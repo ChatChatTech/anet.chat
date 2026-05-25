@@ -1,4 +1,4 @@
-# AGENT.md — anet.chat Universal Injection Standard (v5)
+# AGENT.md — anet.chat Universal Injection Standard (v6)
 
 > 这是面向所有 persona Skill 的**统一注入文件**。每个 agent 的 system_prompt =
 > `<persona-name>/SKILL.md` + 本文件 + 实时颜色/槽位/邻居/画板状态上下文。
@@ -237,7 +237,92 @@ User's question (paraphrased): "<...>"
 
 ---
 
-## 11. 失败兜底
+## 11. Excalidraw 画板设计原则（蒸自 mcp_excalidraw 上游 SKILL.md）
+
+> 以下规则是 mcp_excalidraw 作者（yctimlin）在调多个 AI 模型在 Excalidraw 上画图后
+> 沉淀的硬经验。**违反这些规则的 LLM 输出会产出无法阅读的画板。**
+
+### 11.1 间距（硬性数字）
+
+| 维度 | 推荐值 |
+|---|---|
+| 同层兄弟元素 horizontal 间距 | **≥ 40-60px** |
+| 上下 tier 之间 vertical 间距 | **≥ 80-120px**（让箭头不撞标签） |
+| 形状宽度 | `max(160, label字数 × 9)` —— **绝对不要让文字截断** |
+| 形状高度 | 单行 60px / 两行 80px |
+| 背景区（zone）四周 padding | **50px** 留白 |
+
+### 11.2 ⚠️ 三个致命反模式
+
+**反模式 #1：在大背景矩形上挂文字标签**
+
+❌ **错的做法**：
+```json
+{"type":"rectangle","x":50,"y":50,"width":800,"height":400,"text":"VPC zone"}
+```
+→ "VPC zone" 这串字会被 Excalidraw **挂载在矩形正中心**——也就是你后续要放服务图标的地方，**完全盖住所有内容**。
+
+✅ **对的做法**：分离 zone 矩形和它的标签 text，**标签 text 放在 zone 顶部**：
+```json
+{"type":"rectangle","x":50,"y":50,"width":800,"height":400,"text":""}
+{"type":"text","x":70,"y":60,"text":"VPC zone","fontSize":18}
+```
+（v5 已经强制 rectangle 必带 text 防废框，但**大 zone 矩形例外**——你需要 zone 时用一个独立 text 当标签放它顶上。如果你的 zone 不需要标签，那就别画 zone，直接用文字位置传达分组。）
+
+**反模式 #2：跨 zone 长箭头**
+
+❌ 从一个 zone 拉箭头到很远的 zone → 长对角线穿过中间一堆元素 → **意大利面**。
+
+✅ 箭头优先连**同一 zone / 同一 tier 内**的元素。必须跨 zone 时：
+- 用**多点 arrow** 沿 zone 边缘走（见 11.4）
+- 或者放弃箭头，改用一段说明 text
+
+**反模式 #3：每根箭头都加 label**
+
+❌ 在密集图里给每根 arrow 都挂 label → label 放在箭头中点 → 跟两端形状叠。
+
+✅ 只给**真有信息**的箭头加 label（协议名、端口、方向），且 ≤ **12 字符**。其余 arrow 留空。
+
+### 11.3 形状尺寸规则
+
+- 文字会**自动截断**——所以 `width` 必须 `≥ 字数 × 9`（fontSize 18 时）
+- 例：label "AI Coordination Layer" 20 字 → width ≥ 180
+- 当不确定字符数时宁可宽，**不要让 label 被裁**
+
+### 11.4 多点箭头（routing around obstacles）
+
+普通 arrow 是 2 点（起点-终点）。当起点终点之间有别的元素挡路，用**多点 points 数组**绕开：
+
+**S 型绕过**（3 点抛物线）：
+```json
+{"type":"arrow","x1":100,"y1":100,"x2":300,"y2":100,
+ "points":[[0,0],[100,-50],[200,0]]}
+```
+中间那个 `[100,-50]` 是控制点，让箭头**向上拱**避开中间元素。
+
+**L 型直角**（4 点正交路由）：
+```json
+{"type":"arrow","x1":100,"y1":100,"x2":400,"y2":300,
+ "points":[[0,0],[0,200],[300,200],[300,200]]}
+```
+先下后右——专门用在工程架构图（管道、网络拓扑）。
+
+> 注：当前 v5 协调器的 arrow action 只接受 `x1/y1/x2/y2`（2 点），如要画多点 arrow
+> 请通过 `points` 字段（直接走 Excalidraw 元素 schema）。后续 v7 可能加 `waypoints` 语法糖。
+
+### 11.5 落笔前的 quality 自检（每次 action 前过一遍）
+
+1. **text 截断？** —— `width ≥ 字数 × 9` ✓
+2. **重叠？** —— bbox 检查 vs `[CANVAS DIGEST]` ≥ 40px gap ✓
+3. **箭头穿过别的元素？** —— 起终点之间有元素就走多点 routing ✓
+4. **arrow label 跟两端形状叠？** —— 同短或干脆删掉 label ✓
+5. **font size 够大？** —— 正文 ≥ 16，标题 ≥ 20 ✓
+
+发现问题：**停下 → 修 → 再交付**。不要硬画然后甩锅给 curator 收拾。
+
+---
+
+## 12. 失败兜底
 
 JSON 错乱 / 不确定 / 想不出来：
 ```json
