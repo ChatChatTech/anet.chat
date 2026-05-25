@@ -1,0 +1,40 @@
+# anet.chat — collaboration-brain orchestrator
+#
+# Mounts:
+#   ./refs/<persona>-skill → /skills/personas/<persona>/   (one folder per persona)
+#   ./refs/mcp_excalidraw/skills/excalidraw-skill → /skills/excalidraw-skill/  (reference cheatsheet)
+#
+# Persona pool is declared in orchestrator/personas.json and can be extended freely
+# (e.g. to add 40+ professor personas, drop their SKILL.md + papers/ folder under
+# refs/<slug>-skill/ and append a registry entry).
+#
+# Run:
+#   1) cd refs/mcp_excalidraw && docker compose --profile full up -d
+#   2) cd /data/projs/anetchat && docker compose --env-file .minimax.env up -d --build
+
+services:
+  souls:
+    build:
+      context: ./orchestrator
+    image: anet-souls:latest
+    container_name: anet-souls
+    environment:
+      - CANVAS_URL=http://canvas:3000
+      - ANTHROPIC_BASE_URL=${ANTHROPIC_BASE_URL}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ANTHROPIC_MODEL=${ANTHROPIC_MODEL}
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./refs/feynman-skill:/skills/personas/feynman:ro
+      - ./refs/munger-skill:/skills/personas/munger:ro
+      - ./refs/karpathy-skill:/skills/personas/karpathy:ro
+      - ./refs/elon-musk-skill:/skills/personas/musk:ro
+      - ./refs/mcp_excalidraw/skills/excalidraw-skill:/skills/excalidraw-skill:ro
+    networks:
+      - canvas-net
+    restart: unless-stopped
+
+networks:
+  canvas-net:
+    name: mcp_excalidraw_mcp-network
+    external: true

@@ -1,0 +1,35 @@
+# Secrets
+.minimax.env
+*.env
+!.env.example
+
+# Claude Code project state
+.claude/
+
+# External cloned repos (large, have own git history)
+refs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+
+# Docker / build artifacts
+*.tar
+*.tar.gz
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs / temp
+*.log
+/tmp/

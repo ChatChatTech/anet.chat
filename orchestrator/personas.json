@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "feynman",
+    "name": "Richard Feynman",
+    "color": "#fa5252",
+    "skill": "/skills/personas/feynman/SKILL.md",
+    "description": "费曼式思维：第一性原理、命名 vs 理解、货物崇拜检测、用最简单的语言解释、自我欺骗的最大敌人。"
+  },
+  {
+    "slug": "munger",
+    "name": "Charlie Munger",
+    "color": "#1c7ed6",
+    "skill": "/skills/personas/munger/SKILL.md",
+    "description": "芒格式思维：多元思维模型、逆向思考、激励机制扫描、能力圈、Lollapalooza 效应、Too Hard basket。"
+  },
+  {
+    "slug": "karpathy",
+    "name": "Andrej Karpathy",
+    "color": "#37b24d",
+    "skill": "/skills/personas/karpathy/SKILL.md",
+    "description": "Karpathy 式思维：工程务实、demos vs deployment、march of nines、神经网络直觉、教学口语化。"
+  },
+  {
+    "slug": "musk",
+    "name": "Elon Musk",
+    "color": "#ff8c00",
+    "skill": "/skills/personas/musk/SKILL.md",
+    "description": "马斯克式思维：物理第一性原理、成本拆解到原料、白痴指数、五步算法、激进时间线、垂直整合。"
+  }
+]

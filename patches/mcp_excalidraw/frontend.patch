@@ -1,0 +1,134 @@
+diff --git a/frontend/index.html b/frontend/index.html
+index f87046b..8ee9364 100644
+--- a/frontend/index.html
++++ b/frontend/index.html
+@@ -3,7 +3,7 @@
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Excalidraw POC - Backend API Integration</title>
++    <title>anet.chat</title>
+     <style>
+         body {
+             margin: 0;
+@@ -275,6 +275,10 @@
+         .sync-time {
+             color: #666;
+         }
++
++        /* anet.chat: hide Excalidraw help-dialog top header
++           (Documentation / Blog / Found an issue? / YouTube) */
++        .HelpDialog__header { display: none !important; }
+     </style>
+ </head>
+ <body>
+diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
+index 9c328df..9aad680 100644
+--- a/frontend/src/App.tsx
++++ b/frontend/src/App.tsx
+@@ -1,12 +1,58 @@
+ import React, { useState, useEffect, useRef } from 'react'
+ import {
+   Excalidraw,
++  MainMenu,
+   convertToExcalidrawElements,
+   CaptureUpdateAction,
+   ExcalidrawImperativeAPI,
+   exportToBlob,
+   exportToSvg
+ } from '@excalidraw/excalidraw'
++
++// anet.chat: load pre-baked Excalidraw libraries from /libraries/*.excalidrawlib
++// The files are baked into the canvas Docker image (frontend/public/libraries/).
++// On mount, we fetch each one as a Blob and feed it to excalidrawAPI.updateLibrary().
++// `merge: true` so user-added libraries are not clobbered if the user later adds more.
++const PREBAKED_LIBRARIES = [
++  'software-architecture.excalidrawlib',
++  'aws-simple-icons.excalidrawlib',
++  'azure-cloud-services.excalidrawlib',
++  'information-architecture.excalidrawlib',
++  'lo-fi-wireframing-kit.excalidrawlib',
++  'stick-figures.excalidrawlib',
++]
++async function loadPreBakedLibraries(api: ExcalidrawImperativeAPI): Promise<void> {
++  for (const fname of PREBAKED_LIBRARIES) {
++    try {
++      const resp = await fetch(`/libraries/${fname}`)
++      if (!resp.ok) {
++        console.warn(`[anet] library ${fname}: HTTP ${resp.status}`)
++        continue
++      }
++      const blob = await resp.blob()
++      await api.updateLibrary({
++        libraryItems: blob,
++        merge: true,
++        openLibraryMenu: false,
++        defaultStatus: 'published',
++      })
++      console.log(`[anet] loaded library: ${fname}`)
++    } catch (e) {
++      console.warn(`[anet] library ${fname} failed:`, e)
++    }
++  }
++}
++
++// Inline website-globe icon for the "Join Agent Network" menu link
++const websiteIcon = (
++  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
++       strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
++       style={{ display: 'inline-block', verticalAlign: 'middle' }}>
++    <circle cx="12" cy="12" r="10" />
++    <line x1="2" y1="12" x2="22" y2="12" />
++    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
++  </svg>
++)
+ import type { ExcalidrawElement, NonDeleted, NonDeletedExcalidrawElement } from '@excalidraw/excalidraw/types/element/types'
+ import { convertMermaidToExcalidraw, DEFAULT_MERMAID_CONFIG } from './utils/mermaidConverter'
+ import type { MermaidConfig } from '@excalidraw/mermaid-to-excalidraw'
+@@ -347,6 +393,7 @@ function App(): JSX.Element {
+   useEffect(() => {
+     if (excalidrawAPI) {
+       loadExistingElements()
++      loadPreBakedLibraries(excalidrawAPI)
+ 
+       // Ensure WebSocket is connected for real-time updates
+       if (!isConnected) {
+@@ -868,7 +915,7 @@ function App(): JSX.Element {
+     <div className="app">
+       {/* Header */}
+       <div className="header">
+-        <h1>Excalidraw Canvas</h1>
++        <h1>anet.chat</h1>
+         <div className="controls">
+           <div className="status">
+             <div className={`status-dot ${isConnected ? 'status-connected' : 'status-disconnected'}`}></div>
+@@ -929,7 +976,28 @@ function App(): JSX.Element {
+                 viewBackgroundColor: '#ffffff'
+               }
+             }}
+-          />
++          >
++            <MainMenu>
++              <MainMenu.DefaultItems.LoadScene />
++              <MainMenu.DefaultItems.SaveToActiveFile />
++              <MainMenu.DefaultItems.Export />
++              <MainMenu.DefaultItems.SaveAsImage />
++              <MainMenu.DefaultItems.SearchMenu />
++              <MainMenu.DefaultItems.Help />
++              <MainMenu.DefaultItems.ClearCanvas />
++              <MainMenu.Separator />
++              <MainMenu.ItemLink
++                icon={websiteIcon}
++                href="https://agentnetwork.org.cn"
++                aria-label="Join Agent Network"
++              >
++                Join Agent Network
++              </MainMenu.ItemLink>
++              <MainMenu.Separator />
++              <MainMenu.DefaultItems.ToggleTheme />
++              <MainMenu.DefaultItems.ChangeCanvasBackground />
++            </MainMenu>
++          </Excalidraw>
+         </div>
+       </div>
+     </div>
