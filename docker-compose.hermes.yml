@@ -1,0 +1,71 @@
+# anet.chat — Hermes-based stack (feat/hermes-multi-agent branch)
+#
+# Brings up:
+#   * anet-hermes-gateway — nousresearch/hermes-agent gateway with our config
+#   * anet-hermes-bridge  — canvas-watcher → Hermes /v1/runs sidecar
+#
+# Canvas (mcp_excalidraw) is brought up separately by refs/mcp_excalidraw/docker-compose.yml.
+# Do not run anet-souls (v6) at the same time — both would react to human input.
+
+services:
+
+  llm-router:
+    build:
+      context: ./llm-router
+    image: anet-llm-router:latest
+    container_name: anet-llm-router
+    network_mode: host
+    environment:
+      # MiniMax (primary)
+      - ANTHROPIC_BASE_URL=${ANTHROPIC_BASE_URL}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ANTHROPIC_MODEL=${ANTHROPIC_MODEL}
+      # Mimo (2nd fallback — anthropic-compatible)
+      - MIMO_ANTHROPIC_BASE_URL=${MIMO_ANTHROPIC_BASE_URL}
+      - MIMO_API_KEY=${MIMO_API_KEY}
+      - MIMO_DEFAULT_MODEL=${MIMO_DEFAULT_MODEL}
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+
+  hermes-gateway:
+    image: nousresearch/hermes-agent:latest
+    container_name: anet-hermes-gateway
+    network_mode: host
+    volumes:
+      - ./hermes:/opt/data
+      # Pre-built mcp_excalidraw (dist/ + node_modules/) extracted from the
+      # mcp-excalidraw-mcp container. Provides node-executable MCP server.
+      - ./runtime/mcp_excalidraw:/opt/mcp_excalidraw:ro
+    environment:
+      - HERMES_UID=1001
+      - HERMES_GID=1001
+      # Direct to MiniMax. The llm-router service is built and running but
+      # has a response-schema mismatch with the Anthropic SDK (AssertionError
+      # in the SDK validator) — debug TODO. Once fixed, point ANTHROPIC_BASE_URL
+      # back at http://127.0.0.1:4860 for the MiniMax → Mimo fallback chain.
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ANTHROPIC_BASE_URL=${ANTHROPIC_BASE_URL}
+      - ANTHROPIC_MODEL=${ANTHROPIC_MODEL}
+      - API_SERVER_HOST=127.0.0.1
+      - API_SERVER_PORT=8642
+      - API_SERVER_KEY=${API_SERVER_KEY:-anetchat-hermes-secret}
+      - TZ=Asia/Shanghai
+    command: ["gateway", "run"]
+    depends_on:
+      - llm-router
+    restart: unless-stopped
+
+  hermes-bridge:
+    build:
+      context: ./hermes-bridge
+    image: anet-hermes-bridge:latest
+    container_name: anet-hermes-bridge
+    network_mode: host
+    environment:
+      - CANVAS_URL=http://127.0.0.1:3000
+      - HERMES_API=http://127.0.0.1:8642
+      - API_SERVER_KEY=${API_SERVER_KEY:-anetchat-hermes-secret}
+      - TZ=Asia/Shanghai
+    depends_on:
+      - hermes-gateway
+    restart: unless-stopped

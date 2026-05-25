@@ -9,6 +9,54 @@
 # External cloned repos (large, have own git history)
 refs/
 
+# Built/extracted runtime artifacts (300MB+, regenerated via docker cp)
+runtime/
+
+# Hermes container runtime state (created by container at startup)
+hermes/cron/
+hermes/sessions/
+hermes/logs/
+hermes/memories/
+hermes/hooks/
+hermes/skills/
+hermes/skins/
+hermes/plans/
+hermes/workspace/
+hermes/home/
+hermes/audio_cache/
+hermes/image_cache/
+hermes/pairing/
+hermes/bin/
+hermes/*.db*
+hermes/*.json
+hermes/*.lock
+hermes/*.pid
+hermes/.env
+hermes/.install_method
+hermes/SOUL.md
+
+# Per-profile runtime state — only SOUL.md and config.yaml are tracked
+hermes/profiles/*/cron/
+hermes/profiles/*/sessions/
+hermes/profiles/*/logs/
+hermes/profiles/*/memories/
+hermes/profiles/*/hooks/
+hermes/profiles/*/skills/
+hermes/profiles/*/bin/
+hermes/profiles/*/audio_cache/
+hermes/profiles/*/image_cache/
+hermes/profiles/*/pairing/
+hermes/profiles/*/*.db*
+hermes/profiles/*/*.json
+hermes/profiles/*/*.lock
+hermes/profiles/*/*.pid
+
+# But DO track per-profile config.yaml (contains MCP wiring set via `hermes mcp add`)
+!hermes/profiles/*/config.yaml
+
+# Local assets (font sources, large binary)
+assets/
+
 # Python
 __pycache__/
 *.pyc
