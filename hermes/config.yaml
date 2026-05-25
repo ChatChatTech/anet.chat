@@ -1,0 +1,88 @@
+# anet.chat — Hermes Agent config
+#
+# Bind-mounted into the gateway container at /opt/data/config.yaml.
+# Shared across all profiles in profiles/.
+#
+# API key + base URL are NOT here — they come from container env (docker-compose
+# injects them from .minimax.env). This keeps secrets out of the repo.
+
+# =============================================================================
+# Model: MiniMax via Anthropic-compatible endpoint
+# =============================================================================
+model:
+  default: "MiniMax-M2.7-highspeed"
+  provider: "anthropic"
+  # base_url + api_key are picked up from ANTHROPIC_BASE_URL / ANTHROPIC_API_KEY env
+
+# =============================================================================
+# MCP servers — shared by every profile
+# =============================================================================
+# When a profile runs, it spawns this mcp_excalidraw subprocess via stdio,
+# which gives the agent the full 26-tool toolset (create_element, batch_create_elements,
+# describe_scene, get_canvas_screenshot, set_viewport, create_from_mermaid, ...).
+mcp_servers:
+  excalidraw:
+    command: "node"
+    args: ["/opt/mcp_excalidraw/dist/index.js"]
+    env:
+      EXPRESS_SERVER_URL: "http://host.docker.internal:3000"
+      ENABLE_CANVAS_SYNC: "true"
+    timeout: 120
+    connect_timeout: 30
+
+# =============================================================================
+# Terminal (sandboxed shell execution — keep it tame)
+# =============================================================================
+terminal:
+  backend: "local"
+  timeout: 60
+  lifetime_seconds: 300
+
+# =============================================================================
+# Agent behavior
+# =============================================================================
+agent:
+  max_turns: 30
+  verbose: false
+
+# =============================================================================
+# Delegation / Swarm — enable multi-agent sub-agent spawning
+# =============================================================================
+delegation:
+  max_iterations: 30
+  max_concurrent_children: 3
+  max_spawn_depth: 2          # allow curator → personas, but no deeper
+  orchestrator_enabled: true
+  subagent_auto_approve: true # in our trusted local env
+  inherit_mcp_toolsets: true  # children inherit excalidraw MCP
+
+# =============================================================================
+# Memory (per-profile MEMORY.md / USER.md)
+# =============================================================================
+memory:
+  memory_enabled: true
+  user_profile_enabled: false
+  memory_char_limit: 2000
+  nudge_interval: 15
+
+# =============================================================================
+# Display
+# =============================================================================
+display:
+  compact: false
+  tool_progress: all
+  streaming: false
+
+# =============================================================================
+# Skills directory
+# =============================================================================
+skills:
+  external_dirs:
+    - /opt/skills  # mcp_excalidraw upstream skill mounted here
+
+# =============================================================================
+# Platform toolsets — control what each platform can call
+# =============================================================================
+platform_toolsets:
+  cli: [hermes-cli, mcp-excalidraw]
+  api: [hermes-cli, mcp-excalidraw]
