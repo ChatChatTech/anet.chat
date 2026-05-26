@@ -1598,20 +1598,31 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
             log(f"watcher: {reason}. Repainting + resetting state.")
             async with state.canvas_write_lock:
                 await paint_empty_header(client)
+                # v17: FULL reset — clear EVERY piece of agent context.
+                # User clicked Clear → agents must start fresh, no memory of
+                # prior discussion's question / picks / busy flags / fire times.
                 state.active = {"A": None, "B": None, "C": None}
                 state.phase = "WAITING_FOR_QUESTION"
                 state.round_count = 0
                 state.next_tidy_slot = None
                 state.last_tidy_trigger_round = 0
                 state.last_question_signature = ""
+                state.user_question_summary = ""     # v17: WAS leaking across sessions
                 state.last_canvas_change_ts = 0.0
                 state.last_canvas_id_set = frozenset()
                 state.system_active = False
                 state.last_curator_round = 0
                 state.last_re_moderation_round = 0
-                state.synthesis_fired = False        # ready for next discussion
+                state.synthesis_fired = False
+                # Reset per-persona running flags so a clear during an
+                # in-flight LLM call doesn't leave the slot permanently busy.
                 for p in state.pool:
                     state.seen_ids[p.slug] = set()
+                    state.busy[p.slug] = False
+                # Reset fire cooldowns so the next question's IMMEDIATE
+                # first-fire isn't suppressed by stale last_fired.
+                for slot in state.last_fired:
+                    state.last_fired[slot] = 0.0
             await asyncio.sleep(2.0)
             continue
 

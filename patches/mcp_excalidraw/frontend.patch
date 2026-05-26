@@ -64,10 +64,10 @@ index f87046b..d3a5bfb 100644
  </head>
  <body>
 diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
-index 9c328df..b9e93a6 100644
+index 9c328df..20a96cf 100644
 --- a/frontend/src/App.tsx
 +++ b/frontend/src/App.tsx
-@@ -1,12 +1,125 @@
+@@ -1,12 +1,144 @@
  import React, { useState, useEffect, useRef } from 'react'
  import {
    Excalidraw,
@@ -115,32 +115,51 @@ index 9c328df..b9e93a6 100644
 +      }).catch((e: unknown) => console.warn(`[anet] ${name} load failed:`, e))
 +    }
 +
-+    // (b) Hook ctx.font setter — ONLY rewrite Xiaolai → ShouShuTi
-+    const proto = (window as any).CanvasRenderingContext2D?.prototype
-+    if (proto && !proto.__anetFontHooked) {
++    // (b) Hook ctx.font setter — ALWAYS append ", ShouShuTi" as the final
++    //     CJK fallback. Critical insight from Excalidraw source:
++    //     getFontFamilyFallbacks() in @excalidraw/common ONLY adds Xiaolai
++    //     for fontFamily=5 (Excalifont). For Virgil (1), Cascadia (3), etc.
++    //     the resulting ctx.font has NO Xiaolai — so a "replace Xiaolai"
++    //     hook had nothing to match. The robust fix is to UNIVERSALLY
++    //     append our ShouShuTi to every ctx.font, regardless of what
++    //     Excalidraw set. Browser font fallback uses ShouShuTi only when
++    //     the earlier fonts (Virgil/Excalifont) have no glyph for the
++    //     codepoint — i.e. CJK characters only. English keeps Virgil.
++    function hookFontProto(proto: any, label: string) {
++      if (!proto || proto.__anetFontHooked) return
 +      const desc = Object.getOwnPropertyDescriptor(proto, "font")
-+      if (desc && desc.set) {
-+        const originalSet = desc.set
-+        let firstLogShown = false
-+        Object.defineProperty(proto, "font", {
-+          configurable: true,
-+          get: desc.get,
-+          set(value: any) {
-+            if (typeof value === "string" && value.includes("Xiaolai")) {
-+              const rewritten = value.replace(/(['"]?)Xiaolai\1/g, "ShouShuTi")
-+              if (!firstLogShown) {
-+                console.log("[anet] font hook intercepting:", value, "→", rewritten)
-+                firstLogShown = true
-+              }
-+              value = rewritten
++      if (!desc?.set) return
++      const originalSet = desc.set
++      let logsLeft = 30
++      Object.defineProperty(proto, "font", {
++        configurable: true,
++        get: desc.get,
++        set(value: any) {
++          if (typeof value === "string") {
++            // Replace Xiaolai with ShouShuTi (covers Excalifont's CJK chain)
++            // AND unconditionally append ", ShouShuTi" as last fallback
++            // (covers Virgil and any other family that lacks Xiaolai).
++            let rewritten = value.replace(/(['"]?)Xiaolai\1/g, "ShouShuTi")
++            if (!/\bShouShuTi\b/.test(rewritten)) {
++              rewritten = rewritten + ", ShouShuTi"
 +            }
-+            originalSet.call(this, value)
-+          },
-+        })
-+        proto.__anetFontHooked = true
-+        console.log("[anet] CanvasRenderingContext2D.font hook installed (Xiaolai-only)")
-+      }
++            if (logsLeft > 0 && rewritten !== value) {
++              console.log("[anet font hook]", value, "→", rewritten)
++              logsLeft--
++            }
++            value = rewritten
++          }
++          originalSet.call(this, value)
++        },
++      })
++      proto.__anetFontHooked = true
++      console.log(`[anet] font hook installed on ${label}`)
 +    }
++    hookFontProto((window as any).CanvasRenderingContext2D?.prototype,
++                  "CanvasRenderingContext2D")
++    // Some browsers / paths use OffscreenCanvas — hook it too.
++    hookFontProto((window as any).OffscreenCanvasRenderingContext2D?.prototype,
++                  "OffscreenCanvasRenderingContext2D")
 +  } catch (e) {
 +    console.warn("[anet] font setup error:", e)
 +  }
@@ -193,7 +212,7 @@ index 9c328df..b9e93a6 100644
  import type { ExcalidrawElement, NonDeleted, NonDeletedExcalidrawElement } from '@excalidraw/excalidraw/types/element/types'
  import { convertMermaidToExcalidraw, DEFAULT_MERMAID_CONFIG } from './utils/mermaidConverter'
  import type { MermaidConfig } from '@excalidraw/mermaid-to-excalidraw'
-@@ -347,6 +460,19 @@ function App(): JSX.Element {
+@@ -347,6 +479,19 @@ function App(): JSX.Element {
    useEffect(() => {
      if (excalidrawAPI) {
        loadExistingElements()
@@ -213,7 +232,7 @@ index 9c328df..b9e93a6 100644
  
        // Ensure WebSocket is connected for real-time updates
        if (!isConnected) {
-@@ -837,6 +963,10 @@ function App(): JSX.Element {
+@@ -837,6 +982,10 @@ function App(): JSX.Element {
    const clearCanvas = async (): Promise<void> => {
      if (excalidrawAPI) {
        try {
@@ -224,7 +243,7 @@ index 9c328df..b9e93a6 100644
          // Get all current elements and delete them from backend
          const response = await fetch('/api/elements')
          const result: ApiResponse = await response.json()
-@@ -868,7 +998,7 @@ function App(): JSX.Element {
+@@ -868,7 +1017,7 @@ function App(): JSX.Element {
      <div className="app">
        {/* Header */}
        <div className="header">
@@ -233,7 +252,7 @@ index 9c328df..b9e93a6 100644
          <div className="controls">
            <div className="status">
              <div className={`status-dot ${isConnected ? 'status-connected' : 'status-disconnected'}`}></div>
-@@ -929,7 +1059,28 @@ function App(): JSX.Element {
+@@ -929,7 +1078,28 @@ function App(): JSX.Element {
                  viewBackgroundColor: '#ffffff'
                }
              }}
