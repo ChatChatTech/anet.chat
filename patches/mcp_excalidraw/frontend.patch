@@ -58,10 +58,10 @@ index f87046b..6fc6a78 100644
  </head>
  <body>
 diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
-index 9c328df..75b44e2 100644
+index 9c328df..b03b7ca 100644
 --- a/frontend/src/App.tsx
 +++ b/frontend/src/App.tsx
-@@ -1,12 +1,93 @@
+@@ -1,12 +1,133 @@
  import React, { useState, useEffect, useRef } from 'react'
  import {
    Excalidraw,
@@ -73,21 +73,37 @@ index 9c328df..75b44e2 100644
    exportToSvg
  } from '@excalidraw/excalidraw'
 +
-+// anet.chat: pre-register ShouShuTi under Excalidraw's CJK fallback name
-+// "Xiaolai" (see CJK_HAND_DRAWN_FALLBACK_FONT in @excalidraw/common).
-+// Excalidraw lazily downloads HUNDREDS of `Xiaolai-Regular-<hash>.woff2`
-+// subset files keyed by unicode range — we can't replace them all. Trick:
-+// add a single FontFace with the full CJK unicode-range FIRST. When
-+// Excalidraw later requests its subset for a particular character,
-+// browser already has a face that covers it → no extra fetch needed,
-+// and our ShouShuTi glyph wins.
++// anet.chat: force ShouShuTi for ALL canvas text including CJK fallback.
 +//
-+// This runs at module import (before React mounts), so it's race-stable.
-+;(function preloadShouShuTi() {
++// 3-step defense in depth:
++//  (a) Register ShouShuTi as a FontFace named "ShouShuTi" (and also under
++//      Excalidraw's CJK fallback name "Xiaolai" — see CJK_HAND_DRAWN_FALLBACK_FONT
++//      in @excalidraw/common).
++//  (b) Hook CanvasRenderingContext2D.font setter — every assignment from
++//      Excalidraw includes "Xiaolai" in the font stack for CJK chars.
++//      We rewrite "Xiaolai" → "ShouShuTi" so the browser font resolver
++//      picks our @font-face whose src is ShouShuTi.ttf. This bypasses
++//      Excalidraw's hundreds of hashed Xiaolai-Regular-XXX.woff2 subsets.
++//  (c) Re-trigger Excalidraw refresh after our font loads so existing
++//      canvas elements re-render in the new font.
++//
++// Step (a) + (b) together is what actually makes it work — (a) alone wasn't
++// enough because Excalidraw subset-loads its own Xiaolai dynamically AFTER
++// our face register, sometimes winning the resolver race.
++;(function setupShouShuTi() {
 +  try {
 +    const FF = (window as any).FontFace
 +    if (!FF || !document?.fonts) return
-+    const ff = new FF(
++    // Register explicit "ShouShuTi" face
++    const ff1 = new FF("ShouShuTi", "url(/fonts/ShouShuTi.ttf) format('truetype')",
++                      { display: "swap" })
++    ff1.load().then((loaded: FontFace) => {
++      document.fonts.add(loaded)
++      console.log("[anet] ShouShuTi font face added")
++    }).catch((e: unknown) => console.warn("[anet] ShouShuTi load failed:", e))
++
++    // Also register under "Xiaolai" with FULL CJK unicode-range as a safety net
++    const ff2 = new FF(
 +      "Xiaolai",
 +      "url(/fonts/ShouShuTi.ttf) format('truetype')",
 +      {
@@ -95,16 +111,40 @@ index 9c328df..75b44e2 100644
 +        display: "swap",
 +      },
 +    )
-+    ff.load().then((loaded: FontFace) => {
-+      document.fonts.add(loaded)
-+      console.log("[anet] ShouShuTi pre-registered under 'Xiaolai' name")
-+    }).catch((e: unknown) => console.warn("[anet] ShouShuTi preload failed:", e))
-+    // Also register under "ShouShuTi" explicit name for any future use.
-+    const ff2 = new FF("ShouShuTi", "url(/fonts/ShouShuTi.ttf) format('truetype')",
-+                      { display: "swap" })
 +    ff2.load().then((loaded: FontFace) => document.fonts.add(loaded)).catch(() => {})
++
++    // ── Step (b): hook ctx.font setter ────────────────────────────────
++    // Every <canvas> draws text via CanvasRenderingContext2D.font setter.
++    // We intercept and rewrite the font stack — replace any "Xiaolai" /
++    // 'Xiaolai' / "Virgil" reference with "ShouShuTi" so canvas rendering
++    // uses our shape data.
++    const proto = (window as any).CanvasRenderingContext2D?.prototype
++    if (proto && !proto.__anetFontHooked) {
++      const desc = Object.getOwnPropertyDescriptor(proto, "font")
++      if (desc && desc.set) {
++        const originalSet = desc.set
++        Object.defineProperty(proto, "font", {
++          configurable: true,
++          get: desc.get,
++          set(value: any) {
++            if (typeof value === "string") {
++              // Rewrite font family names. We use ShouShuTi for ALL handwritten
++              // and CJK rendering. Excalidraw's other fonts (Cascadia mono,
++              // Helvetica sans) are kept as-is.
++              value = value
++                .replace(/(['"]?)Xiaolai\1/g, "ShouShuTi")
++                .replace(/(['"]?)Virgil\1/g, "ShouShuTi")
++                .replace(/(['"]?)Excalifont\1/g, "ShouShuTi")
++            }
++            originalSet.call(this, value)
++          },
++        })
++        proto.__anetFontHooked = true
++        console.log("[anet] CanvasRenderingContext2D.font hook installed")
++      }
++    }
 +  } catch (e) {
-+    console.warn("[anet] font preload outer error:", e)
++    console.warn("[anet] font setup error:", e)
 +  }
 +})()
 +
@@ -155,7 +195,7 @@ index 9c328df..75b44e2 100644
  import type { ExcalidrawElement, NonDeleted, NonDeletedExcalidrawElement } from '@excalidraw/excalidraw/types/element/types'
  import { convertMermaidToExcalidraw, DEFAULT_MERMAID_CONFIG } from './utils/mermaidConverter'
  import type { MermaidConfig } from '@excalidraw/mermaid-to-excalidraw'
-@@ -347,6 +428,7 @@ function App(): JSX.Element {
+@@ -347,6 +468,7 @@ function App(): JSX.Element {
    useEffect(() => {
      if (excalidrawAPI) {
        loadExistingElements()
@@ -163,7 +203,7 @@ index 9c328df..75b44e2 100644
  
        // Ensure WebSocket is connected for real-time updates
        if (!isConnected) {
-@@ -837,6 +919,10 @@ function App(): JSX.Element {
+@@ -837,6 +959,10 @@ function App(): JSX.Element {
    const clearCanvas = async (): Promise<void> => {
      if (excalidrawAPI) {
        try {
@@ -174,7 +214,7 @@ index 9c328df..75b44e2 100644
          // Get all current elements and delete them from backend
          const response = await fetch('/api/elements')
          const result: ApiResponse = await response.json()
-@@ -868,7 +954,7 @@ function App(): JSX.Element {
+@@ -868,7 +994,7 @@ function App(): JSX.Element {
      <div className="app">
        {/* Header */}
        <div className="header">
@@ -183,7 +223,7 @@ index 9c328df..75b44e2 100644
          <div className="controls">
            <div className="status">
              <div className={`status-dot ${isConnected ? 'status-connected' : 'status-disconnected'}`}></div>
-@@ -929,7 +1015,28 @@ function App(): JSX.Element {
+@@ -929,7 +1055,28 @@ function App(): JSX.Element {
                  viewBackgroundColor: '#ffffff'
                }
              }}

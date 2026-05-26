@@ -1568,6 +1568,21 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
         non_header = [e for e in elements if not is_header(e.get("id", ""))]
         header_count = len(elements) - len(non_header)
 
+        # v15: Always-on header self-heal. The 6 canonical header IDs must
+        # always exist. If any is missing (user manually deleted, or some
+        # race condition), repaint just the missing ones. Doesn't reset state.
+        canonical_header_ids = {
+            "header-frame", "header-title", "header-logo",
+            "header-line-1", "header-line-2", "header-line-3",
+        }
+        present_header_ids = {e["id"] for e in elements if is_header(e["id"])}
+        missing_canonical = canonical_header_ids - present_header_ids
+        if missing_canonical and 0 < header_count < 6:
+            # Partial header — only some elements gone. Repaint missing only.
+            log(f"watcher: header partial ({header_count}/6); repainting {len(missing_canonical)} missing")
+            async with state.canvas_write_lock:
+                await paint_empty_header(client)
+
         # v14: also reset when canvas BODY clears (header now survives Clear Canvas
         # thanks to locked:true + server-side clear-preserve, so we can't rely on
         # header_count==0 alone). If we were ACTIVE/SYNTHESIS/FROZEN with content
@@ -1643,6 +1658,24 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
                                 asyncio.create_task(agent_tick("B", state, client))
                                 await asyncio.sleep(0.5)
                                 asyncio.create_task(agent_tick("C", state, client))
+        # v15: ALWAYS-ON USER WAKE — if any phase (including ACTIVE / SYNTHESIS /
+        # FROZEN) sees a NEW human element since last poll, kick the next-due
+        # agent IMMEDIATELY so the human gets a fresh reaction in 1-2s instead
+        # of waiting up to 30s for the slot scheduler. Also unfreezes FROZEN.
+        active_set = active_colors(state)
+        human_now = [e for e in non_header if author_of(e, active_set) == "human"]
+        if human_now and state.phase in ("ACTIVE", "SYNTHESIS", "FROZEN"):
+            human_sig_now = " ".join(sorted(element_text(e) for e in human_now if element_text(e)))[:300]
+            if human_sig_now and human_sig_now != state.last_question_signature:
+                log(f"watcher: NEW human input while {state.phase} — waking agents immediately")
+                state.last_question_signature = human_sig_now
+                # Unfreeze + reset SYNTHESIS guard so agents can re-engage
+                if state.phase in ("SYNTHESIS", "FROZEN"):
+                    state.phase = "ACTIVE"
+                    state.synthesis_fired = False
+                # Kick slot A immediately; B and C will catch up on their schedule
+                asyncio.create_task(agent_tick("A", state, client))
+
         # v3: SYNTHESIS auto-trigger. Once 3+ "Conclusion:" texts pile up on
         # the canvas, the discussion is closed. Two picked agents do final
         # work: one writes a long-form summary on the left side, one builds
@@ -1765,26 +1798,62 @@ Output the JSON {{actions:[{{type:"text", x:40, y:1300, text:"...", fontSize:18}
 
         # ── 2. mind-map ────────────────────────────────────────────────
         mm_persona = state.pool_by_slug[mindmapper_slug]
+        # v15: precompute 5 explicit child positions so the LLM doesn't have
+        # to do trig. We pre-bake angles 90/162/234/306/18° at r=260 around
+        # (1040, 1500) — the model just fills the text labels.
+        import math as _math
+        cx, cy, r = 1040.0, 1500.0, 260.0
+        children = []
+        for i, deg in enumerate([90, 162, 234, 306, 18]):
+            rad = _math.radians(deg)
+            children.append({
+                "x": round(cx + r * _math.cos(rad)) - 70,  # ellipse top-left
+                "y": round(cy + r * _math.sin(rad)) - 35,
+                "cx": round(cx + r * _math.cos(rad)),       # ellipse center
+                "cy": round(cy + r * _math.sin(rad)),
+                "i": i + 1,
+            })
+        child_block = "\n".join(
+            f"  Child {c['i']}: ellipse top-left at ({c['x']},{c['y']}), "
+            f"center at ({c['cx']},{c['cy']}). Arrow x1=1040,y1=1500 → x2={c['cx']},y2={c['cy']}."
+            for c in children
+        )
+
         mm_user = f"""[SYNTHESIS — mind map]
 
-Build a mind-map of the discussion's main ideas, placed in the bottom-right
-area (x range 700-1380, y range 1300-1900).
+Pull the 5 most important themes from the discussion and lay them out as a
+mind-map AROUND a central topic ellipse.
 
-Structure:
-- ONE central ellipse at (1040, 1500), width=180, height=80, with the
-  CORE topic of the discussion (8-12 chars) as text.
-- 4-6 child ellipses around it (width=140, height=70), each labeled with
-  one main insight from the canvas (8-15 chars). Place them at angles
-  spread evenly: 0°, 60°, 120°, 180°, 240°, 300° at radius 250.
-- ONE arrow from the center ellipse to each child (this is the rare
-  allowed arrow case — they form the mind-map structure).
-- Total ~10-12 actions (1 center + 5 children + 5 arrows).
-- All elements in strokeColor: {mm_persona.color}.
+You MUST emit EXACTLY 11 actions in this exact order — coordinates ARE
+PRE-COMPUTED for you so you don't have to think about geometry:
 
-Canvas digest (use this to pick what to highlight):
+ACTIONS 1-6 (ellipses):
+1. CENTER ellipse — at top-left (950, 1465), width=180, height=70.
+   text = ONE SHORT phrase capturing the discussion's central theme
+   (4-10 Chinese characters). All actions strokeColor must equal {mm_persona.color}.
+
+2-6. FIVE CHILD ellipses — width=140, height=70 each. Use these EXACT positions
+   AND pull each ellipse's text from a distinct insight on the canvas:
+{child_block}
+
+   For each child ellipse, text = ONE punchy insight (5-12 Chinese characters)
+   distilled from a real text on the canvas (do not invent — paraphrase what
+   the personas actually said).
+
+ACTIONS 7-11 (arrows):
+   ONE arrow from center to each child. The arrow x1,y1 is ALWAYS (1040, 1500).
+   The arrow x2,y2 is each child's center as listed above.
+
+Canvas digest (extract themes from these):
 {canvas_digest}
 
-Output JSON {{actions:[...]}} via batch (rectangle/ellipse with TEXT, arrow with start/end coords).
+OUTPUT REQUIREMENTS:
+- emit 11 actions total in one JSON object: 1 center ellipse + 5 child
+  ellipses + 5 arrows (in that order).
+- every action's strokeColor: {mm_persona.color}
+- every ellipse MUST have non-empty `text` field
+- every arrow uses x1/y1/x2/y2 (NOT startElementId)
+- output strict JSON: {{"reasoning":"<one line>","actions":[...]}}
 """
         try:
             text2 = await call_llm(mm_persona.system_prompt, mm_user, client, max_tokens=4000)
