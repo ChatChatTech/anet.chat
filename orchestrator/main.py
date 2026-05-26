@@ -37,9 +37,33 @@ import httpx
 # Configuration
 # --------------------------------------------------------------------------------------
 CANVAS_URL = os.environ.get("CANVAS_URL", "http://canvas:3000")
+
+# =====================================================================
+# Provider chain — MiniMax primary, Doubao fallback.
+# We track each provider's health (consecutive failures) and skip
+# unhealthy ones for COOLDOWN_S seconds. anet-souls v2 highlight:
+# whenever the primary takes > FAILOVER_TIMEOUT_S to respond,
+# we fail it over immediately rather than wait the full HTTP timeout.
+# =====================================================================
 ANTHROPIC_BASE_URL = os.environ["ANTHROPIC_BASE_URL"].rstrip("/")
 ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
-ANTHROPIC_MODEL = os.environ["ANTHROPIC_MODEL"]
+ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "MiniMax-M2.7-highspeed")
+
+DOUBAO_BASE = (os.environ.get("DOUBAO_RESPONSES_URL")
+               or "https://ark.cn-beijing.volces.com/api/v3/responses").rstrip("/")
+DOUBAO_KEY = os.environ.get("DOUBAO_RESPONSES_API_KEY", "")
+DOUBAO_MODEL = os.environ.get("DOUBAO_RESPONSES_DEFAULT_MODEL",
+                              "doubao-seed-2-0-pro-260215")
+DOUBAO_AVAILABLE = bool(DOUBAO_KEY)
+
+# Health tracker — globally shared across all LLM calls.
+PROVIDER_HEALTH = {
+    "minimax": {"consecutive_fails": 0, "unhealthy_until": 0.0},
+    "doubao":  {"consecutive_fails": 0, "unhealthy_until": 0.0},
+}
+FAILOVER_FAIL_THRESHOLD = 2     # mark unhealthy after N consecutive fails
+FAILOVER_COOLDOWN_S = 60        # skip unhealthy provider for this long
+FAILOVER_TIMEOUT_S = 25         # fail over to fallback if primary slower than this
 
 PERSONAS_REGISTRY_PATH = Path(os.environ.get("PERSONAS_REGISTRY", "/app/personas.json"))
 AGENT_MD_PATH = Path(os.environ.get("AGENT_MD", "/app/AGENT.md"))
@@ -354,8 +378,8 @@ async def canvas_delete(client: httpx.AsyncClient, eid: str) -> bool:
         return False
 
 
-async def call_llm(system_prompt: str, user_prompt: str, client: httpx.AsyncClient,
-                   max_tokens: int = 8000) -> str:
+async def _call_minimax(system_prompt: str, user_prompt: str,
+                         client: httpx.AsyncClient, max_tokens: int) -> str:
     payload = {
         "model": ANTHROPIC_MODEL,
         "max_tokens": max_tokens,
@@ -370,12 +394,108 @@ async def call_llm(system_prompt: str, user_prompt: str, client: httpx.AsyncClie
             "content-type": "application/json",
         },
         json=payload,
-        timeout=120.0,
+        timeout=FAILOVER_TIMEOUT_S,
     )
     r.raise_for_status()
     data = r.json()
     text_blocks = [b.get("text", "") for b in data.get("content", []) if b.get("type") == "text"]
     return "\n".join(text_blocks).strip()
+
+
+async def _call_doubao(system_prompt: str, user_prompt: str,
+                       client: httpx.AsyncClient, max_tokens: int) -> str:
+    """Doubao uses an OpenAI-Responses-style API (not Anthropic Messages).
+    We translate the Anthropic payload to its `instructions` + `input` shape
+    and parse the `output[].content[].text` response back to a plain string."""
+    payload = {
+        "model": DOUBAO_MODEL,
+        "instructions": system_prompt,
+        "input": user_prompt,
+        "max_output_tokens": min(max_tokens, 8192),
+    }
+    r = await client.post(
+        DOUBAO_BASE,
+        headers={
+            "Authorization": f"Bearer {DOUBAO_KEY}",
+            "Content-Type": "application/json",
+        },
+        json=payload,
+        timeout=60.0,
+    )
+    r.raise_for_status()
+    data = r.json()
+    # Doubao mirrors OpenAI Responses output: a list of "message" outputs,
+    # each carrying a list of content parts. Pull every text part out.
+    parts: list[str] = []
+    for out in data.get("output", []):
+        if out.get("type") != "message":
+            continue
+        for c in out.get("content", []):
+            t = c.get("text")
+            if isinstance(t, str):
+                parts.append(t)
+    if parts:
+        return "\n".join(parts).strip()
+    # Last-ditch fallback: some SDK variants expose `output_text` shortcut.
+    ot = data.get("output_text")
+    if isinstance(ot, str):
+        return ot.strip()
+    return ""
+
+
+def _provider_healthy(name: str) -> bool:
+    return time.time() >= PROVIDER_HEALTH[name]["unhealthy_until"]
+
+
+def _record_failure(name: str, exc: Exception) -> None:
+    h = PROVIDER_HEALTH[name]
+    h["consecutive_fails"] += 1
+    if h["consecutive_fails"] >= FAILOVER_FAIL_THRESHOLD:
+        h["unhealthy_until"] = time.time() + FAILOVER_COOLDOWN_S
+        log(f"[provider:{name}] marked UNHEALTHY for {FAILOVER_COOLDOWN_S}s after "
+            f"{h['consecutive_fails']} fails. last error: {exc}")
+
+
+def _record_success(name: str) -> None:
+    PROVIDER_HEALTH[name]["consecutive_fails"] = 0
+
+
+async def call_llm(system_prompt: str, user_prompt: str, client: httpx.AsyncClient,
+                   max_tokens: int = 8000) -> str:
+    """Provider-aware LLM call with automatic fallback.
+
+    Order:  MiniMax (primary) → Doubao (fallback, OpenAI-Responses translated).
+    Skips any provider currently in cooldown. Failures bump health counters.
+    """
+    # Primary: MiniMax (Anthropic-compatible)
+    if _provider_healthy("minimax"):
+        try:
+            txt = await _call_minimax(system_prompt, user_prompt, client, max_tokens)
+            _record_success("minimax")
+            return txt
+        except (httpx.TimeoutException, httpx.NetworkError) as exc:
+            _record_failure("minimax", exc)
+        except httpx.HTTPStatusError as exc:
+            # 4xx auth/budget = "broken" (cool down). 5xx = "fail and retry".
+            _record_failure("minimax", exc)
+        except Exception as exc:
+            _record_failure("minimax", exc)
+    else:
+        log(f"[provider] minimax in cooldown, going straight to doubao")
+
+    # Fallback: Doubao
+    if DOUBAO_AVAILABLE and _provider_healthy("doubao"):
+        try:
+            txt = await _call_doubao(system_prompt, user_prompt, client, max_tokens)
+            _record_success("doubao")
+            log(f"[provider] served via doubao")
+            return txt
+        except Exception as exc:
+            _record_failure("doubao", exc)
+    elif not DOUBAO_AVAILABLE:
+        log(f"[provider] no DOUBAO_RESPONSES_API_KEY — cannot fail over")
+
+    raise RuntimeError("all providers failed")
 
 
 def extract_json(text: str) -> Optional[dict]:
@@ -1316,7 +1436,7 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
             elements = await canvas_get_elements(client)
         except Exception as exc:
             log(f"watcher: canvas fetch failed: {exc}")
-            await asyncio.sleep(3.0)
+            await asyncio.sleep(1.0)
             continue
 
         # Track canvas change timestamp for stagnation detection in prompts
@@ -1381,7 +1501,16 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
                                 state.last_tidy_trigger_round = 0
                                 state.last_question_signature = sig
                                 state.last_canvas_change_ts = time.time()
-        await asyncio.sleep(3.0)
+                                # v2: kick off the first persona IMMEDIATELY so the
+                                # user sees a reaction within seconds instead of
+                                # waiting for the next :03/:17/:25 slot tick.
+                                # The other 2 follow on their slot times.
+                                asyncio.create_task(agent_tick("A", state, client))
+                                await asyncio.sleep(0.5)
+                                asyncio.create_task(agent_tick("B", state, client))
+                                await asyncio.sleep(0.5)
+                                asyncio.create_task(agent_tick("C", state, client))
+        await asyncio.sleep(1.0)
 
 
 # --------------------------------------------------------------------------------------

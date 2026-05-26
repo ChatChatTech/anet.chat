@@ -33,3 +33,13 @@ Thumbs.db
 # Logs / temp
 *.log
 /tmp/
+
+# === feat/anet-souls-v2 additions ===
+# Hermes runtime (legacy from feat/hermes-multi-agent; not used on this branch)
+hermes/
+hermes-bridge/
+runtime/
+docker-compose.hermes.yml
+
+# Local assets (large binaries, regeneratable)
+assets/
