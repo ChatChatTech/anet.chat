@@ -102,9 +102,12 @@ def element_text(e: dict) -> str:
 
 # ---- cron pause / resume --------------------------------------------------
 def get_persona_cron_id(slug: str) -> str | None:
+    """Returns the cron job ID for the persona, regardless of paused/active state.
+    Must use --all because default `cron list` hides paused jobs — and that's
+    EXACTLY the set we need to find when resuming."""
     try:
         out = subprocess.run(
-            [HERMES, "-p", slug, "cron", "list"],
+            [HERMES, "-p", slug, "cron", "list", "--all"],
             capture_output=True, text=True, timeout=10,
         ).stdout
         m = re.search(r"\b([0-9a-f]{12})\b", out)
@@ -242,20 +245,19 @@ def main() -> None:
 
     # ---- WAITING ----
     if not human_els:
-        # Canvas has no human text → reset to WAITING with no active personas
+        # Canvas has no human text → ensure all personas paused, state=WAITING.
+        # Always enforce (even if state already says WAITING) because crons can
+        # drift back to active e.g. after manual `cron resume`.
         if state.get("phase") != "WAITING" or state.get("active_slugs"):
             log("no human input → entering WAITING (all personas paused)")
-            for slug in pool_slugs:
-                jid = get_persona_cron_id(slug)
-                if jid:
-                    cron_pause(slug, jid)
             state.update({
                 "phase": "WAITING", "active_slugs": [], "last_pick_round": 0,
                 "last_human_signature": "", "last_question": "",
             })
             save_state(state)
-        else:
-            log("WAITING (no human input)")
+        # Always enforce: every persona paused.
+        apply_active_set([], pool_slugs)
+        log("WAITING enforced")
         return
 
     # ---- new question while WAITING → first pick ----
@@ -265,7 +267,10 @@ def main() -> None:
     needs_repick = state.get("phase") == "ACTIVE" and rounds_since_pick >= RE_PICK_EVERY_N_ROUNDS
 
     if not new_question and not needs_repick:
-        log(f"ACTIVE — no re-pick needed (rounds_since_pick={rounds_since_pick})")
+        # No re-pick needed BUT still enforce the existing picks every tick,
+        # so manual cron pause/resume drift doesn't break the multi-agent fabric.
+        apply_active_set(state.get("active_slugs", []), pool_slugs)
+        log(f"ACTIVE — enforced existing picks {state.get('active_slugs')} (rounds_since_pick={rounds_since_pick})")
         return
 
     # Build canvas digest (last 10 agent texts) so re-picks see topic evolution
