@@ -1,17 +1,22 @@
 diff --git a/frontend/index.html b/frontend/index.html
-index f87046b..6fc6a78 100644
+index f87046b..d3a5bfb 100644
 --- a/frontend/index.html
 +++ b/frontend/index.html
-@@ -3,7 +3,7 @@
+@@ -3,7 +3,12 @@
  <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 -    <title>Excalidraw POC - Backend API Integration</title>
 +    <title>anet.chat</title>
++    <!-- anet.chat: high-priority preload so ShouShuTi is ready BEFORE
++         Excalidraw's first canvas paint. Without this, the first frame
++         renders in system fallback and only updates when user
++         interacts (selection / hover triggers re-paint). -->
++    <link rel="preload" href="/fonts/ShouShuTi.ttf" as="font" type="font/ttf" crossorigin="anonymous">
      <style>
          body {
              margin: 0;
-@@ -275,6 +275,45 @@
+@@ -275,6 +280,46 @@
          .sync-time {
              color: #666;
          }
@@ -20,48 +25,49 @@ index f87046b..6fc6a78 100644
 +           (Documentation / Blog / Found an issue? / YouTube) */
 +        .HelpDialog__header { display: none !important; }
 +
-+        /* anet.chat: bake ShouShuTi (寿书体) as the CJK fallback font.
-+           Trick: Excalidraw's bundled CJK font is named "Xiaolai" (constant
-+           CJK_HAND_DRAWN_FALLBACK_FONT in @excalidraw/common). By declaring
-+           our local font under the same family name, the browser's font
-+           resolver picks ShouShuTi when Excalidraw asks for "Xiaolai" — no
-+           bundle patching required. */
++        /* anet.chat font setup (v16) — English stays Virgil/Excalifont
++           (Excalidraw's bundled hand-drawn English fonts), Chinese uses
++           ShouShuTi. We register ShouShuTi under both its real name
++           AND under "Xiaolai" (Excalidraw's CJK fallback name), with
++           unicode-range scoped to CJK so it ONLY applies to Chinese.
++
++           font-display: block — force browser to wait up to 3s for the
++           font before falling back. Critical: ensures first canvas paint
++           uses our font, not system default. */
 +        @font-face {
 +            font-family: "Xiaolai";
 +            src: url("/fonts/ShouShuTi.ttf") format("truetype");
 +            font-weight: normal;
 +            font-style: normal;
-+            font-display: swap;
++            font-display: block;
 +            unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+3400-4DBF, U+2E80-2EFF;
 +        }
-+        /* Keep "ShouShuTi" name available too for explicit references. */
 +        @font-face {
 +            font-family: "ShouShuTi";
 +            src: url("/fonts/ShouShuTi.ttf") format("truetype");
-+            font-display: swap;
++            font-display: block;
++            unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+3400-4DBF, U+2E80-2EFF;
 +        }
 +
-+        /* Force the CJK font for any Chinese glyph in the canvas + editor.
-+           Browser uses unicode-range to apply ShouShuTi only to CJK
-+           characters, falling back to Excalidraw's hand-drawn fonts for
-+           ASCII. */
-+        .excalidraw,
-+        .excalidraw .excalidraw-textEditorContainer,
-+        .excalidraw .excalidraw__canvas,
++        /* DOM-side font chain for the editor textarea / inputs / sidebars.
++           This only affects DOM text rendering, NOT the canvas (which uses
++           ctx.font set by Excalidraw). For the canvas we rely on
++           Excalidraw's own font handling + our CJK FontFace registration
++           in App.tsx. */
 +        .excalidraw textarea,
 +        .excalidraw input,
 +        .excalidraw .Stack {
-+            font-family: "ShouShuTi", Virgil, Excalifont, "Cascadia",
-+                         "Xiaolai", -apple-system, BlinkMacSystemFont, sans-serif;
++            font-family: Virgil, Excalifont, "ShouShuTi",
++                         -apple-system, BlinkMacSystemFont, sans-serif;
 +        }
      </style>
  </head>
  <body>
 diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
-index 9c328df..b03b7ca 100644
+index 9c328df..b9e93a6 100644
 --- a/frontend/src/App.tsx
 +++ b/frontend/src/App.tsx
-@@ -1,12 +1,133 @@
+@@ -1,12 +1,125 @@
  import React, { useState, useEffect, useRef } from 'react'
  import {
    Excalidraw,
@@ -73,74 +79,66 @@ index 9c328df..b03b7ca 100644
    exportToSvg
  } from '@excalidraw/excalidraw'
 +
-+// anet.chat: force ShouShuTi for ALL canvas text including CJK fallback.
++// anet.chat font setup (v16) — keep Virgil for English, swap Xiaolai → ShouShuTi for CJK
 +//
-+// 3-step defense in depth:
-+//  (a) Register ShouShuTi as a FontFace named "ShouShuTi" (and also under
-+//      Excalidraw's CJK fallback name "Xiaolai" — see CJK_HAND_DRAWN_FALLBACK_FONT
-+//      in @excalidraw/common).
-+//  (b) Hook CanvasRenderingContext2D.font setter — every assignment from
-+//      Excalidraw includes "Xiaolai" in the font stack for CJK chars.
-+//      We rewrite "Xiaolai" → "ShouShuTi" so the browser font resolver
-+//      picks our @font-face whose src is ShouShuTi.ttf. This bypasses
-+//      Excalidraw's hundreds of hashed Xiaolai-Regular-XXX.woff2 subsets.
-+//  (c) Re-trigger Excalidraw refresh after our font loads so existing
-+//      canvas elements re-render in the new font.
++// User spec: 英文 Virgil, 中文 ShouShuTi.
++// We achieve this by:
 +//
-+// Step (a) + (b) together is what actually makes it work — (a) alone wasn't
-+// enough because Excalidraw subset-loads its own Xiaolai dynamically AFTER
-+// our face register, sometimes winning the resolver race.
-+;(function setupShouShuTi() {
++//  (a) Register ShouShuTi (named both "ShouShuTi" AND "Xiaolai") via FontFace
++//      with unicode-range scoped to CJK so it only matches Chinese glyphs.
++//      `display: 'block'` forces the browser to wait for our font on first paint.
++//
++//  (b) Hook CanvasRenderingContext2D.font setter. Excalidraw assigns
++//      `ctx.font = "20px Virgil, Xiaolai, sans-serif"` when rendering CJK
++//      text. We rewrite ONLY "Xiaolai" → "ShouShuTi" (the registered
++//      family name), leaving Virgil / Excalifont / Cascadia untouched.
++//      English glyphs stay in Virgil; Chinese fallback goes to ShouShuTi.
++//
++//  (c) After fonts ready, call document.fonts.ready then trigger any
++//      mounted excalidrawAPI.refresh() so first-paint glitches are fixed.
++;(function setupAnetFonts() {
 +  try {
 +    const FF = (window as any).FontFace
 +    if (!FF || !document?.fonts) return
-+    // Register explicit "ShouShuTi" face
-+    const ff1 = new FF("ShouShuTi", "url(/fonts/ShouShuTi.ttf) format('truetype')",
-+                      { display: "swap" })
-+    ff1.load().then((loaded: FontFace) => {
-+      document.fonts.add(loaded)
-+      console.log("[anet] ShouShuTi font face added")
-+    }).catch((e: unknown) => console.warn("[anet] ShouShuTi load failed:", e))
 +
-+    // Also register under "Xiaolai" with FULL CJK unicode-range as a safety net
-+    const ff2 = new FF(
-+      "Xiaolai",
-+      "url(/fonts/ShouShuTi.ttf) format('truetype')",
-+      {
-+        unicodeRange: "U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+3400-4DBF, U+2E80-2EFF",
-+        display: "swap",
-+      },
-+    )
-+    ff2.load().then((loaded: FontFace) => document.fonts.add(loaded)).catch(() => {})
++    // (a) Register ShouShuTi under BOTH names — same .ttf, both scoped to CJK
++    const cjkRange = "U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+3400-4DBF, U+2E80-2EFF"
++    for (const name of ["ShouShuTi", "Xiaolai"]) {
++      const ff = new FF(
++        name,
++        "url(/fonts/ShouShuTi.ttf) format('truetype')",
++        { unicodeRange: cjkRange, display: "block" },
++      )
++      ff.load().then((loaded: FontFace) => {
++        document.fonts.add(loaded)
++        console.log(`[anet] ${name} font face added (CJK-scoped)`)
++      }).catch((e: unknown) => console.warn(`[anet] ${name} load failed:`, e))
++    }
 +
-+    // ── Step (b): hook ctx.font setter ────────────────────────────────
-+    // Every <canvas> draws text via CanvasRenderingContext2D.font setter.
-+    // We intercept and rewrite the font stack — replace any "Xiaolai" /
-+    // 'Xiaolai' / "Virgil" reference with "ShouShuTi" so canvas rendering
-+    // uses our shape data.
++    // (b) Hook ctx.font setter — ONLY rewrite Xiaolai → ShouShuTi
 +    const proto = (window as any).CanvasRenderingContext2D?.prototype
 +    if (proto && !proto.__anetFontHooked) {
 +      const desc = Object.getOwnPropertyDescriptor(proto, "font")
 +      if (desc && desc.set) {
 +        const originalSet = desc.set
++        let firstLogShown = false
 +        Object.defineProperty(proto, "font", {
 +          configurable: true,
 +          get: desc.get,
 +          set(value: any) {
-+            if (typeof value === "string") {
-+              // Rewrite font family names. We use ShouShuTi for ALL handwritten
-+              // and CJK rendering. Excalidraw's other fonts (Cascadia mono,
-+              // Helvetica sans) are kept as-is.
-+              value = value
-+                .replace(/(['"]?)Xiaolai\1/g, "ShouShuTi")
-+                .replace(/(['"]?)Virgil\1/g, "ShouShuTi")
-+                .replace(/(['"]?)Excalifont\1/g, "ShouShuTi")
++            if (typeof value === "string" && value.includes("Xiaolai")) {
++              const rewritten = value.replace(/(['"]?)Xiaolai\1/g, "ShouShuTi")
++              if (!firstLogShown) {
++                console.log("[anet] font hook intercepting:", value, "→", rewritten)
++                firstLogShown = true
++              }
++              value = rewritten
 +            }
 +            originalSet.call(this, value)
 +          },
 +        })
 +        proto.__anetFontHooked = true
-+        console.log("[anet] CanvasRenderingContext2D.font hook installed")
++        console.log("[anet] CanvasRenderingContext2D.font hook installed (Xiaolai-only)")
 +      }
 +    }
 +  } catch (e) {
@@ -195,15 +193,27 @@ index 9c328df..b03b7ca 100644
  import type { ExcalidrawElement, NonDeleted, NonDeletedExcalidrawElement } from '@excalidraw/excalidraw/types/element/types'
  import { convertMermaidToExcalidraw, DEFAULT_MERMAID_CONFIG } from './utils/mermaidConverter'
  import type { MermaidConfig } from '@excalidraw/mermaid-to-excalidraw'
-@@ -347,6 +468,7 @@ function App(): JSX.Element {
+@@ -347,6 +460,19 @@ function App(): JSX.Element {
    useEffect(() => {
      if (excalidrawAPI) {
        loadExistingElements()
 +      loadPreBakedLibraries(excalidrawAPI)
++
++      // v16: once our ShouShuTi face finishes loading, force Excalidraw
++      // to re-measure + re-render so the canvas updates with the new
++      // font for any element drawn before the font was ready.
++      ;(document as any).fonts?.ready?.then(() => {
++        try {
++          excalidrawAPI.refresh()
++          console.log('[anet] fonts.ready → excalidrawAPI.refresh()')
++        } catch (e) {
++          console.warn('[anet] refresh after fonts.ready failed:', e)
++        }
++      })
  
        // Ensure WebSocket is connected for real-time updates
        if (!isConnected) {
-@@ -837,6 +959,10 @@ function App(): JSX.Element {
+@@ -837,6 +963,10 @@ function App(): JSX.Element {
    const clearCanvas = async (): Promise<void> => {
      if (excalidrawAPI) {
        try {
@@ -214,7 +224,7 @@ index 9c328df..b03b7ca 100644
          // Get all current elements and delete them from backend
          const response = await fetch('/api/elements')
          const result: ApiResponse = await response.json()
-@@ -868,7 +994,7 @@ function App(): JSX.Element {
+@@ -868,7 +998,7 @@ function App(): JSX.Element {
      <div className="app">
        {/* Header */}
        <div className="header">
@@ -223,7 +233,7 @@ index 9c328df..b03b7ca 100644
          <div className="controls">
            <div className="status">
              <div className={`status-dot ${isConnected ? 'status-connected' : 'status-disconnected'}`}></div>
-@@ -929,7 +1055,28 @@ function App(): JSX.Element {
+@@ -929,7 +1059,28 @@ function App(): JSX.Element {
                  viewBackgroundColor: '#ffffff'
                }
              }}
