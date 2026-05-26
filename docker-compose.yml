@@ -20,11 +20,16 @@ services:
     container_name: anet-souls
     environment:
       - CANVAS_URL=http://canvas:3000
-      # Primary LLM — MiniMax (Anthropic-compatible)
+      # PRIMARY LLM — OpenAI Responses (gpt-5.4 via tokhubs)
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL:-https://tokhubs.com}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-5.4}
+      - OPENAI_REASONING_EFFORT=${OPENAI_REASONING_EFFORT:-xhigh}
+      # 1st FALLBACK — MiniMax (Anthropic-compatible)
       - ANTHROPIC_BASE_URL=${ANTHROPIC_BASE_URL}
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
       - ANTHROPIC_MODEL=${ANTHROPIC_MODEL}
-      # Fallback LLM — Doubao (OpenAI-Responses API, schema-translated)
+      # 2nd FALLBACK — Doubao Responses API
       - DOUBAO_RESPONSES_URL=${DOUBAO_RESPONSES_URL:-https://ark.cn-beijing.volces.com/api/v3/responses}
       - DOUBAO_RESPONSES_API_KEY=${DOUBAO_RESPONSES_API_KEY}
       - DOUBAO_RESPONSES_DEFAULT_MODEL=${DOUBAO_RESPONSES_DEFAULT_MODEL:-doubao-seed-2-0-pro-260215}

@@ -56,8 +56,16 @@ DOUBAO_MODEL = os.environ.get("DOUBAO_RESPONSES_DEFAULT_MODEL",
                               "doubao-seed-2-0-pro-260215")
 DOUBAO_AVAILABLE = bool(DOUBAO_KEY)
 
+# tokhubs / OpenAI Responses (gpt-5.4) — primary in chain.
+OPENAI_BASE = (os.environ.get("OPENAI_BASE_URL") or "https://tokhubs.com").rstrip("/")
+OPENAI_KEY = os.environ.get("OPENAI_API_KEY", "")
+OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.4")
+OPENAI_REASONING_EFFORT = os.environ.get("OPENAI_REASONING_EFFORT", "xhigh")
+OPENAI_AVAILABLE = bool(OPENAI_KEY)
+
 # Health tracker — globally shared across all LLM calls.
 PROVIDER_HEALTH = {
+    "openai":  {"consecutive_fails": 0, "unhealthy_until": 0.0},
     "minimax": {"consecutive_fails": 0, "unhealthy_until": 0.0},
     "doubao":  {"consecutive_fails": 0, "unhealthy_until": 0.0},
 }
@@ -238,6 +246,8 @@ class State:
     system_active: bool = False
     last_curator_round: int = 0
     last_re_moderation_round: int = 0
+    # v3 / anet-souls-v2: SYNTHESIS phase trigger guard (so we run it once).
+    synthesis_fired: bool = False
     # The signature of canvas content snapshot at the time of re-moderation, used to
     # avoid double-fires if the round counter doesn't advance.
 
@@ -402,11 +412,66 @@ async def _call_minimax(system_prompt: str, user_prompt: str,
     return "\n".join(text_blocks).strip()
 
 
+def _parse_responses_output(data: dict) -> str:
+    """Common parser for OpenAI/Doubao Responses-API responses.
+    output[].content[].text  OR  output_text  OR  choices[0].message.content"""
+    parts: list[str] = []
+    for out in data.get("output", []):
+        if out.get("type") != "message":
+            continue
+        for c in out.get("content", []):
+            t = c.get("text")
+            if isinstance(t, str):
+                parts.append(t)
+    if parts:
+        return "\n".join(parts).strip()
+    ot = data.get("output_text")
+    if isinstance(ot, str):
+        return ot.strip()
+    # Some Responses-API impls echo Chat Completions shape — accept it too.
+    for choice in data.get("choices", []):
+        msg = choice.get("message") or {}
+        c = msg.get("content")
+        if isinstance(c, str):
+            parts.append(c)
+    return ("\n".join(parts)).strip()
+
+
+async def _call_openai_responses(system_prompt: str, user_prompt: str,
+                                  client: httpx.AsyncClient, max_tokens: int) -> str:
+    """OpenAI Responses API (tokhubs gpt-5.4) — primary provider.
+
+    Note: tokhubs's gateway returns 502 when the `reasoning_effort` field is
+    sent (it forces internal defaults). We omit it entirely. If the user
+    needs explicit reasoning effort, they can set OPENAI_REASONING_EFFORT
+    in the env AND we'll try it — but the default skip avoids the 502 trap.
+    """
+    payload = {
+        "model": OPENAI_MODEL,
+        "instructions": system_prompt,
+        "input": user_prompt,
+        "max_output_tokens": min(max_tokens, 16384),
+    }
+    # Only include reasoning_effort if explicitly requested via env (it can
+    # break tokhubs — see comment above). Default: skip.
+    if OPENAI_REASONING_EFFORT and OPENAI_REASONING_EFFORT.lower() != "default":
+        payload["reasoning_effort"] = OPENAI_REASONING_EFFORT
+    r = await client.post(
+        f"{OPENAI_BASE}/v1/responses",
+        headers={
+            "Authorization": f"Bearer {OPENAI_KEY}",
+            "Content-Type": "application/json",
+        },
+        json=payload,
+        timeout=FAILOVER_TIMEOUT_S,
+    )
+    r.raise_for_status()
+    return _parse_responses_output(r.json())
+
+
 async def _call_doubao(system_prompt: str, user_prompt: str,
                        client: httpx.AsyncClient, max_tokens: int) -> str:
-    """Doubao uses an OpenAI-Responses-style API (not Anthropic Messages).
-    We translate the Anthropic payload to its `instructions` + `input` shape
-    and parse the `output[].content[].text` response back to a plain string."""
+    """Doubao Responses API — last-resort fallback."""
     payload = {
         "model": DOUBAO_MODEL,
         "instructions": system_prompt,
@@ -423,24 +488,7 @@ async def _call_doubao(system_prompt: str, user_prompt: str,
         timeout=60.0,
     )
     r.raise_for_status()
-    data = r.json()
-    # Doubao mirrors OpenAI Responses output: a list of "message" outputs,
-    # each carrying a list of content parts. Pull every text part out.
-    parts: list[str] = []
-    for out in data.get("output", []):
-        if out.get("type") != "message":
-            continue
-        for c in out.get("content", []):
-            t = c.get("text")
-            if isinstance(t, str):
-                parts.append(t)
-    if parts:
-        return "\n".join(parts).strip()
-    # Last-ditch fallback: some SDK variants expose `output_text` shortcut.
-    ot = data.get("output_text")
-    if isinstance(ot, str):
-        return ot.strip()
-    return ""
+    return _parse_responses_output(r.json())
 
 
 def _provider_healthy(name: str) -> bool:
@@ -464,38 +512,57 @@ async def call_llm(system_prompt: str, user_prompt: str, client: httpx.AsyncClie
                    max_tokens: int = 8000) -> str:
     """Provider-aware LLM call with automatic fallback.
 
-    Order:  MiniMax (primary) → Doubao (fallback, OpenAI-Responses translated).
-    Skips any provider currently in cooldown. Failures bump health counters.
+    Chain order: OpenAI/tokhubs (gpt-5.4)  →  MiniMax  →  Doubao
+    Each tier is skipped if currently in cooldown. Consecutive failures
+    drive cooldown windows.
     """
-    # Primary: MiniMax (Anthropic-compatible)
+    last_exc: Optional[Exception] = None
+
+    # ── 1. Primary: OpenAI/tokhubs gpt-5.4 ──────────────────────────────
+    if OPENAI_AVAILABLE and _provider_healthy("openai"):
+        try:
+            txt = await _call_openai_responses(system_prompt, user_prompt, client, max_tokens)
+            if txt:
+                _record_success("openai")
+                return txt
+            _record_failure("openai", RuntimeError("empty response"))
+        except Exception as exc:
+            last_exc = exc
+            _record_failure("openai", exc)
+    elif not OPENAI_AVAILABLE:
+        pass  # silent: not configured
+    else:
+        log(f"[provider] openai in cooldown, trying minimax")
+
+    # ── 2. Fallback: MiniMax (Anthropic-compatible) ─────────────────────
     if _provider_healthy("minimax"):
         try:
             txt = await _call_minimax(system_prompt, user_prompt, client, max_tokens)
-            _record_success("minimax")
-            return txt
-        except (httpx.TimeoutException, httpx.NetworkError) as exc:
-            _record_failure("minimax", exc)
-        except httpx.HTTPStatusError as exc:
-            # 4xx auth/budget = "broken" (cool down). 5xx = "fail and retry".
-            _record_failure("minimax", exc)
+            if txt:
+                _record_success("minimax")
+                log(f"[provider] served via minimax")
+                return txt
+            _record_failure("minimax", RuntimeError("empty response"))
         except Exception as exc:
+            last_exc = exc
             _record_failure("minimax", exc)
     else:
-        log(f"[provider] minimax in cooldown, going straight to doubao")
+        log(f"[provider] minimax in cooldown, trying doubao")
 
-    # Fallback: Doubao
+    # ── 3. Last resort: Doubao ──────────────────────────────────────────
     if DOUBAO_AVAILABLE and _provider_healthy("doubao"):
         try:
             txt = await _call_doubao(system_prompt, user_prompt, client, max_tokens)
-            _record_success("doubao")
-            log(f"[provider] served via doubao")
-            return txt
+            if txt:
+                _record_success("doubao")
+                log(f"[provider] served via doubao")
+                return txt
+            _record_failure("doubao", RuntimeError("empty response"))
         except Exception as exc:
+            last_exc = exc
             _record_failure("doubao", exc)
-    elif not DOUBAO_AVAILABLE:
-        log(f"[provider] no DOUBAO_RESPONSES_API_KEY — cannot fail over")
 
-    raise RuntimeError("all providers failed")
+    raise RuntimeError(f"all providers failed: {last_exc}")
 
 
 def extract_json(text: str) -> Optional[dict]:
@@ -602,15 +669,17 @@ def action_to_element(action: dict, color: str) -> Optional[dict]:
 # --------------------------------------------------------------------------------------
 PHASE_TABLE = [
     (6,  "BRAINSTORM",
-     "找 1 个 hot point，punchy 反应。**不要一次性 dump 5 条角度**——每轮最多 1-2 个 action，1 行短字就够。"),
+     "找 1 个 hot point，punchy 反应。**不要一次性 dump 5 条角度**——每轮最多 1-2 个 action，1 行短字就够。"
+     "**禁止画箭头**——只写 text。"),
     (12, "DISCUSSION",
-     "盯住别人某句具体发言：在它旁边写短评，arrow 直接指它（终点落在它的 bbox 内）。≤ 2 actions/turn。"),
+     "盯住别人某句具体发言：在它**旁边**（≥ 60px 距离）写短评回应。**不要画箭头**——读者自己能看出邻近关系。≤ 2 actions/turn。"),
     (20, "DEBATE",
-     "找最大分歧点，**短评 + arrow** 攻击/支持具体观点。需要加重时 fontSize 22-24。**严禁画空框框作装饰**。"),
+     "找最大分歧点，写一行锐评回应。需要加重时 fontSize 22-24。**禁止画框、禁止画箭头**。"),
     (30, "STRUCTURE",
-     "进入 Diagram zone（y ≥ 900）：用**带 text 的** rectangle / diamond + arrow 链画 flowchart / mindmap / 架构图。把碎碎念升级成结构。"),
+     "进入 Diagram zone（y ≥ 900）：用**带 text 的** rectangle/diamond 画 flowchart/mindmap。**这是少数允许 arrow 的阶段**，连接节点用——禁止单纯指指点点的装饰箭头。"),
     (10**9, "SYNTHESIS",
-     "Conclusion 时刻：前缀 'Conclusion:' + fontSize 24-28 的 text，**不要画框**。"),
+     "Conclusion 时刻：前缀 'Conclusion:' + fontSize 24-28 的 text，**不要画框、不要画箭头**。"
+     "**如果画板上已经有 ≥ 3 条 'Conclusion:' text 了，立即 SILENT (返回 actions:[]）——讨论已经收口，再加是噪音**。"),
 ]
 
 
@@ -752,17 +821,62 @@ def build_user_prompt(state: State, slot: str, elements: list[dict],
             "discovered a genuinely new angle you haven't expressed yet.\n"
         )
 
+    # v3: build a 4-quadrant density map around the user question so the
+    # agent can place its new element in the EMPTIEST direction. Avoids the
+    # "vertical column streak" failure mode where everyone piles below.
+    human_els_now = [e for e in elements
+                     if not is_header(e.get("id", ""))
+                     and author_of(e, active_set) == "human"]
+    if human_els_now:
+        hx = sum(e.get("x", 0) for e in human_els_now) / len(human_els_now)
+        hy = sum(e.get("y", 0) for e in human_els_now) / len(human_els_now)
+    else:
+        hx, hy = 600.0, 400.0
+    quad_counts = {"NE (上右)": 0, "NW (上左)": 0, "SE (下右)": 0, "SW (下左)": 0}
+    for e in elements:
+        if is_header(e.get("id", "")):
+            continue
+        ex, ey = e.get("x", 0), e.get("y", 0)
+        if ex >= hx and ey < hy:   quad_counts["NE (上右)"] += 1
+        elif ex < hx and ey < hy:  quad_counts["NW (上左)"] += 1
+        elif ex >= hx and ey >= hy: quad_counts["SE (下右)"] += 1
+        else:                       quad_counts["SW (下左)"] += 1
+    quad_lines = "\n".join(f"  - {q}: {c} elements" for q, c in
+                           sorted(quad_counts.items(), key=lambda kv: kv[1]))
+    empty_quads = [q for q, c in quad_counts.items()
+                   if c == min(quad_counts.values())]
+
+    # v3: detect Conclusion saturation — count text elements starting with
+    # "Conclusion:" (any agent). If 3+ exist, the discussion is closed.
+    conclusion_count = 0
+    for e in elements:
+        if e.get("type") != "text" or is_header(e.get("id", "")):
+            continue
+        t = element_text(e).lstrip()
+        if t.lower().startswith("conclusion") or t.startswith("结论"):
+            conclusion_count += 1
+
+    conclusion_block = ""
+    if conclusion_count >= 3:
+        conclusion_block = (
+            f"\n[⚠️ CONCLUSION SATURATED — already {conclusion_count} 'Conclusion:' "
+            f"texts on canvas]\nDiscussion is closed. **DO NOT write another Conclusion**.\n"
+            f"Default = SILENCE (actions: []). Only speak if user just posted a NEW question.\n"
+        )
+
     if is_tidy:
         closing = "You are in a TIDY-UP turn — output ONLY move/delete actions for your overlapping own elements."
     else:
         closing = (
             "[BEHAVIORAL EXPECTATION] You are NOT writing an essay.\n"
-            "- Default: 1-2 actions per turn (NOT 5).\n"
+            "- Default: **1 action** per turn. Two is the absolute max.\n"
+            "- **Avoid arrows.** Default to plain text only. Arrows allowed ONLY in STRUCTURE phase\n"
+            "  for connecting flowchart/mindmap nodes — never as decoration or 'pointing'.\n"
+            "- **Spread, don't streak.** Pick the emptiest quadrant (see [QUADRANT DENSITY] below)\n"
+            "  and place at radius 250-450 from the centroid in that direction.\n"
             "- Find ONE hot point on the canvas you have a unique angle on — react PUNCHY.\n"
-            "- Best moves: (a) `dashed` rectangle around someone's claim + short comment + `arrow` to it;\n"
-            "             (b) ONE short text giving a NEW angle in your lane;\n"
-            "             (c) silence (actions: []) — perfectly valid.\n"
-            "- BAD pattern: 4-5 parallel texts in a column — formulaic AI failure mode.\n"
+            "- Silence (`actions: []`) is the strong default when you have nothing punchy to add.\n"
+            "- BAD: 4-5 parallel texts in a vertical column. BAD: arrows pointing at nothing.\n"
             "- Stay in character (use your signature vocabulary)."
         )
 
@@ -772,7 +886,12 @@ Other active personas:
 {others_block}
 
 Round: {state.round_count + (0 if is_tidy else 1)}    Phase: {phase_name}
-Phase guidance: {phase_guidance}{tidy_marker}{stagnant_block}
+Phase guidance: {phase_guidance}{tidy_marker}{stagnant_block}{conclusion_block}
+
+[QUADRANT DENSITY around the user question @ ({hx:.0f},{hy:.0f})]
+{quad_lines}
+→ Place your new element in one of the LEAST-DENSE quadrant(s): {', '.join(empty_quads)}
+   r = 250-450 from question centroid in that direction.
 
 User's question / canvas context (paraphrased):
 "{state.user_question_summary or '(none yet — work from canvas content directly)'}"
@@ -1463,6 +1582,7 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
                 state.system_active = False
                 state.last_curator_round = 0
                 state.last_re_moderation_round = 0
+                state.synthesis_fired = False        # ready for next discussion
                 for p in state.pool:
                     state.seen_ids[p.slug] = set()
             await asyncio.sleep(2.0)
@@ -1501,6 +1621,7 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
                                 state.last_tidy_trigger_round = 0
                                 state.last_question_signature = sig
                                 state.last_canvas_change_ts = time.time()
+                                state.synthesis_fired = False
                                 # v2: kick off the first persona IMMEDIATELY so the
                                 # user sees a reaction within seconds instead of
                                 # waiting for the next :03/:17/:25 slot tick.
@@ -1510,6 +1631,24 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
                                 asyncio.create_task(agent_tick("B", state, client))
                                 await asyncio.sleep(0.5)
                                 asyncio.create_task(agent_tick("C", state, client))
+        # v3: SYNTHESIS auto-trigger. Once 3+ "Conclusion:" texts pile up on
+        # the canvas, the discussion is closed. Two picked agents do final
+        # work: one writes a long-form summary on the left side, one builds
+        # a mind-map on the right. Then all agent crons pause (FROZEN state)
+        # until the canvas is cleared / new question arrives.
+        if state.phase == "ACTIVE":
+            conc = sum(
+                1 for e in elements
+                if e.get("type") == "text"
+                and not is_header(e.get("id", ""))
+                and (element_text(e).lstrip().lower().startswith("conclusion")
+                     or element_text(e).lstrip().startswith("结论"))
+            )
+            if conc >= 3 and not state.synthesis_fired:
+                state.synthesis_fired = True
+                log(f"watcher: {conc} conclusions detected — triggering SYNTHESIS")
+                asyncio.create_task(run_synthesis(state, client))
+
         await asyncio.sleep(1.0)
 
 
@@ -1530,6 +1669,125 @@ async def scheduler(state: State, client: httpx.AsyncClient) -> None:
                     state.last_fired[slot] = ts
                     asyncio.create_task(agent_tick(slot, state, client))
         await asyncio.sleep(1.0)
+
+
+# --------------------------------------------------------------------------------------
+# SYNTHESIS phase — closing ceremony when conclusions saturate
+# --------------------------------------------------------------------------------------
+async def run_synthesis(state: State, client: httpx.AsyncClient) -> None:
+    """When the discussion converges (3+ Conclusion: texts), freeze normal
+    agent cron and run a final two-step closing:
+      step 1: ONE picked agent writes a long-form summary at the left side
+              (x=40-650, y=1300-1900) — paragraph form, 80-150 chars.
+      step 2: ANOTHER picked agent builds a mind-map on the right
+              (x=700-1380, y=1300-1900) — center ellipse + 4-6 radiating
+              labeled child ellipses (no decorative arrows — just the
+              radial links inherent to the mind-map shape).
+    After both run, state.phase becomes 'FROZEN' so no further agent_tick
+    fires until canvas is cleared or a new human question appears.
+    """
+    state.system_active = True   # halt scheduled ticks
+    state.phase = "SYNTHESIS"
+    try:
+        active_slots = [s for s in ["A", "B", "C"] if state.active.get(s)]
+        if len(active_slots) < 2:
+            log("[synthesis] need >= 2 active personas, skipping")
+            return
+
+        # pick summarizer (most-verbose agent) + mindmapper (the other)
+        elements = await canvas_get_elements(client)
+        author_counts: dict[str, int] = {}
+        active_set_now = active_colors(state)
+        for e in elements:
+            if is_header(e.get("id", "")):
+                continue
+            sc = (e.get("strokeColor") or "").lower()
+            if sc in active_set_now:
+                author_counts[sc] = author_counts.get(sc, 0) + 1
+        # sort by element count desc
+        ranked_slugs = sorted(
+            [(slug, author_counts.get(state.pool_by_slug[slug].color.lower(), 0))
+             for slug in state.active.values() if slug],
+            key=lambda kv: -kv[1],
+        )
+        summarizer_slug = ranked_slugs[0][0]
+        mindmapper_slug = ranked_slugs[1][0]
+        log(f"[synthesis] summarizer={summarizer_slug}  mindmapper={mindmapper_slug}")
+
+        # ── 1. long summary ────────────────────────────────────────────
+        sum_persona = state.pool_by_slug[summarizer_slug]
+        canvas_digest = render_canvas_digest(elements, active_set_now)
+        sum_user = f"""[SYNTHESIS — long summary]
+
+The discussion has reached convergence (3+ Conclusion: lines). The other
+active personas wrote the bulk of opinions. As the most-vocal voice,
+you write the closing paragraph.
+
+Constraints:
+- ONE create_element call with a single text element.
+- Place at x=40, y=1300 (left side, below diagram zone).
+- fontSize=18, width=620 (allow line-wrap by inserting \\n between sentences).
+- text: 80-150 Chinese characters (or English equivalent), prose form.
+- Stay in YOUR persona voice. Reference 1-2 specific Conclusion lines from
+  the canvas. Add the missing thread that ties them together.
+- strokeColor: {sum_persona.color}
+- DO NOT add prefix "Conclusion:" — this IS the summary, not another bullet.
+
+Canvas digest:
+{canvas_digest}
+
+Output the JSON {{actions:[{{type:"text", x:40, y:1300, text:"...", fontSize:18}}]}}.
+"""
+        try:
+            text1 = await call_llm(sum_persona.system_prompt, sum_user, client, max_tokens=4000)
+            obj1 = extract_json(text1) or {}
+            for action in (obj1.get("actions") or [])[:1]:
+                el = action_to_element(action, sum_persona.color)
+                if el:
+                    await canvas_post(client, el)
+            log(f"[synthesis] summary posted by {summarizer_slug}")
+        except Exception as exc:
+            log(f"[synthesis] summary failed: {exc}")
+
+        await asyncio.sleep(2.0)
+
+        # ── 2. mind-map ────────────────────────────────────────────────
+        mm_persona = state.pool_by_slug[mindmapper_slug]
+        mm_user = f"""[SYNTHESIS — mind map]
+
+Build a mind-map of the discussion's main ideas, placed in the bottom-right
+area (x range 700-1380, y range 1300-1900).
+
+Structure:
+- ONE central ellipse at (1040, 1500), width=180, height=80, with the
+  CORE topic of the discussion (8-12 chars) as text.
+- 4-6 child ellipses around it (width=140, height=70), each labeled with
+  one main insight from the canvas (8-15 chars). Place them at angles
+  spread evenly: 0°, 60°, 120°, 180°, 240°, 300° at radius 250.
+- ONE arrow from the center ellipse to each child (this is the rare
+  allowed arrow case — they form the mind-map structure).
+- Total ~10-12 actions (1 center + 5 children + 5 arrows).
+- All elements in strokeColor: {mm_persona.color}.
+
+Canvas digest (use this to pick what to highlight):
+{canvas_digest}
+
+Output JSON {{actions:[...]}} via batch (rectangle/ellipse with TEXT, arrow with start/end coords).
+"""
+        try:
+            text2 = await call_llm(mm_persona.system_prompt, mm_user, client, max_tokens=4000)
+            obj2 = extract_json(text2) or {}
+            current = await canvas_get_elements(client)
+            counts = await apply_actions(client, obj2.get("actions") or [],
+                                         mm_persona, current, is_tidy=False)
+            log(f"[synthesis] mind-map by {mindmapper_slug}: {counts}")
+        except Exception as exc:
+            log(f"[synthesis] mind-map failed: {exc}")
+
+        state.phase = "FROZEN"
+        log("[synthesis] done — phase=FROZEN. Clear canvas or post new question to resume.")
+    finally:
+        state.system_active = False
 
 
 # --------------------------------------------------------------------------------------
