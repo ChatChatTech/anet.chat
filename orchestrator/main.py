@@ -1478,73 +1478,55 @@ Output schema:
 # --------------------------------------------------------------------------------------
 # Header painting
 # --------------------------------------------------------------------------------------
-async def clear_header(client: httpx.AsyncClient) -> None:
-    elements = await canvas_get_elements(client)
-    for e in elements:
-        if is_header(e["id"]):
-            await canvas_delete(client, e["id"])
+async def cleanup_legacy_header_elements(client: httpx.AsyncClient) -> None:
+    """v18: caption is now a DOM overlay on the frontend (see AnetCaption in
+    App.tsx). We never create canvas-side header-* elements anymore. This
+    one-shot cleanup at startup deletes any leftover from previous versions.
+    """
+    try:
+        elements = await canvas_get_elements(client)
+        n = 0
+        for e in elements:
+            if is_header(e["id"]):
+                await canvas_delete(client, e["id"])
+                n += 1
+        if n:
+            log(f"cleanup: removed {n} legacy header-* elements (caption is now DOM)")
+    except Exception as exc:
+        log(f"cleanup_legacy_header_elements failed: {exc}")
 
 
-async def paint_empty_header(client: httpx.AsyncClient) -> None:
-    await clear_header(client)
-    H = HEADER
-    payloads = [
-        {"id": "header-frame", "type": "rectangle",
-         "x": H["x"], "y": H["y"], "width": H["w"], "height": H["h"],
-         "strokeColor": HEADER_BLACK, "backgroundColor": "transparent",
-         "strokeWidth": 2, "locked": True},
-        {"id": "header-title", "type": "text",
-         "x": H["title_x"], "y": H["title_y"],
-         "text": "anet.chat", "fontSize": 24, "fontFamily": "1",
-         "strokeColor": HEADER_BLACK, "locked": True},
-        {"id": "header-logo", "type": "rectangle",
-         "x": H["logo_x"], "y": H["logo_y"],
-         "width": H["logo_w"], "height": H["logo_h"],
-         "strokeColor": HEADER_BLACK, "backgroundColor": "transparent",
-         "strokeWidth": 2, "locked": True},
-    ]
-    for i, ly in enumerate(H["line_ys"]):
-        payloads.append({
-            "id": f"header-line-{i+1}", "type": "line",
-            "x": H["line_x"], "y": ly,
-            "width": H["line_w"], "height": 0,
-            "points": [[0, 0], [H["line_w"], 0]],
-            "strokeColor": HEADER_BLACK, "strokeWidth": 2, "locked": True,
-        })
-    for p in payloads:
-        await canvas_post(client, p)
-        await asyncio.sleep(0.05)
+async def push_caption_state(client: httpx.AsyncClient, state: State) -> None:
+    """POST the current caption state to the canvas server. Frontend's
+    AnetCaption component subscribes to the WS broadcast and re-renders.
+    Idempotent — call it any time state.active or state.phase changes."""
+    payload = {
+        "phase": state.phase,
+        "active": [
+            {
+                "slug": state.pool_by_slug[s].slug,
+                "name": state.pool_by_slug[s].name,
+                "color": state.pool_by_slug[s].color,
+            }
+            for s in [state.active.get("A"), state.active.get("B"), state.active.get("C")]
+            if s
+        ],
+    }
+    try:
+        await client.post(f"{CANVAS_URL}/api/anet/state", json=payload, timeout=5.0)
+    except Exception as exc:
+        log(f"push_caption_state failed: {exc}")
+
+
+# Compat shims — old call sites updated to pass state. These delegate
+# to push_caption_state so the rest of the code can stay structurally similar.
+async def paint_empty_header(client: httpx.AsyncClient, state: "State | None" = None) -> None:
+    if state is not None:
+        await push_caption_state(client, state)
 
 
 async def paint_active_header(client: httpx.AsyncClient, state: State) -> None:
-    H = HEADER
-    elements = await canvas_get_elements(client)
-    overlay_ids = {f"header-name-{i}" for i in (1, 2, 3)} | {f"header-stripe-{i}" for i in (1, 2, 3)}
-    for e in elements:
-        if e["id"] in overlay_ids:
-            await canvas_delete(client, e["id"])
-
-    stripe_h = H["logo_h"] // 3
-    for i, slot in enumerate(["A", "B", "C"]):
-        slug = state.active.get(slot)
-        if not slug:
-            continue
-        p = state.pool_by_slug[slug]
-        ly = H["line_ys"][i]
-        await canvas_post(client, {
-            "id": f"header-name-{i+1}", "type": "text",
-            "x": H["line_x"], "y": ly + H["name_y_offset"],
-            "text": f"{i+1}. {p.name}", "fontSize": 18, "fontFamily": "1",
-            "strokeColor": p.color, "locked": True,
-        })
-        await canvas_post(client, {
-            "id": f"header-stripe-{i+1}", "type": "rectangle",
-            "x": H["logo_x"] + 4, "y": H["logo_y"] + 4 + i * stripe_h,
-            "width": H["logo_w"] - 8, "height": max(stripe_h - 2, 6),
-            "strokeColor": p.color, "backgroundColor": p.color,
-            "fillStyle": "solid", "strokeWidth": 1, "locked": True,
-        })
-        await asyncio.sleep(0.05)
+    await push_caption_state(client, state)
 
 
 # --------------------------------------------------------------------------------------
@@ -1566,38 +1548,19 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
             state.last_canvas_id_set = current_id_set
 
         non_header = [e for e in elements if not is_header(e.get("id", ""))]
-        header_count = len(elements) - len(non_header)
 
-        # v15: Always-on header self-heal. The 6 canonical header IDs must
-        # always exist. If any is missing (user manually deleted, or some
-        # race condition), repaint just the missing ones. Doesn't reset state.
-        canonical_header_ids = {
-            "header-frame", "header-title", "header-logo",
-            "header-line-1", "header-line-2", "header-line-3",
-        }
-        present_header_ids = {e["id"] for e in elements if is_header(e["id"])}
-        missing_canonical = canonical_header_ids - present_header_ids
-        if missing_canonical and 0 < header_count < 6:
-            # Partial header — only some elements gone. Repaint missing only.
-            log(f"watcher: header partial ({header_count}/6); repainting {len(missing_canonical)} missing")
-            async with state.canvas_write_lock:
-                await paint_empty_header(client)
-
-        # v14: also reset when canvas BODY clears (header now survives Clear Canvas
-        # thanks to locked:true + server-side clear-preserve, so we can't rely on
-        # header_count==0 alone). If we were ACTIVE/SYNTHESIS/FROZEN with content
-        # and now body is empty → user just hit Clear Canvas.
+        # v18: caption is now a DOM overlay (see AnetCaption in App.tsx).
+        # Canvas no longer holds any header-* elements; we never repaint
+        # them per-tick. Detect Clear via "body went from N>0 to 0".
         body_was_cleared = (
-            state.phase in ("ACTIVE", "SYNTHESIS", "FROZEN")
-            and not non_header
-            and state.last_canvas_id_set  # had elements before
+            not non_header
+            and state.last_canvas_id_set         # had elements before
+            and (state.phase != "WAITING_FOR_QUESTION" or state.user_question_summary)
         )
 
-        if header_count == 0 or body_was_cleared:
-            reason = "no header" if header_count == 0 else "body cleared (locked header survived)"
-            log(f"watcher: {reason}. Repainting + resetting state.")
+        if body_was_cleared:
+            log(f"watcher: body cleared. Full reset → WAITING.")
             async with state.canvas_write_lock:
-                await paint_empty_header(client)
                 # v17: FULL reset — clear EVERY piece of agent context.
                 # User clicked Clear → agents must start fresh, no memory of
                 # prior discussion's question / picks / busy flags / fire times.
@@ -1623,6 +1586,8 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
                 # first-fire isn't suppressed by stale last_fired.
                 for slot in state.last_fired:
                     state.last_fired[slot] = 0.0
+            # Update DOM caption: WAITING (empty rows)
+            await push_caption_state(client, state)
             await asyncio.sleep(2.0)
             continue
 
@@ -1916,19 +1881,20 @@ async def main() -> None:
             sys.exit(3)
 
         try:
+            # v18: one-shot cleanup of any legacy canvas-side header-* elements
+            # from prior versions. Caption is DOM-only now.
+            await cleanup_legacy_header_elements(client)
+
             elements = await canvas_get_elements(client)
             non_header = [e for e in elements if not is_header(e.get("id", ""))]
-            if not non_header:
-                log("canvas is empty; painting fresh empty header")
-                await paint_empty_header(client)
-                state.phase = "WAITING_FOR_QUESTION"
-            else:
-                if not any(is_header(e.get("id", "")) for e in elements):
-                    log("canvas has content but no header; painting empty header")
-                    await paint_empty_header(client)
+            if non_header:
+                # Existing body content — prime seen_ids so agents don't react
+                # to elements that were on canvas before we started.
                 for p in pool:
                     state.seen_ids[p.slug] = {e["id"] for e in elements}
-                state.phase = "WAITING_FOR_QUESTION"
+            state.phase = "WAITING_FOR_QUESTION"
+            # Initialize the DOM caption to WAITING state.
+            await push_caption_state(client, state)
         except Exception as exc:
             log(f"initial setup failed: {exc}")
 

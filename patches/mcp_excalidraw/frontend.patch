@@ -64,10 +64,10 @@ index f87046b..d3a5bfb 100644
  </head>
  <body>
 diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
-index 9c328df..20a96cf 100644
+index 9c328df..b113829 100644
 --- a/frontend/src/App.tsx
 +++ b/frontend/src/App.tsx
-@@ -1,12 +1,144 @@
+@@ -1,12 +1,259 @@
  import React, { useState, useEffect, useRef } from 'react'
  import {
    Excalidraw,
@@ -199,6 +199,121 @@ index 9c328df..20a96cf 100644
 +  }
 +}
 +
++// ──────────────────────────────────────────────────────────────────────
++// anet.chat caption — fixed DOM overlay (NOT a canvas element).
++// Lives in the top-right of the canvas container. Renders an outer
++// black-stroke frame with 3 underlines + a small color-stripe square,
++// matching the previous canvas-rendered caption but now PERMANENT and
++// UNEDITABLE — it's just a <div>, can't be touched by Excalidraw.
++//
++// Subscribes to:
++//   - GET /api/anet/state on mount (cold-start sync)
++//   - WS message `anet_state_changed` for real-time updates
++// ──────────────────────────────────────────────────────────────────────
++interface AnetActivePersona { slug: string; name: string; color: string }
++interface AnetCaptionState { phase: string; active: AnetActivePersona[] }
++
++function AnetCaption() {
++  const [state, setState] = React.useState<AnetCaptionState>({
++    phase: 'WAITING', active: [],
++  })
++
++  // Initial fetch + WS subscription
++  React.useEffect(() => {
++    let cancelled = false
++    fetch('/api/anet/state')
++      .then(r => r.json())
++      .then(s => { if (!cancelled) setState(s) })
++      .catch(() => {})
++
++    // Listen for the existing WS connection's incoming messages.
++    // We add ANOTHER WS connection scoped to this overlay so we don't
++    // disturb the main App's WS handlers. Lightweight.
++    const wsUrl = `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/`
++    const ws = new WebSocket(wsUrl)
++    ws.onmessage = (ev) => {
++      try {
++        const msg = JSON.parse(ev.data)
++        if (msg?.type === 'anet_state_changed' && msg.state) {
++          setState(msg.state)
++        }
++      } catch {}
++    }
++    return () => { cancelled = true; try { ws.close() } catch {} }
++  }, [])
++
++  const rows = [0, 1, 2]   // always render 3 rows
++  const rowGap = 38
++  const baseRowY = 20
++
++  return (
++    <div
++      style={{
++        position: 'absolute',
++        top: 64,                          // below the page-level top bar
++        right: 16,
++        width: 360,
++        padding: '12px 16px',
++        background: 'rgba(255,255,255,0.97)',
++        border: '2px solid #1e1e1e',
++        borderRadius: 4,
++        boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
++        fontFamily: 'Virgil, Excalifont, "ShouShuTi", sans-serif',
++        pointerEvents: 'none',             // user can't click / drag this
++        userSelect: 'none',
++        zIndex: 100,
++      }}
++    >
++      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
++        <div style={{ fontSize: 22, color: '#1e1e1e', lineHeight: 1 }}>
++          anet.chat
++        </div>
++        {/* Small color-stripe square (logo placeholder).
++            WAITING → hollow black square. ACTIVE → 3 horizontal stripes. */}
++        <div style={{ width: 30, height: 34, border: '2px solid #1e1e1e',
++                       display: 'flex', flexDirection: 'column' }}>
++          {rows.map(i => {
++            const p = state.active[i]
++            return (
++              <div
++                key={i}
++                style={{
++                  flex: 1,
++                  background: p ? p.color : 'transparent',
++                  borderTop: i > 0 ? '1px solid #1e1e1e' : 'none',
++                }}
++              />
++            )
++          })}
++        </div>
++      </div>
++
++      {/* 3 underlined name rows. ACTIVE → colored underline + name on top. */}
++      <div style={{ marginTop: 16 }}>
++        {rows.map(i => {
++          const p = state.active[i]
++          const color = p ? p.color : '#1e1e1e'
++          const label = p ? `${i + 1}. ${p.name}` : ''
++          return (
++            <div key={i} style={{ marginBottom: 14, position: 'relative', height: 22 }}>
++              <div style={{
++                fontSize: 14, color, lineHeight: 1.2,
++                fontWeight: p ? 'normal' : 'normal',
++              }}>
++                {label || ' '}
++              </div>
++              <div style={{
++                position: 'absolute', left: 0, right: 0, bottom: 0,
++                height: p ? 3 : 2, background: color,
++              }} />
++            </div>
++          )
++        })}
++      </div>
++    </div>
++  )
++}
++
 +// Inline website-globe icon for the "Join Agent Network" menu link
 +const websiteIcon = (
 +  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
@@ -212,7 +327,7 @@ index 9c328df..20a96cf 100644
  import type { ExcalidrawElement, NonDeleted, NonDeletedExcalidrawElement } from '@excalidraw/excalidraw/types/element/types'
  import { convertMermaidToExcalidraw, DEFAULT_MERMAID_CONFIG } from './utils/mermaidConverter'
  import type { MermaidConfig } from '@excalidraw/mermaid-to-excalidraw'
-@@ -347,6 +479,19 @@ function App(): JSX.Element {
+@@ -347,6 +594,19 @@ function App(): JSX.Element {
    useEffect(() => {
      if (excalidrawAPI) {
        loadExistingElements()
@@ -232,7 +347,7 @@ index 9c328df..20a96cf 100644
  
        // Ensure WebSocket is connected for real-time updates
        if (!isConnected) {
-@@ -837,6 +982,10 @@ function App(): JSX.Element {
+@@ -837,6 +1097,10 @@ function App(): JSX.Element {
    const clearCanvas = async (): Promise<void> => {
      if (excalidrawAPI) {
        try {
@@ -243,7 +358,7 @@ index 9c328df..20a96cf 100644
          // Get all current elements and delete them from backend
          const response = await fetch('/api/elements')
          const result: ApiResponse = await response.json()
-@@ -868,7 +1017,7 @@ function App(): JSX.Element {
+@@ -868,7 +1132,7 @@ function App(): JSX.Element {
      <div className="app">
        {/* Header */}
        <div className="header">
@@ -252,7 +367,20 @@ index 9c328df..20a96cf 100644
          <div className="controls">
            <div className="status">
              <div className={`status-dot ${isConnected ? 'status-connected' : 'status-disconnected'}`}></div>
-@@ -929,7 +1078,28 @@ function App(): JSX.Element {
+@@ -907,7 +1171,11 @@ function App(): JSX.Element {
+       </div>
+ 
+       {/* Canvas Container */}
+-      <div className="canvas-container">
++      <div className="canvas-container" style={{ position: 'relative' }}>
++        {/* anet.chat caption — DOM overlay on top of Excalidraw canvas.
++            NOT a canvas element — cannot be edited / cleared / moved.
++            Subscribes to /api/anet/state for the 3 currently active personas. */}
++        <AnetCaption />
+         <div
+           onPointerDownCapture={() => {
+             userInteractedRef.current = true
+@@ -929,7 +1197,28 @@ function App(): JSX.Element {
                  viewBackgroundColor: '#ffffff'
                }
              }}
@@ -283,7 +411,7 @@ index 9c328df..20a96cf 100644
        </div>
      </div>
 diff --git a/src/server.ts b/src/server.ts
-index 8404b25..ff6d541 100644
+index 8404b25..b6b6726 100644
 --- a/src/server.ts
 +++ b/src/server.ts
 @@ -365,22 +365,36 @@ app.put('/api/elements/:id', (req: Request, res: Response) => {
@@ -330,3 +458,37 @@ index 8404b25..ff6d541 100644
      });
    } catch (error) {
      logger.error('Error clearing canvas:', error);
+@@ -391,6 +405,33 @@ app.delete('/api/elements/clear', (req: Request, res: Response) => {
+   }
+ });
+ 
++// =====================================================================
++// anet.chat: caption-overlay state (active personas, phase). The caption
++// is rendered as a DOM overlay by the frontend (NOT as canvas elements
++// — so it can't be edited / deleted / accidentally cleared). The
++// orchestrator (anet-souls) POSTs state changes here; frontend polls
++// GET on mount and listens for the WS broadcast on every update.
++// =====================================================================
++interface AnetCaptionState {
++  phase: 'WAITING' | 'ACTIVE' | 'SYNTHESIS' | 'FROZEN';
++  active: Array<{ slug: string; name: string; color: string }>;
++}
++let anetCaptionState: AnetCaptionState = { phase: 'WAITING', active: [] };
++
++app.get('/api/anet/state', (_req: Request, res: Response) => {
++  res.json(anetCaptionState);
++});
++
++app.post('/api/anet/state', (req: Request, res: Response) => {
++  const body = req.body || {};
++  // Accept partial updates
++  if (typeof body.phase === 'string') anetCaptionState.phase = body.phase;
++  if (Array.isArray(body.active))     anetCaptionState.active = body.active;
++  broadcast({ type: 'anet_state_changed', state: anetCaptionState } as any);
++  logger.info(`anet caption state updated: phase=${anetCaptionState.phase} active=${anetCaptionState.active.map((p: any) => p.slug).join(',')}`);
++  res.json({ ok: true, state: anetCaptionState });
++});
++
+ // Delete element
+ app.delete('/api/elements/:id', (req: Request, res: Response) => {
+   try {
