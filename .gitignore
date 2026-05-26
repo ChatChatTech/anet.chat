@@ -43,3 +43,8 @@ docker-compose.hermes.yml
 
 # Local assets (large binaries, regeneratable)
 assets/
+
+# GitHub auth token (never commit)
+GITHUB_TOKEN
+GITHUB_TOKEN.*
+
