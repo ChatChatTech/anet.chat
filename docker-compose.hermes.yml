@@ -36,6 +36,9 @@ services:
       # Pre-built mcp_excalidraw (dist/ + node_modules/) extracted from the
       # mcp-excalidraw-mcp container. Provides node-executable MCP server.
       - ./runtime/mcp_excalidraw:/opt/mcp_excalidraw:ro
+      # Excalidraw libraries (6 .excalidrawlib JSONs) — agents can `terminal
+      # read_file` these and reuse element shapes.
+      - ./refs/excalidraw-libraries:/opt/libraries:ro
     environment:
       - HERMES_UID=1001
       - HERMES_GID=1001

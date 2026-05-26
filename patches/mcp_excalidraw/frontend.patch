@@ -1,5 +1,5 @@
 diff --git a/frontend/index.html b/frontend/index.html
-index f87046b..50a1670 100644
+index f87046b..6fc6a78 100644
 --- a/frontend/index.html
 +++ b/frontend/index.html
 @@ -3,7 +3,7 @@
@@ -11,7 +11,7 @@ index f87046b..50a1670 100644
      <style>
          body {
              margin: 0;
-@@ -275,6 +275,34 @@
+@@ -275,6 +275,45 @@
          .sync-time {
              color: #666;
          }
@@ -20,28 +20,39 @@ index f87046b..50a1670 100644
 +           (Documentation / Blog / Found an issue? / YouTube) */
 +        .HelpDialog__header { display: none !important; }
 +
-+        /* anet.chat: bake ShouShuTi as the default font for Chinese characters.
-+           The font file is served from /fonts/ShouShuTi.ttf (frontend/public/).
-+           We use unicode-range to scope to CJK so Excalidraw's English fonts
-+           (Virgil / Excalifont / Cascadia) are untouched. */
++        /* anet.chat: bake ShouShuTi (寿书体) as the CJK fallback font.
++           Trick: Excalidraw's bundled CJK font is named "Xiaolai" (constant
++           CJK_HAND_DRAWN_FALLBACK_FONT in @excalidraw/common). By declaring
++           our local font under the same family name, the browser's font
++           resolver picks ShouShuTi when Excalidraw asks for "Xiaolai" — no
++           bundle patching required. */
 +        @font-face {
-+            font-family: "ShouShuTi";
++            font-family: "Xiaolai";
 +            src: url("/fonts/ShouShuTi.ttf") format("truetype");
 +            font-weight: normal;
 +            font-style: normal;
 +            font-display: swap;
-+            unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+3400-4DBF;
++            unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+3400-4DBF, U+2E80-2EFF;
++        }
++        /* Keep "ShouShuTi" name available too for explicit references. */
++        @font-face {
++            font-family: "ShouShuTi";
++            src: url("/fonts/ShouShuTi.ttf") format("truetype");
++            font-display: swap;
 +        }
 +
-+        /* Make the Excalidraw canvas + all text elements fall back to
-+           ShouShuTi for any CJK glyphs. The browser uses unicode-range to
-+           pick this font ONLY for Chinese characters, falling back to the
-+           Excalidraw hand-drawn fonts for ASCII text. */
++        /* Force the CJK font for any Chinese glyph in the canvas + editor.
++           Browser uses unicode-range to apply ShouShuTi only to CJK
++           characters, falling back to Excalidraw's hand-drawn fonts for
++           ASCII. */
 +        .excalidraw,
 +        .excalidraw .excalidraw-textEditorContainer,
-+        .excalidraw textarea {
++        .excalidraw .excalidraw__canvas,
++        .excalidraw textarea,
++        .excalidraw input,
++        .excalidraw .Stack {
 +            font-family: "ShouShuTi", Virgil, Excalifont, "Cascadia",
-+                         -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
++                         "Xiaolai", -apple-system, BlinkMacSystemFont, sans-serif;
 +        }
      </style>
  </head>
