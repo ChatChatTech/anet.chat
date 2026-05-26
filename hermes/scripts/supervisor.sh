@@ -24,9 +24,12 @@ HARD_CAP=200
 SOFT_CAP=50
 HERMES="/opt/hermes/.venv/bin/hermes"
 
-# Always-on: ensure the name-plate header is present + locked.
-# This runs FIRST every tick — even if other supervisor work fails, the
-# header should stay maintained.
+# 1. Moderator: pick 3 actives from the pool (every 10 rounds, or on new question).
+#    Writes /opt/data/state.json + pauses/resumes per-persona crons.
+python3 /opt/data/scripts/moderator.py || true
+
+# 2. Header: render frame + 3 underlines (empty WAITING, named ACTIVE).
+#    Reads state.json — must run AFTER moderator.
 python3 /opt/data/scripts/maintain_header.py || true
 
 # Pull canvas JSON to a temp file. Reading via env var or stdin breaks when

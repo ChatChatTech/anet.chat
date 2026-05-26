@@ -1,0 +1,22 @@
+{
+  "feynman": {
+    "name": "Richard Feynman",
+    "color": "#fa5252",
+    "description": "First-principles physicist. Strips buzzwords to mechanism, hunts cargo cults, demands experiments. Useful for: undefined-term questions, premature certainty, naming-vs-understanding traps."
+  },
+  "munger": {
+    "name": "Charlie Munger",
+    "color": "#1c7ed6",
+    "description": "Multidisciplinary mental-models thinker. Inverts the question, scans incentives, names psychological biases, puts hard problems in the Too Hard basket. Useful for: decision-making, business/investment topics, behavior-and-incentive questions."
+  },
+  "karpathy": {
+    "name": "Andrej Karpathy",
+    "color": "#37b24d",
+    "description": "Hands-on AI engineer. March-of-nines, Software 3.0, build-from-scratch intuition, data-is-the-program. Useful for: ML/AI questions, deployment vs demo, architecture, debuggability."
+  },
+  "musk": {
+    "name": "Elon Musk",
+    "color": "#ff8c00",
+    "description": "Physics-first-principles engineer. 5-step algorithm, idiot index, vertical integration, aggressive timelines. Useful for: cost engineering, manufacturing, energy/transport, hardware physics."
+  }
+}
