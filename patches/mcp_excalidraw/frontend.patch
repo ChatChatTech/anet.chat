@@ -58,7 +58,7 @@ index f87046b..6fc6a78 100644
  </head>
  <body>
 diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
-index 9c328df..9aad680 100644
+index 9c328df..903a8dd 100644
 --- a/frontend/src/App.tsx
 +++ b/frontend/src/App.tsx
 @@ -1,12 +1,58 @@
@@ -128,7 +128,18 @@ index 9c328df..9aad680 100644
  
        // Ensure WebSocket is connected for real-time updates
        if (!isConnected) {
-@@ -868,7 +915,7 @@ function App(): JSX.Element {
+@@ -837,6 +884,10 @@ function App(): JSX.Element {
+   const clearCanvas = async (): Promise<void> => {
+     if (excalidrawAPI) {
+       try {
++        // anet.chat: use bulk clear endpoint — server preserves locked: true
++        // (the header name-plate). Falls back to per-element delete if the
++        // bulk endpoint fails.
++        await fetch('/api/elements/clear', { method: 'DELETE' })
+         // Get all current elements and delete them from backend
+         const response = await fetch('/api/elements')
+         const result: ApiResponse = await response.json()
+@@ -868,7 +919,7 @@ function App(): JSX.Element {
      <div className="app">
        {/* Header */}
        <div className="header">
@@ -137,7 +148,7 @@ index 9c328df..9aad680 100644
          <div className="controls">
            <div className="status">
              <div className={`status-dot ${isConnected ? 'status-connected' : 'status-disconnected'}`}></div>
-@@ -929,7 +976,28 @@ function App(): JSX.Element {
+@@ -929,7 +980,28 @@ function App(): JSX.Element {
                  viewBackgroundColor: '#ffffff'
                }
              }}
@@ -167,3 +178,51 @@ index 9c328df..9aad680 100644
          </div>
        </div>
      </div>
+diff --git a/src/server.ts b/src/server.ts
+index 8404b25..ff6d541 100644
+--- a/src/server.ts
++++ b/src/server.ts
+@@ -365,22 +365,36 @@ app.put('/api/elements/:id', (req: Request, res: Response) => {
+ });
+ 
+ // Clear all elements (must be before /:id route)
++// anet.chat patch: skip elements with locked:true so the name-plate header
++// survives both the custom "Clear Canvas" button and the mcp_excalidraw
++// clear_canvas MCP tool. Single-id DELETE is unaffected so the supervisor
++// can still individually delete header elements for repaint.
+ app.delete('/api/elements/clear', (req: Request, res: Response) => {
+   try {
+-    const count = elements.size;
+-    elements.clear();
++    let removed = 0;
++    let kept = 0;
++    for (const [id, el] of Array.from(elements.entries())) {
++      if ((el as any).locked === true) {
++        kept++;
++        continue;
++      }
++      elements.delete(id);
++      removed++;
++    }
+ 
+     broadcast({
+       type: 'canvas_cleared',
+-      timestamp: new Date().toISOString()
+-    });
++      timestamp: new Date().toISOString(),
++      preservedLockedCount: kept
++    } as any);
+ 
+-    logger.info(`Canvas cleared: ${count} elements removed`);
++    logger.info(`Canvas cleared: ${removed} elements removed, ${kept} locked kept`);
+ 
+     res.json({
+       success: true,
+-      message: `Cleared ${count} elements`,
+-      count
++      message: `Cleared ${removed} elements (${kept} locked kept)`,
++      count: removed,
++      kept
+     });
+   } catch (error) {
+     logger.error('Error clearing canvas:', error);

@@ -24,6 +24,18 @@ HARD_CAP=200
 SOFT_CAP=50
 HERMES="/opt/hermes/.venv/bin/hermes"
 
+# 0. Self-heal per-profile gateways. They run as ad-hoc background processes
+#    (`docker exec -d hermes -p X gateway run`) so they die silently on errors
+#    and don't get restarted by s6. Every minute we check + relaunch any that
+#    are missing.
+for p in feynman munger karpathy musk curator; do
+  if ! pgrep -f "hermes -p $p gateway run" > /dev/null 2>&1; then
+    nohup "$HERMES" -p "$p" gateway run \
+      > /opt/data/logs/profile-$p-gateway.log 2>&1 &
+    echo "[supervisor] re-launched $p gateway"
+  fi
+done
+
 # 1. Moderator: pick 3 actives from the pool (every 10 rounds, or on new question).
 #    Writes /opt/data/state.json + pauses/resumes per-persona crons.
 python3 /opt/data/scripts/moderator.py || true
