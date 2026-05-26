@@ -1,5 +1,5 @@
 diff --git a/frontend/index.html b/frontend/index.html
-index f87046b..8ee9364 100644
+index f87046b..6fc6a78 100644
 --- a/frontend/index.html
 +++ b/frontend/index.html
 @@ -3,7 +3,7 @@
@@ -11,7 +11,7 @@ index f87046b..8ee9364 100644
      <style>
          body {
              margin: 0;
-@@ -275,6 +275,10 @@
+@@ -275,6 +275,45 @@
          .sync-time {
              color: #666;
          }
@@ -19,14 +19,49 @@ index f87046b..8ee9364 100644
 +        /* anet.chat: hide Excalidraw help-dialog top header
 +           (Documentation / Blog / Found an issue? / YouTube) */
 +        .HelpDialog__header { display: none !important; }
++
++        /* anet.chat: bake ShouShuTi (寿书体) as the CJK fallback font.
++           Trick: Excalidraw's bundled CJK font is named "Xiaolai" (constant
++           CJK_HAND_DRAWN_FALLBACK_FONT in @excalidraw/common). By declaring
++           our local font under the same family name, the browser's font
++           resolver picks ShouShuTi when Excalidraw asks for "Xiaolai" — no
++           bundle patching required. */
++        @font-face {
++            font-family: "Xiaolai";
++            src: url("/fonts/ShouShuTi.ttf") format("truetype");
++            font-weight: normal;
++            font-style: normal;
++            font-display: swap;
++            unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+3400-4DBF, U+2E80-2EFF;
++        }
++        /* Keep "ShouShuTi" name available too for explicit references. */
++        @font-face {
++            font-family: "ShouShuTi";
++            src: url("/fonts/ShouShuTi.ttf") format("truetype");
++            font-display: swap;
++        }
++
++        /* Force the CJK font for any Chinese glyph in the canvas + editor.
++           Browser uses unicode-range to apply ShouShuTi only to CJK
++           characters, falling back to Excalidraw's hand-drawn fonts for
++           ASCII. */
++        .excalidraw,
++        .excalidraw .excalidraw-textEditorContainer,
++        .excalidraw .excalidraw__canvas,
++        .excalidraw textarea,
++        .excalidraw input,
++        .excalidraw .Stack {
++            font-family: "ShouShuTi", Virgil, Excalifont, "Cascadia",
++                         "Xiaolai", -apple-system, BlinkMacSystemFont, sans-serif;
++        }
      </style>
  </head>
  <body>
 diff --git a/frontend/src/App.tsx b/frontend/src/App.tsx
-index 9c328df..9aad680 100644
+index 9c328df..75b44e2 100644
 --- a/frontend/src/App.tsx
 +++ b/frontend/src/App.tsx
-@@ -1,12 +1,58 @@
+@@ -1,12 +1,93 @@
  import React, { useState, useEffect, useRef } from 'react'
  import {
    Excalidraw,
@@ -37,6 +72,41 @@ index 9c328df..9aad680 100644
    exportToBlob,
    exportToSvg
  } from '@excalidraw/excalidraw'
++
++// anet.chat: pre-register ShouShuTi under Excalidraw's CJK fallback name
++// "Xiaolai" (see CJK_HAND_DRAWN_FALLBACK_FONT in @excalidraw/common).
++// Excalidraw lazily downloads HUNDREDS of `Xiaolai-Regular-<hash>.woff2`
++// subset files keyed by unicode range — we can't replace them all. Trick:
++// add a single FontFace with the full CJK unicode-range FIRST. When
++// Excalidraw later requests its subset for a particular character,
++// browser already has a face that covers it → no extra fetch needed,
++// and our ShouShuTi glyph wins.
++//
++// This runs at module import (before React mounts), so it's race-stable.
++;(function preloadShouShuTi() {
++  try {
++    const FF = (window as any).FontFace
++    if (!FF || !document?.fonts) return
++    const ff = new FF(
++      "Xiaolai",
++      "url(/fonts/ShouShuTi.ttf) format('truetype')",
++      {
++        unicodeRange: "U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+3400-4DBF, U+2E80-2EFF",
++        display: "swap",
++      },
++    )
++    ff.load().then((loaded: FontFace) => {
++      document.fonts.add(loaded)
++      console.log("[anet] ShouShuTi pre-registered under 'Xiaolai' name")
++    }).catch((e: unknown) => console.warn("[anet] ShouShuTi preload failed:", e))
++    // Also register under "ShouShuTi" explicit name for any future use.
++    const ff2 = new FF("ShouShuTi", "url(/fonts/ShouShuTi.ttf) format('truetype')",
++                      { display: "swap" })
++    ff2.load().then((loaded: FontFace) => document.fonts.add(loaded)).catch(() => {})
++  } catch (e) {
++    console.warn("[anet] font preload outer error:", e)
++  }
++})()
 +
 +// anet.chat: load pre-baked Excalidraw libraries from /libraries/*.excalidrawlib
 +// The files are baked into the canvas Docker image (frontend/public/libraries/).
@@ -85,7 +155,7 @@ index 9c328df..9aad680 100644
  import type { ExcalidrawElement, NonDeleted, NonDeletedExcalidrawElement } from '@excalidraw/excalidraw/types/element/types'
  import { convertMermaidToExcalidraw, DEFAULT_MERMAID_CONFIG } from './utils/mermaidConverter'
  import type { MermaidConfig } from '@excalidraw/mermaid-to-excalidraw'
-@@ -347,6 +393,7 @@ function App(): JSX.Element {
+@@ -347,6 +428,7 @@ function App(): JSX.Element {
    useEffect(() => {
      if (excalidrawAPI) {
        loadExistingElements()
@@ -93,7 +163,18 @@ index 9c328df..9aad680 100644
  
        // Ensure WebSocket is connected for real-time updates
        if (!isConnected) {
-@@ -868,7 +915,7 @@ function App(): JSX.Element {
+@@ -837,6 +919,10 @@ function App(): JSX.Element {
+   const clearCanvas = async (): Promise<void> => {
+     if (excalidrawAPI) {
+       try {
++        // anet.chat: use bulk clear endpoint — server preserves locked: true
++        // (the header name-plate). Falls back to per-element delete if the
++        // bulk endpoint fails.
++        await fetch('/api/elements/clear', { method: 'DELETE' })
+         // Get all current elements and delete them from backend
+         const response = await fetch('/api/elements')
+         const result: ApiResponse = await response.json()
+@@ -868,7 +954,7 @@ function App(): JSX.Element {
      <div className="app">
        {/* Header */}
        <div className="header">
@@ -102,7 +183,7 @@ index 9c328df..9aad680 100644
          <div className="controls">
            <div className="status">
              <div className={`status-dot ${isConnected ? 'status-connected' : 'status-disconnected'}`}></div>
-@@ -929,7 +976,28 @@ function App(): JSX.Element {
+@@ -929,7 +1015,28 @@ function App(): JSX.Element {
                  viewBackgroundColor: '#ffffff'
                }
              }}
@@ -132,3 +213,51 @@ index 9c328df..9aad680 100644
          </div>
        </div>
      </div>
+diff --git a/src/server.ts b/src/server.ts
+index 8404b25..ff6d541 100644
+--- a/src/server.ts
++++ b/src/server.ts
+@@ -365,22 +365,36 @@ app.put('/api/elements/:id', (req: Request, res: Response) => {
+ });
+ 
+ // Clear all elements (must be before /:id route)
++// anet.chat patch: skip elements with locked:true so the name-plate header
++// survives both the custom "Clear Canvas" button and the mcp_excalidraw
++// clear_canvas MCP tool. Single-id DELETE is unaffected so the supervisor
++// can still individually delete header elements for repaint.
+ app.delete('/api/elements/clear', (req: Request, res: Response) => {
+   try {
+-    const count = elements.size;
+-    elements.clear();
++    let removed = 0;
++    let kept = 0;
++    for (const [id, el] of Array.from(elements.entries())) {
++      if ((el as any).locked === true) {
++        kept++;
++        continue;
++      }
++      elements.delete(id);
++      removed++;
++    }
+ 
+     broadcast({
+       type: 'canvas_cleared',
+-      timestamp: new Date().toISOString()
+-    });
++      timestamp: new Date().toISOString(),
++      preservedLockedCount: kept
++    } as any);
+ 
+-    logger.info(`Canvas cleared: ${count} elements removed`);
++    logger.info(`Canvas cleared: ${removed} elements removed, ${kept} locked kept`);
+ 
+     res.json({
+       success: true,
+-      message: `Cleared ${count} elements`,
+-      count
++      message: `Cleared ${removed} elements (${kept} locked kept)`,
++      count: removed,
++      kept
+     });
+   } catch (error) {
+     logger.error('Error clearing canvas:', error);

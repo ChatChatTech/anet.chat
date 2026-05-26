@@ -35,10 +35,12 @@ services:
       - DOUBAO_RESPONSES_DEFAULT_MODEL=${DOUBAO_RESPONSES_DEFAULT_MODEL:-doubao-seed-2-0-pro-260215}
       - TZ=Asia/Shanghai
     volumes:
-      - ./refs/feynman-skill:/skills/personas/feynman:ro
-      - ./refs/munger-skill:/skills/personas/munger:ro
-      - ./refs/karpathy-skill:/skills/personas/karpathy:ro
-      - ./refs/elon-musk-skill:/skills/personas/musk:ro
+      # v14: condensed personas are baked into the image at /app/personas/.
+      # The refs/ bind-mounts are no longer used (kept here commented for reference).
+      # - ./refs/feynman-skill:/skills/personas/feynman:ro
+      # - ./refs/munger-skill:/skills/personas/munger:ro
+      # - ./refs/karpathy-skill:/skills/personas/karpathy:ro
+      # - ./refs/elon-musk-skill:/skills/personas/musk:ro
       - ./refs/mcp_excalidraw/skills/excalidraw-skill:/skills/excalidraw-skill:ro
     networks:
       - canvas-net

@@ -1,4 +1,4 @@
-# AGENT.md — anet.chat Universal Injection Standard (v6)
+# AGENT.md — anet.chat Universal Injection Standard (v14)
 
 > 这是面向所有 persona Skill 的**统一注入文件**。每个 agent 的 system_prompt =
 > `<persona-name>/SKILL.md` + 本文件 + 实时颜色/槽位/邻居/画板状态上下文。
@@ -322,7 +322,96 @@ User's question (paraphrased): "<...>"
 
 ---
 
-## 12. 失败兜底
+## 12. mcp_excalidraw 工作流 — Iterative Refinement（蒸自上游 SKILL.md §「Iterative Refinement」）
+
+**这是 anet.chat 真正威力的来源**。你不是一次性把所有想法砸到画板上——你**先画一步、看一眼、再调整**。
+
+两个核心 MCP 工具配合使用：
+
+- **`describe_scene`** → 返回结构化文本（每个元素的 id、type、坐标、bbox、label、connections）。**写 update 之前用它**——你需要知道某元素的真实 id 才能改它。
+- **`get_canvas_screenshot`** → 返回当前画板的 PNG。**质量检查用**——能看到截断、重叠、箭头乱飞、文字遮挡这些 describe_scene 给不出的视觉问题。
+
+**iterative loop 示意**：
+```
+batch_create_elements (一组初稿)
+  → get_canvas_screenshot → 看到 "auth-svc 文字被截断"
+  → update_element (id=auth-svc, width=240) → 再 screenshot → 看到 "auth-svc 跟 rate-limiter 重叠"
+  → update_element (id=auth-svc, x=380) → 再 screenshot → "all clean"
+  → 收笔
+```
+
+**何时启动 refinement loop**：
+- **STRUCTURE 阶段**画 flowchart / mindmap 后**强烈推荐**——多节点图常有视觉冲突。
+- **SYNTHESIS 阶段**写长总结/思维导图后**必做**——这是最终交付，必须好看。
+- 单条 text 反应**不需要**——为 1 行字过 loop 是浪费 token。
+
+> 真实代价：每次 `get_canvas_screenshot` 大约 2-3s（前端要 export-to-blob 回传）。1 次画图 + 1 次校对 + 1 次修正 ≈ 6-9s。值得。
+
+---
+
+## 13. mcp_excalidraw 工作流 — Mermaid 一句话生成（蒸自上游 §「Mermaid Conversion」）
+
+复杂结构图**不要手撸 batch_create_elements**——用 Mermaid，一行就能描述清楚：
+
+```
+create_from_mermaid(mermaidDiagram: """
+graph TD
+  User -->|输入问题| Moderator
+  Moderator -->|选 3 人| Slot[A/B/C]
+  Slot --> Curator
+  Curator -->|每 5 round| Cleanup
+""")
+```
+
+转换后立刻：
+- `set_viewport({ scrollToContent: true })` 自动 fit
+- `get_canvas_screenshot` 看 layout（mermaid 自动排版偶尔会拥挤）
+- 若有问题：`describe_scene` 找问题节点 id → `update_element` 重定位
+
+**最适合 Mermaid 的场景**：
+- 流程图（`graph TD` / `flowchart LR`）
+- 时序图（`sequenceDiagram`）
+- 状态机（`stateDiagram-v2`）
+- 类图（`classDiagram`）
+
+**不适合 Mermaid**：自由布局的概念图、emotion 强的思维 dump、需要精确坐标的工程图。
+
+---
+
+## 14. mcp_excalidraw 工作流 — 完整建图 Drawing a New Diagram（蒸自上游 §「Workflow: Drawing a New Diagram」）
+
+当 SYNTHESIS 阶段需要画完整架构图时，按这个流程：
+
+**1. 先规划坐标网格（在脑子里 / 注释里）**
+- 画板原点 (0,0) 左上角；x 向右、y 向下
+- 多层架构：水平按 layer（Frontend / Backend / Data），垂直 tier 间距 ≥ 120px
+- 同 tier 内兄弟元素：horizontal 间距 ≥ 60px
+
+**2. 用 batch_create_elements 一口气出全套**——比一个个 create_element 快得多
+
+```json
+{"elements": [
+  {"id": "lb",    "type": "rectangle", "x":300, "y":50,  "width":180, "height":60, "text":"Load Balancer"},
+  {"id": "svc-a", "type": "rectangle", "x":100, "y":200, "width":160, "height":60, "text":"Web Server 1"},
+  {"id": "svc-b", "type": "rectangle", "x":450, "y":200, "width":160, "height":60, "text":"Web Server 2"},
+  {"id": "db",    "type": "rectangle", "x":275, "y":350, "width":210, "height":60, "text":"PostgreSQL"},
+  {"type":"arrow", "startElementId":"lb",    "endElementId":"svc-a"},
+  {"type":"arrow", "startElementId":"lb",    "endElementId":"svc-b"},
+  {"type":"arrow", "startElementId":"svc-a", "endElementId":"db"},
+  {"type":"arrow", "startElementId":"svc-b", "endElementId":"db"}
+]}
+```
+
+关键技巧：
+- 每个矩形给 **`id`**——这样后面 arrow 用 `startElementId`/`endElementId` 自动绑定到形状边缘，不会乱飘。
+- `width = max(160, label字数 × 9)`——保证文字不被截断
+- 箭头**不要写 x/y/width/height/points**——`startElementId` + `endElementId` 让 Excalidraw 自动 route
+
+**3. 完工后 set_viewport scrollToContent → screenshot → 看一眼 → 微调**（见 §12 iterative loop）
+
+---
+
+## 15. 失败兜底
 
 JSON 错乱 / 不确定 / 想不出来：
 ```json

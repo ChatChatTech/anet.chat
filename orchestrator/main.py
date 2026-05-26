@@ -71,7 +71,8 @@ PROVIDER_HEALTH = {
 }
 FAILOVER_FAIL_THRESHOLD = 2     # mark unhealthy after N consecutive fails
 FAILOVER_COOLDOWN_S = 60        # skip unhealthy provider for this long
-FAILOVER_TIMEOUT_S = 25         # fail over to fallback if primary slower than this
+FAILOVER_TIMEOUT_S = 45         # fail over to fallback if primary slower than this
+                                # (gpt-5.5 on real ~20KB prompts often takes 25-40s)
 
 PERSONAS_REGISTRY_PATH = Path(os.environ.get("PERSONAS_REGISTRY", "/app/personas.json"))
 AGENT_MD_PATH = Path(os.environ.get("AGENT_MD", "/app/AGENT.md"))
@@ -1567,8 +1568,19 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
         non_header = [e for e in elements if not is_header(e.get("id", ""))]
         header_count = len(elements) - len(non_header)
 
-        if header_count == 0:
-            log("watcher: no header. Repainting + resetting state.")
+        # v14: also reset when canvas BODY clears (header now survives Clear Canvas
+        # thanks to locked:true + server-side clear-preserve, so we can't rely on
+        # header_count==0 alone). If we were ACTIVE/SYNTHESIS/FROZEN with content
+        # and now body is empty → user just hit Clear Canvas.
+        body_was_cleared = (
+            state.phase in ("ACTIVE", "SYNTHESIS", "FROZEN")
+            and not non_header
+            and state.last_canvas_id_set  # had elements before
+        )
+
+        if header_count == 0 or body_was_cleared:
+            reason = "no header" if header_count == 0 else "body cleared (locked header survived)"
+            log(f"watcher: {reason}. Repainting + resetting state.")
             async with state.canvas_write_lock:
                 await paint_empty_header(client)
                 state.active = {"A": None, "B": None, "C": None}
