@@ -24,14 +24,22 @@ HARD_CAP=200
 SOFT_CAP=50
 HERMES="/opt/hermes/.venv/bin/hermes"
 
-# Pull canvas JSON. Be defensive — silent exit on transient errors.
-JSON=$(curl -sS -m 5 "$CANVAS_URL/api/elements" 2>/dev/null) || exit 0
+# Always-on: ensure the name-plate header is present + locked.
+# This runs FIRST every tick — even if other supervisor work fails, the
+# header should stay maintained.
+python3 /opt/data/scripts/maintain_header.py || true
 
-# All decisions are in Python (jq isn't installed in the Hermes image).
-DECISION=$(python3 - <<PY
-import json, sys, re
+# Pull canvas JSON to a temp file. Reading via env var or stdin breaks when
+# LLM-authored canvas text contains embedded newlines / quotes / control chars.
+TMP_JSON=$(mktemp)
+trap 'rm -f "$TMP_JSON"' EXIT
+curl -sS -m 5 "$CANVAS_URL/api/elements" -o "$TMP_JSON" 2>/dev/null || exit 0
 
-data = json.loads("""$JSON""")
+DECISION=$(JSON_PATH="$TMP_JSON" python3 <<'PY'
+import json, os, sys, re
+
+with open(os.environ["JSON_PATH"], "r", encoding="utf-8") as f:
+    data = json.load(f)
 els = data.get("elements", [])
 
 def is_header(e): return (e.get("id") or "").startswith("header-")
@@ -53,7 +61,8 @@ if any((e.get("text") or "").startswith("SESSION CLOSED") for e in els):
     sys.exit()
 
 # HARD CAP
-if len(agents) > $HARD_CAP:
+HARD_CAP, SOFT_CAP = 200, 50
+if len(agents) > HARD_CAP:
     print("STOP_HARD_CAP", len(agents))
     sys.exit()
 
@@ -68,7 +77,7 @@ if humans:
 else:
     agents_since_human = agents
 
-if len(agents_since_human) <= $SOFT_CAP:
+if len(agents_since_human) <= SOFT_CAP:
     print("OK", len(agents), len(agents_since_human))
     sys.exit()
 
