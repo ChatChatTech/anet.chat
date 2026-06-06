@@ -1,0 +1,41 @@
+{
+  "paper_id": "Guo et al. - 2010 - False Negative Problem of Counting Bloom Filter",
+  "doi": null,
+  "title": "False Negative Problem of Counting Bloom Filter",
+  "year": 2010,
+  "venue": "IEEE Transactions on Knowledge and Data Engineering",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Networking devices track flows using CBFs but don't store original data; incorrect deletions cause false negatives which wrongly reject desired objects.",
+  "problem_framing": "Two types of incorrect deletion (false positive items, multiaddress items) cause false negatives in standard BF operations.",
+  "key_insight": "Potential false negatives often stay unexposed; increasing bits set to value>1 without decreasing zero bits reduces exposed false negatives.",
+  "method_signature": "Multichoice Counting Bloom Filter with improved greedy hash allocation and multiple hash groups.",
+  "evaluation_criteria": "Exposed false negative count, false positive probability, maximum counter load under different hash algorithms.",
+  "negative_result_or_admitted_limitation": "SDBM BUZhash algorithm is less suitable; MCBF needs careful configuration; c cannot be arbitrarily large due to overhead.",
+  "evidence_for_taste": [
+    "false negative is more serious",
+    "we are the first to explore",
+    "usually not fully exposed",
+    "the second one rarely holds",
+    "c should not be too large"
+  ],
+  "thinking_moves": [
+    "挑战领域共识: 学界认为 BF 永无假阴, 但实际存在且严重",
+    "从网络设备实际场景反推数据结构的 non-standard 使用",
+    "区分潜在假阴与暴露假阴, 发现二者数量差异约50%",
+    "从测量观察到设计原则, 再构建新数据结构验证",
+    "把不可检测错误转化为可检测的 multiaddress 问题处理"
+  ],
+  "topic_tags": [
+    "Bloom filter",
+    "false negative",
+    "Counting Bloom Filter",
+    "data structure analysis",
+    "network flow tracking"
+  ],
+  "cites_own_work": [
+    "Dynamic Bloom Filters (Guo et al. 2006)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

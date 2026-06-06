@@ -1,0 +1,40 @@
+{
+  "paper_id": "Efficient and effective data imputation with influence functions",
+  "doi": "10.14778/3494124.3494143",
+  "title": "Efficient and Effective Data Imputation with Influence Functions",
+  "year": 2021,
+  "venue": "PVLDB",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "大规模缺失数据的参数插补模型训练成本过高,原始方法需用全部样本计算梯度,效率不可行",
+  "problem_framing": "通过影响函数评估每个样本对模型预测的贡献,选择高贡献样本构成最小代表集以满足用户精度要求",
+  "key_insight": "利用影响函数的加性性质,将单个样本的参数扰动和损失变化通过链式法则扩展到样本集,从而实现无需重训练即可估算添加样本后的精度",
+  "method_signature": "EDIT系统含IIE模块计算影响功率,RSS模块选择最小代表集,加权损失函数驱动模型关注高影响样本",
+  "evaluation_criteria": "RMSE(精度)、训练时间、样本率Rt、以及后验预测MAE",
+  "negative_result_or_admitted_limitation": "HIVAE和GAIN在Criteo数据集上10^5秒内无法完成;MNAR机制下精度低于MCAR/MAR;缺失值分布研究比预期更复杂",
+  "evidence_for_taste": [
+    "original methods take more than 10^5 seconds",
+    "HIVAE and GAIN are unavailable over Criteo",
+    "the study of missing value distributions is more complicated than expected",
+    "some training samples may have little or even negative effects",
+    "the second equation follows by ignoring the first term",
+    "one can directly derive the imputation loss without retraining"
+  ],
+  "thinking_moves": [
+    "从稳健统计引入影响函数概念,迁移到数据插补场景",
+    "利用影响函数的加性性质实现从单样本到样本集的扩展估计",
+    "通过链式法则建立参数扰动与损失变化的解析联系",
+    "将精度保证形式化为损失上界约束,转换为最小样本选择问题",
+    "权重损失函数使模型自动降低低影响样本的权重"
+  ],
+  "topic_tags": [
+    "数据插补",
+    "影响函数",
+    "代表样本选择",
+    "参数模型加速",
+    "缺失数据处理"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整包含摘要、背景、系统架构、IIE模块、RSS模块、实验评估和结论。实验部分涵盖10种方法、4个数据集、多种缺失率和缺失机制实验。 | md truncated to head40k+tail20k"
+}

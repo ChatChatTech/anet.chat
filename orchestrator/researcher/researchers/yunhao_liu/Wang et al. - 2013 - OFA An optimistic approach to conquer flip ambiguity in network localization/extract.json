@@ -1,0 +1,41 @@
+{
+  "paper_id": "Wang et al. - 2013 - OFA An optimistic approach to conquer flip ambiguity in network localization",
+  "doi": null,
+  "title": "OFA: An optimistic approach to conquer flip ambiguity in network localization",
+  "year": 2013,
+  "venue": "Computer Networks",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有方法因flip预测高假阳性率错误拒绝大量可靠位置估计，导致性能大幅下降",
+  "problem_framing": "将flip ambiguity建模为导致巨大误差或零误差的二值问题，而非连续误差",
+  "key_insight": "利用flip导致非零即巨的二元误差特性，可先乐观假设再通过锚骨架一致性检查验证并纠正",
+  "method_signature": "OFA: 通过全局一致性检查和位置纠正阶段实现乐观定位，含置信度传播与错误源定位机制",
+  "evaluation_criteria": "鲁棒定位节点比例、SPEE精度、每节点平均多边测量次数",
+  "negative_result_or_admitted_limitation": "只能纠正单节点flip，无法处理combined flip，且处理该情况会产生指数级开销",
+  "evidence_for_taste": [
+    "flip ambiguity causes either huge error or zero error",
+    "simple discarding is conservative and pessimistic",
+    "we have to carefully balance two critical requirements",
+    "the cost is acceptable in most networks",
+    "error handling can only correct the flip of one node"
+  ],
+  "thinking_moves": [
+    "将错误源二分为ranging error和flip ambiguity，只处理可消除的flip类",
+    "从悲观丢弃转为乐观假设加全局锚骨架一致性验证",
+    "通过置信度传播将远处节点的验证信息回溯到flip源头",
+    "将翻转重构问题转化为过参考节点的直线拟合与镜像反射"
+  ],
+  "topic_tags": [
+    "wireless-sensor-localization",
+    "flip-ambiguity",
+    "multilateration",
+    "consistency-check",
+    "optimistic-design"
+  ],
+  "cites_own_work": [
+    "Yang & Liu 2010 - Quality of trilateration",
+    "Liu et al. 2006 - Robust distributed node localization"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

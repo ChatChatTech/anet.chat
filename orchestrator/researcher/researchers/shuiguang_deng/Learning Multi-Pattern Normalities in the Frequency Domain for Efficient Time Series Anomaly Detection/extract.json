@@ -1,0 +1,42 @@
+{
+  "paper_id": "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection",
+  "doi": "10.48550/arxiv.2311.16191",
+  "title": "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "云环境中服务模式多样，统一模型无法捕捉所有正常模式；海量流量下实时推理效率低；encoder-decoder对单点异常不敏感",
+  "problem_framing": "三个挑战：C1多模式容纳能力有限，C2海量流量实时处理低效，C3单点异常不敏感",
+  "key_insight": "通过样本与服务正常模式的相关性检测异常，而非仅依赖样本自身；利用频域稀疏性选择子集傅里叶基可提升检测性能",
+  "method_signature": "MACE：模式提取机制+双卷积(峰/谷)+上下文感知DFT/IDFT",
+  "evaluation_criteria": "F1-score为主，精确率/召回率为辅，兼评计算效率(speed)和内存开销",
+  "negative_result_or_admitted_limitation": "当γ设为1时，双卷积退化为标准卷积，性能严重下降；γ不能无限增长会导致梯度爆炸",
+  "evidence_for_taste": [
+    "F1 score for unified model and tailored model",
+    "performance of the unified model is substantially lower",
+    "MACE's performances with γ_t and γ_f set to 1 are unsatisfied",
+    "the complete MACE model exhibits considerable superiority over its variants",
+    "performance deteriorates",
+    "γ cannot grow infinitely"
+  ],
+  "thinking_moves": [
+    "将检测问题从样本中心重新frame为关系中心：基于样本与正常模式子空间的关联性判定异常",
+    "利用频域稀疏性绕过时序依赖，放弃RNN实现并行化",
+    "双卷积设计：时域放大异常信号，频域阻碍异常重建但保持正常样本易重建",
+    "理论证伪完整频谱假设：选择子集傅里叶基反而能扩大正异常重构误差差距",
+    "通过消融实验验证每个模块贡献，承认 vanilla DFT/IDFT 引入更多基导致性能下降"
+  ],
+  "topic_tags": [
+    "time-series-anomaly-detection",
+    "frequency-domain-analysis",
+    "multi-pattern-normalities",
+    "cloud-monitoring",
+    "dualistic-convolution"
+  ],
+  "cites_own_work": [
+    "LARA: A light and anti-overfitting retraining approach for unsupervised time series anomaly detection (arXiv:2310.05668)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

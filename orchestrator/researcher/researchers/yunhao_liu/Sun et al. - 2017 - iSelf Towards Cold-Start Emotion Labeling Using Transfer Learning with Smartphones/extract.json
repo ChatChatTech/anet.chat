@@ -1,0 +1,39 @@
+{
+  "paper_id": "Sun et al. - 2017 - iSelf Towards Cold-Start Emotion Labeling Using Transfer Learning with Smartphones",
+  "doi": null,
+  "title": "iSelf: Towards Cold-Start Emotion Labeling Using Transfer Learning with Smartphones",
+  "year": 2017,
+  "venue": "ACM Trans. Sen. Netw.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "手动标注情感数据耗时耗力，现有方法需大量带标签样本，冷启动场景下无法工作",
+  "problem_framing": "冷启动条件下从用户手机使用模式推断情感，特征空间未见导致传统分类器失效",
+  "key_insight": "同一情感能以65%以上概率产生相似的使用模式，特征空间间存在可迁移的分布相似性",
+  "method_signature": "跨特征空间迁移学习：J散度+DTW+余弦相似度三路特征对齐，混合公共/个人推理引擎",
+  "evaluation_criteria": "推理准确率(目标>74%)、能耗(<2%日耗)、延迟(ms级)",
+  "negative_result_or_admitted_limitation": "tense情绪准确率仅60%；仅1人可见时准确率降至11.2%；N>25后噪声导致准确率下降",
+  "evidence_for_taste": [
+    "time-consuming, labor-intensive, and money-consuming",
+    "even a strong classifier may become invalid",
+    "misclassification usually happens when two feature spaces have very large difference",
+    "tense has the minimal accuracy of about 60%",
+    "sensor data has the weakest capabilities",
+    "accuracy drops slightly due to the noise impact"
+  ],
+  "thinking_moves": [
+    "从时序使用模式中抽象特征类型（统计/流/文本），针对各类型选用合适度量实现跨空间对齐",
+    "将特征空间区分seen/unseen，已见空间用个人SVM，未见用迁移学习，两层引擎递进切换",
+    "用户不愿频繁反馈导致验证困难，故从用户自然输入中被动捕获标签代替主动查询",
+    "通过熵阈值决定何时触发主动学习询问，实现最小侵入性验证"
+  ],
+  "topic_tags": [
+    "cold-start-emotion-inference",
+    "transfer-learning-smartphone",
+    "multi-modal-feature-alignment",
+    "active-learning-validation",
+    "hybrid-public-personal-classifier"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,45 @@
+{
+  "paper_id": "Lightweight Salient Object Detection in Optical Remote-Sensing Images via Semantic Matching and Edge Alignment",
+  "doi": "10.48550/arxiv.2301.02778",
+  "title": "Lightweight Salient Object Detection in Optical Remote-Sensing Images via Semantic Matching and Edge Alignment",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有CNN方法参数量大、计算成本高，无法在移动设备和航空航天设备上部署",
+  "problem_framing": "在保持精度的前提下，如何大幅降低轻量化网络的参数量和计算复杂度",
+  "key_insight": "将高层特征和低层特征区分对待——高层用语义匹配激活位置，低层用边缘对齐增强细节",
+  "method_signature": "SeaNet: MobileNet-V2编码器 + DSMM(语义匹配) + ESAM(边缘对齐) + 轻量解码器",
+  "evaluation_criteria": "S-measure、F-measure、E-measure、MAE、参数量、M FLOPs、fps",
+  "negative_result_or_admitted_limitation": "NSI-SOD方法无法直接处理ORSIs的复杂场景，HVPNet被ORSIs场景困扰",
+  "evidence_for_taste": [
+    "unfriendly to aerospace equipments",
+    "the parameters of CorrNet were greatly reduced to only 4.09M, but its computational cost was still very large",
+    "breaks the constraints of the trained parameters",
+    "correct edge errors",
+    "significantly outperforms",
+    "competitive performance",
+    "lightweight but effective"
+  ],
+  "thinking_moves": [
+    "把一个问题从两个层面分解处理——语义定位 vs 细节增强",
+    "借鉴动态卷积思想但不直接用，而是扩展为动态深度可分离卷积以降低计算量",
+    "边缘信息提取不依赖监督信号，用自对齐机制在训练中自适应纠正",
+    "模块化设计可迁移到其他backbone，验证方案的鲁棒性"
+  ],
+  "topic_tags": [
+    "lightweight-ORSI-SOD",
+    "dynamic-depthwise-convolution",
+    "edge-self-alignment",
+    "semantic-matching",
+    "channel-wise-correlation"
+  ],
+  "cites_own_work": [
+    "MCCNet [14]",
+    "CorrNet [15]",
+    "Li et al. [37]",
+    "LVNet [21]"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "摘要和实验部分完整，但部分实验数据和消融表格被截断；作者角色基于署名顺序和邮箱地址推断；venue推断为arXiv预印本，实际情况需补充 | md truncated to head40k+tail20k"
+}

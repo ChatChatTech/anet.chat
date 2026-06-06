@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2020 - Improving Urban Crowd Flow Prediction on Flexible Region Partition",
+  "doi": null,
+  "title": "Improving Urban Crowd Flow Prediction on Flexible Region Partition",
+  "year": 2020,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有方法要么无法捕捉复杂时空依赖,要么受限于网格划分失去语义上下文",
+  "problem_framing": "城市人流预测需支持任意形状大小的区域,并同时建模多种交通方式",
+  "key_insight": "将人流按速度域分解(快/慢流)可捕捉不同交通模式差异,图卷积网络可处理任意形状区域",
+  "method_signature": "GLSTM编码时空+残差GCNN建模长距离依赖的图神经网络",
+  "evaluation_criteria": "RMSE和MAPE在两个城市 cellular 数据集及 GPS 轨迹数据集上与 ST-ResNet、FCCF 等对比",
+  "negative_result_or_admitted_limitation": "数学模型与实际偏差大;位置精度仅70m;仅测试单一交通模式数据",
+  "evidence_for_taste": [
+    "fails to capture the complex",
+    "loses semantic context",
+    "diverse transportation modes",
+    "long-term and long-distance",
+    "irregular-shaped regions",
+    "often deviate from the reality"
+  ],
+  "thinking_moves": [
+    "先分析已有方法局限(网格限制/单模式),再提出多域分解应对",
+    "从数据特性(cellular覆盖多种交通)提炼出speed domain新维度",
+    "用residual learning解决深层GCNN训练困难",
+    "通过k-distance依赖实验验证长距离依赖必要性"
+  ],
+  "topic_tags": [
+    "cellular-data-mobility",
+    "crowd-flow-prediction",
+    "graph-convolution-network",
+    "speed-domain-analysis",
+    "flexible-region-partition"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,36 @@
+{
+  "paper_id": "Liu et al. - 2015 - Scan without a Glance Towards Content-Free Crowd-Sourced Mobile Video Retrieval System",
+  "doi": null,
+  "title": "Scan Without a Glance: Towards Content-Free Crowd-Sourced Mobile Video Retrieval System",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "Mobile video retrieval hindered by costly video transmission and CV computation; need to filter unmatched videos before content analysis",
+  "problem_framing": "Video retrieval as spatio-temporal filtering: query Q=(ts,te,p,r) finds videos covering area(p,r) during time interval [ts,te]",
+  "key_insight": "FoV (GPS+azimuth) as content-free descriptor with negligible size; motion = rotation + translation gives Sim = Sim_R × Sim_T",
+  "method_signature": "FoV similarity measurement → real-time segmentation → R-Tree indexing → rank-based retrieval",
+  "evaluation_criteria": "Feature extraction speed (orders of magnitude faster), search accuracy comparable to CV, response time <100ms, traffic reduction",
+  "negative_result_or_admitted_limitation": "Intersection-based MBR retrieval insufficient; must filter by orientation (camera direction matters even at same location)",
+  "evidence_for_taste": [
+    "negligible data size and low dimension",
+    "at least three orders of magnitude faster",
+    "no constraint on device subscribers' movements"
+  ],
+  "thinking_moves": [
+    "把 perception 问题重新 frame 成 spatio-temporal communication 问题",
+    "用物理模型(旋转+平移)简化几何计算",
+    "分段阈值由经验决定而非理论最优",
+    "R-Tree 处理时间敏感 FoV 索引"
+  ],
+  "topic_tags": [
+    "crowd-sourced video retrieval",
+    "Field of View descriptor",
+    "mobile video segmentation",
+    "R-Tree spatio-temporal indexing",
+    "content-free similarity measurement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "No specific venue name found in paper text; role inferred from contact author designation; limited evidence of own prior work citations in provided excerpt"
+}

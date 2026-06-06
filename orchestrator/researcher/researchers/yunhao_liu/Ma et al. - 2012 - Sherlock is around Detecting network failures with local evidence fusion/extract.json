@@ -1,0 +1,38 @@
+{
+  "paper_id": "Ma et al. - 2012 - Sherlock is around Detecting network failures with local evidence fusion",
+  "doi": null,
+  "title": "Sherlock is Around: Detecting Network Failures with Local Evidence Fusion",
+  "year": 2012,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "Sink-based diagnosis incurs huge transmission overhead; self-diagnosis has narrow scope and inconsistent results from different nodes",
+  "problem_framing": "Balance diagnosis workload among sensor nodes while achieving integrated judgment through distributed evidence fusion in local areas",
+  "key_insight": "Root causes can be partly reflected within a neighborhood; D-S theory with similarity-based weighting achieves associative fusion regardless of order",
+  "method_signature": "Local-Diagnosis (LD2): Naive Bayesian Classifier + improved Dempster-Shafer evidence fusion via fusion tree",
+  "evaluation_criteria": "False negative rate (miss detection) and false positive rate (false alarm) on 50-node TelosB testbed",
+  "negative_result_or_admitted_limitation": "Existing self-diagnosis leads to inconsistent results; TinyD2 fails to achieve consensus as density increases",
+  "evidence_for_taste": [
+    "sink often fails to obtain complete evidences",
+    "leads to inconsistent diagnosis reports",
+    "narrow scope of single node",
+    "TinyD2 often fails to achieve a consensus"
+  ],
+  "thinking_moves": [
+    "把诊断范围从全局sink收窄到局部邻域,利用邻居节点覆盖同一根因的不同侧面",
+    "引入D-S理论处理多节点判断冲突,并改进其结合规则支持结合律以容忍融合树结构动态变化",
+    "用相似度加权替代修改组合规则,避免引入额外参数调优"
+  ],
+  "topic_tags": [
+    "WSN-diagnosis",
+    "Dempster-Shafer-fusion",
+    "Local-evidence-fusion",
+    "Naive-Bayesian-classifier",
+    "Fusion-tree"
+  ],
+  "cites_own_work": [
+    "Liu et al. 2011 - Self-diagnosis for large scale wireless sensor networks"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

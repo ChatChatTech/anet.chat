@@ -1,0 +1,42 @@
+{
+  "paper_id": "Dong et al. - 2012 - Bulk data dissemination in wireless sensor networks Modeling and analysis",
+  "doi": null,
+  "title": "Bulk data dissemination in wireless sensor networks: Modeling and analysis",
+  "year": 2012,
+  "venue": "Computer Communications",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "仿真耗时且不准，测试床难以扩展，需要解析模型来指导协议设计和性能优化",
+  "problem_framing": "以单页为粒度计算任意节点完成时间C_k^p，考虑多跳传播路径和流水线效应",
+  "key_insight": "利用Dijkstra最短路径建模多跳传播，结合拓扑信息、竞争影响和流水线约束可准确估计完成时间",
+  "method_signature": "分层解析模型：物理层(PRR)→单跳传播时间→多跳传播完成时间",
+  "evaluation_criteria": "测试床与TOSSIM仿真结果的吻合度，计算时间开销",
+  "negative_result_or_admitted_limitation": "仅考虑单源节点，实际干涉模型需用SINR-PRR；多源场景和多跳干扰未建模",
+  "evidence_for_taste": [
+    "分析仅适用于线性结构",
+    "does not model page pipelining",
+    "The analytical results are not compared against simulation",
+    "the simulation time is nearly 6 h",
+    "we give the detailed algorithm for the multihop models",
+    "extends our single hop model to capture impacts of both upstream nodes and downstream nodes"
+  ],
+  "thinking_moves": [
+    "用Dijkstra最短路径将复杂拓扑规约为可计算的传播路径",
+    "把流水线效应形式化为3跳约束(C2)与传输完成时间的max约束",
+    "分层解耦：物理层→单跳模型→多跳模型",
+    "将协议细节(advertisement/request/data)代入单跳时间计算",
+    "通过测试床+仿真双重验证解析结果的准确性"
+  ],
+  "topic_tags": [
+    "bulk-data-dissemination",
+    "Deluge-protocol-analysis",
+    "Dijkstra-shortest-path-modeling",
+    "pipelining-effect",
+    "wireless-sensor-network"
+  ],
+  "cites_own_work": [
+    "Performance of bulk data dissemination in wireless sensor networks (DCOSS 2009)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

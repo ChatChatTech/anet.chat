@@ -1,0 +1,39 @@
+{
+  "paper_id": "FedMoE_ Personalized Federated Learning via Heterogeneous Mixture of Experts",
+  "doi": "10.48550/arxiv.2408.11304",
+  "title": "FedMoE: Personalized Federated Learning via Heterogeneous Mixture of Experts",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM微调需大量分布式私有数据，联邦学习面临数据异构性与边缘设备资源约束的双重挑战",
+  "problem_framing": "为每个客户在内存约束下构建最优子MoE模型，并将个性化知识聚合回全局模型",
+  "key_insight": "MoE的稀疏激活使专家参数空间解耦，允许按需共享最相关参数——不同客户激活不同专家即可实现个性化",
+  "method_signature": "两阶段：Stage1用激活概率启发式搜索初始化子模型；Stage2联邦训练+模块聚合+动态专家推荐",
+  "evaluation_criteria": "任务性能(F1/Rouge/Acc)、通信量、内存占用、收敛速度、稳健性(CV指标)",
+  "negative_result_or_admitted_limitation": "专家推荐是探索性调整，若性能不改善则结构回退并固定；Stage1缺失导致专家数量失控（96→104）而非优化",
+  "evidence_for_taste": [
+    "激活模式在微调中显著改变",
+    "专家激活频率存在明显不平衡",
+    "module-granular updates allow for independent optimization",
+    "最优专家子集与全模型性能相当",
+    "异构数据偏好的专家集合存在差异"
+  ],
+  "thinking_moves": [
+    "通过预实验观察激活模式动态变化，反推专家选择需动态评估而非静态预设",
+    "将子模型搜索建模为NP-hard多维背包问题，用二分搜索启发式求解",
+    "利用MoE层解耦特性，把参数共享问题转化为按需选择问题",
+    "模块级聚合策略避免不同客户间冲突，仅共享重叠专家",
+    "当单客户优化停滞时，引入相似客户的全局视角指导结构调整"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "mixture-of-experts",
+    "personalized-PFL",
+    "edge-AI",
+    "LLM-finetuning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,43 @@
+{
+  "paper_id": "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970",
+  "doi": "10.18653/v1/2024.findings-acl.436",
+  "title": "PACE: Improving Prompt with Actor-Critic Editing for Large Language Model",
+  "year": 2024,
+  "venue": "ACL Findings",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "人工提示词质量差异大且改进需大量人力，现有自动提示工程只关注生成阶段而忽视编辑阶段",
+  "problem_framing": "将提示优化建模为最大化期望分数的优化问题，利用LLM近似搜索最优提示",
+  "key_insight": "将提示视为策略，借鉴强化学习actor-critic范式让LLM同时扮演执行者和评价者",
+  "method_signature": "LLM双角色actor-critic迭代优化提示，多个actor-critic对提供多样化反馈",
+  "evaluation_criteria": "在24个指令归纳任务和21个BigBench任务上对比原始提示+APE+其他方法的性能提升",
+  "negative_result_or_admitted_limitation": "对高度复杂问题效果有限，需人机协作释放更大潜力；某些任务如operators几乎无法改善",
+  "evidence_for_taste": [
+    "The effect and human effort of the second stage far surpass",
+    "Prompt p in this context is conceptualized as a policy",
+    "the critic possesses a slightly higher significance",
+    "humans can often produce a satisfactory first attempt without much effort",
+    "The real challenge is refining and optimizing these drafts",
+    "This stabilization indicates a saturation point"
+  ],
+  "thinking_moves": [
+    "识别提示工程有生成和编辑两个阶段，后者人力消耗更大但被忽视",
+    "将NLP中的提示优化问题与强化学习中的策略优化建立类比",
+    "利用LLM自身能力同时充当执行者和评价者形成反馈闭环",
+    "通过多actor多critic降低单一采样偏差影响"
+  ],
+  "topic_tags": [
+    "automatic-prompt-editing",
+    "actor-critic-paradigm",
+    "LLM-optimization",
+    "reinforcement-learning-analogy",
+    "prompt-refinement"
+  ],
+  "cites_own_work": [
+    "Self-collaboration code generation via chatgpt (Dong et al., 2023a)",
+    "CODEP: grammatical seq2seq model for general-purpose code generation (Dong et al., 2023b)",
+    "Generalization or memorization (Dong et al., 2024)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zhang et al. - 2014 - Montage Combine frames with movement continuity for realtime multi-user tracking",
+  "doi": null,
+  "title": "Montage: Combine Frames with Movement Continuity for Realtime Multi-User Tracking",
+  "year": 2014,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "多用户室内实时跟踪困难：现有方法需指纹、锚点或预知识，且无法在无基础设施下工作",
+  "problem_framing": "将跟踪问题形式化为：帧(测距快照)+运动向量(惯性传感)结合，消除歧义并重建连续轨迹",
+  "key_insight": "距离向量 = 运动向量差；若已知前一时刻距离向量，后续可直接计算，从而避免歧义累积",
+  "method_signature": "Gold码声学信号测距 + 带通滤波步态估计 + 约束优化定位多用户",
+  "evaluation_criteria": "步长误差(厘米)、方向误差(度)、轨迹偏差(米)、90分位性能",
+  "negative_result_or_admitted_limitation": "当两用户同向同速移动时，r_ij(t1)=r_ij(t0)产生无穷多解；50-70步处大偏差因转向导致",
+  "evidence_for_taste": [
+    "perpendicular component could result in great error",
+    "forward acceleration companies the rising edge of vertical acceleration",
+    "leverage the neighboring information to eliminate the ambiguity",
+    "avoiding cascading errors",
+    "the various springs of acceleration of walking are caused by diverse walking habits"
+  ],
+  "thinking_moves": [
+    "分析现有方法失效原因：发现横向摆动导致积分误差",
+    "将手机坐标系转换为地球坐标系作为惯性参考系",
+    "用Gold码实现类CDMA多用户声学测距",
+    "把定位问题建模为带约束的三角几何问题",
+    "优先选择邻居更多的三角形作为起始点以减少误差传播",
+    "利用时序相关性消除单锚点情况下的歧义"
+  ],
+  "topic_tags": [
+    "acoustic-ranging",
+    "inertial-tracking",
+    "multi-user-localization",
+    "dead-reckoning",
+    "smartphone-sensing",
+    "formation-tracking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

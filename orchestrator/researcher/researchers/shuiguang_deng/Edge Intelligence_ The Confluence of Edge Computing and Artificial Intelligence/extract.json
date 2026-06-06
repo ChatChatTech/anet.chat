@@ -1,0 +1,44 @@
+{
+  "paper_id": "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence",
+  "doi": "10.1109/jiot.2020.2984887",
+  "title": "Edge Intelligence: The Confluence of Edge Computing and Artificial Intelligence",
+  "year": 2020,
+  "venue": "IEEE Internet of Things Journal",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "海量边缘数据回传云端导致网络拥塞，边缘与AI的结合成为必然",
+  "problem_framing": "将边缘智能分为AI for edge(优化问题求解)和AI on edge(模型训练推理)两个方向",
+  "key_insight": "提出双向分类框架，用层级结构统一边缘计算与AI的交叉研究方向",
+  "method_signature": "分层架构：底部QoE驱动，左侧IEC三层(Topology/Content/Service)，右侧AIE三层(Model Adaptation/Framework/Processor)",
+  "evaluation_criteria": "QoE多指标：Performance、Cost、Privacy、Efficiency、Reliability",
+  "negative_result_or_admitted_limitation": "Edge Intelligence目前处于早期阶段，概念尚不清晰，问题尚未完全解决",
+  "evidence_for_take": [
+    "Edge Intelligence, currently in its early stage",
+    "The subject of Edge Intelligence is tremendous and enormously sophisticated",
+    "many concepts are still unclear and questions remain unsolved",
+    "not fully covered by this survey"
+  ],
+  "thinking_moves": [
+    "从两维度(AI→Edge和AI在Edge)对交叉领域做正交分类",
+    "用自底向上(Topology/Content/Service)解构边缘计算研究",
+    "用自顶向下(Model Adaptation/Framework/Processor)解构AI边缘部署",
+    "QoE作为统一顶层优化目标抽象实际问题"
+  ],
+  "topic_tags": [
+    "edge intelligence taxonomy",
+    "computation offloading",
+    "federated learning",
+    "model compression",
+    "quality of experience optimization"
+  ],
+  "cites_own_work": [
+    "[17] revenue-driven service provisioning",
+    "[18] composition-driven IoT service provisioning",
+    "[20] mobile service selection for composition",
+    "[21] mobility-aware service composition",
+    "[25] mobility-aware cross-edge computation offloading",
+    "[29] density-based offloading strategy"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "本文为综述/路线图论文，主要贡献在于分类框架构建而非算法方法提出，因此method_signature体现其结构化思路而非具体算法特征 | md truncated to head40k+tail20k"
+}

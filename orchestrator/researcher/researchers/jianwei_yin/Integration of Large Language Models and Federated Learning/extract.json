@@ -1,0 +1,36 @@
+{
+  "paper_id": "Integration of Large Language Models and Federated Learning",
+  "doi": "10.48550/arxiv.2307.08925",
+  "title": "Integration of Large Language Models and Federated Learning",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLM参数规模扩大导致训练数据稀缺，而隐私法规阻止各方直接共享数据",
+  "problem_framing": "将LLM与FL的融合分为三个层次：LLM子技术与FL结合、FL子技术与LLM结合、整体合并",
+  "key_insight": "LLM与FL互补——FL解决LLM数据稀缺，LLM增强FL任务泛化能力",
+  "method_signature": "综述框架，按子技术融合与整体合并分类现有工作",
+  "evaluation_criteria": "对比FedLLM框架的微调方式、聚合算法数量、训练数据集和评估指标",
+  "negative_result_or_admitted_limitation": "现有FedLLM框架常忽视安全隐私威胁，这是首次分析FedLLMs的安全隐私威胁",
+  "evidence_for_taste": [
+    "现有研究未充分覆盖LLMs与FL的整合",
+    "简单组合LLM和FL子技术不足",
+    "当前FedLLM框架忽视了这些安全问题"
+  ],
+  "thinking_moves": [
+    "把大规模LLM+FL问题分解为三个层次逐一分析",
+    "先区分子技术融合与整体合并的差异",
+    "从系统异构性推导同步问题的根本原因",
+    "将安全隐私威胁归类为Utility-focused和Privacy-focused两类"
+  ],
+  "topic_tags": [
+    "federated-llm",
+    "llm-data-scarcity",
+    "privacy-preserving-ml",
+    "distributed-training",
+    "instruction-tuning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

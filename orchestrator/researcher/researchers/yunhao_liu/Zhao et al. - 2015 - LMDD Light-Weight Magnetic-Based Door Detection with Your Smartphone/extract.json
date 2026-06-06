@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhao et al. - 2015 - LMDD Light-Weight Magnetic-Based Door Detection with Your Smartphone",
+  "doi": null,
+  "title": "LMDD: Light-Weight Magnetic-based Door Detection with Your Smartphone",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有门检测方案(vision/infrastructure based)成本高,需要轻量级无基础设施方案",
+  "problem_framing": "将门检测定义为从磁信号异常中识别特定模式(drop-and-rise pattern)",
+  "key_insight": "门框金属材产生独特磁信号突变,仅靠手机磁力计可检测",
+  "method_signature": "边缘保留滤波+贝叶斯条件概率+坐标变换去除手机姿态影响",
+  "evaluation_criteria": "TP/FP/FN率计算准确率,测试功耗与环境影响因子",
+  "negative_result_or_admitted_limitation": "平均准确率仅74%,玻璃门最难检测,手机姿态变化导致6-14%精度下降",
+  "evidence_for_taste": [
+    "non-trivial, sometimes even enormous device or management cost",
+    "basically a sound accuracy",
+    "The reason is intuitive",
+    "It is easiest to detect metallic doors",
+    "acceptable precision",
+    "eliminate such noises"
+  ],
+  "thinking_moves": [
+    "把perception问题重新frame为信号处理+概率估计问题",
+    "用坐标变换消除传感器姿态变化影响",
+    "贝叶斯条件概率建模门事件与环境事件的竞争关系",
+    "edge preservation思想保留突变特征同时滤噪声"
+  ],
+  "topic_tags": [
+    "magnetic-sensing-IPS",
+    "door-detection-landmark",
+    "smartphone-sensor",
+    "infrastructure-free-localization",
+    "edge-preserving-filter"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "未找到明确venue信息,DOI为null。第一作者Yiyang Zhao, Yunhao Liu为合作作者(末位).方法细节完整,但贝叶斯概率建模的动机描述较少."
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Wang et al. - 2015 - Ambient rendezvous Energy-efficient neighbor discovery via acoustic sensing",
+  "doi": null,
+  "title": "Ambient Rendezvous: Energy-Efficient Neighbor Discovery via Acoustic Sensing",
+  "year": 2015,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "无线电接口能耗高、唤醒延迟长，难以支持移动设备上的邻居发现应用",
+  "problem_framing": "在低占空比异步模式下，如何利用共享的环境信息实现邻居设备的同时唤醒",
+  "key_insight": "空间相邻的设备共享相似的环境声学特征，可独立检测相同音频事件用于同步",
+  "method_signature": "低功耗声学感知+谱熵/通量特征提取+编码匹配+基于事件触发的无线电台调度",
+  "evaluation_criteria": "发现延迟CDF分布、首三次无线电台开启的成功率、与Searchlight的70%延迟降低",
+  "negative_result_or_admitted_limitation": "无法保证最坏情况发现延迟，能耗略高于Searchlight（15% vs 13%电池消耗）",
+  "evidence_for_taste": [
+    "AIR achieves around 90% discovery rate the first three times the radio is turned on",
+    "significantly decreases the average discovery latency by around 70%",
+    "requires a period of acoustic information recording",
+    "cannot guarantee a worst-case discovery latency",
+    "AIR consumes slightly more energy than Searchlight"
+  ],
+  "thinking_moves": [
+    "利用感知问题（声学特征相关性）解决通信同步问题",
+    "通过谱熵和通量的互补性选择鲁棒特征",
+    "将连续特征序列转换为变长二进制编码以放大音频事件差异",
+    "基于最长连续1序列定位事件起始点实现去中心化共识"
+  ],
+  "topic_tags": [
+    "acoustic-sensing-neighbor-discovery",
+    "low-power-mobile-protocols",
+    "duty-cycle-synchronization",
+    "environmental-context-discovery",
+    "mobile-opportunistic-networking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "未找到DOI和具体会议名称，论文中 venues 字段未填写相关信息"
+}

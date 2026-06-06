@@ -1,0 +1,41 @@
+{
+  "paper_id": "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence",
+  "doi": "10.1109/jiot.2020.2984887",
+  "title": "Edge Intelligence: The Confluence of Edge Computing and Artificial Intelligence",
+  "year": 2020,
+  "venue": "IEEE Internet of Things Journal",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "海量边缘数据无法回传云端,边缘智能是必然趋势",
+  "problem_framing": "将边缘智能分为AI for edge(使能边缘计算)和AI on edge(在边缘运行AI)两类进行系统梳理",
+  "key_insight": "AI与边缘计算是双向互动关系:AI为边缘提供优化技术,边缘为AI提供场景与平台",
+  "method_signature": "survey视角,用层次化路线图组织文献,QoE作为优化目标统一两个方向",
+  "evaluation_criteria": "无(综述论文,评价标准为覆盖度与分类清晰度)",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "material in Edge Intelligence spans an immense and diverse spectrum",
+    "concepts are still unclear and questions remain unsolved",
+    "not simply combination of Edge Computing and AI",
+    "vanilla version of Federated Learning has strong demand for communication efficiency"
+  ],
+  "thinking_moves": [
+    "用二分法将复杂领域拆解为对偶方向",
+    "从bottom-up和top-down双视角组织层次结构",
+    "QoE多维指标作为统一优化目标贯穿全文",
+    "识别协同设计机会(如learning-driven communication跨越通信与机器学习)"
+  ],
+  "topic_tags": [
+    "edge-intelligence-taxonomy",
+    "federated-learning-edge",
+    "computation-offloading",
+    "learning-driven-communication",
+    "device-edge-cloud-synergy"
+  ],
+  "cites_own_work": [
+    "[17][18] on revenue-driven service provisioning",
+    "[21][22] on mobility-aware service composition",
+    "[25][29] on mobility-aware computation offloading"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

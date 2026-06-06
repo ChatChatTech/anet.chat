@@ -1,0 +1,41 @@
+{
+  "paper_id": "FwdLLM_ Efficient FedLLM using Forward Gradient",
+  "doi": "10.48550/arxiv.2308.13894",
+  "title": "FwdLLM: Efficient FedLLM using Forward Gradient",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "移动设备资源受限与LLM训练需求之间的张力导致联邦LLM收敛缓慢且不实用",
+  "problem_framing": "将BP-free训练与PEFT结合，通过扰动推断替代反向传播以适配移动端NPU",
+  "key_insight": "前向梯度计算复杂度与可训练参数而非总参数规模成正比,契合PEFT",
+  "method_signature": "BP-free扰动推断+参数高效微调+方差控制步进+判别性扰动采样",
+  "evaluation_criteria": "训练时间减少倍数、内存占用降低倍数、收敛精度",
+  "negative_result_or_admitted_limitation": "BP-free方法仅在小型模型(如LeNet)上表现相当,对大模型需指数级增加扰动数量才能准确估计梯度",
+  "evidence_for_taste": [
+    "is not a panacea for all models",
+    "this method is often sub-optimal",
+    "contrary to most prior forward-gradient literature",
+    "does not fundamentally reduce memory footprint"
+  ],
+  "thinking_moves": [
+    "通过预实验识别出三个关键障碍而非笼统描述",
+    "将所有问题追溯到BP算法在设备上的使用",
+    "从激活值分解角度解释PEFT不能解决内存问题的根本原因",
+    "利用数学恒等式g_v:=∇_vf(θ)v建立BP-free梯度的无偏估计理论",
+    "观察到梯度方差随训练进程单调增加以此设计自动步进策略"
+  ],
+  "topic_tags": [
+    "federated-LLM",
+    "BP-free-training",
+    "forward-gradient",
+    "mobile-NPU",
+    "parameter-efficient-finetuning"
+  ],
+  "cites_own_work": [
+    "Melon (2022)",
+    "FedNLP (2022)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

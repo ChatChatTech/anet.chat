@@ -1,0 +1,38 @@
+{
+  "paper_id": "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation__oa_W4402667082",
+  "doi": "10.18653/v1/2024.acl-long.59",
+  "title": "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation",
+  "year": 2024,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "检索增强生成面临噪声数据干扰，现有过滤器模块只能达到次优噪声压缩效果。",
+  "problem_framing": "将噪声过滤重新形式化为信息瓶颈问题：同时最大化压缩与输出的互信息，最小化压缩与检索段落的互信息。",
+  "key_insight": "X∩Y是检索段落中对输出有用的精确信息，现有log似然目标无法准确定位这个交集，而信息瓶颈可实现oracle压缩X̃_IB=X∩Y。",
+  "method_signature": "信息瓶颈损失L_IB=I(X̃;X|Q)-βI(X̃;Y|Q)，用于RAG噪声过滤的SFT和DPO训练。",
+  "evaluation_criteria": "IB评分(压缩简洁性与生成正确性的综合评估)，配合EM、F1、TFR、FFR指标。",
+  "negative_result_or_admitted_limitation": "仅用正确性项I(X̃;Y|Q)的 ablation 结果劣于完整IB目标，表明简洁性项不可或缺。",
+  "evidence_for_taste": [
+    "only achieve suboptimal noise compression",
+    "inability to ensure that the annotated filtering results",
+    "cannot in principle eliminate the interference of noise",
+    "these compression methods do not have a unified evaluation",
+    "only yield solutions that are far from optimal"
+  ],
+  "thinking_moves": [
+    "从目标函数形式入手诊断现有方法的本质缺陷",
+    "将直觉性的'去除噪声'问题严格形式化为互信息优化",
+    "借鉴信息论中信息瓶颈理论建立新的学习目标",
+    "将信息瓶颈从单一方法扩展为评估、微调、强化学习的三种应用形式"
+  ],
+  "topic_tags": [
+    "information-bottleneck",
+    "RAG-noise-filtering",
+    "retrieval-augmented-generation",
+    "mutual-information-objective",
+    "compression-rate-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

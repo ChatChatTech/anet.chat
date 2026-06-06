@@ -1,0 +1,37 @@
+{
+  "paper_id": "Chen et al. - 2012 - Optimizing Bloom Filter Settings in Peer-to-Peer Multikeyword Searching",
+  "doi": null,
+  "title": "Optimizing Bloom Filter Settings in Peer-to-Peer Multikeyword Searching",
+  "year": 2012,
+  "venue": "IEEE Transactions on Knowledge and Data Engineering",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "P2P多关键词搜索的分布式交集/并集操作产生大量广域网流量成本",
+  "problem_framing": "优化BF参数设置以最小化通信流量,而非最小化假阳性率",
+  "key_insight": "BF最优设置取决于两侧倒排列表的统计信息,而非最小化假阳性率",
+  "method_signature": "基于数值分析的BF最优参数推导与仿真验证",
+  "evaluation_criteria": "搜索流量与延迟的降低百分比",
+  "negative_result_or_admitted_limitation": "先前研究声称最小化假阳性率是最优的,实则不然",
+  "evidence_for_taste": [
+    "minimizing the false positive of a BF is far from optimal settings",
+    "we show that this is not the case",
+    "optimal settings are determined by the global statistical information",
+    "the loss rate can become quite acceptable by using a BF with larger size"
+  ],
+  "thinking_moves": [
+    "用数学证明反驳前人直觉性结论",
+    "从流量成本倒推BF参数优化目标",
+    "承认OR查询存在结果丢失并权衡精度",
+    "通过查询历史学习最优交集顺序"
+  ],
+  "topic_tags": [
+    "P2P-search",
+    "bloom-filter-optimization",
+    "distributed-intersection",
+    "traffic-cost-minimization",
+    "DHT-inverted-index"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "TransLinkGuard_ Safeguarding Transformer Models Against Model Stealing in Edge Deployment",
+  "doi": "10.48550/arxiv.2404.11121",
+  "title": "TransLinkGuard: Safeguarding Transformer Models Against Model Stealing in Edge Deployment",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Edge-deployed LLMs become white-box accessible, enabling model stealing; existing PTSE defenses fail to balance security and efficiency",
+  "problem_framing": "Four properties must be simultaneously satisfied: proactivity, request-level authorization, runtime security, and negligible overhead",
+  "key_insight": "Avoid direct TEE computation entirely—use permutation matrices to disrupt positional info, authorization only rearranges features (lightweight)",
+  "method_signature": "Weight permutation + TEE-based OTP-encrypted authorization with MLP integration across all transformer layers",
+  "evaluation_criteria": "MS attack accuracy (security), TEE FLOPs ratio (efficiency), accuracy preservation vs original model",
+  "negative_result_or_admitted_limitation": "FLOPs metric is platform-irrelevant; no systematic hardware overhead evaluation across diverse environments",
+  "evidence_for_taste": [
+    "fundamental weakness of PTSE solutions",
+    "TEE's poor computational power",
+    "shielding entire LLMs within TEEs results in a roughly 50× reduction",
+    "offload a significant number of layers to GPUs",
+    "probability of guessing the correct π is 1/(d!)",
+    "attacker must approximate a substantial portion of the parameters"
+  ],
+  "thinking_moves": [
+    "识别PTSE方案的根本弱点是直接执行模式，而非试图改进其参数分配策略",
+    "从对称加密(OTP)获得启发，将其用于授权过程的信息隐藏",
+    "将授权机制集成到MLP块中，使第二个线性层参与授权，从而增加参数复杂度抵御逼近攻击"
+  ],
+  "topic_tags": [
+    "edge-LLM-security",
+    "model-stealing-defense",
+    "TEE-authorization",
+    "weight-permutation",
+    "transformer-IP-protection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

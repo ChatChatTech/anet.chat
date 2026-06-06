@@ -1,0 +1,39 @@
+{
+  "paper_id": "Incorporating Distributed DRL into Storage Resource Optimization of Space-Air-Ground Integrated Wireless Communication Network",
+  "doi": "10.48550/arxiv.2202.02141",
+  "title": "Incorporating Distributed DRL into Storage Resource Optimization of Space-Air-Ground Integrated Wireless Communication Network",
+  "year": 2022,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "SAGIN存储资源极度受限,集中式管理难以处理动态异构网络,需分布式方案协调存储资源",
+  "problem_framing": "将SAGIN资源分配建模为MDP,采用分布式DRL在边缘物理域独立训练以优化长期平均收益、收益率和请求接受率",
+  "key_insight": "在每个边缘物理域部署DRL智能体,提取网络资源属性构建训练环境,实现去中心化存储资源协调管理",
+  "method_signature": "分布式DRL智能体(边缘物理域本地训练)+特征矩阵(存储资源属性)+MDP联合优化",
+  "evaluation_criteria": "长期平均收益AR,收益成本比R/C,终端用户请求接受率ACR三个指标联合优化",
+  "negative_result_or_admitted_limitation": "heuristic算法不适合大规模网络且常陷入局部最优,NRMVNE算法虽早期收益率高但后期快速下降",
+  "evidence_for_taste": [
+    "heuristic algorithms are not suitable for large-scale networks",
+    "the final results often fall into local optimal solutions",
+    "the time cost of algorithm execution increases",
+    "the performance of neural network model reaches the limit",
+    "the algorithm performance begins to show a stable trend"
+  ],
+  "thinking_moves": [
+    "把资源管理问题重新frame成MDP时序决策问题,适合DRL处理高维状态空间",
+    "针对SAGIN动态拓扑特性,放弃集中式管理转向分布式智能体协作框架",
+    "把存储资源定位为特殊约束,因卫星/UAV体积限制导致存储性能受限",
+    "用多个正交指标(收益/成本率/接受率)联合优化而非单一目标,反映运营商实际需求",
+    "通过灵活调整存储需求范围测试算法适应性,验证决策可随网络环境动态变化"
+  ],
+  "topic_tags": [
+    "space-air-ground integrated network",
+    "distributed DRL storage optimization",
+    "edge server resource allocation",
+    "MDP-based network management",
+    "SAGIN Markov decision model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

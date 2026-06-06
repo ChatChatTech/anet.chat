@@ -1,0 +1,39 @@
+{
+  "paper_id": "RLER-TTE_ An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning",
+  "doi": "10.48550/arxiv.2501.15493",
+  "title": "RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning",
+  "year": 2025,
+  "venue": "ACM SIGMOD",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "TTE服务器每日处理数十亿实时请求，现有方法对每个请求都调用高复杂度模型重算，精度提升甚微却造成巨大计算压力",
+  "problem_framing": "将在线决策问题建模为MDP，通过强化学习智能决定是否调用重算模型或复用历史结果",
+  "key_insight": "在ER-TTE流程中引入轻量级Decision Maker先判断新数据是否有价值，再决定是否触发Predictor重算",
+  "method_signature": "Decision Maker + Predictor双模块架构，Decision Maker用Double DQN做action selection，Predictor存储历史结果供lookup",
+  "evaluation_criteria": "准确率(MAPE/RMSE)与效率(模型调用频率)的综合权衡",
+  "negative_result_or_admitted_limitation": "现有训练策略使用固定比例的traveled route，导致模型无法有效处理不同比例的请求",
+  "evidence_for_taste": [
+    "minimal improvements in prediction accuracy",
+    "computational stress on the TTE servers",
+    "unhelpful, misleading, and meaningless",
+    "model performs poorly when handling prediction requests with different proportions",
+    "existing methods fail to consider the complexity of real-world scenarios"
+  ],
+  "thinking_moves": [
+    "把系统层面的效率问题重新定义为agent的决策问题",
+    "从工程异常(服务器负载)反推需要引入决策机制",
+    "设计reward同时考虑performance、efficiency和frequency三个维度",
+    "将online/offline特征的关联性作为attention fusion的核心",
+    "用contrastive learning对齐online和offline feature space"
+  ],
+  "topic_tags": [
+    "en-route-travel-time-estimation",
+    "RL-decision-maker",
+    "spatio-temporal-attention",
+    "curriculum-learning",
+    "online-inference-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

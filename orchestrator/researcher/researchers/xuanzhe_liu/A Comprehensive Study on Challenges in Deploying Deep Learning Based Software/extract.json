@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software",
+  "doi": "10.48550/arxiv.2005.00760",
+  "title": "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software",
+  "year": 2020,
+  "venue": "ESEC/FSE 2020",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "DL软件部署挑战未被系统研究，与开发阶段不同",
+  "problem_framing": "从Stack Overflow挖掘3,023篇帖子定量化分析部署困难度和挑战分类",
+  "key_insight": "部署比开发更难：70.7%无答案、响应时间3倍于非部署问题",
+  "method_signature": "3,023 SO帖子 + 769手动标注构建72类挑战taxonomy",
+  "evaluation_criteria": "无答案比例、响应时间、挑战类别覆盖率",
+  "negative_result_or_admitted_limitation": "DL in browsers is still at dawn，browser问题太少",
+  "evidence_for_taste": [
+    "deployment is more challenging",
+    "median response time is about 3 times",
+    "questions are more difficult to answer",
+    "still at dawn",
+    "unsupported operation error"
+  ],
+  "thinking_moves": [
+    "从Q&A社区行为反推技术难度",
+    "比较部署与非部署阶段的回答率差异",
+    "按平台分层提取挑战共性与个性",
+    "承认早期领域数据稀缺的局限性"
+  ],
+  "topic_tags": [
+    "DL-software-deployment",
+    "Stack-Overflow-empirical-study",
+    "mobile-deployment",
+    "browser-deployment",
+    "taxonomy-construction"
+  ],
+  "cites_own_work": [
+    "xuanzhe_liu"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

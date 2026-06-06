@@ -1,0 +1,43 @@
+{
+  "paper_id": "Yang et al. - 2013 - From RSSI to CSI Indoor localization via channel response",
+  "doi": null,
+  "title": "From RSSI to CSI: Indoor localization via channel response",
+  "year": 2013,
+  "venue": "ACM Computing Surveys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "RSSI suffers dramatic performance degradation due to multipath fading and temporal dynamics, limiting indoor localization to room-level accuracy",
+  "problem_framing": "Survey paper that classifies existing CSI-based localization works into three categories based on how channel response is used",
+  "key_insight": "Channel response is to RSSI what a rainbow is to a sunbeam - it separates multipath components that RSSI superimposes",
+  "method_signature": "Survey classifying CSI usage into power-based, time/angle estimation, and human detection categories",
+  "evaluation_criteria": "Localization accuracy (submeter vs room-level), ranging error, fingerprinting precision",
+  "negative_result_or_admitted_limitation": "The time resolution remains only sufficient to distinguish path clusters rather than individual multipath components due to limited WiFi bandwidth",
+  "evidence_for_taste": [
+    "RSSI is the superimposition of multipath signals with fast changing phases",
+    "Channel response is to RSSI what a rainbow (color spectrum) is to a sunbeam",
+    "fundamentally bounds the number of resolvable paths",
+    "theoretical solutions numerically unstable without practical constraints",
+    "large shadowing Xσ blurs the monotonic trend"
+  ],
+  "thinking_moves": [
+    "从物理层视角解释RSSI失效的根因：叠加相位导致信息湮灭",
+    "将通道响应类比棱镜分光，强调信息解耦而非降噪",
+    "按使用方式对文献做分类而非按技术路线，揭示不同路径的认知差异",
+    "承认技术限制：带宽不足导致只能分辨路径簇而非单条路径"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-localization",
+    "multipath-mitigation",
+    "channel-response-fingerprinting",
+    "PHY-layer-indoor-positioning",
+    "wireless-channel-sounder"
+  ],
+  "cites_own_work": [
+    "Wu et al. 2012",
+    "Zhou et al. 2013",
+    "Yang et al. 2012",
+    "Zhang et al. 2012a"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

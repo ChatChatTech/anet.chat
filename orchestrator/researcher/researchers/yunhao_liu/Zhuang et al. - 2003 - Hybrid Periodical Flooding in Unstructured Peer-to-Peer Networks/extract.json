@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhuang et al. - 2003 - Hybrid Periodical Flooding in Unstructured Peer-to-Peer Networks",
+  "doi": null,
+  "title": "Hybrid Periodical Flooding in Unstructured Peer-to-Peer Networks",
+  "year": 2003,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "盲 flooding 导致大量冗余流量，而统计搜索存在覆盖率不足问题（partial coverage problem）",
+  "problem_framing": "如何在降低流量开销的同时保证查询覆盖率，需在效率和 QoS 之间权衡",
+  "key_insight": "用周期函数 f(n,TTL) 自适应调节跳数邻居数，并用多度量混合选择邻居以兼顾效率与覆盖率",
+  "method_signature": "HPF：周期函数控制邻居数量 + 多度量加权选择邻居集合",
+  "evaluation_criteria": "网络总流量、平均响应时间、节点覆盖率、查询覆盖率规模",
+  "negative_result_or_admitted_limitation": "DBFS 仅能覆盖约 77% 的节点（partial coverage problem）；单度量选择路径非最优",
+  "evidence_for_taste": [
+    "partial coverage problem",
+    "A larger h means a smaller chance for all reached peers to form a loop",
+    "An efficient mechanism should query more peers using less messages",
+    "the query will be flooded to the neighbor that has the largest number of files",
+    "DBFS can only cover up to 77% peers"
+  ],
+  "thinking_moves": [
+    "将现有方法（盲 flooding、DFS、k-walker）统一泛化为 periodical flooding 的特例（C=1）",
+    "识别并命名 partial coverage problem，量化展示其严重性",
+    "通过反例（图1）说明单度量选择的路径非最优，从而论证多度量必要性",
+    "定义综合指标 p = λC·traffic + λR·time，实现流量与时延的可调权衡"
+  ],
+  "topic_tags": [
+    "P2P search",
+    "partial coverage",
+    "periodical flooding",
+    "multi-metric neighbor selection",
+    "unstructured overlay"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

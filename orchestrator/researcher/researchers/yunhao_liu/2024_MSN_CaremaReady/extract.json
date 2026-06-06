@@ -1,0 +1,37 @@
+{
+  "paper_id": "2024_MSN_CaremaReady",
+  "doi": null,
+  "title": "Secure Undirected-Graph Computation Towards Efficiency and Scalability",
+  "year": 2024,
+  "venue": "MSN",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "现有安全图计算协议因双向编码导致数据量翻倍，性能开销严重",
+  "problem_framing": "无向图消息传递框架中，每条边需要编码为两个方向相反的元组，浪费资源",
+  "key_insight": "More data fields are better than more tuples——用额外数据字段替代额外元组来传递双向消息",
+  "method_signature": "SUMP协议通过单边双数据字段编码减少元组数，对幂等操作进一步优化为SUMP-O",
+  "evaluation_criteria": "子协议Sort/Shuffle/Permute等的运行时间加速比，以及TKCN端到端性能",
+  "negative_result_or_admitted_limitation": "bitmap近似策略使准确率略有下降，两方法准确率方差在1%以内",
+  "evidence_for_taste": [
+    "More data fields are better than more tuples",
+    "the idempotent nature ensures repetitive computations do not impact the final result",
+    "directly removing a tuple in one direction is inapplicable",
+    "speedup generally increases as accuracy level increases"
+  ],
+  "thinking_moves": [
+    "从现有编码方式的数据量瓶颈倒推设计约束",
+    "识别幂等操作可进一步简化数据结构",
+    "把双向传递从'两个元组'重构为'一个元组+两个数据字段'",
+    "用bitmap近似替代精确比较以换取计算复杂度下降"
+  ],
+  "topic_tags": [
+    "secure-multiparty-computation",
+    "undirected-graph-message-passing",
+    "graph-privacy",
+    "idempotent-optimization",
+    "bitmap-approximation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

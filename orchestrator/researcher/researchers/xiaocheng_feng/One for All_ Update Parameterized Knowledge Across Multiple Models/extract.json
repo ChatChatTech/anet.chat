@@ -1,0 +1,38 @@
+{
+  "paper_id": "One for All_ Update Parameterized Knowledge Across Multiple Models",
+  "doi": "10.48550/arxiv.2506.00817",
+  "title": "One for All: Update Parameterized Knowledge Across Multiple Models with Once Edit",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLMs存储知识但会过时，导致错误和幻觉；现有方法只能编辑单个模型，多模型编辑效率低",
+  "problem_framing": "将知识编辑问题从单模型扩展到多模型场景，需要同时保证可靠性、泛化性和局部性三个属性",
+  "key_insight": "用轻量级插件模型作为编辑模块，通过[WEIGHT] token动态分配权重，结合搜索空间零初始化和目标增强实现知识跨模型迁移",
+  "method_signature": "ONCEEDIT采用编辑+集成两阶段框架，用Tiny-Llama插件模型修改知识后与多个LLM异构集成",
+  "evaluation_criteria": "可靠性Reliability、泛化性Generality、局部性Locality；在teacher-forced和validation generation两种解码策略下评估",
+  "negative_result_or_admitted_limitation": "动态权重机制有2-4%的泛化性损失但可接受；集成增强机制导致Counterfact上局部性下降4-6%但整体提升超过12%",
+  "evidence_for_taste": [
+    "ensemble methods are not directly applicable",
+    "fixed ensemble weights, making them unsuitable",
+    "inherent bias of the central large model",
+    "significant distributional differences"
+  ],
+  "thinking_moves": [
+    "识别模型集成方法与知识编辑任务的不兼容：固定权重无法区分编辑相关/非相关知识",
+    "诊断中心模型偏差问题：LLM知识主导集成结果导致无法有效捕获新注入知识",
+    "将问题重新框架为插件模型+动态权重+增强解码的三层架构",
+    "通过多任务学习同时训练生成目标和权重预测目标",
+    "逐步消融验证各组件贡献：DEEPEN→+DW→+DW+EE"
+  ],
+  "topic_tags": [
+    "knowledge-editing",
+    "multi-model-ensemble",
+    "LLM-knowledge-update",
+    "heterogeneous-model-fusion",
+    "dynamic-weight-mechanism"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

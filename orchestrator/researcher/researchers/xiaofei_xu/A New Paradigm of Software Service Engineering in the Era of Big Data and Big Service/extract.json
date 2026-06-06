@@ -1,0 +1,39 @@
+{
+  "paper_id": "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service",
+  "doi": "10.48550/arxiv.1608.08342",
+  "title": "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service",
+  "year": 2016,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "软件服务开发从零开始已不适用，需高效复用互联网上大量开放服务资源来满足海量个性化用户需求",
+  "problem_framing": "如何在大服务生态中通过服务资源优化配置来实现需求与解决方案的有效匹配",
+  "key_insight": "将软件服务工程重构为双向两阶段范式：自上而下需求工程与自下而上领域服务工程，以服务上下文作为需求模式与服务模式匹配的媒介",
+  "method_signature": "RE2SEP范式含服务导向需求工程、领域导向服务工程、软件开发方法三个组件",
+  "evaluation_criteria": "匹配效率、匹配精度、匹配效果、服务质量、匹配选择范围五维度",
+  "negative_result_or_admitted_limitation": "现有工程方法效率偏低(‘it is still sometimes low efficient’)，需引入新范式",
+  "evidence_for_taste": [
+    "how to reuse the existing service resources effectively",
+    "it is still sometimes low efficient",
+    "matching between requirement patterns and service patterns",
+    "service context as mediation"
+  ],
+  "thinking_moves": [
+    "将医学诊疗流程类比软件服务工程(医生对应需求工程，药厂对应服务工程)以阐释双向范式哲学",
+    "将服务模式类比为句子中的短语，可实例化执行以构建服务解决方案",
+    "通过MDA等前人方法不足(‘low efficient’)来反衬RE2SEP的必要性"
+  ],
+  "topic_tags": [
+    "big-service-ecosystem",
+    "service-pattern-reuse",
+    "requirement-pattern-matching",
+    "service-oriented-requirement-engineering",
+    "domain-oriented-service-engineering"
+  ],
+  "cites_own_work": [
+    "SMDA (Xu X et al 2007)",
+    "from-big-data-to-big-service (Xu X et al 2015)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

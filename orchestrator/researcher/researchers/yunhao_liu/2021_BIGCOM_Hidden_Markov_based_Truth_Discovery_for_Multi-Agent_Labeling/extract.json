@@ -1,0 +1,37 @@
+{
+  "paper_id": "2021_BIGCOM_Hidden_Markov_based_Truth_Discovery_for_Multi-Agent_Labeling",
+  "doi": null,
+  "title": "Hidden Markov based Truth Discovery for Multi-Agent Labeling",
+  "year": 2021,
+  "venue": "BIGCOM",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "API-based labeling agents输出噪声标签且可靠性各异,买家需聚合多源答案获取真值",
+  "problem_framing": "多标签真值发现问题:联合估计任务真值与标注智能体可靠性",
+  "key_insight": "用隐马尔可夫链建模标签间潜在关联,EM迭代交替估计标签真值与智能体精度",
+  "method_signature": "HMM概率图模型+EM算法联合推断多标签真值与智能体可靠性",
+  "evaluation_criteria": "Accuracy=(1/T·K)∑I(ŷ=y),对比MV/Independent/Dependent三类方法",
+  "negative_result_or_admitted_limitation": "实验仅与Majority Voting比较,未对比标准Truth Discovery基线算法",
+  "evidence_for_taste": [
+    "The immediate limitation here is",
+    "the simple approach ignored this important factor",
+    "there perhaps exists latent correlation",
+    "first truth discovery algorithm",
+    "to the best of our knowledge"
+  ],
+  "thinking_moves": [
+    "将标注智能体建模为二元硬币可靠性模型",
+    "从多标签独立处理转向标签间顺序依赖建模",
+    "用共现频率估计标签转移矩阵F",
+    "Viterbi解码搜索最优标签序列"
+  ],
+  "topic_tags": [
+    "truth-discovery",
+    "multi-agent-labeling",
+    "hidden-markov-model",
+    "EM-algorithm",
+    "probabilistic-graphical-model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

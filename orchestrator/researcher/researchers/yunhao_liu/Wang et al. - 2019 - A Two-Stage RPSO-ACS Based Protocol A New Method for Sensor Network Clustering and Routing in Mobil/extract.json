@@ -1,0 +1,44 @@
+{
+  "paper_id": "Wang et al. - 2019 - A Two-Stage RPSO-ACS Based Protocol A New Method for Sensor Network Clustering and Routing in Mobil",
+  "doi": null,
+  "title": "A Two-Stage RPSO-ACS Based Protocol: A New Method for Sensor Network Clustering and Routing in Mobile Computing",
+  "year": 2019,
+  "venue": "IEEE ACCESS",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传感器节点依赖电池供电，能源有限，数据传输能效成为关键问题，直接影响网络寿命",
+  "problem_framing": "将网络分为两阶段：聚类头选择+中继路由优化，兼顾节点能效与簇内距离均衡",
+  "key_insight": "利用传输能耗曲线的阈值(93.65m)筛选近基站节点直传，避免不必要的聚类开销",
+  "method_signature": "RPSO选CH + ACS选Relay构成双阶段优化，替代单跳传输与随机聚类",
+  "evaluation_criteria": "存活节点数、BS接收数据量、能耗、覆盖率四维对比实验",
+  "negative_result_or_admitted_limitation": "PSO容易陷入局部最优且存在'运动滞后'问题，需引入重采样机制",
+  "evidence_for_taste": [
+    "PSO is still easy to get trapped in local optimum prematurely",
+    "some particles might still be far away from the potential optimal position",
+    "the routes of CH towards BS are always not the optimal path",
+    "makes them easy to die, which increases the load imbalance",
+    "nodes far away from BS would die quickly",
+    "energy consumption is the lowest",
+    "data would be transmitted with minimal energy consumption"
+  ],
+  "thinking_moves": [
+    "通过能耗曲线数学推导确定直传阈值，而非启发式设定",
+    "将CH到BS的单跳传输替换为多跳Relay，用ACO求解最优路径",
+    "借鉴粒子滤波的重采样思想改造PSO，解决粒子退化问题",
+    "从节点位置和能量双维度定义聚类目标函数，平衡簇内距离与能效",
+    "借鉴Particle Filter的重采样机制防止PSO粒子退化"
+  ],
+  "topic_tags": [
+    "WSN-clustering",
+    "RPSO-cluster-head-selection",
+    "ACO-multi-hop-routing",
+    "energy-efficiency",
+    "sensor-network-lifetime"
+  ],
+  "cites_own_work": [
+    "X. Wang, H. Gu, H. Zhang, and H. Chen, 2019",
+    "X. Wang, H. Zhang, S. Fan, and H. Gu, 2018"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

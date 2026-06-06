@@ -1,0 +1,39 @@
+{
+  "paper_id": "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval",
+  "doi": null,
+  "title": "ECNU at 2015 eHealth Task 2: User-centred Health Information Retrieval",
+  "year": 2015,
+  "venue": "CLEF eHealth Evaluation Lab",
+  "venue_tier": "workshop",
+  "role": "first",
+  "motivation": "用户使用迂回描述而非医学术语查询健康信息，导致传统检索模型难以匹配",
+  "problem_framing": "通过Web查询扩展和学习排序将日常描述翻译为医学术语",
+  "key_insight": "利用Google搜索将用户描述自动翻译为MeSH医学术语，实现查询扩展",
+  "method_signature": "Web查询扩展+随机森林学习排序+多IR模型组合",
+  "evaluation_criteria": "P@10(主),NDCG@10,MAP",
+  "negative_result_or_admitted_limitation": "Run.4和Run.5效果反而不如简单方法，学习排序参数敏感",
+  "evidence_for_taste": [
+    "get rid of the influence of single model",
+    "to better understand and satisfy the task",
+    "manually add the keywords diagnose",
+    "customized a learning-to-rank algorithm"
+  ],
+  "thinking_moves": [
+    "观察到用户真实行为模式，利用Google搜索作为术语翻译中介",
+    "通过多模型分数组合消除单模型偏差",
+    "将概念特征作为可学习特征而非直接匹配方式",
+    "通过实验对比发现参数敏感性限制方法泛化"
+  ],
+  "topic_tags": [
+    "medical-IR",
+    "query-expansion",
+    "learning-to-rank",
+    "circumlocutory-queries",
+    "Web-based-expansion"
+  ],
+  "cites_own_work": [
+    "ECNU at TREC 2014 Microblog Track"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

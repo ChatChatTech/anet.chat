@@ -1,0 +1,39 @@
+{
+  "paper_id": "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval",
+  "doi": null,
+  "title": "ECNU at 2015 CDS Track: Two Re-ranking Methods in Medical Information Retrieval",
+  "year": 2015,
+  "venue": "TREC 2015 Clinical Decision Support Track",
+  "venue_tier": "workshop",
+  "role": "first",
+  "motivation": "临床决策支持系统需要从生物医学文献中检索答案，现有的信息检索模型需要针对性改进以满足医学信息检索任务的需求",
+  "problem_framing": "将医学信息检索表述为重排序问题，结合学习排序框架和位置敏感模型来提升检索效果",
+  "key_insight": "查询项在文档中的位置信息具有衰减效应，通过自定义核函数融合高斯、三角、余弦和圆形核可以建模这种空间依赖性",
+  "method_signature": "结合BM25/PL2/BB2的集成排序结果，使用随机森林(逐点)和SVM(成对)进行重排序；同时利用四核组合核函数的位置模型进行重排序",
+  "evaluation_criteria": "infNDCG作为主要评测指标，辅以MAP、bpref、P@10",
+  "negative_result_or_admitted_limitation": "位置模型(ECNUPB: MAP=0.0220, infNDCG=0.0702)远逊于学习排序模型，表明位置敏感假设在该任务上效果有限",
+  "evidence_for_taste": [
+    "we believe that title and abstract parts are the most important",
+    "only the terms appearing more than n times are kept",
+    "we apply random forest to implement pointwise approach",
+    "occurrence of a query term has an impact",
+    "The main evaluation is infNDCG",
+    "ECNUPB performed much worse than ecnu1"
+  ],
+  "thinking_moves": [
+    "假设查询词对周围文本的影响随距离衰减，用核函数建模这种空间依赖性",
+    "通过Web搜索+MeSH数据库自动扩展查询，利用众包医疗术语资源增强检索",
+    "根据任务类型(诊断/检查/治疗)自动添加关键词进行查询增强",
+    "将文档分段处理，假设不同段落权重不同(标题>摘要>正文>表格>图表>参考文献)",
+    "先用多个基础检索模型生成候选集，再通过学习排序重新打分排序"
+  ],
+  "topic_tags": [
+    "clinical-decision-support",
+    "learning-to-rank",
+    "medical-IR",
+    "position-based-retrieval",
+    "query-expansion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

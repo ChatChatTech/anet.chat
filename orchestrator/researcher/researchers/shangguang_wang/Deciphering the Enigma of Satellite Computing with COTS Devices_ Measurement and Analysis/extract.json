@@ -1,0 +1,44 @@
+{
+  "paper_id": "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis",
+  "doi": "10.48550/arxiv.2401.03435",
+  "title": "Deciphering the Enigma of Satellite Computing with COTS Devices: Measurement and Analysis",
+  "year": 2024,
+  "venue": "ACM MobiCom '24",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "预发射仿真与实际在轨表现存在鸿沟,需要真实在轨数据弥合理论与实践的差距",
+  "problem_framing": "将卫星计算约束量化为表面温度和放电深度(DoD)两个关键指标",
+  "key_insight": "温度和能量是限制COTS计算能力的直接因素,表面温度30°C和DoD 30%是关键阈值",
+  "method_signature": "首个在真实卫星上对COTS设备热控/功耗/性能进行实测的研究",
+  "evaluation_criteria": "表面温度是否超30°C限值,芯片频率是否降频,DoD是否超30%",
+  "negative_result_or_admitted_limitation": "两个Atlas并行计算时结构温度快速达到30°C限值,任务被强制终止;6个月实验未观测到SEE错误,辐射效应影响可能被低估",
+  "evidence_for_taste": [
+    "real-world data would enable",
+    "These tests are unable to guarantee",
+    "Overheating phenomena limit the",
+    "cannot operate for extended periods",
+    "discrepancy arises from imperfect",
+    "approximately 6% of the converted",
+    "Building on this foundation"
+  ],
+  "thinking_moves": [
+    "从预发射仿真迈向在轨实测填补知识空白",
+    "将复杂卫星平台约束简化为表面温度和DoD两个可量化指标",
+    "通过天地对比实验消除无关变量干扰",
+    "承认预发射测试的局限性并指出实测必要性",
+    "从设备差异性反推热设计对计算的影响"
+  ],
+  "topic_tags": [
+    "satellite-computing-constraints",
+    "COTS-devices-thermal-management",
+    "in-orbit-measurement",
+    "power-management-DoD",
+    "small-satellite-benchmark"
+  ],
+  "cites_own_work": [
+    "Tiansuan Constellation platform (Wang et al. EDGE 2021)",
+    "Space-ground collaborative intelligence (Wang et al. 2023)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

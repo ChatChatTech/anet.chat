@@ -1,0 +1,42 @@
+{
+  "paper_id": "Ma et al. - 2015 - Sherlock Is Around Detecting Network Failures with Local Evidence Fusion",
+  "doi": null,
+  "title": "Sherlock Is Around: Detecting Network Failures with Local Evidence Fusion",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Sink-based diagnosis incurs huge transmission overhead; sink fails to obtain complete evidence from problematic regions.",
+  "problem_framing": "Balance diagnosis workload among sensor nodes while guaranteeing integrated judgment with consistent results.",
+  "key_insight": "Root causes can be partly reflected by nodes within a neighborhood; local fusion achieves high accuracy without long-distance evidence collection.",
+  "method_signature": "Local-Diagnosis (LD2): Naive Bayesian Classifier + Dempster-Shafer evidence fusion via dynamically constructed fusion tree.",
+  "evaluation_criteria": "False negative rate (miss detection), false positive rate (false alarm), time cost on 50-node TelosB testbed.",
+  "negative_result_or_admitted_limitation": "D-S theory fails when evidences are highly conflicting; must reduce impact of incorrect and fringe evidences.",
+  "evidence_for_taste": [
+    "huge transmission overhead",
+    "sink often fails to obtain complete evidences",
+    "narrow scope of single node",
+    "inconsistent diagnosis reports",
+    "balancing the workload",
+    "leads to inconsistent results"
+  ],
+  "thinking_moves": [
+    "把诊断负担从sink分布式化到邻居节点",
+    "用D-S理论融合局部证据,确保融合结果与顺序无关(associative law)",
+    "邻居节点数增加→诊断准确率提升的自然单调性",
+    "为避免Heisenbug,诊断过程本身不能引入过多通信开销"
+  ],
+  "topic_tags": [
+    "WSN-in-network-diagnosis",
+    "Dempster-Shafer-evidence-fusion",
+    "distributed-fault-detection",
+    "local-consensus",
+    "sensor-network-debugging"
+  ],
+  "cites_own_work": [
+    "TinyD2",
+    "Sympathy"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue not explicitly stated; only co-author role confirmed for Yunhao Liu. DOI null."
+}

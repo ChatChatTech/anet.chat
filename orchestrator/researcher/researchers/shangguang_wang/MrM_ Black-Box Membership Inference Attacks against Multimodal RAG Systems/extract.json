@@ -1,0 +1,38 @@
+{
+  "paper_id": "MrM_ Black-Box Membership Inference Attacks against Multimodal RAG Systems",
+  "doi": "10.48550/arxiv.2506.07399",
+  "title": "MrM: Black-Box Membership Inference Attacks against Multimodal RAG Systems",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Multimodal RAG系统使外部用户间接访问知识库敏感数据，存在隐私泄露风险，现有MIA方法仅关注文本模态",
+  "problem_framing": "将视觉数据成员推断问题形式化为跨模态推理挑战——从纯文本响应推断图像是否在检索数据库中",
+  "key_insight": "通过对象感知扰动遮挡关键语义区域，结合反事实引导的掩码选择，可同时确保检索成功和生成阶段信息泄露",
+  "method_signature": "多目标数据扰动框架，使用反事实攻击约束，统计推断成员身份",
+  "evaluation_criteria": "AUC和TPR@5%FPR，在样本级和集合级评估，测试对自适应防御的鲁棒性",
+  "negative_result_or_admitted_limitation": "在图像高度相似或专业化视觉语义场景（如医学影像）中泛化性不保证，小规模开源模型性能下降明显",
+  "evidence_for_taste": [
+    "balance between ensuring the successful retrieval",
+    "eliminate the interference of the self-knowledge",
+    "prioritize the most informative masked regions",
+    "consistent performance advantage",
+    "robustness against adaptive defense mechanisms"
+  ],
+  "thinking_moves": [
+    "将跨模态成员推断问题重新框架为统计假设检验问题，通过扰动后正确识别所需尝试次数差异推断成员身份",
+    "设计掩码策略时同时满足两个约束：确保目标数据可检索，同时引导模型生成泄露成员信息的响应",
+    "利用代理模型的预测不确定性量化掩码区域的判别信息量，消除目标模型自我知识的干扰",
+    "通过消融实验逐一移除关键组件验证每个模块的必要性，确认对象感知扰动的核心作用"
+  ],
+  "topic_tags": [
+    "multimodal-RAG-privacy",
+    "membership-inference-attack",
+    "black-box-attack",
+    "vision-language-model-security",
+    "counterfactual-perturbation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

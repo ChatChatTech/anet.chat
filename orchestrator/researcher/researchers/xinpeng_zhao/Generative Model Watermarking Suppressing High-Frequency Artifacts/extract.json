@@ -1,0 +1,42 @@
+{
+  "paper_id": "Generative Model Watermarking Suppressing High-Frequency Artifacts",
+  "doi": "10.48550/arxiv.2305.12391",
+  "title": "Generative Model Watermarking Suppressing High-Frequency Artifacts",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有生成模型水印方法在频域引入明显人工痕迹,导致水印可被检测从而威胁知识产权保护",
+  "problem_framing": "将频域伪影问题形式化为:现有方法仅考虑空间域不可见性,忽视频域人工痕迹",
+  "key_insight": "通过在嵌入网络的上/下采样层引入低通滤波抗混叠,可同时抑制结构缺陷和扰动引入的高频伪影",
+  "method_signature": "抗混叠水印嵌入网络(低通滤波上/下采样层)+联合损失优化+对抗训练",
+  "evaluation_criteria": "空间/频域双域不可见性、对抗预处理攻击和替代网络攻击的鲁棒性、水印提取精度",
+  "negative_result_or_admitted_limitation": "我们无法保证所提框架对所有真实攻击都鲁棒,因为不可能预见他人的所有攻击",
+  "evidence_for_taste": [
+    "spatial artifacts",
+    "noticeable green points",
+    "grid-like high-frequency artifacts",
+    "lack of invisibility in the frequency domain",
+    "aliasing can be mitigated",
+    "anti-aliasing kernel"
+  ],
+  "thinking_moves": [
+    "从空间域和频域双视角审视不可见性,扩展了问题定义空间",
+    "将深度网络采样层的工程异常回溯至信号处理中的混叠问题",
+    "借鉴信号处理抗混叠思想解决深度学习网络架构的设计问题",
+    "将替代模型攻击的对抗训练阶段化,与主训练解耦"
+  ],
+  "topic_tags": [
+    "generative-model-watermarking",
+    "high-frequency-artifacts",
+    "anti-aliasing",
+    "frequency-domain-imperceptibility",
+    "DNN-IP-protection"
+  ],
+  "cites_own_work": [
+    "Wu et al. 2020",
+    "Zhang et al. 2022"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

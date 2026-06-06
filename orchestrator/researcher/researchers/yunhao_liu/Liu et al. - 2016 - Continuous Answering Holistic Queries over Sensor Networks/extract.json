@@ -1,0 +1,45 @@
+{
+  "paper_id": "Liu et al. - 2016 - Continuous Answering Holistic Queries over Sensor Networks",
+  "doi": null,
+  "title": "Continuous Answering Holistic Queries over Sensor Networks",
+  "year": 2016,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "传感器数据含噪声,单次查询结果不可靠,现有方法忽略时序相关性,需降低能耗同时保证准确性",
+  "problem_framing": "将连续整体查询(如Median)定义为非分解查询,利用不同轮次间的数据相关性来减少通信开销",
+  "key_insight": "时序相关性被之前方法忽视,通过F-Bucket精确算法和AF-Bucket近似算法hybrid切换可适应数据变化速度",
+  "method_signature": "F-Bucket精确算法(范围细化)+AF-Bucket小波近似算法+efficiency指标驱动切换",
+  "evaluation_criteria": "通信开销(传输次数)、误差界、与LIST和Q-digest对比",
+  "negative_result_or_admitted_limitation": "数据快速变化时范围细化频繁调用导致通信开销很高,此时近似方法更稳定",
+  "evidence_for_taste": [
+    "it is not trivial to answer holistic ones",
+    "Strong correlations exist between data in different rounds",
+    "the temporal correlations between two rounds are exploited",
+    "adaptively selects appropriate one based on data changing speed",
+    "resistant to noisy readings",
+    "when data changes quickly, our approach can adaptively switch"
+  ],
+  "thinking_moves": [
+    "指出领域中被忽视的问题:整体查询虽普遍但少有人研究",
+    "从时序相关性这一被忽略的资源切入",
+    "将问题分解为精确/近似两种场景处理",
+    "引入efficiency指标量化数据变化速度对算法选择的影响",
+    "多轮细化搜索定位精确结果",
+    "承认精确算法在快速变化场景下的局限性并转向近似方案"
+  ],
+  "topic_tags": [
+    "sensor-networks",
+    "holistic-queries",
+    "temporal-correlation",
+    "wavelet-approximation",
+    "hybrid-algorithm",
+    "in-network-aggregation"
+  ],
+  "cites_own_work": [
+    "GreenOrbs system deployment",
+    "Li et al. isomap"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整提供了abstract、method、evaluation和conclusion,venue信息未在文中明确标注"
+}

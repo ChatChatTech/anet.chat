@@ -1,0 +1,52 @@
+{
+  "paper_id": "Liu et al. - 2004 - Efficient Gnutella-like P2P Overlay Construction",
+  "doi": null,
+  "title": "Efficient Gnutella-like P2P Overlay Construction",
+  "year": 2004,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "P2P系统产生大量冗余流量,源于覆盖网与物理网络拓扑不匹配",
+  "problem_framing": "70%以上路径受拓扑失配影响,消息重复穿越同一物理链路",
+  "key_insight": "通过优化覆盖网拓扑结构连接物理邻近节点,可显著降低流量而不缩减搜索范围",
+  "method_signature": "LTM用TTL2检测器发现低效链路并切断,SBO用二分染色+MST选择转发连接",
+  "evaluation_criteria": "流量成本下降幅度、响应时间缩短幅度、收敛步数",
+  "negative_result_or_admitted_limitation": "LTM需要时钟同步(增加NTP开销);简单重连近邻可能破坏连通性造成孤立岛屿",
+  "evidence_for_taste": [
+    "70% of the paths are suffered",
+    "over 20% of the logical connections",
+    "LTM converges in around 2-3 steps",
+    "SBO reduces traffic cost 85-90%",
+    "destroy the connectivity of the overlay",
+    "demands synchronized time among peers"
+  ],
+  "thinking_moves": [
+    "将拓扑失配量化为可测指标(70%路径受影响)",
+    "从物理网络约束出发设计分布式局部测量而非全局拓扑信息",
+    "通过模拟验证问题严重性后再设计解决方案",
+    "承认简单方案的缺陷(全局优化会破坏连通性)"
+  ],
+  "topic_tags": [
+    "P2P-overlay-optimization",
+    "topology-mismatch",
+    "distributed-algorithm",
+    "Gnutella",
+    "traffic-reduction"
+  ],
+  "cites_own_work": [
+    [
+      "Location-Aware Topology Matching in Unstructured P2P Systems",
+      "Proceedings of IEEE INFOCOM, 2004"
+    ],
+    [
+      "Building a Scalable Bipartite P2P Overlay Network",
+      "Proceedings of IPDPS, 2004"
+    ],
+    [
+      "A Distributed Approach to Solving Overlay Mismatch Problem",
+      "Proceedings of ICDCS, 2004"
+    ]
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注发表venue;年份从引用文献和DOI缺失推断;作者role通过作者顺序和脚注确认Yunhao Liu为第一作者"
+}

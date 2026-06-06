@@ -1,0 +1,37 @@
+{
+  "paper_id": "What does Transformer learn about source code_",
+  "doi": "10.48550/arxiv.2207.08466",
+  "title": "What does Transformer learn about source code?",
+  "year": 2022,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Transformer models process sequential code but may capture structural info (syntax tree, data flow). Existing NLP interpretability methods fail on programming languages' special structures.",
+  "problem_framing": "How to extract structural information learned by transformer-based models? How to automatically construct program representation graphs without complex manual rules?",
+  "key_insight": "Aggregating attention scores via max across heads reveals syntactic structure; different heads capture different semantic relations (provides natural edge types).",
+  "method_signature": "Aggregated attention score (max over heads per layer) + Chu-Liu/Edmonds MST algorithm to extract semantic graphs from pre-trained CodeBERT/GraphCodeBERT.",
+  "evaluation_criteria": "Tree distance distribution vs concrete syntax tree; edge type overlap with manual graphs; downstream VarMisuse task accuracy (Loc & Rep Acc).",
+  "negative_result_or_admitted_limitation": "Self-attention handles implicit syntactic/data flow well but still limited to complex relationships like control flows; results slightly drop vs manual graphs.",
+  "evidence_for_taste": [
+    "too dense to analyze, especially in deep layers",
+    "most information about linear word order",
+    "self-attention mechanism can well handle",
+    "still limited to complex relationships",
+    "the final result drops slightly compared"
+  ],
+  "thinking_moves": [
+    "从注意力矩阵的密度问题倒逼需要稀疏化算法 (MST)",
+    "把不同attention head的分布差异重新解释为edge type的来源",
+    "用下游任务的性能来验证提取的图是否包含真实语义",
+    "fine-tuning后模型对语言特定结构的敏感性变化作为insight"
+  ],
+  "topic_tags": [
+    "code-representation-learning",
+    "transformer-interpretability",
+    "program-graph-extraction",
+    "attention-analysis",
+    "code-intelligence-tasks"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Editorial_ Collaborative Computing in AI Empowered Mobile Networks",
+  "doi": "10.1007/s11036-022-02008-3",
+  "title": "Editorial: Collaborative Computing in AI Empowered Mobile Networks",
+  "year": 2022,
+  "venue": "Mobile Networks and Applications",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "special issue on interdisciplinary techniques for networking, communications, big data analytics, and emerging AI applications",
+  "problem_framing": "editorial summarizing six accepted papers on collaborative computing in AI-empowered mobile networks",
+  "key_insight": "AI-empowered mobile networks require integration of wireless, privacy, routing, and edge learning techniques",
+  "method_signature": "editorial overview of six independent submissions",
+  "evaluation_criteria": "simulation comparisons against existing frameworks",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "adds a workload constraint",
+    "solving the queue delay and queue overflow problem",
+    "investigates the routing path selection problem",
+    "analyzes the behaviors of the attacker",
+    "studies a realistic scenario",
+    "considers how to determine the effect"
+  ],
+  "thinking_moves": [
+    "通过汇总归纳六个独立投稿,提炼出AI赋能移动网络的多学科交叉研究框架",
+    "用problem-solving句式统一描述不同方向成果,体现技术问题导向的分类逻辑"
+  ],
+  "topic_tags": [
+    "federated-edge-learning",
+    "congestion-control",
+    "cognitive-radio-routing",
+    "pilot-contamination-security",
+    "D2D-caching",
+    "differential-privacy-DNN"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "This is an editorial summary, not a research paper. Li Kuang is co-author. No original method, result, or limitation is presented; all content summarizes six third-party papers. Cannot extract traditional research taste signals like motivation/problem/framing from a single author's perspective."
+}

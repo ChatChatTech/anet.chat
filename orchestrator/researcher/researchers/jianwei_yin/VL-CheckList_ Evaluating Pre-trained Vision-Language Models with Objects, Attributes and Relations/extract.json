@@ -1,0 +1,37 @@
+{
+  "paper_id": "VL-CheckList_ Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations",
+  "doi": "10.48550/arxiv.2207.00221",
+  "title": "VL-CheckList: Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations",
+  "year": 2022,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有VLP模型仅用下游任务准确率评估，缺乏可解释性、不可比性、数据偏差",
+  "problem_framing": "将VLP能力解耦为object/attribute/relation三个独立维度，用ITM作为通用评估目标",
+  "key_insight": "借用NLP的CheckList思想，用ITM统一评估并通过负采样构造hard negative测试细粒度能力",
+  "method_signature": "ITM作为统一评估器 + taxonomy三层解耦 + linguistic-aware负采样",
+  "evaluation_criteria": "accuracy (正样本得分高于负样本的比例)",
+  "negative_result_or_admitted_limitation": "未解释为何ITM高分模型下游任务分数反而低；CLIP空间关系理解最差(49.1%)",
+  "evidence_for_taste": [
+    "only provides a black box score",
+    "disentangle capabilities into relatively independent variables",
+    "model-agnostic and applies to all fusion architectures",
+    "understanding Relation and Attribute is more challenging than Object",
+    "the size in natural language does not translate to an absolute pixel size in images"
+  ],
+  "thinking_moves": [
+    "从评估工具缺失反推需要通用探测框架",
+    "把复杂下游任务能力分解为可独立测量的原子能力",
+    "用负采样构造定向测试而非模糊评估",
+    "用ITM作为跨模型的公平比较基准"
+  ],
+  "topic_tags": [
+    "vision-language-pretraining evaluation",
+    "image-text-matching",
+    "negative sampling",
+    "model capability profiling",
+    "multimodal interpretability"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

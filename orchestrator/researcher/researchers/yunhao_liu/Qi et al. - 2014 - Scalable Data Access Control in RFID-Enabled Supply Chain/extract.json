@@ -1,0 +1,38 @@
+{
+  "paper_id": "Qi et al. - 2014 - Scalable Data Access Control in RFID-Enabled Supply Chain",
+  "doi": null,
+  "title": "Scalable Data Access Control in RFID-Enabled Supply Chain",
+  "year": 2014,
+  "venue": "IEEE",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有访问控制方案在大规模RFID供应链中不可扩展,存在安全漏洞且撤销开销大",
+  "problem_framing": "需要在物品级别实现数据访问控制和权限撤销,克服CP-ABE的三项局限",
+  "key_insight": "将角色属性与标签属性分离,标签属性凭证本地生成并存储于标签,无需信任中心密钥机构",
+  "method_signature": "将可更新加密与CP-ABE结合,实现策略更新无需解密",
+  "evaluation_criteria": "通过大规模模拟和商品RFID系统实现验证可扩展性和效率",
+  "negative_result_or_admitted_limitation": "传统对称加密不支持无解密策略更新;代理重加密需1024位密钥超出标签512位内存;现有方案仅支持一次性更新",
+  "evidence_for_taste": [
+    "ill-suited to secure the product data",
+    "introduces vulnerability to the product data",
+    "renders such an approach inapplicable",
+    "overcomes the inefficiency hurdles",
+    "does not require any decryption"
+  ],
+  "thinking_moves": [
+    "从CP-ABE三项局限出发构建问题:可扩展性/中心化信任/撤销开销",
+    "将标签属性凭证管理从中心机构转移到本地参与者和标签",
+    "设计可更新加密替代标准对称加密以支持无解密策略更新",
+    "通过双层加密范式结合ABE与对称加密实现细粒度访问控制"
+  ],
+  "topic_tags": [
+    "RFID-supply-chain",
+    "CP-ABE",
+    "updatable-encryption",
+    "privilege-revocation",
+    "item-level-access-control"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

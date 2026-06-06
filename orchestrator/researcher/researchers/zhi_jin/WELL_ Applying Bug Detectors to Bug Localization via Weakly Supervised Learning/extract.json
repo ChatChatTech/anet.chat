@@ -1,0 +1,38 @@
+{
+  "paper_id": "WELL_ Applying Bug Detectors to Bug Localization via Weakly Supervised Learning",
+  "doi": "10.48550/arxiv.2305.17384",
+  "title": "WELL: Applying Bug Detectors to Bug Localization via Weakly Supervised Learning",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "训练bug定位模型需要大量精确定位标注数据，收集困难耗时，而二值bug检测数据易于获取",
+  "problem_framing": "将bug定位问题重新定义为序列标注任务，利用弱监督学习范式训练模型",
+  "key_insight": "CodeBERT若能检测bug，则bug片段必在其最关注的关键部分（注意力最高处）",
+  "method_signature": "CodeBERT微调二值检测+多头注意力聚合定位bug，无需定位标注",
+  "evaluation_criteria": "VarMisuse定位准确率、Top-1/Top-10命中率和Hit@K指标",
+  "negative_result_or_admitted_limitation": "LSTM backbone表现不如CodeBERT，方法可迁移性有限；假设bug片段连续且有界N",
+  "evidence_for_taste": [
+    "buggy fragment is likely to be included in the key portion",
+    "draws the model's most attention",
+    "only a small subset of the heads are specialized",
+    "other heads are dispensable",
+    "LSTM backbone may be not strong enough"
+  ],
+  "thinking_moves": [
+    "将检测任务的强标签信号转嫁为定位任务的弱监督信号",
+    "利用attention机制提取模型内部学到的bug相关知识",
+    "通过 ablation study 验证方法可迁移到其他backbone",
+    "承认多头注意力存在冗余，筛选关键head提升性能"
+  ],
+  "topic_tags": [
+    "bug-localization",
+    "weakly-supervised-learning",
+    "code-attention-analysis",
+    "pre-trained-code-model",
+    "token-sequence-tagging"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

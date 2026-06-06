@@ -1,0 +1,41 @@
+{
+  "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation",
+  "doi": "10.48550/arxiv.2108.03360",
+  "title": "DySR: A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有服务推荐方法忽略了服务随时间的演化以及服务与需求之间的表示差异,导致冷启动问题未得到充分解决",
+  "problem_framing": "将服务束推荐形式化为冷启动场景下的表示对齐和动态演化学习问题,同时处理需求侧和服务侧的信息缺失",
+  "key_insight": "通过可学习的仿射变换函数消除表示鸿沟,利用动态图表示学习捕捉服务的演化社会环境,实现无需交互历史即可推荐",
+  "method_signature": "DySR结合动态图表示学习(DyRep变体)、表示对齐(仿射变换)和GAN风格协同训练",
+  "evaluation_criteria": "Precision@N、Recall@N、F1@N在ProgrammableWeb数据集上与 baselines对比",
+  "negative_result_or_admitted_limitation": "NLP方法的主要缺点是无法利用服务间的社交信息;图方法无法解决冷启动;简单引入预训练模型未显著提升性能可能因负迁移",
+  "evidence_for_taste": [
+    "which has not received enough attention",
+    "we argue that the quality of services evolves",
+    "ignoring the following factors limits the performance",
+    "The arbitrary mixing of features in two different spaces",
+    "this is mainly caused by ignoring the difference",
+    "simple introduction of PLMs does not significantly improve",
+    "cannot solve the cold start problem"
+  ],
+  "thinking_moves": [
+    "区分冷启动的两种形态(需求侧冷启动和服务侧冷启动)并分别处理",
+    "将表示差异问题框定为语义空间不对齐问题,用可学习变换解决",
+    "发现现有方法假设服务静态,而实际服务社交环境动态演化",
+    "用协同训练替代GAN对抗训练,强调互补而非对抗关系",
+    "通过可视化(UMAP)定性地展示表示对齐和演化学习的贡献"
+  ],
+  "topic_tags": [
+    "service-bundle-recommendation",
+    "cold-start",
+    "representation-alignment",
+    "dynamic-graph-learning",
+    "service-ecosystem-evolution"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Lu et al. - 2007 - Pseudo Trust Zero-Knowledge Based Authentication in Anonymous Peer-to-Peer Protocols",
+  "doi": null,
+  "title": "Pseudo Trust: Zero-Knowledge Based Authentication in Anonymous Peer-to-Peer Protocols",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有P2P信任模型依赖真实身份,与匿名需求存在根本冲突,无法同时提供匿名与认证",
+  "problem_framing": "如何让互不信任的匿名对等方通过不可伪造且可验证的假名进行认证和信任管理",
+  "key_insight": "用单向哈希生成假名(PI)绑定信任值,零知识证明在不泄露秘密的情况下完成双向认证",
+  "method_signature": "基于零知识证明的假名认证协议,包含PI生成、PIC证书和六步交互验证",
+  "evaluation_criteria": "安全(冒充概率/中间人攻击)、匿名(哈希抗逆推)、性能(响应时间/流量开销)",
+  "negative_result_or_admitted_limitation": "PT响应时间约为普通Gnutella的7倍,匿名路径构成主要延迟,认证时间本身可忽略",
+  "evidence_for_taste": [
+    "To the best of our knowledge",
+    "failure to support authentication makes these approaches vulnerable",
+    "the key point is that we bind the commitment, the tail node's information",
+    "the time consumption of authentication is indeed trivial"
+  ],
+  "thinking_moves": [
+    "识别现有系统间的根本矛盾(trust vs anonymity),将此定义为设计起点",
+    "用密码学原语(哈希+零知识证明)作为连接对立需求的桥梁",
+    "通过引理形式化证明完备性与可靠性,以概率上界界定安全性",
+    "区分理论分析与模拟/原型验证,后者用真实部署补充理论边界"
+  ],
+  "topic_tags": [
+    "P2P匿名通信",
+    "零知识证明认证",
+    "去中心化信任管理",
+    "隐私保护协议",
+    "洋葱路由"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Paper appears to be a full conference version but venue information not explicitly stated in text; DOI is null; role identified from author order (Yunhao Liu is 5th of 6 authors)"
+}

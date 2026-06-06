@@ -1,0 +1,37 @@
+{
+  "paper_id": "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning",
+  "doi": "10.48550/arxiv.2305.06572",
+  "title": "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning",
+  "year": 2023,
+  "venue": "arXiv preprint (IEEE Transactions format)",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "多服务器作业主导现代计算集群，分配资源时并行计算增益与内部通信开销难以权衡",
+  "problem_framing": "将作业调度建模为在线学习中的累计奖励最大化问题，使用遗憾度量比较在线策略与离线最优",
+  "key_insight": "沿奖励梯度上升方向分配资源，通过快速投影技巧实现O(log K)复杂度",
+  "method_signature": "在线梯度上升算法OGASCHED，结合凹收益函数的次线性遗憾上界",
+  "evaluation_criteria": "遗憾上界分析 + 对比DRF、FAIR-NESS等启发式算法的仿真收益提升",
+  "negative_result_or_admitted_limitation": "Future extensions may include more elaborate modeling of intra-node and inter-node communication overheads",
+  "evidence_for_taste": [
+    "sublinear regret with general concave rewards",
+    "SOTA regret O(H_G √T)",
+    "OGASCHED achieves a State-of-the-Art regret",
+    "parallelism helps yield a complexity of O(log K)"
+  ],
+  "thinking_moves": [
+    "将计算增益与通信开销解耦，分别建模为奖励的加法项与减法项",
+    "引入 bipartite graph 形式化作业-服务器约束",
+    "定义nice setup条件使证明 concavity 可处理",
+    "通过KKT条件设计快速投影实现并行化"
+  ],
+  "topic_tags": [
+    "multi-server job scheduling",
+    "online gradient ascent",
+    "regret minimization",
+    "concave reward optimization",
+    "communication-computation tradeoff"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文正文完整但引用和部分附录被截断；第一作者为 Hailiang Zhao，Shuiguang Deng 为 senior co-author；实验部分包含 Alibaba cluster trace 真实数据验证 | md truncated to head40k+tail20k"
+}

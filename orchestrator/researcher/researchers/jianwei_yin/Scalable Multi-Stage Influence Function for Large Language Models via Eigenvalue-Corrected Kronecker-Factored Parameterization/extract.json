@@ -1,0 +1,38 @@
+{
+  "paper_id": "Scalable Multi-Stage Influence Function for Large Language Models via Eigenvalue-Corrected Kronecker-Factored Parameterization",
+  "doi": "10.24963/ijcai.2025/892",
+  "title": "Scalable Multi-Stage Influence Function for Large Language Models via Eigenvalue-Corrected Kronecker-Factored Parameterization",
+  "year": 2025,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有IF方法无法追踪微调模型对预训练数据的归因，且无法扩展到十亿参数的LLM",
+  "problem_framing": "两步优化问题：1)多阶段IF的梯度连接需处理输出域不匹配 2)大规模模型的Hessian计算瓶颈",
+  "key_insight": "EK-FAC参数化可高效近似多阶段IF，且MLP参数比MHA参数贡献更大影响，可作为实践中的计算权衡",
+  "method_signature": "多阶段IF + EK-FAC近似 + 语义相似度候选筛选",
+  "evaluation_criteria": "Spearman相关系数(影响力估计质量)、wall-clock时间(效率)、MRR/Recall@10(事实追溯任务)",
+  "negative_result_or_admitted_limitation": "Arnoldi产生差估计且计算成本是EK-FAC的~120倍；TRAK估计质量最低且计算成本最高；GDP/CKA等梯度相似方法产生低质量估计",
+  "evidence_for_taste": [
+    "MLP parameters play a proportionally greater role",
+    "approximation quality of CG and LiSSA scales log-linearly",
+    "fails to yield usable influence estimates",
+    "limiting exploration of modern architectures like transformers",
+    "Arnoldi yields poor estimates"
+  ],
+  "thinking_moves": [
+    "将多阶段影响力估计拆解为两个独立问题：梯度连接与计算效率",
+    "通过实验发现MLP/MHA参数贡献不均，提出可剥离MHA参数以降低计算量",
+    "选择Pareto最优边界作为评估基准而非单一指标",
+    "用Euclidean距离验证微调参数的近邻假设有效性"
+  ],
+  "topic_tags": [
+    "LLM influence function",
+    "multi-stage training attribution",
+    "EK-FAC curvature approximation",
+    "transformer interpretability",
+    "factual knowledge tracing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

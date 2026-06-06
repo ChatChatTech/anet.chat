@@ -1,0 +1,39 @@
+{
+  "paper_id": "FroM_ Frobenius Norm-Based Data-Free Adaptive Model Merging__oa_W4416035165",
+  "doi": "10.18653/v1/2025.findings-emnlp.251",
+  "title": "FroM: Frobenius Norm-Based Data-Free Adaptive Model Merging",
+  "year": 2025,
+  "venue": "EMNLP Findings",
+  "venue_tier": "strong",
+  "role": "co-corresponding",
+  "motivation": "RegMean依赖训练数据的内积矩阵，但开源模型通常不提供，导致方法适用性受限",
+  "problem_framing": "模型合并时任务向量干扰问题，特别是PEFT/LoRA场景下，简单线性组合导致性能下降",
+  "key_insight": "直接用Frobenius范数量化任务向量差异作为权重系数k，避免依赖训练数据",
+  "method_signature": "用||θᵢ||ᵈᵏ加权的参数合并，FFT有闭式解，LoRA用交替优化",
+  "evaluation_criteria": "跨任务平均性能（指令跟随、数学推理、代码生成），与baseline在FFT和LoRA场景对比",
+  "negative_result_or_admitted_limitation": "Qwen2.5-Math与其它模型合并时线性模式连接被破坏，性能大幅下降；TIES-Merging和DARE会加剧干扰",
+  "evidence_for_taste": [
+    "without any training data",
+    "task interference problem",
+    "larger task vectors contain more information",
+    "more evident in parameter-efficient fine-tuning",
+    "this limitation significantly impacts the applicability"
+  ],
+  "thinking_moves": [
+    "从RegMean的数据依赖痛点出发，反推需要纯参数驱动的替代方案",
+    "借鉴模型剪枝直觉：大权重=多信息，将此转化为加权系数",
+    "把模型合并目标从输出匹配转译为参数空间直接测量",
+    "把k参数的物理含义解释为从简单平均到最大范数选择的连续平衡",
+    "用凸优化闭式解作为理论保证，但承认LoRA场景下非凸需要启发式"
+  ],
+  "topic_tags": [
+    "model-merging",
+    "parameter-efficient-fine-tuning",
+    "task-interference",
+    "frozen-norm-weighting",
+    "lora-integration"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

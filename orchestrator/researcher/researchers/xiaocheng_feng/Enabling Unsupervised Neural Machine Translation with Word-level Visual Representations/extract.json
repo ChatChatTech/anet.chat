@@ -1,0 +1,37 @@
+{
+  "paper_id": "Enabling Unsupervised Neural Machine Translation with Word-level Visual Representations",
+  "doi": "10.18653/v1/2023.findings-emnlp.839",
+  "title": "Enabling Unsupervised Neural Machine Translation with Word-level Visual Representations",
+  "year": 2023,
+  "venue": "EMNLP Findings",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "UNMT混淆相似词(如lion译成rabbit), 高质量双语词典成本高, 需低成本替代方案",
+  "problem_framing": "纯单语语料无法提供词级翻译监督, 导致分布相似的词混淆",
+  "key_insight": "图像跨语言一致性使word-level图片成为比bilingual dictionary更廉价的lexical mapping信号",
+  "method_signature": "修改embedding层+mask transformer注入图片, 用visible matrix隔离图像对无关词的影响",
+  "evaluation_criteria": "Multi30k数据集BLEU分数, 1-gram precision, 与XLM/UNMT-CS对比",
+  "negative_result_or_admitted_limitation": "未能有效处理一词多义问题, 图片通过网页爬取, 可能不完全对应同一语义",
+  "evidence_for_taste": [
+    "confusing similar words",
+    "high-quality bilingual dictionaries can be costly",
+    "the physical visual perception is congruent among speakers",
+    "we have not been able to effectively handle the issue of polysemy",
+    "adding three images may introduce more noise"
+  ],
+  "thinking_moves": [
+    "用perception的跨语言一致性绕过lexical supervision缺失的工程难题",
+    "从sentence-level改为word-level粒度, 降低图片收集难度的工程tradeoff",
+    "通过mask transformer强制图像只与对应词交互, 避免破坏句子结构",
+    "固定选图效果不如随机选图, 说明数据多样性比精确匹配更重要"
+  ],
+  "topic_tags": [
+    "unsupervised-NMT",
+    "word-level-visual-representation",
+    "lexical-confusion-remedy",
+    "multimodal-translation",
+    "image-text-embedding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

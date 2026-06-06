@@ -1,0 +1,37 @@
+{
+  "paper_id": "Probing the Geometry of Truth_ Consistency and Generalization of Truth Directions in LLMs Across Logical Transformations and Question Answering Tasks__oa_W4414893717",
+  "doi": "10.48550/arxiv.2506.00823",
+  "title": "Probing the Geometry of Truth: Consistency and Generalization of Truth Directions in LLMs Across Logical Transformations and Question Answering Tasks",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLMs输出自信的虚假信息,可靠性存疑,需要理解其内部真值表示",
+  "problem_framing": "三个研究问题:真值方向是否普遍存在、简单探测是否足够、泛化能力",
+  "key_insight": "并非所有LLM都有consistent真值方向,强模型更一致,简单线性探测就足够",
+  "method_signature": "四类探测器的跨逻辑变换和QA泛化实验",
+  "evaluation_criteria": "AUROC/ECE/Brier Score衡量分类与校准",
+  "negative_result_or_admitted_limitation": "Truth是理想化概念,探测捕获的未必是真正的truth",
+  "evidence_for_taste": [
+    "We challenge this assumption",
+    "simple supervised probes are sufficiently expressive",
+    "differences in performance between probes become negligible",
+    "This finding indicates that probes may capture an overlap between widely accepted human beliefs"
+  ],
+  "thinking_moves": [
+    "挑战先验假设:不是所有LLM都有真值方向",
+    "先验证随机模型无真值方向,再证真实模型有",
+    "反驳Levinstein结论:泛化失败源于LLM自身而非探测技术局限",
+    "弱分类器能区分表示则说明LLM隐式转换了输入"
+  ],
+  "topic_tags": [
+    "LLM-interpretability",
+    "truth-direction-probing",
+    "selective-QA",
+    "logical-negation-generalization",
+    "representation-geometry"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

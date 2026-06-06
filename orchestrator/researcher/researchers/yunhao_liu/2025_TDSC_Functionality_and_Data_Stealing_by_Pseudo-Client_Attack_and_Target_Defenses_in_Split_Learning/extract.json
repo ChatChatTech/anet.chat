@@ -1,0 +1,39 @@
+{
+  "paper_id": "2025_TDSC_Functionality_and_Data_Stealing_by_Pseudo-Client_Attack_and_Target_Defenses_in_Split_Learning",
+  "doi": null,
+  "title": "Functionality and Data Stealing by Pseudo-Client Attack and Target Defenses in Split Learning",
+  "year": 2025,
+  "venue": "IEEE Transactions on Dependable and Secure Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Semi-honest server in split learning can steal client functionality without knowing client model structure; prior attacks fail on complex models.",
+  "problem_framing": "Design attack for semi-honest server to steal functionality, reconstruct inputs, infer labels without client model knowledge.",
+  "key_insight": "Well-trained server model alone provides enough info to train pseudo-client model with very limited samples; intermediate server models during SL guide better pseudo-client convergence.",
+  "method_signature": "PCAT: Pseudo-Client Attack trains fake client model using server model as constraint while SL runs normally.",
+  "evaluation_criteria": "Attack accuracy vs baseline accuracy; functionality gap; input reconstruction quality (SSIM); label inference accuracy.",
+  "negative_result_or_admitted_limitation": "Adding Gaussian noise does NOT prevent PCAT but enhances functionality stealing ability (unexpected). Their proposed defense 'will fail' under improved PCAT in U-shape SL.",
+  "evidence_for_taste": [
+    "we are surprised to discover",
+    "the attack is transparent to clients",
+    "the solution space could be too large",
+    "without any preknowledge about the client model",
+    "breaking the similarity between their input-label pairs"
+  ],
+  "thinking_moves": [
+    "把攻击从model inversion重新frame成knowledge distillation问题",
+    "利用server model自身的知识而非smashed data来构造伪客户端",
+    "先提出防御机制再设计绕过方案,形成对抗性迭代",
+    "从单层模型攻击扩展到复杂深度网络,验证方法通用性",
+    "意外发现噪声反而增强攻击效果,提示防御不能只看数据扰动"
+  ],
+  "topic_tags": [
+    "split-learning-privacy-attack",
+    "model-functionality-stealing",
+    "model-inversion-defense",
+    "knowledge-distillation-attack",
+    "semi-honest-server-threat"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

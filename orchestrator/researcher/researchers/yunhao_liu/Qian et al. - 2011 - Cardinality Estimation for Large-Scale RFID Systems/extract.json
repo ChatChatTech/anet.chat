@@ -1,0 +1,43 @@
+{
+  "paper_id": "Qian et al. - 2011 - Cardinality Estimation for Large-Scale RFID Systems",
+  "doi": null,
+  "title": "Cardinality Estimation for Large-Scale RFID Systems",
+  "year": 2011,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "移动物体上的RFID标签在传统识别协议完成前就离开阅读器范围,导致计数失效",
+  "problem_framing": "在标签数量未知且可动的大规模RFID系统中,如何在短时间内准确估计标签基数",
+  "key_insight": "碰撞不再被视为资源浪费,而是将碰撞槽排列成有序模式从中提取基数信息",
+  "method_signature": "Lottery Frame (LoF): 几何分布哈希+ALOHA时隙+右端零位置估计",
+  "evaluation_criteria": "估计误差界(β)、时间槽数量、处理延迟、可扩展性(2^32上限)",
+  "negative_result_or_admitted_limitation": "标签可能非均匀分布时需改进哈希方法;估计精度随哈希数增加而改善但有极限",
+  "evidence_for_taste": [
+    "tag collisions are no longer considered as waste",
+    "log2 N slots are sufficient",
+    "like a super reader",
+    "collisions are no longer considered as waste of time",
+    "The penalty is only a little extra memory",
+    "If we do not know the tag cardinality"
+  ],
+  "thinking_moves": [
+    "把碰撞从干扰源重新定义为信息源",
+    "将空槽计数问题转化为碰撞模式几何分布问题",
+    "借用数据库概率计数算法(Flajolet-Martin)到RFID场景",
+    "用哈希性质天然消除多读者场景的重复计数",
+    "固定帧长实现scalability,牺牲存储换时间"
+  ],
+  "topic_tags": [
+    "RFID-cardinality-estimation",
+    "ALOHA-collision-resolution",
+    "probabilistic-counting",
+    "multi-reader-RFID",
+    "geometric-distribution-hashing"
+  ],
+  "cites_own_work": [
+    "Cardinality Estimation for Large-Scale RFID Systems (PerCom 2008)",
+    "ASAP: Scalable Identification and Counting for Contactless RFID Systems (ICDCS 2010)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "IEEE TPDS期刊论文;作者群包括张伟、李明等,需从tpds@computer.org推断出正确引用 | md truncated to head40k+tail20k"
+}

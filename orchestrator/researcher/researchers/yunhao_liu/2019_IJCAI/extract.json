@@ -1,0 +1,36 @@
+{
+  "paper_id": "2019_IJCAI",
+  "doi": null,
+  "title": "Extensible Cross-Modal Hashing",
+  "year": 2019,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "Real-world cross-modal retrieval systems face continuously arriving new data categories; existing CMH methods lack extensibility and suffer catastrophic forgetting",
+  "problem_framing": "Incremental learning problem: update hash function to support new categories using only new data while preserving performance on old tasks and old hash codes",
+  "key_insight": "Agreement matrix identifies dimensions where cross-modal representations already agree; these dimensions should be frozen via weak constraint distillation, allowing selective update of disagreed dimensions",
+  "method_signature": "ECMH with self-taught distillation loss + common space learning + hash function learning, using agreement matrix as dimension selector",
+  "evaluation_criteria": "Mean Average Precision (MAP), Precision-Recall curves, training time cost comparison against retraining baseline",
+  "negative_result_or_admitted_limitation": "Self-taught distillation slightly limits new task performance (up to 2.7% MAP decrease vs fine-tuning); trade-off accepted to preserve old knowledge",
+  "evidence_for_taste": [
+    "A traditional fine-tuning method suffers the catastrophic forgetting effect",
+    "those method cannot resolve the cross-modal hashing problem",
+    "we adopt an alternating strategy to solve the non-convex objective",
+    "the hash code smoothing factor β helps prevent overfitting"
+  ],
+  "thinking_moves": [
+    "把增量学习中的参数更新问题转化为'同意/不同意'维度选择问题",
+    "通过agreement matrix把hard constraint变成weak constraint来缓解灾难性遗忘",
+    "不追求new task的极致性能，而是寻求old和new task的平衡"
+  ],
+  "topic_tags": [
+    "cross-modal-hashing",
+    "incremental-learning",
+    "deep-hashing",
+    "catastrophic-forgetting",
+    "knowledge-distillation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

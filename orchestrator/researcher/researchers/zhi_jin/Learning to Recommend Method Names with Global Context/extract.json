@@ -1,0 +1,39 @@
+{
+  "paper_id": "Learning to Recommend Method Names with Global Context",
+  "doi": "10.48550/arxiv.2201.10705",
+  "title": "Learning to Recommend Method Names with Global Context",
+  "year": 2022,
+  "venue": "ICSE '22",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有NMT模型仅利用方法体局部上下文,忽视项目级全局上下文和文档信息,导致命名一致性和准确性不足",
+  "problem_framing": "将方法命名推荐建模为抽象文本摘要任务,以多层次上下文token为输入,子token为输出目标",
+  "key_insight": "85.98%的方法名token出现在同文件上下文方法名中,证明项目级上下文包含方法命名关键信息",
+  "method_signature": "GTNM采用双编码器结构(Code Encoder+Project Encoder)+Transformer解码器,三层注意力分别关注解码输入、项目上下文、全局上下文",
+  "evaluation_criteria": "子token级Precision/Recall/F1分数,以及考虑子token顺序的Exact Match Accuracy",
+  "negative_result_or_admitted_limitation": "32%测试样本Exact Match不满足但F1≥0.5,其中仅2.32%子token集合相同,说明高F1可能掩盖语义相反的错误",
+  "evidence_for_taste": [
+    "only 2.32% of methods have the same subtoken set",
+    "exact match accuracy can evaluate the generated name more precisely",
+    "the other three metrics are based on the subtoken overlapping",
+    "cannot suggest neologisms",
+    "the methods which have no explicit interaction with the target methods can also provide essential information"
+  ],
+  "thinking_moves": [
+    "先通过统计分析验证直觉:67%本地上下文匹配→85%项目上下文匹配→说明项目上下文更重要",
+    "用动机示例暴露现有方法盲点:方法体相似但命名不一致,仅靠局部上下文不够",
+    "将命名推荐问题重新框架为摘要生成,借用NLP成熟范式",
+    "设计双编码器结构增强对项目上下文的注意力权重,显式建模调用关系",
+    "用Exact Match Accuracy而非F1作为更严格评价指标,揭示F1高估问题"
+  ],
+  "topic_tags": [
+    "method-naming-recommendation",
+    "global-context-modeling",
+    "transformer-seq2seq",
+    "code-naturalness-hypothesis",
+    "documentation-leveraging"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

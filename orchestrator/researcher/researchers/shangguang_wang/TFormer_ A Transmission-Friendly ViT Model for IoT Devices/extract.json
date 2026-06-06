@@ -1,0 +1,40 @@
+{
+  "paper_id": "TFormer_ A Transmission-Friendly ViT Model for IoT Devices",
+  "doi": "10.48550/arxiv.2302.07734",
+  "title": "TFormer: A Transmission-Friendly ViT Model for IoT Devices",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "IoT设备资源受限且ViT参数量大,云端传输模型造成网络负载沉重",
+  "problem_framing": "需同时减少ViT模型的参数量和FLOPs以适配IoT设备部署",
+  "key_insight": "MHA的本质等效于用多种滤波器提取不同特征,可用廉价池化替代",
+  "method_signature": "混合层(非可学池化+点卷积)+PCS-FFN(组卷积+通道混排)",
+  "evaluation_criteria": "ImageNet分类top-1准确率,COCO检测AP,ADE20K分割mIoU",
+  "negative_result_or_admitted_limitation": "自适应注意力机制对高分辨率图像效率提升仍不足",
+  "evidence_for_taste": [
+    "reducing r results in a significant degradation",
+    "PCS-FFN leads to a substantially better efficiency-performance tradeoff",
+    "Both adding more types of operations and adding more scales are beneficial"
+  ],
+  "thinking_moves": [
+    "把MHA的本质重新解释为多滤波器特征提取,用廉价操作替代",
+    "从参数和FLOPs两个维度建立复杂度方程进行量化分析",
+    "通过消融实验验证多类型多尺度特征组合的有效性",
+    "将FFN问题归约为通道连接方式,用组卷积+混排解决"
+  ],
+  "topic_tags": [
+    "IoT-ViT部署",
+    "传输友好模型压缩",
+    "高效注意力替代",
+    "组卷积FFN",
+    "云边协同推理"
+  ],
+  "cites_own_work": [
+    "Towards transmission-friendly and robust CNN models",
+    "Cognitive service in mobile edge computing",
+    "A cloud-edge collaboration framework"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

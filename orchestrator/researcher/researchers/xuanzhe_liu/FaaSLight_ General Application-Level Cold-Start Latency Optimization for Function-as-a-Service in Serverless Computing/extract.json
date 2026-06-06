@@ -1,0 +1,51 @@
+{
+  "paper_id": "FaaSLight_ General Application-Level Cold-Start Latency Optimization for Function-as-a-Service in Serverless Computing",
+  "doi": "10.48550/arxiv.2207.08175",
+  "title": "FaaSLight: General Application-Level Cold-Start Latency Optimization for Function-as-a-Service in Serverless Computing",
+  "year": 2022,
+  "venue": "ACM",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "FaaS应用的冷启动延迟可达总响应延迟的80%，严重影响用户体验",
+  "problem_framing": "将系统级优化问题重新定义为应用级代码加载优化问题",
+  "key_insight": "应用代码加载延迟是冷启动主要开销，仅加载必要代码可显著优化",
+  "method_signature": "通过函数级调用图识别可选代码并按需加载",
+  "evaluation_criteria": "代码加载延迟降低78.95%，总响应延迟降低42.05%",
+  "negative_result_or_admitted_limitation": "静态分析无法100%准确识别可达函数，但保守策略通过按需加载兜底",
+  "evidence_for_taste": [
+    "cold-start latency could be as much as 80%",
+    "application code loading latency is a significant overhead",
+    "function execution latency only takes less than 5%",
+    "developers can hardly control the preparation phase latency",
+    "such a design is enough to process serverless functions"
+  ],
+  "thinking_moves": [
+    "通过测量研究定位根因，而非假设驱动",
+    "将系统级优化问题转换为应用级代码优化问题",
+    "平台无关和开发者无关的设计约束",
+    "用保守的按需加载策略为激进的静态分析兜底"
+  ],
+  "topic_tags": [
+    "serverless-cold-start",
+    "FaaS-optimization",
+    "code-bloating",
+    "function-level-callgraph",
+    "on-demand-loading"
+  ],
+  "cites_own_work": [
+    {
+      "title": "An empirical study on challenges of application development in serverless computing",
+      "venue": "ESEC/FSE 2021"
+    },
+    {
+      "title": "Characterizing commodity serverless computing platforms",
+      "venue": "Journal of Software: Evolution and Process"
+    },
+    {
+      "title": "Rise of the Planet of Serverless Computing: A Systematic Review",
+      "venue": "ACM TOSEM 2023"
+    }
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

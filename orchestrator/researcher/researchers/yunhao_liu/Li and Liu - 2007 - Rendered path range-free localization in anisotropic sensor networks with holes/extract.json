@@ -1,0 +1,38 @@
+{
+  "paper_id": "Li and Liu - 2007 - Rendered path range-free localization in anisotropic sensor networks with holes",
+  "doi": null,
+  "title": "Rendered Path: Range-Free Localization in Anisotropic Sensor Networks with Holes",
+  "year": 2007,
+  "venue": "MobiCom'07",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Range-based schemes need expensive hardware; range-free schemes need many uniformly-deployed seeds and fail when holes exist in practical deployments",
+  "problem_framing": "How to estimate Euclidean distance between nodes purely from hop-count in anisotropic networks where holes break hop-to-distance proportionality",
+  "key_insight": "Hole boundaries can be colored and rendered on shortest paths; comparing original path with augmented virtual-hole path recovers angle and distance information",
+  "method_signature": "REP renders shortest paths with colored boundary nodes, constructs virtual holes around focal nodes, and calculates distance from two rendered paths",
+  "evaluation_criteria": "Distance estimation error (%) and localization error (meters) across varying node density and network geometry complexity",
+  "negative_result_or_admitted_limitation": "Approach involves routes exponentially increasing with number of holes in worst case, incurring significant overhead",
+  "evidence_for_taste": [
+    "REP is the only range-free protocol",
+    "most previous approaches would fail",
+    "DV-hop is the only approach which employs a constant number of seeds",
+    "This approach involves routes exponentially increasing",
+    "left to future research"
+  ],
+  "thinking_moves": [
+    "把距离估计问题从几何感知重新frame为路径通信问题",
+    "通过人为制造干扰(虚拟孔)来探测原始几何结构",
+    "用两条渲染路径的差异反推角度信息",
+    "承认最坏情况下复杂度爆炸，但用技巧性解法缓解"
+  ],
+  "topic_tags": [
+    "range-free localization",
+    "anisotropic sensor networks",
+    "hole detection",
+    "virtual anchor",
+    "path rendering"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

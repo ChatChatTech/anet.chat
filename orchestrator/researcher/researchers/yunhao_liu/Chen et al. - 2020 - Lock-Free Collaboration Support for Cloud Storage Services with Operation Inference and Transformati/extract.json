@@ -1,0 +1,39 @@
+{
+  "paper_id": "Chen et al. - 2020 - Lock-Free Collaboration Support for Cloud Storage Services with Operation Inference and Transformati",
+  "doi": null,
+  "title": "Lock-Free Collaboration Support for Cloud Storage Services with Operation Inference and Transformation",
+  "year": 2020,
+  "venue": "USENIX FAST '20",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Cloud storage services' heuristic-based conflict handling causes unexpected experiences: losing updates, false conflicts despite coordination, and long sync durations.",
+  "problem_framing": "How to provide transparent, lock-free collaboration by intelligently inferring editing operations and transforming/merging conflicting file versions.",
+  "key_insight": "Most file-level conflicts are false positives—collaborators editing different parts can be auto-merged using operation-level inference and three-way merge.",
+  "method_signature": "Edit-graph-based operation inference + conflict-graph-based transformation + hybrid CDC deduplication.",
+  "evaluation_criteria": "Conflict reduction rate (98%), time overhead percentage (2%), CDC speedup (3x).",
+  "negative_result_or_admitted_limitation": "We feel it wiser to give up using locks. Cloud services cannot predict real-time editing behavior to determine when to request/release locks.",
+  "evidence_for_taste": [
+    "debug these patterns from the inside out",
+    "we feel it wiser to give up using locks",
+    "the vast majority are false conflicts",
+    "locking too early leads to Pattern 4",
+    "locking too late leads to Pattern 1"
+  ],
+  "thinking_moves": [
+    "Reverse-engineer eight cloud services to diagnose root causes",
+    "从表面症状反推底层设计缺陷: locks are too early or too late",
+    "区分假冲突和真冲突, 发现大部分是false positive",
+    "把文件级冲突细粒度化为操作级冲突来分析",
+    "借鉴三向合并思想解决协作编辑问题"
+  ],
+  "topic_tags": [
+    "false-positive-conflict detection",
+    "lock-free collaborative editing",
+    "operation inference and transformation",
+    "cloud storage conflict resolution",
+    "three-way merge"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005",
+  "doi": "10.18653/v1/2024.acl-long.735",
+  "title": "HiRoPE: Length Extrapolation for Code Models Using Hierarchical Position",
+  "year": 2024,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "LLM预训练上下文长度(2k-16k)不足以处理复杂的长代码，导致推理时性能严重下降",
+  "problem_framing": "传统位置编码将代码视为纯文本，忽略代码的层级结构；RoPE在高维度上面临分布外(O.O.D)问题",
+  "key_insight": "利用源代码的层级结构(函数/类级别)划分RoPE维度，实现层级位置编码，使模型在层级层面而非单个token层面处理相对距离",
+  "method_signature": "HiRoPE将RoPE维度分成两部分，低维表示token级位置，高维表示函数/类级位置，并添加窗口机制保持短文本稳定性",
+  "evaluation_criteria": "困惑度(ppl)、损失(loss)、准确率(acc)、编辑相似度(edit similarity)、召回率(recall)",
+  "negative_result_or_admitted_limitation": "讨论上限时倾向于理论推导；ShortLLM实验仅用Lshort=128训练，不确定实际LLM上的最大性能",
+  "evidence_for_taste": [
+    "LLMs are not ideal in this more realistic code symbol understanding task",
+    "Discussion on upper limit...tends to lean towards theoretical derivation",
+    "We are not clear whether some settings will implicitly affect the performance",
+    "constrained by computational resources, we choose models below 7B",
+    "the situation is contrary to this. We attribute this to the fact that the original model's ability to model long sequence languages is so poor"
+  ],
+  "thinking_moves": [
+    "借鉴人类程序员利用层级结构定位代码的认知习惯，将其形式化为位置编码的分层设计",
+    "从RoPE三角函数的周期性质出发，理论推导O.O.D问题的根源和高可靠维度比例",
+    "将位置外推问题从线性扩展重新框架为指数级扩展(层级h层可外推到L^h)",
+    "设计ShortLLM反向验证实验：用极短训练长度(128)证明指数级外推能力"
+  ],
+  "topic_tags": [
+    "code-LLM-context-length",
+    "rotary-position-embedding",
+    "hierarchical-position-encoding",
+    "length-extrapolation",
+    "code-structure-awareness"
+  ],
+  "cites_own_work": [
+    "Zhang et al., 2023 (prior work on implanting hierarchy)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2008 - Robust and Efficient Aggregate Query Processing in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Robust and Efficient Aggregate Query Processing in Wireless Sensor Networks",
+  "year": 2008,
+  "venue": "Springer Science + Business Media",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传感器数据含噪且高链路丢包导致聚合结果偏离真实值，简单移动平均无效",
+  "problem_framing": "将聚合查询期望分析为概率模型：每个传感值到达sink的概率Pi影响SUM/AVG期望",
+  "key_insight": "不改善可达概率Pi而是用1/Pi补偿传输值，使期望等于实际值",
+  "method_signature": "PCM概率补偿模型+卡尔曼滤波丢包估计+智能路径选择算法",
+  "evaluation_criteria": "结果期望值、相对误差、通信开销三个维度",
+  "negative_result_or_admitted_limitation": "Sketch即使无丢包也有约10%相对误差；TAG和Fractional方法不适用于高链路丢包场景",
+  "evidence_for_taste": [
+    "not designed for handling high link loss",
+    "brings additional faults due to the hashing conflicts",
+    "requires a data structure with a much larger size",
+    "performs much worse than sketch and PCM",
+    "we simply add a compensation factor"
+  ],
+  "thinking_moves": [
+    "将聚合结果偏差归因于期望偏移而非方差，通过补偿因子直接修正期望",
+    "先建立概率模型证明现有方法期望不等于真值，再提出补偿方案",
+    "区分期望和方差的处理策略：补偿修正期望，fractional parents减少方差",
+    "从工程异常反推：移动平均仍不准确→链路丢包问题→概率建模分析",
+    "提出路径选择算法解决Ring结构全父节点的高接收开销问题"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-aggregation",
+    "link-loss-compensation",
+    "probabilistic-data-model",
+    "energy-efficient-routing",
+    "moving-average-noise-filtering"
+  ],
+  "cites_own_work": [
+    "Li M, Liu Y (2007) Underground structure monitoring"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整包含摘要、方法、实验和结论，各章节逻辑清晰。卡尔曼滤波参数部分有少量公式截断，但不影响整体认知提取。 | md truncated to head40k+tail20k"
+}

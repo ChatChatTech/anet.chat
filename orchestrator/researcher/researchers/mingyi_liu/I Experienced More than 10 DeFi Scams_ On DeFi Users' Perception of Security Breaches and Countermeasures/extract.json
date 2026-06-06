@@ -1,0 +1,36 @@
+{
+  "paper_id": "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures",
+  "doi": "10.48550/arxiv.2406.15709",
+  "title": "I Experienced More than 10 DeFi Scams: On DeFi Users' Perception of Security Breaches and Countermeasures",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "DeFi用户持续使用高风险服务,损失巨大但无人研究其安全认知与风险缓解策略",
+  "problem_framing": "通过访谈+问卷系统研究DeFi用户的安全感知与受害后的应对行为",
+  "key_insight": "受害用户不改安全习惯、快速换服务恢复损失,像赌博成瘾",
+  "method_signature": "混合方法:半结构化访谈(N=14)+问卷调查(N=493)",
+  "evaluation_criteria": "自报告的风险感知与 mitigation 策略、受害后行为改变",
+  "negative_result_or_admitted_limitation": "仅靠教育或经验积累无法改变用户行为,需更强监管",
+  "evidence_for_taste": [
+    "超过一半受访受害者表示安全认知未改变",
+    "受害者只是找新服务继续使用DeFi",
+    "2FA在非托管钱包不被支持但用户仍依赖它",
+    "教育支持效果有限,需更强控制"
+  ],
+  "thinking_moves": [
+    "发现受害用户认知不改变 -> 反常识 -> 提出监管必要性",
+    "将受害用户行为类比赌博成瘾 -> 强调金融动机压倒安全考量",
+    "从访谈归纳出安全误解 -> 再用问卷大规模验证"
+  ],
+  "topic_tags": [
+    "DeFi安全感知",
+    "用户风险行为",
+    "受害后恢复心理",
+    "DeFi监管",
+    "加密货币安全认知"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文后半部分有部分截断,但核心研究问题和关键发现已完整提取。arXiv是预印本平台,venue_tier标记为unknown。 | md truncated to head40k+tail20k"
+}

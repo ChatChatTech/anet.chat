@@ -1,0 +1,40 @@
+{
+  "paper_id": "HypomimiaCoach_ An AU-based Digital Therapy System for Hypomimia Detection &amp; Rehabilitation with Parkinson's Disease",
+  "doi": "10.48550/arxiv.2410.09772",
+  "title": "HypomimiaCoach: An AU-based Digital Therapy System for Hypomimia Detection & Rehabilitation with Parkinson's Disease",
+  "year": 2024,
+  "venue": "ACM IUI 2025",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "当前临床 hypomimia 诊断依赖主观经验且康复缺乏可及的数字化工具,患者就医受限",
+  "problem_framing": "把 hypomimia 的检测与康复重新定义为基于 AU 的可量化闭环系统问题",
+  "key_insight": "AU 不是独立特征而是相互关联的系统,用 GCN 建模 AU 关系可提升检测性能",
+  "method_signature": "检测: Swin Transformer+GCN+CNN; 康复: OpenGraphAU 实时反馈+中国戏曲音乐交互",
+  "evaluation_criteria": "检测: Accuracy/PPV/TPR/F1; 康复: 可用性/参与度/自我效能",
+  "negative_result_or_admitted_limitation": "小样本(7例)限制结论泛化性,数据量(105样本)不足以充分训练模型",
+  "evidence_for_taste": [
+    "relies heavily on the subjective expertise of neurologists",
+    "bridging the gap between technological advancements and clinical rehabilitation practice remains a challenge",
+    "small sample size is a limitation in itself",
+    "lack of real-time feedback and quantitative assessment mechanisms"
+  ],
+  "thinking_moves": [
+    "将检测与康复合并为一个闭环数字疗法系统,而非分开解决",
+    "通过迁移学习缓解小样本 hypomimia 数据稀缺问题",
+    "用自我决定理论解释患者依从性动机的底层需求(自主/关联/胜任)",
+    "借助中国戏曲的音韵和文化熟悉度提升患者康复参与度"
+  ],
+  "topic_tags": [
+    "Parkinson-hypomimia",
+    "AU-facial-action-unit",
+    "digital-therapy",
+    "graph-convolutional-network",
+    "rehabilitation-system"
+  ],
+  "cites_own_work": [
+    "Su et al. 2021 hypomimia detection",
+    "Su et al. 2021 semantic features"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

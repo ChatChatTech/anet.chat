@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2009 - Sensor Network Navigation without Locations",
+  "doi": null,
+  "title": "Sensor Network Navigation without Locations",
+  "year": 2009,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有导航方法依赖位置信息,在地下矿道、室内等无定位环境无法适用,且未考虑危险区域动态变化",
+  "problem_framing": "将人体导航建模为无位置信息的路径规划问题,以最大最小安全距离为目标,需应对危险区域动态演化",
+  "key_insight": "利用安全区域的骨架轴(medial axis)作为分布式路网,可保证全局最优安全距离且仅需局部更新",
+  "method_signature": "基于骨架轴的分布式路网构建,虚拟势场引导用户至骨架,通过局部洪水更新应对危险区域变化",
+  "evaluation_criteria": "最小安全距离、短路径长度、累积曝光度、动态更新通信开销",
+  "negative_result_or_admitted_limitation": "节点稀疏时骨架轴不连通,需放宽精度换取连通性;路径长度仅为最优的1.5倍左右",
+  "evidence_for_taste": [
+    "导航人体本质上不同于路由数据包",
+    "机会路由显然不能用于导航协议",
+    "不能简单地借用现有路由算法",
+    "需局部更新而非全局重建",
+    "我们妥协了骨架轴的精度"
+  ],
+  "thinking_moves": [
+    "将位置依赖问题转化为纯拓扑问题,用骨架轴代替坐标",
+    "人体导航不能借用数据包路由范式,必须保证单一路由安全",
+    "用数学引理保证势场下降方向不会陷入局部最小",
+    "动态变化只需局部更新,通过单元格边界证明影响域受限"
+  ],
+  "topic_tags": [
+    "sensor-network-navigation",
+    "medial-axis-routing",
+    "location-free-navigation",
+    "emergency-navigation",
+    "cyber-physical-system"
+  ],
+  "cites_own_work": [
+    "Li et al. 2008 (Demo Abstract)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "未找到DOI和具体会议信息,论文发表于HKUST,属于WSN领域重要工作"
+}

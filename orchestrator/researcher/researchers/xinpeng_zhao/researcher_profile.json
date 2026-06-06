@@ -1,0 +1,665 @@
+{
+  "slug": "xinpeng_zhao",
+  "n_extracts": 76,
+  "n_full": 69,
+  "n_partial": 7,
+  "n_thin": 0,
+  "year_range": [
+    2012,
+    2025
+  ],
+  "top_tags": [
+    [
+      "generative-model-watermarking",
+      3
+    ],
+    [
+      "neural-network-watermarking",
+      3
+    ],
+    [
+      "invertible-neural-network",
+      3
+    ],
+    [
+      "backdoor-attack",
+      2
+    ],
+    [
+      "steganography",
+      2
+    ],
+    [
+      "model-integrity-verification",
+      2
+    ],
+    [
+      "fragile-watermarking",
+      2
+    ],
+    [
+      "backdoor-detection",
+      2
+    ],
+    [
+      "DNN-steganography",
+      2
+    ],
+    [
+      "tamper-localization",
+      2
+    ],
+    [
+      "AIGC-editing-robustness",
+      2
+    ],
+    [
+      "high-frequency-artifacts",
+      2
+    ],
+    [
+      "frequency-domain-imperceptibility",
+      2
+    ],
+    [
+      "deep-steganography",
+      2
+    ],
+    [
+      "covert-communication",
+      2
+    ],
+    [
+      "style-transfer",
+      2
+    ],
+    [
+      "adversarial-training",
+      2
+    ],
+    [
+      "jpeg-robustness",
+      2
+    ],
+    [
+      "coverless-steganography",
+      2
+    ],
+    [
+      "social-network-covert-channel",
+      2
+    ],
+    [
+      "黑盒验证",
+      2
+    ],
+    [
+      "partial-optimization",
+      2
+    ],
+    [
+      "image-secret-sharing",
+      1
+    ],
+    [
+      "share-authentication",
+      1
+    ],
+    [
+      "polynomial-based-ISS",
+      1
+    ],
+    [
+      "visual-secret-sharing",
+      1
+    ],
+    [
+      "screening-operation",
+      1
+    ],
+    [
+      "CRT-secret-sharing",
+      1
+    ],
+    [
+      "separable-RDH-ED",
+      1
+    ],
+    [
+      "homomorphic-difference-expansion",
+      1
+    ]
+  ],
+  "topic_clusters": [
+    {
+      "tag": "generative-model-watermarking",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Generative Model Watermarking Suppressing High-Frequency Artifacts",
+          "year": 2023,
+          "venue": "arXiv",
+          "key_insight": "通过在嵌入网络的上/下采样层引入低通滤波抗混叠,可同时抑制结构缺陷和扰动引入的高频伪影",
+          "method_signature": "抗混叠水印嵌入网络(低通滤波上/下采样层)+联合损失优化+对抗训练",
+          "score": 16
+        },
+        {
+          "paper_id": "Hiding Images in Deep Probabilistic Models",
+          "year": 2022,
+          "venue": "arXiv preprint",
+          "key_insight": "用DNN建模覆盖图像的概率密度，通过共享嵌入密钥生成特定噪声映射到秘密图像，实现分布层面的隐藏",
+          "method_signature": "SinGAN学习单张覆盖图像的内部patch分布，在训练时将重建损失从覆盖图像改为秘密图像",
+          "score": 16
+        },
+        {
+          "paper_id": "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models",
+          "year": 2024,
+          "venue": "Applied Sciences",
+          "key_insight": "绕过CNN嵌入网络，直接在低频域嵌入可调频率扰动，可同时规避CNN结构伪影与扰动引入的高频痕迹",
+          "method_signature": "频率扰动生成网络F替代CNN嵌入器，低频域(128×128)叠加扰动，联合训练提取网络E",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "neural-network-watermarking",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Neural network fragile watermarking with no model performance degradation",
+          "year": 2022,
+          "venue": "ICIP",
+          "key_insight": "Using variance regularization on prediction probabilities across categories makes generated triggers sensitive to model parameter changes.",
+          "method_signature": "Train generative model with L_cla + a·Var(P) loss to create fragile triggers without modifying target classifier.",
+          "score": 17
+        },
+        {
+          "paper_id": "Hiding Data Hiding__oa_W4306315237",
+          "year": 2021,
+          "venue": "arXiv",
+          "key_insight": "不同任务使用显著不同的图像作为输入(如y是彩色图、m是二值图、r是全黑图)，网络能自动区分并执行对应任务",
+          "method_signature": "单一DNN用联合损失函数同时训练风格迁移、数据嵌入、数据提取三个任务",
+          "score": 16
+        },
+        {
+          "paper_id": "Secure neural network watermarking protocol against forging attack",
+          "year": 2020,
+          "venue": "EURASIP Journal on Image and Video Processing",
+          "key_insight": "用单向哈希函数生成触发样本链,攻击者无法逆向构造合法触发集",
+          "method_signature": "用双向单向哈希链生成触发集并嵌入所有权验证协议",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "invertible-neural-network",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Learning to Immunize Images for Tamper Localization and Self-Recovery",
+          "year": 2022,
+          "venue": "arXiv preprint",
+          "key_insight": "观察图像免疫与自恢复间的可逆性关系,采用归一化流生成器在单网络中联合学习 immunization 和 recovery",
+          "method_signature": "IINet(可逆U-net)+KD-JPEG(JPEG模拟器)+伪造检测器+双判别器",
+          "score": 18
+        },
+        {
+          "paper_id": "Invertible Image Dataset Protection",
+          "year": 2021,
+          "venue": "arXiv",
+          "key_insight": "Train the INN generator with a defense simulation layer so perturbations survive JPEG/blur/resize",
+          "method_signature": "RAEG uses U-shaped invertible INN with DSAC blocks and ensemble classifiers, trained with defense simulation",
+          "score": 16
+        },
+        {
+          "paper_id": "Image Protection for Robust Cropping Localization and Recovery",
+          "year": 2022,
+          "venue": "arXiv",
+          "key_insight": "使用可逆神经网络使图像保护过程可逆，同时利用特征对齐网络统一不同攻击下的变换域",
+          "method_signature": "CLR-Net: 可逆U-Net生成器+轻量U-Net定位器+特征对齐网络+FG-JPEG模拟器",
+          "score": 13
+        }
+      ]
+    }
+  ],
+  "recurring_thinking_moves": [
+    {
+      "move": "通过消融实验验证嵌入位置的影响，说明浅层特征与深层特征的差异性贡献",
+      "count": 5,
+      "variants": [
+        "通过消融实验验证低频稳定性和VAE深度特征的各自贡献",
+        "通过消融实验验证各模块贡献度，确认注意力机制的必要性",
+        "通过消融实验验证嵌入位置的影响，说明浅层特征与深层特征的差异性贡献",
+        "通过消融实验验证每个组件的必要性"
+      ],
+      "papers": [
+        "From Covert Hiding to Visual Editing_ Robust Generative Video Steganography",
+        "Hiding Images into Images with Real-world Robustness",
+        "Multimodal Fake News Detection via CLIP-Guided Learning",
+        "RGB-T Semantic Segmentation With Location, Activation, and Sharpening",
+        "SimuFreeMark_ A Noise-Simulation-Free Robust Watermarking Against Image Editing"
+      ]
+    }
+  ],
+  "evolution_arc": [
+    {
+      "year": 2012,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "face-recognition-blur-invariant",
+          1
+        ],
+        [
+          "local-frequency-descriptor",
+          1
+        ],
+        [
+          "low-resolution-face-recognition",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "encrypted-domain-retrieval",
+          1
+        ],
+        [
+          "JPEG-DCT-markov-features",
+          1
+        ],
+        [
+          "privacy-preserving-multimedia",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2018,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "constructive steganography",
+          1
+        ],
+        [
+          "tangle pattern generation",
+          1
+        ],
+        [
+          "texture synthesis steganography",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2019,
+      "paper_count": 35,
+      "top_tags": [
+        [
+          "FPGA硬件加速",
+          1
+        ],
+        [
+          "可逆数据隐藏",
+          1
+        ],
+        [
+          "视觉秘密共享",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 30,
+      "top_tags": [
+        [
+          "image-secret-sharing",
+          1
+        ],
+        [
+          "share-authentication",
+          1
+        ],
+        [
+          "polynomial-based-ISS",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 61,
+      "top_tags": [
+        [
+          "deep-steganography",
+          2
+        ],
+        [
+          "adversarial-training",
+          2
+        ],
+        [
+          "linguistic steganalysis",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 60,
+      "top_tags": [
+        [
+          "DNN-steganography",
+          2
+        ],
+        [
+          "invertible-neural-network",
+          2
+        ],
+        [
+          "deniable-steganography",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 75,
+      "top_tags": [
+        [
+          "backdoor-attack",
+          1
+        ],
+        [
+          "adaptive-trigger",
+          1
+        ],
+        [
+          "texture-detection",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 40,
+      "top_tags": [
+        [
+          "adversarial-attack-invisibility",
+          1
+        ],
+        [
+          "frequency-domain-analysis",
+          1
+        ],
+        [
+          "Fourier-perturbation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 41,
+      "top_tags": [
+        [
+          "AIGC-editing-robustness",
+          2
+        ],
+        [
+          "pNET-segmentation",
+          1
+        ],
+        [
+          "rare-tumor-CECT-dataset",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "当n-k较大时需要更多迭代且N_A减少,建议(n-k)/n ≤ 1/2;认证依赖HVS视觉识别,无法定位篡改位置",
+    "设置w=7时可压缩MSB将Blowup Factor降至1，但实现细节留作未来工作",
+    "参数裁剪约束下BASR略有下降,视觉质量也稍逊于无参数裁剪情况",
+    "Conventional prediction methods with fixed predictors limited by arithmetic combination of neighboring pixels",
+    "跨数据集微调后签名检测率下降约25%;当攻击者完全掌握模型知识时可进行密钥重训练微调攻击",
+    "UNet在ROI上DSC反而从0.392降至0.347，slice-wise weight loss对不同架构效果不一致",
+    "随裁剪比例p增大,FID急剧上升表明stylization功能被破坏",
+    "CLASP需更长嵌入/提取时间(3.33s vs baseline 0.007s)，自适应攻击下BitAcc仍有明显下降",
+    "内积运算要求嵌入矩阵H正交,限制了矩阵选择的灵活性",
+    "Rich-Model 无法区分干净与隐写 tangle 图像,两者检测错误率均约2%",
+    "当b=4时嵌入每个元素，成功匹配率急剧下降，通常需要b<4才能保持高精度",
+    "MNIST样本PSNR仅29dB，CIFAR100需更多扰动迭代收敛，TinyImageNet高PSNR易振荡",
+    "传统攻击要达到足够的数据错误率必然导致图像不可容忍的失真；QIM水印效果最好，SS和ULPM因非盲和纠错码表现稍好",
+    "fake messages are random bits lacking semantic plausibility; scheme sensitive to steganalysis attacks not tested",
+    "极端信噪比时相位信息缺失导致伪影可忽略，CSM优势减弱",
+    "由于实验设备限制,使用有限数量DNN构建公共敏感区域",
+    "AE-RNN优于LM-RNN,因自编码器学习全句信息建模能力更强",
+    "FGAS_R生成高保真隐写音频需35秒,标准FGAS需8秒,这是为获得优越抗隐写分析和鲁棒性所付出的必要代价",
+    "HiDDeN即使加了失真模块也无法泛化到视频级失真；PWRN在运动模糊和对比度调整下仍受限",
+    "Without verifier and discriminators, Imuge fails completely (L-PSNR drops from 27.43 to 13.16); larger tampers degrade recovery quality; plain areas need extra residual patterns",
+    "当Bob产生的错误过多时，Alice可能无法嵌入任何有效载荷，导致博弈不公平",
+    "全局语义重写(如InstructP2P)因彻底改变结构模型将整图标记为篡改,这是优先保真的设计权衡",
+    "Watermarked adversarial texts show lower attack success rates compared to non-watermarked versions; performance degrades as payload size increases",
+    "我们无法保证所提框架对所有真实攻击都鲁棒,因为不可能预见他人的所有攻击",
+    "Sign位修改会翻转像素值严重影响图像内容，PNG格式舍入操作不可逆导致准确率下降",
+    "当前生成式数据隐藏方法无法抵御先进隐写分析检测，常量修改代价函数是根本问题",
+    "提取精度仍有很大提升空间，对精确恢复的应用需优化网络结构和使用感知损失",
+    "网络会过拟合固定JPEG模拟器导致盲JPEG去伪影性能差;四张图像时性能显著下降",
+    "直接卷积在NCHW布局上表现很差；CHWN布局对batch size最敏感；无法复现对比[18]的方法因其未开源",
+    "对加性噪声攻击存在脆弱性，无法预测并防御所有潜在攻击策略",
+    "网络在高纹理区域产生噪声，直接训练效果不佳；16-bit时random_noise有效，32-bit时几乎失效",
+    "outpainting只能产生视觉逼真但不唯一的结果，无法用于需要精确恢复的取证场景",
+    "消息恢复准确率未达100%(实验仅99.2%),且实际信道噪声和平台压缩会进一步降低准确率",
+    "当β=0时修改像素比例接近50%，FTD以>90%准确率识别攻击；仅修改<1%像素时FTD检测率仅~50%",
+    "\"there exist a trade-off between the adversary and the visual quality of the protected image\"",
+    "停止阈值大则触发器更明显易被发现,阈值小则后门注入困难",
+    "Imuge仅能近似恢复原始内容,与ground truth仍有较大差距;Imuge定位精度不理想且无法抵抗inpainting攻击",
+    "NSI-SOD方法无法直接处理ORSIs的复杂场景，HVPNet被ORSIs场景困扰",
+    "若不使用活动内容则容量较低;冲突避免算法未实现;当前仅概念验证非安全级实现",
+    "Intra-block dependency alone yields poor performance because VLI code length replacement conceals actual DCT coefficient values, making little intra-block changes difficult to detect.",
+    "标签不一致方法对重训练攻击和伪造版权攻击并不总是有效(Remark 1)",
+    "当有效载荷较低(<0.5bpp)时检测准确率低于50%,因正确检测数量减少",
+    "输出仅为二值预测，无法解释为何判定为假新闻及可疑元素",
+    "When weight a=1, AccTri does not decline in first epoch—detection may have omissions.",
+    "两台云服务器一旦共谋，隐私可能受影响；本文安全假设较强是局限；未来将聚焦单服务器场景",
+    "Object detector limitation causes some objects not to be detected; future work plans semantic segmentation for more precise region targeting",
+    "变形卷积和小滤波器优选,ORN仅适用于小尺寸滤波器,GCNs固定方向/尺度判别能力受限",
+    "EVP方法因特征融合设计简单泛化性能不佳；仅用高频分支(0.392)或语义分支(0.481)均效果有限",
+    "64位哈希码可能过拟合导致测试集性能下降;当前对网络深层功能信息利用有限",
+    "教师模型在VGG11架构下NC检测异常值2.7超过阈值2.5,未通过检测",
+    "方案假设一个区块的所有交易来自同一发送者；MPC策略在permissionless设置下存在扩展性问题",
+    "encoder fusion使用简单逐元素相加忽略RGB/TIR特征属性;其他范式统一模块处理各层级特征是次优的。",
+    "现有RDH-CE方法存在视觉质量保持不足、直方图利用效率低、可能产生椒盐噪声等问题;当histogram vacancy数量少时嵌入率低",
+    "ELP D维度更高导致维度灾难，若实施判别分析可超越LPD；ELFD_bins数激增需学习合并策略",
+    "无法保证方法对所有真实攻击都鲁棒，因为我们无法预见所有攻击方式",
+    "传统spatial attention以全局方式生成注意力图,会遗漏有效信息导致误检背景;SGE忽略子特征间注意力一致性,不友好于SOD",
+    "method in [21] performs best in image level but loses all in individual level, trade-off exists",
+    "不使用ln操作时生成图像退化为随机噪声，不使用LPIPS时图像模糊；安全性与保真度存在矛盾",
+    "嵌入新水印不构成成功攻击,因可提交含单一水印网络证明专属所有权",
+    "Word-level causes many unknown tokens and security drops sharply (Fig.4)",
+    "SimuFreeMark在P2P指令编辑上仅90.42%准确率,对显式指令引导的语义重写仍有改进空间",
+    "当前研究方法基于不现实的严苛条件,高计算复杂度限制实际应用",
+    "当攻击者只分享少量风格生成图像而不公开模型时,框架识别能力有限",
+    "秘密太短性能不保证，太长嵌入提取不可行",
+    "随着训练集增大SVM计算效率大幅降低，不再适用于大规模标签预测",
+    "固定长度嵌入导致文本质量急剧下降；图像压缩会轻微影响提取准确性",
+    "HILL alone is not effective for GIF due to texture simplicity, producing pepper and salt noises; method only outperforms baseline in most cases.",
+    "Previous DNN steganographic schemes recover models with 50% BER and 10% ACC — completely broken for DNN model hiding",
+    "知识蒸馏等改变模型结构的攻击可移除水印,但需要大量数据和计算资源",
+    "使用随机滤波插入策略性能明显下降，单纯使用任务损失函数会导致参数分布偏移被检测",
+    "统一因子设置并非对所有模型和数据集都最优，部分情况下性能下降较明显",
+    "现有可解释性方法仅提供事后解释,无法先验识别最优触发位置,且计算效率不足",
+    "Baseline poisons achieve only 56.88% ASR max; our method requires epsilon budget constraint for imperceptibility",
+    "低嵌入率0.1bpp时优化效果不明显；未来更复杂的嵌入技术可能带来新挑战",
+    "水印容量与鲁棒性之间存在权衡,较大水印对模型剪枝更脆弱"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "our approach achieves the best visual quality",
+      "paper_id": "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    },
+    {
+      "quote": "the accuracy of FTD against ours is only around 50%",
+      "paper_id": "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    },
+    {
+      "quote": "Network Pruning cannot alleviate the backdoor",
+      "paper_id": "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    },
+    {
+      "quote": "the accuracy of malicious images is entangled with benign ones",
+      "paper_id": "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    },
+    {
+      "quote": "the round error cannot be ignored",
+      "paper_id": "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    },
+    {
+      "quote": "the trace of the trigger is too small to be detected",
+      "paper_id": "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    },
+    {
+      "quote": "classical backdoor attacks work ineffectively",
+      "paper_id": "Physical Invisible Backdoor Based on Camera Imaging"
+    },
+    {
+      "quote": "the peculiar architecture of the model may easily arouse suspicion",
+      "paper_id": "Physical Invisible Backdoor Based on Camera Imaging"
+    },
+    {
+      "quote": "EASR of Wanet with PhysicalBA on VGG11 is only 10.288%",
+      "paper_id": "Physical Invisible Backdoor Based on Camera Imaging"
+    },
+    {
+      "quote": "the loss of image semantic information during the process of camera fingerprint extraction",
+      "paper_id": "Physical Invisible Backdoor Based on Camera Imaging"
+    },
+    {
+      "quote": "her real share is already sent to the fake participant",
+      "paper_id": "A Common Method of Share Authentication in Image Secret Sharing"
+    },
+    {
+      "quote": "the dealer fails to decrypt and cannot distinguish the fake one",
+      "paper_id": "A Common Method of Share Authentication in Image Secret Sharing"
+    },
+    {
+      "quote": "The advantages of VSS and polynomial-based ISS are skillfully fused",
+      "paper_id": "A Common Method of Share Authentication in Image Secret Sharing"
+    },
+    {
+      "quote": "a screening operation is an operation that screens the polynomial coefficients satisfying some requirements",
+      "paper_id": "A Common Method of Share Authentication in Image Secret Sharing"
+    },
+    {
+      "quote": "N_A ≥ 4 is suggested for an acceptable performance",
+      "paper_id": "A Common Method of Share Authentication in Image Secret Sharing"
+    },
+    {
+      "quote": "may have failed authentication with a larger value of n-k",
+      "paper_id": "A Common Method of Share Authentication in Image Secret Sharing"
+    },
+    {
+      "quote": "the schemes are therefore fragile",
+      "paper_id": "From Image to Imuge_ Immunized Image Generation"
+    },
+    {
+      "quote": "Imuge fails to conduct content recovery",
+      "paper_id": "From Image to Imuge_ Immunized Image Generation"
+    },
+    {
+      "quote": "we do not compare Imuge with the previous fragile image self-recovery schemes",
+      "paper_id": "From Image to Imuge_ Immunized Image Generation"
+    },
+    {
+      "quote": "we find that the ℓ2 distance is better",
+      "paper_id": "From Image to Imuge_ Immunized Image Generation"
+    },
+    {
+      "quote": "the failure of precise tamper mask prediction always happens",
+      "paper_id": "From Image to Imuge_ Immunized Image Generation"
+    },
+    {
+      "quote": "the schemes are only tolerant to a typical kind of attack",
+      "paper_id": "From Image to Imuge_ Immunized Image Generation"
+    },
+    {
+      "quote": "the quality of generated images is still the heel of Achilles",
+      "paper_id": "Image Generation Network for Covert Transmission in Online Social Network"
+    },
+    {
+      "quote": "the network tends to leave noise in the high-frequency area",
+      "paper_id": "Image Generation Network for Covert Transmission in Online Social Network"
+    },
+    {
+      "quote": "we find that the effect of random noise is obvious when the length of secret messages is 16",
+      "paper_id": "Image Generation Network for Covert Transmission in Online Social Network"
+    },
+    {
+      "quote": "Since we can not achieve 100% extraction accuracy",
+      "paper_id": "Image Generation Network for Covert Transmission in Online Social Network"
+    },
+    {
+      "quote": "new unknown noises may reduce accuracy",
+      "paper_id": "Image Generation Network for Covert Transmission in Online Social Network"
+    },
+    {
+      "quote": "The lack of the original cover image makes it difficult for the opponent learning steganalyzer to identify the stego",
+      "paper_id": "Image Steganography and Style Transformation Based on Generative Adversarial Network"
+    },
+    {
+      "quote": "the message recovery accuracy did not achieve 100%",
+      "paper_id": "Image Steganography and Style Transformation Based on Generative Adversarial Network"
+    },
+    {
+      "quote": "there will be complex noise in the real-world communication channel, and some platforms will compress the image before transmission",
+      "paper_id": "Image Steganography and Style Transformation Based on Generative Adversarial Network"
+    },
+    {
+      "quote": "Ours检测误差≈0.5等于随机猜测,说明方法无法被检测",
+      "paper_id": "Image Steganography and Style Transformation Based on Generative Adversarial Network"
+    },
+    {
+      "quote": "detection accuracy is still 100%",
+      "paper_id": "Secure Cover Selection for Steganography"
+    },
+    {
+      "quote": "spare no pains to increase image level without considering individual",
+      "paper_id": "Secure Cover Selection for Steganography"
+    },
+    {
+      "quote": "the steganographer can be easily identified",
+      "paper_id": "Secure Cover Selection for Steganography"
+    },
+    {
+      "quote": "the abnormality is evidence of guilt",
+      "paper_id": "Secure Cover Selection for Steganography"
+    },
+    {
+      "quote": "CNNs can only extract features within certain receptive fields",
+      "paper_id": "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    },
+    {
+      "quote": "insufficient to handle challenging scenes of ORSIs",
+      "paper_id": "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    },
+    {
+      "quote": "D-SWSAM comprehensively perceives the orientation information",
+      "paper_id": "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    },
+    {
+      "quote": "channel shuffle operation to explicitly increase the channel interaction",
+      "paper_id": "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    },
+    {
+      "quote": "complementarity between the product and sum",
+      "paper_id": "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    }
+  ]
+}

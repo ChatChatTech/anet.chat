@@ -1,0 +1,39 @@
+{
+  "paper_id": "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767",
+  "doi": "10.24963/ijcai.2022/242",
+  "title": "Imperceptible Backdoor Attack: From Input Space to Feature Representation",
+  "year": 2022,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有隐身后门攻击无法抵抗统计检测(FTD)，且特征空间中恶意与良性样本可分离导致模型诊断防御有效",
+  "problem_framing": "从输入空间和特征表示空间两个层面设计不可见触发器，使恶意图像特征与良性图像特征纠缠",
+  "key_insight": "将触发器建模为多项分布采样(±1,0)而非直接生成浮点触发器，既解决像素整数约束问题，又最小化修改幅度",
+  "method_signature": "U-Net生成器+SampleNet采样多项分布+特征纠缠正则化",
+  "evaluation_criteria": "ASR攻击成功率、BA良性准确率、L1范数失真、FTD检测率、Neural Cleanse异常指数、Network Pruning后ASR",
+  "negative_result_or_admitted_limitation": "当β=0时修改像素比例接近50%，FTD以>90%准确率识别攻击；仅修改<1%像素时FTD检测率仅~50%",
+  "evidence_for_taste": [
+    "our approach achieves the best visual quality",
+    "the accuracy of FTD against ours is only around 50%",
+    "Network Pruning cannot alleviate the backdoor",
+    "the accuracy of malicious images is entangled with benign ones",
+    "the round error cannot be ignored",
+    "the trace of the trigger is too small to be detected"
+  ],
+  "thinking_moves": [
+    "从防守方视角反推攻击弱点: FTD通过频域DCT检测触发痕迹 → 触发器设计必须极小扰动",
+    "先观察到图像像素是整数约束, 直接生成浮点触发器有舍入误差 → 转用概率采样解决",
+    "从单维度(输入空间)扩展到双维度(输入+特征)分析隐蔽性 → 特征纠缠正则化弥合可分离性缺陷",
+    "将BadNets可见触发与ISSBA不可见触发的问题显式化: 人眼不可见≠统计不可见"
+  ],
+  "topic_tags": [
+    "backdoor-attack-stealthiness",
+    "multinomial-distribution-sampling",
+    "feature-representation-entanglement",
+    "frequency-domain-detection-defense",
+    "trigger-generator-U-Net"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

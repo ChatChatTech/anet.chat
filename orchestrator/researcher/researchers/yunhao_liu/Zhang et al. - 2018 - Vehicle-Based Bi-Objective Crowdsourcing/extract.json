@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zhang et al. - 2018 - Vehicle-Based Bi-Objective Crowdsourcing",
+  "doi": null,
+  "title": "Vehicle-Based Bi-Objective Crowdsourcing",
+  "year": 2018,
+  "venue": "IEEE Transactions on Intelligent Transportation Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "车辆众包可同时承担自动感知和查询任务，但现有研究将两类任务割裂处理，未充分利用每辆车的双重能力",
+  "problem_framing": "将车辆双目标众包建模为预算约束下的双目标优化问题，同时最大化感知覆盖率和查询可靠性，并证明NP-hard",
+  "key_insight": "当工人行驶时，其轨迹既能提供感知覆盖，又能在经过查询任务位置时完成查询任务，形成两类任务的「关键链接」",
+  "method_signature": "基于双目标贪婪策略和NSGA-II遗传算法求解双目标优化问题，采用Pareto支配关系筛选工人-任务配对",
+  "evaluation_criteria": "使用真实出租车轨迹数据(T-drive)，对比C-Greedy(覆盖优先)和Q-Greedy(查询优先)，以覆盖率和查询可靠性为指标",
+  "negative_result_or_admitted_limitation": "VBC-GA与VBC-Greedy获得「相似结果」，实验未能显示遗传算法优于贪婪算法",
+  "evidence_for_taste": [
+    "The rationality of the combination lies in a key link",
+    "In contrast, in existing solutions, a worker has to commit to two applications",
+    "more efficient in fully using the active and passive sensing capabilities",
+    "VBC-GA and VBC-Greedy have similar results",
+    "C-Greedy and Q-Greedy have marked shortages"
+  ],
+  "thinking_moves": [
+    "识别两类任务间的「关键链接」并重新定义问题边界",
+    "通过NP-hard证明建立复杂性下界",
+    "利用单调性性质设计近似贪婪算法",
+    "采用NSGA-II探索Pareto前沿以获得多个权衡解",
+    "将遗传算法组件(编码、交叉、变异)适配到任务分配问题"
+  ],
+  "topic_tags": [
+    "vehicle-crowdsourcing",
+    "bi-objective-optimization",
+    "worker-recruitment",
+    "trajectory-coverage",
+    "Pareto-optimality"
+  ],
+  "cites_own_work": [
+    "Zhang et al., 2016 - Incentives for mobile crowd sensing",
+    "Zhang et al., 2017 - Toward efficient mechanisms",
+    "Zhang et al., 2017 - SpatialRecruiter"
+  ],
+  "extraction_quality": "full"
+}

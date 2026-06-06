@@ -1,0 +1,39 @@
+{
+  "paper_id": "2019_MobiCom Poster",
+  "doi": null,
+  "title": "Cross Labelling and Learning Unknown Activities Among Multimodal Sensing Data",
+  "year": 2019,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "多模态感知数据因缺乏有效的分割和标注方法而严重未被利用",
+  "problem_framing": "在不知道正确标签的情况下如何利用多模态数据间的隐藏关联进行交叉标注和学习",
+  "key_insight": "用部分模型的结果自动标注其他模态的未识别数据，将浪费数据转为有价值标注",
+  "method_signature": "MultiSense: 跨模态分割对齐 → 标签评估 → 预测聚合 → 模型迭代更新",
+  "evaluation_criteria": "多场景下的数据-人对齐精度、标注准确率提升、模型能力增长",
+  "negative_result_or_admitted_limitation": "强冲突预测仍难以完美处理，Case 4准确率仅67.9%",
+  "evidence_for_taste": [
+    "turn unrecognized wasted data into valuable labelled data",
+    "can deal with strongly conflicting predictions",
+    "high-confidence prediction doesn\\'t necessarily mean a high accuracy",
+    "discard those unqualified ones",
+    "The worse the initial ability of models, the more significant the improvement"
+  ],
+  "thinking_moves": [
+    "把视频用骨架关节点运动序列表示，实现跨模态统一",
+    "用运动和静止双重证据对齐多模态数据与人",
+    "承认高置信度预测不等于高精度，据此评估标签可靠性",
+    "设计预测聚合机制处理能力差异大的模型间的强冲突",
+    "对更新样本进行质量筛选，只用合格样本训练"
+  ],
+  "topic_tags": [
+    "multimodal-sensing",
+    "cross-labelling",
+    "cross-learning",
+    "activity-recognition",
+    "sensor-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

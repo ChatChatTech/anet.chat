@@ -1,0 +1,40 @@
+{
+  "paper_id": "LoongServe_ Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism",
+  "doi": "10.48550/arxiv.2404.09526",
+  "title": "LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism",
+  "year": 2024,
+  "venue": "SOSP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "长上下文LLM请求间和请求内不同阶段资源需求差异巨大，现有静态并行策略无法高效利用底层资源",
+  "problem_framing": "将动态资源分配问题形式化为弹性序列并行（ESP）问题，支持在迭代粒度动态调整DoP",
+  "key_insight": "预填充阶段序列并行本身就在循环通信KV张量，只需选择性保留即可实现零开销缩容",
+  "method_signature": "ESP+主动迁移+多主解码+四步调度算法",
+  "evaluation_criteria": "吞吐量提升（P90 goodput），与chunked prefill和prefill-decoding disaggregation对比",
+  "negative_result_or_admitted_limitation": "静态混合并行和复制并行无法应对动态推理负载，在重负载下需谨慎平衡DoP",
+  "evidence_for_tape": [
+    "huge variance in resource usage",
+    "mismatches with the resource demand",
+    "eliminating extra communication overhead",
+    "mitigate GPU memory fragmentation",
+    "tipping point that transitions from memory bound to compute bound",
+    "poor scalability",
+    "static grouping strategy often mismatches"
+  ],
+  "thinking_moves": [
+    "观察到预填充阶段SP通信本质，将其复用为迁移机制，实现零开销缩容",
+    "将批处理调度问题分解为四个多项式时间子问题以满足毫秒级延迟要求",
+    "通过主动迁移而非被动迁移消除迁移开销，颠覆现有迁移范式",
+    "将单主解码扩展为多主解码以同时解决内存碎片和计算瓶颈问题"
+  ],
+  "topic_tags": [
+    "LLM serving",
+    "elastic sequence parallelism",
+    "KV-cache management",
+    "dynamic resource scheduling",
+    "prefill-decoding disaggregation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Li et al. - 2014 - Enhancing Visibility of Network Performance in Large-Scale Sensor Networks",
+  "doi": null,
+  "title": "Enhancing Visibility of Network Performance in Large-Scale Sensor Networks",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WSNs deployed in exoteric environments suffer from limited visibility; existing evidence-based diagnosis approaches rely on expert knowledge and fail to generalize.",
+  "problem_framing": "Formalize diagnosis as factorizing exception state matrix E into representative matrix Ψ and correlation strength W via NMF, enabling multi-root-cause attribution.",
+  "key_insight": "Instead of pre-defining root causes via expert heuristics, latent root cause vectors can be automatically discovered from historical network state data using NMF.",
+  "method_signature": "Inject 43 metrics into nodes, detect anomalies by variance threshold, apply NMF to extract r representative root cause vectors in Ψ",
+  "evaluation_criteria": "Feasibility and accuracy of mapping exceptions to root causes; ability to explain network behaviors in CitySee field study.",
+  "negative_result_or_admitted_limitation": "When nodes are removed in local areas (scenario 2), representation is less accurate than in expansive removal (scenario 1).",
+  "evidence_for_taste": [
+    "这些诊断模型定义了一组有限的网络故障",
+    "emphasizing on expert knowledge too much",
+    "我们跳过异常提取过程",
+    "特征Ψ7代表正常网络状态的表示",
+    "the most proper explanation is that",
+    "we give brief explanations to these features"
+  ],
+  "thinking_moves": [
+    "从专家系统反推数据驱动: 批评现有方法过度依赖expert knowledge",
+    "把诊断问题重新frame成矩阵分解问题",
+    "从异常数据中学习潜在模式而非预定义规则",
+    "用压缩表示解释复杂异常的多根因组合"
+  ],
+  "topic_tags": [
+    "WSN-diagnosis",
+    "non-negative-matrix-factorization",
+    "root-cause-analysis",
+    "metric-injection",
+    "CitySee-system"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue not explicitly stated in paper text; role inferred from author ordering. Some technical details (figure contents, exact algorithm derivations) referenced but not fully reproducible from text alone."
+}

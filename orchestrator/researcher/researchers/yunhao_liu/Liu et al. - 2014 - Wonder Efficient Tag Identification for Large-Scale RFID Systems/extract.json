@@ -1,0 +1,39 @@
+{
+  "paper_id": "Liu et al. - 2014 - Wonder Efficient Tag Identification for Large-Scale RFID Systems",
+  "doi": null,
+  "title": "Wonder: Efficient Tag Identification for Large-scale RFID Systems",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "机场行李追踪系统RATS需要快速可靠地识别大量标签，防止行李丢失和错放",
+  "problem_framing": "标签同时响应导致信号碰撞，现有TDMA/CDMA方法在效率或带宽上存在瓶颈",
+  "key_insight": "利用正交Walsh码的碰撞抗性，让多个标签同时传输 Walsh码而无需扩展频谱",
+  "method_signature": "将标签ID映射到4个Walsh码，通过哈希函数选择时隙传输，接收端通过相关性恢复",
+  "evaluation_criteria": "识别时间、识别延迟、误报率",
+  "negative_result_or_admitted_limitation": " slotted-CDMA在识别时间上优于Wonder，但Walsh码方案不占用额外频谱",
+  "evidence_for_taste": [
+    "collision resistant property",
+    "significantly reduces identification time",
+    "does not lag too far behind",
+    "Our protocol is efficient"
+  ],
+  "thinking_moves": [
+    "从实际行李追踪项目提炼出效率瓶颈的工程问题",
+    "引入通信理论中的正交码概念解决感知系统的碰撞难题",
+    "用概率分析建立误报率与帧大小的解析关系",
+    "时间效率和带宽占用之间的工程权衡"
+  ],
+  "topic_tags": [
+    "RFID-tag-identification",
+    "Walsh-code-anti-collision",
+    "closed-loop-RFID",
+    "orthogonal-spreading",
+    "baggage-tracking"
+  ],
+  "cites_own_work": [
+    "RATS项目"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少DOI和具体发表会议/期刊信息，基于格式推断为会议论文"
+}

@@ -1,0 +1,36 @@
+{
+  "paper_id": "Advancing Large Language Model Attribution through Self-Improving__oa_W4404783000",
+  "doi": "10.18653/v1/2024.emnlp-main.223",
+  "title": "Advancing Large Language Model Attribution through Self-Improving",
+  "year": 2024,
+  "venue": "EMNLP 2024",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "改进LLM归因能力需要高质量标注数据，成本高昂且难以扩展",
+  "problem_framing": "将LLM归因自我改进问题形式化为两步：防止模型早期停滞 + 利用低质量样本的细粒度偏好信号",
+  "key_insight": "低质量样本通过偏好优化可提供比模仿正确答案更细粒度的学习信号",
+  "method_signature": "START框架：合成数据热身 + 迭代式拒绝采样微调 + 细粒度偏好优化",
+  "evaluation_criteria": "引用质量(F1)和答案正确性(Recall/Acc)",
+  "negative_result_or_admitted_limitation": "合成数据热身本身无法显著提升引用质量，仅提供初始基础",
+  "evidence_for_taste": [
+    "self-improvement bootstrapping",
+    "prevent model stagnation",
+    "fine-grained signals from low-quality samples",
+    "learning from mistakes",
+    "surface characteristics of attribution"
+  ],
+  "thinking_moves": [
+    "从初始性能不足导致样本稀缺的角度分析自改进停滞问题",
+    "把学习低质量样本中的错误重新定义为提供细粒度信号的手段",
+    "从人类认知出发理解'从错误中学习比模仿正确示例更有效'",
+    "将归因任务的多目标特性映射为偏好优化的多个优化奖励"
+  ],
+  "topic_tags": [
+    "LLM归因",
+    "自改进",
+    "引用生成",
+    "偏好优化",
+    "合成数据"
+  ],
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

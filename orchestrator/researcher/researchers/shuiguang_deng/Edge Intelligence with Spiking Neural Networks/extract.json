@@ -1,0 +1,39 @@
+{
+  "paper_id": "Edge Intelligence with Spiking Neural Networks",
+  "doi": "10.48550/arxiv.2507.14069",
+  "title": "Edge Intelligence with Spiking Neural Networks",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "传统深度学习依赖云端算力，带来高延迟、带宽瓶颈和隐私风险，边缘设备资源受限难以部署",
+  "problem_framing": "如何让脑启发计算（尤其是SNN）在资源受限的边缘设备上实现低功耗、低延迟的推理和训练",
+  "key_insight": "SNN通过模拟生物神经元动力学，以事件驱动计算替代昂贵的MAC操作，可成为边缘智能的低功耗替代方案",
+  "method_signature": "首个EdgeSNN综合调研，系统梳理神经元模型、学习算法、硬件平台及部署挑战",
+  "evaluation_criteria": "任务有效性、计算效率、模型可训练性三重维度",
+  "negative_result_or_admitted_limitation": " neuromorphic硬件尚未收敛到商业主导平台，现有评估主要在非原生CPU/GPU上进行，结论可能有偏",
+  "evidence_for_taste": [
+    " evaluations of EdgeSNNs conducted on them remain limited and potentially biased",
+    " hardware is not explicitly designed to harness the full potential of BIC",
+    " their deployment in practical edge intelligence applications must be critically assessed",
+    " Although LIF variants ... introduce additional computational overhead",
+    " their generalization ability across diverse domains remains an open question"
+  ],
+  "thinking_moves": [
+    "从云端AI痛点倒推边缘场景需求，提炼SNN作为低功耗替代的立足点",
+    "将神经元模型的生物逼真度与实现成本进行空间-时间复杂度二维权衡",
+    "先建立技术基础框架，再分类讨论部署/训练/安全三大实践挑战",
+    "引入dual-track评估方案解决 neuromorphic硬件未成熟时的基准测试难题",
+    "以对比表格明确自身定位，区分于已有综述的覆盖范围差异"
+  ],
+  "topic_tags": [
+    "spiking-neural-network",
+    "edge-intelligence",
+    "brain-inspired-computing",
+    "neuromorphic-hardware",
+    "on-device-inference"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "作为调研论文缺乏原创方法验证，主要提取的是综述框架和分类思想；SNNBench等基准工具引用完整但未深入评估其局限 | md truncated to head40k+tail20k"
+}

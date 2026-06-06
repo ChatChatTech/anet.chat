@@ -1,0 +1,43 @@
+{
+  "paper_id": "Duan et al. - 2021 - Full-Dimension Relative Positioning for RFID-Enabled Self-Checkout Services",
+  "doi": null,
+  "title": "Full-Dimension Relative Positioning for RFID-Enabled Self-Checkout Services",
+  "year": 2021,
+  "venue": "Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "RFID标签已在零售普及,现有自助结账需逐件扫描或部署大量传感器,成本高不通用",
+  "problem_framing": "用相对定位替代绝对定位,通过相位V-zone确定标签顺序,关联物品与购物车",
+  "key_insight": "利用传送带上标签相位变化的V-zone谷点标记经过天线时刻,两天线相位变化率之差放大Y维差异",
+  "method_signature": "锚标签+快速V-zone检测+双天线相位率差分+概率分类器",
+  "evaluation_criteria": "标签排序准确率90%、物品归类准确率95%、系统延迟0.15s",
+  "negative_result_or_admitted_limitation": "标签间距过近时准确率下降至84%,DTW需先验知识不适用于本场景",
+  "evidence_for_taste": [
+    "requires customized hardware efforts",
+    "is time-consuming just to search for a V-zone",
+    "cannot simply apply a fixed time window",
+    "achieve 90% ordering accuracy in real-time",
+    "about 10× faster than STPP"
+  ],
+  "thinking_moves": [
+    "把绝对定位难题替换为相对排序问题",
+    "从物理距离推相位变化率的数学关系",
+    "用两天线相位率之差放大Y维信号抑制噪声",
+    "借鉴DTW思路但放弃需先验知识的前提",
+    "概率模型容忍排序误差而非追求完美排序"
+  ],
+  "topic_tags": [
+    "RFID-relative-positioning",
+    "self-checkout",
+    "phase-V-zone-detection",
+    "tag-ordering",
+    "retail-ubiquitous-computing"
+  ],
+  "cites_own_work": [
+    "STPP (Shangguan et al. 2015)",
+    "OTrack (Shangguan et al. 2014)",
+    "Tagoram (Yang et al. 2014)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

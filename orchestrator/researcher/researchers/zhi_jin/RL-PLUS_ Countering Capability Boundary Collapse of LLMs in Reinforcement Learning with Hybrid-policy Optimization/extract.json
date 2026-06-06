@@ -1,0 +1,45 @@
+{
+  "paper_id": "RL-PLUS_ Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization",
+  "doi": "10.48550/arxiv.2508.00222",
+  "title": "RL-PLUS: Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "当前RLVR方法只能进行内化利用(on-policy)，无法突破基座模型的能力边界，导致能力边界崩塌",
+  "problem_framing": "RLVR的pass@128显著低于基座模型，说明其收窄了模型的解空间；SFT+GRPO简单组合因KL约束导致负迁移",
+  "key_insight": "用Multiple Importance Sampling处理外部数据分布偏移，用Exploration-Based Advantage Function优先学习低概率但正确的推理路径",
+  "method_signature": "混合策略优化：内化利用(GRPO) + 外部探索(MIS + EBAF)，去除clipping机制",
+  "evaluation_criteria": "Pass@k曲线超越基座模型、6个数学推理benchmark平均提升5.2分、 entropy不崩塌",
+  "negative_result_or_admitted_limitation": "GRPO w/ SFT Loss (简单相加SFT loss) 反而降低性能，说明有效融合两种学习范式是 nontrivial 的挑战",
+  "evidence_for_taste": [
+    "其pass@1282是substantially lower",
+    "collapsed the base model's capability boundary",
+    "inward exploitation",
+    "outward exploration",
+    "hard to continuous 'learning' of new knowledge",
+    "effective integration is a non-trivial challenge",
+    "RLVR refines the probability of known correct paths but fails to expand the overall set of solvable problems",
+    "policy entropy sharply decreases",
+    "The entropy of RL-PLUS does not diminish to zero",
+    "prioritizes novel yet high-value reasoning paths"
+  ],
+  "thinking_moves": [
+    "把LLM的RLVR问题类比到教育学古训'学而不思则罔，思而不学则殆'",
+    "用Pass@k vs Pass@1的差距来定义能力边界崩塌",
+    "从信息论角度分析on-policy IS的bias和off-policy IS的variance explosion",
+    "把行为策略估计建模为贝叶斯决策问题：在已知代理πθ_old和最大不确定性(均匀分布)之间做最优权衡",
+    "借鉴focal loss思想设计exploration weight：低概率正确token获得更大梯度信号",
+    "证明MIS estimator的方差鲁棒性：只要行为池中有一个好的策略，estimator就低方差"
+  ],
+  "topic_tags": [
+    "LLM-reinforcement-learning",
+    "capability-boundary-collapse",
+    "hybrid-policy-optimization",
+    "multiple-importance-sampling",
+    "exploration-based-advantage-function"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

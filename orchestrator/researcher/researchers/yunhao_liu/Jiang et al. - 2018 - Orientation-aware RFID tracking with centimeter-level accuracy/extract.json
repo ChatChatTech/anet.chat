@@ -1,0 +1,36 @@
+{
+  "paper_id": "Jiang et al. - 2018 - Orientation-aware RFID tracking with centimeter-level accuracy",
+  "doi": null,
+  "title": "Orientation-aware RFID Tracking with Centimeter-level Accuracy",
+  "year": 2018,
+  "venue": "IPSN",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "工业生产线中物体边移动边自旋,现有RFID追踪因忽略方向变化导致精度严重下降",
+  "problem_framing": "RFID相位变化由距离和标签朝向共同决定,但现有方法将其简化为仅与距离相关",
+  "key_insight": "标签相位随极化方向与天线-标签方向夹角线性变化,可通过实验观测验证这一关系",
+  "method_signature": "基于极化线性关系的朝向感知相位模型,结合迭代追踪与校准消除累积误差",
+  "evaluation_criteria": "厘米级定位误差、方向角误差、旋转目标追踪对比实验",
+  "negative_result_or_admitted_limitation": "在远离天线的位置采样率较低导致初始化误差增大,且未处理多路径效应的完整方案",
+  "evidence_for_taste": [
+    "we find it violates our empirical results",
+    "neglecting the impact of the varying orientation will cause the loss of tracking accuracy",
+    "without an effective solution to cope with such ambiguity",
+    "The orientation error on the circular rail is higher"
+  ],
+  "thinking_moves": [
+    "通过实验观察发现现有理论模型与实测不符",
+    "将天线极化现象与相位变化建立物理联系",
+    "利用线性关系将方向问题转化为可量化模型",
+    "承认迭代计算会累积误差并设计被动触发校准机制"
+  ],
+  "topic_tags": [
+    "RFID追踪",
+    "朝向感知定位",
+    "相位模型",
+    "工业CPS",
+    "标签极化"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

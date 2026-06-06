@@ -1,0 +1,41 @@
+{
+  "paper_id": "2020_KDD_A Request-level Guaranteed Delivery Advertising Planning Forecasting and Allocation",
+  "doi": null,
+  "title": "A Request-level Guaranteed Delivery Advertising Planning: Forecasting and Allocation",
+  "year": 2020,
+  "venue": "KDD",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "45%订单需要请求级定向,但现有方法在用户级/群体级建模,规模差数个数量级无法扩展",
+  "problem_framing": "请求级库存预测误差和销售策略共同决定广告投放效果,需同时优化预测-销售-投放三组件",
+  "key_insight": "聚类+张量分解降维:将大tensor分解为用户聚类、请求聚类和时间维tensor B,把高维稀疏问题转为低维可解问题",
+  "method_signature": "聚类+张量分解预测,参数服务器并行+GPU加速分配,Lambda架构支持离线/在线销售",
+  "evaluation_criteria": "预测准确率88%-92%,配送率,播放率,与ST-TF/HWM/SHALE/ALI对比",
+  "negative_result_or_admitted_limitation": "ST-TF在PANGC属性组合下loss在0.2附近震荡无法收敛,其他模型全部失败;RAP的L2距离略大表明代表性问题有轻微损失",
+  "evidence_for_tightness": [
+    "existing tensor factorization models cannot be directly adopted",
+    "45% orders require request-level targeting",
+    "the dimension of the request-level tensor is several orders of magnitude larger",
+    "existing methods are not sufficient to meet the needs",
+    "few work has delved into the large-scale impression opportunity forecasting"
+  ],
+  "thinking_moves": [
+    "将高维稀疏张量问题,通过聚类分解为低维子问题",
+    "利用二分图和分配解的结构稀疏性(sparsity < 2.7%)设计并行算法",
+    "将问题分解为离线全局优化和在线快速响应两个层次",
+    "承认方法局限性:准确率提升换来轻微代表性问题"
+  ],
+  "topic_tags": [
+    "request-level-advertising",
+    "guaranteed-delivery",
+    "tensor-factorization-forecasting",
+    "large-scale-allocation",
+    "GPU-accelerated-optimization"
+  ],
+  "cites_own_work": [
+    "ST-TF (Ma et al. 2019) is state-of-the-art and from same institution",
+    "building on temporal regularized matrix factorization"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整呈现了预测、分配优化算法及系统架构,包含足够对比实验和消融分析,负向结果信号明确(方法失败案例详尽) | md truncated to head40k+tail20k"
+}

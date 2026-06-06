@@ -1,0 +1,38 @@
+{
+  "paper_id": "2025_ICDE_E3FS",
+  "doi": null,
+  "title": "E3FS: Efficient, Secure, and Verifiable Fuzzy Search with Data Updates in Hybrid-Storage Blockchains",
+  "year": 2025,
+  "venue": "ICDE",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "HSB系统中不可信的离线服务器存在隐私泄露和结果篡改风险，现有方案无法同时实现可验证性与多关键字模糊搜索的隐私保护",
+  "problem_framing": "设计一个兼顾安全性、可验证性和前向隐私的动态多关键字模糊搜索协议，同时满足区块链资源受限的约束",
+  "key_insight": "基于最少出现关键字构造倒排认证索引树，将搜索和验证复杂度从线性降至次线性，仅在链上存储轻量级摘要",
+  "method_signature": "可更新混合索引（T-MAP/B-MAP/O-MAP）+ LSH加密布隆过滤器 + 认证平衡二叉树（A-BBT/A-BMT）",
+  "evaluation_criteria": "搜索速度58.6×提升、验证速度34.4×提升、通信开销减少约60×",
+  "negative_result_or_admitted_limitation": "A-BBT和A-BMT的性能取决于关键字分布，前者在关键字稀疏时更优，后者在关键字普遍存在时更优",
+  "evidence_for_taste": [
+    "linear scan of files",
+    "sublinear cost",
+    "forward privacy risk",
+    "least frequent keyword",
+    "lightweight digests"
+  ],
+  "thinking_moves": [
+    "将区块链可验证搜索问题拆解为链上/链下/用户三端资源分配",
+    "利用关键字频率差异构造倒排索引以压缩搜索空间",
+    "把动态更新的前向隐私威胁转化为秘密计数器刷新机制",
+    "通过HMAC认证实现无需线性扫描的子树级验证"
+  ],
+  "topic_tags": [
+    "hybrid-storage-blockchain",
+    "verifiable-search",
+    "fuzzy-keyword-search",
+    "forward-privacy",
+    "authenticated-data-structure"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

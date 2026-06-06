@@ -1,0 +1,38 @@
+{
+  "paper_id": "Federated Few-Shot Learning for Mobile NLP",
+  "doi": "10.1145/3570361.3613277",
+  "title": "Federated Few-Shot Learning for Mobile NLP",
+  "year": 2023,
+  "venue": "ACM MobiCom '23",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "移动端用户缺乏标注意愿和知识，导致联邦学习中标签极度稀缺（<0.1%）且分布严重偏斜",
+  "problem_framing": "将伪标签和提示学习结合，构建FedFSL工作流，需解决推理训练协同规划和移动端资源高效利用问题",
+  "key_insight": "模型弱时仅选高置信伪标签，随着模型变强逐步加速注入，通过配置空间<freq, n, k>动态调节训练节奏",
+  "method_signature": "FeS系统含课程步调、表示多样性过滤、层深与容量联合规划三大设计",
+  "evaluation_criteria": "收敛准确率、训练延迟、设备能耗、网络流量等多维系统开销",
+  "negative_result_or_admitted_limitation": "层冻结单独使用效果不足，需同时控制层容量；配置无万能解，需动态切换",
+  "evidence_for_tape": [
+    "most mobile users lack motivations",
+    "neither pseudo labeling nor prompt learning alone is enough",
+    "layer freezing alone is inadequate",
+    "no silver-bullet configuration",
+    "87.4% of the total energy cost is inference"
+  ],
+  "thinking_moves": [
+    "从极端标签稀缺（0.05%）和高度偏斜分布出发定义问题，而非假设均匀分布",
+    "将算法设计（伪标签+提示学习）与系统设计（课程步调+推理优化）分离再协同",
+    "用AUG-E指标将准确率收益与系统开销联合建模，实现配置空间的轻量搜索",
+    "承认无通用配置，通过在线监控AUG-E触发动态切换机制"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "few-shot-nlp",
+    "mobile-nlp",
+    "pseudo-labeling",
+    "prompt-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

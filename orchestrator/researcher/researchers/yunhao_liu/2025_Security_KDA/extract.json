@@ -1,0 +1,38 @@
+{
+  "paper_id": "2025_Security_KDA",
+  "doi": null,
+  "title": "Exploiting Task-Level Vulnerabilities: An Automatic Jailbreak Attack and Defense Benchmarking for LLMs",
+  "year": 2025,
+  "venue": "USENIX Security Symposium",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有越狱攻击依赖特定提示词/标记,易被对齐修复补丁防御,需要发现更深层的任务级漏洞",
+  "problem_framing": "将恶意任务分解为多个低风险子任务,绕过LLM安全防护后再聚合响应重建原始有害答案",
+  "key_insight": "无害任务与有害任务共享底层知识(如修补与利用系统漏洞都需识别漏洞知识),通过分解可规避安全拒绝",
+  "method_signature": "知识分解攻击(KDA):迭代分解任务树→子任务执行→响应聚合→越狱判定",
+  "evaluation_criteria": "攻击成功率(ASR)与SOTA对比,响应细节丰富度;基准测试含7931条6级风险提示语",
+  "negative_result_or_admitted_limitation": "存在少量任务无论分解多少次风险仍高,但当前LLM尚未能防御所有有害任务(14% GPT-4仍准确响应)",
+  "evidence_for_taste": [
+    "a more intrinsic vulnerability at the task-level",
+    "remaining its effectiveness even as LLMs are continuously updated",
+    "significantly greater resilience against re-alignment defenses",
+    "the first benchmark tailored to comprehensively assess"
+  ],
+  "thinking_moves": [
+    "识别提示级/标记级攻击的根本局限:可被对抗训练补丁修复",
+    "将越狱攻击从prompt-level重新框架为task-level,利用知识重叠性质",
+    "构建任务分解树结构,递归直到所有叶节点被目标模型执行",
+    "利用meta-prompting自动化恶意意图隐藏与任务重述",
+    "将防御评估扩展为风险分级谱系,弥补仅高危提示无法区分强防御模型的空白"
+  ],
+  "topic_tags": [
+    "LLM-jailbreak-attack",
+    "task-decomposition",
+    "knowledge-sharing-duality",
+    "safety-alignment-benchmark",
+    "black-box-red-teaming"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文,含方法细节与攻击示例。附录提供系统提示词模板。 | md truncated to head40k+tail20k"
+}

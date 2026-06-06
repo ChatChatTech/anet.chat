@@ -1,0 +1,37 @@
+{
+  "paper_id": "Align before Search_ Aligning Ads Image to Text for Accurate Cross-Modal Sponsored Search",
+  "doi": "10.48550/arxiv.2309.16141",
+  "title": "Align before Search: Aligning Ads Image to Text for Accurate Cross-Modal Sponsored Search",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有VLP模型难以实现细粒度对齐导致广告搜索性能次优,且数据开销大",
+  "problem_framing": "查询-广告相关性二分类任务,需统一异构多模态输入到同一语言空间",
+  "key_insight": "视觉与语言空间的共现结构拓扑一致性可用于弱监督跨模态对齐",
+  "method_signature": "VALSE三阶段对齐(对抗分布校准→伪结构字典→伪语义精修)+VinVL",
+  "evaluation_criteria": "商业广告数据集AUC,MSCOCO图文检索R@1/5/10",
+  "negative_result_or_admitted_limitation": "仅使用100%数据时完整模型最优,去除任一对齐阶段均导致性能下降",
+  "evidence_for_taste": [
+    "hard to satisfy fine-grained sponsored search",
+    "challenging to accurately achieve fine-grained alignment",
+    "data-exhaustive to achieve optimal performance",
+    "explicit vision and language alignment by VALSE is more beneficial for relevance modeling than implicit alignment by pre-training"
+  ],
+  "thinking_moves": [
+    "把跨模态对齐与查询-广告匹配解耦为两阶段pipeline",
+    "假设视觉与语言空间的共现拓扑结构天然一致",
+    "借鉴无监督词翻译的三阶段对齐方法解决跨模态语义鸿沟",
+    "使用伪标签自动构建区域-名词对应关系避免人工标注"
+  ],
+  "topic_tags": [
+    "cross-modal-sponsored-search",
+    "vision-language-alignment",
+    "weakly-supervised-learning",
+    "ads-relevance-modeling",
+    "structure-consistency-hypothesis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Gang Xiong为第七作者,邮箱显示为iie.ac.cn机构邮箱,属合作署名"
+}

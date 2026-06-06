@@ -1,0 +1,35 @@
+{
+  "paper_id": "Chen et al. - 2013 - SmokeGrenade A Key Generation Protocol with Artificial Interference in Wireless Networks",
+  "doi": null,
+  "title": "SmokeGrenade: A Key Generation Protocol with Artificial Interference in Wireless Networks",
+  "year": 2013,
+  "venue": "unknown (appears as conference paper based on structure)",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统PHY层密钥生成方案在静态场景下密钥生成率低、熵低，严重依赖节点移动性",
+  "problem_framing": "在已知人工干扰模型下，如何利用干扰信号贡献信道状态变化以提升密钥生成率",
+  "key_insight": "通过可信helper节点与合法节点间的安全信道广播已知干扰，使干扰对合法方对称而对窃听者不对称",
+  "method_signature": "利用已知人工干扰增强信道测量变化的密钥生成协议SmokeGrenade",
+  "evaluation_criteria": "密钥生成率(至少4倍提升)、NIST随机性测试、误匹配率、条件熵",
+  "negative_result_or_admitted_limitation": "当干扰功率趋于无穷时传统方案密钥率趋于零；承认secure channel假设过强",
+  "evidence_for_taste": [
+    "it is not hard to see that a slight interference does have a huge impact",
+    "the assumption about adding a secure channel is too strong",
+    "the key rate is reduced rapidly when interference power increases"
+  ],
+  "thinking_moves": [
+    "先分析一般干扰模型下限(定理1),再设计已知干扰模型超越该限",
+    "将干扰从噪声转化为信道变化源",
+    "利用条件互信息上界证明安全性和可实现密钥率"
+  ],
+  "topic_tags": [
+    "physical-layer-security",
+    "secret-key-generation",
+    "artificial-interference",
+    "narrowband-fading-channel",
+    "known-jamming"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文提供完整方法论和仿真，但未给出明确venue信息，DOI为null"
+}

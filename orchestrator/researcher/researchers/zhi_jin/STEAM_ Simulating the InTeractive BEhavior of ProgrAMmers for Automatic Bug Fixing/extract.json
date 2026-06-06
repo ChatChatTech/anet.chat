@@ -1,0 +1,37 @@
+{
+  "paper_id": "STEAM_ Simulating the InTeractive BEhavior of ProgrAMmers for Automatic Bug Fixing",
+  "doi": "10.48550/arxiv.2308.14460",
+  "title": "STEAM: Simulating the InTeractive BEhavior of ProgrAMmers for Automatic Bug Fixing",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "现有LLM修复Bug方法忽视程序员协作本质，将修复视为单阶段过程",
+  "problem_framing": "将Bug修复分解为四个阶段:报告、诊断、生成、验证，多智能体交互完成",
+  "key_insight": "模拟程序员(testdeveloperreviewer)协作行为可有效增强LLM自动修Bug能力",
+  "method_signature": "三ChatGPT智能体分饰testerdeveloperreviewer，按阶段交互生成补丁",
+  "evaluation_criteria": "Fix@1(单次修复率)、BLEU-4、Levenshtein距离",
+  "negative_result_or_admitted_limitation": "未对所有替代设计进行穷尽实验，提示和超参数基于经验设置而非系统调优",
+  "evidence_for_taste": [
+    "treat bug fixing as a single-stage process",
+    "neglecting the interactive and collaborative nature",
+    "generating correct patches in a single attempt can be particularly challenging",
+    "We set the number of interaction turns between the reviewer and developer to be 3, which is based on empirical suggestions"
+  ],
+  "thinking_moves": [
+    "将社会工程实践(协作)映射为LLM多智能体交互框架",
+    "从单阶段端到端修复重构为多阶段流水线",
+    "引入软件工程中的角色分工思维到AI系统设计",
+    "复用行业最佳实践(bug管理流程)作为LLM行为模拟蓝图"
+  ],
+  "topic_tags": [
+    "LLM-bug-fixing",
+    "multi-agent-simulation",
+    "programmer-collaboration",
+    "stage-wise-repair",
+    "ChatGPT"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "该论文为完整文本，包含所有必要章节。作者Zhi Jin为联合作者，来自北京大学高可信软件技术教育部重点实验室。方法通过角色扮演提示工程实现，无模型参数更新。 | md truncated to head40k+tail20k"
+}

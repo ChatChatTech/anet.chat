@@ -1,0 +1,42 @@
+{
+  "paper_id": "ENLD_Efficient_Noisy_Label_Detection_for_Incremental_Datasets_in_Data_Lake",
+  "doi": null,
+  "title": "ENLD: Efficient Noisy Label Detection for Incremental Datasets in Data Lake",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "数据湖中持续到来的增量数据集难以高效检测噪声标签,现有方法开销大或效果差",
+  "problem_framing": "在海量库存数据存在的前提下,对新到达的小规模增量数据集进行高效且准确的噪声标签检测",
+  "key_insight": "通过对比采样从库存数据中选取与增量数据中模糊样本特征接近的高质量样本进行微调,可兼顾效率与精度",
+  "method_signature": "两阶段框架:通用模型初始化+带对比采样的细粒度噪声标签检测,采用k近邻特征匹配与多数投票",
+  "evaluation_criteria": "F1分数、检测加速比(3.65×-4.97×)、平均处理时间,在EMNIST/CIFAR100/Tiny-Imagenet上验证",
+  "negative_result_or_admitted_limitation": "当噪声率为0.4时F1分数略低于Topofilter,需增大采样规模k才能超过基线",
+  "evidence_for_taste": [
+    "compared with the random policy",
+    "the highest confidence policy",
+    "choosing a larger k represents that there will be more contrastive samples",
+    "contrastive learning is an essential part of ENLD",
+    "directly selecting nearest samples that have the same observed label",
+    "A more aggressive clean sample selection strategy",
+    "the overall performance will be greatly reduced",
+    "selecting proper samples from the inventory data as contrastive samples to improve the detection performance"
+  ],
+  "thinking_moves": [
+    "从现实数据湖场景提炼出增量检测的工程难题,而非仅优化现有数据集上的指标",
+    "通过理论推导(Corollary 3)验证'选择最近邻样本能带来更大训练收益'的直觉假设",
+    "把模糊样本定义为预测标签与观测标签不一致的样本,缩小需处理的样本范围",
+    "分析不同采样策略对检测任务的差异影响,区分主动学习与噪声检测场景的不同需求",
+    "承认高噪声率下方法F1下降的事实,并提出增大k的工程补救方案"
+  ],
+  "topic_tags": [
+    "noisy-label-detection",
+    "incremental-learning",
+    "data-lake-quality",
+    "contrastive-sampling",
+    "sample-selection-strategies"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少年份与具体会议/期刊信息;ENLD-4对比实验中发现在低噪声率下直接选相同观测标签的最近邻更好,但作者未深入解释这一反直觉现象的根因 | md truncated to head40k+tail20k"
+}

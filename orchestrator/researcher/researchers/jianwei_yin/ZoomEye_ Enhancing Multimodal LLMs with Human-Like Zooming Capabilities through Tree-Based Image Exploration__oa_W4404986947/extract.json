@@ -1,0 +1,38 @@
+{
+  "paper_id": "ZoomEye_ Enhancing Multimodal LLMs with Human-Like Zooming Capabilities through Tree-Based Image Exploration__oa_W4404986947",
+  "doi": "10.48550/arxiv.2411.16044",
+  "title": "ZoomEye: Enhancing Multimodal LLMs with Human-Like Zooming Capabilities through Tree-Based Image Exploration",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有MLLM推理停留在文本层面,视觉输入保持静态,无法处理高分辨率图像中的细粒度视觉内容",
+  "problem_framing": "将图像建模为层次树结构,根节点为完整图像,子节点为放大区域,通过搜索算法实现视觉层面的动态缩放推理",
+  "key_insight": "用置信度驱动的排名函数和停止准则引导树搜索,模拟人类先全局扫描再逐步放大感兴趣区域的视觉行为",
+  "method_signature": "训练无关的树搜索算法,基于现有置信度和潜在置信度加权排序节点",
+  "evaluation_criteria": "高分辨率基准测试(V* Bench, HR-Bench)上的性能提升幅度和vision-level test-time scaling现象",
+  "negative_result_or_admitted_limitation": "模型在RS/Position任务上下降12.95%,因无法关联全图与子图的方位关系;在MO/Orientation上基础能力不足",
+  "evidence_for_taste": [
+    "视觉输入在整个推理过程中保持静态",
+    "MLLM struggles to perceive the detailed one",
+    "zoom out and explore alternative regions",
+    "vision-level test-time scaling phenomenon",
+    "model struggles to link positional relationships between the full image and sub-images"
+  ],
+  "thinking_moves": [
+    "把MLLM视觉感知问题类比为人类缩放行为,用树结构自然建模",
+    "引入两种置信度(现有/潜在)引导搜索优先级,depth越大越偏重现有置信度",
+    "把stopping criterion问题转化为对token概率比值的阈值判断",
+    "通过降低τ阈值观察性能曲线来类比text-level test-time scaling"
+  ],
+  "topic_tags": [
+    "vision-level reasoning",
+    "tree search algorithm",
+    "multimodal LLM",
+    "high-resolution image understanding",
+    "zoom-in mechanism"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文包含method、experiments、ablation study和appendix,证据充分提取完整 | md truncated to head40k+tail20k"
+}

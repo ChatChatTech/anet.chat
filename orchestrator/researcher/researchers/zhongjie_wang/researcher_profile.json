@@ -1,0 +1,444 @@
+{
+  "slug": "zhongjie_wang",
+  "n_extracts": 18,
+  "n_full": 16,
+  "n_partial": 2,
+  "n_thin": 0,
+  "year_range": [
+    2005,
+    2025
+  ],
+  "top_tags": [
+    [
+      "smart-contract-code-generation",
+      1
+    ],
+    [
+      "model-driven-architecture-MDA",
+      1
+    ],
+    [
+      "blockchain-pattern-reuse-library",
+      1
+    ],
+    [
+      "LLM-assisted-contract-analysis",
+      1
+    ],
+    [
+      "multi-party-service-agreement",
+      1
+    ],
+    [
+      "component-identification",
+      1
+    ],
+    [
+      "software-reuse",
+      1
+    ],
+    [
+      "multi-objective-optimization",
+      1
+    ],
+    [
+      "business-component",
+      1
+    ],
+    [
+      "granularity-control",
+      1
+    ],
+    [
+      "DNN-partition-taxonomy",
+      1
+    ],
+    [
+      "cloud-edge-end-collaboration",
+      1
+    ],
+    [
+      "edge-inference-offloading",
+      1
+    ],
+    [
+      "distributed-deep-learning",
+      1
+    ],
+    [
+      "latency-energy-tradeoff",
+      1
+    ],
+    [
+      "incremental-object-detection",
+      1
+    ],
+    [
+      "pretrained-model-adaptation",
+      1
+    ],
+    [
+      "stability-plasticity-dilemma",
+      1
+    ],
+    [
+      "DETR-finetuning",
+      1
+    ],
+    [
+      "cross-domain-detection",
+      1
+    ],
+    [
+      "Internet-of-Services",
+      1
+    ],
+    [
+      "service-pattern-mining",
+      1
+    ],
+    [
+      "requirement-pattern",
+      1
+    ],
+    [
+      "supply-demand-matching",
+      1
+    ],
+    [
+      "I-Tree-model",
+      1
+    ],
+    [
+      "service-bundle-recommendation",
+      1
+    ],
+    [
+      "cold-start",
+      1
+    ],
+    [
+      "dynamic-graph-learning",
+      1
+    ],
+    [
+      "representation-alignment",
+      1
+    ],
+    [
+      "service-evolution",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2005,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "component-identification",
+          1
+        ],
+        [
+          "software-reuse",
+          1
+        ],
+        [
+          "multi-objective-optimization",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 11,
+      "top_tags": [
+        [
+          "model-driven-interoperability",
+          1
+        ],
+        [
+          "ontology-alignment",
+          1
+        ],
+        [
+          "MDA-MDE",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "Internet-of-Services",
+          1
+        ],
+        [
+          "service-pattern-mining",
+          1
+        ],
+        [
+          "requirement-pattern",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "service-bundle-recommendation",
+          1
+        ],
+        [
+          "cold-start",
+          1
+        ],
+        [
+          "dynamic-graph-learning",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "DNN-partition-taxonomy",
+          1
+        ],
+        [
+          "cloud-edge-end-collaboration",
+          1
+        ],
+        [
+          "edge-inference-offloading",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "smart-contract-code-generation",
+          1
+        ],
+        [
+          "model-driven-architecture-MDA",
+          1
+        ],
+        [
+          "blockchain-pattern-reuse-library",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "incremental-object-detection",
+          1
+        ],
+        [
+          "pretrained-model-adaptation",
+          1
+        ],
+        [
+          "stability-plasticity-dilemma",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "Still some non-automated steps in converting blockchain analysis results into CIM; smart contracts become immutable after deployment—future work will explore update methods.",
+    "现有方法只关注部分性能指标，忽略其他指标，导致组件性能不完整；大多数方法自动化程度低，需要手工完成",
+    "时间空间复杂度常被忽略;假设整个模型预先安装不现实;动态运行环境成本需研究",
+    "TT100K上Lrpy1+Lrpy2组合比单独Lrpy2效果差,因小样本下高斯建模不可靠",
+    "主题模型方法在ProgrammableWeb上F1@5仅约30%，当前SOTA不到40%；简单引入预训练模型和深度学习未显著提升性能，因无法直接适配服务推荐且存在负迁移",
+    "现有研究更关注感知内容的静态指标,而非其变化",
+    "扩散模型在随机字符组合上容易重复或遗漏，且训练推理资源消耗大",
+    "环境预设依赖专家劳动,无法动态发现新物品或学习未记录活动",
+    "Token Entropy (TE) 策略在中文NER数据集上效果不如随机基准，证明简单聚合token不确定性的方法存在根本缺陷",
+    "多跳扩散反而降低性能；注意力机制效果不稳健",
+    "λ增大时MP和MQ提升但MID和Coverage下降；为多样性牺牲部分精确度可接受",
+    "many services distributed on the Internet are seldom used due to reliability considerations",
+    "完全自动化模型发现未达,动态行为捕获困难,目前仍为开放问题",
+    "VNS、ALNS、交叉算子等改进方法对算法效果无显著影响,复杂度与原问题相当",
+    "100服务器规模下BD-QSRFP执行时间约52s,不适合在线算法;GA在大规模场景下性能最差",
+    "No single strategy consistently outperforms across all datasets and models; hash struggles on FedMF",
+    "多跳文本需求无法清晰识别，剪枝策略仍需离线预处理，希望未来在线实时"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "similar variable values naturally lead to similar function values",
+      "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    },
+    {
+      "quote": "neighborhood search is quite similar to a random search",
+      "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    },
+    {
+      "quote": "the fewer control parameters the easier configuration",
+      "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    },
+    {
+      "quote": "no significant impact on our proposed algorithms",
+      "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    },
+    {
+      "quote": "这些原则不完全适合组件设计",
+      "paper_id": "A Survey Of Business Component Identification Methods And Related Techniques"
+    },
+    {
+      "quote": "cannot reach optimization at the same time",
+      "paper_id": "A Survey Of Business Component Identification Methods And Related Techniques"
+    },
+    {
+      "quote": "cannot realize optimization on granularity",
+      "paper_id": "A Survey Of Business Component Identification Methods And Related Techniques"
+    },
+    {
+      "quote": "have not considered reusability and adaptability",
+      "paper_id": "A Survey Of Business Component Identification Methods And Related Techniques"
+    },
+    {
+      "quote": "lack of standard method architecture",
+      "paper_id": "A Survey Of Business Component Identification Methods And Related Techniques"
+    },
+    {
+      "quote": "requires component designers to manually identify",
+      "paper_id": "A Survey Of Business Component Identification Methods And Related Techniques"
+    },
+    {
+      "quote": "services' function and quality are static",
+      "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    },
+    {
+      "quote": "each mashup only appears once",
+      "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    },
+    {
+      "quote": "ignoring word orders make the performance",
+      "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    },
+    {
+      "quote": "mixing of features in two different spaces",
+      "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    },
+    {
+      "quote": "cannot really understand semantic",
+      "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    },
+    {
+      "quote": "negative transfer",
+      "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    },
+    {
+      "quote": "F1@5 value below 40%",
+      "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    },
+    {
+      "quote": "simple introduction of PLMs and deep learning",
+      "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    },
+    {
+      "quote": "do not work in the real world",
+      "paper_id": "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    },
+    {
+      "quote": "greatly lowers the significance",
+      "paper_id": "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    },
+    {
+      "quote": "have not yet received sufficient attention",
+      "paper_id": "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    },
+    {
+      "quote": "not yet been widely recognized",
+      "paper_id": "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    },
+    {
+      "quote": "not independent of each other",
+      "paper_id": "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    },
+    {
+      "quote": "successfully adapted connected things in our daily life",
+      "paper_id": "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    },
+    {
+      "quote": "still require human intervention",
+      "paper_id": "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    },
+    {
+      "quote": "cannot work autonomously",
+      "paper_id": "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    },
+    {
+      "quote": "cannot control any device to take the actions accordingly",
+      "paper_id": "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    },
+    {
+      "quote": "environmental setup is still predefined",
+      "paper_id": "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    },
+    {
+      "quote": "certain amount of expertise labor work",
+      "paper_id": "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    },
+    {
+      "quote": "Diffusing more hops...doesn't result in improved performance",
+      "paper_id": "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    },
+    {
+      "quote": "repeatedly obtaining information through diffusion will lead to negative effect",
+      "paper_id": "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    },
+    {
+      "quote": "The more hops of diffusion, the greater the risk and amount of noise",
+      "paper_id": "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    },
+    {
+      "quote": "LDG-AD-delta have a significant performance decline",
+      "paper_id": "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    },
+    {
+      "quote": "attention mechanism is still meaningful...explore a more suitable attention mechanism",
+      "paper_id": "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    },
+    {
+      "quote": "integration tackles strong connections",
+      "paper_id": "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    },
+    {
+      "quote": "interoperability is providing looser coupling",
+      "paper_id": "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    },
+    {
+      "quote": "ontologies across different domains can improve design",
+      "paper_id": "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    },
+    {
+      "quote": "completely automated models discovery for existing systems is not reached yet",
+      "paper_id": "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    },
+    {
+      "quote": "the dynamic of the system that is still difficult to capture",
+      "paper_id": "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    },
+    {
+      "quote": "all the current approaches remain limited",
+      "paper_id": "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    }
+  ]
+}

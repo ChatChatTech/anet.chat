@@ -1,0 +1,44 @@
+{
+  "paper_id": "InferRouter_TMC25_camera_ready",
+  "doi": null,
+  "title": "Mitigating Tail Latency for On-Device Inference with Load-Balanced Heterogeneous Models",
+  "year": 2025,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "移动/边缘设备推理在负载突增时出现严重尾部延迟，即使模型已充分优化；云端自动扩缩容方法因资源限制不可用",
+  "problem_framing": "将异构模型负载均衡建模为MDP，结合排队论分析误差率与延迟的加权优化目标",
+  "key_insight": "部署资源开销极小的异构小模型，通过抗空闲精度剖析实现任务无关的在线负载均衡",
+  "method_signature": "基于排队论的阈值控制路由+抗空闲精度剖析+黄金对优先排序",
+  "evaluation_criteria": "P99尾部延迟、准确率、资源开销(内存/能耗)、SLO达成率",
+  "negative_result_or_admitted_limitation": "RL方法在训练分布外流量模式下表现不佳，DP迭代在移动设备上超过100ms不可接受",
+  "evidence_for_taste": [
+    "even a fully optimized model could lead to severe violations",
+    "offline profiled accuracy quickly becomes suboptimal",
+    "over 100 ms on a smartwatch with only two models",
+    "such offline accuracy profile becomes suboptimal",
+    "does not work properly when traffic patterns change"
+  ],
+  "thinking_moves": [
+    "从生产系统异常日志反推理论假设失效",
+    "用排队论将工程问题形式化为可证最优的结构",
+    "将K模型问题分解为K-1个两模型子问题的归纳证明",
+    "设计anti-idling机制利用冗余计算同时测精度",
+    "先证阈值结构存在，再设计轻量启发式逼近"
+  ],
+  "topic_tags": [
+    "on-device-ML-inference",
+    "load-balancing-heterogeneous-models",
+    "queuing-theory-latency-optimization",
+    "edge-computing-latency-tail",
+    "accuracy-profiling-feedback-control"
+  ],
+  "cites_own_work": [
+    "InFi [16]",
+    "FoggyCache [19]",
+    "Chameleon [20]",
+    "INFaaS [30]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

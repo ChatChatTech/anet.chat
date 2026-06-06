@@ -1,0 +1,40 @@
+{
+  "paper_id": "Liu et al. - 2004 - Building a Scalable Bipartite P2P Overlay Network",
+  "doi": null,
+  "title": "Building a Scalable Bipartite P2P Overlay Network",
+  "year": 2004,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "P2P overlay拓扑与物理网络失配导致大量冗余流量和查询延迟,现有方案存在同步开销和收敛慢问题",
+  "problem_framing": "将拓扑失配问题分解为RK(已知重复)和RN(未知重复)两类,优先解决RN问题可同时降低流量和延迟",
+  "key_insight": "双部图着色分配使白节点探测距离、红节点计算转发路径,实现优化任务的分布式分担",
+  "method_signature": "Scalable Bipartite Overlay (SBO): bootstrapping→距离探测报告→FC计算→邻居替换,四阶段迭代优化",
+  "evaluation_criteria": "平均流量开销、查询响应时间、搜索覆盖范围保持不变",
+  "negative_result_or_admitted_limitation": "LTM需全网节点同步(NTP协议),ACE收敛极慢,两者均因全对等信息交换开销大",
+  "evidence_for_taste": [
+    "slow convergence speed",
+    "synchronization requirement",
+    "considerable amount of overhead",
+    "more effective to solve RN than RK",
+    "price is increment of query latency",
+    "relatively trivial",
+    "always desirable"
+  ],
+  "thinking_moves": [
+    "将已知重复(RK)与未知重复(RN)分类,论证RN更需优先解决",
+    "承认减少冗余与降低延迟之间的权衡不可回避",
+    "对竞争方案逐一列举失效模式(收敛/同步/开销)",
+    "通过着色将全局优化问题转化为局部并行计算"
+  ],
+  "topic_tags": [
+    "P2P overlay topology optimization",
+    "topology mismatching problem",
+    "bipartite graph construction",
+    "flooding-based search",
+    "traffic-cost trade-off"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

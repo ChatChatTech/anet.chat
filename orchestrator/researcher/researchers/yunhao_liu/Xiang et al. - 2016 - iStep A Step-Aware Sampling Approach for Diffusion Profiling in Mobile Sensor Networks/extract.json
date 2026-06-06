@@ -1,0 +1,37 @@
+{
+  "paper_id": "Xiang et al. - 2016 - iStep A Step-Aware Sampling Approach for Diffusion Profiling in Mobile Sensor Networks",
+  "doi": null,
+  "title": "iStep: A Step-Aware Sampling Approach for Diffusion Profiling in Mobile Sensor Networks",
+  "year": 2016,
+  "venue": "IEEE Transactions on Vehicular Technology",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Mobile sensor networks用于污染源追踪,但能耗和时间延迟相互制约,现有方法未在优化目标中考虑资源约束",
+  "problem_framing": "在能耗E和延迟D约束下,设计每轮迭代的采样间隔ξ_j使定位误差ε最小化",
+  "key_insight": "采样间隔是高效利用资源的关键:它决定了采样偏差(实际路径与理想路径的垂直距离),自适应调整可实现近最优剖析精度",
+  "method_signature": "基于Fisher信息和MLE渐近正态性推导置信区间半径γ_j,建立采样间隔与状态参数的定量关系式(19)",
+  "evaluation_criteria": "剖析精度(定位误差距离)、能耗(移动总长度)、延迟(迭代次数×每轮计算时间)",
+  "negative_result_or_admitted_limitation": "初始采样间隔设置过大(>70l)时精度显著下降,需人工调参;未考虑每个传感器的独立能耗约束",
+  "evidence_for_taste": [
+    "sampling deviation is the root cause",
+    "confidence interval radius of the source",
+    "efficient utilization of resources is significant",
+    "near-optimal profiling accuracy",
+    "the radial approach can only acquire an approximately optimal performance in terms of one iteration process"
+  ],
+  "thinking_moves": [
+    "从采样偏差的几何分析出发建立采样间隔的上界约束",
+    "利用Fisher信息和MLE渐近正态性将估计误差转化为置信区间半径",
+    "将复杂优化问题分解为两步:先计算采样间隔,再调用已有的径向移动调度算法"
+  ],
+  "topic_tags": [
+    "mobile-sensor-network-diffusion-profiling",
+    "adaptive-sampling-interval",
+    "fisher-information-confidence-interval",
+    "energy-delay-constrained-optimization",
+    "spatiotemporal-sampling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文主体完整但部分数学推导被截断,无法确认式(25)等关键推导细节。创新点明确:首次在优化目标中同时考虑能耗和延迟约束,并通过自适应调整采样间隔实现资源高效利用。 | md truncated to head40k+tail20k"
+}

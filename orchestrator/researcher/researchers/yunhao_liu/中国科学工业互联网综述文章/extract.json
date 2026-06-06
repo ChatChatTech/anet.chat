@@ -1,0 +1,21 @@
+{
+  "paper_id": "中国科学工业互联网综述文章",
+  "doi": null,
+  "title": "中国科学工业互联网综述文章",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": null,
+  "problem_framing": null,
+  "key_insight": null,
+  "method_signature": null,
+  "evaluation_criteria": null,
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [],
+  "thinking_moves": [],
+  "topic_tags": [],
+  "cites_own_work": [],
+  "extraction_quality": "thin",
+  "extraction_notes": "md only 313 chars (<500); pre-filtered, no LLM call"
+}

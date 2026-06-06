@@ -1,0 +1,42 @@
+{
+  "paper_id": "Lin et al. - 2017 - Revisiting Reading Rate with Mobility Rate-Adaptive Reading in COTS RFID Systems",
+  "doi": null,
+  "title": "Revisiting Reading Rate with Mobility: Rate-Adaptive Reading in COTS RFID Systems",
+  "year": 2017,
+  "venue": "CoNEXT",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "RFID reading rate too low when many tags present; motion tracking requires high sampling rate but COTS systems suffer from channel contention",
+  "problem_framing": "Improve IRR for mobile tags by discriminating them from stationary tags; frame as rate-adaptive reading problem not anti-collision problem",
+  "key_insight": "Only <20% tags are moving; stationary tags don't need high reading rate since states unchanged; cut their readings to prioritize mobile tags",
+  "method_signature": "Two-phase reading: Phase I assess motion via GMM, Phase II selectively read mobile tags via Gen2 Select bitmask",
+  "evaluation_criteria": "IRR gain (reading rate ratio), detection accuracy, tracking trajectory precision",
+  "negative_result_or_admitted_limitation": "When mobile tags exceed 20%, scheduling overhead counteracts gains; system should switch back to reading all",
+  "evidence_for_taste": [
+    "only a few tags (<20%) are actually in motion",
+    "leaves very limited room to improve",
+    "current anti-collision algorithm is already a good algorithm",
+    "we are the first to accurately model the IRR",
+    "cost may counteract its gains"
+  ],
+  "thinking_moves": [
+    "把通信问题重新frame成感知问题：非均匀分配读取资源",
+    "从真实trace数据发现只有小部分标签在移动",
+    "先建立理论下界(IRR model)，再证现有协议已near-optimal",
+    "用multipath物理模型(GMM)解决相位测量误差问题",
+    "把bitmask选择问题建模为集合覆盖问题"
+  ],
+  "topic_tags": [
+    "RFID-rate-adaptation",
+    "motion-detection",
+    "COTS-RFID",
+    "Gaussian-Mixture-Model",
+    "selective-reading"
+  ],
+  "cites_own_work": [
+    "TrackPoint",
+    "Tagoram"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

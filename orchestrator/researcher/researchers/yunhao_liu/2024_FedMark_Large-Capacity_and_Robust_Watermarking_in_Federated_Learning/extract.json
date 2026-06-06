@@ -1,0 +1,40 @@
+{
+  "paper_id": "2024_FedMark_Large-Capacity_and_Robust_Watermarking_in_Federated_Learning",
+  "doi": null,
+  "title": "FedMark: Large-Capacity and Robust Watermarking in Federated Learning",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Real-world FL systems involve many participants (>50), yet existing watermarking only supports <40 owners",
+  "problem_framing": "Watermark capacity = max watermarks where accuracy degradation <1% and detection rate >95%",
+  "key_insight": "Bloom Filter with N hash functions reduces per-watermark constraints from T to N (N<<T), enabling 150+ participants",
+  "method_signature": "Bloom Filter watermarking + secret sharing verification in horizontal FL",
+  "evaluation_criteria": "Watermark capacity (>150), accuracy impact (<1%), detection rate (>95%), robustness to attacks",
+  "negative_result_or_admitted_limitation": "Proposed mechanism not suitable for vertical FL; assumes semi-honest participants but malicious participants could infer watermark info",
+  "evidence_for_taste": [
+    "Lemma 1",
+    "Theorem 1",
+    "Conclusion #4",
+    "Conclusion #3",
+    "FedIPR only supports limited participants (<40)",
+    "M should be set to a sufficient length",
+    "watermarks failed to embed"
+  ],
+  "thinking_moves": [
+    "先证存在性( Lemma 1, Theorem 1), 再识别实践瓶颈",
+    "把容量问题分解为有限参数 vs 标记冲突两个约束",
+    "用 Bloom Filter 的空间效率换取约束数量的降低",
+    "引入密码学原语(秘密共享)解决概率数据结构的假阳性问题"
+  ],
+  "topic_tags": [
+    "federated-learning-watermarking",
+    "bloom-filter",
+    "multi-party-IP-protection",
+    "model-parameter-watermarking",
+    "secret-sharing-verification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue information not found in paper. Some references to other works but no self-citation detected. | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "LangGPS_ Language Separability Guided Data Pre-Selection for Joint Multilingual Instruction Tuning",
+  "doi": "10.48550/arxiv.2511.10229",
+  "title": "LangGPS: Language Separability Guided Data Pre-Selection for Joint Multilingual Instruction Tuning",
+  "year": 2025,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "多语言指令微调的成功对训练数据的选择高度敏感,现有方法忽视了多语言数据固有的语言结构",
+  "problem_framing": "用语言可分离性来量化不同语言样本在模型表示空间中的可区分程度",
+  "key_insight": "高可分离性样本帮助形成清晰语言边界,低可分离性样本充当跨语言对齐的桥梁",
+  "method_signature": "两阶段预筛选框架:先按可分离性过滤,再经传统方法细选",
+  "evaluation_criteria": "6个基准、22种语言、LLaMA-3.1-8B和Qwen2.5-7B上的理解和生成任务性能",
+  "negative_result_or_admitted_limitation": "极小ρ值(如10%)过度聚焦高可分离样本导致多样性降低,已有方法在多语言设置中效果不一致",
+  "evidence_for_taste": [
+    "existing selection methods",
+    "overlook the intrinsic linguistic structure",
+    "form and maintain clear linguistic boundaries",
+    "serve as bridges for cross-lingual alignment",
+    "over-similarity among samples",
+    "not highly sensitive to the choice of ρ"
+  ],
+  "thinking_moves": [
+    "用聚类质量指标silhouette score来定义语言可分离性,建立量化语言边界的数学框架",
+    "承认高可分离性与多样性之间的权衡,非单一最优",
+    "分析低可分离性样本的独特作用,从损失中找收益",
+    "把数据筛选问题框架为两阶段流程,保持与现有方法的兼容性"
+  ],
+  "topic_tags": [
+    "multilingual-instruction-tuning",
+    "language-separability",
+    "data-pre-selection",
+    "silhouette-score",
+    "cross-lingual-alignment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

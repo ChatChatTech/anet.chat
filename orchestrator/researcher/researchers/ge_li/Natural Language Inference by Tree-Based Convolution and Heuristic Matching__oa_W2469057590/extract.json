@@ -1,0 +1,41 @@
+{
+  "paper_id": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2469057590",
+  "doi": "10.48550/arxiv.1512.08422",
+  "title": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching",
+  "year": 2015,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有神经网络模型在句对建模时未能充分利用句法结构信息",
+  "problem_framing": "NLI任务中两句话的语义关系分类,采用Siamese架构",
+  "key_insight": "依赖树卷积比序列卷积更能捕获结构信息,且向量差操作能捕捉句子对应关系",
+  "method_signature": "TBCNN编码句子+拼接/元素积/元素差匹配",
+  "evaluation_criteria": "SNLI数据集测试集准确率",
+  "negative_result_or_admitted_limitation": "单独使用element-wise product效果显著差于拼接或差操作",
+  "evidence_for_taste": [
+    "TBCNN is more robust than sequential convolution",
+    "element-wise difference matching layer does not add to model complexity",
+    "explicitly using such heuristic yields an accuracy boost of 1–2%",
+    "may fail to fully make use of the syntactical information",
+    "may suffer from the problem of long propagation path"
+  ],
+  "thinking_moves": [
+    "比较树结构卷积与序列卷积对词序扭曲的鲁棒性差异",
+    "将复杂匹配操作分解为简单的拼接/差/积组合以验证各自贡献",
+    "从word analogy任务中向量偏移的线性规律类比到句子层级",
+    "承认element-wise product单独使用效果差,承认某些方法可被其他方法吸收但显式建模仍有益"
+  ],
+  "topic_tags": [
+    "tree-based convolution",
+    "natural language inference",
+    "sentence pair modeling",
+    "dependency parsing",
+    "heuristic matching"
+  ],
+  "cites_own_work": [
+    "Mou et al., 2015",
+    "Mou et al., 2016"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

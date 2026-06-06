@@ -1,0 +1,44 @@
+{
+  "paper_id": "Study on the description method of manufacturing capability based on description logics in cloud manufacturing",
+  "doi": null,
+  "title": "Study on the description method of manufacturing capability based on description logics in cloud manufacturing",
+  "year": 2011,
+  "venue": "Computer Integrated Manufacturing Systems",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "云制造中制造能力共享是核心创新，但现有服务描述语言难以满足制造能力的形式化描述需求",
+  "problem_framing": "如何用形式化方法描述云制造环境下的制造能力，使其具备静态属性和动态行为表达能力",
+  "key_insight": "将动态描述逻辑(DDL)应用于制造能力描述，同时建模静态属性(资源、案例)与动态行为(动作、状态转换)",
+  "method_signature": "基于DDL的MC描述模型 MC=(State/RelationSet,ObjectiveSet,QoSSet)，含静态属性模型与动态行为模型",
+  "evaluation_criteria": "无显式评估标准，仅通过实例说明描述模型的可行性",
+  "negative_result_or_admitted_limitation": "OWL-S和WSMO无法描述服务行为的状态转换、服务间复杂关系及进行中的交互",
+  "evidence_for_taste": [
+    "现有描述语言难以满足MC的形式化描述需求",
+    "DL只能处理服务的静态领域知识",
+    "描述逻辑不能表达服务的动态特性",
+    "OWL-S cannot characterize expression and ratiocination of services' dynamic natures",
+    "Manufacturing capability service is multi-level and multi-dimensional"
+  ],
+  "thinking_moves": [
+    "系统分析现有服务描述语言(WSMO,OWL-S)的不足",
+    "从不足出发定位DDL作为解决方案",
+    "采用自顶向下的层次化描述方法",
+    "用DL形式化语法定义概念和约束",
+    "区分静态属性建模与动态行为建模两条线",
+    "结合动作理论扩展DL以支持动态过程"
+  ],
+  "topic_tags": [
+    "cloud-manufacturing-capability",
+    "description-logics",
+    "dynamic-description-logics",
+    "manufacturing-capability-sharing",
+    "semantic-service-description"
+  ],
+  "cites_own_work": [
+    "Zhang Lin et al. 2010",
+    "Zhang Lin et al. 2011",
+    "Luo Yongliang et al."
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为概念框架和形式化模型定义，缺乏实证评估和原型实现验证，仅通过实例说明方法可行性"
+}

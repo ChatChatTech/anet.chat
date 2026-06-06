@@ -1,0 +1,41 @@
+{
+  "paper_id": "Lin et al. - 2017 - TagScreen Synchronizing social televisions through hidden sound markers",
+  "doi": null,
+  "title": "TagScreen: Synchronizing Social Televisions Through Hidden Sound Markers",
+  "year": 2017,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Legacy TVs无法追踪播放进度,而现有音频签名方案在噪声或多径环境下识别精度骤降,无法实现细粒度进度同步",
+  "problem_framing": "将TV→移动设备的媒体上下文同步问题建模为通过声学信道传输隐藏标记的实时通信问题",
+  "key_insight": "利用18-20kHz线性调频信号(CHIRP)承载上下文信息,利用结果稀疏性将计算从O(n²)降至O(n)",
+  "method_signature": "在内容音频中插入每秒隐藏标记,通过快速同步算法识别和解码媒体上下文",
+  "evaluation_criteria": "识别精度、追踪精度、追踪延迟、通信距离、功耗、运行时间",
+  "negative_result_or_admitted_limitation": "WeChat在车内多径环境下准确率仅14%;一秒延迟不可消除,因为需收集完整标记(耗时0.97s)",
+  "evidence_for_taste": [
+    "frequency selectivity becomes the most fatal factor",
+    "purely software-based solution",
+    "chir p has very excellent capability",
+    "the result is actually very sparse",
+    "majority of the folding results are still at low level",
+    "the spike is very sparse",
+    "one second delay is unavoidable"
+  ],
+  "thinking_moves": [
+    "将感知问题重构为通信问题:用音频通道而非传感器感知",
+    "从工程异常反推底层物理假设失效:多径导致频率选择性是致命因素",
+    "利用信号稀疏性进行计算复杂度压缩",
+    "借鉴雷达中的调频技术解决多径问题",
+    "通过折叠操作实现亚采样FFT的数学等价变换"
+  ],
+  "topic_tags": [
+    "acoustic-communication",
+    "social-tv-synchronization",
+    "hidden-sound-marker",
+    "chirp-signal-modulation",
+    "sparse-FFT-decoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文正文未提供具体会议/期刊名称,DOI缺失,从格式和参考文献推断为IEEE INFOCOM或类似顶会,但无法确定"
+}

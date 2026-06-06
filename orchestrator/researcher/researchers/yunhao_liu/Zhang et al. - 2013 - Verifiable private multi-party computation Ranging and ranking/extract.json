@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zhang et al. - 2013 - Verifiable private multi-party computation Ranging and ranking",
+  "doi": null,
+  "title": "Verifiable Private Multi-party Computation: Ranging and Ranking",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Existing MPC protocols assume honest participation but neglect verifiability; malicious parties can forge inputs or lie about results.",
+  "problem_framing": "Define verifiable private multi-party computation where parties compute functions on private inputs without revelation, and no malicious party can cheat others to accept incorrect results.",
+  "key_insight": "Two attacks discovered on existing schemes: (1) compressive sensing enables reconstructing sparse vectors from O(K log M) dot products; (2) homomorphic signatures allow fake signature generation. Solution: use certificates from trusted authority to bind encrypted values.",
+  "method_signature": "Threshold-based ranging and ranking protocols using Paillier encryption with certificates from trusted third party; both input and outcome verifiable.",
+  "evaluation_criteria": "Computation time and communication cost on laptop and mobile phone; practical efficiency measured as less than 0.5s for most protocols.",
+  "negative_result_or_admitted_limitation": "P1 can launch binary search by adjusting threshold θ to narrow down value range of f(v1,v2); suggests threshold from system or query time limit.",
+  "evidence_for_taste": [
+    "verifiability of user inputs and outcomes are neglected",
+    "malicious adversary may simply forge his/her input value",
+    "a party P_i is able to generate a fake signature",
+    "Protocol 4 is unconditionally verifiable when at most one party cheats",
+    "when P1 and P2 collude, they can cheat the aggregator"
+  ],
+  "thinking_moves": [
+    "Identify overlooked attack surface in existing privacy-preserving MPC",
+    "Apply compressive sensing theory as threat model for sparse vector privacy",
+    "Prove theorem enabling encrypted comparison via modular arithmetic",
+    "Design protocol structure where each party can independently verify"
+  ],
+  "topic_tags": [
+    "verifiable MPC",
+    "homomorphic encryption",
+    "threshold-based ranging",
+    "privacy-preserving ranking",
+    "fake input attack"
+  ],
+  "cites_own_work": [
+    "Jung et al. - 2013 - Privacy-preserving data aggregation",
+    "Li and Jung - 2013 - Privacy-preserving location query",
+    "Jung et al. - 2013 - Privacy preserving cloud data access"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "No DOI or explicit venue stated; role inferred from author ordering and affiliations (asterisk indicates first author is corresponding)."
+}

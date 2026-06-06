@@ -1,0 +1,43 @@
+{
+  "paper_id": "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828",
+  "doi": "10.18653/v1/2025.acl-long.933",
+  "title": "CC-TUNING: A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning",
+  "year": 2025,
+  "venue": "ACL 2025",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "LLM因英文训练语料主导导致多语言能力失衡，现有方法仅在数据层做隐式对齐",
+  "problem_framing": "将跨语言对齐从数据层推到隐层，通过融合英/非英前馈激活实现显式跨语言连接",
+  "key_insight": "非英语输入可从英语激活的融合中获益，且中间层捕获的泛化知识最具价值",
+  "method_signature": "CC-TUNING：训练时融合英/非英前馈激活加Decision Maker选择，推理时用Transform Matrix替代平行语料",
+  "evaluation_criteria": "6基准22语言NLU/NLG任务的Accuracy和ROUGE-L指标对比",
+  "negative_result_or_admitted_limitation": "+EN设置下CC-TUNING性能反而下降，因EN2EN连接偏离跨语言目标；实验仅在两个模型验证",
+  "evidence_for_taste": [
+    "overlook the potential for deeper, latent-level cross-lingual interactions",
+    "cross-lingual connection becomes an EN2EN connection",
+    "underscores CC-TUNING's alignment with its motivation",
+    "an 'easy-to-learn' Transform Matrix",
+    "introduces only negligible interference",
+    "Feed-forward activations contribute the most",
+    "the middle layers may capture more valuable and generalized knowledge"
+  ],
+  "thinking_moves": [
+    "从数据级对齐转向隐层激活级对齐",
+    "引入可学习的Decision Maker实现自适应层选择",
+    "通过消融实验证明组件必要性而非假设",
+    "EN2EN场景性能下降反而验证方法与动机的契合",
+    "借鉴FFN存储事实知识的发现定位前馈激活的作用"
+  ],
+  "topic_tags": [
+    "latent-cross-lingual-connection",
+    "multilingual-SFT",
+    "feed-forward-activation-transfer",
+    "adaptive-layer-selection",
+    "cross-lingual-LLM-tuning"
+  ],
+  "cites_own_work": [
+    "Ye et al. (2024b)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Accurate CPU Power Modeling for Multicore Smartphones",
+  "doi": null,
+  "title": "Accurate CPU Power Modeling for Multicore Smartphones",
+  "year": null,
+  "venue": "MobiSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "智能手机多核CPU功耗模型误差高达34%,现有方法不考虑idle power states",
+  "problem_framing": "把CPU功耗建模问题重新定义为需考虑idle power states的回归问题",
+  "key_insight": "加权平均idle state驻留时长WED_Ci能准确预测多核CPU功耗",
+  "method_signature": "基于WED的idle-state regression model",
+  "evaluation_criteria": "功耗估算精度(98%)和稳定性(variation<5%)",
+  "negative_result_or_admitted_limitation": "仅考虑CPU,未建模GPU功耗;视频解码实验精度降至90%",
+  "evidence_for_taste": [
+    "same frequency/utilization, power difference can reach 50%",
+    "Simply considering durations or numbers of entries does not work",
+    "Even when portion of each idle state duration is fixed, CPU could have more than 20% variation",
+    "CPU idle states play a less critical role in old single-core smartphones"
+  ],
+  "thinking_moves": [
+    "从实测异常反推现有模型的隐含假设失效",
+    "先证简单扩展法不可行(duration/entry数都不够)",
+    "提出加权度量WED消除噪声",
+    "从单核模型逐步扩展到多核",
+    "用benchmark和real app双重验证稳定性"
+  ],
+  "topic_tags": [
+    "smartphone-power-modeling",
+    "CPU-idle-states",
+    "multicore-power-estimation",
+    "ARM-power-model",
+    "Android-kernel-instrumentation"
+  ],
+  "cites_own_work": [
+    "[28] Towards Better CPU Power Management on Multicore Smartphones. Hotpower 2013"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

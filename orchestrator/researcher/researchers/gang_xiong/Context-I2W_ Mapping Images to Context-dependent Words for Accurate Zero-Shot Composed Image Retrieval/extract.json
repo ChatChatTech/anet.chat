@@ -1,0 +1,40 @@
+{
+  "paper_id": "Context-I2W_ Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval",
+  "doi": "10.48550/arxiv.2309.16137",
+  "title": "Context-I2W: Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有ZS-CIR方法将整幅图像映射为统一的伪词，忽略了描述中仅部分视觉内容与意图相关，导致检索不准确。",
+  "problem_framing": "将图像到词的映射建模为层级化的上下文相关选择问题，而非全局特征压缩。",
+  "key_insight": "设计Intent View Selector和Visual Target Extractor两个互补模块，前者学习旋转规则选择视角，后者用可学习query提取局部目标信息。",
+  "method_signature": "Context-I2W: 图像→上下文相关伪词映射网络，含IVS视角选择+VTE目标提取+tanh门控融合",
+  "evaluation_criteria": "R1/R5/R10/R50指标，在Domain转换、目标组合、目标/场景操作、属性操作四类任务上验证",
+  "negative_result_or_admitted_limitation": "直接使用跨注意力(Q=描述)替代Context-I2W导致性能大幅下降10.30%，证明所提映射策略有效性。",
+  "evidence_for_taste": [
+    "only part of the visual content is relevant",
+    "limits the model's flexibility",
+    "context-dependent word mapping strategy",
+    "model '5' brings a bigger decrease",
+    "The first two queries mainly focus on the object attributes",
+    "adaptive attention to the reference image",
+    "removing either IVS or VTE causes obvious decrease"
+  ],
+  "thinking_moves": [
+    "从全局图像特征的冗余噪声出发，反推需要细粒度的上下文相关选择机制",
+    "将图像到词的映射从静态压缩问题转化为动态的条件选择问题",
+    "引入可学习query作为视觉目标的隐式查询器，实现无监督的细粒度信息提取",
+    "通过门控机制自适应融合全局视角信息和局部目标信息，而非简单拼接"
+  ],
+  "topic_tags": [
+    "zero-shot composed image retrieval",
+    "context-dependent image-to-word mapping",
+    "CLIP-based retrieval",
+    "learnable query visual extraction",
+    "vision-language alignment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

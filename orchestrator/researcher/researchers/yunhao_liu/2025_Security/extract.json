@@ -1,0 +1,38 @@
+{
+  "paper_id": "2025_Security",
+  "doi": null,
+  "title": "Exploiting Task-Level Vulnerabilities: An Automatic Jailbreak Attack and Defense Benchmarking for LLMs",
+  "year": 2025,
+  "venue": "USENIX Security Symposium",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有越狱攻击依赖特定prompt或token，易被重对齐修补，需挖掘更深层的任务级漏洞",
+  "problem_framing": "将恶意任务分解为无害子任务链式执行，绕过LLM防御机制",
+  "key_insight": "无害与恶意任务共享底层知识（如修复与利用漏洞都需识别漏洞），通过知识分解可规避风险判断",
+  "method_signature": "KDA知识分解越狱攻击 + 多风险层级防御基准",
+  "evaluation_criteria": "攻击成功率(ASR)、响应信息丰富度、防御有效性区分度",
+  "negative_result_or_admitted_limitation": "分解树可能指数级膨胀，查询开销过大",
+  "evidence_for_taste": [
+    "rendering them susceptible to countermeasures such as realignments",
+    "does not rely on any specific prompts or tokens",
+    "significantly greater resilience against re-alignment defenses",
+    "this multi-query integration significantly enhances the granularity",
+    "moderately harmful tasks have been largely overlooked"
+  ],
+  "thinking_moves": [
+    "从对抗视角追问补丁式防御的充分性",
+    "识别无害与恶意任务的知识重叠结构",
+    "将单查询攻击扩展为多子任务聚合框架",
+    "利用LLM对知识性问题的响应偏好隐藏恶意意图"
+  ],
+  "topic_tags": [
+    "LLM-security",
+    "jailbreak-attack",
+    "knowledge-decomposition",
+    "red-teaming",
+    "defense-benchmark"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

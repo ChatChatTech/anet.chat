@@ -1,0 +1,45 @@
+{
+  "paper_id": "Convergence in Crossover Service",
+  "doi": "10.1007/978-981-19-8844-8",
+  "title": "Convergence in Crossover Service",
+  "year": 2023,
+  "venue": "Advanced Topics in Science and Technology in China",
+  "venue_tier": "regional",
+  "role": "senior",
+  "motivation": "传统边界限制人类认知和生产力，新一代信息技术重新定义认知边界，需要跨组织流程重构实现融合",
+  "problem_framing": "将跨域服务融合问题分解为模式、需求、环境、质量、价值五个维度的收敛问题",
+  "key_insight": "跨域服务以3C为特征(跨域、融合、复杂)，融合是实现跨域服务的关键",
+  "method_signature": "多维度收敛框架：模式→需求→运行时环境→质量→价值的系统方法",
+  "evaluation_criteria": "服务模式熵、归一化支出、多维属性收敛度、价值冲突检测",
+  "negative_result_or_admitted_limitation": "因为知识有限，书中错误和缺陷不可避免，欢迎读者批评指正",
+  "evidence_for_taste": [
+    "首次聚焦",
+    "基于我们现有知识",
+    "欢迎评论和建议",
+    "错误和缺陷不可避免",
+    "收敛是实现跨域服务关键",
+    "3C特性",
+    "深度收敛",
+    "透明虚拟融合环境"
+  ],
+  "thinking_moves": [
+    "将离散的社会现象(跨界)概念化为可计算的学术术语",
+    "从单一技术视角转向社会生产效率的工程问题框架",
+    "将融合问题分解为五个正交维度逐一攻克",
+    "提出3C特征作为定义新研究方向的锚点",
+    "从已知工程实践反推需要何种理论支撑"
+  ],
+  "topic_tags": [
+    "service-computing",
+    "crossover-service",
+    "convergence-framework",
+    "service-ecosystem",
+    "cross-organizational-process"
+  ],
+  "cites_own_work": [
+    "National Natural Science Foundation of China (No. 61825205)",
+    "National Key Research and Development Program (No. 2017YFB1400600)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "这是合著书籍而非单篇论文，内容为概述性章节框架，缺少具体算法的详细实现和实验数据。章节内容为目录级别描述，缺乏完整的正文论述。"
+}

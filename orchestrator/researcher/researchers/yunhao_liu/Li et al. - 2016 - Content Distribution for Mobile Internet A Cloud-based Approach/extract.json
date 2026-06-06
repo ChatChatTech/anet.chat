@@ -1,0 +1,43 @@
+{
+  "paper_id": "Li et al. - 2016 - Content Distribution for Mobile Internet A Cloud-based Approach",
+  "doi": null,
+  "title": "Content Distribution for Mobile Internet: A Cloud-based Approach",
+  "year": 2016,
+  "venue": "Springer (Book)",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "移动端设备轻量化与云端服务重载化之间的性能鸿沟日益扩大，现有技术在此场景下表现不佳",
+  "problem_framing": "设计流量节省、节能、高速且延迟容忍的内容分发技术框架，自动适配移动应用场景",
+  "key_insight": "通过云端协调代理实现跨应用流量优化，可在不修改应用的前提下透明处理网络流量",
+  "method_signature": "基于生产系统实测的云协调内容分发优化",
+  "evaluation_criteria": "流量削减率、延迟开销、系统能耗、下载成功率",
+  "negative_result_or_admitted_limitation": "现有内容分发技术在云计算和移动互联网环境下常表现出差强人意甚至糟糕的性能",
+  "evidence_for_taste": [
+    "现有技术表现poor performance",
+    "流量overuse problem普遍存在",
+    "未受云平台协助时功效poor",
+    "需严格控制流量和能耗"
+  ],
+  "thinking_moves": [
+    "基于大规模工业系统的实测驱动研究",
+    "将性能问题归因于heavy-cloud与light-end的polarization",
+    "从跨协议跨平台的Open-P2SP模型提炼共性机制",
+    "承认生产系统存在可规避的性能瓶颈"
+  ],
+  "topic_tags": [
+    "cloud-assisted-P2P",
+    "cellular-traffic-optimization",
+    "mobile-video-distribution",
+    "cloud-storage-sync",
+    "cross-app-proxy"
+  ],
+  "cites_own_work": [
+    "NSDI'16 TrafficGuard",
+    "IMC'14 cloud storage",
+    "IMC'15 offline downloading",
+    "Middleware'13 UDS",
+    "TPDS'13 Open-P2SP"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

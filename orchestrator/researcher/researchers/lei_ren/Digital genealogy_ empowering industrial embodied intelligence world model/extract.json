@@ -1,0 +1,49 @@
+{
+  "paper_id": "Digital genealogy_ empowering industrial embodied intelligence world model",
+  "doi": "10.1360/ssi-2025-0093",
+  "title": "数字族谱: 驱动工业具身智能世界模型",
+  "year": 2025,
+  "venue": "中国科学: 信息科学",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "工业具身世界模型训练场景与数据极度匮乏，工业场景构建及数据采集成本高昂",
+  "problem_framing": "如何为工业具身世界模型生成大规模、高质量、可解释的3D训练数据和场景",
+  "key_insight": "引入生物族谱DNA概念，用DG-DNA约束生成零件的表现型，实现从零件到产品的多代演化族谱，保证生成对象既有多样性又符合工业约束",
+  "method_signature": "基于DG-DNA的两阶段工业零件生成算法DG-VAE，结合VQ-VAE量化编码与Transformer生成器",
+  "evaluation_criteria": "覆盖率COV、最小匹配距离MMD、Jensen-Shannon散度JSD、唯一性Unique、新颖性Novel",
+  "negative_result_or_admitted_limitation": "DG-VAE在新颖性指标上略低于HNC-CAD，因为更好地学习了训练数据分布导致生成数据与训练集更接近",
+  "evidence_for_taste": [
+    "训练场景与数据极度匮乏",
+    "DG-DNA基因机制",
+    "多代演化的相似数字实体",
+    "继承核心DG-DNA属性",
+    "提升操作对象泛化性",
+    "符合工业生产性能要求",
+    "多型号生产对象与多样化生产空间的排列组合"
+  ],
+  "thinking_moves": [
+    "借用生物族谱进化机制类比工业零件演化",
+    "用DNA隐喻建立生成约束的可解释性桥梁",
+    "将数字孪生和数字表亲作为起点向外延伸",
+    "把工业零件的CAD建模层次映射为可编码的基因序列",
+    "从单代相似扩展到多代谱系演化的数据生成策略"
+  ],
+  "topic_tags": [
+    "digital-genealogy",
+    "DG-DNA",
+    "industrial-embodied-ai",
+    "world-model",
+    "DG-VAE",
+    "AIGC-part-generation",
+    "digital-twin-evolution",
+    "manufacturing-data-synthesis"
+  ],
+  "cites_own_work": [
+    "Industrial foundation model (2024)",
+    "Digital twin robotic system (2023)",
+    "Industrial metaverse (2024)",
+    "Parallel learning (2023)",
+    "Deep learning for IIoT time-series (2024)"
+  ],
+  "extraction_quality": "full"
+}

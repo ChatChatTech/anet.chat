@@ -1,0 +1,42 @@
+{
+  "paper_id": "Clustering Categorical Data Streams",
+  "doi": "10.48550/arxiv.cs/0412058",
+  "title": "Clustering Categorical Data Streams",
+  "year": 2003,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Web click streams and network intrusions generate massive categorical data needing one-pass analysis with bounded memory",
+  "problem_framing": "Cluster categorical data streams where records arrive continuously, can only be read once, and memory is limited",
+  "key_insight": "Apply lossy counting histogram approximation to Squeezer algorithm yields bounded memory one-pass categorical clustering",
+  "method_signature": "StreamCluCD combines Squeezer clustering with lossy counting histogram pruning",
+  "evaluation_criteria": "Clustering accuracy (vs Squeezer/k-modes), memory usage (entries), execution time (linearity), parameter sensitivity",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "no algorithm exists for clustering categorical data streams",
+    "small memory footprints",
+    "time needed must be small and constant",
+    "memory usage almost keeps consistent",
+    "the algorithm is not sensitive to parameter st",
+    "clustering error did not change significantly"
+  ],
+  "thinking_moves": [
+    "Identify critical gap in streaming algorithms literature",
+    "Borrow lossy counting space-bounded technique from frequency mining",
+    "Prove space complexity bound, then verify empirically",
+    "Tune epsilon vs support threshold separately to understand parameter roles"
+  ],
+  "topic_tags": [
+    "categorical-data-stream-clustering",
+    "lossy-counting",
+    "bounded-memory-algorithms",
+    "one-pass-clustering",
+    "histogram-approximation"
+  ],
+  "cites_own_work": [
+    "Squeezer: an efficient algorithm for clustering categorical data",
+    "Discovering cluster based local outliers"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

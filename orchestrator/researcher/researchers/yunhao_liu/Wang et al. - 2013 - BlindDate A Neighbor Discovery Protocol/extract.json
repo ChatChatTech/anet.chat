@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2013 - BlindDate A Neighbor Discovery Protocol",
+  "doi": null,
+  "title": "BlindDate: A Neighbor Discovery Protocol",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Mobile apps (gaming/coupons) need devices to discover each other locally without server; urban sensor networks need efficient handheld-to-node discovery under 4% duty cycle",
+  "problem_framing": "Asynchronous neighbor discovery: symmetric case (same duty cycle, async clocks) and asymmetric case (different duty cycles). Goal: guarantee active slot overlap between devices with low latency",
+  "key_insight": "Multiple Dynamic slots with opposite moving directions (vs Searchlight's single moving probe) increases overlap probability; bouncing strategy (step=2) halves hyper-period",
+  "method_signature": "Deterministic BD protocol with Static+Dynamic slots, k=2 dynamic blocks out of m=5 total blocks, using bouncing (step=2) movement",
+  "evaluation_criteria": "Worst-case discovery latency bound and average latency, under same duty cycle for fair comparison across protocols",
+  "negative_result_or_admitted_limitation": "Theoretical asymmetric bound is loose (we believe real performance is much better); cannot find feasible solution for p=1 (optimal even case) and settle for p=2",
+  "evidence_for_taste": [
+    "Enlightened by Searchlight",
+    "we observe that there is little chance for overlap",
+    "we consider adding more probe slots",
+    "the bouncing Dynamic slots of opposite directions often jump over each other",
+    "we propose an approach to overcome this issue",
+    "we only give a loose worst-case bound"
+  ],
+  "thinking_moves": [
+    "观察到单 probe slot 同向移动时 overlap 概率低, 从而想到用多 probe slot 反向移动",
+    "先分析 k 和 m 的 case-by-case 关系, 确定最优参数组合 (k=2, m=5)",
+    "发现 bouncing 策略导致 slots 跳过的副作用后, 通过延长邻近 slot 长度来补偿",
+    "把 worst-case latency 表示成 duty cycle 的函数, 在相同参数下形式化比较"
+  ],
+  "topic_tags": [
+    "duty-cycled-wireless",
+    "neighbor-discovery",
+    "asynchronous-protocols",
+    "mobile-ad-hoc",
+    "latency-bound-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue tier unknown because paper does not explicitly state conference name; DOI not provided. Limited access to full paper text."
+}

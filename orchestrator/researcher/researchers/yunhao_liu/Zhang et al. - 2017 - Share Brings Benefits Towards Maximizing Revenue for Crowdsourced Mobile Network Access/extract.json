@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhang et al. - 2017 - Share Brings Benefits Towards Maximizing Revenue for Crowdsourced Mobile Network Access",
+  "doi": null,
+  "title": "Share Brings Benefits: Towards Maximizing Revenue for Crowdsourced Mobile Network Access",
+  "year": 2017,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有CMNA研究假设完全信息，但实际中信息不对称导致运营商和主机都无法优化收益",
+  "problem_framing": "将MVNO与主机的交互建模为两阶段贝叶斯博弈，在信息不对称下求均衡策略",
+  "key_insight": "通过部分合作策略(PCS)交换邻居数量而非隐私信息，消除流量估计偏差同时保护隐私",
+  "method_signature": "两阶段贝叶斯博弈+部分合作策略(PCS)+梯度下降优化均衡",
+  "evaluation_criteria": "MVNO收益提升23%且满足主机理性约束",
+  "negative_result_or_admitted_limitation": "信息不对称下的均衡策略导致次优收益，估计偏差会造成主机误判",
+  "evidence_for_taste": [
+    "Such assumptions are unrealistic in practice",
+    "we should notice that the equilibrium with information asymmetry can be further improved",
+    "This issue, however, is ignored in previous studies",
+    "The inaccurate estimation may lead to suboptimal strategies"
+  ],
+  "thinking_moves": [
+    "先分析信息不对称下的均衡缺陷，再设计信息交换方案弥补",
+    "用NP完全性证明说明精确求解不可行，转而设计启发式贪婪算法",
+    "通过反向归纳法逐步求解两阶段博弈均衡"
+  ],
+  "topic_tags": [
+    "crowdsourced mobile network",
+    "information asymmetry",
+    "Bayesian game",
+    "partial cooperation",
+    "WiFi offloading"
+  ],
+  "cites_own_work": [
+    "Furion (SECON 2016)",
+    "Q-offload (RTSS 2015)",
+    "Netmaster (ICPP 2014)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

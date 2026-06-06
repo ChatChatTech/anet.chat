@@ -1,0 +1,36 @@
+{
+  "paper_id": "PhoneLM_an Efficient and Capable Small Language Model Family through Principled Pre-training",
+  "doi": "10.48550/arxiv.2411.05046",
+  "title": "PhoneLM: an Efficient and Capable Small Language Model Family through Principled Pre-training",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有SLM设计不考虑设备硬件特性，仅以参数量小作为高效依据",
+  "problem_framing": "将运行时效率设为首要设计目标，在预训练前搜索最优硬件架构",
+  "key_insight": "运行时速度对架构敏感度远高于损失，同参数模型可差3.13×速度",
+  "method_signature": "预训练前在目标硬件上穷举搜索架构超参数",
+  "evaluation_criteria": "速度-能力 tradeoff（吞吐量和7项零样本任务准确率）",
+  "negative_result_or_admitted_limitation": "PhoneLM-0.5B在ARC-e和ARC-c两项任务不如SmolLM-360M",
+  "evidence_for_taste": [
+    "runtime speed is more sensitive to the SLM architecture than the loss",
+    "the range of its runtime speed is much wider than that of the loss",
+    "Architecture searching for (near-)optimal runtime efficiency before pre-training",
+    "the cost of pre-training SLMs for different devices will be amortized"
+  ],
+  "thinking_moves": [
+    "通过实验发现速度对架构敏感度被低估",
+    "将后置优化改为前置搜索的设计范式转换",
+    "验证稀疏性和整数运算兼容性为ReLU提供硬件优势"
+  ],
+  "topic_tags": [
+    "on-device-SLM",
+    "hardware-aware-architecture-search",
+    "smartphone-inference-optimization",
+    "edge-LLM-deployment",
+    "NPU-acceleration"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

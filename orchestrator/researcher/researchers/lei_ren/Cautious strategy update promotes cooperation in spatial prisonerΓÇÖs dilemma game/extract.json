@@ -1,0 +1,40 @@
+{
+  "paper_id": "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game",
+  "doi": "10.1016/j.physa.2013.04.031",
+  "title": "Cautious strategy update promotes cooperation in spatial prisoner's dilemma game",
+  "year": null,
+  "venue": "Physica A",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Strategy update may involve costs or risks, yet cautiousness is ubiquitous but ignored in previous evolutionary game studies.",
+  "problem_framing": "Introduce cautiousness index σ in Fermi update rule on square lattice to control individual learning activity in PDG.",
+  "key_insight": "Caution creates a threshold that protects cooperators when defector advantage is below σ, allowing clusters to survive and thrive.",
+  "method_signature": "Fermi update with cautiousness index σ on L=100 square lattice; pair approximation for analytical support.",
+  "evaluation_criteria": "Cooperator density ρ_C vs σ, temptation b, noise κ; phase transition identification; robustness to initial conditions.",
+  "negative_result_or_admitted_limitation": "Pair approximation qualitatively agrees but over/underestimates cooperation levels compared to simulation.",
+  "evidence_for_taste": [
+    "interestingly, it is found",
+    "the most pronounced phenomenon",
+    "we also demonstrate the robustness",
+    "qualitatively agree",
+    "well reproduced"
+  ],
+  "thinking_moves": [
+    "Identify overlooked real-world trait (cautiousness) in existing theory",
+    "Formalize intuitive concept as tunable parameter σ in update probability",
+    "Trace phase transition points to exact neighborhood configurations"
+  ],
+  "topic_tags": [
+    "evolutionary game theory",
+    "prisoner's dilemma",
+    "spatial reciprocity",
+    "strategy updating",
+    "phase transitions"
+  ],
+  "cites_own_work": [
+    "[46,47] Liu et al. aspiration-based learning",
+    "[24] Liu et al. adaptive partners"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Year not explicitly stated in paper; DOI suggests 2013. Venue tier estimated as strong based on Physica A impact."
+}

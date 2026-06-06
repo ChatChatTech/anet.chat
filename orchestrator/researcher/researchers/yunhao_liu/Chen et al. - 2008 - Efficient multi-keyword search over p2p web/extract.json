@@ -1,0 +1,36 @@
+{
+  "paper_id": "Chen et al. - 2008 - Efficient multi-keyword search over p2p web",
+  "doi": null,
+  "title": "Efficient Multi-keyword Search over P2P Web",
+  "year": 2008,
+  "venue": "WWW 2008",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "DHT-based P2P系统中多关键词搜索需执行分布式交集/并集操作，导致广域网流量成本不可接受",
+  "problem_framing": "将多关键词搜索的通信开销问题形式化为需优化Bloom Filter参数的问题",
+  "key_insight": "最优BF设置应由关键词全局统计信息决定，而非最小化假阳性率",
+  "method_signature": "基于关键词流行度的最优Bloom Filter参数选择与查询词排序策略",
+  "evaluation_criteria": "流量成本节省百分比及低流量查询占比",
+  "negative_result_or_admitted_limitation": "最小化假阳性率的方案导致通信成本仍然不可接受",
+  "evidence_for_taste": [
+    "optimal setting of BF is determined by global statistical information",
+    "not the minimized false positive rate as claimed by previous methods",
+    "intersection order between sets is important"
+  ],
+  "thinking_moves": [
+    "通过数学证明推翻前人经验性假设",
+    "从理论推导得到最优参数与流行度的解析关系",
+    "用仿真验证理论推导结果",
+    "识别出Intersection order为关键优化维度"
+  ],
+  "topic_tags": [
+    "P2P多关键词搜索",
+    "Bloom Filter参数优化",
+    "DHT分布式索引",
+    "流量成本最小化",
+    "关键词流行度统计"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

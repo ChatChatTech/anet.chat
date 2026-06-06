@@ -1,0 +1,40 @@
+{
+  "paper_id": "Using location semantics to realize personalized road network location privacy protection",
+  "doi": "10.1186/s13638-019-1618-7",
+  "title": "Using location semantics to realize personalized road network location privacy protection",
+  "year": 2019,
+  "venue": "EURASIP Journal on Wireless Communications and Networking",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "用户在使用基于位置服务时面临隐私泄露风险，攻击者可从位置语义和查询位置推断隐私信息",
+  "problem_framing": "现有方案未考虑用户对不同位置语义的敏感度差异，也未同时保护用户位置和查询位置",
+  "key_insight": "利用强化学习智能选取低敏感度道路段作为协作路段进行k匿名，并用双向k扰动同时保护用户位置和查询位置",
+  "method_signature": "PSWA权重分配 + CSM强化学习路段匹配 + 双向k扰动",
+  "evaluation_criteria": "匿名成功率、服务质量(相对距离)、匿名耗时、所需道路数",
+  "negative_result_or_admitted_limitation": "位置语义信息稀疏时难以达到k匿名要求，未来需研究稀疏语义区域的隐私保护",
+  "evidence_for_taste": [
+    "the query location may reflect his requirement",
+    "the algorithm is still not satisfactory",
+    "the higher the sensitivity weight, the more sensitive",
+    "when k is set as 9 or 10, the success rate is essentially zero",
+    "if the location semantic information is sparse, it is not easy to reach the requirement"
+  ],
+  "thinking_moves": [
+    "把查询位置视为与用户位置同等重要的隐私泄露源，提出双向保护",
+    "从直觉反推：如果用户对某语义敏感，则应避免在协作路段中包含高敏感语义",
+    "将路段匹配问题建模为强化学习中的序列决策，用Q表记录最优动作",
+    "承认随机匿名方法在语义感知场景下的失效(k=9或10时成功率为零)"
+  ],
+  "topic_tags": [
+    "location-based-service-privacy",
+    "road-network-k-anonymity",
+    "location-semantics-sensitivity",
+    "reinforcement-learning-Q-table",
+    "bidirectional-query-disturbance"
+  ],
+  "cites_own_work": [
+    "Kuang et al. 2018 data publication game model"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

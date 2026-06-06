@@ -1,0 +1,39 @@
+{
+  "paper_id": "Exploring the Generalizability of Spatio-Temporal Traffic Prediction_ Meta-Modeling and an Analytic Framework",
+  "doi": "10.1109/tkde.2021.3130762",
+  "title": "Exploring the Generalizability of Spatio-Temporal Traffic Prediction: Meta-Modeling and an Analytic Framework",
+  "year": 2021,
+  "venue": "IEEE TKDE",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有STTP研究过于应用定制,跨场景泛化能力不明,方法难以比较",
+  "problem_framing": "从模型泛化性和知识泛化性两个角度定义STTP的泛化问题",
+  "key_insight": "统一建模多种时空知识因素(closeness/periodicity/proximity/functionality),可设计跨场景泛化模型",
+  "method_signature": "STAnalytic定性分析框架 + STMeta元模型(分层集成多时空知识)",
+  "evaluation_criteria": "10个真实数据集5类场景下的NRMSE,对比state-of-the-art方法",
+  "negative_result_or_admitted_limitation": "外部因素(天气/事件)难以统一泛化建模,被排除以保证公平比较;数据驱动方法高度依赖数据量与质量",
+  "evidence_for_taste": [
+    "hardly comparable",
+    "generalizable over various scenarios",
+    "the more knowledge, the better prediction",
+    "making the method comparison fair",
+    "highly dependent on the amount and quality of the input historical data"
+  ],
+  "thinking_moves": [
+    "从现有模型中归纳时空知识因素类别,作为泛化性分析的基础",
+    "提出inter-location关系图作为空间知识的一般化表示",
+    "基于STAnalytic分析结果推导:考虑因素越多,模型越可能泛化",
+    "将meta-model设计为model-of-model,允许灵活替换底层技术",
+    "构建跨应用场景benchmark以定量验证定性分析结论"
+  ],
+  "topic_tags": [
+    "spatio-temporal prediction",
+    "traffic prediction generalizability",
+    "meta-learning",
+    "graph neural networks",
+    "urban mobility"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

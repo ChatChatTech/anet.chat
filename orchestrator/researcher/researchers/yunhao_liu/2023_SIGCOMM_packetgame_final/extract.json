@@ -1,0 +1,42 @@
+{
+  "paper_id": "2023_SIGCOMM_packetgame_final",
+  "doi": null,
+  "title": "PacketGame: Multi-Stream Packet Gating for Concurrent Video Inference at Scale",
+  "year": 2023,
+  "venue": "ACM SIGCOMM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "视频解码成为1000+摄像头并发推理的系统瓶颈，硬件扩容成本高昂($100K+/年)，需纯软件解决方案",
+  "problem_framing": "在parser和decoder之间插入packet gating模块，将packet元数据映射到是否需要解码的决策",
+  "key_insight": "利用packet metadata(大小、帧类型)和在线反馈的混合表征，通过多视角神经网络预测 gating confidence",
+  "method_signature": "多流packet gating框架：时序估计器+上下文预测器+组合优化器，理论保证O(√T)遗憾界",
+  "evaluation_criteria": "解码成本节省率(52-79%)和并发流数量提升倍数(2.1-4.8×)",
+  "negative_result_or_admitted_limitation": "greedy optimizer对一般组合问题可能任意差，需假设解码成本近似分数",
+  "evidence_for_taste": [
+    "previously overlooked bottleneck",
+    "fail to effectively adapt to",
+    "can be arbitrarily bad for general",
+    "the reason is quite obvious",
+    "such a greedy-based optimizer"
+  ],
+  "thinking_moves": [
+    "从运维1000+摄像头的真实系统异常出发，定位到decoding module的并发瓶颈",
+    "将frame filtering问题前移到parser和decoder之间，定义新任务packet gating",
+    "引用多臂老虎机理论框架，将跨流协调建模为在线决策问题",
+    "指出residual feature等现有方法discriminability差，需end-to-end learning",
+    "先证明理论上界(1-c/B近似比)，再给出实践中的具体设计"
+  ],
+  "topic_tags": [
+    "video-inference-pipeline",
+    "packet-gating",
+    "concurrent-stream-scheduling",
+    "multi-view-neural-network",
+    "combinatorial-bandit"
+  ],
+  "cites_own_work": [
+    "InFi",
+    "High-quality Activity-Level Video Advertising"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,44 @@
+{
+  "paper_id": "Study on the servilization of simulation capability",
+  "doi": null,
+  "title": "Study on the servilization of simulation capability",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "云制造系统需要实现制造资源的按需使用和动态协同，但制造能力(MC)缺乏清晰定义和定量描述",
+  "problem_framing": "将仿真能力(SC)从定性描述转化为可形式化、可度量的服务化模型",
+  "key_insight": "仿真能力由资源维度(R)、过程维度(P)、任务维度(T)三维构成，服务生命周期包含发布、发现、评估、演化四阶段",
+  "method_signature": "描述模型 DMSC=(T,R,P,K,E)+fun(T,P,R,K,E)，融合任务、资源、参与者、知识、企业信息",
+  "evaluation_criteria": "综合效用评价与动态监控，强调层次性和系统性",
+  "negative_result_or_admitted_limitation": "现有服务描述语言(OWL、OWL-S、SHOE)无法满足仿真能力服务化的复杂性、不确定性和知识性需求",
+  "evidence_for_taste": [
+    "lack of supports for quantitative description",
+    "existing service description language",
+    "can’t fulfill the actual requirements",
+    "not able to meet the requirement of SC servilization",
+    "expand service description language",
+    "key to achieve on-demand use"
+  ],
+  "thinking_moves": [
+    "从云制造理念出发，系统梳理制造能力的学术定义演化",
+    "将定性概念(制造能力)转化为可操作的仿真能力三维模型",
+    "设计服务全生命周期(发布-发现-评估-演化)实现闭环",
+    "承认现有描述语言的不足，明确提出扩展需求"
+  ],
+  "topic_tags": [
+    "cloud-manufacturing",
+    "simulation-capability-servilization",
+    "manufacturing-capability-modeling",
+    "service-lifecycle-management",
+    "ontology-description-language"
+  ],
+  "cites_own_work": [
+    "Zhang Lin 2010",
+    "Zhang Lin 2011",
+    "Tao Fei 2011",
+    "Luo Yongliang 2011"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少明确的发表年份、具体DOI和期刊信息，属于中文学术会议论文。方法验证为框架性描述，缺少具体实验数据或案例细节。"
+}

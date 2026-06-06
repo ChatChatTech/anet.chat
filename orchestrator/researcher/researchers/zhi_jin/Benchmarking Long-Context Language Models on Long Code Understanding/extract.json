@@ -1,0 +1,44 @@
+{
+  "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding",
+  "doi": "10.18653/v1/2025.acl-long.1324",
+  "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code Understanding",
+  "year": 2025,
+  "venue": "ACL Long Papers",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有长代码理解评估框架缺乏严谨性，无法有效测试128K-1M上下文窗口的实际能力",
+  "problem_framing": "将长代码理解分解为代码单元感知、单元内理解、单元间关系理解、文档理解四个维度评估",
+  "key_insight": "LLM在代码长度超过32K后性能急剧下降，远未达到其声称的128K-1M上下文能力",
+  "method_signature": "4维度8任务的综合长代码理解基准测试，覆盖0-128Ktokens长度分布",
+  "evaluation_criteria": "基于召回率/精确率/CodeBLEU等多粒度指标进行自动评测",
+  "negative_result_or_admitted_limitation": "Claude-3.5-Sonnet表现不佳令人意外，表明专有模型并非总是最优",
+  "evidence_for_taste": [
+    "性能drop dramatically when >32K",
+    "inter-code unit relation最challenging",
+    "Claude-3.5-Sonnet not satisfactory",
+    "do not decouple code understanding",
+    "ignoring context dependency",
+    "reducing data contamination"
+  ],
+  "thinking_moves": [
+    "将长代码理解能力分解为从感知到推理的层级结构",
+    "通过隔离代码理解与其他任务挑战来精确定位能力短板",
+    "从下游应用倒推所需的基础认知能力",
+    "用性能随长度衰减曲线揭示上下文利用的真实边界",
+    "承认专有模型Claude表现不佳以示客观"
+  ],
+  "topic_tags": [
+    "long-context-LM-evaluation",
+    "code-understanding-benchmark",
+    "context-length-scalability",
+    "software-engineering-LLM",
+    "dependency-analysis"
+  ],
+  "cites_own_work": [
+    "Kechi Zhang et al. 2024a on Hirope",
+    "Jia Li et al. 2024a on EvoCodeBench",
+    "Jia Li et al. 2024b on DevEval"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

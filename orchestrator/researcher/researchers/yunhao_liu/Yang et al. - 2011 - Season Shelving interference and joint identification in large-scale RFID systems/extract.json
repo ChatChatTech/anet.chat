@@ -1,0 +1,44 @@
+{
+  "paper_id": "Yang et al. - 2011 - Season Shelving interference and joint identification in large-scale RFID systems",
+  "doi": null,
+  "title": "Season: Shelving Interference and Joint Identification in Large-scale RFID Systems",
+  "year": 2011,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有防碰撞方案采用互斥调度导致吞吐量骤降(52 tags/s),大量时间浪费在调度上,少量争议标签造成严重延迟。",
+  "problem_framing": "将多读写器RFID系统的碰撞问题拆分为两阶段:相位I识别非争议标签忽略冲突,相位II联合识别争议标签。",
+  "key_insight": "无需严格互斥调度;大部分标签为非争议标签可并发识别;利用被动监听实现读写器间协作。",
+  "method_signature": "Season三层协议栈:Season-I并发识别非争议标签,Season-II基于MWIS选主动读写器,Season-III处理跨域标签碰撞。",
+  "evaluation_criteria": "吞吐量(标签/时隙)、识别时延、读取率、调度轮数。",
+  "negative_result_or_admitted_limitation": "Phase-I阶段负载不均衡时低负载读写器需等待高负载读写器;通过切换两阶段顺序可缓解。",
+  "evidence_for_taste": [
+    "lack of readers' collaboration wastes numerous time",
+    "the tags within the overlapped interrogation regions",
+    "it is not necessary to constrain neighboring readers",
+    "joint identification among neighboring readers",
+    "unbalanced loads of readers",
+    "session number to solve this problem"
+  ],
+  "thinking_moves": [
+    "将'避免冲突'翻转为'搁置冲突+分而治之'",
+    "从观察到的事实出发(大部分标签非争议)反推调度策略应改变",
+    "识别出一个新现象:跨域标签碰撞(cross-range tag collision)",
+    "将读写器选择问题形式化为最大加权独立集(MWIS)",
+    "通过会话号机制解决并发识别时的标签状态混淆问题"
+  ],
+  "topic_tags": [
+    "RFID-anti-collision",
+    "multi-reader-coordination",
+    "reader-collision-resolution",
+    "joint-tag-identification",
+    "MWIS-scheduling"
+  ],
+  "cites_own_work": [
+    "L Yang, J.Han, Y. Qi, Y. Liu, 'Identification-Free Batch Authentication for RFID Tags', IEEE ICNP 2010",
+    "L. Lu, J. Han, L. Hu, Y. Liu, and L. M. Ni, 'Dynamic Key-Updating', IEEE PerCom 2007",
+    "L. Lu, J. Han, R. Xiao, and Y. Liu, 'ACTION', IEEE INFOCOM 2009"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,43 @@
+{
+  "paper_id": "Shangguan et al. - 2014 - OTrack Towards Order Tracking for Tags in Mobile RFID Systems",
+  "doi": null,
+  "title": "OTrack: Towards Order Tracking for Tags in Mobile RFID Systems",
+  "year": 2014,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "机场行李分拣系统中需要追踪传送带上行李的相对顺序，现有人工成本高或系统成本昂贵且错误率高",
+  "problem_framing": "将标签顺序追踪问题形式化为：在移动RFID系统中利用读写器与标签的通信属性来确定标签相对位置",
+  "key_insight": "单独RSSI或RRR属性无法追踪顺序，但组合使用可识别'关键区域'，该区域内RSSI呈现稳定凹形趋势，峰值时间戳即为标签经过读写器正下方的时间参考",
+  "method_signature": "基于中心极限定理检测RRR关键区域，结合二次拟合定位RSSI峰值时间戳进行顺序排序",
+  "evaluation_criteria": "准确率（正确排序标签数/总标签数），实验在首都机场传送带上进行一个月验证",
+  "negative_result_or_admitted_limitation": "FCFS方法准确率仅55%失败；G-RSSI因RSSI波动剧烈有多个峰值而失败；G-RRR无法直接区分标签顺序",
+  "evidence_for_taste": [
+    "only 55 percent of luggage has been ordered correctly",
+    "fluctuates significantly such that there are multiple peaks",
+    "the RSSI trace is not symmetric",
+    "by intelligently combining them together",
+    "we avoid using any threshold-based heuristic",
+    "we utilize the central limit theory",
+    "a critical region always exists in the RRR trace"
+  ],
+  "thinking_moves": [
+    "先实验验证朴素方法失败（FCFS 55%），再分析失败原因（硬件异构性、环境动态性）",
+    "单一属性不够，通过组合多个通信属性提取稳定指示信号",
+    "将直觉观察形式化为'关键区域'概念，并建立概率检测模型",
+    "用中心极限定理为经验观察提供理论解释而非依赖启发式阈值",
+    "通过极限情况分析确定参数设置原则"
+  ],
+  "topic_tags": [
+    "RFID-order-tracking",
+    "mobile-RFID-protocol",
+    "critical-region-detection",
+    "probabilistic-model",
+    "conveyor-belt-logistics"
+  ],
+  "cites_own_work": [
+    "Longfei Shangguan, Zhenjiang Li, Zheng Yang, Mo Li, and Y. Liu, 'OTrack: Order Tracking for Tags in Mobile RFID System,' in Proc. IEEE INFOCOM, 2013, pp. 3066-3074."
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

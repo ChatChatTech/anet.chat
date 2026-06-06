@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zhang et al. - 2015 - PLP Protecting Location Privacy Against Correlation-Analysis Attack in Crowdsensing",
+  "doi": null,
+  "title": "PLP: Protecting Location Privacy against Correlation-Analysis Attack in Crowdsensing",
+  "year": 2015,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "用户担心位置隐私泄露而不愿参与众感，导致数据收集质量下降",
+  "problem_framing": "隐私-效用权衡：防止强敌手利用时空相关性推断敏感位置，同时最大化数据收集",
+  "key_insight": "CRF可建模HMM无法捕捉的长程依赖和跨阶相关性，从而抵抗已知系统与相关性的强敌手攻击",
+  "method_signature": "CRF建模时空与数据相关性，按抑制概率过滤上下文流以实现δ-隐私",
+  "evaluation_criteria": "隐私指标(后验与先验差≤δ)与效用指标(非空报告比例)",
+  "negative_result_or_admitted_limitation": "敌手总可构建更好的模型揭露敏感信息，防御者永远无法确信覆盖所有攻击",
+  "evidence_for_taste": [
+    "HMM cannot perfectly describe",
+    "HMM has severe limitations",
+    "the defender can never say with certainty",
+    "vulnerable to attacks",
+    "more powerful than [13]"
+  ],
+  "thinking_moves": [
+    "暴露HMM建模方法的隐含条件独立假设缺陷",
+    "将抑制策略建模为CRF的特征函数参数",
+    "先证单调性属性以加速最优策略搜索",
+    "用更强攻击模型验证现有方法的不安全性"
+  ],
+  "topic_tags": [
+    "location-privacy-crowdsensing",
+    "CRF-temporal-modeling",
+    "correlation-analysis-attack",
+    "indoor-localization-privacy",
+    "suppression-strategy-optimization"
+  ],
+  "cites_own_work": [
+    "MASKIT暴露31%敏感信息",
+    "现有方法对CRF敌手脆弱"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

@@ -1,0 +1,46 @@
+{
+  "paper_id": "Liu et al. - 2010 - Location, Localization, and Localizability",
+  "doi": null,
+  "title": "Location, Localization, and Localizability",
+  "year": 2010,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "无线传感网络需地理信息支撑应用,但现有定位系统(GPS, LPS)成本高或不适配多跳网络,需研究新定位方案",
+  "problem_framing": "将定位问题分解为物理测量、网络定位算法、误差控制与可定位性四个子问题",
+  "key_insight": "误差控制和网络可定位性理论是定位研究的两个关键新兴方向,需同时考虑",
+  "method_signature": "综述分类现有方法,提出误差控制与可定位性分析框架",
+  "evaluation_criteria": "准确性、硬件成本、计算成本、环境需求四维比较",
+  "negative_result_or_admitted_limitation": "MDS算法渐近复杂度O(n^3),大多数现有方法在各向异性网络拓扑下失效,RR3P条件的必要性仍未证明",
+  "evidence_for_taste": [
+    "no particular algorithm is an absolute favorite",
+    "RSS based ranging is a relatively cheap solution",
+    "breakthrough technology is not there today",
+    "tradeoff is that nodes must be equipped",
+    "poor asymptotic performance, which is O(n^3)",
+    "the sufficiency of RR3P is proved...while the necessity remains open"
+  ],
+  "thinking_moves": [
+    "沿细粒度到粗粒度维度对物理测量方法分类",
+    "识别定位方法的成本-精度权衡",
+    "从实际问题(距离误差累积)反向定义理论需求",
+    "识别并形式化开放研究问题(如RR3P必要性)",
+    "将定位问题与其他图论问题(刚性与可实现性)关联"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-localization",
+    "range-error-control",
+    "network-localizability",
+    "rigidity-theory",
+    "ranging-accuracy"
+  ],
+  "cites_own_work": [
+    "Liu et al. 2007",
+    "Liu et al. 2009",
+    "Yang et al. 2009",
+    "Yang & Liu 2010",
+    "Peng et al. 2007 (BeepBeep)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

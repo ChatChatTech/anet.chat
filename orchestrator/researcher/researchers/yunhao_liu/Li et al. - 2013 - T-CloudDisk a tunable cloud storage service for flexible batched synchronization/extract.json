@@ -1,0 +1,41 @@
+{
+  "paper_id": "Li et al. - 2013 - T-CloudDisk a tunable cloud storage service for flexible batched synchronization",
+  "doi": null,
+  "title": "T-CloudDisk: A Tunable Cloud Storage Service for Flexible Batched Synchronization",
+  "year": 2013,
+  "venue": "Middleware 2013 Posters and Demos Track",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "现有云存储服务（如Dropbox）面临频繁短更新的流量过度消耗问题",
+  "problem_framing": "通过可调缓冲区大小c和定时器阈值t实现灵活批量同步",
+  "key_insight": "将中间件方案升级为独立可调服务,允许用户自定义同步参数以平衡流量与体验",
+  "method_signature": "字节计数器+定时器双变量驱动批量同步",
+  "evaluation_criteria": "流量消耗与同步数据量的统计",
+  "negative_result_or_admitted_limitation": "UDS中间件需要额外存储空间且使用固定参数",
+  "evidence_for_taste": [
+    "traffic overuse problem",
+    "tunable",
+    "Flexible batched synchronization",
+    "trivial sync traffic decrease",
+    "cost and enhance the service scalability"
+  ],
+  "thinking_moves": [
+    "从现有中间件局限反推独立服务设计",
+    "识别关键可调变量c和t作为设计杠杆",
+    "通过参数空间探索确定典型值（250KB/5秒）",
+    "将黑盒测试升级为白盒研究能力"
+  ],
+  "topic_tags": [
+    "cloud-storage-sync",
+    "traffic-optimization",
+    "batch-sync-tuning",
+    "middleware-to-service",
+    "public-private-cloud-hybrid"
+  ],
+  "cites_own_work": [
+    "[3] Li et al. UDS middleware",
+    "[4] Li et al. aTDS delta sync"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为会议海报/演示 track,技术细节有限,主要为架构介绍和进度报告,缺乏完整实验数据和深入评估"
+}

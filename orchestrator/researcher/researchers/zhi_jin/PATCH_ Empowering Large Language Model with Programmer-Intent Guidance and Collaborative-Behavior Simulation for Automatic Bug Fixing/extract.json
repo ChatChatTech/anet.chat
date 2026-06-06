@@ -1,0 +1,40 @@
+{
+  "paper_id": "PATCH_ Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing",
+  "doi": "10.48550/arxiv.2501.16149",
+  "title": "PATCH: Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing",
+  "year": 2024,
+  "venue": "ACM Transactions on Software Engineering and Methodology",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "LLM-based bug fixing忽略协同行为,仅用buggy snippet作为输入,无法处理跨文件依赖和复杂嵌套结构",
+  "problem_framing": "将bug修复视为单阶段端到端生成任务,而非多阶段协同管理流程",
+  "key_insight": "模拟程序员在bug管理中的角色分工(test-developer-reviewer)可弥补LLM多步推理缺陷",
+  "method_signature": "三ChatGPT Agent模拟tester-developer-reviewer协作,四阶段(报告-诊断-生成-验证)迭代",
+  "evaluation_criteria": "BFP基准上与SOTA LLMs对比pass@k和accuracy指标",
+  "negative_result_or_admitted_limitation": "实验仅针对单hunk Java bug且假设perfect fault localization,泛化性受限",
+  "evidence_for_taste": [
+    "low accuracy, with performance rates below 15%",
+    "relies on pattern recognition rather than authentic cognitive processes",
+    "minimize the risk of information leakage",
+    "constraints the effectiveness of LLMs"
+  ],
+  "thinking_moves": [
+    "将bug修复任务类比软件工程中的bug管理生命周期",
+    "复用commit message作为程序员意图代理以避免信息泄露",
+    "用rubber duck debugging技术引导LLM进行代码解释",
+    "将LLM的pattern recognition局限转化为多Agent协同弥补",
+    "从软件开发流程中提炼协同行为模式并形式化"
+  ],
+  "topic_tags": [
+    "LLM-based-bug-fixing",
+    "multi-agent-collaboration",
+    "programmer-intent-guidance",
+    "bug-management-simulation",
+    "patch-verification"
+  ],
+  "cites_own_work": [
+    "Zhang et al. 2023 (Neural Program Repair with PDA)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

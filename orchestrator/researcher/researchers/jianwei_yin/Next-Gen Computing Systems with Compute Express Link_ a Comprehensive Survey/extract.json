@@ -1,0 +1,42 @@
+{
+  "paper_id": "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey",
+  "doi": "10.48550/arxiv.2412.20249",
+  "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "互联带宽增长60000x vs 计算性能30x，严重制约系统整体性能",
+  "problem_framing": "将CXL研究按单机/分布式、内存扩展/近存处理/统一内存分类综述",
+  "key_insight": "CXL通过三种协议提供低延迟、可扩展的内存语义互联，可解决内存墙和异构协作问题",
+  "method_signature": "Survey: 分类汇总单机到分布式系统的CXL研究，含性能基准测试和仿真平台评估",
+  "evaluation_criteria": "延迟、带宽、性能降解百分比、应用基准测试",
+  "negative_result_or_admitted_limitation": "直接在CXL内存运行应用产生10-82%性能降解，即使TPP动态页迁移仍增加尾延迟",
+  "evidence_for_taste": [
+    "严重限制整体性能",
+    "解决内存墙挑战",
+    "增强异构系统协作",
+    "资源解耦和共享",
+    "10-82%性能降解",
+    "CXL内存延迟更高",
+    "数据迁移开销大",
+    "网络高延迟阻碍解耦"
+  ],
+  "thinking_moves": [
+    "将互联性能问题系统化为三层：内存墙、异构协作、网络延迟",
+    "按CXL协议类型(Type1/2/3)映射不同应用场景",
+    "从单机到分布式递进构建CXL技术全景图",
+    "承认实验平台限制：大多数CXL硬件仍为原型，仅少数商业化",
+    "指出Tiered Memory范式可能需要升级，不能简单用DRAM做Cache"
+  ],
+  "topic_tags": [
+    "CXL内存扩展",
+    "内存墙解决",
+    "异构计算互联",
+    "内存解耦池化",
+    "近存处理架构"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

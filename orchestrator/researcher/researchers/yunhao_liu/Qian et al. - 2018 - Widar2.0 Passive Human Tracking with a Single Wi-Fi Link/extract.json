@@ -1,0 +1,41 @@
+{
+  "paper_id": "Qian et al. - 2018 - Widar2.0 Passive Human Tracking with a Single Wi-Fi Link",
+  "doi": null,
+  "title": "Widar2.0: Passive Human Tracking with a Single Wi-Fi Link",
+  "year": 2018,
+  "venue": "MobiSys",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有系统需多链路或专用硬件,在家庭等单AP场景无法部署;实际场景如老人监护、家庭安防需求迫切",
+  "problem_framing": "将多参数估计问题建模为最大似然估计,用SAGE算法联合求解AoA/ToF/DFS/衰减系数;从噪声CSI中提取目标反射路径并精确定位",
+  "key_insight": "利用单链路的多维信号参数(而非多链路的单参数)实现被动跟踪——将参数估计从冗余转换为正交信息源",
+  "method_signature": "统一CSI模型+共轭乘法去相位噪声+SAGE联合参数估计+图匹配目标识别+ToF/DFS融合测距",
+  "evaluation_criteria": "单链路下中位精度0.75m(6m×5m),对比IndoTrack和多链路系统性能",
+  "negative_result_or_admitted_limitation": "仅支持单目标跟踪;两天线限制AoA/ToF精度导致无法分离多人;NLOS条件下ToF估计失效",
+  "evidence_for_taste": [
+    "requires at least two links",
+    "leaves richful features within CSI unaddressed",
+    "it is non-trivial to gain multidimensional parameter estimation",
+    "the residual error after calibration is still strong enough",
+    "it fails to yield accurate AoA and ToF"
+  ],
+  "thinking_moves": [
+    "将多链路需求问题重新框架为单链路多参数问题——从参数维度而非链路数量寻找突破",
+    "利用同-radio天线共享相位噪声的特性,通过共轭乘法消除时偏和载频偏,同时保留参数结构",
+    "将时域和频域的相位变化统一建模,使得ToF转化为静态LoS路径与目标反射路径的相对时延差",
+    "用图论约束将路径匹配建模为整数规划,保证所选路径形成完整图结构而非孤立离群点",
+    "识别出DFS可提供相对距离变化率,将ToF绝对测距与DFS增量测距融合提升分辨率(0.3m→0.05m)"
+  ],
+  "topic_tags": [
+    "WiFi-passive-localization",
+    "CSI-parameter-estimation",
+    "single-link-tracking",
+    "graph-matching-tracking",
+    "COTS-WiFi-sensing"
+  ],
+  "cites_own_work": [
+    "Widar [21]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

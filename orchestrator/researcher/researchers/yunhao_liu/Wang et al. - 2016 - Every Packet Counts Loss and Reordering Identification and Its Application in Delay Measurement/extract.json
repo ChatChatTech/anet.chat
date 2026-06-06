@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2016 - Every Packet Counts Loss and Reordering Identification and Its Application in Delay Measurement",
+  "doi": null,
+  "title": "Every Packet Counts: Loss and Reordering Identification and Its Application in Delay Measurement",
+  "year": 2016,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有方法只能提供聚合延迟统计,在丢包或乱序时整组丢弃,无法捕捉细粒度延迟异常(如大延迟)",
+  "problem_framing": "在不改包前提下,通过识别丢包和乱序位置来恢复每个数据包的发送时间戳,从而计算per-packet延迟",
+  "key_insight": "网络中丢包和乱序数量远小于正常数据包,只需传输'小 ordering difference'而非全部可能的ordering",
+  "method_signature": "OPA(顺序保持聚合器): augmented hash + 线性组合成CAH,receiver枚举丢失位置并用checking equation验证",
+  "evaluation_criteria": "per-packet相对误差~2%,聚合延迟相对误差~10^-5,通信开销~10^-4,恢复率",
+  "negative_result_or_admitted_limitation": "在10 Gbps高数据率下开销过高,只能在低数据率链路或离线分析中使用",
+  "evidence_for_taste": [
+    "a single lost packet in a group cannot be calculated",
+    "the behavior of other protocols may be affected",
+    "large delays of interest may appear on a special set of packets",
+    "the overhead will be too high to run OPA online on the router",
+    "it is better to use OPA for low data rate link",
+    "RLI cannot identify large delays"
+  ],
+  "thinking_moves": [
+    "将ordering recovery问题从通信角度重新建模:不传完整ordering,而传与发送ordering的small difference",
+    "利用网络数据的内在稀疏性(丢乱序少)来压缩信息表示",
+    "先用mapping equation求解,再用checking equation验证候选解的正确性",
+    "承认工程可行性限制:只在低数据率或离线场景实用,高数据率需future work"
+  ],
+  "topic_tags": [
+    "network-delay-measurement",
+    "loss-reordering-identification",
+    "order-preserving-aggregator",
+    "fine-grained-monitoring",
+    "non-intrusive-measurement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

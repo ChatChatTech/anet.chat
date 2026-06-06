@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhang et al. - 2014 - Demo visual attention driven networking with smart glasses",
+  "doi": null,
+  "title": "Demo: Visual Attention Driven Networking with Smart Glasses",
+  "year": 2014,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Smart glasses用户需要一种无需显式交换联系信息即可建立网络连接的新方式",
+  "problem_framing": "如何在设备平面中根据用户视觉注意力的注视向量匹配目标设备",
+  "key_insight": "用户注视目标时，注视向量与设备向量方向一致，可作为匹配依据",
+  "method_signature": "单眼相机捕获视觉注意力 + 扬声器多普勒效应估计设备向量 + 双匹配协议",
+  "evaluation_criteria": "系统对不同用户具有鲁棒性，实现高精度的注意力捕获和方向估计",
+  "negative_result_or_admitted_limitation": "现有方法对手持设备要求头部位移≥20cm和移动速度2~6m/s，难以用头戴式眼镜实现；对象识别需要大量训练和计算，且易受环境噪声影响",
+  "evidence_for_taste": [
+    "propose a proof-of-concept",
+    "explore a novel networking mode",
+    "make the networking devices smarter",
+    "smart glasses are still in the early stage",
+    "enable a whole new set of applications"
+  ],
+  "thinking_moves": [
+    "把device pairing从perception问题重新frame成communication问题",
+    "利用头部运动产生的多普勒效应来测量设备方向，而非依赖外部设备",
+    "用生理测量模型消除椭圆投影回圆的反演歧义"
+  ],
+  "topic_tags": [
+    "gaze-tracking",
+    "smart-glasses",
+    "device-pairing",
+    "doppler-acoustic",
+    "visual-attention"
+  ],
+  "cites_own_work": [
+    "[5] It starts with iGaze: Visual attention driven networking with smart glasses. Mobicom 2014"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Demo论文形式导致方法和评估描述较为简略，缺乏定量性能数据。系统描述依赖硬件规格而非算法细节。"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Performing Projection in Problem Frames Using Scenarios",
+  "doi": "10.1109/apsec.2009.22",
+  "title": "Performing Projection in Problem Frames Using Scenarios",
+  "year": 2009,
+  "venue": "16th Asia-Pacific Software Engineering Conference",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "Problem Frames方法缺乏对问题投影的精确定义和具体操作指导,导致问题分析成为依赖分析师经验的经验性、繁琐且主观的过程。",
+  "problem_framing": "将问题投影形式化为数学运算,使用场景作为PF方法中被投影的方面(projected aspect),从而系统地从场景派生子问题。",
+  "key_insight": "场景作为交互流程可以作为PF方法中被投影的方面(projected aspect),使得每个子问题对应一个实现需求的场景化投影。",
+  "method_signature": "基于场景扩展的问题本体论,结合关系代数投影算子定义形式化问题投影操作符。",
+  "evaluation_criteria": "使用包裹路由控制问题进行案例研究,展示如何构建良好-formed场景并执行问题投影得到子问题层次结构。",
+  "negative_result_or_admitted_limitation": "如果场景不是良好-formed的,需要引入模型域或新问题来补充,这是方法的前提条件限制。",
+  "evidence_for_taste": [
+    "makes problem analysis an empirical, tedious, and subjective process",
+    "heavily dependant on the analysts' experiences",
+    "lacks a precise definition of problem projection",
+    "does not provide specific instructions",
+    "It is easy to justify that sce1 for realising req2 is well-formed"
+  ],
+  "thinking_moves": [
+    "借用关系代数中投影的数学概念,用场景替换属性集合作为投影的操作数",
+    "识别出PF方法中三个基本元素(需求、域属性、机器规格)都无法单独作为被投影方面",
+    "通过引入场景作为第四元素,建立场景扩展的问题本体论",
+    "定义well-formed场景的约束条件,确保投影的语义正确性",
+    "当场景不符合well-formed条件时,通过引入模型域或新问题来修补场景完整性"
+  ],
+  "topic_tags": [
+    "Problem Frames投影方法",
+    "场景化需求工程",
+    "关系代数投影算子",
+    "问题分解形式化",
+    "well-formed场景约束"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Length Controlled Generation for Black-box LLMs__oa_W4412945110",
+  "doi": "10.18653/v1/2025.acl-long.825",
+  "title": "Length Controlled Generation for Black-box LLMs",
+  "year": 2025,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "LLM难以精确控制生成长度，而微调方法计算开销大且无法用于黑盒模型",
+  "problem_framing": "将长度控制问题建模为从目标分布采样，采用MCMC迭代框架",
+  "key_insight": "用Metropolis-Hastings框架结合重要性采样加速，无需修改模型参数即可实现黑盒LLM的长度控制",
+  "method_signature": "MH迭代采样 + 重要性采样加速的黑盒长度控制框架",
+  "evaluation_criteria": "ACC精度、L1/L2距离、ROUGE/BERTSCORE质量、WINS胜率",
+  "negative_result_or_admitted_limitation": "原始MH方法比随机采样更差（40.2% vs 38.8%），需结合重要性采样才有效",
+  "evidence_for_taste": [
+    "the proposal distribution plays a pivotal role",
+    "does not make the process more efficient and is sometimes even worse than random sampling",
+    "the sampling efficiency decreases as this discrepancy increases",
+    "not all LLMs are open source",
+    "enabling the integration of effective length control mechanisms across the broadest possible spectrum of LLMs"
+  ],
+  "thinking_moves": [
+    "将长度控制问题从约束满足重新frame为概率采样问题",
+    "引入MCMC框架(Metropolis-Hastings)处理复杂分布",
+    "通过重要性采样改善proposal分布以提高采样效率",
+    "保持LLM作为黑盒不可变组件以兼容任意模型",
+    "用LLM-as-Judge估计自身概率分布以规避黑盒限制"
+  ],
+  "topic_tags": [
+    "black-box LLM length control",
+    "Metropolis-Hastings sampling",
+    "importance sampling acceleration",
+    "MCMC text generation",
+    "instruction following"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

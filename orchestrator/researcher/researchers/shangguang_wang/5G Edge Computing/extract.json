@@ -1,0 +1,38 @@
+{
+  "paper_id": "5G Edge Computing",
+  "doi": "10.1007/978-981-97-0213-8",
+  "title": "5G Edge Computing: Technologies, Applications and Future Visions",
+  "year": 2024,
+  "venue": "Springer",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "边缘计算凭借低延迟和减轻核心网负担的优势成为5G关键技术,需系统研究其进展与实践",
+  "problem_framing": "从测量研究、技术优化、系统实现、未来愿景四维度构建5G边缘计算完整知识体系",
+  "key_insight": "首次对公共边缘平台进行综合测量,揭示关键问题并开源数据集以推动研究社区",
+  "method_signature": "测量驱动问题发现 + 算法优化 + 标准实现 + 前瞻探索 四阶段研究",
+  "evaluation_criteria": "延迟/吞吐量/资源使用率/Profit多维指标",
+  "negative_result_or_admitted_limitation": "null",
+  "evidence_for_taste": [
+    "first comprehensive measurement study",
+    "critical concerns studied in depth",
+    "dataset is open-sourced",
+    "improve quality of experience",
+    "optimize system performance/minimize system cost"
+  ],
+  "thinking_moves": [
+    "先用实测揭示工程实践真相,再由此驱动理论算法设计",
+    "问题复杂度分析先于算法求解",
+    "遵循5G标准3GPP TS 23.501实现端到端系统",
+    "将6G愿景落地为可验证的卫星-地面集成平台"
+  ],
+  "topic_tags": [
+    "edge-computing-measurement",
+    "computation-offloading",
+    "workload-scheduling",
+    "edge-caching",
+    "orbital-edge-computing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "该论文为书籍而非期刊论文,正文为目录结构,缺少完整方法论和实验细节,仅能从前言推断研究思路"
+}

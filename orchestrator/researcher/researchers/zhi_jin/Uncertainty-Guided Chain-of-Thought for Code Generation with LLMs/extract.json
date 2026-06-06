@@ -1,0 +1,42 @@
+{
+  "paper_id": "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs",
+  "doi": "10.48550/arxiv.2503.15341",
+  "title": "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM在简单任务上过度推理导致错误并浪费计算资源，需要选择性使用CoT",
+  "problem_framing": "将问题定义为在生成新代码行时测量模型不确定性，动态决定是否调用CoT推理",
+  "key_insight": "新代码行开头的预测难度最高，通过熵或概率差测量不确定性并在此触发CoT可提高准确性",
+  "method_signature": "UnCert-CoT：基于不确定性的自适应CoT解码方法",
+  "evaluation_criteria": "PassRate在HumanEval和MHPP基准上的功能正确性",
+  "negative_result_or_admitted_limitation": "原始CoT-Decoding直接应用于代码生成会降低性能，因为置信度评估无法有效处理长代码序列",
+  "evidence_for_taste": [
+    "prediction difficulty is particularly high at the beginning of a new line of code",
+    "confidence value and the correctness of the generated code",
+    "error accumulation in extended reasoning chains",
+    "LLMs allocating excessive computational resources",
+    "This overthinking may lead LLMs down incorrect reasoning paths"
+  ],
+  "thinking_moves": [
+    "观察到过拟合现象后将问题重新定义为资源分配问题而非准确性问题",
+    "在代码行边界而非完整代码序列层面评估不确定性",
+    "承认直接迁移CoT-Decoding到代码生成会失败，并解释原因（长序列置信度难以评估）",
+    "通过消融实验验证CoT解码组件对复杂问题的必要性"
+  ],
+  "topic_tags": [
+    "LLM-code-generation",
+    "chain-of-thought-decoding",
+    "uncertainty-estimation",
+    "adaptive-reasoning",
+    "code-generation-efficiency"
+  ],
+  "cites_own_work": [
+    "SEED: Customize Large Language Models with Sample-Efficient Adaptation for Code Generation",
+    "Self-Planning Code Generation with Large Language Models",
+    "Structured chain-of-thought prompting for code generation"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

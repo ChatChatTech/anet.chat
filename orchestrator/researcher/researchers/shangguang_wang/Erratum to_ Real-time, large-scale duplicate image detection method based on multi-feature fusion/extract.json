@@ -1,0 +1,21 @@
+{
+  "paper_id": "Erratum to_ Real-time, large-scale duplicate image detection method based on multi-feature fusion",
+  "doi": "10.1007/s11554-017-0673-8",
+  "title": "Erratum to: Real-time, large-scale duplicate image detection method based on multi-feature fusion",
+  "year": 2017,
+  "venue": "Journal of Real-Time Image Processing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": null,
+  "problem_framing": null,
+  "key_insight": null,
+  "method_signature": null,
+  "evaluation_criteria": null,
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [],
+  "thinking_moves": [],
+  "topic_tags": [],
+  "cites_own_work": [],
+  "extraction_quality": "thin",
+  "extraction_notes": "This is an erratum correcting a typo in institutional affiliation. Contains no research methodology, results, or insights. The original paper DOI 10.1007/s11554-016-0632-9 is referenced but not discussed."
+}

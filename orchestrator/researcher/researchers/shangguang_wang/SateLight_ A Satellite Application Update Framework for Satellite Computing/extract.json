@@ -1,0 +1,46 @@
+{
+  "paper_id": "SateLight_ A Satellite Application Update Framework for Satellite Computing",
+  "doi": "10.48550/arxiv.2509.12809",
+  "title": "SateLight: A Satellite Application Update Framework for Satellite Computing",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "卫星应用需远程更新但面临异构性、带宽受限、空间环境恶劣三大挑战，现有地面方案不适用",
+  "problem_framing": "设计统一框架应对卫星应用更新，需兼顾异构性封装、带宽高效传输、故障可靠恢复",
+  "key_insight": "用容器化统一异构应用，内容感知差分编码传输，层级回滚实现故障恢复",
+  "method_signature": "容器化+内容感知差分+层级回滚的卫星应用更新框架",
+  "evaluation_criteria": "传输延迟、更新延迟、正确性、恢复开销",
+  "negative_result_or_admitted_limitation": "层回滚需额外存储空间，与补丁恢复相比存储开销更大",
+  "evidence_for_taste": [
+    "sidesteps this complexity through application containerization",
+    "balances semantic accuracy with computational efficiency",
+    "ensures deterministic reconstruction during the subsequent onboard update",
+    "instead of relying on fine-grained state reconstruction",
+    "offers a balanced trade-off between recovery overhead and storage overhead",
+    "these limitations preclude the use of heavyweight software update methods"
+  ],
+  "thinking_moves": [
+    "用容器化抽象规避异构工具链复杂性问题",
+    "混合差分策略平衡语义精度与计算效率",
+    "利用容器固有层级结构实现零重传回滚",
+    "确定性重构确保更新正确性",
+    "权衡恢复延迟与存储开销"
+  ],
+  "topic_tags": [
+    "satellite-computing",
+    "software-update",
+    "containerization",
+    "differential-encoding",
+    "fault-tolerance",
+    "LEO-satellite"
+  ],
+  "cites_own_work": [
+    "Komet",
+    "SECO",
+    "Phoenix",
+    "Tiansuan-constellation"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

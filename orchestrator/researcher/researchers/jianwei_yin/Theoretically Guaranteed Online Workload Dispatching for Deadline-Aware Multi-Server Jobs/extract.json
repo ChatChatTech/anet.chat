@@ -1,0 +1,40 @@
+{
+  "paper_id": "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs",
+  "doi": "10.48550/arxiv.2112.02456",
+  "title": "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs",
+  "year": 2021,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有策略处理服务局部性和资源竞争有效,但添加deadline约束后理论优势无法保证",
+  "problem_framing": "将deadline感知的多服务器作业调度建模为在线社会福利最大化问题",
+  "key_insight": "通过伪社会福利函数和边际成本估计,将离线对偶变量构造为资源使用成本,实现α≥2竞争比",
+  "method_signature": "ONSOCMAX算法:伪社会福利最大化+增广拉格朗日求解器",
+  "evaluation_criteria": "竞争比α定义,social welfare数值对比基线策略",
+  "negative_result_or_admitted_limitation": "对数/多项式效用会增大波动率v,导致更多作业边际成本落入φ_r第二段,social welfare下降",
+  "evidence_for_taste": [
+    "when adding the deadline-aware constraint, the theoretical superiority",
+    "fill the theoretical gap",
+    "rigorously proved to be α-competitive for some α≥2",
+    "theoretical superiority is also validated with simulations",
+    "the more data samples...the better the trained model",
+    "a thing is valued in proportion to its rarity"
+  ],
+  "thinking_moves": [
+    "识别现有方法缺失:有效但缺理论保证→提出理论保证问题",
+    "将在线决策问题转化为对偶变量构造:通过边际成本函数桥接原问题与对偶问题",
+    "利用经济直觉驱动算法设计:资源越稀缺成本越高,后到作业付更高成本",
+    "从KKT条件推导算法性质:证明P3的解同时优化共轭函数ξ_nr",
+    "分情况可视化理解最优点:三种Case对应不同边际关系下的最优分配"
+  ],
+  "topic_tags": [
+    "online-scheduling",
+    "deadline-constraint",
+    "multi-server-jobs",
+    "social-welfare-maximization",
+    "competitive-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

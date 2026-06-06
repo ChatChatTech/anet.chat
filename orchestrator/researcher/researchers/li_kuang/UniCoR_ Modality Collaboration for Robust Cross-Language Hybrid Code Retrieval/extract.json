@@ -1,0 +1,41 @@
+{
+  "paper_id": "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval",
+  "doi": "10.48550/arxiv.2512.10452",
+  "title": "UniCoR: Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval",
+  "year": 2026,
+  "venue": "ICSE '26",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有代码检索模型在混合查询和跨语言场景下泛化能力不足,开发者需要跨语言验证功能等效代码",
+  "problem_framing": "定义代码检索为表示学习排序问题,通过自然语言和代码片段联合检索功能相似代码",
+  "key_insight": "通过构造功能等效但形式多样的正样本,强制模型超越表面词共现,学习代码背后的深层计算逻辑",
+  "method_signature": "多视角监督对比学习+表示分布一致性学习,实现模态对齐和跨语言泛化",
+  "evaluation_criteria": "MRR和MAP评估模型检索首个相关结果的能力和所有相关结果的排序质量",
+  "negative_result_or_admitted_limitation": "简单集成强大模型不足以克服混合代码检索的根本挑战,单纯加权融合效果有限且不稳定",
+  "evidence_for_taste": [
+    "MAP improves by only 0.13%",
+    "optimal weight α varies by more than 3.9%",
+    "models only learn language-specific representations",
+    "reliance on surface lexical prevents deeper functional semantics",
+    "ensembling powerful models is insufficient"
+  ],
+  "thinking_moves": [
+    "从消融实验诊断出三个核心挑战(语义不足/融合低效/跨语言弱)",
+    "把表面词共现问题转化为对比学习中的正样本构造策略",
+    "将域适应理论(MMD)引入跨语言表示对齐",
+    "用MRR和MAP的不一致性揭示模型依赖词法匹配的深层问题"
+  ],
+  "topic_tags": [
+    "cross-language-code-retrieval",
+    "hybrid-code-search",
+    "supervised-contrastive-learning",
+    "modality-fusion",
+    "language-agnostic-representation"
+  ],
+  "cites_own_work": [
+    "ZC3",
+    "CoCoSoDa"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

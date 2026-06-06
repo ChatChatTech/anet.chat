@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wu et al. - 2012 - WILL Wireless indoor localization without site survey",
+  "doi": null,
+  "title": "WILL: Wireless Indoor Localization Without Site Survey",
+  "year": 2012,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统WiFi指纹定位需要人工现场勘测，成本高昂且难以适应环境变化",
+  "problem_framing": "能否利用用户移动和墙体穿透效应替代人工指纹采集，将独立指纹在语义层面连接",
+  "key_insight": "用户运动轨迹可将原本独立的WiFi指纹按可达性语义连接，墙体穿透的RSS突变可用于区分房间",
+  "method_signature": "RSS堆叠差分特征+虚拟房间聚类+逻辑平面图到物理平面图的图匹配映射",
+  "evaluation_criteria": "房间级定位准确率(80%+平均)，与需site survey的传统方法比较",
+  "negative_result_or_admitted_limitation": "走廊分段分区误差较大，因无墙体阻隔导致指纹相似度增大；特定虚拟房间难以区分；实验建筑为钢龙骨木板墙而非钢筋混凝土，屏蔽效应弱增加了区分难度",
+  "evidence_for_taste": [
+    "site survey is inevitable",
+    "attenuation models perform poorly",
+    "lacking technical potentials",
+    "no human participation is involved",
+    "AE of partition on corridor segments is less accurate",
+    "some virtual rooms may be indistinguishable"
+  ],
+  "thinking_moves": [
+    "从日常观察(墙体两侧信号突变)提取被忽视的物理特征",
+    "将定位问题重构为图匹配问题：虚拟房间逻辑图→物理平面图",
+    "引入聚类技术而非人工标注，自动生成虚拟房间",
+    "区分space-continuous和space-discontinuous数据，用途不同",
+    "利用可达性双向假设，从用户轨迹推断房间连通性"
+  ],
+  "topic_tags": [
+    "WiFi-fingerprint-localization",
+    "site-survey-free",
+    "virtual-room-clustering",
+    "graph-matching-floorplan",
+    "accelerometer-trace"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注venue信息，根据格式为会议论文但具体名称缺失；作者列表显示Yunhao Liu为第三作者，可能非第一或通讯作者；实验建筑墙体材质特殊(钢龙骨木板)导致信号屏蔽弱，这一局限性被明确承认并影响结果"
+}

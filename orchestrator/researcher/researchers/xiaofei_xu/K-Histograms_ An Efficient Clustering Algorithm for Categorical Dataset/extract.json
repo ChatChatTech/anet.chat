@@ -1,0 +1,37 @@
+{
+  "paper_id": "K-Histograms_ An Efficient Clustering Algorithm for Categorical Dataset",
+  "doi": "10.48550/arxiv.cs/0509033",
+  "title": "K-Histograms: An Efficient Clustering Algorithm for Categorical Dataset",
+  "year": 2005,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有聚类算法多针对数值数据，类别数据无法自然排序，传统方法如k-means难以直接应用",
+  "problem_framing": "将k-means扩展至类别域，建立以直方图替代均值的目标函数优化框架",
+  "key_insight": "用直方图完整保留属性值频率分布，比mode更能刻画类别聚类的内部结构",
+  "method_signature": "用直方图表示簇，以公式(6)计算对象与直方图差异度，迭代优化聚类目标函数",
+  "evaluation_criteria": "聚类精度r=Σa_i/n（与真实标签最大匹配），迭代次数，对象交换次数，纯簇数量",
+  "negative_result_or_admitted_limitation": "k-histograms算法产生局部最优解，依赖于初始直方图选择和数据集顺序",
+  "evidence_for_taste": [
+    "k-histograms algorithm is more robust to outliers than k-modes",
+    "the outputs of our algorithm are significantly better",
+    "the clusters formed in the clustering process are more stable",
+    "our algorithm performed the best in all cases"
+  ],
+  "thinking_moves": [
+    "将k-means迭代框架机械迁移到类别数据，识别出障碍在于均值和距离函数",
+    "提出AVFT框架将k-modes和k-histograms统一为极端情况，指明中间地带研究空间",
+    "通过纯簇检测实验揭示算法在细粒度聚类上的优势，非仅比较整体精度"
+  ],
+  "topic_tags": [
+    "categorical-clustering",
+    "histogram-representation",
+    "k-means-extension",
+    "dissimilarity-measure",
+    "outlier-robustness"
+  ],
+  "cites_own_work": [
+    "Squeezer algorithm (He, Xu, Deng 2002)"
+  ],
+  "extraction_quality": "full"
+}

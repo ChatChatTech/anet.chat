@@ -1,0 +1,41 @@
+{
+  "paper_id": "Network Motifs in Object-Oriented Software Systems",
+  "doi": "10.48550/arxiv.0808.3292",
+  "title": "Network Motifs in Object-Oriented Software Systems",
+  "year": 2008,
+  "venue": "unknown (arXiv preprint)",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "软件系统日益复杂难以控制,需理解其演化规律以指导开发过程",
+  "problem_framing": "将软件类图建模为复杂网络,用网络模体分析微结构演化原理",
+  "key_insight": "高Z分数的模体倾向于拥有稳定结构,演化由稳定性驱动的功能克隆驱动",
+  "method_signature": "mfinder分析6软件系统的3-4节点模体,Z分数与结构稳定分数关联",
+  "evaluation_criteria": "Z分数>2为显著过表达,用Kruskal-Wallis检验稳定性类别差异显著性",
+  "negative_result_or_admitted_limitation": "结构稳定性可能必要但非充分条件,仍无法解释约束增长的起源",
+  "evidence_for_taste": [
+    "motifs with high Z score tend to have stable structure",
+    "structural stability may be necessary, but not sufficient",
+    "loops should be avoided when software engineers design",
+    "provides the statistical evidence to prove the structural reasonableness",
+    "unfold a fundamental rule of structural evolution"
+  ],
+  "thinking_moves": [
+    "将软件工程问题类比生物网络,用复杂网络理论框架分析",
+    "用Z分数量化模体显著性,用SSS分类稳定性层次",
+    "从具体统计数据归纳普遍演化规律:稳定性驱动复制",
+    "连接抽象网络理论与已有工程设计原则(避免循环复杂度)",
+    "承认方法局限:稳定性非充分条件,增长起源待解释"
+  ],
+  "topic_tags": [
+    "complex-networks",
+    "software-evolution",
+    "network-motifs",
+    "object-oriented-structure",
+    "structural-stability"
+  ],
+  "cites_own_work": [
+    "Y. Ma et al. 2006 (Complexity Metrics Set)",
+    "Y. Ma et al. 2005 (Structural Complexity Method)"
+  ],
+  "extraction_quality": "full"
+}

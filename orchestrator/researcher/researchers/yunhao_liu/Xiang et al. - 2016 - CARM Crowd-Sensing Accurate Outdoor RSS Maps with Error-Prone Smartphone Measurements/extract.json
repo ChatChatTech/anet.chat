@@ -1,0 +1,41 @@
+{
+  "paper_id": "Xiang et al. - 2016 - CARM Crowd-Sensing Accurate Outdoor RSS Maps with Error-Prone Smartphone Measurements",
+  "doi": null,
+  "title": "CARM: Crowd-sensing Accurate Outdoor RSS Maps with Error-Prone Smartphone Measurements",
+  "year": 2016,
+  "venue": "IEEE/ACM Transactions on Mobile Computing (incomplete reference in paper)",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "WiFi APs需要精准RSS地图指导频谱利用，但专业测量成本过高难以规模化部署",
+  "problem_framing": "利用大众智能终端采集的噪声RSS数据，协同估计测量误差模型与信号传播模型参数",
+  "key_insight": "标定测量值受物理传播模型约束，两模型参数可迭代互推直至收敛到准确解",
+  "method_signature": "基于DFP算法迭代估计误差模型与传播模型参数，再驱动构建RSS地图",
+  "evaluation_criteria": "RSS地图平均误差(dBm)，基准19.8dBm降至8.5dBm，提升57.2%精度",
+  "negative_result_or_admitted_limitation": "线性误差模型虽非高精度但简单有效；大量AP未被种子用户采样时精度下降；动态人群环境改变信号传播增大误差；长期时变测量影响算法性能",
+  "evidence_for_taste": [
+    "non-trivial to construct",
+    "unacceptable inaccuracy",
+    "error-prone nature",
+    "maximum error is up to 40 dBm",
+    "simple but effective",
+    "This assumption is reasonable",
+    "difficult to realize"
+  ],
+  "thinking_moves": [
+    "通过实测数据建立误差模型而非依赖理论假设",
+    "将测量校准与信号传播物理规律关联形成闭环约束",
+    "用最优化迭代算法同时求解两个耦合未知参数集",
+    "承认简化模型缺陷同时论证其实用性取舍",
+    "从受控环境实验出发逐步扩展到复杂动态场景"
+  ],
+  "topic_tags": [
+    "crowd-sensing RSS calibration",
+    "smartphone WiFi measurement error",
+    "signal propagation model estimation",
+    "iterative optimization DFP",
+    "outdoor WiFi coverage mapping"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

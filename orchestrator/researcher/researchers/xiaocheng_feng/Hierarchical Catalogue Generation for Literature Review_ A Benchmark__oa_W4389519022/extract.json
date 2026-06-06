@@ -1,0 +1,38 @@
+{
+  "paper_id": "Hierarchical Catalogue Generation for Literature Review_ A Benchmark__oa_W4389519022",
+  "doi": "10.18653/v1/2023.findings-emnlp.453",
+  "title": "Hierarchical Catalogue Generation for Literature Review: A Benchmark",
+  "year": 2023,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "研究人员被海量科学文献淹没,直接生成综述缺乏层次导致内容重复和逻辑混乱",
+  "problem_framing": "将综述生成任务分解为两步:首先生成分层目录,再生成各部分内容",
+  "key_insight": "层次指引(hierarchical guidance)对文本生成有效,目录代表作者对现有研究的理解和组织",
+  "method_signature": "提出HiCatGLR任务和HiCaD数据集(7.6k目录,389k参考文献),设计CEDS和CQE评估指标",
+  "evaluation_criteria": "ROUGE、BERTScore、CEDS(结构相似性)、CQE(信息量)多维度评估",
+  "negative_result_or_admitted_limitation": "大模型无法超越专门训练的LED模型,单纯堆砌知识和参数不是好方案,目录生成需要逻辑推理和归纳能力",
+  "evidence_for_taste": [
+    "large language models can not outperform",
+    "simply stacking knowledge and parameters may not be a good solution",
+    "requires more capabilities on logic and induction",
+    "there are still duplication and hierarchical errors",
+    "extractive methods are not suitable for hierarchical catalogue generation"
+  ],
+  "thinking_moves": [
+    "将复杂综述生成问题分解为两个子任务",
+    "从PDF转为HTML保留结构信息",
+    "设计结合语义和结构的编辑距离评估",
+    "分层生成而非一次性生成"
+  ],
+  "topic_tags": [
+    "hierarchical-catalogue-generation",
+    "literature-review-summarization",
+    "multi-document-summarization",
+    "scientific-document-structure",
+    "text-structure-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

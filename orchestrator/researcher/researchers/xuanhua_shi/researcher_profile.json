@@ -1,0 +1,363 @@
+{
+  "slug": "xuanhua_shi",
+  "n_extracts": 7,
+  "n_full": 6,
+  "n_partial": 1,
+  "n_thin": 0,
+  "year_range": [
+    2022,
+    2025
+  ],
+  "top_tags": [
+    [
+      "Chinese-financial-relation-extraction",
+      1
+    ],
+    [
+      "overlap-triple-handling",
+      1
+    ],
+    [
+      "entity-type-constraints",
+      1
+    ],
+    [
+      "span-based-NER",
+      1
+    ],
+    [
+      "knowledge-graph-construction",
+      1
+    ],
+    [
+      "knowledge hypergraph",
+      1
+    ],
+    [
+      "hyperbolic embedding",
+      1
+    ],
+    [
+      "multi-relational learning",
+      1
+    ],
+    [
+      "hyper-star message passing",
+      1
+    ],
+    [
+      "position-aware representation",
+      1
+    ],
+    [
+      "incremental-learning",
+      1
+    ],
+    [
+      "optimal-margin-distribution",
+      1
+    ],
+    [
+      "quadratic-loss",
+      1
+    ],
+    [
+      "Lagrange-multiplier-tracking",
+      1
+    ],
+    [
+      "kernel-methods",
+      1
+    ],
+    [
+      "positive-unlabeled learning",
+      1
+    ],
+    [
+      "optimal transport",
+      1
+    ],
+    [
+      "margin distribution optimization",
+      1
+    ],
+    [
+      "class prior estimation",
+      1
+    ],
+    [
+      "semi-supervised classification",
+      1
+    ],
+    [
+      "kernel_methods_scalability",
+      1
+    ],
+    [
+      "margin_distribution_learning",
+      1
+    ],
+    [
+      "distribution_aware_partition",
+      1
+    ],
+    [
+      "dual_coordinate_descent",
+      1
+    ],
+    [
+      "stratified_sampling_RKHS",
+      1
+    ],
+    [
+      "margin-distribution-learning",
+      1
+    ],
+    [
+      "kernel-method-scalability",
+      1
+    ],
+    [
+      "distributed-QP-solver",
+      1
+    ],
+    [
+      "stratified-sampling-in-RKHS",
+      1
+    ],
+    [
+      "dual-coordinate-descent",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2022,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "positive-unlabeled learning",
+          1
+        ],
+        [
+          "optimal transport",
+          1
+        ],
+        [
+          "margin distribution optimization",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "incremental-learning",
+          1
+        ],
+        [
+          "optimal-margin-distribution",
+          1
+        ],
+        [
+          "quadratic-loss",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "Chinese-financial-relation-extraction",
+          1
+        ],
+        [
+          "overlap-triple-handling",
+          1
+        ],
+        [
+          "entity-type-constraints",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "GPU-ECC-optimization",
+          1
+        ],
+        [
+          "Montgomery-trick-batching",
+          1
+        ],
+        [
+          "modular-multiplication-IMAD",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "Threshold for object detection fixed at 0.5; authors admit it 'has the potential for optimization' but postpone to future work.",
+    "G-MPNN在JF17K数据集上两天未出结果,表明异构超图上方法失效",
+    "在类先验0.7时输给CAPU的估计精度,理论分析留待未来工作",
+    "最大化最小主角度的问题难以求解,只能近似优化;尚未考虑联邦学习场景(数据分散无法聚合)",
+    "SODM在skin-nonskin数据集上测试准确率略低于DC-ODM",
+    "Some CUDA cores are idle during modinv apply phase; NAF algorithm causes warp divergence issues in parallel UPMUL; memory access overhead limits input scale"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "EN is very prone to overestimate the class prior",
+      "paper_id": "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    },
+    {
+      "quote": "optimizing minimum margin only focuses on a small proportion",
+      "paper_id": "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    },
+    {
+      "quote": "multiple low-density decision boundaries",
+      "paper_id": "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    },
+    {
+      "quote": "verifies the effectiveness of entropy regularized OT",
+      "paper_id": "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    },
+    {
+      "quote": "better generalization performance than minimum margin based methods",
+      "paper_id": "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    },
+    {
+      "quote": "leverage data as heavily as possible",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    },
+    {
+      "quote": "off-the-shelf solvers usually ignore the intrinsic structure",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    },
+    {
+      "quote": "preserve the original distribution possibly",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    },
+    {
+      "quote": "the more representative each partition is",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    },
+    {
+      "quote": "approximate solution obtained in each partition",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    },
+    {
+      "quote": "after removing the type information, the proportions of false type and non-entity both increase",
+      "paper_id": "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction"
+    },
+    {
+      "quote": "E2CNN outperforms SOTA by 19.7% and 28.69% on F1",
+      "paper_id": "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction"
+    },
+    {
+      "quote": "the learned knowledge graph is publicly available on GitHub",
+      "paper_id": "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction"
+    },
+    {
+      "quote": "Lagrange multipliers are unbounded and much more difficult to track",
+      "paper_id": "Incremental and Decremental Optimal Margin Distribution Learning"
+    },
+    {
+      "quote": "avoid updating the Lagrange multipliers in an infinite range",
+      "paper_id": "Incremental and Decremental Optimal Margin Distribution Learning"
+    },
+    {
+      "quote": "breakpoint is detected",
+      "paper_id": "Incremental and Decremental Optimal Margin Distribution Learning"
+    },
+    {
+      "quote": "monotonically increases or decreases",
+      "paper_id": "Incremental and Decremental Optimal Margin Distribution Learning"
+    },
+    {
+      "quote": "Immediate cycling will not occur",
+      "paper_id": "Incremental and Decremental Optimal Margin Distribution Learning"
+    },
+    {
+      "quote": "strictly diagonally dominant matrix",
+      "paper_id": "Incremental and Decremental Optimal Margin Distribution Learning"
+    },
+    {
+      "quote": "9.1× speedup on average",
+      "paper_id": "Incremental and Decremental Optimal Margin Distribution Learning"
+    },
+    {
+      "quote": "data distribution-unaware sampling",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    },
+    {
+      "quote": "ignore the intrinsic structure",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    },
+    {
+      "quote": "huge difference between the distribution",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    },
+    {
+      "quote": "leverage data as heavily as possible",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    },
+    {
+      "quote": "the smaller the K, the more close",
+      "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    },
+    {
+      "quote": "significantly affecting overall performance",
+      "paper_id": "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    },
+    {
+      "quote": "remains a bottleneck",
+      "paper_id": "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    },
+    {
+      "quote": "This effectively avoids the divergence issue",
+      "paper_id": "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    },
+    {
+      "quote": "modadd operations are cheaper than global memory access",
+      "paper_id": "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    },
+    {
+      "quote": "the benefit of decreasing computational complexity dominates the increased overhead",
+      "paper_id": "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    },
+    {
+      "quote": "The throughput of gECC with all the optimizations can achieve 36% and 23% improvement",
+      "paper_id": "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    },
+    {
+      "quote": "信息损失且可能产生次优模型",
+      "paper_id": "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    },
+    {
+      "quote": "lossless expansion of hyperedges",
+      "paper_id": "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    },
+    {
+      "quote": "unreal flight from Beijing to Guangzhou",
+      "paper_id": "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    },
+    {
+      "quote": "强相关性存在于树状图和双曲空间之间",
+      "paper_id": "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    },
+    {
+      "quote": "full model H2GNN exhibits the best performance",
+      "paper_id": "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    }
+  ]
+}

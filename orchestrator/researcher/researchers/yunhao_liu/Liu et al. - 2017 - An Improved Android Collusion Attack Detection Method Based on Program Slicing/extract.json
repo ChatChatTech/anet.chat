@@ -1,0 +1,38 @@
+{
+  "paper_id": "Liu et al. - 2017 - An Improved Android Collusion Attack Detection Method Based on Program Slicing",
+  "doi": null,
+  "title": "An Improved Android Collusion Attack Detection Method Based on Program Slicing",
+  "year": 2017,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Android collusion attacks让多个app协作泄露隐私，现有单app检测方法易被绕过",
+  "problem_framing": "现有污点分析仅关注赋值传播，忽略控制流导致的污染；且以app边界而非设备边界定义泄露",
+  "key_insight": "先用程序切片提取可疑路径缩小分析范围，再结合控制依赖和数据依赖做改进的污点分析",
+  "method_signature": "基于IACFG+程序切片+改进的到达定义分析检测跨应用隐私泄露",
+  "evaluation_criteria": "对比FlowDroid/IccTA/SCanDroid能否检测传统串通和基于控制流的串通攻击",
+  "negative_result_or_admitted_limitation": "无法分析native code、Web应用和动态链接库；因分析条件语句可能引入假阳性",
+  "evidence_for_taste": [
+    "most exist methods ignore detection of taint propagation based on control flow",
+    "we use a different approach",
+    "the sensitive data can circumvents traditional taint checking mechanism",
+    "It is difficult to analyze the source code for all existing tools",
+    "none of the tools found the collusion app group based on control flow",
+    "we neglect the false positive cause by analyzing conditional statements"
+  ],
+  "thinking_moves": [
+    "从对抗角度构造攻击样本揭示现有工具的盲点",
+    "先用程序切片技术缩小分析范围再精细化污点追踪",
+    "将泄露边界从app级重新定义为device级以减少假阳性"
+  ],
+  "topic_tags": [
+    "Android-collusion-detection",
+    "control-flow-taint-analysis",
+    "program-slicing",
+    "inter-app-communication-analysis",
+    "static-privacy-leak-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文格式完整但venue信息缺失，Table 2的标题标注有误(RQ3应为RQ2)。关键方法步骤有详细描述但部分伪代码显示为'some description'占位。"
+}

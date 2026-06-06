@@ -1,0 +1,39 @@
+{
+  "paper_id": "Learning-Augmented Algorithms for the Bahncard Problem",
+  "doi": "10.48550/arxiv.2410.15257",
+  "title": "Learning-Augmented Algorithms for the Bahncard Problem",
+  "year": 2024,
+  "venue": "arxiv.org",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Bahncard问题在机票购买场景普遍存在，需在未知未来的情况下反复决策买卡还是单买票",
+  "problem_framing": "将Bahncard问题建模为BP(C,β,T)参数化模型，采用学习增强框架用预测误差度量算法性能",
+  "key_insight": "需同时用历史T-近期成本和预测T-远期成本两个独立条件来决定购卡，而非简单加总两者",
+  "method_signature": "PFSUM算法在每个常规请求点同时检查过去和预测的成本阈值是否满足γ",
+  "evaluation_criteria": "一致性(完美预测下竞争比)和鲁棒性(任意预测误差上界)两个指标",
+  "negative_result_or_admitted_limitation": "SUM_w的一致性至少(3-β)/(1+β)甚至差于SUM的2-β，且完全没有有界鲁棒性",
+  "evidence_for_taste": [
+    "SUMSUM_w is not a good algorithm",
+    "completely ignores the historical information",
+    "SUMSUM_w fails because",
+    "the worst case is that the actual ticket cost",
+    "the rationale is that by definition"
+  ],
+  "thinking_moves": [
+    "先尝试直接移植预测窗口方法SUM_w，发现其竞争比反而变差",
+    "再尝试纯用未来预测的FSUM，发现完全忽略历史信息导致无界鲁棒性",
+    "从失败中归纳教训：不能用简单加总，需分别独立使用历史和预测信息",
+    "通过反向追踪法分析非增强型Pattern VI与前面Pattern的组合边界",
+    "观察到需将预测误差η从Pattern IV迁移到Pattern VI使后者变为增强型"
+  ],
+  "topic_tags": [
+    "学习增强算法",
+    "在线决策优化",
+    "竞争比分析",
+    "机票/铁路票务决策",
+    "预测集成"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

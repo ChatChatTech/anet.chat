@@ -1,0 +1,41 @@
+{
+  "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358",
+  "doi": "10.18653/v1/d16-1046",
+  "title": "How Transferable are Neural Networks in NLP Applications",
+  "year": 2016,
+  "venue": "EMNLP 2016",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有NLP迁移学习研究结论不一致，有的几乎无效(如0.04-0.21%误差降低)，有的效果显著，缺乏系统性研究",
+  "problem_framing": "将迁移问题按语义相似性分类(等价vs不同)，逐层分析CNN/LSTM各层可迁移性，比较INIT和MULT两种方法",
+  "key_insight": "NLP中神经网络是否可迁移主要取决于任务间语义相似程度，这不同于图像处理中底层特征几乎总是可迁移的共识",
+  "method_signature": "在6个数据集上用LSTM和CNN逐层分析INIT和MULT的可迁移性",
+  "evaluation_criteria": "目标数据集测试准确率，对比有无迁移的基线性能",
+  "negative_result_or_admitted_limitation": "MULT和INIT组合并不产生额外增益；隐藏层在语义不同任务中不可迁移；输出层完全专属于数据集",
+  "evidence_for_taste": [
+    "results are not consistent",
+    "only 0.04–0.21% error reduction",
+    "the incapability of transferring",
+    "MULT and INIT are generally comparable",
+    "do not obtain further gain",
+    "more prone to semantics than image",
+    "semantic relatedness—which emerges"
+  ],
+  "thinking_moves": [
+    "对先前矛盾结果做细致甄别：区分词嵌入的贡献与隐藏层的贡献",
+    "将语义相似性显式建模为迁移学习的核心变量",
+    "逐层穷举分析(E/H/O冻结组合)以解构迁移失败的原因",
+    "跨领域类比(NLP vs 图像)揭示问题特殊性",
+    "承认实验结果缺乏统一解释(第五节第4小节)"
+  ],
+  "topic_tags": [
+    "neural-network-transfer-learning",
+    "NLP-sentence-classification",
+    "multi-task-learning-vs-initialization",
+    "layer-wise-transferability",
+    "semantic-similarity-in-adaptation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

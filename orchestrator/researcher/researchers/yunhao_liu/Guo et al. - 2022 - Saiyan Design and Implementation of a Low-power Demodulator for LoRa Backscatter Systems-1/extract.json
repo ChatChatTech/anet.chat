@@ -1,0 +1,41 @@
+{
+  "paper_id": "Guo et al. - 2022 - Saiyan Design and Implementation of a Low-power Demodulator for LoRa Backscatter Systems-1",
+  "doi": null,
+  "title": "Saiyan: Design and Implementation of a Low-power Demodulator for LoRa Backscatter Systems",
+  "year": 2022,
+  "venue": "ACM SenSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Backscatter tags无法解调远程AP的反馈信号,因为LoRa解调需40mW而能量采集器每25.4秒仅产生1mW",
+  "problem_framing": "如何让backscatter tag以极低功耗解调LoRa下行信号,实现按需重传和信道跳频",
+  "key_insight": "利用SAW滤波器的陡峭频率响应,将调频Chirp变换为调幅信号,追踪峰值幅度即可解调",
+  "method_signature": "SAW滤波器频幅变换+双阈值比较器+循环频移+相关器",
+  "evaluation_criteria": "BER、吞吐率、解调距离(误码率<1‰时的最大距离)",
+  "negative_result_or_admitted_limitation": "Vanilla Saiyan解调距离仅55m,需手动配置阈值且留待未来加入AGC",
+  "evidence_for_taste": [
+    "the envelope of a LoRa signal is a constant",
+    "RLC resonant circuit, inapplicable",
+    "using a high threshold alone fails to detect",
+    "using a low threshold alone causes false positives",
+    "theoretical minimum sampling rate exacerbates bit errors",
+    "the chirp signal will be transformed into an AM signal whose amplitude scales with the frequency"
+  ],
+  "thinking_moves": [
+    "把FM信号解调问题reframe成AM信号峰值追踪问题",
+    "从工程异常(信号恒定包络)反推现有方案不可行",
+    "从物理器件(SAW滤波器)特性出发找新变换路径",
+    "先证RC电路不可行(寄生电容过小),再确立SAW方案",
+    "通过循环频移将目标信号隔离到中频带来避开包络检测的噪声污染",
+    "将功率密集型ADC替换为双阈值比较器,降低量化复杂度"
+  ],
+  "topic_tags": [
+    "LoRa-backscatter",
+    "low-power-demodulator",
+    "FM-to-AM-transformation",
+    "SAW-filter",
+    "energy-harvesting"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Editorial_ ACM_Springer Mobile Networks &amp; Applications - Special Issue on Mobile Service Computing and Applications",
+  "doi": "10.1007/s11036-019-01306-7",
+  "title": "Editorial: ACM/Springer Mobile Networks & Applications - Special Issue on Mobile Service Computing and Applications",
+  "year": 2019,
+  "venue": "Mobile Networks & Applications",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "移动设备和无线技术快速发展,传统服务计算在移动环境中面临机遇",
+  "problem_framing": "移动服务计算的挑战包括持续移动性、能力受限、电力有限、安全无保证等",
+  "key_insight": "服务不再是传统平台限定,可部署在移动设备或云服务器通过无线网络交付",
+  "method_signature": "综述特刊六篇高质量论文,无原创方法提出",
+  "evaluation_criteria": "选择具有高质量的六篇论文",
+  "negative_result_or_admitted_limitation": "null",
+  "evidence_for_taste": [
+    "特刊 features six selected papers with high quality",
+    "bridging the gap between business and IT services",
+    "great challenges for both service provision and consumption",
+    "state-of-the-art research",
+    "disseminate their recent advances"
+  ],
+  "thinking_moves": [
+    "定义服务计算的范式价值——桥接业务与IT服务",
+    "识别移动环境带来的核心挑战——移动性、能力、电力、安全",
+    "通过特刊形式组织领域前沿进展",
+    "选择论文时强调问题导向与解决思路的多样性"
+  ],
+  "topic_tags": [
+    "mobile-service-computing",
+    "collaborative-filtering-recommendation",
+    "edge-computing-deployment",
+    "augmented-reality-collaboration",
+    "vm-scheduling-energy-efficiency"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "本文为期刊特刊社论,主要描述六篇入选论文的研究内容,未提出原创方法或实验验证。作者Jianwei Yin作为客座编辑参与,研究品味主要通过选择性描述论文和强调的问题域体现。"
+}

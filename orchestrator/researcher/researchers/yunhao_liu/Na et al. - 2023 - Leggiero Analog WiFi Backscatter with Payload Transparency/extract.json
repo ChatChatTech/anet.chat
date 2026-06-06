@@ -1,0 +1,41 @@
+{
+  "paper_id": "Na et al. - 2023 - Leggiero Analog WiFi Backscatter with Payload Transparency",
+  "doi": null,
+  "title": "Leggiero: Analog WiFi Backscatter with Payload Transparency",
+  "year": 2023,
+  "venue": "MobiSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Backscatter tags' μP (mW-level) wastes the ultra-low-power RF (μW-level), and existing methods corrupt WiFi carrier traffic.",
+  "problem_framing": "Eliminate microprocessor as interface; embed sensor data into WiFi CSI without modifying payload or degrading carrier throughput.",
+  "key_insight": "Reflection coefficient can be varied continuously in analog form; exploiting ESS feature in 802.11n lets sensor-embedded phase coexist with payload.",
+  "method_signature": "Varactor-diode-based passive reflective circuit converts analog voltage to RF phase; ESS CSI carries sensor data transparently.",
+  "evaluation_criteria": "Power consumption (30μW), throughput (5Kbps), WiFi carrier throughput unaffected, synchronization accuracy (250ns).",
+  "negative_result_or_admitted_limitation": "Direct voltage switching fails due to LC transient process lasting >2μs; capacitive sensors have too-large capacitance (100pF+) yielding only 1.5° phase range.",
+  "evidence_for_taste": [
+    "the reflection coefficient can not only be switched digitally but also be controlled in an analog form",
+    "does not work in practice",
+    "using a capacitor sensor is not an option",
+    "phase difference remains always very close to 0",
+    "the phase is near-linear in 0-5V",
+    "more than 200 times faster",
+    "no modification is made to the payload"
+  ],
+  "thinking_moves": [
+    "电路理论反推：refection coefficient can be varied continuously → analog control possible",
+    "否定直觉方案：先试capacitor model，发现generality和phase range/linearity问题，主动放弃",
+    "利用标准中的冗余feature：ESS本是sounding extra channel，作者借用来承载sensor data",
+    "定位工程异常的根本原因：direct voltage switching的LC transient过程导致失败",
+    "通过component-level分析找到满足power+cost+accuracy的custom方案（vs商业IC）"
+  ],
+  "topic_tags": [
+    "analog-backscatter",
+    "WiFi-CSI-embedding",
+    "battery-free-sensing",
+    "varactor-diode-phase-shifter",
+    "802.11n-ESS-exploitation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

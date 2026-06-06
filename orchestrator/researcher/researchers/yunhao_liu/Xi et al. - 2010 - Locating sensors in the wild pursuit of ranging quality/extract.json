@@ -1,0 +1,41 @@
+{
+  "paper_id": "Xi et al. - 2010 - Locating sensors in the wild pursuit of ranging quality",
+  "doi": null,
+  "title": "Locating Sensors in the Wild: Pursuit of Ranging Quality",
+  "year": 2010,
+  "venue": "SenSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "GreenOrbs森林传感器网络中GPS失效，RSSI测距受环境干扰严重，实际部署中定位误差大",
+  "problem_framing": "将定位精度问题重新定义为'测距质量'问题，包含参考节点位置精度和测距精度两个维度",
+  "key_insight": "只有少数节点测距准确；用所有节点不加区分地进行校准反而会让结果变差",
+  "method_signature": "CDL结合虚拟跳数定位、本地过滤和逐级测距质量校准三阶段迭代流程",
+  "evaluation_criteria": "定位精度、效率、且在不同环境下性能一致",
+  "negative_result_or_admitted_limitation": "经过若干轮迭代后定位误差趋于稳定不再下降；模型直接校准不可行",
+  "evidence_for_taste": [
+    "indiscriminate calibration to be even worse than before",
+    "model-based filtration is infeasible",
+    "Only a small portion of range measurements are accurate",
+    "the errors of the rest of the nodes (73%) are between 1m and 5m",
+    "environmental factors do matter in localization"
+  ],
+  "thinking_moves": [
+    "通过GreenOrbs实测发现直接套用模型校准会恶化结果，反推底层假设失效",
+    "将定位问题重构为过滤问题：通过邻里匹配区分好节点与坏节点",
+    "利用邻居数量差异来区分等跳数节点到信标的不同距离",
+    "从连通性信息出发，层层递进到序列匹配提高过滤精度",
+    "观察环境湿度影响RSSI和传输范围，反思定位质量与环境条件的关联"
+  ],
+  "topic_tags": [
+    "RSSI-ranging",
+    "wireless-sensor-network-localization",
+    "GreenOrbs-forest-deployment",
+    "node-filtration",
+    "ranging-quality"
+  ],
+  "cites_own_work": [
+    "GreenOrbs"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

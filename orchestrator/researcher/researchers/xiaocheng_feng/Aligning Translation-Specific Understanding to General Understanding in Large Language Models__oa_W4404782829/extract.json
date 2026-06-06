@@ -1,0 +1,40 @@
+{
+  "paper_id": "Aligning Translation-Specific Understanding to General Understanding in Large Language Models__oa_W4404782829",
+  "doi": "10.18653/v1/2024.emnlp-main.289",
+  "title": "Aligning Translation-Specific Understanding to General Understanding in Large Language Models",
+  "year": 2024,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "LLMs accurately understand concepts in general QA but mistranslate the same concepts literally, revealing internal misalignment",
+  "problem_framing": "Define translation failure caused by misalignment between translation-specific and general understanding as generalization failure",
+  "key_insight": "Difficult words are the bottleneck; explicitly extracting interpretations via LLM's general understanding and feeding back to guide translation aligns both understandings",
+  "method_signature": "DUAT: detect difficult words via draft+QE, generate cross-lingual interpretations, filter via interpretation quality control",
+  "evaluation_criteria": "COMET/BLEURT scores, human-annotated generalization failures and literalness ratings",
+  "negative_result_or_admitted_limitation": "DUAT increases latency due to multiple prompts; LLMs still fail on neologisms requiring extrinsic knowledge; difficult word detection remains an open question",
+  "evidence_for_taste": [
+    "Difficult words are the bottleneck in translating complex sentences",
+    "CoT makes LLMs imitate junior translators rather than advanced translators",
+    "DUAT works like senior translators to analyze the complicate words",
+    "it is the difficult words that lead to the performance bottleneck",
+    "Increasing the number of interpretations does not necessarily lead to performance improvements"
+  ],
+  "thinking_moves": [
+    "Identifies an internal inconsistency within the same model between different task contexts",
+    "Diagnoses the specific locus of failure rather than treating translation holistically",
+    "Frames solution as bridging two internal representations (translation-specific vs general)",
+    "Uses external tool (QE) to make intrinsic limitation (LLM self-knowledge failure) tractable",
+    "Translates abstract understanding alignment into concrete pipeline of detect-interpret-refine"
+  ],
+  "topic_tags": [
+    "LLM-based machine translation",
+    "translation-specific understanding misalignment",
+    "difficult word detection",
+    "cross-lingual interpretation",
+    "translation quality estimation",
+    "generalization failure"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

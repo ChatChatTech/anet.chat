@@ -1,0 +1,43 @@
+{
+  "paper_id": "2025_CIKM25_camera_ready",
+  "doi": null,
+  "title": "ProxySampler: Proxy Informativeness Estimation for Efficient Data Selection in Active Learning",
+  "year": 2025,
+  "venue": "CIKM",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "实时视频分析系统中数据选择占端到端时间的42%成为瓶颈，实际部署中手动标注全部样本不可行",
+  "problem_framing": "将数据选择时间成本建模为(嵌入+测量)×样本数×轮数的乘积，识别出三个关键因子",
+  "key_insight": "用轻量级代理估计器直接学习信息量而非通过任务模型预测，可简化假设复杂度实现可行性证明",
+  "method_signature": "ProxySampler由代理估计器和样本池化两模块组成，实现一次性特征嵌入和候选样本缩小",
+  "evaluation_criteria": "在达到相同准确率条件下时间成本降低53.6-83.3%，加速2.15-6.01倍",
+  "negative_result_or_admitted_limitation": "预训练模型与目标任务数据分布差异大时方法有效性下降",
+  "evidence_for_taste": [
+    "previously overlooked bottleneck",
+    "becomes the efficiency bottleneck",
+    "the most informative samples",
+    "directly learn informativeness",
+    "low-informativeness samples remain stable",
+    "a previously overlooked time overhead"
+  ],
+  "thinking_moves": [
+    "从真实系统时间剖析发现被忽视的性能瓶颈",
+    "将时间成本显式建模为可分解的数学公式",
+    "通过成本公式推导两个正交优化方向",
+    "观察到相邻轮次信息量变化的不对称性",
+    "将信息量学习与任务学习解耦以降低假设复杂度",
+    "使用计算学习理论中的Rademacher复杂度形式化证明可行性"
+  ],
+  "topic_tags": [
+    "active-learning-data-selection",
+    "informativeness-estimation",
+    "proxy-estimation",
+    "efficient-model-update",
+    "video-analysis-systems"
+  ],
+  "cites_own_work": [
+    "CoTel: Ontology-Neural Co-Enhanced Text Labeling (WWW 2023)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

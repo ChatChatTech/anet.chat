@@ -1,0 +1,41 @@
+{
+  "paper_id": "FedRDMA_ Communication-Efficient Cross-Silo Federated LLM via Chunked RDMA Transmission",
+  "doi": "10.48550/arxiv.2403.00881",
+  "title": "FedRDMA: Communication-Efficient Cross-Silo Federated LLM via Chunked RDMA Transmission",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RDMA在WAN上因丢包导致重传循环而失效，无法直接用于跨数据中心联邦学习通信",
+  "problem_framing": "将RDMA在WAN环境下的传输失效问题重新定义为应用层流量控制问题",
+  "key_insight": "通过分块顺序发送限制链路上同时存在的数据量，将burst流量平滑化以适应WAN",
+  "method_signature": "FedRDMA分块传输 + FedRDMA-E大页池与反向接收策略",
+  "evaluation_criteria": "端到端通信时间减少比例 vs TCP/IP基准，含PEFT兼容性和系统能耗",
+  "negative_result_or_admitted_limitation": "RDMA在WAN上运行带宽极低，无法充分利用可用带宽，一旦丢包即陷入无尽重传导致传输失败",
+  "evidence_for_taste": [
+    "communication time still constitutes a substantial 44.97%",
+    "RDMA struggles on WANs, operating only at very low bandwidths",
+    "creating a vicious cycle that causes RDMA to fall into endless retransmissions",
+    "performance degradation caused by all these additional overheads is significant",
+    "We are the first to integrate RDMA into federated learning"
+  ],
+  "thinking_moves": [
+    "从RDMA在WAN丢包重传失败的现象，反推其根因为大流量burst冲击中间节点缓存容量",
+    "将通信优化问题从网络层重框架为应用层流量整形问题，通过分块消除burst",
+    "在基本分块方案引入额外CPU开销后，进一步优化为内存池加反向接收策略以消除延迟"
+  ],
+  "topic_tags": [
+    "RDMA-WAN-adaptation",
+    "cross-silo-federated-LLM",
+    "chunked-transmission",
+    "communication-bottleneck-optimization",
+    "PEFT-integration"
+  ],
+  "cites_own_work": [
+    "FedLLM (previous federated few-shot learning work)",
+    "FedLLM (Efficient federated learning for modern NLP)",
+    "FedLLM (Federated fine-tuning across mobile devices)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Role determined by listing among authors without specific indication of first/corresponding author."
+}

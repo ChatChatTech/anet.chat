@@ -1,0 +1,41 @@
+{
+  "paper_id": "2017_TPDS_PIC_Enable_Large-Scale_Privacy_Preserving_Content-Based_Image_Search_on_Cloud",
+  "doi": null,
+  "title": "PIC: Enable Large-Scale Privacy Preserving Content-Based Image Search on Cloud",
+  "year": 2017,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "用户隐私顾虑阻碍云端图像服务普及，现有加密方案无法支持内容检索",
+  "problem_framing": "在大规模加密图像上进行非交互式相似度搜索，同时保护图像和查询隐私",
+  "key_insight": "多层次同态加密配合密钥转换实现云端密文运算，关键代理解密距离而非特征向量",
+  "method_signature": "双层搜索(聚类匹配+近邻搜索)结合MapReduce并行化",
+  "evaluation_criteria": "搜索准确率、计算开销、通信开销、隐私安全性",
+  "negative_result_or_admitted_limitation": "高分辨率图像密文过大，移动设备无法接受；MapReduce直接实现因排序导致reducer只能为1",
+  "evidence_for_taste": [
+    "homomorphic encryption to achieve private vector distance measurement, but reveal search results to the cloud",
+    "gigabytes of encrypted data would be unacceptable for many mobile devices",
+    "sorting limits the number of reducers to one",
+    "accuracy loss caused by quantizing the feature vector space",
+    "the extra overhead is due to image encryption, key modifications"
+  ],
+  "thinking_moves": [
+    "将隐私保护问题分解为多层密钥管理，通过密钥转换而非重加密实现权限移交",
+    "从准确最近邻搜索退化为近似搜索以换取并行化可行性",
+    "通过视觉词袋量化降低特征向量维度，从而压缩密文大小"
+  ],
+  "topic_tags": [
+    "homomorphic-encryption",
+    "privacy-preserving-search",
+    "image-retrieval",
+    "cloud-outsourcing",
+    "access-control"
+  ],
+  "cites_own_work": [
+    "[12] PoP: Privacy-preserving outsourced photo sharing and searching for mobile devices",
+    "[3] Privacy-friendly photo capturing and sharing system",
+    "[39] Message in a sealed bottle: Privacy preserving friending in mobile social networks"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

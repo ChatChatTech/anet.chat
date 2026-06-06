@@ -1,0 +1,36 @@
+{
+  "paper_id": "Global-Local Aware Scene Text Editing",
+  "doi": "10.48550/arxiv.2512.03574",
+  "title": "Global-Local Aware Scene Text Editing",
+  "year": null,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有STE方法存在patch与周围区域不一致、长度敏感性问题，导致编辑效果视觉不协调",
+  "problem_framing": "将局部patch生成问题重新定义为全局局部联合优化，通过先inpainting后渲染的方式保证一致性",
+  "key_insight": "风格向量与图像尺寸解耦+affine fusion显式控制目标文本大小可有效解决长度变化问题",
+  "method_signature": "GLASTE: FFC背景inpainting + style/content encoder + AdaIN合成 + affine fusion融合",
+  "evaluation_criteria": "图像质量(MSE/PSNR/SSIM/LPIPS/FID)与文本识别精度(Acc/CER)双维度评估",
+  "negative_result_or_admitted_limitation": "扩散模型在随机字符组合上容易重复或遗漏，且训练推理资源消耗大",
+  "evidence_for_taste": [
+    "lack of coherence between the edited text patch",
+    "difficulty in text length differences",
+    "significantly reduces shadow artifacts",
+    "Accuracy: only 4.9",
+    "slight overfitting"
+  ],
+  "thinking_moves": [
+    "从crop-paste策略的根本缺陷(不考虑全局上下文)反推解决方案需转向全局局部联合视角",
+    "通过ablation验证AdaIN优于cross-attention，揭示条件注入方式对生成质量的影响",
+    "发现paired data对抑制过拟合的作用，说明自监督场景下显式监督信号的价值"
+  ],
+  "topic_tags": [
+    "scene-text-editing",
+    "global-local-harmony",
+    "affine-text-style-transfer",
+    "FFT-inpainting",
+    "multi-module-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

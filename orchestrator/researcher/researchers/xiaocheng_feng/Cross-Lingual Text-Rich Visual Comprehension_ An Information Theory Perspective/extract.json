@@ -1,0 +1,39 @@
+{
+  "paper_id": "Cross-Lingual Text-Rich Visual Comprehension_ An Information Theory Perspective",
+  "doi": "10.48550/arxiv.2412.17787",
+  "title": "Cross-Lingual Text-Rich Visual Comprehension: An Information Theory Perspective",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "跨语言场景日益普遍,但LVLM在图像文字语言与提问语言不一致时性能严重下降(32.6%),缺乏有效评估和解决方法",
+  "problem_framing": "将跨语言文本丰富视觉问答形式化为源语言图像文本与目标语言问题之间的语言不一致问题,通过互信息量化视觉信息激活程度",
+  "key_insight": "跨语言问题未能充分激活相关视觉信息,性能下降与互信息下降强相关;可通过KL散度蒸馏从单语言向跨语言迁移知识",
+  "method_signature": "MVCL-MI:最大化视觉-语言跨语言互信息,通过KL散度最小化将单语言logits蒸馏到跨语言设置",
+  "evaluation_criteria": "F1分数和准确率衡量跨语言性能差距,关注忠实度而非答案语言",
+  "negative_result_or_admitted_limitation": "直接最小化熵会导致模型学习捷径,产生尖锐的输出分布;即使如Qwen-VL-Chat等微调过多语言数据的模型也表现出明显的跨语言性能差距",
+  "evidence_for_taste": [
+    "跨语言问题未能充分激活相关视觉信息",
+    "直接最小化熵会导致模型学习捷径",
+    "跨语言性能下降与互信息下降强相关",
+    "包含多语言数据的训练表现出相对一致的跨语言性能",
+    "需要忠实识别和理解视觉信息"
+  ],
+  "thinking_moves": [
+    "引入信息论框架量化视觉激活问题,将性能差距归因于互信息不足",
+    "用KL散度作为训练目标而非直接优化熵,避免尖锐分布捷径",
+    "通过消融实验验证各损失项的必要性,确认KL损失和跨语言交叉熵都有效",
+    "从工程现象(性能差距)追溯到信息论解释(互信息不足)",
+    "提出蒸馏方案而非端到端训练,保持单语言能力"
+  ],
+  "topic_tags": [
+    "跨语言多模态理解",
+    "LVLM基准测试",
+    "信息论视角",
+    "视觉-语言对齐",
+    "互信息蒸馏"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

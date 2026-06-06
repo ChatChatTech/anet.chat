@@ -1,0 +1,39 @@
+{
+  "paper_id": "CAI_ Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models",
+  "doi": "10.48550/arxiv.2506.23590",
+  "title": "CAI: Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有方法要么需要昂贵的标注/训练成本,要么显著增加推理延迟,需要一种低成本、无训练的幻觉缓解方法",
+  "problem_framing": "将幻觉问题重新定义为注意力机制缺陷：LVLM对视觉token的注意力不足导致生成与视觉信息冲突的内容",
+  "key_insight": "LVLM在回答caption查询时对视觉信息的注意力显著强于非caption查询,可识别并精细化caption-sensitive attention heads来增强视觉感知",
+  "method_signature": "训练-free方法,通过SVM二分类器识别caption-sensitive heads,在推理时应用预计算的注意力输出位移向量进行干预",
+  "evaluation_criteria": "POPE准确率/F1、MME感知分数、CHAIR句子/实例级幻觉率、MMHal-Bench信息丰富度",
+  "negative_result_or_admitted_limitation": "CAI依赖合适的caption查询可用性;不适用于不依赖multi-head attention的LVLM",
+  "evidence_for_taste": [
+    "minimal additional inference cost",
+    "SOTA hallucination mitigating performance",
+    "does not rely on specific models or data",
+    "balance between enhancing visual perception and maintaining the integrity of other foundational capabilities",
+    "minimal necessary attention weight shift",
+    "vision-centric optimization direction"
+  ],
+  "thinking_moves": [
+    "通过观察不同查询类型下注意力权重的差异,将perception问题转化为attention mechanism探测问题",
+    "把caption query作为激活模型视觉感知能力的触发器,而非简单的数据增强",
+    "用二分类器Probe而非手工定义来识别关键attention heads",
+    "承认方法的适用范围依赖特定架构前提"
+  ],
+  "topic_tags": [
+    "LVLM-hallucination-mitigation",
+    "attention-head-analysis",
+    "training-free-intervention",
+    "caption-query-utilization",
+    "visual-perception-enhancement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

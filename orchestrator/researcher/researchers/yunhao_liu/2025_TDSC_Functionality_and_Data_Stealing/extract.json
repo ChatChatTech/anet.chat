@@ -1,0 +1,40 @@
+{
+  "paper_id": "2025_TDSC_Functionality_and_Data_Stealing",
+  "doi": null,
+  "title": "Functionality and Data Stealing by Pseudo-Client Attack and Target Defenses in Split Learning",
+  "year": 2025,
+  "venue": "IEEE Transactions on Dependable and Secure Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有split learning攻击需要知道客户端模型结构,且对复杂模型失效,服务器有强动机窃取客户端功能和数据",
+  "problem_framing": "在半诚实服务器假设下,未知客户端模型结构时,如何窃取客户端功能、重建输入、推断标签",
+  "key_insight": "服务器模型本身包含足够知识训练伪客户端模型;中间服务器模型序列可引导伪客户端更好收敛",
+  "method_signature": "伪客户端攻击:训练伪客户端映射输入到服务器模型目标特征空间",
+  "evaluation_criteria": "功能窃取准确率、输入重建质量、对抗非独立同分布和差分隐私的鲁棒性",
+  "negative_result_or_admitted_limitation": "原始意图添加噪声保护隐私,却意外增强伪客户端窃取能力",
+  "evidence_for_taste": [
+    "too large to converge",
+    "performance deteriorates dramatically",
+    "surprised to discover",
+    "adding noise does not prevent PCAT",
+    "the solution we deal with is initializing several pairs",
+    "can not avoid the F̃ ≠ F case"
+  ],
+  "thinking_moves": [
+    "将模型窃取问题从参数级重新定义为功能级——只需学到映射而非精确参数",
+    "借鉴知识蒸馏的soft label思想,但要求同步训练而非事后迁移",
+    "通过服务器模型演化序列构造学习目标,扩展攻击时间窗口",
+    "把防御攻击的问题反过来frame为制造任务不一致性",
+    "意外发现反直觉现象(加噪声反而增强攻击)后深入分析其机制"
+  ],
+  "topic_tags": [
+    "split-learning-privacy-attack",
+    "model-functionality-stealing",
+    "model-inversion-attack",
+    "knowledge-distillation-attack",
+    "semi-honest-server-attack"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

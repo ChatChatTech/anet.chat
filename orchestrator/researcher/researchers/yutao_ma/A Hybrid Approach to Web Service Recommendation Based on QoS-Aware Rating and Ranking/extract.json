@@ -1,0 +1,37 @@
+{
+  "paper_id": "A Hybrid Approach to Web Service Recommendation Based on QoS-Aware Rating and Ranking",
+  "doi": "10.48550/arxiv.1501.04298",
+  "title": "A Hybrid Approach to Web Service Recommendation Based on QoS-Aware Rating and Ranking",
+  "year": 2015,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "Web服务数量激增，用户更关注QoS排序而非精确评分，但高评分预测准确性不等于好的排序效果",
+  "problem_framing": "将Web服务推荐问题重新定义为排序预测问题，目标是最小化推荐列表与理想列表的差异",
+  "key_insight": "用排名相关系数(KRCC)替代传统评分相似度，让相似性度量捕捉相对排序关系而非绝对评分差异",
+  "method_signature": "2RHyRec混合模型：融合基线估计、基于项目的CF(用KRCC)和隐因子模型(SVD)，通过β参数平衡邻居模型与全局模型",
+  "evaluation_criteria": "使用NDCG-k评估Top-K推荐列表的排序准确性，而非仅用RMSE评估评分预测准确性",
+  "negative_result_or_admitted_limitation": "实验仅用响应时间子集且数据集较小(339用户5825服务)，威胁外部效度；多参数调试可能陷入局部最优",
+  "evidence_for_taste": [
+    "high accuracy of rating prediction may not necessarily lead to a satisfactory recommendation result",
+    "accurate rating predictions do not definitely lead to better recommendation performance",
+    "how to recommend the top K appropriate Web services is actually a quality ranking issue"
+  ],
+  "thinking_moves": [
+    "将问题从评分预测reframe为排序预测",
+    "用排名相关代替评分相关作为相似度度量",
+    "组合邻居模型与隐因子模型互补分析矩阵",
+    "先理论说明再经验验证参数敏感性",
+    "用自适应学习率保证SGD收敛"
+  ],
+  "topic_tags": [
+    "QoS-aware recommendation",
+    "ranking-oriented CF",
+    "Kendall rank correlation",
+    "hybrid collaborative filtering",
+    "Web service selection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "2020_TETC_AppDNA_Profiling_App_Behavior_via_Deep-Learning_on_Function_Call_Graphs",
+  "doi": null,
+  "title": "AppDNA: Profiling App Behavior via Deep-Learning on Function Call Graphs",
+  "year": 2020,
+  "venue": "IEEE Transactions on Emerging Topics in Computing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "海量app的行为理解、分类、推荐缺乏统一有效的特征表示方法",
+  "problem_framing": "如何从函数调用图中自动学习任务无关的紧凑向量表示",
+  "key_insight": "用系统函数集合(稳定一致的)作为行为签名来排序用户函数，可抵御重命名和代码重排",
+  "method_signature": "FCG图编码 + Autoencoder无监督压缩 + 多任务复用",
+  "evaluation_criteria": "恶意检测准确率、家族分类准确率、功能分类准确率、运行时间",
+  "negative_result_or_admitted_limitation": "现有方法依赖手工特征和大量标注数据；静态分析无法处理反射、动态加载和Native代码",
+  "evidence_for_taste": [
+    "handcrafted task-specific features",
+    "rely on extensive labeled training data",
+    "does not meet the robustness requirements",
+    "cannot deal with graphs with varying sizes",
+    "output of GNNs is invariant for the input order of nodes",
+    "function inlining and outlining can be used to hide the call graph structure"
+  ],
+  "thinking_moves": [
+    "用稳定的行为描述(系统函数调用)对抗易变的手写标签",
+    "把图遍历顺序设计成对重命名和代码重排不敏感",
+    "通过多数投票机制消除同一集合内系统函数调用顺序的影响",
+    "用autoencoder实现无监督学习避免标注瓶颈",
+    "图神经网络(GNN)的输入不变性不适合需要序列敏感遍历的有向调用图"
+  ],
+  "topic_tags": [
+    "android-malware-detection",
+    "function-call-graph-embedding",
+    "unsupervised-representation-learning",
+    "graph-traversal-robustness",
+    "autoencoder-compression"
+  ],
+  "cites_own_work": [
+    "AppDNA conference version at IEEE INFOCOM 2018"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

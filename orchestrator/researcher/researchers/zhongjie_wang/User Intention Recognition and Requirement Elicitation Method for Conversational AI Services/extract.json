@@ -1,0 +1,42 @@
+{
+  "paper_id": "User Intention Recognition and Requirement Elicitation Method for Conversational AI Services",
+  "doi": "10.48550/arxiv.2009.01509",
+  "title": "User Intention Recognition and Requirement Elicitation Method for Conversational AI Services",
+  "year": 2020,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "chat-bot服务常与用户期望不符，因用户表达不完整不确定与服务资源多样性，需用多轮对话引导但轮数过多体验差",
+  "problem_framing": "将用户模糊需求识别转化为知识图谱实体推理，用粒计算实现对话策略自动生成以减少轮数",
+  "key_insight": "粒计算能自动划分连续变量模糊边界，无需人工预设阈值，且能多维聚合服务而非逐属性询问",
+  "method_signature": "KG推理+GrC聚类剪枝实现多轮对话策略，替代预设规则和逐属性slot填充",
+  "evaluation_criteria": "Hit rate和平均对话轮数，优先减少轮数而非单一指标最优",
+  "negative_result_or_admitted_limitation": "多跳文本需求无法清晰识别，剪枝策略仍需离线预处理，希望未来在线实时",
+  "evidence_for_taste": [
+    "the services it provides are not what users expect",
+    "a 36.1% decreasing in the average rounds",
+    "1% decreasing in accuracy",
+    "GrC method solves the problem of the fuzzy boundary",
+    "Artificial can define more than a particular value means expensive",
+    "We believe that a 36.1% decreasing would make the conversational AI bot user experience better"
+  ],
+  "thinking_moves": [
+    "把对话策略生成从在线计算转为离线预计算，用GrC结果树引导实时询问",
+    "用多维聚合代替单属性递进询问，减少对话轮数而不降低语义理解能力",
+    "接受1%准确率损失换取36%轮数减少，explicitly prioritize用户体验 over单一指标",
+    "从工程异常(模糊价格描述)反推连续变量边界需自动划分而非人工阈值"
+  ],
+  "topic_tags": [
+    "conversational-AI-intention-recognition",
+    "knowledge-graph-fuzzy-reasoning",
+    "granular-computing-dialog-policy",
+    "multi-round-dialogue-pruning",
+    "BERT-fine-tuning-domain-adaptation"
+  ],
+  "cites_own_work": [
+    "E-sbot: A soft service robot for user-centric smart service delivery (2019)",
+    "Crowdsourcing service requirement oriented requirement pattern elicitation method (2019)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

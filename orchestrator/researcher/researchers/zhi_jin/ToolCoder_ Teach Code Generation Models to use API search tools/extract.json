@@ -1,0 +1,40 @@
+{
+  "paper_id": "ToolCoder_ Teach Code Generation Models to use API search tools",
+  "doi": "10.48550/arxiv.2305.04032",
+  "title": "ToolCoder: Teach Code Generation Models to use API search tools",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "代码生成模型在选择合适的API时遇到困难，尤其对于小众或私有库，错误率超过90%",
+  "problem_framing": "将人类程序员使用搜索工具选择API的过程，形式化为API Search Tool并嵌入代码生成模型",
+  "key_insight": "通过ChatGPT自动标注数据集来教模型使用搜索工具，比多阶段pipeline更灵活且泛化性强",
+  "method_signature": "ToolCoder: ChatGPT自动标注+LoRA参数高效微调+推理时API搜索工具增强",
+  "evaluation_criteria": "pass@1和pass@10在公开库和私有库基准上与SOTA和GPT-3.5对比",
+  "negative_result_or_admitted_limitation": "私有库上仅靠数据标注改进有限，需配合文档搜索工具；没有工具时私有库性能急剧下降",
+  "evidence_for_taste": [
+    "more than 26% of the APIs generated have the problems",
+    "the failure rate will increase to more than 90%",
+    "the improvement comes from our dataset annotation process",
+    "For private libraries...this form of dataset annotation is challenging",
+    "our relatively small ToolCoder model is comparable to GPT-3.5",
+    "at least 6.21% improvement on average pass@1 metrics"
+  ],
+  "thinking_moves": [
+    "从人类程序员使用搜索工具选择API的行为获得启发，将其形式化",
+    "发现现有模型生成不存在API的问题后，用实证数据量化痛点",
+    "将API搜索工具抽象为统一接口以适配不同类型库",
+    "采用参数高效微调降低计算资源门槛",
+    "在解码过程中动态插入工具调用而非多阶段生成"
+  ],
+  "topic_tags": [
+    "code-generation-llm",
+    "api-selection",
+    "tool-augmented-model",
+    "private-library-code-generation",
+    "automated-data-annotation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

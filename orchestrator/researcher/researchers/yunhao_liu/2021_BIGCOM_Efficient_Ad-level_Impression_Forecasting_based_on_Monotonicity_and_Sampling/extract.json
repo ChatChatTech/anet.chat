@@ -1,0 +1,38 @@
+{
+  "paper_id": "2021_BIGCOM_Efficient_Ad-level_Impression_Forecasting_based_on_Monotonicity_and_Sampling",
+  "doi": null,
+  "title": "Efficient Ad-level Impression Forecasting based on Monotonicity and Sampling",
+  "year": 2021,
+  "venue": "BIGCOM",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "页面级方法需为每个展示机会计算胜出分数，资源消耗大；采样存储导致覆盖率低和赢率估计不准",
+  "problem_framing": "将广告展示量预测分解为基准展示量×调整系数，采用XGBoost估计基准量，高斯分布建模调整系数",
+  "key_insight": "胜率曲线类似于高斯分布的累积分布函数，可用RANSAC拟合参数并剔除异常点，同时确保单调性",
+  "method_signature": "ACMIF：XGBoost估计基准展示量 + RANSAC高斯分布建模赢率曲线",
+  "evaluation_criteria": "准确率(相对误差阈值τ=0.2/0.5)和覆盖率(1h/12h)",
+  "negative_result_or_admitted_limitation": "THR因稀疏采样覆盖率仅35.6%，页面级方法需计算每个展示机会的eCPM分数非常耗时",
+  "evidence_for_taste": [
+    "this is very similar to the cumulative distribution function",
+    "ensures that the impressions must increase monotonically",
+    "very time-consuming because they have to calculate the eCPM",
+    "improve the model's generalization ability for the missing values",
+    "solved the problems of outlier and sparse sampling"
+  ],
+  "thinking_moves": [
+    "观察胜率曲线形状，类比为高斯分布CDF进行建模",
+    "从业务约束(单调性)反推必须用参数化方法而非通用ML模型",
+    "稀疏采样无法满足RANSAC的3点要求，故设计回溯策略提升覆盖率",
+    "将时序预测问题拆解为两个可独立建模的子问题"
+  ],
+  "topic_tags": [
+    "ad-impression-forecasting",
+    "RTB-auction",
+    "gaussian-fitting",
+    "RANSAC",
+    "monotonicity-constraint"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

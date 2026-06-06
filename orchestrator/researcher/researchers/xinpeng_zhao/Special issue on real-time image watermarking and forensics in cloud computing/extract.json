@@ -1,0 +1,39 @@
+{
+  "paper_id": "Special issue on real-time image watermarking and forensics in cloud computing",
+  "doi": "10.1007/s11554-019-00881-y",
+  "title": "Special issue on real-time image watermarking and forensics in cloud computing",
+  "year": 2019,
+  "venue": "Journal of Real-Time Image Processing",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "云端多媒体数据处理日益增长,现有水印和取证技术因计算复杂度高且条件严苛而难以实用",
+  "problem_framing": "如何实现可应用于云计算的实时图像水印和取证技术,并保证隐私保护",
+  "key_insight": "通过分类综述21篇论文,揭示实时性、计算效率是连接学术研究与实际云端应用的核心瓶颈",
+  "method_signature": "特殊issue综述:5类技术+21篇论文分类概述",
+  "evaluation_criteria": "实时性能、计算复杂度、嵌入率、图像质量、统计安全性",
+  "negative_result_or_admitted_limitation": "当前研究方法基于不现实的严苛条件,高计算复杂度限制实际应用",
+  "evidence_for_tour_taste": [
+    "computational complexity is also an important criterion",
+    "high computational complexity makes it difficult to cope with big data",
+    "leading to lower computational efficiency",
+    "MCDH may be compromised under the condition of steganography over lossy channel",
+    "one-bit error in MCDH may change to multi-bit errors",
+    "low computation efficiency of this scheme"
+  ],
+  "thinking_moves": [
+    "通过分类综述组织领域全景,揭示实时性是核心缺口",
+    "从反面识别当前研究的三大约束:严苛条件、计算复杂度、实用性",
+    "把计算效率提升作为连通学术与工业界的关键评价维度",
+    "强调隐私保护与云计算的实际场景驱动研究需求"
+  ],
+  "topic_tags": [
+    "real-time-watermarking",
+    "cloud-forensics",
+    "computational-complexity",
+    "reversible-data-hiding",
+    "steganography-steganalysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "这是特殊issue编辑引言而非原创研究论文,缺乏具体方法细节。内容是对21篇已录用论文的分类概述,作者本人的研究品味主要通过选择综述主题和强调的评价维度体现。需按partial处理,部分字段无法提取完整信息。"
+}

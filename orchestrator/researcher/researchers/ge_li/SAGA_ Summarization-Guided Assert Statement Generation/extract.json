@@ -1,0 +1,38 @@
+{
+  "paper_id": "SAGA_ Summarization-Guided Assert Statement Generation",
+  "doi": "10.48550/arxiv.2305.14808",
+  "title": "SAGA: Summarization-Guided Assert Statement Generation",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有深度学习模型仅依赖测试前缀和焦点方法生成断言，忽略了开发者编写的摘要信息",
+  "problem_framing": "将断言生成建模为文本到文本的序列生成任务，使用CodeT5融合代码与摘要两种模态",
+  "key_insight": "开发者撰写的摘要包含意图相关参数（如delta值），可补充源代码中缺失的关键断言信息",
+  "method_signature": "基于CodeT5预训练模型，用特殊token隔离测试前缀、焦点方法和摘要三种输入模态",
+  "evaluation_criteria": "准确率（完全匹配）、BLEU-4、ROUGE-L三种指标综合评估",
+  "negative_result_or_admitted_limitation": "T5在修改后的数据集上表现不佳，因断言语句更长且包含未知token；模型依赖预训练参数而非自适应调整",
+  "evidence_for_taste": [
+    "SAGA substantially outperforms",
+    "the summarization may have explicitly given the intent-related parameter",
+    "we observe that some intent-related parameters within the assert statements can be directly discovered in the summarization contents but not in the source code implementations",
+    "SAGA is able to consistently outperform the baselines in all the assert statement types",
+    "the easier it is to transform an incorrect assert statement into a correct assert statement, the more useful"
+  ],
+  "thinking_moves": [
+    "从现有模型盲点出发——源码中没有但摘要中有的参数信息",
+    "将自然语言摘要作为代码生成的额外guidance信号",
+    "先证摘要有效（消融实验），再做全面基线对比",
+    "区分exact match和semantic equivalence两种评估视角"
+  ],
+  "topic_tags": [
+    "assert-statement-generation",
+    "code-summarization",
+    "pre-trained-language-model",
+    "test-case-generation",
+    "codeNL-pairs"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "arXiv论文无正式发表年份，根据arXiv ID和引用推断为2023年；作者Ge Li为第五位共同作者，负责PKU实验室工作 | md truncated to head40k+tail20k"
+}

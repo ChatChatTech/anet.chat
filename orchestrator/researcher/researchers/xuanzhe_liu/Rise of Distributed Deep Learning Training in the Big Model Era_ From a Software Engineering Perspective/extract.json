@@ -1,0 +1,38 @@
+{
+  "paper_id": "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective",
+  "doi": "10.48550/arxiv.2112.06222",
+  "title": "Rise of Distributed Deep Learning Training in the Big Model Era: From a Software Engineering Perspective",
+  "year": 2023,
+  "venue": "J. ACM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "分布式训练中开发者遇到的独特挑战在软件工程社区中尚未被研究，存在知识鸿沟。",
+  "problem_framing": "对Stack Overflow和GitHub上1,131个分布式训练相关问题进行实证分析，构建30类细粒度故障症状分类法。",
+  "key_insight": "分布式特定故障与非分布式故障共享相同症状表象，但根因不同，这增加了调试难度；大多数故障症状有频繁的修复模式。",
+  "method_signature": "基于关键字挖掘SO和GitHub问题，手动标注与仲裁，统计故障分布与修复模式。",
+  "evaluation_criteria": "Cohen's Kappa衡量标注一致性（κ=0.95细化阶段，κ=0.88可靠性阶段）。",
+  "negative_result_or_admitted_limitation": "误差信息难以理解导致安装失败类故障难以进一步分类（\"error messages in this stage are difficult to understand\"）。",
+  "evidence_for_taste": [
+    "error messages in this stage are difficult to understand",
+    "making it challenging to debug",
+    "faults share the same fault symptoms",
+    "have frequent fix patterns",
+    "about half of the faults are related to system-level configurations"
+  ],
+  "thinking_moves": [
+    "从工程问题表象反推底层根因差异（共享症状但来源不同）",
+    "从开发者实际遇到的问题（而非框架设计）出发定义研究范围",
+    "通过关键词迭代筛选确保90%召回率以捕捉分布式训练相关问题",
+    "关注修复模式而非仅故障类型，为自动化修复铺路"
+  ],
+  "topic_tags": [
+    "distributed-training-debugging",
+    "DL-software-fault-taxonomy",
+    "empirical-software-engineering",
+    "multi-GPU-training-issues",
+    "developer-QA-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

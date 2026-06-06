@@ -1,0 +1,37 @@
+{
+  "paper_id": "2019_BIGCOM_Noisy_Data_Collection_Towards_Diversity_Maximization",
+  "doi": null,
+  "title": "Noisy Data Collection Towards Diversity Maximization",
+  "year": 2019,
+  "venue": "BIGCOM",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "现实数据普遍存在噪声，但现有数据收集方法假设无噪，忽略噪声分布导致效率低下",
+  "problem_framing": "给定含噪数据集D和基数约束k，最大化所选子集的期望平均距离(多样性)",
+  "key_insight": "噪声服从正态分布时，距离平方服从chi-square分布，可推导闭式近似公式，替代耗时的采样曲线拟合",
+  "method_signature": "推导距离PDF闭式解+随机采样加速贪心选择，时间复杂度从O(nk²)降至O(kk₁k₂)",
+  "evaluation_criteria": "收集数据集的多样性(平均距离)接近通用贪心算法，时间消耗低数个数量级",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "data generally has noise",
+    "diversified uncertain data",
+    "well balance the calculation efficiency and accuracy",
+    "can be approximately treated as a normal distribution",
+    "several orders of magnitude faster"
+  ],
+  "thinking_moves": [
+    "从采样曲线拟合改为闭式数学推导，利用chi-square分布性质",
+    "对高维Q近似为正态分布(大数定律)，简化计算",
+    "用Hoeffding不等式为随机采样方法提供理论保证",
+    "通过调整样本量在效率和精度间权衡"
+  ],
+  "topic_tags": [
+    "noisy-data-collection",
+    "diversity-maximization",
+    "uncertain-data",
+    "chi-square-distribution",
+    "random-sampling-acceleration"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

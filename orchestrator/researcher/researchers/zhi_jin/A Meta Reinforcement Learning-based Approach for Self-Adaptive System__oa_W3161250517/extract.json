@@ -1,0 +1,42 @@
+{
+  "paper_id": "A Meta Reinforcement Learning-based Approach for Self-Adaptive System__oa_W3161250517",
+  "doi": "10.48550/arxiv.2105.04986",
+  "title": "A Meta Reinforcement Learning-based Approach for Self-Adaptive System",
+  "year": 2021,
+  "venue": "ArXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有'Re-'重规划方法耗时长、耗资源，导致运行时效能下降；需解决多模型条件下的适应策略学习问题",
+  "problem_framing": "将不完全信息学习定义为多模型问题——需找到能应对多种环境系统动力学模型的适应策略",
+  "key_insight": "按分离关注点原则将空间环境、系统能力、用户目标分别建模并合成 MDPs，再用元强化学习跨多模型训练元策略实现快速在线适应",
+  "method_signature": "基于MAML的元强化学习+分离关注点建模+离线训练-在线适应-在线执行三阶段流程",
+  "evaluation_criteria": "重规划时间(相对OPE的百分比)、策略质量(累积奖励)、效用函数权衡离线训练时间与在线性能",
+  "negative_result_or_admitted_limitation": "离线模型未覆盖用户目标时会被误导至局部最优；元学习算法通常只适用于相似任务",
+  "evidence_for_taste": [
+    "re-planning time of our approach is significantly reduced to 0.63% of that of online policy evolution",
+    "in most cases, MeRAP is quicker than the baselines",
+    "if the offline models do not cover the real user's objectives, MeRAP will be misled by the offline knowledge to a local optimum",
+    "disquieting problem"
+  ],
+  "thinking_moves": [
+    "将适应策略优化问题转化为状态动作序列的累积奖励最大化问题",
+    "按分离关注点原则拆分环境系统动力学以便模型修订",
+    "用元学习实现'学会学习'而非从零学习",
+    "离线积累多模型先验知识换取在线快速微调",
+    "承认局部最优陷阱并讨论泛化边界"
+  ],
+  "topic_tags": [
+    "meta-reinforcement-learning",
+    "self-adaptive-systems",
+    "separation-of-concerns",
+    "multiple-model-problem",
+    "MDP-synthesis",
+    "online-adaptation"
+  ],
+  "cites_own_work": [
+    "Zhao et al. (2017)",
+    "Zhang et al. (2016)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

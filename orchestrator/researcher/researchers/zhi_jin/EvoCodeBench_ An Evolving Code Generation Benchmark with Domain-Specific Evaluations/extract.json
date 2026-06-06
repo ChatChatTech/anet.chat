@@ -1,0 +1,42 @@
+{
+  "paper_id": "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations",
+  "doi": "10.48550/arxiv.2410.22821",
+  "title": "EvoCodeBench: An Evolving Code Generation Benchmark with Domain-Specific Evaluations",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "现有代码生成基准存在数据泄露问题,且缺乏领域特定的评估方法,无法帮助从业者选择特定领域的优秀LLM",
+  "problem_framing": "将问题定义为构建动态演进的基准测试,包含最新仓库以避免数据泄露,并设计10个流行领域的分类体系",
+  "key_insight": "LLM在不同领域表现差异显著,总体Pass@1最高的模型在特定领域可能反而落后,必须通过领域特定改进(DSI)指标来揭示",
+  "method_signature": "基于四阶段流水线构建进化基准,使用LLM自动标注需求和领域标签,计算Pass@k和DSI指标",
+  "evaluation_criteria": "Pass@k(功能正确性)、Recall@k(依赖召回)、Domain-Specific Improvement(DSI,领域相对提升)",
+  "negative_result_or_admitted_limitation": "EvoCodeBench仅支持Python单语言,且当前规模小于部分已有基准;自动标注可能遗漏超参数等必要细节",
+  "evidence_for_taste": [
+    "significantly alleviates the data leakage",
+    "decreases the potential leak rate from 41.47% to 2.18%",
+    "reveals the actual abilities",
+    "help practitioners select superior LLMs",
+    "discover the shortcomings of existing LLMs",
+    "more challenging",
+    "alleviate two limitations",
+    "unexpectedly performs well",
+    "comfort domains and strange domains"
+  ],
+  "thinking_moves": [
+    "通过数据泄露检测工具(CDD)量化基准可信度,建立可度量的质量标准",
+    "从整体指标差异推断领域特定表现差异,避免被聚合指标误导",
+    "将领域分布设计锚定于PyPI社区真实统计数据,提升生态有效性",
+    "通过DSI公式将跨模型比较转化为相对优势,便于从业者决策"
+  ],
+  "topic_tags": [
+    "code-generation-benchmark",
+    "LLM-evaluation",
+    "data-leakage-detection",
+    "domain-specific-analysis",
+    "repo-level-code-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为arXiv预印本,年份和 venue 信息未在正文中明确给出;作者列表中标注了Zhi Jin为合作作者,但具体角色(first/corresponding)需对照作者署名确认 | md truncated to head40k+tail20k"
+}

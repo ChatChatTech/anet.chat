@@ -1,0 +1,38 @@
+{
+  "paper_id": "Towards Better Summarizing Bug Reports with Crowdsourcing Elicited∩ü£n Attributes",
+  "doi": "10.48550/arxiv.1810.00125",
+  "title": "Towards Better Summarizing Bug Reports with Crowdsourcing Elicited Attributes",
+  "year": 2018,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "开发者阅读大量bug报告耗时费力,现有监督方法依赖1-3人设计特征,难以获得足够有效特征",
+  "problem_framing": "将特征构造问题重新定义为众包数据驱动的属性推断问题,通过heuristic construction rules从群体决策理由中提取特征",
+  "key_insight": "众人决策理由中隐含特征构造启发,众包可克服传统方法中研究者人数有限的瓶颈,系统化生成有效特征",
+  "method_signature": "Crowd-Attribute(CA)+LRCA: 众包提取特征理由,经HCRs三阶段构造11个新特征,训练逻辑回归模型",
+  "evaluation_criteria": "SDS(36报告)和BRSBs(105177报告)上P/R/F/Pyramid;对比BRC基线和无监督方法",
+  "negative_result_or_admitted_limitation": "众包质量和数量是威胁,需多人互补;固体SE知识非必需,志愿者可互相补充",
+  "evidence_for_taste": [
+    "mostly 1-3 persons are involved",
+    "no universal method exists",
+    "more effective attributes",
+    "solid SE knowledge is not mandatory",
+    "volunteers could complement with each other"
+  ],
+  "thinking_moves": [
+    "调查MSR中特征构造方法,发现实践依赖少数人经验且缺乏系统化方法",
+    "将众包流程适配到特征工程:志愿者提供解决方案而非答案,研究者从中提取特征设计启发",
+    "提出三阶段Heuristic Construction Rules将非结构化理由转化为结构化特征",
+    "承认众包的质量和数量风险,但论证多人互补可缓解"
+  ],
+  "topic_tags": [
+    "bug-report-summarization",
+    "crowdsourcing-attribute-construction",
+    "mining-software-repositories",
+    "supervised-learning-features",
+    "heuristic-construction-rules"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2014 - Towards Network-level Efficiency for Cloud Storage Services",
+  "doi": null,
+  "title": "Towards Network-level Efficiency for Cloud Storage Services",
+  "year": 2014,
+  "venue": "IMC",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "云存储同步流量巨大，给服务商和用户都带来财务负担，需量化流量使用效率",
+  "problem_framing": "定义TUE指标量化同步流量效率，通过trace和实验分析六种服务的流量开销来源",
+  "key_insight": "大量同步流量本质上是浪费的，通过精心设计的同步机制可有效避免或大幅降低",
+  "method_signature": "trace测量+对照实验，测量创建/删除/修改等操作的流量TUE，跨PC/网页/移动端",
+  "evaluation_criteria": "TUE（总同步流量/数据更新大小）作为核心指标，测量各服务的流量开销效率",
+  "negative_result_or_admitted_limitation": "压缩与分块去重同时实现技术上困难，建议只实现压缩和全文去重；固定同步延迟在某些场景低效",
+  "evidence_for_taste": [
+    "considerable portion of the data sync traffic is in a sense wasteful",
+    "can be effectively avoided or significantly reduced",
+    "implementing compression and block-level deduplication together is technically challenging",
+    "Surprisingly, users with relatively poor hardware or Internet access save on sync traffic",
+    "fixed sync deferments are inefficient in some scenarios"
+  ],
+  "thinking_moves": [
+    "从财务痛点出发定义效率指标TUE，借鉴PUE的命名方式",
+    "通过trace发现77%是小文件，两 thirds可批量同步以节省开销",
+    "意外发现：网络差或硬件慢的用户反而节省流量，因更新自然被批处理",
+    "承认某些技术组合实现困难，建议务实的简化方案"
+  ],
+  "topic_tags": [
+    "cloud-storage-sync",
+    "traffic-efficiency-metric",
+    "data-sync-mechanism",
+    "compression-deduplication",
+    "network-level-efficiency"
+  ],
+  "cites_own_work": [
+    "Li et al. 2013 - Efficient Batched Synchronization (UDS algorithm)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

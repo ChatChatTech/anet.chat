@@ -1,0 +1,41 @@
+{
+  "paper_id": "Yang et al. - 2013 - Beyond triangle inequality Sifting noisy and outlier distance measurements for localization",
+  "doi": null,
+  "title": "Beyond triangle inequality: Sifting noisy and outlier distance measurements for localization",
+  "year": 2013,
+  "venue": "ACM Transactions on Sensor Networks",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "小部分outlier导致定位精度急剧下降",
+  "problem_framing": "基于图可嵌入性和刚性理论识别异常边",
+  "key_insight": "距离测量的冗余性可用于检测outlier",
+  "method_signature": "双侧广义环算法检测异常测量",
+  "evaluation_criteria": "定位精度提升程度",
+  "negative_result_or_admitted_limitation": "Saxe证明图可嵌入性判定是强NP难问题; Sweeps随环规模指数增长",
+  "evidence_for_taste": [
+    "triangle inequality has many limitations",
+    "coarse granularity",
+    "cannot identify them",
+    "redundancy plays an important role",
+    "weakly NP-hard"
+  ],
+  "thinking_moves": [
+    "证明下界: 展示三角形不等式为何失效",
+    "从图可嵌入性反推异常检测必要性",
+    "用刚性理论结构化地定义问题",
+    "承认NP难下界但不放弃, 转向实践可行的子问题"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-localization",
+    "outlier-detection",
+    "graph-rigidity-theory",
+    "distance-measurement-error",
+    "bilateration-generic-cycles"
+  ],
+  "cites_own_work": [
+    "Yang and Liu 2010",
+    "Yang et al. 2010"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

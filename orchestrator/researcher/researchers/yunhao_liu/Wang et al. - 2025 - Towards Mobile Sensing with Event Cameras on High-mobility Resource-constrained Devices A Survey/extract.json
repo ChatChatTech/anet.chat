@@ -1,0 +1,41 @@
+{
+  "paper_id": "Wang et al. - 2025 - Towards Mobile Sensing with Event Cameras on High-mobility Resource-constrained Devices A Survey",
+  "doi": null,
+  "title": "Event Camera Meets Mobile Embodied Perception: Abstraction, Algorithm, Acceleration, Application",
+  "year": 2025,
+  "venue": "ACM MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "移动智能体向高敏捷性演进，传统传感器(LiDAR/帧相机)无法满足高准确度低延迟的感知需求",
+  "problem_framing": "事件相机虽具微秒级分辨率和高动态范围，但异步特性、大噪声、缺乏语义一致性和数据量大四大挑战阻碍移动端部署",
+  "key_insight": "事件相机以对数尺度独立像素响应光照变化，生成触发式事件流，非常适合高动态高敏捷移动智能体的感知任务",
+  "method_signature": "综述论文，组织为四个支柱：事件抽象方法、感知算法、软硬件加速、移动应用",
+  "evaluation_criteria": "从精度、延迟、功耗三个维度评估事件数据处理各阶段方法在移动计算约束下的表现",
+  "negative_result_or_admitted_limitation": "事件数据静态场景几乎无事件、高动态爆发输出，处理非均匀数据困难，有意义信号常埋于运动噪声中",
+  "evidence_for_taste": [
+    "高频采样产生冗余",
+    "事件流缺乏稳定纹理",
+    "移动设备以能效换算力",
+    "高阈值漏细微变化",
+    "低阈值增噪声触发",
+    "运动诱导噪声埋信号",
+    "算力受限于热节流"
+  ],
+  "thinking_moves": [
+    "将移动感知问题解构为传感器输入端与算法处理端的双重需求",
+    "识别事件相机相对于帧相机的本质优势在于原生响应场景动态而非全局时钟",
+    "承认事件数据稀疏-爆发二元性使统一处理困难，需按阶段组织算法",
+    "把精度-延迟-功耗作为评估移动感知方法的三元约束",
+    "总结商业产品时揭示功耗从3mW到12W的跨度反映设计目标分歧"
+  ],
+  "topic_tags": [
+    "event-camera",
+    "mobile-embodied-perception",
+    "high-agility-agent",
+    "resource-constrained-computing",
+    "event-stream-processing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

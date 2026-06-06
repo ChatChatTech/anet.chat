@@ -1,0 +1,43 @@
+{
+  "paper_id": "CodeEditor_ Learning to Edit Source Code with Pre-trained Models",
+  "doi": "10.48550/arxiv.2210.17040",
+  "title": "CodeEditor: Learning to Edit Source Code with Pre-trained Models",
+  "year": 2022,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "开发者70%代码编辑为重复性劳动，人工设计编辑模式繁琐易错",
+  "problem_framing": "将代码编辑建模为Seq2Seq任务，利用预训练模型学习编辑模式",
+  "key_insight": "用生成器将原始代码改写为缺陷版本，训练模型编辑缺陷版本而非填充mask，更接近真实编辑",
+  "method_signature": "CodeGPT生成缺陷版本→预训练模型学习修复编辑→微调下游任务",
+  "evaluation_criteria": "Exact Match、CrystalBLEU、Edit Distance",
+  "negative_result_or_admitted_limitation": "现有代码填充任务（如MLM）源自NLP，未专门针对代码编辑设计",
+  "evidence_for_tight_frugality": [
+    "code infilling tasks are derived from NLP",
+    "pre-training task specialized in code editing",
+    "30% of tokens are selected",
+    "6 layers, 512 dim, 60M params"
+  ],
+  "thinking_moves": [
+    "指出现有预训练任务与目标任务不对齐的问题",
+    "将填充任务重新框架为编辑任务",
+    "利用语言模型生成训练数据避免人工标注"
+  ],
+  "evidence_for_taste": [
+    "code infilling tasks are derived from the natural language processing field",
+    "are not designed for automatic code editing",
+    "Our pre-training task aims to transform a previous program",
+    "requires a high-level understanding ability to locate inferior parts",
+    "closer to the real-world code editing task"
+  ],
+  "topic_tags": [
+    "代码预训练",
+    "代码编辑自动化",
+    "Seq2Seq预训练",
+    "代码突变生成",
+    "编辑模式学习"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

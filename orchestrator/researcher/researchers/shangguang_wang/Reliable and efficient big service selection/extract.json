@@ -1,0 +1,38 @@
+{
+  "paper_id": "Reliable and efficient big service selection",
+  "doi": "10.1007/s10796-017-9767-x",
+  "title": "Reliable and efficient big service selection",
+  "year": 2017,
+  "venue": "Information Systems Frontiers",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Big services face high QoS uncertainty and NP-hard selection time cost, making conventional methods inefficient.",
+  "problem_framing": "Big service selection as bi-objective optimization: minimize time cost while maximizing reliability under global QoS constraints.",
+  "key_insight": "Filter services by coefficient of variation to prune unreliable candidates, dramatically reducing the MIP search space.",
+  "method_signature": "CVMIP: Coefficient of Variation filtering + Mixed Integer Programming",
+  "evaluation_criteria": "Computation time, reliability fitness (CV-based), and near-to-optimal performance gap.",
+  "negative_result_or_admitted_limitation": "CVMIP achieves 92% optimality on average; the 8% gap is admitted but claimed imperceptible.",
+  "evidence_for_taste": [
+    "QoS uncertainty of a big service can lower its service reliability",
+    "A big service with consistently good QoS is typically more reliable",
+    "near-to-optimal composite service",
+    "the gap (8%) is very little and imperceptible"
+  ],
+  "thinking_moves": [
+    "Redefine reliability as low coefficient of variation (QoS consistency) rather than raw QoS values",
+    "Pre-filter unreliable services before optimization to shrink NP-hard search space",
+    "Accept near-optimality (92%) as sufficient when time cost and reliability gains are substantial"
+  ],
+  "topic_tags": [
+    "big-service-selection",
+    "QoS-uncertainty",
+    "coefficient-of-variation",
+    "mixed-integer-programming",
+    "service-reliability"
+  ],
+  "cites_own_work": [
+    "Wang et al. 2011a (QoS uncertainty computing)",
+    "Shangguang et al. 2011 (cloud model)"
+  ],
+  "extraction_quality": "full"
+}

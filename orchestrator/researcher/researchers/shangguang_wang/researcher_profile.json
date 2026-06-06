@@ -1,0 +1,604 @@
+{
+  "slug": "shangguang_wang",
+  "n_extracts": 69,
+  "n_full": 62,
+  "n_partial": 5,
+  "n_thin": 2,
+  "year_range": [
+    2013,
+    2025
+  ],
+  "top_tags": [
+    [
+      "orbital-edge-computing",
+      3
+    ],
+    [
+      "federated-learning",
+      3
+    ],
+    [
+      "workload-scheduling",
+      2
+    ],
+    [
+      "mobile-edge-computing",
+      2
+    ],
+    [
+      "on-device-inference",
+      2
+    ],
+    [
+      "mobile-edge-caching",
+      2
+    ],
+    [
+      "edge-content-delivery",
+      2
+    ],
+    [
+      "cache-pool-ranking",
+      2
+    ],
+    [
+      "pseudo-labeling",
+      2
+    ],
+    [
+      "prompt-learning",
+      2
+    ],
+    [
+      "parameter-efficient-finetuning",
+      2
+    ],
+    [
+      "edge-computing",
+      2
+    ],
+    [
+      "satellite-edge-computing",
+      2
+    ],
+    [
+      "edge-computing-measurement",
+      1
+    ],
+    [
+      "computation-offloading",
+      1
+    ],
+    [
+      "edge-caching",
+      1
+    ],
+    [
+      "crowd-intelligence-incentive",
+      1
+    ],
+    [
+      "reward-penalty-model",
+      1
+    ],
+    [
+      "blockchain-smart-contract",
+      1
+    ],
+    [
+      "strong-Nash-equilibrium",
+      1
+    ],
+    [
+      "foundation-model-efficiency",
+      1
+    ],
+    [
+      "LLM-compression",
+      1
+    ],
+    [
+      "edge-deployment",
+      1
+    ],
+    [
+      "multimodal-model",
+      1
+    ],
+    [
+      "resource-optimization",
+      1
+    ],
+    [
+      "speculative-decoding",
+      1
+    ],
+    [
+      "mobile-NPU-acceleration",
+      1
+    ],
+    [
+      "on-device-RAG",
+      1
+    ],
+    [
+      "graph-scheduling",
+      1
+    ],
+    [
+      "draft-extension",
+      1
+    ]
+  ],
+  "topic_clusters": [
+    {
+      "tag": "orbital-edge-computing",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "FOOL_ Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression",
+          "year": 2024,
+          "venue": "arXiv preprint",
+          "key_insight": "用浅层特征而非图像重建作失真目标,可保留足够信息供任意下游任务同时获高压缩率",
+          "method_signature": "FOOL神经特征压缩:Profiler+TCR/s度量+并发执行+特征空间重建",
+          "score": 16
+        },
+        {
+          "paper_id": "Resource-efficient In-orbit Detection of Earth Objects",
+          "year": 2024,
+          "venue": "arXiv",
+          "key_insight": "利用置信度阈值在星上处理与下行之间动态分配；存在最优分块大小平衡精度与计算开销",
+          "method_signature": "星地协同+自适应图像分块+聚类去重+带宽感知下行节流",
+          "score": 16
+        },
+        {
+          "paper_id": "5G Edge Computing",
+          "year": 2024,
+          "venue": "Springer",
+          "key_insight": "首次对公共边缘平台进行综合测量,揭示关键问题并开源数据集以推动研究社区",
+          "method_signature": "测量驱动问题发现 + 算法优化 + 标准实现 + 前瞻探索 四阶段研究",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "federated-learning",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "FedMoE_ Personalized Federated Learning via Heterogeneous Mixture of Experts",
+          "year": 2024,
+          "venue": "arXiv",
+          "key_insight": "MoE的稀疏激活使专家参数空间解耦，允许按需共享最相关参数——不同客户激活不同专家即可实现个性化",
+          "method_signature": "两阶段：Stage1用激活概率启发式搜索初始化子模型；Stage2联邦训练+模块聚合+动态专家推荐",
+          "score": 16
+        },
+        {
+          "paper_id": "Federated Few-Shot Learning for Mobile NLP",
+          "year": 2023,
+          "venue": "ACM MobiCom '23",
+          "key_insight": "模型弱时仅选高置信伪标签，随着模型变强逐步加速注入，通过配置空间<freq, n, k>动态调节训练节奏",
+          "method_signature": "FeS系统含课程步调、表示多样性过滤、层深与容量联合规划三大设计",
+          "score": 16
+        },
+        {
+          "paper_id": "Hierarchical Federated Learning through LAN-WAN Orchestration",
+          "year": 2020,
+          "venue": "ArXiv",
+          "key_insight": "LAN abundant bandwidth (tens of Mbps) can be exploited for frequent local aggregation, reducing reliance on expensive constrained WAN",
+          "method_signature": "LanFL: two-level aggregation hierarchy with P2P intra-LAN topology and dynamic device selection for heterogeneous LAN",
+          "score": 16
+        }
+      ]
+    }
+  ],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2013,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "QoS-prediction",
+          1
+        ],
+        [
+          "multi-user-service-selection",
+          1
+        ],
+        [
+          "matrix-factorization",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2017,
+      "paper_count": 13,
+      "top_tags": [
+        [
+          "IoV架构设计",
+          1
+        ],
+        [
+          "协同计算控制层",
+          1
+        ],
+        [
+          "虚拟车辆VV",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2018,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "mobile-edge-computing",
+          1
+        ],
+        [
+          "edge-content-delivery",
+          1
+        ],
+        [
+          "cache-pool-ranking",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2019,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "crowd-intelligence-incentive",
+          1
+        ],
+        [
+          "reward-penalty-model",
+          1
+        ],
+        [
+          "blockchain-smart-contract",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 17,
+      "top_tags": [
+        [
+          "vehicular edge computing",
+          1
+        ],
+        [
+          "partial task offloading",
+          1
+        ],
+        [
+          "V2V V2I communication",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "mobile-network-cognition",
+          1
+        ],
+        [
+          "deep-learning-QoS-prediction",
+          1
+        ],
+        [
+          "network-admission-control",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 45,
+      "top_tags": [
+        [
+          "vertical-federated-learning",
+          1
+        ],
+        [
+          "homomorphic-encryption-overhead",
+          1
+        ],
+        [
+          "backup-worker-straggler",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 60,
+      "top_tags": [
+        [
+          "pseudo-labeling",
+          2
+        ],
+        [
+          "prompt-learning",
+          2
+        ],
+        [
+          "DNN cold inference optimization",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 80,
+      "top_tags": [
+        [
+          "orbital-edge-computing",
+          3
+        ],
+        [
+          "edge-computing-measurement",
+          1
+        ],
+        [
+          "computation-offloading",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 82,
+      "top_tags": [
+        [
+          "speculative-decoding",
+          1
+        ],
+        [
+          "mobile-NPU-acceleration",
+          1
+        ],
+        [
+          "on-device-RAG",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "null",
+    "目前仅支持相对小规模模型,尚未见真实部署",
+    "调度的NP-hard性意味着只能采用贪婪启发式，无法保证全局最优；分布校准依赖prefill已计算的logits，若prefill阶段已开销过大则收益有限",
+    "PCA压缩在Epsilon数据集上损失约3%精度,不同数据集表现差异大,存在效率-精度的权衡",
+    "现有传感技术缺乏有效协同机制；现有研究未考虑车速和带宽等车辆特性",
+    "传统ML模型层浅、参数量少,无法处理复杂非线性映射且易过拟合",
+    "INT8量化带来的加速(0.8×–3.0×)远低于理论预期(4×)",
+    "Problem is NP-hard, cannot obtain optimal kernel scheduling plan directly; multithreading weights read/transformation has limited benefit",
+    "问题被分类为NP-hard，难以获得精确最优解；未考虑LEO任务从HEO返回最终结果的传输时间",
+    "即使简化情形仍具NP复杂度,贪婪算法仅考虑流行度忽视存储需求导致性能较差",
+    "路由中应用计算信息仍需进一步研究,广域网高吞吐传输面临长距离延迟挑战",
+    "LLM在细节上频繁犯错，原始准确代码经LLM处理后平均44.2%变得不准确，原来不准确的代码改进率仅8.02%",
+    "两个Atlas并行计算时结构温度快速达到30°C限值,任务被强制终止;6个月实验未观测到SEE错误,辐射效应影响可能被低估",
+    "固定冗余20%时99th-MAX延迟仍比中位数高14倍；10%固定冗余超时无法完成",
+    "现有深度学习预测模型高度依赖全网流量实时获取,难以适应时空资源受限的高度动态低空网络,模型泛化能力有限",
+    "ECDU并非CDN的替代品，两者需结合；安全隐私问题尚需预处理方案",
+    "仅考虑静态基站位置，未研究位置依赖特征对内容存储和更新的影响。",
+    "频率缓存策略因专家激活被训练为平衡而收益有限；不适用于prefill阶段或多请求并行场景",
+    "困惑度无法反映生成内容的准确性,对关键数值的错误不敏感,不能全面衡量文本质量",
+    "纯任务导向编码虽可极低码率但失去泛化能力;有损压缩可能丢弃连专家也无法验证的机器可解读信息",
+    "Layer freezing收益有限,选错配置可使收敛慢4.7倍",
+    "专家推荐是探索性调整，若性能不改善则结构回退并固定；Stage1缺失导致专家数量失控（96→104）而非优化",
+    "RDMA在WAN上运行带宽极低，无法充分利用可用带宽，一旦丢包即陷入无尽重传导致传输失败",
+    "层冻结单独使用效果不足，需同时控制层容量；配置无万能解，需动态切换",
+    "NEP仍无法满足云VR/AR(5-20ms)和自动驾驶(10ms)需求,吞吐量仅在>200Mbps时改善, billing model粗粒度",
+    "更多综合测量研究留作未来工作,当前仅验证基本流程,未做完整性能评估",
+    "BP-free方法仅在小型模型(如LeNet)上表现相当,对大模型需指数级增加扰动数量才能准确估计梯度",
+    "GhostNet和SineFM理论参数量更少但实际比vanilla CNN更慢，因为引入了额外的计算节点",
+    "当前实验仅覆盖选定领域的常用基准数据集，框架主要优化检索侧而生成侧表示较简单",
+    "梯度压缩算法几乎无法加速收敛，q-FedAvg在异构感知下保证公平性的效果减弱",
+    "LanFL relies on manual parameter tuning through extensive experiments; current design only works for LAN domains with ≥10 devices, introducing selection bias",
+    "heuristic算法不适合大规模网络且常陷入局部最优,NRMVNE算法虽早期收益率高但后期快速下降",
+    "数据驱动方法因无法覆盖所有配置和模式识别困难而效果有限;LLM固有随机性通过设置temperature=0和5次重复实验缓解",
+    "kernel-wise方法在r≥k时参数量超过全微调,难以平衡性能与参数效率",
+    "无轻量微调时性能几乎等于原版模型，矩阵乘法导致数值不稳定；LoRASuite对学习率高度敏感",
+    "MCP-only配置因\"MCP覆盖不足\"（48.42%失败原因）和\"API不兼容\"持续表现最差；MCP工具过长prompt导致5-10步任务成功率反而下降",
+    "未支持FP8和某些INT8训练算法,因缺乏对应低精度算子支持",
+    "单类型NLP导致性能下降；γ=1(全共享)导致性能受损；不同任务类型需不同训练策略",
+    "MobiEdit仅修改单层MLP，编辑成功率比MEMIT等低约14%，对模糊知识效果更差",
+    "M4比任务专用模型慢18倍；手机上图像分类延迟2.1秒；当前只在高端设备可运行",
+    "跨SoC协作缺失致大模型延迟数百毫秒;视频硬件编码器无法满足低码率约束",
+    "在图像高度相似或专业化视觉语义场景（如医学影像）中泛化性不保证，小规模开源模型性能下降明显",
+    "参数r对预测精度有影响，需在2-8范围内调优",
+    "PhoneLM-0.5B在ARC-e和ARC-c两项任务不如SmolLM-360M",
+    "现有训练策略使用固定比例的traveled route，导致模型无法有效处理不同比例的请求",
+    "即使没有P-LoRA修复,Recall仍可获得可用的检索性能,但样本过早退出不可避免且会破坏统一嵌入空间",
+    "CVMIP achieves 92% optimality on average; the 8% gap is admitted but claimed imperceptible.",
+    "当conf_p过高时丢弃高价值图块导致计数误差增大；COTS硬件计算能力因物理限制难以提升",
+    "层回滚需额外存储空间，与补丁恢复相比存储开销更大",
+    "现有研究仍处于起步阶段,距实际工业应用还有很长的路要走",
+    "When edge servers exceed a certain number, execution energy shows no significant reduction—indicating diminishing returns from over-provisioning.",
+    "理论分析中近似成立需假设c_relu非全零向量，且仅针对CNN模型未涉及Transformer。",
+    "自适应注意力机制对高分辨率图像效率提升仍不足",
+    "受限于星上计算能力，无法处理高分辨率图像，需先分割再推理",
+    "地面站部署成本约百万美元，新进入者难以承担；传统交通预测无法应对卫星网络的时空相关性",
+    "Introducing 20% noise into satellite imagery causes the majority of tiles to appear in inland areas, leading to failed predictions — imagery quality directly impacts spatial filtering.",
+    "RoBERTa-large导致内存溢出(>10GB)，推理占总计算87.4%，竞争性能以显著系统开销为代价",
+    "香草双曲投影在嵌入范数较大时会导致洛伦兹距离趋近于零，无法区分近邻轨迹",
+    "无法像发明新材料那样从根本上延长电池寿命,只能优化使用策略",
+    "Distill-only without fine-tuning yields poor accuracy (<40%); heavy pruning (≥60%) degrades trade-off",
+    "Reminisce has slightly higher peak memory than naive layer-wise baseline due to batching parallelism overhead, though still within practical range",
+    "Remote sensing improvement more obvious for Chicago where POI data is sparse, suggesting RS acts as data substitute not enrichment"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "non-trivial accuracy drop",
+      "paper_id": "Heterogeneity-Aware Federated Learning"
+    },
+    {
+      "quote": "state heterogeneity is often more responsible",
+      "paper_id": "Heterogeneity-Aware Federated Learning"
+    },
+    {
+      "quote": "can hardly speed up the model convergence",
+      "paper_id": "Heterogeneity-Aware Federated Learning"
+    },
+    {
+      "quote": "optimizations are not always effective as reported",
+      "paper_id": "Heterogeneity-Aware Federated Learning"
+    },
+    {
+      "quote": "early exit aligns with our design principles",
+      "paper_id": "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    },
+    {
+      "quote": "mirrors the human brain",
+      "paper_id": "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    },
+    {
+      "quote": "acceptable tradeoff",
+      "paper_id": "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    },
+    {
+      "quote": "unreasonable ineffectiveness",
+      "paper_id": "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    },
+    {
+      "quote": "little to no benefit during inference",
+      "paper_id": "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    },
+    {
+      "quote": "no prior work ever dives deep",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "up to 62,806× gap",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "severe fragmentation",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "no one-size-fit-all",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "can overwhelm the optimizations",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "much less than the theoretical expectation",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "significantly slower than warm inference",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "performance bugs are introduced",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "takes 1–16 weeks to be fixed",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "becomes relatively stable since 2020",
+      "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices"
+    },
+    {
+      "quote": "no silver-bullet kernel",
+      "paper_id": "Boosting DNN Cold Inference on Edge Devices"
+    },
+    {
+      "quote": "fastest kernel in warm inference does not necessarily best in cold",
+      "paper_id": "Boosting DNN Cold Inference on Edge Devices"
+    },
+    {
+      "quote": "weight sharing approaches are not scalable",
+      "paper_id": "Boosting DNN Cold Inference on Edge Devices"
+    },
+    {
+      "quote": "we do not need to iterate over all combinations",
+      "paper_id": "Boosting DNN Cold Inference on Edge Devices"
+    },
+    {
+      "quote": "real-world data would enable",
+      "paper_id": "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    },
+    {
+      "quote": "These tests are unable to guarantee",
+      "paper_id": "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    },
+    {
+      "quote": "Overheating phenomena limit the",
+      "paper_id": "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    },
+    {
+      "quote": "cannot operate for extended periods",
+      "paper_id": "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    },
+    {
+      "quote": "discrepancy arises from imperfect",
+      "paper_id": "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    },
+    {
+      "quote": "approximately 6% of the converted",
+      "paper_id": "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    },
+    {
+      "quote": "Building on this foundation",
+      "paper_id": "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    },
+    {
+      "quote": "we believe that throughput is not a primary advantage",
+      "paper_id": "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    },
+    {
+      "quote": "existing resource allocation challenges are amplified",
+      "paper_id": "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    },
+    {
+      "quote": "draw our conclusions in a conservative and cautious manner",
+      "paper_id": "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    },
+    {
+      "quote": "only when we are confident that the disparities",
+      "paper_id": "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    },
+    {
+      "quote": "this comparison is not perfectly apples-to-apples",
+      "paper_id": "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    },
+    {
+      "quote": "has not generally sunk into cellular core networks as envisioned",
+      "paper_id": "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    },
+    {
+      "quote": "We are the first to deploy",
+      "paper_id": "From Earth to Space_ A First Deployment of 5G Core Network on Satellite"
+    },
+    {
+      "quote": "lightweight 5G core network",
+      "paper_id": "From Earth to Space_ A First Deployment of 5G Core Network on Satellite"
+    },
+    {
+      "quote": "can function normally",
+      "paper_id": "From Earth to Space_ A First Deployment of 5G Core Network on Satellite"
+    },
+    {
+      "quote": "The result is acceptable",
+      "paper_id": "From Earth to Space_ A First Deployment of 5G Core Network on Satellite"
+    }
+  ]
+}

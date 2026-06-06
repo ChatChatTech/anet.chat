@@ -1,0 +1,53 @@
+{
+  "paper_id": "Huang et al. - 2015 - Swadloon Direction Finding and Indoor Localization Using Acoustic Signal by Shaking Smartphones",
+  "doi": null,
+  "title": "Swadloon: Direction Finding and Indoor Localization Using Acoustic Signal by Shaking Smartphones",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有室内方向定位方法依赖专用硬件或GPS，普通用户难以获取高精度室内定位服务",
+  "problem_framing": "将手机晃动产生的多普勒效应转化为声源方向，通过PLL精确跟踪相位偏移",
+  "key_insight": "相对位移与相位偏移成正比，PLL可跟踪相位实现亚毫米级位移分辨率",
+  "method_signature": "利用PLL跟踪声学多普勒相位频率偏移，结合惯性传感器数据线性回归求解方向",
+  "evaluation_criteria": "方向误差(度)、定位误差(米)、跟踪误差(米)",
+  "negative_result_or_admitted_limitation": "惯性传感器误差累积导致速度计算不准确；时钟漂移需纳入方程；手机与声源高度不同时公式需要修正",
+  "evidence_for_taste": [
+    "FFT cannot measure the precise value of f",
+    "PLL can be thought as a device that tracks the phase",
+    "there is a tradeoff on choosing the μ",
+    "the calculated one is -0.77 m/s",
+    "it won't affect much on calculating the direction",
+    "the errors get smaller when the distance becomes longer",
+    "Spartacus loses the limitation that it also supports slow peak velocity"
+  ],
+  "thinking_moves": [
+    "将感知问题转化为通信问题——用多普勒相位跟踪代替角度估计",
+    "从硬件能力出发而非从理想模型出发——利用手机扬声器和麦克风作为信号源",
+    "承认FFT的分辨率限制，主动选择PLL进行精确相位跟踪",
+    "先建立简单模型(矩形路径)，再扩展到任意运动模式",
+    "用线性回归统一处理速度误差和时钟漂移等非理想因素",
+    "承认累积误差问题，但不放弃惯性传感器——通过与声学数据融合补偿"
+  ],
+  "topic_tags": [
+    "acoustic-doppler-localization",
+    "smartphone-motion-tracking",
+    "phase-locked-loop",
+    "direction-finding",
+    "indoor-localization"
+  ],
+  "cites_own_work": [
+    "BeepBeep",
+    "Zee",
+    "No need to war-drive",
+    "Loco",
+    "Tagoram",
+    "Montage",
+    "SmartLoc",
+    "Swordfight",
+    "Friendshake",
+    "Friendshake"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

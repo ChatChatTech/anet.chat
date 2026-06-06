@@ -1,0 +1,44 @@
+{
+  "paper_id": "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey",
+  "doi": "10.48550/arxiv.2306.04945",
+  "title": "Modern Data Pricing Models: Taxonomy and Comprehensive Survey",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "数据孤岛阻碍数据流通,定价方案不足致市场不成熟",
+  "problem_framing": "将现有数据定价方案系统分类为QP/FP/MLP三类策略",
+  "key_insight": "首次建立数据定价模型的形式化分类体系",
+  "method_signature": "构建三层分类树,对13种定价模型深入分析比较",
+  "evaluation_criteria": "无(综述论文)",
+  "negative_result_or_admitted_limitation": "现有简单定价策略无法反映数据真实价值",
+  "evidence_for_taste": [
+    "data pricing is in its infancy",
+    "too simple to price complicated data",
+    "does not consider the core of data pricing",
+    "hard for human to change",
+    "practical to the case with less human knowledge",
+    "not suitable to the scenarios",
+    "it is still open"
+  ],
+  "thinking_moves": [
+    "从市场实际痛点出发,指出简单定价策略的局限性",
+    "通过分类框架揭示各方法间的内在联系与差异",
+    "先建立理论taxonomy,再逐模型剖析定价机制",
+    "指出现有方法未触及数据定价核心问题",
+    "从数据库与机器学习两个社区视角统一审视问题"
+  ],
+  "topic_tags": [
+    "data marketplace",
+    "query pricing",
+    "feature-based pricing",
+    "ML model pricing",
+    "taxonomy construction",
+    "arbitrage-free pricing",
+    "data valuation",
+    "federated learning pricing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

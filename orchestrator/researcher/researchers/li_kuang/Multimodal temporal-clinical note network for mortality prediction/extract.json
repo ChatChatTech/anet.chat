@@ -1,0 +1,42 @@
+{
+  "paper_id": "Multimodal temporal-clinical note network for mortality prediction",
+  "doi": "10.1186/s13326-021-00235-3",
+  "title": "Multimodal temporal-clinical note network for mortality prediction",
+  "year": 2021,
+  "venue": "BMC Medical Informatics and Decision Making",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有死亡率预测方法依赖时序数据，忽视了临床文本中丰富的病史信息，尤其是慢性病患者的历史数据未被利用",
+  "problem_framing": "将死亡率预测建模为时序特征(17项APACHE II指标)与临床文本的多模态融合问题，并区分慢性/非慢性患者处理",
+  "key_insight": "对慢性患者和非慢性患者的临床文本采用差异化处理——慢性患者纳入病史信息，非慢性患者仅用近期记录",
+  "method_signature": "LSTM时序嵌入 + Label-aware CNN临床文本嵌入 + 慢性/非慢性患者差异化处理",
+  "evaluation_criteria": "AUCPR(不平衡数据集更适用) 和 AUCROC，消融实验验证各模块贡献",
+  "negative_result_or_admitted_limitation": "APACHE II评分系统作为特征选择指导仍远未达到实际诊断过程；未来需引入医学知识图谱",
+  "evidence_for_taste": [
+    "overestimation of mortality",
+    "partially duplicated with the information contained in time series",
+    "history of illness and other related information should be treated differently",
+    "this is not enough for the actual treatment process",
+    "the importance that the model assigns to each text",
+    "provide interpretability improvement",
+    "it is crucial to learn the text representation",
+    "the most contributing notes for the patients"
+  ],
+  "thinking_moves": [
+    "发现时序数据和临床文本存在信息重叠，现有方法未充分挖掘病史信息",
+    "借鉴APACHE II中急慢性健康评估的区分理念，将慢性病概念引入模型设计",
+    "提出Label-aware CNN学习词汇与死亡标签的关联性，实现可解释性可视化",
+    "设计section重要性评分函数量化临床文本各部分对预测的贡献",
+    "通过消融实验逐步验证时序融合、Label-aware CNN、慢性患者差异化处理的有效性"
+  ],
+  "topic_tags": [
+    "mortality-prediction",
+    "clinical-notes",
+    "multimodal-learning",
+    "chronic-patient-modeling",
+    "label-aware-attention"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文结构完整，包含完整的方法、实验、结果和讨论部分，可提取所有必需字段 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "Dang et al. - 2017 - NFC-enabled attack on cyber physical systems A practical case study",
+  "doi": null,
+  "title": "NFC-enabled Attack on Cyber Physical Systems: A practical case study",
+  "year": 2017,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "NFC手机普及+Android HCE打破了10cm距离假设,使得原本隔离的AFC系统暴露于互联网",
+  "problem_framing": "将NFC中继攻击框架化为两阶段事务的不可靠链路协调问题,类似TCP握手和双将军问题",
+  "key_insight": "卡片收到有效MAC2后余额增加,但发行方若未收到TAC则认为交易失败——协议层面无法达成共同知识",
+  "method_signature": "手机中继+APDU状态码篡改:将step15的9000改为9302使发行方认为MAC2无效",
+  "evaluation_criteria": "实测15款手机中13款可实施攻击;RTT测量显示中继延迟达物理卡的3-4倍",
+  "negative_result_or_admitted_limitation": "双将军问题在理论上无解,只能通过间接防御(禁用自动退款、时序检测)减轻影响",
+  "evidence_for_taste": [
+    "the advent of NFC-equipped mobile phones bridged the gap",
+    "This is a scenario of the famous two generals' problem",
+    "the loss caused by the attack described in this paper can be reduced",
+    "This flaw challenges current thinking about the security",
+    "it is time for the industry to take an interest"
+  ],
+  "thinking_moves": [
+    "从两阶段事务协议结构反推协调失败根源",
+    "将工程问题映射到经典分布式理论问题",
+    "通过实测数据量化中继延迟特征",
+    "跨系统(中国PBOC/新加坡EZ-Link/英国Oyster等)验证攻击通用性",
+    "从协议层缺陷转向系统层防御策略"
+  ],
+  "topic_tags": [
+    "NFC-relay-attack",
+    "AFC-system-security",
+    "two-generals-problem",
+    "HCE-card-emulation",
+    "APDU-protocol-manipulation"
+  ],
+  "cites_own_work": [
+    "Dang et al. 2017 INFOCOM (large-scale invisible attack)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "未找到明确的会议/期刊名称,但文中引用了INFOCOM 2017作为相关工作。可能发表在较早的会议或技术报告,venue字段无法确定。"
+}

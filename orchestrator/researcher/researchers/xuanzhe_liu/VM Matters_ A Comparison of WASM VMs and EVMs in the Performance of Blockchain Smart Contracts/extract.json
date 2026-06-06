@@ -1,0 +1,39 @@
+{
+  "paper_id": "VM Matters_ A Comparison of WASM VMs and EVMs in the Performance of Blockchain Smart Contracts",
+  "doi": "10.48550/arxiv.2012.01032",
+  "title": "VM Matters: A Comparison of WASM VMs and EVMs in the Performance of Blockchain Smart Contracts",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "eWASM被寄予厚望取代EVM，但缺乏实证证据证明其在区块链客户端的实际性能表现",
+  "problem_framing": "通过对比13种基准测试在EVM和WASM引擎上的执行时间,量化回答WASM是否真的优于EVM",
+  "key_insight": "eWASM引擎反而慢于EVM: gas计量和EEI上下文切换的额外开销淹没了WASM的性能优势",
+  "method_signature": "跨引擎测量研究: EVM引擎间、WASM引擎间、跨字节码引擎对比,含256/64位双版本基准",
+  "evaluation_criteria": "智能合约执行时间(1000次平均), 跨客户端(Geth/Openethereum)跨引擎类型对比",
+  "negative_result_or_admitted_limitation": "eWASM VMs在所有256位基准和大部分64位基准上慢于EVMs,开销占总执行时间84.9%-99.9%",
+  "evidence_for_taste": [
+    "To our surprise",
+    "contrary to the general expectation",
+    "overhead introduced by gas metering",
+    "The support for WASM on Ethereum-based blockchain clients is far from ideal",
+    "This is because the native data type of WASM is 32/64-bit",
+    "even up to three orders of magnitude"
+  ],
+  "thinking_moves": [
+    "对业界'WASM必然更快'的共识进行实证反驳",
+    "将性能问题拆解为引擎内对比和跨引擎对比两个正交维度",
+    "用差值法测量eWASM环境引入的额外开销占比",
+    "从源代码层面分析EVM引擎 opcode 实现差异导致性能差距的根因"
+  ],
+  "topic_tags": [
+    "EVM性能测量",
+    "eWASM开销分析",
+    "区块链智能合约基准",
+    "WASM引擎对比",
+    "以太坊客户端"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

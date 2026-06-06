@@ -1,0 +1,39 @@
+{
+  "paper_id": "Keywords Guided Method Name Generation",
+  "doi": "10.48550/arxiv.2103.11118",
+  "title": "Keywords Guided Method Name Generation",
+  "year": 2021,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "开发过程中重命名方法是最频繁的重构操作(74.8%),不当的方法名普遍存在",
+  "problem_framing": "将方法命名任务分解为关键词抽取和方法名生成两个子任务",
+  "key_insight": "方法名中约62%的token来自方法实现,共享token信息可用于提升方法命名效果",
+  "method_signature": "GNN编码器+双选择性门+双注意力解码器的两阶段关键词引导生成模型",
+  "evaluation_criteria": "ROUGE-1/2/L指标与多个基线模型对比",
+  "negative_result_or_admitted_limitation": "无共享token时性能较差,需模型完全理解程序语义;参考策略相对仍有很大性能差距",
+  "evidence_for_taste": [
+    "tokens composing the method name are closely related",
+    "62.0% in its corresponding method implementation",
+    "keywords guidance can facilitate",
+    "significantly outperform competitive baselines",
+    "the performance is closely related to the quality of extracted keywords",
+    "hard to generate method names when just one common token is shared"
+  ],
+  "thinking_moves": [
+    "通过大规模实证分析(17M方法)发现方法名与实现的共享token规律",
+    "将任务分解为两个相关子任务而非端到端学习",
+    "设计监督关键词抽取器解决训练/测试不匹配问题",
+    "使用双选择性门探索节点表示与关键词的语义关联",
+    "使用双注意力机制同时整合输入序列和关键词的语义信息"
+  ],
+  "topic_tags": [
+    "method-naming",
+    "code-summarization",
+    "graph-neural-network",
+    "keywords-extraction",
+    "encoder-decoder"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

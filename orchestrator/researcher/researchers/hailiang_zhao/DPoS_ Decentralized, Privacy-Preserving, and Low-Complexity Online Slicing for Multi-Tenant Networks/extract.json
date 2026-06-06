@@ -1,0 +1,40 @@
+{
+  "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+  "doi": "10.48550/arxiv.2012.14108",
+  "title": "DPoS: Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有网络切片算法存在高复杂度、隐私泄露和离线设置不切实际的问题",
+  "problem_framing": "将问题建模为全局社会福利最大化问题，要求去中心化、在线、隐私保护的求解",
+  "key_insight": "利用原始对偶框架结合公布价格机制，将决策权归还各参与方，从源头阻断隐私泄露",
+  "method_signature": "基于原始对偶方法和公布价格机制的去中心化在线切片算法，MVNO复杂度O(NC)，租户复杂度O(C)",
+  "evaluation_criteria": "社会福利、跨代理通信数据量、算法执行时间、竞争比",
+  "negative_result_or_admitted_limitation": "拍卖机制对在线网络切片问题不理想；DQN即使在状态和动作空间被离散化后也可能需要数天甚至数周才能获得不太好的动作",
+  "evidence_for_taste": [
+    "拍卖机制可能不是在线网络切片的理想选择",
+    "MVNO应该不知道租户的到达顺序",
+    "租户的私人信息不应该被其他租户获取",
+    "时间消耗的重复竞标",
+    "当成本函数为线性时达到最优竞争比",
+    "接近离线最优性能",
+    "拍卖需要时间并需要多轮通信"
+  ],
+  "thinking_moves": [
+    "把隐私泄露问题归因为\"集中式优化问题 formulation 本身就是损害\"",
+    "选择公布价格而非拍卖来解决在线场景的实践困境",
+    "将问题分解为两个部分：MVNO的定价和租户的决策",
+    "从信息流角度分析隐私保护：只传递少量与隐私无关的数据"
+  ],
+  "topic_tags": [
+    "network-slicing",
+    "decentralized-algorithm",
+    "posted-price-mechanism",
+    "privacy-preserving",
+    "primal-dual-approach"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

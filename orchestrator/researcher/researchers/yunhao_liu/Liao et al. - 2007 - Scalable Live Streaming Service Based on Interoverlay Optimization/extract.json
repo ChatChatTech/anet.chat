@@ -1,0 +1,43 @@
+{
+  "paper_id": "Liao et al. - 2007 - Scalable Live Streaming Service Based on Interoverlay Optimization",
+  "doi": null,
+  "title": "Scalable Live Streaming Service Based on Interoverlay Optimization",
+  "year": 2007,
+  "venue": "IEEE Transactions on Computers",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有组播树/mesh方案在大量用户同时加入时出现长延迟和非计划中断，资源利用率低且不均衡",
+  "problem_framing": "将P2P流媒体优化问题形式化为跨overlay路径选择问题，利用不同overlay中的节点构造高效路径",
+  "key_insight": "节点可同时加入多个overlay，从而跨overlay共享资源，而非仅在同一overlay内优化",
+  "method_signature": "基于位置感知拓扑匹配(LTM)构建底层mesh，各overlay通过反向追踪算法探测并维护备份路径集",
+  "evaluation_criteria": "启动延迟、源到端延迟、播放连续性指数、资源利用率",
+  "negative_result_or_admitted_limitation": "即使拥有全局知识，最优资源分配也是NP难问题，因此采用分布式启发式算法而非最优解",
+  "evidence_for_taste": [
+    "leaf nodes fail to contribute any bandwidth",
+    "finding an optimal assignment of resources is NP-hard",
+    "users have great patience for live streaming",
+    "a larger delay is not always the major reason",
+    "95 percent of peers in the Gnutella system could be reached within seven hops"
+  ],
+  "thinking_moves": [
+    "用具体数值例子揭示现有方法的全局非优性(fig1路径成本对比)",
+    "从NP难问题约束反推必须采用启发式而非最优算法",
+    "通过用户行为日志发现延迟容忍度与节目受欢迎程度正相关",
+    "将问题从单overlay路径选择重新frame为跨overlay资源协调问题",
+    "承认即使有全局知识也无法找到最优解，转而设计可扩展的分布式启发方案"
+  ],
+  "topic_tags": [
+    "P2P live streaming",
+    "interoverlay optimization",
+    "overlay multicast",
+    "resource utilization",
+    "backup path management"
+  ],
+  "cites_own_work": [
+    "Location-Aware Topology Matching (LTM)",
+    "AnySee implementation",
+    "Gnutella crawler data"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

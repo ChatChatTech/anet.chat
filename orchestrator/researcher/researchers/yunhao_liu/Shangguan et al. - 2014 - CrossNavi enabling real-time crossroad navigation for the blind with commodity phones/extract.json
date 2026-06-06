@@ -1,0 +1,41 @@
+{
+  "paper_id": "Shangguan et al. - 2014 - CrossNavi enabling real-time crossroad navigation for the blind with commodity phones",
+  "doi": null,
+  "title": "CrossNavi enabling real-time crossroad navigation for the blind with commodity phones",
+  "year": 2014,
+  "venue": "UbiComp '14",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "全球2.85亿视障者无法安全过马路，现有方案缺三要素：检测路口、定位斑马线、纠正偏离",
+  "problem_framing": "将视障者路口导航形式化为三模块集成问题：路口检测、斑马线定位、行进纠偏",
+  "key_insight": "利用交通蜂鸣器的声学特征检测路口；利用白杖摆动周期触发摄像头拍照以扩展视角",
+  "method_signature": "声学+视觉+惯性传感三模块协同的自动无干预路口导航系统",
+  "evaluation_criteria": "检测成功率、角度误差、测距精度、CPU占用率、能耗",
+  "negative_result_or_admitted_limitation": "廉价手机传感器限制下，测距和定位精度仍不理想；城市环境罗盘误差扩展",
+  "evidence_for_taste": [
+    "empirically optimal",
+    "significantly higher",
+    "robust indicator",
+    "insensitive to acoustic noises",
+    "considerably surpasses",
+    "promising behavior",
+    "competitive detection results"
+  ],
+  "thinking_moves": [
+    "将GPS粗精度问题归零，转向声学特征作为精准路口指示器",
+    "用白杖摆动周期生成'稳定时刻'触发摄像头，替代连续拍摄",
+    "用碰地撞击声而非加速度峰值检测拍摄触发点",
+    "将计算密集的立体视觉替换为轻量级CV+惯性传感组合",
+    "模块化架构分离功能单元，便于独立升级"
+  ],
+  "topic_tags": [
+    "acoustic-crossroad-detection",
+    "zebra-crossing-localization",
+    "veer-rectification",
+    "white-cane-swing-imaging",
+    "blind-indoor-outdoor-navigation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,44 @@
+{
+  "paper_id": "Differentiable and Scalable Generative Adversarial Models for Data Imputation",
+  "doi": "10.48550/arxiv.2201.03202",
+  "title": "Differentiable and Scalable Generative Adversarial Models for Data Imputation",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "GAN imputation性能好但训练代价极高，大规模数据下计算不可行",
+  "problem_framing": "GAN基于JS散度在支撑不重叠时梯度消失，且需估算保证精度的最小样本量",
+  "key_insight": "利用最优传输理论设计掩码Sinkhorn散度使GAN可微，从而可解析推导精度保证下的最小训练样本数",
+  "method_signature": "SCIS = DIM(MS散度损失) + SSE(最小样本量估计)",
+  "evaluation_criteria": "RMSE、训练时间、训练样本率、下游预测AUC/MAE",
+  "negative_result_or_admitted_limitation": "几乎所有GAN imputation算法仅在MCAR假设下有效，复杂缺失机制下效果受限",
+  "evidence_for_taste": [
+    "JS divergence fails in the case that the supports have non-overlapping",
+    "the gradients of JS are 0 almost everywhere",
+    "a smaller value of ε signifies a lower user-tolerated error",
+    "more training samples the imputation method requires",
+    "the more training samples the higher imputation accuracy",
+    "SCIS-GAIN shows a negligible decrease in imputation accuracy",
+    "the less the initial sample size the larger the variance"
+  ],
+  "thinking_moves": [
+    "把vanishing gradient问题归因于JS散度理论缺陷，而非实现问题",
+    "用最优传输理论(Sinkhorn)替代JS散度提供连续可微的替代",
+    "可微性不仅解决梯度问题，还开启了理论样本量分析的通路",
+    "先在初始样本上验证MS散度，再分析精度保证下的扩展需求"
+  ],
+  "topic_tags": [
+    "GAN-imputation",
+    "optimal-transport",
+    "sample-size-estimation",
+    "vanishing-gradient",
+    "large-scale-missing-data"
+  ],
+  "cites_own_work": [
+    "SCIS-GAIN",
+    "DIM-GAIN",
+    "Fixed-DIM-GAIN"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "2019_TON_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint",
+  "doi": null,
+  "title": "Finding the Stars in the Fireworks: Deep Understanding of Motion Sensor Fingerprint",
+  "year": 2019,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Motion sensor数据可唯一标识设备带来隐私威胁,但现有手工特征方法在动态场景下鲁棒性差",
+  "problem_framing": "将传感器指纹识别建模为 Balls-into-Bins 容量问题,探索特征维度与碰撞概率的理论关系",
+  "key_insight": "Manufacturing heterogeneities的细微噪声差异可被LSTM自动提取,而手工特征被用户活动噪声淹没",
+  "method_signature": "多维Balls-into-Bins理论容量模型+Multi-LSTM自动特征提取+生成式匿名化模型",
+  "evaluation_criteria": "碰撞概率/碰撞期望/F-score/匿名化后识别率与数据效用平衡",
+  "negative_result_or_admitted_limitation": "Same person same model accuracy drops to 89% due to human behavior fingerprints; calibration requires specialized equipment",
+  "evidence_for_taste": [
+    "multidimensional Balls-into-Bins",
+    "collision probability decreases",
+    "F-score reduces significantly",
+    "sacrifices some data utility",
+    "requires specialized equipment",
+    "are highly sensitive to large noises"
+  ],
+  "thinking_moves": [
+    "从容量理论出发回答'能否唯一标识'的本质问题",
+    "将设备指纹问题形式化为 Balls-into-Bins 概率模型",
+    "通过理论模型推导多维特征的组合增益",
+    "指出手工特征的脆弱性源于活动噪声掩盖硬件特征",
+    "用深度学习自动提取被噪声淹没的底层特征",
+    "设计对抗性训练实现匿名化与效用保留的博弈"
+  ],
+  "topic_tags": [
+    "motion-sensor-fingerprint",
+    "LSTM-neural-network",
+    "device-authentication",
+    "privacy-anonymization",
+    "Balls-into-Bins-model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

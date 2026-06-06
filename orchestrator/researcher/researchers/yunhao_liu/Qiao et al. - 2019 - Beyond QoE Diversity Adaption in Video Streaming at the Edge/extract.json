@@ -1,0 +1,38 @@
+{
+  "paper_id": "Qiao et al. - 2019 - Beyond QoE Diversity Adaption in Video Streaming at the Edge",
+  "doi": null,
+  "title": "Beyond QoE Diversity Adaption in Video Streaming at the Edge",
+  "year": 2019,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有ABR算法使用固定QoE函数,导致差异化用户需求被忽视,MPC在实验中QoE下降至少20%",
+  "problem_framing": "将视频流建模为更新系统,通过灵活约束不同QoE指标将比特率选择转化为效用优化问题",
+  "key_insight": "利用漂移加惩罚技术和虚拟队列实现无需离线重新计算的在线参数更新",
+  "method_signature": "基于更新系统的在线参数化ABR算法,漂移加惩罚技术驱动比特率选择",
+  "evaluation_criteria": "平均比特率、比特率切换、重新缓冲次数、缓冲区占用率等多维QoE指标",
+  "negative_result_or_admitted_limitation": "离线修改需要预先获知每个用户的具体QoE函数;在线修改导致参数更新的巨大重新计算开销",
+  "evidence_for_taste": [
+    "overall QoE degrades at least 20%",
+    "QoE ratio drops to only 65%",
+    "leaves a gap for ensuring high quality",
+    "induce huge overheads",
+    "a straightforward idea is to change",
+    "specific QoE functions of edge users are elusive"
+  ],
+  "thinking_moves": [
+    "将问题从离线优化转换为在线参数可调的形式",
+    "通过更新系统建模证明参数可映射到约束条件",
+    "承认离线方法在在线适配时的根本缺陷"
+  ],
+  "topic_tags": [
+    "adaptive-bitrate-algorithm",
+    "QoE-diversity",
+    "video-streaming-edge",
+    "renewal-system-optimization",
+    "online-parameter-adaptation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

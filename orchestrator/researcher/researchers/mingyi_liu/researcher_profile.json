@@ -1,0 +1,76 @@
+{
+  "slug": "mingyi_liu",
+  "n_extracts": 1,
+  "n_full": 0,
+  "n_partial": 1,
+  "n_thin": 0,
+  "year_range": [
+    2024,
+    2024
+  ],
+  "top_tags": [
+    [
+      "DeFi安全感知",
+      1
+    ],
+    [
+      "用户风险行为",
+      1
+    ],
+    [
+      "受害后恢复心理",
+      1
+    ],
+    [
+      "DeFi监管",
+      1
+    ],
+    [
+      "加密货币安全认知",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2024,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "DeFi安全感知",
+          1
+        ],
+        [
+          "用户风险行为",
+          1
+        ],
+        [
+          "受害后恢复心理",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "仅靠教育或经验积累无法改变用户行为,需更强监管"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "超过一半受访受害者表示安全认知未改变",
+      "paper_id": "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+    },
+    {
+      "quote": "受害者只是找新服务继续使用DeFi",
+      "paper_id": "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+    },
+    {
+      "quote": "2FA在非托管钱包不被支持但用户仍依赖它",
+      "paper_id": "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+    },
+    {
+      "quote": "教育支持效果有限,需更强控制",
+      "paper_id": "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+    }
+  ]
+}

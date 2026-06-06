@@ -1,0 +1,40 @@
+{
+  "paper_id": "Xiao et al. - 2006 - A design of overlay anonymous multicast protocol",
+  "doi": null,
+  "title": "A Design of Overlay Anonymous Multicast Protocol",
+  "year": 2006,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Overlay multicast即将部署,但安全功能(匿名性)缺失,军事/紧急应用急需发送方和接收方双向匿名",
+  "problem_framing": "将匿名多播定义为空Overlay匿名多播树,需同时满足匿名度,传输效率,分布式自组织和增量优化",
+  "key_insight": "匿名多播的核心必须围绕树的构建,unica单播方案不能直接套用",
+  "method_signature": "MAM协议:单向匿名协议+双向匿名协议+匿名多播树构建与IT阈值触发MO节点邀请",
+  "evaluation_criteria": "P_reveal(匿名度),RRU(相对资源消耗),AWD(最坏延迟)",
+  "negative_result_or_admitted_limitation": "AM节点过多时性能严重下降,即使最优方案也退化为naïve RAND,且AM-AM连接代价至少两倍于AM-NM连接",
+  "evidence_for_taste": [
+    "the potential solution to anonymous multicast must center on the concept of the tree",
+    "A larger m will provide a higher anonymity degree while incurring larger cost and latency",
+    "AM sender anonymity improves when the tree grows",
+    "MAM may be directly used with no need to invite MO nodes",
+    "inviting more MO nodes is not as effective as before"
+  ],
+  "thinking_moves": [
+    "把匿名多播的挑战归结为树的暴露问题,而非路径问题",
+    "通过IT阈值机制把AM-AM连接控制在性能可接受范围",
+    "用incomplete tree在带宽效率和匿名度之间做工程折中",
+    "从攻击者视角(break-in概率)形式化定义匿名度度量"
+  ],
+  "topic_tags": [
+    "overlay-multicast-anonymity",
+    "mutual-anonymous-protocol",
+    "k-ary-incomplete-tree",
+    "traffic-analysis-defense",
+    "MO-node-invitation"
+  ],
+  "cites_own_work": [
+    "Xiao et al. 2003 - Low-cost and Reliable Mutual Anonymity Protocols"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "未找到明确venue信息,论文未注明发表会议或期刊,role为根据署名顺序推断的co-author"
+}

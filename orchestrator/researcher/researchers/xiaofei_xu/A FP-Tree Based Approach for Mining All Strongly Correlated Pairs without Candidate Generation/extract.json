@@ -1,0 +1,36 @@
+{
+  "paper_id": "A FP-Tree Based Approach for Mining All Strongly Correlated Pairs without Candidate Generation",
+  "doi": "10.48550/arxiv.cs/0411035",
+  "title": "A FP-Tree Based Approach for Mining All Strongly Correlated Pairs without Candidate Generation",
+  "year": 2004,
+  "venue": "arXiv preprint",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "即使Taper算法用了上界剪枝, 当物品数和事务数非常大时, 候选对测试仍然代价高昂",
+  "problem_framing": "给定最小相关阈值θ和事务数据库, 找出皮尔逊相关系数高于θ的所有物品对",
+  "key_insight": "利用FP-tree结构直接计算所有物品对的相关系数, 无需候选生成和上界剪枝, 对阈值θ不敏感",
+  "method_signature": "Tcp: 构建完整FP-tree + 模式增长计算相关系数",
+  "evaluation_criteria": "运行时间与Taper对比, 合成与真实数据集, 不同阈值下的稳定性",
+  "negative_result_or_admitted_limitation": "对于物品数较少的数据集(如mushroom), Tcp优势不明显, 在高阈值时不如Taper快",
+  "evidence_for_taste": [
+    "Tcp's performance is not good as that of Taper",
+    "the Tcp's unsatisfied performance is that, for dataset with fewer items, the advantage of Tcp is not very significant",
+    "Taper algorithm failed to continue its work because of the limited memory size"
+  ],
+  "thinking_moves": [
+    "把相关性挖掘问题从候选生成+剪枝框架转为模式增长框架",
+    "利用FP-tree压缩结构直接提取配对支持信息, 绕过上界近似",
+    "从工程失败案例(Taper在高阈值/大数据库上的内存问题)反向推导结构化方法的必要性",
+    "承认自身方法在特定条件下(小物品集)不优, 不是简单夸大优势"
+  ],
+  "topic_tags": [
+    "FP-tree",
+    "correlation-mining",
+    "candidate-elimination",
+    "pattern-growth",
+    "pearson-correlation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

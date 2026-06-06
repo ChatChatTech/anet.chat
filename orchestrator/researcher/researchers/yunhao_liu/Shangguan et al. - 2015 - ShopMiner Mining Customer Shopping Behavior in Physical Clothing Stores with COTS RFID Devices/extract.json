@@ -1,0 +1,46 @@
+{
+  "paper_id": "Shangguan et al. - 2015 - ShopMiner Mining Customer Shopping Behavior in Physical Clothing Stores with COTS RFID Devices",
+  "doi": null,
+  "title": "ShopMiner: Mining Customer Shopping Behavior in Physical Clothing Stores with COTS RFID Devices",
+  "year": 2015,
+  "venue": "SenSys'15",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Physical stores only have sales history, missing pre-checkout behaviors like browsing, picking up, and matching items",
+  "problem_framing": "Detect three behavior types: popular category (viewed items), hot items (picked/turned), correlated items (matched together)",
+  "key_insight": "Phase readings of RFID tags show distinct stable patterns when body blocks LOS link, enabling non-invasive behavior sensing",
+  "method_signature": "Foreground segmentation + KL-divergence segmentation + DDTW clustering on phase time-series",
+  "evaluation_criteria": "TPR 92% for popular items, 94%/87% accuracy for pick-up/turn-over, 85%+ for correlated items",
+  "negative_result_or_admitted_limitation": "False alarm rate breaks 40% without variance filtering; cannot distinguish employee from customer via RF signals",
+  "evidence_for_taste": [
+    "such a method is error-prone",
+    "the phase value changes significantly when the LOS path is blocked",
+    "false alarm rate breaks 40%",
+    "ShopMiner is unable to distinguish employees and customers",
+    "performance of ShopMiner can degrade dramatically in crowded stores"
+  ],
+  "thinking_moves": [
+    "把感知问题重新frame成通信问题：利用body shadowing对RF链路的影响",
+    "将用户行为建模为物品状态变化（stationary→kinetic），相位响应随之改变",
+    "先证相位噪声服从Gaussian分布，再设计假设检验方案",
+    "借鉴图像处理中前景检测的思路来处理phase frame",
+    "通过实验发现pick-up与turn-over对邻近物品的不同影响（是否被连带推动）",
+    "主动承认RSS-based方法在此场景下不可靠，选择phase时序相似性替代"
+  ],
+  "topic_tags": [
+    "RFID-phase-profiling",
+    "shopping-behavior-mining",
+    "physical-retail-analytics",
+    "forefront-detection-analog",
+    "DTW-clustering"
+  ],
+  "cites_own_work": [
+    "CBID",
+    "Tagbooth",
+    "OTrack",
+    "STPP",
+    "Tagoram"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

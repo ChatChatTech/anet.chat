@@ -1,0 +1,38 @@
+{
+  "paper_id": "Coordination of networking and computing_ toward new information infrastructure and new services mode",
+  "doi": "10.1631/fitee.2430000",
+  "title": "Coordination of networking and computing: toward new information infrastructure and new services mode",
+  "year": 2024,
+  "venue": "Frontiers of Information Technology & Electronic Engineering",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "网络与计算传统上分属不同利益方独立演进,当前需协调整合以提升资源调度效率和用户体验",
+  "problem_framing": "如何设计网络化超级计算机系统,实现跨端边云的计算资源优化调度",
+  "key_insight": "计算与网络的协同可通过交换传输换取计算能力,实现超低延迟与计算力的权衡",
+  "method_signature": "特刊综述:计算感知网络框架、联邦学习能效策略、任务分解与调度",
+  "evaluation_criteria": "资源利用率、用户满意度、延迟与阻塞率的权衡",
+  "negative_result_or_admitted_limitation": "路由中应用计算信息仍需进一步研究,广域网高吞吐传输面临长距离延迟挑战",
+  "evidence_for_taste": [
+    "The architectural design of the system is pivotal",
+    "exchanging computation for transmission",
+    "remains in its infancy",
+    "three pivotal technologies",
+    "requires further investigation"
+  ],
+  "thinking_moves": [
+    "从特刊多篇论文中提炼CNC共性挑战框架",
+    "将系统设计问题锚定为计算-传输权衡问题",
+    "区分识别、感知、调度三个层次递进解决",
+    "承认当前方法的不成熟与待解决问题"
+  ],
+  "topic_tags": [
+    "computing-aware-network",
+    "cloud-edge-device-collaboration",
+    "wide-area-resource-scheduling",
+    "federated-learning-energy-efficiency",
+    "computing-power-network-coordination"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "本文是特刊社论,非完整研究论文。缺乏具体方法细节,主要为方向性综述,需结合具体论文补充细节。研究者Wang以co-author身份参与。"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "2022_AAAI_Mlink",
+  "doi": null,
+  "title": "MLink: Linking Black-Box Models for Collaborative Multi-Model Inference",
+  "year": 2022,
+  "venue": "AAAI",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "多模型推理时GPU内存不足，无法同时运行所有模型获取完整结果",
+  "problem_framing": "最大化所有模型的平均输出精度，在给定成本预算下选择激活子集并用模型链接预测未激活模型",
+  "key_insight": "不同模型的输出空间存在语义相关性，可通过学习映射实现跨模型知识传递",
+  "method_signature": "学习黑盒模型输出空间之间的映射函数gij，并使用加权集成预测未激活模型",
+  "evaluation_criteria": "GPU内存预算下的平均输出精度，对比MTL/DRLS/Reducto等基线",
+  "negative_result_or_admitted_limitation": "当源模型与目标模型语义相关性低时模型链接精度差；模型数量大时成对链接不可行",
+  "evidence_for_taste": [
+    "model linking achieves higher prediction performance, especially when the amount of training data is small",
+    "only introduces negligible additional overheads",
+    "black-box outputs...are very effective hints",
+    "the best source dominates the ensemble performance",
+    "model linking has poor output accuracy"
+  ],
+  "thinking_moves": [
+    "把多模型推理的成本分配问题重新框架为跨模型知识链接问题",
+    "从模型输出的语义相关性而非中间特征构建映射",
+    "理论分析样本复杂度证明模型链接可减少数据需求",
+    "工程上用激活概率启发式简化NP难调度问题",
+    "用ensemble视角统一单源和多源链接"
+  ],
+  "topic_tags": [
+    "black-box model linking",
+    "multi-model inference",
+    "knowledge transfer across tasks",
+    "resource-constrained inference",
+    "ensemble model prediction"
+  ],
+  "cites_own_work": [
+    "Yuan et al. 2020a (DRLS)",
+    "Yuan et al. 2020b (advertising)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "paper provides complete text including intro/method/eval/conclusion. DOI not available. First author is Mu Yuan, corresponding author is Lan Zhang."
+}

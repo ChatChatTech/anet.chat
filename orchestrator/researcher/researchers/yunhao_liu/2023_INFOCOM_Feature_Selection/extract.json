@@ -1,0 +1,38 @@
+{
+  "paper_id": "2023_INFOCOM_Feature_Selection",
+  "doi": null,
+  "title": "FedSDG-FS: Efficient and Secure Feature Selection for Vertical Federated Learning",
+  "year": 2023,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "VFL中的噪声特征导致模型精度大幅下降(82.6%→54.2%),现有方法需要先验知识(如噪声特征数或后验阈值),不切实际",
+  "problem_framing": "无需先验知识的VFL安全特征选择:在保护数据隐私下,联合选择特征子集并训练全局模型,最小化风险R(θ,s)",
+  "key_insight": "先用Gini impurity初始化特征重要性(仅需2次通信),再通过随机双门(stochastic dual-gates)在训练中动态筛选特征,实现高效安全选择",
+  "method_signature": "Gini impurity初始化 + 高斯随机双门 + PHE加密 + 噪声机制",
+  "evaluation_criteria": "测试精度、特征选择精度(precision)、稳定性、通信开销",
+  "negative_result_or_admitted_limitation": "当噪声特征较少时,使用全部特征的准确率反而更高;FedSDG-FS在某些情况下仅达到可比的准确率",
+  "evidence_for_taste": [
+    "requires post-training threshold",
+    "Gini impurity initialization can speed up",
+    "reduces the sizes of the embedding vectors",
+    "neither data nor labels are exposed",
+    "can lead to inaccurate feature selection"
+  ],
+  "thinking_moves": [
+    "从现有方法的不可行假设入手,否定需要先验知识的方案",
+    "通过实验发现Gini特征与随机门选择的特征高度重合,从而论证初始化有效性",
+    "将特征选择问题重新框架为联合优化问题,通过连续松弛将离散的Bernoulli变量转化为可微的高斯变量",
+    "通过双门机制(特征门+嵌入门)同时解决选择精度和通信开销两个维度的问题"
+  ],
+  "topic_tags": [
+    "vertical-federated-learning",
+    "feature-selection",
+    "privacy-preserving-ml",
+    "homomorphic-encryption",
+    "stochastic-gates"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

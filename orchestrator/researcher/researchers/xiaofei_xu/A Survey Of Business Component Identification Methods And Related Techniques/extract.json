@@ -1,0 +1,38 @@
+{
+  "paper_id": "A Survey Of Business Component Identification Methods And Related Techniques",
+  "doi": "10.5281/zenodo.1062023",
+  "title": "A Survey of Business Component Identification Methods and Related Techniques",
+  "year": null,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "随着企业软件系统复杂度增加，如何从业务模型中快速有效识别可复用组件成为紧迫需求",
+  "problem_framing": "组件识别是多目标优化问题，需在复用性、复用成本、粒度、内聚耦合之间权衡",
+  "key_insight": "现有方法各有侧重：领域工程方法优化复用性与稳定性，聚类方法降低复用成本，CRUD方法保证语义完整性",
+  "method_signature": "将组件识别方法分为四类：领域工程法、聚类分析法、CRUD矩阵法、其他方法并进行比较分析",
+  "evaluation_criteria": "复用性、复用成本、复用效率、稳定性、粒度、内聚、耦合",
+  "negative_result_or_admitted_limitation": "大多数方法自动化程度低，需要设计师手工识别组件；现有方法只关注部分性能指标而忽略其他",
+  "evidence_for_taste": [
+    "cannot reach optimization at the same time",
+    "seeks balance between different components",
+    "runs in the opposite direction of coarse-grained reuse tendency",
+    "there lacks of a uniform component semantics model",
+    "various CI methods only pay attentions to part of performance metrics",
+    "have to be done manually"
+  ],
+  "thinking_moves": [
+    "识别多目标优化中相互制约的指标（如粗粒度高复用效率但低复用性）",
+    "从手工方法逐步走向自动化工具支持是必然趋势",
+    "通过分类比较揭示各方法优缺点，而非提出单一最优方案"
+  ],
+  "topic_tags": [
+    "组件识别",
+    "软件复用",
+    "业务建模",
+    "多目标优化",
+    "聚类分析"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为2005年survey，缺少具体年份和会议信息。Xiaofei Xu为合作作者身份（第三作者），论文主要体现Xiaofei Xu团队（哈尔滨工业大学）在软件复用领域的研究视野，但非其本人的方法创新论文。"
+}

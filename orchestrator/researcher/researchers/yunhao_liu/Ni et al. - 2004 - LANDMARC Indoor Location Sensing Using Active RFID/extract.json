@@ -1,0 +1,37 @@
+{
+  "paper_id": "Ni et al. - 2004 - LANDMARC Indoor Location Sensing Using Active RFID",
+  "doi": null,
+  "title": "LANDMARC: Indoor Location Sensing Using Active RFID",
+  "year": 2004,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "GPS fails indoors; existing indoor solutions (infrared, 802.11, ultrasonic) have line-of-sight, accuracy, or cost limitations.",
+  "problem_framing": "Use cheap reference tags as calibration landmarks to compensate for RFID's lack of native signal strength reporting.",
+  "key_insight": "Reference tags experiencing identical environmental effects as tracking tags enable relative signal-strength comparison for location estimation.",
+  "method_signature": "k-nearest neighbor with inverse-square weighted Euclidean distance in signal-strength space",
+  "evaluation_criteria": "Error distance (Euclidean) between computed and true coordinates; CDF of error at 50th and 90th percentiles",
+  "negative_result_or_admitted_limitation": "Initial reader-placement approach fails because dynamic interference causes inconsistent detection ranges for static objects.",
+  "evidence_for_taste": [
+    "Such a nicely formulated optimization problem turns out to be useless",
+    "the physical distance cannot be computed accurately by using power levels directly",
+    "the improvement is not as great as we expected",
+    "the accuracy has dropped quite significantly",
+    "the error due to the dynamics of the environment can hardly be alleviated"
+  ],
+  "thinking_moves": [
+    "Faced with environmental noise destroying distance-to-signal mapping, pivot to using redundant cheap sensors as relative landmarks",
+    "Formulate location as a k-nearest-neighbor lookup problem in signal-strength space rather than direct coordinate computation",
+    "Validate robustness by comparing daytime vs nighttime (high vs low interference) conditions",
+    "Identify cost-accuracy tradeoff: readers expensive, tags cheap; exploit many cheap tags over few expensive readers"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "k-nearest-neighbor",
+    "reference-tag-calibration",
+    "signal-strength-proxy",
+    "indoor-positioning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

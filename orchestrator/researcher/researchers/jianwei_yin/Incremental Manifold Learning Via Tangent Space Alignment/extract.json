@@ -1,0 +1,37 @@
+{
+  "paper_id": "Incremental Manifold Learning Via Tangent Space Alignment",
+  "doi": "10.1007/11829898_10",
+  "title": "Incremental Manifold Learning Via Tangent Space Alignment",
+  "year": 2006,
+  "venue": "unknown (appears to be conference proceedings)",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "批量流形学习算法在顺序收集数据的监控等场景下计算代价过高，需增量方法",
+  "problem_framing": "将LTSA的批量特征分解问题转化为增量特征更新问题，利用局部性结构简化更新",
+  "key_insight": "LTSA对齐矩阵结构高度局部，新数据影响仅限k近邻子集，且扰动矩阵的特征向量保持接近",
+  "method_signature": "ILTSA通过局部切空间更新+子空间迭代+Ritz加速实现增量特征分解",
+  "evaluation_criteria": "与批量版本坐标误差<0.1%且计算时间显著节省",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "influence of a new data is more local",
+    "reuse of the current transform matrix",
+    "eigenvalues of new data distance matrix are assumed the same as old data set. However, the assumption does not always hold",
+    "landmark points are selected somewhat randomly. while in our method. the landmarks are selected following a more principal approach"
+  ],
+  "thinking_moves": [
+    "利用LTSA对齐矩阵的局部稀疏结构设计增量更新，避免全局重算",
+    "将ISOMAP的landmark增量思想移植到LTSA，并用LASSO替代随机选择",
+    "将渐增特征值分解问题frame为子空间迭代+Ritz加速，以有效处理矩阵尺寸增大",
+    "通过局部几何信息保留原则求解新数据点坐标，将问题转化为最小二乘"
+  ],
+  "topic_tags": [
+    "incremental-manifold-learning",
+    "LTSA",
+    "eigenvalue-incremental-update",
+    "LASSO-landmark-selection",
+    "tangent-space-alignment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "年份从参考文献推断为2006年；venue信息从DOI格式和论文风格推断为学术会议，但具体名称未在文中明确给出；作者角色标注基于拼音jainwei_yin在作者列表中的位置"
+}

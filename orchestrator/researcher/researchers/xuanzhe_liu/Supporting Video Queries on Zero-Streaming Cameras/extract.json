@@ -1,0 +1,45 @@
+{
+  "paper_id": "Supporting Video Queries on Zero-Streaming Cameras",
+  "doi": null,
+  "title": "Video Analytics with Zero-streaming Cameras",
+  "year": 2021,
+  "venue": "USENIX ATC (inferred from ATC 2021 references)",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "大量冷视频(cold videos)占用带宽但几乎无人查询(<0.005%)，流媒体传输浪费资源且低コストカメラ无力实时处理",
+  "problem_framing": "如何高效查询本地存储的冷视频？需解决捕获期资源利用和查询期快速探索两大挑战",
+  "key_insight": "准确知识在稀疏帧上比不准确知识在所有帧上更有价值；多轮递增算子逐步精化结果",
+  "method_signature": "DIVA：捕获期构建稀疏地标帧，查询期多轮算子升级处理",
+  "evaluation_criteria": "查询速度>100×实时视频，优于竞品≥4×；结果半程返回时间缩短10×",
+  "negative_result_or_admitted_limitation": "不适用于极短视频范围；依赖存储可靠性；非平稳摄像机表现可能欠佳；未考虑极低带宽场景",
+  "evidence_for_taste": [
+    "accurate knowledge on a sparse sample",
+    "much more useful than inaccurate knowledge",
+    "opposite to existing designs",
+    "the key is to refine query results",
+    "maximizing the rate of true positive",
+    "never omits any region",
+    "does not affect query correctness",
+    "only suits fewer cameras"
+  ],
+  "thinking_moves": [
+    "挑战流媒体范式：把通信问题重新frame成存储查询问题",
+    "稀疏但准确的监督信号优于密集但低质量的弱监督",
+    "利用长时序视频的统计不变性(空间偏斜)作为先验知识",
+    "将离线知识蒸馏与在线算子升级结合",
+    "先探索后精化的贪心策略：easy frames优先处理"
+  ],
+  "topic_tags": [
+    "zero-streaming-camera",
+    "video-query-system",
+    "cold-video-analytics",
+    "edge-cloud-coordination",
+    "multi-pass-inference"
+  ],
+  "cites_own_work": [
+    "Approximate query service on autonomous IoT cameras",
+    "DeepCache"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "paper完整但参考文献部分被截断；年份从引用上下文推断；提取了系统设计、实验验证和局限性的完整信息 | md truncated to head40k+tail20k"
+}

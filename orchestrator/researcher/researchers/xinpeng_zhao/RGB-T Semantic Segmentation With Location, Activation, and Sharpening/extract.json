@@ -1,0 +1,38 @@
+{
+  "paper_id": "RGB-T Semantic Segmentation With Location, Activation, and Sharpening",
+  "doi": "10.1109/tcsvt.2022.3208833",
+  "title": "RGB-T Semantic Segmentation With Location, Activation, and Sharpening",
+  "year": 2022,
+  "venue": "IEEE Trans. Circuits Syst. Video Technol.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有RGB-T方法对不同层级特征采用统一模块,忽视CNN各层级特征的独特属性,导致融合次优。",
+  "problem_framing": "将RGB-T融合问题重新定义为对高层语义特征(定位)、中层特征(区域激活)、低层纹理特征(边缘锐化)的差异化处理。",
+  "key_insight": "特征层级具有独特属性,需设计专门模块而非统一模块;乘法提取共存信息,加法提取综合信息,二者互补。",
+  "method_signature": "LASNet三步走:CLM定位,CAM激活,ESM锐化。",
+  "evaluation_criteria": "MFNet和PST900数据集上的mAcc和mIoU。",
+  "negative_result_or_admitted_limitation": "encoder fusion使用简单逐元素相加忽略RGB/TIR特征属性;其他范式统一模块处理各层级特征是次优的。",
+  "evidence_for_taste": [
+    "indiscriminate treatment ignores the properties of features at different levels and is suboptimal",
+    "w/o Corr discards building cross-modal pixel-level correlations",
+    "self-enhancement of f_sum is sub-optimal",
+    "its performance drops by 2.6%, which is the worst in Tab. V",
+    "using one kind of attention alone is insufficient"
+  ],
+  "thinking_moves": [
+    "将融合范式问题重新frame为特征层级差异化处理",
+    "先指出现有方法统一模块的局限,再提出层级专属模块",
+    "通过消融实验验证每个组件的必要性",
+    "乘法与加法的信息互补性作为设计原则"
+  ],
+  "topic_tags": [
+    "cross-modal-fusion",
+    "RGB-T-semantic-segmentation",
+    "feature-level-discriminative-treatment",
+    "thermal-infrared",
+    "attention-mechanism"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

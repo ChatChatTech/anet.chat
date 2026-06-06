@@ -1,0 +1,39 @@
+{
+  "paper_id": "Qian et al. - 2018 - Enabling Contactless Detection of Moving Humans with Dynamic Speeds Using CSI",
+  "doi": null,
+  "title": "Enabling Contactless Detection of Moving Humans with Dynamic Speeds Using CSI",
+  "year": 2018,
+  "venue": "ACM Trans. Embed. Comput. Syst.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "RSS-based detection suffers from coarse granularity; existing CSI methods ignore phase and cannot handle dynamic walking speeds",
+  "problem_framing": "Extract sensitive features from full CSI (amplitude+phase) using eigenvalue-based correlation matrices and multi-antenna diversity",
+  "key_insight": "Phase difference across antennas has higher variance than linear transformation, yielding better sensitivity to human motion",
+  "method_signature": "Phase difference + outlier filtering → correlation matrix eigenvalues → SVM classification for motion detection",
+  "evaluation_criteria": "True-Positive rate (motion detection) and True-Negative rate (static environment classification)",
+  "negative_result_or_admitted_limitation": "PADS cannot detect quasi-static humans; requires motion for detection; theoretical limitation acknowledged",
+  "evidence_for_taste": [
+    "few of them have explored the full potential of CSI",
+    "phase difference tends to have higher variance",
+    "phase differences across antennas have clear physical meaning",
+    "major information of human motion centers upon the first three eigenvalues",
+    "gathering CSI data where humans walk at slow speeds is sufficient and necessary"
+  ],
+  "thinking_moves": [
+    "先验证相位差异比线性变换相位方差更大, 再选择前者",
+    "从天线间距导致相位独立性角度解释方差差异",
+    "从特征工程角度统一振幅和相位特征表达",
+    "通过交叉验证发现慢速行走数据训练效果最佳"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-motion-detection",
+    "phase-difference-feature",
+    "eigenvalue-correlation-feature",
+    "device-free-localization",
+    "MIMO-antenna-diversity"
+  ],
+  "cites_own_work": [
+    "Qian et al. 2014 (conference version)"
+  ],
+  "extraction_quality": "full"
+}

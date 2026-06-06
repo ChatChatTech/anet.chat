@@ -1,0 +1,40 @@
+{
+  "paper_id": "Hierarchical Federated Learning through LAN-WAN Orchestration",
+  "doi": "10.48550/arxiv.2010.11612",
+  "title": "Hierarchical Federated Learning through LAN-WAN Orchestration",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WAN-driven FL has communication bottleneck and high monetary cost (80% billing to network traffic)",
+  "problem_framing": "Hierarchical FL with intra-LAN P2P aggregation and infrequent inter-LAN global aggregation across WAN",
+  "key_insight": "LAN bandwidth is 10x more abundant and unmetered; frequent local aggregation reduces WAN reliance while accelerating convergence",
+  "method_signature": "LanFL: LAN-aware hierarchical FL with dynamic topology selection and device number balancing for heterogeneous LANs",
+  "evaluation_criteria": "Model accuracy preservation, convergence speedup (1.5x-6.0x), WAN traffic reduction (18.3x-75.6x), monetary cost reduction (3.8x-27.2x)",
+  "negative_result_or_admitted_limitation": "LanFL only works with LAN domains having at least 10 devices; current design relies on manual parameter tuning; simulation-based without real deployment",
+  "evidence_for_taste": [
+    "Such a cost can be amplified",
+    "80% is billed to network traffic",
+    "even worse in FL due to the Non-IID data",
+    "cannot really speedup model convergence",
+    "imposes high engineering overhead"
+  ],
+  "thinking_moves": [
+    "把WAN瓶颈问题重新frame成利用LAN资源的机会",
+    "先分析现有方法的根本缺陷(网络是瓶颈且成本高),再寻找替代资源",
+    "用hierarchical结构调和异构网络资源的矛盾",
+    "通过实验验证关键设计点的有效性(dynamic device selection等)"
+  ],
+  "topic_tags": [
+    "hierarchical-federated-learning",
+    "LAN-WAN-orchestration",
+    "P2P-aggregation-topology",
+    "cross-device-FL",
+    "edge-assisted-distributed-learning"
+  ],
+  "cites_own_work": [
+    "10.48550/arxiv.2006.06983"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

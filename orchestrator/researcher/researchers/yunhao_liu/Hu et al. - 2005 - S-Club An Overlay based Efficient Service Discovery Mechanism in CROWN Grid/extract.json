@@ -1,0 +1,38 @@
+{
+  "paper_id": "Hu et al. - 2005 - S-Club An Overlay based Efficient Service Discovery Mechanism in CROWN Grid",
+  "doi": null,
+  "title": "S-Club: An Overlay based Efficient Service Discovery Mechanism in CROWN Grid",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CROWN网格规模快速增长，现有GISmesh网络搜索性能差、响应时间长、流量开销大",
+  "problem_framing": "将服务发现问题形式化为在GISmesh上高效定位同类服务的问题",
+  "key_insight": "同类热门服务聚成服务俱乐部，将广播搜索限制在俱乐部内而非全网",
+  "method_signature": "基于使用频率阈值构建服务俱乐部，俱乐部内用最小生成树拓扑",
+  "evaluation_criteria": "平均响应时间、总流量开销、优化率",
+  "negative_result_or_admitted_limitation": "MST拓扑易因成员动态加入离开而性能退化，需定期重建",
+  "evidence_for_taste": [
+    "too many clubs may bring much maintenance overhead",
+    "not always improved",
+    "single-point-failure"
+  ],
+  "thinking_moves": [
+    "利用服务使用的非均匀分布特性：热门服务建俱乐部，冷门服务走mesh",
+    "将搜索空间从全网缩减到俱乐部，通过拓扑约束实现流量节省",
+    "引入阈值α平衡俱乐部数量与维护开销，通过实验找最优值",
+    "MST拓扑牺牲鲁棒性换取最小流量成本的权宜设计"
+  ],
+  "topic_tags": [
+    "grid-information-service",
+    "overlay-network",
+    "service-discovery",
+    "peer-to-peer-search",
+    "distributed-hash-table"
+  ],
+  "cites_own_work": [
+    "CROWN项目"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

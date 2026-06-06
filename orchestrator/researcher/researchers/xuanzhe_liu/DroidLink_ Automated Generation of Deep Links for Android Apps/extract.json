@@ -1,0 +1,39 @@
+{
+  "paper_id": "DroidLink_ Automated Generation of Deep Links for Android Apps",
+  "doi": "10.48550/arxiv.1605.06928",
+  "title": "DroidLink: Automated Generation of Deep Links for Android Apps",
+  "year": 2018,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Apps become isolated islands; data enclosed inside cannot be accessed externally without manual refactoring",
+  "problem_framing": "Automate deep link generation while resolving page dependencies and publishing requirements with minimal developer effort",
+  "key_insight": "Model activity transitions as paths; compute shortest shortcuts to enable efficient deep link execution without modifying app structure",
+  "method_signature": "Navigation Graph via dynamic analysis → Shortcut computation → Proxy Activity architecture for APK repackaging",
+  "evaluation_criteria": "Feasibility (deep links generated) and efficiency (computation time, activity coverage)",
+  "negative_result_or_admitted_limitation": "Navigation Analyzer cannot reach activities requiring login; graph is incomplete. Security/privacy risks for exposing sensitive data via indexes",
+  "evidence_for_taste": [
+    "quite error-prone and time-consuming",
+    "non-trivial task at all",
+    "quite ad-hoc and even case-by-case way",
+    "preliminary effort to accelerate productivity",
+    "minimal refactorings to the original app",
+    "sufficiency of paths detected can be influenced"
+  ],
+  "thinking_moves": [
+    "把app内页面的可达性问题建模为有向图最短路径问题",
+    "引入Proxy Activity隔离机制实现无需修改原app的deep link注入",
+    "用动态分析爬取状态机而非静态分析来发现页面状态转换",
+    "承认动态分析覆盖不全，转向讨论静态分析作为补充方案"
+  ],
+  "topic_tags": [
+    "Android-deep-link-automation",
+    "mobile-app-interoperability",
+    "navigation-graph-analysis",
+    "intent-based-activity-transition",
+    "automated-app-indexing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

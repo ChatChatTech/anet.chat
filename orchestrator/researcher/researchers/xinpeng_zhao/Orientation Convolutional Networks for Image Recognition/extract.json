@@ -1,0 +1,37 @@
+{
+  "paper_id": "Orientation Convolutional Networks for Image Recognition",
+  "doi": "10.48550/arxiv.2102.01523",
+  "title": "Orientation Convolutional Networks for Image Recognition",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "DCNNs缺乏建模旋转变换的内在能力,导致图像分类等视觉任务性能受限",
+  "problem_framing": "将Gabor滤波器压缩为少量锚点滤波器,同时保持旋转变换表示能力",
+  "key_insight": "低秩结构传播可显著提升稀疏表示,矩阵分解框架可同时捕获全局和局部结构",
+  "method_signature": "LGF矩阵分解(核范数+低秩+稀疏约束)调制CNN卷积核",
+  "evaluation_criteria": "MNIST/MNIST-rot/CIFAR-10/100/SVHN错误率、参数量、计算时间",
+  "negative_result_or_admitted_limitation": "变形卷积和小滤波器优选,ORN仅适用于小尺寸滤波器,GCNs固定方向/尺度判别能力受限",
+  "evidence_for_taste": [
+    "the inherent capability of dealing with large object transformation is limited",
+    "the problem to be solved in (9) is non-convex",
+    "the approximation degree of original oriented filters",
+    "a more compact and efficient model"
+  ],
+  "thinking_moves": [
+    "把旋转变换鲁棒性问题重新框定为有效定向滤波器压缩问题",
+    "将核范数低秩约束与稀疏约束结合,通过交替方向法求解",
+    "理论证明最优解Z是块对角的,解释为何选择Z而非V作为系数",
+    "先调参优化近似度D,再迁移到下游分类任务验证"
+  ],
+  "topic_tags": [
+    "Gabor滤波器",
+    "矩阵分解",
+    "旋转变换鲁棒性",
+    "深度CNN调制",
+    "稀疏低秩表示"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

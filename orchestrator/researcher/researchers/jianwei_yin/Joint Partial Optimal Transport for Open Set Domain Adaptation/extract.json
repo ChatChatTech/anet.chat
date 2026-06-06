@@ -1,0 +1,37 @@
+{
+  "paper_id": "Joint Partial Optimal Transport for Open Set Domain Adaptation",
+  "doi": "10.24963/ijcai.2020/352",
+  "title": "Joint Partial Optimal Transport for Open Set Domain Adaptation",
+  "year": 2020,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "目标域含未知类导致负迁移，现有方法在决策边界附近错分未知样本",
+  "problem_framing": "开放集域适应需正确分类已知类并将未知类识别为unknown",
+  "key_insight": "利用部分最优传输排除远距离配对，仅传输高相似度样本对来避免负迁移",
+  "method_signature": "JPOT结合部分最优传输损失与联合判别原型紧致损失",
+  "evaluation_criteria": "OS、OS*、ALL、UNK四种指标综合评估已知类准确率和未知类识别率",
+  "negative_result_or_admitted_limitation": "OSBP等方法在特征空间中未知类样本与已知类混合导致低置信度分类",
+  "evidence_for_taste": [
+    "unknown samples will be negatively transported",
+    "misclassification when target domain unknown samples",
+    "blind about the structure of unknown classes",
+    "eliminate the far-fetched pairings that cause negative transfer",
+    "remain intractable for previous methods"
+  ],
+  "thinking_moves": [
+    "把负迁移问题重新理解为一对一运输中远距离配对导致的代价",
+    "先用全局最优传输获得耦合矩阵，再从残差中提取未知类统计信息",
+    "将原型紧致损失与最优传输结合实现类内紧凑与类间分离",
+    "增量学习累积均值方差来稳定未知类估计"
+  ],
+  "topic_tags": [
+    "open-set-domain-adaptation",
+    "partial-optimal-transport",
+    "negative-transfer",
+    "discriminative-prototype",
+    "unknown-class-recognition"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

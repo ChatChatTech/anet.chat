@@ -1,0 +1,37 @@
+{
+  "paper_id": "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4392737534",
+  "doi": "10.48550/arxiv.2403.06932",
+  "title": "ERA-CoT: Improving Chain-of-Thought through Entity Relationship Analysis",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLMs处理多实体复杂场景时遇到挑战,隐式关系需要多步推理,但CoT缺乏实体关系理解能力",
+  "problem_framing": "将复杂场景问答建模为实体关系分析+链式推理的5步pipeline问题",
+  "key_insight": "通过显式关系提取→隐式关系推理→关系判别过滤,可增强LLM对实体关系的理解从而提升推理准确性",
+  "method_signature": "5步pipeline:实体提取→显式关系→隐式推理→阈值过滤→问答",
+  "evaluation_criteria": "Accuracy和Exact Match在6个数据集上对比baseline方法",
+  "negative_result_or_admitted_limitation": "在符号推理等实体关系较少的任务上性能提升不明显,且k值过大时会引入幻觉",
+  "evidence_for_taste": [
+    "Implicit Relationship Inference Errors is consistently the highest",
+    "the error rate of An. is relatively small",
+    "if the relationships between entities are correctly inferred, the model is likely to answer questions correctly",
+    "Even simple sentences can contain some in-depth entity relationships worth exploring"
+  ],
+  "thinking_moves": [
+    "把问答中的多实体关系问题拆解为串行的子任务pipeline",
+    "用Self-Consistency投票机制验证实体提取和显式关系的一致性",
+    "通过阈值过滤消除推理过程中的错误隐式关系",
+    "区分简单问题(k=1)和复杂问题(k>3)的隐式关系数量需求"
+  ],
+  "topic_tags": [
+    "LLM-CoT增强",
+    "实体关系抽取",
+    "零样本推理",
+    "隐式关系推断",
+    "问答系统"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

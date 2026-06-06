@@ -1,0 +1,38 @@
+{
+  "paper_id": "Listening to Chaotic Whispers_ A Deep Learning Framework for∩ü£n News-oriented Stock Trend Prediction",
+  "doi": "10.48550/arxiv.1712.02136",
+  "title": "Listening to Chaotic Whispers: A Deep Learning Framework for News-oriented Stock Trend Prediction",
+  "year": 2018,
+  "venue": "WSDM 2018",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "在线股票相关内容质量参差不齐,大量低质量新闻/评论/谣言难以利用,需模仿人类学习过程应对混沌信息",
+  "problem_framing": "将新闻导向的股票趋势预测形式化为基于新闻语料序列的三分类问题(DOWN/UP/PRESERVE)",
+  "key_insight": "人类处理混沌新闻遵循三原则:序列上下文依赖、多样影响力、有效高效学习,据此设计双层注意力网络",
+  "method_signature": "Hybrid Attention Networks (HAN) + 自节奏学习机制,含新闻级注意力和时序级注意力",
+  "evaluation_criteria": "分类准确率、三类约等分后的Accuracy、投资模拟年化收益率",
+  "negative_result_or_admitted_limitation": "当某股票连续10天以上无新闻时(占8.4%),难以进行新闻导向预测;早期SPL学习速度慢于标准训练",
+  "evidence_for_taste": [
+    "quality, trustworthiness, and comprehensiveness of online content vary drastically",
+    "human can comprehensively consider a sequence of related recent news",
+    "human beings tend to first gain knowledge by focusing on informative occasions",
+    "our framework can select significant news and filter out those less informative ones",
+    "the highest profits should be obtained by selecting the most top stocks"
+  ],
+  "thinking_moves": [
+    "将人类认知过程形式化为三原则,用于指导模型设计",
+    "双层注意力机制模仿人类对不同新闻和时段的差异化关注",
+    "通过自节奏学习机制自动跳过早期困难样本实现有效学习",
+    "用SINOPEC炼油改革案例具体说明序列上下文依赖的应用"
+  ],
+  "topic_tags": [
+    "stock-trend-prediction",
+    "news-mining",
+    "hybrid-attention-networks",
+    "self-paced-learning",
+    "deep-learning-RNN"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

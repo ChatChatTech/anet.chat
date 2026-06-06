@@ -1,0 +1,42 @@
+{
+  "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2310102669",
+  "doi": "10.48550/arxiv.1603.06111",
+  "title": "How Transferable are Neural Networks in NLP Applications?",
+  "year": 2016,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "神经NLP中迁移学习结论不一致,需要系统性探究",
+  "problem_framing": "区分语义等价/不同迁移场景,比较INIT和MULT两种方法",
+  "key_insight": "NLP中迁移性取决于任务语义相似度,不同于图像处理",
+  "method_signature": "逐层转移分析(LSTM/CNN),冻结vs微调对照",
+  "evaluation_criteria": "6数据集测试准确率,冻结参数排除优化因素",
+  "negative_result_or_admitted_limitation": "跨语义迁移无效(无提升),MULT+INIT无额外收益",
+  "evidence_for_taste": [
+    "results are not consistent",
+    "very prone to overfitting",
+    "no improvement of transferring hidden layers",
+    "frustrating results",
+    "inconsistent and lack explanation",
+    "not higher than MULT or INIT",
+    "the output layer is mainly specific to a dataset"
+  ],
+  "thinking_moves": [
+    "从图像领域类比出发,指出自然语言离散性与连续像素的根本差异",
+    "系统化拆分迁移场景:语义等价vs语义不同,INIT vs MULT",
+    "逐层冻结分析,排除目标域优化干扰以揭示特征本身的可迁移性",
+    "负面结果归因:输出层特定于数据集,隐藏层需语义匹配",
+    "意外发现转译时机悖论:SNLI第2轮最高迁移性能却源任务性能低",
+    "对比前人矛盾结论,重新解读Collobert等人的微小增益实为词嵌入贡献"
+  ],
+  "topic_tags": [
+    "neural-network-transfer-learning",
+    "nlp-semantic-generalization",
+    "layer-wise-transferability-analysis",
+    "multi-task-learning-comparison",
+    "parameter-initialization-nlp"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Liu et al. - 2012 - Ad-hoc Anonymity Privacy Preservation for Location-based Services in Mobile Networks",
+  "doi": null,
+  "title": "Ad-hoc Anonymity: Privacy Preservation for Location-based Services in Mobile Networks",
+  "year": 2012,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "LBS要求用户报告精确位置,隐私泄露严重,现有方案依赖中介或合作用户,限制应用",
+  "problem_framing": "如何在无中介条件下通过异步假名变更实现接近同步的隐私保护",
+  "key_insight": "虚拟用户(dummy)链式参与不同时间的假名变更,打破时间相关性使攻击者无法识别",
+  "method_signature": "ad-hoc匿名:异步假名变更+dummy概率参与+假名链式混合",
+  "evaluation_criteria": "熵(匿名集有效大小)和服务会话时长",
+  "negative_result_or_admitted_limitation": "非合作用户限制可达隐私度,分布式方案难以同步大量用户",
+  "evidence_for_taste": [
+    "lightweight and distributed, relying on no intermediary",
+    "A dummy does not care the quality of services",
+    "ambitious participation is transparent to attackers",
+    "an effective way to obscure attackers",
+    "this protects the dummy from being recognized"
+  ],
+  "thinking_moves": [
+    "把匿名集分割问题转化为dummy链式链接问题",
+    "利用攻击者视角的不确定性证明dummy不可识别",
+    "用信息熵形式化隐私可度量性",
+    "从对抗性角度设计dummy生成时机"
+  ],
+  "topic_tags": [
+    "location-privacy",
+    "pseudonym-change",
+    "ad-hoc-anonymity",
+    "dummy-traffic-injection",
+    "entropy-metric-anonymity"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue信息未在正文中明确给出,仅从论文样式推断为会议论文;role为推断"
+}

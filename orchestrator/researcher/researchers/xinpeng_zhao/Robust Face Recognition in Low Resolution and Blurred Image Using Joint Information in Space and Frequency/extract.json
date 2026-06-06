@@ -1,0 +1,40 @@
+{
+  "paper_id": "Robust Face Recognition in Low Resolution and Blurred Image Using Joint Information in Space and Frequency",
+  "doi": "10.1007/978-3-642-35606-3_73",
+  "title": "Robust Face Recognition in Low Resolution and Blurred Image Using Joint Information in Space and Frequency",
+  "year": 2012,
+  "venue": "International Conference on Intelligent Computing and Intelligent Systems",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "现有方法面对低分辨率和模糊图像时性能急剧下降，实际应用需求迫切",
+  "problem_framing": "从模糊/低分辨率图像直接提取对模糊不变且有区分性的特征，而非先恢复再识别",
+  "key_insight": "不同频率间的相关性在低分辨率和模糊退化下有利于提升识别性能",
+  "method_signature": "ELFD在相同空间位置编码两相关频率的联合局部描述符，含自适应窗口选择和幅度相位融合",
+  "evaluation_criteria": "在Yale和FERET数据库的12种退化条件下比较LFD/ELFD/融合方法的识别准确率",
+  "negative_result_or_admitted_limitation": "ELP D维度更高导致维度灾难，若实施判别分析可超越LPD；ELFD_bins数激增需学习合并策略",
+  "evidence_for_taste": [
+    "the goal of image restoration is not consistent with recognition",
+    "correlations between frequencies are beneficial",
+    "blur insensitive and local property is in fact a trade-off",
+    "the main drawback of ELFD is the substantially increased number of bins",
+    "We do not know blur kernel size in advance in reality"
+  ],
+  "thinking_moves": [
+    "从LFD忽视频率相关性的局限出发，反推联合表示的必要性",
+    "将模糊建模为卷积，通过数学推导分析窗口大小对模糊不变性的影响",
+    "将幅度和相位视为互补信息，用线性加权融合而非简单拼接",
+    "承认维度灾难的副作用，提出基于训练集学习合并有效bin的策略"
+  ],
+  "topic_tags": [
+    "face-recognition-blur-invariant",
+    "local-frequency-descriptor",
+    "low-resolution-face-recognition",
+    "adaptive-STFT-window",
+    "magnitude-phase-fusion"
+  ],
+  "cites_own_work": [
+    "Sun, G., Li, G.: Blurred Image Classification Using Adaptive Dictionary (2011)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整方法论和实验数据，作者Xinpeng Zhang为第三作者，非通讯作者；年份通过DOI的卷号2012推断"
+}

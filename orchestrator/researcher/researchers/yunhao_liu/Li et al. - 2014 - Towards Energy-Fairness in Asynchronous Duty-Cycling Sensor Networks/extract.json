@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2014 - Towards Energy-Fairness in Asynchronous Duty-Cycling Sensor Networks",
+  "doi": null,
+  "title": "Towards Energy-Fairness in Asynchronous Duty-Cycling Sensor Networks",
+  "year": 2014,
+  "venue": "ACM Transactions on Sensor Networks",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Sensor nodes powered by batteries; frequent replacements prohibited; gap between limited energy and long-term deployment needs.",
+  "problem_framing": "Sleep Interval Control (SIC) problem formulated as convex optimization minimizing maximum energy consumption rate (min-max fairness).",
+  "key_insight": "SIC is convex, enabling decomposition into local sub-problems solvable in a distributed manner while achieving global optimum.",
+  "method_signature": "GDSIC: distributed convex optimization via local information exchange among sensor nodes.",
+  "evaluation_criteria": "Maximum energy consumption rate minimization; network lifetime extension; convergence speed and scalability.",
+  "negative_result_or_admitted_limitation": "Greedy SIC strategy leads network to suboptimal value far above optimal result (4.9 vs 2.8 mJ/s in case study).",
+  "evidence_for_taste": [
+    "hardly perform well in practice",
+    "greedy strategy is not always effective",
+    "there is an urgent need to develop",
+    "such an instrument is still lacking",
+    "hardness of the SIC problem is beyond such an intuition"
+  ],
+  "thinking_moves": [
+    "从数学上严格证明现有策略(包括直观启发式)失效",
+    "用定理形式化问题本质,揭示违背直觉之处",
+    "将全局优化问题分解为局部子问题以实现分布式求解",
+    "通过凸性质保证分布式计算能收敛到全局最优"
+  ],
+  "topic_tags": [
+    "duty-cycling MAC",
+    "energy-fairness",
+    "convex optimization",
+    "distributed algorithm",
+    "min-max optimization"
+  ],
+  "cites_own_work": [
+    "Li et al. 2012 (INFOCOM preliminary version)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

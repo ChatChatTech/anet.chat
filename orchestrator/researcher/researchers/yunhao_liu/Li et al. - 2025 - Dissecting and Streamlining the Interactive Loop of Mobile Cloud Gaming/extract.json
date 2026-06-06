@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2025 - Dissecting and Streamlining the Interactive Loop of Mobile Cloud Gaming",
+  "doi": null,
+  "title": "Dissecting and Streamlining the Interactive Loop of Mobile Cloud Gaming",
+  "year": 2025,
+  "venue": "USENIX NSDI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "MCG platforms exhibit high interactive latency (112-403ms) even under good network, critically affecting QoE for budget mobile users",
+  "problem_framing": "Interactive latency is decomposed into 16 pipeline stages; VSync mechanism (5 events, 36% of latency) identified as root cause",
+  "key_insight": "Game-irrelevant VSyncs (VSync2/3) are avoidable since MCG game monopolizes rendering pipeline, only appending system UIs to game frames",
+  "method_signature": "LoopTailor: GFI intercepts frames to bypass cloud VSyncs; RVC predicts latencies and aligns remaining VSyncs across cloud-client",
+  "evaluation_criteria": "Interactive latency reduction to <100ms (34% lower); latency fluctuation ratio reduced from 11.52 to 1.23",
+  "negative_result_or_admitted_limitation": "High-end devices with adaptive refresh rates make VSync5 optimization less effective; prediction error may cause frame deadline miss",
+  "evidence_for_taste": [
+    "not every VSync event is functionally useful",
+    "a lack of coordination between the VSync events",
+    "network is not the key bottleneck",
+    "introducing non-trivial guest-host frame copy overheads"
+  ],
+  "thinking_moves": [
+    "从系统测量出发逐阶段拆解pipeline,定位VSync为瓶颈",
+    "通过区分功能必要性与结构性必要性,识别可优化VSync",
+    "利用MCG独占渲染特性绕过通用图形同步约束",
+    "将云端渲染与客户端VSync解耦重组成协同调度问题"
+  ],
+  "topic_tags": [
+    "mobile-cloud-gaming",
+    "VSync-optimization",
+    "graphics-pipeline",
+    "interactive-latency",
+    "android-emulation"
+  ],
+  "cites_own_work": [
+    "Trinity (prior work)",
+    "vSoC (prior work)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

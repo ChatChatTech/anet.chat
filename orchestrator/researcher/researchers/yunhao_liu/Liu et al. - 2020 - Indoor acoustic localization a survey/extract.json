@@ -1,0 +1,39 @@
+{
+  "paper_id": "Liu et al. - 2020 - Indoor acoustic localization a survey",
+  "doi": null,
+  "title": "Indoor acoustic localization: a survey",
+  "year": 2020,
+  "venue": "EURASIP Journal on Advances in Signal Processing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有GPS在室内失效,需高精度低延迟且通用设备即可实现的定位方案",
+  "problem_framing": "声学定位系统按绝对/相对测距分类,再按机制细分,比较各方法精度延迟与基础设施需求",
+  "key_insight": "声速低于射频,时延估计精度更高,且麦克风扬声器广泛嵌入设备降低基础设施要求",
+  "method_signature": "声学室内定位系统综述分类:绝对测距(ToF/TDoA/RTOF)与相对测距(FMCW/多普勒/相移)",
+  "evaluation_criteria": "定位精度(厘米级/毫米级)、时间延迟、基础设施要求",
+  "negative_result_or_admitted_limitation": "Cricket精度虽达12厘米但高噪声阻止广泛部署;多普勒效应因时频分辨率问题无法实现细粒度定位",
+  "evidence_for_taste": [
+    "Cricket...has a very impressive accuracy of 12 cm",
+    "prevented from wide deployment due to its high noise",
+    "Doppler effect cannot enable fine-grained localization",
+    "The main limitation of vision localization is that, it is severely constrained by the lighting condition"
+  ],
+  "thinking_moves": [
+    "对多种室内定位技术(RF/视觉/惯性/声学)做横向比较权衡",
+    "构建层次化分类体系(绝对vs相对→机制细分)",
+    "识别当前方法的残余挑战而非仅列成功案例",
+    "从通信领域(RF)借鉴技术思想(如OFDM、信道冲击响应)到声学定位",
+    "识别共同挑战后区分各子类的独有难题"
+  ],
+  "topic_tags": [
+    "acoustic-indoor-localization",
+    "time-of-flight-ranging",
+    "FMCW-chirp-signal",
+    "Doppler-effect-motion-tracking",
+    "phase-shift-fine-grained-tracking",
+    "COTS-smart-device-localization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "本文为综述论文,作者角色为合著但非主导;重点反映系统性分类思考而非单一方法创新提出;关键判断多以对比实验数据或同行工作为证 | md truncated to head40k+tail20k"
+}

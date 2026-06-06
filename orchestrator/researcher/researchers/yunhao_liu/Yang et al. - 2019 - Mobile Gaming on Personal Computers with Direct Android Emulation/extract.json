@@ -1,0 +1,41 @@
+{
+  "paper_id": "Yang et al. - 2019 - Mobile Gaming on Personal Computers with Direct Android Emulation",
+  "doi": null,
+  "title": "Mobile Gaming on Personal Computers with Direct Android Emulation",
+  "year": 2019,
+  "venue": "MobiCom '19",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Android游戏在PC上用AOVB虚拟化运行性能差,尤其重3D游戏卡顿严重,用户无法获得满意体验",
+  "problem_framing": "如何在消除完全虚拟化开销的同时保持Android兼容性,将问题定义为'直接安卓模拟'",
+  "key_insight": "通过指令重写和系统调用模拟,直接执行Android二进制文件于Windows x86之上,绕过虚拟化层",
+  "method_signature": "直接安卓模拟:指令重写加系统调用模拟,通过Windows内核接口访问PC硬件",
+  "evaluation_criteria": "流畅度(自研指标)、启动时间、内存/CPU/GPU占用、兼容性覆盖率",
+  "negative_result_or_admitted_limitation": "兼容性从95%降至92%,为换取高流畅度牺牲少量兼容性",
+  "evidence_for_taste": [
+    "pragmatic, efficient instruction rewriting",
+    "data-driven approach",
+    "prioritize supporting the popular syscalls",
+    "trade little decrease of compatibility",
+    "we still fail to make full virtualization",
+    "insufficient to provide the desired experiences"
+  ],
+  "thinking_moves": [
+    "从性能瓶颈定位虚拟化开销,再到打破虚拟化边界",
+    "用数据驱动分析syscall使用频率,优先支持高频 syscall",
+    "通过工程折中而非理论最优来平衡效率与兼容性",
+    "先量化用户感知指标(流畅度),再优化对应的系统瓶颈"
+  ],
+  "topic_tags": [
+    "Android emulation",
+    "cross-ISA translation",
+    "syscall emulation",
+    "mobile gaming on PC",
+    "virtualization overhead optimization"
+  ],
+  "cites_own_work": [
+    "AOVB-EMU"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

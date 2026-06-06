@@ -1,0 +1,139 @@
+{
+  "slug": "xiaoping_li",
+  "n_papers": 4,
+  "n_indexed": 4,
+  "anchors": [
+    "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing",
+    "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity",
+    "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization",
+    "Pattern learning for scheduling microservice workflow to cloud containers"
+  ],
+  "by_id": {
+    "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing": {
+      "title": "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing",
+      "year": null,
+      "venue": "Springer Lecture Notes in Computer Science",
+      "doi": "10.1007/978-3-642-45005-1_15",
+      "key_insight": "迭代生成完整关键路径而非部分关键路径，将路径优化松弛为多阶段决策过程(MDP)用动态规划求解",
+      "method_signature": "CPI启发式：迭代构造完整关键路径，动态规划Pareto方法(DPPM)优化路径",
+      "tags": [
+        "workflow-scheduling",
+        "cloud-computing",
+        "critical-path-heuristic",
+        "dynamic-programming",
+        "utility-computing"
+      ],
+      "quality": "partial"
+    },
+    "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity": {
+      "title": "ICPS: Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.2504.06512",
+      "key_insight": "Predict function concurrency via LSTM, pre-warm instances to avoid cold starts, and co-locate dependent functions on same worker node via affinity",
+      "method_signature": "ICPS: LSTM-based concurrency prediction + affinity-based instance deployment + request routing",
+      "tags": [
+        "serverless-cold-start",
+        "LSTM-concurrency-prediction",
+        "affinity-deployment",
+        "workflow-response-time",
+        "container-pre-warming"
+      ],
+      "quality": "full"
+    },
+    "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization": {
+      "title": "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization",
+      "year": null,
+      "venue": null,
+      "doi": "10.1007/978-0-387-36594-7_37",
+      "key_insight": "迭代搜索能大幅提升基于RZ插入的启发式性能, 但对NEH插入类启发式提升有限",
+      "method_signature": "在迭代RZ框架上集成LR初始解生成和FPE/FPE-R邻域搜索",
+      "tags": [
+        "permutation-flowshop-scheduling",
+        "total-flowtime-minimization",
+        "iterative-heuristics",
+        "composite-constructive-heuristics",
+        "pairwise-exchange-improvement"
+      ],
+      "quality": "partial"
+    },
+    "Pattern learning for scheduling microservice workflow to cloud containers": {
+      "title": "Pattern learning for scheduling microservice workflow to cloud containers",
+      "year": 2024,
+      "venue": "International Journal of Machine Learning and Cybernetics",
+      "doi": "10.21203/rs.3.rs-3726089/v1",
+      "key_insight": "通过GNN挖掘工作流中的模式子结构,复用排序结果可避免重复计算",
+      "method_signature": "PMWSC框架: GNN模式识别 → 工作流排序 → 任务排序(PB-TS) → 资源选择(PB-RS)",
+      "tags": [
+        "microservice workflow scheduling",
+        "container cloud",
+        "GNN pattern recognition",
+        "deadline-constrained optimization",
+        "scheduling algorithm efficiency"
+      ],
+      "quality": "partial"
+    }
+  },
+  "by_tag": {
+    "workflow-scheduling": [
+      "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    ],
+    "cloud-computing": [
+      "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    ],
+    "critical-path-heuristic": [
+      "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    ],
+    "dynamic-programming": [
+      "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    ],
+    "utility-computing": [
+      "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    ],
+    "serverless-cold-start": [
+      "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    ],
+    "LSTM-concurrency-prediction": [
+      "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    ],
+    "affinity-deployment": [
+      "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    ],
+    "workflow-response-time": [
+      "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    ],
+    "container-pre-warming": [
+      "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    ],
+    "permutation-flowshop-scheduling": [
+      "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    ],
+    "total-flowtime-minimization": [
+      "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    ],
+    "iterative-heuristics": [
+      "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    ],
+    "composite-constructive-heuristics": [
+      "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    ],
+    "pairwise-exchange-improvement": [
+      "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    ],
+    "microservice workflow scheduling": [
+      "Pattern learning for scheduling microservice workflow to cloud containers"
+    ],
+    "container cloud": [
+      "Pattern learning for scheduling microservice workflow to cloud containers"
+    ],
+    "GNN pattern recognition": [
+      "Pattern learning for scheduling microservice workflow to cloud containers"
+    ],
+    "deadline-constrained optimization": [
+      "Pattern learning for scheduling microservice workflow to cloud containers"
+    ],
+    "scheduling algorithm efficiency": [
+      "Pattern learning for scheduling microservice workflow to cloud containers"
+    ]
+  }
+}

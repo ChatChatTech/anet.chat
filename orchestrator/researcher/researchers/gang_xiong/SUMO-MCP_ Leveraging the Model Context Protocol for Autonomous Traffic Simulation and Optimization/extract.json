@@ -1,0 +1,46 @@
+{
+  "paper_id": "SUMO-MCP_ Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization",
+  "doi": "10.1109/cac67268.2025.11487664",
+  "title": "SUMO-MCP: Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization",
+  "year": 2025,
+  "venue": "IEEE Conference on Intelligent Transportation Systems (CAC)",
+  "venue_tier": "strong",
+  "role": "co-first",
+  "motivation": "SUMO工具复杂,非专业人士难以使用;现有LLM集成方案步骤固定,缺乏灵活性",
+  "problem_framing": "将复杂的多步骤SUMO仿真工作流转化为自然语言可驱动的自动化流程",
+  "key_insight": "利用MCP动态导入机制按需加载工具子模块,解决工具过载导致的智能体迷失问题",
+  "method_signature": "MCP协议封装SUMO工具套件,动态导入+预定义工作流+智能体编排",
+  "evaluation_criteria": "任务完成时间、内存占用、工具调用次数、性能指标(延误/排队)",
+  "negative_result_or_admitted_limitation": "预加载所有工具时,智能体更易出现工具过载,忘记既定工作流,产生错误级联",
+  "evidence_for_taste": [
+    "every SUMO simulation step must still be performed manually",
+    "these systems expose only a small set of hand-wrapped commands",
+    "keep the server lightweight",
+    "tool overload problem",
+    "agent is more prone to tool overload",
+    "occasionally forgot its established workflow",
+    "reduces the likelihood of parameter errors",
+    "virtual eliminates common scripting errors"
+  ],
+  "thinking_moves": [
+    "从现有ChatSUMO/Open-TI的固定步骤缺陷出发,识别动态工具编排的需求",
+    "将工具过载问题归因于预加载而非工具数量本身,通过对比实验验证动态导入的优势",
+    "通过agent行为观察而非纯指标来评估系统质量(如'忘记既定工作流')",
+    "将复杂工程问题(交通仿真)重新框架为自然语言交互的agent工具调用问题"
+  ],
+  "topic_tags": [
+    "LLM-agent-traffic-simulation",
+    "MCP-dynamic-tool-discovery",
+    "SUMO-traffic-optimization",
+    "agent-workflow-orchestration",
+    "traffic-signal-control"
+  ],
+  "cites_own_work": [
+    "LLMLight",
+    "CoLLMLight",
+    "LLMAATSC",
+    "LLMDUTSC"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

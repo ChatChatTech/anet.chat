@@ -1,0 +1,37 @@
+{
+  "paper_id": "Systematic Literature Review of Commercial Participation in Open Source Software",
+  "doi": "10.48550/arxiv.2405.16880",
+  "title": "Systematic Literature Review of Commercial Participation in Open Source Software",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "OSS商业参与研究分散缺系统性综述,学界业界仍凭经验而非系统架构交互",
+  "problem_framing": "商业参与OSS的动机、模式、影响未获系统梳理,定义RQ1-RQ4结构化研究问题",
+  "key_insight": "公司参与OSS动机分经济/技术/社会三类,参与模式反映社区交互方式,影响决定项目可持续性",
+  "method_signature": "基于Kitchenham指南的SLR,三数据库检索+滚雪球采样,内容分析92篇文献",
+  "evaluation_criteria": "统计发表趋势/ venue分布/方法类型,内容分析提取动机参与模式影响",
+  "negative_result_or_admitted_limitation": "指出当前研究分散且无系统架构,业界仍靠经验指导实践",
+  "evidence_for_taste": [
+    "companies and OSS communities still use their empirical experience as a guide rather than a systematic architecture",
+    "Current studies on OSS are scattered and have different focuses",
+    "A comprehensive understanding...is still left as a knowledge gap",
+    "rich merchants from the cathedral, i.e. companies, have joined the development of OSS projects"
+  ],
+  "thinking_moves": [
+    "将分散研究聚类为统一框架",
+    "用 cathedral-bazaar 隐喻重构公司-社区关系",
+    "按动机/模式/影响三维度结构化分析",
+    "从定性直觉转向证据驱动综述"
+  ],
+  "topic_tags": [
+    "OSS商业参与",
+    "动机分类体系",
+    "参与模型",
+    "文献系统综述",
+    "开源生态治理"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

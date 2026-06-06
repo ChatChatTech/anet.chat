@@ -1,0 +1,482 @@
+{
+  "slug": "yutao_ma",
+  "n_papers": 15,
+  "n_indexed": 15,
+  "anchors": [
+    "Dynamics of Open-Source Software Developer's Commit Behavior: An Empirical Investigation of Subversion",
+    "An empirical study on software defect prediction with a simplified metric set",
+    "An Analysis of Research in Software Engineering: Assessment and Trends",
+    "Bug Priority Change Prediction: An Exploratory Study on Apache Software",
+    "A spatial-temporal graph neural network framework for automated software bug triaging",
+    "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations",
+    "From Language to Action: Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation",
+    "Cervical optical coherence tomography image classification based on contrastive self-supervised texture learning"
+  ],
+  "by_id": {
+    "A Hybrid Approach to Web Service Recommendation Based on QoS-Aware Rating and Ranking": {
+      "title": "A Hybrid Approach to Web Service Recommendation Based on QoS-Aware Rating and Ranking",
+      "year": 2015,
+      "venue": null,
+      "doi": "10.48550/arxiv.1501.04298",
+      "key_insight": "用排名相关系数(KRCC)替代传统评分相似度，让相似性度量捕捉相对排序关系而非绝对评分差异",
+      "method_signature": "2RHyRec混合模型：融合基线估计、基于项目的CF(用KRCC)和隐因子模型(SVD)，通过β参数平衡邻居模型与全局模型",
+      "tags": [
+        "QoS-aware recommendation",
+        "ranking-oriented CF",
+        "Kendall rank correlation",
+        "hybrid collaborative filtering",
+        "Web service selection"
+      ],
+      "quality": "full"
+    },
+    "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging": {
+      "title": "A Spatial-Temporal Graph Neural Network Framework for Automated Software Bug Triaging",
+      "year": 2022,
+      "venue": "Knowledge-Based Systems",
+      "doi": "10.1016/j.knosys.2022.108308",
+      "key_insight": "结合节点重要性(度)和边重要性(权重)的联合随机游走采样策略，能捕获更丰富的局部拓扑信息；开发者行为存在小时/日/周周期性与bug修复模式相关",
+      "method_signature": "ST-DGNN框架：JRWalk联合随机游走采样 + GRCNN(含CNN空间特征提取器与注意力LSTM时序模块)的三周期组件",
+      "tags": [
+        "bug-triaging",
+        "developer-collaboration-networks",
+        "dynamic-graph-representation",
+        "spatial-temporal-GNN",
+        "joint-random-walk-sampling"
+      ],
+      "quality": "full"
+    },
+    "An Analysis of Research in Software Engineering_ Assessment and Trends": {
+      "title": "An Analysis of Research in Software Engineering: Assessment and Trends",
+      "year": 2014,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1407.4903",
+      "key_insight": "区分第一/通讯作者与其他作者角色,并根据CCF分级对不同出版物赋分",
+      "method_signature": "自动化从EI Compendex采集数据,按C rule计算评分并拟合幂律分布",
+      "tags": [
+        "bibliometric-assessment",
+        "power-law-distribution",
+        "software-engineering-trends",
+        "author-contribution-scoring",
+        "research-evaluation-rule"
+      ],
+      "quality": "full"
+    },
+    "An empirical study on software defect prediction with a simplified metric set": {
+      "title": "An empirical study on software defect prediction with a simplified metric set",
+      "year": 2014,
+      "venue": "Information and Software Technology",
+      "doi": "10.1016/j.infsof.2014.11.006",
+      "key_insight": "Top-5指标子集(CBO、LOC、RFC、LCOM、CE)可作为通用特征子集，简化预测器在准确率和代价间达成可接受的折中",
+      "method_signature": "基于覆盖率的Top-k特征选择 + 相关性过滤找最小指标子集，6个分类器 × 3个场景",
+      "tags": [
+        "software-defect-prediction",
+        "metric-set-simplification",
+        "cross-project-prediction",
+        "feature-selection",
+        "within-project-vs-cross-project"
+      ],
+      "quality": "full"
+    },
+    "Bug Priority Change Prediction_ An Exploratory Study on Apache Software": {
+      "title": "Bug Priority Change Prediction: An Exploratory Study on Apache Software",
+      "year": 2025,
+      "venue": "ACM Trans. Softw. Eng. Methodol.",
+      "doi": "10.48550/arxiv.2512.09216",
+      "key_insight": "通过项目演化、报告者历史、评论动态、历史变更项四维度构建演化特征",
+      "method_signature": "条件混合采样+软投票集成+代价敏感学习的两阶段混合架构",
+      "tags": [
+        "bug-priority-prediction",
+        "class-imbalance-handling",
+        "software-bug-lifecycle",
+        "evolutionary-feature-engineering",
+        "cross-project-validation"
+      ],
+      "quality": "full"
+    },
+    "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning": {
+      "title": "Cervical Optical Coherence Tomography Image Classification Based on Contrastive Self-Supervised Texture Learning",
+      "year": null,
+      "venue": "Medical Physics",
+      "doi": "10.1002/mp.15630",
+      "key_insight": "将LBP局部纹理特征与对比学习结合,增强灰度医学图像的表示学习能力",
+      "method_signature": "CTL自监督预训练+CNN分类器,基于LBP纹理提取和余弦距离对比损失",
+      "tags": [
+        "self-supervised-learning",
+        "cervical-OCT-classification",
+        "contrastive-texture-learning",
+        "LBP-feature-extraction",
+        "computer-aided-diagnosis"
+      ],
+      "quality": "full"
+    },
+    "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion": {
+      "title": "Dynamics of Open-Source Software Developer's Commit Behavior: An Empirical Investigation of Subversion",
+      "year": 2013,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1309.0897",
+      "key_insight": "开发者提交间隔遵循幂律分布,反映OSS协作开发的普遍规律",
+      "method_signature": "基于CDF估计幂律指数,对55个发布周期进行多函数拟合对比",
+      "tags": [
+        "OSS-commit-interval",
+        "power-law-distribution",
+        "SVN-revision-control",
+        "developer-behavior-dynamics",
+        "incremental-development"
+      ],
+      "quality": "full"
+    },
+    "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation": {
+      "title": "From Language to Action: Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation",
+      "year": 2025,
+      "venue": "ASE 2025",
+      "doi": null,
+      "key_insight": "不能仅做语义匹配,必须同时建模结构兼容性(编程语言/系统环境/接口约束),否则推荐的工具虽语义相关但执行时不可用",
+      "method_signature": "T2MRec模型:语义相关性+结构兼容性建模,质心扩展候选,LLM约束重排序",
+      "tags": [
+        "MCP-server-recommendation",
+        "task-oriented-retrieval",
+        "semantic-structural-mismatch",
+        "LLM-tool-selection",
+        "agent-tool-ecosystem"
+      ],
+      "quality": "full"
+    },
+    "Network Motifs in Object-Oriented Software Systems": {
+      "title": "Network Motifs in Object-Oriented Software Systems",
+      "year": 2008,
+      "venue": "unknown (arXiv preprint)",
+      "doi": "10.48550/arxiv.0808.3292",
+      "key_insight": "高Z分数的模体倾向于拥有稳定结构,演化由稳定性驱动的功能克隆驱动",
+      "method_signature": "mfinder分析6软件系统的3-4节点模体,Z分数与结构稳定分数关联",
+      "tags": [
+        "complex-networks",
+        "software-evolution",
+        "network-motifs",
+        "object-oriented-structure",
+        "structural-stability"
+      ],
+      "quality": "full"
+    },
+    "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations": {
+      "title": "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations",
+      "year": 2021,
+      "venue": "ACM Transactions on Information Systems",
+      "doi": "10.48550/arxiv.2107.05235",
+      "key_insight": "在图卷积中引入位置编码和时间编码,利用自注意力聚合器同时建模序列模式和时序影响,堆叠多层图卷积捕获高阶协作信号",
+      "method_signature": "PTGCN:基于二部图的时序感知图卷积网络,自注意力聚合器聚合邻居节点特征,多层图卷积编码高阶连接",
+      "tags": [
+        "sequential-recommendation",
+        "graph-convolutional-network",
+        "bipartite-graph",
+        "self-attention-aggregator",
+        "high-order-connectivity",
+        "temporal-dynamics"
+      ],
+      "quality": "full"
+    },
+    "Revealing Task Driven Knowledge Worker Behaviors in Open Source Software Communities": {
+      "title": "Revealing Task Driven Knowledge Worker Behaviors in Open Source Software Communities",
+      "year": 2017,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1702.07900",
+      "key_insight": "Developers exhibit opposite behavioral patterns in spatial vs temporal scale when overloaded; processing times follow stretched exponential, not power law",
+      "method_signature": "Empirical analysis of Eclipse/Mozilla bug-tracking data with workload-performance curve fitting and Kruskal-Wallis tests",
+      "tags": [
+        "knowledge-worker-behavior",
+        "open-source-software",
+        "workload-overload-detection",
+        "bug-triage-dynamics",
+        "human-dynamics-distribution"
+      ],
+      "quality": "full"
+    },
+    "Segmentation of Drosophila Heart in Optical Coherence Microscopy Images Using Convolutional Neural Networks": {
+      "title": "Segmentation of Drosophila Heart in Optical Coherence Microscopy Images Using Convolutional Neural Networks",
+      "year": 2018,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1803.01947",
+      "key_insight": "U-Net编码器-解码器架构配合跳跃连接能保留空间信息；软IOU损失函数实现端到端可微训练",
+      "method_signature": "基于U-Net的encoder-decoder CNN，使用软IOU损失，10折交叉验证，数据增强",
+      "tags": [
+        "Drosophila-heart-OCM-segmentation",
+        "U-Net-semantic-segmentation",
+        "soft-IOU-loss",
+        "biomedical-image-CNN",
+        "10-fold-cross-validation"
+      ],
+      "quality": "full"
+    },
+    "Simplification of Training Data for Cross-Project Defect Prediction": {
+      "title": "Simplification of Training Data for Cross-Project Defect Prediction",
+      "year": 2014,
+      "venue": null,
+      "doi": "10.48550/arxiv.1405.0773",
+      "key_insight": "先用k-NN选相似发布,再选相似实例,并用DPR值指导训练集驱动/测试集驱动过滤器的选择",
+      "method_signature": "riTDS多粒度简化(发布级rTDS+实例级iTDS)+双滤波器自适应选择",
+      "tags": [
+        "cross-project-defect-prediction",
+        "training-data-simplification",
+        "multi-granularity-filtering",
+        "defect-proneness-ratio",
+        "transfer-learning"
+      ],
+      "quality": "full"
+    },
+    "TDSelector_ A Training Data Selection Method for Cross-Project Defect Prediction": {
+      "title": "TDSelector: A Training Data Selection Method for Cross-Project Defect Prediction",
+      "year": 2016,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1612.09065",
+      "key_insight": "包含缺陷数量的训练实例比仅依赖相似性选择的实例具有更高预测价值",
+      "method_signature": "基于α加权融合相似度与归一化缺陷数的实例评分排序方法",
+      "tags": [
+        "cross-project defect prediction",
+        "training data selection",
+        "logistic regression classifier",
+        "similarity metrics",
+        "defect count normalization"
+      ],
+      "quality": "full"
+    },
+    "Towards Cross-Project Defect Prediction with Imbalanced Feature Sets": {
+      "title": "Towards Cross-Project Defect Prediction with Imbalanced Feature Sets",
+      "year": 2014,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1411.4228",
+      "key_insight": "Instances with different feature vectors may have similar statistical distributions of normalized metric values, making distribution characteristics a potential bridge.",
+      "method_signature": "Distribution characteristic-based instance mapping: preprocess → project onto latent space of indicators → apply regular CPDP.",
+      "tags": [
+        "cross-project-defect-prediction",
+        "imbalanced-feature-sets",
+        "distribution-characteristics-mapping",
+        "transfer-learning",
+        "defect-ratio-balancing"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "power-law-distribution": [
+      "An Analysis of Research in Software Engineering_ Assessment and Trends",
+      "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    ],
+    "cross-project-defect-prediction": [
+      "Simplification of Training Data for Cross-Project Defect Prediction",
+      "Towards Cross-Project Defect Prediction with Imbalanced Feature Sets"
+    ],
+    "transfer-learning": [
+      "Simplification of Training Data for Cross-Project Defect Prediction",
+      "Towards Cross-Project Defect Prediction with Imbalanced Feature Sets"
+    ],
+    "QoS-aware recommendation": [
+      "A Hybrid Approach to Web Service Recommendation Based on QoS-Aware Rating and Ranking"
+    ],
+    "ranking-oriented CF": [
+      "A Hybrid Approach to Web Service Recommendation Based on QoS-Aware Rating and Ranking"
+    ],
+    "Kendall rank correlation": [
+      "A Hybrid Approach to Web Service Recommendation Based on QoS-Aware Rating and Ranking"
+    ],
+    "hybrid collaborative filtering": [
+      "A Hybrid Approach to Web Service Recommendation Based on QoS-Aware Rating and Ranking"
+    ],
+    "Web service selection": [
+      "A Hybrid Approach to Web Service Recommendation Based on QoS-Aware Rating and Ranking"
+    ],
+    "bug-triaging": [
+      "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    ],
+    "developer-collaboration-networks": [
+      "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    ],
+    "dynamic-graph-representation": [
+      "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    ],
+    "spatial-temporal-GNN": [
+      "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    ],
+    "joint-random-walk-sampling": [
+      "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    ],
+    "bibliometric-assessment": [
+      "An Analysis of Research in Software Engineering_ Assessment and Trends"
+    ],
+    "software-engineering-trends": [
+      "An Analysis of Research in Software Engineering_ Assessment and Trends"
+    ],
+    "author-contribution-scoring": [
+      "An Analysis of Research in Software Engineering_ Assessment and Trends"
+    ],
+    "research-evaluation-rule": [
+      "An Analysis of Research in Software Engineering_ Assessment and Trends"
+    ],
+    "software-defect-prediction": [
+      "An empirical study on software defect prediction with a simplified metric set"
+    ],
+    "metric-set-simplification": [
+      "An empirical study on software defect prediction with a simplified metric set"
+    ],
+    "cross-project-prediction": [
+      "An empirical study on software defect prediction with a simplified metric set"
+    ],
+    "feature-selection": [
+      "An empirical study on software defect prediction with a simplified metric set"
+    ],
+    "within-project-vs-cross-project": [
+      "An empirical study on software defect prediction with a simplified metric set"
+    ],
+    "bug-priority-prediction": [
+      "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    ],
+    "class-imbalance-handling": [
+      "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    ],
+    "software-bug-lifecycle": [
+      "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    ],
+    "evolutionary-feature-engineering": [
+      "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    ],
+    "cross-project-validation": [
+      "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    ],
+    "self-supervised-learning": [
+      "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning"
+    ],
+    "cervical-OCT-classification": [
+      "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning"
+    ],
+    "contrastive-texture-learning": [
+      "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning"
+    ],
+    "LBP-feature-extraction": [
+      "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning"
+    ],
+    "computer-aided-diagnosis": [
+      "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning"
+    ],
+    "OSS-commit-interval": [
+      "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    ],
+    "SVN-revision-control": [
+      "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    ],
+    "developer-behavior-dynamics": [
+      "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    ],
+    "incremental-development": [
+      "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    ],
+    "MCP-server-recommendation": [
+      "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    ],
+    "task-oriented-retrieval": [
+      "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    ],
+    "semantic-structural-mismatch": [
+      "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    ],
+    "LLM-tool-selection": [
+      "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    ],
+    "agent-tool-ecosystem": [
+      "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    ],
+    "complex-networks": [
+      "Network Motifs in Object-Oriented Software Systems"
+    ],
+    "software-evolution": [
+      "Network Motifs in Object-Oriented Software Systems"
+    ],
+    "network-motifs": [
+      "Network Motifs in Object-Oriented Software Systems"
+    ],
+    "object-oriented-structure": [
+      "Network Motifs in Object-Oriented Software Systems"
+    ],
+    "structural-stability": [
+      "Network Motifs in Object-Oriented Software Systems"
+    ],
+    "sequential-recommendation": [
+      "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    ],
+    "graph-convolutional-network": [
+      "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    ],
+    "bipartite-graph": [
+      "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    ],
+    "self-attention-aggregator": [
+      "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    ],
+    "high-order-connectivity": [
+      "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    ],
+    "temporal-dynamics": [
+      "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    ],
+    "knowledge-worker-behavior": [
+      "Revealing Task Driven Knowledge Worker Behaviors in Open Source Software Communities"
+    ],
+    "open-source-software": [
+      "Revealing Task Driven Knowledge Worker Behaviors in Open Source Software Communities"
+    ],
+    "workload-overload-detection": [
+      "Revealing Task Driven Knowledge Worker Behaviors in Open Source Software Communities"
+    ],
+    "bug-triage-dynamics": [
+      "Revealing Task Driven Knowledge Worker Behaviors in Open Source Software Communities"
+    ],
+    "human-dynamics-distribution": [
+      "Revealing Task Driven Knowledge Worker Behaviors in Open Source Software Communities"
+    ],
+    "Drosophila-heart-OCM-segmentation": [
+      "Segmentation of Drosophila Heart in Optical Coherence Microscopy Images Using Convolutional Neural Networks"
+    ],
+    "U-Net-semantic-segmentation": [
+      "Segmentation of Drosophila Heart in Optical Coherence Microscopy Images Using Convolutional Neural Networks"
+    ],
+    "soft-IOU-loss": [
+      "Segmentation of Drosophila Heart in Optical Coherence Microscopy Images Using Convolutional Neural Networks"
+    ],
+    "biomedical-image-CNN": [
+      "Segmentation of Drosophila Heart in Optical Coherence Microscopy Images Using Convolutional Neural Networks"
+    ],
+    "10-fold-cross-validation": [
+      "Segmentation of Drosophila Heart in Optical Coherence Microscopy Images Using Convolutional Neural Networks"
+    ],
+    "training-data-simplification": [
+      "Simplification of Training Data for Cross-Project Defect Prediction"
+    ],
+    "multi-granularity-filtering": [
+      "Simplification of Training Data for Cross-Project Defect Prediction"
+    ],
+    "defect-proneness-ratio": [
+      "Simplification of Training Data for Cross-Project Defect Prediction"
+    ],
+    "cross-project defect prediction": [
+      "TDSelector_ A Training Data Selection Method for Cross-Project Defect Prediction"
+    ],
+    "training data selection": [
+      "TDSelector_ A Training Data Selection Method for Cross-Project Defect Prediction"
+    ],
+    "logistic regression classifier": [
+      "TDSelector_ A Training Data Selection Method for Cross-Project Defect Prediction"
+    ],
+    "similarity metrics": [
+      "TDSelector_ A Training Data Selection Method for Cross-Project Defect Prediction"
+    ],
+    "defect count normalization": [
+      "TDSelector_ A Training Data Selection Method for Cross-Project Defect Prediction"
+    ],
+    "imbalanced-feature-sets": [
+      "Towards Cross-Project Defect Prediction with Imbalanced Feature Sets"
+    ],
+    "distribution-characteristics-mapping": [
+      "Towards Cross-Project Defect Prediction with Imbalanced Feature Sets"
+    ],
+    "defect-ratio-balancing": [
+      "Towards Cross-Project Defect Prediction with Imbalanced Feature Sets"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wan et al. - 2012 - Priv-Code Preserving privacy against traffic analysis through network coding for multihop wireless",
+  "doi": null,
+  "title": "Priv-Code: Preserving Privacy Against Traffic Analysis Through Network Coding for Multihop Wireless Networks",
+  "year": 2012,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "无线网络因开放性易受流量分析攻击，传统mix机制延迟高、计算开销大，资源受限设备难以承受",
+  "problem_framing": "将隐私保护建模为超图网络编码模型下的minimax优化问题，目标是最小化节点最大传输速率",
+  "key_insight": "网络编码具有内在混合特性，若所有节点以相同泊松过程传输，攻击者无法区分发送接收者",
+  "method_signature": "基于对偶分解的分布式算法求解隐私优化问题，并用熵度量隐私强度",
+  "evaluation_criteria": "隐私熵（攻击者识别发送者所需额外信息量bits）和平均传输速率",
+  "negative_result_or_admitted_limitation": "混合系统因缓存重排序引入不可预测延迟，高计算成本无法支持实时流量和QoS保证",
+  "evidence_for_taste": [
+    "mix-based system lacks ability to support realtime network traffic",
+    "too much computation cost for Mixes",
+    "the intrinsic mixing feature like the Mix",
+    "minimize the maximum flow rate",
+    "privacy-preserving design with performance concern",
+    "formal treatment of privacy with regard to traffic flows is not given"
+  ],
+  "thinking_moves": [
+    "将mix系统的隐私特性与网络编码的混合特性类比，发现网络编码可替代mix实现隐私保护",
+    "把流量分析防御问题重新框架为网络调度优化问题（等速率传输）",
+    "用信息熵形式化度量隐私强度，将主观安全概念转为可计算指标",
+    "针对无线网络特性（广播、干扰、丢包）构建超图模型，将有线网络编码方案适配到无线环境",
+    "承认先前工作未给出流量视角的形式化隐私分析，填补该空白"
+  ],
+  "topic_tags": [
+    "network-coding-privacy",
+    "traffic-analysis-defense",
+    "wireless-multihop-privacy",
+    "information-theoretic-metric",
+    "hypergraph-network-model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为会议论文，venue信息未在正文中明确给出。摘要和引言较为完整，但方法细节和仿真部分有图表引用，完整评估需查看图表内容。"
+}

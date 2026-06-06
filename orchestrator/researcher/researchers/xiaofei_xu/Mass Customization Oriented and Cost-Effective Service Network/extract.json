@@ -1,0 +1,42 @@
+{
+  "paper_id": "Mass Customization Oriented and Cost-Effective Service Network",
+  "doi": "10.1007/978-3-642-36796-0_15",
+  "title": "Mass Customization Oriented and Cost-Effective Service Network",
+  "year": 2013,
+  "venue": "Springer LNCS (Service-Oriented Computing)",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传统服务组合方法难以应对大规模个性化需求，难以平衡标准化与定制化、成本与收益的矛盾。",
+  "problem_framing": "如何构建持久基础设施以动态满足大量差异化需求，同时实现成本效益。",
+  "key_insight": "将服务网络作为持久基础设施而非临时组合，通过特征选择与组合优化实现动态定制。",
+  "method_signature": "基于IN_Pool/OUT_Pool/Service_Pool的服务网络形式化定义与两阶段优化算法。",
+  "evaluation_criteria": "能力评估框架SN-CAF：功能覆盖度、定制度、QoS定制范围、最大负载、成本效益比。",
+  "negative_result_or_admitted_limitation": "现有方法生成的解决方案通常是临时的，需求满足后即释放，进一步增加成本。",
+  "evidence_for_taste": [
+    "significant challenge",
+    "reaching a tradeoff",
+    "cost-effective",
+    "just-enough policy",
+    "competency assessment",
+    "optional or mandatory",
+    "lower degrees of customer satisfaction",
+    "cost is bound to significantly increase"
+  ],
+  "thinking_moves": [
+    "借用互联网路由机制类比服务网络设计哲学",
+    "将临时解决方案模式转化为持久基础设施模式",
+    "将大规模定制问题分解为特征选择组合优化问题",
+    "通过剪枝策略识别强制性与可选特征",
+    "从功能覆盖与QoS多维度定义定制能力"
+  ],
+  "topic_tags": [
+    "service-composition",
+    "mass-customization",
+    "service-network",
+    "cost-effectiveness",
+    "competency-assessment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

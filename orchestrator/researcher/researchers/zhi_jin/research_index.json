@@ -1,0 +1,4042 @@
+{
+  "slug": "zhi_jin",
+  "n_papers": 134,
+  "n_indexed": 134,
+  "anchors": [
+    "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+    "Distilling Word Embeddings_ An Encoding Approach",
+    "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588",
+    "How Transferable are Neural Networks in NLP Applications___oa_W2964352358",
+    "Code Generation as a Dual Task of Code Summarization",
+    "Multi-task Learning based Pre-trained Language Model for Code Completion",
+    "Modeling Programs Hierarchically with Stack-Augmented LSTM",
+    "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning",
+    "Learning to Recommend Method Names with Global Context",
+    "Modular Tree Network for Source Code Representation Learning",
+    "Self-Edit_ Fault-Aware Code Editor for Code Generation__oa_W4385572345",
+    "Self-collaboration Code Generation via ChatGPT",
+    "Structured Chain-of-Thought Prompting for Code Generation",
+    "TACO_ Topics in Algorithmic COde generation dataset",
+    "IRCoCo_ Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion",
+    "Sifting through the Chaff_ On Utilizing Execution Feedback for Ranking the Generated Code Candidates",
+    "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005",
+    "Knowledge-Aware Code Generation with Large Language Models",
+    "Automated Commit Message Generation with Large Language Models_ An Empirical Study and Beyond",
+    "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment",
+    "Rethinking Repetition Problems of LLMs in Code Generation__oa_W4412886913",
+    "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning",
+    "Benchmarking Long-Context Language Models on Long Code Understanding"
+  ],
+  "by_id": {
+    "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901": {
+      "title": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks",
+      "year": 2015,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/d15-1252",
+      "key_insight": "L2正则化主要起局部效应——参数趋于收敛到同一吸引域，可在训练中增量调参",
+      "method_signature": "CNN/RNN上比较L2权重惩罚、L2嵌入惩罚、重嵌入词、Dropout四种策略",
+      "tags": [
+        "neural-network-regularization",
+        "word-embeddings",
+        "hyperparameter-tuning",
+        "nlp-classification",
+        "dropout-vs-l2"
+      ],
+      "quality": "full"
+    },
+    "A First Look at Package-to-Group Mechanism_ An Empirical Study of the Linux Distributions": {
+      "title": "A First Look at Package-to-Group Mechanism: An Empirical Study of the Linux Distributions",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2410.10131",
+      "key_insight": "不再使用P2G的包更倾向于保留在发行版中而非直接删除",
+      "method_signature": "多版本多发行版混合方法：定量分析+人工标注+问卷调查+LDA主题建模",
+      "tags": [
+        "package-management",
+        "linux-distributions",
+        "empirical-software-engineering",
+        "group-quality-metrics",
+        "open-source-evolution"
+      ],
+      "quality": "full"
+    },
+    "A Framework for the Elicitation and Analysis of Information Technology Service Requirements and Their Alignment with Enterprise Business Goals": {
+      "title": "A Framework for the Elicitation and Analysis of Information Technology Service Requirements and Their Alignment with Enterprise Business Goals",
+      "year": 2010,
+      "venue": "COMPSACW",
+      "doi": "10.1109/compsacw.2010.54",
+      "key_insight": "IT服务管理面临的挑战与软件需求工程40年来解决的挑战几乎相同，RE方法可直接应用",
+      "method_signature": "融合i*框架与问题フレーム方法，结合本体领域模型和协作研讨会",
+      "tags": [
+        "IT服务需求工程",
+        "业务-IT对齐",
+        "i*-目标导向分析",
+        "问题フレーム方法",
+        "服务供应链本体建模"
+      ],
+      "quality": "partial"
+    },
+    "A Game-Theoretical Self-Adaptation Framework for Securing Software-Intensive Systems": {
+      "title": "A Game-Theoretical Self-Adaptation Framework for Securing Software-Intensive Systems",
+      "year": 2021,
+      "venue": null,
+      "doi": "10.48550/arxiv.2112.07588",
+      "key_insight": "组件级博弈建模允许对部分妥协系统设计细粒度防御策略,而非将系统作为整体单一玩家",
+      "method_signature": "自动从组件架构生成贝叶斯博弈并求解纳什均衡作为自适应防御策略",
+      "tags": [
+        "Bayesian-game-security",
+        "component-level-self-adaptation",
+        "automated-game-generation",
+        "industrial-control-systems-security",
+        "adversarial-modeling"
+      ],
+      "quality": "partial"
+    },
+    "A Meta Reinforcement Learning-based Approach for Self-Adaptive System__oa_W3161250517": {
+      "title": "A Meta Reinforcement Learning-based Approach for Self-Adaptive System",
+      "year": 2021,
+      "venue": "ArXiv preprint",
+      "doi": "10.48550/arxiv.2105.04986",
+      "key_insight": "按分离关注点原则将空间环境、系统能力、用户目标分别建模并合成 MDPs，再用元强化学习跨多模型训练元策略实现快速在线适应",
+      "method_signature": "基于MAML的元强化学习+分离关注点建模+离线训练-在线适应-在线执行三阶段流程",
+      "tags": [
+        "meta-reinforcement-learning",
+        "self-adaptive-systems",
+        "separation-of-concerns",
+        "multiple-model-problem",
+        "MDP-synthesis",
+        "online-adaptation"
+      ],
+      "quality": "full"
+    },
+    "A Model-Based Fuzzy Control Approach to Achieving Adaptation with Contextual Uncertainties": {
+      "title": "A Model-Based Fuzzy Control Approach to Achieving Adaptation with Contextal Uncertainties",
+      "year": 2017,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1704.00417",
+      "key_insight": "利用前馈模糊控制器处理上下文变化对NFR期望满意度的影响,反馈回路则通过偏差纠正任务配置,实现两层自适应",
+      "method_signature": "基于目标模型和上下文层次模型构建模糊控制器,使用语言变量和隶属度函数表示不确定性,通过三类启发式规则(UPD/ENA/COR)进行推理",
+      "tags": [
+        "fuzzy-control-SAS",
+        "NFR-dynamic-adaptation",
+        "feedforward-feedback-control",
+        "context-uncertainty-modeling",
+        "requirements-engineering-control-theory"
+      ],
+      "quality": "full"
+    },
+    "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning": {
+      "title": "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning",
+      "year": 2020,
+      "venue": "ICPC '20",
+      "doi": "10.48550/arxiv.1909.06983",
+      "key_insight": "从预测节点到根节点的路径编码了该节点的层级位置信息,且类型与值任务相互约束,联合学习可利用这种相关性改善泛化。",
+      "method_signature": "Transformer-XL编码AST序列 + BiLSTM编码path2root路径 + MTL硬参数共享联合学习类型与值预测。",
+      "tags": [
+        "code-completion",
+        "AST-hierarchical-structure",
+        "Transformer-XL",
+        "multi-task-learning",
+        "program-representation"
+      ],
+      "quality": "full"
+    },
+    "A Thematic Study of Requirements Modeling and Analysis for Self-Adaptive Systems": {
+      "title": "A Thematic Study of Requirements Modeling and Analysis for Self-Adaptive Systems",
+      "year": 2017,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1704.00420",
+      "key_insight": "从109篇文献中提取29种建模方法、35个基础主题、12个组织主题、3个全局主题,揭示需求工程对自适应系统的支撑全景",
+      "method_signature": "系统性文献综述+主题综合法(文本提取→编码→主题聚合)",
+      "tags": [
+        "self-adaptive-systems-requirements",
+        "thematic-synthesis-SLR",
+        "goal-oriented-modeling-KAOS-iStar",
+        "requirements-time-runtime",
+        "uncertainty-handling-fuzzy-logic"
+      ],
+      "quality": "full"
+    },
+    "AceCoder_ Utilizing Existing Code to Enhance Code Generation": {
+      "title": "AceCoder: Utilizing Existing Code to Enhance Code Generation",
+      "year": 2023,
+      "venue": "ArXiv / ACM Conference",
+      "doi": "10.48550/arxiv.2303.17780",
+      "key_insight": "Human developers use test cases to clarify requirements and search for similar code for reuse; LLMs can be guided to do the same through structured prompts with preliminaries and retrieved examples.",
+      "method_signature": "Retrieve similar programs, select diverse examples, construct prompts with <requirement, preliminary, code> triples, guide LLM to output intermediate then final code.",
+      "tags": [
+        "LLM code generation",
+        "prompt engineering",
+        "example retrieval for code",
+        "test-driven prompt guidance",
+        "multi-language code synthesis"
+      ],
+      "quality": "full"
+    },
+    "Achieving Adaptation for Adaptive Systems via Runtime Verification_ A Model-Driven Approach": {
+      "title": "Achieving Adaptation for Adaptive Systems via Runtime Verification: A Model-Driven Approach",
+      "year": 2017,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1704.00869",
+      "key_insight": "verification is used as the decision-making process—verification results直接筛选候选适应方案",
+      "method_signature": "MAPE目标模型→CSP行为模型→变种DTMC/CTMC→PCTL/CSL验证→最优适应决策",
+      "tags": [
+        "self-adaptive-software",
+        "runtime-verification",
+        "model-driven-requirements",
+        "probabilistic-model-checking",
+        "MAPE-control-loop",
+        "NFR-adaptive-decision"
+      ],
+      "quality": "full"
+    },
+    "AdapTrack_ Constrained Decoding without Distorting LLM's Output Intent": {
+      "title": "AdapTrack: Constrained Decoding without Distorting LLM's Output Intent",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2510.17376",
+      "key_insight": "When a top-ranked token becomes invalid, backtrack by adaptive rejection sampling proportional to invalidated probability mass, not full resampling.",
+      "method_signature": "AdapTrack: maintain Q[x] estimate of P(c|x), sample N[x] from P_Q(·|x), backtrack via Bernoulli rejection when Q drops.",
+      "tags": [
+        "constrained-decoding",
+        "LLM-code-generation",
+        "adaptive-backtracking",
+        "intent-preservation",
+        "API-version-handling"
+      ],
+      "quality": "full"
+    },
+    "An Evaluation of Requirements Modeling for Cyber-Physical Systems via LLMs": {
+      "title": "An Evaluation of Requirements Modeling for Cyber-Physical Systems via LLMs",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2408.02450",
+      "key_insight": "LLM对通用概念理解较好但对专业概念(RD、DD、RC)理解不足,且召回率仅约60%",
+      "method_signature": "构建CPSBENCH基准集,使用few-shot推理评估7种LLM",
+      "tags": [
+        "CPS需求建模",
+        "问题图方法",
+        "LLM评估",
+        "实体识别",
+        "交互抽取"
+      ],
+      "quality": "full"
+    },
+    "Assignment problem in requirements driven agent collaboration and its implementation": {
+      "title": "Assignment Problem in Requirements Driven Agent Collaboration and its Implementation",
+      "year": 2010,
+      "venue": "9th Int. Conf. on Autonomous Agents and Multiagent Systems (AAMAS 2010)",
+      "doi": "10.5555/1838206.1838318",
+      "key_insight": "Bridging assignment problem with normative systems via Kripke structure enables leveraging existing game/mechanism theory.",
+      "method_signature": "Negotiation-based task allocation modeled as Kripke structure with CTL-expressed normative constraints.",
+      "tags": [
+        "multiagent-task-allocation",
+        "normative-systems-Kripke",
+        "service-oriented-computing",
+        "decentralized-negotiation",
+        "reservation-payoff-constraints"
+      ],
+      "quality": "full"
+    },
+    "Automated Commit Message Generation with Large Language Models_ An Empirical Study and Beyond": {
+      "title": "Automated Commit Message Generation with Large Language Models: An Empirical Study and Beyond",
+      "year": 2024,
+      "venue": "IEEE Transactions on Software Engineering",
+      "doi": "10.48550/arxiv.2404.14824",
+      "key_insight": "MCMD数据集中的ground truth本身缺少What/Why信息，GPT-3.5生成的消息反而更完整",
+      "method_signature": "ERICommiter：两步过滤+语义/词法检索的ICL框架",
+      "tags": [
+        "LLM代码生成",
+        "Commit Message Generation",
+        "In-Context Learning",
+        "实证研究",
+        "检索增强生成"
+      ],
+      "quality": "full"
+    },
+    "Backward and Forward Language Modeling for Constrained Sentence Generation": {
+      "title": "Backward and Forward Language Modeling for Constrained Sentence Generation",
+      "year": 2015,
+      "venue": null,
+      "doi": "10.48550/arxiv.1512.06612",
+      "key_insight": "以给定词为根节点生成前后子序列,变单向生成(左→右)为双向生成",
+      "method_signature": "B/F LM:同步(syn)和异步(asyn)两个RNN变体生成前后词",
+      "tags": [
+        "constrained-text-generation",
+        "bidirectional-language-model",
+        "RNN-generation",
+        "constrained-neural-LM",
+        "arXiv-paper-title-generation"
+      ],
+      "quality": "full"
+    },
+    "Benchmarking Long-Context Language Models on Long Code Understanding": {
+      "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code Understanding",
+      "year": 2025,
+      "venue": "ACL Long Papers",
+      "doi": "10.18653/v1/2025.acl-long.1324",
+      "key_insight": "LLM在代码长度超过32K后性能急剧下降，远未达到其声称的128K-1M上下文能力",
+      "method_signature": "4维度8任务的综合长代码理解基准测试，覆盖0-128Ktokens长度分布",
+      "tags": [
+        "long-context-LM-evaluation",
+        "code-understanding-benchmark",
+        "context-length-scalability",
+        "software-engineering-LLM",
+        "dependency-analysis"
+      ],
+      "quality": "full"
+    },
+    "Building Program Vector Representations for Deep Learning": {
+      "title": "Building Program Vector Representations for Deep Learning",
+      "year": 2014,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1409.3358",
+      "key_insight": "提出编码准则：AST父节点表示应能由其子节点表示通过单层神经网络'编码'得到，利用树结构捕捉符号相似性",
+      "method_signature": "基于AST的编码准则学习节点向量表示，配合连续二叉树模型处理变长子节点",
+      "tags": [
+        "AST节点向量表示",
+        "程序分析预训练",
+        "深度学习程序分类",
+        "编码准则无监督学习",
+        "树卷积神经网络"
+      ],
+      "quality": "full"
+    },
+    "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation": {
+      "title": "ChatCoder: Chat-based Refine Requirement Improves LLMs' Code Generation",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2311.00272",
+      "key_insight": "需求精化必须同时依赖人类用户和LLM,缺一不可;LLM引导用户精化比用户自行精化更有效",
+      "method_signature": "两轮对话框架(释义扩展+深度追问循环),基于IEEE SRS的五个分析角度引导LLM生成精化需求",
+      "tags": [
+        "LLM代码生成",
+        "需求工程",
+        "人机协作对话",
+        "prompt工程",
+        "迭代式需求精化"
+      ],
+      "quality": "full"
+    },
+    "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path": {
+      "title": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+      "year": 2015,
+      "venue": null,
+      "doi": "10.48550/arxiv.1508.03720",
+      "key_insight": "将SDP在公共祖先节点处分为两条子路径，分别用LSTM建模，可显式捕捉关系方向性且保留最相关语义信息",
+      "method_signature": "SDP-LSTM：四通道(词/POS/依存关系/WordNet)LSTM网络处理最短依存路径双路子路径",
+      "tags": [
+        "relation-classification",
+        "SDP-LSTM",
+        "dependency-path-RNN",
+        "multichannel-embedding",
+        "directional-relation"
+      ],
+      "quality": "full"
+    },
+    "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths": {
+      "title": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths",
+      "year": 2015,
+      "venue": "ACL-DEMOS",
+      "doi": "10.18653/v1/d15-1206",
+      "key_insight": "依存路径是有向图,拆分SDP为两个子路径可捕获关系的方向性,且多通道信息(词性、语法关系、WordNet)互补",
+      "method_signature": "SDP-LSTM:多通道LSTM沿最短依存路径双向传播,最大池化后拼接分类",
+      "tags": [
+        "relation-classification",
+        "SDP-LSTM",
+        "dependency-parsing",
+        "multichannel-LSTM",
+        "neural-networks"
+      ],
+      "quality": "full"
+    },
+    "Code Difference Guided Adversarial Example Generation for Deep Code Models": {
+      "title": "Code Difference Guided Adversarial Example Generation for Deep Code Models",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2301.02412",
+      "key_insight": "利用参考输入与目标输入之间的代码差异来缩小成分空间，指引语义保持的转换生成",
+      "method_signature": "CODA通过参考输入选择+等价结构转换+标识符重命名转换生成对抗样本",
+      "tags": [
+        "deep-code-model-adversarial-testing",
+        "code-difference-guided-generation",
+        "ingredient-space-reduction",
+        "semantic-preserving-transformation",
+        "fault-revealing-example"
+      ],
+      "quality": "full"
+    },
+    "Code Generation as a Dual Task of Code Summarization": {
+      "title": "Code Generation as a Dual Task of Code Summarization",
+      "year": 2019,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1910.05923",
+      "key_insight": "CS的输入是CG的输出、CG的输入是CS的输出——这种对偶性可作为正则化项直接约束模型",
+      "method_signature": "双任务Seq2Seq+概率对偶正则化+注意力对称正则化的联合训练框架",
+      "tags": [
+        "code-generation",
+        "code-summarization",
+        "dual-learning",
+        "attention-mechanism",
+        "seq2seq"
+      ],
+      "quality": "full"
+    },
+    "CodeAgent_ Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges": {
+      "title": "CODEAGENT: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2401.07339",
+      "key_insight": null,
+      "method_signature": "LLM Agent + 5编程工具 + 4种Agent策略(ReAct/Rule-based等)",
+      "tags": [
+        "repo-level-code-generation",
+        "LLM-agent",
+        "code-navigation-tools",
+        "software-artifact-interaction",
+        "benchmark-construction"
+      ],
+      "quality": "full"
+    },
+    "CodeDPO_ Aligning Code Models with Self Generated and Verified Source Code__oa_W4412945242": {
+      "title": "CodeDPO: Aligning Code Models with Self Generated and Verified Source Code",
+      "year": 2025,
+      "venue": "ACL 2025 Long Papers",
+      "doi": "10.18653/v1/2025.acl-long.771",
+      "key_insight": "通过PageRank式迭代更新让代码与测试互相验证置信度,消除对外部测试或强大模型的依赖",
+      "method_signature": "自生成-自验证循环+PageRank迭代评分构建偏好数据集,再以DPO训练优化",
+      "tags": [
+        "code generation preference optimization",
+        "self-verification ranking algorithm",
+        "DPO training for code models",
+        "PageRank-inspired code scoring",
+        "code execution efficiency optimization"
+      ],
+      "quality": "full"
+    },
+    "CodeEditor_ Learning to Edit Source Code with Pre-trained Models": {
+      "title": "CodeEditor: Learning to Edit Source Code with Pre-trained Models",
+      "year": 2022,
+      "venue": null,
+      "doi": "10.48550/arxiv.2210.17040",
+      "key_insight": "用生成器将原始代码改写为缺陷版本，训练模型编辑缺陷版本而非填充mask，更接近真实编辑",
+      "method_signature": "CodeGPT生成缺陷版本→预训练模型学习修复编辑→微调下游任务",
+      "tags": [
+        "代码预训练",
+        "代码编辑自动化",
+        "Seq2Seq预训练",
+        "代码突变生成",
+        "编辑模式学习"
+      ],
+      "quality": "full"
+    },
+    "CodePAD_ Sequence-based Code Generation with Pushdown Automaton": {
+      "title": "CodePAD: Sequence-based Code Generation with Pushdown Automaton",
+      "year": 2022,
+      "venue": null,
+      "doi": "10.48550/arxiv.2211.00818",
+      "key_insight": "编程语言是PDA可识别语言的子集,被PDA接受的代码必为语法正确代码。",
+      "method_signature": "CodePAD框架将PDA演绎融入深度学习,包含PDA模块、状态表示、状态预测任务和联合预测。",
+      "tags": [
+        "code-generation-grammar-constraint",
+        "pushdown-automaton-PDA",
+        "sequence-based-deep-learning",
+        "Python-parsing",
+        "zero-shot-code-synthesis"
+      ],
+      "quality": "full"
+    },
+    "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment": {
+      "title": "CODERL+: Improving Code Generation via Reinforcement with Execution Semantics Alignment",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2510.18471",
+      "key_insight": "Jointly optimize code generation with execution semantics alignment by inferring variable-level execution trajectories from failed rollouts",
+      "method_signature": "Dual-objective RLVR: code generation + execution semantics alignment via variable final-value prediction",
+      "tags": [
+        "LLM-code-generation",
+        "RLVR",
+        "execution-semantics-alignment",
+        "code-reasoning",
+        "variable-trace-inference"
+      ],
+      "quality": "full"
+    },
+    "CodeScore_ Evaluating Code Generation by Learning Code Execution": {
+      "title": "CodeScore: Evaluating Code Generation by Learning Code Execution",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2301.09043",
+      "key_insight": "LLM虽具备代码理解能力，但因预测下一个token的训练目标而缺乏功能正确性评估意识，需专门训练其学习代码执行",
+      "method_signature": "UniCE统一代码评估框架，通过多任务学习融合Ref/NL/Ref&NL三种输入格式预测PassRatio和Executability",
+      "tags": [
+        "code-evaluation-metric",
+        "LLM-fine-tuning",
+        "functional-correctness",
+        "code-execution-learning",
+        "passratio-prediction"
+      ],
+      "quality": "full"
+    },
+    "Commenting Higher-level Code Unit_ Full Code, Reduced Code, or Hierarchical Code Summarization": {
+      "title": "Commenting Higher-level Code Unit: Full Code, Reduced Code, or Hierarchical Code Summarization",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2503.10737",
+      "key_insight": "文件级摘要全代码最优，模块级摘要层级策略最优；压缩策略引入信息损失但能降成本",
+      "method_signature": "三策略比较:全代码/缩减代码/层级摘要; GPT-4评估替代人工",
+      "tags": [
+        "LLM-code-summarization",
+        "higher-level-code-units",
+        "hierarchical-summarization",
+        "code-commenting",
+        "evaluation-automation"
+      ],
+      "quality": "full"
+    },
+    "CompaniesΓÇÖ Participation in OSS DevelopmentΓÇôAn Empirical Study of OpenStack": {
+      "title": "Companies' Participation in OSS Development–An Empirical Study of OpenStack",
+      "year": 2019,
+      "venue": "IEEE Transactions on Software Engineering",
+      "doi": "10.1109/tse.2019.2946156",
+      "key_insight": "多样性(以贡献模型的熵度量)与志愿者参与呈强正相关,公司贡献模式是理解生态系统的关键",
+      "method_signature": "结合代码提交历史分析与在线文档审查的案例研究,使用主题分析提取贡献模式",
+      "tags": [
+        "OSS生态系统",
+        "商业参与",
+        "贡献模式",
+        "开发者身份合并",
+        "公司多样性"
+      ],
+      "quality": null
+    },
+    "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588": {
+      "title": "Compressing Neural Language Models by Sparse Word Representations",
+      "year": 2016,
+      "venue": "ACL",
+      "doi": "10.18653/v1/p16-1022",
+      "key_insight": "词典中陌生词由常用词定义——稀有词可仅用4-8个常用词的embedding稀疏组合来表示",
+      "method_signature": "先预训练word2vec得到embeddings，再对稀有词求解稀疏系数优化方程，压缩Embedding和Prediction子网",
+      "tags": [
+        "neural-language-model-compression",
+        "sparse-word-representation",
+        "vocabulary-size-scalability",
+        "ZRegression-NCE",
+        "rare-word-embedding"
+      ],
+      "quality": "full"
+    },
+    "Convolutional Neural Networks over Tree Structures for Programming Language Processing": {
+      "title": "Convolutional Neural Networks over Tree Structures for Programming Language Processing",
+      "year": 2014,
+      "venue": null,
+      "doi": "10.48550/arxiv.1409.5718",
+      "key_insight": "连续二叉树处理变长子节点数，动态池化解决不同AST的规模和形状差异",
+      "method_signature": "TBCNN：编码层+树卷积层+动态池化层+全连接层",
+      "tags": [
+        "programming-language-processing",
+        "tree-based-CNN",
+        "AST-convolution",
+        "code-classification",
+        "deep-learning"
+      ],
+      "quality": "full"
+    },
+    "Coupling Distributed and Symbolic Execution for Natural Language Queries": {
+      "title": "Coupling Distributed and Symbolic Execution for Natural Language Queries",
+      "year": 2017,
+      "venue": "ICML",
+      "doi": "10.48550/arxiv.1612.02741",
+      "key_insight": "Distributed executor's field attention 'generally aligns with column selection' — use this imperfect symbolic interpretation as supervision signal to pretrain symbolic executor, alleviating REINFORCE cold start.",
+      "method_signature": "Two-way coupling: distributed→symbolic pretraining, then symbolic→distributed feedback using intermediate execution results.",
+      "tags": [
+        "neural-semantic-parsing",
+        "table-querying",
+        "distributed-symbolic-coupling",
+        "REINFORCE-pretraining",
+        "neural-symbolic-systems"
+      ],
+      "quality": "full"
+    },
+    "Data Dependency-Aware Code Generation from Enhanced UML Sequence Diagrams": {
+      "title": "Data Dependency-Aware Code Generation from Enhanced UML Sequence Diagrams",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2508.03379",
+      "key_insight": "用数学形式化建模数据依赖问题,可利用LLM数学推理优势,分离控制流重建与依赖推断",
+      "method_signature": "增强时序图+数学形式化提示+可达性剪枝的DDI任务",
+      "tags": [
+        "UML-sequence-diagram",
+        "data-dependency-inference",
+        "LLM-code-generation",
+        "mathematical-formalization",
+        "reachability-pruning"
+      ],
+      "quality": "full"
+    },
+    "Detecting Code Clones with Graph Neural Networkand Flow-Augmented Abstract Syntax Tree": {
+      "title": "Detecting Code Clones with Graph Neural Network and Flow-Augmented Abstract Syntax Tree",
+      "year": 2020,
+      "venue": null,
+      "doi": "10.48550/arxiv.2002.08653",
+      "key_insight": "FA-AST在AST基础上显式添加控制流和数据流边,让GNN同时捕获语法结构和语义信息",
+      "method_signature": "FA-AST构建加边+GNN消息传递+余弦相似度",
+      "tags": [
+        "code-clone-detection",
+        "flow-augmented-AST",
+        "graph-neural-network",
+        "semantic-clone",
+        "control-data-flow-analysis"
+      ],
+      "quality": "full"
+    },
+    "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434": {
+      "title": "DevEval: A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories",
+      "year": 2024,
+      "venue": "ACL 2024 Findings",
+      "doi": "10.18653/v1/2024.findings-acl.214",
+      "key_insight": "DevEval通过匹配500个真实仓库的代码和依赖分布（27% standalone/73% non-standalone），构建更贴近实际的评测场景",
+      "method_signature": "收集1825个样本，包含六要素：签名、需求、仓库上下文、参考代码、参考依赖、测试用例",
+      "tags": [
+        "LLM代码生成评估",
+        "代码生成基准测试",
+        "仓库级代码生成",
+        "依赖召回评测",
+        "上下文理解"
+      ],
+      "quality": "full"
+    },
+    "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035": {
+      "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+      "year": 2015,
+      "venue": "ACL",
+      "doi": "10.18653/v1/d15-1279",
+      "key_insight": "树上的卷积窗口让任意位置的节点都有到输出层的短传播路径",
+      "method_signature": "TBCNN基于句法树滑动子树特征检测器,max pooling聚合",
+      "tags": [
+        "tree-based-convolution",
+        "sentence-modeling",
+        "dependency-parsing",
+        "constituency-parsing",
+        "sentiment-classification"
+      ],
+      "quality": "full"
+    },
+    "Distilling Word Embeddings_ An Encoding Approach": {
+      "title": "Distilling Word Embeddings: An Encoding Approach",
+      "year": 2016,
+      "venue": "CIKM-16 short paper; RL4NLP Workshop @ACL-16",
+      "doi": "10.48550/arxiv.1506.04488",
+      "key_insight": "大 Embedding 捕获多方面语义，监督编码层可提炼任务相关知识、消除无关信息",
+      "method_signature": "Encoding层: vec(x_i)=f(W_encode·Φ_c·x_i+b_encode) 将300d压缩至50d",
+      "tags": [
+        "word-embedding-distillation",
+        "model-compression",
+        "knowledge-distillation",
+        "neural-NLP",
+        "sentiment-analysis",
+        "relation-classification"
+      ],
+      "quality": "full"
+    },
+    "Early Validation of Cyber-Physical Space Systems via Multi-Concerns Integration": {
+      "title": "Early Validation of Cyber-Physical Space Systems via Multi-Concerns Integration",
+      "year": 2020,
+      "venue": null,
+      "doi": "10.48550/arxiv.2007.06719",
+      "key_insight": "分离关注点建模后系统集成,可获得早期设计洞察虽非完备保证",
+      "method_signature": "分离建模→半自动集成STA→UPPAAL-SMC统计模型检验",
+      "tags": [
+        "separation-of-concerns",
+        "statistical-model-checking",
+        "cyber-physical-systems",
+        "multi-concern-integration",
+        "early-validation"
+      ],
+      "quality": "full"
+    },
+    "EditSum_ A Retrieve-and-Edit Framework for Source Code Summarization": {
+      "title": "EDITSUM: A Retrieve-and-Edit Framework for Source Code Summarization",
+      "year": 2021,
+      "venue": "IEEE/ACM ASE",
+      "doi": "10.1109/ase51524.2021.9678724",
+      "key_insight": "原型模式教模型\"怎么说\"，输入代码语义教模型\"说什么\"，二者结合生成摘要",
+      "method_signature": "Retrieve-and-Edit：通过检索获取原型摘要，计算编辑向量修正语义差异",
+      "tags": [
+        "code-summarization",
+        "retrieve-and-edit",
+        "prototype-learning",
+        "keyword-prediction",
+        "neural-code-understanding"
+      ],
+      "quality": "full"
+    },
+    "Enhancing Code Generation Performance of Smaller Models by Distilling the Reasoning Ability of LLMs": {
+      "title": "Enhancing Code Generation Performance of Smaller Models by Distilling the Reasoning Ability of LLMs",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2403.13271",
+      "key_insight": "后向推理：从正确答案反推解决计划，比LLM直接从前缀题生成计划质量更高；计划采样模拟程序员试错",
+      "method_signature": "CodePLAN多任务框架：前向生成代码+计划生成任务训练；推理时采样多计划+单元测试筛选最优计划",
+      "tags": [
+        "LLM蒸馏",
+        "小模型代码生成",
+        "思维链CoT蒸馏",
+        "计划采样",
+        "多任务学习"
+      ],
+      "quality": "full"
+    },
+    "Enhancing the Spatial Awareness Capability of Multi-Modal Large Language Model": {
+      "title": "Enhancing the Spatial Awareness Capability of Multi-Modal Large Language Model",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2310.20357",
+      "key_insight": "利用预训练小模型(Faster R-CNN+PSG)提供精确几何位置和场景图信息引导LLM",
+      "method_signature": "目标实体提取→目标检测获取几何坐标→场景图生成获取语义关系→Prompt引导LLM",
+      "tags": [
+        "MLLM空间感知",
+        "目标检测引导生成",
+        "场景图增强VLM",
+        "多模态提示工程",
+        "BLIP-2增强"
+      ],
+      "quality": "full"
+    },
+    "EvEval_ A Comprehensive Evaluation of Event Semantics for Large Language Models": {
+      "title": "EVEVAL: A Comprehensive Evaluation of Event Semantics for Large Language Models",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.15268",
+      "key_insight": "结构化事件表示（如JSON）与自然语言表现相当，为具身AI提供启示",
+      "method_signature": "构建EVEVAL基准，覆盖理解/推理/预测/CoT/表示五个维度",
+      "tags": [
+        "LLM评估基准",
+        "事件语义处理",
+        "Chain-of-Thought失效分析",
+        "结构化事件表示",
+        "零样本事件推理"
+      ],
+      "quality": "full"
+    },
+    "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories": {
+      "title": "EvoCodeBench: An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2404.00599",
+      "key_insight": "代码生成应是\"仓库级\"任务，需理解上下文依赖(类内/文件内/跨文件)，而非简单的需求到代码映射",
+      "method_signature": "构建EvoCodeBench，包含275样本，提出仓库级代码生成任务和Pass@k+Recall@k双指标",
+      "tags": [
+        "LLM代码生成评测",
+        "仓库级代码生成",
+        "基准测试对齐性",
+        "依赖调用召回",
+        "上下文感知代码生成"
+      ],
+      "quality": "full"
+    },
+    "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations": {
+      "title": "EvoCodeBench: An Evolving Code Generation Benchmark with Domain-Specific Evaluations",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.2410.22821",
+      "key_insight": "LLM在不同领域表现差异显著,总体Pass@1最高的模型在特定领域可能反而落后,必须通过领域特定改进(DSI)指标来揭示",
+      "method_signature": "基于四阶段流水线构建进化基准,使用LLM自动标注需求和领域标签,计算Pass@k和DSI指标",
+      "tags": [
+        "code-generation-benchmark",
+        "LLM-evaluation",
+        "data-leakage-detection",
+        "domain-specific-analysis",
+        "repo-level-code-generation"
+      ],
+      "quality": "partial"
+    },
+    "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation": {
+      "title": "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2403.00046",
+      "key_insight": "利用LLM自身错误输出作为学习机会，比直接学习数据集样本更高效，因修订代码在模型表征空间中与错误输出更接近",
+      "method_signature": "DEED：先收集错误代码，用Self-Revise自动修订，再用修订代码优化模型，迭代执行",
+      "tags": [
+        "LLM代码生成",
+        "数据高效微调",
+        "错误驱动学习",
+        "自修订",
+        "少样本适应"
+      ],
+      "quality": "full"
+    },
+    "Exploring LLM-based Data Annotation Strategies for Medical Dialogue Preference Alignment": {
+      "title": "Exploring LLM-based Data Annotation Strategies for Medical Dialogue Preference Alignment",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2410.04112",
+      "key_insight": "Physicians' preferences can be depicted using flowcharts that represent diagnostic decision logic, which can then be converted into rules for preference data annotation.",
+      "method_signature": "Multi-agent annotation with Planner (long-term goal setting), Ranker (response evaluation), and Rethinker (response generation) to replace expert involvement.",
+      "tags": [
+        "medical-dialogue-preference-alignment",
+        "RLAIF",
+        "Constitutional-AI",
+        "multi-agent-annotation",
+        "standardized-patient-evaluation"
+      ],
+      "quality": "full"
+    },
+    "Exploring and Unleashing the Power of Large Language Models in Automated Code Translation": {
+      "title": "Exploring and Unleashing the Power of Large Language Models in Automated Code Translation",
+      "year": 2024,
+      "venue": "ACM FSE",
+      "doi": "10.48550/arxiv.2404.14646",
+      "key_insight": "测试用例能同时解决LLM对源程序理解不足、I/O类型缺失、跨语言差异忽略三类问题",
+      "method_signature": "UniTrans三阶段框架:测试用例生成→翻译增强→迭代修复",
+      "tags": [
+        "LLM代码翻译",
+        "自动化代码转译",
+        "测试用例增强",
+        "程序修复",
+        "多语言代码迁移"
+      ],
+      "quality": "full"
+    },
+    "Exploring the Potential of Large Language Models in Self-adaptive Systems": {
+      "title": "Exploring the Potential of Large Language Models in Self-adaptive Systems",
+      "year": 2024,
+      "venue": "SEAMS'24",
+      "doi": "10.48550/arxiv.2401.07534",
+      "key_insight": "MAPE-K可作为结构化框架,将LLM能力系统映射到SAS各阶段功能",
+      "method_signature": "5步文献综述,从相关领域收集1363篇论文,按MAPE-K分类",
+      "tags": [
+        "LLM-SAS-mapping",
+        "MAPE-K literature review",
+        "cross-disciplinary survey",
+        "autonomous agents",
+        "self-adaptive systems engineering"
+      ],
+      "quality": "partial"
+    },
+    "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively": {
+      "title": "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2211.01642",
+      "key_insight": "将子网导出过程与微调过程融合(不分离),通过循环两阶段策略让子网随训练动态更新",
+      "method_signature": "DPS(Dense/Mix): Stage I累积梯度, Stage II基于梯度排序选择子网参数更新",
+      "tags": [
+        "PLM-fine-tuning",
+        "adaptive-subnetwork",
+        "gradient-based-mask",
+        "catastrophic-forgetting",
+        "low-resource-transfer"
+      ],
+      "quality": "full"
+    },
+    "Focused-DPO_ Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points__oa_W4412888491": {
+      "title": "Focused-DPO: Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points",
+      "year": 2025,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2025.findings-acl.498",
+      "key_insight": "代码中间部分(mid)决定正确性，前后缀只是模式匹配，错误易发点集中在推理复杂的中间代码段",
+      "method_signature": "Focused-DPO通过权重放大(error-prone mid)和排除suffix reward来修改DPO损失函数",
+      "tags": [
+        "code-generation-DPO",
+        "error-prone-point-identification",
+        "fine-grained-preference-optimization",
+        "code-model-post-training",
+        "self-verification-synthetic-data"
+      ],
+      "quality": "full"
+    },
+    "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101": {
+      "title": "Generalization or Memorization: Data Contamination and Trustworthy Evaluation for Large Language Models",
+      "year": 2024,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2024.findings-acl.716",
+      "key_insight": "训练会使模型输出分布更尖峰——记忆导致模型倾向于生成与训练数据相同或高度相似的文本",
+      "method_signature": "CDD利用编辑距离分布的峰值检测污染，TED通过排除峰值和去重修正输出分布",
+      "tags": [
+        "LLM-data-contamination-detection",
+        "output-distribution-peakedness",
+        "edit-distance-distribution",
+        "trustworthy-evaluation",
+        "contamination-mitigation"
+      ],
+      "quality": "full"
+    },
+    "HITS_ High-coverage LLM-based Unit Test Generation via Method Slicing": {
+      "title": "HITS: High-coverage LLM-based Unit Test Generation via Method Slicing",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2408.11324",
+      "key_insight": "将方法按问题解决步骤分解为slice，LLM每次只需分析单个slice的分支，显著减少推理组合数",
+      "method_signature": "方法切片+链式思维+自调试修复的LLM单元测试生成流水线",
+      "tags": [
+        "LLM测试生成",
+        "程序切片",
+        "代码覆盖率",
+        "复杂方法测试",
+        "Java单元测试"
+      ],
+      "quality": "full"
+    },
+    "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005": {
+      "title": "HiRoPE: Length Extrapolation for Code Models Using Hierarchical Position",
+      "year": 2024,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2024.acl-long.735",
+      "key_insight": "利用源代码的层级结构(函数/类级别)划分RoPE维度，实现层级位置编码，使模型在层级层面而非单个token层面处理相对距离",
+      "method_signature": "HiRoPE将RoPE维度分成两部分，低维表示token级位置，高维表示函数/类级位置，并添加窗口机制保持短文本稳定性",
+      "tags": [
+        "code-LLM-context-length",
+        "rotary-position-embedding",
+        "hierarchical-position-encoding",
+        "length-extrapolation",
+        "code-structure-awareness"
+      ],
+      "quality": "full"
+    },
+    "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection": {
+      "title": "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection",
+      "year": 2017,
+      "venue": "CIKM'17",
+      "doi": "10.48550/arxiv.1703.07713",
+      "key_insight": "Static attention—only critical sentences search for relevant info—avoids burying them, unlike dynamic cross-RNN attention",
+      "method_signature": "Hierarchical LSTM-RNN with static sentence-level attention for utterance matching before/after decision points",
+      "tags": [
+        "text-based speaker change detection",
+        "hierarchical RNN",
+        "sentence-level attention",
+        "dialog modeling",
+        "speaker diarization"
+      ],
+      "quality": "full"
+    },
+    "Hot or Cold_ Adaptive Temperature Sampling for Code Generation with Large Language Models": {
+      "title": "Hot or Cold? Adaptive Temperature Sampling for Code Generation with Large Language Models",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2309.02772",
+      "key_insight": "代码块起始位置的token预测难度最高(79.8%)，对这些挑战token应提高温度增加多样性，对自信token应降低温度避免随机噪声",
+      "method_signature": "AdapT采样：根据是否为代码块初始token动态切换温度参数a/b",
+      "tags": [
+        "LLM代码生成解码",
+        "自适应温度采样",
+        "代码token损失分布分析",
+        "挑战token识别",
+        "代码块结构感知"
+      ],
+      "quality": "partial"
+    },
+    "How Transferable are Neural Networks in NLP Applications___oa_W2964352358": {
+      "title": "How Transferable are Neural Networks in NLP Applications?",
+      "year": 2016,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/d16-1046",
+      "key_insight": "NLP中神经网络是否可迁移主要取决于源目标任务的语义相似度,这与图像领域的共识不同",
+      "method_signature": "CNN和LSTM在6个数据集上的INIT与MULT迁移实验,逐层分析",
+      "tags": [
+        "neural-network-transfer-learning",
+        "NLP-domain-adaptation",
+        "multi-task-learning",
+        "layer-transferability",
+        "semantic-similarity-transfer"
+      ],
+      "quality": "full"
+    },
+    "ICDH 2023 Committees": {
+      "title": "ICDH 2023 Committees",
+      "year": 2023,
+      "venue": "IEEE ICDH 2023",
+      "doi": "10.1109/icdh60066.2023.00010",
+      "key_insight": null,
+      "method_signature": null,
+      "tags": [],
+      "quality": "thin"
+    },
+    "IEEE 2020 World Congress on Services Message from the Program Chairs in Chief__oa_W3111965701": {
+      "title": "IEEE 2020 World Congress on Services Message from the Program Chairs in Chief",
+      "year": 2020,
+      "venue": "IEEE World Congress on Services",
+      "doi": "10.1109/edge50951.2020.00006",
+      "key_insight": null,
+      "method_signature": null,
+      "tags": [
+        "service-computing",
+        "edge-computing",
+        "IoT",
+        "smart-data-services",
+        "cloud-computing"
+      ],
+      "quality": "thin"
+    },
+    "IRCoCo_ Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion": {
+      "title": "IRCoCo: Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion",
+      "year": 2024,
+      "venue": "ACM FSE",
+      "doi": "10.48550/arxiv.2401.16637",
+      "key_insight": "为每个生成的token提供即时reward，让模型感知context的实时变化",
+      "method_signature": "Actor-Critic框架，Actor为预训练LM，Critic为BLEU/Edit-Sim训练的评估器",
+      "tags": [
+        "code-completion",
+        "actor-critic-RL",
+        "immediate-reward",
+        "exposure-bias",
+        "supervised-fine-tuning"
+      ],
+      "quality": "full"
+    },
+    "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models": {
+      "title": "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2303.07826",
+      "key_insight": "代码层级结构不仅包含token间关系，还包含语句的操作语义(global)和token在语句中的局部上下文(local)",
+      "method_signature": "HiT: CST根到叶路径编码为层级嵌入，与token嵌入拼接后送入Transformer序列编码器",
+      "tags": [
+        "code-representation-learning",
+        "hierarchical-embedding",
+        "transformer-code",
+        "syntax-tree-hierarchy",
+        "clone-detection"
+      ],
+      "quality": "partial"
+    },
+    "Improved Knowledge Base Completion by Path-Augmented TransR Model": {
+      "title": "Improved Knowledge Base Completion by Path-Augmented TransR Model",
+      "year": 2016,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1610.04073",
+      "key_insight": "用TransR作基座模型比TransE好，将路径增强技术移植到更强的基座上可进一步提升",
+      "method_signature": "PTransR=TransR+路径可靠性加权正则+PCRA路径评分",
+      "tags": [
+        "知识库补全",
+        "链接预测",
+        "TransR变体",
+        "多跳路径建模",
+        "嵌入学习"
+      ],
+      "quality": "full"
+    },
+    "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation__oa_W2236688737": {
+      "title": "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation",
+      "year": 2016,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1601.03651",
+      "key_insight": "关系具有方向性,调换两子路径顺序可生成逆关系样本实现数据增强",
+      "method_signature": "堆叠多层RNN隐藏层于最短依存路径上",
+      "tags": [
+        "deep-RNN",
+        "relation-classification",
+        "shortest-dependency-path",
+        "data-augmentation",
+        "semantic-relations"
+      ],
+      "quality": "full"
+    },
+    "Integrating Physician Diagnostic Logic into Large Language Models_ Preference Learning from Process Feedback__oa_W4402670852": {
+      "title": "Integrating Physician Diagnostic Logic into Large Language Models: Preference Learning from Process Feedback",
+      "year": 2024,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2024.findings-acl.144",
+      "key_insight": "用流程图显式编码诊断逻辑依赖关系，通过轨迹预测获得多轮对话的未来影响，再用REM评分进行偏好排序",
+      "method_signature": "规则建模(REM)→偏好数据生成(轨迹预测+REM评分)→DPO偏好对齐",
+      "tags": [
+        "medical-dialogue-generation",
+        "diagnostic-process-standardization",
+        "preference-learning",
+        "rule-evaluation-model",
+        "standardized-patient-testing"
+      ],
+      "quality": "full"
+    },
+    "Integrating Tree Path in Transformer for Code Representation": {
+      "title": "Integrating Tree Path in Transformer for Code Representation",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "相对/绝对路径编码可类比NLP中的相对/绝对位置编码，直接修改注意力分数实现结构归纳偏置",
+      "method_signature": "TPTrans：通过修改注意力QK/V矩阵，将AST相对/绝对路径编码融入自注意力",
+      "tags": [
+        "code-representation-learning",
+        "AST-path-encoding",
+        "Transformer-attention-modification",
+        "code-summarization",
+        "structural-inductive-bias"
+      ],
+      "quality": "full"
+    },
+    "Knowledge-Aware Code Generation with Large Language Models": {
+      "title": "Knowledge-Aware Code Generation with Large Language Models",
+      "year": 2024,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2401.15940",
+      "key_insight": "通过外部知识库注入算法和数据结构知识,引导LLM生成知识感知的提示词,可提升其解决全新编程问题的能力",
+      "method_signature": "KareCoder: 两阶段(提示工程+编码)+知识库匹配,使用知识描述/伪代码/步骤三种格式",
+      "tags": [
+        "LLM代码生成",
+        "知识注入提示工程",
+        "竞赛编程数据集",
+        "算法数据结构知识库",
+        "Pass@k评测指标"
+      ],
+      "quality": "full"
+    },
+    "Knowledge-Guided Multi-Agent Framework for Automated Requirements Development_ A Vision": {
+      "title": "Knowledge-Guided Multi-Agent Framework for Automated Requirements Development: A Vision",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2506.22656",
+      "key_insight": "每个智能体需配备功能、预定义动作和知识三要素，通过artifacts pool的状态变化触发协作",
+      "method_signature": "六智能体+artifacts pool的多智能体协同框架，模拟RE中的interviewer、end-user、analyst等角色",
+      "tags": [
+        "automated-requirements-engineering",
+        "multi-agent-LLM-systems",
+        "knowledge-guided-agent-design",
+        "artifacts-pool-collaboration",
+        "requirements-elicitation-automation"
+      ],
+      "quality": "partial"
+    },
+    "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding": {
+      "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code Understanding",
+      "year": 2025,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2503.04359",
+      "key_insight": "跨代码单元关系理解是LCLMs最具挑战性的能力,性能在32K后急剧下降",
+      "method_signature": "构建包含8任务~500例/0-128K token的LONGCODEU基准",
+      "tags": [
+        "long-context-LLM-evaluation",
+        "code-understanding-benchmark",
+        "software-engineering",
+        "context-window-scalability",
+        "retrieval-metrics"
+      ],
+      "quality": "full"
+    },
+    "Large Language Model-Aware In-Context Learning for Code Generation": {
+      "title": "Large Language Model-Aware In-Context Learning for Code Generation",
+      "year": 2023,
+      "venue": "arXiv/ACM Conference",
+      "doi": "10.48550/arxiv.2310.09748",
+      "key_insight": "用ground-truth programs的生成概率来衡量候选示例对LLM的有用程度,概率高者为positive,低者为negative",
+      "method_signature": "两阶段:BM25初筛→LLM概率估计→contrastive learning训练GraphCodeBERT retriever",
+      "tags": [
+        "in-context-learning",
+        "example-selection",
+        "code-generation",
+        "LLM-preference",
+        "contrastive-learning"
+      ],
+      "quality": "full"
+    },
+    "Large Language Models are Few-Shot Summarizers_ Multi-Intent Comment Generation via In-Context Learning": {
+      "title": "Large Language Models are Few-Shot Summarizers: Multi-Intent Comment Generation via In-Context Learning",
+      "year": 2024,
+      "venue": "ICSE 2024",
+      "doi": "10.48550/arxiv.2304.11384",
+      "key_insight": "LLM在预训练中已接触多样化意图的注释,充足的示例(≥10)能激发其多意图理解潜力",
+      "method_signature": "基于Codex的上下文学习+检索式示例选择+评论重排序",
+      "tags": [
+        "LLM-in-context-learning",
+        "multi-intent-code-summarization",
+        "code-comment-generation",
+        "few-shot-prompt-engineering",
+        "demonstration-retrieval"
+      ],
+      "quality": "full"
+    },
+    "Learning Program Representations with a Tree-Structured Transformer": {
+      "title": "Learning Program Representations with a Tree-Structured Transformer",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2208.08643",
+      "key_insight": "双向(自底向上+自顶向下)传播让每个节点都能捕获全局上下文信息",
+      "method_signature": "Tree-Transformer用多头注意力建模兄弟和父子依赖,结合双向传播",
+      "tags": [
+        "AST表示学习",
+        "树结构Transformer",
+        "多头注意力",
+        "程序理解",
+        "节点级预测"
+      ],
+      "quality": "full"
+    },
+    "Learning to Recommend Method Names with Global Context": {
+      "title": "Learning to Recommend Method Names with Global Context",
+      "year": 2022,
+      "venue": "ICSE '22",
+      "doi": "10.48550/arxiv.2201.10705",
+      "key_insight": "85.98%的方法名token出现在同文件上下文方法名中,证明项目级上下文包含方法命名关键信息",
+      "method_signature": "GTNM采用双编码器结构(Code Encoder+Project Encoder)+Transformer解码器,三层注意力分别关注解码输入、项目上下文、全局上下文",
+      "tags": [
+        "method-naming-recommendation",
+        "global-context-modeling",
+        "transformer-seq2seq",
+        "code-naturalness-hypothesis",
+        "documentation-leveraging"
+      ],
+      "quality": "full"
+    },
+    "Learning to Represent Programs with Heterogeneous Graphs": {
+      "title": "Learning to Represent Programs with Heterogeneous Graphs",
+      "year": 2022,
+      "venue": "ICPC '22",
+      "doi": "10.48550/arxiv.2012.04188",
+      "key_insight": "借助ASDL语法自然获得节点/边类型,联合元关系(节点类型+边类型+目标节点类型)使模型能区分stmt-body-stmt与Except-body-stmt等不同语义",
+      "method_signature": "HPG(基于ASDL的异构程序图)+HGT(异构图Transformer)",
+      "tags": [
+        "code-representation",
+        "heterogeneous-graph-neural-network",
+        "AST-typing",
+        "program-comprehension",
+        "method-name-prediction"
+      ],
+      "quality": "full"
+    },
+    "Line-level Semantic Structure Learning for Code Vulnerability Detection": {
+      "title": "Line-level Semantic Structure Learning for Code Vulnerability Detection",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2407.18877",
+      "key_insight": "以行语义为最小结构单元，在高维语义空间中建模代码行间的非线性结构关系，而非基于代码块或token的结构建模。",
+      "method_signature": "CSLS网络：保留结构元素的预处理 + 全局语义感知 + 行语义感知 + 行语义结构感知(Transformer)",
+      "tags": [
+        "code-vulnerability-detection",
+        "line-level-semantic-learning",
+        "code-structure-preservation",
+        "transformer-structure-modeling",
+        "pre-trained-code-models"
+      ],
+      "quality": "full"
+    },
+    "MARE_ Multi-Agents Collaboration Framework for Requirements Engineering": {
+      "title": "MARE: Multi-Agents Collaboration Framework for Requirements Engineering",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2405.03256",
+      "key_insight": "多智能体协作可统一RE各任务,无需每个任务专用模型",
+      "method_signature": "5个LLM智能体(Stakeholders/Collector/Modeler/Checker/Documenter)通过共享工作空间协作",
+      "tags": [
+        "LLM-multi-agent",
+        "Requirements-Engineering-automation",
+        "collaborative-AI",
+        "prompt-engineering",
+        "requirements-modeling"
+      ],
+      "quality": "full"
+    },
+    "Message from Conference Chairs": {
+      "title": "Message from Conference Chairs",
+      "year": 2018,
+      "venue": "16th IEEE/ACIS International Conference on Software Engineering, Research, Management & Applications (SERA)",
+      "doi": "10.1109/sera.2018.8477211",
+      "key_insight": null,
+      "method_signature": null,
+      "tags": [],
+      "quality": "thin"
+    },
+    "Modeling Programs Hierarchically with Stack-Augmented LSTM": {
+      "title": "Modeling Programs Hierarchically with Stack-Augmented LSTM",
+      "year": 2020,
+      "venue": null,
+      "doi": "10.48550/arxiv.2002.04516",
+      "key_insight": "堆栈的PUSH/POP操作天然适合追踪代码块的开始与结束，可存储恢复上下文信息",
+      "method_signature": "Stack-Augmented LSTM: AST序列化后对⟨/⟩标记执行确定性PUSH/POP操作",
+      "tags": [
+        "programming-language-modeling",
+        "stack-augmented-LSTM",
+        "AST-hierarchical-representation",
+        "code-completion",
+        "long-term-dependency"
+      ],
+      "quality": "full"
+    },
+    "Modeling Uncertainty and Evolving Self-Adaptive Software_ A Fuzzy Theory Based Requirements Engineering Approach": {
+      "title": "Modeling Uncertainty and Evolving Self-Adaptive Software: A Fuzzy Theory Based Requirements Engineering Approach",
+      "year": 2017,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.1704.00873",
+      "key_insight": "模糊属性+推理规则可同时支撑自适应决策和增量知识学习两种演化能力",
+      "method_signature": "基于模糊理论的推理机控制论方法",
+      "tags": [
+        "自适应性软件",
+        "模糊需求工程",
+        "上下文不确定性",
+        "控制理论适配",
+        "增量学习演化"
+      ],
+      "quality": "full"
+    },
+    "Modular Tree Network for Source Code Representation Learning": {
+      "title": "Modular Tree Network for Source Code Representation Learning",
+      "year": 2018,
+      "venue": "J. ACM",
+      "doi": "10.48550/arxiv.2104.00196",
+      "key_insight": "不同语义单元类型需要不同的组合函数来捕获其结构特性，仅用单一神经网络单元建模所有语义单元是不够的。",
+      "method_signature": "MTN为每类AST语义单元设计专属神经模块，包含MTN-a（全局参数共享）和MTN-b（按类型参数共享）两种策略。",
+      "tags": [
+        "AST-based neural network",
+        "source code representation learning",
+        "program classification",
+        "code clone detection",
+        "modular tree-structured neural network"
+      ],
+      "quality": "full"
+    },
+    "Multi-task Learning based Pre-trained Language Model for Code Completion": {
+      "title": "Multi-task Learning based Pre-trained Language Model for Code Completion",
+      "year": 2020,
+      "venue": "ASE '20",
+      "doi": "10.48550/arxiv.2012.14631",
+      "key_insight": "先预测标识符类型、再用类型约束令牌预测，比联合预测能获得更准确的类型约束",
+      "method_signature": "CugLM预训练Transformer通过MLM/NCP/ULM三目标联合学习，下游微调时预测类型+令牌",
+      "tags": [
+        "code-completion",
+        "pre-trained-language-model",
+        "multi-task-learning",
+        "type-prediction",
+        "transformer"
+      ],
+      "quality": "full"
+    },
+    "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning": {
+      "title": "NL2Lean: Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning",
+      "year": 2025,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2025.emnlp-main.1586",
+      "key_insight": "Four reward signals (semantic, term-level, global-level, compile-check) combined with multi-aspect curriculum learning from easy to hard progressively improves translation quality.",
+      "method_signature": "Multi-aspect RL framework with dense rewards + curriculum learning on PPO-optimized LLaMA-8B base translator.",
+      "tags": [
+        "NL-to-Lean-autoformalization",
+        "multi-aspect-reward-RL",
+        "curriculum-learning-math",
+        "formal-proof-generation",
+        "preference-learning-reward-model"
+      ],
+      "quality": "full"
+    },
+    "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825": {
+      "title": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching",
+      "year": 2016,
+      "venue": "ACL",
+      "doi": "10.18653/v1/p16-2022",
+      "key_insight": "Element-wise difference matching is mathematically reducible to concatenation but explicitly optimizing it yields 1-2% accuracy boost",
+      "method_signature": "TBCNN-pair: tree-based convolution for sentence encoding + concatenation/product/difference matching heuristics",
+      "tags": [
+        "tree-based convolution",
+        "NLI entailment recognition",
+        "heuristic matching layers",
+        "dependency parse trees",
+        "Siamese architecture"
+      ],
+      "quality": "full"
+    },
+    "Neural Program Repair with Program Dependence Analysis and Effective Filter Mechanism": {
+      "title": "Neural Program Repair with Program Dependence Analysis and Effective Filter Mechanism",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2305.09315",
+      "key_insight": "利用程序依赖图中的切片提取相关上下文作为修复成分，并设计过滤器机制消除未改变补丁",
+      "method_signature": "程序依赖分析+切片上下文提取+双模型串联过滤",
+      "tags": [
+        "neural-program-repair",
+        "program-dependence-graph",
+        "program-slicing",
+        "unaltered-patch-filter",
+        "codeT5-finetuning"
+      ],
+      "quality": "full"
+    },
+    "Non-autoregressive Model for Full-line Code Completion": {
+      "title": "Non-autoregressive Model for Full-line Code Completion",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2204.09877",
+      "key_insight": "通过依赖分析验证代码token可并行预测，语法感知采样策略可增强NAR训练",
+      "method_signature": "SANAR：编码器-解码器Transformer + 条件独立因式分解 + 语法感知采样",
+      "tags": [
+        "code-completion",
+        "non-autoregressive-generation",
+        "syntax-aware-sampling",
+        "transformer",
+        "parallel-decoding"
+      ],
+      "quality": "full"
+    },
+    "On End-to-End Program Generation from User Intention by Deep Neural Networks": {
+      "title": "On End-to-End Program Generation from User Intention by Deep Neural Networks",
+      "year": 2015,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1510.07211",
+      "key_insight": "RNN无需真正理解语义，通过隐藏状态切换识别注释意图，混合不同结构和变量仍保持代码连贯",
+      "method_signature": "字符级Seq2Seq LSTM网络，输入注释输出C代码片段",
+      "tags": [
+        "neural-code-generation",
+        "char-level-seq2seq",
+        "program-synthesis-from-NL",
+        "RNN-hidden-state-semantics",
+        "software-engineering-automation"
+      ],
+      "quality": "full"
+    },
+    "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970": {
+      "title": "PACE: Improving Prompt with Actor-Critic Editing for Large Language Model",
+      "year": 2024,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2024.findings-acl.436",
+      "key_insight": "让LLM同时扮演actor和critic双重角色,actor执行prompt产生响应,critic评估响应反馈批评,从而实现真实反馈驱动的prompt改进",
+      "method_signature": "PACE通过actor-critic范式和迭代算法,使用n个actor执行prompt和n个critic评估响应,聚合反馈后更新prompt",
+      "tags": [
+        "LLM-prompt-optimization",
+        "actor-critic-paradigm",
+        "automatic-prompt-editing",
+        "iterative-feedback",
+        "prompt-generation"
+      ],
+      "quality": "full"
+    },
+    "PATCH_ Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing": {
+      "title": "PATCH: Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing",
+      "year": 2024,
+      "venue": "ACM Transactions on Software Engineering and Methodology",
+      "doi": "10.48550/arxiv.2501.16149",
+      "key_insight": "模拟程序员在bug管理中的角色分工(test-developer-reviewer)可弥补LLM多步推理缺陷",
+      "method_signature": "三ChatGPT Agent模拟tester-developer-reviewer协作,四阶段(报告-诊断-生成-验证)迭代",
+      "tags": [
+        "LLM-based-bug-fixing",
+        "multi-agent-collaboration",
+        "programmer-intent-guidance",
+        "bug-management-simulation",
+        "patch-verification"
+      ],
+      "quality": "full"
+    },
+    "Performing Projection in Problem Frames Using Scenarios": {
+      "title": "Performing Projection in Problem Frames Using Scenarios",
+      "year": 2009,
+      "venue": "16th Asia-Pacific Software Engineering Conference",
+      "doi": "10.1109/apsec.2009.22",
+      "key_insight": "场景作为交互流程可以作为PF方法中被投影的方面(projected aspect),使得每个子问题对应一个实现需求的场景化投影。",
+      "method_signature": "基于场景扩展的问题本体论,结合关系代数投影算子定义形式化问题投影操作符。",
+      "tags": [
+        "Problem Frames投影方法",
+        "场景化需求工程",
+        "关系代数投影算子",
+        "问题分解形式化",
+        "well-formed场景约束"
+      ],
+      "quality": "full"
+    },
+    "PlugMed_ Improving Specificity in Patient-Centered Medical Dialogue Generation using In-Context Learning": {
+      "title": "PlugMed: Improving Specificity in Patient-Centered Medical Dialogue Generation using In-Context Learning",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.11508",
+      "key_insight": "LLM擅长生成丰富医疗术语但过度自信不问诊,SLM谨慎但术语贫乏,二者互补可用SLM筛选LLM输出",
+      "method_signature": "PG模块(全局+局部视图检索)+RR模块(微调SLM用困惑度排序)",
+      "tags": [
+        "medical-dialogue-generation",
+        "in-context-learning",
+        "large-language-model",
+        "response-ranking",
+        "patient-specific-response"
+      ],
+      "quality": "full"
+    },
+    "Poison Attack and Defense on Deep Source Code Processing Models": {
+      "title": "Poison Attack and Defense on Deep Source Code Processing Models",
+      "year": 2022,
+      "venue": null,
+      "doi": "10.48550/arxiv.2210.17029",
+      "key_insight": "源码有编译约束和命名规范限制，不能简单复用NLP的字符级trigger；需利用代码的结构性特征(identifier renaming、dead-code insertion)生成编译通过且人类难以察觉的poison样本",
+      "method_signature": "CodePoisoner利用规则+语言模型生成代码trigger；CodeDetector用integrated gradients定位influential tokens并通过性能下降探测trigger",
+      "tags": [
+        "backdoor-attack-on-DL",
+        "source-code-processing-DL",
+        "poison-sample-detection",
+        "integrated-gradients-for-backdoor",
+        "code-model-security"
+      ],
+      "quality": "partial"
+    },
+    "Precise Learning of Source Code Contextual Semantics via Hierarchical Dependence Structure and Graph Attention Networks": {
+      "title": "Precise Learning of Source Code Contextual Semantics via Hierarchical Dependence Structure and Graph Attention Networks",
+      "year": 2021,
+      "venue": "Journal of Systems and Software",
+      "doi": "10.1016/j.jss.2021.111108",
+      "key_insight": "每个CFG基本块对应一个AST子树——基本块的AST结构差异（如null vs NO_FIELDS）比词频更能捕捉语义区别",
+      "method_signature": "MFGNN双层网络：TBCNN提取基本块局部特征，AGN4D（有向多类型边图注意力）学习上下文特征",
+      "tags": [
+        "AST-CFG混合代码表示",
+        "图注意力网络",
+        "程序缺陷预测",
+        "基本块语义建模",
+        "多类型边有向图"
+      ],
+      "quality": "full"
+    },
+    "RL-PLUS_ Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization": {
+      "title": "RL-PLUS: Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2508.00222",
+      "key_insight": "用Multiple Importance Sampling处理外部数据分布偏移，用Exploration-Based Advantage Function优先学习低概率但正确的推理路径",
+      "method_signature": "混合策略优化：内化利用(GRPO) + 外部探索(MIS + EBAF)，去除clipping机制",
+      "tags": [
+        "LLM-reinforcement-learning",
+        "capability-boundary-collapse",
+        "hybrid-policy-optimization",
+        "multiple-importance-sampling",
+        "exploration-based-advantage-function"
+      ],
+      "quality": "full"
+    },
+    "ROCODE_ Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation": {
+      "title": "ROCODE: Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2411.07112",
+      "key_insight": "编译器的程序分析可增量检测错误，LLM不确定性熵可定位回滚点，指数衰减惩罚可约束再生",
+      "method_signature": "增量错误检测+熵驱动回滚策略+约束再生+Trie树建模",
+      "tags": [
+        "LLM代码生成",
+        "回溯机制",
+        "程序分析",
+        "错误累积",
+        "增量检测"
+      ],
+      "quality": "partial"
+    },
+    "Requirements-Driven Dynamic Adaptation to Mitigate Runtime Uncertainties for Self-Adaptive Systems": {
+      "title": "Requirements-Driven Dynamic Adaptation to Mitigate Runtime Uncertainties for Self-Adaptive Systems",
+      "year": 2017,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1704.00419",
+      "key_insight": "Treat requirements model as runtime entity that evolves with MAPE loop; parametric adaptation handles context uncertainty violations, structural adaptation handles components uncertainty violations",
+      "method_signature": "REDAPT uses Adaptive Goal Model (AGM) with temporal logic grammar to derive MAPE-based adaptation mechanism algorithms from requirements specifications",
+      "tags": [
+        "self-adaptive systems requirements",
+        "adaptive goal modeling",
+        "runtime uncertainty",
+        "requirements-driven adaptation",
+        "MAPE loop integration"
+      ],
+      "quality": "partial"
+    },
+    "Rethinking Positional Encoding in Tree Transformer for Code Representation": {
+      "title": "Rethinking Positional Encoding in Tree Transformer for Code Representation",
+      "year": 2022,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2022.emnlp-main.210",
+      "key_insight": "每个节点位置递归表示为2D坐标列表(兄弟序+父节点孩子数),结合全局绝对编码与局部相对编码能互相补充提升性能",
+      "method_signature": "2D递归树描述+全局绝对+局部相对位置编码的解纠缠注意力",
+      "tags": [
+        "tree-positional-encoding",
+        "code-ast-representation",
+        "soft-inductive-bias",
+        "tree-transformer",
+        "global-local-attention"
+      ],
+      "quality": "full"
+    },
+    "Rethinking Regularization Methods for Knowledge Graph Completion": {
+      "title": "Rethinking Regularization Methods for Knowledge Graph Completion",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2505.23442",
+      "key_insight": "Selectively penalizing only large-magnitude embedding components while discarding noise-like small components improves generalization more than uniform penalization",
+      "method_signature": "SPR: rank-based sparse regularization that masks small embedding components via cumulative-sum thresholding δ",
+      "tags": [
+        "knowledge-graph-completion",
+        "regularization-theory",
+        "sparse-embedding",
+        "overfitting-mitigation",
+        "rank-based-sparsity"
+      ],
+      "quality": "full"
+    },
+    "Rethinking Repetition Problems of LLMs in Code Generation__oa_W4412886913": {
+      "title": "Rethinking Repetition Problems of LLMs in Code Generation",
+      "year": 2025,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2025.acl-long.48",
+      "key_insight": "结构重复的潜在位置由显式语法规则决定，可用下推自动机识别并指数衰减惩罚重复语法规则",
+      "method_signature": "RPG通过语法规则识别重复并指数衰减关键token概率",
+      "tags": [
+        "LLM-code-generation",
+        "structural-repetition",
+        "grammar-based-decoding",
+        "pushdown-automaton",
+        "repetition-penalty"
+      ],
+      "quality": "full"
+    },
+    "Review on Requirements Modeling and Analysis for Self-Adaptive Systems_ A Ten-Year Perspective": {
+      "title": "Review on Requirements Modeling and Analysis for Self-Adaptive Systems: A Ten-Year Perspective",
+      "year": 2017,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.1704.00421",
+      "key_insight": "企业模型应用更广泛,但行为模型评估更严格;需求驱动运行时适配是最频繁研究主题",
+      "method_signature": "SLR覆盖21个 venues与8个数字图书馆,筛选109篇论文,提取29种建模方法8大类",
+      "tags": [
+        "self-adaptive-systems-requirements",
+        "systematic-literature-review",
+        "requirements-modeling",
+        "requirements-analysis",
+        "autonomic-computing"
+      ],
+      "quality": "full"
+    },
+    "Revisit Self-Debugging with Self-Generated Tests for Code Generation": {
+      "title": "Revisit Self-Debugging with Self-Generated Tests for Code Generation",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2501.12793",
+      "key_insight": "Bias from self-generated tests causes false negatives; in-execution (intermediate states) avoids this bias vs post-execution (output comparison)",
+      "method_signature": "Two paradigms: post-execution (compare outputs) vs in-execution (analyze runtime traces per basic block)",
+      "tags": [
+        "LLM code generation",
+        "self-debugging",
+        "self-generated tests",
+        "execution trace analysis",
+        "runtime state feedback"
+      ],
+      "quality": "full"
+    },
+    "SAGA_ Summarization-Guided Assert Statement Generation": {
+      "title": "SAGA: Summarization-Guided Assert Statement Generation",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.14808",
+      "key_insight": "开发者摘要包含代码中未直接出现的意图相关参数(如delta值)",
+      "method_signature": "基于CodeT5的编码器-解码器模型融合自然语言摘要与编程语言代码",
+      "tags": [
+        "assert-generation",
+        "software-testing",
+        "deep-learning-code",
+        "method-summarization",
+        "test-case-generation"
+      ],
+      "quality": "full"
+    },
+    "SEAG_ Structure-Aware Event Causality Generation": {
+      "title": "SEAG: Structure-Aware Event Causality Generation",
+      "year": 2023,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2023.findings-acl.283",
+      "key_insight": "关系词(如动词)使线性化序列更流畅接近自然语言；因果图结构判别训练让模型区分正负ECG结构而非仅学习表层特征",
+      "method_signature": "图线性化模板 + T5/BART生成 + 因果结构判别多任务训练",
+      "tags": [
+        "event-causality-extraction",
+        "graph-linearization",
+        "structural-discrimination",
+        "text2text-generation",
+        "joint-extraction"
+      ],
+      "quality": "full"
+    },
+    "SSE 2023 Committees": {
+      "title": "SSE 2023 Committees",
+      "year": 2023,
+      "venue": "IEEE SSE 2023",
+      "doi": "10.1109/sse60056.2023.00011",
+      "key_insight": "会议服务职能分配",
+      "method_signature": "无",
+      "tags": [
+        "conference-organization",
+        "software-engineering",
+        "service-computing"
+      ],
+      "quality": "thin"
+    },
+    "STEAM_ Simulating the InTeractive BEhavior of ProgrAMmers for Automatic Bug Fixing": {
+      "title": "STEAM: Simulating the InTeractive BEhavior of ProgrAMmers for Automatic Bug Fixing",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2308.14460",
+      "key_insight": "模拟程序员(testdeveloperreviewer)协作行为可有效增强LLM自动修Bug能力",
+      "method_signature": "三ChatGPT智能体分饰testerdeveloperreviewer，按阶段交互生成补丁",
+      "tags": [
+        "LLM-bug-fixing",
+        "multi-agent-simulation",
+        "programmer-collaboration",
+        "stage-wise-repair",
+        "ChatGPT"
+      ],
+      "quality": "full"
+    },
+    "Saber_ An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model": {
+      "title": "Saber: An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2510.18165",
+      "key_insight": "基于历史未掩码token平均置信度动态调整阈值，并回溯置信度下降的token重新掩码",
+      "method_signature": "自适应加速(AADU动态阈值)+回溯增强重掩码(BERM)协同机制",
+      "tags": [
+        "diffusion-language-model-sampling",
+        "adaptive-acceleration",
+        "backtracking-error-correction",
+        "code-generation",
+        "non-autoregressive-decoding"
+      ],
+      "quality": "full"
+    },
+    "Self-Edit_ Fault-Aware Code Editor for Code Generation__oa_W4385572345": {
+      "title": "Self-Edit: Fault-Aware Code Editor for Code Generation",
+      "year": 2023,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2023.acl-long.45",
+      "key_insight": "执行错误信息直接指向代码缺陷，将其封装为补充注释可引导编辑器精确定位并修复错误",
+      "method_signature": "三步流程：LLM生成→示例测试执行→故障感知神经编辑器根据补充注释修正代码",
+      "tags": [
+        "LLM代码生成",
+        "神经代码编辑",
+        "执行反馈利用",
+        "竞争编程基准",
+        "后处理方法"
+      ],
+      "quality": "full"
+    },
+    "Self-collaboration Code Generation via ChatGPT": {
+      "title": "Self-collaboration Code Generation via ChatGPT",
+      "year": 2023,
+      "venue": "ACM Trans. Softw. Eng. Methodol.",
+      "doi": "10.48550/arxiv.2304.07590",
+      "key_insight": "角色扮演(role-playing)让LLM在特定领域内推理，约束生成空间激发潜在能力",
+      "method_signature": "自协作框架：角色指令实现分工+协作，三角色(分析师/编码器/测试员)虚拟团队",
+      "tags": [
+        "LLM-code-generation",
+        "multi-agent-collaboration",
+        "role-playing-prompting",
+        "software-engineering-methodology",
+        "ChatGPT"
+      ],
+      "quality": "full"
+    },
+    "Semantic Approach for Service Oriented Requirements Modeling": {
+      "title": "Semantic Approach for Service Oriented Requirements Modeling",
+      "year": 2010,
+      "venue": "unknown",
+      "doi": "10.1007/978-3-642-16327-2_8",
+      "key_insight": "通过环境本体刻画服务对环境的影响(状态变迁和信息转换)来统一描述业务需求与服务能力",
+      "method_signature": "基于环境本体的SOA服务能力形式化描述，采用输入输出、条件与状态转换三元组",
+      "tags": [
+        "SOA需求工程",
+        "环境本体建模",
+        "服务语义描述",
+        "服务能力匹配",
+        "业务-IT对齐"
+      ],
+      "quality": "partial"
+    },
+    "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation": {
+      "title": "Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation",
+      "year": 2016,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1607.00970",
+      "key_insight": "通过PMI惩罚常见词、先预测具体名词作为锚点，再用seq2BF从该词向两侧生成，可强制引入实质内容",
+      "method_signature": "seq2BF: 从关键词向两侧同时生成前半(逆序)和后半(正序)序列",
+      "tags": [
+        "neural-dialogue-generation",
+        "seq2seq-universal-reply-problem",
+        "content-introducing-keyword",
+        "backward-forward-language-model",
+        "PMI-keyword-prediction"
+      ],
+      "quality": "full"
+    },
+    "Showing LLM-Generated Code Selectively Based on Confidence of LLMs": {
+      "title": "Showing LLM-Generated Code Selectively Based on Confidence of LLMs",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2410.03234",
+      "key_insight": "LLM自信时生成多版本程序相似度更高，自信度可通过多模态相似度衡量",
+      "method_signature": "采样N个程序，计算文本/句法/数据流/嵌入四模态相似度，取均值作为置信度",
+      "tags": [
+        "LLM代码生成",
+        "置信度估计",
+        "选择性展示",
+        "多模态代码相似度",
+        "程序正确性判断"
+      ],
+      "quality": "full"
+    },
+    "Sifting through the Chaff_ On Utilizing Execution Feedback for Ranking the Generated Code Candidates": {
+      "title": "Sifting through the Chaff: On Utilizing Execution Feedback for Ranking the Generated Code Candidates",
+      "year": 2024,
+      "venue": "ASE '24",
+      "doi": "10.48550/arxiv.2408.13976",
+      "key_insight": "多任务学习整合代码分类与执行反馈生成，使ranker既具备基本分类能力，又能深度理解错误根因，从而在推理时不依赖执行反馈",
+      "method_signature": "RankEF通过硬/软参数共享和中间微调三策略，用分类损失+生成损失联合训练CodeT5+，推理时不执行代码",
+      "tags": [
+        "code-ranking",
+        "execution-feedback",
+        "multi-task-learning",
+        "LLM-code-generation",
+        "code-classification"
+      ],
+      "quality": "full"
+    },
+    "SkCoder_ A Sketch-based Approach for Automatic Code Generation__oa_W4384345649": {
+      "title": "SKCODER: A Sketch-based Approach for Automatic Code Generation",
+      "year": 2023,
+      "venue": "ICSE 2023",
+      "doi": "10.1109/icse48619.2023.00179",
+      "key_insight": "代码草图提供'怎么写'的结构性指导，自然语言描述提供'写什么'的需求，草图编辑比从头生成更容易产生正确代码",
+      "method_signature": "Retriever(BM25) + Sketcher(Transformer分类器) + Editor(Encoder-Decoder Transformer)两阶段训练",
+      "tags": [
+        "sketch-based-code-generation",
+        "code-retrieval-augmented",
+        "copy-mechanism-limitation",
+        "developer-code-reuse-mimicking",
+        "LCS-sketch-construction"
+      ],
+      "quality": "full"
+    },
+    "Solving Pictorial Jigsaw Puzzle by Stigmergy-inspired Internet-based Human Collective Intelligence": {
+      "title": "Solving Pictorial Jigsaw Puzzle by Stigmergy-inspired Internet-based Human Collective Intelligence",
+      "year": 2018,
+      "venue": null,
+      "doi": "10.48550/arxiv.1812.02559",
+      "key_insight": "用软件算法替代物理定律作为整合机制，用集体意见图COG+个体探索结果的组合替代物理位置作为反馈基础",
+      "method_signature": "EIF循环(探索-整合-反馈)驱动COG持续更新实现网络空间stigmergy",
+      "tags": [
+        "stigmergy-inspired human CI",
+        "EIF loop architecture",
+        "collective opinion graph",
+        "Internet-based distributed collaboration",
+        "bottom-up problem solving"
+      ],
+      "quality": "full"
+    },
+    "StackTrans_ From Large Language Model to Large Pushdown Automata Model": {
+      "title": "STACKTRANS: From Large Language Model to Large Pushdown Automata Model",
+      "year": 2025,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2507.15343",
+      "key_insight": "受下推自动机启发,在Transformer层间引入可微分的隐藏状态堆栈,使模型能端到端学习堆栈操作从而捕获层级依赖",
+      "method_signature": "层间可微分隐藏状态堆栈:软push/pop/noop操作、多头堆栈、全局读取注意力",
+      "tags": [
+        "stack-augmented-transformer",
+        "pushdown-automata",
+        "Chomsky-hierarchy-learning",
+        "context-free-grammar-induction",
+        "differentiable-stack"
+      ],
+      "quality": "full"
+    },
+    "Structured Chain-of-Thought Prompting for Code Generation": {
+      "title": "Structured Chain-of-Thought Prompting for Code Generation",
+      "year": 2023,
+      "venue": "ACM Conference",
+      "doi": "10.48550/arxiv.2305.06599",
+      "key_insight": "程序可由sequence/branch/loop三种结构组成,中间推理步骤也应结构化",
+      "method_signature": "SCoT prompting两阶段:先生成结构化CoT,再生成代码",
+      "tags": [
+        "LLM-code-generation",
+        "chain-of-thought-prompting",
+        "program-structures",
+        "SCoT-prompting",
+        "code-synthesis"
+      ],
+      "quality": "partial"
+    },
+    "Summarizing Source Code with Transferred API Knowledge": {
+      "title": "Summarizing Source Code with Transferred API Knowledge",
+      "year": 2018,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2018/314",
+      "key_insight": "API调用序列比源代码更能反映功能本质,且规律性强,可从API摘要任务迁移知识辅助代码摘要",
+      "method_signature": "TL-CodeSum:双编码器(代码+迁移API)带注意力机制,两阶段迁移学习",
+      "tags": [
+        "code-summarization",
+        "transfer-learning",
+        "API-knowledge-mining",
+        "sequence-to-sequence",
+        "attention-mechanism"
+      ],
+      "quality": "full"
+    },
+    "Systematic Literature Review of Commercial Participation in Open Source Software": {
+      "title": "Systematic Literature Review of Commercial Participation in Open Source Software",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2405.16880",
+      "key_insight": "公司参与OSS动机分经济/技术/社会三类,参与模式反映社区交互方式,影响决定项目可持续性",
+      "method_signature": "基于Kitchenham指南的SLR,三数据库检索+滚雪球采样,内容分析92篇文献",
+      "tags": [
+        "OSS商业参与",
+        "动机分类体系",
+        "参与模型",
+        "文献系统综述",
+        "开源生态治理"
+      ],
+      "quality": "full"
+    },
+    "TACO_ Topics in Algorithmic COde generation dataset": {
+      "title": "TACO: Topics in Algorithmic COde generation dataset",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2312.14852",
+      "key_insight": "算法是编程的基本字母表,增强算法标注可提升代码理解和生成能力,精细技能分类能针对性增强模型能力",
+      "method_signature": "构建26,443题目的TACO数据集,合并968个原始标签为36个算法类别,多轮验证确保数据质量",
+      "tags": [
+        "code-generation-benchmark",
+        "algorithmic-annotation",
+        "programming-challenge",
+        "multi-task-learning",
+        "fine-grained-evaluation"
+      ],
+      "quality": "full"
+    },
+    "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing": {
+      "title": "TBCNN: A Tree-Based Convolutional Neural Network for Programming Language Processing",
+      "year": null,
+      "venue": null,
+      "doi": null,
+      "key_insight": "连续二叉树机制：用固定数量的权重矩阵组合处理任意叉数的节点",
+      "method_signature": "TBCNN：编码准则+树卷积+3路池化+全连接softmax",
+      "tags": [
+        "AST-based-program-representation",
+        "tree-convolution-neural-network",
+        "continuous-binary-tree",
+        "programming-language-NLP",
+        "neural-program-analysis"
+      ],
+      "quality": "partial"
+    },
+    "The Current Challenges of Software Engineering in the Era of Large Language Models": {
+      "title": "The Current Challenges of Software Engineering in the Era of Large Language Models",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2412.14554",
+      "key_insight": "从语义鸿沟、数据更新、结果不稳定三方面概括LLM4SE核心局限",
+      "method_signature": "定性研究:24位专家3天研讨会讨论,开放编码归纳挑战",
+      "tags": [
+        "LLM4SE挑战",
+        "软件工程自动化",
+        "定性研究方法",
+        "代码生成可靠性",
+        "SE特定LLM"
+      ],
+      "quality": "partial"
+    },
+    "ToolCoder_ Teach Code Generation Models to use API search tools": {
+      "title": "ToolCoder: Teach Code Generation Models to use API search tools",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.04032",
+      "key_insight": "通过ChatGPT自动标注数据集来教模型使用搜索工具，比多阶段pipeline更灵活且泛化性强",
+      "method_signature": "ToolCoder: ChatGPT自动标注+LoRA参数高效微调+推理时API搜索工具增强",
+      "tags": [
+        "code-generation-llm",
+        "api-selection",
+        "tool-augmented-model",
+        "private-library-code-generation",
+        "automated-data-annotation"
+      ],
+      "quality": "full"
+    },
+    "Towards Better Summarizing Bug Reports with Crowdsourcing Elicited∩ü£n Attributes": {
+      "title": "Towards Better Summarizing Bug Reports with Crowdsourcing Elicited Attributes",
+      "year": 2018,
+      "venue": null,
+      "doi": "10.48550/arxiv.1810.00125",
+      "key_insight": "众人决策理由中隐含特征构造启发,众包可克服传统方法中研究者人数有限的瓶颈,系统化生成有效特征",
+      "method_signature": "Crowd-Attribute(CA)+LRCA: 众包提取特征理由,经HCRs三阶段构造11个新特征,训练逻辑回归模型",
+      "tags": [
+        "bug-report-summarization",
+        "crowdsourcing-attribute-construction",
+        "mining-software-repositories",
+        "supervised-learning-features",
+        "heuristic-construction-rules"
+      ],
+      "quality": "full"
+    },
+    "Towards Full-line Code Completion with Neural Language Models": {
+      "title": "Towards Full-line Code Completion with Neural Language Models",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2009.08603",
+      "key_insight": "Transformer语言模型可直接用于整行补全；意外发现语法树动作序列并不优于token序列",
+      "method_signature": "基于GPT架构的Transformer语言模型，在token/语法/BPE三种粒度上评估整行补全",
+      "tags": [
+        "整行代码补全",
+        "神经语言模型",
+        "Transformer",
+        "AST动作序列",
+        "语法约束"
+      ],
+      "quality": "full"
+    },
+    "Towards Neural Speaker Modeling in Multi-Party Conversation_ The Task, Dataset, and Models": {
+      "title": "Towards Neural Speaker Modeling in Multi-Party Conversation: The Task, Dataset, and Models",
+      "year": 2017,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1708.03152",
+      "key_insight": "content信息与temporal信息互补;简单线性插值后训练效果优于复杂门控机制,因为端到端训练带来优化困难",
+      "method_signature": "层次RNN编码utterance,结合speaker内容向量与位置embedding,通过插值或门控融合两路预测",
+      "tags": [
+        "speaker-classification",
+        "multi-party-conversation",
+        "neural-dialog-systems",
+        "content-temporal-hybrid",
+        "hierarchical-RNN"
+      ],
+      "quality": "full"
+    },
+    "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling": {
+      "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+      "year": 2015,
+      "venue": "EMNLP",
+      "doi": null,
+      "key_insight": "Tree-based convolution applies fixed-depth subtree detectors sliding over parsing trees, combining structural capture with CNN-like short paths",
+      "method_signature": "c-TBCNN/d-TBCNN: convolution windows over constituency/dependency trees with max pooling",
+      "tags": [
+        "tree-convolution",
+        "sentence-structural-features",
+        "max-pooling-over-trees",
+        "dependency-parse-neural",
+        "sentiment-classification"
+      ],
+      "quality": "full"
+    },
+    "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs": {
+      "title": "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2503.15341",
+      "key_insight": "新代码行开头的预测难度最高，通过熵或概率差测量不确定性并在此触发CoT可提高准确性",
+      "method_signature": "UnCert-CoT：基于不确定性的自适应CoT解码方法",
+      "tags": [
+        "LLM-code-generation",
+        "chain-of-thought-decoding",
+        "uncertainty-estimation",
+        "adaptive-reasoning",
+        "code-generation-efficiency"
+      ],
+      "quality": "full"
+    },
+    "UniEvent_ Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning": {
+      "title": "Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning",
+      "year": 2023,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2023.acl-long.391",
+      "key_insight": "多维度前缀分别编码任务形式和关系类型，配合对比正则化防止模型忽略前缀而退化",
+      "method_signature": "基于T5的多任务生成模型+双维度自适应前缀生成器+对比正则化",
+      "tags": [
+        "zero-shot-transfer",
+        "event-relation-reasoning",
+        "prefix-tuning",
+        "multi-task-learning",
+        "causal-temporal-nlu"
+      ],
+      "quality": "full"
+    },
+    "UserTrace_ User-Level Requirements Generation and Traceability Recovery from Software Project Repositories": {
+      "title": "UserTrace: User-Level Requirements Generation and Traceability Recovery from Software Project Repositories",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2509.11238",
+      "key_insight": "通过多智能体协作框架协调专门代理,利用依赖图结构化和迭代验证,将代码实现级语义抽象为用户意图级需求",
+      "method_signature": "三阶段多智能体协作(结构化→IR推导→UR生成),四专业代理协同(审阅者/搜索者/写作/验证)",
+      "tags": [
+        "用户级需求生成",
+        "代码可追溯性恢复",
+        "多智能体LLM系统",
+        "需求工程自动化",
+        "AI辅助软件开发"
+      ],
+      "quality": "full"
+    },
+    "VulAgent_ Hypothesis-Validation based Multi-Agent Vulnerability Detection": {
+      "title": "VulAgent: A Hypothesis Validation-Based Multi-Agent System for Software Vulnerability Detection",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2509.11523",
+      "key_insight": "模拟人类审计员思维:对每个漏洞报告构建假设条件和触发路径,引导LLM定向检索相关上下文进行验证,而非简单拼接",
+      "method_signature": "四阶段流水线:多视图检测聚合→假设构建→假设条件验证→假设路径验证",
+      "tags": [
+        "LLM-based vulnerability detection",
+        "multi-agent collaboration",
+        "hypothesis validation",
+        "program context reasoning",
+        "false positive reduction"
+      ],
+      "quality": "full"
+    },
+    "WELL_ Applying Bug Detectors to Bug Localization via Weakly Supervised Learning": {
+      "title": "WELL: Applying Bug Detectors to Bug Localization via Weakly Supervised Learning",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2305.17384",
+      "key_insight": "CodeBERT若能检测bug，则bug片段必在其最关注的关键部分（注意力最高处）",
+      "method_signature": "CodeBERT微调二值检测+多头注意力聚合定位bug，无需定位标注",
+      "tags": [
+        "bug-localization",
+        "weakly-supervised-learning",
+        "code-attention-analysis",
+        "pre-trained-code-model",
+        "token-sequence-tagging"
+      ],
+      "quality": "full"
+    },
+    "What does Transformer learn about source code_": {
+      "title": "What does Transformer learn about source code?",
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2207.08466",
+      "key_insight": "Aggregating attention scores via max across heads reveals syntactic structure; different heads capture different semantic relations (provides natural edge types).",
+      "method_signature": "Aggregated attention score (max over heads per layer) + Chu-Liu/Edmonds MST algorithm to extract semantic graphs from pre-trained CodeBERT/GraphCodeBERT.",
+      "tags": [
+        "code-representation-learning",
+        "transformer-interpretability",
+        "program-graph-extraction",
+        "attention-analysis",
+        "code-intelligence-tasks"
+      ],
+      "quality": "full"
+    },
+    "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation": {
+      "title": "Why Do Neural Dialog Systems Generate Short and Meaningless Replies? A Comparison between Dialog and Translation",
+      "year": 2017,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1712.02250",
+      "key_insight": "Shuffling translation pairs mimics the unaligned property; this reproduces short/generic reply phenomenon in translation.",
+      "method_signature": "Shuffle translation source-target pairs at varying rates to artificially construct unaligned datasets.",
+      "tags": [
+        "neural-dialog-generation",
+        "seq2seq-unaligned-problem",
+        "conditional-distribution-multimodality",
+        "universal-reply-collapse",
+        "dialog-translation-comparison"
+      ],
+      "quality": "full"
+    },
+    "ZC3_ Zero-Shot Cross-Language Code Clone Detection": {
+      "title": "ZC3: Zero-Shot Cross-Language Code Clone Detection",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2308.13754",
+      "key_insight": "通过对比片段预测构造异构表示空间，结合领域对抗学习和循环一致性学习实现语言间对齐与克隆类型区分",
+      "method_signature": "CSP构造异构空间+领域对抗学习+循环一致性学习约束",
+      "tags": [
+        "zero-shot-cross-language-clone-detection",
+        "code-representation-alignment",
+        "contrastive-snippet-prediction",
+        "adversarial-domain-learning",
+        "cycle-consistency-code"
+      ],
+      "quality": "full"
+    },
+    "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion": {
+      "title": "Aligning LLMs to Fully Utilize the Cross-file Context in Repository-level Code Completion",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2503.15301",
+      "key_insight": "通过构造context-aware代码补全数据集,显式训练LLM学会在长跨文件上下文中定位相关信息",
+      "method_signature": "COLA双阶段训练: SFT学习生成context-aware代码 + DPO强化学习抑制错误上下文利用",
+      "tags": [
+        "LLM-code-completion",
+        "cross-file-context-utilization",
+        "context-alignment",
+        "long-context-LLM",
+        "reinforcement-learning-4-code"
+      ],
+      "quality": "full"
+    },
+    "iReDev_ A Knowledge-Driven Multi-Agent Framework for Intelligent Requirements Development": {
+      "title": "iReDev: A Knowledge-Driven Multi-Agent Framework for Intelligent Requirements Development",
+      "year": 2025,
+      "venue": "ACM Trans. Softw. Eng. Methodol.",
+      "doi": "10.48550/arxiv.2507.13081",
+      "key_insight": "Injecting structured expert knowledge (methodologies, standards, heuristics) into agents via chain-of-thought enables them to simulate real requirements engineers and produce higher-quality artifacts.",
+      "method_signature": "Six knowledge-driven agents with event-driven artifact pool and human-in-the-loop.",
+      "tags": [
+        "LLM-multi-agent-requirements-engineering",
+        "knowledge-driven-agent",
+        "human-in-the-loop",
+        "event-driven-communication",
+        "chain-of-thought-prompting"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "LLM-code-generation": [
+      "AdapTrack_ Constrained Decoding without Distorting LLM's Output Intent",
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment",
+      "Data Dependency-Aware Code Generation from Enhanced UML Sequence Diagrams",
+      "Rethinking Repetition Problems of LLMs in Code Generation__oa_W4412886913",
+      "Self-collaboration Code Generation via ChatGPT",
+      "Sifting through the Chaff_ On Utilizing Execution Feedback for Ranking the Generated Code Candidates",
+      "Structured Chain-of-Thought Prompting for Code Generation",
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "LLM代码生成": [
+      "Automated Commit Message Generation with Large Language Models_ An Empirical Study and Beyond",
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation",
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation",
+      "Knowledge-Aware Code Generation with Large Language Models",
+      "ROCODE_ Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation",
+      "Self-Edit_ Fault-Aware Code Editor for Code Generation__oa_W4385572345",
+      "Showing LLM-Generated Code Selectively Based on Confidence of LLMs"
+    ],
+    "multi-task-learning": [
+      "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning",
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358",
+      "Multi-task Learning based Pre-trained Language Model for Code Completion",
+      "Sifting through the Chaff_ On Utilizing Execution Feedback for Ranking the Generated Code Candidates",
+      "TACO_ Topics in Algorithmic COde generation dataset",
+      "UniEvent_ Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning"
+    ],
+    "code-completion": [
+      "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning",
+      "IRCoCo_ Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion",
+      "Modeling Programs Hierarchically with Stack-Augmented LSTM",
+      "Multi-task Learning based Pre-trained Language Model for Code Completion",
+      "Non-autoregressive Model for Full-line Code Completion"
+    ],
+    "relation-classification": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths",
+      "Distilling Word Embeddings_ An Encoding Approach",
+      "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation__oa_W2236688737"
+    ],
+    "code-summarization": [
+      "Code Generation as a Dual Task of Code Summarization",
+      "EditSum_ A Retrieve-and-Edit Framework for Source Code Summarization",
+      "Integrating Tree Path in Transformer for Code Representation",
+      "Summarizing Source Code with Transferred API Knowledge"
+    ],
+    "code-generation": [
+      "Code Generation as a Dual Task of Code Summarization",
+      "Large Language Model-Aware In-Context Learning for Code Generation",
+      "Saber_ An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model"
+    ],
+    "code-representation-learning": [
+      "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models",
+      "Integrating Tree Path in Transformer for Code Representation",
+      "What does Transformer learn about source code_"
+    ],
+    "业务-IT对齐": [
+      "A Framework for the Elicitation and Analysis of Information Technology Service Requirements and Their Alignment with Enterprise Business Goals",
+      "Semantic Approach for Service Oriented Requirements Modeling"
+    ],
+    "separation-of-concerns": [
+      "A Meta Reinforcement Learning-based Approach for Self-Adaptive System__oa_W3161250517",
+      "Early Validation of Cyber-Physical Space Systems via Multi-Concerns Integration"
+    ],
+    "self-adaptive-systems-requirements": [
+      "A Thematic Study of Requirements Modeling and Analysis for Self-Adaptive Systems",
+      "Review on Requirements Modeling and Analysis for Self-Adaptive Systems_ A Ten-Year Perspective"
+    ],
+    "LLM code generation": [
+      "AceCoder_ Utilizing Existing Code to Enhance Code Generation",
+      "Revisit Self-Debugging with Self-Generated Tests for Code Generation"
+    ],
+    "code-understanding-benchmark": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding",
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "SDP-LSTM": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths"
+    ],
+    "dependency-parsing": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths",
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035"
+    ],
+    "attention-mechanism": [
+      "Code Generation as a Dual Task of Code Summarization",
+      "Summarizing Source Code with Transferred API Knowledge"
+    ],
+    "repo-level-code-generation": [
+      "CodeAgent_ Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges",
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations"
+    ],
+    "code-classification": [
+      "Convolutional Neural Networks over Tree Structures for Programming Language Processing",
+      "Sifting through the Chaff_ On Utilizing Execution Feedback for Ranking the Generated Code Candidates"
+    ],
+    "仓库级代码生成": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434",
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "sentiment-classification": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035",
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "code-generation-benchmark": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations",
+      "TACO_ Topics in Algorithmic COde generation dataset"
+    ],
+    "service-computing": [
+      "IEEE 2020 World Congress on Services Message from the Program Chairs in Chief__oa_W3111965701",
+      "SSE 2023 Committees"
+    ],
+    "medical-dialogue-generation": [
+      "Integrating Physician Diagnostic Logic into Large Language Models_ Preference Learning from Process Feedback__oa_W4402670852",
+      "PlugMed_ Improving Specificity in Patient-Centered Medical Dialogue Generation using In-Context Learning"
+    ],
+    "software-engineering": [
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding",
+      "SSE 2023 Committees"
+    ],
+    "in-context-learning": [
+      "Large Language Model-Aware In-Context Learning for Code Generation",
+      "PlugMed_ Improving Specificity in Patient-Centered Medical Dialogue Generation using In-Context Learning"
+    ],
+    "requirements-modeling": [
+      "MARE_ Multi-Agents Collaboration Framework for Requirements Engineering",
+      "Review on Requirements Modeling and Analysis for Self-Adaptive Systems_ A Ten-Year Perspective"
+    ],
+    "transformer": [
+      "Multi-task Learning based Pre-trained Language Model for Code Completion",
+      "Non-autoregressive Model for Full-line Code Completion"
+    ],
+    "multi-agent-collaboration": [
+      "PATCH_ Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing",
+      "Self-collaboration Code Generation via ChatGPT"
+    ],
+    "ChatGPT": [
+      "STEAM_ Simulating the InTeractive BEhavior of ProgrAMmers for Automatic Bug Fixing",
+      "Self-collaboration Code Generation via ChatGPT"
+    ],
+    "chain-of-thought-prompting": [
+      "Structured Chain-of-Thought Prompting for Code Generation",
+      "iReDev_ A Knowledge-Driven Multi-Agent Framework for Intelligent Requirements Development"
+    ],
+    "neural-network-regularization": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "word-embeddings": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "hyperparameter-tuning": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "nlp-classification": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "dropout-vs-l2": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "package-management": [
+      "A First Look at Package-to-Group Mechanism_ An Empirical Study of the Linux Distributions"
+    ],
+    "linux-distributions": [
+      "A First Look at Package-to-Group Mechanism_ An Empirical Study of the Linux Distributions"
+    ],
+    "empirical-software-engineering": [
+      "A First Look at Package-to-Group Mechanism_ An Empirical Study of the Linux Distributions"
+    ],
+    "group-quality-metrics": [
+      "A First Look at Package-to-Group Mechanism_ An Empirical Study of the Linux Distributions"
+    ],
+    "open-source-evolution": [
+      "A First Look at Package-to-Group Mechanism_ An Empirical Study of the Linux Distributions"
+    ],
+    "IT服务需求工程": [
+      "A Framework for the Elicitation and Analysis of Information Technology Service Requirements and Their Alignment with Enterprise Business Goals"
+    ],
+    "i*-目标导向分析": [
+      "A Framework for the Elicitation and Analysis of Information Technology Service Requirements and Their Alignment with Enterprise Business Goals"
+    ],
+    "问题フレーム方法": [
+      "A Framework for the Elicitation and Analysis of Information Technology Service Requirements and Their Alignment with Enterprise Business Goals"
+    ],
+    "服务供应链本体建模": [
+      "A Framework for the Elicitation and Analysis of Information Technology Service Requirements and Their Alignment with Enterprise Business Goals"
+    ],
+    "Bayesian-game-security": [
+      "A Game-Theoretical Self-Adaptation Framework for Securing Software-Intensive Systems"
+    ],
+    "component-level-self-adaptation": [
+      "A Game-Theoretical Self-Adaptation Framework for Securing Software-Intensive Systems"
+    ],
+    "automated-game-generation": [
+      "A Game-Theoretical Self-Adaptation Framework for Securing Software-Intensive Systems"
+    ],
+    "industrial-control-systems-security": [
+      "A Game-Theoretical Self-Adaptation Framework for Securing Software-Intensive Systems"
+    ],
+    "adversarial-modeling": [
+      "A Game-Theoretical Self-Adaptation Framework for Securing Software-Intensive Systems"
+    ],
+    "meta-reinforcement-learning": [
+      "A Meta Reinforcement Learning-based Approach for Self-Adaptive System__oa_W3161250517"
+    ],
+    "self-adaptive-systems": [
+      "A Meta Reinforcement Learning-based Approach for Self-Adaptive System__oa_W3161250517"
+    ],
+    "multiple-model-problem": [
+      "A Meta Reinforcement Learning-based Approach for Self-Adaptive System__oa_W3161250517"
+    ],
+    "MDP-synthesis": [
+      "A Meta Reinforcement Learning-based Approach for Self-Adaptive System__oa_W3161250517"
+    ],
+    "online-adaptation": [
+      "A Meta Reinforcement Learning-based Approach for Self-Adaptive System__oa_W3161250517"
+    ],
+    "fuzzy-control-SAS": [
+      "A Model-Based Fuzzy Control Approach to Achieving Adaptation with Contextual Uncertainties"
+    ],
+    "NFR-dynamic-adaptation": [
+      "A Model-Based Fuzzy Control Approach to Achieving Adaptation with Contextual Uncertainties"
+    ],
+    "feedforward-feedback-control": [
+      "A Model-Based Fuzzy Control Approach to Achieving Adaptation with Contextual Uncertainties"
+    ],
+    "context-uncertainty-modeling": [
+      "A Model-Based Fuzzy Control Approach to Achieving Adaptation with Contextual Uncertainties"
+    ],
+    "requirements-engineering-control-theory": [
+      "A Model-Based Fuzzy Control Approach to Achieving Adaptation with Contextual Uncertainties"
+    ],
+    "AST-hierarchical-structure": [
+      "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning"
+    ],
+    "Transformer-XL": [
+      "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning"
+    ],
+    "program-representation": [
+      "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning"
+    ],
+    "thematic-synthesis-SLR": [
+      "A Thematic Study of Requirements Modeling and Analysis for Self-Adaptive Systems"
+    ],
+    "goal-oriented-modeling-KAOS-iStar": [
+      "A Thematic Study of Requirements Modeling and Analysis for Self-Adaptive Systems"
+    ],
+    "requirements-time-runtime": [
+      "A Thematic Study of Requirements Modeling and Analysis for Self-Adaptive Systems"
+    ],
+    "uncertainty-handling-fuzzy-logic": [
+      "A Thematic Study of Requirements Modeling and Analysis for Self-Adaptive Systems"
+    ],
+    "prompt engineering": [
+      "AceCoder_ Utilizing Existing Code to Enhance Code Generation"
+    ],
+    "example retrieval for code": [
+      "AceCoder_ Utilizing Existing Code to Enhance Code Generation"
+    ],
+    "test-driven prompt guidance": [
+      "AceCoder_ Utilizing Existing Code to Enhance Code Generation"
+    ],
+    "multi-language code synthesis": [
+      "AceCoder_ Utilizing Existing Code to Enhance Code Generation"
+    ],
+    "self-adaptive-software": [
+      "Achieving Adaptation for Adaptive Systems via Runtime Verification_ A Model-Driven Approach"
+    ],
+    "runtime-verification": [
+      "Achieving Adaptation for Adaptive Systems via Runtime Verification_ A Model-Driven Approach"
+    ],
+    "model-driven-requirements": [
+      "Achieving Adaptation for Adaptive Systems via Runtime Verification_ A Model-Driven Approach"
+    ],
+    "probabilistic-model-checking": [
+      "Achieving Adaptation for Adaptive Systems via Runtime Verification_ A Model-Driven Approach"
+    ],
+    "MAPE-control-loop": [
+      "Achieving Adaptation for Adaptive Systems via Runtime Verification_ A Model-Driven Approach"
+    ],
+    "NFR-adaptive-decision": [
+      "Achieving Adaptation for Adaptive Systems via Runtime Verification_ A Model-Driven Approach"
+    ],
+    "constrained-decoding": [
+      "AdapTrack_ Constrained Decoding without Distorting LLM's Output Intent"
+    ],
+    "adaptive-backtracking": [
+      "AdapTrack_ Constrained Decoding without Distorting LLM's Output Intent"
+    ],
+    "intent-preservation": [
+      "AdapTrack_ Constrained Decoding without Distorting LLM's Output Intent"
+    ],
+    "API-version-handling": [
+      "AdapTrack_ Constrained Decoding without Distorting LLM's Output Intent"
+    ],
+    "CPS需求建模": [
+      "An Evaluation of Requirements Modeling for Cyber-Physical Systems via LLMs"
+    ],
+    "问题图方法": [
+      "An Evaluation of Requirements Modeling for Cyber-Physical Systems via LLMs"
+    ],
+    "LLM评估": [
+      "An Evaluation of Requirements Modeling for Cyber-Physical Systems via LLMs"
+    ],
+    "实体识别": [
+      "An Evaluation of Requirements Modeling for Cyber-Physical Systems via LLMs"
+    ],
+    "交互抽取": [
+      "An Evaluation of Requirements Modeling for Cyber-Physical Systems via LLMs"
+    ],
+    "multiagent-task-allocation": [
+      "Assignment problem in requirements driven agent collaboration and its implementation"
+    ],
+    "normative-systems-Kripke": [
+      "Assignment problem in requirements driven agent collaboration and its implementation"
+    ],
+    "service-oriented-computing": [
+      "Assignment problem in requirements driven agent collaboration and its implementation"
+    ],
+    "decentralized-negotiation": [
+      "Assignment problem in requirements driven agent collaboration and its implementation"
+    ],
+    "reservation-payoff-constraints": [
+      "Assignment problem in requirements driven agent collaboration and its implementation"
+    ],
+    "Commit Message Generation": [
+      "Automated Commit Message Generation with Large Language Models_ An Empirical Study and Beyond"
+    ],
+    "In-Context Learning": [
+      "Automated Commit Message Generation with Large Language Models_ An Empirical Study and Beyond"
+    ],
+    "实证研究": [
+      "Automated Commit Message Generation with Large Language Models_ An Empirical Study and Beyond"
+    ],
+    "检索增强生成": [
+      "Automated Commit Message Generation with Large Language Models_ An Empirical Study and Beyond"
+    ],
+    "constrained-text-generation": [
+      "Backward and Forward Language Modeling for Constrained Sentence Generation"
+    ],
+    "bidirectional-language-model": [
+      "Backward and Forward Language Modeling for Constrained Sentence Generation"
+    ],
+    "RNN-generation": [
+      "Backward and Forward Language Modeling for Constrained Sentence Generation"
+    ],
+    "constrained-neural-LM": [
+      "Backward and Forward Language Modeling for Constrained Sentence Generation"
+    ],
+    "arXiv-paper-title-generation": [
+      "Backward and Forward Language Modeling for Constrained Sentence Generation"
+    ],
+    "long-context-LM-evaluation": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "context-length-scalability": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "software-engineering-LLM": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "dependency-analysis": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "AST节点向量表示": [
+      "Building Program Vector Representations for Deep Learning"
+    ],
+    "程序分析预训练": [
+      "Building Program Vector Representations for Deep Learning"
+    ],
+    "深度学习程序分类": [
+      "Building Program Vector Representations for Deep Learning"
+    ],
+    "编码准则无监督学习": [
+      "Building Program Vector Representations for Deep Learning"
+    ],
+    "树卷积神经网络": [
+      "Building Program Vector Representations for Deep Learning"
+    ],
+    "需求工程": [
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation"
+    ],
+    "人机协作对话": [
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation"
+    ],
+    "prompt工程": [
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation"
+    ],
+    "迭代式需求精化": [
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation"
+    ],
+    "dependency-path-RNN": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path"
+    ],
+    "multichannel-embedding": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path"
+    ],
+    "directional-relation": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path"
+    ],
+    "multichannel-LSTM": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths"
+    ],
+    "neural-networks": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths"
+    ],
+    "deep-code-model-adversarial-testing": [
+      "Code Difference Guided Adversarial Example Generation for Deep Code Models"
+    ],
+    "code-difference-guided-generation": [
+      "Code Difference Guided Adversarial Example Generation for Deep Code Models"
+    ],
+    "ingredient-space-reduction": [
+      "Code Difference Guided Adversarial Example Generation for Deep Code Models"
+    ],
+    "semantic-preserving-transformation": [
+      "Code Difference Guided Adversarial Example Generation for Deep Code Models"
+    ],
+    "fault-revealing-example": [
+      "Code Difference Guided Adversarial Example Generation for Deep Code Models"
+    ],
+    "dual-learning": [
+      "Code Generation as a Dual Task of Code Summarization"
+    ],
+    "seq2seq": [
+      "Code Generation as a Dual Task of Code Summarization"
+    ],
+    "LLM-agent": [
+      "CodeAgent_ Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges"
+    ],
+    "code-navigation-tools": [
+      "CodeAgent_ Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges"
+    ],
+    "software-artifact-interaction": [
+      "CodeAgent_ Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges"
+    ],
+    "benchmark-construction": [
+      "CodeAgent_ Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges"
+    ],
+    "code generation preference optimization": [
+      "CodeDPO_ Aligning Code Models with Self Generated and Verified Source Code__oa_W4412945242"
+    ],
+    "self-verification ranking algorithm": [
+      "CodeDPO_ Aligning Code Models with Self Generated and Verified Source Code__oa_W4412945242"
+    ],
+    "DPO training for code models": [
+      "CodeDPO_ Aligning Code Models with Self Generated and Verified Source Code__oa_W4412945242"
+    ],
+    "PageRank-inspired code scoring": [
+      "CodeDPO_ Aligning Code Models with Self Generated and Verified Source Code__oa_W4412945242"
+    ],
+    "code execution efficiency optimization": [
+      "CodeDPO_ Aligning Code Models with Self Generated and Verified Source Code__oa_W4412945242"
+    ],
+    "代码预训练": [
+      "CodeEditor_ Learning to Edit Source Code with Pre-trained Models"
+    ],
+    "代码编辑自动化": [
+      "CodeEditor_ Learning to Edit Source Code with Pre-trained Models"
+    ],
+    "Seq2Seq预训练": [
+      "CodeEditor_ Learning to Edit Source Code with Pre-trained Models"
+    ],
+    "代码突变生成": [
+      "CodeEditor_ Learning to Edit Source Code with Pre-trained Models"
+    ],
+    "编辑模式学习": [
+      "CodeEditor_ Learning to Edit Source Code with Pre-trained Models"
+    ],
+    "code-generation-grammar-constraint": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "pushdown-automaton-PDA": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "sequence-based-deep-learning": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "Python-parsing": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "zero-shot-code-synthesis": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "RLVR": [
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment"
+    ],
+    "execution-semantics-alignment": [
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment"
+    ],
+    "code-reasoning": [
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment"
+    ],
+    "variable-trace-inference": [
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment"
+    ],
+    "code-evaluation-metric": [
+      "CodeScore_ Evaluating Code Generation by Learning Code Execution"
+    ],
+    "LLM-fine-tuning": [
+      "CodeScore_ Evaluating Code Generation by Learning Code Execution"
+    ],
+    "functional-correctness": [
+      "CodeScore_ Evaluating Code Generation by Learning Code Execution"
+    ],
+    "code-execution-learning": [
+      "CodeScore_ Evaluating Code Generation by Learning Code Execution"
+    ],
+    "passratio-prediction": [
+      "CodeScore_ Evaluating Code Generation by Learning Code Execution"
+    ],
+    "LLM-code-summarization": [
+      "Commenting Higher-level Code Unit_ Full Code, Reduced Code, or Hierarchical Code Summarization"
+    ],
+    "higher-level-code-units": [
+      "Commenting Higher-level Code Unit_ Full Code, Reduced Code, or Hierarchical Code Summarization"
+    ],
+    "hierarchical-summarization": [
+      "Commenting Higher-level Code Unit_ Full Code, Reduced Code, or Hierarchical Code Summarization"
+    ],
+    "code-commenting": [
+      "Commenting Higher-level Code Unit_ Full Code, Reduced Code, or Hierarchical Code Summarization"
+    ],
+    "evaluation-automation": [
+      "Commenting Higher-level Code Unit_ Full Code, Reduced Code, or Hierarchical Code Summarization"
+    ],
+    "OSS生态系统": [
+      "CompaniesΓÇÖ Participation in OSS DevelopmentΓÇôAn Empirical Study of OpenStack"
+    ],
+    "商业参与": [
+      "CompaniesΓÇÖ Participation in OSS DevelopmentΓÇôAn Empirical Study of OpenStack"
+    ],
+    "贡献模式": [
+      "CompaniesΓÇÖ Participation in OSS DevelopmentΓÇôAn Empirical Study of OpenStack"
+    ],
+    "开发者身份合并": [
+      "CompaniesΓÇÖ Participation in OSS DevelopmentΓÇôAn Empirical Study of OpenStack"
+    ],
+    "公司多样性": [
+      "CompaniesΓÇÖ Participation in OSS DevelopmentΓÇôAn Empirical Study of OpenStack"
+    ],
+    "neural-language-model-compression": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "sparse-word-representation": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "vocabulary-size-scalability": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "ZRegression-NCE": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "rare-word-embedding": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "programming-language-processing": [
+      "Convolutional Neural Networks over Tree Structures for Programming Language Processing"
+    ],
+    "tree-based-CNN": [
+      "Convolutional Neural Networks over Tree Structures for Programming Language Processing"
+    ],
+    "AST-convolution": [
+      "Convolutional Neural Networks over Tree Structures for Programming Language Processing"
+    ],
+    "deep-learning": [
+      "Convolutional Neural Networks over Tree Structures for Programming Language Processing"
+    ],
+    "neural-semantic-parsing": [
+      "Coupling Distributed and Symbolic Execution for Natural Language Queries"
+    ],
+    "table-querying": [
+      "Coupling Distributed and Symbolic Execution for Natural Language Queries"
+    ],
+    "distributed-symbolic-coupling": [
+      "Coupling Distributed and Symbolic Execution for Natural Language Queries"
+    ],
+    "REINFORCE-pretraining": [
+      "Coupling Distributed and Symbolic Execution for Natural Language Queries"
+    ],
+    "neural-symbolic-systems": [
+      "Coupling Distributed and Symbolic Execution for Natural Language Queries"
+    ],
+    "UML-sequence-diagram": [
+      "Data Dependency-Aware Code Generation from Enhanced UML Sequence Diagrams"
+    ],
+    "data-dependency-inference": [
+      "Data Dependency-Aware Code Generation from Enhanced UML Sequence Diagrams"
+    ],
+    "mathematical-formalization": [
+      "Data Dependency-Aware Code Generation from Enhanced UML Sequence Diagrams"
+    ],
+    "reachability-pruning": [
+      "Data Dependency-Aware Code Generation from Enhanced UML Sequence Diagrams"
+    ],
+    "code-clone-detection": [
+      "Detecting Code Clones with Graph Neural Networkand Flow-Augmented Abstract Syntax Tree"
+    ],
+    "flow-augmented-AST": [
+      "Detecting Code Clones with Graph Neural Networkand Flow-Augmented Abstract Syntax Tree"
+    ],
+    "graph-neural-network": [
+      "Detecting Code Clones with Graph Neural Networkand Flow-Augmented Abstract Syntax Tree"
+    ],
+    "semantic-clone": [
+      "Detecting Code Clones with Graph Neural Networkand Flow-Augmented Abstract Syntax Tree"
+    ],
+    "control-data-flow-analysis": [
+      "Detecting Code Clones with Graph Neural Networkand Flow-Augmented Abstract Syntax Tree"
+    ],
+    "LLM代码生成评估": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    ],
+    "代码生成基准测试": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    ],
+    "依赖召回评测": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    ],
+    "上下文理解": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    ],
+    "tree-based-convolution": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035"
+    ],
+    "sentence-modeling": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035"
+    ],
+    "constituency-parsing": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035"
+    ],
+    "word-embedding-distillation": [
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "model-compression": [
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "knowledge-distillation": [
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "neural-NLP": [
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "sentiment-analysis": [
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "statistical-model-checking": [
+      "Early Validation of Cyber-Physical Space Systems via Multi-Concerns Integration"
+    ],
+    "cyber-physical-systems": [
+      "Early Validation of Cyber-Physical Space Systems via Multi-Concerns Integration"
+    ],
+    "multi-concern-integration": [
+      "Early Validation of Cyber-Physical Space Systems via Multi-Concerns Integration"
+    ],
+    "early-validation": [
+      "Early Validation of Cyber-Physical Space Systems via Multi-Concerns Integration"
+    ],
+    "retrieve-and-edit": [
+      "EditSum_ A Retrieve-and-Edit Framework for Source Code Summarization"
+    ],
+    "prototype-learning": [
+      "EditSum_ A Retrieve-and-Edit Framework for Source Code Summarization"
+    ],
+    "keyword-prediction": [
+      "EditSum_ A Retrieve-and-Edit Framework for Source Code Summarization"
+    ],
+    "neural-code-understanding": [
+      "EditSum_ A Retrieve-and-Edit Framework for Source Code Summarization"
+    ],
+    "LLM蒸馏": [
+      "Enhancing Code Generation Performance of Smaller Models by Distilling the Reasoning Ability of LLMs"
+    ],
+    "小模型代码生成": [
+      "Enhancing Code Generation Performance of Smaller Models by Distilling the Reasoning Ability of LLMs"
+    ],
+    "思维链CoT蒸馏": [
+      "Enhancing Code Generation Performance of Smaller Models by Distilling the Reasoning Ability of LLMs"
+    ],
+    "计划采样": [
+      "Enhancing Code Generation Performance of Smaller Models by Distilling the Reasoning Ability of LLMs"
+    ],
+    "多任务学习": [
+      "Enhancing Code Generation Performance of Smaller Models by Distilling the Reasoning Ability of LLMs"
+    ],
+    "MLLM空间感知": [
+      "Enhancing the Spatial Awareness Capability of Multi-Modal Large Language Model"
+    ],
+    "目标检测引导生成": [
+      "Enhancing the Spatial Awareness Capability of Multi-Modal Large Language Model"
+    ],
+    "场景图增强VLM": [
+      "Enhancing the Spatial Awareness Capability of Multi-Modal Large Language Model"
+    ],
+    "多模态提示工程": [
+      "Enhancing the Spatial Awareness Capability of Multi-Modal Large Language Model"
+    ],
+    "BLIP-2增强": [
+      "Enhancing the Spatial Awareness Capability of Multi-Modal Large Language Model"
+    ],
+    "LLM评估基准": [
+      "EvEval_ A Comprehensive Evaluation of Event Semantics for Large Language Models"
+    ],
+    "事件语义处理": [
+      "EvEval_ A Comprehensive Evaluation of Event Semantics for Large Language Models"
+    ],
+    "Chain-of-Thought失效分析": [
+      "EvEval_ A Comprehensive Evaluation of Event Semantics for Large Language Models"
+    ],
+    "结构化事件表示": [
+      "EvEval_ A Comprehensive Evaluation of Event Semantics for Large Language Models"
+    ],
+    "零样本事件推理": [
+      "EvEval_ A Comprehensive Evaluation of Event Semantics for Large Language Models"
+    ],
+    "LLM代码生成评测": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "基准测试对齐性": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "依赖调用召回": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "上下文感知代码生成": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "LLM-evaluation": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations"
+    ],
+    "data-leakage-detection": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations"
+    ],
+    "domain-specific-analysis": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations"
+    ],
+    "数据高效微调": [
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation"
+    ],
+    "错误驱动学习": [
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation"
+    ],
+    "自修订": [
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation"
+    ],
+    "少样本适应": [
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation"
+    ],
+    "medical-dialogue-preference-alignment": [
+      "Exploring LLM-based Data Annotation Strategies for Medical Dialogue Preference Alignment"
+    ],
+    "RLAIF": [
+      "Exploring LLM-based Data Annotation Strategies for Medical Dialogue Preference Alignment"
+    ],
+    "Constitutional-AI": [
+      "Exploring LLM-based Data Annotation Strategies for Medical Dialogue Preference Alignment"
+    ],
+    "multi-agent-annotation": [
+      "Exploring LLM-based Data Annotation Strategies for Medical Dialogue Preference Alignment"
+    ],
+    "standardized-patient-evaluation": [
+      "Exploring LLM-based Data Annotation Strategies for Medical Dialogue Preference Alignment"
+    ],
+    "LLM代码翻译": [
+      "Exploring and Unleashing the Power of Large Language Models in Automated Code Translation"
+    ],
+    "自动化代码转译": [
+      "Exploring and Unleashing the Power of Large Language Models in Automated Code Translation"
+    ],
+    "测试用例增强": [
+      "Exploring and Unleashing the Power of Large Language Models in Automated Code Translation"
+    ],
+    "程序修复": [
+      "Exploring and Unleashing the Power of Large Language Models in Automated Code Translation"
+    ],
+    "多语言代码迁移": [
+      "Exploring and Unleashing the Power of Large Language Models in Automated Code Translation"
+    ],
+    "LLM-SAS-mapping": [
+      "Exploring the Potential of Large Language Models in Self-adaptive Systems"
+    ],
+    "MAPE-K literature review": [
+      "Exploring the Potential of Large Language Models in Self-adaptive Systems"
+    ],
+    "cross-disciplinary survey": [
+      "Exploring the Potential of Large Language Models in Self-adaptive Systems"
+    ],
+    "autonomous agents": [
+      "Exploring the Potential of Large Language Models in Self-adaptive Systems"
+    ],
+    "self-adaptive systems engineering": [
+      "Exploring the Potential of Large Language Models in Self-adaptive Systems"
+    ],
+    "PLM-fine-tuning": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "adaptive-subnetwork": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "gradient-based-mask": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "catastrophic-forgetting": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "low-resource-transfer": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "code-generation-DPO": [
+      "Focused-DPO_ Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points__oa_W4412888491"
+    ],
+    "error-prone-point-identification": [
+      "Focused-DPO_ Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points__oa_W4412888491"
+    ],
+    "fine-grained-preference-optimization": [
+      "Focused-DPO_ Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points__oa_W4412888491"
+    ],
+    "code-model-post-training": [
+      "Focused-DPO_ Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points__oa_W4412888491"
+    ],
+    "self-verification-synthetic-data": [
+      "Focused-DPO_ Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points__oa_W4412888491"
+    ],
+    "LLM-data-contamination-detection": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "output-distribution-peakedness": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "edit-distance-distribution": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "trustworthy-evaluation": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "contamination-mitigation": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "LLM测试生成": [
+      "HITS_ High-coverage LLM-based Unit Test Generation via Method Slicing"
+    ],
+    "程序切片": [
+      "HITS_ High-coverage LLM-based Unit Test Generation via Method Slicing"
+    ],
+    "代码覆盖率": [
+      "HITS_ High-coverage LLM-based Unit Test Generation via Method Slicing"
+    ],
+    "复杂方法测试": [
+      "HITS_ High-coverage LLM-based Unit Test Generation via Method Slicing"
+    ],
+    "Java单元测试": [
+      "HITS_ High-coverage LLM-based Unit Test Generation via Method Slicing"
+    ],
+    "code-LLM-context-length": [
+      "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    ],
+    "rotary-position-embedding": [
+      "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    ],
+    "hierarchical-position-encoding": [
+      "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    ],
+    "length-extrapolation": [
+      "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    ],
+    "code-structure-awareness": [
+      "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    ],
+    "text-based speaker change detection": [
+      "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection"
+    ],
+    "hierarchical RNN": [
+      "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection"
+    ],
+    "sentence-level attention": [
+      "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection"
+    ],
+    "dialog modeling": [
+      "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection"
+    ],
+    "speaker diarization": [
+      "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection"
+    ],
+    "LLM代码生成解码": [
+      "Hot or Cold_ Adaptive Temperature Sampling for Code Generation with Large Language Models"
+    ],
+    "自适应温度采样": [
+      "Hot or Cold_ Adaptive Temperature Sampling for Code Generation with Large Language Models"
+    ],
+    "代码token损失分布分析": [
+      "Hot or Cold_ Adaptive Temperature Sampling for Code Generation with Large Language Models"
+    ],
+    "挑战token识别": [
+      "Hot or Cold_ Adaptive Temperature Sampling for Code Generation with Large Language Models"
+    ],
+    "代码块结构感知": [
+      "Hot or Cold_ Adaptive Temperature Sampling for Code Generation with Large Language Models"
+    ],
+    "neural-network-transfer-learning": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    ],
+    "NLP-domain-adaptation": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    ],
+    "layer-transferability": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    ],
+    "semantic-similarity-transfer": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    ],
+    "edge-computing": [
+      "IEEE 2020 World Congress on Services Message from the Program Chairs in Chief__oa_W3111965701"
+    ],
+    "IoT": [
+      "IEEE 2020 World Congress on Services Message from the Program Chairs in Chief__oa_W3111965701"
+    ],
+    "smart-data-services": [
+      "IEEE 2020 World Congress on Services Message from the Program Chairs in Chief__oa_W3111965701"
+    ],
+    "cloud-computing": [
+      "IEEE 2020 World Congress on Services Message from the Program Chairs in Chief__oa_W3111965701"
+    ],
+    "actor-critic-RL": [
+      "IRCoCo_ Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion"
+    ],
+    "immediate-reward": [
+      "IRCoCo_ Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion"
+    ],
+    "exposure-bias": [
+      "IRCoCo_ Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion"
+    ],
+    "supervised-fine-tuning": [
+      "IRCoCo_ Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion"
+    ],
+    "hierarchical-embedding": [
+      "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models"
+    ],
+    "transformer-code": [
+      "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models"
+    ],
+    "syntax-tree-hierarchy": [
+      "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models"
+    ],
+    "clone-detection": [
+      "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models"
+    ],
+    "知识库补全": [
+      "Improved Knowledge Base Completion by Path-Augmented TransR Model"
+    ],
+    "链接预测": [
+      "Improved Knowledge Base Completion by Path-Augmented TransR Model"
+    ],
+    "TransR变体": [
+      "Improved Knowledge Base Completion by Path-Augmented TransR Model"
+    ],
+    "多跳路径建模": [
+      "Improved Knowledge Base Completion by Path-Augmented TransR Model"
+    ],
+    "嵌入学习": [
+      "Improved Knowledge Base Completion by Path-Augmented TransR Model"
+    ],
+    "deep-RNN": [
+      "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation__oa_W2236688737"
+    ],
+    "shortest-dependency-path": [
+      "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation__oa_W2236688737"
+    ],
+    "data-augmentation": [
+      "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation__oa_W2236688737"
+    ],
+    "semantic-relations": [
+      "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation__oa_W2236688737"
+    ],
+    "diagnostic-process-standardization": [
+      "Integrating Physician Diagnostic Logic into Large Language Models_ Preference Learning from Process Feedback__oa_W4402670852"
+    ],
+    "preference-learning": [
+      "Integrating Physician Diagnostic Logic into Large Language Models_ Preference Learning from Process Feedback__oa_W4402670852"
+    ],
+    "rule-evaluation-model": [
+      "Integrating Physician Diagnostic Logic into Large Language Models_ Preference Learning from Process Feedback__oa_W4402670852"
+    ],
+    "standardized-patient-testing": [
+      "Integrating Physician Diagnostic Logic into Large Language Models_ Preference Learning from Process Feedback__oa_W4402670852"
+    ],
+    "AST-path-encoding": [
+      "Integrating Tree Path in Transformer for Code Representation"
+    ],
+    "Transformer-attention-modification": [
+      "Integrating Tree Path in Transformer for Code Representation"
+    ],
+    "structural-inductive-bias": [
+      "Integrating Tree Path in Transformer for Code Representation"
+    ],
+    "知识注入提示工程": [
+      "Knowledge-Aware Code Generation with Large Language Models"
+    ],
+    "竞赛编程数据集": [
+      "Knowledge-Aware Code Generation with Large Language Models"
+    ],
+    "算法数据结构知识库": [
+      "Knowledge-Aware Code Generation with Large Language Models"
+    ],
+    "Pass@k评测指标": [
+      "Knowledge-Aware Code Generation with Large Language Models"
+    ],
+    "automated-requirements-engineering": [
+      "Knowledge-Guided Multi-Agent Framework for Automated Requirements Development_ A Vision"
+    ],
+    "multi-agent-LLM-systems": [
+      "Knowledge-Guided Multi-Agent Framework for Automated Requirements Development_ A Vision"
+    ],
+    "knowledge-guided-agent-design": [
+      "Knowledge-Guided Multi-Agent Framework for Automated Requirements Development_ A Vision"
+    ],
+    "artifacts-pool-collaboration": [
+      "Knowledge-Guided Multi-Agent Framework for Automated Requirements Development_ A Vision"
+    ],
+    "requirements-elicitation-automation": [
+      "Knowledge-Guided Multi-Agent Framework for Automated Requirements Development_ A Vision"
+    ],
+    "long-context-LLM-evaluation": [
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "context-window-scalability": [
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "retrieval-metrics": [
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "example-selection": [
+      "Large Language Model-Aware In-Context Learning for Code Generation"
+    ],
+    "LLM-preference": [
+      "Large Language Model-Aware In-Context Learning for Code Generation"
+    ],
+    "contrastive-learning": [
+      "Large Language Model-Aware In-Context Learning for Code Generation"
+    ],
+    "LLM-in-context-learning": [
+      "Large Language Models are Few-Shot Summarizers_ Multi-Intent Comment Generation via In-Context Learning"
+    ],
+    "multi-intent-code-summarization": [
+      "Large Language Models are Few-Shot Summarizers_ Multi-Intent Comment Generation via In-Context Learning"
+    ],
+    "code-comment-generation": [
+      "Large Language Models are Few-Shot Summarizers_ Multi-Intent Comment Generation via In-Context Learning"
+    ],
+    "few-shot-prompt-engineering": [
+      "Large Language Models are Few-Shot Summarizers_ Multi-Intent Comment Generation via In-Context Learning"
+    ],
+    "demonstration-retrieval": [
+      "Large Language Models are Few-Shot Summarizers_ Multi-Intent Comment Generation via In-Context Learning"
+    ],
+    "AST表示学习": [
+      "Learning Program Representations with a Tree-Structured Transformer"
+    ],
+    "树结构Transformer": [
+      "Learning Program Representations with a Tree-Structured Transformer"
+    ],
+    "多头注意力": [
+      "Learning Program Representations with a Tree-Structured Transformer"
+    ],
+    "程序理解": [
+      "Learning Program Representations with a Tree-Structured Transformer"
+    ],
+    "节点级预测": [
+      "Learning Program Representations with a Tree-Structured Transformer"
+    ],
+    "method-naming-recommendation": [
+      "Learning to Recommend Method Names with Global Context"
+    ],
+    "global-context-modeling": [
+      "Learning to Recommend Method Names with Global Context"
+    ],
+    "transformer-seq2seq": [
+      "Learning to Recommend Method Names with Global Context"
+    ],
+    "code-naturalness-hypothesis": [
+      "Learning to Recommend Method Names with Global Context"
+    ],
+    "documentation-leveraging": [
+      "Learning to Recommend Method Names with Global Context"
+    ],
+    "code-representation": [
+      "Learning to Represent Programs with Heterogeneous Graphs"
+    ],
+    "heterogeneous-graph-neural-network": [
+      "Learning to Represent Programs with Heterogeneous Graphs"
+    ],
+    "AST-typing": [
+      "Learning to Represent Programs with Heterogeneous Graphs"
+    ],
+    "program-comprehension": [
+      "Learning to Represent Programs with Heterogeneous Graphs"
+    ],
+    "method-name-prediction": [
+      "Learning to Represent Programs with Heterogeneous Graphs"
+    ],
+    "code-vulnerability-detection": [
+      "Line-level Semantic Structure Learning for Code Vulnerability Detection"
+    ],
+    "line-level-semantic-learning": [
+      "Line-level Semantic Structure Learning for Code Vulnerability Detection"
+    ],
+    "code-structure-preservation": [
+      "Line-level Semantic Structure Learning for Code Vulnerability Detection"
+    ],
+    "transformer-structure-modeling": [
+      "Line-level Semantic Structure Learning for Code Vulnerability Detection"
+    ],
+    "pre-trained-code-models": [
+      "Line-level Semantic Structure Learning for Code Vulnerability Detection"
+    ],
+    "LLM-multi-agent": [
+      "MARE_ Multi-Agents Collaboration Framework for Requirements Engineering"
+    ],
+    "Requirements-Engineering-automation": [
+      "MARE_ Multi-Agents Collaboration Framework for Requirements Engineering"
+    ],
+    "collaborative-AI": [
+      "MARE_ Multi-Agents Collaboration Framework for Requirements Engineering"
+    ],
+    "prompt-engineering": [
+      "MARE_ Multi-Agents Collaboration Framework for Requirements Engineering"
+    ],
+    "programming-language-modeling": [
+      "Modeling Programs Hierarchically with Stack-Augmented LSTM"
+    ],
+    "stack-augmented-LSTM": [
+      "Modeling Programs Hierarchically with Stack-Augmented LSTM"
+    ],
+    "AST-hierarchical-representation": [
+      "Modeling Programs Hierarchically with Stack-Augmented LSTM"
+    ],
+    "long-term-dependency": [
+      "Modeling Programs Hierarchically with Stack-Augmented LSTM"
+    ],
+    "自适应性软件": [
+      "Modeling Uncertainty and Evolving Self-Adaptive Software_ A Fuzzy Theory Based Requirements Engineering Approach"
+    ],
+    "模糊需求工程": [
+      "Modeling Uncertainty and Evolving Self-Adaptive Software_ A Fuzzy Theory Based Requirements Engineering Approach"
+    ],
+    "上下文不确定性": [
+      "Modeling Uncertainty and Evolving Self-Adaptive Software_ A Fuzzy Theory Based Requirements Engineering Approach"
+    ],
+    "控制理论适配": [
+      "Modeling Uncertainty and Evolving Self-Adaptive Software_ A Fuzzy Theory Based Requirements Engineering Approach"
+    ],
+    "增量学习演化": [
+      "Modeling Uncertainty and Evolving Self-Adaptive Software_ A Fuzzy Theory Based Requirements Engineering Approach"
+    ],
+    "AST-based neural network": [
+      "Modular Tree Network for Source Code Representation Learning"
+    ],
+    "source code representation learning": [
+      "Modular Tree Network for Source Code Representation Learning"
+    ],
+    "program classification": [
+      "Modular Tree Network for Source Code Representation Learning"
+    ],
+    "code clone detection": [
+      "Modular Tree Network for Source Code Representation Learning"
+    ],
+    "modular tree-structured neural network": [
+      "Modular Tree Network for Source Code Representation Learning"
+    ],
+    "pre-trained-language-model": [
+      "Multi-task Learning based Pre-trained Language Model for Code Completion"
+    ],
+    "type-prediction": [
+      "Multi-task Learning based Pre-trained Language Model for Code Completion"
+    ],
+    "NL-to-Lean-autoformalization": [
+      "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    ],
+    "multi-aspect-reward-RL": [
+      "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    ],
+    "curriculum-learning-math": [
+      "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    ],
+    "formal-proof-generation": [
+      "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    ],
+    "preference-learning-reward-model": [
+      "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    ],
+    "tree-based convolution": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "NLI entailment recognition": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "heuristic matching layers": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "dependency parse trees": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "Siamese architecture": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "neural-program-repair": [
+      "Neural Program Repair with Program Dependence Analysis and Effective Filter Mechanism"
+    ],
+    "program-dependence-graph": [
+      "Neural Program Repair with Program Dependence Analysis and Effective Filter Mechanism"
+    ],
+    "program-slicing": [
+      "Neural Program Repair with Program Dependence Analysis and Effective Filter Mechanism"
+    ],
+    "unaltered-patch-filter": [
+      "Neural Program Repair with Program Dependence Analysis and Effective Filter Mechanism"
+    ],
+    "codeT5-finetuning": [
+      "Neural Program Repair with Program Dependence Analysis and Effective Filter Mechanism"
+    ],
+    "non-autoregressive-generation": [
+      "Non-autoregressive Model for Full-line Code Completion"
+    ],
+    "syntax-aware-sampling": [
+      "Non-autoregressive Model for Full-line Code Completion"
+    ],
+    "parallel-decoding": [
+      "Non-autoregressive Model for Full-line Code Completion"
+    ],
+    "neural-code-generation": [
+      "On End-to-End Program Generation from User Intention by Deep Neural Networks"
+    ],
+    "char-level-seq2seq": [
+      "On End-to-End Program Generation from User Intention by Deep Neural Networks"
+    ],
+    "program-synthesis-from-NL": [
+      "On End-to-End Program Generation from User Intention by Deep Neural Networks"
+    ],
+    "RNN-hidden-state-semantics": [
+      "On End-to-End Program Generation from User Intention by Deep Neural Networks"
+    ],
+    "software-engineering-automation": [
+      "On End-to-End Program Generation from User Intention by Deep Neural Networks"
+    ],
+    "LLM-prompt-optimization": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "actor-critic-paradigm": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "automatic-prompt-editing": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "iterative-feedback": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "prompt-generation": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "LLM-based-bug-fixing": [
+      "PATCH_ Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing"
+    ],
+    "programmer-intent-guidance": [
+      "PATCH_ Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing"
+    ],
+    "bug-management-simulation": [
+      "PATCH_ Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing"
+    ],
+    "patch-verification": [
+      "PATCH_ Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing"
+    ],
+    "Problem Frames投影方法": [
+      "Performing Projection in Problem Frames Using Scenarios"
+    ],
+    "场景化需求工程": [
+      "Performing Projection in Problem Frames Using Scenarios"
+    ],
+    "关系代数投影算子": [
+      "Performing Projection in Problem Frames Using Scenarios"
+    ],
+    "问题分解形式化": [
+      "Performing Projection in Problem Frames Using Scenarios"
+    ],
+    "well-formed场景约束": [
+      "Performing Projection in Problem Frames Using Scenarios"
+    ],
+    "large-language-model": [
+      "PlugMed_ Improving Specificity in Patient-Centered Medical Dialogue Generation using In-Context Learning"
+    ],
+    "response-ranking": [
+      "PlugMed_ Improving Specificity in Patient-Centered Medical Dialogue Generation using In-Context Learning"
+    ],
+    "patient-specific-response": [
+      "PlugMed_ Improving Specificity in Patient-Centered Medical Dialogue Generation using In-Context Learning"
+    ],
+    "backdoor-attack-on-DL": [
+      "Poison Attack and Defense on Deep Source Code Processing Models"
+    ],
+    "source-code-processing-DL": [
+      "Poison Attack and Defense on Deep Source Code Processing Models"
+    ],
+    "poison-sample-detection": [
+      "Poison Attack and Defense on Deep Source Code Processing Models"
+    ],
+    "integrated-gradients-for-backdoor": [
+      "Poison Attack and Defense on Deep Source Code Processing Models"
+    ],
+    "code-model-security": [
+      "Poison Attack and Defense on Deep Source Code Processing Models"
+    ],
+    "AST-CFG混合代码表示": [
+      "Precise Learning of Source Code Contextual Semantics via Hierarchical Dependence Structure and Graph Attention Networks"
+    ],
+    "图注意力网络": [
+      "Precise Learning of Source Code Contextual Semantics via Hierarchical Dependence Structure and Graph Attention Networks"
+    ],
+    "程序缺陷预测": [
+      "Precise Learning of Source Code Contextual Semantics via Hierarchical Dependence Structure and Graph Attention Networks"
+    ],
+    "基本块语义建模": [
+      "Precise Learning of Source Code Contextual Semantics via Hierarchical Dependence Structure and Graph Attention Networks"
+    ],
+    "多类型边有向图": [
+      "Precise Learning of Source Code Contextual Semantics via Hierarchical Dependence Structure and Graph Attention Networks"
+    ],
+    "LLM-reinforcement-learning": [
+      "RL-PLUS_ Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization"
+    ],
+    "capability-boundary-collapse": [
+      "RL-PLUS_ Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization"
+    ],
+    "hybrid-policy-optimization": [
+      "RL-PLUS_ Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization"
+    ],
+    "multiple-importance-sampling": [
+      "RL-PLUS_ Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization"
+    ],
+    "exploration-based-advantage-function": [
+      "RL-PLUS_ Countering Capability Boundary Collapse of LLMs in Reinforcement Learning with Hybrid-policy Optimization"
+    ],
+    "回溯机制": [
+      "ROCODE_ Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation"
+    ],
+    "程序分析": [
+      "ROCODE_ Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation"
+    ],
+    "错误累积": [
+      "ROCODE_ Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation"
+    ],
+    "增量检测": [
+      "ROCODE_ Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation"
+    ],
+    "self-adaptive systems requirements": [
+      "Requirements-Driven Dynamic Adaptation to Mitigate Runtime Uncertainties for Self-Adaptive Systems"
+    ],
+    "adaptive goal modeling": [
+      "Requirements-Driven Dynamic Adaptation to Mitigate Runtime Uncertainties for Self-Adaptive Systems"
+    ],
+    "runtime uncertainty": [
+      "Requirements-Driven Dynamic Adaptation to Mitigate Runtime Uncertainties for Self-Adaptive Systems"
+    ],
+    "requirements-driven adaptation": [
+      "Requirements-Driven Dynamic Adaptation to Mitigate Runtime Uncertainties for Self-Adaptive Systems"
+    ],
+    "MAPE loop integration": [
+      "Requirements-Driven Dynamic Adaptation to Mitigate Runtime Uncertainties for Self-Adaptive Systems"
+    ],
+    "tree-positional-encoding": [
+      "Rethinking Positional Encoding in Tree Transformer for Code Representation"
+    ],
+    "code-ast-representation": [
+      "Rethinking Positional Encoding in Tree Transformer for Code Representation"
+    ],
+    "soft-inductive-bias": [
+      "Rethinking Positional Encoding in Tree Transformer for Code Representation"
+    ],
+    "tree-transformer": [
+      "Rethinking Positional Encoding in Tree Transformer for Code Representation"
+    ],
+    "global-local-attention": [
+      "Rethinking Positional Encoding in Tree Transformer for Code Representation"
+    ],
+    "knowledge-graph-completion": [
+      "Rethinking Regularization Methods for Knowledge Graph Completion"
+    ],
+    "regularization-theory": [
+      "Rethinking Regularization Methods for Knowledge Graph Completion"
+    ],
+    "sparse-embedding": [
+      "Rethinking Regularization Methods for Knowledge Graph Completion"
+    ],
+    "overfitting-mitigation": [
+      "Rethinking Regularization Methods for Knowledge Graph Completion"
+    ],
+    "rank-based-sparsity": [
+      "Rethinking Regularization Methods for Knowledge Graph Completion"
+    ],
+    "structural-repetition": [
+      "Rethinking Repetition Problems of LLMs in Code Generation__oa_W4412886913"
+    ],
+    "grammar-based-decoding": [
+      "Rethinking Repetition Problems of LLMs in Code Generation__oa_W4412886913"
+    ],
+    "pushdown-automaton": [
+      "Rethinking Repetition Problems of LLMs in Code Generation__oa_W4412886913"
+    ],
+    "repetition-penalty": [
+      "Rethinking Repetition Problems of LLMs in Code Generation__oa_W4412886913"
+    ],
+    "systematic-literature-review": [
+      "Review on Requirements Modeling and Analysis for Self-Adaptive Systems_ A Ten-Year Perspective"
+    ],
+    "requirements-analysis": [
+      "Review on Requirements Modeling and Analysis for Self-Adaptive Systems_ A Ten-Year Perspective"
+    ],
+    "autonomic-computing": [
+      "Review on Requirements Modeling and Analysis for Self-Adaptive Systems_ A Ten-Year Perspective"
+    ],
+    "self-debugging": [
+      "Revisit Self-Debugging with Self-Generated Tests for Code Generation"
+    ],
+    "self-generated tests": [
+      "Revisit Self-Debugging with Self-Generated Tests for Code Generation"
+    ],
+    "execution trace analysis": [
+      "Revisit Self-Debugging with Self-Generated Tests for Code Generation"
+    ],
+    "runtime state feedback": [
+      "Revisit Self-Debugging with Self-Generated Tests for Code Generation"
+    ],
+    "assert-generation": [
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "software-testing": [
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "deep-learning-code": [
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "method-summarization": [
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "test-case-generation": [
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "event-causality-extraction": [
+      "SEAG_ Structure-Aware Event Causality Generation"
+    ],
+    "graph-linearization": [
+      "SEAG_ Structure-Aware Event Causality Generation"
+    ],
+    "structural-discrimination": [
+      "SEAG_ Structure-Aware Event Causality Generation"
+    ],
+    "text2text-generation": [
+      "SEAG_ Structure-Aware Event Causality Generation"
+    ],
+    "joint-extraction": [
+      "SEAG_ Structure-Aware Event Causality Generation"
+    ],
+    "conference-organization": [
+      "SSE 2023 Committees"
+    ],
+    "LLM-bug-fixing": [
+      "STEAM_ Simulating the InTeractive BEhavior of ProgrAMmers for Automatic Bug Fixing"
+    ],
+    "multi-agent-simulation": [
+      "STEAM_ Simulating the InTeractive BEhavior of ProgrAMmers for Automatic Bug Fixing"
+    ],
+    "programmer-collaboration": [
+      "STEAM_ Simulating the InTeractive BEhavior of ProgrAMmers for Automatic Bug Fixing"
+    ],
+    "stage-wise-repair": [
+      "STEAM_ Simulating the InTeractive BEhavior of ProgrAMmers for Automatic Bug Fixing"
+    ],
+    "diffusion-language-model-sampling": [
+      "Saber_ An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model"
+    ],
+    "adaptive-acceleration": [
+      "Saber_ An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model"
+    ],
+    "backtracking-error-correction": [
+      "Saber_ An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model"
+    ],
+    "non-autoregressive-decoding": [
+      "Saber_ An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model"
+    ],
+    "神经代码编辑": [
+      "Self-Edit_ Fault-Aware Code Editor for Code Generation__oa_W4385572345"
+    ],
+    "执行反馈利用": [
+      "Self-Edit_ Fault-Aware Code Editor for Code Generation__oa_W4385572345"
+    ],
+    "竞争编程基准": [
+      "Self-Edit_ Fault-Aware Code Editor for Code Generation__oa_W4385572345"
+    ],
+    "后处理方法": [
+      "Self-Edit_ Fault-Aware Code Editor for Code Generation__oa_W4385572345"
+    ],
+    "role-playing-prompting": [
+      "Self-collaboration Code Generation via ChatGPT"
+    ],
+    "software-engineering-methodology": [
+      "Self-collaboration Code Generation via ChatGPT"
+    ],
+    "SOA需求工程": [
+      "Semantic Approach for Service Oriented Requirements Modeling"
+    ],
+    "环境本体建模": [
+      "Semantic Approach for Service Oriented Requirements Modeling"
+    ],
+    "服务语义描述": [
+      "Semantic Approach for Service Oriented Requirements Modeling"
+    ],
+    "服务能力匹配": [
+      "Semantic Approach for Service Oriented Requirements Modeling"
+    ],
+    "neural-dialogue-generation": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation"
+    ],
+    "seq2seq-universal-reply-problem": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation"
+    ],
+    "content-introducing-keyword": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation"
+    ],
+    "backward-forward-language-model": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation"
+    ],
+    "PMI-keyword-prediction": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation"
+    ],
+    "置信度估计": [
+      "Showing LLM-Generated Code Selectively Based on Confidence of LLMs"
+    ],
+    "选择性展示": [
+      "Showing LLM-Generated Code Selectively Based on Confidence of LLMs"
+    ],
+    "多模态代码相似度": [
+      "Showing LLM-Generated Code Selectively Based on Confidence of LLMs"
+    ],
+    "程序正确性判断": [
+      "Showing LLM-Generated Code Selectively Based on Confidence of LLMs"
+    ],
+    "code-ranking": [
+      "Sifting through the Chaff_ On Utilizing Execution Feedback for Ranking the Generated Code Candidates"
+    ],
+    "execution-feedback": [
+      "Sifting through the Chaff_ On Utilizing Execution Feedback for Ranking the Generated Code Candidates"
+    ],
+    "sketch-based-code-generation": [
+      "SkCoder_ A Sketch-based Approach for Automatic Code Generation__oa_W4384345649"
+    ],
+    "code-retrieval-augmented": [
+      "SkCoder_ A Sketch-based Approach for Automatic Code Generation__oa_W4384345649"
+    ],
+    "copy-mechanism-limitation": [
+      "SkCoder_ A Sketch-based Approach for Automatic Code Generation__oa_W4384345649"
+    ],
+    "developer-code-reuse-mimicking": [
+      "SkCoder_ A Sketch-based Approach for Automatic Code Generation__oa_W4384345649"
+    ],
+    "LCS-sketch-construction": [
+      "SkCoder_ A Sketch-based Approach for Automatic Code Generation__oa_W4384345649"
+    ],
+    "stigmergy-inspired human CI": [
+      "Solving Pictorial Jigsaw Puzzle by Stigmergy-inspired Internet-based Human Collective Intelligence"
+    ],
+    "EIF loop architecture": [
+      "Solving Pictorial Jigsaw Puzzle by Stigmergy-inspired Internet-based Human Collective Intelligence"
+    ],
+    "collective opinion graph": [
+      "Solving Pictorial Jigsaw Puzzle by Stigmergy-inspired Internet-based Human Collective Intelligence"
+    ],
+    "Internet-based distributed collaboration": [
+      "Solving Pictorial Jigsaw Puzzle by Stigmergy-inspired Internet-based Human Collective Intelligence"
+    ],
+    "bottom-up problem solving": [
+      "Solving Pictorial Jigsaw Puzzle by Stigmergy-inspired Internet-based Human Collective Intelligence"
+    ],
+    "stack-augmented-transformer": [
+      "StackTrans_ From Large Language Model to Large Pushdown Automata Model"
+    ],
+    "pushdown-automata": [
+      "StackTrans_ From Large Language Model to Large Pushdown Automata Model"
+    ],
+    "Chomsky-hierarchy-learning": [
+      "StackTrans_ From Large Language Model to Large Pushdown Automata Model"
+    ],
+    "context-free-grammar-induction": [
+      "StackTrans_ From Large Language Model to Large Pushdown Automata Model"
+    ],
+    "differentiable-stack": [
+      "StackTrans_ From Large Language Model to Large Pushdown Automata Model"
+    ],
+    "program-structures": [
+      "Structured Chain-of-Thought Prompting for Code Generation"
+    ],
+    "SCoT-prompting": [
+      "Structured Chain-of-Thought Prompting for Code Generation"
+    ],
+    "code-synthesis": [
+      "Structured Chain-of-Thought Prompting for Code Generation"
+    ],
+    "transfer-learning": [
+      "Summarizing Source Code with Transferred API Knowledge"
+    ],
+    "API-knowledge-mining": [
+      "Summarizing Source Code with Transferred API Knowledge"
+    ],
+    "sequence-to-sequence": [
+      "Summarizing Source Code with Transferred API Knowledge"
+    ],
+    "OSS商业参与": [
+      "Systematic Literature Review of Commercial Participation in Open Source Software"
+    ],
+    "动机分类体系": [
+      "Systematic Literature Review of Commercial Participation in Open Source Software"
+    ],
+    "参与模型": [
+      "Systematic Literature Review of Commercial Participation in Open Source Software"
+    ],
+    "文献系统综述": [
+      "Systematic Literature Review of Commercial Participation in Open Source Software"
+    ],
+    "开源生态治理": [
+      "Systematic Literature Review of Commercial Participation in Open Source Software"
+    ],
+    "algorithmic-annotation": [
+      "TACO_ Topics in Algorithmic COde generation dataset"
+    ],
+    "programming-challenge": [
+      "TACO_ Topics in Algorithmic COde generation dataset"
+    ],
+    "fine-grained-evaluation": [
+      "TACO_ Topics in Algorithmic COde generation dataset"
+    ],
+    "AST-based-program-representation": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "tree-convolution-neural-network": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "continuous-binary-tree": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "programming-language-NLP": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "neural-program-analysis": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "LLM4SE挑战": [
+      "The Current Challenges of Software Engineering in the Era of Large Language Models"
+    ],
+    "软件工程自动化": [
+      "The Current Challenges of Software Engineering in the Era of Large Language Models"
+    ],
+    "定性研究方法": [
+      "The Current Challenges of Software Engineering in the Era of Large Language Models"
+    ],
+    "代码生成可靠性": [
+      "The Current Challenges of Software Engineering in the Era of Large Language Models"
+    ],
+    "SE特定LLM": [
+      "The Current Challenges of Software Engineering in the Era of Large Language Models"
+    ],
+    "code-generation-llm": [
+      "ToolCoder_ Teach Code Generation Models to use API search tools"
+    ],
+    "api-selection": [
+      "ToolCoder_ Teach Code Generation Models to use API search tools"
+    ],
+    "tool-augmented-model": [
+      "ToolCoder_ Teach Code Generation Models to use API search tools"
+    ],
+    "private-library-code-generation": [
+      "ToolCoder_ Teach Code Generation Models to use API search tools"
+    ],
+    "automated-data-annotation": [
+      "ToolCoder_ Teach Code Generation Models to use API search tools"
+    ],
+    "bug-report-summarization": [
+      "Towards Better Summarizing Bug Reports with Crowdsourcing Elicited∩ü£n Attributes"
+    ],
+    "crowdsourcing-attribute-construction": [
+      "Towards Better Summarizing Bug Reports with Crowdsourcing Elicited∩ü£n Attributes"
+    ],
+    "mining-software-repositories": [
+      "Towards Better Summarizing Bug Reports with Crowdsourcing Elicited∩ü£n Attributes"
+    ],
+    "supervised-learning-features": [
+      "Towards Better Summarizing Bug Reports with Crowdsourcing Elicited∩ü£n Attributes"
+    ],
+    "heuristic-construction-rules": [
+      "Towards Better Summarizing Bug Reports with Crowdsourcing Elicited∩ü£n Attributes"
+    ],
+    "整行代码补全": [
+      "Towards Full-line Code Completion with Neural Language Models"
+    ],
+    "神经语言模型": [
+      "Towards Full-line Code Completion with Neural Language Models"
+    ],
+    "Transformer": [
+      "Towards Full-line Code Completion with Neural Language Models"
+    ],
+    "AST动作序列": [
+      "Towards Full-line Code Completion with Neural Language Models"
+    ],
+    "语法约束": [
+      "Towards Full-line Code Completion with Neural Language Models"
+    ],
+    "speaker-classification": [
+      "Towards Neural Speaker Modeling in Multi-Party Conversation_ The Task, Dataset, and Models"
+    ],
+    "multi-party-conversation": [
+      "Towards Neural Speaker Modeling in Multi-Party Conversation_ The Task, Dataset, and Models"
+    ],
+    "neural-dialog-systems": [
+      "Towards Neural Speaker Modeling in Multi-Party Conversation_ The Task, Dataset, and Models"
+    ],
+    "content-temporal-hybrid": [
+      "Towards Neural Speaker Modeling in Multi-Party Conversation_ The Task, Dataset, and Models"
+    ],
+    "hierarchical-RNN": [
+      "Towards Neural Speaker Modeling in Multi-Party Conversation_ The Task, Dataset, and Models"
+    ],
+    "tree-convolution": [
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "sentence-structural-features": [
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "max-pooling-over-trees": [
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "dependency-parse-neural": [
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "chain-of-thought-decoding": [
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "uncertainty-estimation": [
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "adaptive-reasoning": [
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "code-generation-efficiency": [
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "zero-shot-transfer": [
+      "UniEvent_ Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning"
+    ],
+    "event-relation-reasoning": [
+      "UniEvent_ Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning"
+    ],
+    "prefix-tuning": [
+      "UniEvent_ Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning"
+    ],
+    "causal-temporal-nlu": [
+      "UniEvent_ Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning"
+    ],
+    "用户级需求生成": [
+      "UserTrace_ User-Level Requirements Generation and Traceability Recovery from Software Project Repositories"
+    ],
+    "代码可追溯性恢复": [
+      "UserTrace_ User-Level Requirements Generation and Traceability Recovery from Software Project Repositories"
+    ],
+    "多智能体LLM系统": [
+      "UserTrace_ User-Level Requirements Generation and Traceability Recovery from Software Project Repositories"
+    ],
+    "需求工程自动化": [
+      "UserTrace_ User-Level Requirements Generation and Traceability Recovery from Software Project Repositories"
+    ],
+    "AI辅助软件开发": [
+      "UserTrace_ User-Level Requirements Generation and Traceability Recovery from Software Project Repositories"
+    ],
+    "LLM-based vulnerability detection": [
+      "VulAgent_ Hypothesis-Validation based Multi-Agent Vulnerability Detection"
+    ],
+    "multi-agent collaboration": [
+      "VulAgent_ Hypothesis-Validation based Multi-Agent Vulnerability Detection"
+    ],
+    "hypothesis validation": [
+      "VulAgent_ Hypothesis-Validation based Multi-Agent Vulnerability Detection"
+    ],
+    "program context reasoning": [
+      "VulAgent_ Hypothesis-Validation based Multi-Agent Vulnerability Detection"
+    ],
+    "false positive reduction": [
+      "VulAgent_ Hypothesis-Validation based Multi-Agent Vulnerability Detection"
+    ],
+    "bug-localization": [
+      "WELL_ Applying Bug Detectors to Bug Localization via Weakly Supervised Learning"
+    ],
+    "weakly-supervised-learning": [
+      "WELL_ Applying Bug Detectors to Bug Localization via Weakly Supervised Learning"
+    ],
+    "code-attention-analysis": [
+      "WELL_ Applying Bug Detectors to Bug Localization via Weakly Supervised Learning"
+    ],
+    "pre-trained-code-model": [
+      "WELL_ Applying Bug Detectors to Bug Localization via Weakly Supervised Learning"
+    ],
+    "token-sequence-tagging": [
+      "WELL_ Applying Bug Detectors to Bug Localization via Weakly Supervised Learning"
+    ],
+    "transformer-interpretability": [
+      "What does Transformer learn about source code_"
+    ],
+    "program-graph-extraction": [
+      "What does Transformer learn about source code_"
+    ],
+    "attention-analysis": [
+      "What does Transformer learn about source code_"
+    ],
+    "code-intelligence-tasks": [
+      "What does Transformer learn about source code_"
+    ],
+    "neural-dialog-generation": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "seq2seq-unaligned-problem": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "conditional-distribution-multimodality": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "universal-reply-collapse": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "dialog-translation-comparison": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "zero-shot-cross-language-clone-detection": [
+      "ZC3_ Zero-Shot Cross-Language Code Clone Detection"
+    ],
+    "code-representation-alignment": [
+      "ZC3_ Zero-Shot Cross-Language Code Clone Detection"
+    ],
+    "contrastive-snippet-prediction": [
+      "ZC3_ Zero-Shot Cross-Language Code Clone Detection"
+    ],
+    "adversarial-domain-learning": [
+      "ZC3_ Zero-Shot Cross-Language Code Clone Detection"
+    ],
+    "cycle-consistency-code": [
+      "ZC3_ Zero-Shot Cross-Language Code Clone Detection"
+    ],
+    "LLM-code-completion": [
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "cross-file-context-utilization": [
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "context-alignment": [
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "long-context-LLM": [
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "reinforcement-learning-4-code": [
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "LLM-multi-agent-requirements-engineering": [
+      "iReDev_ A Knowledge-Driven Multi-Agent Framework for Intelligent Requirements Development"
+    ],
+    "knowledge-driven-agent": [
+      "iReDev_ A Knowledge-Driven Multi-Agent Framework for Intelligent Requirements Development"
+    ],
+    "human-in-the-loop": [
+      "iReDev_ A Knowledge-Driven Multi-Agent Framework for Intelligent Requirements Development"
+    ],
+    "event-driven-communication": [
+      "iReDev_ A Knowledge-Driven Multi-Agent Framework for Intelligent Requirements Development"
+    ]
+  }
+}

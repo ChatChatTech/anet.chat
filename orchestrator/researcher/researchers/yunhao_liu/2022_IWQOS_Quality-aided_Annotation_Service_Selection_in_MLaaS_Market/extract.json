@@ -1,0 +1,39 @@
+{
+  "paper_id": "2022_IWQOS_Quality-aided_Annotation_Service_Selection_in_MLaaS_Market",
+  "doi": null,
+  "title": "Quality-aided Annotation Service Selection in MLaaS Market",
+  "year": 2022,
+  "venue": "IWQOS",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "MLaaS市场的标注服务存在异构性(类别、质量、价格),消费者难以在预算约束下选择最优服务组合获取高质量标注数据",
+  "problem_framing": "在未知服务性能的前提下,如何通过预算约束下的自适应服务选择获得高质量多标签标注数据",
+  "key_insight": "将标注生成过程参数化为概率图模型,通过EM算法联合估计服务质量和任务真值分布,再将服务选择建模为自适应次模最大化问题",
+  "method_signature": "Probabilistic Graph Model + EM参数估计 + 自适应随机贪心算法(1-1/e近似)",
+  "evaluation_criteria": "真值聚合准确率、服务质量估计MAE/MSE、预算效率下的性能提升",
+  "negative_result_or_admitted_limitation": "FrugalMCT忽略了标注类别的区分作用且未评估不同服务质量,且用真实标签集训练准确率预测器在实际中不可行",
+  "evidence_for_taste": [
+    "computational complexity is exponential",
+    "ignores the important role",
+    "true label sets are actually unknown",
+    "the spammer will definitely reduce the quality",
+    "still in a good state"
+  ],
+  "thinking_moves": [
+    "从MLaaS市场异构性抽象出三个维度:类别/质量/价格",
+    "把标注反馈的随机性建模为概率分布以适配自适应次模框架",
+    "用信息熵作为服务选择的信息增益度量标准",
+    "通过拉格朗日乘子法推导EM算法的解析闭式解",
+    "将服务选择问题映射为覆盖问题的变体以获得近似保证"
+  ],
+  "topic_tags": [
+    "MLaaS-service-selection",
+    "probabilistic-graphical-model",
+    "EM-algorithm",
+    "adaptive-submodular-optimization",
+    "multi-label-annotation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

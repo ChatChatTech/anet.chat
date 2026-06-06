@@ -1,0 +1,41 @@
+{
+  "paper_id": "Sun et al. - 2006 - RCT A Self-Adaptive Overlay for Efficient Computational Resource Discovery in Grid Systems",
+  "doi": null,
+  "title": "RCT: A Self-adaptive Overlay for Efficient Computational Resource Discovery in Grid Systems",
+  "year": 2006,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有GIS系统不考虑应用资源需求特性,导致资源发现需遍历整个overlay",
+  "problem_framing": "计算资源发现效率受限于无分类机制的扁平overlay组织",
+  "key_insight": "按资源特征将相似资源聚类,查询时只需搜索子集而非全部资源",
+  "method_signature": "基于AVL树的自适应overlay RCT,节点管理PA值域范围",
+  "evaluation_criteria": "平均搜索长度ASL、查询负载标准差",
+  "negative_result_or_admitted_limitation": "并行搜索使用过期信息时会失败,需回退到普通搜索算法",
+  "evidence_for_taste": [
+    "applications can be characterized by their requirements",
+    "resources can be categorized by some characteristics",
+    "queries can be processed by searching a subset",
+    "higher-level nodes are not required to maintain more information",
+    "increase their priority to be searched"
+  ],
+  "thinking_moves": [
+    "将应用需求特征映射为资源组织维度",
+    "把同类资源聚合成搜索子空间以降低遍历开销",
+    "平衡二叉树结构天然支持范围查询",
+    "负载自适应通过子范围分裂合并实现而非全局重平衡",
+    "故障恢复采用备份冗余而非维护复杂父子关系"
+  ],
+  "topic_tags": [
+    "grid-resource-discovery",
+    "self-adaptive-overlay",
+    "AVL-tree-range-query",
+    "computational-resource-categorization",
+    "load-balancing"
+  ],
+  "cites_own_work": [
+    "[7] OpenSPACE: An Open Service Provisioning",
+    "[8] Early Experience of Remote & Hot Service Deployment in CROWN Grid"
+  ],
+  "extraction_quality": "full"
+}

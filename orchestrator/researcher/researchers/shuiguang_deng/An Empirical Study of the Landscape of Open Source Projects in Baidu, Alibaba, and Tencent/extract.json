@@ -1,0 +1,40 @@
+{
+  "paper_id": "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent",
+  "doi": "10.48550/arxiv.2103.01590",
+  "title": "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "前期研究聚焦微软/谷歌, 中国BAT的开源价值尚不清晰",
+  "problem_framing": "用混合方法(项目分析+问卷)从三个维度刻画BAT开源项目特征",
+  "key_insight": "国际化程度高的项目(有英文README)获得了更多stars",
+  "method_signature": "1000项目GitHub采集 + 101人问卷调查",
+  "evaluation_criteria": "stars数量衡量流行度, 问卷统计态度与动机",
+  "negative_result_or_admitted_limitation": "声称考虑国际化的73%但实际仅55.2%项目有英文README",
+  "evidence_for_taste": [
+    "the Kappa value between two labelers is 0.89",
+    "follow [20] remove projects with less than 6 commits",
+    "Effect sizes are at least small",
+    "We can notice that projects with Go, Rust, Python",
+    "projects with high internationalization effort show higher popularity"
+  ],
+  "thinking_moves": [
+    "用card sorting把1000个项目手动分类为9类",
+    "问卷交叉分析不同人口学特征的差异",
+    "先观察现象再追问背后动机(M5揭示商业动机)",
+    "用客观指标(英文README)验证主观声称(73%考虑国际化)"
+  ],
+  "topic_tags": [
+    "BAT-open-source",
+    "internationalization-effort",
+    "developer-survey",
+    "github-empirical-study",
+    "frontend-preference"
+  ],
+  "cites_own_work": [
+    "Han et al. 2019 - Characterization and prediction of popular projects"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

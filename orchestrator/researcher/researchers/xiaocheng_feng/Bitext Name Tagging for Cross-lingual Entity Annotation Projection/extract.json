@@ -1,0 +1,43 @@
+{
+  "paper_id": "Bitext Name Tagging for Cross-lingual Entity Annotation Projection",
+  "doi": null,
+  "title": "Bitext Name Tagging for Cross-lingual Entity Annotation Projection",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Low-resource incident languages lack annotations; annotation projection can help but suffers from noise propagation due to word alignment errors",
+  "problem_framing": "How to project entity annotations from English to low-resource languages through bitexts without heavy dependence on noisy word alignment",
+  "key_insight": "Combine rule-based high-confidence annotation projection with neural bitext name tagger: strict searching first for precision, then neural recall for lost annotations",
+  "method_signature": "Two-step weakly-supervised framework: high-confidence rule-based projection → LSTM-CRF bitext name tagger with cross-lingual hidden layer connections",
+  "evaluation_criteria": "F1 score on projected annotation quality and IL name tagger trained on projected annotations",
+  "negative_result_or_admitted_limitation": "Post-processing strategy fails on Turkish because assumption that first-step annotations are more trustworthy is not valid when second-step precision outperforms first-step",
+  "evidence_for_taste": [
+    "noise propagation from word alignment errors",
+    "totally depends on word alignment results",
+    "hardly find back labels lost in alignment step",
+    "searching-based method has significantly outperformed word alignment",
+    "assumption of post-processing strategy is not valid",
+    "model shows stable performances without much influences from quality of word alignment",
+    "precision of annotations from the second step outperforms the first step"
+  ],
+  "thinking_moves": [
+    "把对齐错误导致的噪声传播视为根本问题而非局部修复",
+    "先用规则方法保precision，再用神经网络recall丢失的标注",
+    "借鉴seq2seq初始化思路，用英文LSTM的final hidden state初始化IL端",
+    "通过随机dropout部分高置信标注来模拟预测时的信息缺失",
+    "当后处理假设失效时，将先验知识作为额外输入让神经网络自适应决定权重"
+  ],
+  "topic_tags": [
+    "cross-lingual annotation projection",
+    "bitext NER",
+    "low-resource language processing",
+    "LSTM-CRF sequence labeling",
+    "weakly-supervised learning"
+  ],
+  "cites_own_work": [
+    "Zhang et al., 2016"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Year and venue not explicitly stated in paper text. Role determined from author position (third author) and institution affiliation."
+}

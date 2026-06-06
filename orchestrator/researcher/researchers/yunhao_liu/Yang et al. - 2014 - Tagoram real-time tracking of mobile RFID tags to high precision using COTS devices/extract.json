@@ -1,0 +1,44 @@
+{
+  "paper_id": "Yang et al. - 2014 - Tagoram real-time tracking of mobile RFID tags to high precision using COTS devices",
+  "doi": null,
+  "title": "Tagoram: Real-Time Tracking of Mobile RFID Tags to High Precision Using COTS Devices",
+  "year": 2014,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Airport baggage sorting loses >90% bags due to tracking errors; robot manipulation needs cm/mm precision",
+  "problem_framing": "Given phase measurements from M antennas over N time slots, find tag trajectory f(t) at interrogation times",
+  "key_insight": "Mobility creates virtual antenna array: treating tag as static while antennas move in opposite direction enables hologram construction",
+  "method_signature": "Differential Augmented Hologram (DAH) using phase differences to cancel diversity term c",
+  "evaluation_criteria": "Median error distance (mm for lab linear/circular tracks, cm for airport real deployments)",
+  "negative_result_or_admitted_limitation": "Main accuracy loss from versatile real environment; multipath still affects accuracy slightly (19-60mm)",
+  "evidence_for_taste": [
+    "phase measurement as a Gaussian random variable",
+    "cannot ignore tag diversity in practice",
+    "uncalibrated θ violates our basic assumption",
+    "the majority of pixels have low PSNR values",
+    "main source affecting accuracy from versatile environment"
+  ],
+  "thinking_moves": [
+    "把tag移动反转为天线等效移动，构建虚拟天线阵列",
+    "用phase差分消除硬件diversity term，灵感来自Doppler抵消",
+    "从Naive Hologram逐层递进到Augmented再到Differential Augmented",
+    "把求解定位问题frame为波叠加干涉的图像重建问题",
+    "用Gaussian概率建模热噪声误差，给signal分配非均匀振幅"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "virtual-antenna-array",
+    "phase-based-tracking",
+    "multipath-robust-localization",
+    "COTS-RFID-systems"
+  ],
+  "cites_own_work": [
+    "BackPos [9]",
+    "OTrak [3]",
+    "SEASON [14]",
+    "FrogEye [27]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

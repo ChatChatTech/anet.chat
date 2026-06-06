@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zheng et al. - 2019 - Zero-Effort Cross-Domain Gesture Recognition with Wi-Fi",
+  "doi": null,
+  "title": "Zero-Effort Cross-Domain Gesture Recognition with Wi-Fi",
+  "year": 2019,
+  "venue": "MobiSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Wi-Fi sensing部署广泛但跨域泛化困难,每次换环境需重新训练或采集数据,限制了实用性",
+  "problem_framing": "将跨域适应问题从模型层下移到信号层,寻找与域无关的特征来表示手势",
+  "key_insight": "人体坐标速度谱(BVP)描述手势在身体坐标系中的功率分布,是手势特有的动力学特征,与域无关",
+  "method_signature": "从CSI提取BVP特征,压缩感知恢复稀疏速度分量,CNN+GRU分类",
+  "evaluation_criteria": "跨位置92.7%,跨方向82.6%,跨环境92.4%,跨用户88.9%均无需重训练的准确率",
+  "negative_result_or_admitted_limitation": "精度随定位定向误差增大而下降,训练需至少4人以覆盖行为多样性",
+  "evidence_for_taste": [
+    "accuracy obviously drops without the knowledge of the target domains",
+    "one-fits-all model trained in one domain",
+    "move generalization ability downwardly at the lower signal level",
+    "three links are sufficient to resolve the ambiguity",
+    "accuracy degrades slightly by around 4% when the sampling rate drops"
+  ],
+  "thinking_moves": [
+    "把跨域泛化能力从模型层下移到信号层",
+    "利用物理约束(身体坐标系)消除环境依赖",
+    "利用人体运动稀疏性将欠定问题转化为压缩感知问题",
+    "用实验数据揭示现有方法缺陷而非理论论证",
+    "承认需要定位定向信息作为前置条件"
+  ],
+  "topic_tags": [
+    "Wi-Fi-CSI-gesture-recognition",
+    "cross-domain-adaptation",
+    "body-coordinate-velocity-profile",
+    "compressed-sensing-estimation",
+    "zero-effort-deployment"
+  ],
+  "cites_own_work": [
+    "Widar",
+    "Widar2.0"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

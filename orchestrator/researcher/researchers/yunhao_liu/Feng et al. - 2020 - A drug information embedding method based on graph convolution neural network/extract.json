@@ -1,0 +1,40 @@
+{
+  "paper_id": "Feng et al. - 2020 - A drug information embedding method based on graph convolution neural network",
+  "doi": null,
+  "title": "A drug information embedding method based on graph convolution neural network",
+  "year": 2020,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "药物研发耗时且高风险，需要从大量未验证关系对中寻找潜在药-疾病治疗关系",
+  "problem_framing": "多源异构药物数据样本不平衡、标签稀缺、噪声大，如何预测药-病关联",
+  "key_insight": "用GCN替代DeepDR/DTINet中的自编码器嵌入层，学习低维网络表示提升预测",
+  "method_signature": "GCN编码器 + 重构损失正则化 + cVAE解码器预测药-病关联",
+  "evaluation_criteria": "AUC(ROC曲线下面积) 和 AUPR(精确率-召回率曲线下面积)",
+  "negative_result_or_admitted_limitation": "模型可解释性仍是大挑战，多源数据相关性权重难以确定",
+  "evidence_for_taste": [
+    "improve the enrichment degree",
+    "reduce the false positive rate",
+    "avoid the limitations of traditional feature extraction methods",
+    "deal with data noise well and has strong robustness",
+    "inherit the advantages of self coding"
+  ],
+  "thinking_moves": [
+    "把现有模型DeepDR/DTINet的嵌入层替换为GCN进行验证",
+    "利用重构损失作为无标签数据的正则化项",
+    "多视图drug特征各自构建相似图再融合"
+  ],
+  "topic_tags": [
+    "drug-repositioning",
+    "graph-convolution-networks",
+    "network-embedding",
+    "multi-source-heterogeneous-data",
+    "variational-autoencoder"
+  ],
+  "cites_own_work": [
+    "DeepDR",
+    "DTINet"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供DOI和具体会议/期刊信息。作者署名位置为最后一位，可能是学生或合作者角色。方法验证采用替换已有模型组件的策略，而非完全重新设计。"
+}

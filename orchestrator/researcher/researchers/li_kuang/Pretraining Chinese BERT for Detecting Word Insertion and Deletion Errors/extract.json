@@ -1,0 +1,40 @@
+{
+  "paper_id": "Pretraining Chinese BERT for Detecting Word Insertion and Deletion Errors",
+  "doi": "10.48550/arxiv.2204.12052",
+  "title": "Pretraining Chinese BERT for Detecting Word Insertion and Deletion Errors",
+  "year": 2022,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Chinese BERT fails on word insertion/deletion because BERT assumes every position has a word, yet these errors account for 44.7% of grammatical errors",
+  "problem_framing": "Detect whether a word should be inserted between positions or deleted at a position in Chinese text lacking word delimiters",
+  "key_insight": "Introduce [null] token whose prediction represents non-existence of a word; jointly train with substitution and insertion corruption operations",
+  "method_signature": "Chinese BERT pretrained with [null] token added to vocabulary for word insertion/deletion detection via masked language modeling",
+  "evaluation_criteria": "Character-level precision/recall/F1 for detection; end-to-end position+word accuracy for correction",
+  "negative_result_or_admitted_limitation": "Speed-up attempt inserting [mask] between all word pairs improves speed 10x but decreases F1 from 78.1 to 72.3",
+  "evidence_for_taste": [
+    "BERT assumes the existence of a word at each position",
+    "the learning objective of BERT assumes the existence of a word",
+    "predict [null] at the position of x̃ins means that there is no word",
+    "we do not insert [mask] tokens to the input",
+    "detecting all tokens can be done in one forward pass",
+    "our approach consistently outperforms baselines by large margins"
+  ],
+  "thinking_moves": [
+    "把BERT假设'每个位置必须有词'变成可学习的约束条件",
+    "通过加入null token让模型同时具备'选词'和'判断词是否存在'两种能力",
+    "用同一模型同一前向传播同时完成检测和纠正",
+    "先验证简单方案(BERT w/ inserted [mask])的局限性，再提出改进",
+    "承认精度-速度权衡，不回避实用性问题"
+  ],
+  "topic_tags": [
+    "Chinese grammatical error correction",
+    "word insertion detection",
+    "word deletion detection",
+    "BERT pretraining",
+    "null token prediction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

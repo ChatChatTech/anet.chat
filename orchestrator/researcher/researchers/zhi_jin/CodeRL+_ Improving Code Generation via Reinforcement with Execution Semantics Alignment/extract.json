@@ -1,0 +1,38 @@
+{
+  "paper_id": "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment",
+  "doi": "10.48550/arxiv.2510.18471",
+  "title": "CODERL+: Improving Code Generation via Reinforcement with Execution Semantics Alignment",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLMs learn code through textual patterns but code correctness depends on execution semantics; RLVR's sparse pass/fail signals are insufficient",
+  "problem_framing": "Semantic gap between textual code representation and formal execution semantics limits code generation quality",
+  "key_insight": "Jointly optimize code generation with execution semantics alignment by inferring variable-level execution trajectories from failed rollouts",
+  "method_signature": "Dual-objective RLVR: code generation + execution semantics alignment via variable final-value prediction",
+  "evaluation_criteria": "pass@1 on HumanEval/LeetCode/LiveCodeBench; accuracy on code reasoning and test output generation",
+  "negative_result_or_admitted_limitation": "Execution semantics alignment incurs additional computational overhead compared to standard RL algorithms",
+  "evidence_for_taste": [
+    "sparse pass/fail signals is insufficient",
+    "failed programs are repurposed",
+    "each component contributes meaningfully",
+    "synthesizing and understanding",
+    "fails to effectively bridge the semantic gap"
+  ],
+  "thinking_moves": [
+    "识别RLVR仅用最终执行结果的稀疏信号不足，需要中间执行状态",
+    "将代码生成与执行语义理解建模为双向关系：合成状态转换函数 vs 理解状态转换函数",
+    "失败样本比成功样本更能揭示模型对执行语义的误解",
+    "用探针实验验证内部表征是否对齐执行语义，而非仅依赖行为指标"
+  ],
+  "topic_tags": [
+    "LLM-code-generation",
+    "RLVR",
+    "execution-semantics-alignment",
+    "code-reasoning",
+    "variable-trace-inference"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

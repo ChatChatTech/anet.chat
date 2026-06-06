@@ -1,0 +1,42 @@
+{
+  "paper_id": "ImageRAG_ Enhancing Ultra High Resolution Remote Sensing Imagery Analysis with ImageRAG",
+  "doi": "10.48550/arxiv.2411.07688",
+  "title": "ImageRAG: Enhancing Ultra High Resolution Remote Sensing Imagery Analysis with ImageRAG",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "UHR遥感图像(万级像素)超出MLLM输入限制,直接缩小丢失细节,现有方案需大量重训练",
+  "problem_framing": "将UHR图像分析问题重构为长上下文选择任务:从图像中检索与查询最相关的视觉块作为证据",
+  "key_insight": "类比LLM的RAG思想,用Text-Image检索定位视觉块,快路径失败时用慢路径(外部数据库锚定视觉概念)兜底",
+  "method_signature": "双路径视觉RAG框架:快路径(文本-图像直接检索)与慢路径(通过RS域数据库做图像-图像检索)",
+  "evaluation_criteria": "三任务评估:视觉块检索质量(Recall@K+IoU)、推理VQA准确率、常规VQA准确率",
+  "negative_result_or_admitted_limitation": "Text-Image检索模块使用通用VLM,难以将遥感视觉概念与文本描述关联,慢路径失败时性能受限",
+  "evidence_for_taste": [
+    "transforming UHR remote sensing image analysis task to image's long context selection task",
+    "Fast path failure indicates that no visual concept has been found",
+    "a plausible explanation is that Text-Image Retrieval Module utilizes VLM that is trained on general image-text pairs",
+    "The evaluation metric is too simplistic",
+    "we annotated MME-RealWorld-lite-RS",
+    "the ROI area usually takes up only a tiny portion"
+  ],
+  "thinking_moves": [
+    "将perception问题重构为retrieval问题:不端到端处理图像,而是先选择性检索关键视觉块",
+    "从LLM的RAG范式获得启发,将文本检索替换为视觉检索",
+    "将评估分解为检索阶段和推理阶段,分别评估而不是只看端到端准确率",
+    "用快慢双路径处理效率-效果权衡:简单情况走快路径,复杂情况触发慢路径",
+    "识别域差距:通用VLM无法理解遥感视觉概念,需要遥感域数据库作为锚点"
+  ],
+  "topic_tags": [
+    "UHR-remote-sensing-VQA",
+    "visual-retrieval-augmented-generation",
+    "multi-scale-patch-retrieval",
+    "MLLM-efficiency-constraint",
+    "remote-sensing-specific-CLIP"
+  ],
+  "cites_own_work": [
+    "ZoomEye (arXiv:2411.16044)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

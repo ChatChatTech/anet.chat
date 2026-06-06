@@ -1,0 +1,41 @@
+{
+  "paper_id": "Bo et al. - 2012 - Locating sensors in the forest A case study in GreenOrbs",
+  "doi": null,
+  "title": "Locating Sensors in the Forest: A Case Study in GreenOrbs",
+  "year": 2012,
+  "venue": "ACM Conference on Embedded Networked Sensor Systems (SenSys)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "GreenOrbs森林部署中GPS失效,环境因素(温度/湿度/树冠)导致RSSI测距不可靠,现有方法忽略节点与环境的关系",
+  "problem_framing": "将定位问题重新定义为\"环境感知\"问题:不是改进测距精度,而是利用功率扫描得到的邻居序列替代原始RSSI值",
+  "key_insight": "用\"功率递增时被触达的邻居节点顺序\"来表征相对距离关系,比原始RSSI值更稳定;由此提出JND(联合邻居距离)替代DV-hop",
+  "method_signature": "EARL三阶段:邻居关系估计→JND-hop定位→边界检测→反向定位校验好节点→好节点辅助标定差节点",
+  "evaluation_criteria": "定位误差均值、CDF分布、与DV-hop和CDL的对比",
+  "negative_result_or_admitted_limitation": "\"RSSI is quite susceptible to environment\"表明放弃纯RSSI方案;\"DV-Hop performs the worst,mean error around 40 meters\"承认传统跳距法在森林中失效",
+  "evidence_for_taste": [
+    "RSSI is quite susceptible to environment",
+    "DV-Hop performs the worst",
+    "The accuracy of localization is determined by the ranging quality",
+    "negllecting the relationship between two sensor nodes",
+    "overcome the error propagation"
+  ],
+  "thinking_moves": [
+    "从野外实测数据中发现RSSI与距离的单调关系在森林中不成立",
+    "把\"测量距离\"问题转换为\"邻居触达顺序\"问题——用通信行为替代物理量",
+    "提出JND将环境因素(树密度、障碍物)隐式编码进跳距度量",
+    "通过\"反向定位\"校验好节点:把已知节点当未知重新跑算法,误差小则证明是好节点",
+    "边界节点因邻居数少导致误差大,先检测边界再针对性标定"
+  ],
+  "topic_tags": [
+    "forest-sensor-network-localization",
+    "environmental-aware-ranging",
+    "RSSI-power-scanning",
+    "joint-neighbor-distance",
+    "GreenOrbs"
+  ],
+  "cites_own_work": [
+    "CDL (Xi et al., 2010) - authors co-authored; EARL is successor to CDL"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "paper完整包含动机、方法、实验评估。Yunhao Liu为共同作者(senior),位列最后。文中多处通过实验数据驱动问题定义,思维痕迹清晰。"
+}

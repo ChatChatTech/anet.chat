@@ -1,0 +1,39 @@
+{
+  "paper_id": "2016_MobiCom",
+  "doi": null,
+  "title": "Lasagna: Towards Deep Hierarchical Understanding and Searching over Mobile Sensing Data",
+  "year": 2016,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "移动设备普及但现有方法依赖预定义特征，只能识别预定义活动",
+  "problem_framing": "无先验知识下对任意活动的深层语义理解与搜索",
+  "key_insight": "用无监督深度学习提取运动基，实现任意活动的通用多分辨率嵌入",
+  "method_signature": "堆叠CRBM提取多分辨率运动基，生成层级描述符",
+  "evaluation_criteria": "分类精度98.9%，搜索召回近100%精度约90%",
+  "negative_result_or_admitted_limitation": "现有方法只适用于预定义活动，依赖先验知识或标注数据",
+  "evidence_for_taste": [
+    "make it quite difficult to model or label all activities",
+    "lack of prior knowledge",
+    "we are still far from activity management",
+    "preventing a comprehensive understanding",
+    "inefficient to apply all recognition models"
+  ],
+  "thinking_moves": [
+    "将活动空间类比为向量空间，基向量→运动基",
+    "从感知问题转向语义搜索问题（类比文本搜索引擎）",
+    "用多分辨率感受野捕获活动的层级结构",
+    "先解决表示问题，再设计上层搜索索引",
+    "承认时间尺度不匹配的挑战并提出不变性引理"
+  ],
+  "topic_tags": [
+    "mobile-sensing-activity-recognition",
+    "hierarchical-motion-descriptor",
+    "semantic-activity-search",
+    "unsupervised-deep-learning-CRBM",
+    "multi-resolution-representation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文内容完整，包含intro、method、eval、conclusion。评估指标完整，方法细节充分。 | md truncated to head40k+tail20k"
+}

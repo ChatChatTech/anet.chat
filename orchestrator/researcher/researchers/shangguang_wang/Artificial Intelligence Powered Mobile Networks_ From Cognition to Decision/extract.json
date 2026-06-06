@@ -1,0 +1,41 @@
+{
+  "paper_id": "Artificial Intelligence Powered Mobile Networks_ From Cognition to Decision",
+  "doi": "10.48550/arxiv.2112.04263",
+  "title": "Artificial Intelligence Powered Mobile Networks: From Cognition to Decision",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有移动网络依赖规则驱动,复杂度激增导致传统方法失效,网络被动响应而非主动预判",
+  "problem_framing": "将移动网络智能问题分解为感知-认知-决策三阶段,识别复杂度关联、高维动作空间、自适应三大挑战",
+  "key_insight": "CNN可直接建立网络状态到QoS的映射,无需人工特征工程即可捕获隐藏模式",
+  "method_signature": "CNN将KPI与MR张量直接映射为QoS变化,实现认知与决策融合",
+  "evaluation_criteria": "测试集准确率78.84%,实际延迟可视化对比验证QoS改善",
+  "negative_result_or_admitted_limitation": "传统ML模型层浅、参数量少,无法处理复杂非线性映射且易过拟合",
+  "evidence_for_taste": [
+    "conventional mobile networks are reactive rather than proactive",
+    "this method faces increasing challenges",
+    "CNN achieves the best performance",
+    "without any feature engineering",
+    "The model is shallow"
+  ],
+  "thinking_moves": [
+    "将被动响应型网络重新定义为需要主动认知的智能系统",
+    "先识别问题维度再对症下药",
+    "把感知-认知-决策串成闭环",
+    "用端到端学习规避人工特征工程的认知瓶颈",
+    "通过真实运营商数据验证工程可行性"
+  ],
+  "topic_tags": [
+    "mobile-network-cognition",
+    "deep-learning-QoS-prediction",
+    "network-admission-control",
+    "CNN-network-management",
+    "edge-AI-orchestration"
+  ],
+  "cites_own_work": [
+    "G. Luo, Q. Yuan, H. Zhou... 2018",
+    "J. Li, G. Luo... 2019"
+  ],
+  "extraction_quality": "full"
+}

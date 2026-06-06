@@ -1,0 +1,39 @@
+{
+  "paper_id": "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4399252447",
+  "doi": "10.48550/arxiv.2405.19856",
+  "title": "DevEval: A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有基准与真实代码仓库对齐不足，LLM表现与开发者实际体验不一致",
+  "problem_framing": "代码生成基准应满足真实仓库、代码分布、综合标注、鲁棒评估四个特征",
+  "key_insight": "DevEval按500真实仓库的数据分布构建，对齐代码和依赖的类型分布",
+  "method_signature": "仓库级代码生成结合Pass@k和Recall@k指标评估",
+  "evaluation_criteria": "功能正确性Pass@k、依赖准确性Recall@k",
+  "negative_result_or_admitted_limitation": "gpt-4在DevEval上Pass@1仅53.04%，远低于HumanEval的80%",
+  "evidence_for_taste": [
+    "13名开发者人工标注",
+    "LLMs struggle with understanding contexts",
+    "The contexts are too long",
+    "The contexts are heterogeneous",
+    "gpt-4 achieves a Pass@1 score of 88.4 on HumanEval",
+    "We are surprised to find that LLMs are able to generate some dependencies without context",
+    "the distributions of code and dependency"
+  ],
+  "thinking_moves": [
+    "从工程实践角度重新定义基准应该满足的特征",
+    "通过大规模分析500个真实仓库获得分布特征",
+    "设计双重指标体系同时评估功能正确性和依赖准确性",
+    "承认LLM在长上下文理解上的根本局限"
+  ],
+  "topic_tags": [
+    "LLM代码生成评估",
+    "仓库级代码生成",
+    "代码基准构建",
+    "依赖关系分析",
+    "上下文窗口限制"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

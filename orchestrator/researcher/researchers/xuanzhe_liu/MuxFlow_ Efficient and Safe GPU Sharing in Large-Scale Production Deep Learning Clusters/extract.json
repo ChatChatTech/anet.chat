@@ -1,0 +1,40 @@
+{
+  "paper_id": "MuxFlow_ Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters",
+  "doi": "10.48550/arxiv.2303.13803",
+  "title": "MuxFlow: Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "生产GPU集群利用率低(26%)，在线负载无法充分利用GPU，离线负载需要填充空闲资源",
+  "problem_framing": "在保障在线负载性能和安全的前提下，通过空间共享提升GPU利用率",
+  "key_insight": "MPS可空间共享但无法保证性能和安全性；两层保护机制+混合错误处理可解决此问题",
+  "method_signature": "xCUDA两层性能保护+混合错误处理+动态SM分配+匹配调度",
+  "evaluation_criteria": "GPU利用率26%→76%，延迟增加<20%，错误率<0.9%",
+  "negative_result_or_admitted_limitation": "MuxFlow错误率0.9%略高于Online-only的0.7%；多负载共享存在挑战",
+  "evidence_for_taste": [
+    "cannot guarantee the performance",
+    "99% propagated errors are caused by SIGINT and SIGTERM",
+    "almost all unsafe cases in our deployment can be handled",
+    "the increase of the error rate is much less than the increase of the executed containers",
+    "MuxFlow only accepts trustworthy offline workloads",
+    "sharing multiple offline workloads with multiple online workloads may bring more benefits, especially for lightweighted offline workloads"
+  ],
+  "thinking_moves": [
+    "从生产环境错误数据反推错误根因分布(99% vs 1%)",
+    "将保护问题分解为两层：负载级+xCUDA和GPU级+SysMonitor",
+    "将调度问题形式化为最大权二分图匹配问题并用KM算法求解",
+    "将不可能的任务拆分为可工程化的子问题",
+    "承认系统局限性：仅接受可信离线负载，外部云用户需要更多保护"
+  ],
+  "topic_tags": [
+    "GPU-sharing",
+    "production-DL-clusters",
+    "MPS-space-sharing",
+    "performance-protection",
+    "matching-scheduling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

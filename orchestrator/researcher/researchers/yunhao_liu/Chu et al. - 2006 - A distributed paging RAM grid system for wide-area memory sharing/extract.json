@@ -1,0 +1,41 @@
+{
+  "paper_id": "Chu et al. - 2006 - A distributed paging RAM grid system for wide-area memory sharing",
+  "doi": null,
+  "title": "A Distributed Paging RAM Grid System for Wide-Area Memory Sharing",
+  "year": 2006,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "内存密集型应用在内存不足时受困于磁盘swap性能；气象分析应用在512M机器上需>20分钟，在4G机器上仅需30秒",
+  "problem_framing": "如何将网格计算范式扩展到跨广域网的远程内存共享；需解决异构性、动态性和自主性问题",
+  "key_insight": "利用互联网中分散的高速网络连接的闲置内存资源，通过服务导向架构和流量分布缓解单点过载和内部网络拥塞",
+  "method_signature": "DPRG通过 paging service 和 deputy service 两类服务，以及五种节点状态机实现网格内存共享",
+  "evaluation_criteria": "completion time 与 disk、network memory 对比；在不同带宽/延迟/异构因子/动态因子/工作负载/并行规模下的表现",
+  "negative_result_or_admitted_limitation": "We separate sub-problems (mutual trust) and throw away the trivia (zero disk cache) - 承认安全和信任机制被有意分离简化",
+  "evidence_for_tast": [
+    "we separate sub-problems",
+    "throw away the trivia",
+    "for simplicity we can treat",
+    "not as significant as",
+    "security and trust mechanisms are necessary",
+    "zero disk cache",
+    "security is separated from core functions"
+  ],
+  "thinking_moves": [
+    "将复杂系统工程问题分解为可独立处理的子问题（安全/信任与核心功能分离）",
+    "从物理性能差距出发量化论证远程内存的可行性（磁盘5-35ms vs 网络几百μs）",
+    "通过状态机形式化描述分布式系统节点行为",
+    "定义设计准则（single service, exponential request）作为工程约束的显式表达",
+    "用trace驱动仿真的方式评估真实系统行为"
+  ],
+  "topic_tags": [
+    "wide-area-memory-sharing",
+    "RAM-grid",
+    "distributed-paging",
+    "grid-computing",
+    "service-oriented-architecture"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue信息未在文中明确给出，基于作者单位(国防科大、香港科大)和2006年判断可能为会议论文但无法确定具体venue名称"
+}

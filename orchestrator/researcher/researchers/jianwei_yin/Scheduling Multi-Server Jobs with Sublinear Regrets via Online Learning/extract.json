@@ -1,0 +1,42 @@
+{
+  "paper_id": "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning",
+  "doi": "10.48550/arxiv.2305.06572",
+  "title": "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "多服务器任务主导现代计算集群，需平衡并行计算收益与通信开销，资源分配无未来信息",
+  "problem_framing": "在线双边调度问题，最大化累积奖励，模型为带凹奖励的在线凸优化，用遗憾分析性能下界",
+  "key_insight": "沿奖励梯度上升方向分配资源，利用并行投影加速，子线性遗憾O(√T)对一般凹奖励",
+  "method_signature": "OGASCHED在线梯度上升调度算法，含快速投影的并行子过程",
+  "evaluation_criteria": "遗憾上界理论证明，Alibaba集群trace仿真，对比DRF/FAIR-NESS/BINPACKING/SPREADING",
+  "negative_result_or_admitted_limitation": "未精确区分节点内与节点间通信开销，仅粗粒度处理",
+  "evidence_for_taste": [
+    "theoretical superiority is highlighted",
+    "SOTA regret O(H_G·√T)",
+    "gain-overhead tradeoff",
+    "the parallel computation gain does not increase linearly",
+    "first algorithm that has sublinear regret"
+  ],
+  "thinking_moves": [
+    "把调度问题frame成在线凸优化问题",
+    "用梯度上升处理无分布假设的在线决策",
+    "通过KKT条件设计快速投影实现并行化",
+    "先证一般形式上界，再具体化参数上界",
+    "用离线oracle最优作基准定义遗憾"
+  ],
+  "topic_tags": [
+    "multi-server-job-scheduling",
+    "online-gradient-ascent",
+    "sublinear-regret",
+    "computation-communication-tradeoff",
+    "bipartite-scheduling",
+    "concave-reward-optimization"
+  ],
+  "cites_own_work": [
+    "Learning to schedule multi-server jobs with fluctuated processing speeds"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整，动机/问题/方法/理论/实验各层面均有直接文本支持 | md truncated to head40k+tail20k"
+}

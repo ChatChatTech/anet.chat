@@ -1,0 +1,40 @@
+{
+  "paper_id": "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation",
+  "doi": "10.48550/arxiv.2311.00272",
+  "title": "ChatCoder: Chat-based Refine Requirement Improves LLMs' Code Generation",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "人类用自然语言表达需求时常常模糊、不完整、有歧义，导致大模型误解需求生成错误代码，且人类自己难以修正需求",
+  "problem_framing": "将需求修正定义为LLM与人类协作的双向沟通过程，而非LLM单方面改进或人类独自完成",
+  "key_insight": "让LLM从预设的工程规格视角（IEEE SRS）引导用户补充遗漏信息、纠正错误理解，比自由改写更有效",
+  "method_signature": "两轮对话框架：第一轮Paraphrase+Extend用五个角度让LLM展开需求，第二轮Going-deep让LLM追问歧义，人类循环修正",
+  "evaluation_criteria": "在HumanEval和Sanitized-MBPP上对比pass@k指标，以及与人机通信效率和自动修正的消融对比",
+  "negative_result_or_admitted_limitation": "Auto-Refine（无人类介入的自动修正）反而损害了LLM的代码生成性能，说明人类干预是必要且不可忽视的",
+  "evidence_for_taste": [
+    "human's poor requirement expressions",
+    "LLMs will guide the human users to refine",
+    "Neither the customer nor the supplier is qualified",
+    "Auto-Refine hurts the LLM's code generation performances",
+    "human intervention is necessary and can not be neglected",
+    "it is difficult for a human user to refine the requirement"
+  ],
+  "thinking_moves": [
+    "把代码生成失败归因于需求表达质量而非模型能力不足",
+    "从软件工程的IEEE需求规格标准中借用结构化角度来约束LLM的改进行为",
+    "通过消融实验验证人类介入的必要性，而非假设其贡献",
+    "用对比实验证明结构化指令优于自由改写和自由问答",
+    "承认Auto-Refine的失败来反证方法核心假设的正确性"
+  ],
+  "topic_tags": [
+    "LLM-code-generation",
+    "requirements-refinement",
+    "human-LLM-collaboration",
+    "prompt-engineering",
+    "dialogue-framework"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

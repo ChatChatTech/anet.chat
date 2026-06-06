@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2010 - Passive Diagnosis for Wireless Sensor Networks",
+  "doi": null,
+  "title": "Passive Diagnosis for Wireless Sensor Networks",
+  "year": 2010,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有传感器网络调试工具(如Sympathy)在资源受限网络中产生过多开销,不适合现场诊断",
+  "problem_framing": "从观察到的症状(丢包、延迟)反推网络故障根因,同时不产生额外流量开销",
+  "key_insight": "通过数据包标记被动获取网络拓扑信息,结合贝叶斯推理模型实现轻量级诊断",
+  "method_signature": "数据包标记+层级概率推理模型",
+  "evaluation_criteria": "检测率、误报率、流量开销",
+  "negative_result_or_admitted_limitation": "当同时存在超过5个故障时,检测率下降、误报率上升;因果图模型以牺牲一定精度换取计算效率",
+  "evidence_for_taste": [
+    "may not be suitable for in-situ network diagnosis",
+    "does not incur additional traffic overhead",
+    "The error rate introduced by the bloom filter introduces negligible",
+    "approximated inference with less accuracy",
+    "the detection ratio decreases and the false positive ratio increases"
+  ],
+  "thinking_moves": [
+    "从主动收集信息的范式转向被动观察",
+    "将企业网络诊断方法适配到动态传感器网络",
+    "设计层次化依赖模型捕获多级网络结构",
+    "用近似推理换取计算可扩展性"
+  ],
+  "topic_tags": [
+    "passive-diagnosis",
+    "wireless-sensor-networks",
+    "packet-marking",
+    "probabilistic-inference",
+    "belief-network"
+  ],
+  "cites_own_work": [
+    "OceanSense project",
+    "FIND fault detection"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,34 @@
+{
+  "paper_id": "Liu - 2021 - Editorial from the Editor-in-Chief",
+  "doi": null,
+  "title": "Editorial from the Editor-in-Chief",
+  "year": 2021,
+  "venue": "ACM Transactions on Sensor Networks",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "传感器网络领域新兴AIoT、边缘计算、IoT安全方向，需明确期刊定位以扩大影响力",
+  "problem_framing": "TOSN需从传统无线传感器网络扩展至多领域，同时提升能见度与审稿效率",
+  "key_insight": "通过建立特刊、合作会议、扩充编辑团队来匹配扩展的研究范围",
+  "method_signature": "N/A-社论文章",
+  "evaluation_criteria": "N/A-社论文章",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "旗舰ACM期刊",
+    "high-quality work will attract more people",
+    "diverse expertise of these AEs will completely match the extended scope"
+  ],
+  "thinking_moves": [
+    "以期刊影响力提升为目标进行系统性规划",
+    "从宏观领域趋势推导期刊战略调整",
+    "通过编辑团队专业多样性匹配研究范围扩展"
+  ],
+  "topic_tags": [
+    "sensor-networks",
+    "AIoT",
+    "edge-computing",
+    "IoT-security",
+    "journal-editorial"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

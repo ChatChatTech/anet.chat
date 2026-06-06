@@ -1,0 +1,40 @@
+{
+  "paper_id": "Denoise-I2W_ Mapping Images to Denoising Words for Accurate Zero-Shot Composed Image Retrieval",
+  "doi": "10.48550/arxiv.2410.17393",
+  "title": "Denoise-I2W: Mapping Images to Denoising Words for Accurate Zero-Shot Composed Image Retrieval",
+  "year": 2024,
+  "venue": "arXiv preprint (submitted to IEEE)",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有ZS-CIR方法中，图像被映射为包含大量冗余信息的伪词token，人为操控意图所关注的具体视觉信息被掩盖",
+  "problem_framing": "将图像映射为去噪伪词token，去除意图无关的视觉信息，使映射结果与检索阶段目标一致",
+  "key_insight": "通过伪三元组构造引入伪操控文本，让映射网络学会在训练阶段就选择意图相关的视觉信息进行映射",
+  "method_signature": "PTC构造伪三元组 + PCM伪组合映射 + 双对比损失微调图像到词映射网络",
+  "evaluation_criteria": "Recall@K on COCO/CIRR/Fashion-IQ/ImageNet benchmarks",
+  "negative_result_or_admitted_limitation": "处理复杂冗余操控描述时失败，主要源于CLIP语言编码器难以充分理解和处理复杂意图",
+  "evidence_for_taste": [
+    "without intention-irrelevant visual information",
+    "S* contains heavy information redundancy",
+    "information-dense and highly entangled",
+    "reduces redundant visual information",
+    "focus on the visual aspects of human manipulation intention"
+  ],
+  "thinking_moves": [
+    "将伪词token中的冗余信息类比为噪声，提出去噪映射思路",
+    "从预训练与推理阶段的目标不一致出发，反推训练数据需要引入伪操控文本",
+    "通过自动构造伪三元组规避人工标注成本，将任务不匹配问题转化为数据生成问题",
+    "引入全局映射分支防止模型在伪操控文本主导下崩溃"
+  ],
+  "topic_tags": [
+    "zero-shot-composed-image-retrieval",
+    "image-to-word-mapping",
+    "denoising-visual-redundancy",
+    "pseudo-triplet-construction",
+    "vision-language-alignment"
+  ],
+  "cites_own_work": [
+    "Context-I2W (same authors, AAAI 2024)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

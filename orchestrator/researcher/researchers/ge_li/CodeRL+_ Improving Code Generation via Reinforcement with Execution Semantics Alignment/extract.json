@@ -1,0 +1,38 @@
+{
+  "paper_id": "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment",
+  "doi": "10.48550/arxiv.2510.18471",
+  "title": "CODERL+: Improving Code Generation via Reinforcement with Execution Semantics Alignment",
+  "year": 2025,
+  "venue": "ArXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLM通过文本模式学习代码,但正确性由形式化执行语义决定,存在根本语义鸿沟",
+  "problem_framing": "RLVR仅依赖稀疏的pass/fail信号,无法有效桥接代码文本表示与执行语义的差距",
+  "key_insight": "利用失败 rollout 程序推断变量级执行轨迹,提供执行语义的直接学习信号",
+  "method_signature": "联合优化代码生成与执行语义对齐的双目标RL框架",
+  "evaluation_criteria": "pass@1 on HumanEval/LeetCode/LiveCodeBench; 代码推理与测试输出生成准确率",
+  "negative_result_or_admitted_limitation": "execution semantics alignment 带来额外计算开销;未进行超参调优因RL训练成本高",
+  "evidence_for_taste": [
+    "RLVR-trained models show only marginal improvement over base models (4% increase)",
+    "solely relying on binary pass/fail signals is inefficient",
+    "establishing a stronger, more explicit connection between code's textual representation",
+    "moves beyond learning from surface-level code patterns",
+    "while GRPO sometimes struggles with training stability"
+  ],
+  "thinking_moves": [
+    "从失败案例中提取执行语义作为诊断信号",
+    "将代码生成任务重新框架为状态转换函数的综合与理解的双向问题",
+    "通过变量最终值近似完整执行轨迹以保持计算可行性",
+    "对比execution trace inference能力揭示RLVR方法的深层局限"
+  ],
+  "topic_tags": [
+    "RLVR-code-generation",
+    "execution-semantics-alignment",
+    "variable-trace-inference",
+    "LLM-post-training",
+    "program-state-modeling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

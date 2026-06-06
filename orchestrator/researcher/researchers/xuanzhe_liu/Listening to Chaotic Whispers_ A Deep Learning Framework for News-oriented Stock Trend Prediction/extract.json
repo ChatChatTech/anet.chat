@@ -1,0 +1,35 @@
+{
+  "paper_id": "Listening to Chaotic Whispers_ A Deep Learning Framework for News-oriented Stock Trend Prediction",
+  "doi": "10.48550/arxiv.1712.02136",
+  "title": "Listening to Chaotic Whispers: A Deep Learning Framework for News-oriented Stock Trend Prediction",
+  "year": 2018,
+  "venue": "WSDM 2018",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "网上财经新闻质量参差不齐,大量低质量新闻/评论/谣言干扰预测",
+  "problem_framing": "基于新闻序列预测股票涨跌三分类(DOWN/UP/PRESERVE)",
+  "key_insight": "模仿人类学习过程处理混沌新闻的三个原则:序列上下文依赖、多样影响力、有效高效学习",
+  "method_signature": "Hybrid Attention Networks (HAN) + 自步学习(SPL),双层注意力+双向GRU",
+  "evaluation_criteria": "分类准确率 + 模拟交易的年化收益率",
+  "negative_result_or_admitted_limitation": "选择太少股票导致高换手率,交易成本抵消利润",
+  "evidence_for_taste": [
+    "预测挑战在于新闻稀缺或内容模糊",
+    "关注可信有预测性的信息",
+    "关注有重大事件或分析师预测的新闻",
+    "忽视困难样本加速早期学习",
+    "选择太少股票导致高换手率"
+  ],
+  "thinking_moves": [
+    "把人类认知过程形式化为三个可建模的原则",
+    "通过自步学习模仿'先易后难'的高效学习策略",
+    "用双层注意力机制实现对不同新闻/时间段的差异化关注",
+    "在模拟交易中验证实际盈利能力,而非仅看预测指标"
+  ],
+  "topic_tags": [
+    "stock-trend-prediction",
+    "news-mining",
+    "hybrid-attention-networks",
+    "self-paced-learning",
+    "deep-learning-financial"
+  ]
+}

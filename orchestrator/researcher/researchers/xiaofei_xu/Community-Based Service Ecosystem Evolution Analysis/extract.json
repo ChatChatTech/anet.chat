@@ -1,0 +1,37 @@
+{
+  "paper_id": "Community-Based Service Ecosystem Evolution Analysis",
+  "doi": "10.48550/arxiv.2005.02729",
+  "title": "Community-Based Service Ecosystem Evolution Analysis",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "业务级服务生态演化研究不足，现有研究仅关注技术层服务，缺乏市场趋势预判和商业决策支撑",
+  "problem_framing": "将服务社区演化预测定义为分类任务，预测形成、持续、增长、收缩、分裂、合并、消亡七类演化事件",
+  "key_insight": "服务社区比整体生态系统更敏感，能更早感知生态系统演化趋势，提供整体层面无法获取的独特洞察",
+  "method_signature": "随机森林分类器+SHAP可解释性分析，从社区视角预测服务生态演化",
+  "evaluation_criteria": "F1值对比多模型（决策树/SVM/LSTM等），聚焦各演化事件的预测性能",
+  "negative_result_or_admitted_limitation": "合并事件所有模型表现均差；深度学习因数据量小而表现不佳；本工作重点不在寻找最优模型",
+  "evidence_for_taste": [
+    "exploring the business-level service ecosystem is still insufficient",
+    "this is the first time that community evolution analysis is applied",
+    "provide unique insights that cannot be provided by exploring technical-level",
+    "the focus of paper is not to find an optimal service community evolution prediction model",
+    "these models may vary greatly in different domains and datasets"
+  ],
+  "thinking_moves": [
+    "将社交网络中的社区演化检测方法迁移到服务生态系统",
+    "通过SHAP解释将黑盒预测转化为可理解的业务洞察",
+    "用bike-sharing案例展示社区视角如何捕捉整体层面无法发现的演化规律",
+    "承认方法局限性：不追求最优模型，承认模型泛化能力受领域影响"
+  ],
+  "topic_tags": [
+    "service-ecosystem-evolution",
+    "community-detection",
+    "SHAP-interpretation",
+    "business-level-analysis",
+    "service-community"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

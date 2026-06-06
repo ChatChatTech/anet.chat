@@ -1,0 +1,40 @@
+{
+  "paper_id": "Liu and Yang - 2024 - Location, Localization, and Localizability - Location-awareness Technology for Wireless Networks, Se",
+  "doi": null,
+  "title": "Location, Localization, and Localizability: Location-awareness Technology for Wireless Networks",
+  "year": 2024,
+  "venue": "Springer (2nd edition textbook)",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Localization技术从萌芽成长为大树,但仍存在重大挑战阻碍广泛部署",
+  "problem_framing": "将Wi-Fi、传感器网络、移动通信等多样化网络的定位技术组织为location→localization→localizability三层主题",
+  "key_insight": "通过物理测量→单跳定位→多跳网络定位→误差控制→可定位性的递进框架统一表述定位技术",
+  "method_signature": "教科书式系统综述:物理测量方法、单跳定位、多跳网络定位、误差控制、可定位性理论",
+  "evaluation_criteria": "覆盖广度、叙述清晰度、先进性",
+  "negative_result_or_admitted_limitation": "传统Wi-Fi指纹定位因数据库维护困难仍停留在实验室,室内定位无法达到室外GPS体验",
+  "evidence_for_taste": [
+    "remaining acutely attentive to the current limitations",
+    "has remained stay in the laboratory",
+    "cannot achieve the outdoor GPS-like experience",
+    "the overwhelming majority of localization techniques are involved",
+    "basic concepts and designs while keep the completeness"
+  ],
+  "thinking_moves": [
+    "用实践困境而非理论完备性来评判技术成熟度",
+    "以应用场景的多样性作为组织材料的动机而非技术细节",
+    "将定位问题重新框架为可定位性((localizability)理论问题"
+  ],
+  "topic_tags": [
+    "wireless-localization",
+    "sensor-network-localization",
+    "ranging-techniques",
+    "localizability-theory",
+    "RSS-fingerprinting"
+  ],
+  "cites_own_work": [
+    "Liu and Yang - 2010",
+    "Liu's prior graduate students' work"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "这是教科书/专著而非会议/期刊论文,venue_tier不适用。提供了对定位技术领域成熟而系统的认知框架,核心品味体现在对\"location→localization→localizability\"三层递进主题的选择以及承认Wi-Fi指纹定位等主流技术的实践局限。"
+}

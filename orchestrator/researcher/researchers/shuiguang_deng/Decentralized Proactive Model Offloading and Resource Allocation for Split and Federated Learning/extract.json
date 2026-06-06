@@ -1,0 +1,38 @@
+{
+  "paper_id": "Decentralized Proactive Model Offloading and Resource Allocation for Split and Federated Learning",
+  "doi": "10.48550/arxiv.2402.06123",
+  "title": "Decentralized Proactive Model Offloading and Resource Allocation for Split and Federated Learning",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "资源受限IoT设备无法单独运行大DNN模型,传统SplitFed存在设备异构性、资源分配、数据泄露和中心化隐私问题",
+  "problem_framing": "将联合模型卸载与资源分配问题建模为混合整数非线性规划(MINLP),以最小化训练延迟同时满足数据泄露风险约束",
+  "key_insight": "每个终端设备可基于本地多维训练配置独立确定最优切分层和资源需求,无需知晓其他设备私有信息即可实现去中心化隐私保护",
+  "method_signature": "DP-MORA: 数据驱动回归模型拟合工作量与数据量,分布式迭代优化切分层与资源分配",
+  "evaluation_criteria": "训练延迟降低率(与FAAF/SF3AF/FSAF等基线对比)、数据泄露风险率约束满足性",
+  "negative_result_or_admitted_limitation": "数据泄露风险率约束越低,可行解空间越小,训练延迟越高;去中心化方法牺牲全局最优性换取隐私与可扩展性",
+  "evidence_for_taste": [
+    "formulated as a mixed integer non-linear programming",
+    "data-driven methodology to fit the forward/backward propagation workloads",
+    "without knowledge of other devices' configurations",
+    "The larger feasible solution space",
+    "centralized optimization problem itself is a detriment on privacy"
+  ],
+  "thinking_moves": [
+    "从隐私泄露风险反向定义约束条件,将隐私问题量化评估",
+    "将切分层选择问题分解为每个设备本地决策,避免中心化信息泄露",
+    "用回归模型拟合DNN各层计算工作量与数据量,实现问题可解",
+    "松散耦合设计使各设备独立迭代收敛,绕过联合优化难题"
+  ],
+  "topic_tags": [
+    "split-federated-learning",
+    "model-offloading",
+    "edge-computing",
+    "data-leakage-risk",
+    "decentralized-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "paper完整包含动机、问题建模、方法设计与实验评估,提取充分 | md truncated to head40k+tail20k"
+}

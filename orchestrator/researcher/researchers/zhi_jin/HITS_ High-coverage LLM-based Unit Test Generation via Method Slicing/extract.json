@@ -1,0 +1,40 @@
+{
+  "paper_id": "HITS_ High-coverage LLM-based Unit Test Generation via Method Slicing",
+  "doi": "10.48550/arxiv.2408.11324",
+  "title": "HITS: High-coverage LLM-based Unit Test Generation via Method Slicing",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM在复杂方法上覆盖率低，搜索空间过大导致难以枚举足够的输入条件组合",
+  "problem_framing": "复杂方法(循环复杂度>10)包含众多条件分支，整体喂给LLM导致推理输入条件难度过高",
+  "key_insight": "将方法按问题解决步骤分解为slice，LLM每次只需分析单个slice的分支，显著减少推理组合数",
+  "method_signature": "方法切片+链式思维+自调试修复的LLM单元测试生成流水线",
+  "evaluation_criteria": "Java项目复杂方法的行覆盖率和分支覆盖率及测试通过率",
+  "negative_result_or_admitted_limitation": "Commons-collections上HITS被ChatUniTest超越，因LLM从训练数据中记忆更完整；Evosuite在Datafaker上仍优于所有LLM方法",
+  "evidence_for_taste": [
+    "the LLM has learned enough about the project from its training data",
+    "the LLM has difficulty inferring the test inputs to cover all conditions",
+    "complex methods... requiring the test cases to be various enough",
+    "guiding for high-coverage test cases more informative and precise",
+    "generating tests for a slice is not common in real-world unit test development"
+  ],
+  "thinking_moves": [
+    "从复杂方法的低覆盖率问题出发，将整体方法推理frame为slice级逐步推理",
+    "通过组合数学论证slice级生成能减少输入组合数",
+    "承认LLM在复杂任务上的认知局限，采用divide-and-conquer补偿",
+    "集成程序切片、CoT、自调试、格式工程等多种技术而非单一方法",
+    "用ablation验证各组件贡献，确认切片思想是核心驱动力",
+    "对比Evosuite等成熟工具来定位改进空间和剩余差距"
+  ],
+  "topic_tags": [
+    "LLM测试生成",
+    "程序切片",
+    "代码覆盖率",
+    "复杂方法测试",
+    "Java单元测试"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

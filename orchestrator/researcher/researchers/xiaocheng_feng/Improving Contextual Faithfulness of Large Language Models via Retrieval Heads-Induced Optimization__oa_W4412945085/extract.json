@@ -1,0 +1,38 @@
+{
+  "paper_id": "Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization__oa_W4412945085",
+  "doi": "10.18653/v1/2025.acl-long.826",
+  "title": "Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization",
+  "year": 2025,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "LLMs生成响应与检索文档不一致,损害用户信任",
+  "problem_framing": "通过对比学习教会LLM区分faithful与unfaithful输出",
+  "key_insight": "遮蔽检索头会产生与真实幻觉相似的错误模式,可用于构造逼真的负样本",
+  "method_signature": "遮蔽检索头生成负样本+POS/NEG控制码微调+对比解码",
+  "evaluation_criteria": "FaithScore(基于MiniCheck的NLI语句级蕴含判断)",
+  "negative_result_or_admitted_limitation": "遮蔽超过100个检索头反而降低样本质量,模型生成不连贯",
+  "evidence_for_taste": [
+    "遮蔽检索头产生与模型真实错误模式高度相似",
+    "关键在于增强模型感知和区分不同类型幻觉错误的能力",
+    "现有方法更多是补偿性的而非让模型内置faithfulness机制",
+    "entity和relation扰动仅带来边际提升",
+    "self-induced负样本更有效因为嵌入模型特有错误模式"
+  ],
+  "thinking_moves": [
+    "从注意力机制可解释性研究(检索头)切入幻觉问题",
+    "把faithfulness问题reframe为区分性学习问题而非生成式模仿",
+    "利用模型内在机制(检索头遮蔽)替代外部干预生成负样本",
+    "对比解码放大POS与NEG条件下的输出差异"
+  ],
+  "topic_tags": [
+    "retrieval-augmented-LLM",
+    "faithfulness-hallucination",
+    "long-form-QA",
+    "retrieval-heads",
+    "contrastive-decoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

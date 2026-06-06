@@ -1,0 +1,39 @@
+{
+  "paper_id": "Guo et al. - 2020 - Aloba rethinking ON-OFF keying modulation for ambient LoRa backscatter",
+  "doi": null,
+  "title": "Aloba: Rethinking ON-OFF Keying Modulation for Ambient LoRa Backscatter",
+  "year": 2020,
+  "venue": "SenSys '20",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "工业物联网需要低功耗长距回传，但现有方案牺牲吞吐量换距离或反之",
+  "problem_framing": "同频带叠加的LoRa载波与回传信号如何同时解调",
+  "key_insight": "把LoRa线性调频转为正弦音可将相/幅变化作为回传数据线索",
+  "method_signature": "LoRa包检测+调频转正弦+两步相位对齐+聚类解码",
+  "evaluation_criteria": "吞吐量39.5-199.4 Kbps，距离50-200 m，较PLoRa优10.4-52.4倍",
+  "negative_result_or_admitted_limitation": "增益主要在短中距(≤250 m)，长距需牺牲速率；回传距离受限于信号衰减和能量损耗",
+  "evidence_for_taste": [
+    "None of them is able to balance the throughput and communication range",
+    "Aloba achieves 10.4-52.4× higher throughput",
+    "The performance gain of Aloba over PloRa is achieved mainly within short and medium communication range (≤250 m)",
+    "the backscatter signal is orders of magnitude weaker than the carrier signal",
+    "we cannot blindly borrow the idea of LoRa parallel decoding"
+  ],
+  "thinking_moves": [
+    "发现现有方案的二元对立困境后重新审视经典调制方案",
+    "将解调问题重构为信号变换后的相位幅值检测",
+    "用两步相位对齐消除调频边界假报警",
+    "用聚类代替瞬时跳变检测以抗相位噪声",
+    "承认方案在长距场景的固有局限并指出改进方向"
+  ],
+  "topic_tags": [
+    "LoRa-backscatter",
+    "ON-OFF-keying-modulation",
+    "in-band-backscatter",
+    "self-interference-cancellation",
+    "industrial-iot-monitoring"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

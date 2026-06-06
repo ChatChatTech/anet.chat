@@ -1,0 +1,38 @@
+{
+  "paper_id": "English-Chinese Knowledge Base Translation with Neural Network",
+  "doi": null,
+  "title": "English-Chinese Knowledge Base Translation with Neural Network",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "English KB比中文KB大且质量高，需要通过翻译扩充中文KB；但现有机器翻译存在歧义问题，超过一半的Freebase翻译存在歧义",
+  "problem_framing": "给定英文三元组和中文候选三元组列表，学习统一的语义向量空间，选择语义最相关的中文候选作为翻译结果",
+  "key_insight": "通过门控神经网络自适应融合实体表示和关系表示，动态计算权重α∈[0,1]线性加权两部分，而非使用固定模型",
+  "method_signature": "门控神经网络学习三元组连续表示，神经张量网络建模关系，结合-ranking型hinge损失函数",
+  "evaluation_criteria": "P@1，即排名第一的翻译结果是否为正确答案",
+  "negative_result_or_admitted_limitation": "英文和中文词向量分开训练不在同一语义空间，需用线性层映射；且仅在两种关系类型上验证",
+  "evidence_for_taste": [
+    "Surface Matching is the worst performer",
+    "Average function fails to model the interaction",
+    "hard to measure the importances with a fixed weight",
+    "more than half of Freebase translations are ambiguous",
+    "direct translating entity literally is not effective enough"
+  ],
+  "thinking_moves": [
+    "发现现有翻译器对专有名词覆盖不足的问题，提出启发式分词组合翻译",
+    "通过消融实验对比Entity Model、Relational Model和Full Model逐步论证各组件贡献",
+    "受highway network启发，将自适应门控机制从时序模型迁移到语义组合任务",
+    "承认中英文词向量分开训练的局限性，预留双语联合训练为未来工作"
+  ],
+  "topic_tags": [
+    "knowledge-base-translation",
+    "cross-lingual-KB-enrichment",
+    "neural-tensor-network",
+    "adaptive-gating-mechanism",
+    "triple-representation-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Self-Edit_ Fault-Aware Code Editor for Code Generation__oa_W4385572345",
+  "doi": "10.18653/v1/2023.acl-long.45",
+  "title": "Self-Edit: Fault-Aware Code Editor for Code Generation",
+  "year": 2023,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "LLMs在竞争编程任务上准确率低，样本有限时pass@1仅7%，需类似人类程序员的调试改进流程",
+  "problem_framing": "将代码生成后的修正问题形式化为generate-and-edit任务，利用执行结果指导神经编辑器修正代码",
+  "key_insight": "执行错误信息直接指向代码缺陷，将其封装为补充注释可引导编辑器精确定位并修复错误",
+  "method_signature": "三步流程：LLM生成→示例测试执行→故障感知神经编辑器根据补充注释修正代码",
+  "evaluation_criteria": "pass@k指标衡量解决率，对比基础LLM提升幅度，突出常数样本预算下的效率优势",
+  "negative_result_or_admitted_limitation": "极难问题上LLM输出质量差，编辑器难以修正；二次编辑反而因训练-推理分布不一致导致性能下降",
+  "evidence_for_taste": [
+    "error message directly points out the bug",
+    "editing the candidate code is very sample efficient",
+    "losing the guidance of the supplementary comment will hurt",
+    "the editor is trained to edit LLM outputs but used to edit its own output"
+  ],
+  "thinking_moves": [
+    "把人类程序员的调试行为系统化为神经编辑器的训练目标",
+    "将执行结果从反馈副产品转化为编辑器的输入信号",
+    "证明编辑比重新采样更样本高效（edit-pass@1 > pass@5）",
+    "从经验观察到错误信息的诊断价值，发掘LLM输出中的可修正部分",
+    "用小模型编辑器弥补大模型LLM的局部错误，验证编辑能力的杠杆效应"
+  ],
+  "topic_tags": [
+    "LLM代码生成",
+    "神经代码编辑",
+    "执行反馈利用",
+    "竞争编程基准",
+    "后处理方法"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

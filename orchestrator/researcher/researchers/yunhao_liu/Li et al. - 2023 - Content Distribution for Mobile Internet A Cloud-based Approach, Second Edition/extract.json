@@ -1,0 +1,44 @@
+{
+  "paper_id": "Li et al. - 2023 - Content Distribution for Mobile Internet A Cloud-based Approach, Second Edition",
+  "doi": null,
+  "title": "Content Distribution for Mobile Internet: A Cloud-based Approach, Second Edition",
+  "year": 2023,
+  "venue": "Springer",
+  "venue_tier": "book",
+  "role": "co-author",
+  "motivation": "移动端设备日益轻量化多样化，现存CDN/P2P等技术性能不理想",
+  "problem_framing": "从Speed/Cost/Reliability/Security四个维度系统性解决mobile网络问题",
+  "key_insight": "heavy-cloud与light-end的极化趋势下需云端方案桥接两端",
+  "method_signature": "综合实测发现问题+云端系统设计+工业落地验证",
+  "evaluation_criteria": "实际工业系统影响(小米/腾讯/百度)+顶会论文+奖项",
+  "negative_result_or_admitted_limitation": "承认现有技术often exhibit undesirable or even poor performance",
+  "evidence_for_taste": [
+    "undesirable or even poor performance",
+    "firsthand system experiences",
+    "actual effect on industrial systems",
+    "uncovering the root causes",
+    "insightful measurement findings",
+    "the first time Asian scholars get this award"
+  ],
+  "thinking_moves": [
+    "从实测反推根因而非直接设计系统",
+    "四个维度解构复杂问题",
+    "学术贡献与工业影响并重",
+    "章节结构即方法论框架"
+  ],
+  "topic_tags": [
+    "mobile-content-distribution",
+    "cloud-edge-architecture",
+    "cellular-network-optimization",
+    "IoT-security-measurement",
+    "mobile-bandwidth-testing"
+  ],
+  "cites_own_work": [
+    "SIGCOMM",
+    "NSDI",
+    "MobiCom",
+    "MobiSys"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "本书为系统性工作总结,各章对应具体系统和测量研究,提供了完整方法论框架和作者问题视角"
+}

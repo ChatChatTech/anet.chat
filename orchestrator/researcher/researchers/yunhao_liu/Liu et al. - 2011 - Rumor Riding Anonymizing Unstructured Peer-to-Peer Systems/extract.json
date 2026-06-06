@@ -1,0 +1,44 @@
+{
+  "paper_id": "Liu et al. - 2011 - Rumor Riding Anonymizing Unstructured Peer-to-Peer Systems",
+  "doi": null,
+  "title": "Rumor Riding: Anonymizing Unstructured Peer-to-Peer Systems",
+  "year": 2010,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "路径式匿名方案需要预建路径、收集大量IP和公钥,维护开销高且路径失效难以感知。",
+  "problem_framing": "如何在去中心化P2P中以低开销实现非路径式双向匿名通信。",
+  "key_insight": "将密钥和密文拆分为两条独立随机游走的rumor,相遇于随机peer(sower)处即可恢复并充当代 理,无需预建路径。",
+  "method_signature": "对称加密的key-rumor与cipher-rumor随机游走碰撞于sower实现非路径式双向匿名。",
+  "evaluation_criteria": "碰撞率、碰撞距离、sower多样性、流量开销、响应时延、密码运算开销。",
+  "negative_result_or_admitted_limitation": "流量开销在(6,6)-RR最大设置下略高于Shortcut;多rumor虽加速但增加冗余开销;存储开销随查询频率线性增长。",
+  "evidence_for_taste": [
+    "traffic overhead of RR is much smaller than that of the Shortcut protocol",
+    "larger TTL value of rumors corresponds to a higher collision rate",
+    "a higher collision rate often yields more overhead",
+    "except for this case, the traffic overhead of RR is much smaller",
+    "the ratio of the cryptographic overhead of RR to that of Onion Routing spent on the path is below 0.01",
+    "if we slightly reduce the collision rate from 99.99 percent to 90 percent, the least needed k×L dramatically decreases",
+    "the traffic overhead is highly correlated with the length of packets",
+    "more rumors incur more traffic overhead and message replications"
+  ],
+  "thinking_moves": [
+    "从现有路径式方法的工程痛点(高开销、可靠性差)反推需非路径式设计",
+    "将匿名通信的「路径」概念替换为「随机Rumors相遇」的 primitives",
+    "用概率建模推导k、L与碰撞率的解析关系,再以模拟验证理论边界",
+    "参数敏感性分析:展示k×L在100~200范围可平衡可靠性与可扩展性",
+    "承认多sower虽提升可靠性但带来额外开销,不做单点夸大"
+  ],
+  "topic_tags": [
+    "P2P-anonymity",
+    "random-walk-protocol",
+    "non-path-based-mutual-anonymity",
+    "symmetric-crypto-P2P",
+    "rumor-riding"
+  ],
+  "cites_own_work": [
+    "technical report version [18]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

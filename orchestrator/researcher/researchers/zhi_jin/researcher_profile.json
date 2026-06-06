@@ -1,0 +1,977 @@
+{
+  "slug": "zhi_jin",
+  "n_extracts": 134,
+  "n_full": 115,
+  "n_partial": 14,
+  "n_thin": 4,
+  "year_range": [
+    2009,
+    2025
+  ],
+  "top_tags": [
+    [
+      "LLM-code-generation",
+      8
+    ],
+    [
+      "LLM代码生成",
+      7
+    ],
+    [
+      "multi-task-learning",
+      6
+    ],
+    [
+      "code-completion",
+      5
+    ],
+    [
+      "relation-classification",
+      4
+    ],
+    [
+      "code-summarization",
+      4
+    ],
+    [
+      "code-generation",
+      3
+    ],
+    [
+      "code-representation-learning",
+      3
+    ],
+    [
+      "业务-IT对齐",
+      2
+    ],
+    [
+      "separation-of-concerns",
+      2
+    ],
+    [
+      "self-adaptive-systems-requirements",
+      2
+    ],
+    [
+      "LLM code generation",
+      2
+    ],
+    [
+      "code-understanding-benchmark",
+      2
+    ],
+    [
+      "SDP-LSTM",
+      2
+    ],
+    [
+      "dependency-parsing",
+      2
+    ],
+    [
+      "attention-mechanism",
+      2
+    ],
+    [
+      "repo-level-code-generation",
+      2
+    ],
+    [
+      "code-classification",
+      2
+    ],
+    [
+      "仓库级代码生成",
+      2
+    ],
+    [
+      "sentiment-classification",
+      2
+    ],
+    [
+      "code-generation-benchmark",
+      2
+    ],
+    [
+      "service-computing",
+      2
+    ],
+    [
+      "medical-dialogue-generation",
+      2
+    ],
+    [
+      "software-engineering",
+      2
+    ],
+    [
+      "in-context-learning",
+      2
+    ],
+    [
+      "requirements-modeling",
+      2
+    ],
+    [
+      "transformer",
+      2
+    ],
+    [
+      "multi-agent-collaboration",
+      2
+    ],
+    [
+      "ChatGPT",
+      2
+    ],
+    [
+      "chain-of-thought-prompting",
+      2
+    ]
+  ],
+  "topic_clusters": [
+    {
+      "tag": "LLM-code-generation",
+      "paper_count": 7,
+      "exemplars": [
+        {
+          "paper_id": "Rethinking Repetition Problems of LLMs in Code Generation__oa_W4412886913",
+          "year": 2025,
+          "venue": "ACL",
+          "key_insight": "结构重复的潜在位置由显式语法规则决定，可用下推自动机识别并指数衰减惩罚重复语法规则",
+          "method_signature": "RPG通过语法规则识别重复并指数衰减关键token概率",
+          "score": 20
+        },
+        {
+          "paper_id": "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment",
+          "year": 2025,
+          "venue": "arXiv preprint",
+          "key_insight": "Jointly optimize code generation with execution semantics alignment by inferring variable-level execution trajectories from failed rollouts",
+          "method_signature": "Dual-objective RLVR: code generation + execution semantics alignment via variable final-value prediction",
+          "score": 18
+        },
+        {
+          "paper_id": "Self-collaboration Code Generation via ChatGPT",
+          "year": 2023,
+          "venue": "ACM Trans. Softw. Eng. Methodol.",
+          "key_insight": "角色扮演(role-playing)让LLM在特定领域内推理，约束生成空间激发潜在能力",
+          "method_signature": "自协作框架：角色指令实现分工+协作，三角色(分析师/编码器/测试员)虚拟团队",
+          "score": 18
+        },
+        {
+          "paper_id": "Structured Chain-of-Thought Prompting for Code Generation",
+          "year": 2023,
+          "venue": "ACM Conference",
+          "key_insight": "程序可由sequence/branch/loop三种结构组成,中间推理步骤也应结构化",
+          "method_signature": "SCoT prompting两阶段:先生成结构化CoT,再生成代码",
+          "score": 17
+        },
+        {
+          "paper_id": "AdapTrack_ Constrained Decoding without Distorting LLM's Output Intent",
+          "year": 2025,
+          "venue": "arXiv",
+          "key_insight": "When a top-ranked token becomes invalid, backtrack by adaptive rejection sampling proportional to invalidated probability mass, not full resampling.",
+          "method_signature": "AdapTrack: maintain Q[x] estimate of P(c|x), sample N[x] from P_Q(·|x), backtrack via Bernoulli rejection when Q drops.",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "LLM代码生成",
+      "paper_count": 7,
+      "exemplars": [
+        {
+          "paper_id": "Self-Edit_ Fault-Aware Code Editor for Code Generation__oa_W4385572345",
+          "year": 2023,
+          "venue": "ACL",
+          "key_insight": "执行错误信息直接指向代码缺陷，将其封装为补充注释可引导编辑器精确定位并修复错误",
+          "method_signature": "三步流程：LLM生成→示例测试执行→故障感知神经编辑器根据补充注释修正代码",
+          "score": 22
+        },
+        {
+          "paper_id": "Automated Commit Message Generation with Large Language Models_ An Empirical Study and Beyond",
+          "year": 2024,
+          "venue": "IEEE Transactions on Software Engineering",
+          "key_insight": "MCMD数据集中的ground truth本身缺少What/Why信息，GPT-3.5生成的消息反而更完整",
+          "method_signature": "ERICommiter：两步过滤+语义/词法检索的ICL框架",
+          "score": 20
+        },
+        {
+          "paper_id": "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation",
+          "year": 2023,
+          "venue": "arXiv",
+          "key_insight": "需求精化必须同时依赖人类用户和LLM,缺一不可;LLM引导用户精化比用户自行精化更有效",
+          "method_signature": "两轮对话框架(释义扩展+深度追问循环),基于IEEE SRS的五个分析角度引导LLM生成精化需求",
+          "score": 16
+        },
+        {
+          "paper_id": "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation",
+          "year": 2024,
+          "venue": "arXiv preprint",
+          "key_insight": "利用LLM自身错误输出作为学习机会，比直接学习数据集样本更高效，因修订代码在模型表征空间中与错误输出更接近",
+          "method_signature": "DEED：先收集错误代码，用Self-Revise自动修订，再用修订代码优化模型，迭代执行",
+          "score": 16
+        },
+        {
+          "paper_id": "Knowledge-Aware Code Generation with Large Language Models",
+          "year": 2024,
+          "venue": "arxiv",
+          "key_insight": "通过外部知识库注入算法和数据结构知识,引导LLM生成知识感知的提示词,可提升其解决全新编程问题的能力",
+          "method_signature": "KareCoder: 两阶段(提示工程+编码)+知识库匹配,使用知识描述/伪代码/步骤三种格式",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "code-completion",
+      "paper_count": 5,
+      "exemplars": [
+        {
+          "paper_id": "IRCoCo_ Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion",
+          "year": 2024,
+          "venue": "ACM FSE",
+          "key_insight": "为每个生成的token提供即时reward，让模型感知context的实时变化",
+          "method_signature": "Actor-Critic框架，Actor为预训练LM，Critic为BLEU/Edit-Sim训练的评估器",
+          "score": 21
+        },
+        {
+          "paper_id": "Multi-task Learning based Pre-trained Language Model for Code Completion",
+          "year": 2020,
+          "venue": "ASE '20",
+          "key_insight": "先预测标识符类型、再用类型约束令牌预测，比联合预测能获得更准确的类型约束",
+          "method_signature": "CugLM预训练Transformer通过MLM/NCP/ULM三目标联合学习，下游微调时预测类型+令牌",
+          "score": 19
+        },
+        {
+          "paper_id": "Modeling Programs Hierarchically with Stack-Augmented LSTM",
+          "year": 2020,
+          "venue": null,
+          "key_insight": "堆栈的PUSH/POP操作天然适合追踪代码块的开始与结束，可存储恢复上下文信息",
+          "method_signature": "Stack-Augmented LSTM: AST序列化后对⟨/⟩标记执行确定性PUSH/POP操作",
+          "score": 18
+        },
+        {
+          "paper_id": "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning",
+          "year": 2020,
+          "venue": "ICPC '20",
+          "key_insight": "从预测节点到根节点的路径编码了该节点的层级位置信息,且类型与值任务相互约束,联合学习可利用这种相关性改善泛化。",
+          "method_signature": "Transformer-XL编码AST序列 + BiLSTM编码path2root路径 + MTL硬参数共享联合学习类型与值预测。",
+          "score": 16
+        },
+        {
+          "paper_id": "Non-autoregressive Model for Full-line Code Completion",
+          "year": 2022,
+          "venue": "arXiv",
+          "key_insight": "通过依赖分析验证代码token可并行预测，语法感知采样策略可增强NAR训练",
+          "method_signature": "SANAR：编码器-解码器Transformer + 条件独立因式分解 + 语法感知采样",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "relation-classification",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "Distilling Word Embeddings_ An Encoding Approach",
+          "year": 2016,
+          "venue": "CIKM-16 short paper; RL4NLP Workshop @ACL-16",
+          "key_insight": "大 Embedding 捕获多方面语义，监督编码层可提炼任务相关知识、消除无关信息",
+          "method_signature": "Encoding层: vec(x_i)=f(W_encode·Φ_c·x_i+b_encode) 将300d压缩至50d",
+          "score": 20
+        },
+        {
+          "paper_id": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths",
+          "year": 2015,
+          "venue": "ACL-DEMOS",
+          "key_insight": "依存路径是有向图,拆分SDP为两个子路径可捕获关系的方向性,且多通道信息(词性、语法关系、WordNet)互补",
+          "method_signature": "SDP-LSTM:多通道LSTM沿最短依存路径双向传播,最大池化后拼接分类",
+          "score": 18
+        },
+        {
+          "paper_id": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+          "year": 2015,
+          "venue": null,
+          "key_insight": "将SDP在公共祖先节点处分为两条子路径，分别用LSTM建模，可显式捕捉关系方向性且保留最相关语义信息",
+          "method_signature": "SDP-LSTM：四通道(词/POS/依存关系/WordNet)LSTM网络处理最短依存路径双路子路径",
+          "score": 16
+        },
+        {
+          "paper_id": "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation__oa_W2236688737",
+          "year": 2016,
+          "venue": "arXiv preprint",
+          "key_insight": "关系具有方向性,调换两子路径顺序可生成逆关系样本实现数据增强",
+          "method_signature": "堆叠多层RNN隐藏层于最短依存路径上",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "multi-task-learning",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "UniEvent_ Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning",
+          "year": 2023,
+          "venue": "ACL",
+          "key_insight": "多维度前缀分别编码任务形式和关系类型，配合对比正则化防止模型忽略前缀而退化",
+          "method_signature": "基于T5的多任务生成模型+双维度自适应前缀生成器+对比正则化",
+          "score": 21
+        },
+        {
+          "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358",
+          "year": 2016,
+          "venue": "EMNLP",
+          "key_insight": "NLP中神经网络是否可迁移主要取决于源目标任务的语义相似度,这与图像领域的共识不同",
+          "method_signature": "CNN和LSTM在6个数据集上的INIT与MULT迁移实验,逐层分析",
+          "score": 20
+        },
+        {
+          "paper_id": "Sifting through the Chaff_ On Utilizing Execution Feedback for Ranking the Generated Code Candidates",
+          "year": 2024,
+          "venue": "ASE '24",
+          "key_insight": "多任务学习整合代码分类与执行反馈生成，使ranker既具备基本分类能力，又能深度理解错误根因，从而在推理时不依赖执行反馈",
+          "method_signature": "RankEF通过硬/软参数共享和中间微调三策略，用分类损失+生成损失联合训练CodeT5+，推理时不执行代码",
+          "score": 20
+        },
+        {
+          "paper_id": "TACO_ Topics in Algorithmic COde generation dataset",
+          "year": 2023,
+          "venue": null,
+          "key_insight": "算法是编程的基本字母表,增强算法标注可提升代码理解和生成能力,精细技能分类能针对性增强模型能力",
+          "method_signature": "构建26,443题目的TACO数据集,合并968个原始标签为36个算法类别,多轮验证确保数据质量",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "code-generation",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Code Generation as a Dual Task of Code Summarization",
+          "year": 2019,
+          "venue": "arXiv preprint",
+          "key_insight": "CS的输入是CG的输出、CG的输入是CS的输出——这种对偶性可作为正则化项直接约束模型",
+          "method_signature": "双任务Seq2Seq+概率对偶正则化+注意力对称正则化的联合训练框架",
+          "score": 16
+        },
+        {
+          "paper_id": "Large Language Model-Aware In-Context Learning for Code Generation",
+          "year": 2023,
+          "venue": "arXiv/ACM Conference",
+          "key_insight": "用ground-truth programs的生成概率来衡量候选示例对LLM的有用程度,概率高者为positive,低者为negative",
+          "method_signature": "两阶段:BM25初筛→LLM概率估计→contrastive learning训练GraphCodeBERT retriever",
+          "score": 16
+        },
+        {
+          "paper_id": "Saber_ An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model",
+          "year": 2025,
+          "venue": null,
+          "key_insight": "基于历史未掩码token平均置信度动态调整阈值，并回溯置信度下降的token重新掩码",
+          "method_signature": "自适应加速(AADU动态阈值)+回溯增强重掩码(BERM)协同机制",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "code-representation-learning",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Integrating Tree Path in Transformer for Code Representation",
+          "year": null,
+          "venue": "null",
+          "key_insight": "相对/绝对路径编码可类比NLP中的相对/绝对位置编码，直接修改注意力分数实现结构归纳偏置",
+          "method_signature": "TPTrans：通过修改注意力QK/V矩阵，将AST相对/绝对路径编码融入自注意力",
+          "score": 18
+        },
+        {
+          "paper_id": "What does Transformer learn about source code_",
+          "year": 2022,
+          "venue": "arXiv preprint",
+          "key_insight": "Aggregating attention scores via max across heads reveals syntactic structure; different heads capture different semantic relations (provides natural edge types).",
+          "method_signature": "Aggregated attention score (max over heads per layer) + Chu-Liu/Edmonds MST algorithm to extract semantic graphs from pre-trained CodeBERT/GraphCodeBERT.",
+          "score": 16
+        },
+        {
+          "paper_id": "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models",
+          "year": 2023,
+          "venue": "arXiv",
+          "key_insight": "代码层级结构不仅包含token间关系，还包含语句的操作语义(global)和token在语句中的局部上下文(local)",
+          "method_signature": "HiT: CST根到叶路径编码为层级嵌入，与token嵌入拼接后送入Transformer序列编码器",
+          "score": 15
+        }
+      ]
+    }
+  ],
+  "recurring_thinking_moves": [
+    {
+      "move": "通过消融实验验证每个组件的必要性,非仅与baseline比较",
+      "count": 5,
+      "variants": [
+        "通过消融实验验证CoT解码组件对复杂问题的必要性",
+        "通过消融实验验证各结构的贡献",
+        "通过消融实验验证各通道的互补性而非简单叠加",
+        "通过消融实验验证栈操作(push/pop)缺一不可的必要性",
+        "通过消融实验验证每个组件的必要性,非仅与baseline比较"
+      ],
+      "papers": [
+        "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+        "Learning to Represent Programs with Heterogeneous Graphs",
+        "StackTrans_ From Large Language Model to Large Pushdown Automata Model",
+        "Structured Chain-of-Thought Prompting for Code Generation",
+        "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+      ]
+    }
+  ],
+  "evolution_arc": [
+    {
+      "year": 2009,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "Problem Frames投影方法",
+          1
+        ],
+        [
+          "场景化需求工程",
+          1
+        ],
+        [
+          "关系代数投影算子",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2010,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "业务-IT对齐",
+          2
+        ],
+        [
+          "IT服务需求工程",
+          1
+        ],
+        [
+          "i*-目标导向分析",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2014,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "AST节点向量表示",
+          1
+        ],
+        [
+          "程序分析预训练",
+          1
+        ],
+        [
+          "深度学习程序分类",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2015,
+      "paper_count": 35,
+      "top_tags": [
+        [
+          "relation-classification",
+          2
+        ],
+        [
+          "SDP-LSTM",
+          2
+        ],
+        [
+          "dependency-parsing",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 36,
+      "top_tags": [
+        [
+          "relation-classification",
+          2
+        ],
+        [
+          "neural-language-model-compression",
+          1
+        ],
+        [
+          "sparse-word-representation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2017,
+      "paper_count": 51,
+      "top_tags": [
+        [
+          "self-adaptive-systems-requirements",
+          2
+        ],
+        [
+          "fuzzy-control-SAS",
+          1
+        ],
+        [
+          "NFR-dynamic-adaptation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2018,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "AST-based neural network",
+          1
+        ],
+        [
+          "source code representation learning",
+          1
+        ],
+        [
+          "program classification",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2019,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "code-generation",
+          1
+        ],
+        [
+          "code-summarization",
+          1
+        ],
+        [
+          "dual-learning",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 35,
+      "top_tags": [
+        [
+          "code-completion",
+          3
+        ],
+        [
+          "multi-task-learning",
+          2
+        ],
+        [
+          "AST-hierarchical-structure",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 21,
+      "top_tags": [
+        [
+          "Bayesian-game-security",
+          1
+        ],
+        [
+          "component-level-self-adaptation",
+          1
+        ],
+        [
+          "automated-game-generation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 50,
+      "top_tags": [
+        [
+          "代码预训练",
+          1
+        ],
+        [
+          "代码编辑自动化",
+          1
+        ],
+        [
+          "Seq2Seq预训练",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 118,
+      "top_tags": [
+        [
+          "LLM代码生成",
+          2
+        ],
+        [
+          "in-context-learning",
+          2
+        ],
+        [
+          "ChatGPT",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 135,
+      "top_tags": [
+        [
+          "LLM代码生成",
+          5
+        ],
+        [
+          "仓库级代码生成",
+          2
+        ],
+        [
+          "package-management",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 105,
+      "top_tags": [
+        [
+          "LLM-code-generation",
+          5
+        ],
+        [
+          "code-understanding-benchmark",
+          2
+        ],
+        [
+          "constrained-decoding",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "重嵌入词策略在我们的实验中无效；Dropout表现略差于L2惩罚；与Irsoy等报告结果不一致",
+    "Spearman相关性弱(p=0.6,rho=0.4)表明发行版流行度因素复杂",
+    "框架目前仅完成初步研究，尚未提供实际案例验证其有效性",
+    "先前工作需要先验知识构建博弈,且需要专家手动设计博弈模型,无法满足安全系统实时响应需求",
+    "离线模型未覆盖用户目标时会被误导至局部最优；元学习算法通常只适用于相似任务",
+    "规则设计依赖专家知识,人类专家可能无法观察所有系统行为;当规则数量增加时会产生冲突需检测消除",
+    "JavaScript数据集上提升幅度不如Python/Java,原因是JavaScript类型类别少(仅95类)导致类型-值相关性弱于其他语言。",
+    "仅覆盖英文文献,无法捕获非英语学术界的研究进展;不足6页的短文被排除可能遗漏重要工作",
+    "REDCODER (fine-tuned retrieval model) performs poorly due to overfitting on limited training data; when retrieval is irrelevant, AceCoder degrades to few-shot prompting.",
+    "未讨论self-protecting场景,且假设系统离散化处理连续属性",
+    "AdapTrack invokes LM 20-60% more than constrained decoding, and requires longer backtracking distance for TensorFlow v2 settings (4-8 vs 2).",
+    "LLM召回率仅约60%,几乎遗漏一半建模元素,实际应用效果不足",
+    "96% success rate but 4/100 failed; agents with higher proportion often break negotiation quickly.",
+    "LLM倾向于传达更多What信息，但因代码上下文有限而缺乏Why细节",
+    "B/F变体困惑度均高于顺序LM,因随机选split word增加不确定性",
+    "Claude-3.5-Sonnet表现不佳令人意外，表明专有模型并非总是最优",
+    "AST层面将所有标识符视为同一符号，失去token级信息；高层语义合成面临语义壁垒难精确捕获",
+    "Auto-Refine损害LLM代码生成性能;缺乏人类编辑修正时LLM的猜测导致更差结果;精化规范过长给用户带来负担",
+    "dropout LSTM内部单元会损害模型性能，即使dropout率仅为0.1",
+    "dropout LSTM内部单元会损害模型,即使dropout率为0.1",
+    "过小的成分空间可能遗漏太多有用的成分，故选择多个参考输入以平衡",
+    "CG任务极具挑战性，有效代码生成比例仍低，未来需整合语法规则",
+    "Vicuna-13B等小型模型未见提升,Rule-based策略优于Tool-Planning",
+    "未引入特定Python库先验知识导致Torch/TensorFlow设置下性能略有下降",
+    "现有代码填充任务（如MLM）源自NLP，未专门针对代码编辑设计",
+    "方法无法防止编译错误,且PDA对每种编程语言需单独构建,增加CPU和内存开销。",
+    "Execution semantics alignment incurs additional computational overhead compared to standard RL algorithms",
+    "学习代码执行需要收集足够数据；仅适用于Python函数级代码；额外计算开销在可接受范围内",
+    "层级摘要策略在文件级表现最差，成本最高；GPT-4可能对自身生成摘要有偏好",
+    "仅前124家公司有足够在线数据覆盖90%提交,但仍有10%开发者无法匹配",
+    "当词表大于20k时，LSTM-z,wb的困惑度略高于未压缩模型；压缩会丢失信息",
+    "RNN在结构较大时性能退化；预训练加速训练但对最终精度提升有限",
+    "REINFORCE alone takes 2000 epochs to get started and gets stuck in poor local optima; symbolic executor alone cannot recover complicated execution cases.",
+    "Action类型依赖F1仅71.11%,低于API的92.25%;QueryParentAccounts全测试通过率下降11%",
+    "现有数据集不够难,当前深度学习模型在此类数据集上已接近饱和",
+    "上下文过长且异构导致LLM忽略相关知识甚至产生幻觉（如调用不存在的create_connection而非有效的connect）",
+    "复杂pooling效果提升不大,模型对pooling方法不敏感;c-TBCNN比d-TBCNN略差",
+    "Matching softmax在教师准确率低时(如情感分类50%)会伤害学生模型性能",
+    "统计模型检验不提供确定性保证,仅能在设计早期提供有价值洞察",
+    "先前模型在模式词上表现好但忽略关键词重要性，如LeClair发现仅7%摘要含低频词",
+    "低质量解决计划会被模型误认为噪声，反而损害基础能力；N=1时贪婪解码反而比无计划更差",
+    "\"there is no gold standard, and no one is perfect; present MLLM struggles to effectively accomplish all multi-modal tasks with its intrinsic abilities alone\"",
+    "CoT对事件语义处理几乎无提升甚至降低性能",
+    "GPT-4在HumanEval达80%但EvoCodeBench仅20.73%；现有LLM性能远未达到实际应用水平",
+    "EvoCodeBench仅支持Python单语言,且当前规模小于部分已有基准;自动标注可能遗漏超参数等必要细节",
+    "Self-refine和Self-debug在小模型(如CodeGen-2B)上表现不佳，且推理时需迭代导致时间和token消耗增加",
+    "Training with Rethinker-generated data alone compromises instruction-following ability due to overfitting to guidance-dominant responses.",
+    "TransCoder训练需32张V100 GPU跑12天,且各语言对翻译准确率均不到50%",
+    "未发现LLM与形式验证/控制理论结合的研究;HITL领域研究仍有限",
+    "DPS引入额外内存开销(存GAM/FAM矩阵),虽固定不随batch增长,但仍高于部分方法",
+    "Step-DPO在代码生成任务上表现次优；未与DeepSeek-R1等先进RL技术广泛比较",
+    "LoRA微调代替全参数微调可能与真实污染场景有差异，且假设基础模型未受污染",
+    "Commons-collections上HITS被ChatUniTest超越，因LLM从训练数据中记忆更完整；Evosuite在Datafaker上仍优于所有LLM方法",
+    "讨论上限时倾向于理论推导；ShortLLM实验仅用Lshort=128训练，不确定实际LLM上的最大性能",
+    "Dynamic attention hurts 1-2% F1; 'may bury the critical sentences' under context propagation",
+    "语句内部的挑战token分布无清晰统计规律；尝试线性衰减、指数衰减等调温函数均未获实质改进；最常见错误类型是逻辑错误而非语法错误",
+    "隐藏层迁移到语义不同任务无提升甚至略降;MULT+INIT无额外收益;输出层不可迁移",
+    "BLEU/Edit-Sim只看表面匹配，不捕捉代码语义，等价表达式被错误标记",
+    "C++数据集中序列模型表现差，因代码序列高度相似(平均TF-IDF余弦相似度0.754-0.787)导致难以区分",
+    "仅考虑2跳路径，3跳路径改善不显著；计算开销较大",
+    "深度过大时性能下降;CNN深度架构反而损害性能;Other类引入噪声",
+    "定义的流程相对简单，更复杂流程需额外测试；模型精度仍不足以实际应用，仍会产生幻觉",
+    "JavaScript数据集表现较差；两种路径编码存在特征重叠，绝对路径增益微弱",
+    "在APPS数据集上直接生成的ChatGPT超越其他所有方法,因APPS可能与训练数据重叠,额外知识注入未发挥作用",
+    "当前仅有一个案例研究，方法泛化性待验证",
+    "LCLMs性能在32K后急剧下降,远未达到声称的128K-1M上下文窗口",
+    "larger size of S_i results in better performance but is more computationally expensive, leaving other sizes to future work",
+    "零样本和单样本学习效果不如DOME,未能充分挖掘LLM潜力",
+    "Tree-Transformer时间效率低于顺序Transformer/GNN,深度堆叠时差距更大",
+    "32%测试样本Exact Match不满足但F1≥0.5,其中仅2.32%子token集合相同,说明高F1可能掩盖语义相反的错误",
+    "缺少NextSib或NextToken边时性能显著下降(约1-1.4%);全节点解码比仅子token解码F1下降4.57%",
+    "模型参数量(297.74M)带来较高训练和部署成本；代码风格会影响效果，极简风格代码受影响较小。",
+    "完整性评分略低于正确性和一致性,因为生成规范各节不够充分,LLM生成长文本时压缩长度",
+    "封闭词表限制；程序长度300时TBCNN优于此模型；需监督语法解析器",
+    "前向推理速度快但不优化,后向推理精度高但计算量大,参数识别和系统识别在噪声环境下不稳定",
+    "GGNN在程序分类任务上表现不佳，准确率甚至低于序列模型；Tree-LSTM对负克隆对预测偏高，阈值选择困难。",
+    "BERT的双向性使其难以应用于代码生成任务；Pointer Mixture网络用token级输入可能低估其精度",
+    "Compile-checking reward achieves high compilation (19.3%) but limited semantic accuracy (15.6%), confirming syntactic validity alone is insufficient.",
+    "Element-wise product alone performs significantly worse than concatenation or difference alone",
+    "exact match metric does not represent human judgment；超参数次优可能导致内部威胁",
+    "NAR模型token重复率略高于AR模型但未造成实际问题",
+    "RNN无法理解自然语言或编程语言的语义，当前训练任何学习机完全理解两者都不现实",
+    "PACE在处理中低难度问题上高效,但面对高度复杂问题时,需要人机协作才能发挥更大潜力",
+    "实验仅针对单hunk Java bug且假设perfect fault localization,泛化性受限",
+    "如果场景不是良好-formed的,需要引入模型域或新问题来补充,这是方法的前提条件限制。",
+    "PlugMed诊断效率不足,难以快速识别疾病,可能增加平均对话轮数损害患者体验",
+    "虽然rule-based策略有效，但context-free的固定trigger仍有被人工审查发现的风险；LM-guided策略每个样本trigger不同，但仍需依赖CodeGPT生成质量",
+    "BoW等文本特征严重依赖词频，无法有效捕捉代码间的细微语义差异",
+    "GRPO w/ SFT Loss (简单相加SFT loss) 反而降低性能，说明有效融合两种学习范式是 nontrivial 的挑战",
+    "λ值越大约束越松，惩罚衰减慢，需更多迭代才能修正错误",
+    "For the third case in NFR violation experiment, 'further tuning is needed' — one adaptive goal could not be satisfied with current parameter adjustments",
+    "消融表明移除任一维度均导致性能下降;未考虑数据流/控制流等额外代码图结构",
+    "Regularization is a 'double-edged sword': both too-high and too-low rates degrade below no-regularization baseline; δ must be tuned per model",
+    "需比采样稍多计算资源；未解释LLM为何产生结构重复",
+    "no systematic study has been performed on summarizing modeling methods and corresponding requirements activities",
+    "Post-execution self-debugging with self-generated tests causes performance declines on basic problems; models struggle to recognize faulty feedback",
+    "T5模型因断言语句更长和开放词汇问题表现较差",
+    "在EventStoryLine上F1仅35%左右，远低于SCITE的92%；对隐式因果抽取不如显式因果效果好",
+    "未对所有替代设计进行穷尽实验，提示和超参数基于经验设置而非系统调优",
+    "仅在合理范围内探索超参数，更优超参数可能带来额外提升；O(N) CPU操作开销略高于直接采样",
+    "极难问题上LLM输出质量差，编辑器难以修正；二次编辑反而因训练-推理分布不一致导致性能下降",
+    "编译器团队与原三角色团队性能相当；few-shot示例选择可能偏置LLM对人类意图的理解",
+    "EC4WS环境本体仅支持简单推理(蕴含和等价)，状态机组合存在固有不可能性问题",
+    "实验表明，仅将序列机械地切成两部分而不加关键词约束，模型表现反而变差(seq2BF-分数低于seq2seq)",
+    "现有工作专为自然语言设计，在代码生成上表现次优；深度学习方法缺乏泛化",
+    "CodeRanker将错误类型细化到更细粒度后性能反而下降，表明仅增加类别数不能有效提升模型能力",
+    "REDCODER倾向于重复相似代码而不做必要修改，忽略草图；仅使用Top-1相似代码效果仍优于使用多条的REDCODER",
+    "我们的目标不是证明方法能胜过自动求解器，而是展示人类在适当组织下拥有机器无法替代的独特能力",
+    "严格限制只能访问栈顶元素导致训练不稳定和次优性能;截断近似可能在需要深层token间依赖的任务中存在风险",
+    "生成SCoT可能包含噪声(错误或缺失步骤),累积误差影响代码实现",
+    "微调整个网络时精确率反而下降;模型常遗漏或以UNK替换标识符",
+    "指出当前研究分散且无系统架构,业界仍靠经验指导实践",
+    "TACO训练后在APPS和CodeContest上评估不合适,因数据重叠导致无法准确反映模型能力",
+    "RNN无法有效训练：代价函数停滞在-log(0.25)≈1.4，仅学习标签分布",
+    "LLM在代码生成中存在幻觉问题,生成结果可能与事实矛盾",
+    "私有库上仅靠数据标注改进有限，需配合文档搜索工具；没有工具时私有库性能急剧下降",
+    "众包质量和数量是威胁,需多人互补;固体SE知识非必需,志愿者可互相补充",
+    "语法方法并不优于token方法，且推理速度慢3倍以上",
+    "self-adaptive gating未超越简单插值;注意力机制带来提升极小;端到端混合训练导致优化困难",
+    "c-TBCNN is slightly worse than d-TBCNN; 3-slot pooling for constituency trees is admitted as 'hard mechanism' temporarily; pooling effect not strong",
+    "原始CoT-Decoding直接应用于代码生成会降低性能，因为置信度评估无法有效处理长代码序列",
+    "UNIEVENT在NLU任务上不如QA，原因是预训练生成模型更适合生成任务",
+    "LLM在仓库级长上下文场景下未获领域知识时倾向于幻觉不存在的代码单元,生成描述类似IR而非UR",
+    "当前方法无法让LLM排除在工程上下文中实际无法触发的攻击,导致高假阳性率",
+    "LSTM backbone表现不如CodeBERT，方法可迁移性有限；假设bug片段连续且有界N",
+    "Self-attention handles implicit syntactic/data flow well but still limited to complex relationships like control flows; results slightly drop vs manual graphs.",
+    "100% shuffled data shows inconsistent encoder correlation (.99) but decoder only .85; no good explanation provided.",
+    "模型性能依赖于实现细节和超参数调优",
+    "aiXcoder-7B-cont略弱于原始aiXcoder-7B,表明进一步预训练可能导致轻微过拟合; COLA仅覆盖两种显式关联的context-aware代码,隐式关系未涉及",
+    "Current framework depends on manually extracting knowledge; knowledge is treated as static asset, not automatically evolved."
+  ],
+  "taste_quotes": [
+    {
+      "quote": "性能drop dramatically when >32K",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "inter-code unit relation最challenging",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "Claude-3.5-Sonnet not satisfactory",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "do not decouple code understanding",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "ignoring context dependency",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "reducing data contamination",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "第二因素占主导时压缩LM性能高",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "压缩有两个效果：丢失信息，但也使稀有词参数估计更准",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "该超参数不敏感",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "我们认为拟合损失和稀疏惩罚同等重要",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "出乎意料地提升性能",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "LLMs are not ideal in this more realistic code symbol understanding task",
+      "paper_id": "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    },
+    {
+      "quote": "Discussion on upper limit...tends to lean towards theoretical derivation",
+      "paper_id": "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    },
+    {
+      "quote": "We are not clear whether some settings will implicitly affect the performance",
+      "paper_id": "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    },
+    {
+      "quote": "constrained by computational resources, we choose models below 7B",
+      "paper_id": "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    },
+    {
+      "quote": "the situation is contrary to this. We attribute this to the fact that the original model's ability to model long sequence languages is so poor",
+      "paper_id": "HiRoPE_ Length Extrapolation for Code Models Using Hierarchical Position__oa_W4402671005"
+    },
+    {
+      "quote": "substantially more efficient",
+      "paper_id": "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection"
+    },
+    {
+      "quote": "nearer sentences play",
+      "paper_id": "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection"
+    },
+    {
+      "quote": "more suitable for SCD",
+      "paper_id": "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection"
+    },
+    {
+      "quote": "bury the critical sentences",
+      "paper_id": "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection"
+    },
+    {
+      "quote": "only 2.32% of methods have the same subtoken set",
+      "paper_id": "Learning to Recommend Method Names with Global Context"
+    },
+    {
+      "quote": "exact match accuracy can evaluate the generated name more precisely",
+      "paper_id": "Learning to Recommend Method Names with Global Context"
+    },
+    {
+      "quote": "the other three metrics are based on the subtoken overlapping",
+      "paper_id": "Learning to Recommend Method Names with Global Context"
+    },
+    {
+      "quote": "cannot suggest neologisms",
+      "paper_id": "Learning to Recommend Method Names with Global Context"
+    },
+    {
+      "quote": "the methods which have no explicit interaction with the target methods can also provide essential information",
+      "paper_id": "Learning to Recommend Method Names with Global Context"
+    },
+    {
+      "quote": "same neural network unit to model different kinds",
+      "paper_id": "Modular Tree Network for Source Code Representation Learning"
+    },
+    {
+      "quote": "apparently not enough, which can cause underfitting",
+      "paper_id": "Modular Tree Network for Source Code Representation Learning"
+    },
+    {
+      "quote": "different programming languages may contain different semantic units",
+      "paper_id": "Modular Tree Network for Source Code Representation Learning"
+    },
+    {
+      "quote": "similar semantic units in different programming languages may have different form",
+      "paper_id": "Modular Tree Network for Source Code Representation Learning"
+    },
+    {
+      "quote": "modeling differences among semantic units",
+      "paper_id": "Modular Tree Network for Source Code Representation Learning"
+    },
+    {
+      "quote": "MTNs are more advantageous for fewer training data",
+      "paper_id": "Modular Tree Network for Source Code Representation Learning"
+    },
+    {
+      "quote": "lacks fine-grained semantic feedback",
+      "paper_id": "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    },
+    {
+      "quote": "syntactic validity alone is not sufficient",
+      "paper_id": "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    },
+    {
+      "quote": "high compilation rates only",
+      "paper_id": "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    },
+    {
+      "quote": "easy-to-hard progression",
+      "paper_id": "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    },
+    {
+      "quote": "complementary reward signals",
+      "paper_id": "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    },
+    {
+      "quote": "time-consuming, expensive, and difficult to scale",
+      "paper_id": "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning"
+    },
+    {
+      "quote": "fail to fully make use of the syntactical information",
+      "paper_id": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    },
+    {
+      "quote": "difficult to train due to the long propagation path",
+      "paper_id": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    },
+    {
+      "quote": "explicitly specifying this heuristic significantly improves",
+      "paper_id": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    }
+  ]
+}

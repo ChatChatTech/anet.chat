@@ -1,0 +1,42 @@
+{
+  "paper_id": "Patil et al. - 2005 - Resource allocation using multiple edge-sharing multicast trees",
+  "doi": null,
+  "title": "Resource Allocation using Multiple Edge-Sharing Multicast Trees",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "MANET中只有少数内部节点贡献资源导致电池耗尽更快,瓶颈节点决定组播树寿命",
+  "problem_framing": "如何在保持低延迟约束下,构造能均匀分配负载的多棵组播树",
+  "key_insight": "允许低权值边重叠比构造边不相交树更能平衡资源利用与延迟——边不相交后期树被迫使用高权值边",
+  "method_signature": "在GHS算法上迭代运行,边缘数组标记B/R/U/X/S状态控制边重用",
+  "evaluation_criteria": "组播延迟、叶子节点数(资源利用代理)、重叠指数",
+  "negative_result_or_admitted_limitation": "流应用共享边会产生固有的额外排队延迟;算法超出某点数后无额外改善反而可能因拥塞增加延迟",
+  "evidence_for_taste": [
+    "a node will not mark higher elements of a recently used edge as unavailable",
+    "A bridge edge is hard to detect",
+    "the performance curves tend to flatten-out for higher threshold values",
+    "we strongly believe that there would be other factors that need close examination",
+    "such a method works well only for a mesh case",
+    "it cannot be used for address the resource allocation problem"
+  ],
+  "thinking_moves": [
+    "从资源瓶颈节点寿命出发定义问题,而非单纯最小化延迟",
+    "通过控制重叠而非完全边不相交来约束延迟上界",
+    "将资源分配问题映射为图的边权重分配问题",
+    "引入阈值机制在完全重用与完全避免之间寻找工程折中",
+    "用模拟实验确定具体场景下的最优阈值而非理论推导"
+  ],
+  "topic_tags": [
+    "MANET-multicast",
+    "spanning-tree-construction",
+    "distributed-algorithm",
+    "resource-allocation",
+    "overlay-network"
+  ],
+  "cites_own_work": [
+    "Patil et al. 2004 (SOLONet)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注venue和DOI,Simulation实验参数有提及但未提供完整对比表格数据,部分关键参数需推断"
+}

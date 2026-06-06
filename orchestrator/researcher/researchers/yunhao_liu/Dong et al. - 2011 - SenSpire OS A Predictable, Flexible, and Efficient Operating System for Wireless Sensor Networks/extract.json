@@ -1,0 +1,43 @@
+{
+  "paper_id": "Dong et al. - 2011 - SenSpire OS A Predictable, Flexible, and Efficient Operating System for Wireless Sensor Networks",
+  "doi": null,
+  "title": "SenSpire OS: A Predictable, Flexible, and Efficient Operating System for Wireless Sensor Networks",
+  "year": 2011,
+  "venue": "IEEE Transactions on Computers",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "WSN nodes deployed in inaccessible areas operate unattended for long periods; existing OSs fail to bound interrupt latency or provide programming flexibility.",
+  "problem_framing": "Three-way trade-off: interrupt latency predictability (bounded vs unbounded), programming flexibility (event-driven vs multithreaded), and resource efficiency.",
+  "key_insight": "Two-phase interrupt servicing + priority ceiling protocol in kernel scheduler enables decoupling of event/thread subsystems while enabling stack sharing for memory efficiency.",
+  "method_signature": "Native hybrid scheduling with differentiated kernel scheduler, two-phase interrupts, priority ceiling protocol, and stack sharing.",
+  "evaluation_criteria": "Interrupt latency CDF, bottom half latency, scheduling overhead, program memory footprint, reprogramming file size.",
+  "negative_result_or_admitted_limitation": "Two-phase interrupt servicing adds programming complexity: developers must reason about bottom halves vs top halves for synchronization.",
+  "evidence_for_taste": [
+    "cannot prevent the applications from disabling interrupts",
+    "SenSpire OS achieves a more predictable interrupt latency",
+    "allows decoupling of two subsystems",
+    "advances prior work by supporting programmer-assigned priority-based preemption",
+    "is able to employ stack sharing for optimizing resource utilization",
+    "CELF is 1.6-2.5 times larger than SELF"
+  ],
+  "thinking_moves": [
+    "Identify failure modes in prior work (atomic sections unbounded latency, tight coupling of subsystems)",
+    "Infer design requirements from observed problems",
+    "Derive joint solution: kernel-native hybrid scheduling enables both decoupling and stack sharing",
+    "Articulate that event preemption is necessary for predictability, not just thread preemption",
+    "Show how prelinking and chained references reduce module file size more than datatype compression"
+  ],
+  "topic_tags": [
+    "sensor-network-os",
+    "interrupt-latency-bounding",
+    "hybrid-scheduler-design",
+    "priority-ceiling-protocol",
+    "stack-sharing-optimization"
+  ],
+  "cites_own_work": [
+    "W. Dong, C. Chen, X. Liu, K. Zheng, R. Chu, and J. Bu, 'FIT: A Flexible, Lightweight, and Real-Time Scheduling System'",
+    "W. Dong, C. Chen, X. Liu, J. Bu, and Y. Liu, 'Dynamic Linking and Loading in Networked Embedded Systems'"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

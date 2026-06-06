@@ -1,0 +1,39 @@
+{
+  "paper_id": "Tong et al. - 2020 - Combating packet collisions using non-stationary signal scaling in LPWANs",
+  "doi": null,
+  "title": "Combating Packet Collisions Using Non-Stationary Signal Scaling in LPWANs",
+  "year": 2020,
+  "venue": "MobiSys '20",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "LoRa部署中碰撞导致丢包和吞吐量下降,且现有方法在低SNR下失效,无法利用LoRa编码特性",
+  "problem_framing": "将碰撞数据包分离问题转化为:从低SNR混合信号中,利用符号到达时间差恢复各数据包",
+  "key_insight": "利用非平稳信号缩放将易受噪声影响的时域偏移转换为稳健的频域特征峰",
+  "method_signature": "非平稳缩放下chirp解调+峰值配对+约束k-means聚类分离碰撞数据包",
+  "evaluation_criteria": "SNR损失<1.7dB、低SNR下吞吐量提升3.3×、真实室外网络验证",
+  "negative_result_or_admitted_limitation": "Choir在节点数增加时频率偏移趋于相似,导致符号聚类错误; mLoRa仅在SNR>5dB有效",
+  "evidence_for_taste": [
+    "do not exploit the coding properties",
+    "cannot work well for low SNR LoRa signals",
+    "mainly works for signals with SNR >5 dB",
+    "significantly removes the major advantages",
+    "does not scale well as the number of nodes increases"
+  ],
+  "thinking_moves": [
+    "从LoRa物理层编码特性出发,找到前人忽视的时间偏移结构信息",
+    "将时域易损特征通过非平稳缩放转为频域稳健特征以对抗噪声",
+    "利用FFT相位旋转性质反向补偿恢复峰值准确估计",
+    "利用前导码中up-chirp和down-chirp对CFO响应相反的特性解耦参数估计",
+    "通过理论分析SNR损失证明方法在最坏情况下的可行性"
+  ],
+  "topic_tags": [
+    "LoRa-LPWAN-collision-resolution",
+    "non-stationary-signal-scaling",
+    "CSS-modulation",
+    "low-SNR-decoding",
+    "multi-packet-reception"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

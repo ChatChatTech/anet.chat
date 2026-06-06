@@ -1,0 +1,39 @@
+{
+  "paper_id": "Chen et al. - 2007 - Indexable PLA for Efficient Similarity Search",
+  "doi": null,
+  "title": "Indexable PLA for Efficient Similarity Search",
+  "year": 2007,
+  "venue": "VLDB",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "PLA是唯一没有索引机制的降维方法,但实验显示其效果不逊于APCA等方法,却只能线性扫描",
+  "problem_framing": "为PLA设计一个满足下界引理的可索引距离函数dist_PLA,使得R树过滤不错过任何真实结果",
+  "key_insight": "等长分段加'重新从1开始计起点'的技巧,使线段对之间的最小距离可解析计算,从而可索引",
+  "method_signature": "dist_PLA下界距离函数 + R树索引 + 查询点到MBR的最小距离计算",
+  "evaluation_criteria": "剪枝能力(pruning power)和实际查询时间(wall clock time),对比APCA和CP",
+  "negative_result_or_admitted_limitation": "仅支持等长分段,变长分段的PLA索引留作future work",
+  "evidence_for_taste": [
+    "PLA is the only one... that does not have an indexable lower bound",
+    "our zooming in the second pair, the starting index always begins with '1'",
+    "the tighter the lower bound distance is, the higher the pruning power is",
+    "PLA is always the best, in terms of the pruning power",
+    "only feasible way to perform similarity search based on PLA is the linear scan"
+  ],
+  "thinking_moves": [
+    "发现PLA效果好但无法索引的矛盾,先做实验证明PLA潜力",
+    "聚焦tightness of lower bound而非重建误差作为核心指标",
+    "借鉴GEMINI框架,用下界距离函数+R树解决非索引问题",
+    "将全局距离分解为各分段距离之和,逐段证明下界引理成立",
+    "通过数学归纳法从l=2递归证明wl≥0,严密的数学证明"
+  ],
+  "topic_tags": [
+    "time-series-indexing",
+    "dimensionality-reduction",
+    "lower-bound-distance",
+    "PLA-approximation",
+    "R-tree-similarity-search"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

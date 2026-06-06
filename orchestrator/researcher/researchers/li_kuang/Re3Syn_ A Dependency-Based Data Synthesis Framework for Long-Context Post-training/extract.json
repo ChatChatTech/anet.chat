@@ -1,0 +1,37 @@
+{
+  "paper_id": "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training",
+  "doi": "10.18653/v1/2025.acl-long.1518",
+  "title": "RE3SYN: A Dependency-Based Data Synthesis Framework for Long-Context Post-training",
+  "year": 2025,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "长上下文数据稀缺，现有方法拼接短文档时忽略语义依赖导致伪长文档",
+  "problem_framing": "如何从离短短文档合成高质量长上下文训练数据，以依赖而非相似度为导向",
+  "key_insight": "高质量长文档的特征是更强的前向/后向依赖，perplexity可量化依赖强度",
+  "method_signature": "基于语义相似聚类文档，用小模型计算perplexity识别依赖，拓扑排序重排序",
+  "evaluation_criteria": "语言建模困惑度(LongBench/PG19)、任务性能(MMLU/ARC)、依赖强度(Prolong)",
+  "negative_result_or_admitted_limitation": "ICLM在32k上下文时因文档冗余反而不如Standard；受资源限制仅验证7B和13B",
+  "evidence_for_taste": [
+    "concatenating overly similar documents leading to document redundancy",
+    "do not reliably generate dependencies",
+    "lower ppl indicates higher quality",
+    "methods selecting next doc based on similarity lead to only nearby associations"
+  ],
+  "thinking_moves": [
+    "从相似度方法的失败案例（32k时ICLM不如Standard）推断出冗余是根本问题",
+    "把依赖定义从相似度问题转化为perplexity排序问题",
+    "将文档重排序建模为拓扑排序问题而非贪心序列生成",
+    "承认简单聚类方法局限，指出可用更精确检索改进"
+  ],
+  "topic_tags": [
+    "long-context-post-training",
+    "data-synthesis",
+    "document-dependency",
+    "semantic-ordering",
+    "LLM-pretraining"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Li Kuang为通讯作者(co-corresponding with Wang Huiming)。论文完整呈现了方法动机、框架、实验和分析。"
+}

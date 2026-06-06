@@ -1,0 +1,48 @@
+{
+  "paper_id": "2021_UbiComp_KATN Key Activity Detection via Inexact Supervised Learning",
+  "doi": null,
+  "title": "KATN: Key Activity Detection via Inexact Supervised Learning",
+  "year": 2021,
+  "venue": "ACM Interact. Mob. Wearable Ubiquitous Technol.",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "IMU数据标注耗时耗力且准确标签难以获取，同时大量附带模糊信息的传感器数据严重未被利用",
+  "problem_framing": "利用粗粒度的用户交互事件(如点击按钮)作为模糊标签，从原始IMU数据中精确定位关键活动的起止时间",
+  "key_insight": "先训练粗粒度二分类深度模型，再用模型行为的注意力权重反推精确边界，而非直接学习精确标注",
+  "method_signature": "Siamese双注意力网络(SAN)提取判别/细节双视角特征，结合时间重要性评分估计精确时段",
+  "evaluation_criteria": "IoU、时间偏移误差、简单/复杂活动的检测准确率、用户适应后的性能提升",
+  "negative_result_or_admitted_limitations": [
+    "精确度受分类器前时序特征粒度限制",
+    "当前设计对多模态IMU数据融合效率不高",
+    "只能处理单个关键活动，多个相近活动需扩展"
+  ],
+  "evidence_for_taste": [
+    "training deep models to improve accuracy relies on specially collected and accurately labeled sensor data",
+    "IMU signals are much more difficult for humans to read and label directly",
+    "massive IMU data is being continuously generated in company with user interaction events",
+    "the click action may happen at any time in the last-mile delivery",
+    "leverage the inexact labels to train a two-class deep classifier",
+    "trace the positive outputs of the deep classifier through its algorithm",
+    "enabling the model to learn features with rotational invariance",
+    "restrains the activation of attention value by limiting the variance of attention values",
+    "make the network ignore what has learned and focus on learning the details",
+    "there still lacks an effective method to achieve accurate complex activity detection with only inexact labels"
+  ],
+  "thinking_moves": [
+    "将精确边界检测问题转化为模型解释问题：训练粗粒度分类器后通过注意力权重反推精确时段",
+    "提出双视角注意力机制：判别注意力捕获最显著特征，详细注意力学习剩余部分，二者互补",
+    "借鉴多实例学习(MIL)范式处理模糊标签问题，通过袋级别标签监督实例级别检测",
+    "利用负样本方差约束防止注意力过度激活，增强模型判别能力",
+    "从工程失败案例反推领域需求：现有方法在复杂活动中表现差，需多视角设计"
+  ],
+  "topic_tags": [
+    "IMU-activity-detection",
+    "inexact-supervised-learning",
+    "multi-instance-learning",
+    "attention-mechanism",
+    "food-delivery-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "研究者slug为yunhao_liu，但作者列表中未找到此人(extracted from: XUANKE YOU, LAN ZHANG, HAIKUO YU, MU YUAN, XIANG-YANG LI)。论文完整但方法细节有所简化(如公式排版、4.4节具体实现)。 | md truncated to head40k+tail20k"
+}

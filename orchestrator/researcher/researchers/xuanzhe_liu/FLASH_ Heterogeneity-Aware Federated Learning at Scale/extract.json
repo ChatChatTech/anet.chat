@@ -1,0 +1,46 @@
+{
+  "paper_id": "FLASH_ Heterogeneity-Aware Federated Learning at Scale",
+  "doi": "10.1109/tmc.2022.3214234",
+  "title": "FLASH: Heterogeneity-Aware Federated Learning at Scale",
+  "year": 2022,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "现有FL研究普遍采用模拟评估，忽略设备硬件差异与动态状态，导致算法在实际部署中的效果未知。",
+  "problem_framing": "首次基于136k真实智能手机数据，系统测量异构性（硬件异构+状态异构）对FL基本算法、进阶算法及系统配置的量化影响。",
+  "key_insight": "状态异构比硬件异构对准确率的负面影响更大（9.5% vs 0.4%），且异构性使现有进阶算法的优化效果大幅折损（q-FedAvg方差降低效果下降17.5%）。",
+  "method_signature": "构建异构感知的FL模拟平台FLASH，基于真实设备状态轨迹与硬件容量数据，对比异构/非异构设置下的算法性能差异。",
+  "evaluation_criteria": "收敛准确率、每轮训练时间、压缩率、跨设备准确率方差等多维度指标。",
+  "negative_result_or_admitted_limitation": "梯度压缩算法在异构环境下收敛时间延长2.5×，client-selection算法的选优效果在异构下降低73.9%，现有算法在真实场景收益大幅缩水。",
+  "evidence_for_taste": [
+    "most FL researchers take a simulation approach",
+    "ignore heterogeneity and make an overly idealistic assumption",
+    "the impact of heterogeneity has not yet been systematically demonstrated",
+    "what is more, since most research efforts have not accessed real-world large-scale FL systems",
+    "they usually subconsciously set the reporting deadline to a very loose value",
+    "subconsciously set the reporting fraction to 1.0",
+    "it hinders FL client-selection algorithms from selecting wanted clients",
+    "one could simply choose a loose enough deadline",
+    "one needs to adjust them carefully",
+    "state heterogeneity has more influence over the accuracy drop than hardware heterogeneity"
+  ],
+  "thinking_moves": [
+    "将现实工程问题（异构设备丢包/退出的比例）转化为可量化指标（accuracy drop、convergence time multiplier）",
+    "先构建异构感知平台，再系统地解耦硬件异构与状态异构的各自贡献（9.5% vs 0.4%）",
+    "以消融对比（heterogeneity-aware vs unaware）揭示现有算法在理想假设下的收益被高估",
+    "从宏观结果（算法有效/无效）深入微观机制（device failure 11.6%、participant bias top 30%贡献86%）",
+    "承认现有模拟方法的根本缺陷：researchers没有接触真实大规模FL系统，只能做ideal假设"
+  ],
+  "topic_tags": [
+    "federated-learning-heterogeneity",
+    "mobile-edge-training",
+    "real-device-evaluation",
+    "client-selection-optimization",
+    "fl-configuration-tuning"
+  ],
+  "cites_own_work": [
+    "26"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "该文为完整长文（IEEE TMC期刊版），包含数据集、平台、四个数据集的实验结果及深入分析。作者Xuanzhe Liu为通讯作者兼Senior author，动机/问题/关键发现均有直接文本支撑，抽取完整。 | md truncated to head40k+tail20k"
+}

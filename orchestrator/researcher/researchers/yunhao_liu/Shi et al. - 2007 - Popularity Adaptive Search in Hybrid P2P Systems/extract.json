@@ -1,0 +1,38 @@
+{
+  "paper_id": "Shi et al. - 2007 - Popularity Adaptive Search in Hybrid P2P Systems",
+  "doi": null,
+  "title": "Popularity Adaptive Search in Hybrid P2P Systems",
+  "year": 2007,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Hybrid P2P 需要在 flooding 和 DHT 之间切换，但现有方法未考虑节点动态加入离开导致的人气值失准",
+  "problem_framing": "将 hybrid search 中人气值估计问题形式化为：如何在去中心化动态环境中准确识别稀有/热门资源",
+  "key_insight": "用少量 smart nodes 作为传感器测量全局动态率 β，修正 gossip 所得的人气值以跟踪副本真实变化",
+  "method_signature": "PASH: smart node 感知动态 + β 修正 gossip 人气值 + flooding/DHT 自适应选择",
+  "evaluation_criteria": "人气估计误差、流量开销、搜索响应时间",
+  "negative_result_or_admitted_limitation": "GAB 统计在动态环境下完全不准确，副本统计是单调递增函数，无法反映节点离开导致的副本减少",
+  "evidence_for_taste": [
+    "statistics are far from accurate",
+    "GAB statistics are always a monotone increasing function",
+    "Neither stable nor ultrapeers",
+    "improper document publishing in DHT",
+    "unfruitful flooding"
+  ],
+  "thinking_moves": [
+    "通过数学分析揭示现有方法的核心缺陷：从单调性证明 GAB 必然不准",
+    "将动态网络问题转化为可测量的参数 β，用局部采样推断全局变化",
+    "从诊断/调试角度重构问题：把 gossip 人气值失准视为 bug，用 β 修正作为 patch",
+    "承认工程权衡：通过实验确定 smart node 比例而非理论推导，15% 在小规模足够但大规模需降至 <10%"
+  ],
+  "topic_tags": [
+    "P2P-search",
+    "flooding-DHT-hybrid",
+    "popularity-estimation",
+    "dynamic-topology",
+    "gossip-protocol"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提及具体 venue/ DOI，仅提供完整正文故 method_signature 和 evaluation_criteria 充分但 venue 未知"
+}

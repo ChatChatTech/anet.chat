@@ -1,0 +1,39 @@
+{
+  "paper_id": "GroupNL_ Low-Resource and Robust CNN Design over Cloud and Device",
+  "doi": "10.48550/arxiv.2506.12335",
+  "title": "GroupNL: Low-Resource and Robust CNN Design over Cloud and Device",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "IoT设备资源受限，现有CNN压缩方法引入额外轻量卷积影响训练推理速度",
+  "problem_framing": "如何提高特征图多样性的同时避免引入额外计算操作",
+  "key_insight": "对seed特征图分组后用多样NLF生成特征，完全使用张量操作而非额外卷积",
+  "method_signature": "GroupNL Conv: seed卷积+分组+张量操作+非线性变换",
+  "evaluation_criteria": "ImageNet-C鲁棒性、设备FPS/能耗、训练加速比",
+  "negative_result_or_admitted_limitation": "GhostNet和SineFM理论参数量更少但实际比vanilla CNN更慢，因为引入了额外的计算节点",
+  "evidence_for_taste": [
+    "cheap Conv和BN导致慢训练",
+    "GroupNL无额外torch.nn.Module",
+    "Ghost-like方法使用太多模块"
+  ],
+  "thinking_moves": [
+    "发现轻量操作虽降参数量但实际拖慢速度",
+    "从ghost方法追问为何理论优但实践差",
+    "用张量操作替代卷积来消除额外计算节点",
+    "通过分组seed特征图放大NLF多样性而不增计算"
+  ],
+  "topic_tags": [
+    "cloud-assisted-IoT",
+    "CNN-design",
+    "lightweight-convolution",
+    "feature-diversity",
+    "robustness-enhancement"
+  ],
+  "cites_own_work": [
+    "MonoCNN",
+    "SineFM"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

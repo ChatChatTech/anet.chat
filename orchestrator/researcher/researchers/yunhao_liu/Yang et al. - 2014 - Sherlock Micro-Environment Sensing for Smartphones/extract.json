@@ -1,0 +1,40 @@
+{
+  "paper_id": "Yang et al. - 2014 - Sherlock Micro-Environment Sensing for Smartphones",
+  "doi": null,
+  "title": "Sherlock: Micro-Environment Sensing for Smartphones",
+  "year": 2014,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "手机需要感知自身周边微环境以实现自动适配,但现有研究仅关注人视角上下文,忽略手机自身视角",
+  "problem_framing": "将手机周边几厘米范围定义为微环境,通过多模态传感协作实现放置/交互/材质三类感知",
+  "key_insight": "利用手机固有传感器(摄像头/加速度计/麦克风)协作检测,无需额外硬件即可推断微环境",
+  "method_signature": "分层架构+多阶段检测:摄像头检测in-hand,DTW匹配on-body,振动模式识别材质",
+  "evaluation_criteria": "检测误差<17%,能耗增量<11.4%,CPU占用~6%,存储~1.3MB/天",
+  "negative_result_or_admitted_limitation": "IPDS在低对比度背景(如白墙)或昏暗光照下检测效果下降,且细粒度材质区分困难",
+  "evidence_for_taste": [
+    "only suitable for specific scenarios",
+    "the scheme easily extends to more kinds",
+    "accuracy peaks 90 percent in Case3",
+    "non-trivial to extract accurate DC component",
+    "leaves careful calibration of DC component in future work",
+    "won't trigger vibrator or speaker when carried"
+  ],
+  "thinking_moves": [
+    "将感知问题按手机状态分层,从运动检测→放置识别→材质检测流水线处理",
+    "通过图像直方图斜率量化光照对比度,避免复杂图像处理",
+    "DTW消除步行速度引起的时序变形,实现设备/用户无关的放置识别",
+    "振动响应与材质刚度关联:硬材质变形小恢复快,软材质能量吸收多",
+    "利用进程队列代替屏幕锁,避免用户保持常亮导致的误判"
+  ],
+  "topic_tags": [
+    "smartphone-sensing",
+    "micro-environment-perception",
+    "DTW-motion-matching",
+    "vibration-material-detection",
+    "mobile-context-middleware"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

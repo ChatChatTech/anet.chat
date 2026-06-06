@@ -1,0 +1,38 @@
+{
+  "paper_id": "Guo et al. - 2022 - RF-Transformer A Unified Backscatter Radio Hardware Abstraction",
+  "doi": null,
+  "title": "RF-Transformer: A Unified Backscatter Radio Hardware Abstraction",
+  "year": 2022,
+  "venue": "ACM MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有反向散射系统针对特定协议定制,缺乏灵活性,无法在异构无线网络中直接与多种技术互操作",
+  "problem_framing": "如何在保持超低功耗的同时实现可编程的反向散射无线电,生成不同类型的协议兼容无线信号",
+  "key_insight": "通过改变I/Q路径的幅度来调制反射系数,将复杂的阻性和感性双负载控制转化为纯阻性负载控制",
+  "method_signature": "使用Wilkinson功分器和延迟线构建I/Q路径,配合MOSFET管偏置电压实现负载阻抗编程",
+  "evaluation_criteria": "吞吐量、功耗、散射距离、与商品接收器的兼容性、7天案例研究的包接收率",
+  "negative_result_or_admitted_limitation": "RF-Transformer功耗高于Multiscatter等现有反向散射技术,且高性能振荡器和DAC消耗大部分功率",
+  "evidence_for_taste": [
+    "neither scalable nor forward-compatible",
+    "cannot be set arbitrarily",
+    "power consumption is higher than other existing",
+    "This is also the reason for the highest power consumption",
+    "performance gap is expected since backscatter signal becomes very weak"
+  ],
+  "thinking_moves": [
+    "将阻性和感性双负载控制转化为纯阻性控制",
+    "利用欧拉公式将信号表示为IQ分量",
+    "从传统QAM收发机原理类比反向散射调制",
+    "通过Smith图分析负载阻抗对反射系数的几何影响"
+  ],
+  "topic_tags": [
+    "backscatter-radio",
+    "IQ-modulation",
+    "low-power-IoT",
+    "heterogeneous-wireless",
+    "protocol-compliant-signals"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文部分内容被截断,缺少方法节的部分细节和实验节的部分图表描述,但核心贡献、方法和主要实验结果完整 | md truncated to head40k+tail20k"
+}

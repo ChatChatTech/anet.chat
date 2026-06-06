@@ -1,0 +1,40 @@
+{
+  "paper_id": "2023_packetgame",
+  "doi": null,
+  "title": "PacketGame: Multi-Stream Packet Gating for Concurrent Video Inference at Scale",
+  "year": 2023,
+  "venue": "ACM SIGCOMM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "从1000+摄像头的实际系统运营中发现,视频解码成为被忽视的并发瓶颈,而非推理模块",
+  "problem_framing": "将视频帧过滤的思想前推到包级别,形式化为多臂老虎机框架下的组合上下文带 bandits 问题",
+  "key_insight": "元数据与反馈的混合表示:仅用包大小和图片类型等元数据无法区分,必须结合下游推理结果的反馈",
+  "method_signature": "多视角神经网络(独立帧/预测帧分视图)+时序估计器+近似比保证的贪婪组合优化器",
+  "evaluation_criteria": "解码成本节省率(52.0-79.3%)、并发流数量提升(2.1-4.8×)、推理精度保持",
+  "negative_result_or_admitted_limitation": "当前预测器离线训练后部署,无在线参数更新;攻击者可从流量元数据推断隐私敏感推理结果",
+  "evidence_for_taste": [
+    "previously overlooked bottleneck",
+    "surprising, we find",
+    "either fail to discriminate or cannot adapt",
+    "an expensive but direct way",
+    "these representation approaches are not designed for the general pipeline"
+  ],
+  "thinking_moves": [
+    "从系统运维异常反推底层假设失效:解码才是瓶颈而非推理",
+    "将已被充分研究的帧过滤类比迁移到包级别,填补pipeline空白",
+    "发现GOP解码依赖导致非均匀动态开销是理论与实践的关键差距",
+    "利用视频包解码近似分数的特性证明贪婪算法的近似比保证"
+  ],
+  "topic_tags": [
+    "video-decoding-concurrency",
+    "packet-gating",
+    "video-analytics-at-scale",
+    "multi-armed-bandit",
+    "edge-video-inference"
+  ],
+  "cites_own_work": [
+    "InFi: End-to-End Learnable Input Filter (MobiCom 2022)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

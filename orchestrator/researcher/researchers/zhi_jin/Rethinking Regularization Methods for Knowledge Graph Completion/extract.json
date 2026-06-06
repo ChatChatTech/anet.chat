@@ -1,0 +1,38 @@
+{
+  "paper_id": "Rethinking Regularization Methods for Knowledge Graph Completion",
+  "doi": "10.48550/arxiv.2505.23442",
+  "title": "Rethinking Regularization Methods for Knowledge Graph Completion",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "KGC models suffer from overfitting by learning noise in training data, limiting generalization and performance upper bounds",
+  "problem_framing": "Reconceptualize regularization not just as overfitting mitigation but as a lever to break original performance ceilings; existing regularizers don't generalize to non-TDB models",
+  "key_insight": "Selectively penalizing only large-magnitude embedding components while discarding noise-like small components improves generalization more than uniform penalization",
+  "method_signature": "SPR: rank-based sparse regularization that masks small embedding components via cumulative-sum thresholding δ",
+  "evaluation_criteria": "MRR, Hits@1/3/10 on WN18RR, FB15K-237, YAGO3-10; also UMLS, Kinship, TKGC datasets",
+  "negative_result_or_admitted_limitation": "Regularization is a 'double-edged sword': both too-high and too-low rates degrade below no-regularization baseline; δ must be tuned per model",
+  "evidence_for_taste": [
+    "breaks through the upper bounds",
+    "may only represent noise",
+    "a 'double-edged sword'",
+    "overfitting is a widespread issue",
+    "simpler, more generalizable"
+  ],
+  "thinking_moves": [
+    "从观察到的训练/验证差距反推过拟合问题的普遍性",
+    "把正则化从'防止过拟合'重新frame成'突破性能上界'",
+    "通过对比Dropout与SPR的方差结构, 从理论上区分有效/无效mask",
+    "用信息论直觉(信号噪声比)设计稀疏化准则"
+  ],
+  "topic_tags": [
+    "knowledge-graph-completion",
+    "regularization-theory",
+    "sparse-embedding",
+    "overfitting-mitigation",
+    "rank-based-sparsity"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Full paper text available; complete method, experiments, and theoretical analysis present | md truncated to head40k+tail20k"
+}

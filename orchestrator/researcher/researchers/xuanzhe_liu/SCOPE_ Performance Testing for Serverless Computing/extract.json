@@ -1,0 +1,40 @@
+{
+  "paper_id": "SCOPE_ Performance Testing for Serverless Computing",
+  "doi": "10.48550/arxiv.2306.01620",
+  "title": "SCOPE: Performance Testing for Serverless Computing",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有云应用性能测试方法不适用于serverless函数,需要专门方法",
+  "problem_framing": "定义性能测试停止准则:结合准确度检查和一致性检查",
+  "key_insight": "短时执行的serverless函数需细粒度高精度停止准则,通过置信区间和历史轮次对比判断稳定性",
+  "method_signature": "双阶段停止准则:准确度检查(百分位置信区间)+一致性检查(前后轮次都通过)",
+  "evaluation_criteria": "97.25%准确率,相比最佳现有技术提升33.83个百分点",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "not all serverless functions require or benefit from the same level of repetition",
+    "using a fixed number of repetitions is unreasonable",
+    "performance of most serverless functions follows a non-normal distribution",
+    "performance can produce highly fluctuating results even with multiple identical runs"
+  ],
+  "thinking_moves": [
+    "指出领域缺乏专用方法,现有技术来自传统云",
+    "识别serverless函数独特性能特征(短执行时长、按需触发)",
+    "用非参数方法规避分布假设,适合高波动数据",
+    "通过双轮次准确度验证缓解单次波动干扰",
+    "固定重复次数策略的局限反衬自适应停止准则必要性"
+  ],
+  "topic_tags": [
+    "serverless-performance-testing",
+    "stopping-criterion",
+    "confidence-interval",
+    "non-parametric-methods",
+    "cloud-function-evaluation"
+  ],
+  "cites_own_work": [
+    "SCOPE builds on their prior work on performance variance analysis (Wen et al., 2023)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "GEMRec_ A Graph-Based Emotion-Aware Music Recommendation Approach",
+  "doi": "10.1007/978-3-319-48740-3_7",
+  "title": "GEMRec: A Graph-Based Emotion-Aware Music Recommendation Approach",
+  "year": 2016,
+  "venue": "Springer LNCS (International Conference)",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "用户面对海量音乐难以选择,传统推荐忽视音乐承载情感的特点,且情绪为次级上下文难以直接获取",
+  "problem_framing": "如何从用户微博中获取情感上下文;如何将情感嵌入用户-音乐关系;如何基于情感推断个性化音乐偏好",
+  "key_insight": "微博中音乐分享与情感表达的关联可反映用户情感感知音乐偏好,且情感维度是私有效应不应跨用户共享比较",
+  "method_signature": "构建情感感知图(EAG),基于随机游走的关联系传播算法对音乐排序推荐",
+  "evaluation_criteria": "HitRate, Precision, Recall, F1 Score四个指标,与BPR/RankALS/UCFE比较",
+  "negative_result_or_admitted_limitation": "矩阵求逆复杂度O(n³),虽可用降维估计,但对超大规模数据仍有挑战;且需用户有较多音乐微博",
+  "evidence_for_taste": [
+    "情感的主次之分不应平等对待",
+    "次要情感若处理不当可能产生负面影响",
+    "时间窗口过窄情感噪声",
+    "情感是私有效应不应跨用户共享"
+  ],
+  "thinking_moves": [
+    "将情感从直接测量重新定义为次级上下文,需从微博中间接推导",
+    "批评现有方法将情感作为跨用户通用维度,主张应为私有效应",
+    "从用户微博文本中提取音乐-情感关联而非要求用户显式输入情感",
+    "验证三种情感建模方式(向量/多标签/单标签)的差异化贡献"
+  ],
+  "topic_tags": [
+    "emotion-aware-recommendation",
+    "music-recommendation",
+    "graph-based-propagation",
+    "random-walk-ranking",
+    "microblog-emotion-mining"
+  ],
+  "cites_own_work": [
+    "[4] Deng et al. 2015"
+  ],
+  "extraction_quality": "full"
+}

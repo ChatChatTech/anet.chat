@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Survey on Dialogue Summarization_ Recent Advances and New Frontiers__oa_W4285602465",
+  "doi": "10.24963/ijcai.2022/764",
+  "title": "A Survey on Dialogue Summarization: Recent Advances and New Frontiers",
+  "year": 2022,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "对话数据过载亟需摘要技术，且此前缺乏全面综述",
+  "problem_framing": "按领域分类综述：会议、聊天、邮件、客服、医疗对话",
+  "key_insight": "对话摘要不同于文档摘要，需处理多方发言、指代消解、主题漂移等",
+  "method_signature": "综述梳理现有工作，提供数据集表格与评估排行榜",
+  "evaluation_criteria": "ROUGE-1/2/L F1分数对比各方法",
+  "negative_result_or_admitted_limitation": "模型仍难以选重点、易产生幻觉，且标注数据成本高",
+  "evidence_for_taste": [
+    "methods can not be easily transferred",
+    "highly-costing or even intractable",
+    "difficulty selecting the important parts",
+    "tend to generate hallucinations"
+  ],
+  "thinking_moves": [
+    "先界定任务边界，说明为何通用方法不适用",
+    "按领域特征分类组织，揭示各域独特挑战",
+    "通过排行榜量化比较，暴露方法间的实际差距"
+  ],
+  "topic_tags": [
+    "dialogue-summarization",
+    "multi-party-conversation",
+    "domain-specific-summarization",
+    "faithfulness-hallucination",
+    "pre-trained-language-models"
+  ],
+  "cites_own_work": [
+    "Feng et al., 2021b",
+    "Feng et al., 2021c",
+    "Feng et al., 2021a"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

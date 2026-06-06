@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2016 - Towards Energy Efficient Duty-Cycled Networks Analysis, Implications and Improvement",
+  "doi": null,
+  "title": "Towards Energy Efficient Duty-Cycled Networks: Analysis, Implications and Improvement",
+  "year": 2016,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "1200节点CitySee网络实测发现现有duty-cycling协议在真实流量下能耗远高于小规模测试预期",
+  "problem_framing": "将协议参数(t_s,t_w,t_d)与数据率λ的联合优化问题形式化为平均每包能耗最小化",
+  "key_insight": "同一参数设置在不同数据率下效果相反:低速率应设小t_w/t_d,高速率反之;需联合优化发送端和接收端能耗",
+  "method_signature": "LAD协议:基于泊松流量模型推导最优参数,离线预计算Lookup表供在线查询",
+  "evaluation_criteria": "能耗降低百分比(对比TinyOS LPL MAC、X-MAC等);节点duty cycle ratio分布",
+  "negative_result_or_admitted_limitation": "TinyOS LPL MAC默认参数在特定场景下导致very poor performance,ContikiMAC并不总是energy efficient",
+  "evidence_for_taste": [
+    "using the same parameter setting results in totally different performance",
+    "a small tw and td, which is preferred in (a), is prohibited in (b)",
+    "fixed settings...may lead to a very poor performance",
+    "state-of-the-art protocols with empirical parameters are not adequate"
+  ],
+  "thinking_moves": [
+    "从1200节点运营网络实测异常反推理论分析必要性",
+    "先推导解析公式(Theorem 1)作为设计准则,再实例化到TinyOS LPL",
+    "用泊松分布简化后验算,再通过真实数据验证分布假设",
+    "将在线优化计算转化为离线预计算+查表以适应资源受限节点"
+  ],
+  "topic_tags": [
+    "duty-cycling MAC optimization",
+    "wireless sensor network energy",
+    "parameter adaptation",
+    "LPL protocol analysis",
+    "distributed protocol design"
+  ],
+  "cites_own_work": [
+    "CitySee urban CO2 monitoring"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

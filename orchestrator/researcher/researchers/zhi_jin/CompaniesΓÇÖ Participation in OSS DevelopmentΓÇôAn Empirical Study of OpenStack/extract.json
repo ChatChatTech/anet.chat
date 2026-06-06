@@ -1,0 +1,36 @@
+{
+  "paper_id": "CompaniesΓÇÖ Participation in OSS DevelopmentΓÇôAn Empirical Study of OpenStack",
+  "doi": "10.1109/tse.2019.2946156",
+  "title": "Companies' Participation in OSS Development–An Empirical Study of OpenStack",
+  "year": 2019,
+  "venue": "IEEE Transactions on Software Engineering",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "商业参与OSS增长迅速,但企业贡献的本质和范围以及对志愿者社区的影响尚不清楚",
+  "problem_framing": "量化公司贡献(通过开发者和提交),探索贡献分布不均程度,提取贡献模式并分析其多样性对志愿者参与的影响",
+  "key_insight": "多样性(以贡献模型的熵度量)与志愿者参与呈强正相关,公司贡献模式是理解生态系统的关键",
+  "method_signature": "结合代码提交历史分析与在线文档审查的案例研究,使用主题分析提取贡献模式",
+  "evaluation_criteria": "贡献强度、范围和焦点三维特征;多样性以贡献模型熵度量;关联性以回归模型检验",
+  "negative_result_or_admitted_limitation": "仅前124家公司有足够在线数据覆盖90%提交,但仍有10%开发者无法匹配",
+  "evidence_for_taste": [
+    "companies made far more contributions than volunteers",
+    "distribution of contributions is highly unbalanced",
+    "increase in diversity is associated with an increase in volunteers",
+    "contribution models based on commercial objectives",
+    "contribution intensity, extent, and focus"
+  ],
+  "thinking_moves": [
+    "用行为特征(文件修改、时区、提交消息)而非字符串相似度来解决开发者身份合并问题",
+    "将定性主题分析与定量贡献指标结合形成多维贡献模型",
+    "用生态系统理论(Iansiti & Levien)链接公司多样性到生态健康",
+    "从商业目标动机出发归纳贡献模式而非预设类别"
+  ],
+  "topic_tags": [
+    "OSS生态系统",
+    "商业参与",
+    "贡献模式",
+    "开发者身份合并",
+    "公司多样性"
+  ],
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Rethinking Positional Encoding in Tree Transformer for Code Representation",
+  "doi": "10.18653/v1/2022.emnlp-main.210",
+  "title": "Rethinking Positional Encoding in Tree Transformer for Code Representation",
+  "year": 2022,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有树Transformer遗漏了某些树结构(固定孩子数假设/兄弟序特征),需更好地捕获代码语法结构",
+  "problem_framing": "将树节点位置描述为可精确重建树结构的形式;同时引入局部和全局软偏差",
+  "key_insight": "每个节点位置递归表示为2D坐标列表(兄弟序+父节点孩子数),结合全局绝对编码与局部相对编码能互相补充提升性能",
+  "method_signature": "2D递归树描述+全局绝对+局部相对位置编码的解纠缠注意力",
+  "evaluation_criteria": "代码摘要(Bleu/F1/Acc)和代码补全(MRR/Acc)的双任务、多语言(JS/Python)评估",
+  "negative_result_or_admitted_limitation": "消融表明移除任一维度均导致性能下降;未考虑数据流/控制流等额外代码图结构",
+  "evidence_for_taste": [
+    "a good description should be information lossless",
+    "tree structures are overlooked by these previous approaches",
+    "local features are less likely to be lost",
+    "global bias is relatively soft and perhaps fragile",
+    "can be seen as the advanced generalization of (Shiv and Quirk, 2019)",
+    "combining both local and global paradigms is still helpful"
+  ],
+  "thinking_moves": [
+    "从先前方法的局限出发: regular tree假设遗漏结构,sibling特征缺失",
+    "设定评价标准: 信息无损且可精确重建原始结构",
+    "探索性假设: 局部方法通过堆叠层捕获结构,特征不易丢失;全局方法虽理论完整但软偏差脆弱",
+    "整合范式: 验证局部+全局结合优于单独使用,揭示二者互补机制"
+  ],
+  "topic_tags": [
+    "tree-positional-encoding",
+    "code-ast-representation",
+    "soft-inductive-bias",
+    "tree-transformer",
+    "global-local-attention"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

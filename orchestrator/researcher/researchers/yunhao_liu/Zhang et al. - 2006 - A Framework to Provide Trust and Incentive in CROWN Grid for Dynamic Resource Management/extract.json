@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zhang et al. - 2006 - A Framework to Provide Trust and Incentive in CROWN Grid for Dynamic Resource Management",
+  "doi": null,
+  "title": "A Framework to Provide Trust and Incentive in CROWN Grid for Dynamic Resource Management",
+  "year": 2006,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Grid resources are depleted by selfish users taking free rides; existing soft incentive cannot satisfy providers' desire for benefit.",
+  "problem_framing": "Combine soft incentive (reputation) and hard incentive (price) to achieve trust-incentive compatibility in dynamic grid resource allocation.",
+  "key_insight": "Users gain more resources only if they share more AND possess higher trust; the mechanism integrates price, trust, and incentive as complementary levers.",
+  "method_signature": "TIM framework with four models (Child, Club, Bids, Trust) using weighted voting for admission control and price-based allocation.",
+  "evaluation_criteria": "Allocation ratio, job completion time, system completion ratio, aggregated resource utilization, revenue under malicious attacks.",
+  "negative_result_or_admitted_limitation": "Hard incentive alone fails: 'wealthy nodes are not always with higher degree reputation. Simply considering bid price cannot satisfy security concerns.'",
+  "evidence_for_taste": [
+    "wealthy nodes are not always with higher degree reputation",
+    "The more resources a node provides, the higher degree of trust a node has",
+    "the provision ratio of node 3 (60%) is less than node 1 (90%), but node 3 has a higher trust value",
+    "Club considering both benefit and security factors (α=0.5) obtains more revenue",
+    "the revenue of Club2 without TIM is suffering much more than Club1 with TIM"
+  ],
+  "thinking_moves": [
+    "Merge two previously separate incentive paradigms (soft vs hard) by finding their complementary strengths",
+    "Admit that economic rationality alone fails security requirements — wealthy ≠ trustworthy",
+    "Use risk-degree parameter α to dynamically balance economic gain vs security",
+    "Model trust as a compounding function (1-(1-T2)^T1) rather than simple average",
+    "Replace Smale's continuous equilibrium with discrete iteration for practical grid deployment"
+  ],
+  "topic_tags": [
+    "grid-resource-allocation",
+    "trust-incentive-compatibility",
+    "price-based-market-design",
+    "weighted-voting-admission-control",
+    "CROWN-grid-infrastructure"
+  ],
+  "cites_own_work": [
+    "Liu et al. 2004 on Location-Aware Topology Matching",
+    "Huai et al. 2005 on Distributed Access Control in CROWN Groups"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue tier unknown because the specific conference or journal name is not stated in the provided text. Role 'co-author' assigned based on author list position (Yunhao Liu is 3rd author, not first or corresponding)."
+}

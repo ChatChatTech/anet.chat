@@ -1,0 +1,38 @@
+{
+  "paper_id": "2019_IJCAI_ECMH",
+  "doi": null,
+  "title": "Extensible Cross-Modal Hashing",
+  "year": 2019,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现实应用中数据新类别不断到来，现有跨模态哈希方法无法高效扩展以容纳新类别同时保持旧类别性能",
+  "problem_framing": "将跨模态哈希扩展问题形式化为：仅用新数据更新模型参数，同时满足无需更新旧哈希码、不增加码长、保持新旧任务性能的要求",
+  "key_insight": "通过\"协议矩阵\"识别跨模态表征中已有一致的维度并冻结，仅更新不一致维度，实现选择性学习避免灾难性遗忘",
+  "method_signature": "ECMH通过INet+TNet双网络，利用协议矩阵选择需更新维度，自蒸馏损失保持旧性能",
+  "evaluation_criteria": "MAP（平均精度）、PR曲线、前向兼容性（用新哈希码检索旧哈希码的效果）",
+  "negative_result_or_admitted_limitation": "微调方法遭受灾难性遗忘导致旧任务性能大幅下降高达11.3%；现有增量学习方法持续增加哈希码维度无法解决跨模态哈希问题",
+  "evidence_for_taste": [
+    "incurs an ever increasing large computation cost",
+    "suffers from catastrophic forgetting",
+    "with an up to 2.7% decrease",
+    "slightly limits the performance on new tasks",
+    "the hash code will be too intense"
+  ],
+  "thinking_moves": [
+    "将\"扩展性\"问题重新定义为\"选择性遗忘\"控制问题，而非简单增量学习",
+    "从\"哪些维度不该变\"的角度切入而非\"哪些知识该保留\"的传统蒸馏思路",
+    "通过协议矩阵把直觉形式化为可计算的约束条件",
+    "承认增量方法局限，直面维度增长这一核心挑战"
+  ],
+  "topic_tags": [
+    "cross-modal-hashing",
+    "incremental-learning",
+    "knowledge-distillation",
+    "deep-cross-modal-retrieval",
+    "catastrophic-forgetting"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

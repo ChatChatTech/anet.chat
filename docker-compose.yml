@@ -33,6 +33,10 @@ services:
       - DOUBAO_RESPONSES_URL=${DOUBAO_RESPONSES_URL:-https://ark.cn-beijing.volces.com/api/v3/responses}
       - DOUBAO_RESPONSES_API_KEY=${DOUBAO_RESPONSES_API_KEY}
       - DOUBAO_RESPONSES_DEFAULT_MODEL=${DOUBAO_RESPONSES_DEFAULT_MODEL:-doubao-seed-2-0-pro-260215}
+      # v22: SillyTavern persona/lorebook source. If empty, falls back to
+      # local /app/personas/<slug>.md files (v21 behavior).
+      - SILLYTAVERN_URL=${SILLYTAVERN_URL:-http://sillytavern:8000}
+      - LOREBOOK_CHAR_BUDGET=${LOREBOOK_CHAR_BUDGET:-3000}
       - TZ=Asia/Shanghai
     volumes:
       # v14: condensed personas are baked into the image at /app/personas/.

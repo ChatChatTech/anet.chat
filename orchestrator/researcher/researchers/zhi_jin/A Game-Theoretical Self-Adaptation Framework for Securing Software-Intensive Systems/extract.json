@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Game-Theoretical Self-Adaptation Framework for Securing Software-Intensive Systems",
+  "doi": "10.48550/arxiv.2112.07588",
+  "title": "A Game-Theoretical Self-Adaptation Framework for Securing Software-Intensive Systems",
+  "year": 2021,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有游戏理论方法将整个系统建模为单一防守者,粒度过粗,无法处理部分组件被攻击而其他组件协同防御的场景",
+  "problem_framing": "将系统组件建模为独立博弈玩家,采用贝叶斯博弈编码攻击不确定性,组件被攻击后行为类型分为合作型或竞争型",
+  "key_insight": "组件级博弈建模允许对部分妥协系统设计细粒度防御策略,而非将系统作为整体单一玩家",
+  "method_signature": "自动从组件架构生成贝叶斯博弈并求解纳什均衡作为自适应防御策略",
+  "evaluation_criteria": "在Znn.com网站系统、路由系统和SWaT真实水处理测试台上验证方法的适用性和有效性",
+  "negative_result_or_admitted_limitation": "先前工作需要先验知识构建博弈,且需要专家手动设计博弈模型,无法满足安全系统实时响应需求",
+  "evidence_for_taste": [
+    "the attackers may carry out actions to maximize damage",
+    "very laborious, time-consuming and error-prone",
+    "modeling the defender at the granularity of components is more expressive",
+    "without the needs of help from the experts"
+  ],
+  "thinking_moves": [
+    "从系统级博弈细化到组件级博弈",
+    "将攻击检测与博弈求解解耦为独立模块",
+    "用深度学习预测代替先验概率",
+    "自动化生成博弈模型而非手动设计",
+    "引入Shapley值从系统效用推导组件收益"
+  ],
+  "topic_tags": [
+    "Bayesian-game-security",
+    "component-level-self-adaptation",
+    "automated-game-generation",
+    "industrial-control-systems-security",
+    "adversarial-modeling"
+  ],
+  "cites_own_work": [
+    "LZKG21"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文完整内容被截断,部分方法细节和实验结果未完整呈现。Zhi Jin为署名第五位的合作作者,但文中未明确其具体贡献。 | md truncated to head40k+tail20k"
+}

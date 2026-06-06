@@ -1,0 +1,39 @@
+{
+  "paper_id": "Towards Full-line Code Completion with Neural Language Models",
+  "doi": "10.48550/arxiv.2009.08603",
+  "title": "Towards Full-line Code Completion with Neural Language Models",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统代码补全需多次预测，效率低；提出整行补全可减少开发者操作次数",
+  "problem_framing": "定义新任务：给定部分代码上下文，预测完整的下一行代码而非单个token",
+  "key_insight": "Transformer语言模型可直接用于整行补全；意外发现语法树动作序列并不优于token序列",
+  "method_signature": "基于GPT架构的Transformer语言模型，在token/语法/BPE三种粒度上评估整行补全",
+  "evaluation_criteria": "准确率@1/5、MRR、BLEU-4、编辑相似度",
+  "negative_result_or_admitted_limitation": "语法方法并不优于token方法，且推理速度慢3倍以上",
+  "evidence_for_taste": [
+    "syntax-based approaches do not outperform token sequence-based ones",
+    "neural language models are capable of learning program grammar",
+    "nearly all of them are syntactically correct",
+    "syntax guidance is still very coarse",
+    "tremendously increase the size of the training set"
+  ],
+  "thinking_moves": [
+    "定义新任务边界：整行补全而非单token补全",
+    "将语义解析中的AST生成方法迁移到代码补全",
+    "通过消融对比揭示语法约束的负面效果",
+    "从时间效率角度否定语法方法可行性",
+    "意外结果促使重新评估语法信息的作用"
+  ],
+  "topic_tags": [
+    "整行代码补全",
+    "神经语言模型",
+    "Transformer",
+    "AST动作序列",
+    "语法约束"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者明确承认语法方法失败，且主动分析失败原因；发现BPE对标识符生成有负面影响"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Ma et al. - 2013 - Link Scanner Faulty link detection for wireless sensor networks",
+  "doi": null,
+  "title": "Link Scanner: Faulty Link Detection for Wireless Sensor Networks",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "大规模无线传感网络中动态监控链路退化困难,且现有方法只检测已用链路,遗漏潜在故障链路",
+  "problem_framing": "将链路故障检测形式化为:从单次探测洪泛的跳数失配推断所有链路的健康状态",
+  "key_insight": "故障链路会导致节点接收的跳数与拓扑期望失配,利用DLP概率推理可从失配信息逆向推断故障链路",
+  "method_signature": "单次广播探测+HopCount压缩编码+DLP逻辑规划推理故障链路",
+  "evaluation_criteria": "误报率(false positive)和漏报率(false negative),基于60节点测试床和2000节点仿真",
+  "negative_result_or_admitted_limitation": "约束反馈几乎无收益,高密度网络推理组合爆炸导致准确率下降至约14%漏报率",
+  "evidence_for_taste": [
+    "we are not allowed to set any more monitors",
+    "we can expect that there is one for each hop count number",
+    "it does not make sense that we are discussing about link features",
+    "a multiple-node dense network may bring much vagueness",
+    "feedback of constraints concretely increases the diagnosis accuracy"
+  ],
+  "thinking_moves": [
+    "将顺序检测改为单次探测推理:避免高传输开销",
+    "用HopCount代替节点ID降低压缩开销同时保留链路区分信息",
+    "将链路状态推断建模为DLP约束满足/优化问题",
+    "从现场观测中学习弱约束优先级参数化",
+    "发现稠密度增加时推理歧义组合爆炸的工程挑战"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-fault-detection",
+    "hop-count-inference",
+    "disjunctive-logic-programming",
+    "probabilistic-link-monitoring",
+    "probe-based-network-diagnosis"
+  ],
+  "cites_own_work": [
+    "Liu et al. 2011 GreenOrbs measurement",
+    "Ma et al. 2012 Sherlock local fusion"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供完整DOI和具体会议名称,只能推断为IEEE/ACM传感网或网络会议。摘要和正文完整,但Implementation小节提到venue的部分缺失。"
+}

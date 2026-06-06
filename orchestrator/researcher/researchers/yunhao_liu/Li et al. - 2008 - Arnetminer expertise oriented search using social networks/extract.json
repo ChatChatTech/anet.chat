@@ -1,0 +1,38 @@
+{
+  "paper_id": "Li et al. - 2008 - Arnetminer expertise oriented search using social networks",
+  "doi": null,
+  "title": "Arnetminer: expertise oriented search using social networks",
+  "year": 2008,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Funding agencies and researchers need to find experts, detect conflicts of interest, assign reviewers, but data is distributed and unstructured",
+  "problem_framing": "Expertise oriented search as ranking persons by topic relevance in a co-authorship social network with propagation",
+  "key_insight": "Relevance propagates through co-authorship edges; social network structure + individual profiles outperform local-only methods",
+  "method_signature": "Relevance propagation expert finding with two-stage heap-Dijkstra association search",
+  "evaluation_criteria": "P@K, MAP, bpref for expert finding; runtime seconds for association search",
+  "negative_result_or_admitted_limitation": "Name disambiguation only uses heuristic rules; cannot handle cases outside rule patterns",
+  "evidence_for_taste": [
+    "the more publications researchers have",
+    "relevance of a researcher is propagated",
+    "over a hundred times faster than the baseline",
+    "our methods can achieve high performances",
+    "our approach can achieve a high accuracy"
+  ],
+  "thinking_moves": [
+    "Convert expert finding into topic relevance calculation with propagation through network edges",
+    "Use heap-Dijkstra to precompute shortest paths, then enumerate near-shortest paths for efficiency",
+    "Combine local profile information with network structure via weighted co-authorship edges",
+    "Ground truth as committee membership of top conferences"
+  ],
+  "topic_tags": [
+    "expert-finding",
+    "social-network-analysis",
+    "co-authorship-network",
+    "association-search",
+    "information-retrieval"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "ViTAD_ Timing Violation-Aware Debugging of RTL Code using Large Language Models",
+  "doi": null,
+  "title": "ViTAD: Timing Violation-Aware Debugging of RTL Code using Large Language Models",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Manual RTL timing debugging is error-prone, inefficient, and relies heavily on scarce expert experience in VLSI design",
+  "problem_framing": "Timing violations cause functional failures; debugging requires pinpointing faulty paths, analyzing root causes, and modifying design without altering functionality",
+  "key_insight": "Joint modeling of code structure and timing via Signal Timing Dependency Graph enables LLM to reason about violation causes with explicit causality",
+  "method_signature": "STDG construction + violation path extraction + scenario-based knowledge retrieval + dynamic repair template generation",
+  "evaluation_criteria": "Fix Rate (FR) = c/n across 54 timing violation cases from open-source RTL projects",
+  "negative_result_or_admitted_limitation": "LLM cannot accurately determine control signals for asynchronous transmission; complex/large code exceeds LLM processing capacity",
+  "evidence_for_taste": [
+    "error-prone and inefficient due to limited engineer experience",
+    "cause descriptions greatly improve repair success",
+    "clear causality enables LLMs to infer repair strategies",
+    "incorporating iterative or backtracking mechanisms may improve",
+    "the provided prompts lack sufficient specificity"
+  ],
+  "thinking_moves": [
+    "把时序约束违规重新定义为可图化的信号依赖路径问题",
+    "显式因果链条比隐式领域知识更能引导LLM推理修复策略",
+    "先抽取结构特征再建时序关联, 而非端到端黑盒",
+    "承认LLM在异步传输和多因溯源上的能力边界",
+    "采用分级分类(类型→子场景→策略)组织领域知识以精确检索"
+  ],
+  "topic_tags": [
+    "RTL-timing-violation-debugging",
+    "LLM-assisted-hardware-repair",
+    "Signal-Timing-Dependency-Graph",
+    "VLSI-static-timing-analysis",
+    "domain-knowledge-retrieval-augmented-LLM"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "No DOI, publication year, or specific venue confirmed; extracted from paper formatting and references (DAC, IEEE/ACM conference formats). Li Kuang listed as second author (co-author role). Ablation study in Table 3 provides strongest evidence for causality being key driver."
+}

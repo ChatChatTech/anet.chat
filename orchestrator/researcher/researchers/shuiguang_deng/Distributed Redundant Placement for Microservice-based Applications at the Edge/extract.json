@@ -1,0 +1,41 @@
+{
+  "paper_id": "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+  "doi": "10.48550/arxiv.1911.03600",
+  "title": "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+  "year": 2019,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "MEC服务放置未考虑服务组合属性，且Kubernetes默认调度器在高异构边缘环境下无法保证高可用性。",
+  "problem_framing": "将分布式冗余放置建模为随机离散优化问题，通过蒙特卡洛采样近似期望值决定部署实例数和边缘站点选择。",
+  "key_insight": "冗余机制让同一候选服务部署到多个边缘站点，通过多实例访问实现更快的服务响应和高可用性保障。",
+  "method_signature": "SAA-RP框架结合GASS遗传算法求解边缘服务冗余放置问题。",
+  "evaluation_criteria": "基于EUA真实数据集对比响应时间与多种基准策略的优劣。",
+  "negative_result_or_admitted_limitation": "冗余并非总是有益，创建过多实例反而导致不可接受的高响应时间甚至系统不稳定。",
+  "evidence_for_taste": [
+    "不充分考虑服务的组合属性",
+    "高可用性无法得到保证",
+    "Kubernetes默认调度器的不足",
+    "冗余并非总是赢",
+    "过多样本导致不稳定"
+  ],
+  "thinking_moves": [
+    "指出现有工作将服务原子化处理而忽视组合相关性",
+    "从Kubernetes生产实践的局限性出发定位问题",
+    "将不确定性建模引入服务放置优化",
+    "以冗余为核心设计应对异构边缘的容错机制",
+    "通过真实数据集验证而非纯仿真实验"
+  ],
+  "topic_tags": [
+    "MEC服务放置",
+    "边缘计算冗余",
+    "容器化微服务",
+    "随机优化",
+    "Kubernetes调度"
+  ],
+  "cites_own_work": [
+    "Y. Chen et al., Mobile Networks and Applications 2019"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

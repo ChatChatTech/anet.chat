@@ -1,0 +1,38 @@
+{
+  "paper_id": "Benchmarking Sequential Visual Input Reasoning and Prediction in Multimodal Large Language Models",
+  "doi": "10.48550/arxiv.2310.13473",
+  "title": "Benchmarking Sequential Visual Input Reasoning and Prediction in Multimodal Large Language Models",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "MLLMs需要推理多帧视觉输入(如机器人决策场景),但现有评估仅关注单图感知",
+  "problem_framing": "设计三个预测任务(抽象模式/人类活动/物理交互)来量化MLLM的时序推理能力",
+  "key_insight": "图像训练的模型(LLaVA)反而优于视频训练的模型(Otter),简单架构泛化更强",
+  "method_signature": "三任务benchmark配三种LLM评判器(SGAE/PPE/MGAE)进行多维度评估",
+  "evaluation_criteria": "逻辑一致性/准确性/特异性/可信度/多样性等维度,LLM作为裁判打分",
+  "negative_result_or_admitted_limitation": "所有模型在抽象模式推理上表现极差,视频训练模型(Otter)反而最差",
+  "evidence_for_taste": [
+    "surprisngly different outcomes",
+    "LLaVA demonstrates exceptional performance",
+    "All models struggle to grasp abstract pattern reasoning",
+    "Models perform poorly in physical interaction prediction",
+    "high propensity for repetitive text generation"
+  ],
+  "thinking_moves": [
+    "从应用场景(机器人决策)反推能力缺口,将单图评估扩展为序列预测",
+    "对比不同训练范式(图像vs视频)对预测任务的副作用",
+    "用LLM作为评判器解决生成式模型评估难题",
+    "按任务性质(确定性/多可能/概率)设计不同评估范式"
+  ],
+  "topic_tags": [
+    "MLLM预eval",
+    "序列视觉推理",
+    "未来预测",
+    "多模态基准测试",
+    "LLM-as-Judge"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

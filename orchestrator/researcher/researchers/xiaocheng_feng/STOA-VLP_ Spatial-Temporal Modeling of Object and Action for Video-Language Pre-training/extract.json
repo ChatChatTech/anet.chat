@@ -1,0 +1,39 @@
+{
+  "paper_id": "STOA-VLP_ Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training",
+  "doi": "10.48550/arxiv.2302.09736",
+  "title": "STOA-VLP: Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有视频-语言预训练模型只建模全局对齐,缺少细粒度信息,导致处理动态物体运动和多动作交互时失败",
+  "problem_framing": "将细粒度视频理解问题形式化为:1)时序变化的物体轨迹建模 2)空间重叠的多动作特征提取",
+  "key_insight": "物体跨帧轨迹与多动作特征需跨时空维度联合建模,通过OTA和ASP辅助任务实现粗到细的视频-文本对齐",
+  "method_signature": "四编码器架构+双辅助任务的预训练框架:物体轨迹编码器、时空动作编码器、OTA和ASP对齐任务",
+  "evaluation_criteria": "视频字幕(Rouge-L 68.4)、文本-视频检索(R@1 50.1)、视频问答(MSVD Acc 50.8%)",
+  "negative_result_or_admitted_limitation": "现有方法用固定边界框建模物体,不足以理解视频中物体的移动;只建模单个动作导致信息损失",
+  "evidence_for_t兴趣": [
+    "objects are usually moving and changing across time",
+    "leading to an insufficient understanding of object movements",
+    "ignoring the multiple actions triggered by different object interactions",
+    "extracting object patch features from deeper layers benefits the retrieval task more",
+    "preserve more high-level semantic information which is more helpful for modeling"
+  ],
+  "thinking_moves": [
+    "从视频captioning和VQA任务的失败案例反推细粒度建模缺失",
+    "将物体运动问题从静态边界框扩展为时序轨迹表示",
+    "将多动作识别问题从单一动作预测转化为集合匹配问题",
+    "通过 ablation 验证深层特征包含更多语义信息",
+    "用 bipartite matching 将soft alignment转化为可微目标"
+  ],
+  "topic_tags": [
+    "video-language-pretraining",
+    "object-trajectory-tracking",
+    "multi-action-recognition",
+    "fine-grained-crossmodal-alignment",
+    "spatial-temporal-modeling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

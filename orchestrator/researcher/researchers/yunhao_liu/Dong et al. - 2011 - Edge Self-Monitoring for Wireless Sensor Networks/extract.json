@@ -1,0 +1,41 @@
+{
+  "paper_id": "Dong et al. - 2011 - Edge Self-Monitoring for Wireless Sensor Networks",
+  "doi": null,
+  "title": "Edge Self-Monitoring for Wireless Sensor Networks",
+  "year": 2011,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有方案假设充足节点进行监控,但大规模传感器网络中难以满足,需优化激活最少节点实现自监控",
+  "problem_framing": "将最小自监控拓扑问题形式化为MPMSP:在给定图上激活最少睡眠节点使所有边达到k监控能力",
+  "key_insight": "问题在Δ≥3时NP完全,但可用几何 lune性质构造PTAS,Δ≤2则多项式可解,Δ=3是复杂度分界阈值",
+  "method_signature": "基于几何划分和监控集有界图设计PTAS;基于MIS和贪心构造分布式近似算法LME/LDF",
+  "evaluation_criteria": "补丁集大小、运行轮数、与最优解比值、随TD/MN规模化表现",
+  "negative_result_or_admitted_limitation": "算法基于连通性信息,在真实无线干扰和敌对攻击下需额外机制;无法消除干扰影响只能容忍",
+  "evidence_for_taste": [
+    "three additional nodes... optimal strategy, only one node is needed",
+    "we cannot eliminate the possibility of selecting malicious nodes",
+    "interference also affects the node selection strategy",
+    "SLAM focuses on shortening the monitoring time... while our work considers reducing the number of nodes"
+  ],
+  "thinking_moves": [
+    "从资源约束痛点反向定义优化目标:最小化激活节点数而非最小化监控时间",
+    "通过Δ阈值精确刻画问题复杂度边界:Δ≥3为NP完全,Δ≤2为多项式可解",
+    "利用UDG几何表示将问题转化为 lune hitting set 并构造PTAS",
+    "先证最坏情况复杂度下界,再为实际网络设计分布式近似算法",
+    "区分优化目标与补充机制:拓扑设计与干扰容忍/安全验证分开处理"
+  ],
+  "topic_tags": [
+    "WSN-security",
+    "local-monitoring",
+    "NP-completeness",
+    "distributed-approximation",
+    "topology-optimization"
+  ],
+  "cites_own_work": [
+    "Dong et al. 2008 (MobiHoc preliminary version)",
+    "Liu et al. 2008 (Passive diagnosis, SenSys)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,44 @@
+{
+  "paper_id": "Liu et al. - 2004 - Building Efficient Overlays",
+  "doi": null,
+  "title": "Building Efficient Overlays",
+  "year": 2004,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "P2P流量已占互联网最大份额，但随机选择逻辑邻居导致Overlay与物理网络严重失配，造成大量不必要的流量",
+  "problem_framing": "把拓扑失配定义为Overlay逻辑拓扑与物理底层网络之间的结构性错位，使得同一物理链路被同一消息重复遍历",
+  "key_insight": "通过在局部区域探测延迟并重构逻辑邻居，可同时降低流量成本和查询响应时间，而不缩小搜索范围",
+  "method_signature": "AOTO用最小生成树消除冗余消息复制；LTM用TTL2探测器识别低效链路并切断",
+  "evaluation_criteria": "每查询平均流量成本、查询平均响应时间",
+  "negative_result_or_admitted_limitation": "LTM虽收敛更快、流量节省更多，但其要求全网时钟同步，需额外运行NTP协议，产生额外开销",
+  "evidence_for_taste": [
+    "the traffic cost has already been significantly reduced",
+    "LTM outperforms AOTO",
+    "The hiding factor of AOTO's overhead is smaller than LTM",
+    "the optimal LTM frequency is determined by the average peer lifetime and query frequency",
+    "AOTO may reduce traffic cost by around 65% while LTM reduces traffic cost by 85%"
+  ],
+  "thinking_moves": [
+    "从实测P2P流量数据反推拓扑失配的严重性",
+    "用具体数值对比展示不同Overlay拓扑结构的流量差异",
+    "提出轻量级、分布式、无需全局知识的优化方案",
+    "通过模拟收敛速度比较两种方案的动态特性",
+    "承认LTM依赖时钟同步的工程代价"
+  ],
+  "topic_tags": [
+    "P2P-overlay-topology-mismatch",
+    "adaptive-overlay-optimization",
+    "location-aware-topology-matching",
+    "flooding-search-efficiency",
+    "distributed-overlay-construction"
+  ],
+  "cites_own_work": [
+    "[11] Location-Aware Topology Matching INFOCOM 2004",
+    "[13] AOTO GLOBECOM 2003",
+    "[12] Bipartite P2P IPDPS 2004",
+    "[14] Distributed Approach ICDCS 2004"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文引用了GLOBECOM、INFOCOM、ICDCS等会议论文，但正文中未明确说明本文发表的具体会议 venues；根据论文结构和引用关系推断为国际会议论文"
+}

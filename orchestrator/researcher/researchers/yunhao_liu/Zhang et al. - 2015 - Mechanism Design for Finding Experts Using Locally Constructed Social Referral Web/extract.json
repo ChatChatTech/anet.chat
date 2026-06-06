@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zhang et al. - 2015 - Mechanism Design for Finding Experts Using Locally Constructed Social Referral Web",
+  "doi": null,
+  "title": "Mechanism Design for Finding Experts Using Locally Constructed Social Referral Web",
+  "year": 2015,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "社交网络中专家查找需求普遍,但现有方法无法激励中继者主动传递信息,导致链式搜索失败率极高",
+  "problem_framing": "将分布式专家查找建模为机制设计问题,假设用户自私理性且有隐私成本,求解有限预算下的最优路径",
+  "key_insight": "利用同质性原理,用profile相似度预测结识概率,通过精心设计的补偿+奖金支付函数确保策略-proof性",
+  "method_signature": "基于相似度的本地贪心搜索 + 真实可信支付机制(M=(O,p))",
+  "evaluation_criteria": "成功率(~90% vs 20%)、路径长度(中位数6跳)、成本效率(20% vs untruthful)",
+  "negative_result_or_admitted_limitation": "当用户声明成本时预算可能无界;发起者仍难以准确估计路径长度和所需预算",
+  "evidence_for_taste": [
+    "participants are not sufficiently motivated",
+    "the main course of the failure",
+    "our mechanism is truthful",
+    "profile similarity based strategy outperforms",
+    "similarly matches the well-known small-world",
+    "success rate of about 90 percent"
+  ],
+  "thinking_moves": [
+    "诊断真实失败原因:不是拓扑结构问题,而是参与者缺乏激励",
+    "将搜索问题重构为机制设计问题,引入支付函数使参与者在真实报告成本时获得最大效用",
+    "从拓扑距离转向属性相似度,用logistic回归学习结识概率参数",
+    "理论证明truthfulness后再做大规模实验验证"
+  ],
+  "topic_tags": [
+    "mechanism-design-strategyproof",
+    "social-referral-search",
+    "profile-similarity-acquaintance",
+    "homophily-small-world",
+    "local-search-incentive"
+  ],
+  "cites_own_work": [
+    "[11] Lan Zhang et al., INFOCOM 2012"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

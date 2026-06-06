@@ -1,0 +1,38 @@
+{
+  "paper_id": "Liu et al. - 2013 - End-to-End Delay Measurement in Wireless Sensor Networks without Synchronization",
+  "doi": null,
+  "title": "End-to-end Delay Measurement in Wireless Sensor Networks without Synchronization",
+  "year": 2013,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "大规模无线传感网(CitySee 1200节点)部署中,现有延迟测量方案要求严格时钟同步,代价高昂且链路不可靠时易失效",
+  "problem_framing": "端到端延迟测量问题:如何利用少量锚点包恢复完整延迟序列,同时容忍时钟漂移和乱序到达",
+  "key_insight": "将直接延迟累加问题转化为相邻包间延迟差分问题,差分运算中时钟偏斜效应可部分消除,再以少量锚点包校准绝对值",
+  "method_signature": "SDR:两阶段顺序差分恢复(Stage1计算相邻包延迟差分,Stage2用锚点包恢复绝对延迟)",
+  "evaluation_criteria": "相对于逐跳累加真值的误差百分比,均值0.013%为优",
+  "negative_result_or_admitted_limitation": "时钟偏斜估计需要约30分钟才能收敛稳定,初期抖动严重",
+  "evidence_for_taste": [
+    "现有方法对时钟同步要求严格",
+    "直接累加各跳不同时钟的计数器会\"lead to significant measurement errors\"",
+    "时延分布\"turns to be more unstable as path length increases\"",
+    "单锚点易受\"random errors due to unreliable hardware\"",
+    "CTP拓扑比固定拓扑\"more dynamic\"且存在outliers可能是\"routing loops\""
+  ],
+  "thinking_moves": [
+    "把端到端延迟累加问题逆转为差分序列恢复问题",
+    "利用时钟偏斜的时间稳定性假设进行长期估计",
+    "承认方法局限性:锚点开销虽小但仍需额外传输"
+  ],
+  "topic_tags": [
+    "WSN延迟测量",
+    "无同步时钟",
+    "顺序差分恢复",
+    "大规模传感网运维"
+  ],
+  "cites_own_work": [
+    "CitySee urban CO2 monitoring [8]"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少具体venue信息,根据结构判断为会议论文但无法确认;方法细节(detailed equations)在原文中部分图片化,完整公式推断困难"
+}

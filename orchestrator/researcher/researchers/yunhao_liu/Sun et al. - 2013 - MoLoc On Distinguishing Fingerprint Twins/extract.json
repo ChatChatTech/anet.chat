@@ -1,0 +1,41 @@
+{
+  "paper_id": "Sun et al. - 2013 - MoLoc On Distinguishing Fingerprint Twins",
+  "doi": null,
+  "title": "MoLoc: On Distinguishing Fingerprint Twins",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "室内定位依赖RSS指纹，但相同指纹导致定位错误。现有方法忽视此根本问题。",
+  "problem_framing": "指纹混淆：AP不足、信号时变、多径效应导致位置指纹不唯一。",
+  "key_insight": "用户运动模式（方向、位移）可为RSS指纹增加多样性，用于区分相似指纹位置。",
+  "method_signature": "结合RSS指纹匹配与概率运动匹配的移动辅助定位，辅以众包运动数据库。",
+  "evaluation_criteria": "定位误差（估计位置与真实距离）、准确率百分比、均值误差、最大误差。",
+  "negative_result_or_admitted_limitation": "初始定位错误时MoLoc仍存在大误差，因用户运动尚不可用。",
+  "evidence_for_taste": [
+    "errors are bounded by 20°",
+    "方向误差限制在20°以内",
+    "offset errors bounded by 3m",
+    "distribution fit to Gaussian",
+    "early attempt at exploiting user motion in the localization phase",
+    "reduces the large errors caused by fingerprint ambiguity",
+    "we discover an important insight: they are caused primarily by initial errors"
+  ],
+  "thinking_moves": [
+    "识别出前人忽视的根本问题：指纹混淆",
+    "将定位问题重新框架为结合运动模式的混合推理",
+    "通过众包解决运动数据库构建的效率与一致性问题",
+    "用概率算法消除不同测量维度间的偏差",
+    "从定位结果中抽取导致大误差的位置对进行专项分析"
+  ],
+  "topic_tags": [
+    "WiFi指纹定位",
+    "指纹混淆问题",
+    "移动辅助定位",
+    "运动数据库众包构建",
+    "概率运动匹配"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

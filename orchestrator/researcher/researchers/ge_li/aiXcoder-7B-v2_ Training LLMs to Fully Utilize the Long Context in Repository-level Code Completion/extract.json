@@ -1,0 +1,41 @@
+{
+  "paper_id": "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion",
+  "doi": "10.48550/arxiv.2503.15301",
+  "title": "Aligning LLMs to Fully Utilize the Cross-file Context in Repository-level Code Completion",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLMs在仓库级代码补全中难以充分利用跨文件上下文中的信息",
+  "problem_framing": "预训练依赖近邻上下文与代码补全需要跨文件长程依赖之间存在对齐错配",
+  "key_insight": "通过构造上下文感知代码(跨文件API调用和相似代码片段)强制LLMs主动查找跨文件相关信息",
+  "method_signature": "COLA两阶段训练(SFT+DPO)基于132K仓库级补全数据集",
+  "evaluation_criteria": "Exact Match和BLEU在COLA-132K测试集和CrossCodeEval基准上评估",
+  "negative_result_or_admitted_limitation": "COLA-132K仅覆盖两种显式关联的上下文感知代码，隐式关系难以定义和收集",
+  "evidence_for_taste": [
+    "LLMs struggle to fully utilize",
+    "misalignment between pre-training",
+    "context-aware code",
+    "push LLMs to actively utilize",
+    "purely data-driven solution",
+    "our work and these recent works are complementary"
+  ],
+  "thinking_moves": [
+    "通过具体失败案例诊断LLMs的跨文件上下文利用缺陷",
+    "将问题重新框架为预训练-下游任务的对齐错配",
+    "用数据驱动方式强制模型必须从长上下文中检索信息才能降低损失",
+    "承认方法只覆盖显式关联类型，隐式关系留给未来工作"
+  ],
+  "topic_tags": [
+    "long-context-alignment",
+    "cross-file-code-completion",
+    "LLM-fine-tuning",
+    "preference-optimization",
+    "code-repository-context"
+  ],
+  "cites_own_work": [
+    "aiXcoder-7B"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

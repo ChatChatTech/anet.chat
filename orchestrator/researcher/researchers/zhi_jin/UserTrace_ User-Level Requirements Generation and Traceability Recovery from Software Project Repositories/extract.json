@@ -1,0 +1,43 @@
+{
+  "paper_id": "UserTrace_ User-Level Requirements Generation and Traceability Recovery from Software Project Repositories",
+  "doi": "10.48550/arxiv.2509.11238",
+  "title": "UserTrace: User-Level Requirements Generation and Traceability Recovery from Software Project Repositories",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "AI生成代码时代,66%组织面临可维护性挑战,46%开发者缺需求文档,人工编写需求和维护可追溯性仍劳动密集",
+  "problem_framing": "现有自动化代码摘要生成实现级需求(IR)而非用户级需求(UR),可追溯性方法忽视项目演化,导致UR和活链接缺失",
+  "key_insight": "通过多智能体协作框架协调专门代理,利用依赖图结构化和迭代验证,将代码实现级语义抽象为用户意图级需求",
+  "method_signature": "三阶段多智能体协作(结构化→IR推导→UR生成),四专业代理协同(审阅者/搜索者/写作/验证)",
+  "evaluation_criteria": "UR质量:完整性/正确性/有用性(文档视角);集合视角:精确率/召回率/F1;可追溯性:分组准确率;用户研究:验证准确率/时间/满意度",
+  "negative_result_or_admitted_limitation": "LLM在仓库级长上下文场景下未获领域知识时倾向于幻觉不存在的代码单元,生成描述类似IR而非UR",
+  "evidence_for_taste": [
+    "LLMs tend to hallucinate non-existent code units",
+    "descriptions that resemble IRs rather than URs",
+    "focus on how the code works rather than why",
+    "lack sufficient generalization capability",
+    "requires strategic context and dependency management"
+  ],
+  "thinking_moves": [
+    "将用户级需求问题定义为首要工程目标而非代码摘要的副产品",
+    "用四智能体分工处理依赖管理/业务知识检索/抽象生成/质量验证的不同认知挑战",
+    "把IR到UR的抽象过程建模为需要外部业务知识参与的迭代协作而非简单同义改写",
+    "提出活链接概念强调可追溯性需随项目演化动态更新而非一次性静态建立",
+    "用验证-反馈机制确保生成UR同时忠于代码结构和业务需求"
+  ],
+  "topic_tags": [
+    "用户级需求生成",
+    "代码可追溯性恢复",
+    "多智能体LLM系统",
+    "需求工程自动化",
+    "AI辅助软件开发"
+  ],
+  "cites_own_work": [
+    "Jin et al. 2024 (MARE)",
+    "Jin et al. 2025 (iReDev)",
+    "Jin et al. 2024 (CPS requirements)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

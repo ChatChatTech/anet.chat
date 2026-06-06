@@ -1,0 +1,43 @@
+{
+  "paper_id": "Yang et al. - 2015 - Anti-counterfeiting via federated RFID tags' fingerprints and geometric relationships",
+  "doi": null,
+  "title": "Anti-counterfeiting via Federated RFID tags' Fingerprints and Geometric Relationships",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有RFID安全协议对无源标签负担过重,且遭受协议层攻击,在线验证需持续投入服务器成本",
+  "problem_framing": "如何利用COTS设备实现低成本、离线、抗协议层攻击的真品验证",
+  "key_insight": "利用相位指纹差的差分消除-reader影响,联合联邦标签几何约束实现离线验证",
+  "method_signature": "相位指纹提取+高斯牛顿非线性最小二乘+双曲线定位+联邦标签几何约束",
+  "evaluation_criteria": "分类成功率CSR、等错误率EER、对抗克隆攻击的经济成本",
+  "negative_result_or_admitted_limitation": "当标签数>5000时CSR降至约55%,相位分辨率限制指纹空间为4096",
+  "evidence_for_taste": [
+    "cannot tamper fingerprints in tags' memories",
+    "reader position is randomly chosen",
+    "both the cloning cost and huge computations make it hard",
+    "the variance is so small (< 0.002 radians)",
+    "the difference is able to eliminate the reader's diversity"
+  ],
+  "thinking_moves": [
+    "将'分离挑战'(reader-tag耦合)从难题转化为安全优势",
+    "利用几何约束将模糊的指纹匹配问题重新frame为定位聚类问题",
+    "把对抗者能力边界(无法获取私钥)作为系统安全假设前提",
+    "通过Coupon Collectors Problem量化对抗者攻击成本",
+    "从单标签指纹扩展到联邦标签几何关系的组合安全"
+  ],
+  "topic_tags": [
+    "RFID-anti-counterfeiting",
+    "phase-fingerprint",
+    "hyperbola-localization",
+    "geometric-constraint-validation",
+    "federated-tags"
+  ],
+  "cites_own_work": [
+    "Yang et al. 2014 (Tagoram)",
+    "Zanetti et al. 2010",
+    "Ma et al. 2014 (GenePrint)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

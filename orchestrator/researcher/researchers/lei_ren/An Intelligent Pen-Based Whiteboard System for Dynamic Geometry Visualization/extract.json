@@ -1,0 +1,40 @@
+{
+  "paper_id": "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization",
+  "doi": null,
+  "title": "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization",
+  "year": 2007,
+  "venue": "Journal of Software",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "现有电子课件系统无法满足课堂教学中师生间及时、高效的互动需求，尤其是几何教学",
+  "problem_framing": "将连续书写板书、自由勾画图形、动态几何定理演示定义为需要自然高效交互的系统问题",
+  "key_insight": "笔交互具备连续性与隐含性特点，结合上下文感知智能推测用户意图，可实现自然高效的交互",
+  "method_signature": "基于笔式交互、隐式状态切换、知识库推理、扩展LIM0动态几何约束求解的白板系统",
+  "evaluation_criteria": "任务完成时间与可用性问卷调查评分比较",
+  "negative_result_or_admitted_limitation": "IPW可靠性评分(3.91)低于CPT(4.42)，系统稳定性不足，需要扩充识别库",
+  "evidence_for_taste": [
+    "WIMP范式适于离散性交互而不能很好地适应连续性交互",
+    "笔交互具备连续性与隐含性特点",
+    "动态几何有助于增强学生的理解力",
+    "基于交互上下文与知识库中的规则对笔画进行识别",
+    "教师通过IPW直接与胶片交互不需要在电脑与黑板之间切换"
+  ],
+  "thinking_moves": [
+    "把连续性交互需求归约为笔式隐式交互的设计问题",
+    "通过交互上下文与知识库谓词逻辑实现状态自动切换以保持交互连续性",
+    "将动态几何求解问题形式化为约束满足问题并扩展LIM0算法求解",
+    "以用户意图推测替代显式命令选择来提高交互效率"
+  ],
+  "topic_tags": [
+    "pen-based interaction",
+    "dynamic geometry",
+    "sketch recognition",
+    "context-aware HCI",
+    "computer-aided teaching"
+  ],
+  "cites_own_work": [
+    "(刘媛媛,林强,戴国忠. PIGP: A pen-based intelligent dynamic lecture system for geometry teaching, 2007)",
+    "(林强,任磊,陈颖等. 基于拓展LIM0算法的智能动态几何软件设计, 计算机学报, 2006)"
+  ],
+  "extraction_quality": "full"
+}

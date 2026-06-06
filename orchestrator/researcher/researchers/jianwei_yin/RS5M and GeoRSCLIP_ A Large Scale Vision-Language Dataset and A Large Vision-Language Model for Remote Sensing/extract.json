@@ -1,0 +1,37 @@
+{
+  "paper_id": "RS5M and GeoRSCLIP_ A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing",
+  "doi": "10.48550/arxiv.2306.11300",
+  "title": "RS5M and GeoRSCLIP: A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "通用VLM在常见物体上训练,在遥感等专业领域表现不佳,领域迁移困难",
+  "problem_framing": "提出DVLM框架,将通用视觉-语言模型知识迁移到遥感下游任务",
+  "key_insight": "通过构建大规模遥感图像-文本配对数据集RS5M并微调CLIP,可有效弥合领域差距",
+  "method_signature": "过滤大规模图文数据集+BLIP2为遥感图生成caption+PEFT微调CLIP",
+  "evaluation_criteria": "零样本分类准确率、跨模态检索召回率、语义定位指标",
+  "negative_result_or_admitted_limitation": "PEFT方法不能达到全量微调的同等效果;数据存在地理分布不均问题",
+  "evidence_for_taste": [
+    "they do not consistently achieve the same level of effectiveness",
+    "the RS3 subset may contain wrong captions or misleading information",
+    "around 0.8% of images in the sampled RS5M images are outliers",
+    "low image density areas are overlapped with many underdevelopment areas"
+  ],
+  "thinking_moves": [
+    "先构建领域数据集解决数据稀缺瓶颈,再通过PEFT实现高效迁移",
+    "用旋转不变性准则筛选caption,排除幻觉文本",
+    "区分PUB11(航拍图)和RS3(卫星图)分析各自贡献",
+    "承认PEFT与全量微调存在效果差距,指出效率优势作为补偿"
+  ],
+  "topic_tags": [
+    "遥感视觉-语言模型",
+    "领域自适应",
+    "大规模图文数据集构建",
+    "参数高效微调",
+    "零样本遥感分类"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

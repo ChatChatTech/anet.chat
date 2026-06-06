@@ -1,0 +1,36 @@
+{
+  "paper_id": "Steganographic visual story with mutual-perceived joint attention",
+  "doi": "10.1186/s13640-020-00543-1",
+  "title": "Steganographic visual story with mutual-perceived joint attention",
+  "year": 2021,
+  "venue": "EURASIP Journal on Image and Video Processing",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "社交媒体易传播难追踪，用户需在透明环境下安全交换敏感信息",
+  "problem_framing": "用视觉故事生成代替传统文本隐写，将秘密信息嵌入自动生成的图片叙事中",
+  "key_insight": "通过互感知联合注意力(MPJA)建模图像与文本的相互感知关系，动态调整每词嵌入位数以保语义",
+  "method_signature": "ResNet+Bi-LSTM编码图像序列 + MPJA跨模态注意力 + 自适应变长隐写",
+  "evaluation_criteria": "BLEU/METEOR评估文本质量；t-SNE语义空间分布和CNN检测准确率评估安全性；人类主观评判",
+  "negative_result_or_admitted_limitation": "固定长度嵌入导致文本质量急剧下降；图像压缩会轻微影响提取准确性",
+  "evidence_for_taste": [
+    "the quality of generated text decreases as ER increases",
+    "fixed-length secret bits...not all the words in sentences are suitable",
+    "force embedding will only make the quality of generated text poor",
+    "the stego text is indistinguishable from the text created by humans",
+    "accuracy of correct discrimination is similar to random guessing"
+  ],
+  "thinking_moves": [
+    "把隐写问题重新定义为视觉叙事生成问题",
+    "用图像序列替代词作为解码密钥以提高鲁棒性",
+    "通过方差阈值自适应选择每词嵌入位数以保持语义连贯"
+  ],
+  "topic_tags": [
+    "text-steganography",
+    "visual-story-generation",
+    "mutual-attention-mechanism",
+    "adaptive-embedding",
+    "cross-modal-hiding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

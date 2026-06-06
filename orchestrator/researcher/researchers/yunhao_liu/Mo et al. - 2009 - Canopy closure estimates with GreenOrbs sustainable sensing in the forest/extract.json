@@ -1,0 +1,40 @@
+{
+  "paper_id": "Mo et al. - 2009 - Canopy closure estimates with GreenOrbs sustainable sensing in the forest",
+  "doi": null,
+  "title": "Canopy Closure Estimates with GreenOrbs: Sustainable Sensing in the Forest",
+  "year": 2009,
+  "venue": "SenSys'09",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传统测量方法(人工、航空、卫星)无法在广阔森林中精确且可扩展地估算冠层郁闭度",
+  "problem_framing": "将冠层郁闭度估算问题重新定义为随机部署传感器的光/阴影二分类问题,利用蒙特卡罗理论估计",
+  "key_insight": "用大量廉价传感器随机采样,通过计算阴影中传感器比例来估计冠层郁闭度,而非直接测量树木形态",
+  "method_signature": "预训练标定+线性判别模型+轻量级状态监测+太阳高度角翻译模型",
+  "evaluation_criteria": "相对误差与真实冠层郁闭度比较,达2.27%误差",
+  "negative_result_or_admitted_limitation": "参考节点失效会导致标定问题;目前设计仍处于早期阶段,新增节点需重新训练",
+  "evidence_for_taste": [
+    "除非传感器读数经过适当标定",
+    "仅通过感知照度无法确定状态",
+    "当前设计仍处于早期阶段",
+    "目前无法解决反射或折射问题",
+    "我们的设计无法解决"
+  ],
+  "thinking_moves": [
+    "把郁闭度估算重新 frame 成概率采样问题,引用蒙特卡罗理论作为理论基础",
+    "先通过实验揭示仪器误差不可忽视,再提出标定方法",
+    "从\"每个节点汇报\"降级到\"仅状态变化时汇报\",降低通信开销",
+    "通过观察状态转换频率(2.25次/天)论证并发传输问题可忽略"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-forest",
+    "canopy-closure-estimation",
+    "distributed-calibration",
+    "Monte-Carlo-sampling",
+    "green-monitoring"
+  ],
+  "cites_own_work": [
+    "GreenOrbs project website [2]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

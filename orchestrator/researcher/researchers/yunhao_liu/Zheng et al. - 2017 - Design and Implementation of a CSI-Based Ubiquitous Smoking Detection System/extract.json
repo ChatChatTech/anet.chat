@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zheng et al. - 2017 - Design and Implementation of a CSI-Based Ubiquitous Smoking Detection System",
+  "doi": null,
+  "title": "Design and Implementation of a CSI-Based Ubiquitous Smoking Detection System",
+  "year": 2017,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "室内禁烟政策需要无处不在的检测手段,但现有方法在非视距环境中失效",
+  "problem_framing": "利用WiFi信号CSI实现被动式吸烟行为检测,无需目标配合",
+  "key_insight": "吸烟是具有固定顺序的节律性复合动作,可通过时序模式而非个体手势识别来检测",
+  "method_signature": "CSI帧前景检测 + 自相关周期分析 + 多天线融合",
+  "evaluation_criteria": "TPR/FPR、ROC曲线、不同场景下准确率",
+  "negative_result_or_admitted_limitation": "穿墙场景准确率急剧下降(FPR=0.01时TPR仅0.304),单人天线方案在困难场景不稳健",
+  "evidence_for_taste": [
+    "different subcarriers are sensitive to the motions of different body parts",
+    "smoking is a rhythmic activity",
+    "avoiding the target-dependent training set",
+    "leverage the diversity of multiple antennas",
+    "The accuracy degrades with distance increasing",
+    "one antenna may fail to capture the smoking motions"
+  ],
+  "thinking_moves": [
+    "将图像处理中的前景检测方法跨域迁移到CSI信号分析",
+    "把个体手势识别问题重构为群体节律模式检测问题",
+    "用自相关而非傅里叶变换来容忍缺频的基础频率",
+    "先验证可行性再设计系统,实验驱动的方法论"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-smoking-detection",
+    "device-free-sensing",
+    "periodicity-analysis",
+    "foreground-detection",
+    "multi-antenna-diversity"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

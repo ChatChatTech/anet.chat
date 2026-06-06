@@ -1,0 +1,38 @@
+{
+  "paper_id": "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4404783962",
+  "doi": "10.18653/v1/2024.emnlp-industry.50",
+  "title": "Breaking the Hourglass Phenomenon of Residual Quantization: Enhancing the Upper Bound of Generative Retrieval",
+  "year": 2024,
+  "venue": "EMNLP Industry Track",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "RQ-based semantic IDs suffer hourglass phenomenon: intermediate tokens overly concentrated, hindering full utilization of generative retrieval in e-commerce.",
+  "problem_framing": "Define as path sparsity and long-tailed distribution in intermediate codebook layers causing representational capacity bottleneck for GR.",
+  "key_insight": "Root cause lies in progressive quantization of high-dimensional residuals, naturally producing non-uniform then uniform layer distributions.",
+  "method_signature": "Two-layer removal: heuristic (drop layer 2 entirely) vs adaptive variable-length token (remove top@K tokens from layer 2).",
+  "evaluation_criteria": "Recall@K (K=1,3,5,10,30,50) on large-scale e-commerce platform; invalid ID ratio via beam search.",
+  "negative_result_or_admitted_limitation": "While simple and efficient, the method is not optimal and can only alleviate, but not completely resolve, the hourglass phenomenon.",
+  "evidence_for_taste": [
+    "hourglass effect is highly pronounced",
+    "path sparsity and long-tail distributions as the primary causes",
+    "while this method is simple and efficient, it is not optimal",
+    "the performance upper limit of RQ-based methods largely depends on the generation of SID",
+    "significantly enhances model performance by improving codebook utilization"
+  ],
+  "thinking_moves": [
+    "从工程异常反推底层量化机制缺陷",
+    "通过熵/基尼系数/标准差统计指标验证长尾分布假设",
+    "先分析残差量化的数学特性解释现象成因",
+    "提出轻量修复方案并承认非最优性质"
+  ],
+  "topic_tags": [
+    "residual-quantization",
+    "generative-retrieval",
+    "hourglass-phenomenon",
+    "e-commerce-recommendation",
+    "long-tail-distribution"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

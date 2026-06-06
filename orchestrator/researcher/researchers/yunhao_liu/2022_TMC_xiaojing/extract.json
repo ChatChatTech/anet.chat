@@ -1,0 +1,40 @@
+{
+  "paper_id": "2022_TMC_xiaojing",
+  "doi": null,
+  "title": "ThumbUp: Secure Smartwatch Controller for Smart Homes using Simple Hand Gestures",
+  "year": 2022,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "智能家居控制缺乏兼顾安全性与便捷性的方案，现有语音/WiFi方法受环境影响大",
+  "problem_framing": "将简单手势+智能手表IMU信号构建为双因素身份认证系统，需解决信号弱、用户行为漂移问题",
+  "key_insight": "手指/手掌细微动作由肌肉潜意识控制，产生唯一生物特征且难以模仿",
+  "method_signature": "BiLSTM+Attention用户识别，Auto-Encoder隐私过滤，RF上下文命令分析",
+  "evaluation_criteria": "用户分类准确率、EER防伪造率、命令识别准确率、用户友好度",
+  "negative_result_or_admitted_limitation": "身体运动产生巨大干扰，行走奔跑时系统鲁棒性不足需改进；冷启动仅用10样本限制了初期精度",
+  "evidence_for_taste": [
+    "diversity of different users and the consistency of a single user",
+    "simplistic movements such as softly waving one finger are useless",
+    "The threshold is difficult to select in practical varying noise scenarios",
+    "body motion of users brings a huge disruption to our system",
+    "avoid frequent model resets"
+  ],
+  "thinking_moves": [
+    "把肌肉运动当作生物特征利用：肌肉由潜意识控制，难自主修改",
+    "在便捷性与唯一性之间设计权衡：太简单无法辨识，太复杂不便使用",
+    "从信号处理角度解决用户行为漂移：自校准+缓存更新机制",
+    "借鉴雷达CFAR方法做动态阈值检测：从工程领域迁移信号检测技术"
+  ],
+  "topic_tags": [
+    "IMU-gesture-biometrics",
+    "smartwatch-authentication",
+    "BiLSTM-attention",
+    "autoencoder-privacy-filter",
+    "smart-home-control"
+  ],
+  "cites_own_work": [
+    "ThumbUp: Identification and authentication by smartwatch using simple hand gestures (PerCom 2020)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

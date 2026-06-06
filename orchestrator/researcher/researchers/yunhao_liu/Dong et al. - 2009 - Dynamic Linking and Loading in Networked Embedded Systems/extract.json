@@ -1,0 +1,42 @@
+{
+  "paper_id": "Dong et al. - 2009 - Dynamic Linking and Loading in Networked Embedded Systems",
+  "doi": null,
+  "title": "Dynamic Linking and Loading in Networked Embedded Systems",
+  "year": 2009,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WSN nodes deployed in inaccessible environments need over-the-air reprogramming, but existing approaches either cost too much energy to disseminate (bootloader) or to execute (VM).",
+  "problem_framing": "Design a dynamic linking/loading mechanism for micro sensor nodes meeting four requirements: minimal code size, efficient execution/loading, portable design, and isolated kernel/application development.",
+  "key_insight": "Use pre-relocating and pre-linking at compile-time to shift work offline, and maintain a kernel jump table to decouple application layout from kernel layout, enabling isolated updates.",
+  "method_signature": "Transform standard ELF to minimized SELF format; employ pre-relocating+pre-linking at compile-time; use kernel jump table for kernel/application isolation.",
+  "evaluation_criteria": "Code size ratio (SELF vs ELF/CELF), loading speed improvement percentage (pre-relocating+pre-linking vs standard mechanism), portability across MicaZ/TelosB.",
+  "negative_result_or_admitted_limitation": "Tradeoff acknowledged: data encoding can further reduce code size but incurs decoding overhead during loading, and delta patching limits flexibility for heterogeneous networks.",
+  "evidence_for_taste": [
+    "not yet minimized",
+    "code size should be minimized",
+    "reduce the communication cost",
+    "reduce the run-time linking overhead",
+    "clean isolation between kernel and application",
+    "our approach can be easily ported"
+  ],
+  "thinking_moves": [
+    "识别现有方案在能耗两端的矛盾：dissemination vs execution",
+    "把运行时开销前移到编译时，用pre-relocating/pre-linking换取加载速度",
+    "用kernel jump table解耦kernel和application的布局依赖，保持灵活性",
+    "通过格式最小化（tailoring ELF）降低无线传输的通信成本"
+  ],
+  "topic_tags": [
+    "WSN-reprogramming",
+    "ELF-format-minimization",
+    "dynamic-linking-loading",
+    "kernel-jump-table",
+    "pre-relocating"
+  ],
+  "cites_own_work": [
+    "SenSpire OS: A Predictable, Flexible, and Efficient OS for Wireless Sensor Networks (2008)",
+    "Providing OS Support for Wireless Sensor Networks: Challenges and Approaches"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Year inferred from publication context (2009); venue not explicitly stated in paper. Role of Yunhao Liu as co-author is clear from author ordering. Some evaluation details (specific benchmarks, tables) referenced as figures but not fully extracted due to image-only format."
+}

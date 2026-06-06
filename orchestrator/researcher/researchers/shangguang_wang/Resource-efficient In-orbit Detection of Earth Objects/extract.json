@@ -1,0 +1,40 @@
+{
+  "paper_id": "Resource-efficient In-orbit Detection of Earth Objects",
+  "doi": "10.48550/arxiv.2402.01675",
+  "title": "Resource-efficient In-orbit Detection of Earth Objects",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LEO卫星产生海量数据，受限于下行带宽和计算能源，无法全部传回或处理",
+  "problem_framing": "在卫星能源预算和带宽预算双重约束下，最小化目标检测/计数误差",
+  "key_insight": "利用置信度阈值在星上处理与下行之间动态分配；存在最优分块大小平衡精度与计算开销",
+  "method_signature": "星地协同+自适应图像分块+聚类去重+带宽感知下行节流",
+  "evaluation_criteria": "CMAE(计数平均绝对误差)与带宽效率；对比Space-Only/Ground-Only/TIANSUAN/Kodan基线",
+  "negative_result_or_admitted_limitation": "当conf_p过高时丢弃高价值图块导致计数误差增大；COTS硬件计算能力因物理限制难以提升",
+  "evidence_for_taste": [
+    "optimal tile size that maximizes accuracy",
+    "balancing accuracy and computational overhead",
+    "improving the computational capacity of COTS hardware is difficult because of physical constraints",
+    "choosing an appropriate dynamic conf_p is crucial",
+    "optimizing conf_p is crucial"
+  ],
+  "thinking_moves": [
+    "将计算瓶颈重新frame为通信决策问题：通过置信度阈值决定哪些图块下行",
+    "从工程物理约束反推协作必要性：单星能源有限且不可扩展",
+    "通过实验曲线发现最优分块大小：存在精度-执行时间的帕累托最优",
+    "区分三类图块处理策略：丢弃/星上接受/下行到地面再处理"
+  ],
+  "topic_tags": [
+    "orbital-edge-computing",
+    "satellite-ground-collaboration",
+    "energy-aware-detection",
+    "bandwidth-throttling",
+    "LEO-satellite-imagery"
+  ],
+  "cites_own_work": [
+    "Tiansuan Constellation (arXiv:2311.06078)",
+    "Deciphering the enigma of satellite computing (arXiv:2401.03435)"
+  ],
+  "extraction_quality": "full"
+}

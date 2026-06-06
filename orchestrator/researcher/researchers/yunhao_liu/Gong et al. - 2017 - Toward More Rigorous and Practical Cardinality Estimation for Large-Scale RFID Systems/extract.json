@@ -1,0 +1,43 @@
+{
+  "paper_id": "Gong et al. - 2017 - Toward More Rigorous and Practical Cardinality Estimation for Large-Scale RFID Systems",
+  "doi": null,
+  "title": "Toward More Rigorous and Practical Cardinality Estimation for Large-Scale RFID Systems",
+  "year": 2017,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有RFID基数估计方案在非均匀数据下无法满足精度要求,因为依赖理想哈希函数假设,而该假设在实际中难以满足",
+  "problem_framing": "设计一种两阶段基数估计方法,在任意数据分布下都能保证相对误差ε和失败概率δ的严格界限",
+  "key_insight": "用 pairwise-independent 哈希做粗估计保证常数倍精度,再用t-wise-independent哈希精化,无需完美哈希也能实现严格有界精度",
+  "method_signature": "RPC两阶段方案:第一阶段pairwise独立哈希+loglog计数,第二阶段t-wise独立哈希球箱模型精化",
+  "evaluation_criteria": "在均匀/正态/泊松/指数等多种数据分布下验证是否满足预设相对误差ε,对比ART/SRC/ZOE方案",
+  "negative_result_or_admitted_limitation": "承认先前方案对非均匀数据失效:'ART fails to achieve desired relative error in the normal distribution',SRC fails under normal distribution due to invalid hash assumption",
+  "evidence_for_taste": [
+    "accuracy of final estimates is not rigorously bounded",
+    "both of them are hard to meet in practice",
+    "the accuracy of estimators is hard to be rigorously bounded",
+    "This negative impact is hidden",
+    "cannot meet the requirement all the time"
+  ],
+  "thinking_moves": [
+    "从工程失败案例反推理论假设失效",
+    "揭示隐含假设:完美哈希或均匀随机数据在实际中不存在",
+    "将精度问题重新框架为概率界的有界性(boundedness)问题",
+    "引入universality hashing theory解决实践约束下的理论保证",
+    "从反例(非均匀数据)出发诊断现有方法的根本缺陷"
+  ],
+  "topic_tags": [
+    "RFID-cardinality-estimation",
+    "universal-hashing",
+    "probabilistic-bounds",
+    "two-phase-estimator",
+    "t-wise-independence"
+  ],
+  "cites_own_work": [
+    "Gong et al. 2014 Arbitrarily accurate approximation scheme",
+    "Gong et al. 2016 Fast and scalable counterfeits estimation",
+    "Gong et al. 2016 Fast composite counting in RFID systems"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的理论分析和实验验证,包含了动机、问题形式化、关键洞察、方法签名、评价标准和负面结果的明确表述 | md truncated to head40k+tail20k"
+}

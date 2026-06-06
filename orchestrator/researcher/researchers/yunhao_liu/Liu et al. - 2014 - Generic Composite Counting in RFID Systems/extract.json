@@ -1,0 +1,42 @@
+{
+  "paper_id": "Liu et al. - 2014 - Generic Composite Counting in RFID Systems",
+  "doi": null,
+  "title": "Generic Composite Counting in RFID Systems",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有RFID计数协议只支持单reader或union场景,无法处理intersection/difference等复合集表达式,实际应用需求无法满足",
+  "problem_framing": "定义复合集计数问题:给定任意集合表达式E(如(S₁∪S₂)-(S₃∩S₄)),估计|E|的基数",
+  "key_insight": "用小规模synopsis代替完整tag集,通过hash值排序和Jaccard相似度分解,实现任意集合表达式的概率估计",
+  "method_signature": "基于slotted ALOHA的synopsis收集协议,使用binary search提取k个最小hash值,O(k log n)通信开销",
+  "evaluation_criteria": "时间效率(通信slot数/耗时)和(ε,δ)-精度保证下的相对误差<10%",
+  "negative_result_or_admitted_limitation": "原型系统因USRP-WISP通信距离限制无法做大规模实验,只能用simulation验证",
+  "evidence_for_taste": [
+    "most existing protocols, however, only apply",
+    "cannot be trivially solved by simple counting",
+    "the overhead of exact counting is prohibitively high",
+    "It is obviously incorrect to approximate",
+    "communication cost is within a small factor from the optimal",
+    "incurs more communication overhead",
+    "cannot be trivially solved"
+  ],
+  "thinking_moves": [
+    "将具体应用场景(warehouse/conference/authentication)抽象为集合代数问题",
+    "利用communication complexity理论证明下界,用reduction桥接RFID与Two-party模型",
+    "将集合操作问题分解为union基数估计和Jaccard相似度估计的组合",
+    "hash函数将任意分布ID映射为均匀分布,使order statistics可直接应用",
+    "将近似计算的理论保证转换为具体参数k的选择(Θ(1/ε²ln(1/δ)))",
+    "用synopsis交集大小直接估计比例R=|E|/|∪Si|,绕过原始ID未知难题"
+  ],
+  "topic_tags": [
+    "RFID-cardinality-estimation",
+    "set-expression-query",
+    "synopsis-sampling",
+    "communication-complexity-lower-bound",
+    "slotted-ALOHA-protocol"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Lu et al. - 2007 - Dynamic Key-Updating Privacy-Preserving Authentication for RFID Systems",
+  "doi": null,
+  "title": "Dynamic Key-Updating: Privacy-Preserving Authentication for RFID Systems",
+  "year": 2007,
+  "venue": "IEEE PerCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "RFID tags auto-emit serial numbers enabling silent tracking; existing tree-based protocols lack key-updating making them vulnerable to compromising attacks",
+  "problem_framing": "How to enable dynamic key-updating in tree-based RFID auth while maintaining consistency across shared keys without mass tag updates",
+  "key_insight": "Temporary keys and state bits allow each non-leaf node to auto-update only after all children update—cascading updates without coordination overhead",
+  "method_signature": "Tree-walking ID with per-node temporary-key + state-bit tracking for lazy cascading key renewal",
+  "evaluation_criteria": "Correlated-exposing probability under compromising attack; key-updating latency; O(log N) identification complexity",
+  "negative_result_or_admitted_limitation": "Static tree approaches cannot solve key-updating; updating root-adjacent keys influences half of all tags making the problem intractable without SPA",
+  "evidence_for_taste": [
+    "static tree architecture is not capable",
+    "consistent and dynamic key-updating mechanisms have scarcely been seen",
+    "major challenge of dynamic key-updating is consistency",
+    "enlarging δ does not help much",
+    "such a solution is not practical"
+  ],
+  "thinking_moves": [
+    "把全局一致性协调难题转换为局部状态传播问题",
+    "引入临时存储使旧密钥在过渡期内仍可被其他标签使用",
+    "通过状态位追踪子节点更新进度实现自动级联",
+    "从妥协攻击后果反推需要前向保密和动态密钥更新"
+  ],
+  "topic_tags": [
+    "RFID-private-authentication",
+    "dynamic-key-update",
+    "tree-based-key-search",
+    "compromising-attack-defense",
+    "forward-secrecy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Authors identify existing tree protocols as vulnerable due to static key storage; SPA solves by lazy updating with temp keys and state bits; performance validated via prototype on 40 RF Code tags with SHA-1 hash"
+}

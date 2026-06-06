@@ -1,0 +1,37 @@
+{
+  "paper_id": "TVFL_infocom2023",
+  "doi": null,
+  "title": "TVFL: Tunable Vertical Federated Learning towards Communication-Efficient Model Serving",
+  "year": 2023,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "VFL模型推理中90%-99%延迟来自通信开销，在资源受限或延迟敏感场景（如在线广告）下无法承受",
+  "problem_framing": "将VFL推理中的通信开销问题定义为「可省略通信」，发现大量样本可由活跃方独立正确预测",
+  "key_insight": "通过判别器识别可独立预测的样本，在不损失精度前提下跳过不必要的联邦推理通信",
+  "method_signature": "TVFL框架：独立推理与联邦推理的智能切换",
+  "evaluation_criteria": "通信成本降低率、预测延迟降低率、精度损失",
+  "negative_result_or_admitted_limitation": "理论证明VFL系统无法完全避免可省略通信，必须在精度和通信间做权衡",
+  "evidence_for_taste": [
+    "Table I显示alone模型准确率77.7%",
+    "active party has sufficient knowledge",
+    "the ratio of positive and negative samples is 1:10",
+    "communication savings positively correlated with feature importance"
+  ],
+  "thinking_moves": [
+    "把推理优化问题重新frame成通信优化问题",
+    "先理论证明可行性下界，再提出近似算法",
+    "用SHAP特征重要性解释通信节省程度",
+    "区分D^s和D^d两类样本的本质差异"
+  ],
+  "topic_tags": [
+    "vertical-federated-learning",
+    "communication-efficiency",
+    "model-serving",
+    "inference-optimization",
+    "active-party-features"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

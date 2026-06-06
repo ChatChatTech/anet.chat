@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2007 - Non-Threshold based Event Detection for 3D Environment Monitoring in Sensor Networks",
+  "doi": null,
+  "title": "Non-Threshold based Event Detection for 3D Environment Monitoring in Sensor Networks",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Coal mine gas泄漏等复杂事件无法用阈值检测,需要捕捉时空数据模式而非瞬时阈值突破",
+  "problem_framing": "将事件检测重新定义为在梯度数据图上进行模式匹配,而非节点级阈值判断",
+  "key_insight": "复杂环境事件产生的是可识别的时空数据模式(OP聚类),而非简单的阈值超越",
+  "method_signature": "3D梯度数据图 + 正交多面体OP聚合 + 模式匹配事件检测",
+  "evaluation_criteria": "事件检测准确率(precision/recall)与网络通信开销",
+  "negative_result_or_admitted_limitation": "SAT方法(tree结构聚合)在高丢包率下recall骤降至0%,完全不可接受",
+  "evidence_for_taste": [
+    "rather than some instantaneous overrun of specified thresholds",
+    "can hardly be described by the overrun of specified attribute thresholds",
+    "we need an integrative view of the environment",
+    "gas density decreases from the source of the leak",
+    "space orthogonal polyhedra model",
+    "similar OPs at each sensor node",
+    "100% detection precision is consistently achieved"
+  ],
+  "thinking_moves": [
+    "从阈值失效反推问题根源:环境事件是时空模式而非瞬时值",
+    "将检测问题从节点级阈值判断重框架为全局模式匹配",
+    "引入几何学OP模型解决3D数据聚合的表达效率问题",
+    "多路径路由保证高丢包率矿山环境的鲁棒传输"
+  ],
+  "topic_tags": [
+    "3D-sensor-monitoring",
+    "non-threshold-event-detection",
+    "orthogonal-polyhedra-aggregation",
+    "in-network-data-fusion",
+    "coal-mine-monitoring"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Paper完整包含动机、方法、实验和局限。Yunhao Liu为第二作者,来自HKUST团队。评估了SAT、SAM、AGG三种方法对比。"
+}

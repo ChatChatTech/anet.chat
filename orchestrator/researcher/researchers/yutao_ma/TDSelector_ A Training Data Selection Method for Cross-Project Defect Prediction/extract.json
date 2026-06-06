@@ -1,0 +1,42 @@
+{
+  "paper_id": "TDSelector_ A Training Data Selection Method for Cross-Project Defect Prediction",
+  "doi": "10.48550/arxiv.1612.09065",
+  "title": "TDSelector: A Training Data Selection Method for Cross-Project Defect Prediction",
+  "year": 2016,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "CPDP因项目缺少历史缺陷数据而性能不佳，低质量训练数据选择是主要障碍",
+  "problem_framing": "将CPDP性能问题形式化为训练数据选择问题，需在相似性和缺陷数之间权衡",
+  "key_insight": "包含缺陷数量的训练实例比仅依赖相似性选择的实例具有更高预测价值",
+  "method_signature": "基于α加权融合相似度与归一化缺陷数的实例评分排序方法",
+  "evaluation_criteria": "AUC面积衡量预测性能，对比Peter Filter和TCA+基线",
+  "negative_result_or_admitted_limitation": "不同Z-score归一化方法、特征选择、步长0.1的α优化、单一LR分类器等参数设置不同会导致结果变化",
+  "evidence_for_taste": [
+    "low quality training data selection has been regarded as a major obstacle",
+    "none of them considered the number of defects",
+    "more attention should be paid to those training instances with more defects",
+    "the inclusion of defects is indeed helpful",
+    "modules with faults in the past are likely to have faults in the future",
+    "there is no significant difference in AUC value between different methods"
+  ],
+  "thinking_moves": [
+    "将仅用相似性的训练选择问题扩展为多因素加权问题",
+    "通过穷举法搜索α参数空间(0到1步长0.1)找最优权重",
+    "用Cliff's delta效应量替代假设检验处理小样本对比",
+    "经验验证归一化方法对缺陷信息整合的影响",
+    "先分析k近邻参数敏感性再确定最优k值"
+  ],
+  "topic_tags": [
+    "cross-project defect prediction",
+    "training data selection",
+    "logistic regression classifier",
+    "similarity metrics",
+    "defect count normalization"
+  ],
+  "cites_own_work": [
+    "TDSelector_ A Training Data Selection Method for Cross-Project Defect Prediction"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

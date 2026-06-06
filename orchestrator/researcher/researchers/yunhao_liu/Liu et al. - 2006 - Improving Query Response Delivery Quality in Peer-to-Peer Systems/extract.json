@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2006 - Improving Query Response Delivery Quality in Peer-to-Peer Systems",
+  "doi": null,
+  "title": "Improving Query Response Delivery Quality in Peer-to-Peer Systems",
+  "year": 2006,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "P2P系统动态性强,查询响应沿原路返回时若节点离开则响应丢失,实测35%响应丢失",
+  "problem_framing": "将响应丢失问题形式化为:响应沿单路径返回缺乏容错,而泛洪机制仅为查询提供鲁棒性",
+  "key_insight": "泛洪查询中节点通常有多个转发邻居,可利用这些冗余路径实现响应的容错返回",
+  "method_signature": "三种技术:RRD主动冗余路径、ARD动态重路由、e-ARD引入备份响应代理扩展ARD",
+  "evaluation_criteria": "响应返回率(有效性)、流量开销(效率)、响应时间(QoS)",
+  "negative_result_or_admitted_limitation": "RRD和ARD的有效性依赖于系统中每个节点有超过一个转发邻居这一假设",
+  "evidence_for_taste": [
+    "up to 35 percent of the responses are lost",
+    "response loss problem led by the P2P system itself",
+    "most popular search method is the keyword search",
+    "both RRD and ARD work effectively based on the assumption",
+    "the P2P system is a highly oscillating system"
+  ],
+  "thinking_moves": [
+    "从系统固有特性(匿名要求)推导问题不可避免",
+    "将通信问题重新frame为容错路由问题",
+    "利用泛洪机制固有的多路径特性作为解决方案杠杆",
+    "先分而治之(分别针对泛洪/非泛洪系统设计)",
+    "通过工程约束(节点寿命分布)推导参数公式"
+  ],
+  "topic_tags": [
+    "P2P-response-loss",
+    "flooding-query",
+    "fault-tolerant-routing",
+    "redundant-delivery",
+    "adaptive-overlay"
+  ],
+  "cites_own_work": [
+    "Liu et al. 2004 (Location-Aware Topology Matching)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2013 - STAGGER Improving Channel Utilization for Convergecast in Wireless Sensor Networks",
+  "doi": null,
+  "title": "STAGGER: Improving Channel Utilization for Convergecast in Wireless Sensor Networks",
+  "year": 2013,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "无线传感器网络中汇聚流量(channel利用率仅50kbps/250kbps最大速率)因backoff开销导致效率极低",
+  "problem_framing": "CSMA中多个节点竞争信道时,backoff时间远大于实际传输时间,是低效的主因",
+  "key_insight": "通过累积数据包批量发送可减少竞争次数,但需精确计算最优累积数以保证最坏情况延迟不恶化",
+  "method_signature": "分布式累积数据包协议,基于本地信息计算最优batch size,兼容CSMA并保持公平性",
+  "evaluation_criteria": "per-hop throughput, packet loss ratio, Jain fairness index",
+  "negative_result_or_admitted_limitation": "当packet coming rate很低时,n=0为最优值,即累积反而有害;且受限于传感器节点小packet size(128B)",
+  "evidence_for_taste": [
+    "unnecessary backoff is a major cause of low channel utilization",
+    "the backoff time is comparable to the packet transmission time",
+    "accumulating packets on each node",
+    "guarantee the worst case performance",
+    "D(n) ≤ D(1) cannot be guaranteed",
+    "Lemma 3.1: n_i is still feasible for node i",
+    "stop increasing n when D̄(n) > D̄(n-1)",
+    "Jain Index is near to 1"
+  ],
+  "thinking_moves": [
+    "从CSMA传输开销分解出发:backoff时间远大于packet in-air时间,量化此低效为设计动机",
+    "将packet accumulation问题形式化为在约束D(n)≤D(1)下最小化平均传输时间D̄(n)",
+    "通过Lemma 3.1证明局部增加n不会损害其他节点性能,从而实现完全分布式决策",
+    "利用backoff等待时间自然完成packet accumulation bootstrap,无需额外协调开销",
+    "设计分两步:先累积packet,再批量发送,分别解决contention减少和transmission效率问题"
+  ],
+  "topic_tags": [
+    "WSN convergecast",
+    "CSMA backoff optimization",
+    "packet batching",
+    "channel utilization",
+    "distributed MAC protocol"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注venue信息,根据内容(TinyOS, TelosB, WSN领域)推断为会议/期刊论文但具体名称未知。实验基于TelosB实现,理论分析占较大篇幅。"
+}

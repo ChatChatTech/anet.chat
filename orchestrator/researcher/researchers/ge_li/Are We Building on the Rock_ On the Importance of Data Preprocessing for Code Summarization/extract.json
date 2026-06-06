@@ -1,0 +1,40 @@
+{
+  "paper_id": "Are We Building on the Rock_ On the Importance of Data Preprocessing for Code Summarization",
+  "doi": "10.48550/arxiv.2207.05579",
+  "title": "Are We Building on the Rock? On the Importance of Data Preprocessing for Code Summarization",
+  "year": 2022,
+  "venue": "ESEC/FSE",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "代码摘要模型依赖的数据集存在大量噪声,但研究者往往默认其质量而忽视预处理问题",
+  "problem_framing": "构建12类数据噪声的分类体系,通过自动化工具评估四大基准数据集的质量",
+  "key_insight": "噪声数据广泛存在于31%-66%的样本中,移除噪声后BLEU-4提升21%-27%",
+  "method_signature": "基于启发式if-else规则的CAT清洗工具,检测并修正/移除12类代码-注释对噪声",
+  "evaluation_criteria": "BLEU-1/2/3/4、ROUGE、METEOR、CIDEr对比原始/对照/过滤数据集上的模型性能",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "noisy data extensively exist",
+    "Removing noisy data have a positive influence",
+    "we carefully identify syntax features",
+    "All the F1 scores should be larger than 90%",
+    "The major correction for CSN is removals",
+    "some do not",
+    "are not coincident all the time"
+  ],
+  "thinking_moves": [
+    "用人工标注构建噪声分类体系,再将标注者共识转化为可编程规则",
+    "用Controlled组消除数据量缩减的混淆因素,隔离清洗效果的贡献",
+    "从数据集构建过程反推噪声来源:编程语言特性、开发实践、数据处理假设",
+    "对每类噪声设计UPDATE或REMOVE两种动作,区分可修复与不可修复的噪声"
+  ],
+  "topic_tags": [
+    "code-summarization",
+    "data-quality",
+    "benchmark-dataset-noise",
+    "rule-based-data-cleaning",
+    "empirical-software-engineering"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

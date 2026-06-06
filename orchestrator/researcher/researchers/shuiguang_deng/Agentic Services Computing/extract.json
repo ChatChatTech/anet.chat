@@ -1,0 +1,44 @@
+{
+  "paper_id": "Agentic Services Computing",
+  "doi": "10.48550/arxiv.2509.24380",
+  "title": "Agentic Services Computing",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "传统服务计算缺乏自主性与目标导向行为，而LLM智能体缺乏工程化治理与生命周期管理，两者需深度整合",
+  "problem_framing": "将智能体定位为一等公民服务，通过四阶段生命周期(设计/部署/运维/演化)组织能力维度",
+  "key_insight": "非增量扩展而是根本性重构——从请求驱动到目标驱动、从被动调用到主动参与、从静态编排到动态协同",
+  "method_signature": "SCALE框架(状态化/认知自主/目标执行器/终身协作/端到端治理)+四维研究矩阵",
+  "evaluation_criteria": "与现有survey对比(Table I)，将代表性工作映射到生命周期×能力矩阵中",
+  "negative_result_or_admitted_limitation": "古典MAS受限于手工知识库与刚性规划机制，难以适应开放动态环境；LLM智能体缺乏审计、可解释性与运营严谨性",
+  "evidence_for_taste": [
+    "foundational reimagining",
+    "deep, principled integration",
+    "lacks mechanisms for auditability",
+    "constrain their adoption in production",
+    "SCALE framework",
+    "four-phase lifecycle",
+    "cognitive observability",
+    "agentic services are first-class citizens",
+    "from correctness to trustworthiness",
+    "self-organizing coordination"
+  ],
+  "thinking_moves": [
+    "通过survey表格定位自身工作空白——'no existing survey integrates'",
+    "创建易记框架(SCALE)将抽象概念具象化",
+    "将生命周期阶段作为组织复杂研究的元框架",
+    "引入领域外术语('cognitive observability', 'zero-trust')扩展技术词汇表",
+    "用对比表格(structure vs emergence, correctness vs trustworthiness)揭示范式转变"
+  ],
+  "topic_tags": [
+    "LLM-based agents",
+    "multi-agent systems",
+    "service lifecycle governance",
+    "agent autonomy and trustworthiness",
+    "services computing paradigm shift"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

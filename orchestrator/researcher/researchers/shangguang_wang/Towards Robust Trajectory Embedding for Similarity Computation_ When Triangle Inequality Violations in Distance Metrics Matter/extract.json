@@ -1,0 +1,38 @@
+{
+  "paper_id": "Towards Robust Trajectory Embedding for Similarity Computation_ When Triangle Inequality Violations in Distance Metrics Matter",
+  "doi": "10.48550/arxiv.2504.10933",
+  "title": "Towards Robust Trajectory Embedding for Similarity Computation: When Triangle Inequality Violations in Distance Metrics Matter",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有轨迹嵌入方法在欧氏空间受三角形不等式约束，而DTW等轨迹相似度度量不满足该约束，导致嵌入精度随违背程度增大而下降",
+  "problem_framing": "将欧氏空间嵌入的三角形不等式约束与真实轨迹相似度的不满足性质之间的矛盾形式化为核心问题",
+  "key_insight": "利用双曲空间的洛伦兹距离突破欧氏空间度量约束，并通过Cosh投影防止距离衰减",
+  "method_signature": "LH-plugin含Cosh双曲投影模块和动态融合距离模块的插件化框架",
+  "evaluation_criteria": "Hit Rate@K指标衡量轨迹相似度计算精度和多数据集泛化能力",
+  "negative_result_or_admitted_limitation": "香草双曲投影在嵌入范数较大时会导致洛伦兹距离趋近于零，无法区分近邻轨迹",
+  "evidence_for_taste": [
+    "accuracy significantly deteriorates",
+    "failing to preserve distances",
+    "angle diminishes leading distance to approach zero",
+    "discrepancy could amplify causing distortions",
+    "Lorentz distance approach zero"
+  ],
+  "thinking_moves": [
+    "发现经验现象后先形式化约束矛盾，再从非欧几何寻找理论出路",
+    "先证明最坏情况距离衰减问题，再设计非线性修正函数",
+    "为保持效率选择插件式而非端到端重设计",
+    "用定理严格证明后再通过实验验证理论边界"
+  ],
+  "topic_tags": [
+    "trajectory-embedding",
+    "triangle-inequality-violation",
+    "hyperbolic-space",
+    "lorentz-distance",
+    "dynamic-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

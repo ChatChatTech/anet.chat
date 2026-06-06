@@ -1,0 +1,35 @@
+{
+  "paper_id": "Edge intelligence in wireless networks",
+  "doi": "10.1007/s11276-024-03881-4",
+  "title": "Edge intelligence in wireless networks",
+  "year": 2024,
+  "venue": "Wireless Networks",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "IoT设备在边缘网络产生海量数据，若传至远程云数据中心会带来传输压力和延迟",
+  "problem_framing": "边缘AI研究处于早期阶段，需要对技术进展进行总结和讨论",
+  "key_insight": "边缘智能让深度模型本地运行于IoT设备，需整合端设备、边缘节点和云数据中心的分层资源",
+  "method_signature": "Guest editorial介绍特刊论文，非原创研究",
+  "evaluation_criteria": "基于相关性、原创性、技术新颖性和呈现质量筛选论文",
+  "negative_result_or_admitted_limitation": "承认边缘AI研究目前处于早期阶段，通信技术需求未被充分讨论",
+  "evidence_for_taste": [
+    "currently in its early stage",
+    "lack of summary and discussion",
+    "rigorously reviewing"
+  ],
+  "thinking_moves": [
+    "从云计算瓶颈转向边缘分布处理的范式转变认知",
+    "识别领域早期阶段的特征作为编辑遴选动机",
+    "通过特刊编辑行为定义领域边界和研究议程"
+  ],
+  "topic_tags": [
+    "edge intelligence",
+    "IoT data processing",
+    "edge-cloud hierarchy",
+    "deep neural network offloading",
+    "5G edge networks"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "本文是Guest Editorial而非研究论文, Li Kuang担任编辑角色, 无原创研究贡献可提取其个人研究认知信号"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Liu et al. - 2007 - Defending P2Ps from Overlay Flooding-based DDoS",
+  "doi": null,
+  "title": "Defending P2Ps from Overlay Flooding-based DDoS",
+  "year": 2007,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "P2P flooding搜索导致少量恶意节点可放大攻击消耗整个系统资源",
+  "problem_framing": "Overlay DDoS攻击目标不是单个站点而是整个P2P系统",
+  "key_insight": "通过邻居协作监控与双重指标(g/s)识别恶意节点并隔离",
+  "method_signature": "DD-POLICE分布式流量监控+Buddy Group协作+指标阈值判决",
+  "evaluation_criteria": "查询成功率/响应时间/流量开销/损伤恢复时间/误判率",
+  "negative_result_or_admitted_limitation": "预防方法无法阻止P2P中大量代理被招募；cut threshold存在漏判与误判的权衡",
+  "evidence_for_taste": [
+    "most previous techniques...cannot be applied to overlay DDoS",
+    "only tens of DDoS agents in a 20,000-peer system cause serious damage",
+    "The tradeoff is that the damage...but some good peers may be miscounted",
+    "a small number of messages are inherently propagated to consume...resources",
+    "hard to separate attack query traffic from legitimate traffic"
+  ],
+  "thinking_moves": [
+    "从网络层防御失效反推需要overlay层专属方案",
+    "通过实现真实DDoS agent理解攻击者能力边界",
+    "把邻居协作检测框定为信息交换+指标计算问题",
+    "用阈值敏感性分析指导参数选择(CT=5或6)",
+    "先量化攻击危害程度再验证防御有效性"
+  ],
+  "topic_tags": [
+    "P2P-DDoS",
+    "overlay-flooding",
+    "collaborative-detection",
+    "buddy-group",
+    "indicator-based-classification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少完整venue信息；Section编号存在跳跃(5->4->5)可能是排版问题"
+}

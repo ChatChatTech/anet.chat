@@ -1,0 +1,43 @@
+{
+  "paper_id": "Zhu et al. - 2013 - Understanding Routing Dynamics in a Large-Scale Wireless Sensor Network",
+  "doi": null,
+  "title": "Understanding Routing Dynamics in a Large-scale Wireless Sensor Network",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Large-scale WSN部署中,环境动态影响链路质量,但路由动态的根因和影响尚不清楚",
+  "problem_framing": "通过分析parent change事件的时间空间分布,关联loop和drop事件来定位根因",
+  "key_insight": "Parent change主要影响局部节点,环境湿度和路由环路是主因,约30%换父不必要",
+  "method_signature": "从有限日志中提取parent change/loop/no-ack事件,按时间空间相关性分组识别TPC/IPC事件",
+  "evaluation_criteria": "PDR改善率,换父有效性系数,皮尔逊相关系数,事件频率和持续时间CDF",
+  "negative_result_or_admitted_limitation": "日志缺失导致无法精确判断parent change时机,只能近似估计路由链路寿命",
+  "evidence_for_taste": [
+    "we cannot simply conclude that the large number of parent changes is caused by the interference or heavy traffic",
+    "30% of nodes suffers from ineffective routing decisions",
+    "ineffective routing oscillation will be incurred",
+    "Parent change events mostly impact only local nodes",
+    "we are unable to obtain the ground truth",
+    "it is difficult to measure the accurate lifetime of the routing links"
+  ],
+  "thinking_moves": [
+    "从系统日志中只能获得累计计数器,无法直接观测事件,需设计启发式规则推断事件发生时间",
+    "将parent change事件分为触发型(TPC)和受影响型(IPC)两类,缩小根因搜索范围",
+    "用auto-correlation发现FPC事件的24小时周期性,关联湿度数据推断环境因素",
+    "通过RSSI阈值判断旧链路是否真的变差,近似评估换父是否有效",
+    "放弃精确建模,转而用空间时间相关性聚类事件来找规律"
+  ],
+  "topic_tags": [
+    "WSN_routing_dynamics",
+    "large_scale_measurement",
+    "CTP_protocol_analysis",
+    "parent_change_event",
+    "GreenOrbs_deployment"
+  ],
+  "cites_own_work": [
+    "GreenOrbs canopy closure (SenSys 2009)",
+    "GreenOrbs scale measurement (INFOCOM 2011)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue信息未提供,根据作者署名和论文风格推断为顶级会议/期刊,但无法确认具体名称"
+}

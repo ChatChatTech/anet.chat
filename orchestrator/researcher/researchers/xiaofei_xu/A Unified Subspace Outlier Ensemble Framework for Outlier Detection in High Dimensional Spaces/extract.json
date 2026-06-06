@@ -1,0 +1,39 @@
+{
+  "paper_id": "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces",
+  "doi": "10.48550/arxiv.cs/0505060",
+  "title": "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces",
+  "year": 2005,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有离群点定义未被广泛接受，高维空间中近邻概念失去意义，现方法不适用",
+  "problem_framing": "将离群点检测形式化为集成学习问题，通过组合函数融合不同子空间的离群因子",
+  "key_insight": "所有现有离群点检测方法都可视为子空间集合和组合函数两种参数的不同取值",
+  "method_signature": "SOE1算法：仅用一维权值子空间，两次扫描数据集，基于直方图计算",
+  "evaluation_criteria": "稀有类别覆盖率、执行时间/可扩展性、与FindFPOF等算法对比",
+  "negative_result_or_admitted_limitation": "Arrhythmia数据集上表现不如[3]，如何选择有意义的子空间仍未解决",
+  "evidence_for_taste": [
+    "none of the existing definitions are widely accepted",
+    "Can we formally define the problem...and unify",
+    "preliminary exploration",
+    "remains unaddressed",
+    "very appealing in real data mining applications"
+  ],
+  "thinking_moves": [
+    "把离群点检测问题重新框架为集成学习问题",
+    "用两个参数(子空间集合+组合函数)统一现有方法",
+    "先验最坏情况上界再实证改进",
+    "承认子空间选择的开放问题",
+    "用简单算子(+/×)胜出作为实践建议"
+  ],
+  "topic_tags": [
+    "subspace-outlier-ensemble",
+    "high-dimensional-outlier-detection",
+    "ensemble-learning-unification",
+    "histogram-based-algorithm",
+    "categorical-data-mining"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

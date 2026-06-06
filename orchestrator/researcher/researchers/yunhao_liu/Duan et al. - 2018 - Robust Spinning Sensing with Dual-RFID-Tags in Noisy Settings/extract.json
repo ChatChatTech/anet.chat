@@ -1,0 +1,41 @@
+{
+  "paper_id": "Duan et al. - 2018 - Robust Spinning Sensing with Dual-RFID-Tags in Noisy Settings",
+  "doi": null,
+  "title": "Robust Spinning Sensing with Dual-RFID-Tags in Noisy Settings",
+  "year": 2018,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有RFID旋转传感方案仅在安静环境下有效,实际工业场景中设备振动导致信号周期性破坏,无法恢复",
+  "problem_framing": "将抗振动传感问题形式化为:通过双标签相对相位消除共同噪声,在随机时域采样下恢复稀疏频域信号",
+  "key_insight": "两标签间距离固定不随设备移动而变,相对相位中共同距离项被消除,仅保留旋转引起的相位变化",
+  "method_signature": "相对旋转信号(RSS) = sin(2(θ₁-θ₂)) + 双压缩读取(DCR)含高斯插值对齐时域采样",
+  "evaluation_criteria": "频率误差sub-hertz级(<1Hz),与专业转速计相当,容忍30cm范围三维振动轨迹",
+  "negative_result_or_admitted_limitation": "NLOS场景精度下降至0.79Hz平均误差,仍优于激光方案但明显弱于LOS",
+  "evidence_for_taste": [
+    "even a 5cm noisy translation",
+    "sparsity assumption still holds true",
+    "tags are exclusively read in time-sharing",
+    "mean of 2.3ms",
+    "we do not expect to attach tags under some scheduled rules"
+  ],
+  "thinking_moves": [
+    "先分析单标签方案局限性:距离依赖导致抗噪性差",
+    "从几何模型推导相对相位消除共同项的可行性",
+    "处理phase不连续问题:sin(2θ)变换消除π模糊度",
+    "处理时域对齐问题:利用读写局部性+高斯插值近似同步读取",
+    "形式化证明相对旋转信号在多径环境下仍保持周期性和稀疏性"
+  ],
+  "topic_tags": [
+    "RFID-compressive-sensing",
+    "dual-tag-relative-phase",
+    "spinning-vibration-sensing",
+    "anti-shaking-robust-sensing",
+    "phase-recovery-interpolation"
+  ],
+  "cites_own_work": [
+    "Tagbeat (2016)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供完整DOI和具体会议名称,但动机-问题-解决方案链条清晰。关键认知信号包括:承认Tagbeat在现实场景失效,提出相对相位消除振动噪声的核心洞察,以及处理COTS设备时域采样不对齐的工程妥协。"
+}

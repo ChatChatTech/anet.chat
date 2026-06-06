@@ -1,0 +1,37 @@
+{
+  "paper_id": "Li et al. - 2012 - Observation vs statistics Near optimal online channel access in cognitive radio networks",
+  "doi": null,
+  "title": "Observation vs Statistics: Near Optimal Online Channel Access in Cognitive Radio Networks",
+  "year": 2012,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有OSP和MAB两种范式存在鸿沟,难以有效整合学习和利用过程",
+  "problem_framing": "将信道接入建模为时域上的观察与统计博弈问题,关注感知顺序和访问规则的联合优化",
+  "key_insight": "感知顺序(sensing order)对在线信道接入策略设计至关重要,恰当的顺序可实现机会接入并降低计算开销",
+  "method_signature": "CIE学习策略和OSP-in-MAB解耦算法,复杂度从O(KNK̄)降至O(K)",
+  "evaluation_criteria": "累积吞吐量 regret;与genie最优策略对比的相对增益",
+  "negative_result_or_admitted_limitation": "OSP in MAB将联合优化解耦为两阶段分别求解,难以证明其最优性,且性能略有损失",
+  "evidence_for_taste": [
+    "sensing order indeed plays important role",
+    "It is hard to prove the optimality of the approach",
+    "the OSP in MAB policy is a compromised approach",
+    "the regret of myopic policy is approximately linearly increased",
+    "the myopic algorithm may not always converge to the optimal solution"
+  ],
+  "thinking_moves": [
+    "将联合优化问题解耦降维换取计算可行性",
+    "通过仿真而非理论证明来验证次优方案的合理性",
+    "承认简化假设下最优性不可证,转而强调工程折中价值"
+  ],
+  "topic_tags": [
+    "cognitive-radio",
+    "channel-access",
+    "multi-armed-bandit",
+    "optimal-stopping-theory",
+    "online-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的算法描述、复杂度分析和仿真验证,证据充分"
+}

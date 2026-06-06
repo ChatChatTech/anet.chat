@@ -1,0 +1,39 @@
+{
+  "paper_id": "2023_TPAMI_MLink_Linking_Black-Box_Models_From_Multiple_Domains_for_Collaborative_Inference",
+  "doi": null,
+  "title": "MLink: Linking Black-Box Models From Multiple Domains for Collaborative Inference",
+  "year": 2023,
+  "venue": "IEEE TPAMI",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "多模型推理时GPU显存不足，需在成本约束下获取多模型推断结果",
+  "problem_framing": "在成本预算下最大化平均推断精度，通过选择性激活模型和链接预测",
+  "key_insight": "不同黑盒模型输出存在语义相关性，可通过模型链接从已执行模型预测未执行模型输出",
+  "method_signature": "黑盒模型链接：输出空间映射函数g_ij，支持异构模型",
+  "evaluation_criteria": "保持94%推断精度的同时节省66.7%计算量",
+  "negative_result_or_admitted_limitation": "当源模型与目标模型语义相关性低时，模型链接精度较差",
+  "evidence_for_taste": [
+    "ML models are prone to overlearning",
+    "outputs of different models have semantic correlations",
+    "the correlation learned by model links is similar with the semantic attention",
+    "multi-task learning lacks flexibility and scalability"
+  ],
+  "thinking_moves": [
+    "提出新任务定义：模型链接(model linking)",
+    "从黑盒输出而非中间表示构建链接",
+    "利用在线自适应训练应对数据分布动态变化",
+    "将调度问题转化为子模优化并设计激活概率启发式指标"
+  ],
+  "topic_tags": [
+    "黑盒模型链接",
+    "多模型协同推理",
+    "模型调度",
+    "成本约束优化",
+    "知识迁移"
+  ],
+  "cites_own_work": [
+    "AAAI 2022 conference version"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

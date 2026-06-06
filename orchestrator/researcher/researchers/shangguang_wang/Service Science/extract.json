@@ -1,0 +1,36 @@
+{
+  "paper_id": "Service Science",
+  "doi": "10.1007/978-981-99-4402-6",
+  "title": "Service Science",
+  "year": 2023,
+  "venue": "ICSS 2023",
+  "venue_tier": "regional",
+  "role": "senior",
+  "motivation": "ICSS aims to bridge researchers and practitioners in service science, with unique mix of academic, industrial, and cross-discipline topics",
+  "problem_framing": "No single problem framing — this is a proceedings volume containing 36 papers across 8 categories",
+  "key_insight": "No single key insight — volume spans Serverless Edge Computing, Edge Services Reliability, Intelligent Services, Service Ecosystem, Graph-Based Service Optimization, and AI-Inspired Service Optimization",
+  "method_signature": "Not applicable",
+  "evaluation_criteria": "Not applicable",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "bridging perspectives of researchers and practitioners",
+    "aims to efficiently disseminate original research results",
+    "inclusion of reviewed short papers reporting on work in progress is welcome",
+    "strict peer-reviewing and paper selection process"
+  ],
+  "thinking_moves": [
+    "会议组织的元层次视角",
+    "多学科交叉的服务科学领域",
+    "质量控制通过严格的同行评审"
+  ],
+  "topic_tags": [
+    "service-science",
+    "edge-computing",
+    "intelligent-services",
+    "AI-service-optimization",
+    "service-ecosystem"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Only front matter and table of contents available. Individual paper content not included. Researcher (Shangguang Wang) appears as Program Chair and volume editor. Cannot extract paper-specific research cognition."
+}

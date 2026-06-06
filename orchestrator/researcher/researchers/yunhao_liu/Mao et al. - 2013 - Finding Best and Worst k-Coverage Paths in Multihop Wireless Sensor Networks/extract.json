@@ -1,0 +1,42 @@
+{
+  "paper_id": "Mao et al. - 2013 - Finding Best and Worst k-Coverage Paths in Multihop Wireless Sensor Networks",
+  "doi": null,
+  "title": "Finding Best and Worst k-Coverage Paths in Multihop Wireless Sensor Networks",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "无线传感网络部署需保证k覆盖服务质量,经济与应用双重需求驱动",
+  "problem_framing": "在传感节点集合中求源宿点间k-support(最小化最大kth距离)和k-breach路径(最大化最小kth距离)",
+  "key_insight": "最优k-support路径必由完美支撑点线段组成;最优k-breach路径必沿kth-NP Voronoi边",
+  "method_signature": "构建kth-NP Voronoi图,化为加权图最短路问题,复杂度O(k²n log n)",
+  "evaluation_criteria": "理论证明最优性,时间复杂度O(k²n log n),通用k非仅常数",
+  "negative_result_or_admitted_limitation": "Fang等人的binary search算法无法保证最优解,k须为常数减少通用性",
+  "evidence_for_taste": [
+    "Unfortunately, their algorithms cannot guarantee an optimum solution",
+    "their algorithm may not return the optimal k-support path",
+    "their algorithms cannot guarantee an optimum solution",
+    "This is the first work that presents polynomial time algorithms",
+    "we try to reduce the time complexity of our algorithm"
+  ],
+  "thinking_moves": [
+    "引入kth-NP Voronoi图作为计算几何基础结构",
+    "通过定理证明将连续路径搜索空间约束到离散完美支撑点",
+    "将路径优化问题等价转换为图中最短路径问题",
+    "利用层次分解(order-k Voronoi + farthest Voronoi)构造kth-NP Voronoi",
+    "分布式实现中让各节点本地构建子图后合并"
+  ],
+  "topic_tags": [
+    "k-coverage path optimization",
+    "kth-NP Voronoi diagram",
+    "wireless sensor networks",
+    "optimal k-support path",
+    "optimal k-breach path",
+    "distributed algorithms"
+  ],
+  "cites_own_work": [
+    "[15] Tang, Mao, Li - Optimal k-support coverage paths in wireless sensor networks (2009)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "该文为2013年论文含完整intro/method/eval/conclusion;作者刘云浩为署名co-author(含email及单位);文中明确批评前人算法不能保证最优解,是强 taste 信号;论文明确声称首次为一般k(非常数)提供多项式时间最优算法 | md truncated to head40k+tail20k"
+}

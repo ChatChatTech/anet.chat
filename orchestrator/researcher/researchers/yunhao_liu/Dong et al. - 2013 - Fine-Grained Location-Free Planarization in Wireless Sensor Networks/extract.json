@@ -1,0 +1,39 @@
+{
+  "paper_id": "Dong et al. - 2013 - Fine-Grained Location-Free Planarization in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Fine-Grained Location-Free Planarization in Wireless Sensor Networks",
+  "year": 2013,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Location-based planarization requires costly GPS or NP-hard localization, limiting applicability in large-scale sensor networks.",
+  "problem_framing": "Extract a connected planar subgraph (TPS) from connectivity graph G with bounded stretch factor, using only local connectivity information.",
+  "key_insight": "Using underlying representations (underlying paths) enables dynamically transforming non-CDM edges into conflict-free edges, achieving denser sampling than CDM.",
+  "method_signature": "Construct RWG with underlying representation, compute maximal conflict-free edge set via conflict graph MIS, perform separable conflict resolution.",
+  "evaluation_criteria": "Planarity guarantee, stretch factor (worst/average), connectivity (number of branches), edge count ratio vs CDM.",
+  "negative_result_or_admitted_limitation": "Cannot guarantee constant stretch factor for arbitrary inputs, though simple test exists for correctness and simulations show small stretch.",
+  "evidence_for_taste": [
+    "edges not in CDM can often be transformed",
+    "CDM will be disconnected and contain many connected components",
+    "large distortion of those planar structures",
+    "cannot be easily applied in those applications",
+    "theoretical result requires the diameter be at least 290"
+  ],
+  "thinking_moves": [
+    "先用CDM方法演示其局限性(稀疏采样导致断开)",
+    "定义底层表示来捕获边的几何关系而非依赖位置",
+    "将冲突检测形式化为图独立集问题",
+    "区分可分离冲突(可重选路径)与真实交叉(不可消除)",
+    "理论与实践分离—理论给边界,仿真验证实际性能"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-planarization",
+    "location-free-topology",
+    "quasi-UDG-model",
+    "connectivity-graph-spanner",
+    "distributed-algorithm"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

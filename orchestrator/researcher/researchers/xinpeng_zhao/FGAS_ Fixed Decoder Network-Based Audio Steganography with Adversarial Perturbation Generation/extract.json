@@ -1,0 +1,44 @@
+{
+  "paper_id": "FGAS_ Fixed Decoder Network-Based Audio Steganography with Adversarial Perturbation Generation",
+  "doi": "10.48550/arxiv.2505.22266",
+  "title": "FGAS: Fixed Decoder Network-Based Audio Steganography with Adversarial Perturbation Generation",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "现有音频隐写方法存在高计算成本、长实现时间、抗隐写分析性能差的问题，且传输预训练模型带来安全风险",
+  "problem_framing": "将隐写重新定义为利用固定解码器网络进行消息提取,并通过对抗扰动生成实现嵌入的通信问题",
+  "key_insight": "发送方和接收方只需共享固定解码器的结构和密钥,无需传输大型模型即可实现安全隐蔽通信",
+  "method_signature": "A2PG策略通过迭代优化生成大小受限的对抗扰动,同时满足消息可解码性和对抗隐蔽性约束",
+  "evaluation_criteria": "PSNR音频质量、分类错误率(抗检测性能)、消息提取准确率、通道扰动下的鲁棒性",
+  "negative_result_or_admitted_limitation": "FGAS_R生成高保真隐写音频需35秒,标准FGAS需8秒,这是为获得优越抗隐写分析和鲁棒性所付出的必要代价",
+  "evidence_for_taste": [
+    "PSNR gain of over 10 dB",
+    "near-random-guess accuracy",
+    "eliminate the need for massive model transmission",
+    "lightweight fixed decoder",
+    "adversarial curriculum learning approach"
+  ],
+  "thinking_moves": [
+    "将图像领域的固定神经网络隐写扩展到音频领域,识别出1D波形特性带来的根本挑战",
+    "从安全通信角度重新定义隐写问题:消除模型传输风险,而非单纯优化嵌入容量",
+    "将嵌入问题建模为多目标优化:音频质量+恢复准确率+抗检测性能三者联合",
+    "引入对抗课程学习机制,按复杂度递增顺序训练扰动以应对真实信道失真",
+    "权衡取舍明确化:承认鲁棒变体需更长生成时间来换取更强的抗攻击能力"
+  ],
+  "topic_tags": [
+    "audio-steganography-fixed-decoder",
+    "adversarial-perturbation-generation",
+    "anti-steganalysis",
+    "adversarial-curriculum-learning",
+    "lightweight-cryptographic-embedding"
+  ],
+  "cites_own_work": [
+    "Zhang et al. (2024) provably secure public-key steganography",
+    "Zhang et al. (2024) linguistic steganography semantic-preserving",
+    "Chen et al. (2019) derivative-based steganographic distortion audio",
+    "Luo et al. (2017) adaptive audio steganography AAC STC"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文结构完整,包含动机、问题定义、方法设计、实验验证全流程。关键认知信号清晰:识别出音频1D波形的特殊性导致图像方法不适用,将安全问题重构为消除模型传输风险,并明确承认生成时间的权衡代价。 | md truncated to head40k+tail20k"
+}

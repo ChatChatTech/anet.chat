@@ -1,0 +1,39 @@
+{
+  "paper_id": "2019_TPDS_Enabling_Flexible_Resource_Allocation_in_Mobile_Deep_Learning_Systems",
+  "doi": null,
+  "title": "Enabling Flexible Resource Allocation in Mobile Deep Learning Systems",
+  "year": 2019,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "移动设备资源受限,云端有隐私风险,压缩模型牺牲精度,需要平衡时间效率与内存占用",
+  "problem_framing": "将深度学习模型拆分为代码块流,按需增量加载执行,实现资源受限下的高精度推理",
+  "key_insight": "不压缩模型,而是拆分成小代码块增量加载执行,通过缓存和垃圾回收管理内存",
+  "method_signature": "增量代码块执行 + DCG图调度 + 静态化内存管理 + 垃圾回收机制",
+  "evaluation_criteria": "内存占用降低70%,能耗仅0.2%,无精度损失,支持灵活资源分配策略",
+  "negative_result_or_admitted_limitation": "延迟略有增加约700ms,I/O瓶颈略微影响效率,SoC本身耗时占93%",
+  "evidence_for_taste": [
+    "requires great engineering effort",
+    "strenuous but with wonderful effect",
+    "is non-trivial",
+    "takes us great engineering effort",
+    "we went through all the source codes",
+    "can impact our system efficiency slightly"
+  ],
+  "thinking_moves": [
+    "将模型执行从整体加载重新定义为增量加载的工程问题",
+    "通过拆解框架源码理解内部机制,再定制化内存管理",
+    "承认延迟代价换取内存和精度优势",
+    "从系统层面对深度学习框架进行侵入式改造而非另起炉灶"
+  ],
+  "topic_tags": [
+    "mobile-deep-learning-inference",
+    "resource-constrained-computation",
+    "incremental-code-execution",
+    "memory-management-mobile",
+    "edge-deep-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

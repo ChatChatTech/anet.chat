@@ -1,0 +1,43 @@
+{
+  "paper_id": "Li et al. - 2014 - FLIGHT Clock Calibration and Context Recognition Using Fluorescent Lighting",
+  "doi": null,
+  "title": "FLIGHT: Clock Calibration and Context Recognition Using Fluorescent Lighting",
+  "year": 2014,
+  "venue": "unknown (appears as IEEE Transactions)",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "时钟同步需频繁通信导致高能耗; AC驱动的荧光灯周期稳定且普遍存在,可作为无需额外硬件的公共时间参考",
+  "problem_framing": "将时钟同步问题缩小为时钟校准问题——只保证不同节点以相同速率推进,不要求绝对时间一致",
+  "key_insight": "荧光灯亮度随交流电半周期(10ms@50Hz)周期性变化,且该周期性与灯具位置/距离无关,可作为通用时间基准",
+  "method_signature": "基于荧光灯光强周期检测的低功耗时钟校准与上下文识别",
+  "evaluation_criteria": "周期检测误差(<165μs)、能耗(比Radio方案低40倍)、上下文识别准确率(~95%)",
+  "negative_result_or_admitted_limitation": "检测精度受其他光源干扰;室内检测准确率仅90%",
+  "evidence_for_taste": [
+    "empirically study the feasibility",
+    "验证了该策略的稳定性和准确性",
+    "A greedy searching solution for counting cannot work",
+    "such a shift follows N(0,σ²)",
+    "the error is bounded by 165μs",
+    "a 6-order filter is adequate"
+  ],
+  "thinking_moves": [
+    "从物理层交流电特性出发,构建跨层时间基准",
+    "先通过实验验证可行性,再形式化设计",
+    "区分同步与校准的概念边界,简化问题",
+    "将信号处理问题转化为轻量级滤波实现",
+    "利用周期性作为室内上下文指纹的独特特征",
+    "从能耗角度重新定义技术选型(光采样vs射频)"
+  ],
+  "topic_tags": [
+    "fluorescent-lighting-clock-sync",
+    "light-sensor-sampling",
+    "low-power-time-synchronization",
+    "indoor-outdoor-context-recognition",
+    "period-detection-filtering"
+  ],
+  "cites_own_work": [
+    "ACM MobiCom 2012 version of this paper"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

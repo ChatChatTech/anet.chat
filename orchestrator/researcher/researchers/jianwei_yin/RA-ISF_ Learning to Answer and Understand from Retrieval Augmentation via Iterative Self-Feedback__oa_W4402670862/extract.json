@@ -1,0 +1,38 @@
+{
+  "paper_id": "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4402670862",
+  "doi": "10.18653/v1/2024.findings-acl.281",
+  "title": "RA-ISF: Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback",
+  "year": 2024,
+  "venue": "ACL Findings",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "RAG中无关文本会损害模型性能，LLM内部知识与检索知识融合困难",
+  "problem_framing": "将问答过程分解为自知识判断、段落相关性判断、问题分解三个子模块迭代处理",
+  "key_insight": "通过迭代自反馈机制，当模型无初始答案或检索到无关文本时，分解问题为子问题逐步解决",
+  "method_signature": "三个预训练子模型(M_know, M_rel, M_decom)与LLM和检索器协同迭代求解",
+  "evaluation_criteria": "Exact Match (EM) 精确匹配率",
+  "negative_result_or_admitted_limitation": "迭代问题分解可能导致过度分叉，对数学推理、符号推理等专业领域未验证",
+  "evidence_for_taste": [
+    "retrieving irrelevant knowledge texts will impair",
+    "if none of the retrieved text is relevant",
+    "performance improvement of RA-ISF is +8.7",
+    "removing any component leads to performance decline",
+    "this approach might become inefficient"
+  ],
+  "thinking_moves": [
+    "从检索失效的反面出发：先判断问题是否可由内部知识解决，再判断检索段落是否相关",
+    "将复杂问题迭代分解为子问题，利用子答案合成最终答案",
+    "通过三个子模块的迭代组合，既增强RAG有效性，又缓解无关段落带来的负面干扰",
+    "在迭代过程中设置早停机制：当找到相关段落或子问题可解时立即返回答案"
+  ],
+  "topic_tags": [
+    "retrieval-augmented-generation",
+    "iterative-self-feedback",
+    "question-decomposition",
+    "knowledge-filtering",
+    "hallucination-mitigation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

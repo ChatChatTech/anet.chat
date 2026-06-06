@@ -1,0 +1,40 @@
+{
+  "paper_id": "Review on Requirements Modeling and Analysis for Self-Adaptive Systems_ A Ten-Year Perspective",
+  "doi": "10.48550/arxiv.1704.00421",
+  "title": "Review on Requirements Modeling and Analysis for Self-Adaptive Systems: A Ten-Year Perspective",
+  "year": 2017,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有研究未系统总结自适应系统的建模方法和需求活动",
+  "problem_framing": "通过SLR系统综述2003-2013年间需求建模分析文献,提取方法分类与质量评估",
+  "key_insight": "企业模型应用更广泛,但行为模型评估更严格;需求驱动运行时适配是最频繁研究主题",
+  "method_signature": "SLR覆盖21个 venues与8个数字图书馆,筛选109篇论文,提取29种建模方法8大类",
+  "evaluation_criteria": "10项质量评估问题(问题陈述/上下文/方法清晰度/评估详细度等)",
+  "negative_result_or_admitted_limitation": "no systematic study has been performed on summarizing modeling methods and corresponding requirements activities",
+  "evidence_for_taste": [
+    "no systematic study has been performed",
+    "29 modeling methods classified into 8 categories",
+    "quasi-sensitivity above 80%",
+    "Kappa value above 0.8",
+    "behavior models were more rigorously evaluated",
+    "requirements-driven runtime adaptation was the most frequently studied"
+  ],
+  "thinking_moves": [
+    "用text mining从已知文献提取搜索词条,避免主观性",
+    "Kappa系数校准研究者间的理解差异",
+    "准灵敏度验证搜索策略的有效性",
+    "用准金标准建立搜索词条和评估自动化搜索性能",
+    "区分建模维度被考虑的程度与保障维度被传达的程度"
+  ],
+  "topic_tags": [
+    "self-adaptive-systems-requirements",
+    "systematic-literature-review",
+    "requirements-modeling",
+    "requirements-analysis",
+    "autonomic-computing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Jin et al. - 2024 - Palantir Towards Efficient Super Resolution for Ultra-high-definition Live Streaming",
+  "doi": null,
+  "title": "Palantír: Towards Efficient Super Resolution for Ultra-high-definition Live Streaming",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "UHD视频带宽需求(45Mbps)远超平均上行带宽(11.07Mbps),SR DNN推理开销过大难以部署",
+  "problem_framing": "将帧级调度细化为补丁级调度,选择哪些补丁使用DNN-based SR以平衡质量与开销",
+  "key_insight": "SR误差传播可建模为DAG,其单向无环结构使质量估计既准确又可通过SpMM并行加速",
+  "method_signature": "DAG建模误差传播+贪婪搜索选锚补丁+SpMM并行化调度",
+  "evaluation_criteria": "推理开销降低倍数、质量保留率、调度延迟占比、能耗/成本节省",
+  "negative_result_or_admitted_limitation": "类型优先策略(frame-level有效)对patch-level调度帮助甚微(CLES仅58.9%接近随机)",
+  "evidence_for_taste": [
+    "The metric is as low as 58.9%",
+    "type-based prioritization is unhelpful",
+    "fails to deliver optimal efficiency",
+    "too simplified",
+    "even more unreasonable"
+  ],
+  "thinking_moves": [
+    "通过实验发现类型先验(frame-level有效)不适用于patch-level,批判性否定NeuroScaler方法",
+    "首次系统形式化分析SR误差传播过程,建立理论而非经验模型",
+    "利用DAG的单向无环结构巧得并行性,将串行估计重构为SpMM操作",
+    "承认NEMO测量开销过高不适用于实时场景,选择NeuroScaler作为baseline而非NEMO"
+  ],
+  "topic_tags": [
+    "video-super-resolution",
+    "UHD-live-streaming",
+    "patch-level-scheduling",
+    "DAG-modeling",
+    "SR-error-propagation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

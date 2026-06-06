@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zhu et al. - 2005 - TruGrid A Self-Sustaining Trustworthy Grid",
+  "doi": null,
+  "title": "TruGrid: A Self-sustaining Trustworthy Grid",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "资源消费者与提供者难以在无中心控制下有效交互；现有系统假设提供者自愿贡献资源，与实际不符",
+  "problem_framing": "在去中心化环境中，如何让自主的消费者与提供者基于自身利益驱动实现有效交互",
+  "key_insight": "通过经济模型(虚拟货币)、激励机制(动态定价)和信誉管理使松散连接的网格自维持运行",
+  "method_signature": "Grid Regulator中心调控+分布式P2P竞争+动态价格调整算法+信任度惩罚模型",
+  "evaluation_criteria": "提供者公平性(fairScale标准差)、消费者截止期缺失率、提供者受罚比例",
+  "negative_result_or_admitted_limitation": "Bare System无法识别不诚信消费者，所有消费者获得相同服务，产生严重free-rider问题",
+  "evidence_for_taste": [
+    "made impractical assumptions",
+    "failed to enable the mentioned interaction",
+    "rigid grid systems are not flexible in practice",
+    "the Bare System fails to identify",
+    "consequently behave negatively",
+    "protects the right of consumers"
+  ],
+  "thinking_moves": [
+    "先指出传统方法(分层网格/纯P2P)的根本局限，再提出中间路径",
+    "把交互问题重新frame为经济交易问题，用虚拟货币作为媒介",
+    "用SPEC标准化计算能力作为投资的代理指标，实现利润公平分配",
+    "识别两类新安全威胁(free-rider和boaster)，针对性设计机制",
+    "承认baseline系统缺陷，对比验证安全机制的必要性"
+  ],
+  "topic_tags": [
+    "grid-computing-incentive",
+    "P2P-trustworthiness",
+    "economic-trading-model",
+    "free-rider-detection",
+    "distributed-scheduling"
+  ],
+  "cites_own_work": [
+    "[6] 2004 Grid scheduling paper"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "未明确标注会议名称，仅从作者单位推测为国际会议；DOI缺失；仿真实验为主要评估手段"
+}

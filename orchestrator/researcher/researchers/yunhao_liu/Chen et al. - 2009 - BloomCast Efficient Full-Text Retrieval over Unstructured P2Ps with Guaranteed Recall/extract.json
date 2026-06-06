@@ -1,0 +1,39 @@
+{
+  "paper_id": "Chen et al. - 2009 - BloomCast Efficient Full-Text Retrieval over Unstructured P2Ps with Guaranteed Recall",
+  "doi": null,
+  "title": "BloomCast: Efficient Full-Text Retrieval over Unstructured P2Ps with Guaranteed Recall",
+  "year": 2009,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Unstructured P2P无法保证召回率,全量复制文档通信/存储开销不可接受",
+  "problem_framing": "把副本和查询建模为球与桶模型,寻找使碰撞概率最大化的最优副本数",
+  "key_insight": "用Bloom Filter替代原始文档复制,可将通信/存储成本大幅降低同时保证完美召回率",
+  "method_signature": "Balls-and-Bins约束下求最優副本数r=g=c*sqrt(N),用Bloom Filter实现集合成员验证",
+  "evaluation_criteria": "召回率、通信开销、复制成本、搜索效率(Recall/Communication Cost)",
+  "negative_result_or_admitted_limitation": "Bloom Filter的假阳性会导致轻微精确率下降",
+  "evidence_for_taste": [
+    "The root cause is that DHTs are based on exact hashing schemes, providing poor full-text search capacity",
+    "The minimal cost can be achieved when r=c*sqrt(N*q/d)",
+    "Due to the false positives of Bloom Filters, the returned results may contain undesired documents",
+    "It is difficult to guarantee that the keyword set that users are interested in are exactly the keyword set selected for indexes"
+  ],
+  "thinking_moves": [
+    "把查询-文档匹配问题形式化为Balls-and-Bins碰撞概率问题",
+    "用约束优化求最优副本数,得到通信成本O(sqrt(N))的正式界",
+    "用Bloom Filter的成员验证能力解决全文本检索而不复制原始文档",
+    "承认Bloom Filter假阳性会牺牲精确率换取召回率"
+  ],
+  "topic_tags": [
+    "P2P-full-text-retrieval",
+    "Bloom-Filter-replication",
+    "balls-and-bins-model",
+    "unstructured-P2P-guaranteed-recall"
+  ],
+  "cites_own_work": [
+    "[7] Difficulty-aware hybrid search in peer-to-peer networks",
+    "[8] Efficient multi-keyword search over p2p web"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Paper has abstract, intro, method, evaluation sections but venue/conference name is not explicitly stated; only year and authors are identifiable"
+}

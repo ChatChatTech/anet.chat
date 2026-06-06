@@ -1,0 +1,38 @@
+{
+  "paper_id": "TK-Mamba_ Marrying KAN With Mamba for Text-Driven 3D Medical Image Segmentation",
+  "doi": "10.48550/arxiv.2505.18525",
+  "title": "TK-Mamba: Marrying KAN With Mamba for Text-Driven 3D Medical Image Segmentation",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Mamba的动态聚合特征被静态MLP的固定激活函数约束，产生表达瓶颈；同时视觉骨干无法区分语义相关类别",
+  "problem_framing": "高维3D医学图像需同时满足长程依赖捕获、复杂结构表达、标签不一致处理三个需求",
+  "key_insight": "Mamba的动态聚合必须配合同样动态的变换——用3D-GR-KAN替换固定激活函数以解决表达瓶颈",
+  "method_signature": "K-Mamba模块(Tri-oriented Mamba+3D-GR-KAN) + 双分支文本驱动机制(PuMedCLIP)",
+  "evaluation_criteria": "Dice系数(器官重叠率)、NSD(边界精度)、参数量/FLOPs/推理时间",
+  "negative_result_or_admitted_limitation": "vanilla KAN在高维数据上导致性能崩溃，且对小型结构分割困难",
+  "evidence_for_taste": [
+    "expressiveness bottleneck",
+    "ill-suited for Mamba's complex output",
+    "dramatic performance collapse",
+    "severely limited by computational inefficiency",
+    "prone to overfitting or instability"
+  ],
+  "thinking_moves": [
+    "从Mamba输出与固定激活函数的不适配性反推表达瓶颈的存在",
+    "通过消融实验的三向对比(MLP vs KAN vs 3D-GR-KAN)验证设计必要性",
+    "将视觉骨干的语义盲区问题重新frame为可借助语言模型解决的跨模态对齐问题",
+    "引入rational basis functions解决KAN参数爆炸的工程可行性问题"
+  ],
+  "topic_tags": [
+    "3D医学图像分割",
+    "Mamba状态空间模型",
+    "Kolmogorov-Arnold网络",
+    "视觉-语言对齐",
+    "多器官分割"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

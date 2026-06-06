@@ -1,0 +1,40 @@
+{
+  "paper_id": "Mobile Foundation Model as Firmware",
+  "doi": "10.48550/arxiv.2308.14363",
+  "title": "Mobile Foundation Model as Firmware The Way Towards a Unified Mobile AI Landscape",
+  "year": 2024,
+  "venue": "ACM MobiCom '24",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "移动端深度学习模型高度碎片化，架构/算子/实现各异，硬件系统算法协同优化困难",
+  "problem_framing": "碎片化导致三方面问题：NPU设计权衡、OS层无法跨应用共享权重计算、库级优化只能头痛医头",
+  "key_insight": "用统一的基础模型加轻量适配器替代碎片化模型，像固件一样由OS统一管理暴露给应用",
+  "method_signature": "M4(N-1-M架构)：多模态编码器+LLM主干预训练+多模态解码器，用LoRA适配下游任务",
+  "evaluation_criteria": "Ubiquity精度比肩85%任务；Scalability共享基础模型省存储内存；Simplicity算子从156降至39",
+  "negative_result_or_admitted_limitation": "M4比任务专用模型慢18倍；手机上图像分类延迟2.1秒；当前只在高端设备可运行",
+  "evidence_for_taste": [
+    "fragmented DNNs significantly strain",
+    "only 8% of those models can entirely run",
+    "M4 is much slower than task-specific models",
+    "the prediction delay could be too slow",
+    "ad-hoc optimization efforts",
+    "simplifying hardware design"
+  ],
+  "thinking_moves": [
+    "把碎片化问题归因于元层级设计缺失而非算子层面",
+    "借鉴LLM时代基础模型收敛趋势解决移动端碎片问题",
+    "用N-1-M架构而非直接N-M对齐实现参数效率",
+    "提出适配器模式把可训练部分压缩到千级参数规模",
+    "通过多路径执行设计让简单任务跳过计算密集模块"
+  ],
+  "topic_tags": [
+    "mobile-foundation-model",
+    "on-device-inference",
+    "multimodal-learning",
+    "LLM-firmware",
+    "NPU-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为完整正文，包含intro方法实验结论，作者角色通过名字确认（Shangguang Wang为co-author，Mengwei Xu为corresponding） | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,214 @@
+{
+  "slug": "yang_song",
+  "n_extracts": 4,
+  "n_full": 4,
+  "n_partial": 0,
+  "n_thin": 0,
+  "year_range": [
+    2015,
+    2017
+  ],
+  "top_tags": [
+    [
+      "learning-to-rank",
+      2
+    ],
+    [
+      "medical-IR",
+      2
+    ],
+    [
+      "query-expansion",
+      2
+    ],
+    [
+      "clinical-decision-support",
+      1
+    ],
+    [
+      "position-based-retrieval",
+      1
+    ],
+    [
+      "circumlocutory-queries",
+      1
+    ],
+    [
+      "Web-based-expansion",
+      1
+    ],
+    [
+      "medical-IR-query-expansion",
+      1
+    ],
+    [
+      "web-based-query-expansion",
+      1
+    ],
+    [
+      "model-combination",
+      1
+    ],
+    [
+      "clef-ehealth",
+      1
+    ],
+    [
+      "mesh-terminology",
+      1
+    ],
+    [
+      "医疗信息检索",
+      1
+    ],
+    [
+      "学习排序",
+      1
+    ],
+    [
+      "系统性评审",
+      1
+    ],
+    [
+      "文档排序",
+      1
+    ],
+    [
+      "词向量语义匹配",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2015,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "learning-to-rank",
+          2
+        ],
+        [
+          "medical-IR",
+          2
+        ],
+        [
+          "query-expansion",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "medical-IR-query-expansion",
+          1
+        ],
+        [
+          "web-based-query-expansion",
+          1
+        ],
+        [
+          "model-combination",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2017,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "医疗信息检索",
+          1
+        ],
+        [
+          "学习排序",
+          1
+        ],
+        [
+          "系统性评审",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "位置模型(ECNUPB: MAP=0.0220, infNDCG=0.0702)远逊于学习排序模型，表明位置敏感假设在该任务上效果有限",
+    "Run.4和Run.5效果反而不如简单方法，学习排序参数敏感",
+    "Word2vec单独使用表现差(ap=0.091),需改进以避免语义信息丢失"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "we believe that title and abstract parts are the most important",
+      "paper_id": "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval"
+    },
+    {
+      "quote": "only the terms appearing more than n times are kept",
+      "paper_id": "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval"
+    },
+    {
+      "quote": "we apply random forest to implement pointwise approach",
+      "paper_id": "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval"
+    },
+    {
+      "quote": "occurrence of a query term has an impact",
+      "paper_id": "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval"
+    },
+    {
+      "quote": "The main evaluation is infNDCG",
+      "paper_id": "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval"
+    },
+    {
+      "quote": "ECNUPB performed much worse than ecnu1",
+      "paper_id": "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval"
+    },
+    {
+      "quote": "get rid of the influence of single model",
+      "paper_id": "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval"
+    },
+    {
+      "quote": "to better understand and satisfy the task",
+      "paper_id": "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval"
+    },
+    {
+      "quote": "manually add the keywords diagnose",
+      "paper_id": "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval"
+    },
+    {
+      "quote": "customized a learning-to-rank algorithm",
+      "paper_id": "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval"
+    },
+    {
+      "quote": "achieve an outstanding performance",
+      "paper_id": "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval"
+    },
+    {
+      "quote": "better understand and satisfy the task",
+      "paper_id": "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval"
+    },
+    {
+      "quote": "get rid of the influence of single model",
+      "paper_id": "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval"
+    },
+    {
+      "quote": "more representative of the current state",
+      "paper_id": "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval"
+    },
+    {
+      "quote": "combination of the two methods achieves a better performance",
+      "paper_id": "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine"
+    },
+    {
+      "quote": "the performance of our word2vec model needs to be improved",
+      "paper_id": "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine"
+    },
+    {
+      "quote": "avoid losing semantic information",
+      "paper_id": "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine"
+    }
+  ]
+}

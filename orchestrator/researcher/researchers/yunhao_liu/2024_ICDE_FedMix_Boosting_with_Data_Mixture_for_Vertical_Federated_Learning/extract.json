@@ -1,0 +1,38 @@
+{
+  "paper_id": "2024_ICDE_FedMix_Boosting_with_Data_Mixture_for_Vertical_Federated_Learning",
+  "doi": null,
+  "title": "FedMix: Boosting with Data Mixture for Vertical Federated Learning",
+  "year": 2024,
+  "venue": "ICDE",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "数据孤岛问题日益严重，隐私法规(GDPR)限制数据共享，导致VFL训练时大量数据被丢弃",
+  "problem_framing": "数据牺牲问题(Data Sacrifice Problem)：VFL训练仅使用对齐数据，丢弃未对齐数据导致性能不可恢复损失",
+  "key_insight": "将mixup思想迁移到VFL场景，通过数据混合(data mixture)技术在对齐样本与未对齐样本间进行加权融合，无需额外准备阶段即可提升模型性能",
+  "method_signature": "基于数据混合的FedMix框架，包含数据混合器(data mixer)和数据调味(data seasoning)两大模块",
+  "evaluation_criteria": "模型性能提升百分比(15%)、时间成本节省(30.5小时)、分布偏差和辅助数据场景下的鲁棒性",
+  "negative_result_or_admitted_limitation": "与Vanilla相比时间成本仍有增加，当辅助数据量或参与方数量无限增长时，FedMix会因半监督学习而变慢",
+  "evidence_for_taste": [
+    "现有方法只能实现0.1%~3%性能提升",
+    "准备阶段耗时占整个训练阶段的30%~125%",
+    "数据混合器贡献80%的改进",
+    "数据调味仅贡献4%改进",
+    "这些方法严重依赖足够的已知特征和对齐样本"
+  ],
+  "thinking_moves": [
+    "先理论分析证明未对齐数据确实能提升性能，再设计算法框架",
+    "从数据分布与全局分布的Wasserstein距离角度建立理论支撑",
+    "借鉴中心化学习中的mixup技术解决分布式场景的数据利用问题",
+    "承认各模块贡献不均，数据调味效果有限"
+  ],
+  "topic_tags": [
+    "vertical-federated-learning",
+    "data-sacrifice",
+    "data-mixture",
+    "privacy-preserving-ml",
+    "semi-supervised-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

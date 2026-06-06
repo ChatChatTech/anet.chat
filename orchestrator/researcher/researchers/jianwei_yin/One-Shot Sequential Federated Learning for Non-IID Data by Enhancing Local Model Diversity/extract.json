@@ -1,0 +1,38 @@
+{
+  "paper_id": "One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity",
+  "doi": "10.48550/arxiv.2404.12130",
+  "title": "One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity",
+  "year": 2024,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "SFL reduces communication rounds but struggles with non-IID data; one-shot SFL with single client communication is underexplored and suffers from insufficient diversity.",
+  "problem_framing": "One-shot SFL problem: each client receives one model from adjacent client, limited info exchange, non-IID data causes divergence from global optimum.",
+  "key_insight": "Local model pool with diverse starting points enables knowledge transfer across clients; averaging diverse models improves generalization beyond single-trajectory training.",
+  "method_signature": "FedELMY: model pool per client, initialize new model as average of pool, distance regularization d1 (diversify) + d2 (prevent divergence).",
+  "evaluation_criteria": "Test accuracy on CIFAR-10, Tiny-ImageNet, PACS, Office-Caltech-10 under label-skew and domain-shift non-IID partitions.",
+  "negative_result_or_admitted_limitation": "Higher computation cost: each client trains S models instead of 1 model; simply increasing local epochs causes overfitting.",
+  "evidence_for_taste": [
+    "Our insight is to utilize the diversity of models",
+    "directly applying such a diversity strategy in SFL is not feasible",
+    "directly increasing local epochs does not always improve model performance",
+    "overfitting due to excessive local training",
+    "model number S grew to around 10, the performance started to become stable"
+  ],
+  "thinking_moves": [
+    "把one-shot SFL的communication限制重新定义成diversity利用问题",
+    "借用SWAD的经验：相似训练loss但不同参数的模型ensemble可以提升泛化",
+    "用两个对立的distance term平衡探索与收敛稳定性",
+    "通过ablation验证diversity本身已优于baseline，再加regularization进一步提升"
+  ],
+  "topic_tags": [
+    "one-shot-federated-learning",
+    "sequential-federated-learning",
+    "non-IID-data",
+    "model-diversity",
+    "local-training-regularization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

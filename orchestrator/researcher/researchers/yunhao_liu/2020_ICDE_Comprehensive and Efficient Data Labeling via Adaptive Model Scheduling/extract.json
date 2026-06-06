@@ -1,0 +1,40 @@
+{
+  "paper_id": "2020_ICDE_Comprehensive and Efficient Data Labeling via Adaptive Model Scheduling",
+  "doi": null,
+  "title": "Comprehensive and Efficient Data Labeling via Adaptive Model Scheduling",
+  "year": 2020,
+  "venue": "ICDE",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "数据标注需求爆炸式增长，需要在有限算力下最大化标注价值的现实痛点",
+  "problem_framing": "给定数据流和多模型集合，在资源约束下自适应调度模型以最大化输出标签价值",
+  "key_insight": "利用DRL挖掘模型间语义关系，预测未执行模型的价值以指导调度决策",
+  "method_signature": "DRL模型价值预测+成本效益贪心调度算法",
+  "evaluation_criteria": "价值召回率、执行时间节省百分比、相比随机策略提升幅度",
+  "negative_result_or_admitted_limitation": "经典epsilon-greedy训练难以收敛，因后期任何动作都只带来负奖励",
+  "evidence_for_taste": [
+    "cost-profit greedy algorithm",
+    "maximizing the value of the model output",
+    "submodular function maximization with a knapsack constraint",
+    "NP-hard",
+    "the training process is hard to reach convergence"
+  ],
+  "thinking_moves": [
+    "将多模型调度问题映射为DRL的观测-动作空间问题",
+    "把模型调度的NP难问题用成本效益贪心启发式求解",
+    "引入END动作解决DRL训练后期的负反馈陷阱",
+    "用log函数缓解不同模型输出标签数量差异导致的偏置"
+  ],
+  "topic_tags": [
+    "multi-model-inference-scheduling",
+    "deep-reinforcement-learning",
+    "data-labeling",
+    "knapsack-constraint-optimization",
+    "model-value-prediction"
+  ],
+  "cites_own_work": [
+    "arXiv preprint arXiv:2002.05520"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

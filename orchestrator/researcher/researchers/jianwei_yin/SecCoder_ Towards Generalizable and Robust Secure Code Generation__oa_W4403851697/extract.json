@@ -1,0 +1,37 @@
+{
+  "paper_id": "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4403851697",
+  "doi": "10.48550/arxiv.2410.01488",
+  "title": "SecCoder: Towards Generalizable and Robust Secure Code Generation",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有安全代码生成方法的泛化性不足且鲁棒性差，导致实际应用中的安全失败",
+  "problem_framing": "将安全问题定义为两个核心特征：未见测试用例的泛化性和对攻击模型的鲁棒性",
+  "key_insight": "利用ICL无需重训练即可适应新漏洞，结合独立安全代码库保证演示安全性",
+  "method_signature": "密集检索器选择安全演示+上下文学习引导+四阶段流水线(扩展-选择-整合-生成)",
+  "evaluation_criteria": "安全率(CodeQL检测secure代码占比)和功能正确性(Pass@k)",
+  "negative_result_or_admitted_limitation": "C++改进仅6.14%，是Python的一半；上下文长度限制演示数量",
+  "evidence_for_taste": [
+    "mismatched generalization is more prevalent",
+    "ICL represents a training-free learning paradigm",
+    "preserve the utility without additional effort",
+    "does not need to be retrained when meeting new vulnerabilities"
+  ],
+  "thinking_moves": [
+    "先识别现有方法忽视的两个关键特征",
+    "利用ICL训练free特性降低计算开销",
+    "将检索与上下文学习结合实现自适应安全",
+    "通过实验发现无需额外机制也能保持功能正确性"
+  ],
+  "topic_tags": [
+    "secure-code-generation",
+    "in-context-learning",
+    "code-LLM-adversarial-robustness",
+    "dense-retrieval",
+    "CWE-vulnerability-mitigation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

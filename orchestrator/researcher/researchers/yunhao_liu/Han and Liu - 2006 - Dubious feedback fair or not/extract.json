@@ -1,0 +1,42 @@
+{
+  "paper_id": "Han and Liu - 2006 - Dubious feedback fair or not",
+  "doi": null,
+  "title": "Dubious Feedback: Fair or Not?",
+  "year": 2006,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "P2P reputation systems suffer from malicious feedback that defames trustworthy peers or overpraises group members, but no mechanism validates feedback quality",
+  "problem_framing": "Define feedback validation problem by measuring feedback deviation via Feedback Valid Degree (FVD) and integrating it into reputation computation",
+  "key_insight": "A peer's own reputation should be impacted by the quality of feedback it provides about others, creating an incentive for honest evaluation",
+  "method_signature": "TruthRep uses super-peer architecture with consultants and PID controller to incorporate feedback quality into reputation scoring",
+  "evaluation_criteria": "Reputation degradation of malicious peers and reputation computation error compared to conventional approach",
+  "negative_result_or_admitted_limitation": "Precise validation parameter computation is computationally infeasible in large P2P systems; real-time reputation reporting remains challenging",
+  "evidence_for_taste": [
+    "The lack of authentication makes it difficult to differentiate",
+    "the precision of deciding on feedback credibility is still a challenging issue",
+    "TruthRep takes a first look at this problem",
+    "we simply assume... due to system latency and transmission delay"
+  ],
+  "thinking_moves": [
+    "Identify three attack vectors for reputation tampering then systematize feedback components",
+    "Borrow PID control theory to compute feedback deviation incorporating historical and sudden-change components",
+    "Frame free-riding as feedback scarcity problem rather than pure resource consumption issue",
+    "Criticize existing work for lacking protection from clique cheating and not combining incentive with feedback quality"
+  ],
+  "topic_tags": [
+    "P2P reputation systems",
+    "feedback validation",
+    "trust management",
+    "malicious clique detection",
+    "incentive mechanism design"
+  ],
+  "cites_own_work": [
+    "Liu 2004 on location-aware topology matching",
+    "Liu 2005 on optimal peer-to-peer overlays",
+    "Liu 2004 on bipartite P2P overlay",
+    "Wang Liu Xiao 2004 on distributed caching"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "DOI and specific venue not provided in text. Role determination based on author ordering - first author Han, Liu listed second."
+}

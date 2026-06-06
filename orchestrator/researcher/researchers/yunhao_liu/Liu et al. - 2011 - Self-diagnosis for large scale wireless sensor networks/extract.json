@@ -1,0 +1,45 @@
+{
+  "paper_id": "Liu et al. - 2011 - Self-diagnosis for large scale wireless sensor networks",
+  "doi": null,
+  "title": "Self-Diagnosis for Large Scale Wireless Sensor Networks",
+  "year": 2011,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "sink-based diagnosis incurs huge communication overhead; sink often gets incomplete/suspicious info; problematic regions hardest to query",
+  "problem_framing": "self-diagnosis: each sensor joins fault decision; multiple nodes cooperate via FSM-based fault detectors encoding state transitions",
+  "key_insight": "fault detectors travel among nodes, each contributing local evidence to transit state; when sufficient evidence accumulates, detector reaches Accept state",
+  "method_signature": "FSM-based fault detectors with state transitions driven by local node evidence; diagnosis triggered via CUSUM+bootstrap change-point detection",
+  "evaluation_criteria": "detection ratio (% faults caught) and false alarm ratio across 20-100 node networks, compared with PAD",
+  "negative_result_or_admitted_limitation": "currently our fault detectors are deterministic, and in future works we plan to extend our model to cope with non-deterministic cases",
+  "evidence_for_taste": [
+    "Self-Diagnosis",
+    "fault detectors encode the diagnosis process",
+    "state transitions",
+    "local evidences",
+    "Achieve the Accept state",
+    "light-weight",
+    "change-point detection problem",
+    "bootstrap scheme"
+  ],
+  "thinking_moves": [
+    "把 sink pull 模型翻转为节点 push 自诊断",
+    "用 FSM 状态机编码诊断推理过程",
+    "多节点局部证据聚合成全局诊断结论",
+    "把异常触发条件形式化为变点检测问题",
+    "先定性 FSM 可行, 再经验调参 bootstrap 阈值"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network",
+    "self-diagnosis",
+    "fault-detector-FSM",
+    "change-point-detection",
+    "in-network-processing"
+  ],
+  "cites_own_work": [
+    "PAD (Liu et al., 2008)",
+    "GreenOrbs (Mo et al., 2009)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue not stated in paper; no DOI; role inferred from author order and affiliation"
+}

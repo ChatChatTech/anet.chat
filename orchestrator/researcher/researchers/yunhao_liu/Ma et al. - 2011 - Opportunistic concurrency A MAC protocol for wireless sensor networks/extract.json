@@ -1,0 +1,41 @@
+{
+  "paper_id": "Ma et al. - 2011 - Opportunistic concurrency A MAC protocol for wireless sensor networks",
+  "doi": null,
+  "title": "Opportunistic Concurrency: A MAC Protocol for Wireless Sensor Networks",
+  "year": 2011,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CSMA defers transmission when channel busy, missing opportunities for parallel transmission in WSNs with heavy traffic.",
+  "problem_framing": "Enabling opportunistic concurrent transmissions using MIM physical capability with only local information at each node.",
+  "key_insight": "CSMA's channel-busy rule is overly conservative; SINR conditions at receivers determine success, not carrier sense alone.",
+  "method_signature": "Local concurrency map + SINR-based decision algorithm integrated with X-MAC for distributed transmission decisions.",
+  "evaluation_criteria": "Latency reduction, throughput increase, energy reduction on 60 TelosB testbed vs CSMA baseline.",
+  "negative_result_or_admitted_limitation": "When Cmax > 2, collision mostly happens and performance decreases. OPC slightly increases retransmission cases.",
+  "evidence_for_taste": [
+    "not to enforce any transmission with high signal strength",
+    "we didn’t allow any transmission decision that will result in any other transmission failure",
+    "when we allow 3 or 4 transmissions concurrently proceed, collision mostly happens",
+    "the throughput does not monotonically increase with Cmax",
+    "OPC slightly increases the retransmission cases",
+    "the harm of hidden terminal brought by OPC is quite little"
+  ],
+  "thinking_moves": [
+    "识别物理层新能力(MIM)改变了原本不可行的约束条件",
+    "把serial transmission优化问题重新frame成parallel transmission机会挖掘",
+    "用局部信息(concurrency map)替代全局协调实现分布式决策",
+    "承认追求并发会引入hidden terminal，但权衡收益大于危害"
+  ],
+  "topic_tags": [
+    "MAC protocol design",
+    "MIM physical capability",
+    "concurrent transmission",
+    "wireless sensor networks",
+    "SINR-based decision"
+  ],
+  "cites_own_work": [
+    "GreenOrbs system (line references in background)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue not explicitly stated in paper text. DOI is null per user input."
+}

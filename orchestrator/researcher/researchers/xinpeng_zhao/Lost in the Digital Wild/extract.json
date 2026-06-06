@@ -1,0 +1,41 @@
+{
+  "paper_id": "Lost in the Digital Wild",
+  "doi": "10.1145/3267357.3267365",
+  "title": "Lost in the Digital Wild: Hiding Information in Digital Activities",
+  "year": 2018,
+  "venue": "MPS '18 - International Workshop on Multimedia Privacy and Security",
+  "venue_tier": "workshop",
+  "role": "corresponding",
+  "motivation": "现有信息隐藏方法依赖修改载体对象,易被检测,需突破传统范式",
+  "problem_framing": "如何将秘密信息编码为数字世界中的特定活动而非修改内容",
+  "key_insight": "将信息隐藏在'活动发生'这一事实本身,而非活动内容,整个数字世界成为动态载体",
+  "method_signature": "活动映射编码框架:位序列→数字活动序列→解码还原",
+  "evaluation_criteria": "隐蔽性(自然度检测)、容量(比特/秒)、实用性(延迟~SMS)",
+  "negative_result_or_admitted_limitation": "若不使用活动内容则容量较低;冲突避免算法未实现;当前仅概念验证非安全级实现",
+  "evidence_for_taste": [
+    "to the best of our knowledge no any existing scheme",
+    "go beyond batch steganography",
+    "the whole digital world selected becomes the cover",
+    "the new framework calls for completely new steganalysis techniques",
+    "the mobile app is designed more for fun"
+  ],
+  "thinking_moves": [
+    "将载体概念泛化至整个数字世界,消解传统cover定义",
+    "引用Ker等人2013年提出的11个开放问题来定位研究贡献",
+    "从特工物理活动类比迁移至网络行为信息隐藏",
+    "用分层架构设计将encoding/decoding/conflict三算法分离",
+    "先证可行再论安全:先实现证明概念再做安全增强"
+  ],
+  "topic_tags": [
+    "activity-based-steganography",
+    "coverless-information-hiding",
+    "social-network-covert-channel",
+    "Twitter-behavioral-encoding",
+    "network-steganography"
+  ],
+  "cites_own_work": [
+    "Zhang et al. proposed a coverless steganography method"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

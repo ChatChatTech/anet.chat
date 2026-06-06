@@ -1,0 +1,42 @@
+{
+  "paper_id": "Lu et al. - 2008 - Pseudo Trust Zero-Knowledge Authentication in Anonymous P2Ps",
+  "doi": null,
+  "title": "Pseudo Trust: Zero-Knowledge Authentication in Anonymous P2Ps",
+  "year": 2008,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Identity-based trust models conflict with user anonymity in P2P systems, creating an unresolved trade-off.",
+  "problem_framing": "How to authenticate peers without exposing real identities while maintaining trust management?",
+  "key_insight": "Generate unforgeable pseudonyms via one-way hash; use ZKP so parties authenticate without revealing secrets.",
+  "method_signature": "ZKP-based mutual authentication with pseudo identity certificates (PIC) generated from quadratic residues.",
+  "evaluation_criteria": "Impersonation success probability bound by 2^-k; latency overhead within acceptable bounds per simulations and prototype.",
+  "negative_result_or_admitted_limitation": "PT response time ~7x overt Gnutella due to onion paths; PIC generation costs ~8 seconds on popular PCs (one-time).",
+  "evidence_for_taste": [
+    "R always accepts the PI of peer I as valid",
+    "computationally infeasible to find an x",
+    "probability is max(2^-k, 2^-t)",
+    "traffic stretch is lower than 1.03",
+    "average response time about 493, 600",
+    "needs less than 8 seconds",
+    "extra traffic cost also slightly fluctuates",
+    "growth of P2P overlay has little impact"
+  ],
+  "thinking_moves": [
+    "Define the trade-off explicitly, then search for a cryptographic primitive that decouples identity from trust value",
+    "Replace centralized CA with mathematical intractability assumptions (factoring, square roots modulo n)",
+    "Bound impersonation probability formally via soundness lemma, then show adversary must break factoring",
+    "Layer zero-knowledge proof atop existing anonymous routing (APFS) rather than redesigning anonymity from scratch",
+    "Verify completeness first (honest parties always succeed), then prove soundness (cheaters detected with overwhelming probability)"
+  ],
+  "topic_tags": [
+    "P2P-anonymity",
+    "zero-knowledge-proof",
+    "trust-management",
+    "authentication-protocols",
+    "peer-to-peer-security"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

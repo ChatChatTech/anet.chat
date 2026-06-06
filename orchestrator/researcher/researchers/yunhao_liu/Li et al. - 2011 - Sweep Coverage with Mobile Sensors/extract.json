@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2011 - Sweep Coverage with Mobile Sensors",
+  "doi": null,
+  "title": "Sweep Coverage with Mobile Sensors",
+  "year": 2011,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "GreenOrbs森林监控系统需要 ranger 周期性巡视重点防火点，现有静态覆盖浪费资源",
+  "problem_framing": "将周期性监测POIs问题形式化为 sweep coverage，最小化所需移动传感器数量",
+  "key_insight": "利用时间维度动态性，可用少量移动传感器覆盖大量POIs；问题NP-hard但可常数近似",
+  "method_signature": "CSWEEP/GSWEEP 划分TSP路线片段分配传感器；DSWEEP 用流行病交换+本地决策",
+  "evaluation_criteria": "近似比、所需传感器数量、平均监测周期、可靠POI比例",
+  "negative_result_or_admitted_limitation": "个体传感器无法本地判断全局sweep coverage；集中算法不可扩展；机器人领域技术因硬件成本不适用",
+  "evidence_for_taste": [
+    "cannot be approximated within a factor of 2",
+    "an individual mobile sensor cannot locally say yes or no",
+    "none of the distributed local algorithms can guarantee",
+    "the techniques proposed in the domain of robotics not applicable",
+    "not scalable and adaptive to practical cases"
+  ],
+  "thinking_moves": [
+    "通过TSP归约证明NP-hard并给出2不可近似下界",
+    "识别问题非局部性——单个传感器无法判定全局覆盖",
+    "先简化同周期子问题设计CSWEEP(近似比2+ε)，再推广异周期GSWEEP(近似比3)",
+    "承认分布式算法无法保证严格覆盖，退而求best-effort设计DSWEEP"
+  ],
+  "topic_tags": [
+    "sweep-coverage",
+    "mobile-sensor-networks",
+    "approximation-algorithm",
+    "distributed-coverage",
+    "NP-hardness"
+  ],
+  "cites_own_work": [
+    "GreenOrbs project (refs [1], [26])"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

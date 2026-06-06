@@ -1,0 +1,41 @@
+{
+  "paper_id": "Cao et al. - 2012 - L(^mbox2) Lazy forwarding in low duty cycle wireless sensor networks",
+  "doi": null,
+  "title": "L^2: Lazy Forwarding in Low Duty Cycle Wireless Sensor Networks",
+  "year": 2012,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "X-MAC长前导(~264ms)过度耗能且低估链路质量; duty-cycle下链路突发丢失被忽视",
+  "problem_framing": "将数据转发设计解耦为媒体访问/链路估计/路由策略三个维度,并分析bursty loss对能耗的影响",
+  "key_insight": "链路突发性意味着短时间内多个传输相互关联;用多元伯努利模型精确刻画,在bursty loss时提前停止传输以节能",
+  "method_signature": "窗口传输+本地同步+多元伯努利链路模型+动态多前向者调度",
+  "evaluation_criteria": "PDR(分组投递率)、Radio-on duty cycle(-radio开启占比)、前导长度、能量效率",
+  "negative_result_or_admitted_limitation": "同步偏差可能导致丢包,确定性转发无法即时提供备份前向者;广播时macdsn计数不完美,P略高估实际概率",
+  "evidence_for_taste": [
+    "the transmission is terminated...when bursty loss occurs",
+    "misled by such overestimates of link quality",
+    "the energy cost distribution on multiple forwarders is likely to be inefficient",
+    "if the link suffers heavy bursty loss, the transmission window should be kept small to avoid useless retransmissions",
+    "it can be proved that the above optimization problem is NP-hard",
+    "such approximation does not degrade the overall PDR"
+  ],
+  "thinking_moves": [
+    "从GreenOrbs实际部署的工程异常反推X-MAC链路质量被高估",
+    "将一个communication问题(frame成perception问题):用链路突发性建模替代独立伯努利假设",
+    "先证原问题NP-hard,再提出贪心近似算法保证次优解",
+    "把长前导分解为多个短前导,通过同步协商实现lazy传输"
+  ],
+  "topic_tags": [
+    "low-duty-cycle WSN",
+    "bursty link modeling",
+    "synchronized rendezvous",
+    "energy-efficient forwarding",
+    "multivariate Bernoulli link estimation"
+  ],
+  "cites_own_work": [
+    "GreenOrbs [1]"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确说明发表 venue (会议/期刊),根据内容结构推断为SenSys类会议但无法确认具体名称;作者角色根据署名顺序判断,Yunhao Liu为 senior author"
+}

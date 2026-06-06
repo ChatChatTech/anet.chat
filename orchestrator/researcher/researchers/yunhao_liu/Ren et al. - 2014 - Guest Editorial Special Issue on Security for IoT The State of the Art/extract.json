@@ -1,0 +1,33 @@
+{
+  "paper_id": "Ren et al. - 2014 - Guest Editorial Special Issue on Security for IoT The State of the Art",
+  "doi": null,
+  "title": "Guest Editorial Special Issue on Security for IoT: The State of the Art",
+  "year": 2014,
+  "venue": "IEEE Internet of Things Journal",
+  "venue_tier": "top",
+  "role": "co-editor",
+  "motivation": "IoT安全性成为首要关注点,互联物理对象产生巨大攻击面",
+  "problem_framing": "如何为普适IoT建立强安全基础,需考虑数据安全、隐私、访问控制等多个因素",
+  "key_insight": "安全不能单点解决,需综合数据安全、隐私、信任管理、可互操作等多元因素",
+  "method_signature": "编辑社论介绍特刊论文概览",
+  "evaluation_criteria": "无(社论非研究论文)",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "security is among the top concerns",
+    "potentially enormous attack surface",
+    "strong security foundations"
+  ],
+  "thinking_moves": [
+    "从IoT规模化趋势推导安全必要性",
+    "列举安全需求清单而非单一方案",
+    "以攻击面概念统一多种威胁"
+  ],
+  "topic_tags": [
+    "IoT-security-editorial",
+    "attack-surface-analysis",
+    "privacy-trust-accesscontrol"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "本研究为特刊社论,非原始研究论文。核心内容为7篇入选论文的摘要与列表,无独立研究贡献。提取仅基于编辑导言部分的动机与问题框架。"
+}

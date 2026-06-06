@@ -1,0 +1,38 @@
+{
+  "paper_id": "Yang et al. - 2025 - Generative AI Meets Wireless Sensing Towards Wireless Foundation Model",
+  "doi": null,
+  "title": "Generative AI Meets Wireless Sensing: Towards Wireless Foundation Model",
+  "year": 2025,
+  "venue": "IEEE Communications Surveys & Tutorials",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传统感知方法面临数据稀缺性、泛化能力弱、依赖专家驱动设计等根本性限制",
+  "problem_framing": "将GenAI以plugin或solver两种模式集成到无线感知流程中",
+  "key_insight": "通过生成高质量合成数据和建模复杂信号分布,GenAI可缓解对大规模标注数据的依赖",
+  "method_signature": "全面综述,建立plugin/solver分类框架,覆盖GAN/VAE/扩散模型",
+  "evaluation_criteria": "对比传统方法展示性能提升幅度,引用原始研究数据",
+  "negative_result_or_admitted_limitation": "现有调查缺乏对生成模型的系统综述和明确的pipeline集成分类",
+  "evidence_for_taste": [
+    "lacks a thorough and dedicated analysis",
+    "fills a critical gap in the current literature",
+    "not just a theoretical direction, but a practical and effective approach",
+    "addressing sensing-specific objectives"
+  ],
+  "thinking_moves": [
+    "与现有综述对比,识别研究空白",
+    "建立plugin/solver双模式分类框架",
+    "从信号模态、生成目标、执行策略多维度系统分析",
+    "提出无线基础模型作为未来统一愿景",
+    "通过表格系统梳理代表性工作并标注生成角色"
+  ],
+  "topic_tags": [
+    "Wi-Fi-CSI感知",
+    "GAN数据增强",
+    "扩散模型通道估计",
+    "跨模态信号生成",
+    "无线基础模型"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

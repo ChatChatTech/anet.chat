@@ -1,0 +1,38 @@
+{
+  "paper_id": "Urban Traffic Accident Risk Prediction Revisited_ Regionality, Proximity, Similarity and Sparsity",
+  "doi": "10.1145/3627673.3679567",
+  "title": "Urban Traffic Accident Risk Prediction Revisited: Regionality, Proximity, Similarity and Sparsity",
+  "year": 2024,
+  "venue": "CIKM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "UN target halving road deaths by 2030; existing methods fail to capture regional background, spatial-semantic correlations, and zero-inflation sparsity",
+  "problem_framing": "Four-factor problem: regionality (background), proximity+similarity (spatial-semantic), sparsity (zero-inflation)",
+  "key_insight": "Remote sensing images reveal regional background inaccessible to POI; multi-level hierarchy addresses sparsity by aggregating to coarser granularity",
+  "method_signature": "MGHSTN: remote sensing autoencoder + multi-level region/graph hierarchy + cross-level message passing + adaptive temporal attention + multivariate loss",
+  "evaluation_criteria": "RMSE, Recall, MAP across NYC and Chicago datasets; ablation validates each component's contribution",
+  "negative_result_or_admitted_limitation": "Remote sensing improvement more obvious for Chicago where POI data is sparse, suggesting RS acts as data substitute not enrichment",
+  "evidence_for_taste": [
+    "often overlooked and difficult to capture",
+    "poses a significant challenge",
+    "renders the predictions meaningless",
+    "lacks POI data",
+    "trades performance for efficiency"
+  ],
+  "thinking_moves": [
+    "把regional background视为隐变量,用遥感图像替代稀缺POI来捕获",
+    "稀疏问题不是硬预测而是层次聚合降维",
+    "语义相似度用JS散度量化,物理proximity用卷积捕获,分离两种相关性",
+    "多级预测任务作为辅助loss约束,隐式缓解零膨胀"
+  ],
+  "topic_tags": [
+    "traffic-accident-risk-prediction",
+    "remote-sensing-integration",
+    "hierarchical-spatio-temporal-modeling",
+    "zero-inflation-handling",
+    "multi-view-graph-semantic-similarity"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

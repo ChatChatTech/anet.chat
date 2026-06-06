@@ -1,0 +1,38 @@
+{
+  "paper_id": "Incorporating Commonsense Knowledge into Abstractive Dialogue Summarization via Heterogeneous Graph Networks",
+  "doi": "10.48550/arxiv.2010.10044",
+  "title": "Incorporating Commonsense Knowledge into Abstractive Dialogue Summarization via Heterogeneous Graph Networks",
+  "year": 2020,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "线上多说话人对话成为重要沟通方式,需快速获取对话核心内容,但现有系统忽略常识知识整合",
+  "problem_framing": "将对话摘要任务重新定义为异构图网络中的异构节点(话语、知识、说话人)建模问题",
+  "key_insight": "异构图网络能有效融合信息并在节点和连边中包含丰富语义,从而更准确编码对话表示",
+  "method_signature": "D-HGN:基于异构图Transformer编码话语-知识-说话人异构节点",
+  "evaluation_criteria": "ROUGE-1/2/L F1分数+人类评估(抽象性、信息性、正确性)",
+  "negative_result_or_admitted_limitation": "AbsRL Enhance在正确性上表现最差,因为话语抽取会破坏对话上下文连贯性",
+  "evidence_for_taste": [
+    "current dialogue summarization systems ignore the exploration of commonsense knowledge",
+    "Utterances extraction will break the coherence of dialogue contexts",
+    "we claim that the heterogeneous graph network can effectively fuse information",
+    "incorporating knowledge can help our model express deeper meanings"
+  ],
+  "thinking_moves": [
+    "把常识知识引入对话摘要作为异构节点而非额外输入",
+    "通过ablation study系统验证异构建模各组件贡献",
+    "零样本设置验证知识迁移泛化能力",
+    "设计message fusion解决归一化注意力忽视知识节点问题",
+    "通过tsne可视化验证学习到可区分的节点表示"
+  ],
+  "topic_tags": [
+    "commonsense-knowledge-dialogue",
+    "heterogeneous-graph-network",
+    "abstractive-dialogue-summarization",
+    "conceptnet-knowledge-integration",
+    "zero-shot-domain-adaptation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhang et al. - 2015 - Kaleido You Can Watch It But Cannot Record It",
+  "doi": null,
+  "title": "Kaleido: You Can Watch It But Cannot Record It",
+  "year": 2015,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Film piracy causes $20.5B annual loss; over 90% of illegal online content comes from pirate movies captured by audience cameras",
+  "problem_framing": "Maximize quality degradation of display-camera channel while retaining quality of screen-eye channel; opposite of screen-camera communication",
+  "key_insight": "Exploit limited disparities between human vision (low-pass, temporal fusion) and camera (rolling shutter, sampling) to create imperceptible flicker for eyes but distorted recording for camera",
+  "method_signature": "Re-encode video by decomposing frames into chromatic flickers above CFF and illuminance perturbations; human fuses, camera distorts",
+  "evaluation_criteria": "Subjective survey (50 audiences, 5-point scale) plus objective metrics PSNR/SSIM/CD comparing original vs pirate video quality",
+  "negative_result_or_admitted_limitation": "Cannot prevent high-quality pirate video by high-end professional cameras; leaves this as daunting challenge",
+  "evidence_for_taste": [
+    "while do not affect the viewing experience of legitimate audiences",
+    "over 90% of the surveyed audiences do not see any quality differences",
+    "cannot recover original pixels using incomplete and distorted information",
+    "denoising attack cannot recover the original video",
+    "design to maximize the viewing experience"
+  ],
+  "thinking_moves": [
+    "从communication系统的反向角度定义问题：不是最大化camera的解码能力，而是最大化camera的质量损失",
+    "把perception限制（CFF）当作安全编码的约束边界而非噪声",
+    "利用rolling shutter时序特性将信息失真从时域映射到空域（条纹伪影）",
+    "承认工程Trade-off：存在观看体验和防盗版之间的权衡"
+  ],
+  "topic_tags": [
+    "screen-camera-communication",
+    "visual-privacy-protection",
+    "rolling-shutter-exploitation",
+    "chromatic-frame-decomposition",
+    "temporal-flicker-encoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

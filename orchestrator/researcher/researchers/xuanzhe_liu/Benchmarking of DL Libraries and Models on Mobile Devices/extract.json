@@ -1,0 +1,38 @@
+{
+  "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices",
+  "doi": "10.48550/arxiv.2202.06512",
+  "title": "A Comprehensive Benchmark of Deep Learning Libraries on Mobile Devices",
+  "year": 2022,
+  "venue": "WWW '22",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有benchmark聚焦硬件或算法，DL库性能被忽视；移动生态严重碎片化导致开发者难以选择",
+  "problem_framing": "在多样模型和硬件上系统测量6个DL库的性能差异与根源",
+  "key_insight": "DL软件的影响可能压倒算法设计和硬件容量的优化效果",
+  "method_signature": "MDLBench自动benchmark：6库×15模型×10设备，含算子级instrumentation",
+  "evaluation_criteria": "推理延迟、算子级性能、冷启动开销、库间性能差距",
+  "negative_result_or_admitted_limitation": "INT8量化加速仅0.8×-3.0×远低于理论4×；GPU在某些模型上比CPU更慢",
+  "evidence_for_taste": [
+    "up to 62,806× gap between vanilla and fine-tuned",
+    "INT8-based quantization only brings 0.8×–3.0× inference speedup",
+    "GPU even runs slower than CPU (up to 2.3×)",
+    "some commits incur significant performance degradation",
+    "0%–29.9% inference time reduction"
+  ],
+  "thinking_moves": [
+    "通过系统化benchmark揭示软件栈被忽视的性能作用",
+    "从碎片化现象反推底层实现差异（算子级）",
+    "用oracle组合实验量化潜在优化空间",
+    "冷启动问题揭示memory preparation被单线程瓶颈拖累"
+  ],
+  "topic_tags": [
+    "mobile-DL-inference",
+    "DL-library-benchmark",
+    "performance-fragmentation",
+    "operator-level-optimization",
+    "on-device-deep-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

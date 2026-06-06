@@ -1,0 +1,42 @@
+{
+  "paper_id": "Guo et al. - 2012 - Theory and network applications of balanced kautz tree structures",
+  "doi": null,
+  "title": "Theory and Network Applications of Balanced Kautz Tree Structures",
+  "year": 2012,
+  "venue": "ACM Transactions on Internet Technology",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Kautz digraph的顶点数量被度d和直径k固定约束，实际P2P网络中节点数动态变化，无法直接应用",
+  "problem_framing": "在任意节点数量n下，设计具有常数度d+2和最优对数直径的结构化P2P网络",
+  "key_insight": "用平衡Kautz树和Kautz环结构模拟Kautz有向图，既保持最优直径又支持动态节点加入",
+  "method_signature": "BAKE系统基于平衡Kautz树叶节点构建，度d+2，直径⌈log_d(n/(d+1))+1⌉",
+  "evaluation_criteria": "网络直径、平均路由距离、连通性、容错性、加入/离开/失败操作的延迟和消息开销",
+  "negative_result_or_admitted_limitation": "广义Kautz图每次节点数变化必须重建整个拓扑，开销过大不实用",
+  "evidence_for_taste": [
+    "cannot simply be used in dynamic scenarios",
+    "the best lower bound is d^k+d^{k-1}",
+    "ensures the robustness and correctness",
+    "almost achieves the Moore bound",
+    "suffers from the poor robustness"
+  ],
+  "thinking_moves": [
+    "从Moore bound理论最优出发，识别Kautz图的本质约束",
+    "将静态图论结构重新设计为适合动态分布式场景",
+    "通过增加前驱后继链接增强路由鲁棒性",
+    "区分完全树与不完全树，设计不同的距离计算算法"
+  ],
+  "topic_tags": [
+    "structured P2P network",
+    "Kautz digraph",
+    "balanced Kautz tree",
+    "constant degree overlay",
+    "network diameter optimization"
+  ],
+  "cites_own_work": [
+    "MOORE [Guo et al. 2007]",
+    "quasi-Kautz digraph [Guo et al. 2011]",
+    "BAKE [Guo et al. 2008]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

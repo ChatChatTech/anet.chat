@@ -1,0 +1,42 @@
+{
+  "paper_id": "Privacy_preserving_Data_Selection_for_Horizontal_and_Vertical_Federated_Learning",
+  "doi": null,
+  "title": "Privacy-preserving Data Selection for Horizontal and Vertical Federated Learning",
+  "year": null,
+  "venue": "IEEE ICDE or IEEE TPDS",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "FL系统中低质量样本和特征导致模型精度下降和不稳定,而现有选择方法需访问本地数据,侵犯隐私",
+  "problem_framing": "在预算约束下,隐私保护地选择高质量HFL样本和VFL特征,最大化统计同质性和内容多样性",
+  "key_insight": "错误样本的梯度上界范数异常大,因此可通过阈值过滤错误样本同时保留重要样本",
+  "method_signature": "分层选择:先用DPP选同质多样客户,训练中用梯度上界范数避错选重要样本",
+  "evaluation_criteria": "模型精度、收敛速度、计算和通信开销",
+  "negative_result_or_admitted_limitation": "现有重要性采样方法在有错误样本时严重退化,loss和梯度范数都偏向选择错误样本",
+  "evidence_for_taste": [
+    "erroneous samples have significantly greater importance values",
+    "a client should avoid selecting samples whose importance values are outliers",
+    "neither considers other data quality factors",
+    "neither considers the dynamic importances",
+    "resulting in overfitting to the training data"
+  ],
+  "thinking_moves": [
+    "错误样本的异常高重要性被发现后,用阈值过滤而非改变指标本身",
+    "将客户端选择和样本选择分层处理以节省逐样本分析成本",
+    "centralized方法因需访问本地样本而无法直接用于FL,必须重新设计隐私协议"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "data-quality-selection",
+    "privacy-preserving",
+    "determinantal-point-process",
+    "importance-sampling"
+  ],
+  "cites_own_work": [
+    "Samplelevel data selection for federated learning (IEEE INFOCOM 2021)",
+    "Efficient federated-learning model debugging (IEEE ICDE 2021)",
+    "Fedsdg-fs: Efficient and secure feature selection (arXiv 2023)",
+    "Efficient and privacy-preserving feature importance-based VFL (IEEE TMC 2023)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文主体完整包含abstract/intro/related work/analysis/system overview部分,但evaluation和conclusion部分被截断,无法提取完整实验数据和某些技术细节如完整公式推导 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Qian et al. - 2014 - PADS Passive detection of moving targets with dynamic speed using PHY layer information",
+  "doi": null,
+  "title": "PADS: Passive Detection of Moving Targets with Dynamic Speed using PHY Layer Information",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "RSS-based detection fails for slow-moving targets since signal changes are buried by intrinsic RSS variance",
+  "problem_framing": "Detect moving humans of dynamic speed using WiFi CSI without attaching devices to targets",
+  "key_insight": "Phase information from CSI after linear transformation is more sensitive to slow motion than amplitude; eigenvalue-based features are power-irrelevant",
+  "method_signature": "CSI phase sanitization + eigenvalue covariance feature + SVM + multi-antenna MIMO fusion",
+  "evaluation_criteria": "True positive rate (detecting motion) and true negative rate (static correctly classified)",
+  "negative_result_or_admitted_limitation": "RSSI-based approach reaches equally high performance but suffers from temporal variance and unstable performance",
+  "evidence_for_taste": [
+    "RSS changes caused by especially slow and slight target movements would be buried by its intrinsic variances",
+    "we do derive a usable and effective feature of the true phase",
+    "the self-similarity within individual state is always remarkably smaller than cross-similarity",
+    "changes of phases are much more sensitive to slow human motion",
+    "one key reason is that all the features involved is power independent"
+  ],
+  "thinking_moves": [
+    "Phase was abandoned by prior work; prove it contains usable motion signal after denoising",
+    "Design features invariant to absolute power so system works without environment calibration",
+    "Reframe detection problem: phase changes detect slow motion where amplitude fails",
+    "Exploit spatial diversity from MIMO to reduce risk of selecting a 'bad' antenna",
+    "Even minimal human motion causes perceivable CSI perturbations enabling detection"
+  ],
+  "topic_tags": [
+    "device-free-localization",
+    "CSI-phase-utilization",
+    "WiFi-sensing",
+    "MIMO-diversity",
+    "eigenvalue-feature"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue not explicitly stated in paper text (likely IEEE PerCom based on references). Researcher Yunhao Liu is senior author (corresponding). Phase sanitization math partially clipped in source."
+}

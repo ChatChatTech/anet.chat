@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2004 - Reliable Response Delivery in Peer-to-Peer Systems",
+  "doi": null,
+  "title": "Reliable Response Delivery in Peer-to-Peer Systems",
+  "year": 2004,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "35%响应在返回路径上丢失,浪费网络资源;P2P系统高度动态,节点频繁加入离开",
+  "problem_framing": "匿名要求导致响应只能沿查询路径返回,路径上任一节点失效即响应丢失",
+  "key_insight": "洪泛机制天然产生多个前向邻居,可利用冗余路径作为备份返回路径",
+  "method_signature": "RRD/ARD/e-ARD三阶段递进:主动冗余→自适应重路由→备份代理扩展",
+  "evaluation_criteria": "响应返回率/流量开销/响应延迟/可扩展性",
+  "negative_result_or_admitted_limitation": "e-ARD需要较大修改现有系统,引入bRDA增加复杂度,且在邻居极少时效果受限",
+  "evidence_for_taste": [
+    "35% of the responses are lost",
+    "no requestor information is included",
+    "ARD will perform poorly in the case that only a few",
+    "one issue about RRD deserving mention",
+    "this is rare in the unstructured P2P system",
+    "adds some complexity of the implementation"
+  ],
+  "thinking_moves": [
+    "从系统动态性导致的基础设施失效出发,识别响应丢失这个被忽视的问题",
+    "将容错问题从结构化P2P重新框架为非结构化P2P中独立的响应返回子问题",
+    "利用洪泛机制天然产生冗余路径的特性,以无中心控制方式解决",
+    "三阶段递进设计:先简化场景(RRD)→再自适应增强(ARD)→最后扩展到无洪泛场景(e-ARD)"
+  ],
+  "topic_tags": [
+    "P2P响应丢失",
+    "非结构化P2P容错",
+    "洪泛搜索优化",
+    "响应返回路径多样性",
+    "P2P匿名性约束"
+  ],
+  "cites_own_work": [
+    "Liu et al., 2004 (Location-Aware Topology Matching)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Backdoor Pre-trained Models Can Transfer to All",
+  "doi": "10.1145/3460120.3485370",
+  "title": "Backdoor Pre-trained Models Can Transfer to All",
+  "year": 2021,
+  "venue": "CCS '21",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "开放预训练模型被广泛下载使用，用户无法判断其是否被植入后门；现有后门攻击依赖目标标签，无法适应下游任务标签空间变化",
+  "problem_framing": "能否在预训练阶段植入后门而不绑定特定目标标签，同时保持后门在各下游任务中的可迁移性？",
+  "key_insight": "将trigger映射到预训练模型目标token的输出表征(POR)而非标签，使后门随下游任务复用该表征而自动转移",
+  "method_signature": "伪孪生网络训练：冻结参考模型参数，指导目标模型在中毒文本上逼近POR同时保持其他表征正常",
+  "evaluation_criteria": "提出新指标Effectiveness(E)、Stealthiness(S)、Capability(C)替代CV领域的ASR，因NLP中trigger可重复插入且文本长度变化大",
+  "negative_result_or_admitted_limitation": "some triggers have inconsistent performance between the two datasets which is opposite to the result in sophisticated word",
+  "evidence_for_taste": [
+    "greatly limits their real-world threats",
+    "the basic requirement for a successful backdoor model",
+    "the same trigger has a certain consistency on the performance across the two datasets",
+    "may raise suspicion",
+    "should not be considered as a good trigger since it is too long"
+  ],
+  "thinking_moves": [
+    "将问题从label空间重新formulate到representation空间，绕过下游任务标签未知的限制",
+    "从CV领域metrics的不适用性反推NLP需新评估体系",
+    "借鉴定义良好的数学对象（如书名、人名）验证trigger有效性假设",
+    "通过attention score分析揭示trigger成功背后的机制"
+  ],
+  "topic_tags": [
+    "backdoor-attack",
+    "pre-trained-language-models",
+    "transfer-learning",
+    "NLP-security",
+    "output-representation-manipulation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

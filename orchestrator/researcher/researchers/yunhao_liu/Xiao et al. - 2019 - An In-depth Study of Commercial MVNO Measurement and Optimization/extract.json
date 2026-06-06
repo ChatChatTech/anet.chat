@@ -1,0 +1,39 @@
+{
+  "paper_id": "Xiao et al. - 2019 - An In-depth Study of Commercial MVNO Measurement and Optimization",
+  "doi": null,
+  "title": "An In-depth Study of Commercial MVNO: Measurement and Optimization",
+  "year": 2019,
+  "venue": "MobiSys '19",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "MVNO用户对计费准确性存在担忧,且先前研究报道了性能歧视问题,但学界缺乏对MVNO生态系统的全面理解。",
+  "problem_framing": "从架构、性能、经济、用户行为多维度对商业MVNO进行大规模测量,揭示MVNO与基础运营商的复杂交互。",
+  "key_insight": "MVNO用户选择数据套餐往往经济上次优,而用户套餐超额不足正是MVNO盈利的关键来源。",
+  "method_signature": "基于5个数据集(用户/账单/性能/SUR)的多源测量,结合机器学习进行套餐重售优化与用户流失预测。",
+  "evaluation_criteria": "数据使用预测准确率86.75%、利润提升57.1%、流失预测精确率95.52%、实地试验验证。",
+  "negative_result_or_admitted_limitation": "无法量化结果对其他MVNO的可推广性,因为缺乏其他运营商的数据。",
+  "evidence_for_taste": [
+    "such suboptimality is a key reason why operating an MVNO can be profitable",
+    "very likely a (man-manipulated) policy-level result by the base carrier",
+    "appears to be unwise according to our observation",
+    "these users can bring high profits if V-Mobile can accurately predict",
+    "the algorithms are fixed and thus only the parameters need to be tuned"
+  ],
+  "thinking_moves": [
+    "从用户行为数据反推商业模型盈利机制",
+    "跨实体分析(MVNO+基础运营商+用户三方交互)",
+    "从技术性能无差异推断政策层面歧视的存在",
+    "将商业运营问题形式化为监督学习预测任务",
+    "用不确定性建模补充个体预测的稀疏性问题"
+  ],
+  "topic_tags": [
+    "MVNO-ecosystem-measurement",
+    "data-plan-reselling-optimization",
+    "customer-churn-prediction",
+    "cellular-network-performance-discrimination",
+    "MVNO-billing-inaccuracy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

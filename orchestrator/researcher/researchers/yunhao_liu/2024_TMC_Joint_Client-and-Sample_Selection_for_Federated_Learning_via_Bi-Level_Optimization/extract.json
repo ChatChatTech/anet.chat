@@ -1,0 +1,40 @@
+{
+  "paper_id": "2024_TMC_Joint_Client-and-Sample_Selection_for_Federated_Learning_via_Bi-Level_Optimization",
+  "doi": null,
+  "title": "Joint Client-and-Sample Selection for Federated Learning via Bi-Level Optimization",
+  "year": 2024,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "FL中样本重要性差异大,噪声样本损害模型,但现有方法无法同时区分有害噪声样本和有益的难样本",
+  "problem_framing": "将客户端样本选择问题与全局模型构建联合建模为双层优化问题,用小规模干净验证集引导选择",
+  "key_insight": "通过操纵梯度流实现类级别权重学习,而不是仅用实例级标量权重,从而保留不同类别梯度流的差异信息",
+  "method_signature": "FedMW-CSS:双层优化框架,元学习在线近似,梯度流类级别权重,分层影响力估计",
+  "evaluation_criteria": "测试准确率、通信成本、计算成本、收敛速度(9个基线,6个数据集,噪声和非IID设置)",
+  "negative_result_or_admitted_limitation": "之前方法无法同时处理噪声和难样本,因为模型处理两者时对损失值的偏好相互矛盾(low loss噪声vs high loss难样本)",
+  "evidence_for_taste": [
+    "models often favor samples with small training losses as they are more likely to be clean",
+    "when attempting to identify positively influential samples, models prioritize those with high training losses",
+    "this is because to mitigate noisy labels, models often favor samples with small training losses",
+    "instance-level weight is a special case of class-level weight when elements of τ are the same"
+  ],
+  "thinking_moves": [
+    "发现现有方法的根本矛盾:降噪偏好小损失样本,而难样本选择偏好大损失样本,两者无法同时满足",
+    "将客户端选择和样本选择统一建模为双层优化,外层学选择概率,内层建全局模型",
+    "通过梯度链式分解,将实例级权重推广到类级别,保留不同梯度流的信息差异",
+    "用元学习在线近似替代昂贵的二阶Hessian计算,避免高通信开销",
+    "分层分析:先选有影响力的客户端,再在其内部选样本,减少不必要的计算"
+  ],
+  "topic_tags": [
+    "federated-learning-client-selection",
+    "bi-level-optimization",
+    "label-noise-robust-learning",
+    "sample-selection",
+    "class-level-gradient-weighting"
+  ],
+  "cites_own_work": [
+    "FedCSS: Joint client-and-sample selection for hard sample-aware noise-robust federated learning (conference version)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整,从动机、问题建模、方法设计、实验到理论分析均齐全。提供了详细的算法伪代码和系统架构图。 | md truncated to head40k+tail20k"
+}

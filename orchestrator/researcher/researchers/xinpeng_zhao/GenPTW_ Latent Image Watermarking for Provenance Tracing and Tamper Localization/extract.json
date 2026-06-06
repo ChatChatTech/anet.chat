@@ -1,0 +1,42 @@
+{
+  "paper_id": "GenPTW_ Latent Image Watermarking for Provenance Tracing and Tamper Localization",
+  "doi": "10.48550/arxiv.2504.19567",
+  "title": "GenPTW: Latent Image Watermarking for Provenance Tracing and Tamper Localization",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "生成式图像模型普及带来内容溯源和篡改检测需求，现有方法或无法定位篡改或受限于特定生成设置",
+  "problem_framing": "将 provenance tracing 和 tamper localization 统一在单一潜空间水印嵌入中，同时支持 in-generation 和 post-hoc",
+  "key_insight": "通过 cross-attention fusion 让水印随潜表征演化并对齐语义，通过 spatial fusion 在最终解码层注入像素级空间先验",
+  "method_signature": "CAF+SF 双模块潜空间嵌入 + tamper-aware extractor 联合水印解码与篡改定位",
+  "evaluation_criteria": "视觉保真度(PSNR/SSIM/LPIPS)、水印位准确率、篡改定位F1/AUC",
+  "negative_result_or_admitted_limitation": "全局语义重写(如InstructP2P)因彻底改变结构模型将整图标记为篡改,这是优先保真的设计权衡",
+  "evidence_for_taste": [
+    "optimal balance between robustness and perceptual quality",
+    "consistent with the evidence in Table 4",
+    "optimal trade-off",
+    "deliberate design choice",
+    "prioritizing preserving original visual semantics",
+    "enhances spatial alignment and local sensitivity"
+  ],
+  "thinking_moves": [
+    "统一两个独立任务于单一embedding中",
+    "将watermark injection从post-generation前推到latent space",
+    "用cross-attention实现latent-guided watermark adaptation",
+    "用spatial fusion在最终层注入pixel-level spatial prior",
+    "joint watermark features + high-frequency features做multi-modal fusion",
+    "coarse-to-fine hierarchical embedding across decoder stages"
+  ],
+  "topic_tags": [
+    "latent-space-watermarking",
+    "provenance-tracing",
+    "tamper-localization",
+    "generative-model-forensics",
+    "cross-attention-fusion",
+    "AIGC-editing-robustness"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

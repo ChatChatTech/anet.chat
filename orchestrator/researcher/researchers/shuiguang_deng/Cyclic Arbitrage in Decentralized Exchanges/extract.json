@@ -1,0 +1,38 @@
+{
+  "paper_id": "Cyclic Arbitrage in Decentralized Exchanges",
+  "doi": "10.48550/arxiv.2105.02784",
+  "title": "Cyclic Arbitrage in Decentralized Exchanges",
+  "year": 2021,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "DEX markets exhibit price discrepancies enabling cyclic arbitrage, but lack systematic study of trader behavior",
+  "problem_framing": "Formalize profitability conditions and optimal trading volume for cyclic arbitrage in constant product AMMs",
+  "key_insight": "Atomic smart contract execution enables cyclic arbitrage without price impact loss—blockchain tech unlocks novel trading strategies",
+  "method_signature": "Theoretical CPMM arbitrage model + empirical Uniswap V2 transaction-level data analysis",
+  "evaluation_criteria": "Exploitable opportunity count, total revenue, gas cost ratio, success rate of atomic vs sequential implementation",
+  "negative_result_or_admitted_limitation": "Most profitable unexploited opportunity persistently exceeds 1 ETH, indicating market inefficiency—traders cannot capture available profit",
+  "evidence_for_taste": [
+    "revenue of the most profitable unexploited opportunity is persistently higher than 1 ETH",
+    "market size of exploited cyclic arbitrage is significantly smaller than the exploitable opportunities",
+    "only 0.03% of traders submit trades sequentially",
+    "atomic implementations could mitigate users' financial loss",
+    "DEX markets may not be efficient enough"
+  ],
+  "thinking_moves": [
+    "从价格差异出发定义利润函数，求导找最优交易量",
+    "将多池交易等价为单一虚拟池来简化分析",
+    "理论条件→实际数据验证，测量市场效率差距",
+    "区分实现方式(sequential vs atomic)来揭示技术优势"
+  ],
+  "topic_tags": [
+    "DeFi arbitrage",
+    "AMM market making",
+    "Ethereum DEX",
+    "blockchain smart contracts",
+    "arbitrage implementation strategy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

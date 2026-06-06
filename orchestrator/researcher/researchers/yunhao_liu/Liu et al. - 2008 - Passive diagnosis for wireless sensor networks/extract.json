@@ -1,0 +1,39 @@
+{
+  "paper_id": "Liu et al. - 2008 - Passive diagnosis for wireless sensor networks",
+  "doi": null,
+  "title": "Passive Diagnosis for Wireless Sensor Networks",
+  "year": 2008,
+  "venue": "SenSys'08",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现场部署的传感器网络频繁出现能量异常消耗,而现有调试工具通过主动上报信息会进一步加剧资源消耗",
+  "problem_framing": "将网络诊断问题重新定义为:从sink端被动观察表症,利用概率推理反推根因,而非主动探测",
+  "key_insight": "利用路由数据包本身携带路径信息,无需额外发包即可重建网络拓扑并构建依赖图进行推理",
+  "method_signature": "轻量级包标记+贝叶斯网络/因果图双模推理引擎",
+  "evaluation_criteria": "检测率、误报率、计算开销,及与Sympathy的流量开销对比",
+  "negative_result_or_admitted_limitation": "Causality Diagram相比Belief Network牺牲了精确度,但大幅降低计算开销以适应资源受限网络",
+  "evidence_for_taste": [
+    "we often observed abnormal energy depletion that never occurred in the controlled laboratory experiments",
+    "introducing network overhead to a resource constrained and usually traffic sensitive sensor network",
+    "Belief Network model has a slightly higher detection rate than Causality Diagram model",
+    "The error rate introduced by the bloom filter introduces negligible adverse impact",
+    "such tools are effective for offline debugging but may not be suitable for in-situ network diagnosis"
+  ],
+  "thinking_moves": [
+    "把in-situ诊断问题从主动探测重新frame为被动推理",
+    "利用数据包中已有的字段隐式携带拓扑信息,零额外开销",
+    "贝叶斯网络虽精确但NP难,因此近似为层次因果图以降低复杂度",
+    "从现场异常现象反推出应用层路由策略导致能量快速耗尽",
+    "网络高动态性使得静态依赖模型不可行,必须持续被动更新"
+  ],
+  "topic_tags": [
+    "WSN-diagnosis-passive",
+    "packet-marking-topology-inference",
+    "Bayesian-network-fault-localization",
+    "energy-efficient-monitoring",
+    "probabilistic-inference-WSN"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "JTangSynergy 3.0_ A framework and software tool for integrating cross-organizational applications",
+  "doi": "10.4108/icst.collaboratecom2009.8314",
+  "title": "JTangSynergy 3.0: A Framework and Software Tool for Integrating Cross-Organizational Applications",
+  "year": 2009,
+  "venue": "CollaborateCom",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "传统ESB产品在跨组织场景下安全策略与异构数据服务支持不足",
+  "problem_framing": "跨组织大规模应用管理及异构数据服务集成的两个挑战",
+  "key_insight": "领域控制器可协调不同域间的安全策略，实现跨组织异构应用互操作",
+  "method_signature": "基于领域的跨组织ESB框架，包含领域控制器与CO-ESB容器集群",
+  "evaluation_criteria": "杭州电子政务集成项目，每年服务约五百万市民，人力成本降75%",
+  "negative_result_or_admitted_limitation": "Most ESB products make simplified assumptions about security and heterogeneity requirements",
+  "evidence_for_taste": [
+    "simplified assumptions about security",
+    "few of them can meet the above cross-organization EAI requirements",
+    "autonomous evolution of heterogeneous data services",
+    "different security, privacy, and confidentiality policies for different projects"
+  ],
+  "thinking_moves": [
+    "将跨组织EAI问题拆解为分布式环境管理+异构数据服务集成两个维度",
+    "从现有ESB产品的局限性出发定位研究空间",
+    "用真实电子政务场景验证框架可行性而非仅做原型演示",
+    "通过量化指标（5百万市民/年、20%效率提升、75%成本降低）论证实用价值"
+  ],
+  "topic_tags": [
+    "cross-organizational ESB",
+    "enterprise application integration",
+    "domain-based coordination",
+    "heterogeneous data service integration",
+    "e-government system"
+  ],
+  "cites_own_work": [
+    "Yin J.W., Chen H.W. et al. A Dependable ESB Framework for Service Integration (2009)",
+    "Shi D.C., Yin J.W. et al. JTangPS: An RDF-based Publish/Subscribe System (2007)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "paper提供完整方法论描述但具体实现细节偏少，evaluation通过电子政务案例给出量化指标"
+}

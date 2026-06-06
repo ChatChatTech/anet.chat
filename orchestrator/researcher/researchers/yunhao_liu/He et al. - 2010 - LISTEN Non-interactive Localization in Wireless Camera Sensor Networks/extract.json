@@ -1,0 +1,40 @@
+{
+  "paper_id": "He et al. - 2010 - LISTEN Non-interactive Localization in Wireless Camera Sensor Networks",
+  "doi": null,
+  "title": "LISTEN: Non-interactive Localization in Wireless Camera Sensor Networks",
+  "year": 2010,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "GreenOrbs大规模部署中GPS失效,传统WSN定位在林业环境下信号不规则且动态,交互式定位易受sniffer攻击且能耗过高",
+  "problem_framing": "将相机传感器网络中的定位问题,从需要节点间通信的交互式框架,转变为被动监听+图像感知的非交互式框架",
+  "key_insight": "利用针孔模型的三角几何关系,通过计算相机视野中信标位置的角距离,实现仅需被动监听即可完成定位",
+  "method_signature": "移动信标广播坐标,节点被动捕获图像提取角距离,几何定理保证唯一可定位性",
+  "evaluation_criteria": "定位误差(mm)、朝向误差(°)、相对FOV误差(%),与PI等方法对比",
+  "negative_result_or_admitted_limitation": "走廊环境中信标位置远离节点导致角距离小,相对误差增大;尚未实现位置精化步骤",
+  "evidence_for_taste": [
+    "GPS devices fail to work under the dense tree canopy",
+    "less than 80% of the real FOV is covered",
+    "image sensing is much higher than scalar sensing",
+    "accuracy is almost not affected by the image quality",
+    "beacon images captured... are all near to the center of the image",
+    "it may be feasible and beneficial to design a refining procedure"
+  ],
+  "thinking_moves": [
+    "从安全攻击角度(非技术性能)论证交互式方案的致命缺陷",
+    "将定位问题重新框架为感知问题:节点不说话,只被动看",
+    "用几何定理(圆周角定理)严格证明定位唯一性条件",
+    "从最坏情况分析信标轨迹覆盖性,再给出具体三角网格设计",
+    "实验发现图像位置接近中心可降低误差,反向指导subset选择优化"
+  ],
+  "topic_tags": [
+    "camera-sensor-localization",
+    "non-interactive-localization",
+    "mobile-beacon",
+    "FOV-triangulation",
+    "GreenOrbs"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

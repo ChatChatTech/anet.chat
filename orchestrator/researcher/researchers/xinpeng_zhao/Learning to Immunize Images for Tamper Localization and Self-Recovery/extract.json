@@ -1,0 +1,39 @@
+{
+  "paper_id": "Learning to Immunize Images for Tamper Localization and Self-Recovery",
+  "doi": "10.48550/arxiv.2210.15902",
+  "title": "Learning to Immunize Images for Tamper Localization and Self-Recovery",
+  "year": 2022,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Digital images在OSN平台易被恶意篡改,而现有被动取证无法自恢复内容,作者提出免疫概念让图像主动抵抗攻击",
+  "problem_framing": "将图像免疫与自恢复建模为可逆函数对,利用INN在单网络中同时学习嵌入与恢复;通过KD-JPEG蒸馏解决JPEG压缩下的鲁棒性",
+  "key_insight": "观察图像免疫与自恢复间的可逆性关系,采用归一化流生成器在单网络中联合学习 immunization 和 recovery",
+  "method_signature": "IINet(可逆U-net)+KD-JPEG(JPEG模拟器)+伪造检测器+双判别器",
+  "evaluation_criteria": "篡改定位精度MIoU + 恢复图像质量PSNR/SSIM + 与被动取证SOTA对比",
+  "negative_result_or_admitted_limitation": "Imuge仅能近似恢复原始内容,与ground truth仍有较大差距;Imuge定位精度不理想且无法抵抗inpainting攻击",
+  "evidence_for_taste": [
+    "the network will tend to hallucinate the missing content",
+    "minimizing L can hardly achieve satisfying results",
+    "poorly-trained forgery detector will mislead the image recovery process",
+    "still a big gap toward high-quality and accurate image recovery"
+  ],
+  "thinking_moves": [
+    "从Imuge的失败案例(模糊恢复/定位不准)反推其根本缺陷是网络会依赖DIP幻觉内容而非忠实恢复",
+    "将图像免疫问题重新frame为可逆变换问题,用INN的固有性质同时实现嵌入与恢复",
+    "针对JPEG鲁棒性差的问题,提出用知识蒸馏训练学生网络模拟真实JPEG压缩的量化表变化",
+    "提出tampering-based data augmentation强制网络不依赖Deep Image Prior进行恢复"
+  ],
+  "topic_tags": [
+    "image-immunization",
+    "invertible-neural-network",
+    "tamper-localization",
+    "jpeg-robustness",
+    "self-recovery"
+  ],
+  "cites_own_work": [
+    "Imuge conference paper [74] is the precursor - Imuge+ extends it"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

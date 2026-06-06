@@ -1,0 +1,37 @@
+{
+  "paper_id": "Enhancing Neural Data-To-Text Generation Models with External Background Knowledge",
+  "doi": "10.18653/v1/d19-1299",
+  "title": "Enhancing Neural Data-To-Text Generation Models with External Background Knowledge",
+  "year": 2019,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Neural data-to-text models assume writing knowledge can be learned from training data alone, but humans consider related knowledge when writing",
+  "problem_framing": "Formulate data-to-text generation as learning from parallel data-text pairs plus external knowledge via attention mechanism",
+  "key_insight": "Encoding external knowledge as temporary memory and combining with context via dual-attention allows inferring facts not explicitly in data table",
+  "method_signature": "KBAtt: seq2seq with dual-attention over table and knowledge base, plus copy mechanism",
+  "evaluation_criteria": "BLEU-4 on 21 datasets, human fact accuracy evaluation, KBGain correlation with performance boost",
+  "negative_result_or_admitted_limitation": "Absolute improvement is relatively small on WikiBio since 728K pairs let neural models memorize inference patterns",
+  "evidence_for_taste": [
+    "the baseline model struggles to learn",
+    "no data sparsity in the original data",
+    "this inference pattern doesn't hold for this case",
+    "the improvement of our model over the baseline gradually narrows"
+  ],
+  "thinking_moves": [
+    "Identify that neural models fail on sparse co-occurrence pairs despite large datasets",
+    "Design KBGain metric to quantify when external knowledge is effective via correlation analysis",
+    "Perform few-shot learning analysis by splitting on co-occurrence frequency intervals",
+    "Admit baseline learns inference when parallel data is dense enough, limiting KBAtt gains"
+  ],
+  "topic_tags": [
+    "knowledge-base-enhanced NLG",
+    "data-to-text generation",
+    "Wikipedia infobox-to-text",
+    "dual-attention mechanism",
+    "few-shot inference learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

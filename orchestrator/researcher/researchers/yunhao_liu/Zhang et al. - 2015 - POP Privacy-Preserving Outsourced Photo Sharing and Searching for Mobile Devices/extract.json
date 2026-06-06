@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhang et al. - 2015 - POP Privacy-Preserving Outsourced Photo Sharing and Searching for Mobile Devices",
+  "doi": null,
+  "title": "POP: Privacy-preserving Outsourced Photo Sharing and Searching for Mobile Devices",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "用户因资源受限需将照片存储和搜索外包给云,但隐私泄露风险使搜索功能与隐私保护难以兼顾",
+  "problem_framing": "在外包模式下,如何让云端在不解密情况下执行基于特征向量的相似度搜索,同时保护图像内容和查询隐私",
+  "key_insight": "利用Paillier同态加密的非交互特性,通过加密形式直接计算欧氏距离,实现无需主客交互的隐私保护搜索",
+  "method_signature": "Paillier同态加密+CP-ABE属性加密+可选的Yao混淆电路,支持实数/二进制特征向量隐私计算",
+  "evaluation_criteria": "计算/通信开销、可搜索准确度、隐私保护强度(防自动检测和密码学证明)",
+  "negative_result_or_admitted_limitation": "线性扫描所有图片的搜索延迟'稍微超出可接受范围',需借助k-d树等优化算法解决可扩展性问题",
+  "evidence_for_taste": [
+    "privacy becomes a critical issue",
+    "The most challenging part is outsourcing",
+    "non-interactive way",
+    "few changes to existing cloud",
+    "a step towards easily deployable"
+  ],
+  "thinking_moves": [
+    "将图像搜索的计算问题重新定义为密码学协议中的安全距离计算",
+    "识别出交互式SMC不适用于云外包场景,强调非交互性为部署前提",
+    "模块化设计以兼容现有系统,降低部署门槛",
+    "从精确到近似的工程权衡:binary descriptor牺牲少量精度换取效率显著提升"
+  ],
+  "topic_tags": [
+    "privacy-preserving image search",
+    "cloud outsourcing",
+    "homomorphic encryption",
+    "mobile photo sharing",
+    "non-interactive secure computation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

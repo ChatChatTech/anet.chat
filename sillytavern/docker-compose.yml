@@ -1,0 +1,40 @@
+# SillyTavern — character/persona host for anet.chat researcher integration.
+# Pulls the official image; mounts our config + data dirs so character
+# cards + chats persist.
+#
+# Network: joins the existing canvas-net (created by mcp_excalidraw)
+# so anet-souls can reach it as http://sillytavern:8000 if we later
+# integrate. From host: http://localhost:8000.
+#
+# Run:
+#   cd /data/projs/anetchat/sillytavern && docker compose up -d
+
+services:
+  sillytavern:
+    image: ghcr.io/sillytavern/sillytavern:latest
+    container_name: sillytavern
+    hostname: sillytavern
+    environment:
+      - NODE_ENV=production
+      - FORCE_COLOR=1
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./config:/home/node/app/config:rw"
+      - "./data:/home/node/app/data:rw"
+      - "./plugins:/home/node/app/plugins:rw"
+      - "./extensions:/home/node/app/public/scripts/extensions/third-party:rw"
+    healthcheck:
+      test: ["CMD", "node", "src/healthcheck.js"]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - canvas-net
+
+networks:
+  canvas-net:
+    name: mcp_excalidraw_mcp-network
+    external: true

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Du et al. - 2005 - IPR Automated Interaction Process Reconciliation",
+  "doi": null,
+  "title": "IPR: Automated Interaction Process Reconciliation",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有B2B交互过程难以自动调和,动态伙伴协作缺乏实用算法支持",
+  "problem_framing": "将伙伴兼容性问题形式化为交互过程的序列匹配与调和问题",
+  "key_insight": "基于WF-net继承机制(阻塞/隐藏任务)实现从精确匹配到模糊匹配的自动松弛",
+  "method_signature": "IPR算法:WF-net投影+继承规则+匹配度阈值过滤",
+  "evaluation_criteria": "匹配成功率、响应时间、匹配效率",
+  "negative_result_or_admitted_limitation": "现有方法无法自动调和不兼容流程,缺乏调和方法",
+  "evidence_for_taste": [
+    "现有方法不能调和交互过程",
+    "仅有可选分支可选,顺序任务不可跳过",
+    "有限状态自动机无法描述并行分支",
+    "进程太复杂会导致低成功率和长响应时间"
+  ],
+  "thinking_moves": [
+    "先指出现有方法局限(不能调和),再提出解决方案",
+    "将业务流程匹配问题重新定义为可调和问题",
+    "借鉴WF-net继承概念的阻塞/隐藏操作实现过程变形",
+    "引入阈值控制调和质量与效率的平衡"
+  ],
+  "topic_tags": [
+    "B2B-interaction-reconciliation",
+    "Petri-Net-WF-net",
+    "fuzzy-matchmaking",
+    "peer-to-peer-business-process",
+    "workflow-inheritance"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文来自学术会议但具体venue未明确标注；作者角色基于署名顺序确定；主题标签聚焦于技术方法层面"
+}

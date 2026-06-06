@@ -1,0 +1,41 @@
+{
+  "paper_id": "2024_计算机学报",
+  "doi": null,
+  "title": "面向智能物联网的资源高效模型推理综述",
+  "year": 2023,
+  "venue": "计算机学报",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "AIoT设备资源受限（计算、带宽、内存、电池），模型推理资源开销成为关键技术挑战",
+  "problem_framing": "从推理三模块（传感器数据、智能模型、物联网硬件）和五类资源（时间/内存/带宽/能量/存储）角度形式化优化问题",
+  "key_insight": "优化机会存在于推理全流程，需系统整合数据过滤、模型压缩、硬件加速等多层技术",
+  "method_signature": "提出三模块×五资源的新分类法，以及AIoT模型推理通用优化流程",
+  "evaluation_criteria": "资源效率（时延/内存/带宽/能耗/存储）作为主要评估指标",
+  "negative_result_or_admitted_limitation": "很多技术并非对资源孤立优化，单一方法难以解决AIoT推理全链条挑战",
+  "evidence_for_taste": [
+    "高精度模型的参数量也日益增大",
+    "需要寻求推理精度和资源开销的最佳平衡点",
+    "对资源进行孤立优化",
+    "我们仍缺少将他们之间的关联起来的逻辑线"
+  ],
+  "thinking_moves": [
+    "从三模块视角系统性归类现有技术，建立技术-资源的二维矩阵映射",
+    "先建立技术分类的坐标系，再通过流程图串联各优化点",
+    "区分黑盒/灰盒/白盒模型权限，对应不同部署方式的选择逻辑"
+  ],
+  "topic_tags": [
+    "AIoT模型推理",
+    "边缘计算卸载",
+    "模型压缩量化",
+    "协同推理部署",
+    "神经网络加速器"
+  ],
+  "cites_own_work": [
+    "Yuan等[19] (InFi)",
+    "Yuan等[49,50]",
+    "Yuan等[68] (MLink)",
+    "袁牧"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

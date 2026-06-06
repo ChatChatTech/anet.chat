@@ -1,0 +1,38 @@
+{
+  "paper_id": "Sun et al. - 2015 - iSelf Towards cold-start emotion labeling using transfer learning with smartphones",
+  "doi": null,
+  "title": "iSelf: Towards Cold-Start Emotion Labeling using Transfer Learning with Smartphones",
+  "year": 2015,
+  "venue": "IEEE/ACM International Conference on Information Processing in Sensor Networks (pervasive computing context)",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "手动标注用户情绪数据耗时耗力耗钱,且冷启动时只有极少的标注样本可用",
+  "problem_framing": "将冷启动情绪推断定义为跨特征空间的迁移学习问题,不同用户的同种情绪对应不同的特征分布",
+  "key_insight": "相同情绪可导致相似的使用模式(SD或SF),概率超过65%,这使得跨特征空间的迁移学习成为可能",
+  "method_signature": "基于迁移学习的自动标注+混合公众/个人推理引擎+主动学习验证",
+  "evaluation_criteria": "准确率(75%),F1值,能耗占比(小于2%日耗电),用户反馈最小化",
+  "negative_result_or_admitted_limitation": "当只有一个可见用户时准确率降至11.2%;tense情绪准确率最低约60%,因其使用模式差异最大",
+  "evidence_for_taste": [
+    "time-consuming, labor-intensive and money-consuming",
+    "unlike other recognition scenarios",
+    "misclassification usually happens when",
+    "usage patterns vary much when people are tense",
+    "The more similar and are, the lower the value",
+    "the same emotion can cause similar SD or SF"
+  ],
+  "thinking_moves": [
+    "将用户行为数据中的共性模式抽象为跨用户迁移的桥梁,忽略个体差异的表面特征",
+    "用验证机制(被动监听+主动查询)替代大规模标注,将人工干预压缩到最低",
+    "混合公开迁移推理与个人SVM分类器,随时间从公共知识向个性化模型过渡",
+    "识别特定情绪(tense)的模式变异性作为方法论瓶颈,承认其不可忽视的局限性"
+  ],
+  "topic_tags": [
+    "cold-start-emotion-inference",
+    "transfer-learning-smartphone",
+    "active-learning-validation",
+    "hybrid-public-personal-classifier",
+    "ubiquitous-computing-inference"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

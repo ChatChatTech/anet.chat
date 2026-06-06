@@ -1,0 +1,38 @@
+{
+  "paper_id": "SCIR-MTΓÇÖs Submission for WMT24 General Machine Translation Task",
+  "doi": "10.18653/v1/2024.wmt-1.21",
+  "title": "SCIR-MT's Submission for WMT24 General Machine Translation Task",
+  "year": 2024,
+  "venue": "WMT24",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "在有限资源和计算约束下实现高质量翻译输出是持续挑战",
+  "problem_framing": "受限赛道中英文到捷克的神经机器翻译",
+  "key_insight": "仅保留4.8%高质量数据的三阶段训练结合COMET-MBR解码可超越商业系统",
+  "method_signature": "LLaMA-2-13B三层连续预训练加指令微调加COMET-MBR",
+  "evaluation_criteria": "BLEU和COMET分数在Flores-200和WMT23测试集对比Baidu与Google",
+  "negative_result_or_admitted_limitation": "连续预训练可能导致大语言模型灾难性遗忘，损害通用能力",
+  "evidence_for_taste": [
+    "retaining only 4.8% of the highest quality data",
+    "prevent catastrophic forgetting problem",
+    "limited yet high-quality datasets",
+    "One-Stop Data Processing System for Large Language Models",
+    "objective identification of outliers samples without making specific assumptions"
+  ],
+  "thinking_moves": [
+    "激进数据过滤(4.8%保留率)作为质量控制核心手段",
+    "三阶段预训练渐进式注入翻译能力而非一步微调",
+    "用MBR解码从多候选中选择而非贪婪解码",
+    "IQR方法规避数据分布假设实现客观过滤"
+  ],
+  "topic_tags": [
+    "LLM-translation",
+    "COMET-MBR-decoding",
+    "data-filtering-pipeline",
+    "English-Czech",
+    " continual-pretraining"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

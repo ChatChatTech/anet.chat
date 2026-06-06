@@ -1,0 +1,38 @@
+{
+  "paper_id": "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation",
+  "doi": "10.48550/arxiv.2412.12158",
+  "title": "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有方法将超边转换为二元关系或视为孤立节点,造成信息损失,需融合邻接信息和位置感知信息",
+  "problem_framing": "多关系知识超图的表示学习需同时建模超关系类型多样性和实体的位置角色语义",
+  "key_insight": "超星消息传递将超边无损展开为层级树状结构,结合双曲空间更好捕捉层次结构",
+  "method_signature": "H2GNN在洛伦兹空间执行双阶段超星消息传递,使用质心操作作为聚合函数",
+  "evaluation_criteria": "节点分类准确率(半监督/归纳学习)和链接预测Hits@k及MRR",
+  "negative_result_or_admitted_limitation": "G-MPNN在JF17K数据集上两天未出结果,表明异构超图上方法失效",
+  "evidence_for_taste": [
+    "信息损失且可能产生次优模型",
+    "lossless expansion of hyperedges",
+    "unreal flight from Beijing to Guangzhou",
+    "强相关性存在于树状图和双曲空间之间",
+    "full model H2GNN exhibits the best performance"
+  ],
+  "thinking_moves": [
+    "从信息损失出发反向定义无损展开的操作目标",
+    "将异构超图问题重构为层次结构表示问题",
+    "从欧式空间迁移到双曲空间以保留树状性质",
+    "使用非参数质心操作避免双曲几何复杂计算"
+  ],
+  "topic_tags": [
+    "knowledge hypergraph",
+    "hyperbolic embedding",
+    "multi-relational learning",
+    "hyper-star message passing",
+    "position-aware representation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为arXiv预印本,缺乏同行评审venue信息。方法细节(公式推导、具体激活函数选择)在正文中描述不完整,实验部分较充分。"
+}

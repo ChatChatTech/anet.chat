@@ -1,0 +1,40 @@
+{
+  "paper_id": "Yang et al. - 2016 - Making sense of mechanical vibration period with sub-millisecond accuracy using backscatter signals",
+  "doi": null,
+  "title": "Making Sense of Mechanical Vibration Period with Sub-millisecond Accuracy Using Backscatter Signals",
+  "year": 2016,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有振动检测方案（激光、加速度计）成本高且无法穿透遮挡，RFID标签便宜且天然穿透障碍，但难以从随机低频采样中提取高频振动",
+  "problem_framing": "从40Hz随机RFID读数中恢复并检测高频振动周期，要求亚毫秒精度，涉及亚Nyquist采样和噪声干扰",
+  "key_insight": "利用RFID随机读取的内在随机性实现压缩采样，结合相位信号放大和RF折叠算法，可突破物理读数限制实现高精度",
+  "method_signature": "RFID相位变化+数字显微镜放大+压缩感知恢复+RF折叠周期发现",
+  "evaluation_criteria": "平均误差0.36ms，相对误差率0.03%，对比激光仪的0.01%",
+  "negative_result_or_admitted_limitation": "GCD方法对谐波频率误差过于敏感，即使0.1Hz误差也会导致数十倍错误；放大因子超过25×后噪声主导导致误差骤增",
+  "evidence_for_taste": [
+    "GCD-based method is fragile",
+    "0.1Hz error would lead to dozens times",
+    "over-amplified negative impact prevents recovery",
+    "inherently random sampling is able to ensure",
+    "without any modification on low-layer of COTS readers"
+  ],
+  "thinking_moves": [
+    "把微振动位移问题转化为相位放大问题，通过泰勒展开证明B(t)与振动半径r成正比",
+    "利用RFID随机读取的内禀随机性，将其建模为压缩感知测量矩阵，无需修改底层协议",
+    "借用脉冲星检测领域的RF折叠技术，将其适配到振动周期发现",
+    "承认压缩感知的M=3K~4K采样数要求，同时论证RFID随机性可满足此条件"
+  ],
+  "topic_tags": [
+    "RFID-backscatter-sensing",
+    "vibration-period-detection",
+    "compressive-sampling-RFID",
+    "sub-Nyquist-signal-recovery",
+    "phase-based-motion-sensing"
+  ],
+  "cites_own_work": [
+    "Tagoram"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

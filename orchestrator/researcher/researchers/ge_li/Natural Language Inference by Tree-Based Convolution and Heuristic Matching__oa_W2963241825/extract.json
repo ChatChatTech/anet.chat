@@ -1,0 +1,41 @@
+{
+  "paper_id": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825",
+  "doi": "10.18653/v1/p16-2022",
+  "title": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching",
+  "year": 2016,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "递归网络虽有结构敏感性，但训练时路径过长导致难以优化",
+  "problem_framing": "将NLI建模为两步骤的句子对匹配任务：先编码单句，再用启发式层组合",
+  "key_insight": "树结构卷积比递归网络传播路径更短，且显式使用元素级差异heuristics能带来优化收益",
+  "method_signature": "TBCNN捕获结构语义 + concatenation/product/difference启发式匹配层",
+  "evaluation_criteria": "SNLI数据集准确率；匹配复杂度O(1) vs O(n²)",
+  "negative_result_or_admitted_limitation": "单独使用element-wise product效果显著劣于concatenation或difference",
+  "evidence_for_taste": [
+    "TBCNN is more robust than sequential convolution in terms of word order distortion",
+    "explicitly specifying this heuristic significantly improves the performance",
+    "the matching part counts 1.71% of the total time during prediction",
+    "the element-wise difference matching layer does not add to model complexity",
+    "using element-wise product alone is significantly worse"
+  ],
+  "thinking_moves": [
+    "把结构敏感性从递归网络(路径长难训练)重新归属到树卷积(路径短易训练)",
+    "通过数学等价证明(difference可吸收到concat)反衬出显式建模的优化价值",
+    "把syntactic parsing不是当作最终目标而是当作feature detector的约束先验"
+  ],
+  "topic_tags": [
+    "tree-based convolution",
+    "heuristic matching",
+    "sentence pair modeling",
+    "dependency parse",
+    "natural language inference"
+  ],
+  "cites_own_work": [
+    "Mou et al., 2015",
+    "Mou et al., 2016",
+    "Xu et al., 2015",
+    "Xu et al., 2016"
+  ],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434",
+  "doi": "10.18653/v1/2024.findings-acl.214",
+  "title": "DevEval: A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories",
+  "year": 2024,
+  "venue": "ACL Findings",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有代码生成基准测试与真实代码仓库不对齐，LLM在基准上的表现与开发者实际体验不一致",
+  "problem_framing": "定义好基准应满足四大特征：真实仓库、真实代码分布、全面标注、鲁棒评测指标",
+  "key_insight": "真实仓库有73%非独立代码和跨文件依赖，现有基准忽略这些分布导致评测失真",
+  "method_signature": "DevEval含1825样本从115仓库，标注需求/参考代码/依赖，提供Pass@k和Recall@k评测",
+  "evaluation_criteria": "Pass@k测功能正确性，Recall@k测依赖召回率，基于测试用例执行评估",
+  "negative_result_or_admitted_limitation": "GPT-4在DevEval上Pass@1仅53.04%远低于HumanEval的80%，LLM难以理解长且异构的上下文",
+  "evidence_for_taste": [
+    "poorly aligned with real-world",
+    "inconsistent with developers' actual experiences",
+    "struggle with understanding long and heterogeneous contexts",
+    "even though a valid function connect is present",
+    "non-existent function - create_connection"
+  ],
+  "thinking_moves": [
+    "从500个真实仓库反推基准应该具备的特征分布",
+    "把独立代码vs非独立代码的占比作为关键区分维度",
+    "用Recall@k专门度量依赖调用准确性弥补Pass@k的不足",
+    "通过失败案例分析揭示上下文过长和异构导致的幻觉问题"
+  ],
+  "topic_tags": [
+    "LLM代码生成评测",
+    "真实仓库代码基准",
+    "多文件依赖召回",
+    "上下文窗口限制",
+    "代码生成幻觉检测"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

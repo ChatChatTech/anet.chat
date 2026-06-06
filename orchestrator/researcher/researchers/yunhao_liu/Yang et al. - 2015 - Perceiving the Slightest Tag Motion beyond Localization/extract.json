@@ -1,0 +1,39 @@
+{
+  "paper_id": "Yang et al. - 2015 - Perceiving the Slightest Tag Motion beyond Localization",
+  "doi": null,
+  "title": "Perceiving the Slightest Tag Motion beyond Localization",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有RFID系统用存在/不存在方式检测运动,粒度太粗,无法满足博物馆安保和超市行为挖掘等厘米级需求",
+  "problem_framing": "从信号强度变化中检测标签运动,但热噪声和多径效应导致弱稳定性,易产生误报",
+  "key_insight": "信号强度随距离按四次方衰减呈超敏性,但弱稳定性由多径传播路径决定,可用高斯混合模型刻画",
+  "method_signature": "将标签读数投影为强度图像,借用计算机视觉MoG背景建模检测前景像素(运动标签)",
+  "evaluation_criteria": "检测准确率92.34%,误报率<0.5%,最小可感知距离~10cm",
+  "negative_result_or_admitted_limitation": "LANDMARC等定位方法表现最差,因为米级定位精度无法检测1m内运动;MV方法在规则运动模式下易失效",
+  "evidence_for_taste": [
+    "points in the figure are linear and very close to the theoretical line",
+    "the strength is enhanced or decayed by the person's movement",
+    "MoG-BS conquers the above weakness because it learns from the environment instead of the tag's current status",
+    "higher antenna power gives much more energy to the tag, therefore the tag has more choices of propagation paths",
+    "the sensitivity decreases when more models are used"
+  ],
+  "thinking_moves": [
+    "将RFID信号强度问题类比计算机视觉图像处理,借用背景建模方法解决运动检测",
+    "从物理方程推导信号强度对位置的极端敏感性,为方法可行性提供理论依据",
+    "对弱稳定性现象进行分层解释:热噪声决定振动范围,多径决定振动水平层次",
+    "实验发现高功率反而降低敏感性,反向验证了多径建模的正确性",
+    "将时序运动事件建模为伯努利试验,用切诺夫界推导自适应滑动窗口大小"
+  ],
+  "topic_tags": [
+    "RFID-motion-detection",
+    "Mixture-of-Gaussians",
+    "background-subtraction",
+    "signal-strength-analysis",
+    "multipath-effect"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文主体完整,方法描述充分,但缺少明确的发表 venue 信息,DOI 未提供 | md truncated to head40k+tail20k"
+}

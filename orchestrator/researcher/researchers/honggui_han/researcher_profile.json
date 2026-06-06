@@ -1,0 +1,198 @@
+{
+  "slug": "honggui_han",
+  "n_extracts": 3,
+  "n_full": 3,
+  "n_partial": 0,
+  "n_thin": 0,
+  "year_range": [
+    2010,
+    2024
+  ],
+  "top_tags": [
+    [
+      "federated learning IIoT",
+      1
+    ],
+    [
+      "temporal convolutional network",
+      1
+    ],
+    [
+      "node heterogeneity handling",
+      1
+    ],
+    [
+      "cyberattack detection",
+      1
+    ],
+    [
+      "FedProx aggregation",
+      1
+    ],
+    [
+      "multi-agent-reinforcement-learning",
+      1
+    ],
+    [
+      "distributed-event-triggered-control",
+      1
+    ],
+    [
+      "MADDPG",
+      1
+    ],
+    [
+      "obstacle-avoidance",
+      1
+    ],
+    [
+      "cooperative-motion-control",
+      1
+    ],
+    [
+      "RBF神经网络",
+      1
+    ],
+    [
+      "自组织结构设计",
+      1
+    ],
+    [
+      "动态系统辨识",
+      1
+    ],
+    [
+      "感受野半径",
+      1
+    ],
+    [
+      "污水处理软测量",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2010,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "RBF神经网络",
+          1
+        ],
+        [
+          "自组织结构设计",
+          1
+        ],
+        [
+          "动态系统辨识",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "federated learning IIoT",
+          1
+        ],
+        [
+          "temporal convolutional network",
+          1
+        ],
+        [
+          "node heterogeneity handling",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "multi-agent-reinforcement-learning",
+          1
+        ],
+        [
+          "distributed-event-triggered-control",
+          1
+        ],
+        [
+          "MADDPG",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "VSA和UA攻击因对时序信号影响小而检测效果差;实验中只有4个客户端,节点异构性不够明显",
+    "上述研究的实验场地均在空旷的场景下, 必须设计避障策略",
+    "固定常数值的ε和τ参数在复杂系统中可能导致结构变化缓慢，最终难以获得最优网络"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "智能体之间的通信和数据传输往往是冗余的",
+      "paper_id": "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    },
+    {
+      "quote": "优化智能体之间的通信机制",
+      "paper_id": "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    },
+    {
+      "quote": "平衡协同控制性能和通信节省",
+      "paper_id": "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    },
+    {
+      "quote": "以较低的通信成本实现极好的协同运动控制性能",
+      "paper_id": "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    },
+    {
+      "quote": "该方法需要较少的与环境交互的时间",
+      "paper_id": "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    },
+    {
+      "quote": "a self-organizing algorithm is necessary",
+      "paper_id": "Research on an online self-organizing radial basis function neural network"
+    },
+    {
+      "quote": "structure design mainly relies on the RBF nodes",
+      "paper_id": "Research on an online self-organizing radial basis function neural network"
+    },
+    {
+      "quote": "The criterion of the RBF selection is based on the radius",
+      "paper_id": "Research on an online self-organizing radial basis function neural network"
+    },
+    {
+      "quote": "SORBF demonstrates a good performance",
+      "paper_id": "Research on an online self-organizing radial basis function neural network"
+    },
+    {
+      "quote": "The final architecture of the RBF neural network is suitable",
+      "paper_id": "Research on an online self-organizing radial basis function neural network"
+    },
+    {
+      "quote": "non-i.i.d. characteristics may lead to a severe impairment",
+      "paper_id": "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    },
+    {
+      "quote": "CNN performs much better on MNIST",
+      "paper_id": "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    },
+    {
+      "quote": "FSL loss function converged faster and gave the best results",
+      "paper_id": "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    },
+    {
+      "quote": "the models tend to confuse VSA and UA with normal signals",
+      "paper_id": "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    },
+    {
+      "quote": "making the heterogeneity of nodes not obvious enough",
+      "paper_id": "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    }
+  ]
+}

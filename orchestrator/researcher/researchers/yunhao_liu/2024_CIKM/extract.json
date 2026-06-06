@@ -1,0 +1,37 @@
+{
+  "paper_id": "2024_CIKM",
+  "doi": null,
+  "title": "GameTrail: Probabilistic Lifecycle Process Model for Deep Game Understanding",
+  "year": 2024,
+  "venue": "CIKM",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "移动游戏市场增长快,但相比用户LTV预测,游戏本身的生命周期理解研究不足,难以支撑营销需求",
+  "problem_framing": "将游戏-用户长期重复交互建模为概率随机过程,通过潜在变量表示生命周期阶段,预测下游任务",
+  "key_insight": "用贝叶斯变分推断从少量游戏-用户特定数据中学习潜在阶段变量,并通过交叉注意力捕捉广告上下文变化",
+  "method_signature": "联合概率随机过程模型+变分推断+Mixture of Experts+动态编码器+跨注意力机制",
+  "evaluation_criteria": "NMSE和NMAE在工业数据集和公开游戏数据集上的1/7/15/30天预测性能",
+  "negative_result_or_admitted_limitation": "强化学习方法需考虑探索-利用权衡,企业不愿频繁基于大数据更新动作函数,故采用概率模型替代",
+  "evidence_for_taste": [
+    "unlike modeling individual users",
+    "domain-specific knowledge to ensure its availability",
+    "motivating a Bayesian treatment by the VI",
+    "impossible to find a unified stage definition",
+    "the practical business issues arising from the exploration-exploitation trade-off"
+  ],
+  "thinking_moves": [
+    "把游戏生命周期理解问题重新定义为由用户行为驱动的潜在变量学习问题",
+    "从用户-游戏交互数据不足的现实出发,选择贝叶斯变分推断而非点估计",
+    "通过概率KL散度形式化阶段转换的影响,从信息论角度建模"
+  ],
+  "topic_tags": [
+    "game-lifecycle-modeling",
+    "variational-inference",
+    "probabilistic-stochastic-process",
+    "user-game-interaction",
+    "downstream-prediction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,35 @@
+{
+  "paper_id": "Dong et al. - 2019 - Pair-Navi Peer-to-Peer Indoor Navigation with Mobile Visual SLAM",
+  "doi": null,
+  "title": "Pair-Navi: Peer-to-Peer Indoor Navigation with Mobile Visual SLAM",
+  "year": 2019,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "现有室内导航依赖预部署基础设施和精确地图,无法实现无基础设施的自由导航",
+  "problem_framing": "将室内导航重新定义为P2P模式:复用领路者的轨迹经验引导跟随者",
+  "key_insight": "通过剔除非刚性上下文保持静态刚性内容,结合解耦SLAM模块实现实时导航",
+  "method_signature": "P2P轨迹复用视觉SLAM + 动态内容过滤 + 模块解耦",
+  "evaluation_criteria": "即时导航成功率98.6%,两周后仍保持83.4%,优于SOTA超过50%",
+  "negative_result_or_admitted_limitation": "视觉SLAM对环境动态敏感且计算密集,难以实时运行",
+  "evidence_for_taste": [
+    "vulnerable to environmental dynamics",
+    "intensive computation that prohibits real-time",
+    "circumvents all these requirements"
+  ],
+  "thinking_moves": [
+    "将基础设施依赖问题转化为轨迹复用问题",
+    "承认视觉SLAM两大根本缺陷(动态敏感+计算密集)",
+    "通过内容过滤绕过感知鲁棒性挑战"
+  ],
+  "topic_tags": [
+    "visual-SLAM",
+    "infrastructure-free-localization",
+    "peer-to-peer-navigation",
+    "mobile-visual-navigation",
+    "trajectory-reuse"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "仅有摘要,缺少方法细节和评估指标具体描述"
+}

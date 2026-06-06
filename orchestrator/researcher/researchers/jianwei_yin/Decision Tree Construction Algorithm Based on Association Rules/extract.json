@@ -1,0 +1,36 @@
+{
+  "paper_id": "Decision Tree Construction Algorithm Based on Association Rules",
+  "doi": "10.2991/iccasm.2012.191",
+  "title": "Decision Tree Construction Algorithm Based on Association Rules",
+  "year": 2012,
+  "venue": "ICCASM",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "B2C网站产品信息激增,人工分类费时费力,亟需自动分类技术",
+  "problem_framing": "将关联规则挖掘与决策树算法结合,提升文本分类准确率",
+  "key_insight": "用关联规则'有效规则'(effective rules)来构建决策树节点",
+  "method_signature": "先用Apriori挖掘关联规则,再用有效规则引导决策树分裂",
+  "evaluation_criteria": "Precision/Recall/F-score及分类耗时对比",
+  "negative_result_or_admitted_limitation": "关联规则关联过多类别时,无法找到最合适的决策节点,导致某些类别精度很低",
+  "evidence_for_taste": [
+    "how to get a higher accuracy",
+    "expect to gain the better result",
+    "six of seven categories perform better",
+    "cannot find the most proper decision node",
+    "the precision of proposal algorithm is very low"
+  ],
+  "thinking_moves": [
+    "组合两种经典方法以期获得更好效果",
+    "用挖掘出的关联规则来强化决策树属性选择",
+    "当有效规则失效时才回退到熵增益方法"
+  ],
+  "topic_tags": [
+    "text-based classification",
+    "association rules mining",
+    "decision tree",
+    "product classification",
+    "B2C e-commerce"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

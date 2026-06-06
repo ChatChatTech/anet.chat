@@ -1,0 +1,37 @@
+{
+  "paper_id": "LoRA-C_ Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices",
+  "doi": "10.48550/arxiv.2410.16954",
+  "title": "LoRA-C: Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "IoT设备部署在恶劣环境中处理受环境干扰的数据,需要高效提升CNN鲁棒性",
+  "problem_framing": "将LoRA从Transformer迁移到CNN时,核参数共享特性导致kernel-wise方法参数膨胀,需重新设计分解粒度",
+  "key_insight": "采用layer-wise低秩分解替代kernel-wise,并发现α/r保持常数(≈2)时性能最优",
+  "method_signature": "LoRA-C在卷积层引入矩阵A(r×cin×k)和B(cout×k×r),仅更新约1%参数",
+  "evaluation_criteria": "CIFAR-10/100准确率、CIFAR-10-C鲁棒性、Icons-50风格泛化、参数量减少率",
+  "negative_result_or_admitted_limitation": "kernel-wise方法在r≥k时参数量超过全微调,难以平衡性能与参数效率",
+  "evidence_for_taste": [
+    "kernel-wise will be greater than the full fine-tuning one when r ≥ k",
+    "the best performance is usually obtained when α/r is a constant",
+    "the gap in accuracy between the two settings is narrowing",
+    "it is not the case that the more parameters updated, the better"
+  ],
+  "thinking_moves": [
+    "将Transformer中LoRA的分解机制适配到CNN卷积层结构",
+    "通过数学推导比较kernel-wise与layer-wise的参数效率",
+    "从参数比与准确率的关系发现α/r常数的经验法则",
+    "根据模型容量(参数量)自动选择rank设置策略"
+  ],
+  "topic_tags": [
+    "LoRA-CNN-fine-tuning",
+    "IoT-device-deployment",
+    "layer-wise-decomposition",
+    "CNN-robustness",
+    "parameter-efficient-tuning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

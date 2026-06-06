@@ -1,0 +1,40 @@
+{
+  "paper_id": "Integrating Tree Path in Transformer for Code Representation",
+  "doi": null,
+  "title": "Integrating Tree Path in Transformer for Code Representation",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "Sequential models struggle to capture code structure; Transformers lack structural inductive bias; GNNs have local representations",
+  "problem_framing": "Integrate AST path encodings (relative and absolute) into Transformer attention module to capture code syntax and semantics",
+  "key_insight": "Relative paths reveal token relationships (patterns like for-loops); absolute paths reveal per-token program behavior; both can bias self-attention",
+  "method_signature": "TPTrans: modify Transformer attention with path-encoded relative position representations and layer-normalized GRU encoders",
+  "evaluation_criteria": "Code summarization F1/precision/recall on Python, Ruby, JavaScript, Go (CSN dataset)",
+  "negative_result_or_admitted_limitation": "TPTrans-α (with absolute path) shows almost no gain over TPTrans alone; path overlap exists between absolute and relative paths",
+  "evidence_for_taste": [
+    "struggle to capture the structural complexity",
+    "representation of GNNs tends to be local",
+    "lacks the ability to model the structural complexity",
+    "overlooked by only encoding distances",
+    "normalization method is crucial",
+    "the gain from absolute path encoding is almost weak"
+  ],
+  "thinking_moves": [
+    "把positional encoding的类比嫁接到AST path encoding",
+    "分离相对路径和绝对路径的信息贡献",
+    "通过消融实验逐步去除路径编码的子模块",
+    "用路径退化实验验证'路径vs距离'的信息量差异",
+    "发现语言间路径长度分布差异导致的性能异常"
+  ],
+  "topic_tags": [
+    "code-representation-learning",
+    "AST-path-encoding",
+    "Transformer-structural-bias",
+    "code-summarization",
+    "relative-absolute-positional-encoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Year and venue not explicitly stated in paper. Abstract mentions CodeSearchNet dataset but no specific conference publication. The paper appears to be from arXiv based on reference style, likely a conference submission."
+}

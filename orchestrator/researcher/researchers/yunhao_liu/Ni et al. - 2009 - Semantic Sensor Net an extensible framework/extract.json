@@ -1,0 +1,43 @@
+{
+  "paper_id": "Ni et al. - 2009 - Semantic Sensor Net an extensible framework",
+  "doi": null,
+  "title": "Semantic Sensor Net: an extensible framework",
+  "year": 2009,
+  "venue": "Int. J. Ad Hoc and Ubiquitous Computing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有方案假设同构传感器、应用定制、工程导向、缺乏互操作性，严重限制了WSN的实用化部署",
+  "problem_framing": "将WSN独特挑战（资源受限、无全局ID、动态拓扑、异构性）重新定义为需要统一语义框架的问题",
+  "key_insight": "引入语义层实现数据共享复用，类比互联网hourglass架构，提出everything over SSD的层次结构",
+  "method_signature": "通过SSDL/SSNDL/SSNQL动态标注语义，实现语义化的数据发布/订阅路由和查询处理",
+  "evaluation_criteria": "架构的extensible与practical性，是否能连接异构传感器并提供统一接口",
+  "negative_result_or_admitted_limitation": "架构仅从数据视角呈现，仍非常conceptual，未涉及网络层连接细节；语义会带来通信开销",
+  "evidence_for_taste": [
+    "we have just begun to touch the tip",
+    "the success behind the internet",
+    "any individual sensor node is by itself",
+    "engineering-oriented approaches",
+    "suffer from these major drawbacks"
+  ],
+  "thinking_moves": [
+    "指出既有方案的四大缺陷，从工程实践反推需要理论基础",
+    "类比成功互联网hourglass架构，提出SSN的核心抽象",
+    "将WSN从node-centric原则重新frame成data-centric原则",
+    "区分语义存在于不同层次（感知数据→查询→服务）并可相互转换",
+    "承认当前方案仍conceptual，为后续工作留白"
+  ],
+  "topic_tags": [
+    "semantic-sensor-networks",
+    "heterogeneous-WSN-framework",
+    "data-centric-routing",
+    "semantic-tagging",
+    "SSN-architecture"
+  ],
+  "cites_own_work": [
+    "BLOSSOMS",
+    "SAS",
+    "Cabot"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

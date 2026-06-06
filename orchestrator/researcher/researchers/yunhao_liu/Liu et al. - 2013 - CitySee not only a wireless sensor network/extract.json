@@ -1,0 +1,45 @@
+{
+  "paper_id": "Liu et al. - 2013 - CitySee not only a wireless sensor network",
+  "doi": null,
+  "title": "CitySee: Not Only a Wireless Sensor Network",
+  "year": 2013,
+  "venue": "IEEE Communications Magazine",
+  "venue_tier": "strong",
+  "role": "senior",
+  "motivation": "城市碳排放难以精确实时监测,现有方法不够准确且无法满足实时需求",
+  "problem_framing": "大型城市传感器网络面临硬件/软件/网络/服务多层挑战",
+  "key_insight": "将感知基础设施与云服务结合,用混合云架构提供传感即服务",
+  "method_signature": "1196节点城市WSN+云端混合架构的感知即服务平台",
+  "evaluation_criteria": "网络连通性/数据完整性/查询响应时间/系统可靠性",
+  "negative_result_or_admitted_limitation": "单服务器查询10个月数据需等待约15秒,体验很差;粗粒度云同步导致严重流量浪费",
+  "evidence_for_taste": [
+    "less accurate and do not satisfy the real-time requirements",
+    "粗粒度云同步导致严重流量浪费",
+    "a terrible user experience without a doubt",
+    "most unpredictable",
+    "Low-performance links are often wrongly selected"
+  ],
+  "thinking_moves": [
+    "将部署连通性问题形式化为几何Group Steiner Tree with Holes问题",
+    "从云端同步开销反推出粗粒度同步机制失效",
+    "用PAD被动诊断避免额外流量开销",
+    "混合私有云和公有云以平衡成本/安全/性能",
+    "通过长期观测链路性能发现中间链路最不可预测"
+  ],
+  "topic_tags": [
+    "urban-CO2-monitoring",
+    "large-scale-WSN",
+    "sensing-as-a-service",
+    "cloudlet-architecture",
+    "network-diagnosis"
+  ],
+  "cites_own_work": [
+    "GreenOrbs",
+    "LiFS",
+    "PAD",
+    "Qof",
+    "Coarse-grained cloud sync"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

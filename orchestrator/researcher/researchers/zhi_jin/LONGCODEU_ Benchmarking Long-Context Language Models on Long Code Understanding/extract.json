@@ -1,0 +1,37 @@
+{
+  "paper_id": "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding",
+  "doi": "10.48550/arxiv.2503.04359",
+  "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code Understanding",
+  "year": 2025,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有基准测试无法有效评估LCLMs的真实长代码理解能力",
+  "problem_framing": "从四个维度(代码单元感知/单元内理解/单元间关系理解/文档理解)系统评测LCLMs",
+  "key_insight": "跨代码单元关系理解是LCLMs最具挑战性的能力,性能在32K后急剧下降",
+  "method_signature": "构建包含8任务~500例/0-128K token的LONGCODEU基准",
+  "evaluation_criteria": "使用EM/LCS/CodeBLEU/BLEU等检索指标进行自动评测",
+  "negative_result_or_admitted_limitation": "LCLMs性能在32K后急剧下降,远未达到声称的128K-1M上下文窗口",
+  "evidence_for_taste": [
+    "only focusing on needle function search",
+    "ignoring context dependency in real-world source code",
+    "does not decouple the long code understanding ability",
+    "falls far short of their claimed context windows"
+  ],
+  "thinking_moves": [
+    "把长代码理解问题分解为四个递进维度",
+    "从合成代码转向真实仓库依赖关系",
+    "用检索指标而非下游任务性能来独立测量理解能力",
+    "通过长度分桶揭示性能衰减规律"
+  ],
+  "topic_tags": [
+    "long-context-LLM-evaluation",
+    "code-understanding-benchmark",
+    "software-engineering",
+    "context-window-scalability",
+    "retrieval-metrics"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

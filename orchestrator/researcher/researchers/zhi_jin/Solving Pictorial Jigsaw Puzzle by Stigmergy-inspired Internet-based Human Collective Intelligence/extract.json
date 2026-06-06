@@ -1,0 +1,40 @@
+{
+  "paper_id": "Solving Pictorial Jigsaw Puzzle by Stigmergy-inspired Internet-based Human Collective Intelligence",
+  "doi": "10.48550/arxiv.1812.02559",
+  "title": "Solving Pictorial Jigsaw Puzzle by Stigmergy-inspired Internet-based Human Collective Intelligence",
+  "year": 2018,
+  "venue": null,
+  "venue_tier": "workshop",
+  "role": "senior",
+  "motivation": "利用蚂蚁通过环境间接协调的stigmergy机制，在网络空间实现分布式人类玩家的集体智能",
+  "problem_framing": "将拼图问题建模为无法自顶向下分解的复杂问题，需要用EIF循环在网络空间模拟stigmergy",
+  "key_insight": "用软件算法替代物理定律作为整合机制，用集体意见图COG+个体探索结果的组合替代物理位置作为反馈基础",
+  "method_signature": "EIF循环(探索-整合-反馈)驱动COG持续更新实现网络空间stigmergy",
+  "evaluation_criteria": "拼图解决时间随玩家数量呈近线性反比、可扩展性、对最佳单人的提升幅度",
+  "negative_result_or_admitted_limitation": "我们的目标不是证明方法能胜过自动求解器，而是展示人类在适当组织下拥有机器无法替代的独特能力",
+  "evidence_for_taste": [
+    "the kind of complex problems that are embodied by jigsaw puzzle in general",
+    "human beings, if being organized appropriately, do possess some distinctive capabilities",
+    "the integration in EIF is not carried out by physical laws as in physical-space based stigmergy",
+    "For those PJ puzzles satisfying the two assumptions above, the state-of-the-art solvers have done well",
+    "no need to pre-decompose the to-be-resolved problem"
+  ],
+  "thinking_moves": [
+    "将昆虫stigmergy类比迁移到人类CI，设计网络空间人造环境",
+    "用软件/算法替代物理定律作为整合机制，保留反馈的主动推送特性",
+    "把复杂问题求解重新框定为通过环境介导的间接协调而非直接交互",
+    "从物理位置依赖转向集体产物+个体状态的条件依赖"
+  ],
+  "topic_tags": [
+    "stigmergy-inspired human CI",
+    "EIF loop architecture",
+    "collective opinion graph",
+    "Internet-based distributed collaboration",
+    "bottom-up problem solving"
+  ],
+  "cites_own_work": [
+    "[76] Feature-oriented stigmergy-based collaborative requirements modeling"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "完整提取了EIF循环机制、COG图结构、反馈策略(responsive/stimulative)等核心设计，以及对自动求解器的明确定位差异 | md truncated to head40k+tail20k"
+}

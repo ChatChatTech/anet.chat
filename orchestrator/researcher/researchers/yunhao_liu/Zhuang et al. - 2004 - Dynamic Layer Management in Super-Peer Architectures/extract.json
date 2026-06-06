@@ -1,0 +1,35 @@
+{
+  "paper_id": "Zhuang et al. - 2004 - Dynamic Layer Management in Super-Peer Architectures",
+  "doi": null,
+  "title": "Dynamic Layer Management in Super-Peer Architectures",
+  "year": 2004,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "当前超节点系统缺乏有效的层管理机制,导致瞬态和低容量节点被选举为超节点",
+  "problem_framing": "在无全局知识条件下,同时实现最优层大小比维护和高质量节点选举为超节点",
+  "key_insight": "通过比较局部叶邻居数lnn与最优kl推断全局层比,并用可调缩放参数X实现目标兼容性",
+  "method_signature": "基于局部邻居信息的分布式层管理算法DLM",
+  "evaluation_criteria": "维持给定层大小比且使超层节点具有更大容量和更长寿命",
+  "negative_result_or_admitted_limitation": "we leave the discussion of the appropriate size ratio to our other papers",
+  "evidence_for_taste": [
+    "we argue that this approach cannot maintain an appropriate size ratio",
+    "These problems are not trivial to deal with",
+    "Unfortunately, these two goals are not always compatible",
+    "comparing in such a direct way may fail to maintain the layer size ratio successfully"
+  ],
+  "thinking_moves": [
+    "将两个问题(层比维护+节点质量)分离并识别其不兼容性",
+    "从局部邻居观察推断全局层比状态的观察推理",
+    "用可调缩放参数实现两层目标的动态平衡",
+    "从直接比较失效反推需要引入缩放比较机制"
+  ],
+  "topic_tags": [
+    "P2P-super-peer-layer-management",
+    "distributed-algorithm-design",
+    "capacity-age-metric-selection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue信息缺失,论文来自Michigan State University作者,推测为会议论文但未在文中明确标注。相关工作中提到与Yang & Garcia-Molina (ICDE 2003)等工作的关系,但未标注完整引用信息。"
+}

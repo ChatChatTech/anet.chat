@@ -1,0 +1,38 @@
+{
+  "paper_id": "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization",
+  "doi": "10.1109/hpca61900.2025.00031",
+  "title": "Choco-Q: Commute Hamiltonian-based QAOA for Constrained Binary Optimization",
+  "year": 2025,
+  "venue": "IEEE International Symposium on High-Performance Computer Architecture (HPCA)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有QAOA方法无法彻底编码约束,导致成功率极低(接近零),且延迟高",
+  "problem_framing": "将约束编码为与约束算子对易的驱动哈密顿量,使量子态在演化中保持约束不变",
+  "key_insight": "利用Heisenberg绘景中算子与哈密顿量对易则期望值不变的特性,发明对易哈密顿量作为驱动哈密顿量",
+  "method_signature": "对易哈密顿量+序列化+等价分解+变量消除三层优化",
+  "evaluation_criteria": "约束内率(100%)、成功率(67.1%)、端到端延迟(4.69×加速)",
+  "negative_result_or_admitted_limitation": "承认若不消除变量,28变量问题产生989深度电路无法在NISQ设备执行",
+  "evidence_for_taste": [
+    "smashing quantum advantages",
+    "lacking the generality",
+    "trotter decomposition [36]",
+    "The execution time is estimated",
+    "going far beyond the executable depth"
+  ],
+  "thinking_moves": [
+    "将失败归因于'编码不彻底'而非参数调优问题",
+    "从量子力学Heisenberg绘景推导约束保持条件",
+    "先证引理保证序列化不丢失约束信息,再谈工程收益",
+    "复杂度从O(n2^n)和深度10^10降到O(n)和~100深度"
+  ],
+  "topic_tags": [
+    "QAOA-constraint-encoding",
+    "commute-Hamiltonian",
+    "quantum-circuit-decomposition",
+    "NISQ-deployability",
+    "Hamiltonian-serialization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

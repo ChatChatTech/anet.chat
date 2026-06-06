@@ -1,0 +1,37 @@
+{
+  "paper_id": "Semantic Relation Based Exception Detection in Workflow Systems",
+  "doi": null,
+  "title": "Semantic Relation Based Exception Detection in Workflow Systems",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "工作流执行中的异常难以完全预定义，直接修改模式会导致schema复杂度增加和维护成本上升",
+  "problem_framing": "将工作流异常定义为未来执行路径中不满足数据依赖规则的路径，通过分析控制流图与数据依赖图的前向搜索提前识别",
+  "key_insight": "数据依赖图G_Data是控制依赖图G_Ctrl的超图，利用数据依赖规则作为控制规则的语义补充，可在不改变schema结构的前提下检测异常路径",
+  "method_signature": "基于BFS的路径枚举(AllPath)+数据依赖规则验证(ExceptionChecking)+异常路径搜索(SearchAllExceptionPath)",
+  "evaluation_criteria": "算法时间复杂度界O(OD(v0)+Σ(OD(vi)-1))至O(L*(OD(v0)+Σ(OD(vi)-1)))，实例中Path1比Path2多消耗14分钟执行时间",
+  "negative_result_or_admitted_limitation": "对于复杂工作流schema，搜索过程耗时，且转换数据依赖规则为控制规则会改变模型结构",
+  "evidence_for_taste": [
+    "avoids complexity modeling",
+    "keeps rationality of business process",
+    "Not only executing time can be shortened",
+    "does not accord with business custom"
+  ],
+  "thinking_moves": [
+    "将工作流控制依赖与数据依赖分离为两个图结构，利用图论包含关系(G_Ctrl⊂G_Data)推理语义约束的补充作用",
+    "从图论性质出发证 Property 1（控制依赖蕴含数据依赖），再反推G_Data是G_Ctrl超图",
+    "将异常检测问题重构为前向图搜索问题，在活动执行前评估所有可达路径的数据依赖满足性",
+    "区分显式依赖与隐式依赖，隐式依赖通过全局状态触发，无法直接在控制流图中表达"
+  ],
+  "topic_tags": [
+    "workflow-exception-detection",
+    "data-dependency-rule",
+    "control-dependency-graph",
+    "semantic-relation",
+    "path-enumeration-algorithm"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文发表年份、期刊/会议名称未被提供，无法确定venue_tier。作者Xu Xiao-fei位列第三位（末位），标注为co-author。数据依赖规则与控制规则的转换方法作为未来研究方向被搁置，此为明确的limitation承认。"
+}

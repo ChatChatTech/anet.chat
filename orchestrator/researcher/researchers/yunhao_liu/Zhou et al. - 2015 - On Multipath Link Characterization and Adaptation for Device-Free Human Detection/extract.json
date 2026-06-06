@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zhou et al. - 2015 - On Multipath Link Characterization and Adaptation for Device-Free Human Detection",
+  "doi": null,
+  "title": "On Multipath Link Characterization and Adaptation for Device-Free Human Detection",
+  "year": 2015,
+  "venue": "IEEE INFOCOM (inferred from references)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Multipath propagation deteriorates detection rates and shrinks coverage in indoor device-free sensing; existing work avoids multipath at the cost of coverage",
+  "problem_framing": "How to characterize detection sensitivity via measurable metrics on commodity WiFi, and how to exploit reflected paths for wider coverage",
+  "key_insight": "Multipath factor μ—ratio of LOS power to total power—serves as a directly measurable runtime proxy for link sensitivity, enabling subcarrier weighting to boost detection",
+  "method_signature": "Subcarrier + path weighting scheme using multipath factor μ and MUSIC angle-of-arrival",
+  "evaluation_criteria": "True Positive rate vs False Positive rate (ROC curves); detection range at 90% minimal detection rate",
+  "negative_result_or_admitted_limitation": "Path weighting causes slight performance drop in some cases due to angle estimation errors >20 degrees with only 3 antennas",
+  "evidence_for_taste": [
+    "seemingly uncertain link reactions",
+    "diverse RSS change trends",
+    "break down the basic assumption",
+    "motivates us to take a deeper analysis",
+    "ease of demonstration",
+    "marginal gain",
+    "error-prone fitting"
+  ],
+  "thinking_moves": [
+    "将传统上被视为干扰的多径重新诠释为可利用的资源",
+    "从物理建模出发推导可测量的代理指标(multipath factor)",
+    "利用OFDM子载波的频率分集实现灵敏度可调",
+    "借助MUSIC算法和多天线实现空间分集以区分LOS与反射路径"
+  ],
+  "topic_tags": [
+    "device-free-localization",
+    "WiFi-CSI-sensing",
+    "multipath-exploitation",
+    "angle-of-arrival-estimation",
+    "subcarrier-weighting"
+  ],
+  "cites_own_work": [
+    "Zhou et al. 2013 (omnidirectional detection)"
+  ],
+  "extraction_quality": "full"
+}

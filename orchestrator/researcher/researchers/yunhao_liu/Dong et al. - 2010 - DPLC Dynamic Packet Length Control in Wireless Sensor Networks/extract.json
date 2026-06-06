@@ -1,0 +1,40 @@
+{
+  "paper_id": "Dong et al. - 2010 - DPLC Dynamic Packet Length Control in Wireless Sensor Networks",
+  "doi": null,
+  "title": "DPLC: Dynamic Packet Length Control in Wireless Sensor Networks",
+  "year": 2010,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WSNs的链路质量时变且能量受限,固定包长优化方案无法适应空间时间多样性",
+  "problem_framing": "将包长优化形式化为最大化传输效率E=收到有用字节/总传输字节",
+  "key_insight": "通过被动监听数据包接收来实时估计链路质量并动态调整包长",
+  "method_signature": "动态包长控制+聚合/分片服务+轻量级AggAck机制",
+  "evaluation_criteria": "传输开销、能耗、数据收集可靠性",
+  "negative_result_or_admitted_limitation": "多流场景优化太复杂,当前传感器节点能力不足",
+  "evidence_for_taste": [
+    "RSSI and LQI value measured do not see such degradation",
+    "inaccurate PRR value will affect the calculation",
+    "mitigates ACK overhead",
+    "approximates to the metric described by Eq. (1)"
+  ],
+  "thinking_moves": [
+    "从实验数据中发现RSSI/LQI无法准确反映链路质量",
+    "将跨层依赖隔离到L2.5层以降低编程成本",
+    "针对不同服务模式(AS/FS)设计不同的AggAck机制",
+    "通过数学推导证明多跳情况下单跳优化足够好"
+  ],
+  "topic_tags": [
+    "dynamic-packet-length",
+    "link-estimation-passive",
+    "aggregation-fragmentation",
+    "WSN-energy-efficiency",
+    "TinyOS-implementation"
+  ],
+  "cites_own_work": [
+    "GreenOrbs",
+    "CTP"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "未找到venue和DOI信息,论文框架完整但缺少完整的实验结果图"
+}

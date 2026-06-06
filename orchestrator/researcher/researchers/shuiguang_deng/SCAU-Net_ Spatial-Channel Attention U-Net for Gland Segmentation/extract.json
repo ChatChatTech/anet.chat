@@ -1,0 +1,37 @@
+{
+  "paper_id": "SCAU-Net_ Spatial-Channel Attention U-Net for Gland Segmentation",
+  "doi": "10.3389/fbioe.2020.00670",
+  "title": "SCAU-Net: Spatial-Channel Attention U-Net for Gland Segmentation",
+  "year": 2020,
+  "venue": "Frontiers in Bioengineering and Biotechnology",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "手动分割医学图像耗时且需专家 pathologist，仅靠U-Net准确度不足",
+  "problem_framing": "腺体分割需增强局部相关特征、抑制空间与通道层面的无关特征",
+  "key_insight": "空间注意力和通道注意力可作为即插即用模块嵌入U-Net实现特征重校准",
+  "method_signature": "对称编码器-解码器结构 + 空间注意力模块 + 通道注意力模块",
+  "evaluation_criteria": "Dice系数、Jaccard系数、RVD在GlaS和CRAG数据集上评估",
+  "negative_result_or_admitted_limitation": "注意力机制增加模型参数，数据量少时更易过拟合；未来需探索卷积层数等超参数设置",
+  "evidence_for_taste": [
+    "only experts are able to identify tissues",
+    "fuzzy edge is the most worthy",
+    "pay more attention on the edges",
+    "the added attention mechanism makes the model parameters increase",
+    "the model is more likely to over-fit with less data amount"
+  ],
+  "thinking_moves": [
+    "从U-Net基线出发逐步添加注意力模块验证增量贡献",
+    "可视化注意力权重图解释网络关注区域",
+    "分析训练曲线中过拟合现象与参数增加的关系"
+  ],
+  "topic_tags": [
+    "medical-image-segmentation",
+    "gland-segmentation",
+    "attention-mechanism",
+    "U-Net-extension",
+    "encoder-decoder"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

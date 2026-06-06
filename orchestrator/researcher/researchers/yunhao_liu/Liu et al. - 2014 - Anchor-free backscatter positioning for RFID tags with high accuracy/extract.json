@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2014 - Anchor-free backscatter positioning for RFID tags with high accuracy",
+  "doi": null,
+  "title": "Anchor-free backscatter positioning for RFID tags with high accuracy",
+  "year": 2014,
+  "venue": "IEEE",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有RFID定位方法(RSS/AOA)受限于标签能力,且天线间距要求在实际中难以满足",
+  "problem_framing": "利用相位差推断距离差,结合双曲定位实现无锚点高精度定位",
+  "key_insight": "相位是稳定的位置指示器,且在可行区域内可放松三角形约束仍保证定位能力",
+  "method_signature": "基于相位差的双曲定位,利用可行区域放松天线间距约束",
+  "evaluation_criteria": "定位误差均值12.8cm,方差3.8cm,对比LANDMARC/VIRE",
+  "negative_result_or_admitted_limitation": "多径效应问题存在,但超出本文讨论范围留待后续研究",
+  "evidence_for_taste": [
+    "phase is indeed a reliable indicator highly related to tag's position",
+    "preserved over frequency or tag orientation",
+    "the phase exhibits a stable linear relation to the distance",
+    "feasible region is acceptable in practice",
+    "the maximum error is less than 1cm",
+    "the error mainly comes from the y-axis instead of x-axis",
+    "the feasible region is a trade-off that balances the realizability and the practical deployment"
+  ],
+  "thinking_moves": [
+    "通过实证研究建立对相位特性的信任,先验证假设再构建系统",
+    "用几何约束(三角形不等式)严格证明相位与距离差的确定性关系",
+    "引入通信领域的概念(询问区)来解决定位问题中的工程约束",
+    "将定位问题转化为双曲线的交点问题,并利用天线直线排列获得解析解",
+    "承认实际约束(λ/2过严),通过理论证明可行区域概念来放松约束"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "backscatter-positioning",
+    "phase-difference-ranging",
+    "hyperbolic-positioning",
+    "anchor-free-localization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

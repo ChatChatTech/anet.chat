@@ -1,0 +1,38 @@
+{
+  "paper_id": "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization",
+  "doi": "10.48550/arxiv.1909.02742",
+  "title": "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization",
+  "year": 2019,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有后门攻击的触发器肉眼可见,实际部署时会被用户或管理员发现并拒绝使用MLaaS服务",
+  "problem_framing": "将后门触发器设计问题形式化为双层优化,兼顾攻击成功率与人类视觉不可见性",
+  "key_insight": "神经网络对人类不可感知的微小特征敏感,可利用这一感知差异在LSB层级隐藏触发器",
+  "method_signature": "基于LSB隐写嵌入触发器 + Lp范数正则化生成微小扰动触发器",
+  "evaluation_criteria": "攻击成功率(ASR)、正常用户功能保持、触发器不可见性(PASS/LPIPS)",
+  "negative_result_or_admitted_limitation": "停止阈值大则触发器更明显易被发现,阈值小则后门注入困难",
+  "evidence_for_taste": [
+    "trigger is often visible and easily recognizable",
+    "neural networks are sensitive to features imperceptible",
+    "too hard for pre-trained model to memorize",
+    "harder for DNNs to identify the existence of the trigger",
+    "find a trade-off between the attack success rate and invisibility"
+  ],
+  "thinking_moves": [
+    "把perception问题frame成communication问题,利用隐写术在位层级嵌入信息",
+    "利用人类视觉局限与神经网络敏感性的感知差异作为攻击杠杆",
+    "引入视觉心理测量指标PASS/LPIPS量化不可见性,打通安全与认知科学的边界",
+    "对两类攻击(隐写vs正则化)进行攻击假设差异的显式对比分析"
+  ],
+  "topic_tags": [
+    "backdoor-attack-invisibility",
+    "LSB-steganography-trigger",
+    "Lp-norm-regularization-attack",
+    "neural-network-perceptual-gap",
+    "trojan-detection-evasion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

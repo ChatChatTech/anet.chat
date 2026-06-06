@@ -1,0 +1,42 @@
+{
+  "paper_id": "Yang and Liu - 2010 - Quality of Trilateration Confidence-Based Iterative Localization",
+  "doi": null,
+  "title": "Quality of Trilateration: Confidence-Based Iterative Localization",
+  "year": 2010,
+  "venue": "IEEE Transactions",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Coal mine sensor network prototype failed because noisy distance estimation degrades trilateration quality in four aspects.",
+  "problem_framing": "Quantify geometric relationship and ranging noise to evaluate trilateration quality beyond binary feasible/unfeasible.",
+  "key_insight": "Different geometric forms of trilaterations provide different accuracy levels; QoT enables selecting best trilaterations and avoiding flip ambiguity.",
+  "method_signature": "QoT metric measures trilateration quality; CIL scheme iteratively selects highest-confidence trilaterations with refinement.",
+  "evaluation_criteria": "Localization accuracy (meter error), confidence values, error propagation speed across network hops.",
+  "negative_result_or_admitted_limitation": "In coal mine prototype, straightforward multilateration-based localization turns out to be a failure.",
+  "evidence_for_taste": [
+    "localization turns out to be a failure",
+    "a fine-grained evaluation is necessary",
+    "QoT well represents trilateration accuracy",
+    "CIL significantly outperforms previous designs",
+    "error propagation needs to be carefully considered"
+  ],
+  "thinking_moves": [
+    "从工程失败反推需要超越二元分类的连续质量度量",
+    "将置信度定义为 trilateration 质量和参考节点置信度的乘积",
+    "将置信度计算问题转化为 Bellman-Ford 最短路径问题",
+    "用位置 refinement 机制在动态过程中持续改进精度"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-localization",
+    "trilateration-quality-metric",
+    "confidence-based-iterative-localization",
+    "range-estimation-noise",
+    "flip-ambiguity-detection"
+  ],
+  "cites_own_work": [
+    "M. Li and Y. Liu, 'Underground Coal Mine Monitoring with Wireless Sensor Networks'",
+    "M. Li, Y. Liu, 'Rendered Path: Range-Free Localization in Anisotropic Sensor Networks with Holes'",
+    "Z. Yang, Y. Liu, and X.-Y. Li, 'Beyond Trilateration: On the Localizability of Wireless Ad-Hoc Networks'"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

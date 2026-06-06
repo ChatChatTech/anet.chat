@@ -1,0 +1,39 @@
+{
+  "paper_id": "MCBA_ A Matroid Constraint-Based Approach for Composite Service Recommendation Considering Compatibility and Diversity",
+  "doi": "10.48550/arxiv.2409.01600",
+  "title": "MCBA: A Matroid Constraint-Based Approach for Composite Service Recommendation Considering Compatibility and Diversity",
+  "year": 2024,
+  "venue": "arxiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "API搜索结果集中于流行API限制多样性，且难以验证API兼容性",
+  "problem_framing": "关键词查询下找到满足功能需求的多样兼容API组合，形式化为最小组斯坦纳树+边界约束多样化",
+  "key_insight": "将分区拟阵约束与MMR结合，同时捕获跨类别多样性和最大边际相关性，实现可调多样性保证",
+  "method_signature": "两阶段：压缩-求解斯坦纳树获得候选组合；MMR-PMC筛选生成top-k多样化推荐",
+  "evaluation_criteria": "准确性MP、质量MQ、多样性MID、覆盖率、运行时间TC五维对比基线方法",
+  "negative_result_or_admitted_limitation": "λ增大时MP和MQ提升但MID和Coverage下降；为多样性牺牲部分精确度可接受",
+  "evidence_for_taste": [
+    "controllable diversity",
+    "sacrificing accuracy",
+    "significant average improvement",
+    "These slight redundancies are acceptable",
+    "higher precision and quality",
+    "cannot be too similar"
+  ],
+  "thinking_moves": [
+    "将API组合发现问题重新frame为图论最小组斯坦纳树问题",
+    "通过图压缩将稀疏/稠密图转换为均匀分布的超图以提升动态规划效率",
+    "把多样化目标同时建模为跨类别约束和质量-相似度权衡两个维度",
+    "承认精度与多样性存在张力，采用可调参数λ实现可控权衡"
+  ],
+  "topic_tags": [
+    "API-composition-recommendation",
+    "matroid-constraint-diversity",
+    "minimum-group-steiner-tree",
+    "MMR-diversification",
+    "mashup-development"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

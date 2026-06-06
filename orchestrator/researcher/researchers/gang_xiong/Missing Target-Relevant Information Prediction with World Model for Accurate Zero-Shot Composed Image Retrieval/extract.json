@@ -1,0 +1,39 @@
+{
+  "paper_id": "Missing Target-Relevant Information Prediction with World Model for Accurate Zero-Shot Composed Image Retrieval",
+  "doi": "10.48550/arxiv.2503.17109",
+  "title": "Missing Target-Relevant Information Prediction with World Model for Accurate Zero-Shot Composed Image Retrieval",
+  "year": null,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "ZS-CIR方法在参考图像缺失目标内容时失效，因为现有方法忽视了对缺失视觉信息的预测",
+  "problem_framing": "将ZS-CIR重新定义为\"先预测缺失内容再映射\"的问题，利用世界模型在潜空间预测目标缺失元素",
+  "key_insight": "用世界模型模拟用户意图，自适应预测参考图像中缺失的目标视觉元素，再与原内容融合映射到伪词元",
+  "method_signature": "World View Generation生成裁剪源/目标视图 + Target Content Predictor用JEPA框架预测缺失内容 + Predictive Cross-Modal Alignment动态加权融合",
+  "evaluation_criteria": "6个ZS-CIR任务上的R@K和mAP@R指标，验证预测缺失内容的有效性",
+  "negative_result_or_admitted_limitation": "语义感知裁剪策略会限制训练样本多样性，导致Fashion-IQ细粒度属性操作下降6.15%；不同crop大小导致位置嵌入不匹配，性能下降",
+  "evidence_for_taste": [
+    "CLIP embedding captures main object while missing fine-grained details",
+    "predict the missing visual content guided by action",
+    "Dynamic cropping strategy ensures richer and more variable training samples",
+    "limiting the diversity of training samples",
+    "discrepancies in position embeddings"
+  ],
+  "thinking_moves": [
+    "把检索问题重构为\"先预测缺失内容\"的问题",
+    "用JEPA世界模型来模拟用户行为并预测目标缺失元素",
+    "通过裁剪图像自动构造源/目标视图对，避免额外标注",
+    "动态门控机制自适应决定预测信息和源信息的融合比例",
+    "随机裁剪优于语义裁剪，因为能产生更丰富的训练样本"
+  ],
+  "topic_tags": [
+    "zero-shot-composed-image-retrieval",
+    "world-model",
+    "JEPA",
+    "visual-language-alignment",
+    "predictive-mapping"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Gang Xiong为一作，文中未明确对应作者身份标注；从arXiv论文中无法确认正式发表年份和会议信息 | md truncated to head40k+tail20k"
+}

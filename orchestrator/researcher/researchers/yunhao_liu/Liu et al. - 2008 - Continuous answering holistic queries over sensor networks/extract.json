@@ -1,0 +1,36 @@
+{
+  "paper_id": "Liu et al. - 2008 - Continuous answering holistic queries over sensor networks",
+  "doi": null,
+  "title": "Continuous Answering Holistic Queries over Sensor Networks",
+  "year": 2008,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传感器数据噪声多，现有方法只处理非整体查询，整体查询虽常见却少有研究被解决",
+  "problem_framing": "定义整体查询为不可分解的聚合操作；在数据缓慢变化时利用时序相关性，在快变时用小波近似",
+  "key_insight": "利用不同轮次间的时序相关性引导范围细化，从而减少通信开销",
+  "method_signature": "F-Bucket精确方案 + 小波式近似方案，根据数据变化速率自适应切换",
+  "evaluation_criteria": "传输流量(消息数)和精度(误差百分比)与LIST和Q-digest对比",
+  "negative_result_or_admitted_limitation": "精确方案在数据变化快时效率低下，需频繁执行范围细化导致通信开销激增",
+  "evidence_for_taste": [
+    "few of them, if any, addressed holistic queries",
+    "Strong correlations (temporal correlations) exist",
+    "the exact scheme will be inefficient",
+    "this is not energy efficient"
+  ],
+  "thinking_moves": [
+    "识别出被忽视的研究空白：时序相关性",
+    "根据数据变化速率提出双模式切换策略",
+    "诚实承认精确方法在快变场景下的低效性"
+  ],
+  "topic_tags": [
+    "sensor-network-queries",
+    "holistic-aggregation",
+    "temporal-correlation",
+    "in-network-aggregation",
+    "median-query"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "paper中未找到DOI和具体会议/期刊名称，venue字段标记为null"
+}

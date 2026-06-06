@@ -1,0 +1,46 @@
+{
+  "paper_id": "Universal Image Vaccine Against Steganography",
+  "doi": "10.3390/sym17010066",
+  "title": "Universal Image Vaccine Against Steganography",
+  "year": 2025,
+  "venue": "Symmetry",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "数字图像是隐写术主要载体，现有隐写分析检测精度不足，隐写技术被恶意组织滥用威胁信息安全",
+  "problem_framing": "把图像疫苗从针对特定隐写方法扩展为通用方案，使其能配合所有隐写分析方法提升检测能力",
+  "key_insight": "CLAHE算法可同时提升图像质量并使直方图更规律，破坏隐写嵌入的局部特征从而增强检测器敏感度",
+  "method_signature": "上传前对图像施加CLAHE处理作为通用疫苗，无需修改现有隐写分析方法",
+  "evaluation_criteria": "最小平均决策错误率P_E，越低表示隐写分析检测性能越好",
+  "negative_result_or_admitted_limitation": "低嵌入率0.1bpp时优化效果不明显；未来更复杂的嵌入技术可能带来新挑战",
+  "evidence_for_taste": [
+    "impractical at low payloads",
+    "enhance image quality while bolstering",
+    "modest improvements are crucial",
+    "does not significantly improve",
+    "optimization at low embedding rates",
+    "often come at the expense of visual quality",
+    "variably impacted visual quality",
+    "rendering them unreliable",
+    "noticeable color blocks in the sky",
+    "uniform distribution may excessively enhance"
+  ],
+  "thinking_moves": [
+    "先验证基础图像处理方法(锐化、维纳滤波)的效果，发现它们虽能提升检测但会损害视觉质量，因此不可靠",
+    "拒绝传统直方图均衡化(HE)因为天空出现明显色块，选择CLAHE作为兼顾视觉质量的方案",
+    "用数学指标(MSE/PSNR/SSIM/信息熵)量化证明CLAHE比HE更好地保留图像细节",
+    "在二元分类框架下定义隐写分析性能指标P_E，平衡虚警率和漏检率",
+    "承认方法在低嵌入率场景下效果有限，诚实面对局限性",
+    "不修改现有隐写分析工具，而是从图像预处理侧构建防御体系"
+  ],
+  "topic_tags": [
+    "image-vaccine-steganalysis",
+    "CLAHE-image-enhancement",
+    "universal-countermeasure",
+    "steganography-defense",
+    "content-adaptive-steganography"
+  ],
+  "cites_own_work": [
+    "Li et al. 2024 \"Vaccine for Digital Images Against Steganography\" (prior work they build upon)"
+  ],
+  "extraction_quality": "full"
+}

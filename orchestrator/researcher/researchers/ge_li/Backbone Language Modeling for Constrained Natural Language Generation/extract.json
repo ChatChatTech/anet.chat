@@ -1,0 +1,35 @@
+{
+  "paper_id": "Backbone Language Modeling for Constrained Natural Language Generation",
+  "doi": null,
+  "title": "Backward and Forward Language Modeling for Constrained Sentence Generation",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有语言模型无法保证生成句子中包含指定词汇",
+  "problem_framing": "将约束词作为根节点,从split word双向生成",
+  "key_insight": "若某词必须出现,以该词为根节点构建贝叶斯网络",
+  "method_signature": "B/F双通道RNN同步或异步从约束词生成前后文",
+  "evaluation_criteria": "perplexity与顺序LM对比,生成句子质量人工评估",
+  "negative_result_or_admitted_limitation": "随机选split word增加不确定性,导致perplexity高于顺序LM",
+  "evidence_for_taste": [
+    "All B/F variants yield a larger perplexity",
+    "the split word is chosen randomly",
+    "randomly choosing a split word cannot make use of position information"
+  ],
+  "thinking_moves": [
+    "将序列生成问题重构为从锚点向两侧展开的树形生成",
+    "通过分离前后向链路的联合建模实现约束词任意位置嵌入",
+    "从概率分解形式出发设计模型架构而非堆叠trick"
+  ],
+  "topic_tags": [
+    "constrained-text-generation",
+    "bidirectional-language-model",
+    "RNN-constrained-LM",
+    "word-embedding-constraint",
+    "scientific-title-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供年份和venue信息,methodology描述较完整但动机讨论篇幅较短。实验聚焦于perplexity指标,缺少更细粒度的自动化评估。"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Hu et al. - 2005 - Efficient Information Service Management Using Service Club in CROWN Grid",
+  "doi": null,
+  "title": "Efficient Information Service Management Using Service Club in CROWN Grid",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CROWN Grid suffers from poor scalability, long search response time, and huge traffic overhead when users flood the GIS mesh network for service discovery",
+  "problem_framing": "How to organize GISs in a mesh network to restrict service search to relevant nodes rather than flooding all GISs",
+  "key_insight": "Build an overlay of service clubs where GISs sharing the same popular service types are tightly connected via MST, limiting search scope and traffic",
+  "method_signature": "S-Club overlay organizes GISs into service-type-specific clubs using MST topology, frequency thresholds, and distributed maintenance",
+  "evaluation_criteria": "Average response time, total traffic overhead, and optimization ratio compared to MDS-like flooding baseline",
+  "negative_result_or_admitted_limitation": "Intuitively, too many clubs may bring much maintenance overhead; MST topology suffers from single-point-failure",
+  "evidence_for_taste": [
+    "no existing approaches can provide efficient information service",
+    "Intuitively, too many clubs may bring much maintenance overhead",
+    "There exists a best value of α to maximize the benefit",
+    "MST may assure all the club members are connected while get minimum traffic cost",
+    "This method can not assure the member topology to be a MST",
+    "S-Club reduces traffic by 55% and average response time by 27%"
+  ],
+  "thinking_moves": [
+    "把服务类型聚类问题转化为overlay拓扑构建与维护问题",
+    "引入可调频率阈值来平衡俱乐部数量与维护开销",
+    "复用分布式系统协议(Narada)来处理成员动态变化",
+    "承认MST单点故障问题并采用spanning tree容忍故障",
+    "通过simulation验证参数敏感性与系统可扩展性"
+  ],
+  "topic_tags": [
+    "grid-information-service",
+    "service-discovery-overlay",
+    "GIS-mesh-network",
+    "service-club",
+    "CROWN-grid"
+  ],
+  "cites_own_work": [
+    "CROWN Grid project (their key project)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

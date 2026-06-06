@@ -1,0 +1,37 @@
+{
+  "paper_id": "Large Language Models are Few-Shot Summarizers_ Multi-Intent Comment Generation via In-Context Learning",
+  "doi": "10.48550/arxiv.2304.11384",
+  "title": "Large Language Models are Few-Shot Summarizers: Multi-Intent Comment Generation via In-Context Learning",
+  "year": 2024,
+  "venue": "ICSE 2024",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有方法只能生成单一注释,但开发者需要多视角评论;监督学习数据不足限制效果",
+  "problem_framing": "多意图代码注释生成:从一对一映射扩展为一对多映射,利用LLM的上下文学习能力",
+  "key_insight": "LLM在预训练中已接触多样化意图的注释,充足的示例(≥10)能激发其多意图理解潜力",
+  "method_signature": "基于Codex的上下文学习+检索式示例选择+评论重排序",
+  "evaluation_criteria": "BLEU/ROUGE-L/METEOR对比DOME基线",
+  "negative_result_or_admitted_limitation": "零样本和单样本学习效果不如DOME,未能充分挖掘LLM潜力",
+  "evidence_for_taste": [
+    "Zero-shot and one-shot learning may not fully exploit",
+    "the potential of the LLMs",
+    "BLEU metric excessively focuses on measuring n-gram overlapping",
+    "the BLEU values are sightly lower"
+  ],
+  "thinking_moves": [
+    "从预训练数据构成反推LLM具备多视角理解能力的假设",
+    "将模型采样输出的多样性转化为可利用的后处理信号",
+    "通过消融演示数量揭示LLM上下文学习能力的阈值效应",
+    "借用代码克隆领域直觉验证语义检索的有效性"
+  ],
+  "topic_tags": [
+    "LLM-in-context-learning",
+    "multi-intent-code-summarization",
+    "code-comment-generation",
+    "few-shot-prompt-engineering",
+    "demonstration-retrieval"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

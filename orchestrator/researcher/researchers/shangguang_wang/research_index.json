@@ -1,0 +1,2122 @@
+{
+  "slug": "shangguang_wang",
+  "n_papers": 69,
+  "n_indexed": 69,
+  "anchors": [
+    "From Cloud to Edge_ A First Look at Public Edge Platforms",
+    "Benchmarking of DL Libraries and Models on Mobile Devices",
+    "Boosting DNN Cold Inference on Edge Devices",
+    "Heterogeneity-Aware Federated Learning",
+    "Hierarchical Federated Learning through LAN-WAN Orchestration",
+    "Federated Few-Shot Learning for Mobile NLP",
+    "FedMoE_ Personalized Federated Learning via Heterogeneous Mixture of Experts",
+    "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis",
+    "From Earth to Space_ A First Deployment of 5G Core Network on Satellite",
+    "Resource-efficient In-orbit Detection of Earth Objects",
+    "FOOL_ Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression",
+    "Mobile Foundation Model as Firmware",
+    "Ubiquitous memory augmentation via mobile multimodal embedding system",
+    "PhoneLM-0.5B",
+    "LoRASuite"
+  ],
+  "by_id": {
+    "5G Edge Computing": {
+      "title": "5G Edge Computing: Technologies, Applications and Future Visions",
+      "year": 2024,
+      "venue": "Springer",
+      "doi": "10.1007/978-981-97-0213-8",
+      "key_insight": "首次对公共边缘平台进行综合测量,揭示关键问题并开源数据集以推动研究社区",
+      "method_signature": "测量驱动问题发现 + 算法优化 + 标准实现 + 前瞻探索 四阶段研究",
+      "tags": [
+        "edge-computing-measurement",
+        "computation-offloading",
+        "workload-scheduling",
+        "edge-caching",
+        "orbital-edge-computing"
+      ],
+      "quality": "partial"
+    },
+    "A Blockchain-Enabled Trustless Crowd-Intelligence Ecosystem on Mobile Edge Computing": {
+      "title": "A Blockchain-Enabled Trustless Crowd-Intelligence Ecosystem on Mobile Edge Computing",
+      "year": 2019,
+      "venue": "IEEE Transactions on Industrial Informatics",
+      "doi": "10.1109/tii.2019.2896965",
+      "key_insight": "区块链智能合约可在边缘服务器上实现去中心化信任,使强纳什均衡成为可能",
+      "method_signature": "奖励惩罚模型+区块链智能合约+边缘计算masternode形成去中心化众智平台",
+      "tags": [
+        "crowd-intelligence-incentive",
+        "reward-penalty-model",
+        "blockchain-smart-contract",
+        "mobile-edge-computing",
+        "strong-Nash-equilibrium"
+      ],
+      "quality": "full"
+    },
+    "A Survey of Resource-efficient LLM and Multimodal Foundation Models": {
+      "title": "A Survey of Resource-efficient LLM and Multimodal Foundation Models",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2401.08092",
+      "key_insight": "效率优化需算法与系统协同,从云到端全面覆盖",
+      "method_signature": "文献综述,按模型压缩/训练/服务/系统组织",
+      "tags": [
+        "foundation-model-efficiency",
+        "LLM-compression",
+        "edge-deployment",
+        "multimodal-model",
+        "resource-optimization"
+      ],
+      "quality": "full"
+    },
+    "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution": {
+      "title": "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2510.15312",
+      "key_insight": "图切换可通过分块流水线掩藏开销，拒稿token可回收复用以饱和NPU矩阵单元",
+      "method_signature": "sd.npu: 分块渐进图调度+上下文分布校准+验证感知的draft扩展",
+      "tags": [
+        "speculative-decoding",
+        "mobile-NPU-acceleration",
+        "on-device-RAG",
+        "graph-scheduling",
+        "draft-extension"
+      ],
+      "quality": "full"
+    },
+    "Accelerating Vertical Federated Learning": {
+      "title": "Accelerating Vertical Federated Learning",
+      "year": 2022,
+      "venue": "IEEE Transactions on Big Data",
+      "doi": "10.1109/tbdata.2022.3192898",
+      "key_insight": "备份worker与PCA特征压缩是正交技术,可协同组合——前者缓解通信straggler,后者减少加密乘法次数",
+      "method_signature": "基于SSP的备份worker scheme + 本地PCA压缩特征维度,减少加密乘法的计算量",
+      "tags": [
+        "vertical-federated-learning",
+        "homomorphic-encryption-overhead",
+        "backup-worker-straggler",
+        "PCA-feature-compression",
+        "communication-computation-tradeoff"
+      ],
+      "quality": "full"
+    },
+    "An efficient task offloading scheme in vehicular edge computing": {
+      "title": "An efficient task offloading scheme in vehicular edge computing",
+      "year": 2020,
+      "venue": "EURASIP Journal on Wireless Communications and Networking",
+      "doi": "10.1186/s13677-020-00175-w",
+      "key_insight": "优先将任务分配给附近资源丰富车辆因其通信和计算成本最低，从而最大化利用车载计算资源",
+      "method_signature": "三段式部分卸载(本地V2V VEC)+基于停留时间的比例估算+贪婪选择合格车辆",
+      "tags": [
+        "vehicular edge computing",
+        "partial task offloading",
+        "V2V V2I communication",
+        "mobility-aware offloading",
+        "cost minimization"
+      ],
+      "quality": "full"
+    },
+    "Architecture and key technologies for Internet of Vehicles_ a survey": {
+      "title": "Architecture and key technologies for Internet of Vehicles: a survey",
+      "year": 2017,
+      "venue": "Journal of communications and information networks",
+      "doi": "10.1007/s41650-017-0018-6",
+      "key_insight": "从应用层分离出协同计算控制层，并通过虚拟车辆(VV)解决物理空间通信瓶颈",
+      "method_signature": "综述提出四层IoV架构并构建虚拟车辆(VV)作为人一车在赛博空间的智能代理",
+      "tags": [
+        "IoV架构设计",
+        "协同计算控制层",
+        "虚拟车辆VV",
+        "人一车一环境协同",
+        "异构网络传输"
+      ],
+      "quality": "full"
+    },
+    "Artificial Intelligence Powered Mobile Networks_ From Cognition to Decision": {
+      "title": "Artificial Intelligence Powered Mobile Networks: From Cognition to Decision",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2112.04263",
+      "key_insight": "CNN可直接建立网络状态到QoS的映射,无需人工特征工程即可捕获隐藏模式",
+      "method_signature": "CNN将KPI与MR张量直接映射为QoS变化,实现认知与决策融合",
+      "tags": [
+        "mobile-network-cognition",
+        "deep-learning-QoS-prediction",
+        "network-admission-control",
+        "CNN-network-management",
+        "edge-AI-orchestration"
+      ],
+      "quality": "full"
+    },
+    "Benchmarking of DL Libraries and Models on Mobile Devices": {
+      "title": "A Comprehensive Benchmark of Deep Learning Libraries on Mobile Devices",
+      "year": 2022,
+      "venue": "WWW '22",
+      "doi": "10.48550/arxiv.2202.06512",
+      "key_insight": "DL库性能在不同模型和硬件间严重碎片化,软件影响可压倒算法或硬件优化",
+      "method_signature": "构建自动化基准测试工具,跨DL库/模型/设备进行系统化性能测量",
+      "tags": [
+        "mobile-DL-benchmark",
+        "DL-library-comparison",
+        "on-device-inference",
+        "performance-fragmentation",
+        "quantization-overhead"
+      ],
+      "quality": "full"
+    },
+    "Boosting DNN Cold Inference on Edge Devices": {
+      "title": "Boosting DNN Cold Inference on Devices",
+      "year": 2023,
+      "venue": "MobiSys",
+      "doi": "10.48550/arxiv.2206.07446",
+      "key_insight": "Kernel selected by warm inference speed is suboptimal for cold inference; Winograd kernels execute fast but incur heavy transformation cost that dominates cold latency",
+      "method_signature": "Heuristic kernel scheduler balancing operation-to-processor affinity and pipeline overlapping across big.LITTLE cores",
+      "tags": [
+        "DNN cold inference optimization",
+        "edge device inference engine",
+        "kernel selection scheduler",
+        "heterogeneous processor scheduling",
+        "weights transformation caching"
+      ],
+      "quality": "full"
+    },
+    "Collaborative Inference in DNN-based Satellite Systems with Dynamic Task Streams": {
+      "title": "Collaborative Inference in DNN-based Satellite Systems with Dynamic Task Streams",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2311.06073",
+      "key_insight": "通过任务增益函数融合任务完成数与用户满意度，动态选择早退出点和分区点实现延迟-精度权衡",
+      "method_signature": "任务增益感知的推理卸载算法(Algorithm1+2)",
+      "tags": [
+        "satellite-edge-inference",
+        "multi-exit-DNN",
+        "model-partition-offloading",
+        "latency-constraint-optimization",
+        "LEO-HEO-collaboration"
+      ],
+      "quality": "full"
+    },
+    "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing": {
+      "title": "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing",
+      "year": 2020,
+      "venue": null,
+      "doi": "10.48550/arxiv.2002.01358",
+      "key_insight": "边缘节点协作可协调利用异构存储与计算资源,Gibbs采样实现近最优缓存决策",
+      "method_signature": "两层ICE算法:外层Gibbs采样更新缓存,内层水填充调度工作负载",
+      "tags": [
+        "mobile-edge-caching",
+        "workload-scheduling",
+        "Gibbs-sampling",
+        "water-filling-algorithm",
+        "edge-cooperation",
+        "MINLP",
+        "convex-optimization"
+      ],
+      "quality": "partial"
+    },
+    "Coordination of networking and computing_ toward new information infrastructure and new services mode": {
+      "title": "Coordination of networking and computing: toward new information infrastructure and new services mode",
+      "year": 2024,
+      "venue": "Frontiers of Information Technology & Electronic Engineering",
+      "doi": "10.1631/fitee.2430000",
+      "key_insight": "计算与网络的协同可通过交换传输换取计算能力,实现超低延迟与计算力的权衡",
+      "method_signature": "特刊综述:计算感知网络框架、联邦学习能效策略、任务分解与调度",
+      "tags": [
+        "computing-aware-network",
+        "cloud-edge-device-collaboration",
+        "wide-area-resource-scheduling",
+        "federated-learning-energy-efficiency",
+        "computing-power-network-coordination"
+      ],
+      "quality": "partial"
+    },
+    "Correction to_ Reliable and efficient big service selection": {
+      "title": "Correction to: Reliable and efficient big service selection",
+      "year": 2017,
+      "venue": "Information Systems Frontiers",
+      "doi": "10.1007/s10796-017-9813-8",
+      "key_insight": "null",
+      "method_signature": "null",
+      "tags": [
+        "author-correction",
+        "service-selection",
+        "metadata-correction"
+      ],
+      "quality": "thin"
+    },
+    "D-LiFT_ Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning": {
+      "title": "D-LIFT: Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2506.10125",
+      "key_insight": "准确率优先验证，通过D-SCORE引导强化学习微调，仅对通过准确率检查的候选代码奖励可读性",
+      "method_signature": "D-SCORE多维评分 + GRPO强化学习微调 + 推理期三路选择",
+      "tags": [
+        "decompiler-quality-assessment",
+        "LLM-fine-tuning-reinforcement-learning",
+        "semantic-verification-symbolic-execution",
+        "code-readability-metrics",
+        "binary-analysis"
+      ],
+      "quality": "full"
+    },
+    "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis": {
+      "title": "Deciphering the Enigma of Satellite Computing with COTS Devices: Measurement and Analysis",
+      "year": 2024,
+      "venue": "ACM MobiCom '24",
+      "doi": "10.48550/arxiv.2401.03435",
+      "key_insight": "温度和能量是限制COTS计算能力的直接因素,表面温度30°C和DoD 30%是关键阈值",
+      "method_signature": "首个在真实卫星上对COTS设备热控/功耗/性能进行实测的研究",
+      "tags": [
+        "satellite-computing-constraints",
+        "COTS-devices-thermal-management",
+        "in-orbit-measurement",
+        "power-management-DoD",
+        "small-satellite-benchmark"
+      ],
+      "quality": "full"
+    },
+    "Device-centric Federated Analytics At Ease": {
+      "title": "Device-centric Federated Analytics At Ease",
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2206.11491",
+      "key_insight": "绕过app开发者，通过中央协调器服务让数据分析师直接提交代码到设备执行",
+      "method_signature": "Deck系统含中央Coordinator和设备端Execution Sandbox，含混合权限检查和零知识统计模型",
+      "tags": [
+        "federated analytics",
+        "on-device computation",
+        "privacy-preserving query",
+        "mobile system",
+        "task scheduling"
+      ],
+      "quality": "full"
+    },
+    "Digital twin driven autonomous management and control architecture and key technologies for low-altitude intelligent networks": {
+      "title": "数字孪生驱动的低空智联网自智管控架构及关键技术",
+      "year": 2025,
+      "venue": "中国科学: 信息科学",
+      "doi": "10.1360/ssi-2025-0071",
+      "key_insight": "通过虚实映射的数字孪生体实现毫秒级状态感知与自智管控闭环,推动网络从人工经验驱动向数据智能驱动跃迁",
+      "method_signature": "三层自智管控架构(低空网络层/数字孪生层/自智管控层)配合GNN预测与AS-DDS状态同步",
+      "tags": [
+        "low-altitude-intelligent-networks",
+        "digital-twin",
+        "autonomous-network",
+        "GNN-prediction",
+        "airborne-base-station-deployment"
+      ],
+      "quality": "full"
+    },
+    "ECDU_ an edge content delivery and update framework in Mobile edge computing": {
+      "title": "ECDU: an edge content delivery and update framework in Mobile edge computing",
+      "year": 2019,
+      "venue": "EURASIP Journal on Wireless Communications and Networking",
+      "doi": "10.1186/s13638-019-1590-2",
+      "key_insight": "内容服务器存原始内容，缓存池仅存热门内容，配合Pareto分布实现按需上传",
+      "method_signature": "三层架构（端/边/云）+ ECD优先级投放 + ECU动态迁移",
+      "tags": [
+        "mobile-edge-caching",
+        "CDN-optimization",
+        "edge-content-delivery",
+        "cache-pool-ranking",
+        "content-migration"
+      ],
+      "quality": "full"
+    },
+    "ECD_ An Edge Content Delivery and Update Framework in Mobile Edge Computing": {
+      "title": "ECD: An Edge Content Delivery and Update Framework in Mobile Edge Computing",
+      "year": 2018,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1805.10783",
+      "key_insight": "基于帕累托原则，只有少数内容被频繁请求，无需将所有内容上传云端，只需将热门内容逐级向上迁移。",
+      "method_signature": "三层架构（端-边-云）结合内容服务器与缓存池，基于内容popularity和cache pool ranking的边缘内容分发与更新方案。",
+      "tags": [
+        "mobile-edge-computing",
+        "edge-content-delivery",
+        "cache-pool-ranking",
+        "content-popularity",
+        "edge-caching-strategy"
+      ],
+      "quality": "full"
+    },
+    "EdgeMoE_ Empowering Sparse Large Language Models on Mobile Devices": {
+      "title": "EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices",
+      "year": 2023,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2308.14352",
+      "key_insight": "专家权重bulk但cold(86.5%内存但只26.4%计算)，非专家hot但小，这天然匹配存储层次结构；且专家激活路径呈power law分布表明层间相关可预测",
+      "method_signature": "专家级混合精度量化+基于激活相关性的专家预加载+结合频率和层位置的缓存淘汰策略",
+      "tags": [
+        "MoE-LLM-edge-inference",
+        "expert-memory-hierarchy",
+        "mixed-precision-quantization",
+        "expert-preloading-pipeline",
+        "on-device-sparse-models"
+      ],
+      "quality": "full"
+    },
+    "Enhancing Watermarking Quality for LLMs via Contextual Generation States Awareness": {
+      "title": "Enhancing Watermarking Quality for LLMs via Contextual Generation States Awareness",
+      "year": 2025,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2506.07403",
+      "key_insight": "孤立token置信度无法可靠识别关键信息,需结合当前token及其上下文生成状态联合评估",
+      "method_signature": "CAW框架通过上下文生成状态感知的容量评估器动态调整水印强度,配合树注意力多分支预生成机制",
+      "tags": [
+        "LLM-watermarking",
+        "contextual-generation-states",
+        "text-quality-preservation",
+        "plug-and-play-framework",
+        "tree-attention-decoding"
+      ],
+      "quality": "full"
+    },
+    "Erratum to_ Real-time, large-scale duplicate image detection method based on multi-feature fusion": {
+      "title": "Erratum to: Real-time, large-scale duplicate image detection method based on multi-feature fusion",
+      "year": 2017,
+      "venue": "Journal of Real-Time Image Processing",
+      "doi": "10.1007/s11554-017-0673-8",
+      "key_insight": null,
+      "method_signature": null,
+      "tags": [],
+      "quality": "thin"
+    },
+    "FOOL_ Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression": {
+      "title": "FOOL: Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2403.16677",
+      "key_insight": "用浅层特征而非图像重建作失真目标,可保留足够信息供任意下游任务同时获高压缩率",
+      "method_signature": "FOOL神经特征压缩:Profiler+TCR/s度量+并发执行+特征空间重建",
+      "tags": [
+        "orbital-edge-computing",
+        "neural-feature-compression",
+        "downlink-bottleneck",
+        "shallow-variational-bottleneck",
+        "cubeSat-inference"
+      ],
+      "quality": "full"
+    },
+    "FedAdapter_ Efficient Federated Learning for Modern NLP": {
+      "title": "FedAdapter: Efficient Federated Learning for Modern NLP",
+      "year": 2022,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2205.10162",
+      "key_insight": "渐进训练+旁路试验可快速学习浅层知识并探测最优配置",
+      "method_signature": "Adapter配置动态演进+跨轮激活缓存",
+      "tags": [
+        "federated-learning-NLP",
+        "adapter-modules",
+        "time-to-accuracy",
+        "mobile-edge-inference",
+        "configuration-optimization"
+      ],
+      "quality": "full"
+    },
+    "FedMoE_ Personalized Federated Learning via Heterogeneous Mixture of Experts": {
+      "title": "FedMoE: Personalized Federated Learning via Heterogeneous Mixture of Experts",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2408.11304",
+      "key_insight": "MoE的稀疏激活使专家参数空间解耦，允许按需共享最相关参数——不同客户激活不同专家即可实现个性化",
+      "method_signature": "两阶段：Stage1用激活概率启发式搜索初始化子模型；Stage2联邦训练+模块聚合+动态专家推荐",
+      "tags": [
+        "federated-learning",
+        "mixture-of-experts",
+        "personalized-PFL",
+        "edge-AI",
+        "LLM-finetuning"
+      ],
+      "quality": "full"
+    },
+    "FedRDMA_ Communication-Efficient Cross-Silo Federated LLM via Chunked RDMA Transmission": {
+      "title": "FedRDMA: Communication-Efficient Cross-Silo Federated LLM via Chunked RDMA Transmission",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2403.00881",
+      "key_insight": "通过分块顺序发送限制链路上同时存在的数据量，将burst流量平滑化以适应WAN",
+      "method_signature": "FedRDMA分块传输 + FedRDMA-E大页池与反向接收策略",
+      "tags": [
+        "RDMA-WAN-adaptation",
+        "cross-silo-federated-LLM",
+        "chunked-transmission",
+        "communication-bottleneck-optimization",
+        "PEFT-integration"
+      ],
+      "quality": "full"
+    },
+    "Federated Few-Shot Learning for Mobile NLP": {
+      "title": "Federated Few-Shot Learning for Mobile NLP",
+      "year": 2023,
+      "venue": "ACM MobiCom '23",
+      "doi": "10.1145/3570361.3613277",
+      "key_insight": "模型弱时仅选高置信伪标签，随着模型变强逐步加速注入，通过配置空间<freq, n, k>动态调节训练节奏",
+      "method_signature": "FeS系统含课程步调、表示多样性过滤、层深与容量联合规划三大设计",
+      "tags": [
+        "federated-learning",
+        "few-shot-nlp",
+        "mobile-nlp",
+        "pseudo-labeling",
+        "prompt-learning"
+      ],
+      "quality": "full"
+    },
+    "From Cloud to Edge_ A First Look at Public Edge Platforms": {
+      "title": "From Cloud to Edge: A First Look at Public Edge Platforms",
+      "year": 2021,
+      "venue": "IMC '21",
+      "doi": "10.48550/arxiv.2109.03395",
+      "key_insight": "NEP的VM资源配置过度且利用率低,延迟关键应用仍无法满足,计费模型粗粒度是经济性隐患",
+      "method_signature": "众包网络测量+自建QoE应用+3个月VM workload追踪",
+      "tags": [
+        "edge-platform-measurement",
+        "edge-workload-characterization",
+        "public-edge-platform",
+        "crowd-sourced-network-measurement",
+        "edge-economics"
+      ],
+      "quality": "full"
+    },
+    "From Earth to Space_ A First Deployment of 5G Core Network on Satellite": {
+      "title": "From Earth to Space: A First Deployment of 5G Core Network on Satellite",
+      "year": 2022,
+      "venue": "China Communications",
+      "doi": "10.48550/arxiv.2210.05405",
+      "key_insight": "星载5G核心网消除不必要回传,显著降低控制面信令交互延迟,加速用户接入过程",
+      "method_signature": "在TY20卫星上部署轻量化5G核心网(AMF/SMF/UPF),联合地面5G专网进行注册与会话实验",
+      "tags": [
+        "satellite-terrestrial-integrated-network",
+        "5G-core-network-deployment",
+        "LEO-satellite-edge-computing",
+        "in-orbit-network-function",
+        "satellite-5G-integration"
+      ],
+      "quality": "full"
+    },
+    "FwdLLM_ Efficient FedLLM using Forward Gradient": {
+      "title": "FwdLLM: Efficient FedLLM using Forward Gradient",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2308.13894",
+      "key_insight": "前向梯度计算复杂度与可训练参数而非总参数规模成正比,契合PEFT",
+      "method_signature": "BP-free扰动推断+参数高效微调+方差控制步进+判别性扰动采样",
+      "tags": [
+        "federated-LLM",
+        "BP-free-training",
+        "forward-gradient",
+        "mobile-NPU",
+        "parameter-efficient-finetuning"
+      ],
+      "quality": "full"
+    },
+    "GroupNL_ Low-Resource and Robust CNN Design over Cloud and Device": {
+      "title": "GroupNL: Low-Resource and Robust CNN Design over Cloud and Device",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2506.12335",
+      "key_insight": "对seed特征图分组后用多样NLF生成特征，完全使用张量操作而非额外卷积",
+      "method_signature": "GroupNL Conv: seed卷积+分组+张量操作+非线性变换",
+      "tags": [
+        "cloud-assisted-IoT",
+        "CNN-design",
+        "lightweight-convolution",
+        "feature-diversity",
+        "robustness-enhancement"
+      ],
+      "quality": "full"
+    },
+    "HeteRAG_ A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations": {
+      "title": "HeteRAG: A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2504.10529",
+      "key_insight": "通过解耦检索侧(多粒度上下文+元数据)和生成侧(独立短块)的知识表示来消除冲突",
+      "method_signature": "检索侧融合多粒度上下文信号与全局结构化元数据，生成侧使用独立知识块",
+      "tags": [
+        "retrieval-augmented-generation",
+        "knowledge-representation-decoupling",
+        "dense-retrieval",
+        "multi-granular-context",
+        "adaptive-prompt-tuning"
+      ],
+      "quality": "full"
+    },
+    "Heterogeneity-Aware Federated Learning": {
+      "title": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data",
+      "year": 2021,
+      "venue": "WWW '21",
+      "doi": null,
+      "key_insight": "异构性导致非平凡性能下降(9.2%准确率下降、2.32×训练时间延长)，状态异构性比硬件异构性更致准确率下降",
+      "method_signature": "大规模智能手机数据集+异构感知FL仿真平台+对比实验测量",
+      "tags": [
+        "federated-learning-heterogeneity",
+        "large-scale-smartphone-measurement",
+        "device-failure-analysis",
+        "participant-bias",
+        "fl-platform-simulation"
+      ],
+      "quality": "full"
+    },
+    "Hierarchical Federated Learning through LAN-WAN Orchestration": {
+      "title": "Hierarchical Federated Learning through LAN-WAN Orchestration",
+      "year": 2020,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2010.11612",
+      "key_insight": "LAN abundant bandwidth (tens of Mbps) can be exploited for frequent local aggregation, reducing reliance on expensive constrained WAN",
+      "method_signature": "LanFL: two-level aggregation hierarchy with P2P intra-LAN topology and dynamic device selection for heterogeneous LAN",
+      "tags": [
+        "federated-learning",
+        "LAN-WAN-orchestration",
+        "hierarchical-aggregation",
+        "P2P-communication",
+        "edge-computing"
+      ],
+      "quality": "full"
+    },
+    "Incorporating Distributed DRL into Storage Resource Optimization of Space-Air-Ground Integrated Wireless Communication Network": {
+      "title": "Incorporating Distributed DRL into Storage Resource Optimization of Space-Air-Ground Integrated Wireless Communication Network",
+      "year": 2022,
+      "venue": null,
+      "doi": "10.48550/arxiv.2202.02141",
+      "key_insight": "在每个边缘物理域部署DRL智能体,提取网络资源属性构建训练环境,实现去中心化存储资源协调管理",
+      "method_signature": "分布式DRL智能体(边缘物理域本地训练)+特征矩阵(存储资源属性)+MDP联合优化",
+      "tags": [
+        "space-air-ground integrated network",
+        "distributed DRL storage optimization",
+        "edge server resource allocation",
+        "MDP-based network management",
+        "SAGIN Markov decision model"
+      ],
+      "quality": "full"
+    },
+    "LLM-Based Misconfiguration Detection for AWS Serverless Computing": {
+      "title": "LLM-Based Misconfiguration Detection for AWS Serverless Computing",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2411.00642",
+      "key_insight": "将配置错误检测重新框定为LLM推理任务,通过Chain of Thought技术引导模型按资源类型-条目-值-依赖维度逐步验证",
+      "method_signature": "SlsDetector: 零样本LLM框架,多维约束(资源类型/条目/值/依赖)+CoT推理+结构化输出",
+      "tags": [
+        "serverless-computing",
+        "misconfiguration-detection",
+        "LLM-prompt-engineering",
+        "AWS-SAM",
+        "chain-of-thought"
+      ],
+      "quality": "full"
+    },
+    "LoRA-C_ Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices": {
+      "title": "LoRA-C: Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2410.16954",
+      "key_insight": "采用layer-wise低秩分解替代kernel-wise,并发现α/r保持常数(≈2)时性能最优",
+      "method_signature": "LoRA-C在卷积层引入矩阵A(r×cin×k)和B(cout×k×r),仅更新约1%参数",
+      "tags": [
+        "LoRA-CNN-fine-tuning",
+        "IoT-device-deployment",
+        "layer-wise-decomposition",
+        "CNN-robustness",
+        "parameter-efficient-tuning"
+      ],
+      "quality": "full"
+    },
+    "LoRASuite_ Efficient LoRA Adaptation Across Large Language Model Upgrades": {
+      "title": "LoRASuite: Efficient LoRA Adaptation Across Large Language Model Upgrades",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2505.13515",
+      "key_insight": "利用新旧模型已知参数计算迁移矩阵，用CKA做层对齐、用匈牙利算法做头对齐，再小规模微调保证数值稳定",
+      "method_signature": "模块化迁移：CKA层映射 + 匈牙利头映射 + 轻量微调",
+      "tags": [
+        "LoRA-adaptation",
+        "LLM-upgrade-transfer",
+        "parameter-efficient-finetuning",
+        "centered-kernel-alignment",
+        "attention-head-mapping"
+      ],
+      "quality": "full"
+    },
+    "MCPWorld_ A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents": {
+      "title": "MCPWorld: A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents",
+      "year": 2025,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2506.07672",
+      "key_insight": "使用可修改源码的\"白盒应用\"，通过动态代码插桩直接监控应用内部行为，实现与agent实现或UI状态解耦的鲁棒精确评估",
+      "method_signature": "白盒应用+内部行为Hook的统一CUA测试台",
+      "tags": [
+        "CUA-benchmarking",
+        "MCP-protocol",
+        "white-box-evaluation",
+        "API-agent",
+        "dynamic-binary-instrumentation",
+        "computer-use-agent"
+      ],
+      "quality": "full"
+    },
+    "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading": {
+      "title": "Mandheling: Mixed-Precision On-Device DNN Training with DSP Offloading",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2206.07509",
+      "key_insight": "DSP擅长INT8矩阵运算,但需解决4个training特有的挑战: DSP不友好算子、动态rescaling开销、DSP缓存压力、图准备开销",
+      "method_signature": "CPU-DSP协同调度+自适应rescaling+batch分割+子图复用",
+      "tags": [
+        "on-device-training",
+        "mixed-precision-training",
+        "DSP-offloading",
+        "mobile-DNN",
+        "resource-efficient-ML"
+      ],
+      "quality": "full"
+    },
+    "Mitigating Task Interference in Multi-Task Learning via Explicit Task Routing with Non-Learnable Primitives": {
+      "title": "Mitigating Task Interference in Multi-Task Learning via Explicit Task Routing with Non-Learnable Primitives",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2308.02066",
+      "key_insight": "用非可学习原语提取任务无关特征 + 显式任务路由控制共享vs专有参数配比",
+      "method_signature": "ETR-NLP模块: 非可学习原语并行提取多样特征 + 共享/专有分支显式分离",
+      "tags": [
+        "multi-task-learning",
+        "task-interference",
+        "parameter-partitioning",
+        "non-learnable-primitives",
+        "explicit-task-routing"
+      ],
+      "quality": "full"
+    },
+    "MobiEdit_ Resource-efficient Knowledge Editing for Personalized On-device LLMs": {
+      "title": "MobiEdit: Resource-efficient Knowledge Editing for Personalized On-device LLMs",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2506.13772",
+      "key_insight": "零阶梯度估计方差仅取决于两次前向噪声差，不随网络深度增长；而BP链式求导使量化噪声呈指数增长",
+      "method_signature": "用前向loss差估计梯度替代BP，全模型INT8量化，仅编辑层保持FP32",
+      "tags": [
+        "on-device-LLM",
+        "knowledge-editing",
+        "zeroth-order-optimization",
+        "mobile-NPU-quantization",
+        "LLM-personalization"
+      ],
+      "quality": "full"
+    },
+    "Mobile Foundation Model as Firmware": {
+      "title": "Mobile Foundation Model as Firmware The Way Towards a Unified Mobile AI Landscape",
+      "year": 2024,
+      "venue": "ACM MobiCom '24",
+      "doi": "10.48550/arxiv.2308.14363",
+      "key_insight": "用统一的基础模型加轻量适配器替代碎片化模型，像固件一样由OS统一管理暴露给应用",
+      "method_signature": "M4(N-1-M架构)：多模态编码器+LLM主干预训练+多模态解码器，用LoRA适配下游任务",
+      "tags": [
+        "mobile-foundation-model",
+        "on-device-inference",
+        "multimodal-learning",
+        "LLM-firmware",
+        "NPU-optimization"
+      ],
+      "quality": "full"
+    },
+    "More is Different_ Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs": {
+      "title": "More is Different: Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs",
+      "year": 2022,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2212.12842",
+      "key_insight": "移动SoC功耗与负载成比例伸缩,且能效远超传统服务器",
+      "method_signature": "自研60核SoC集群+benchmark对比评测视频转码和深度学习推理",
+      "tags": [
+        "edge-server-energy-efficiency",
+        "mobile-SoC-cluster",
+        "video-transcoding-benchmark",
+        "DL-serving-energy-proportionality",
+        "heterogeneous-edge-hardware"
+      ],
+      "quality": "full"
+    },
+    "MrM_ Black-Box Membership Inference Attacks against Multimodal RAG Systems": {
+      "title": "MrM: Black-Box Membership Inference Attacks against Multimodal RAG Systems",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2506.07399",
+      "key_insight": "通过对象感知扰动遮挡关键语义区域，结合反事实引导的掩码选择，可同时确保检索成功和生成阶段信息泄露",
+      "method_signature": "多目标数据扰动框架，使用反事实攻击约束，统计推断成员身份",
+      "tags": [
+        "multimodal-RAG-privacy",
+        "membership-inference-attack",
+        "black-box-attack",
+        "vision-language-model-security",
+        "counterfactual-perturbation"
+      ],
+      "quality": "full"
+    },
+    "Multi-user web service selection based on multi-QoS prediction": {
+      "title": "Multi-user web service selection based on multi-QoS prediction",
+      "year": 2013,
+      "venue": "Information Systems Frontiers",
+      "doi": "10.1007/s10796-013-9455-4",
+      "key_insight": "先用非负矩阵分解从多QoS属性联合提取用户特征，再用多输出SVR同步预测缺失值",
+      "method_signature": "NMF特征提取+MSVR多QoS预测+KM算法快速匹配",
+      "tags": [
+        "QoS-prediction",
+        "multi-user-service-selection",
+        "matrix-factorization",
+        "support-vector-regression",
+        "maximum-weight-matching"
+      ],
+      "quality": "full"
+    },
+    "PhoneLM_an Efficient and Capable Small Language Model Family through Principled Pre-training": {
+      "title": "PhoneLM: an Efficient and Capable Small Language Model Family through Principled Pre-training",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2411.05046",
+      "key_insight": "运行时速度对架构敏感度远高于损失，同参数模型可差3.13×速度",
+      "method_signature": "预训练前在目标硬件上穷举搜索架构超参数",
+      "tags": [
+        "on-device-SLM",
+        "hardware-aware-architecture-search",
+        "smartphone-inference-optimization",
+        "edge-LLM-deployment",
+        "NPU-acceleration"
+      ],
+      "quality": "full"
+    },
+    "RLER-TTE_ An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning": {
+      "title": "RLER-TTE: An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning",
+      "year": 2025,
+      "venue": "ACM SIGMOD",
+      "doi": "10.48550/arxiv.2501.15493",
+      "key_insight": "在ER-TTE流程中引入轻量级Decision Maker先判断新数据是否有价值，再决定是否触发Predictor重算",
+      "method_signature": "Decision Maker + Predictor双模块架构，Decision Maker用Double DQN做action selection，Predictor存储历史结果供lookup",
+      "tags": [
+        "en-route-travel-time-estimation",
+        "RL-decision-maker",
+        "spatio-temporal-attention",
+        "curriculum-learning",
+        "online-inference-optimization"
+      ],
+      "quality": "full"
+    },
+    "RLOMM_ An Efficient and Robust Online Map Matching Framework with Reinforcement Learning": {
+      "title": "RLOMM: An Efficient and Robust Online Map Matching Framework with Reinforcement Learning",
+      "year": 2025,
+      "venue": "SIGMOD",
+      "doi": "10.48550/arxiv.2502.06825",
+      "key_insight": "用强化学习从未来导向视角做匹配决策,避免贪心引起的级联错误",
+      "method_signature": "基于OMDP的深度Q学习框架,结合轨迹转移图和道路连接图的异构图表示",
+      "tags": [
+        "online-map-matching",
+        "reinforcement-learning-MDP",
+        "trajectory-road-heterogeneity",
+        "graph-representation-learning",
+        "contrastive-learning-alignment"
+      ],
+      "quality": "full"
+    },
+    "Recall_ Empowering Multimodal Embedding for Edge Devices": {
+      "title": "Recall: Empowering Multimodal Embedding for Edge Devices",
+      "year": 2024,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2409.15342",
+      "key_insight": "利用early-exiting生成粗粒度嵌入用于候选过滤,将完整嵌入开销转移到查询阶段(查询稀疏且携带精确检索信息)",
+      "method_signature": "三层协同设计:数据感知预退出预测器+渐进式LoRA修复+投机式细粒度检索",
+      "tags": [
+        "on-device-MEM",
+        "early-exiting-multimodal",
+        "edge-embedding-inference",
+        "privacy-preserving-embedding",
+        "memory-palace-retrieval"
+      ],
+      "quality": "full"
+    },
+    "Reliable and efficient big service selection": {
+      "title": "Reliable and efficient big service selection",
+      "year": 2017,
+      "venue": "Information Systems Frontiers",
+      "doi": "10.1007/s10796-017-9767-x",
+      "key_insight": "Filter services by coefficient of variation to prune unreliable candidates, dramatically reducing the MIP search space.",
+      "method_signature": "CVMIP: Coefficient of Variation filtering + Mixed Integer Programming",
+      "tags": [
+        "big-service-selection",
+        "QoS-uncertainty",
+        "coefficient-of-variation",
+        "mixed-integer-programming",
+        "service-reliability"
+      ],
+      "quality": "full"
+    },
+    "Resource-efficient In-orbit Detection of Earth Objects": {
+      "title": "Resource-efficient In-orbit Detection of Earth Objects",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2402.01675",
+      "key_insight": "利用置信度阈值在星上处理与下行之间动态分配；存在最优分块大小平衡精度与计算开销",
+      "method_signature": "星地协同+自适应图像分块+聚类去重+带宽感知下行节流",
+      "tags": [
+        "orbital-edge-computing",
+        "satellite-ground-collaboration",
+        "energy-aware-detection",
+        "bandwidth-throttling",
+        "LEO-satellite-imagery"
+      ],
+      "quality": "full"
+    },
+    "SateLight_ A Satellite Application Update Framework for Satellite Computing": {
+      "title": "SateLight: A Satellite Application Update Framework for Satellite Computing",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2509.12809",
+      "key_insight": "用容器化统一异构应用，内容感知差分编码传输，层级回滚实现故障恢复",
+      "method_signature": "容器化+内容感知差分+层级回滚的卫星应用更新框架",
+      "tags": [
+        "satellite-computing",
+        "software-update",
+        "containerization",
+        "differential-encoding",
+        "fault-tolerance",
+        "LEO-satellite"
+      ],
+      "quality": "full"
+    },
+    "Satellite Computing_ A Case Study of Cloud-Native Satellites": {
+      "title": "Satellite Computing: A Case Study of Cloud-Native Satellites",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2307.08530",
+      "key_insight": "云原生载荷让卫星功能从硬件绑定变为软件定义,突破传统任务载荷固定限制",
+      "method_signature": "BUPT-1六层云原生卫星架构,支持容器化载荷部署",
+      "tags": [
+        "cloud-native-satellite",
+        "LEO-satellite-computing",
+        "Tiansuan-constellation",
+        "satellite-edge-computing",
+        "software-defined-payload"
+      ],
+      "quality": "full"
+    },
+    "Security modeling and efficient computation offloading for service workflow in mobile edge computing": {
+      "title": "Security modeling and efficient computation offloading for service workflow in mobile edge computing",
+      "year": 2019,
+      "venue": "Future Generation Computer Systems",
+      "doi": "10.1016/j.future.2019.03.011",
+      "key_insight": "Security overhead is node-dependent and linearly/inversely proportional to secured data size, processor cores, and frequency—enabling schedulers to incorporate heterogeneous overhead into optimization.",
+      "method_signature": "SEECO strategy: security overhead model + NP-hard problem formulation + GA-based coding for task order, location, and security service selection.",
+      "tags": [
+        "MEC-computation-offloading",
+        "workflow-scheduling-security",
+        "security-overhead-modeling",
+        "energy-efficient-MD",
+        "genetic-algorithm-scheduling"
+      ],
+      "quality": "full"
+    },
+    "Seed Feature Maps-based CNN Models for LEO Satellite Remote Sensing Services": {
+      "title": "Seed Feature Maps-based CNN Models for LEO Satellite Remote Sensing Services",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2308.06515",
+      "key_insight": "仅学习一个种子特征图，通过非线性变换函数（随机超参数）生成其余特征图，超参数由随机种子保存和复现。",
+      "method_signature": "SineFM：每层仅需一个种子滤波器，其余特征图由正弦函数等非线性变换生成。",
+      "tags": [
+        "LEO-satellite-CNN-deployment",
+        "seed-feature-map",
+        "nonlinear-transformation-FLOPs-reduction",
+        "random-seed-parameter-compression",
+        "remote-sensing-semantic-segmentation"
+      ],
+      "quality": "full"
+    },
+    "Service Science": {
+      "title": "Service Science",
+      "year": 2023,
+      "venue": "ICSS 2023",
+      "doi": "10.1007/978-981-99-4402-6",
+      "key_insight": "No single key insight — volume spans Serverless Edge Computing, Edge Services Reliability, Intelligent Services, Service Ecosystem, Graph-Based Service Optimization, and AI-Inspired Service Optimization",
+      "method_signature": "Not applicable",
+      "tags": [
+        "service-science",
+        "edge-computing",
+        "intelligent-services",
+        "AI-service-optimization",
+        "service-ecosystem"
+      ],
+      "quality": "partial"
+    },
+    "TFormer_ A Transmission-Friendly ViT Model for IoT Devices": {
+      "title": "TFormer: A Transmission-Friendly ViT Model for IoT Devices",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2302.07734",
+      "key_insight": "MHA的本质等效于用多种滤波器提取不同特征,可用廉价池化替代",
+      "method_signature": "混合层(非可学池化+点卷积)+PCS-FFN(组卷积+通道混排)",
+      "tags": [
+        "IoT-ViT部署",
+        "传输友好模型压缩",
+        "高效注意力替代",
+        "组卷积FFN",
+        "云边协同推理"
+      ],
+      "quality": "full"
+    },
+    "The First Verification Test of Space-Ground Collaborative Intelligence via Cloud-Native Satellites": {
+      "title": "The First Verification Test of Space-Ground Collaborative Intelligence via Cloud-Native Satellites",
+      "year": 2023,
+      "venue": "China Communications",
+      "doi": "10.48550/arxiv.2311.06078",
+      "key_insight": "轻量级星上模型预处理+高精度地面模型协同推理，以50%精度提升换90%数据削减",
+      "method_signature": "基于KubeEdge/Sedna的云原生卫星协同推理框架，分发YOLOv3-tiny/YOLOv3模型",
+      "tags": [
+        "cloud-native satellite",
+        "orbital edge computing",
+        "collaborative AI inference",
+        "satellite-ground coordination",
+        "edge-cloud orchestration"
+      ],
+      "quality": "full"
+    },
+    "Tiansuan Constellation_ An Open Research Platform": {
+      "title": "Tiansuan Constellation: An Open Research Platform",
+      "year": 2021,
+      "venue": null,
+      "doi": "10.48550/arxiv.2112.14957",
+      "key_insight": "通过三阶段卫星部署(6→24→300)和统一接口，让不同机构能参与真实卫星网络实验",
+      "method_signature": "设计开放卫星星座平台，集成地面站、载荷与云端计算资源支撑实验",
+      "tags": [
+        "LEO卫星星座",
+        "卫星边缘计算",
+        "星上核心网部署",
+        "联邦学习在轨推理",
+        "卫星计算平台编排"
+      ],
+      "quality": "full"
+    },
+    "Towards Effective Next POI Prediction_ Spatial and Semantic Augmentation with Remote Sensing Data": {
+      "title": "Towards Effective Next POI Prediction: Spatial and Semantic Augmentation with Remote Sensing Data",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2404.04271",
+      "key_insight": "Remote sensing imagery acts as a warehouse of environmental context (land use, urban morphology) that enriches tile representations beyond POI density alone; quad-tree with road network edges solves both granularity and connectivity problems.",
+      "method_signature": "TSPN-RA: two-step prediction (tile selection → POI ranking) with quad-tree road-graph (QR-P) and CNN-encoded remote sensing tile embeddings.",
+      "tags": [
+        "next-POI-prediction",
+        "remote-sensing-augmentation",
+        "quad-tree-graph",
+        "spatial-semantic-intent-separation",
+        "heterogeneous-graph-attention"
+      ],
+      "quality": "full"
+    },
+    "Towards Practical Few-shot Federated NLP": {
+      "title": "Towards Practical Few-shot Federated NLP",
+      "year": 2023,
+      "venue": "EuroMLSys",
+      "doi": "10.48550/arxiv.2212.00192",
+      "key_insight": "提示学习让少量标签就能微调，伪标签利用无标注数据补偿倾斜分布的精度损失",
+      "method_signature": "AUG-FedPrompt: 提示学习+伪标签数据增强的联邦少样本系统",
+      "tags": [
+        "federated-NLP",
+        "few-shot-learning",
+        "prompt-learning",
+        "pseudo-labeling",
+        "edge-inference-optimization"
+      ],
+      "quality": "full"
+    },
+    "Towards Robust Trajectory Embedding for Similarity Computation_ When Triangle Inequality Violations in Distance Metrics Matter": {
+      "title": "Towards Robust Trajectory Embedding for Similarity Computation: When Triangle Inequality Violations in Distance Metrics Matter",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2504.10933",
+      "key_insight": "利用双曲空间的洛伦兹距离突破欧氏空间度量约束，并通过Cosh投影防止距离衰减",
+      "method_signature": "LH-plugin含Cosh双曲投影模块和动态融合距离模块的插件化框架",
+      "tags": [
+        "trajectory-embedding",
+        "triangle-inequality-violation",
+        "hyperbolic-space",
+        "lorentz-distance",
+        "dynamic-fusion"
+      ],
+      "quality": "full"
+    },
+    "Towards Sustainable Satellite Edge Computing": {
+      "title": "Towards Sustainable Satellite Edge Computing",
+      "year": 2022,
+      "venue": null,
+      "doi": "10.48550/arxiv.2203.06065",
+      "key_insight": "利用卫星周期性运动产生的光暗和连接模式信息构建模式感知基准,实现亚线性遗憾",
+      "method_signature": "模式感知在线能量调度算法,基于虚拟队列的在线凸优化",
+      "tags": [
+        "satellite-edge-computing",
+        "depth-of-discharge",
+        "online-convex-optimization",
+        "pattern-aware-scheduling",
+        "battery-life-extension"
+      ],
+      "quality": "partial"
+    },
+    "TuneComp_ Joint Fine-tuning and Compression for Large Foundation Models": {
+      "title": "TuneComp: Joint Fine-tuning and Compression for Large Foundation Models",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2505.21835",
+      "key_insight": "Integrating fine-tuning with compression preserves task-relevant information that sequential approaches discard",
+      "method_signature": "Parallel teacher-student branches with cosine decay blending, activation-aware SVD init, and pruning during distillation",
+      "tags": [
+        "joint-finetuning-compression",
+        "low-rank-decomposition",
+        "activation-aware-initialization",
+        "knowledge-distillation",
+        "vision-transformer-compression"
+      ],
+      "quality": "full"
+    },
+    "Ubiquitous memory augmentation via mobile multimodal embedding system": {
+      "title": "Ubiquitous memory augmentation via mobile multimodal embedding system",
+      "year": 2025,
+      "venue": "Nature Communications",
+      "doi": "10.1038/s41467-025-60802-5",
+      "key_insight": "Offload full embedding cost to infrequent query phase via coarse-grained early-exit embeddings, mirroring brain's selective memory retention",
+      "method_signature": "Early-exit multimodal embedding with data-aware pre-exit prediction, progressive LoRA healing, and speculative fine-grained retrieval",
+      "tags": [
+        "on-device ML inference",
+        "multimodal embedding",
+        "early-exit neural networks",
+        "mobile system optimization",
+        "memory augmentation"
+      ],
+      "quality": "full"
+    },
+    "Urban Traffic Accident Risk Prediction Revisited_ Regionality, Proximity, Similarity and Sparsity": {
+      "title": "Urban Traffic Accident Risk Prediction Revisited: Regionality, Proximity, Similarity and Sparsity",
+      "year": 2024,
+      "venue": "CIKM",
+      "doi": "10.1145/3627673.3679567",
+      "key_insight": "Remote sensing images reveal regional background inaccessible to POI; multi-level hierarchy addresses sparsity by aggregating to coarser granularity",
+      "method_signature": "MGHSTN: remote sensing autoencoder + multi-level region/graph hierarchy + cross-level message passing + adaptive temporal attention + multivariate loss",
+      "tags": [
+        "traffic-accident-risk-prediction",
+        "remote-sensing-integration",
+        "hierarchical-spatio-temporal-modeling",
+        "zero-inflation-handling",
+        "multi-view-graph-semantic-similarity"
+      ],
+      "quality": "full"
+    },
+    "Variational Multi-Modal Hypergraph Attention Network for Multi-Modal Relation Extraction": {
+      "title": "Variational Multi-Modal Hypergraph Attention Network for Multi-Modal Relation Extraction",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2404.12006",
+      "key_insight": "Hypergraph structure naturally captures multi-way correlations beyond pairwise; variational Gaussian modeling handles entity/relation ambiguity",
+      "method_signature": "VM-HAN constructs multi-modal hypergraph with global/intra/inter-modal hyperedges, uses V-HAN with variational attention in Gaussian space",
+      "tags": [
+        "multi-modal-relation-extraction",
+        "hypergraph-neural-networks",
+        "variational-learning",
+        "entity-disambiguation",
+        "cross-modal-fusion"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "orbital-edge-computing": [
+      "5G Edge Computing",
+      "FOOL_ Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression",
+      "Resource-efficient In-orbit Detection of Earth Objects"
+    ],
+    "federated-learning": [
+      "FedMoE_ Personalized Federated Learning via Heterogeneous Mixture of Experts",
+      "Federated Few-Shot Learning for Mobile NLP",
+      "Hierarchical Federated Learning through LAN-WAN Orchestration"
+    ],
+    "workload-scheduling": [
+      "5G Edge Computing",
+      "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing"
+    ],
+    "mobile-edge-computing": [
+      "A Blockchain-Enabled Trustless Crowd-Intelligence Ecosystem on Mobile Edge Computing",
+      "ECD_ An Edge Content Delivery and Update Framework in Mobile Edge Computing"
+    ],
+    "on-device-inference": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices",
+      "Mobile Foundation Model as Firmware"
+    ],
+    "mobile-edge-caching": [
+      "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing",
+      "ECDU_ an edge content delivery and update framework in Mobile edge computing"
+    ],
+    "edge-content-delivery": [
+      "ECDU_ an edge content delivery and update framework in Mobile edge computing",
+      "ECD_ An Edge Content Delivery and Update Framework in Mobile Edge Computing"
+    ],
+    "cache-pool-ranking": [
+      "ECDU_ an edge content delivery and update framework in Mobile edge computing",
+      "ECD_ An Edge Content Delivery and Update Framework in Mobile Edge Computing"
+    ],
+    "pseudo-labeling": [
+      "Federated Few-Shot Learning for Mobile NLP",
+      "Towards Practical Few-shot Federated NLP"
+    ],
+    "prompt-learning": [
+      "Federated Few-Shot Learning for Mobile NLP",
+      "Towards Practical Few-shot Federated NLP"
+    ],
+    "parameter-efficient-finetuning": [
+      "FwdLLM_ Efficient FedLLM using Forward Gradient",
+      "LoRASuite_ Efficient LoRA Adaptation Across Large Language Model Upgrades"
+    ],
+    "edge-computing": [
+      "Hierarchical Federated Learning through LAN-WAN Orchestration",
+      "Service Science"
+    ],
+    "satellite-edge-computing": [
+      "Satellite Computing_ A Case Study of Cloud-Native Satellites",
+      "Towards Sustainable Satellite Edge Computing"
+    ],
+    "edge-computing-measurement": [
+      "5G Edge Computing"
+    ],
+    "computation-offloading": [
+      "5G Edge Computing"
+    ],
+    "edge-caching": [
+      "5G Edge Computing"
+    ],
+    "crowd-intelligence-incentive": [
+      "A Blockchain-Enabled Trustless Crowd-Intelligence Ecosystem on Mobile Edge Computing"
+    ],
+    "reward-penalty-model": [
+      "A Blockchain-Enabled Trustless Crowd-Intelligence Ecosystem on Mobile Edge Computing"
+    ],
+    "blockchain-smart-contract": [
+      "A Blockchain-Enabled Trustless Crowd-Intelligence Ecosystem on Mobile Edge Computing"
+    ],
+    "strong-Nash-equilibrium": [
+      "A Blockchain-Enabled Trustless Crowd-Intelligence Ecosystem on Mobile Edge Computing"
+    ],
+    "foundation-model-efficiency": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "LLM-compression": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "edge-deployment": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "multimodal-model": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "resource-optimization": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "speculative-decoding": [
+      "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution"
+    ],
+    "mobile-NPU-acceleration": [
+      "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution"
+    ],
+    "on-device-RAG": [
+      "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution"
+    ],
+    "graph-scheduling": [
+      "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution"
+    ],
+    "draft-extension": [
+      "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution"
+    ],
+    "vertical-federated-learning": [
+      "Accelerating Vertical Federated Learning"
+    ],
+    "homomorphic-encryption-overhead": [
+      "Accelerating Vertical Federated Learning"
+    ],
+    "backup-worker-straggler": [
+      "Accelerating Vertical Federated Learning"
+    ],
+    "PCA-feature-compression": [
+      "Accelerating Vertical Federated Learning"
+    ],
+    "communication-computation-tradeoff": [
+      "Accelerating Vertical Federated Learning"
+    ],
+    "vehicular edge computing": [
+      "An efficient task offloading scheme in vehicular edge computing"
+    ],
+    "partial task offloading": [
+      "An efficient task offloading scheme in vehicular edge computing"
+    ],
+    "V2V V2I communication": [
+      "An efficient task offloading scheme in vehicular edge computing"
+    ],
+    "mobility-aware offloading": [
+      "An efficient task offloading scheme in vehicular edge computing"
+    ],
+    "cost minimization": [
+      "An efficient task offloading scheme in vehicular edge computing"
+    ],
+    "IoV架构设计": [
+      "Architecture and key technologies for Internet of Vehicles_ a survey"
+    ],
+    "协同计算控制层": [
+      "Architecture and key technologies for Internet of Vehicles_ a survey"
+    ],
+    "虚拟车辆VV": [
+      "Architecture and key technologies for Internet of Vehicles_ a survey"
+    ],
+    "人一车一环境协同": [
+      "Architecture and key technologies for Internet of Vehicles_ a survey"
+    ],
+    "异构网络传输": [
+      "Architecture and key technologies for Internet of Vehicles_ a survey"
+    ],
+    "mobile-network-cognition": [
+      "Artificial Intelligence Powered Mobile Networks_ From Cognition to Decision"
+    ],
+    "deep-learning-QoS-prediction": [
+      "Artificial Intelligence Powered Mobile Networks_ From Cognition to Decision"
+    ],
+    "network-admission-control": [
+      "Artificial Intelligence Powered Mobile Networks_ From Cognition to Decision"
+    ],
+    "CNN-network-management": [
+      "Artificial Intelligence Powered Mobile Networks_ From Cognition to Decision"
+    ],
+    "edge-AI-orchestration": [
+      "Artificial Intelligence Powered Mobile Networks_ From Cognition to Decision"
+    ],
+    "mobile-DL-benchmark": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices"
+    ],
+    "DL-library-comparison": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices"
+    ],
+    "performance-fragmentation": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices"
+    ],
+    "quantization-overhead": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices"
+    ],
+    "DNN cold inference optimization": [
+      "Boosting DNN Cold Inference on Edge Devices"
+    ],
+    "edge device inference engine": [
+      "Boosting DNN Cold Inference on Edge Devices"
+    ],
+    "kernel selection scheduler": [
+      "Boosting DNN Cold Inference on Edge Devices"
+    ],
+    "heterogeneous processor scheduling": [
+      "Boosting DNN Cold Inference on Edge Devices"
+    ],
+    "weights transformation caching": [
+      "Boosting DNN Cold Inference on Edge Devices"
+    ],
+    "satellite-edge-inference": [
+      "Collaborative Inference in DNN-based Satellite Systems with Dynamic Task Streams"
+    ],
+    "multi-exit-DNN": [
+      "Collaborative Inference in DNN-based Satellite Systems with Dynamic Task Streams"
+    ],
+    "model-partition-offloading": [
+      "Collaborative Inference in DNN-based Satellite Systems with Dynamic Task Streams"
+    ],
+    "latency-constraint-optimization": [
+      "Collaborative Inference in DNN-based Satellite Systems with Dynamic Task Streams"
+    ],
+    "LEO-HEO-collaboration": [
+      "Collaborative Inference in DNN-based Satellite Systems with Dynamic Task Streams"
+    ],
+    "Gibbs-sampling": [
+      "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing"
+    ],
+    "water-filling-algorithm": [
+      "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing"
+    ],
+    "edge-cooperation": [
+      "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing"
+    ],
+    "MINLP": [
+      "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing"
+    ],
+    "convex-optimization": [
+      "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing"
+    ],
+    "computing-aware-network": [
+      "Coordination of networking and computing_ toward new information infrastructure and new services mode"
+    ],
+    "cloud-edge-device-collaboration": [
+      "Coordination of networking and computing_ toward new information infrastructure and new services mode"
+    ],
+    "wide-area-resource-scheduling": [
+      "Coordination of networking and computing_ toward new information infrastructure and new services mode"
+    ],
+    "federated-learning-energy-efficiency": [
+      "Coordination of networking and computing_ toward new information infrastructure and new services mode"
+    ],
+    "computing-power-network-coordination": [
+      "Coordination of networking and computing_ toward new information infrastructure and new services mode"
+    ],
+    "author-correction": [
+      "Correction to_ Reliable and efficient big service selection"
+    ],
+    "service-selection": [
+      "Correction to_ Reliable and efficient big service selection"
+    ],
+    "metadata-correction": [
+      "Correction to_ Reliable and efficient big service selection"
+    ],
+    "decompiler-quality-assessment": [
+      "D-LiFT_ Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning"
+    ],
+    "LLM-fine-tuning-reinforcement-learning": [
+      "D-LiFT_ Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning"
+    ],
+    "semantic-verification-symbolic-execution": [
+      "D-LiFT_ Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning"
+    ],
+    "code-readability-metrics": [
+      "D-LiFT_ Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning"
+    ],
+    "binary-analysis": [
+      "D-LiFT_ Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning"
+    ],
+    "satellite-computing-constraints": [
+      "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    ],
+    "COTS-devices-thermal-management": [
+      "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    ],
+    "in-orbit-measurement": [
+      "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    ],
+    "power-management-DoD": [
+      "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    ],
+    "small-satellite-benchmark": [
+      "Deciphering the Enigma of Satellite Computing with COTS Devices_ Measurement and Analysis"
+    ],
+    "federated analytics": [
+      "Device-centric Federated Analytics At Ease"
+    ],
+    "on-device computation": [
+      "Device-centric Federated Analytics At Ease"
+    ],
+    "privacy-preserving query": [
+      "Device-centric Federated Analytics At Ease"
+    ],
+    "mobile system": [
+      "Device-centric Federated Analytics At Ease"
+    ],
+    "task scheduling": [
+      "Device-centric Federated Analytics At Ease"
+    ],
+    "low-altitude-intelligent-networks": [
+      "Digital twin driven autonomous management and control architecture and key technologies for low-altitude intelligent networks"
+    ],
+    "digital-twin": [
+      "Digital twin driven autonomous management and control architecture and key technologies for low-altitude intelligent networks"
+    ],
+    "autonomous-network": [
+      "Digital twin driven autonomous management and control architecture and key technologies for low-altitude intelligent networks"
+    ],
+    "GNN-prediction": [
+      "Digital twin driven autonomous management and control architecture and key technologies for low-altitude intelligent networks"
+    ],
+    "airborne-base-station-deployment": [
+      "Digital twin driven autonomous management and control architecture and key technologies for low-altitude intelligent networks"
+    ],
+    "CDN-optimization": [
+      "ECDU_ an edge content delivery and update framework in Mobile edge computing"
+    ],
+    "content-migration": [
+      "ECDU_ an edge content delivery and update framework in Mobile edge computing"
+    ],
+    "content-popularity": [
+      "ECD_ An Edge Content Delivery and Update Framework in Mobile Edge Computing"
+    ],
+    "edge-caching-strategy": [
+      "ECD_ An Edge Content Delivery and Update Framework in Mobile Edge Computing"
+    ],
+    "MoE-LLM-edge-inference": [
+      "EdgeMoE_ Empowering Sparse Large Language Models on Mobile Devices"
+    ],
+    "expert-memory-hierarchy": [
+      "EdgeMoE_ Empowering Sparse Large Language Models on Mobile Devices"
+    ],
+    "mixed-precision-quantization": [
+      "EdgeMoE_ Empowering Sparse Large Language Models on Mobile Devices"
+    ],
+    "expert-preloading-pipeline": [
+      "EdgeMoE_ Empowering Sparse Large Language Models on Mobile Devices"
+    ],
+    "on-device-sparse-models": [
+      "EdgeMoE_ Empowering Sparse Large Language Models on Mobile Devices"
+    ],
+    "LLM-watermarking": [
+      "Enhancing Watermarking Quality for LLMs via Contextual Generation States Awareness"
+    ],
+    "contextual-generation-states": [
+      "Enhancing Watermarking Quality for LLMs via Contextual Generation States Awareness"
+    ],
+    "text-quality-preservation": [
+      "Enhancing Watermarking Quality for LLMs via Contextual Generation States Awareness"
+    ],
+    "plug-and-play-framework": [
+      "Enhancing Watermarking Quality for LLMs via Contextual Generation States Awareness"
+    ],
+    "tree-attention-decoding": [
+      "Enhancing Watermarking Quality for LLMs via Contextual Generation States Awareness"
+    ],
+    "neural-feature-compression": [
+      "FOOL_ Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression"
+    ],
+    "downlink-bottleneck": [
+      "FOOL_ Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression"
+    ],
+    "shallow-variational-bottleneck": [
+      "FOOL_ Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression"
+    ],
+    "cubeSat-inference": [
+      "FOOL_ Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression"
+    ],
+    "federated-learning-NLP": [
+      "FedAdapter_ Efficient Federated Learning for Modern NLP"
+    ],
+    "adapter-modules": [
+      "FedAdapter_ Efficient Federated Learning for Modern NLP"
+    ],
+    "time-to-accuracy": [
+      "FedAdapter_ Efficient Federated Learning for Modern NLP"
+    ],
+    "mobile-edge-inference": [
+      "FedAdapter_ Efficient Federated Learning for Modern NLP"
+    ],
+    "configuration-optimization": [
+      "FedAdapter_ Efficient Federated Learning for Modern NLP"
+    ],
+    "mixture-of-experts": [
+      "FedMoE_ Personalized Federated Learning via Heterogeneous Mixture of Experts"
+    ],
+    "personalized-PFL": [
+      "FedMoE_ Personalized Federated Learning via Heterogeneous Mixture of Experts"
+    ],
+    "edge-AI": [
+      "FedMoE_ Personalized Federated Learning via Heterogeneous Mixture of Experts"
+    ],
+    "LLM-finetuning": [
+      "FedMoE_ Personalized Federated Learning via Heterogeneous Mixture of Experts"
+    ],
+    "RDMA-WAN-adaptation": [
+      "FedRDMA_ Communication-Efficient Cross-Silo Federated LLM via Chunked RDMA Transmission"
+    ],
+    "cross-silo-federated-LLM": [
+      "FedRDMA_ Communication-Efficient Cross-Silo Federated LLM via Chunked RDMA Transmission"
+    ],
+    "chunked-transmission": [
+      "FedRDMA_ Communication-Efficient Cross-Silo Federated LLM via Chunked RDMA Transmission"
+    ],
+    "communication-bottleneck-optimization": [
+      "FedRDMA_ Communication-Efficient Cross-Silo Federated LLM via Chunked RDMA Transmission"
+    ],
+    "PEFT-integration": [
+      "FedRDMA_ Communication-Efficient Cross-Silo Federated LLM via Chunked RDMA Transmission"
+    ],
+    "few-shot-nlp": [
+      "Federated Few-Shot Learning for Mobile NLP"
+    ],
+    "mobile-nlp": [
+      "Federated Few-Shot Learning for Mobile NLP"
+    ],
+    "edge-platform-measurement": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "edge-workload-characterization": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "public-edge-platform": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "crowd-sourced-network-measurement": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "edge-economics": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "satellite-terrestrial-integrated-network": [
+      "From Earth to Space_ A First Deployment of 5G Core Network on Satellite"
+    ],
+    "5G-core-network-deployment": [
+      "From Earth to Space_ A First Deployment of 5G Core Network on Satellite"
+    ],
+    "LEO-satellite-edge-computing": [
+      "From Earth to Space_ A First Deployment of 5G Core Network on Satellite"
+    ],
+    "in-orbit-network-function": [
+      "From Earth to Space_ A First Deployment of 5G Core Network on Satellite"
+    ],
+    "satellite-5G-integration": [
+      "From Earth to Space_ A First Deployment of 5G Core Network on Satellite"
+    ],
+    "federated-LLM": [
+      "FwdLLM_ Efficient FedLLM using Forward Gradient"
+    ],
+    "BP-free-training": [
+      "FwdLLM_ Efficient FedLLM using Forward Gradient"
+    ],
+    "forward-gradient": [
+      "FwdLLM_ Efficient FedLLM using Forward Gradient"
+    ],
+    "mobile-NPU": [
+      "FwdLLM_ Efficient FedLLM using Forward Gradient"
+    ],
+    "cloud-assisted-IoT": [
+      "GroupNL_ Low-Resource and Robust CNN Design over Cloud and Device"
+    ],
+    "CNN-design": [
+      "GroupNL_ Low-Resource and Robust CNN Design over Cloud and Device"
+    ],
+    "lightweight-convolution": [
+      "GroupNL_ Low-Resource and Robust CNN Design over Cloud and Device"
+    ],
+    "feature-diversity": [
+      "GroupNL_ Low-Resource and Robust CNN Design over Cloud and Device"
+    ],
+    "robustness-enhancement": [
+      "GroupNL_ Low-Resource and Robust CNN Design over Cloud and Device"
+    ],
+    "retrieval-augmented-generation": [
+      "HeteRAG_ A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations"
+    ],
+    "knowledge-representation-decoupling": [
+      "HeteRAG_ A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations"
+    ],
+    "dense-retrieval": [
+      "HeteRAG_ A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations"
+    ],
+    "multi-granular-context": [
+      "HeteRAG_ A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations"
+    ],
+    "adaptive-prompt-tuning": [
+      "HeteRAG_ A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations"
+    ],
+    "federated-learning-heterogeneity": [
+      "Heterogeneity-Aware Federated Learning"
+    ],
+    "large-scale-smartphone-measurement": [
+      "Heterogeneity-Aware Federated Learning"
+    ],
+    "device-failure-analysis": [
+      "Heterogeneity-Aware Federated Learning"
+    ],
+    "participant-bias": [
+      "Heterogeneity-Aware Federated Learning"
+    ],
+    "fl-platform-simulation": [
+      "Heterogeneity-Aware Federated Learning"
+    ],
+    "LAN-WAN-orchestration": [
+      "Hierarchical Federated Learning through LAN-WAN Orchestration"
+    ],
+    "hierarchical-aggregation": [
+      "Hierarchical Federated Learning through LAN-WAN Orchestration"
+    ],
+    "P2P-communication": [
+      "Hierarchical Federated Learning through LAN-WAN Orchestration"
+    ],
+    "space-air-ground integrated network": [
+      "Incorporating Distributed DRL into Storage Resource Optimization of Space-Air-Ground Integrated Wireless Communication Network"
+    ],
+    "distributed DRL storage optimization": [
+      "Incorporating Distributed DRL into Storage Resource Optimization of Space-Air-Ground Integrated Wireless Communication Network"
+    ],
+    "edge server resource allocation": [
+      "Incorporating Distributed DRL into Storage Resource Optimization of Space-Air-Ground Integrated Wireless Communication Network"
+    ],
+    "MDP-based network management": [
+      "Incorporating Distributed DRL into Storage Resource Optimization of Space-Air-Ground Integrated Wireless Communication Network"
+    ],
+    "SAGIN Markov decision model": [
+      "Incorporating Distributed DRL into Storage Resource Optimization of Space-Air-Ground Integrated Wireless Communication Network"
+    ],
+    "serverless-computing": [
+      "LLM-Based Misconfiguration Detection for AWS Serverless Computing"
+    ],
+    "misconfiguration-detection": [
+      "LLM-Based Misconfiguration Detection for AWS Serverless Computing"
+    ],
+    "LLM-prompt-engineering": [
+      "LLM-Based Misconfiguration Detection for AWS Serverless Computing"
+    ],
+    "AWS-SAM": [
+      "LLM-Based Misconfiguration Detection for AWS Serverless Computing"
+    ],
+    "chain-of-thought": [
+      "LLM-Based Misconfiguration Detection for AWS Serverless Computing"
+    ],
+    "LoRA-CNN-fine-tuning": [
+      "LoRA-C_ Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices"
+    ],
+    "IoT-device-deployment": [
+      "LoRA-C_ Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices"
+    ],
+    "layer-wise-decomposition": [
+      "LoRA-C_ Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices"
+    ],
+    "CNN-robustness": [
+      "LoRA-C_ Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices"
+    ],
+    "parameter-efficient-tuning": [
+      "LoRA-C_ Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices"
+    ],
+    "LoRA-adaptation": [
+      "LoRASuite_ Efficient LoRA Adaptation Across Large Language Model Upgrades"
+    ],
+    "LLM-upgrade-transfer": [
+      "LoRASuite_ Efficient LoRA Adaptation Across Large Language Model Upgrades"
+    ],
+    "centered-kernel-alignment": [
+      "LoRASuite_ Efficient LoRA Adaptation Across Large Language Model Upgrades"
+    ],
+    "attention-head-mapping": [
+      "LoRASuite_ Efficient LoRA Adaptation Across Large Language Model Upgrades"
+    ],
+    "CUA-benchmarking": [
+      "MCPWorld_ A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents"
+    ],
+    "MCP-protocol": [
+      "MCPWorld_ A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents"
+    ],
+    "white-box-evaluation": [
+      "MCPWorld_ A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents"
+    ],
+    "API-agent": [
+      "MCPWorld_ A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents"
+    ],
+    "dynamic-binary-instrumentation": [
+      "MCPWorld_ A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents"
+    ],
+    "computer-use-agent": [
+      "MCPWorld_ A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents"
+    ],
+    "on-device-training": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading"
+    ],
+    "mixed-precision-training": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading"
+    ],
+    "DSP-offloading": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading"
+    ],
+    "mobile-DNN": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading"
+    ],
+    "resource-efficient-ML": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading"
+    ],
+    "multi-task-learning": [
+      "Mitigating Task Interference in Multi-Task Learning via Explicit Task Routing with Non-Learnable Primitives"
+    ],
+    "task-interference": [
+      "Mitigating Task Interference in Multi-Task Learning via Explicit Task Routing with Non-Learnable Primitives"
+    ],
+    "parameter-partitioning": [
+      "Mitigating Task Interference in Multi-Task Learning via Explicit Task Routing with Non-Learnable Primitives"
+    ],
+    "non-learnable-primitives": [
+      "Mitigating Task Interference in Multi-Task Learning via Explicit Task Routing with Non-Learnable Primitives"
+    ],
+    "explicit-task-routing": [
+      "Mitigating Task Interference in Multi-Task Learning via Explicit Task Routing with Non-Learnable Primitives"
+    ],
+    "on-device-LLM": [
+      "MobiEdit_ Resource-efficient Knowledge Editing for Personalized On-device LLMs"
+    ],
+    "knowledge-editing": [
+      "MobiEdit_ Resource-efficient Knowledge Editing for Personalized On-device LLMs"
+    ],
+    "zeroth-order-optimization": [
+      "MobiEdit_ Resource-efficient Knowledge Editing for Personalized On-device LLMs"
+    ],
+    "mobile-NPU-quantization": [
+      "MobiEdit_ Resource-efficient Knowledge Editing for Personalized On-device LLMs"
+    ],
+    "LLM-personalization": [
+      "MobiEdit_ Resource-efficient Knowledge Editing for Personalized On-device LLMs"
+    ],
+    "mobile-foundation-model": [
+      "Mobile Foundation Model as Firmware"
+    ],
+    "multimodal-learning": [
+      "Mobile Foundation Model as Firmware"
+    ],
+    "LLM-firmware": [
+      "Mobile Foundation Model as Firmware"
+    ],
+    "NPU-optimization": [
+      "Mobile Foundation Model as Firmware"
+    ],
+    "edge-server-energy-efficiency": [
+      "More is Different_ Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs"
+    ],
+    "mobile-SoC-cluster": [
+      "More is Different_ Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs"
+    ],
+    "video-transcoding-benchmark": [
+      "More is Different_ Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs"
+    ],
+    "DL-serving-energy-proportionality": [
+      "More is Different_ Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs"
+    ],
+    "heterogeneous-edge-hardware": [
+      "More is Different_ Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs"
+    ],
+    "multimodal-RAG-privacy": [
+      "MrM_ Black-Box Membership Inference Attacks against Multimodal RAG Systems"
+    ],
+    "membership-inference-attack": [
+      "MrM_ Black-Box Membership Inference Attacks against Multimodal RAG Systems"
+    ],
+    "black-box-attack": [
+      "MrM_ Black-Box Membership Inference Attacks against Multimodal RAG Systems"
+    ],
+    "vision-language-model-security": [
+      "MrM_ Black-Box Membership Inference Attacks against Multimodal RAG Systems"
+    ],
+    "counterfactual-perturbation": [
+      "MrM_ Black-Box Membership Inference Attacks against Multimodal RAG Systems"
+    ],
+    "QoS-prediction": [
+      "Multi-user web service selection based on multi-QoS prediction"
+    ],
+    "multi-user-service-selection": [
+      "Multi-user web service selection based on multi-QoS prediction"
+    ],
+    "matrix-factorization": [
+      "Multi-user web service selection based on multi-QoS prediction"
+    ],
+    "support-vector-regression": [
+      "Multi-user web service selection based on multi-QoS prediction"
+    ],
+    "maximum-weight-matching": [
+      "Multi-user web service selection based on multi-QoS prediction"
+    ],
+    "on-device-SLM": [
+      "PhoneLM_an Efficient and Capable Small Language Model Family through Principled Pre-training"
+    ],
+    "hardware-aware-architecture-search": [
+      "PhoneLM_an Efficient and Capable Small Language Model Family through Principled Pre-training"
+    ],
+    "smartphone-inference-optimization": [
+      "PhoneLM_an Efficient and Capable Small Language Model Family through Principled Pre-training"
+    ],
+    "edge-LLM-deployment": [
+      "PhoneLM_an Efficient and Capable Small Language Model Family through Principled Pre-training"
+    ],
+    "NPU-acceleration": [
+      "PhoneLM_an Efficient and Capable Small Language Model Family through Principled Pre-training"
+    ],
+    "en-route-travel-time-estimation": [
+      "RLER-TTE_ An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning"
+    ],
+    "RL-decision-maker": [
+      "RLER-TTE_ An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning"
+    ],
+    "spatio-temporal-attention": [
+      "RLER-TTE_ An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning"
+    ],
+    "curriculum-learning": [
+      "RLER-TTE_ An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning"
+    ],
+    "online-inference-optimization": [
+      "RLER-TTE_ An Efficient and Effective Framework for En Route Travel Time Estimation with Reinforcement Learning"
+    ],
+    "online-map-matching": [
+      "RLOMM_ An Efficient and Robust Online Map Matching Framework with Reinforcement Learning"
+    ],
+    "reinforcement-learning-MDP": [
+      "RLOMM_ An Efficient and Robust Online Map Matching Framework with Reinforcement Learning"
+    ],
+    "trajectory-road-heterogeneity": [
+      "RLOMM_ An Efficient and Robust Online Map Matching Framework with Reinforcement Learning"
+    ],
+    "graph-representation-learning": [
+      "RLOMM_ An Efficient and Robust Online Map Matching Framework with Reinforcement Learning"
+    ],
+    "contrastive-learning-alignment": [
+      "RLOMM_ An Efficient and Robust Online Map Matching Framework with Reinforcement Learning"
+    ],
+    "on-device-MEM": [
+      "Recall_ Empowering Multimodal Embedding for Edge Devices"
+    ],
+    "early-exiting-multimodal": [
+      "Recall_ Empowering Multimodal Embedding for Edge Devices"
+    ],
+    "edge-embedding-inference": [
+      "Recall_ Empowering Multimodal Embedding for Edge Devices"
+    ],
+    "privacy-preserving-embedding": [
+      "Recall_ Empowering Multimodal Embedding for Edge Devices"
+    ],
+    "memory-palace-retrieval": [
+      "Recall_ Empowering Multimodal Embedding for Edge Devices"
+    ],
+    "big-service-selection": [
+      "Reliable and efficient big service selection"
+    ],
+    "QoS-uncertainty": [
+      "Reliable and efficient big service selection"
+    ],
+    "coefficient-of-variation": [
+      "Reliable and efficient big service selection"
+    ],
+    "mixed-integer-programming": [
+      "Reliable and efficient big service selection"
+    ],
+    "service-reliability": [
+      "Reliable and efficient big service selection"
+    ],
+    "satellite-ground-collaboration": [
+      "Resource-efficient In-orbit Detection of Earth Objects"
+    ],
+    "energy-aware-detection": [
+      "Resource-efficient In-orbit Detection of Earth Objects"
+    ],
+    "bandwidth-throttling": [
+      "Resource-efficient In-orbit Detection of Earth Objects"
+    ],
+    "LEO-satellite-imagery": [
+      "Resource-efficient In-orbit Detection of Earth Objects"
+    ],
+    "satellite-computing": [
+      "SateLight_ A Satellite Application Update Framework for Satellite Computing"
+    ],
+    "software-update": [
+      "SateLight_ A Satellite Application Update Framework for Satellite Computing"
+    ],
+    "containerization": [
+      "SateLight_ A Satellite Application Update Framework for Satellite Computing"
+    ],
+    "differential-encoding": [
+      "SateLight_ A Satellite Application Update Framework for Satellite Computing"
+    ],
+    "fault-tolerance": [
+      "SateLight_ A Satellite Application Update Framework for Satellite Computing"
+    ],
+    "LEO-satellite": [
+      "SateLight_ A Satellite Application Update Framework for Satellite Computing"
+    ],
+    "cloud-native-satellite": [
+      "Satellite Computing_ A Case Study of Cloud-Native Satellites"
+    ],
+    "LEO-satellite-computing": [
+      "Satellite Computing_ A Case Study of Cloud-Native Satellites"
+    ],
+    "Tiansuan-constellation": [
+      "Satellite Computing_ A Case Study of Cloud-Native Satellites"
+    ],
+    "software-defined-payload": [
+      "Satellite Computing_ A Case Study of Cloud-Native Satellites"
+    ],
+    "MEC-computation-offloading": [
+      "Security modeling and efficient computation offloading for service workflow in mobile edge computing"
+    ],
+    "workflow-scheduling-security": [
+      "Security modeling and efficient computation offloading for service workflow in mobile edge computing"
+    ],
+    "security-overhead-modeling": [
+      "Security modeling and efficient computation offloading for service workflow in mobile edge computing"
+    ],
+    "energy-efficient-MD": [
+      "Security modeling and efficient computation offloading for service workflow in mobile edge computing"
+    ],
+    "genetic-algorithm-scheduling": [
+      "Security modeling and efficient computation offloading for service workflow in mobile edge computing"
+    ],
+    "LEO-satellite-CNN-deployment": [
+      "Seed Feature Maps-based CNN Models for LEO Satellite Remote Sensing Services"
+    ],
+    "seed-feature-map": [
+      "Seed Feature Maps-based CNN Models for LEO Satellite Remote Sensing Services"
+    ],
+    "nonlinear-transformation-FLOPs-reduction": [
+      "Seed Feature Maps-based CNN Models for LEO Satellite Remote Sensing Services"
+    ],
+    "random-seed-parameter-compression": [
+      "Seed Feature Maps-based CNN Models for LEO Satellite Remote Sensing Services"
+    ],
+    "remote-sensing-semantic-segmentation": [
+      "Seed Feature Maps-based CNN Models for LEO Satellite Remote Sensing Services"
+    ],
+    "service-science": [
+      "Service Science"
+    ],
+    "intelligent-services": [
+      "Service Science"
+    ],
+    "AI-service-optimization": [
+      "Service Science"
+    ],
+    "service-ecosystem": [
+      "Service Science"
+    ],
+    "IoT-ViT部署": [
+      "TFormer_ A Transmission-Friendly ViT Model for IoT Devices"
+    ],
+    "传输友好模型压缩": [
+      "TFormer_ A Transmission-Friendly ViT Model for IoT Devices"
+    ],
+    "高效注意力替代": [
+      "TFormer_ A Transmission-Friendly ViT Model for IoT Devices"
+    ],
+    "组卷积FFN": [
+      "TFormer_ A Transmission-Friendly ViT Model for IoT Devices"
+    ],
+    "云边协同推理": [
+      "TFormer_ A Transmission-Friendly ViT Model for IoT Devices"
+    ],
+    "cloud-native satellite": [
+      "The First Verification Test of Space-Ground Collaborative Intelligence via Cloud-Native Satellites"
+    ],
+    "orbital edge computing": [
+      "The First Verification Test of Space-Ground Collaborative Intelligence via Cloud-Native Satellites"
+    ],
+    "collaborative AI inference": [
+      "The First Verification Test of Space-Ground Collaborative Intelligence via Cloud-Native Satellites"
+    ],
+    "satellite-ground coordination": [
+      "The First Verification Test of Space-Ground Collaborative Intelligence via Cloud-Native Satellites"
+    ],
+    "edge-cloud orchestration": [
+      "The First Verification Test of Space-Ground Collaborative Intelligence via Cloud-Native Satellites"
+    ],
+    "LEO卫星星座": [
+      "Tiansuan Constellation_ An Open Research Platform"
+    ],
+    "卫星边缘计算": [
+      "Tiansuan Constellation_ An Open Research Platform"
+    ],
+    "星上核心网部署": [
+      "Tiansuan Constellation_ An Open Research Platform"
+    ],
+    "联邦学习在轨推理": [
+      "Tiansuan Constellation_ An Open Research Platform"
+    ],
+    "卫星计算平台编排": [
+      "Tiansuan Constellation_ An Open Research Platform"
+    ],
+    "next-POI-prediction": [
+      "Towards Effective Next POI Prediction_ Spatial and Semantic Augmentation with Remote Sensing Data"
+    ],
+    "remote-sensing-augmentation": [
+      "Towards Effective Next POI Prediction_ Spatial and Semantic Augmentation with Remote Sensing Data"
+    ],
+    "quad-tree-graph": [
+      "Towards Effective Next POI Prediction_ Spatial and Semantic Augmentation with Remote Sensing Data"
+    ],
+    "spatial-semantic-intent-separation": [
+      "Towards Effective Next POI Prediction_ Spatial and Semantic Augmentation with Remote Sensing Data"
+    ],
+    "heterogeneous-graph-attention": [
+      "Towards Effective Next POI Prediction_ Spatial and Semantic Augmentation with Remote Sensing Data"
+    ],
+    "federated-NLP": [
+      "Towards Practical Few-shot Federated NLP"
+    ],
+    "few-shot-learning": [
+      "Towards Practical Few-shot Federated NLP"
+    ],
+    "edge-inference-optimization": [
+      "Towards Practical Few-shot Federated NLP"
+    ],
+    "trajectory-embedding": [
+      "Towards Robust Trajectory Embedding for Similarity Computation_ When Triangle Inequality Violations in Distance Metrics Matter"
+    ],
+    "triangle-inequality-violation": [
+      "Towards Robust Trajectory Embedding for Similarity Computation_ When Triangle Inequality Violations in Distance Metrics Matter"
+    ],
+    "hyperbolic-space": [
+      "Towards Robust Trajectory Embedding for Similarity Computation_ When Triangle Inequality Violations in Distance Metrics Matter"
+    ],
+    "lorentz-distance": [
+      "Towards Robust Trajectory Embedding for Similarity Computation_ When Triangle Inequality Violations in Distance Metrics Matter"
+    ],
+    "dynamic-fusion": [
+      "Towards Robust Trajectory Embedding for Similarity Computation_ When Triangle Inequality Violations in Distance Metrics Matter"
+    ],
+    "depth-of-discharge": [
+      "Towards Sustainable Satellite Edge Computing"
+    ],
+    "online-convex-optimization": [
+      "Towards Sustainable Satellite Edge Computing"
+    ],
+    "pattern-aware-scheduling": [
+      "Towards Sustainable Satellite Edge Computing"
+    ],
+    "battery-life-extension": [
+      "Towards Sustainable Satellite Edge Computing"
+    ],
+    "joint-finetuning-compression": [
+      "TuneComp_ Joint Fine-tuning and Compression for Large Foundation Models"
+    ],
+    "low-rank-decomposition": [
+      "TuneComp_ Joint Fine-tuning and Compression for Large Foundation Models"
+    ],
+    "activation-aware-initialization": [
+      "TuneComp_ Joint Fine-tuning and Compression for Large Foundation Models"
+    ],
+    "knowledge-distillation": [
+      "TuneComp_ Joint Fine-tuning and Compression for Large Foundation Models"
+    ],
+    "vision-transformer-compression": [
+      "TuneComp_ Joint Fine-tuning and Compression for Large Foundation Models"
+    ],
+    "on-device ML inference": [
+      "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    ],
+    "multimodal embedding": [
+      "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    ],
+    "early-exit neural networks": [
+      "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    ],
+    "mobile system optimization": [
+      "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    ],
+    "memory augmentation": [
+      "Ubiquitous memory augmentation via mobile multimodal embedding system"
+    ],
+    "traffic-accident-risk-prediction": [
+      "Urban Traffic Accident Risk Prediction Revisited_ Regionality, Proximity, Similarity and Sparsity"
+    ],
+    "remote-sensing-integration": [
+      "Urban Traffic Accident Risk Prediction Revisited_ Regionality, Proximity, Similarity and Sparsity"
+    ],
+    "hierarchical-spatio-temporal-modeling": [
+      "Urban Traffic Accident Risk Prediction Revisited_ Regionality, Proximity, Similarity and Sparsity"
+    ],
+    "zero-inflation-handling": [
+      "Urban Traffic Accident Risk Prediction Revisited_ Regionality, Proximity, Similarity and Sparsity"
+    ],
+    "multi-view-graph-semantic-similarity": [
+      "Urban Traffic Accident Risk Prediction Revisited_ Regionality, Proximity, Similarity and Sparsity"
+    ],
+    "multi-modal-relation-extraction": [
+      "Variational Multi-Modal Hypergraph Attention Network for Multi-Modal Relation Extraction"
+    ],
+    "hypergraph-neural-networks": [
+      "Variational Multi-Modal Hypergraph Attention Network for Multi-Modal Relation Extraction"
+    ],
+    "variational-learning": [
+      "Variational Multi-Modal Hypergraph Attention Network for Multi-Modal Relation Extraction"
+    ],
+    "entity-disambiguation": [
+      "Variational Multi-Modal Hypergraph Attention Network for Multi-Modal Relation Extraction"
+    ],
+    "cross-modal-fusion": [
+      "Variational Multi-Modal Hypergraph Attention Network for Multi-Modal Relation Extraction"
+    ]
+  }
+}

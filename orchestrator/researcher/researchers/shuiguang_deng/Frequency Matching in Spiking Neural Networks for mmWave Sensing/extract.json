@@ -1,0 +1,38 @@
+{
+  "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing",
+  "doi": null,
+  "title": "Frequency Matching in Spiking Neural Networks for mmWave Sensing",
+  "year": 2026,
+  "venue": "ICML",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "mmWave sensing on edge devices suffers tension between accuracy and efficiency; existing ANN pipelines require heavy preprocessing or deep architectures",
+  "problem_framing": "Mechanism-data alignment: characterize how LIF neuron low-pass dynamics interact with mmWave signal spectral structure",
+  "key_insight": "LIF dynamics act as implicit low-pass filter; matching effective bandwidth to discriminative spectral content of mmWave signals enables inherent noise suppression",
+  "method_signature": "Frequency-matching criterion for configuring membrane decay factor β by aligning LIF effective bandwidth with discriminative spectrum",
+  "evaluation_criteria": "Test accuracy improvement and theoretical energy consumption reduction vs ANN baselines across four mmWave datasets",
+  "negative_result_or_admitted_limitation": "Maximum-deviation rule marks onset of over-low-pass behavior; beyond this point further low-pass bias yields diminishing discriminative spectrum retention",
+  "evidence_for_taste": [
+    "clarifying when and why SNNs outperform ANNs",
+    "fully specified, accuracy-agnostic method",
+    "onset of over-low-pass behavior",
+    "accuracy-agnostic method to identify reference boundary",
+    "conservative validity check"
+  ],
+  "thinking_moves": [
+    "把感知问题重新形式化为频域机制-数据对齐问题",
+    "建立LIF动力学与IIR低通滤波器的等价性连接",
+    "从数据频谱结构出发定义判别性频带而非预设先验",
+    "用几何偏差而非性能指标确定参数边界"
+  ],
+  "topic_tags": [
+    "mmWave-sensing",
+    "spiking-neural-networks",
+    "frequency-matching",
+    "LIF-neuron-dynamics",
+    "edge-inference-efficiency"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

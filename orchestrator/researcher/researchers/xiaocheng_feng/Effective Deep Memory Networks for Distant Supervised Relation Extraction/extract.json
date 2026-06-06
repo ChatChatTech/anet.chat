@@ -1,0 +1,37 @@
+{
+  "paper_id": "Effective Deep Memory Networks for Distant Supervised Relation Extraction",
+  "doi": "10.24963/ijcai.2017/559",
+  "title": "Effective Deep Memory Networks for Distant Supervised Relation Extraction",
+  "year": 2017,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "Distant supervision generates noisy multi-instance multi-label data; existing neural models ignore context word importance and inter-relation dependencies",
+  "problem_framing": "Multi-instance multi-label relation extraction with noisy labels from knowledge base alignment",
+  "key_insight": "Use two-level attention memory networks: word-level to weight context words by entity-pair relevance, relation-level to model inter-relation dependencies and reduce noise",
+  "method_signature": "Two-layer memory networks: word-level (6-hop) attention for sentence representation, relation-level (2-layer) attention for bag-of-instances multi-label classification",
+  "evaluation_criteria": "Precision-recall curve and P@N (Top-100/200/500) on NYT10 distant supervision dataset",
+  "negative_result_or_admitted_limitation": "When hop count exceeds 6, results degrade; gradient vanishing problem as memory network goes deeper",
+  "evidence_for_taste": [
+    "neural-based methods are extremely strong performer",
+    "DMN provides superior performance to all other methods",
+    "when the number of hops exceeds 6, the experimental results become worse",
+    "The reason might lie in the gradient vanishing problem"
+  ],
+  "thinking_moves": [
+    "Identifies two unmodeled phenomena: context word importance and inter-relation dependencies",
+    "Selects memory networks as the architectural vehicle because they enable explicit read/write of importance weights",
+    "Ablates each memory component separately to isolate their contributions",
+    "Finds optimal hop depth empirically; treats saturation as a limitation rather than forcing deeper model"
+  ],
+  "topic_tags": [
+    "distant-supervision-relation-extraction",
+    "attention-memory-networks",
+    "multi-instance-multi-label",
+    "entity-pair-representation",
+    "knowledge-base-population"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

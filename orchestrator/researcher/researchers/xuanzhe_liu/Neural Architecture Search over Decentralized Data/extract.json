@@ -1,0 +1,39 @@
+{
+  "paper_id": "Neural Architecture Search over Decentralized Data",
+  "doi": null,
+  "title": "Federated Neural Architecture Search",
+  "year": null,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "隐私法规(GDPR)限制中心化训练，移动设备异构性要求不同架构，传统NAS在去中心化数据上开销巨大",
+  "problem_framing": "在去中心化数据上进行神经架构搜索，自动生成满足资源约束的DNN模型，同时保证用户隐私",
+  "key_insight": "NAS过程中候选模型无需充分收敛，可利用并行训练、动态轮数和早期丢弃三招大幅降低客户端开销",
+  "method_signature": "DecNAS:联邦NAS框架，通过客户端分组并行训练候选、动态调整轮数、早期淘汰劣质候选",
+  "evaluation_criteria": "模型精度(与中心化NAS对比)、客户端计算和通信成本削减倍数、精度-成本权衡曲线",
+  "negative_result_or_admitted_limitation": "100%淘汰率时精度下降31.3%;组数过大超过候选数时端到端搜索时间不再减少;模型精度偶尔不如NetAdapt",
+  "evidence_for_taste": [
+    "key opportunity as insufficient candidate tuning",
+    "optimal candidate often quickly outperforms others",
+    "accuracy of candidates are not yet representative",
+    "misleading the model selection",
+    "insight motivates us",
+    "We find that the tuning of each DNN candidate can be parallel",
+    "requires more re-training to regain the accuracy"
+  ],
+  "thinking_moves": [
+    "将NAS的内在特性(候选模型不必收敛)重新定义为联邦场景下的优化杠杆",
+    "通过实验观察(Figure 3)发现最优候选在前1-3轮就脱颖而出",
+    "承认极端情况下的精度损失，量化展示权衡空间"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "neural-architecture-search",
+    "mobile-DNN",
+    "decentralized-training",
+    "privacy-preserving-ML"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为arXiv版本(引用17指向FedNAS)，未明确标注年份和venue，但从内容判断为系统领域顶会级别工作。实验部分有截断，但核心方法论证完整。 | md truncated to head40k+tail20k"
+}

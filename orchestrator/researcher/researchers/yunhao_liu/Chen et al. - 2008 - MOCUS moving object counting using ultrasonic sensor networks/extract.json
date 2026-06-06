@@ -1,0 +1,36 @@
+{
+  "paper_id": "Chen et al. - 2008 - MOCUS moving object counting using ultrasonic sensor networks",
+  "doi": null,
+  "title": "MOCUS: moving object counting using ultrasonic sensor networks",
+  "year": 2008,
+  "venue": "Int. J. Sensor Networks",
+  "venue_tier": "regional",
+  "role": "senior",
+  "motivation": "现有视频方案有隐私和光照限制；红外/压力传感方案不实用；需低功耗、部署简单的方案计数移动物体",
+  "problem_framing": "将移动物体计数问题定义为利用超声波传感器簇检测并区分不同运动方向的物体数量",
+  "key_insight": "三元簇（单发射双接收）利用两个接收节点检测时序的相关性判断运动方向，避免多发射干扰",
+  "method_signature": "三元簇内时序相关+簇间概率协作的两层分布式计数算法",
+  "evaluation_criteria": "正确率、错向率、重复率、漏检率，综合准确率约90%",
+  "negative_result_or_admitted_limitation": "天花板部署无法区分单个慢行人与两紧邻前后行人；需对接收器灵敏度做线性标定",
+  "evidence_for_taste": [
+    "it is inevitable that there may be some noise",
+    "we carefully select this parameter based on experimental results",
+    "From our experience, we validate",
+    "some other three-node sensor clusters tend to miss counting"
+  ],
+  "thinking_moves": [
+    "从简单方案失败出发识别具体障碍（turn-around problem, interference），针对性设计三元簇结构",
+    "将方向判断问题转化为时序相关性的阈值检测问题",
+    "用概率方法处理簇间协作的边缘情况而非确定性规则",
+    "承认物理部署差异导致的非均匀灵敏度问题并做线性标定"
+  ],
+  "topic_tags": [
+    "ultrasonic-sensor-networks",
+    "moving-object-counting",
+    "pedestrian-tracking",
+    "wireless-sensor-applications",
+    "direction-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

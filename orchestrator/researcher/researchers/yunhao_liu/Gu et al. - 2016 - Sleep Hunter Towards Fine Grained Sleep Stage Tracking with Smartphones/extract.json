@@ -1,0 +1,39 @@
+{
+  "paper_id": "Gu et al. - 2016 - Sleep Hunter Towards Fine Grained Sleep Stage Tracking with Smartphones",
+  "doi": null,
+  "title": "Sleep Hunter: Towards Fine Grained Sleep Stage Tracking with Smartphones",
+  "year": 2016,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有睡眠监测要么贵(PSG)要么粗(actigraphy)，无法精确反映睡眠质量",
+  "problem_framing": "用手机传感器做细粒度睡眠阶段检测(REM/浅睡/深睡)，并提供智能唤醒服务",
+  "key_insight": "睡眠阶段伴随特定身体动作和声音事件，且睡眠遵循90分钟周期规律，可建模为序列标注问题",
+  "method_signature": "手机多传感器采集+特征提取+条件随机场(CRF)整合时序依赖预测睡眠阶段",
+  "evaluation_criteria": "与Zeo(EEG设备)对比验证准确率，要求非侵入、低能耗、细粒度检测",
+  "negative_result_or_admitted_limitation": "Zeo准确率约75%非金标准；样本量小结论为推测性；光照传感器被挡时用历史值",
+  "evidence_for_taste": [
+    "neither the bedtime nor the intensity",
+    "locally optimizes the performance",
+    "the classification performance is acceptable",
+    "all conclusions are speculative",
+    "detection accuracy attains 64.55%"
+  ],
+  "thinking_moves": [
+    "把睡眠阶段识别从医学设备问题转译为手机感知+统计学习问题",
+    "用CRF建模睡眠的时序依赖而非简单规则匹配",
+    "分层设计：特征层(传感器事件)+整合层(CRF)分离关注点",
+    "从身体动作时长差异(>2.8s vs <0.85s)提炼宏观/微运动特征",
+    "交叉验证+小样本案例研究补充定量评估"
+  ],
+  "topic_tags": [
+    "sleep-stage-detection",
+    "smartphone-actigraphy",
+    "conditional-random-fields",
+    "acoustic-event-classification",
+    "smart-wakeup-service"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

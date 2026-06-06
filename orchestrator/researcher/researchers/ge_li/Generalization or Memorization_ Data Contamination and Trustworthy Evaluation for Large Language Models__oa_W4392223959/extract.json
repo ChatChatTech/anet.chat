@@ -1,0 +1,43 @@
+{
+  "paper_id": "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4392223959",
+  "doi": "10.48550/arxiv.2402.15938",
+  "title": "Generalization or Memorization: Data Contamination and Trustworthy Evaluation for Large Language Models",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLM评估因训练数据污染而不可信，模型表现优异可能只是记忆了测试数据而非真正理解任务",
+  "problem_framing": "将数据污染检测定义为识别模型输出分布的尖峰程度，并在黑盒场景下仅用采样文本进行检测和评估纠正",
+  "key_insight": "污染会使模型输出分布变得尖锐(peakedness)，即采样文本的编辑距离趋近于零，可用此检测污染",
+  "method_signature": "CDD通过计算采样文本与贪婪搜索输出的编辑距离密度识别尖峰；TED通过排除尖峰和去重纠正分布",
+  "evaluation_criteria": "Accuracy/F1/AUC用于CDD检测任务；Pass@1衰减程度用于TED污染缓解评估",
+  "negative_result_or_admitted_limitation": "采用LoRA而非全参数微调模拟污染；假设基模型未受污染但实际可能存在轻微污染；验证仅限代码生成和逻辑推理领域",
+  "evidence_for_taste": [
+    "requires only the sampled texts",
+    "detecting implicit contamination",
+    "performance influence of TED on the uncontaminated model is small",
+    "the main function is provided by the rule of exclude peakedness"
+  ],
+  "thinking_moves": [
+    "把污染问题从数据匹配重新框定为输出分布统计特性问题",
+    "用编辑距离作为分布相似度的代理指标，无需概率输出",
+    "从统计密度突变角度证明即使单次污染也能被检测",
+    "通过消融实验区分两类纠正规则的主次作用"
+  ],
+  "topic_tags": [
+    "LLM-data-contamination",
+    "output-distribution-detection",
+    "edit-distance-metrics",
+    "trustworthy-evaluation",
+    "black-box-LLM-testing"
+  ],
+  "cites_own_work": [
+    "Dong2023a",
+    "Dong2023b",
+    "Dong2023c",
+    "Jiang2023",
+    "Li2024"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Multimodal Fake News Detection via CLIP-Guided Learning",
+  "doi": "10.48550/arxiv.2205.14304",
+  "title": "Multimodal Fake News Detection via CLIP-Guided Learning",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "OSNs广泛传播假新闻，现有融合机制黑盒化，预训练多模态模型潜力未充分挖掘",
+  "problem_framing": "如何计算模态间相似性并影响决策；如何利用预训练CLIP改进特征对齐与融合",
+  "key_insight": "CLIP跨模态相似度可显式度量图文一致性，据此自适应调节融合特征权重",
+  "method_signature": "FND-CLIP: CLIP编码图文+余弦相似度重加权+模态级注意力聚合",
+  "evaluation_criteria": "Weibo/Politifact/Gossipcop三数据集Accuracy/Precision/Recall/F1",
+  "negative_result_or_admitted_limitation": "输出仅为二值预测，无法解释为何判定为假新闻及可疑元素",
+  "evidence_for_taste": [
+    "mechanisms are largely at a black-box level",
+    "we freeze the weights of BERT and CLIP due to their difficulty in training on small datasets",
+    "image itself does not have classification ability",
+    "text features play a leading role",
+    "noisy and redundant features"
+  ],
+  "thinking_moves": [
+    "先指出前人方法的'黑盒'缺陷，再提出用预训练CLIP显式化跨模态相似度计算",
+    "区分单模态特征(语义/噪声)与多模态特征(语义一致性)，分层设计提取目标",
+    "用相似度得分作为门控信号：图文低相关时削减融合特征权重",
+    "通过消融实验验证各模块贡献度，确认注意力机制的必要性"
+  ],
+  "topic_tags": [
+    "CLIP-multimodal-fusion",
+    "fake-news-detection",
+    "cross-modal-similarity-gating",
+    "modality-wise-attention",
+    "pretrained-vision-language-model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

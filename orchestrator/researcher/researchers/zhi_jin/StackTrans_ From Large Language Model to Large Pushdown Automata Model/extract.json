@@ -1,0 +1,38 @@
+{
+  "paper_id": "StackTrans_ From Large Language Model to Large Pushdown Automata Model",
+  "doi": "10.48550/arxiv.2507.15343",
+  "title": "STACKTRANS: From Large Language Model to Large Pushdown Automata Model",
+  "year": 2025,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Transformers缺乏表示Chomsky层级的归纳偏置,无法学习正则表达式和上下文无关文法,对超出训练长度分布的输入泛化能力差",
+  "problem_framing": "将Transformer无法捕获Chomsky层级的问题形式化为缺乏外部数据结构(堆栈)导致的归纳偏置缺失",
+  "key_insight": "受下推自动机启发,在Transformer层间引入可微分的隐藏状态堆栈,使模型能端到端学习堆栈操作从而捕获层级依赖",
+  "method_signature": "层间可微分隐藏状态堆栈:软push/pop/noop操作、多头堆栈、全局读取注意力",
+  "evaluation_criteria": "形式语言任务测试准确率、自然语言 benchmark 性能、训练/推理效率开销",
+  "negative_result_or_admitted_limitation": "严格限制只能访问栈顶元素导致训练不稳定和次优性能;截断近似可能在需要深层token间依赖的任务中存在风险",
+  "evidence_for_tape": [
+    "Transformers struggle with tasks",
+    "standard Transformers lack inductive biases",
+    "push-only variant performs poorly",
+    "limiting access to only the top element restricts gradient flow",
+    "this truncation approximation may still pose risks"
+  ],
+  "thinking_moves": [
+    "从形式语言理论出发:下推自动机处理DCF的机制启示堆栈增强",
+    "将Transformer局限性归因于缺乏 Chomsky 层级归纳偏置而非注意力机制本身",
+    "区分栈的读写约束:神经网络的随机访问能力使全局读取成为可能",
+    "通过消融实验验证栈操作(push/pop)缺一不可的必要性"
+  ],
+  "topic_tags": [
+    "stack-augmented-transformer",
+    "pushdown-automata",
+    "Chomsky-hierarchy-learning",
+    "context-free-grammar-induction",
+    "differentiable-stack"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

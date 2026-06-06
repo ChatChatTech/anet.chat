@@ -1,0 +1,41 @@
+{
+  "paper_id": "Ma et al. - 2015 - Opportunistic Concurrency A MAC Protocol for Wireless Sensor Networks",
+  "doi": null,
+  "title": "Opportunistic Concurrency: A MAC Protocol for Wireless Sensor Networks",
+  "year": 2015,
+  "venue": "IEEE",
+  "venue_tier": "strong",
+  "role": "senior",
+  "motivation": "CSMA deferring transmissions on busy channels wastes opportunities when physical layer could decode concurrent signals.",
+  "problem_framing": "How to enable distributed nodes to exploit capture-effect/MIM for parallel transmission instead of serial waiting.",
+  "key_insight": "Local SINR map allows each node to independently decide if concurrent transmission will succeed without disturbing ongoing links.",
+  "method_signature": "Concurrency map + SINR-based decision + embedded X-MAC",
+  "evaluation_criteria": "Latency (17% reduction), throughput (9.4% gain), energy (10% reduction) in 60-node testbed.",
+  "negative_result_or_admitted_limitation": "When Cmax is 3 or 4, collision increases. More concurrency suffers from hidden-terminal asymmetry.",
+  "evidence_for_taste": [
+    "more concurrent transmissions, thus increases the performance",
+    "collision mostly happens",
+    "information asymmetry between different transmitters",
+    "we didn’t allow any transmission decision that will result in any other transmission failure"
+  ],
+  "thinking_moves": [
+    "Identify concrete deferral opportunities via validation experiment on CC2420",
+    "Distill lightweight distributed decision mechanism from physical-layer capability",
+    "Embed as modular assistant component rather than replacing existing MAC",
+    "Map spatial distribution of concurrency gains across topology",
+    "Observe multi-hop packets benefit incrementally at each hop"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network",
+    "MAC-protocol",
+    "concurrent-transmission",
+    "capture-effect",
+    "SINR-based-decision"
+  ],
+  "cites_own_work": [
+    "GreenOrbs measurement study",
+    "Walking down the Stairs collision resolution"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

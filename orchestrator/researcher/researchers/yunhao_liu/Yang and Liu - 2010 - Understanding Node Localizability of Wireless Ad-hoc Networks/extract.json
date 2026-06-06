@@ -1,0 +1,41 @@
+{
+  "paper_id": "Yang and Liu - 2010 - Understanding Node Localizability of Wireless Ad-hoc Networks",
+  "doi": null,
+  "title": "Understanding Node Localizability of Wireless Ad-hoc Networks",
+  "year": 2010,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "实际海监网络中现有定位测试几乎总是返回'失败', 理论分析与现实观测严重脱节",
+  "problem_framing": "从网络整体可定位性转向单个节点可定位性, 提出可回答具体哪些节点可定位的新问题框架",
+  "key_insight": "RR3P条件(冗余刚性+3条顶点不相交路径)是可定位节点的充要条件, 可在多项式时间测试",
+  "method_signature": "基于图刚性与隐式边的节点可定位性分析, 结合RR-3P必要条件与RR3P充分条件",
+  "evaluation_criteria": "真实海监网络80%节点可定位; 仿真验证RR3P优于前人方法, 减少能耗和链路",
+  "negative_result_or_admitted_limitation": "Theorem 3 requires implicit edges which incurs combinational number of graph partitions; RR-3P is still not sufficient",
+  "evidence_for_taste": [
+    "to our surprise and disappointment",
+    "Motivated by the example",
+    "This work is motivated by an ongoing sea monitoring project",
+    "the situation recurs for static sensor networks",
+    "is NOT the end of the localizability story"
+  ],
+  "thinking_moves": [
+    "从真实系统观测出发发现理论缺口",
+    "识别网络可定位条件对节点可定位不再必要",
+    "引入隐式边概念桥接刚性子图",
+    "通过边替换操作证明RR3P与全局刚性的等价性",
+    "必要条件过松时反向构造反例说明不足"
+  ],
+  "topic_tags": [
+    "wireless-ad-hoc-localization",
+    "graph-rigidity-theory",
+    "node-localizability",
+    "sea-monitoring-sensor-network",
+    "distance-graph-analysis"
+  ],
+  "cites_own_work": [
+    "Yang et al. 2009 - Beyond trilateration"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文来自传感器网络领域, 结合图论刚性与定位问题。实验数据来自OceanSense项目, 包含真实海监网络。venue信息未明确给出, 从作者机构判断可能为INFOCOM或类似顶会。"
+}

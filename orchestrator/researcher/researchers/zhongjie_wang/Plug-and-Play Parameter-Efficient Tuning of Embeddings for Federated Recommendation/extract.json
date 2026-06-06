@@ -1,0 +1,38 @@
+{
+  "paper_id": "Plug-and-Play Parameter-Efficient Tuning of Embeddings for Federated Recommendation",
+  "doi": "10.48550/arxiv.2512.13734",
+  "title": "Plug-and-Play Parameter-Efficient Tuning of Embeddings for Federated Recommendation",
+  "year": 2025,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Large item embeddings dominate FR parameters, causing communication bottleneck in distributed training",
+  "problem_framing": "Apply PEFT techniques to item embeddings in federated recommendation to reduce transmitted parameter volume",
+  "key_insight": "Freeze pre-trained full embeddings locally, only transmit lightweight compressed embeddings during training",
+  "method_signature": "PEFT-based embedding framework combining frozen full embeddings with fine-tunable compressed embeddings",
+  "evaluation_criteria": "Hit Ratio and NDCG at top-K; communication cost per client; differential privacy robustness",
+  "negative_result_or_admitted_limitation": "No single strategy consistently outperforms across all datasets and models; hash struggles on FedMF",
+  "evidence_for_taste": [
+    "compressed embeddings typically suffer from poor robustness",
+    "Noticeable drop in recommendation accuracy",
+    "overly large codebooks may introduce redundancy",
+    "even limited updates lead to noticeable performance improvements",
+    "performance does not consistently improve with larger k_L"
+  ],
+  "thinking_moves": [
+    "把 embedding 压缩问题重新 frame 成 PEFT 调优问题",
+    "先用 warm-up 训练稳定优化过程",
+    "比较三类压缩策略的 representation collision 特性",
+    "通过 sensitivity analysis 探索超参与性能的 non-monotonic 关系"
+  ],
+  "topic_tags": [
+    "federated-recommendation",
+    "parameter-efficient-finetuning",
+    "embedding-compression",
+    "communication-efficiency",
+    "LoRA-adaptation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

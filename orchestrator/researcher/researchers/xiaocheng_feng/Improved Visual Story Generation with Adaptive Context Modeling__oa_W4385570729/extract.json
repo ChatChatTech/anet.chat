@@ -1,0 +1,36 @@
+{
+  "paper_id": "Improved Visual Story Generation with Adaptive Context Modeling__oa_W4385570729",
+  "doi": "10.18653/v1/2023.findings-acl.305",
+  "title": "Improved Visual Story Generation with Adaptive Context Modeling",
+  "year": 2023,
+  "venue": "Findings of ACL",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "当前方法将所有历史上下文扁平化处理，忽略故事中并非所有句子都紧密相关的事实",
+  "problem_framing": "将视觉故事生成建模为基于语义相似度选择性使用历史上下文的问题",
+  "key_insight": "依赖关系主要由句子间的语义关系衡量，应自适应选择相关历史文本-图像对",
+  "method_signature": "自适应编码器(Cross-Attention过滤历史)+自适应指导(采样阶段CLIP引导)",
+  "evaluation_criteria": "FID分数(图像质量)+Char-F1+Frame-Accuracy(角色一致性)",
+  "negative_result_or_admitted_limitation": "仍有故事不一致(床/被子风格颜色不一致)、角色重复、角色动作错误等问题",
+  "evidence_for_taste": [
+    "we find that some images in the history",
+    "different colors of fluids",
+    "not related to either the second or third",
+    "should depend more on the second and third",
+    "The style of the bed and the color of the quilt"
+  ],
+  "thinking_moves": [
+    "从具体例子发现规则：第四句与第二三句无关但第五句应依赖它们",
+    "把全局一致性问题归结为语义相似度下的上下文选择问题",
+    "承认方法局限：风格/颜色不一致、角色重复、动作错位"
+  ],
+  "topic_tags": [
+    "visual-story-generation",
+    "adaptive-context-modeling",
+    "diffusion-model",
+    "semantic-consistency",
+    "cross-attention"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

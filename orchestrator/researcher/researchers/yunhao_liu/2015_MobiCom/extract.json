@@ -1,0 +1,38 @@
+{
+  "paper_id": "2015_MobiCom",
+  "doi": null,
+  "title": "Kaleido: You Can Watch It But Cannot Record It",
+  "year": 2015,
+  "venue": "ACM MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "电影盗版每年造成约205亿美元损失，90%非法内容来自盗版视频；现有技术无法有效防止观众用移动设备偷拍屏幕",
+  "problem_framing": "在不影响观众观看体验的前提下，最大化屏幕-摄像机通道的质量劣化，同时保持屏幕-人眼通道的高质量",
+  "key_insight": "利用人眼与相机之间的有限差异（色温混合、闪烁临界频率、滚动快门），设计可被人类视觉融合但导致相机记录失真的帧序列",
+  "method_signature": "将原始帧分解为多个子帧：色度帧分解+亮度帧污染+空间形变，人眼融合为原始色彩，相机记录产生严重失真",
+  "evaluation_criteria": "主观测试（50人问卷，90%+看不出差异）+客观指标（PSNR降60%+，SSIM降40%+）",
+  "negative_result_or_admitted_limitation": "对现场观众仍有轻微观看体验下降，防盗录与观看体验之间存在权衡；专业高端电影摄像机无法防御",
+  "evidence_for_taste": [
+    "最大化显示-摄像机通道的质量劣化",
+    "保持屏幕-人眼通道的高质量",
+    "时间平均色度和亮度",
+    "无法取消out",
+    "无法恢复原始像素"
+  ],
+  "thinking_moves": [
+    "将隐私保护问题反转为通信通道设计问题",
+    "利用感知系统（人眼）vs 采样系统（相机）的本质差异作为设计杠杆",
+    "通过分析摄像机rolling shutter和不稳定帧间隔主动放大信息丢失",
+    "从物理约束（闪烁临界频率）反推污染参数范围"
+  ],
+  "topic_tags": [
+    "screen-camera-communication",
+    "video-copyright-protection",
+    "human-vision-vs-camera",
+    "rolling-shutter-exploitation",
+    "watch-only-video-encoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

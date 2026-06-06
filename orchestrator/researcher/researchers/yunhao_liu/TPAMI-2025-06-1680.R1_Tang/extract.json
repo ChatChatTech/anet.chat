@@ -1,0 +1,40 @@
+{
+  "paper_id": "TPAMI-2025-06-1680.R1_Tang",
+  "doi": null,
+  "title": "Model Lineage Analysis: Determination and Closeness Measurement",
+  "year": 2025,
+  "venue": "TPAMI",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "模型修改技术广泛使用，如何判断两模型是否存在派生关系并量化修改程度？现有方法缺乏理论支撑且对高强度修改无效。",
+  "problem_framing": "将模型血缘判定问题重新形式化为：两模型参数是否位于损失函数同一局部最优解（同一basin）中。",
+  "key_insight": "处于同一局部最优的模型插值后性能保持稳定；而决策边界相似性可精确反映模型血缘亲近度。",
+  "method_signature": "参数线性插值判 lineage + 对抗距离+匹配率测 closeness",
+  "evaluation_criteria": "血缘判定准确率、亲近度分数与修改幅度的相关性、跨修改类型泛化性",
+  "negative_result_or_admitted_limitation": "知识蒸馏模型与无血缘模型无法区分；生成模型因缺乏自然决策边界而难以扩展。",
+  "evidence_for_taste": [
+    "100% accuracy in lineage determination",
+    "clear gap in s between lineage and no lineage models",
+    "the distilled model behaves like an independently trained model",
+    "even within the same technique, different parameter settings lead to differing effects",
+    "combination modifications significantly reduce lineage closeness"
+  ],
+  "thinking_moves": [
+    "将抽象的模型血缘问题映射到损失函数几何拓扑上",
+    "用参数插值的损失曲线形状推断模型是否同 basin",
+    "借鉴 Git Rebasing 中 permutation symmetry 的分析范式",
+    "通过决策边界可视化洞察不同修改技术的几何效应",
+    "用对抗距离量化决策边界几何相似性",
+    "区分敏感边界区域和公共边界区域以过滤无效样本"
+  ],
+  "topic_tags": [
+    "model-lineage-determination",
+    "loss-landscape-local-optima",
+    "decision-boundary-similarity",
+    "adversarial-distance-metric",
+    "model-copyright-protection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "null | md truncated to head40k+tail20k"
+}

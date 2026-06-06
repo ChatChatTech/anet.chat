@@ -1,0 +1,39 @@
+{
+  "paper_id": "Building Program Vector Representations for Deep Learning",
+  "doi": "10.48550/arxiv.1409.3358",
+  "title": "Building Program Vector Representations for Deep Learning",
+  "year": 2014,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "深度学习在NLP/图像等领域成功但无法分析程序，因程序符号离散且无合适预训练方法，现有NLP算法因编程语言结构差异不适用",
+  "problem_framing": "将AST节点映射为实值向量作为预训练，使深度网络能捕获层级抽象特征，需设计无监督表示学习算法",
+  "key_insight": "提出编码准则：AST父节点表示应能由其子节点表示通过单层神经网络'编码'得到，利用树结构捕捉符号相似性",
+  "method_signature": "基于AST的编码准则学习节点向量表示，配合连续二叉树模型处理变长子节点",
+  "evaluation_criteria": "定性：最近邻查询和k-means聚类验证符号相似性；定量：程序分类准确率对比浅层方法",
+  "negative_result_or_admitted_limitation": "AST层面将所有标识符视为同一符号，失去token级信息；高层语义合成面临语义壁垒难精确捕获",
+  "evidence_for_taste": [
+    "cannot be trained effectively with pure back propagation",
+    "new approaches are needed",
+    "similar usages in the programming language",
+    "We think the representation for nodes in ASTs has theoretical foundations",
+    "This experiment suggests the promising future"
+  ],
+  "thinking_moves": [
+    "将深度学习应用于程序分析的核心障碍定义为缺乏预训练，而非模型容量不足",
+    "通过分析字符级、token级、AST节点级粒度的不可行性，确定AST节点为最佳表示粒度",
+    "将NLP的表示学习框架迁移到AST结构，但需解决树结构vs序列的差异",
+    "用负采样防止平凡解，通过pairwise ranking criterion确保学习有意义的距离",
+    "实验确认预训练对深度网络优化的必要性，引用MNIST等领域的证据支撑"
+  ],
+  "topic_tags": [
+    "AST节点向量表示",
+    "程序分析预训练",
+    "深度学习程序分类",
+    "编码准则无监督学习",
+    "树卷积神经网络"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

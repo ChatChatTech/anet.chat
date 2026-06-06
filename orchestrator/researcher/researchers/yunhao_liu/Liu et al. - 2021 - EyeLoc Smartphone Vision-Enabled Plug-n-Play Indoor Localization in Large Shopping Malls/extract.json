@@ -1,0 +1,38 @@
+{
+  "paper_id": "Liu et al. - 2021 - EyeLoc Smartphone Vision-Enabled Plug-n-Play Indoor Localization in Large Shopping Malls",
+  "doi": null,
+  "title": "EyeLoc: Smartphone Vision Enabled Plug-n-play Indoor Localization in Large Shopping Malls",
+  "year": 2021,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "现有室内定位需要昂贵的站点勘测成本，阻碍了在大型购物中心的实际部署",
+  "problem_framing": "能否让用户像使用GPS一样自动在平面图上获取位置，实现即插即用定位",
+  "key_insight": "利用公开可用的楼层平面图图像和手机视觉模仿人类自定位行为",
+  "method_signature": "基于三点几何约束的圆弧相交定位模型",
+  "evaluation_criteria": "90分位定位误差5.97m，航向误差20度",
+  "negative_result_or_admitted_limitation": "由于运动传感器精度和图像分辨率限制，距离估计误差过大，放弃距离测量，仅使用方向信息",
+  "evidence_for_taste": [
+    "huge sunk cost usually hinders",
+    "the potential huge error makes the distance estimation unpractical currently",
+    "We leave the accurate distance measurement as our future work",
+    "The distance error is getting to 1.97m when θ1 decreases",
+    "0.1° error is common for the facing direction measurement"
+  ],
+  "thinking_moves": [
+    "发现距离估计在微小角度误差下会发散，主动放弃该方法",
+    "用冗余POI信息投票抵消单次测量的随机误差",
+    "将稀疏图像处理与质量过滤结合，减少计算量同时保证信息完整",
+    "通过圆弧相交将角度约束几何化为位置估计"
+  ],
+  "topic_tags": [
+    "indoor-localization",
+    "smartphone-vision",
+    "floorplan-matching",
+    "text-detection-recognition",
+    "geometric-constraints"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

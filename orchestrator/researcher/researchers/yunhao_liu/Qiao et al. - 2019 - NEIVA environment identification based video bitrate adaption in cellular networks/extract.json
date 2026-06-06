@@ -1,0 +1,35 @@
+{
+  "paper_id": "Qiao et al. - 2019 - NEIVA environment identification based video bitrate adaption in cellular networks",
+  "doi": null,
+  "title": "NEIVA: Environment Identification based Video Bitrate Adaption in Cellular Networks",
+  "year": 2019,
+  "venue": "IWQoS",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "移动视频占蜂窝网络流量3/4，但4G吞吐波动大导致现有ABR算法QoE下降",
+  "problem_framing": "蜂窝网络吞吐呈马尔可夫行为且与环境相关，但现有方法假设不稳或开销过大",
+  "key_insight": "同一环境下马尔可夫转移概率随时间稳定，可离线训练环境专属HMM模型",
+  "method_signature": "离线环境聚类HMM训练+在线MLP环境识别+模型选择预测",
+  "evaluation_criteria": "吞吐预测误差(QoE分量：平均码率/缓冲时间/码率切换)",
+  "negative_result_or_admitted_limitation": "OBOE的分段平稳假设在蜂窝网络中失效，实测非平稳trace比例高达44%-72%；CS2P在线训练开销是离线的446-932倍",
+  "evidence_for_taste": [
+    "piecewise-stationary model does not always hold",
+    "time cost of CS2P is hundred to thousand times higher",
+    "the non-stationary trace proportion is 35.89%, 59.10% and 65.77%"
+  ],
+  "thinking_moves": [
+    "从实测吞吐的非平稳性反推分段平稳假设失效",
+    "发现环境差异后用聚类方法验证假设",
+    "利用马尔可夫属性的时间稳定性绕过在线训练开销难题"
+  ],
+  "topic_tags": [
+    "cellular-network-throughput-prediction",
+    "HMM-environment-identification",
+    "adaptive-bitrate-ABR",
+    "Markov-property-time-stability",
+    "QoE-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

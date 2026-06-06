@@ -1,0 +1,39 @@
+{
+  "paper_id": "PCAT_TDSC_Notation",
+  "doi": null,
+  "title": "Functionality and Data Stealing by Pseudo-Client Attack and Target Defenses in Split Learning",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Semi-honest server wants to steal client functionality to avoid revenue sharing in split learning partnerships",
+  "problem_framing": "Enable server to steal functionality, reconstruct inputs, infer labels without knowing client model structure in split learning",
+  "key_insight": "A well-trained server model contains sufficient knowledge to construct a pseudo-client model using very limited samples, even without smashed data",
+  "method_signature": "Train pseudo-client model using evolving server models as learning targets via knowledge distillation; label alignment boosts attack",
+  "evaluation_criteria": "Functionality gap measured by inference accuracy decrease; input reconstruction quality; label inference accuracy",
+  "negative_result_or_admitted_limitation": "UnSplit only works for client top model with one layer; existing attacks suffer from large search space when models are deep",
+  "evidence_for_taste": [
+    "steal the functionality of the client model",
+    "large search space of both possible inputs",
+    "server can add noise to the smashed data",
+    "the feature space of smashed data",
+    "label alignment helps"
+  ],
+  "thinking_moves": [
+    "从已知服务器模型反推未知客户端模型的可能性",
+    "把模型反演问题转化为知识蒸馏问题",
+    "观察中间模型比最终模型提供更多信息",
+    "标签对齐作为攻击增强手段",
+    "防御思路：制造标签不一致来破坏攻击前提"
+  ],
+  "topic_tags": [
+    "split-learning-privacy-attack",
+    "model-functionality-stealing",
+    "pseudo-client-attack",
+    "knowledge-distillation-attack",
+    "label-inference-attack"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

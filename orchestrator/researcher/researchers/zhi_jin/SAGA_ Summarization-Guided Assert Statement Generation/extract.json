@@ -1,0 +1,35 @@
+{
+  "paper_id": "SAGA_ Summarization-Guided Assert Statement Generation",
+  "doi": "10.48550/arxiv.2305.14808",
+  "title": "SAGA: Summarization-Guided Assert Statement Generation",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "生成有意义断言语句困难，现有深度学习模型仅依赖代码实现而忽略开发者摘要",
+  "problem_framing": "利用开发者摘要中的意图信息引导生成准确断言语句",
+  "key_insight": "开发者摘要包含代码中未直接出现的意图相关参数(如delta值)",
+  "method_signature": "基于CodeT5的编码器-解码器模型融合自然语言摘要与编程语言代码",
+  "evaluation_criteria": "精确匹配率、BLEU-4、ROUGE-L三个指标",
+  "negative_result_or_admitted_limitation": "T5模型因断言语句更长和开放词汇问题表现较差",
+  "evidence_for_taste": [
+    "summarization contents but not in the source code implementations",
+    "may be less capable of dealing with open-vocabulary issues",
+    "Thus, these incorrect assert statements can also be useful"
+  ],
+  "thinking_moves": [
+    "通过观察开发者摘要与源码的差异发现问题",
+    "将自然语言摘要作为额外模态信息融合到代码生成任务",
+    "对错误断言进行等价性和编辑距离分析而非简单否定"
+  ],
+  "topic_tags": [
+    "assert-generation",
+    "software-testing",
+    "deep-learning-code",
+    "method-summarization",
+    "test-case-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

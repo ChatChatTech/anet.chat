@@ -1,0 +1,39 @@
+{
+  "paper_id": "MPInspector_ A Systematic and Automatic Approach for Evaluating the Security of IoT Messaging Protocols",
+  "doi": "10.48550/arxiv.2208.08751",
+  "title": "MPInspector: A Systematic and Automatic Approach for Evaluating the Security of IoT Messaging Protocols",
+  "year": 2022,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "IoT messaging protocol implementations are fragmented and not carefully implemented for security; no systematic solution exists for automatic security checks.",
+  "problem_framing": "How to build an automatic tool to verify security properties of MP implementations across diverse IoT platforms with closed-source and customized implementations?",
+  "key_insight": "Combining model learning (active learning of state machines) with formal verification (Tamarin Prover) enables systematic, black-box security analysis without needing source code.",
+  "method_signature": "Three-stage pipeline: extract parameter semantics + interaction logic → infer state machine → generate security properties → formal verification",
+  "evaluation_criteria": "252 property violations, 11 attacks, 100% precision, 4.5h average overhead across 9 platforms",
+  "negative_result_or_admitted_limitation": "Traditional Tamarin Prover may fail to prove properties for complex state transitions; solved by designing helping oracle to guide proof.",
+  "evidence_for_taste": [
+    "model learning cannot be directly applied",
+    "may be trapped into an endless learning procedure",
+    "The adapter invokes the corresponding pre-installed encryption interface",
+    "it does not make sense to continue searching",
+    "The main root causes are the gap between ad-hoc MP implementations"
+  ],
+  "thinking_moves": [
+    "把黑盒安全分析问题重构成可学习的有限状态机建模问题",
+    "先用标准规范定义元属性，再根据实际实现扩展为具体属性",
+    "用模式匹配解决常见加密参数，用NLP处理文档中的未知自定义加密",
+    "通过限制相同假设生成次数来应对模型学习的非确定性陷阱",
+    "通过剪枝无效查询（已关闭连接的路径）来加速状态机学习"
+  ],
+  "topic_tags": [
+    "IoT-messaging-protocol-security",
+    "model-learning",
+    "formal-verification-Tamarin",
+    "blackbox-firmware-analysis",
+    "MQTT-CoAP-AMQP-security"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

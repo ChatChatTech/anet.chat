@@ -1,0 +1,39 @@
+{
+  "paper_id": "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging",
+  "doi": "10.48550/arxiv.2503.00325",
+  "title": "CADRef: Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "DNNs produce confidently incorrect predictions on OOD samples, risking safety-critical deployments like autonomous driving and medical diagnostics",
+  "problem_framing": "OOD detection framed as binary classification via post-hoc score function; existing feature-based methods reshape features but neglect inherent feature information",
+  "key_insight": "Using error between sample features and class-aware average features as discriminative criterion, decoupled by sign alignment with model weights",
+  "method_signature": "Class-aware relative feature error + feature decoupling + error scaling with logit-based scores",
+  "evaluation_criteria": "AUROC (higher better) and FPR95 (lower better) across ImageNet-1k and CIFAR benchmarks with multiple model architectures",
+  "negative_result_or_admitted_limitation": "Feature shaping-based methods collapse on ViT/Swin/ConvNeXt (AUROC below 50%); ViM does not fully utilize feature information, closely approximated by Energy alone",
+  "evidence_for_taste": [
+    "ASH-S method even collapsing",
+    "ViM does not fully utilize feature information",
+    "positive error as the score substantially reduces OOD detection performance",
+    "feature shaping-based methods exhibit architecture-specific behavior",
+    "MSP leads to a substantial decline in its performance"
+  ],
+  "thinking_moves": [
+    "识别现有方法的共同盲点: 特征重构方法忽视了特征内部蕴含的丰富信息",
+    "从特征与logit的数学关系出发, 探索细粒度的特征分解",
+    "通过消融实验区分正负误差的不同贡献, 揭示正误差是耦合形式的障碍",
+    "利用经验观察(高S_logit时ID/OOD正误差重叠)反向推导修正策略",
+    "在多种架构上验证鲁棒性, 不满足于单一数据集上的最优结果"
+  ],
+  "topic_tags": [
+    "out-of-distribution-detection",
+    "neural-network-calibration",
+    "feature-space-analysis",
+    "OOD-robustness",
+    "post-hoc-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

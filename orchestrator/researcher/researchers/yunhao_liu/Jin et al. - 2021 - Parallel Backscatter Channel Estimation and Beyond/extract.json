@@ -1,0 +1,42 @@
+{
+  "paper_id": "Jin et al. - 2021 - Parallel Backscatter Channel Estimation and Beyond",
+  "doi": null,
+  "title": "Parallel Backscatter: Channel Estimation and Beyond",
+  "year": 2021,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "多标签信号碰撞时信道估计失真,导致感知容量受限,工厂流水线等场景需要30Hz以上的信道估计率",
+  "problem_framing": "能否从碰撞信号中直接估计各标签的信道参数(相位和幅度)",
+  "key_insight": "碰撞信号在IQ域的移动轨迹由各标签信道决定,路径的几何属性(方向和长度)反映相位和幅度",
+  "method_signature": "IIA模型建模信道与轨迹的数学变换,通过全局优化拟合DTG图估计信道",
+  "evaluation_criteria": "相位误差(rad)、幅度误差、轨迹追踪精度(cm)",
+  "negative_result_or_admitted_limitation": "未展示near-far问题的处理能力,留作future work",
+  "evidence_for_taste": [
+    "the collided signal isn’t the linear addition",
+    "Fast Variation of Signal",
+    "inter-tag interference will further distort",
+    "a surprising observation is that the mean error of FlipTracer slightly decreases",
+    "We leave this in the future works"
+  ],
+  "thinking_moves": [
+    "把感知问题重新定义为communication中的信道估计问题",
+    "通过几何直观(IQ轨迹)建立物理层信号与信道参数的数学联系",
+    "利用优化方法从全局轨迹而非单点估计来求解信道",
+    "将inter-tag interference建模为额外的虚拟信号源而非噪声"
+  ],
+  "topic_tags": [
+    "RFID-channel-estimation",
+    "backscatter-sensing",
+    "parallel-transmission",
+    "IQ-domain-trajectory",
+    "inter-tag-interference"
+  ],
+  "cites_own_work": [
+    "FlipTracer",
+    "Tagoram",
+    "previous version in IPSN 2020"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Qian et al. - 2017 - Widar Decimeter-Level Passive Tracking via Velocity Monitoring with Commodity Wi-Fi",
+  "doi": null,
+  "title": "Widar: Decimeter-Level Passive Tracking via Velocity Monitoring with Commodity Wi-Fi",
+  "year": 2017,
+  "venue": "Mobihoc '17",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "现有Wi-Fi感知依赖学习技术需先训练,无法无需训练实现精细跟踪,限制了被动感知的应用前景",
+  "problem_framing": "需建立从CSI到人体速度与位置的几何量化模型,克服PLCR到速度的映射鸿沟",
+  "key_insight": "不同位置以不同速度移动会在信号传播路径长度上产生不同变化,可几何建模CSI与移动的关系",
+  "method_signature": "CSI-移动几何模型→PLCR提取→速度方向联立求解→轨迹优化",
+  "evaluation_criteria": "位置误差中位数25cm(有初始位置)和38cm(无初始位置),速度误差中位数13%",
+  "negative_result_or_admitted_limitation": "无训练校准下跟踪误差随距离累积,需间歇性精确定位以避免漂移;当前无法直接适用现有被动定位方法",
+  "evidence_for_taste": [
+    "requires prior training",
+    "do not quantitatively model",
+    "cannot directly measure movement",
+    "cannot be uniquely identified",
+    "cannot solve the ambiguity",
+    "requires occasionally pinpointing",
+    "does not solve the ambiguity"
+  ],
+  "thinking_moves": [
+    "把学习问题转化为物理几何建模",
+    "先从最简理想情况建立模型,再逐步引入实际约束",
+    "从Doppler频率移与速度的几何关系推导PLCR公式",
+    "利用多链路联立方程消除单链路歧义",
+    "用动态规划在加速度约束下提取目标PLCR",
+    "以速度而非位置为主变量进行追踪"
+  ],
+  "topic_tags": [
+    "Wi-Fi-CSI被动跟踪",
+    "PLCR几何建模",
+    "速度方向联合估计",
+    "路径长度变化率提取",
+    "室内定位与追踪"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

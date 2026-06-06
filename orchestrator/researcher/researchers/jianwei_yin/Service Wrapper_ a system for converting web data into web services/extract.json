@@ -1,0 +1,37 @@
+{
+  "paper_id": "Service Wrapper_ a system for converting web data into web services",
+  "doi": "10.48550/arxiv.1910.07786",
+  "title": "Service Wrapper: a system for converting web data into web services",
+  "year": 2019,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有web数据提取工具需要专业知识，普通用户难以使用wrapper",
+  "problem_framing": "将网页数据转换为可调用的web服务，实现零代码的wrapper生成",
+  "key_insight": "通过自动化的表单检测、块分割和规则生成，让用户以傻瓜式操作完成wrapper到service的转换",
+  "method_signature": "Service Extractor + Service Invoker双组件架构，含6个处理模块",
+  "evaluation_criteria": "系统可用性、操作简便性、稳定性，通过案例演示验证",
+  "negative_result_or_admitted_limitation": "需要用户手动选择表单和块，完全自动化程度有限；NLP工具尚未正式引入",
+  "evidence_for_taste": [
+    "designed specifically for professional wrapper program developers",
+    "not friendly to users without expertise",
+    "fool-style operations",
+    "requires manual postprocessors",
+    "hard for users without some technical background"
+  ],
+  "thinking_moves": [
+    "把数据提取问题从developer-centric重新设计为user-centric",
+    "通过组合表单检测+块分割+块排序来解决动态页面的自动化问题",
+    "用截图+标注方式让用户在GUI中完成技术决策",
+    "利用DOM树结构而非视觉特征来分割页面，确保能捕获隐藏内容"
+  ],
+  "topic_tags": [
+    "web-data-extraction",
+    "wrapper-generation",
+    "web-service-generation",
+    "block-segmentation",
+    "GUI-based-automation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

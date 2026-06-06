@@ -1,0 +1,42 @@
+{
+  "paper_id": "TableGPT_ Few-shot Table-to-Text Generation with Table Structure Reconstruction and Content Matching",
+  "doi": "10.18653/v1/2020.coling-main.179",
+  "title": "TableGPT: Few-shot Table-to-Text Generation with Table Structure Reconstruction and Content Matching",
+  "year": 2020,
+  "venue": "COLING",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "大模型微调数据不足时性能急剧下降，需利用预训练知识做小样本学习",
+  "problem_framing": "预训练语言模型处理结构化表格存在模态鸿沟、结构缺失、文本保真度三个不兼容问题",
+  "key_insight": "通过模板序列化消歧模态鸿沟，用辅助任务嵌入结构信息，OT距离度量文本保真度",
+  "method_signature": "基于GPT-2的多任务框架，含表格序列化、结构重建、内容匹配三个训练目标",
+  "evaluation_criteria": "BLEU/ROUGE自动指标+人类factual-correctness和naturalness双维度评估",
+  "negative_result_or_admitted_limitation": "分离的复制机制与GPT-2生成导致birth date错误和语法不连贯",
+  "evidence_for_taste": [
+    "gap between structured input",
+    "lack of modeling of table structure",
+    "improve text fidelity",
+    "unified GPT-2 model for generating",
+    "match important information only",
+    "change of model structure may break"
+  ],
+  "thinking_moves": [
+    "将结构化输入序列化以适配语言模型预训练范式",
+    "用辅助任务隐式注入结构信息而不改变模型结构",
+    "用OT距离将离散的内容匹配问题转为可微损失",
+    "识别前人switch策略的内在缺陷：分离复制与生成导致不一致",
+    "只在共现信息上做匹配以避免对冗余信息的错误惩罚"
+  ],
+  "topic_tags": [
+    "few-shot-table-to-text",
+    "GPT-2-finetuning",
+    "optimal-transport-content-matching",
+    "multi-task-table-structure",
+    "factual-fidelity-generation"
+  ],
+  "cites_own_work": [
+    "Feng et al., 2020",
+    "Gong et al., 2019"
+  ],
+  "extraction_quality": "full"
+}

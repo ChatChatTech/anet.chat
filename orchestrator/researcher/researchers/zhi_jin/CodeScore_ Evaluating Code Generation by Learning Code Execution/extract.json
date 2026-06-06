@@ -1,0 +1,40 @@
+{
+  "paper_id": "CodeScore_ Evaluating Code Generation by Learning Code Execution",
+  "doi": "10.48550/arxiv.2301.09043",
+  "title": "CodeScore: Evaluating Code Generation by Learning Code Execution",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有匹配指标(BLEU/CodeBLEU)仅比较表面相似度，无法捕捉功能等价性，导致错误代码得分高于正确实现",
+  "problem_framing": "将代码评估定义为学习PassRatio和Executability，而非文本匹配；并扩展到NL-only和Ref&NL三种输入格式",
+  "key_insight": "LLM虽具备代码理解能力，但因预测下一个token的训练目标而缺乏功能正确性评估意识，需专门训练其学习代码执行",
+  "method_signature": "UniCE统一代码评估框架，通过多任务学习融合Ref/NL/Ref&NL三种输入格式预测PassRatio和Executability",
+  "evaluation_criteria": "与功能正确性的相关性(Kendall-Tau/Spearman/Pearson)及MAE，同时比较执行耗时",
+  "negative_result_or_admitted_limitation": "学习代码执行需要收集足够数据；仅适用于Python函数级代码；额外计算开销在可接受范围内",
+  "evidence_for_taste": [
+    "BLEU(a,b)=0.961 CodeBLEU(a,b)=0.884",
+    "BLEU(a,c)=0.204 CodeBLEU(a,c)=0.265",
+    "they exhibit suboptimal performance",
+    "measuring the similarity of token/structure is insufficient",
+    "CodeScore substantially outperforms",
+    "achieves state-of-the-art performance"
+  ],
+  "thinking_moves": [
+    "用具体反例揭露现有指标的根本缺陷：BLEU给错误代码0.961分却给正确代码0.204分",
+    "将代码评估问题重新定义为学习执行相似性而非文本匹配",
+    "借鉴自然语言处理中COMET等学习人类判断的思想，将其迁移到代码领域",
+    "通过层注意力聚合LLM多层信息增强表示能力",
+    "用多任务学习统一三种输入格式的训练目标"
+  ],
+  "topic_tags": [
+    "code-evaluation-metric",
+    "LLM-fine-tuning",
+    "functional-correctness",
+    "code-execution-learning",
+    "passratio-prediction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

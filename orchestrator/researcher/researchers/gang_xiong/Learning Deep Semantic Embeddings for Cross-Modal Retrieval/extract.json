@@ -1,0 +1,40 @@
+{
+  "paper_id": "Learning Deep Semantic Embeddings for Cross-Modal Retrieval",
+  "doi": null,
+  "title": "Learning Deep Semantic Embeddings for Cross-Modal Retrieval",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "跨模态检索中存在语义鸿沟，softmax损失产生的类内方差大，不适合跨模态匹配验证任务",
+  "problem_framing": "将图像文本映射到公共语义嵌入空间，用类别标签引导学习，实现无需配对的直接匹配",
+  "key_insight": "跨模态匹配需要同时实现类间分离和类内紧凑，中心损失和距离度量softmax损失可补足softmax损失的不足",
+  "method_signature": "DSE (Deep Semantic Embedding) 三种变体: DSE-S基线 / DSE-CS加中心损失 / DSE-DS距离度量softmax损失",
+  "evaluation_criteria": "mAP、PR曲线、Precision-Scope曲线",
+  "negative_result_or_admitted_limitation": "没有类别标签时方法不适用；距离范围不对称需更大λ平衡参数； pairwise训练数据有限时难以泛化",
+  "evidence_for_taste": [
+    "soft cross-entropy loss does not explicitly reduce intra-class variance",
+    "not suited for verification or matching problems",
+    "intra-class compactness is very important",
+    "pairwise multimodal samples...not easy to learn a model that generalizes well",
+    "not applicable in case where class labels are not available",
+    "it is not effective without the additional intra-class compactness constraint"
+  ],
+  "thinking_moves": [
+    "诊断softmax损失在验证任务上的根本缺陷——只优化类间分离而忽视类内方差",
+    "将人脸识别中的中心损失跨领域迁移到跨模态匹配场景",
+    "从参数效率角度重新设计损失函数形式，合并分类器权重与类中心",
+    "通过可视化嵌入分布证明类内紧凑性的关键作用",
+    "对比余弦相似度与欧式距离的差异揭示嵌入归一化的影响"
+  ],
+  "topic_tags": [
+    "cross-modal retrieval",
+    "semantic embedding",
+    "center loss",
+    "intra-class compactness",
+    "image-text matching"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "年份和期刊信息未在论文中明确给出；作者列表完整但角色定位为共同合作者；论文未提供DOI；方法细节完整但缺少完整发表信息"
+}

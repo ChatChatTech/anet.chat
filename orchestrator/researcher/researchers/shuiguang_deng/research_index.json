@@ -1,0 +1,2584 @@
+{
+  "slug": "shuiguang_deng",
+  "n_papers": 84,
+  "n_indexed": 84,
+  "anchors": [
+    "Determination and Computation of Behavioral Compatibility for Web Services",
+    "Trust-based Service Recommendation in Social Network",
+    "GEMRec_ A Graph-Based Emotion-Aware Music Recommendation Approach",
+    "Learning to embed music and metadata for context-aware music recommendation",
+    "Sequence-based context-aware music recommendation",
+    "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention",
+    "Energy-effective artificial internet-of-things application deployment in edge-cloud systems",
+    "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection",
+    "Cluster-Wide Task Slowdown Detection in Cloud System",
+    "LARA_ A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection",
+    "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4412887984",
+    "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning",
+    "ECC-SNN_ Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks",
+    "SAFA-SNN_ Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network",
+    "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+  ],
+  "by_id": {
+    "A Heavy-Load-Enhanced and Changeable-Periodicity-Perceived Workload Prediction Network": {
+      "title": "A Heavy-Load-Enhanced and Changeable-Periodicity-Perceived Workload Prediction Network",
+      "year": 2023,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2308.01917",
+      "key_insight": "通过周期感知机制自动检测变周期,通过阿喀琉斯之踵损失函数迭代优化预测序列中误差最大的片段",
+      "method_signature": "PePNet编码器-解码器架构融合长期趋势/短期依赖/周期信息,AHLF动态调整梯度权重",
+      "tags": [
+        "cloud-workload-prediction",
+        "periodicity-detection",
+        "heavy-load-burst",
+        "encoder-decoder",
+        "imbalanced-regression"
+      ],
+      "quality": "full"
+    },
+    "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition": {
+      "title": "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2507.11202",
+      "key_insight": "单一模态在不同模态组合中提供的特征信息存在差异，需要区分公共信息与特征信息并动态调整训练概率",
+      "method_signature": "MCULoRA框架：MCLA模态组合感知低秩适配+DPFT动态参数微调",
+      "tags": [
+        "incomplete-multimodal-learning",
+        "low-rank-adaptation",
+        "emotion-recognition",
+        "parameter-efficient-fine-tuning",
+        "modality-combination-aware"
+      ],
+      "quality": "full"
+    },
+    "A Secure Process-Service Model": {
+      "title": "A Secure Process-Service Model",
+      "year": 2005,
+      "venue": "International Conference on Computational Science and Its Applications",
+      "doi": "10.1007/978-3-540-24685-5_106",
+      "key_insight": "将流程服务分为私有体(PSB)和公开声明(PSD),通过界面时间等价原则在保护细节的同时向消费者提供必要时间约束",
+      "method_signature": "PSB(结构+时间约束全量) + PSD(抽象后等价可发布) + 自动生成算法O(n³)",
+      "tags": [
+        "process-service-abstraction",
+        "time-constraint-management",
+        "web-service-security",
+        "interface-equivalence",
+        "workflow-encapsulation"
+      ],
+      "quality": "partial"
+    },
+    "Agentic Services Computing": {
+      "title": "Agentic Services Computing",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2509.24380",
+      "key_insight": "非增量扩展而是根本性重构——从请求驱动到目标驱动、从被动调用到主动参与、从静态编排到动态协同",
+      "method_signature": "SCALE框架(状态化/认知自主/目标执行器/终身协作/端到端治理)+四维研究矩阵",
+      "tags": [
+        "LLM-based agents",
+        "multi-agent systems",
+        "service lifecycle governance",
+        "agent autonomy and trustworthiness",
+        "services computing paradigm shift"
+      ],
+      "quality": "full"
+    },
+    "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent": {
+      "title": "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2103.01590",
+      "key_insight": "国际化程度高的项目(有英文README)获得了更多stars",
+      "method_signature": "1000项目GitHub采集 + 101人问卷调查",
+      "tags": [
+        "BAT-open-source",
+        "internationalization-effort",
+        "developer-survey",
+        "github-empirical-study",
+        "frontend-preference"
+      ],
+      "quality": "full"
+    },
+    "Anti-diabetic effect of anthocyanin cyanidin-3-O-glucoside_ data from insulin resistant hepatocyte and diabetic mouse": {
+      "title": "Anti-diabetic effect of anthocyanin cyanidin-3-O-glucoside: data from insulin resistant hepatocyte and diabetic mouse",
+      "year": 2024,
+      "venue": "Nutrition and Diabetes",
+      "doi": "10.1038/s41387-024-00265-7",
+      "key_insight": "C3G通过抑制PTP1B解除对IRS-2磷酸化的阻断,恢复胰岛素信号传导",
+      "method_signature": "HepG2/L02细胞IR模型+db/db小鼠6周干预,Western blot/qRT-PCR",
+      "tags": [
+        "anthocyanin-C3G",
+        "insulin-resistance",
+        "PTP1B-inhibition",
+        "hepatocyte-glucose-metabolism",
+        "type-2-diabetes-mouse-model"
+      ],
+      "quality": "full"
+    },
+    "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain": {
+      "title": "BPI: A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain",
+      "year": 2025,
+      "venue": "arXiv (accepted to ACM SIGMOD 2026)",
+      "doi": "10.48550/arxiv.2509.00480",
+      "key_insight": "利用区块链不可变性，仅检索新数据而非全量数据",
+      "method_signature": "BMF+森林结构+Articulated Search增量查询",
+      "tags": [
+        "hybrid-storage-blockchain",
+        "authenticated-data-structure",
+        "bitmap-index",
+        "incremental-search",
+        "query-verification"
+      ],
+      "quality": "full"
+    },
+    "BlockDFL_ A Blockchain-based Fully Decentralized Peer-to-Peer Federated Learning Framework": {
+      "title": "BlockDFL: A Blockchain-based Fully Decentralized Peer-to-Peer Federated Learning Framework",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2205.10568",
+      "key_insight": "两层评分机制(本地median-based + 全局Krum)配合PBFT投票,可唯一选出高质量全局更新",
+      "method_signature": "区块链+PBFT投票+双层评分+梯度压缩的完全去中心化FL框架",
+      "tags": [
+        "blockchain-federated-learning",
+        "peer-to-peer-FL",
+        "poisoning-attack-defense",
+        "gradient-compression-privacy",
+        "PBFT-consensus"
+      ],
+      "quality": "partial"
+    },
+    "Blockchain-based collaborative edge computing_ efficiency, incentive and trust": {
+      "title": "Blockchain-based collaborative edge computing: efficiency, incentive and trust",
+      "year": 2023,
+      "venue": "Cluster Computing",
+      "doi": "10.1186/s13677-023-00452-4",
+      "key_insight": "VCG拍卖使出价规则满足Nash均衡和弱优势策略，区块链确保协作过程可追溯且不可篡改。",
+      "method_signature": "E-VCG: 基于VCG拍卖的两阶段边缘需求响应方法，结合区块链优化激励与信任机制。",
+      "tags": [
+        "VCG拍卖计算卸载",
+        "区块链边缘协作",
+        "边缘负载均衡",
+        "边缘需求响应",
+        "区块链安全攻击"
+      ],
+      "quality": "full"
+    },
+    "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging": {
+      "title": "CADRef: Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2503.00325",
+      "key_insight": "Using error between sample features and class-aware average features as discriminative criterion, decoupled by sign alignment with model weights",
+      "method_signature": "Class-aware relative feature error + feature decoupling + error scaling with logit-based scores",
+      "tags": [
+        "out-of-distribution-detection",
+        "neural-network-calibration",
+        "feature-space-analysis",
+        "OOD-robustness",
+        "post-hoc-detection"
+      ],
+      "quality": "full"
+    },
+    "CAME_ Content- and Context-Aware Music Embedding for Recommendation": {
+      "title": "CAME: Content- and Context-Aware Music Embedding for Recommendation",
+      "year": 2020,
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "doi": "10.1109/tnnls.2020.2984665",
+      "key_insight": "同一音乐在与其他音乐交互时呈现不同方面特征，需用注意力机制动态捕获这种相关性",
+      "method_signature": "异构信息网络结合CNN与注意力机制学习content-context感知的音乐嵌入",
+      "tags": [
+        "music-recommendation",
+        "heterogeneous-information-network",
+        "content-context-aware-embedding",
+        "attention-mechanism",
+        "CNN-text-embedding"
+      ],
+      "quality": "full"
+    },
+    "ChatUniTest_ A Framework for LLM-Based Test Generation": {
+      "title": "ChatUniTest: A Framework for LLM-Based Test Generation",
+      "year": 2024,
+      "venue": "FSE Companion '24",
+      "doi": "10.48550/arxiv.2305.04764",
+      "key_insight": "通过自适应焦点上下文机制选择关键信息，配合生成-验证-修复循环纠正错误，实现可靠测试生成",
+      "method_signature": "自适应焦点上下文 + 生成-验证-修复循环的LLM测试生成框架",
+      "tags": [
+        "LLM-based-unit-test-generation",
+        "adaptive-context-selection",
+        "test-validation-repair",
+        "code-coverage-evaluation",
+        "software-testing-automation"
+      ],
+      "quality": "full"
+    },
+    "Cloud-Native Computing_ A Survey from the Perspective of Services": {
+      "title": "Cloud-Native Computing: A Survey from the Perspective of Services",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2306.14402",
+      "key_insight": "云原生应用可视为由松耦合微服务组成的分布式弹性系统,需按生命周期各状态系统梳理关键问题。",
+      "method_signature": "survey: 按building/orchestration/operate/maintenance四状态组织文献并总结性能指标。",
+      "tags": [
+        "cloud-native-computing",
+        "microservices-architecture",
+        "container-orchestration",
+        "kubernetes",
+        "service-lifecycle-management"
+      ],
+      "quality": "full"
+    },
+    "Cluster-Wide Task Slowdown Detection in Cloud System": {
+      "title": "Cluster-Wide Task Slowdown Detection in Cloud System",
+      "year": 2024,
+      "venue": "KDD '24",
+      "doi": "10.48550/arxiv.2408.04236",
+      "key_insight": "标准注意力机制偏向高振幅子周期,需逐层剥离高振幅再重建低振幅子周期",
+      "method_signature": "SORN:降序剥离子周期振幅+神经最优传输+挑剔损失函数",
+      "tags": [
+        "time-series-anomaly-detection",
+        "cloud-operations",
+        "transformer-attention-mechanism",
+        "optimal-transport",
+        "compound-periodicity"
+      ],
+      "quality": "full"
+    },
+    "CoReQA_ Uncovering Potentials of Language Models in Code Repository Question Answering": {
+      "title": "CoReQA: Uncovering Potentials of Language Models in Code Repository Question Answering",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2501.03447",
+      "key_insight": "从GitHub issue及其含positive comments的真实讨论中构建QA对，确保需求真实且与开发者相关；用LLM-as-a-judge框架从准确性、完整性、相关性、清晰度和 pairwise 比较五个维度评估",
+      "method_signature": "GitHub issue-driven QA生成 + LLM-as-a-judge五维评估",
+      "tags": [
+        "code-repository-QA",
+        "LLM-evaluation-benchmark",
+        "GitHub-issue-QA-generation",
+        "LLM-as-a-judge",
+        "RAG-context-retrieval"
+      ],
+      "quality": "full"
+    },
+    "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4388747891": {
+      "title": "CodeScope: An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2311.08588",
+      "key_insight": "代码词法相似度与执行正确性弱相关,execution-based指标更能捕获实际可用性",
+      "method_signature": "MultiCodeEngine多语言代码执行引擎 + 三维评测框架(长度/难度/效率)",
+      "tags": [
+        "LLM代码生成评测",
+        "execution-based评估",
+        "多语言编程评测",
+        "代码优化效率度量",
+        "benchmark设计"
+      ],
+      "quality": "full"
+    },
+    "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827": {
+      "title": "CodeScope: An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation",
+      "year": 2024,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2024.acl-long.301",
+      "key_insight": "执行结果正确性才是代码生成的最终目标，BLEU等匹配度指标与执行正确性相关性弱",
+      "method_signature": "构建43语言8任务的CodeScope基准，配合MultiCodeEngine实现跨14种语言的自动化代码执行评测",
+      "tags": [
+        "LLM代码评测基准",
+        "多语言代码生成",
+        "执行验证评估",
+        "代码优化评估",
+        "代码理解评测"
+      ],
+      "quality": "full"
+    },
+    "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding": {
+      "title": "Completion by Comprehension: Guiding Code Generation with Multi-Granularity Understanding",
+      "year": 2025,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2512.04538",
+      "key_insight": "采用\"理解优先,补全在后\"范式,通过静态分析提取函数/文件/项目级结构化上下文,经图筛选后转换为LLM可理解的自然语言提示",
+      "method_signature": "静态分析提取多粒度上下文+图排序筛选+结构感知代码重排器+统一提示生成",
+      "tags": [
+        "仓库级代码补全",
+        "多粒度代码理解",
+        "静态分析增强生成",
+        "结构感知检索",
+        "RAG增强LLM"
+      ],
+      "quality": "full"
+    },
+    "Convergence in Crossover Service": {
+      "title": "Convergence in Crossover Service",
+      "year": 2023,
+      "venue": "Advanced Topics in Science and Technology in China (Springer)",
+      "doi": "10.1007/978-981-19-8844-8",
+      "key_insight": "3C特征(跨域/收敛/复杂)决定跨界服务需多维协同收敛机制",
+      "method_signature": "从概念建模→计算仿真→基础设施→价值质量优化的全链路框架",
+      "tags": [
+        "service-convergence",
+        "crossover-service",
+        "multi-dimensional-optimization",
+        "service-network",
+        "value-quality-alignment"
+      ],
+      "quality": "partial"
+    },
+    "CtrlNews_ LLM-based Multi-Agent Controllable News Writing via Knowledge Gravitational Field": {
+      "title": "CtrlNews: LLM-based Multi-Agent Controllable News Writing via Knowledge Gravitational Field",
+      "year": 2025,
+      "venue": "EMNLP 2025 Findings",
+      "doi": "10.18653/v1/2025.findings-emnlp.461",
+      "key_insight": "通过物理引力类比构建层级引力图,利用扩张-反思循环在核心/中间/外围层间组织知识,实现深度分析与精确观点控制的平衡",
+      "method_signature": "多智能体专家提问+层级引力图组织+三元属性(偏见/情感/夸张)精确控制+自反思精修的新闻写作框架",
+      "tags": [
+        "LLM-agent-news-writing",
+        "knowledge-graph-structured-generation",
+        "viewpoint-controllability",
+        "multi-perspective-questioning",
+        "gravitational-field-analogy"
+      ],
+      "quality": "full"
+    },
+    "Cyclic Arbitrage in Decentralized Exchanges": {
+      "title": "Cyclic Arbitrage in Decentralized Exchanges",
+      "year": 2021,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2105.02784",
+      "key_insight": "Atomic smart contract execution enables cyclic arbitrage without price impact loss—blockchain tech unlocks novel trading strategies",
+      "method_signature": "Theoretical CPMM arbitrage model + empirical Uniswap V2 transaction-level data analysis",
+      "tags": [
+        "DeFi arbitrage",
+        "AMM market making",
+        "Ethereum DEX",
+        "blockchain smart contracts",
+        "arbitrage implementation strategy"
+      ],
+      "quality": "full"
+    },
+    "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks": {
+      "title": "DPoS: Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2012.14108",
+      "key_insight": "利用原始对偶方法结合标价机制，每租户根据公开价格自主决策，无需透露私有信息即可实现次优社会福利。",
+      "method_signature": "去中心化原始对偶在线算法，标价机制驱动，多资源切片，线性复杂度O(NC)和O(C)。",
+      "tags": [
+        "network-slicing",
+        "primal-dual-online-algorithm",
+        "posted-price-mechanism",
+        "privacy-preserving-allocation",
+        "multi-tenant-resource-slicing"
+      ],
+      "quality": "partial"
+    },
+    "Darkit_ A User-Friendly Software Toolkit for Spiking Large Language Model": {
+      "title": "Darkit: A User-Friendly Software Toolkit for Spiking Large Language Model",
+      "year": null,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2412.15634",
+      "key_insight": "通过统一GUI和自动化工具降低spiking LLM的研究门槛比改进算法更紧迫",
+      "method_signature": "提供10项功能的集成化工具包，含GUI可视化与代码编辑器",
+      "tags": [
+        "spiking-neural-network",
+        "software-toolkit",
+        "LLM-inference",
+        "brain-inspired-computing",
+        "user-interface-design"
+      ],
+      "quality": "partial"
+    },
+    "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions": {
+      "title": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2407.08584",
+      "key_insight": "Water-filling achieves tight K-approximation where K is task group count; replica-deletion leverages global optimization to surpass WF.",
+      "method_signature": "OBTA narrows search via bounds; WF water-fills across groups; RD deletes replicas globally; OCWF-ACC adds early-exit.",
+      "tags": [
+        "data-locality",
+        "task-assignment",
+        "distributed-scheduling",
+        "water-filling-approximation",
+        "job-completion-time-optimization"
+      ],
+      "quality": "full"
+    },
+    "Decentralized Proactive Model Offloading and Resource Allocation for Split and Federated Learning": {
+      "title": "Decentralized Proactive Model Offloading and Resource Allocation for Split and Federated Learning",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2402.06123",
+      "key_insight": "每个终端设备可基于本地多维训练配置独立确定最优切分层和资源需求,无需知晓其他设备私有信息即可实现去中心化隐私保护",
+      "method_signature": "DP-MORA: 数据驱动回归模型拟合工作量与数据量,分布式迭代优化切分层与资源分配",
+      "tags": [
+        "split-federated-learning",
+        "model-offloading",
+        "edge-computing",
+        "data-leakage-risk",
+        "decentralized-optimization"
+      ],
+      "quality": "full"
+    },
+    "Determination and Computation of Behavioral Compatibility for Web Services": {
+      "title": "Web服务行为兼容性的判定与计算",
+      "year": 2007,
+      "venue": "软件学报",
+      "doi": null,
+      "key_insight": "用π演算文本式表达替代图形化状态机,可避免状态空间爆炸,同时支持兼容度定量计算",
+      "method_signature": "ServiceView2Process算法+π演算操作语义+Expansion Law扩展规则",
+      "tags": [
+        "π-calculus",
+        "service-behavior-compatibility",
+        "web-service-composition",
+        "formal-methods-verification",
+        "dynamic-service-replacement"
+      ],
+      "quality": "full"
+    },
+    "Distributed Redundant Placement for Microservice-based Applications at the Edge": {
+      "title": "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+      "year": 2019,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1911.03600",
+      "key_insight": "冗余机制让同一候选服务部署到多个边缘站点，通过多实例访问实现更快的服务响应和高可用性保障。",
+      "method_signature": "SAA-RP框架结合GASS遗传算法求解边缘服务冗余放置问题。",
+      "tags": [
+        "MEC服务放置",
+        "边缘计算冗余",
+        "容器化微服务",
+        "随机优化",
+        "Kubernetes调度"
+      ],
+      "quality": "full"
+    },
+    "DyC-STG_ Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT": {
+      "title": "DyC-STG: Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2509.06483",
+      "key_insight": "图拓扑由控制节点物理状态事件驱动调制+因果注意力约束时域 receptive field",
+      "method_signature": "事件驱动动态图 + 因果增强Transformer的双分支融合架构",
+      "tags": [
+        "IoT数据可信度评估",
+        "动态图神经网络",
+        "因果注意力机制",
+        "智能家居传感器",
+        "事件驱动图拓扑"
+      ],
+      "quality": "full"
+    },
+    "ECC-SNN_ Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks": {
+      "title": "ECC-SNN: Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2505.20835",
+      "key_insight": "用云端大ANN作为oracle通过知识蒸馏指导边缘小SNN，并让边缘通过增量学习自主减少对云的依赖",
+      "method_signature": "ANN-SNN联合训练( logits +特征对齐损失 ) + 熵阈值过滤协作推理 + 自蒸馏增量学习",
+      "tags": [
+        "edge-cloud-collaboration",
+        "spiking-neural-networks",
+        "incremental-learning",
+        "knowledge-distillation",
+        "energy-efficient-inference"
+      ],
+      "quality": "full"
+    },
+    "Edge Intelligence": {
+      "title": "Edge Intelligence: From Theory to Practice",
+      "year": 2023,
+      "venue": "Springer",
+      "doi": "10.1007/978-3-031-22155-2",
+      "key_insight": "边缘计算形成分布式计算连续统系统，需在笛卡尔空间和马尔可夫空间分别建模，AI/ML可在此连续统上优化服务",
+      "method_signature": "7章结构+7套教程实验(TaLs)，从基础到实践逐步推进",
+      "tags": [
+        "edge-computing-continuum",
+        "edge-AI-ML-optimization",
+        "service-lifecycle-management",
+        "computation-offloading",
+        "kubernetes-orchestration"
+      ],
+      "quality": "partial"
+    },
+    "Edge Intelligence with Spiking Neural Networks": {
+      "title": "Edge Intelligence with Spiking Neural Networks",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2507.14069",
+      "key_insight": "SNN通过模拟生物神经元动力学，以事件驱动计算替代昂贵的MAC操作，可成为边缘智能的低功耗替代方案",
+      "method_signature": "首个EdgeSNN综合调研，系统梳理神经元模型、学习算法、硬件平台及部署挑战",
+      "tags": [
+        "spiking-neural-network",
+        "edge-intelligence",
+        "brain-inspired-computing",
+        "neuromorphic-hardware",
+        "on-device-inference"
+      ],
+      "quality": "partial"
+    },
+    "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence": {
+      "title": "Edge Intelligence: The Confluence of Edge Computing and Artificial Intelligence",
+      "year": 2020,
+      "venue": "IEEE Internet of Things Journal",
+      "doi": "10.1109/jiot.2020.2984887",
+      "key_insight": "提出双向分类框架，用层级结构统一边缘计算与AI的交叉研究方向",
+      "method_signature": "分层架构：底部QoE驱动，左侧IEC三层(Topology/Content/Service)，右侧AIE三层(Model Adaptation/Framework/Processor)",
+      "tags": [
+        "edge intelligence taxonomy",
+        "computation offloading",
+        "federated learning",
+        "model compression",
+        "quality of experience optimization"
+      ],
+      "quality": "full"
+    },
+    "Energy-effective artificial internet-of-things application deployment in edge-cloud systems": {
+      "title": "Energy-effective artificial internet-of-things application deployment in edge-cloud systems",
+      "year": 2021,
+      "venue": "Cluster Computing",
+      "doi": "10.1007/s12083-021-01273-5",
+      "key_insight": "利用DAG刻画服务依赖关系,通过MOEA/D在Pareto前沿搜索性能-能耗平衡解",
+      "method_signature": "MOEA/D分解式多目标进化算法,结合遗传算子求解CA3D",
+      "tags": [
+        "AIoT服务部署",
+        "边缘计算多目标优化",
+        "DAG建模",
+        "MOEA/D算法",
+        "能耗-延迟权衡"
+      ],
+      "quality": "full"
+    },
+    "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning": {
+      "title": "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2412.17305",
+      "key_insight": "Separate intra-client label calibration for majority/minority imbalance from inter-client knowledge distillation for missing labels; global model as teacher preserves correct optimization direction",
+      "method_signature": "FedLEC: calibrated cross-entropy Lc balances intra-client label learning; KL-divergence distillation loss Ld transfers global distribution for missing labels; ATT aggregation across time steps",
+      "tags": [
+        "federated-learning",
+        "spiking-neural-networks",
+        "label-skew",
+        "knowledge-distillation",
+        "non-iid-data",
+        "edge-computing",
+        "gradient-bias"
+      ],
+      "quality": "full"
+    },
+    "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration": {
+      "title": "ExploraCoder: Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration",
+      "year": 2025,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2025.acl-long.887",
+      "key_insight": "人类探索式编程启发:将复杂问题分解为子任务,通过迭代实验积累API使用经验",
+      "method_signature": "训练无关框架,通过子任务规划和API链式探索实现未见API调用",
+      "tags": [
+        "LLM-code-generation",
+        "unseen-API-invocation",
+        "chain-of-exploration",
+        "exploratory-programming",
+        "API-hallucination-mitigation"
+      ],
+      "quality": "full"
+    },
+    "Exploring Parameter-Efficient Fine-Tuning of Large Language Model on Automated Program Repair": {
+      "title": "Exploring Parameter-Efficient Fine-Tuning of Large Language Model on Automated Program Repair",
+      "year": 2024,
+      "venue": "ASE 2024",
+      "doi": "10.48550/arxiv.2406.05639",
+      "key_insight": "IA3 outperforms other PEFT methods by improving LLM creativity rather than just pattern similarity matching",
+      "method_signature": "PEFT (LoRA/prefix-tuning/p-tuning v2/IA3) fine-tuning LLMs on APR-Instruction with test-based patch validation",
+      "tags": [
+        "PEFT-APR-integration",
+        "execution-based-patch-validation",
+        "LLM-creativity-in-program-repair",
+        "parameter-efficient-fine-tuning",
+        "instruction-tuning-for-code-repair"
+      ],
+      "quality": "full"
+    },
+    "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4403573412": {
+      "title": "Federated Data-Efficient Instruction Tuning for Large Language Models",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2410.10926",
+      "key_insight": "Fusing features from all Transformer layers via t-SNE beats last-layer-only; hierarchical intra→inter clustering eliminates inter-client redundancy",
+      "method_signature": "FedHDS: hierarchical data selection via fused multi-layer features + HDBSCAN clustering",
+      "tags": [
+        "federated-learning",
+        "LLM-instruction-tuning",
+        "coreset-selection",
+        "data-efficient-learning",
+        "feature-fusion"
+      ],
+      "quality": "full"
+    },
+    "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4412887984": {
+      "title": "Federated Data-Efficient Instruction Tuning for Large Language Models",
+      "year": 2025,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2025.findings-acl.803",
+      "key_insight": "融合不同Transformer层特征进行聚类,结合层级化选择(先客户端内聚类再服务器端聚类)可在保护隐私同时实现高效数据筛选",
+      "method_signature": "FedHDS: 层级化数据选择,Transformer全层特征融合,HDBSCAN聚类生成coreset进行LoRA微调",
+      "tags": [
+        "federated-learning",
+        "LLM-instruction-tuning",
+        "coreset-selection",
+        "data-efficiency",
+        "privacy-preserving-ml"
+      ],
+      "quality": "full"
+    },
+    "Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes": {
+      "title": "Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes",
+      "year": 2024,
+      "venue": "ICML 2024 (PMLR 235)",
+      "doi": "10.48550/arxiv.2312.06353",
+      "key_insight": "ZOO中每步更新可仅用随机种子+标量梯度两个值表征，从而用种子传输替代模型传输",
+      "method_signature": "FedKSeed用K个有限种子复现ZOO更新，通信仅传K个种子和标量梯度",
+      "tags": [
+        "federated-learning-zeroth-order-optimization",
+        "LLM-full-parameter-fine-tuning",
+        "communication-cost-reduction",
+        "random-seed-sampling",
+        "billion-sized-model"
+      ],
+      "quality": "full"
+    },
+    "Frequency Matching in Spiking Neural Networks for mmWave Sensing": {
+      "title": "Frequency Matching in Spiking Neural Networks for mmWave Sensing",
+      "year": 2026,
+      "venue": "ICML",
+      "doi": null,
+      "key_insight": "LIF dynamics act as implicit low-pass filter; matching effective bandwidth to discriminative spectral content of mmWave signals enables inherent noise suppression",
+      "method_signature": "Frequency-matching criterion for configuring membrane decay factor β by aligning LIF effective bandwidth with discriminative spectrum",
+      "tags": [
+        "mmWave-sensing",
+        "spiking-neural-networks",
+        "frequency-matching",
+        "LIF-neuron-dynamics",
+        "edge-inference-efficiency"
+      ],
+      "quality": "full"
+    },
+    "GEMRec_ A Graph-Based Emotion-Aware Music Recommendation Approach": {
+      "title": "GEMRec: A Graph-Based Emotion-Aware Music Recommendation Approach",
+      "year": 2016,
+      "venue": "Springer LNCS (International Conference)",
+      "doi": "10.1007/978-3-319-48740-3_7",
+      "key_insight": "微博中音乐分享与情感表达的关联可反映用户情感感知音乐偏好,且情感维度是私有效应不应跨用户共享比较",
+      "method_signature": "构建情感感知图(EAG),基于随机游走的关联系传播算法对音乐排序推荐",
+      "tags": [
+        "emotion-aware-recommendation",
+        "music-recommendation",
+        "graph-based-propagation",
+        "random-walk-ranking",
+        "microblog-emotion-mining"
+      ],
+      "quality": "full"
+    },
+    "GPT as Psychologist_ Preliminary Evaluations for GPT-4V on Visual Affective Computing": {
+      "title": "GPT as Psychologist? Preliminary Evaluations for GPT-4V on Visual Affective Computing",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2403.05916",
+      "key_insight": "利用链式推理将表情识别转化为AU识别可提升准确率",
+      "method_signature": "多问题类型(开闭式/判断/选择)+多数据集(DISFA/RAF-DB等)的定性定量混合评估",
+      "tags": [
+        "MLLM评估",
+        "视觉情感计算",
+        "面部动作单元检测",
+        "链式推理prompt",
+        "工具调用自我纠错"
+      ],
+      "quality": "full"
+    },
+    "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion": {
+      "title": "GRACE: Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion",
+      "year": 2026,
+      "venue": "ICSE",
+      "doi": "10.48550/arxiv.2509.05980",
+      "key_insight": "通过图融合机制首次有效利用检索代码与待补全代码之间的结构关联,保留函数调用和继承等依赖关系",
+      "method_signature": "三层代码图构建→混合图检索器→结构化图融合增强→图到文本序列化",
+      "tags": [
+        "LLM代码补全",
+        "代码图检索",
+        "图神经网络RAG",
+        "仓库级代码推理",
+        "结构化上下文融合"
+      ],
+      "quality": "full"
+    },
+    "Genomic insights into the evolution of Echinochloa species as weed and orphan crop": {
+      "title": "Genomic insights into the evolution of Echinochloa species as weed and orphan crop",
+      "year": 2022,
+      "venue": "Nature Communications",
+      "doi": "10.1038/s41467-022-28359-9",
+      "key_insight": "Contrasted NB-ARC disease-gene contraction in Echinochloa vs expansion in wheat reveals fitness-cost-driven adaptation strategy",
+      "method_signature": "DipHiC diploid-assisted polyploid genome scaffolding + population-scale resequencing of 737 accessions",
+      "tags": [
+        "polyploid-genome-assembly",
+        "weed-crop-duality",
+        "herbicide-resistance-genomics",
+        "incomplete-lineage-sorting",
+        "barnyard-millet-domestication"
+      ],
+      "quality": "full"
+    },
+    "Improving Music Recommendation Using Distributed Representation": {
+      "title": "Improving Music Recommendation Using Distributed Representation",
+      "year": null,
+      "venue": null,
+      "doi": "10.1145/2872518.2889399",
+      "key_insight": "相似音乐应有相似上下文,skip-gram可迁移到音乐序列学习",
+      "method_signature": "music2vec(skip-gram)+用户偏好均值+余弦相似度排序",
+      "tags": [
+        "music-recommendation",
+        "distributed-representation",
+        "skip-gram",
+        "collaborative-filtering",
+        "embedding-learning"
+      ],
+      "quality": "full"
+    },
+    "InspectCoder_ Dynamic Analysis-Enabled Self Repair through interactive LLM-Debugger Collaboration": {
+      "title": "InspectCoder: Dynamic Analysis-Enabled Self Repair through Interactive LLM-Debugger Collaboration",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2510.18327",
+      "key_insight": "Dual-agent framework separates Program Inspector for debugger-driven root cause analysis from Patch Coder for grounded patch synthesis",
+      "method_signature": "InspectWare middleware enables stateful LLM-debugger interaction with breakpoints, runtime inspection and reversible state modification",
+      "tags": [
+        "LLM程序修复",
+        "交互式动态分析",
+        "Debugger集成",
+        "双智能体框架",
+        "过程奖励信号"
+      ],
+      "quality": "full"
+    },
+    "LARA_ A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection": {
+      "title": "LARA: A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection",
+      "year": 2024,
+      "venue": "WWW '24",
+      "doi": "10.48550/arxiv.2310.05668",
+      "key_insight": "旧模型是历史数据的抽象，可从中恢复历史数据指导潜向量微调；线性调整函数数学上最优且开销最小",
+      "method_signature": "基于VAE的轻量抗过拟合重训练框架，包含ruminate block恢复历史知识和线性调整函数Mz、Mx",
+      "tags": [
+        "time-series-anomaly-detection",
+        "anti-overfitting-retraining",
+        "convex-optimization",
+        "variational-autoencoder",
+        "lightweight-model-adaptation"
+      ],
+      "quality": "full"
+    },
+    "LSHFed_ Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping": {
+      "title": "LSHFed: Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.2511.01296",
+      "key_insight": "利用LSH将高维梯度不可逆投影为紧凑比特串,通过汉明距离高效识别恶意更新",
+      "method_signature": "LSHGM多超平面投影生成梯度比特串,ScoreQ-Hash角色选举,掩码隐私保护",
+      "tags": [
+        "federated-learning",
+        "locally-sensitive-hashing",
+        "adversarial-robustness",
+        "gradient-privacy",
+        "communication-efficiency"
+      ],
+      "quality": "full"
+    },
+    "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection": {
+      "title": "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2311.16191",
+      "key_insight": "通过样本与服务正常模式的相关性检测异常，而非仅依赖样本自身；利用频域稀疏性选择子集傅里叶基可提升检测性能",
+      "method_signature": "MACE：模式提取机制+双卷积(峰/谷)+上下文感知DFT/IDFT",
+      "tags": [
+        "time-series-anomaly-detection",
+        "frequency-domain-analysis",
+        "multi-pattern-normalities",
+        "cloud-monitoring",
+        "dualistic-convolution"
+      ],
+      "quality": "full"
+    },
+    "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds": {
+      "title": "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2204.04371",
+      "key_insight": "多服务器作业的完成时间主要由实际处理速度决定,与分配的服务器数量线性相关,可通过学习速度分布进行优化",
+      "method_signature": "ESDP结合在线学习框架与动态规划,通过探索-利用学习速度分布,实现多项式时间求解",
+      "tags": [
+        "multi-server-job-scheduling",
+        "online-learning",
+        "processing-speed-fluctuation",
+        "dynamic-programming",
+        "regret-analysis"
+      ],
+      "quality": "full"
+    },
+    "Learning to embed music and metadata for context-aware music recommendation": {
+      "title": "Learning to Embed Music and Metadata for Context-Aware Music Recommendation",
+      "year": 2017,
+      "venue": "World Wide Web",
+      "doi": "10.1007/s11280-017-0521-6",
+      "key_insight": "情境信息可从用户当前播放序列中推断，全局和情境偏好分别对应历史全部记录和最近session",
+      "method_signature": "Music Embedding Model (MEM) 结合滑动窗口局部上下文与用户全局历史学习嵌入",
+      "tags": [
+        "music-embedding",
+        "context-aware-recommendation",
+        "collaborative-filtering",
+        "user-preference-modeling",
+        "sparse-data-handling"
+      ],
+      "quality": "full"
+    },
+    "Learning-Augmented Algorithms for the Bahncard Problem": {
+      "title": "Learning-Augmented Algorithms for the Bahncard Problem",
+      "year": 2024,
+      "venue": "arxiv.org",
+      "doi": "10.48550/arxiv.2410.15257",
+      "key_insight": "需同时用历史T-近期成本和预测T-远期成本两个独立条件来决定购卡，而非简单加总两者",
+      "method_signature": "PFSUM算法在每个常规请求点同时检查过去和预测的成本阈值是否满足γ",
+      "tags": [
+        "学习增强算法",
+        "在线决策优化",
+        "竞争比分析",
+        "机票/铁路票务决策",
+        "预测集成"
+      ],
+      "quality": "full"
+    },
+    "LibRec_ Benchmarking Retrieval-Augmented LLMs for Library Migration Recommendations": {
+      "title": "LibRec: Benchmarking Retrieval-Augmented LLMs for Library Migration Recommendations",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2508.09791",
+      "key_insight": "RAG组件与迁移意图组件协同作用，两者缺一不可；One-shot策略普遍优于CoT",
+      "method_signature": "LLM+RAG检索+迁移意图上下文学习→目标库推荐",
+      "tags": [
+        "RAG增强推荐",
+        "库迁移自动化",
+        "LLM软件工程应用",
+        "上下文学习",
+        "Python依赖管理"
+      ],
+      "quality": "full"
+    },
+    "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead": {
+      "title": "LightRouter: Towards Efficient LLM Collaboration with Minimal Overhead",
+      "year": 2025,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2505.16221",
+      "key_insight": "受Kubernetes启发，先用boot tokens快速探测模型潜力，仅让top-k模型继续生成以控制成本",
+      "method_signature": "两阶段自适应选择：boot tokens初筛+top-k聚合",
+      "tags": [
+        "LLM-routing",
+        "multi-model-ensemble",
+        "cost-efficiency",
+        "adaptive-selection",
+        "token-budgeting"
+      ],
+      "quality": "full"
+    },
+    "MPInspector_ A Systematic and Automatic Approach for Evaluating the Security of IoT Messaging Protocols": {
+      "title": "MPInspector: A Systematic and Automatic Approach for Evaluating the Security of IoT Messaging Protocols",
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2208.08751",
+      "key_insight": "Combining model learning (active learning of state machines) with formal verification (Tamarin Prover) enables systematic, black-box security analysis without needing source code.",
+      "method_signature": "Three-stage pipeline: extract parameter semantics + interaction logic → infer state machine → generate security properties → formal verification",
+      "tags": [
+        "IoT-messaging-protocol-security",
+        "model-learning",
+        "formal-verification-Tamarin",
+        "blackbox-firmware-analysis",
+        "MQTT-CoAP-AMQP-security"
+      ],
+      "quality": "full"
+    },
+    "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey": {
+      "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey",
+      "year": 2024,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2412.20249",
+      "key_insight": "CXL通过硬件缓存一致性统一加速器和处理器内存访问,避免数据搬移开销",
+      "method_signature": "综述CXL从单机到分布式系统的最新研究,按互联类型、研究内容和负载分类",
+      "tags": [
+        "CXL内存扩展",
+        "近存处理",
+        "异构计算统一内存",
+        "内存池化分解",
+        "分布式共享内存"
+      ],
+      "quality": "full"
+    },
+    "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance": {
+      "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2511.01320",
+      "key_insight": "通过正交投影将模态分解为共享与私有分量，防止跨模态信息污染；递归精炼路径锚定原始特征防止信息漂移",
+      "method_signature": "C2F（Contamination-free Cross-modal Fusion）正交分解+代理跨模态注意力+混合门控+递归精炼",
+      "tags": [
+        "multimodal-fusion",
+        "predictive-maintenance",
+        "tool-wear-monitoring",
+        "cross-modal-attention",
+        "service-oriented-arch"
+      ],
+      "quality": "partial"
+    },
+    "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge": {
+      "title": "Placement is not Enough: Embedding with Proactive Stream Mapping on the Heterogenous Edge",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.2012.04158",
+      "key_insight": "Proactive stream mapping and data splitting can significantly reduce makespan even when function placement appears suboptimal.",
+      "method_signature": "Dynamic programming-based embedding (DPE) solving function embedding substructure optimally.",
+      "tags": [
+        "edge-computing-embedding",
+        "stream-mapping",
+        "DAG-scheduling",
+        "heterogeneous-edge",
+        "data-splitting"
+      ],
+      "quality": "partial"
+    },
+    "Reliable Microservice Tail Latency Prediction via Decoupled Dual-Stream Learning and Gradient Modulation": {
+      "title": "Reliable Microservice Tail Latency Prediction via Decoupled Dual-Stream Learning and Gradient Modulation",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2508.01635",
+      "key_insight": "Decouple physical modeling of traffic propagation (GNN) from resource saturation (gMLP) and modulate gradients to prevent one stream from dominating",
+      "method_signature": "Dual-stream GNN+gMLP with hierarchical tensor fusion and reliability-aware gradient modulation (RAGM)",
+      "tags": [
+        "microservice-tail-latency-prediction",
+        "dual-stream-learning",
+        "gradient-modulation-optimization",
+        "graph-neural-network-demand-modeling",
+        "gated-mlp-resource-encoding"
+      ],
+      "quality": "partial"
+    },
+    "Resisting Backdoor Attacks in Federated Learning via Bidirectional Elections and Individual Perspective": {
+      "title": "Resisting Backdoor Attacks in Federated Learning via Bidirectional Elections and Individual Perspective",
+      "year": 2023,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2309.16456",
+      "key_insight": "从全局视角换成个体视角:每个模型投票给最近的模型,多数良性使恶意被淘汰",
+      "method_signature": "Snowball双向选举:自底向上投票+K均值,自顶向下用VAE学差异逐步扩充",
+      "tags": [
+        "federated-learning-backdoor-defense",
+        "individual-perspective",
+        "bidirectional-election",
+        "VAE-anomaly-detection",
+        "non-IID-data-heterogeneity"
+      ],
+      "quality": "full"
+    },
+    "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution": {
+      "title": "Revisiting Vulnerability Patch Localization: An Empirical Study and LLM-Based Solution",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2509.15777",
+      "key_insight": "预训练语义理解优于架构复杂性,搜索空间缩减是性能瓶颈的关键解决路径",
+      "method_signature": "两阶段框架:版本驱动候选过滤 + LLM多轮对话投票",
+      "tags": [
+        "vulnerability-patch-localization",
+        "LLM-security-analysis",
+        "version-range-filtering",
+        "knowledge-driven-detection",
+        "open-source-patch-detection"
+      ],
+      "quality": "full"
+    },
+    "Robustifying Learning-Augmented Caching Efficiently without Compromising 1-Consistency": {
+      "title": "Robustifying Learning-Augmented Caching Efficiently without Compromising 1-Consistency",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2507.16242",
+      "key_insight": "Guard pages only upon detected prediction errors using lightweight phase-based mechanism, avoiding costly recomputation while preserving 1-consistency",
+      "method_signature": "GUARD framework with phase-based error detection and guard mechanism, O(1) per-request overhead",
+      "tags": [
+        "learning-augmented-algorithms",
+        "cache-robustness",
+        "online-algorithms",
+        "prediction-error-detection",
+        "phase-based-mechanism"
+      ],
+      "quality": "full"
+    },
+    "SAFA-SNN_ Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network": {
+      "title": "SAFA-SNN: Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2510.03648",
+      "key_insight": "通过阈值调控将神经元分为稳定和自适应两类，使大多数突触权重自然保持，仅少数更新，从而保留基类知识。",
+      "method_signature": "阈值动态调节+零阶优化+原型正交子空间投影的联合框架",
+      "tags": [
+        "spiking-neural-network",
+        "few-shot-incremental-learning",
+        "on-device-inference",
+        "neuromorphic-hardware",
+        "prototype-subspace-projection"
+      ],
+      "quality": "partial"
+    },
+    "SCAU-Net_ Spatial-Channel Attention U-Net for Gland Segmentation": {
+      "title": "SCAU-Net: Spatial-Channel Attention U-Net for Gland Segmentation",
+      "year": 2020,
+      "venue": "Frontiers in Bioengineering and Biotechnology",
+      "doi": "10.3389/fbioe.2020.00670",
+      "key_insight": "空间注意力和通道注意力可作为即插即用模块嵌入U-Net实现特征重校准",
+      "method_signature": "对称编码器-解码器结构 + 空间注意力模块 + 通道注意力模块",
+      "tags": [
+        "medical-image-segmentation",
+        "gland-segmentation",
+        "attention-mechanism",
+        "U-Net-extension",
+        "encoder-decoder"
+      ],
+      "quality": "full"
+    },
+    "SRMF_ A Data Augmentation and Multimodal Fusion Approach for Long-Tail UHR Satellite Image Segmentation": {
+      "title": "SRMF: A Data Augmentation and Multimodal Fusion Approach for Long-Tail UHR Satellite Image Segmentation",
+      "year": 2025,
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+      "doi": "10.1109/tgrs.2025.3565600",
+      "key_insight": "利用预训练视觉语言模型提取通用文本特征作为特征空间中心，在无单图标注情况下实现多模态融合引导分割",
+      "method_signature": "MARS多尺度锚定区域采样+SRR-TA语义重排序重采样+VLMs文本特征注入的三段式增强框架",
+      "tags": [
+        "UHR卫星图像语义分割",
+        "长尾分布缓解",
+        "多模态视觉语言融合",
+        "SAM实例分割应用",
+        "遥感数据增强"
+      ],
+      "quality": "full"
+    },
+    "Sage Deer_ A Super-Aligned Driving Generalist Is Your Copilot": {
+      "title": "Sage Deer: A Super-Aligned Driving Generalist Is Your Copilot",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2505.10257",
+      "key_insight": "用隐式连续链式思维激活LLM内在推理能力,不依赖显式COT标注即可增强模型泛化与对齐能力",
+      "method_signature": "多视角/多模态tokenizer+可学习RAG+CLCE机制构成超对齐驾驶通用体",
+      "tags": [
+        "driving-cockpit-personalization",
+        "continuous-latent-chain-elicitation",
+        "learnable-RAG",
+        "multi-view-multi-modal-tokenizer",
+        "super-aligned-driving-agent"
+      ],
+      "quality": "full"
+    },
+    "SatFusion_ A Unified Framework for Enhancing Remote Sensing Images via Multi-Frame and Multi-Source Images Fusion": {
+      "title": "SatFusion: A Unified Framework for Enhancing Remote Sensing Images via Multi-Frame and Multi-Source Images Fusion",
+      "year": null,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2510.07905",
+      "key_insight": "Implicit pixel-level alignment via multi-frame redundancy replaces fragile explicit upsampling, breaking both paradigms' bottlenecks simultaneously",
+      "method_signature": "MFIF module aggregates LR MS frames into HR semantic features; MSIF injects PAN textures; SatFusion* adds PAN-guided spatially adaptive Transformer tokens",
+      "tags": [
+        "remote-sensing-image-fusion",
+        "multi-frame-super-resolution",
+        "pansharpening",
+        "implicit-alignment",
+        "pan-guided-attention"
+      ],
+      "quality": "partial"
+    },
+    "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning": {
+      "title": "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning",
+      "year": 2023,
+      "venue": "arXiv preprint (IEEE Transactions format)",
+      "doi": "10.48550/arxiv.2305.06572",
+      "key_insight": "沿奖励梯度上升方向分配资源，通过快速投影技巧实现O(log K)复杂度",
+      "method_signature": "在线梯度上升算法OGASCHED，结合凹收益函数的次线性遗憾上界",
+      "tags": [
+        "multi-server job scheduling",
+        "online gradient ascent",
+        "regret minimization",
+        "concave reward optimization",
+        "communication-computation tradeoff"
+      ],
+      "quality": "partial"
+    },
+    "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples": {
+      "title": "SeMi: When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2501.06004",
+      "key_insight": "通过entropy-based在线挖掘+置信度衰减记忆库+伪标签增强三管齐下,可在低阈值下利用hard examples并保持伪标签可靠性",
+      "method_signature": "OHEML+PLCE(平衡置信衰减记忆库)+解耦分类器的端到端训练",
+      "tags": [
+        "class-imbalanced semi-supervised learning",
+        "hard example mining",
+        "pseudo-label certainty",
+        "memory bank",
+        "tail class performance"
+      ],
+      "quality": "full"
+    },
+    "SegQuant_ A Semantics-Aware and Generalizable Quantization Framework for Diffusion Models": {
+      "title": "SegQuant: A Semantics-Aware and Generalizable Quantization Framework for Diffusion Models",
+      "year": 2025,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2507.14811",
+      "key_insight": "利用静态计算图结构自动识别语义分段模式,对正负激活分别使用双尺度量化,在保留细节的同时保持硬件原生实现",
+      "method_signature": "SegLinear(语义分段量化)+DualScale(双极性量化)+模块化Optimizer/Calibrator接口",
+      "tags": [
+        "diffusion-model-quantization",
+        "static-graph-analysis",
+        "semantic-segmentation",
+        "polarity-preserving-quantization",
+        "compiler-native-deployment"
+      ],
+      "quality": "full"
+    },
+    "Sequence-based context-aware music recommendation": {
+      "title": "Sequence-based context-aware music recommendation",
+      "year": 2017,
+      "venue": "Information Retrieval Journal",
+      "doi": "10.1007/s10791-017-9317-7",
+      "key_insight": "用户的情境偏好反映在当前交互会话中的听歌序列里,而非显式上下文",
+      "method_signature": "music2vec + session-music2vec学习序列嵌入,结合一般与情境偏好做Top-N推荐",
+      "tags": [
+        "music-recommendation",
+        "context-aware",
+        "sequence-embedding",
+        "neural-networks",
+        "collaborative-filtering"
+      ],
+      "quality": "full"
+    },
+    "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention": {
+      "title": "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention",
+      "year": 2021,
+      "venue": "IEEE Transactions on Cybernetics",
+      "doi": "10.1109/tcyb.2021.3077361",
+      "key_insight": "Hawkes过程可在连续时间空间建模事件依赖，注意力可自适应权衡用户的长短期偏好权重",
+      "method_signature": "MHPE-a: 嵌入层+多元Hawkes过程+注意力偏好融合",
+      "tags": [
+        "sequential-recommendation",
+        "multivariate-Hawkes-process",
+        "attention-mechanism",
+        "temporal-point-process",
+        "user-preference-modeling"
+      ],
+      "quality": "full"
+    },
+    "Service Function Chain Placement for Joint Cost and Latency Optimization": {
+      "title": "Service Function Chain Placement for Joint Cost and Latency Optimization",
+      "year": 2020,
+      "venue": "Mobile Networks and Applications",
+      "doi": "10.1007/s11036-020-01661-w",
+      "key_insight": "通过加权函数αC+(1-α)L实现成本与延迟的帕累托权衡,α=0.3达最佳平衡",
+      "method_signature": "MIP多目标规划+蜂群/遗传启发式算法",
+      "tags": [
+        "NFV-SFC放置",
+        "多目标优化",
+        "云边协同部署",
+        "成本延迟权衡",
+        "启发式算法"
+      ],
+      "quality": "full"
+    },
+    "Synergizing Large Language Models and Task-specific Models for Time Series Anomaly Detection": {
+      "title": "Synergizing Large Language Models and Task-specific Models for Time Series Anomaly Detection",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2501.05675",
+      "key_insight": "同一异常分数对LLM和TSADM含义不同,需对齐分布;使用MSE会导致误差累积,需设计新的协作损失函数来保证模型输出的排序性质。",
+      "method_signature": "CoLLaTe框架:对齐模块(使分数分布一致)+条件网络(融合两模型输出)+协作损失函数(避免误差累积的pairwise loss)。",
+      "tags": [
+        "LLM-TSDM协作",
+        "时序异常检测",
+        "分布对齐",
+        "协作损失函数",
+        "误差累积分析"
+      ],
+      "quality": "full"
+    },
+    "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems": {
+      "title": "Tail-Learning: Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2312.16883",
+      "key_insight": "用Laplace变换技术推导出尾延迟概率的上界,该上界对变换参数凸,可作为RL状态的强力表征",
+      "method_signature": "Tail-Learning: tandem queue建模 + Chernoff界推导 + 分层多智能体RL概率调度",
+      "tags": [
+        "edge computing tail latency",
+        "Laplace transform bound",
+        "reinforcement learning scheduling",
+        "tandem queue analysis",
+        "Chernoff bound"
+      ],
+      "quality": "full"
+    },
+    "TenonOS_ A Self-Generating LibOS-on-LibOS Framework for Time-Critical Embedded Operating Systems": {
+      "title": "TenonOS: A Self-Generating LibOS-on-LibOS Framework for Time-Critical Embedded Operating Systems",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2512.00400",
+      "key_insight": "LibOS-on-LibOS架构将hypervisor和OS均分解为细粒度可复用微库,动态编排合成定制化运行时",
+      "method_signature": "Mortise微hypervisor与Tenon实时LibOS双层协同,微库动态组合生成系统",
+      "tags": [
+        "embedded-virtualization",
+        "LibOS",
+        "real-time-operating-system",
+        "hypervisor-microkernel",
+        "mixed-criticality-workloads"
+      ],
+      "quality": "full"
+    },
+    "The Confluence of Blockchain and 6G Network_ Scenarios Analysis and Performance Assessment": {
+      "title": "The Confluence of Blockchain and 6G Network: Scenarios Analysis and Performance Assessment",
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2207.04744",
+      "key_insight": "正确配置的联盟链可满足6G网络性能要求，但需通过泊松分布模型和实验验证各场景的适用性",
+      "method_signature": "七场景抽象+泊松到达率模型+Quorum链多节点实验的性能评估方法论",
+      "tags": [
+        "blockchain-6G-integration",
+        "performance-assessment-methodology",
+        "consortium-blockchain-scalability",
+        "Poisson-transaction-arrival",
+        "read-write-throughput-analysis"
+      ],
+      "quality": "full"
+    },
+    "The Synergy between Data and Multi-Modal Large Language Models_ A Survey from Co-Development Perspective": {
+      "title": "The Synergy between Data and Multi-Modal Large Language Models: A Survey from Co-Development Perspective",
+      "year": 2024,
+      "venue": "arXiv:2407.08583",
+      "doi": "10.48550/arxiv.2407.08583",
+      "key_insight": "数据和模型发展相互交织而非分离,大模型可反哺数据质量形成良性循环",
+      "method_signature": "基于协同发展的新分类法,从数据贡献模型和模型贡献数据双向梳理文献",
+      "tags": [
+        "multimodal LLM",
+        "data-centric AI",
+        "data-model co-development",
+        "instruction tuning",
+        "model-assisted data curation"
+      ],
+      "quality": "full"
+    },
+    "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs": {
+      "title": "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs",
+      "year": 2021,
+      "venue": null,
+      "doi": "10.48550/arxiv.2112.02456",
+      "key_insight": "利用边际成本估计和v/ι比率设计在线调度策略,实现α≥2的竞争比保证",
+      "method_signature": "ONSOCMAX: 基于边际成本估计的α竞争比在线调度算法",
+      "tags": [
+        "online job scheduling",
+        "deadline-aware dispatching",
+        "competitive analysis",
+        "social welfare maximization",
+        "resource mesh model"
+      ],
+      "quality": "full"
+    },
+    "Towards Semantic e-Science for Traditional Chinese Medicine": {
+      "title": "Towards Semantic e-Science for Traditional Chinese Medicine",
+      "year": 2007,
+      "venue": "BMC Bioinformatics",
+      "doi": "10.1186/1471-2105-8-s3-s6",
+      "key_insight": "用LAV方法将关系数据库定义为对本体的视图，新数据库加入时无需修改中介模式，实现可扩展的语义集成",
+      "method_signature": "三层语义架构：资源层→语义层(本体+映射)→功能层(语义查询/搜索/工作流)，用Dart工具链实施",
+      "tags": [
+        "TCM-ontology-integration",
+        "semantic-database-mapping",
+        "service-workflow-composition",
+        "knowledge-discovery-TCM",
+        "e-Science-infrastructure"
+      ],
+      "quality": "full"
+    },
+    "Trust-based Service Recommendation in Social Network": {
+      "title": "Trust-based Service Recommendation in Social Network",
+      "year": 2015,
+      "venue": "Applied Mathematics & Information Sciences",
+      "doi": "10.12785/amis/090353",
+      "key_insight": "通过信任网络扩展用户偏好向量，结合自身和信任用户的调用历史解决冷启动问题",
+      "method_signature": "基于信任网络的服务推荐：构建用户特征向量→计算相似度→计算候选服务排名→Top-K推荐",
+      "tags": [
+        "social-network-recommendation",
+        "trust-relationship",
+        "cold-start-problem",
+        "collaborative-filtering",
+        "user-preference-modeling"
+      ],
+      "quality": "full"
+    },
+    "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding": {
+      "title": "Video-QTR: Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2512.09354",
+      "key_insight": "显著性不等于相关性，视觉突出区域未必与查询意图相关，应由查询语义意图动态引导感知",
+      "method_signature": "四组件协同迭代框架：RTP+感知模块+TCR时序一致性精修+时序记忆",
+      "tags": [
+        "query-driven-video-understanding",
+        "temporal-reasoning",
+        "lightweight-video-understanding",
+        "LLM-agent-planning",
+        "adaptive-perception",
+        "long-video-comprehension"
+      ],
+      "quality": "full"
+    },
+    "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation": {
+      "title": "Walking the Schrödinger Bridge: A Direct Trajectory for Text-to-3D Generation",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2511.05609",
+      "key_insight": "SDS is mathematically equivalent to Schrödinger Bridge under Gaussian noise endpoint condition, enabling principled trajectory design",
+      "method_signature": "TraCe constructs diffusion bridge from current rendering to predicted target, trains LoRA to learn bridge score dynamics",
+      "tags": [
+        "text-to-3D-generation",
+        "Schrödinger-Bridge",
+        "score-distillation-sampling",
+        "3D-Gaussian-Splatting",
+        "diffusion-bridge"
+      ],
+      "quality": "full"
+    },
+    "XFMNet_ Decoding Cross-Site and Nonstationary Water Patterns via Stepwise Multimodal Fusion for Long-Term Water Quality Forecasting": {
+      "title": "XFMNet: Decoding Cross-Site and Nonstationary Water Patterns via Stepwise Multimodal Fusion for Long-Term Water Quality Forecasting",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2508.08279",
+      "key_insight": "Stepwise progressive-recursive fusion with explicit trend-cycle decomposition disentangles multi-scale periodicity and preserves site-specific ecological context from imagery.",
+      "method_signature": "Multiscale aligned downsampling → LocTrend trend-cycle decomposition → XGateFusion progressive cross-attention → recursive refinement → multi-scale aggregation",
+      "tags": [
+        "water-quality-forecasting",
+        "multimodal-time-series-fusion",
+        "remote-sensing-integration",
+        "trend-cycle-decomposition",
+        "spatially-distributed-prediction"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "music-recommendation": [
+      "CAME_ Content- and Context-Aware Music Embedding for Recommendation",
+      "GEMRec_ A Graph-Based Emotion-Aware Music Recommendation Approach",
+      "Improving Music Recommendation Using Distributed Representation",
+      "Sequence-based context-aware music recommendation"
+    ],
+    "federated-learning": [
+      "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning",
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4403573412",
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4412887984",
+      "LSHFed_ Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping"
+    ],
+    "collaborative-filtering": [
+      "Improving Music Recommendation Using Distributed Representation",
+      "Learning to embed music and metadata for context-aware music recommendation",
+      "Sequence-based context-aware music recommendation",
+      "Trust-based Service Recommendation in Social Network"
+    ],
+    "attention-mechanism": [
+      "CAME_ Content- and Context-Aware Music Embedding for Recommendation",
+      "SCAU-Net_ Spatial-Channel Attention U-Net for Gland Segmentation",
+      "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention"
+    ],
+    "time-series-anomaly-detection": [
+      "Cluster-Wide Task Slowdown Detection in Cloud System",
+      "LARA_ A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection",
+      "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection"
+    ],
+    "spiking-neural-network": [
+      "Darkit_ A User-Friendly Software Toolkit for Spiking Large Language Model",
+      "Edge Intelligence with Spiking Neural Networks",
+      "SAFA-SNN_ Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network"
+    ],
+    "spiking-neural-networks": [
+      "ECC-SNN_ Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks",
+      "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning",
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "user-preference-modeling": [
+      "Learning to embed music and metadata for context-aware music recommendation",
+      "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention",
+      "Trust-based Service Recommendation in Social Network"
+    ],
+    "encoder-decoder": [
+      "A Heavy-Load-Enhanced and Changeable-Periodicity-Perceived Workload Prediction Network",
+      "SCAU-Net_ Spatial-Channel Attention U-Net for Gland Segmentation"
+    ],
+    "parameter-efficient-fine-tuning": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition",
+      "Exploring Parameter-Efficient Fine-Tuning of Large Language Model on Automated Program Repair"
+    ],
+    "service-lifecycle-management": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services",
+      "Edge Intelligence"
+    ],
+    "brain-inspired-computing": [
+      "Darkit_ A User-Friendly Software Toolkit for Spiking Large Language Model",
+      "Edge Intelligence with Spiking Neural Networks"
+    ],
+    "edge-computing": [
+      "Decentralized Proactive Model Offloading and Resource Allocation for Split and Federated Learning",
+      "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning"
+    ],
+    "knowledge-distillation": [
+      "ECC-SNN_ Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks",
+      "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning"
+    ],
+    "neuromorphic-hardware": [
+      "Edge Intelligence with Spiking Neural Networks",
+      "SAFA-SNN_ Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network"
+    ],
+    "on-device-inference": [
+      "Edge Intelligence with Spiking Neural Networks",
+      "SAFA-SNN_ Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network"
+    ],
+    "LLM-instruction-tuning": [
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4403573412",
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4412887984"
+    ],
+    "coreset-selection": [
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4403573412",
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4412887984"
+    ],
+    "cloud-workload-prediction": [
+      "A Heavy-Load-Enhanced and Changeable-Periodicity-Perceived Workload Prediction Network"
+    ],
+    "periodicity-detection": [
+      "A Heavy-Load-Enhanced and Changeable-Periodicity-Perceived Workload Prediction Network"
+    ],
+    "heavy-load-burst": [
+      "A Heavy-Load-Enhanced and Changeable-Periodicity-Perceived Workload Prediction Network"
+    ],
+    "imbalanced-regression": [
+      "A Heavy-Load-Enhanced and Changeable-Periodicity-Perceived Workload Prediction Network"
+    ],
+    "incomplete-multimodal-learning": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "low-rank-adaptation": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "emotion-recognition": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "modality-combination-aware": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "process-service-abstraction": [
+      "A Secure Process-Service Model"
+    ],
+    "time-constraint-management": [
+      "A Secure Process-Service Model"
+    ],
+    "web-service-security": [
+      "A Secure Process-Service Model"
+    ],
+    "interface-equivalence": [
+      "A Secure Process-Service Model"
+    ],
+    "workflow-encapsulation": [
+      "A Secure Process-Service Model"
+    ],
+    "LLM-based agents": [
+      "Agentic Services Computing"
+    ],
+    "multi-agent systems": [
+      "Agentic Services Computing"
+    ],
+    "service lifecycle governance": [
+      "Agentic Services Computing"
+    ],
+    "agent autonomy and trustworthiness": [
+      "Agentic Services Computing"
+    ],
+    "services computing paradigm shift": [
+      "Agentic Services Computing"
+    ],
+    "BAT-open-source": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "internationalization-effort": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "developer-survey": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "github-empirical-study": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "frontend-preference": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "anthocyanin-C3G": [
+      "Anti-diabetic effect of anthocyanin cyanidin-3-O-glucoside_ data from insulin resistant hepatocyte and diabetic mouse"
+    ],
+    "insulin-resistance": [
+      "Anti-diabetic effect of anthocyanin cyanidin-3-O-glucoside_ data from insulin resistant hepatocyte and diabetic mouse"
+    ],
+    "PTP1B-inhibition": [
+      "Anti-diabetic effect of anthocyanin cyanidin-3-O-glucoside_ data from insulin resistant hepatocyte and diabetic mouse"
+    ],
+    "hepatocyte-glucose-metabolism": [
+      "Anti-diabetic effect of anthocyanin cyanidin-3-O-glucoside_ data from insulin resistant hepatocyte and diabetic mouse"
+    ],
+    "type-2-diabetes-mouse-model": [
+      "Anti-diabetic effect of anthocyanin cyanidin-3-O-glucoside_ data from insulin resistant hepatocyte and diabetic mouse"
+    ],
+    "hybrid-storage-blockchain": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "authenticated-data-structure": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "bitmap-index": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "incremental-search": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "query-verification": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "blockchain-federated-learning": [
+      "BlockDFL_ A Blockchain-based Fully Decentralized Peer-to-Peer Federated Learning Framework"
+    ],
+    "peer-to-peer-FL": [
+      "BlockDFL_ A Blockchain-based Fully Decentralized Peer-to-Peer Federated Learning Framework"
+    ],
+    "poisoning-attack-defense": [
+      "BlockDFL_ A Blockchain-based Fully Decentralized Peer-to-Peer Federated Learning Framework"
+    ],
+    "gradient-compression-privacy": [
+      "BlockDFL_ A Blockchain-based Fully Decentralized Peer-to-Peer Federated Learning Framework"
+    ],
+    "PBFT-consensus": [
+      "BlockDFL_ A Blockchain-based Fully Decentralized Peer-to-Peer Federated Learning Framework"
+    ],
+    "VCG拍卖计算卸载": [
+      "Blockchain-based collaborative edge computing_ efficiency, incentive and trust"
+    ],
+    "区块链边缘协作": [
+      "Blockchain-based collaborative edge computing_ efficiency, incentive and trust"
+    ],
+    "边缘负载均衡": [
+      "Blockchain-based collaborative edge computing_ efficiency, incentive and trust"
+    ],
+    "边缘需求响应": [
+      "Blockchain-based collaborative edge computing_ efficiency, incentive and trust"
+    ],
+    "区块链安全攻击": [
+      "Blockchain-based collaborative edge computing_ efficiency, incentive and trust"
+    ],
+    "out-of-distribution-detection": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "neural-network-calibration": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "feature-space-analysis": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "OOD-robustness": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "post-hoc-detection": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "heterogeneous-information-network": [
+      "CAME_ Content- and Context-Aware Music Embedding for Recommendation"
+    ],
+    "content-context-aware-embedding": [
+      "CAME_ Content- and Context-Aware Music Embedding for Recommendation"
+    ],
+    "CNN-text-embedding": [
+      "CAME_ Content- and Context-Aware Music Embedding for Recommendation"
+    ],
+    "LLM-based-unit-test-generation": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "adaptive-context-selection": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "test-validation-repair": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "code-coverage-evaluation": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "software-testing-automation": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "cloud-native-computing": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services"
+    ],
+    "microservices-architecture": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services"
+    ],
+    "container-orchestration": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services"
+    ],
+    "kubernetes": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services"
+    ],
+    "cloud-operations": [
+      "Cluster-Wide Task Slowdown Detection in Cloud System"
+    ],
+    "transformer-attention-mechanism": [
+      "Cluster-Wide Task Slowdown Detection in Cloud System"
+    ],
+    "optimal-transport": [
+      "Cluster-Wide Task Slowdown Detection in Cloud System"
+    ],
+    "compound-periodicity": [
+      "Cluster-Wide Task Slowdown Detection in Cloud System"
+    ],
+    "code-repository-QA": [
+      "CoReQA_ Uncovering Potentials of Language Models in Code Repository Question Answering"
+    ],
+    "LLM-evaluation-benchmark": [
+      "CoReQA_ Uncovering Potentials of Language Models in Code Repository Question Answering"
+    ],
+    "GitHub-issue-QA-generation": [
+      "CoReQA_ Uncovering Potentials of Language Models in Code Repository Question Answering"
+    ],
+    "LLM-as-a-judge": [
+      "CoReQA_ Uncovering Potentials of Language Models in Code Repository Question Answering"
+    ],
+    "RAG-context-retrieval": [
+      "CoReQA_ Uncovering Potentials of Language Models in Code Repository Question Answering"
+    ],
+    "LLM代码生成评测": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4388747891"
+    ],
+    "execution-based评估": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4388747891"
+    ],
+    "多语言编程评测": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4388747891"
+    ],
+    "代码优化效率度量": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4388747891"
+    ],
+    "benchmark设计": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4388747891"
+    ],
+    "LLM代码评测基准": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    ],
+    "多语言代码生成": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    ],
+    "执行验证评估": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    ],
+    "代码优化评估": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    ],
+    "代码理解评测": [
+      "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    ],
+    "仓库级代码补全": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding"
+    ],
+    "多粒度代码理解": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding"
+    ],
+    "静态分析增强生成": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding"
+    ],
+    "结构感知检索": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding"
+    ],
+    "RAG增强LLM": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding"
+    ],
+    "service-convergence": [
+      "Convergence in Crossover Service"
+    ],
+    "crossover-service": [
+      "Convergence in Crossover Service"
+    ],
+    "multi-dimensional-optimization": [
+      "Convergence in Crossover Service"
+    ],
+    "service-network": [
+      "Convergence in Crossover Service"
+    ],
+    "value-quality-alignment": [
+      "Convergence in Crossover Service"
+    ],
+    "LLM-agent-news-writing": [
+      "CtrlNews_ LLM-based Multi-Agent Controllable News Writing via Knowledge Gravitational Field"
+    ],
+    "knowledge-graph-structured-generation": [
+      "CtrlNews_ LLM-based Multi-Agent Controllable News Writing via Knowledge Gravitational Field"
+    ],
+    "viewpoint-controllability": [
+      "CtrlNews_ LLM-based Multi-Agent Controllable News Writing via Knowledge Gravitational Field"
+    ],
+    "multi-perspective-questioning": [
+      "CtrlNews_ LLM-based Multi-Agent Controllable News Writing via Knowledge Gravitational Field"
+    ],
+    "gravitational-field-analogy": [
+      "CtrlNews_ LLM-based Multi-Agent Controllable News Writing via Knowledge Gravitational Field"
+    ],
+    "DeFi arbitrage": [
+      "Cyclic Arbitrage in Decentralized Exchanges"
+    ],
+    "AMM market making": [
+      "Cyclic Arbitrage in Decentralized Exchanges"
+    ],
+    "Ethereum DEX": [
+      "Cyclic Arbitrage in Decentralized Exchanges"
+    ],
+    "blockchain smart contracts": [
+      "Cyclic Arbitrage in Decentralized Exchanges"
+    ],
+    "arbitrage implementation strategy": [
+      "Cyclic Arbitrage in Decentralized Exchanges"
+    ],
+    "network-slicing": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "primal-dual-online-algorithm": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "posted-price-mechanism": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "privacy-preserving-allocation": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "multi-tenant-resource-slicing": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "software-toolkit": [
+      "Darkit_ A User-Friendly Software Toolkit for Spiking Large Language Model"
+    ],
+    "LLM-inference": [
+      "Darkit_ A User-Friendly Software Toolkit for Spiking Large Language Model"
+    ],
+    "user-interface-design": [
+      "Darkit_ A User-Friendly Software Toolkit for Spiking Large Language Model"
+    ],
+    "data-locality": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "task-assignment": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "distributed-scheduling": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "water-filling-approximation": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "job-completion-time-optimization": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "split-federated-learning": [
+      "Decentralized Proactive Model Offloading and Resource Allocation for Split and Federated Learning"
+    ],
+    "model-offloading": [
+      "Decentralized Proactive Model Offloading and Resource Allocation for Split and Federated Learning"
+    ],
+    "data-leakage-risk": [
+      "Decentralized Proactive Model Offloading and Resource Allocation for Split and Federated Learning"
+    ],
+    "decentralized-optimization": [
+      "Decentralized Proactive Model Offloading and Resource Allocation for Split and Federated Learning"
+    ],
+    "π-calculus": [
+      "Determination and Computation of Behavioral Compatibility for Web Services"
+    ],
+    "service-behavior-compatibility": [
+      "Determination and Computation of Behavioral Compatibility for Web Services"
+    ],
+    "web-service-composition": [
+      "Determination and Computation of Behavioral Compatibility for Web Services"
+    ],
+    "formal-methods-verification": [
+      "Determination and Computation of Behavioral Compatibility for Web Services"
+    ],
+    "dynamic-service-replacement": [
+      "Determination and Computation of Behavioral Compatibility for Web Services"
+    ],
+    "MEC服务放置": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "边缘计算冗余": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "容器化微服务": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "随机优化": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "Kubernetes调度": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "IoT数据可信度评估": [
+      "DyC-STG_ Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT"
+    ],
+    "动态图神经网络": [
+      "DyC-STG_ Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT"
+    ],
+    "因果注意力机制": [
+      "DyC-STG_ Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT"
+    ],
+    "智能家居传感器": [
+      "DyC-STG_ Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT"
+    ],
+    "事件驱动图拓扑": [
+      "DyC-STG_ Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT"
+    ],
+    "edge-cloud-collaboration": [
+      "ECC-SNN_ Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks"
+    ],
+    "incremental-learning": [
+      "ECC-SNN_ Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks"
+    ],
+    "energy-efficient-inference": [
+      "ECC-SNN_ Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks"
+    ],
+    "edge-computing-continuum": [
+      "Edge Intelligence"
+    ],
+    "edge-AI-ML-optimization": [
+      "Edge Intelligence"
+    ],
+    "computation-offloading": [
+      "Edge Intelligence"
+    ],
+    "kubernetes-orchestration": [
+      "Edge Intelligence"
+    ],
+    "edge-intelligence": [
+      "Edge Intelligence with Spiking Neural Networks"
+    ],
+    "edge intelligence taxonomy": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "computation offloading": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "federated learning": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "model compression": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "quality of experience optimization": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "AIoT服务部署": [
+      "Energy-effective artificial internet-of-things application deployment in edge-cloud systems"
+    ],
+    "边缘计算多目标优化": [
+      "Energy-effective artificial internet-of-things application deployment in edge-cloud systems"
+    ],
+    "DAG建模": [
+      "Energy-effective artificial internet-of-things application deployment in edge-cloud systems"
+    ],
+    "MOEA/D算法": [
+      "Energy-effective artificial internet-of-things application deployment in edge-cloud systems"
+    ],
+    "能耗-延迟权衡": [
+      "Energy-effective artificial internet-of-things application deployment in edge-cloud systems"
+    ],
+    "label-skew": [
+      "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning"
+    ],
+    "non-iid-data": [
+      "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning"
+    ],
+    "gradient-bias": [
+      "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning"
+    ],
+    "LLM-code-generation": [
+      "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    ],
+    "unseen-API-invocation": [
+      "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    ],
+    "chain-of-exploration": [
+      "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    ],
+    "exploratory-programming": [
+      "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    ],
+    "API-hallucination-mitigation": [
+      "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    ],
+    "PEFT-APR-integration": [
+      "Exploring Parameter-Efficient Fine-Tuning of Large Language Model on Automated Program Repair"
+    ],
+    "execution-based-patch-validation": [
+      "Exploring Parameter-Efficient Fine-Tuning of Large Language Model on Automated Program Repair"
+    ],
+    "LLM-creativity-in-program-repair": [
+      "Exploring Parameter-Efficient Fine-Tuning of Large Language Model on Automated Program Repair"
+    ],
+    "instruction-tuning-for-code-repair": [
+      "Exploring Parameter-Efficient Fine-Tuning of Large Language Model on Automated Program Repair"
+    ],
+    "data-efficient-learning": [
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4403573412"
+    ],
+    "feature-fusion": [
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4403573412"
+    ],
+    "data-efficiency": [
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4412887984"
+    ],
+    "privacy-preserving-ml": [
+      "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4412887984"
+    ],
+    "federated-learning-zeroth-order-optimization": [
+      "Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes"
+    ],
+    "LLM-full-parameter-fine-tuning": [
+      "Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes"
+    ],
+    "communication-cost-reduction": [
+      "Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes"
+    ],
+    "random-seed-sampling": [
+      "Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes"
+    ],
+    "billion-sized-model": [
+      "Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes"
+    ],
+    "mmWave-sensing": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "frequency-matching": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "LIF-neuron-dynamics": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "edge-inference-efficiency": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "emotion-aware-recommendation": [
+      "GEMRec_ A Graph-Based Emotion-Aware Music Recommendation Approach"
+    ],
+    "graph-based-propagation": [
+      "GEMRec_ A Graph-Based Emotion-Aware Music Recommendation Approach"
+    ],
+    "random-walk-ranking": [
+      "GEMRec_ A Graph-Based Emotion-Aware Music Recommendation Approach"
+    ],
+    "microblog-emotion-mining": [
+      "GEMRec_ A Graph-Based Emotion-Aware Music Recommendation Approach"
+    ],
+    "MLLM评估": [
+      "GPT as Psychologist_ Preliminary Evaluations for GPT-4V on Visual Affective Computing"
+    ],
+    "视觉情感计算": [
+      "GPT as Psychologist_ Preliminary Evaluations for GPT-4V on Visual Affective Computing"
+    ],
+    "面部动作单元检测": [
+      "GPT as Psychologist_ Preliminary Evaluations for GPT-4V on Visual Affective Computing"
+    ],
+    "链式推理prompt": [
+      "GPT as Psychologist_ Preliminary Evaluations for GPT-4V on Visual Affective Computing"
+    ],
+    "工具调用自我纠错": [
+      "GPT as Psychologist_ Preliminary Evaluations for GPT-4V on Visual Affective Computing"
+    ],
+    "LLM代码补全": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "代码图检索": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "图神经网络RAG": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "仓库级代码推理": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "结构化上下文融合": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "polyploid-genome-assembly": [
+      "Genomic insights into the evolution of Echinochloa species as weed and orphan crop"
+    ],
+    "weed-crop-duality": [
+      "Genomic insights into the evolution of Echinochloa species as weed and orphan crop"
+    ],
+    "herbicide-resistance-genomics": [
+      "Genomic insights into the evolution of Echinochloa species as weed and orphan crop"
+    ],
+    "incomplete-lineage-sorting": [
+      "Genomic insights into the evolution of Echinochloa species as weed and orphan crop"
+    ],
+    "barnyard-millet-domestication": [
+      "Genomic insights into the evolution of Echinochloa species as weed and orphan crop"
+    ],
+    "distributed-representation": [
+      "Improving Music Recommendation Using Distributed Representation"
+    ],
+    "skip-gram": [
+      "Improving Music Recommendation Using Distributed Representation"
+    ],
+    "embedding-learning": [
+      "Improving Music Recommendation Using Distributed Representation"
+    ],
+    "LLM程序修复": [
+      "InspectCoder_ Dynamic Analysis-Enabled Self Repair through interactive LLM-Debugger Collaboration"
+    ],
+    "交互式动态分析": [
+      "InspectCoder_ Dynamic Analysis-Enabled Self Repair through interactive LLM-Debugger Collaboration"
+    ],
+    "Debugger集成": [
+      "InspectCoder_ Dynamic Analysis-Enabled Self Repair through interactive LLM-Debugger Collaboration"
+    ],
+    "双智能体框架": [
+      "InspectCoder_ Dynamic Analysis-Enabled Self Repair through interactive LLM-Debugger Collaboration"
+    ],
+    "过程奖励信号": [
+      "InspectCoder_ Dynamic Analysis-Enabled Self Repair through interactive LLM-Debugger Collaboration"
+    ],
+    "anti-overfitting-retraining": [
+      "LARA_ A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection"
+    ],
+    "convex-optimization": [
+      "LARA_ A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection"
+    ],
+    "variational-autoencoder": [
+      "LARA_ A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection"
+    ],
+    "lightweight-model-adaptation": [
+      "LARA_ A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection"
+    ],
+    "locally-sensitive-hashing": [
+      "LSHFed_ Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping"
+    ],
+    "adversarial-robustness": [
+      "LSHFed_ Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping"
+    ],
+    "gradient-privacy": [
+      "LSHFed_ Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping"
+    ],
+    "communication-efficiency": [
+      "LSHFed_ Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping"
+    ],
+    "frequency-domain-analysis": [
+      "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection"
+    ],
+    "multi-pattern-normalities": [
+      "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection"
+    ],
+    "cloud-monitoring": [
+      "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection"
+    ],
+    "dualistic-convolution": [
+      "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection"
+    ],
+    "multi-server-job-scheduling": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "online-learning": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "processing-speed-fluctuation": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "dynamic-programming": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "regret-analysis": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "music-embedding": [
+      "Learning to embed music and metadata for context-aware music recommendation"
+    ],
+    "context-aware-recommendation": [
+      "Learning to embed music and metadata for context-aware music recommendation"
+    ],
+    "sparse-data-handling": [
+      "Learning to embed music and metadata for context-aware music recommendation"
+    ],
+    "学习增强算法": [
+      "Learning-Augmented Algorithms for the Bahncard Problem"
+    ],
+    "在线决策优化": [
+      "Learning-Augmented Algorithms for the Bahncard Problem"
+    ],
+    "竞争比分析": [
+      "Learning-Augmented Algorithms for the Bahncard Problem"
+    ],
+    "机票/铁路票务决策": [
+      "Learning-Augmented Algorithms for the Bahncard Problem"
+    ],
+    "预测集成": [
+      "Learning-Augmented Algorithms for the Bahncard Problem"
+    ],
+    "RAG增强推荐": [
+      "LibRec_ Benchmarking Retrieval-Augmented LLMs for Library Migration Recommendations"
+    ],
+    "库迁移自动化": [
+      "LibRec_ Benchmarking Retrieval-Augmented LLMs for Library Migration Recommendations"
+    ],
+    "LLM软件工程应用": [
+      "LibRec_ Benchmarking Retrieval-Augmented LLMs for Library Migration Recommendations"
+    ],
+    "上下文学习": [
+      "LibRec_ Benchmarking Retrieval-Augmented LLMs for Library Migration Recommendations"
+    ],
+    "Python依赖管理": [
+      "LibRec_ Benchmarking Retrieval-Augmented LLMs for Library Migration Recommendations"
+    ],
+    "LLM-routing": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "multi-model-ensemble": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "cost-efficiency": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "adaptive-selection": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "token-budgeting": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "IoT-messaging-protocol-security": [
+      "MPInspector_ A Systematic and Automatic Approach for Evaluating the Security of IoT Messaging Protocols"
+    ],
+    "model-learning": [
+      "MPInspector_ A Systematic and Automatic Approach for Evaluating the Security of IoT Messaging Protocols"
+    ],
+    "formal-verification-Tamarin": [
+      "MPInspector_ A Systematic and Automatic Approach for Evaluating the Security of IoT Messaging Protocols"
+    ],
+    "blackbox-firmware-analysis": [
+      "MPInspector_ A Systematic and Automatic Approach for Evaluating the Security of IoT Messaging Protocols"
+    ],
+    "MQTT-CoAP-AMQP-security": [
+      "MPInspector_ A Systematic and Automatic Approach for Evaluating the Security of IoT Messaging Protocols"
+    ],
+    "CXL内存扩展": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "近存处理": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "异构计算统一内存": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "内存池化分解": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "分布式共享内存": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "multimodal-fusion": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "predictive-maintenance": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "tool-wear-monitoring": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "cross-modal-attention": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "service-oriented-arch": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "edge-computing-embedding": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "stream-mapping": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "DAG-scheduling": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "heterogeneous-edge": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "data-splitting": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "microservice-tail-latency-prediction": [
+      "Reliable Microservice Tail Latency Prediction via Decoupled Dual-Stream Learning and Gradient Modulation"
+    ],
+    "dual-stream-learning": [
+      "Reliable Microservice Tail Latency Prediction via Decoupled Dual-Stream Learning and Gradient Modulation"
+    ],
+    "gradient-modulation-optimization": [
+      "Reliable Microservice Tail Latency Prediction via Decoupled Dual-Stream Learning and Gradient Modulation"
+    ],
+    "graph-neural-network-demand-modeling": [
+      "Reliable Microservice Tail Latency Prediction via Decoupled Dual-Stream Learning and Gradient Modulation"
+    ],
+    "gated-mlp-resource-encoding": [
+      "Reliable Microservice Tail Latency Prediction via Decoupled Dual-Stream Learning and Gradient Modulation"
+    ],
+    "federated-learning-backdoor-defense": [
+      "Resisting Backdoor Attacks in Federated Learning via Bidirectional Elections and Individual Perspective"
+    ],
+    "individual-perspective": [
+      "Resisting Backdoor Attacks in Federated Learning via Bidirectional Elections and Individual Perspective"
+    ],
+    "bidirectional-election": [
+      "Resisting Backdoor Attacks in Federated Learning via Bidirectional Elections and Individual Perspective"
+    ],
+    "VAE-anomaly-detection": [
+      "Resisting Backdoor Attacks in Federated Learning via Bidirectional Elections and Individual Perspective"
+    ],
+    "non-IID-data-heterogeneity": [
+      "Resisting Backdoor Attacks in Federated Learning via Bidirectional Elections and Individual Perspective"
+    ],
+    "vulnerability-patch-localization": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "LLM-security-analysis": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "version-range-filtering": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "knowledge-driven-detection": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "open-source-patch-detection": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "learning-augmented-algorithms": [
+      "Robustifying Learning-Augmented Caching Efficiently without Compromising 1-Consistency"
+    ],
+    "cache-robustness": [
+      "Robustifying Learning-Augmented Caching Efficiently without Compromising 1-Consistency"
+    ],
+    "online-algorithms": [
+      "Robustifying Learning-Augmented Caching Efficiently without Compromising 1-Consistency"
+    ],
+    "prediction-error-detection": [
+      "Robustifying Learning-Augmented Caching Efficiently without Compromising 1-Consistency"
+    ],
+    "phase-based-mechanism": [
+      "Robustifying Learning-Augmented Caching Efficiently without Compromising 1-Consistency"
+    ],
+    "few-shot-incremental-learning": [
+      "SAFA-SNN_ Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network"
+    ],
+    "prototype-subspace-projection": [
+      "SAFA-SNN_ Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network"
+    ],
+    "medical-image-segmentation": [
+      "SCAU-Net_ Spatial-Channel Attention U-Net for Gland Segmentation"
+    ],
+    "gland-segmentation": [
+      "SCAU-Net_ Spatial-Channel Attention U-Net for Gland Segmentation"
+    ],
+    "U-Net-extension": [
+      "SCAU-Net_ Spatial-Channel Attention U-Net for Gland Segmentation"
+    ],
+    "UHR卫星图像语义分割": [
+      "SRMF_ A Data Augmentation and Multimodal Fusion Approach for Long-Tail UHR Satellite Image Segmentation"
+    ],
+    "长尾分布缓解": [
+      "SRMF_ A Data Augmentation and Multimodal Fusion Approach for Long-Tail UHR Satellite Image Segmentation"
+    ],
+    "多模态视觉语言融合": [
+      "SRMF_ A Data Augmentation and Multimodal Fusion Approach for Long-Tail UHR Satellite Image Segmentation"
+    ],
+    "SAM实例分割应用": [
+      "SRMF_ A Data Augmentation and Multimodal Fusion Approach for Long-Tail UHR Satellite Image Segmentation"
+    ],
+    "遥感数据增强": [
+      "SRMF_ A Data Augmentation and Multimodal Fusion Approach for Long-Tail UHR Satellite Image Segmentation"
+    ],
+    "driving-cockpit-personalization": [
+      "Sage Deer_ A Super-Aligned Driving Generalist Is Your Copilot"
+    ],
+    "continuous-latent-chain-elicitation": [
+      "Sage Deer_ A Super-Aligned Driving Generalist Is Your Copilot"
+    ],
+    "learnable-RAG": [
+      "Sage Deer_ A Super-Aligned Driving Generalist Is Your Copilot"
+    ],
+    "multi-view-multi-modal-tokenizer": [
+      "Sage Deer_ A Super-Aligned Driving Generalist Is Your Copilot"
+    ],
+    "super-aligned-driving-agent": [
+      "Sage Deer_ A Super-Aligned Driving Generalist Is Your Copilot"
+    ],
+    "remote-sensing-image-fusion": [
+      "SatFusion_ A Unified Framework for Enhancing Remote Sensing Images via Multi-Frame and Multi-Source Images Fusion"
+    ],
+    "multi-frame-super-resolution": [
+      "SatFusion_ A Unified Framework for Enhancing Remote Sensing Images via Multi-Frame and Multi-Source Images Fusion"
+    ],
+    "pansharpening": [
+      "SatFusion_ A Unified Framework for Enhancing Remote Sensing Images via Multi-Frame and Multi-Source Images Fusion"
+    ],
+    "implicit-alignment": [
+      "SatFusion_ A Unified Framework for Enhancing Remote Sensing Images via Multi-Frame and Multi-Source Images Fusion"
+    ],
+    "pan-guided-attention": [
+      "SatFusion_ A Unified Framework for Enhancing Remote Sensing Images via Multi-Frame and Multi-Source Images Fusion"
+    ],
+    "multi-server job scheduling": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "online gradient ascent": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "regret minimization": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "concave reward optimization": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "communication-computation tradeoff": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "class-imbalanced semi-supervised learning": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "hard example mining": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "pseudo-label certainty": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "memory bank": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "tail class performance": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "diffusion-model-quantization": [
+      "SegQuant_ A Semantics-Aware and Generalizable Quantization Framework for Diffusion Models"
+    ],
+    "static-graph-analysis": [
+      "SegQuant_ A Semantics-Aware and Generalizable Quantization Framework for Diffusion Models"
+    ],
+    "semantic-segmentation": [
+      "SegQuant_ A Semantics-Aware and Generalizable Quantization Framework for Diffusion Models"
+    ],
+    "polarity-preserving-quantization": [
+      "SegQuant_ A Semantics-Aware and Generalizable Quantization Framework for Diffusion Models"
+    ],
+    "compiler-native-deployment": [
+      "SegQuant_ A Semantics-Aware and Generalizable Quantization Framework for Diffusion Models"
+    ],
+    "context-aware": [
+      "Sequence-based context-aware music recommendation"
+    ],
+    "sequence-embedding": [
+      "Sequence-based context-aware music recommendation"
+    ],
+    "neural-networks": [
+      "Sequence-based context-aware music recommendation"
+    ],
+    "sequential-recommendation": [
+      "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention"
+    ],
+    "multivariate-Hawkes-process": [
+      "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention"
+    ],
+    "temporal-point-process": [
+      "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention"
+    ],
+    "NFV-SFC放置": [
+      "Service Function Chain Placement for Joint Cost and Latency Optimization"
+    ],
+    "多目标优化": [
+      "Service Function Chain Placement for Joint Cost and Latency Optimization"
+    ],
+    "云边协同部署": [
+      "Service Function Chain Placement for Joint Cost and Latency Optimization"
+    ],
+    "成本延迟权衡": [
+      "Service Function Chain Placement for Joint Cost and Latency Optimization"
+    ],
+    "启发式算法": [
+      "Service Function Chain Placement for Joint Cost and Latency Optimization"
+    ],
+    "LLM-TSDM协作": [
+      "Synergizing Large Language Models and Task-specific Models for Time Series Anomaly Detection"
+    ],
+    "时序异常检测": [
+      "Synergizing Large Language Models and Task-specific Models for Time Series Anomaly Detection"
+    ],
+    "分布对齐": [
+      "Synergizing Large Language Models and Task-specific Models for Time Series Anomaly Detection"
+    ],
+    "协作损失函数": [
+      "Synergizing Large Language Models and Task-specific Models for Time Series Anomaly Detection"
+    ],
+    "误差累积分析": [
+      "Synergizing Large Language Models and Task-specific Models for Time Series Anomaly Detection"
+    ],
+    "edge computing tail latency": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "Laplace transform bound": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "reinforcement learning scheduling": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "tandem queue analysis": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "Chernoff bound": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "embedded-virtualization": [
+      "TenonOS_ A Self-Generating LibOS-on-LibOS Framework for Time-Critical Embedded Operating Systems"
+    ],
+    "LibOS": [
+      "TenonOS_ A Self-Generating LibOS-on-LibOS Framework for Time-Critical Embedded Operating Systems"
+    ],
+    "real-time-operating-system": [
+      "TenonOS_ A Self-Generating LibOS-on-LibOS Framework for Time-Critical Embedded Operating Systems"
+    ],
+    "hypervisor-microkernel": [
+      "TenonOS_ A Self-Generating LibOS-on-LibOS Framework for Time-Critical Embedded Operating Systems"
+    ],
+    "mixed-criticality-workloads": [
+      "TenonOS_ A Self-Generating LibOS-on-LibOS Framework for Time-Critical Embedded Operating Systems"
+    ],
+    "blockchain-6G-integration": [
+      "The Confluence of Blockchain and 6G Network_ Scenarios Analysis and Performance Assessment"
+    ],
+    "performance-assessment-methodology": [
+      "The Confluence of Blockchain and 6G Network_ Scenarios Analysis and Performance Assessment"
+    ],
+    "consortium-blockchain-scalability": [
+      "The Confluence of Blockchain and 6G Network_ Scenarios Analysis and Performance Assessment"
+    ],
+    "Poisson-transaction-arrival": [
+      "The Confluence of Blockchain and 6G Network_ Scenarios Analysis and Performance Assessment"
+    ],
+    "read-write-throughput-analysis": [
+      "The Confluence of Blockchain and 6G Network_ Scenarios Analysis and Performance Assessment"
+    ],
+    "multimodal LLM": [
+      "The Synergy between Data and Multi-Modal Large Language Models_ A Survey from Co-Development Perspective"
+    ],
+    "data-centric AI": [
+      "The Synergy between Data and Multi-Modal Large Language Models_ A Survey from Co-Development Perspective"
+    ],
+    "data-model co-development": [
+      "The Synergy between Data and Multi-Modal Large Language Models_ A Survey from Co-Development Perspective"
+    ],
+    "instruction tuning": [
+      "The Synergy between Data and Multi-Modal Large Language Models_ A Survey from Co-Development Perspective"
+    ],
+    "model-assisted data curation": [
+      "The Synergy between Data and Multi-Modal Large Language Models_ A Survey from Co-Development Perspective"
+    ],
+    "online job scheduling": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "deadline-aware dispatching": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "competitive analysis": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "social welfare maximization": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "resource mesh model": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "TCM-ontology-integration": [
+      "Towards Semantic e-Science for Traditional Chinese Medicine"
+    ],
+    "semantic-database-mapping": [
+      "Towards Semantic e-Science for Traditional Chinese Medicine"
+    ],
+    "service-workflow-composition": [
+      "Towards Semantic e-Science for Traditional Chinese Medicine"
+    ],
+    "knowledge-discovery-TCM": [
+      "Towards Semantic e-Science for Traditional Chinese Medicine"
+    ],
+    "e-Science-infrastructure": [
+      "Towards Semantic e-Science for Traditional Chinese Medicine"
+    ],
+    "social-network-recommendation": [
+      "Trust-based Service Recommendation in Social Network"
+    ],
+    "trust-relationship": [
+      "Trust-based Service Recommendation in Social Network"
+    ],
+    "cold-start-problem": [
+      "Trust-based Service Recommendation in Social Network"
+    ],
+    "query-driven-video-understanding": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "temporal-reasoning": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "lightweight-video-understanding": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "LLM-agent-planning": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "adaptive-perception": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "long-video-comprehension": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "text-to-3D-generation": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "Schrödinger-Bridge": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "score-distillation-sampling": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "3D-Gaussian-Splatting": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "diffusion-bridge": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "water-quality-forecasting": [
+      "XFMNet_ Decoding Cross-Site and Nonstationary Water Patterns via Stepwise Multimodal Fusion for Long-Term Water Quality Forecasting"
+    ],
+    "multimodal-time-series-fusion": [
+      "XFMNet_ Decoding Cross-Site and Nonstationary Water Patterns via Stepwise Multimodal Fusion for Long-Term Water Quality Forecasting"
+    ],
+    "remote-sensing-integration": [
+      "XFMNet_ Decoding Cross-Site and Nonstationary Water Patterns via Stepwise Multimodal Fusion for Long-Term Water Quality Forecasting"
+    ],
+    "trend-cycle-decomposition": [
+      "XFMNet_ Decoding Cross-Site and Nonstationary Water Patterns via Stepwise Multimodal Fusion for Long-Term Water Quality Forecasting"
+    ],
+    "spatially-distributed-prediction": [
+      "XFMNet_ Decoding Cross-Site and Nonstationary Water Patterns via Stepwise Multimodal Fusion for Long-Term Water Quality Forecasting"
+    ]
+  }
+}

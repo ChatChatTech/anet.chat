@@ -1,0 +1,35 @@
+{
+  "paper_id": "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction",
+  "doi": "10.1007/s11704-024-3983-6",
+  "title": "E2CNN: entity-type-enriched cascaded neural network for Chinese financial relation extraction",
+  "year": 2024,
+  "venue": "Frontiers of Computer Science",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "Chinese financial knowledge graphs are crucial for anti-fraud but construction is hindered by complex semantics and the overlap triple problem (62.91% entities appear in multiple relations).",
+  "problem_framing": "Define relation extraction in Chinese financial corpus as handling Entity Pair Overlap and Single Entity Overlap, where over 39% of triples exhibit overlap.",
+  "key_insight": "Entity types provide consistency (same-type entities share relation patterns) and exclusion (certain entity-relation combinations are impossible), acting as implicit constraints for relation extraction.",
+  "method_signature": "E2CNN: BERT encoding with [e:type] markers + span-type identification + cascaded subject-then-object extraction per relation.",
+  "evaluation_criteria": "F1/P/R on end-to-end triple extraction (correct entity boundaries + relation type); ablation on type prediction errors.",
+  "negative_result_or_admitted_limitation": "Threshold for object detection fixed at 0.5; authors admit it 'has the potential for optimization' but postpone to future work.",
+  "evidence_for_taste": [
+    "after removing the type information, the proportions of false type and non-entity both increase",
+    "E2CNN outperforms SOTA by 19.7% and 28.69% on F1",
+    "the learned knowledge graph is publicly available on GitHub"
+  ],
+  "thinking_moves": [
+    "把overlap triple问题拆解为subject提取和relation-specific object提取的级联",
+    "从domain-specific数据特性出发发现类型约束（一致性+排斥性）",
+    "通过消融实验量化类型信息的贡献而非仅报告端到端结果"
+  ],
+  "topic_tags": [
+    "Chinese-financial-relation-extraction",
+    "overlap-triple-handling",
+    "entity-type-constraints",
+    "span-based-NER",
+    "knowledge-graph-construction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

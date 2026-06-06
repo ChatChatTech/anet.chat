@@ -1,0 +1,37 @@
+{
+  "paper_id": "Cloud manufacturing platform architecture",
+  "doi": null,
+  "title": "Cloud Manufacturing Platform Architecture",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有网络制造技术在商业模式、技术完整性、资源利用率和知识利用方面存在不足",
+  "problem_framing": "云制造作为服务导向的敏捷制造范式，需要强大平台同时满足资源提供者和消费者需求",
+  "key_insight": "通过物联网、虚拟化、语义Web和高性能计算的融合解决现有网络制造的局限性",
+  "method_signature": "五层平台架构：资源感知层、虚拟资源层、中间件层、应用支撑层、用户界面层",
+  "evaluation_criteria": "关键技术的讨论和架构设计的完整性",
+  "negative_result_or_admitted_limitation": "当前云计算的虚拟化技术只能处理软资源虚拟化，无法解决硬资源（如车床和加工设备）的封装问题",
+  "evidence_for_taste": [
+    "cannot penetrate through the underlying infrastructure especially for the hard-resources",
+    "does not provide incentives for manufacturing service providers",
+    "cannot make full use of knowledge",
+    "cannot meet the need of resources for peak computing"
+  ],
+  "thinking_moves": [
+    "识别现有解决方案的系统性不足，从商业模式和技术完整性两个维度批判",
+    "将云制造问题分解为五个层次，每层对应特定技术挑战",
+    "区分制造资源（what I have）与制造能力（what I can do）的语义差异",
+    "通过组合物联网、虚拟化、语义Web和HPC等已有技术构建新的解决框架"
+  ],
+  "topic_tags": [
+    "cloud manufacturing platform",
+    "virtualization of hard-resources",
+    "manufacturing resource perception",
+    "knowledge-based semantic integration",
+    "layered architecture design"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少年份、发表venue等元数据；DOI为null；未提供具体评估结果或实验数据，属于架构设计类论文而非实证研究"
+}

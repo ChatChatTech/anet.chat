@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2008 - Design of a stabilizing AQM controller for large-delay networks based on internal model control",
+  "doi": null,
+  "title": "Design of a stabilizing AQM controller for large-delay networks based on internal model control",
+  "year": 2007,
+  "venue": "Computer Communications",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有AQM方案在长往返时延网络下出现剧烈队列振荡,导致链路利用率下降和时延抖动。",
+  "problem_framing": "将AQM拥塞控制稳定性问题形式化为带时延的反馈控制系统,关注大时延下的稳定性、鲁棒性和收敛性。",
+  "key_insight": "采用内模控制原理而非Pade近似来处理时延元素,可减少被控对象与模型之间的失配。",
+  "method_signature": "IMC-PID控制器:先用Taylor级数展开处理时延,再推导PID参数(Kc, Ti, Td)。",
+  "evaluation_criteria": "链路利用率、队列长度稳定性、队列偏差、包丢弃概率的动态行为。",
+  "negative_result_or_admitted_limitation": "DC-AQM虽针对大时延问题设计,但其使用的Pade近似导致被控对象与模型严重失配,队列无法收敛到参考值。",
+  "evidence_for_taste": [
+    "existing AQM schemes neglect the impact of large delay",
+    "dramatic oscillations in large delay networks",
+    "large mismatch between plant and model",
+    "controller will always lag behind",
+    "restrict the negative impact on queue stability"
+  ],
+  "thinking_moves": [
+    "从现有方案失效的现象出发,定位到Pade近似的模型失配问题",
+    "用Taylor级数替代Pade近似来处理时延,以减少模型误差",
+    "将IMC设计步骤映射到PID参数整定公式,建立设计指南",
+    "通过仿真对比验证IMC-PID在各类网络拓扑下的稳定性优势"
+  ],
+  "topic_tags": [
+    "AQM拥塞控制",
+    "大时延网络稳定性",
+    "内模控制IMC",
+    "PID控制器参数整定",
+    "TCP/AQM反馈系统"
+  ],
+  "cites_own_work": [
+    "ICC 2007 (extended version)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

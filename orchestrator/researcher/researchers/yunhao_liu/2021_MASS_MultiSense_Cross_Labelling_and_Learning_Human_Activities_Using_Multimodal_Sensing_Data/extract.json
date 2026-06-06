@@ -1,0 +1,38 @@
+{
+  "paper_id": "2021_MASS_MultiSense_Cross_Labelling_and_Learning_Human_Activities_Using_Multimodal_Sensing_Data",
+  "doi": null,
+  "title": "MultiSense: Cross Labelling and Learning Human Activities Using Multimodal Sensing Data",
+  "year": 2021,
+  "venue": "MASS",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "IoT设备产生海量多模态数据但缺乏标注,人工标注耗时费力且某些模态(如无线信号)难以标注",
+  "problem_framing": "将多模态时序数据自动切分为活动片段并跨模态标注,同时实现模型自进化学习未知活动",
+  "key_insight": "利用不同模态间的隐含关联实现跨标注和跨学习,即使单模态模型能力不完整也能通过融合提升准确率",
+  "method_signature": "多尺度DTW片段提议+距离折扣的标签评估+改进D-S理论融合+动静关联对齐",
+  "evaluation_criteria": "跨标注准确率、各单模态模型提升幅度、数据-人匹配准确率",
+  "negative_result_or_admitted_limitation": "Case 4中五模态能力完全不相交,多数投票与改进D-S方法准确率相同,无明显优势",
+  "evidence_for_taste": [
+    "the segment and prediction paradox",
+    "a high-confidence prediction doesn't necessarily mean a high accuracy",
+    "leverage not only motion evidence but also motionless evidence",
+    "strongly conflicting evidences when models have quite different abilities",
+    "In Case 4 the accuracy by majority voting and our method is the same"
+  ],
+  "thinking_moves": [
+    "识别'分段与预测悖论'并命名这一根本性张力",
+    "质疑置信度的可靠性:高置信度不等于高准确率",
+    "反直觉地利用'静止'状态作为跨模态对齐的可靠锚点",
+    "修改D-S证据理论以处理模型能力差异导致的强冲突证据",
+    "承认当模态能力完全不相交时融合方法失效"
+  ],
+  "topic_tags": [
+    "multimodal-activity-recognition",
+    "cross-modal-labelling",
+    "self-evolving-models",
+    "sensor-data-alignment",
+    "evidence-theory-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

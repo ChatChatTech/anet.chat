@@ -1,0 +1,38 @@
+{
+  "paper_id": "Promptware Engineering_ Software Engineering for Prompt-Enabled Systems",
+  "doi": "10.48550/arxiv.2503.02400",
+  "title": "Promptware Engineering: Software Engineering for Prompt-Enabled Systems",
+  "year": 2026,
+  "venue": "ACM Transactions on Software Engineering and Methodology",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "提示词开发仍依赖试错(ad hoc)，无系统方法论支撑",
+  "problem_framing": "将提示词定位为一等公民软件，构建与传统SE对应的全生命周期框架",
+  "key_insight": "自然语言编程+LLM运行时=需重新诠释SE活动(需求/设计/测试等)",
+  "method_signature": "提出promptware engineering路线图，含27个研究机会点",
+  "evaluation_criteria": "框架覆盖度(SE活动完整性)、挑战-机会映射合理性",
+  "negative_result_or_admitted_limitation": "框架未实现或实证验证，实际效果未知",
+  "evidence_for_taste": [
+    "prompt development remains largely ad hoc",
+    "relies heavily on time-consuming trial-and-error",
+    "likely to remain mired in trial-and-error",
+    "move beyond isolated tools or challenge identification"
+  ],
+  "thinking_moves": [
+    "将LLM应用开发重新frame为软件工程问题",
+    "从语言特性(C1-C3)与运行时特性(C4-C10)双维度拆解差异",
+    "借鉴编译器思想提出prompt compilation概念",
+    "将metamorphic testing引入prompt测试以解决oracle problem",
+    "映射现有SE活动到promptware语境下的对应物"
+  ],
+  "topic_tags": [
+    "prompt-engineering-methodology",
+    "LLM-as-runtime-environment",
+    "software-engineering-lifecycle",
+    "prompt-testing-automation",
+    "natural-language-programming"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为路线图式提案，27个研究机会点(O1-O27)均有清晰描述但未经实现验证 | md truncated to head40k+tail20k"
+}

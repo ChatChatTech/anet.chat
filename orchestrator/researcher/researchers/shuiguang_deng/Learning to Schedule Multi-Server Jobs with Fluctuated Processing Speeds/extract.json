@@ -1,0 +1,38 @@
+{
+  "paper_id": "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds",
+  "doi": "10.48550/arxiv.2204.04371",
+  "title": "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有调度算法需要已知处理速度,但生产系统中速度因DVFS等技术而波动且未知,无法直接应用",
+  "problem_framing": "将多服务器作业调度建模为在线随机优化问题,使用 regret 最小化框架在二部图上最大化累计效用",
+  "key_insight": "多服务器作业的完成时间主要由实际处理速度决定,与分配的服务器数量线性相关,可通过学习速度分布进行优化",
+  "method_signature": "ESDP结合在线学习框架与动态规划,通过探索-利用学习速度分布,实现多项式时间求解",
+  "evaluation_criteria": "通过遗憾分析O(ln T)和模拟实验对比基准策略来验证算法性能",
+  "negative_result_or_admitted_limitation": "ESDP的遗憾保证不适用于非线性效用函数的情况,且在大多数情况下才满足相关不等式",
+  "evidence_for_taste": [
+    "most of them require the processing speeds to be knowable",
+    "fulfills one of the key deficiencies of current literature",
+    "in most case, the following inequality should hold",
+    "Although ESDP has a lower regret...its performance guarantee does suitable for the non-linear cases"
+  ],
+  "thinking_moves": [
+    "识别理论与实践的gap:现有算法需已知速度但实际未知",
+    "将随机优化问题re-frame为regret最小化问题",
+    "利用二部图建模服务局部性约束",
+    "通过添加收敛到零的delta序列使NP难问题变为多项式可解",
+    "动态规划递归求解budgeted integer programming"
+  ],
+  "topic_tags": [
+    "multi-server-job-scheduling",
+    "online-learning",
+    "processing-speed-fluctuation",
+    "dynamic-programming",
+    "regret-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Shuiguang Deng是资深作者(标注为Senior Member, IEEE),主要贡献在于指导问题和理论框架设计。第一作者Zhao Hailiang负责具体算法实现。论文方法基于ESCB和AESCB策略进行扩展,解决了处理速度未知情况下的调度问题。 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu and Li - 2007 - Iso-Map Energy-Efficient Contour Mapping in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Iso-Map: Energy-Efficient Contour Mapping in Wireless Sensor Networks",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有聚合方法需所有传感器上报导致流量O(n)，能耗巨大难以扩展",
+  "problem_framing": "如何在仅采样少量等值线节点下重建高质量等值线地图",
+  "key_insight": "等值线总长O(√n)，仅采集等值线节点即可捕捉轮廓而大幅省 traffic",
+  "method_signature": "局部判别等值线节点→邻居回归求梯度→汇聚重建边界",
+  "evaluation_criteria": "制图精度、网络流量KB、节点计算强度",
+  "negative_result_or_admitted_limitation": "稀疏部署时仅有离散iso-positions，无法确定等值线如何穿过这些位置（可能对应多种等值线地图）",
+  "evidence_for_taste": [
+    "cannot further improve the scalability",
+    "the positions of isoline nodes provide only discrete iso-positions",
+    "We cannot deduce how the isolines pass",
+    "The basic idea beyond Iso-Map is comprehensible"
+  ],
+  "thinking_moves": [
+    "先指出聚合方法的根本局限：只要所有节点都上报 traffic 就是 O(n)",
+    "把 contour map 重构 frame 成只需要等值线上的节点信息",
+    "利用等值线总长度与区域边界的几何性质证明 traffic 下界 O(√n)",
+    "用局部线性回归恢复梯度方向来解决稀疏采样的歧义性",
+    "Voronoi 图+边界规则在sink端重建等值线，平滑处理尖角"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network",
+    "contour-mapping",
+    "sparse-sampling",
+    "isoline-detection",
+    "energy-efficient"
+  ],
+  "cites_own_work": [
+    "[6] Li and Liu 2007 (Underground)",
+    "[16] Xue et al. 2006 (INLR)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

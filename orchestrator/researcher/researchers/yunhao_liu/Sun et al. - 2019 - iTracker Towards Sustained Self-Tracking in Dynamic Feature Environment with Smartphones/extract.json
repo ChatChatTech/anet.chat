@@ -1,0 +1,38 @@
+{
+  "paper_id": "Sun et al. - 2019 - iTracker Towards Sustained Self-Tracking in Dynamic Feature Environment with Smartphones",
+  "doi": null,
+  "title": "iTracker: Towards Sustained Self-Tracking in Dynamic Feature Environment with Smartphones",
+  "year": 2019,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有智能手机自追踪方案在快速旋转、特征不清晰、快速移动、动态场景下会丢失追踪",
+  "problem_framing": "将自追踪失败归因于IMU延迟、特征误匹配、帧间跳变、移动特征四类场景",
+  "key_insight": "用IMU短期精确数据与SLAM结果对比检测漂移,通过Parallel-Multi-State Local Recovery自动恢复",
+  "method_signature": "IMU-Orientation Calculator + Monocular-SLAM + EKF融合 + Parallel-Multi-State Local Recovery",
+  "evaluation_criteria": "方向误差、延迟时间、DTW距离、0.7%距离误差占全程比例",
+  "negative_result_or_admitted_limitation": "移动特征是最主要影响因素,存在cold-start问题;漂移从3m降至0.3m仍非零",
+  "evidence_for_taste": [
+    "tracking would be lost in four such common scenarios",
+    "reduce the degree error by 7° and the delay by 22ms",
+    "reduce the distance drift of nearly 3m to 0.3m",
+    "average distance error is within 0.7% over 2000-meter trajectories",
+    "tracking is lost abruptly due to it mainly depends on the camera"
+  ],
+  "thinking_moves": [
+    "从工程异常反推底层物理假设失效",
+    "对四类失败场景逐一诊断根因并模块化应对",
+    "用IMU短期精确性约束视觉SLAM漂移",
+    "将恢复问题转化为状态向量对齐问题"
+  ],
+  "topic_tags": [
+    "smartphone-tracking",
+    "visual-inertial-odometry",
+    "rolling-shutter-compensation",
+    "IMU-SLAM-fusion",
+    "lost-tracking-recovery"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文目录显示为2019年但未找到确切会议名称;角色基于作者顺序第五位推断为co-author;系统架构描述完整但部分算法细节因空间限制省略"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Image Protection for Robust Cropping Localization and Recovery",
+  "doi": "10.48550/arxiv.2206.02405",
+  "title": "Image Protection for Robust Cropping Localization and Recovery",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有图像裁剪检测方案忽视恢复被裁剪内容可揭示恶意裁剪攻击意图，需保护图像以定位并恢复原始内容",
+  "problem_framing": "将图像裁剪定位与恢复形式化为基于INN的可逆图像嵌入与恢复问题，通过嵌入深度表征实现",
+  "key_insight": "使用可逆神经网络使图像保护过程可逆，同时利用特征对齐网络统一不同攻击下的变换域",
+  "method_signature": "CLR-Net: 可逆U-Net生成器+轻量U-Net定位器+特征对齐网络+FG-JPEG模拟器",
+  "evaluation_criteria": "定位用F1分数，恢复用PSNR/SSIM，JPEG质量因子分类准确率",
+  "negative_result_or_admitted_limitation": "outpainting只能产生视觉逼真但不唯一的结果，无法用于需要精确恢复的取证场景",
+  "evidence_for_taste": [
+    "imperceptible perturbations",
+    "hallucinated rather than truthfully recovered",
+    "fidelity rather than feasibility",
+    "exactness of cropped content recovery",
+    "cannot ensure fidelity with reference to the original",
+    "more clustered transformed domain"
+  ],
+  "thinking_moves": [
+    "把图像裁剪恢复问题重新frame为可逆图像嵌入问题",
+    "从攻击者视角思考对抗策略：resize或compress可绕过传统方法",
+    "先证outpainting与CIR的目标差异，再建立方法论边界",
+    "通过特征对齐将不同攻击的解空间映射到聚类域"
+  ],
+  "topic_tags": [
+    "image-cropping-localization",
+    "image-recovery",
+    "invertible-neural-network",
+    "image-protection",
+    "jpeg-compression-simulation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为arXiv预印本，缺少完整投稿会议信息；作者角色根据署名顺序推断"
+}

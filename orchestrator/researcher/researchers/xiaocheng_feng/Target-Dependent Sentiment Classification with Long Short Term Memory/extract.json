@@ -1,0 +1,41 @@
+{
+  "paper_id": "Target-Dependent Sentiment Classification with Long Short Term Memory",
+  "doi": null,
+  "title": "Effective LSTMs for Target-Dependent Sentiment Classification",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "特征工程耗时费力,离散特征难以编码目标-上下文关联性,需要自动学习连续表示",
+  "problem_framing": "将目标相关情感分类建模为文本分类问题,但需捕捉目标词与语境词的语义关联",
+  "key_insight": "在LSTM每个位置的输入中加入目标向量表示,使网络能显式建模目标与各语境词的连接",
+  "method_signature": "TD-LSTM双方向LSTM捕获目标左右上下文,TC-LSTM在输入层拼接目标向量",
+  "evaluation_criteria": "Twitter数据集准确率和Macro-F1,对比SVM/AdaRNN等基线方法",
+  "negative_result_or_admitted_limitation": "注意力增强LSTM反而下降约65%,参数过多小数据集难优化",
+  "evidence_for_taste": [
+    "basic LSTM approach performs worst",
+    "standard LSTM does not perform well",
+    "attention component has a negative impact",
+    "85.4% of the misclassified examples relate to neutral category",
+    "cannot obtain better result with such an attention model"
+  ],
+  "thinking_moves": [
+    "发现基准LSTM对目标依赖任务无效,从工程失败反推模型缺陷",
+    "从人类认知类比:人做任务时会选择相关语境词,提出目标连接机制",
+    "先做TD-LSTM左右双向建模,再升级为TC-LSTM逐层递进",
+    "注意力机制失败后归因于小数据集参数过多难以优化"
+  ],
+  "topic_tags": [
+    "target-dependent-sentiment",
+    "LSTM-neural-composition",
+    "target-context-connection",
+    "attention-mechanism-limitation",
+    "twitter-sentiment-analysis"
+  ],
+  "cites_own_work": [
+    "Tang et al. (2014) learning sentiment-specific word embedding",
+    "Tang et al. (2015) document modeling with gated recurrent"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文未明确标注发表年份和会议,仅从引用文献推断为2015-2016年左右的工作。第一作者为Duyu Tang, Xiaocheng Feng为合作作者。注意力机制实验未出图表具体数值。"
+}

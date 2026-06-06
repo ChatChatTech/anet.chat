@@ -1,0 +1,40 @@
+{
+  "paper_id": "LARA_ A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection",
+  "doi": "10.48550/arxiv.2310.05668",
+  "title": "LARA: A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection",
+  "year": 2024,
+  "venue": "WWW '24",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Web服务正常模式频繁变化导致模型过时，重新训练大模型计算代价高且小样本易过拟合",
+  "problem_framing": "将模型重训练形式化为凸优化问题，确保证唯一最优解避免过拟合且保证O(1/k)收敛率",
+  "key_insight": "旧模型是历史数据的抽象，可从中恢复历史数据指导潜向量微调；线性调整函数数学上最优且开销最小",
+  "method_signature": "基于VAE的轻量抗过拟合重训练框架，包含ruminate block恢复历史知识和线性调整函数Mz、Mx",
+  "evaluation_criteria": "F1分数(精确率/召回率)、时间内存开销、小样本下抗过拟合能力",
+  "negative_result_or_admitted_limitation": "当新分布与旧分布差异很大时，ruminate block恢复的通用知识可能降低准确性",
+  "evidence_for_taste": [
+    "It is interesting that the adjusting formations with the least error are amazingly simple",
+    "According to Occam's razor principle",
+    "the best formations are simple and require little overhead",
+    "the convexity is only related to the adjusting functions without bothering the model structure",
+    "overfitting is caused by the suboptimal-point-trapping",
+    "a unique global optimal point for the convex problem"
+  ],
+  "thinking_moves": [
+    "把模型视为数据的抽象表示来恢复历史知识",
+    "用凸优化理论保证机器学习方法的收敛性和抗过拟合",
+    "先数学证明线性最优再实验验证",
+    "将优化理论(凸性、梯度Lipschitz连续)转化为工程实践好处(O(1/k)收敛、避免局部最优)",
+    "根据奥卡姆剃刀原则选择最简单的满足条件的函数形式"
+  ],
+  "topic_tags": [
+    "time-series-anomaly-detection",
+    "anti-overfitting-retraining",
+    "convex-optimization",
+    "variational-autoencoder",
+    "lightweight-model-adaptation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

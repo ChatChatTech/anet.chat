@@ -1,0 +1,44 @@
+{
+  "paper_id": "Zhang et al. - 2019 - Cloak of Invisibility Privacy-Friendly Photo Capturing and Sharing System",
+  "doi": null,
+  "title": "Cloak Of Invisibility: Privacy-friendly Photo Capturing and Sharing System",
+  "year": 2019,
+  "venue": "IEEE/ACM Transactions",
+  "venue_tier": "strong",
+  "role": "senior",
+  "motivation": "Secretive photographing without consent raises privacy concerns; existing solutions are broad-brush and blunt (banning devices entirely).",
+  "problem_framing": "Three privacy threats (visual, feature, inference) must be addressed; users need to express privacy without visible tags; matching must be accurate, efficient, and privacy-preserving.",
+  "key_insight": "Dimension-order-independent property of vector distance enables encryption-free privacy-preserving matching; graph representation is robust to pose changes.",
+  "method_signature": "Graph-based portrait profiles with voting-based graph matching; scrambled vectors + LSH for privacy-preserving distance computation.",
+  "evaluation_criteria": "Matching accuracy; computation/communication cost vs Paillier encryption (0.5s+1.8s vs 0.01s per pair).",
+  "negative_result_or_admitted_limitation": "Accuracy depends on people detection; same clothes and no face capture still challenging; vulnerable to DoS attacks with fake portrait uploads.",
+  "evidence_for_taste": [
+    "broad-brush and blunt",
+    "cannot be directly applied in this work",
+    "encryption-free",
+    "non-interactive manner",
+    "significantly saved"
+  ],
+  "thinking_moves": [
+    "把 portrait matching 转成 graph matching 问题",
+    "利用 vector distance 的 dimension-order-independent 性质绕过加密",
+    "把计算负载外包到云端同时保证隐私",
+    "先做 node-level 过滤，再做 neighbor-level 投票",
+    "分层解决 visual/feature/inference 三个层面的隐私威胁"
+  ],
+  "topic_tags": [
+    "privacy-preserving-photo-sharing",
+    "graph-matching-portrait",
+    "vector-distance-privacy",
+    "mobile-camera-privacy",
+    "LSH-scrambling"
+  ],
+  "cites_own_work": [
+    "[41] IGaze 2014",
+    "[39] PIC 2015",
+    "[40] POP 2015",
+    "[43] UbiComp 2016"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

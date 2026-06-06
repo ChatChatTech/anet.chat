@@ -1,0 +1,39 @@
+{
+  "paper_id": "Social media data mining and knowledge discovery under wireless network",
+  "doi": "10.1007/s11276-021-02576-4",
+  "title": "Social media data mining and knowledge discovery under wireless network",
+  "year": 2021,
+  "venue": "Wireless Networks",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "社交媒体产生海量数据,挖掘分析可理解用户在线交互并改善系统设计",
+  "problem_framing": "将社交媒体大数据挖掘定位为热点研究领域,综述六篇精选论文成果",
+  "key_insight": "社交媒体数据可连接用户行为与无线网络服务,支撑API推荐等应用",
+  "method_signature": "特刊引言综述六篇论文,不提供原创方法",
+  "evaluation_criteria": "覆盖率、延迟、F1-score、能耗降低幅度等指标",
+  "negative_result_or_admitted_limitation": "KU-LR方法仅在小训练集场景优于基线,大规模数据表现未知",
+  "evidence_for_taste": [
+    "represent the current state of the art",
+    "outperform other methods",
+    "second-level executive latency",
+    "reducing predictive errors",
+    "when the training dataset is small"
+  ],
+  "thinking_moves": [
+    "从工程约束反推协议设计需求",
+    "将对话分类重新框定为关键语句识别问题",
+    "用旅行特征建模时空支付趋势",
+    "以阈值为媒介协调动态节点通信",
+    "协同学习连接用户偏好与API功能"
+  ],
+  "topic_tags": [
+    "VANET广播协议",
+    "关键语句分类",
+    "高速公路支付趋势",
+    "WSN节能调度",
+    "API推荐系统"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "这是特刊引言而非原创研究论文,仅综述六篇已接收论文的方法与结果,无原创实验数据或方法提出。需补充完整PDF以获取更多上下文。"
+}

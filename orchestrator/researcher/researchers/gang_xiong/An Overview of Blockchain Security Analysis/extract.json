@@ -1,0 +1,40 @@
+{
+  "paper_id": "An Overview of Blockchain Security Analysis",
+  "doi": "10.1007/978-981-13-6621-5_5",
+  "title": "An Overview of Blockchain Security Analysis",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "区块链安全研究关注不足，安全事件造成21亿美元损失，技术发展快但安全滞后",
+  "problem_framing": "从应用层到数据层逐层分析区块链安全威胁，分类整理攻击方式和防御方法",
+  "key_insight": "区块链安全依赖多方节点参与，任何单方都无法应对各层攻击，需系统性协作防御",
+  "method_signature": "分层安全分析：自上而下分析应用层、智能合约层、激励层、共识层、网络层、数据层威胁",
+  "evaluation_criteria": "攻击可行性与影响：经济损耗规模、攻击成本收益、防御有效性",
+  "negative_result_or_admitted_limitation": "现有共识机制不完善，难以找到既安全又快速的共识机制；监管沙盒计划遇冷，区块链初创公司不感兴趣",
+  "evidence_for_taste": [
+    "its security is far behind",
+    "the key is everything",
+    "violates the principle of decentralization",
+    "lacks an effective correction mechanism",
+    "cannot rely solely on short-term anomaly transaction monitoring",
+    "suffered a cold spot as soon as it was launched"
+  ],
+  "thinking_moves": [
+    "将复杂系统拆解为层级结构进行系统安全审计",
+    "从真实攻击案例反推漏洞根因（如明文存储key文件导致Mt.Gox破产）",
+    "承认技术局限：不完美的共识机制需持续探索",
+    "质疑去中心化假设：矿池60%算力集中已违背区块链原则",
+    "从监管视角重新分类应用场景：回收箱、暗箱、沙盒"
+  ],
+  "topic_tags": [
+    "blockchain-layer-security",
+    "smart-contract-vulnerabilities",
+    "consensus-attacks",
+    "cryptocurrency-theft",
+    "regulatory-sandbox"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

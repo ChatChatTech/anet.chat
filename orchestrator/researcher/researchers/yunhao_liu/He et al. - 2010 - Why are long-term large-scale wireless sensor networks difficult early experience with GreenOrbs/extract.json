@@ -1,0 +1,39 @@
+{
+  "paper_id": "He et al. - 2010 - Why are long-term large-scale wireless sensor networks difficult early experience with GreenOrbs",
+  "doi": null,
+  "title": "Why Are Long-Term Large-Scale Wireless Sensor Networks Difficult? Early Experience with GreenOrbs",
+  "year": 2009,
+  "venue": "MobiCom 2009 Poster",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有WSN部署均非长期大规模: ExScal仅存活数日, SensorScope最长6个月但仅97节点",
+  "problem_framing": "将WSN长期大规模部署的根本挑战问题化, 通过GreenOrbs早期经验提炼问题",
+  "key_insight": "野外环境使诊断/定位/路由问题质变为长期大规模部署的核心障碍",
+  "method_signature": "GreenOrbs森林传感系统部署经验总结与未来方向讨论",
+  "evaluation_criteria": "节点存活数/数据包量/测距误差/流量分布/丢包归因",
+  "negative_result_or_admitted_limitation": "目前没有universal diagnosis tool, 无法定位和彻底解决问题",
+  "evidence_for_taste": [
+    "by far there is no universal diagnosis tool",
+    "we can only conjecture the causes",
+    "it is in nature difficult to collect all the required information",
+    "only 18% nodes have small ranging errors (<1m)",
+    "5% nodes carry over 80% of the total traffic"
+  ],
+  "thinking_moves": [
+    "从真实部署长期观测数据反推理论假设失效",
+    "将定性工程问题(诊断难)归因于资源约束+通信不可靠的本质矛盾",
+    "用经验数据量化路由流量不均衡(而非提出新协议)"
+  ],
+  "topic_tags": [
+    "WSN-deployment-challenge",
+    "greenorbs-forest-sensing",
+    "WSN-diagnosis",
+    "RSSI-localization-error",
+    "CTP-traffic-imbalance"
+  ],
+  "cites_own_work": [
+    "Canopy Closure Estimates with GreenOrbs (SenSys 2009)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

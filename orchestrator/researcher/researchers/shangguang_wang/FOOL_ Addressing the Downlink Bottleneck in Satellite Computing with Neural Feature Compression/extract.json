@@ -1,0 +1,41 @@
+{
+  "paper_id": "FOOL_ Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression",
+  "doi": "10.48550/arxiv.2403.16677",
+  "title": "FOOL: Addressing the Downlink Bottleneck in Satellite Computing with Neural Feature Compression",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LEO constellations数据量激增,下行带宽不足且连接窗口短暂,现有方案依赖强假设限制实用性",
+  "problem_framing": "在OEC约束下平衡最大化下行数据量、最少假设下游任务、最小化模型风险三个冲突目标",
+  "key_insight": "用浅层特征而非图像重建作失真目标,可保留足够信息供任意下游任务同时获高压缩率",
+  "method_signature": "FOOL神经特征压缩:Profiler+TCR/s度量+并发执行+特征空间重建",
+  "evaluation_criteria": "TCR/s(像素处理×压缩增益)、下游任务精度、图像重建质量(PSNR/MS-SSIM/LPIPS)、CubeSat可行性",
+  "negative_result_or_admitted_limitation": "纯任务导向编码虽可极低码率但失去泛化能力;有损压缩可能丢弃连专家也无法验证的机器可解读信息",
+  "evidence_for_taste": [
+    "predictive loss is significantly worse than noisy input",
+    "may undermine the effectiveness of entire missions",
+    "discern the salient signals may lead to false confidence",
+    "less potential for rate reductions",
+    "less structure and detail are present"
+  ],
+  "thinking_moves": [
+    "把有损压缩的隐式信息丢弃显式化为可测风险",
+    "从互信息递减性质论证浅层特征的必要性",
+    "用信息瓶颈原则解释任务特异压缩的本质",
+    "引入TCR/s把吞吐量与码率压缩解耦为独立维度",
+    "批判性审视SOTAcodec在下游任务上的欺骗性表现"
+  ],
+  "topic_tags": [
+    "orbital-edge-computing",
+    "neural-feature-compression",
+    "downlink-bottleneck",
+    "shallow-variational-bottleneck",
+    "cubeSat-inference"
+  ],
+  "cites_own_work": [
+    "Frankensplit: Efficient neural feature compression with shallow variational bottleneck injection for mobile edge computing (2024)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

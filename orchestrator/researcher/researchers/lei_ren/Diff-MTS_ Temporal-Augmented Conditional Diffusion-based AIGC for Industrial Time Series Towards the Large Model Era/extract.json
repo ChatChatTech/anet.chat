@@ -1,0 +1,38 @@
+{
+  "paper_id": "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era",
+  "doi": "10.48550/arxiv.2407.11501",
+  "title": "Diff-MTS: Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "工业时序数据因采集困难和隐私顾虑严重不足,阻碍智能维护和大模型构建",
+  "problem_framing": "GAN生成工业多变量时序存在训练不稳定、条件一致性差、时序依赖复杂三大挑战",
+  "key_insight": "用扩散模型替代GAN,并通过自适应MMD损失和时序分解重建模块分别解决条件一致性和时序依赖问题",
+  "method_signature": "条件自适应Ada-MMD扩散模型+TDR-UNet时序分解重建U网络",
+  "evaluation_criteria": "多样性(Discriminative Score)、保真度(Fidelity)、实用性(Predictive Score)",
+  "negative_result_or_admitted_limitation": "GAN方法判别分数普遍高于0.94,说明合成时序与真实时序分布差异大,GAN难以生成复杂MTS数据",
+  "evidence_for_taste": [
+    "GAN-based methods generally obtain a discriminative score above 0.94",
+    "In some settings, DiffWave slightly outperforms Diff-MTS",
+    "Diff-MTS w/o Ada-MMD achieves an average predictive score of 21.840",
+    "some unique characteristics of the datasets or specific noise factors",
+    "DiffWave slightly outperforms Diff-MTS, such as FD001 with lengths of 96"
+  ],
+  "thinking_moves": [
+    "从GAN训练不稳定问题倒推扩散模型的稳定性优势",
+    "将时序分解技术(均值池+最大池)引入扩散模型的U-net结构",
+    "用MMD替代分类器实现无分类器条件控制",
+    "通过消融实验逐个验证Ada-MMD和TDR-UNet各组件的贡献"
+  ],
+  "topic_tags": [
+    "industrial-multivariate-time-series-generation",
+    "diffusion-model",
+    "conditional-AIGC",
+    "Ada-MMD",
+    "temporal-decomposition"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

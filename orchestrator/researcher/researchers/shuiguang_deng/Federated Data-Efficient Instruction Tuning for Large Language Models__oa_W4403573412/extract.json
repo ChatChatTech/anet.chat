@@ -1,0 +1,39 @@
+{
+  "paper_id": "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4403573412",
+  "doi": "10.48550/arxiv.2410.10926",
+  "title": "Federated Data-Efficient Instruction Tuning for Large Language Models",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Edge-side FL consumes all local data causing excessive overhead and overfitting; public instruction data pool is near exhaustion",
+  "problem_framing": "Federated data-efficient instruction tuning: select representative data subsets at intra/inter-client levels without raw data sharing",
+  "key_insight": "Fusing features from all Transformer layers via t-SNE beats last-layer-only; hierarchical intra→inter clustering eliminates inter-client redundancy",
+  "method_signature": "FedHDS: hierarchical data selection via fused multi-layer features + HDBSCAN clustering",
+  "evaluation_criteria": "Rouge-L on held-out tasks, training speedup ratio vs full-data FL baselines",
+  "negative_result_or_admitted_limitation": "Global selection (sending all features to server) causes poor accuracy due to suboptimal clustering on large-scale dataset",
+  "evidence_for_taste": [
+    "the last layer is not universally optimal",
+    "global selection may cause poor accuracy",
+    "determining the optimal data ratio requires extensive experimentation",
+    "Coreset-Cent surpasses our approaches on the complex dataset",
+    "FedHDS on training set theoretically has certain disadvantages"
+  ],
+  "thinking_moves": [
+    "从last-layer特征局限性反推需要融合多层特征",
+    "把数据冗余分为intra-client和inter-client两层处理",
+    "通过hierarchical selection避免global clustering的劣效",
+    "用自动确定的数据比例替代manual ratio搜索",
+    "承认 centralized 方法在复杂数据集上仍有优势"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "LLM-instruction-tuning",
+    "coreset-selection",
+    "data-efficient-learning",
+    "feature-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

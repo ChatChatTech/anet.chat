@@ -1,0 +1,37 @@
+{
+  "paper_id": "Zhao et al. - 2019 - CellTradeMap Delineating Trade Areas for Urban Commercial Districts with Cellular Networks",
+  "doi": null,
+  "title": "CellTradeMap: Delineating Trade Areas for Urban Commercial Districts with Cellular Networks",
+  "year": 2019,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "传统贸易区分析依赖问卷或社交媒体数据，存在劳动密集或偏差大的问题",
+  "problem_framing": "利用手机信令数据(MFRs)提取访客来源以量化城市商业区贸易范围",
+  "key_insight": "从噪声大、采样不规则的手机数据中提取鲁棒位置信息用于贸易区建模",
+  "method_signature": "基于手机流量记录的商业区贸易范围提取框架",
+  "evaluation_criteria": "贸易区与领域知识一致且预测准确率高",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "传统贸易区分析受限于小规模",
+    "劳动密集型问卷",
+    "数据偏差严重",
+    "提取鲁棒位置信息",
+    "与领域知识一致"
+  ],
+  "thinking_moves": [
+    "将劳动密集型问卷调查问题转为数据驱动建模",
+    "从噪声大采样不规则的手机数据中逆向提取位置信息",
+    "融合领域知识进行模型验证而非纯精度指标"
+  ],
+  "topic_tags": [
+    "手机信令数据",
+    "城市商业区",
+    "贸易区分析",
+    "访客来源建模",
+    "蜂窝网络定位"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "仅提供摘要，缺少方法细节、实验评估和局限性讨论"
+}

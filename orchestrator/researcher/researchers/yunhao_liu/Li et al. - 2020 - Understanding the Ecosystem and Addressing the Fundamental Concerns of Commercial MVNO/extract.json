@@ -1,0 +1,44 @@
+{
+  "paper_id": "Li et al. - 2020 - Understanding the Ecosystem and Addressing the Fundamental Concerns of Commercial MVNO",
+  "doi": null,
+  "title": "Understanding the Ecosystem and Addressing the Fundamental Concerns of Commercial MVNO",
+  "year": 2020,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "MVNO市场快速增长(2018年$605亿), 但用户担忧计费不准和性能歧视, 生态系统缺乏系统理解",
+  "problem_framing": "从五大维度系统刻画MVNO生态: 架构/客户/性能/经济/与基础运营商的互动, 解决四大痛点",
+  "key_insight": "轻量级MVNO盈利核心在于用户大幅欠用套餐(82.59%月份欠用), 精准预测用量可优化转售策略",
+  "method_signature": "五数据集多源关联测量 + SVR/RBFNN/BPNN统计学习 + Grubbs'异常检测+邻居均值插值",
+  "evaluation_criteria": "用量预测精度93.3%, 利润率提升27.3%, 流失预测精度96.3%召回97.8%, 计费延迟从2分钟降至1秒",
+  "negative_result_or_admitted_limitation": "ARIMA等复杂模型在有限历史数据下严重过拟合不适用, V-Mobile自用均值法仅68.67%精度",
+  "evidence_for_taste": [
+    "such performance degradation is very likely a (man-manipulated) policy-level result rather than a technical necessity",
+    "basic statistical methods can effectively mitigate the errors or biases in machine learning",
+    "customers' monthly data usages and churn dynamics are roughly in line with specific statistical distributions",
+    "operates atop a nation-wide base carrier",
+    "users considerably under-utilize their data plans",
+    "price conscious",
+    "lowest cost per GB",
+    "our approach can be possibly applied"
+  ],
+  "thinking_moves": [
+    "从运营数据反推商业模式可行性的根本假设",
+    "把用户体验的'担忧'翻译成可测量的技术指标",
+    "用统计分布假设指导ML模型的选择和调参",
+    "从单一MVNO案例提炼可泛化的轻量级MVNO操作模式",
+    "通过真实部署验证方案可行性而非仅做离线实验"
+  ],
+  "topic_tags": [
+    "MVNOecosystem-measurement",
+    "data-plan-reselling-optimization",
+    "cellular-billing-latency",
+    "customer-churn-prediction",
+    "time-series-forecasting-MVNO"
+  ],
+  "cites_own_work": [
+    "An in-depth study of commercial MVNO: Measurement and optimization (MobiSys 2019)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation",
+  "doi": "10.48550/arxiv.1712.02250",
+  "title": "Why Do Neural Dialog Systems Generate Short and Meaningless Replies? A Comparison between Dialog and Translation",
+  "year": 2017,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "senior",
+  "motivation": "Neural dialog systems generate useless universal replies like 'I don't know' and 'Me too', degrading real-world conversation systems.",
+  "problem_framing": "Hypothesis: dialog's unaligned conditional distribution (multiple equally plausible replies) causes Seq2Seq deficiency.",
+  "key_insight": "Shuffling translation pairs mimics the unaligned property; this reproduces short/generic reply phenomenon in translation.",
+  "method_signature": "Shuffle translation source-target pairs at varying rates to artificially construct unaligned datasets.",
+  "evaluation_criteria": "BLEU scores, reply length, negative log-probability, entropy, and hidden-state time-step correlation.",
+  "negative_result_or_admitted_limitation": "100% shuffled data shows inconsistent encoder correlation (.99) but decoder only .85; no good explanation provided.",
+  "evidence_for_taste": [
+    "less satisfactory",
+    "less desired in real-world",
+    "one cause of the deficiency",
+    "artificially construct",
+    "shows evidence that the unaligned property could be one reason",
+    "impossible to construct exactly the same scenario",
+    "more suitable to applications where the source and target information is aligned"
+  ],
+  "thinking_moves": [
+    "从现象(通用回复)反推根本假设(分布多峰导致模型学习退化)",
+    "通过数据打乱人工构造目标分布多峰,实现可控实验",
+    "控制单一变量(对齐度)观察性能变化,验证因果假说",
+    "跨任务迁移实验范式(translation→dialog)揭示通用学习困境"
+  ],
+  "topic_tags": [
+    "neural-dialog-generation",
+    "seq2seq-unaligned-problem",
+    "conditional-distribution-multimodality",
+    "universal-reply-collapse",
+    "dialog-translation-comparison"
+  ],
+  "cites_own_work": [
+    "Mou et al., 2016"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Zhi Jin appears as senior author (last position in PKU affiliation group). Venue is arXiv preprint (no formal venue). Both dialog and translation models use identical architectures for fair comparison."
+}

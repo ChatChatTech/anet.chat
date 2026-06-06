@@ -1,0 +1,39 @@
+{
+  "paper_id": "ESA_TKDE_final",
+  "doi": null,
+  "title": "ESA: Privacy-Preserving Data Sharing Framework with Efficient Fuzzy Search and Access Control",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "云端数据共享需在加密条件下支持模糊搜索和细粒度访问控制，但现有方案两者不可兼得",
+  "problem_framing": "如何实现任意布尔语义的多关键词模糊搜索，同时保证精确的访问控制",
+  "key_insight": "利用质数不可整除性，将关键词与属性编码为互倒形式，使内积为整数才匹配",
+  "method_signature": "质数过滤器的双向嵌入索引结构",
+  "evaluation_criteria": "搜索速度(2-86倍提升)和精确度(超95%)",
+  "negative_result_or_admitted_limitation": "LSH直接嵌入ABKS导致精确度下降超70%，不可行",
+  "evidence_for_taste": [
+    "精确度下降超过70%",
+    "LSH处理后缺乏灵活插入结构",
+    "搜索时间至少长3000倍",
+    "Prime Filter虽极低假阳率",
+    "仍可能导致未授权搜索结果"
+  ],
+  "thinking_moves": [
+    "将属性匹配反向frame成交换 containment，利用编码结构同时处理关键词和属性",
+    "利用质数不可整除的数学性质实现语义分离，避免复杂的协议交互",
+    "先设计离链高效搜索，再引入链上ABE访问控制，形成divide-and-conquer验证机制",
+    "承认混合方案中质数过滤器的局限，补充链上索引兜底",
+    "通过实验反证现有ABKS加LSH的方案不可行，确立研究空间"
+  ],
+  "topic_tags": [
+    "searchable-encryption",
+    "fuzzy-multi-keyword-search",
+    "attribute-based-encryption",
+    "prime-number-encoding",
+    "blockchain-data-sharing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文目录名暗示TKDE但正文中未明确标注年份和出版物信息；作者Yunhao Wang与researcher slug yunhao_liu存在差异；方法细节因论文截断需依赖摘要推断 | md truncated to head40k+tail20k"
+}

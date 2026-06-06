@@ -1,0 +1,38 @@
+{
+  "paper_id": "iclr2025_safetylayers_finalversion (2)",
+  "doi": null,
+  "title": "SAFETY LAYERS IN ALIGNED LARGE LANGUAGE MODELS: THE KEY TO LLM SECURITY",
+  "year": 2025,
+  "venue": "ICLR",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "Aligned LLMs suffer security degradation during fine-tuning attacks, even with harmless datasets, posing real-world deployment risks",
+  "problem_framing": "Understanding the parameter-level mechanism by which aligned LLMs distinguish malicious from normal queries, and how to preserve security during fine-tuning",
+  "key_insight": "A small contiguous set of middle layers (safety layers) are responsible for security recognition; freezing these layers during fine-tuning preserves model security",
+  "method_signature": "SPPFT: freeze safety layer gradients during fine-tuning, update only non-safety layer parameters",
+  "evaluation_criteria": "Harmful rate and harmful score on malicious query dataset; AlpacaEval 2.0 for performance; over-rejection count for localization",
+  "negative_result_or_admitted_limitation": "Wei et al.'s discrete neuron freezing strategy did not suffice in preventing security degradation; freezing non-safety layers does not preserve security and may even exacerbate issues",
+  "evidence_for_taste": [
+    "the precise nature and implications of security alignments in LLMs still remain unclear",
+    "underscoring the generalizability of our findings across different aligned LLMs",
+    "Lisa's method does not achieve the same level of security preservation as SPPFT",
+    "Freezing layers other than the safety layers is ineffective in preserving the security",
+    "the strategy of freezing these neurons during finetuning did not suffice"
+  ],
+  "thinking_moves": [
+    "Analyze layer-wise vector differences between normal and malicious query processing to discover where divergence occurs",
+    "Use over-rejection phenomenon as a sensitive indicator for precise safety layer localization",
+    "Combine parameter scaling with over-rejection metrics to identify upper and lower layer boundaries",
+    "Observe that security layer discovery requires showing pre-trained LLMs lack this phenomenon (control experiment)"
+  ],
+  "topic_tags": [
+    "LLM alignment",
+    "fine-tuning security",
+    "layer-wise mechanism analysis",
+    "jailbreak defense",
+    "parameter-efficient fine-tuning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

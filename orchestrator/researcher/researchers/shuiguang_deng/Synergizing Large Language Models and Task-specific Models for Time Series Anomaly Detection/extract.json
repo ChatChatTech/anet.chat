@@ -1,0 +1,42 @@
+{
+  "paper_id": "Synergizing Large Language Models and Task-specific Models for Time Series Anomaly Detection",
+  "doi": "10.48550/arxiv.2501.05675",
+  "title": "Synergizing Large Language Models and Task-specific Models for Time Series Anomaly Detection",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLM擅长读专业文档获取专家知识,但对时序数值波动不敏感;任务模型能学正常模式但缺乏专家知识。两者需要协作。",
+  "problem_framing": "LLM与TSADM协作面临两个挑战:(1)异常分数表达域不对齐(同一分数在不同模型表示不同严重程度),(2)预测误差累积(经典MSE损失会导致误差叠加而非抵消)。",
+  "key_insight": "同一异常分数对LLM和TSADM含义不同,需对齐分布;使用MSE会导致误差累积,需设计新的协作损失函数来保证模型输出的排序性质。",
+  "method_signature": "CoLLaTe框架:对齐模块(使分数分布一致)+条件网络(融合两模型输出)+协作损失函数(避免误差累积的pairwise loss)。",
+  "evaluation_criteria": "F1分数、精确率、召回率,在Mustang、Mackey、Flight1、Flight2数据集上验证,包括跨分布泛化测试。",
+  "negative_result_or_admitted_limitation": "当用MSE作为损失函数时,两个模型的误差要么复合要么折中在高低值之间,无法抵消,导致性能不如单个模型。",
+  "evidence_for_taste": [
+    "error accumulation arising from predictions",
+    "misalignment between expression domains",
+    "the errors from the two models tend to either compound",
+    "reconstruction error as anomaly score",
+    "using MSE as L leads to error accumulation",
+    "mitigate error accumulation",
+    "distributions are aligned",
+    "complementary performance"
+  ],
+  "thinking_moves": [
+    "从人神经系统类比获取灵感:大脑存储专家知识(LLM),外周神经系统处理具体任务(TSADM)",
+    "形式化两个模型协作过程的挑战,将模糊问题转化为可证明的技术问题",
+    "通过理论分析证明MSE损失会导致误差累积下界(Theorem 1)",
+    "从pairwise排序角度设计损失函数,保证输出的排序性质(Property 1,2)",
+    "用KL散度验证对齐效果,通过消融实验验证各模块必要性"
+  ],
+  "topic_tags": [
+    "LLM-TSDM协作",
+    "时序异常检测",
+    "分布对齐",
+    "协作损失函数",
+    "误差累积分析"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Liang et al. - 2019 - Malicious Link Detection in Multi-Hop Wireless Sensor Networks",
+  "doi": null,
+  "title": "Malicious Link Detection in Multi-Hop Wireless Sensor Networks",
+  "year": 2019,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有检测方法要求中间节点参与，带来高开销和资源受限下的不稳定精度",
+  "problem_framing": "将恶意链接检测形式化为仅在基站利用包送达统计量进行的假设检验问题",
+  "key_insight": "利用联合分布而非估计下层丢包率，既能逐链路定位又保证假警率有界",
+  "method_signature": "基于二项分布的逐跳假设检验，仅需基站侧统计量",
+  "evaluation_criteria": "假警率上界(2α)和漏检率随观察窗口增大趋于零",
+  "negative_result_or_admitted_limitation": "若攻击者可破解每跳哈希，基站只能检测错误存在但无法定位恶意链路",
+  "evidence_for_taste": [
+    "estimation error would render the false alarm rate unbounded",
+    "probability that ... is negligible",
+    "mis-detection rate converges to 0 as T→∞",
+    "guaranteed false alarm rate"
+  ],
+  "thinking_moves": [
+    "把检测问题从分布式协同转换为集中式统计",
+    "用联合分布分析替代直接估计未知参数，避免误差传播",
+    "先证明最坏情况界再讨论经验性能",
+    "把包修改和注入统一归约为丢包检测问题"
+  ],
+  "topic_tags": [
+    "WSN安全",
+    "恶意链接检测",
+    "假设检验",
+    "集中式检测",
+    "多跳网络"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

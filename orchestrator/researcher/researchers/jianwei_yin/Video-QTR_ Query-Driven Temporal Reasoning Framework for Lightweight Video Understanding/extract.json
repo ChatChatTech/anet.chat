@@ -1,0 +1,42 @@
+{
+  "paper_id": "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding",
+  "doi": "10.48550/arxiv.2512.09354",
+  "title": "Video-QTR: Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "Dense frame encoding导致长视频MLLM计算代价过高、内存消耗大、可扩展性差",
+  "problem_framing": "将视频理解从exhaustive process-then-reason重构为query-guided reason-then-perceive范式",
+  "key_insight": "Saliency与relevance不同，视觉显著区域未必与查询相关；LLM应控制感知时机与位置",
+  "method_signature": "四组件迭代循环：RTP生成时序计划→Perception选择性获取→TCR时序一致性校验→TM跨迭代图记忆",
+  "evaluation_criteria": "多基准准确率与评分，并关注frame消耗比例衡量效率-效果权衡",
+  "negative_result_or_admitted_limitation": "框架性能受制于底层LLM推理质量，且non-obvious查询存在cold start问题",
+  "evidence_for_taste": [
+    "saliency and relevance are not synonymous",
+    "visually prominent segments may be irrelevant to the query",
+    "reason-then-perceive framework",
+    "bridging the gap between reasoning and temporal understanding",
+    "must a model process the entire visual stream",
+    "adaptive feedback loop between reasoning and perception",
+    "query-driven temporal reasoning paradigm",
+    "causal and temporally coherent"
+  ],
+  "thinking_moves": [
+    "从信息论视角指出visual streams低时序熵与人脑过滤机制的不匹配，反问是否必须处理全部视觉流",
+    "将perception问题重新框定为communication问题——让LLM通过符号推理指导视觉采样时机",
+    "把时序理解挑战表述为bridging symbolic reasoning与continuous time的语义鸿沟问题",
+    "从人类认知的attentional机制汲取灵感，将query意图作为perceptual resource分配的依据",
+    "通过ablation量化验证每组件的必要性，而非仅报告总体性能"
+  ],
+  "topic_tags": [
+    "query-driven-video-understanding",
+    "iterative-reasoning-perception-loop",
+    "temporal-consistency-refinement",
+    "lightweight-multimodal-LLM",
+    "graph-based-temporal-memory"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

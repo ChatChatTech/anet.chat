@@ -1,0 +1,42 @@
+{
+  "paper_id": "Guo et al. - 2022 - Efficient Ambient LoRa Backscatter with On-Off Keying Modulation",
+  "doi": null,
+  "title": "Efficient Ambient LoRa Backscatter with On-Off Keying Modulation",
+  "year": 2022,
+  "venue": "null (extended version from SenSys 2020)",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "工业物联网需要低功耗长距通信，但现有技术存在吞吐-距离权衡，且消耗频谱资源",
+  "problem_framing": "如何在复用环境LoRa信号作为激励的同时，从叠加信号中解码出后向散射数据",
+  "key_insight": "将LoRa啁啾与自身共轭相乘可转为恒定正弦音，从而通过幅度/相位变化检测后向散射信号",
+  "method_signature": "低功耗LoRa包检测电路 + 啁啾共轭变换 + 聚类解码 + 汉明编码+交织",
+  "evaluation_criteria": "数据率39.5–199.4 Kbps，距离50–200 m，相比PLoRa提升10.4–52.4倍",
+  "negative_result_or_admitted_limitation": "Aloba符号需0 dB SNR解码而LoRa符号可至-30 dB，导致通信距离受限；依赖LoRa占空比且无反馈信道",
+  "evidence_for_taste": [
+    "none of them is able to balance the throughput and communication range",
+    "the receiver is unable to differentiate the backscatter signal and carrier signal in frequency domain",
+    "cannot solely rely on the amplitude variation",
+    "the chirp-modulated LoRa signals can be decoded at -30 dB SNR, while the OOK-modulated Aloba signals can be decoded at 0 dB SNR"
+  ],
+  "thinking_moves": [
+    "从现有工作的局限性出发：现有后向散射系统无法同时满足吞吐和距离需求",
+    "将问题从频域分离转为时域分析：利用相位随时间变化特性而非频率偏移",
+    "借用传统RFID思路但改造：若能将LoRa载波转为恒定正弦音则后向散射变化可检测",
+    "通过两步相位对齐消除误报：先消除符号边界跳变，再消除频率缠绕跳变",
+    "用聚类代替单点检测：利用所有样本而非相位跳变点提高鲁棒性"
+  ],
+  "topic_tags": [
+    "LoRa backscatter",
+    "ambient backscatter",
+    "OOK modulation",
+    "self-interference cancellation",
+    "industrial IoT"
+  ],
+  "cites_own_work": [
+    "PLoRa (2018)",
+    "Aloba SenSys (2020)",
+    "Saiyan (2022)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

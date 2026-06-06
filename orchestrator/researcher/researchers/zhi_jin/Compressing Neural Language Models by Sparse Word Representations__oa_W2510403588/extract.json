@@ -1,0 +1,41 @@
+{
+  "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588",
+  "doi": "10.18653/v1/p16-1022",
+  "title": "Compressing Neural Language Models by Sparse Word Representations",
+  "year": 2016,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "神经语言模型参数量大，在移动端或嵌入式系统部署困难；稀有词梯度更新不足导致embedding不准确",
+  "problem_framing": "将稀有词表示为常用词embeddings的稀疏线性组合，使模型参数数量与词表大小解耦",
+  "key_insight": "词典中陌生词由常用词定义——稀有词可仅用4-8个常用词的embedding稀疏组合来表示",
+  "method_signature": "先预训练word2vec得到embeddings，再对稀有词求解稀疏系数优化方程，压缩Embedding和Prediction子网",
+  "evaluation_criteria": "困惑度(perplexity)与内存占用 Reduction(%)",
+  "negative_result_or_admitted_limitation": "当词表大于20k时，LSTM-z,wb的困惑度略高于未压缩模型；压缩会丢失信息",
+  "evidence_for_taste": [
+    "第二因素占主导时压缩LM性能高",
+    "压缩有两个效果：丢失信息，但也使稀有词参数估计更准",
+    "该超参数不敏感",
+    "我们认为拟合损失和稀疏惩罚同等重要",
+    "出乎意料地提升性能"
+  ],
+  "thinking_moves": [
+    "从字典释义规律类比：陌生词=常用词定义→稀有词embedding=常用词稀疏组合",
+    "压缩有两个拮抗效应：信息损失 vs 参数估计精度提升，用实验揭示何时第二个因素占主导",
+    "将ZRegression作为通用机制提出：非压缩专属，可稳定其他NCE训练的神经网络LM",
+    "偏不做压缩通常的trade-off假设：提出压缩后 perplexity 反而改善的反直觉结果"
+  ],
+  "topic_tags": [
+    "neural-language-model-compression",
+    "sparse-word-representation",
+    "vocabulary-size-scalability",
+    "ZRegression-NCE",
+    "rare-word-embedding"
+  ],
+  "cites_own_work": [
+    "Lili Mou, Rui Yan et al. 2015b",
+    "Mou et al. 2015a"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Zhi Jin作为通讯作者负责本论文；文中提到自己的两篇工作被引用；ACL 2016论文"
+}

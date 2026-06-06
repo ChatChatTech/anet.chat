@@ -1,0 +1,39 @@
+{
+  "paper_id": "2020_ICONIP_Entropy Repulsion for Semi-Supervised Learning against Class Mismatch",
+  "doi": null,
+  "title": "Entropy Repulsion for Semi-Supervised Learning against Class Mismatch",
+  "year": 2020,
+  "venue": "ICONIP",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "现有SSL算法在标注数据与无标注数据存在类别不匹配时性能严重下降，实际场景中无标注数据常含不在目标类别中的脏数据",
+  "problem_framing": "将类别不匹配问题定义为D_U中存在不属于K个目标类别的样本，通过限制潜在不匹配样本参与训练来缓解辅助损失最小化的困难",
+  "key_insight": "通过熵排斥损失鼓励已标注样本的输出熵相对低于无标注样本，同时用batch退火机制在训练早期严格过滤高熵样本并随模型准确度提升逐步放宽",
+  "method_signature": "ERCM=熵排斥损失(基于条件熵差)+batch退火(α参数调度)+时序池重载机制,叠加于现有SSL方法的组合损失",
+  "evaluation_criteria": "CIFAR-10/SVHN/Imagenet不同错配率(0%-100%)下测试误差对比, ablation验证各组件贡献",
+  "negative_result_or_admitted_limitation": "在没有类别不匹配情况下,ERCM-SSL方法表现略差于传统SSL方法;传统SSL在晚训练期会被不匹配问题严重伤害",
+  "evidence_for_taste": [
+    "11.3% test error, which is 5.9% lower compared to 17.2%",
+    "performs best among all algorithms",
+    "alleviate the difficulty to minimize the auxiliary loss",
+    "prevent potentially mismatched unlabeled data from participating in the early training",
+    "the performance of Mix gradually approaches and slightly exceeds Mix* as the number of labeled samples increases"
+  ],
+  "thinking_moves": [
+    "从类别不匹配导致辅助损失难以最小化的现象出发,反推需要主动区分哪些无标注样本有害",
+    "用熵作为置信度代理指标,高熵=低置信度=可能是错配样本",
+    "引入渐进式退火机制平衡早期保守过滤与后期充分训练",
+    "将时序信息(记忆池)用于增强对持续高置信度样本的拟合稳定性",
+    "先对每个组件做ablation验证各自贡献,再展示组合后的最优效果"
+  ],
+  "topic_tags": [
+    "semi-supervised-learning",
+    "class-mismatch-handling",
+    "entropy-regularization",
+    "pseudo-label-confidence",
+    "batch-annealing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "paper提供了完整的方法、实验和ablation,但未提供DOI信息"
+}

@@ -195,9 +195,23 @@ class Persona:
     description: str
     persona_md: str = ""
     system_prompt: str = ""
+    # v22: SillyTavern V2 character_book (lorebook). When non-empty, the
+    # agent_tick path will match recent canvas/user text against entry.keys
+    # and append matched entries to the system_prompt for that single call.
+    lorebook: Optional[dict] = None
 
 
-def load_personas(agent_md: str) -> list[Persona]:
+# v22: SillyTavern integration constants
+SILLYTAVERN_URL = os.environ.get("SILLYTAVERN_URL", "").strip()  # e.g. http://sillytavern:8000
+SILLYTAVERN_USER = os.environ.get("SILLYTAVERN_USER", "default-user")
+LOREBOOK_CHAR_BUDGET = int(os.environ.get("LOREBOOK_CHAR_BUDGET", "3000"))
+
+
+def _load_personas_from_files(agent_md: str) -> list[Persona]:
+    """Fallback: read persona definitions from PERSONAS_REGISTRY_PATH and
+    each entry's local .md skill file. This is the v14-v21 behavior; v22
+    keeps it as a safety net for when SILLYTAVERN_URL is unset or
+    unreachable."""
     registry = json.loads(PERSONAS_REGISTRY_PATH.read_text(encoding="utf-8"))
     personas: list[Persona] = []
     for entry in registry:
@@ -218,6 +232,222 @@ def load_personas(agent_md: str) -> list[Persona]:
         p.system_prompt = md.strip() + "\n\n" + agent_md.strip()
         personas.append(p)
     return personas
+
+
+def _load_personas_from_sillytavern(agent_md: str) -> list[Persona] | None:
+    """v22: pull each character + V2 character_book from SillyTavern via
+    its HTTP API. Reuses the registry's slug→color mapping. Returns None
+    on any failure so the caller falls back to file loading.
+
+    Flow per character:
+      GET  /csrf-token            (sets cookie, returns token)
+      POST /api/characters/all    (list)  — for sanity-checking what ST has
+      POST /api/characters/get { avatar_url: "<slug>.png" }   — full data
+    """
+    if not SILLYTAVERN_URL:
+        return None
+    import httpx as _httpx  # local alias to avoid top-of-file changes
+    base = SILLYTAVERN_URL.rstrip("/")
+    try:
+        with _httpx.Client(timeout=15.0) as c:
+            tok = c.get(f"{base}/csrf-token").json()["token"]
+            list_resp = c.post(
+                f"{base}/api/characters/all",
+                headers={"x-csrf-token": tok, "Content-Type": "application/json"},
+                json={},
+            )
+            list_resp.raise_for_status()
+            st_chars = {ch.get("avatar"): ch for ch in list_resp.json()}
+    except Exception as exc:
+        log(f"[ST] failed to list characters at {base}: {exc}")
+        return None
+
+    # Use orchestrator's personas.json as the SOURCE-OF-TRUTH for which
+    # slugs+colors+order anet.chat uses. ST may have extra characters
+    # we don't care about (e.g. Seraphina).
+    registry = json.loads(PERSONAS_REGISTRY_PATH.read_text(encoding="utf-8"))
+    personas: list[Persona] = []
+    with _httpx.Client(timeout=15.0) as c:
+        tok = c.get(f"{base}/csrf-token").json()["token"]
+        for entry in registry:
+            slug = entry["slug"]
+            avatar = f"{slug}.png"
+            if avatar not in st_chars:
+                log(f"[ST] character missing in ST: {avatar} — skipping")
+                continue
+            try:
+                r = c.post(
+                    f"{base}/api/characters/get",
+                    headers={"x-csrf-token": tok, "Content-Type": "application/json"},
+                    json={"avatar_url": avatar},
+                )
+                r.raise_for_status()
+                card = r.json()
+            except Exception as exc:
+                log(f"[ST] fetch failed for {avatar}: {exc} — skipping")
+                continue
+            data = card.get("data") or {}
+            sp = (card.get("system_prompt") or data.get("system_prompt") or "").strip()
+            lb = data.get("character_book") or card.get("character_book")
+            if not sp:
+                log(f"[ST] {avatar} has empty system_prompt — skipping")
+                continue
+            p = Persona(
+                slug=slug,
+                name=entry["name"],
+                color=entry["color"].lower(),
+                skill_path=f"st:{avatar}",
+                description=entry.get("description", ""),
+                persona_md=sp,
+                lorebook=lb,
+            )
+            p.system_prompt = sp + "\n\n" + agent_md.strip()
+            personas.append(p)
+    if not personas:
+        return None
+    n_lore = sum(1 for p in personas if p.lorebook)
+    log(f"[ST] loaded {len(personas)} personas from {base} ({n_lore} with lorebook)")
+    return personas
+
+
+def load_personas(agent_md: str) -> list[Persona]:
+    """v22: try SillyTavern first; fall back to local files. ST URL is
+    set via env SILLYTAVERN_URL. If unset/unreachable, behaves as v21."""
+    if SILLYTAVERN_URL:
+        personas = _load_personas_from_sillytavern(agent_md)
+        if personas:
+            return personas
+        log(f"[ST] empty/failed — falling back to local file loading")
+    return _load_personas_from_files(agent_md)
+
+
+def _persona_aliases(p: "Persona") -> list[str]:
+    """v24: generate fuzzy-match aliases for one persona.
+
+    Examples for p.name = "刘云浩 (Yunhao Liu)":
+      ["刘云浩", "Yunhao Liu", "Liu", "Yunhao", "云浩", "刘老师", "刘教授", "yunhao_liu"]
+
+    For English-only names like "Hailong Sun":
+      ["Hailong Sun", "Hailong", "Sun", "Sun老师", "hailong_sun"]
+    """
+    import re as _re
+    aliases: set[str] = {p.slug}
+    name = (p.name or "").strip()
+    if not name:
+        return list(aliases)
+    # Tokens inside (parens) and outside parens are both useful.
+    cjk_match = _re.search(r"[一-鿿]{2,4}", name)
+    en_match = _re.search(r"[A-Za-z][A-Za-z\s\.\-]+", name.replace("(", " ").replace(")", " "))
+    if cjk_match:
+        full_cn = cjk_match.group(0)
+        aliases.add(full_cn)
+        # Surname (1 char) + 老师 / 教授
+        aliases.add(full_cn[0] + "老师")
+        aliases.add(full_cn[0] + "教授")
+        # Given name (chars after surname)
+        if len(full_cn) >= 2:
+            aliases.add(full_cn[1:])
+    if en_match:
+        en_full = en_match.group(0).strip()
+        aliases.add(en_full)
+        parts = [t for t in en_full.split() if t and len(t) >= 2]
+        for t in parts:
+            aliases.add(t)
+        if parts:
+            aliases.add(parts[-1] + "老师")
+            aliases.add(parts[-1] + "教授")
+    return [a.strip() for a in aliases if a and a.strip()]
+
+
+def detect_at_mention(human_text: str, state: "State") -> Optional[str]:
+    """v24: scan human input for "@<teacher>" and fuzzy-match against the
+    3 currently-active persona slugs. Returns the matched slug or None.
+
+    Match rule: any "@..." token (Chinese chars + ASCII letters/word chars,
+    up to next space or punctuation) is checked against each active
+    persona's alias set (case-insensitive substring both ways). Longest
+    alias match wins; on tie, first active slot order (A → B → C)."""
+    if not human_text:
+        return None
+    import re as _re
+    # Extract candidate strings after "@". Chinese chars + ASCII letters,
+    # optional 老师/教授 suffix.
+    cands = _re.findall(r"@\s*([一-鿿A-Za-z][一-鿿A-Za-z_\.\-]{0,30})", human_text)
+    if not cands:
+        return None
+    active_slugs = [state.active.get(s) for s in ["A", "B", "C"]]
+    active_slugs = [s for s in active_slugs if s]
+    if not active_slugs:
+        return None
+    best: tuple[int, Optional[str]] = (0, None)  # (score, slug)
+    for cand in cands:
+        cand_norm = cand.strip().lower()
+        if not cand_norm:
+            continue
+        for slug in active_slugs:
+            p = state.pool_by_slug.get(slug)
+            if not p:
+                continue
+            for alias in _persona_aliases(p):
+                alias_norm = alias.lower()
+                if not alias_norm:
+                    continue
+                # bidirectional substring match
+                if alias_norm in cand_norm or cand_norm in alias_norm:
+                    score = min(len(alias_norm), len(cand_norm))
+                    if score > best[0]:
+                        best = (score, slug)
+    return best[1]
+
+
+def inject_lorebook(base_system_prompt: str, lorebook: Optional[dict],
+                    scan_text: str, char_budget: int = LOREBOOK_CHAR_BUDGET) -> str:
+    """v22: match scan_text against the persona's lorebook entries and
+    append matched entries' content to the system_prompt for this call.
+
+    - case-insensitive substring matching on entry.keys
+    - matched entries sorted by priority (desc), capped at char_budget
+    - returns the augmented system prompt; if no lorebook or no match,
+      returns base_system_prompt unchanged
+
+    Token cost: lorebook entries are ~1-2KB each; we cap aggregate
+    appended content at LOREBOOK_CHAR_BUDGET chars (~750 tokens) so the
+    cost per turn stays bounded.
+    """
+    if not lorebook:
+        return base_system_prompt
+    entries = lorebook.get("entries") or []
+    if not entries:
+        return base_system_prompt
+    scan_l = (scan_text or "").lower()
+    matched: list[dict] = []
+    for e in entries:
+        if not e.get("enabled", True):
+            continue
+        if e.get("constant"):
+            matched.append(e)
+            continue
+        keys = [k for k in (e.get("keys") or []) if isinstance(k, str) and k.strip()]
+        if any(k.lower() in scan_l for k in keys):
+            matched.append(e)
+    if not matched:
+        return base_system_prompt
+    matched.sort(key=lambda e: -int(e.get("priority", 0) or 0))
+    out_parts: list[str] = []
+    used = 0
+    for e in matched:
+        content = (e.get("content") or "").strip()
+        if not content:
+            continue
+        if used + len(content) > char_budget:
+            break
+        out_parts.append(content)
+        used += len(content)
+    if not out_parts:
+        return base_system_prompt
+    augmentation = "\n\n## RELEVANT REFERENCES (auto-pulled from your corpus)\n" + \
+                   "\n\n".join(out_parts)
+    return base_system_prompt + augmentation
 
 
 # --------------------------------------------------------------------------------------
@@ -241,6 +471,21 @@ class State:
     last_fired: dict[str, float] = field(default_factory=lambda: {"A": 0.0, "B": 0.0, "C": 0.0})
     canvas_write_lock: asyncio.Lock = field(default_factory=asyncio.Lock)
     moderator_lock: asyncio.Lock = field(default_factory=asyncio.Lock)
+    # v21: seminar turn lock — only one agent (or curator/re-moderator)
+    # thinks+writes at a time. The race-queue scheduler picks the next
+    # eligible slot and the inner tick acquires this lock for the whole
+    # LLM-call + canvas-write window. Replaces the fixed cron seconds.
+    seminar_turn_lock: asyncio.Lock = field(default_factory=asyncio.Lock)
+    # v21: wake_immediate — set to True when human posts new input. The
+    # race-queue resets cooldowns next tick so any agent can respond at once.
+    wake_immediate: bool = False
+    # v24: @mention solo path. When the user types "@刘老师..." or
+    # "@Yunhao..." we fuzzy-match against the 3 currently-active personas
+    # and set solo_target_slug + solo_question. The scheduler then fires
+    # ONLY that slot with a longer 1-on-1 response prompt; other slots skip
+    # this turn. Cleared after the solo fire completes.
+    solo_target_slug: Optional[str] = None
+    solo_question: str = ""
     last_question_signature: str = ""
     # v4: system_active flag — curator OR re-moderator is currently running.
     # Agents (A/B/C) skip their tick while this is true.
@@ -583,18 +828,88 @@ def extract_json(text: str) -> Optional[dict]:
 # --------------------------------------------------------------------------------------
 # Action → element payload
 # --------------------------------------------------------------------------------------
-def action_to_element(action: dict, color: str) -> Optional[dict]:
+def _format_text_for_canvas(text: str, soft_wrap_at: int = 32) -> str:
+    """v27.1: format text destined for an Excalidraw text element so it
+    reads as multi-line instead of one long strip.
+
+    Steps:
+      1. Literal "\\n" → real newline.
+      2. Insert \\n after every Chinese/English sentence ender (。！？；.!?;)
+         that's followed by more content.
+      3. For each resulting line, if it's still longer than soft_wrap_at
+         characters, soft-break on the strongest available mid-sentence
+         marker (—— em-dash, then Chinese 「，」 / 「、」 / 「：」, then ASCII commas/colons).
+      4. Collapse 3+ newlines to 2.
+    Idempotent (won't double-break existing newlines).
+    """
+    import re as _re
+    if not text:
+        return text
+    # Step 1
+    s = text.replace("\\n", "\n")
+    # Step 2: hard break after sentence ender
+    s = _re.sub(r"([。！？；.!?;])(?!\s|$)", r"\1\n", s)
+
+    # Step 3: soft-wrap long lines on ALL mid-sentence markers.
+    # We split on every marker into many tiny pieces, then greedy-merge
+    # pieces back up to soft_wrap_at so each output line is as full as
+    # possible without going over.
+    SPLIT_REGEX = _re.compile(r"(——|[：，、；]|[,;:]\s)")
+    out_lines: list[str] = []
+    for line in s.split("\n"):
+        if len(line) <= soft_wrap_at:
+            out_lines.append(line)
+            continue
+        # Tokenize keeping delimiters attached to the preceding piece.
+        # We split and pair each chunk with its delimiter.
+        parts = SPLIT_REGEX.split(line)
+        # parts is e.g. ["foo", "，", "bar baz", "——", "qux"]
+        pieces: list[str] = []
+        i = 0
+        while i < len(parts):
+            chunk = parts[i]
+            delim = parts[i+1] if (i + 1) < len(parts) else ""
+            if chunk or delim:
+                pieces.append(chunk + delim)
+            i += 2
+        # Greedy merge
+        merged: list[str] = []
+        buf = ""
+        for p in pieces:
+            if not buf:
+                buf = p
+            elif len(buf) + len(p) <= soft_wrap_at:
+                buf += p
+            else:
+                merged.append(buf)
+                buf = p
+        if buf:
+            merged.append(buf)
+        out_lines.extend(merged)
+    s = "\n".join(out_lines)
+
+    # Step 4: collapse
+    s = _re.sub(r"\n{3,}", "\n\n", s)
+    return s.strip()
+
+
+def action_to_element(action: dict, color: str, text_max_chars: int = 400) -> Optional[dict]:
     # v5: dashed-style stripped — was creating empty decorative frames.
+    # v23: text_max_chars opens up the cap for SYNTHESIS closing paragraphs
+    # (default 200 preserves v22 conversational-tick behavior).
+    # v27: ALL text actions get sentence-boundary line breaks now.
     t = action.get("type")
     common = {"strokeColor": color}
     try:
         if t == "text":
+            raw = str(action.get("text", ""))[:text_max_chars]
             return {
                 **common, "type": "text",
                 "x": float(action["x"]), "y": float(action["y"]),
-                "text": str(action.get("text", ""))[:200],
+                "text": _format_text_for_canvas(raw),
                 "fontSize": int(action.get("fontSize", 18)),
                 "fontFamily": "1",
+                **({"width": float(action["width"])} if "width" in action else {}),
             }
         if t == "rectangle":
             # v5: reject empty shapes — they look like废稿
@@ -670,16 +985,30 @@ def action_to_element(action: dict, color: str) -> Optional[dict]:
 # --------------------------------------------------------------------------------------
 PHASE_TABLE = [
     (6,  "BRAINSTORM",
-     "找 1 个 hot point，punchy 反应。**不要一次性 dump 5 条角度**——每轮最多 1-2 个 action，1 行短字就够。"
+     "抛出你这位研究者第一眼会觉得有意思或有问题的角度。每轮 1 个 text action 即可。"
+     "**长度按你这次要做的事自动调节**:"
+     " (a) 戳一个痛点 / 提一个反问 → 30-80 字, 1-2 句; "
+     " (b) 给一个判断 + 依据 → 80-150 字, 2-4 句; "
+     " (c) reframe 整个问题 / 铺开推理链 → 150-260 字, 4-6 句。"
+     "短就短得有信息密度, 长就长得有结构。多句时在句号后插 `\\n` 分行。"
      "**禁止画箭头**——只写 text。"),
     (12, "DISCUSSION",
-     "盯住别人某句具体发言：在它**旁边**（≥ 60px 距离）写短评回应。**不要画箭头**——读者自己能看出邻近关系。≤ 2 actions/turn。"),
-    (20, "DEBATE",
-     "找最大分歧点，写一行锐评回应。需要加重时 fontSize 22-24。**禁止画框、禁止画箭头**。"),
-    (30, "STRUCTURE",
-     "进入 Diagram zone（y ≥ 900）：用**带 text 的** rectangle/diamond 画 flowchart/mindmap。**这是少数允许 arrow 的阶段**，连接节点用——禁止单纯指指点点的装饰箭头。"),
+     "对邻居的发言给出你自己的判断和视角。**长度由内容自然决定**, 不必每轮都一段:"
+     " (a) 同意 + 补一个具体细节 → 1 句 (40-80 字); "
+     " (b) 反驳 + 给理由 → 一小段 (100-200 字, 3-4 句); "
+     " (c) 把别人的角度往前推 / 翻个底牌 → 一小段 (180-260 字)。"
+     "**关键**: 别为了「显得严肃」凑长度, 也别为了「显得 punchy」硬截短。多句时句号后插 `\\n`。"
+     "**不要画箭头**——读者自己能看出邻近关系。≤ 1 actions/turn。"),
+    (30, "DEBATE",
+     "找最大分歧点站队 (不要中立式两边讨好)。**长短交替**:"
+     " (a) 一击命中分歧点 → 30-100 字, 1-2 句; "
+     " (b) 站队 + 理由 + 边界 → 120-280 字, 3-5 句。"
+     "短时要精准, 长时要结构清楚。多句时句号后插 `\\n`。需要加重时 fontSize 22-24。"
+     "**禁止画框、禁止画箭头**——这是多轮研讨会，不是画图练习。"),
     (10**9, "SYNTHESIS",
-     "Conclusion 时刻：前缀 'Conclusion:' + fontSize 24-28 的 text，**不要画框、不要画箭头**。"
+     "Conclusion 时刻：前缀 'Conclusion:' + fontSize 24-28 的 text，"
+     "**长度: 80-150 字一段** (这是 hint 性结论, 不是长篇 — 长结论留给 run_synthesis 那一关)。"
+     "**不要画框、不要画箭头**。"
      "**如果画板上已经有 ≥ 3 条 'Conclusion:' text 了，立即 SILENT (返回 actions:[]）——讨论已经收口，再加是噪音**。"),
 ]
 
@@ -774,6 +1103,51 @@ def render_free_zones(elements: list[dict], slot: str) -> str:
         lines.append("  - (your diagram lane is dense)")
     lines.append("(other slots have their own lanes — don't poach unless absolutely necessary)")
     return "\n".join(lines)
+
+
+def build_solo_prompt(state: State, slot: str, elements: list[dict],
+                      solo_question: str) -> str:
+    """v24: user @-ed this persona directly. Build a 1-on-1 reply prompt
+    that asks for a long, paragraph-form answer (not whiteboard chat).
+
+    Layout: one text block in this persona's slot lane (so the color
+    matches their column). text_max_chars=800 enforced at apply_actions.
+    """
+    me = state.pool_by_slug[state.active[slot]]
+    lane = SLOT_LANES[slot]
+    canvas_digest = render_canvas_digest(elements, active_colors(state))
+    # Find a vertical slot inside this persona's column that has room. Use
+    # a near-bottom anchor so solo responses pile downward rather than
+    # overlap the ongoing seminar discussion at top.
+    lx = (lane["x_min"] + lane["x_max"]) // 2 - 200   # roughly centered, width 400
+    return f"""[1-on-1 SOLO REPLY — user @-ed you]
+
+用户在白板上 @ 了你，希望听**你这位研究者本人**给出一个完整、有深度的回答。
+这不是和别人来回的研讨会发言，而是你直接面对提问者的一段完整阐述。
+
+用户的提问/请求是：
+> {solo_question.strip()}
+
+输出要求：
+- 输出**恰好 1 个 text action**（不要画框、不要画箭头、不要弹幕）。
+- 位置: x={lx}, y=520, width=400, fontSize=15, strokeColor: {me.color}
+- 长度: 300-700 个中文字符 (相当于 5-10 句完整段落)，按内容自然决定具体长度。
+- **不要**用对话弹性 punchy 风格——这是阐述，不是搭话。用你这位研究者会用的
+  完整思路：拆问题 → 给判断 → 给依据 → (可选) 给边界/反例 / 留给提问者的问题。
+- 自然分段：在每个句号、问号、叹号后插入 `\\n`，让段落在白板上分行而不是一长条。
+- 不要引用 paper 名称、paper_id、年份+会议这种 citation 形式；研究经验
+  已经内化到你的判断里。
+- 不要用机械模板 ("@某某 你说X 我补一刀" 这类禁用)。
+- 不要写"以上是我的看法"这种 ChatBot 收尾。
+
+[Canvas digest — 现有的研讨会上下文，供你参考但**不要**逐条回应]
+{canvas_digest}
+
+输出 strict JSON:
+{{"reasoning":"<one line>","phase_intent":"SOLO","actions":[
+  {{"type":"text","x":{lx},"y":520,"width":400,"text":"<your paragraph>","fontSize":15}}
+]}}.
+"""
 
 
 def build_user_prompt(state: State, slot: str, elements: list[dict],
@@ -871,8 +1245,8 @@ def build_user_prompt(state: State, slot: str, elements: list[dict],
         closing = (
             "[BEHAVIORAL EXPECTATION] You are NOT writing an essay.\n"
             "- Default: **1 action** per turn. Two is the absolute max.\n"
-            "- **Avoid arrows.** Default to plain text only. Arrows allowed ONLY in STRUCTURE phase\n"
-            "  for connecting flowchart/mindmap nodes — never as decoration or 'pointing'.\n"
+            "- **Avoid arrows.** This is a multi-round seminar; default to plain text only.\n"
+            "  No flowcharts, no mindmaps, no decorative arrows — just text exchanges.\n"
             "- **Spread, don't streak.** Pick the emptiest quadrant (see [QUADRANT DENSITY] below)\n"
             "  and place at radius 250-450 from the centroid in that direction.\n"
             "- Find ONE hot point on the canvas you have a unique angle on — react PUNCHY.\n"
@@ -958,7 +1332,8 @@ def _auto_shift_action(action: dict, existing_bboxes: list[tuple]) -> Optional[d
 
 async def apply_actions(client: httpx.AsyncClient, actions: list[dict], persona: Persona,
                         current_elements: list[dict], is_tidy: bool,
-                        is_curator: bool = False) -> dict[str, int]:
+                        is_curator: bool = False,
+                        text_max_chars: int = 400) -> dict[str, int]:
     counts = {"posted": 0, "moved": 0, "deleted": 0, "erased": 0, "dropped": 0, "shifted": 0}
     elements_by_id = {e["id"]: e for e in current_elements}
     # Pre-compute bboxes for non-header elements to use as overlap obstacles
@@ -1085,7 +1460,7 @@ async def apply_actions(client: httpx.AsyncClient, actions: list[dict], persona:
                 counts["shifted"] += 1
             action = shifted
 
-        el = action_to_element(action, persona.color)
+        el = action_to_element(action, persona.color, text_max_chars=text_max_chars)
         if el is None:
             counts["dropped"] += 1
             continue
@@ -1106,7 +1481,19 @@ async def apply_actions(client: httpx.AsyncClient, actions: list[dict], persona:
 # --------------------------------------------------------------------------------------
 # Agent tick
 # --------------------------------------------------------------------------------------
-async def agent_tick(slot: str, state: State, client: httpx.AsyncClient) -> None:
+async def agent_tick(slot: str, state: State, client: httpx.AsyncClient,
+                     solo_question: str = "") -> None:
+    """Fire one slot's think-and-write turn.
+
+    v21: the whole tick (LLM call + canvas write) runs under
+    `state.seminar_turn_lock` so only ONE persona is thinking+writing at a
+    time.
+
+    v24: when solo_question is non-empty, this tick is a 1-on-1 reply to
+    a user @mention. Output target: a longer paragraph (≤800 chars,
+    multi-sentence prose) addressing the user directly. Skips the
+    multi-action whiteboard reaction style.
+    """
     slug = state.active.get(slot)
     if not slug or state.phase != "ACTIVE":
         return
@@ -1114,83 +1501,122 @@ async def agent_tick(slot: str, state: State, client: httpx.AsyncClient) -> None
     if state.system_active:
         log(f"[{slot}/-] system_active (curator/re-moderator) — skipping")
         return
-    persona = state.pool_by_slug[slug]
     if state.busy.get(slug):
         log(f"[{slug}/{slot}] still busy — skipping")
         return
 
-    state.busy[slug] = True
-    try:
-        is_tidy = (state.next_tidy_slot == slot)
-        elements = await canvas_get_elements(client)
-        active_set = active_colors(state)
-
-        # NOTE: v3.1 — we do NOT skip on "no new external elements". The LLM is
-        # always called; the agent decides silence via actions:[]. This fixes the
-        # silent-stall problem where after a tidy round, every agent saw "no new"
-        # and the conversation died.
-
-        user_prompt = build_user_prompt(state, slot, elements, is_tidy)
-        kind = "TIDY-UP" if is_tidy else current_phase(state.round_count)[0]
-        log(f"[{slug}/{slot}] LLM call (round={state.round_count + (0 if is_tidy else 1)}, "
-            f"kind={kind}, canvas={len(elements)})")
-
+    async with state.seminar_turn_lock:
+        # Re-check guards INSIDE the lock — phase/active may have shifted
+        # while waiting (e.g. canvas was cleared, persona was swapped out).
+        slug = state.active.get(slot)
+        if not slug or state.phase != "ACTIVE" or state.system_active:
+            return
+        persona = state.pool_by_slug[slug]
+        state.busy[slug] = True
         try:
-            llm_text = await call_llm(persona.system_prompt, user_prompt, client)
-        except Exception as exc:
-            log(f"[{slug}/{slot}] LLM call failed: {exc}")
-            state.seen_ids[slug] = {e["id"] for e in elements}
-            return
+            is_tidy = (state.next_tidy_slot == slot)
+            elements = await canvas_get_elements(client)
+            active_set = active_colors(state)
 
-        obj = extract_json(llm_text)
-        if not obj:
-            log(f"[{slug}/{slot}] non-JSON ({len(llm_text)} chars). first200={llm_text[:200]!r}")
-            state.seen_ids[slug] = {e["id"] for e in elements}
-            return
+            # NOTE: v3.1 — we do NOT skip on "no new external elements". The LLM is
+            # always called; the agent decides silence via actions:[]. This fixes the
+            # silent-stall problem where after a tidy round, every agent saw "no new"
+            # and the conversation died.
 
-        reasoning = (obj.get("reasoning") or "")[:140]
-        intent = obj.get("phase_intent") or "?"
-        actions = obj.get("actions") or []
-        log(f"[{slug}/{slot}] phase_intent={intent} reasoning={reasoning!r} → {len(actions)} actions")
-
-        if state.phase != "ACTIVE" or state.active.get(slot) != slug:
-            log(f"[{slug}/{slot}] state changed during LLM call — abandoning")
-            return
-
-        async with state.canvas_write_lock:
-            current = await canvas_get_elements(client)
-            if not any(is_header(e.get("id", "")) for e in current):
-                log(f"[{slug}/{slot}] canvas cleared during LLM call — abandoning")
-                return
-            counts = await apply_actions(client, actions, persona, current, is_tidy)
-            log(f"[{slug}/{slot}] applied: {counts}")
-
-            refreshed = await canvas_get_elements(client)
-            state.seen_ids[slug] = {e["id"] for e in refreshed}
-
-            if is_tidy:
-                state.next_tidy_slot = None
-                log(f"[{slug}/{slot}] tidy turn done.")
+            if solo_question:
+                user_prompt = build_solo_prompt(state, slot, elements, solo_question)
+                kind = "SOLO"
             else:
-                state.round_count += 1
-                # v4: every RE_MODERATE_EVERY_N_ROUNDS rounds → re-evaluate personas
-                #     every CURATOR_EVERY_N_ROUNDS rounds → fire curator
-                #     Re-moderator has priority. If round is divisible by both,
-                #     re-moderator fires (curator will fire on next divisible round).
-                if (state.round_count >= RE_MODERATE_EVERY_N_ROUNDS
-                        and state.round_count % RE_MODERATE_EVERY_N_ROUNDS == 0
-                        and state.round_count != state.last_re_moderation_round):
-                    state.last_re_moderation_round = state.round_count
-                    log(f"=== RE-MODERATION scheduled at round {state.round_count} ===")
-                    asyncio.create_task(re_moderate_tick(state, client))
-                elif (state.round_count >= CURATOR_EVERY_N_ROUNDS
-                        and state.round_count % CURATOR_EVERY_N_ROUNDS == 0
-                        and state.round_count != state.last_curator_round):
-                    state.last_curator_round = state.round_count
-                    log(f"=== CURATOR scheduled at round {state.round_count} ===")
-                    asyncio.create_task(curator_tick(state, client))
-    finally:
-        state.busy[slug] = False
+                user_prompt = build_user_prompt(state, slot, elements, is_tidy)
+                kind = "TIDY-UP" if is_tidy else current_phase(state.round_count)[0]
+
+            # v22: per-turn lorebook injection. Scan = recent canvas text +
+            # user question + (for solo) the @-mention question itself.
+            scan_chunks = [state.user_question_summary or "", solo_question]
+            for e in elements:
+                if is_header(e.get("id", "")):
+                    continue
+                t = element_text(e)
+                if t:
+                    scan_chunks.append(t)
+            scan_text = "\n".join(scan_chunks)
+            effective_sp = inject_lorebook(persona.system_prompt,
+                                           persona.lorebook,
+                                           scan_text)
+            lore_extra = len(effective_sp) - len(persona.system_prompt)
+            log(f"[{slug}/{slot}] LLM call (round={state.round_count + (0 if is_tidy else 1)}, "
+                f"kind={kind}, canvas={len(elements)}, lore+={lore_extra}c)")
+
+            try:
+                llm_text = await call_llm(effective_sp, user_prompt, client,
+                                          max_tokens=(6000 if solo_question else 4000))
+            except Exception as exc:
+                log(f"[{slug}/{slot}] LLM call failed: {exc}")
+                state.seen_ids[slug] = {e["id"] for e in elements}
+                return
+
+            obj = extract_json(llm_text)
+            if not obj:
+                log(f"[{slug}/{slot}] non-JSON ({len(llm_text)} chars). first200={llm_text[:200]!r}")
+                state.seen_ids[slug] = {e["id"] for e in elements}
+                return
+
+            reasoning = (obj.get("reasoning") or "")[:140]
+            intent = obj.get("phase_intent") or "?"
+            actions = obj.get("actions") or []
+            log(f"[{slug}/{slot}] phase_intent={intent} reasoning={reasoning!r} → {len(actions)} actions")
+
+            if state.phase != "ACTIVE" or state.active.get(slot) != slug:
+                log(f"[{slug}/{slot}] state changed during LLM call — abandoning")
+                return
+
+            async with state.canvas_write_lock:
+                current = await canvas_get_elements(client)
+                # v18 fix: headers are now DOM overlay. "Canvas cleared" means
+                # user emptied the body (no non-header elements remain).
+                body_now = [e for e in current if not is_header(e.get("id", ""))]
+                if not body_now:
+                    log(f"[{slug}/{slot}] canvas cleared during LLM call — abandoning")
+                    return
+                # v24: solo responses get the 800-char text cap.
+                # v25: regular turns now wrap at sentence boundaries too — the
+                # phase prompts ask for 2-4 sentence paragraphs, so they need
+                # line breaks on the canvas.
+                for a in actions:
+                    if a.get("type") == "text" and isinstance(a.get("text"), str):
+                        a["text"] = _wrap_synthesis_text(a["text"])
+                counts = await apply_actions(
+                    client, actions, persona, current, is_tidy,
+                    text_max_chars=(800 if solo_question else 400),
+                )
+                log(f"[{slug}/{slot}] applied: {counts}")
+
+                refreshed = await canvas_get_elements(client)
+                state.seen_ids[slug] = {e["id"] for e in refreshed}
+
+                if is_tidy:
+                    state.next_tidy_slot = None
+                    log(f"[{slug}/{slot}] tidy turn done.")
+                else:
+                    state.round_count += 1
+                    # v4: every RE_MODERATE_EVERY_N_ROUNDS rounds → re-evaluate personas
+                    #     every CURATOR_EVERY_N_ROUNDS rounds → fire curator
+                    #     Re-moderator has priority. If round is divisible by both,
+                    #     re-moderator fires (curator will fire on next divisible round).
+                    if (state.round_count >= RE_MODERATE_EVERY_N_ROUNDS
+                            and state.round_count % RE_MODERATE_EVERY_N_ROUNDS == 0
+                            and state.round_count != state.last_re_moderation_round):
+                        state.last_re_moderation_round = state.round_count
+                        log(f"=== RE-MODERATION scheduled at round {state.round_count} ===")
+                        asyncio.create_task(re_moderate_tick(state, client))
+                    elif (state.round_count >= CURATOR_EVERY_N_ROUNDS
+                            and state.round_count % CURATOR_EVERY_N_ROUNDS == 0
+                            and state.round_count != state.last_curator_round):
+                        state.last_curator_round = state.round_count
+                        log(f"=== CURATOR scheduled at round {state.round_count} ===")
+                        asyncio.create_task(curator_tick(state, client))
+        finally:
+            state.busy[slug] = False
 
 
 # --------------------------------------------------------------------------------------
@@ -1266,7 +1692,9 @@ async def curator_tick(state: State, client: httpx.AsyncClient) -> None:
         )
         async with state.canvas_write_lock:
             current = await canvas_get_elements(client)
-            if not any(is_header(e.get("id", "")) for e in current):
+            # v18 fix: same as agent_tick — check body, not header.
+            body_now = [e for e in current if not is_header(e.get("id", ""))]
+            if not body_now:
                 log("[curator] canvas cleared mid-LLM — abandoning")
                 return
             counts = await apply_actions(
@@ -1541,7 +1969,13 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
             await asyncio.sleep(1.0)
             continue
 
-        # Track canvas change timestamp for stagnation detection in prompts
+        # Track canvas change timestamp for stagnation detection in prompts.
+        # v20.3 fix: snapshot the PREVIOUS id-set BEFORE updating so the
+        # body_was_cleared check below can compare against the prior tick.
+        # The old code updated state.last_canvas_id_set first, then the
+        # body_was_cleared check read the just-cleared (empty) frozenset
+        # and concluded "no prior elements", so caption never reset.
+        prev_id_set = state.last_canvas_id_set
         current_id_set = frozenset(e.get("id", "") for e in elements)
         if current_id_set != state.last_canvas_id_set:
             state.last_canvas_change_ts = time.time()
@@ -1554,7 +1988,7 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
         # them per-tick. Detect Clear via "body went from N>0 to 0".
         body_was_cleared = (
             not non_header
-            and state.last_canvas_id_set         # had elements before
+            and prev_id_set                      # had elements before (use snapshot)
             and (state.phase != "WAITING_FOR_QUESTION" or state.user_question_summary)
         )
 
@@ -1606,8 +2040,18 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
                                 for e in human_elements
                             )
                             picks = await moderator_pick(state, question_context, client)
+                            # v18 fix: caption is now a DOM overlay, so headers
+                            # no longer exist on canvas. Check instead that
+                            # human question text is still on canvas — if the
+                            # user cleared mid-moderation, abandon.
                             current = await canvas_get_elements(client)
-                            if not any(is_header(e.get("id", "")) for e in current):
+                            cur_active = active_colors(state)
+                            still_have_human = any(
+                                author_of(e, cur_active) == "human"
+                                for e in current
+                                if not is_header(e.get("id", ""))
+                            )
+                            if not still_have_human:
                                 log("watcher: canvas cleared during moderator call — abandoning picks")
                             else:
                                 state.active = {"A": None, "B": None, "C": None}
@@ -1625,15 +2069,13 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
                                 state.last_question_signature = sig
                                 state.last_canvas_change_ts = time.time()
                                 state.synthesis_fired = False
-                                # v2: kick off the first persona IMMEDIATELY so the
-                                # user sees a reaction within seconds instead of
-                                # waiting for the next :03/:17/:25 slot tick.
-                                # The other 2 follow on their slot times.
-                                asyncio.create_task(agent_tick("A", state, client))
-                                await asyncio.sleep(0.5)
-                                asyncio.create_task(agent_tick("B", state, client))
-                                await asyncio.sleep(0.5)
-                                asyncio.create_task(agent_tick("C", state, client))
+                                # v21: race-queue scheduler will pick up the
+                                # newly-active slots within ~0.4s (their
+                                # last_fired defaults to 0.0, so all 3 are
+                                # immediately eligible). No need to kick
+                                # explicit create_task tasks — the serial
+                                # lock handles ordering.
+                                state.wake_immediate = True
         # v15: ALWAYS-ON USER WAKE — if any phase (including ACTIVE / SYNTHESIS /
         # FROZEN) sees a NEW human element since last poll, kick the next-due
         # agent IMMEDIATELY so the human gets a fresh reaction in 1-2s instead
@@ -1649,8 +2091,20 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
                 if state.phase in ("SYNTHESIS", "FROZEN"):
                     state.phase = "ACTIVE"
                     state.synthesis_fired = False
-                # Kick slot A immediately; B and C will catch up on their schedule
-                asyncio.create_task(agent_tick("A", state, client))
+                # v24: scan the human input for "@<teacher>" mentions and
+                # fuzzy-match against the 3 currently-active personas. If
+                # matched, route the question to that persona ONLY (long
+                # 1-on-1 response). Falls back to normal race-queue wake.
+                combined_human_text = " ".join(element_text(e) for e in human_now if element_text(e))
+                solo_match = detect_at_mention(combined_human_text, state)
+                if solo_match:
+                    state.solo_target_slug = solo_match
+                    state.solo_question = combined_human_text[:600]
+                    log(f"watcher: @mention detected → solo route to {solo_match}")
+                # v21: signal the race-queue to fire the next eligible slot
+                # immediately (no cooldown). The scheduler runs every 0.4s so
+                # the human will see a reaction within ~1s + LLM-call time.
+                state.wake_immediate = True
 
         # v3: SYNTHESIS auto-trigger. Once 3+ "Conclusion:" texts pile up on
         # the canvas, the discussion is closed. Two picked agents do final
@@ -1677,169 +2131,215 @@ async def watcher(state: State, client: httpx.AsyncClient) -> None:
 # Scheduler
 # --------------------------------------------------------------------------------------
 async def scheduler(state: State, client: httpx.AsyncClient) -> None:
-    log(f"scheduler armed (v4). A@:03/:37  B@:17/:45  C@:25/:53  "
-        f"+CURATOR every {CURATOR_EVERY_N_ROUNDS} rounds (others pause)  "
-        f"+RE-MODERATOR every {RE_MODERATE_EVERY_N_ROUNDS} rounds (may swap personas)")
+    """v21 race-queue scheduler — replaces v4's fixed-cron-seconds slot wheel.
+
+    Behavior:
+      - Only fires during phase=ACTIVE; pauses for WAITING/SYNTHESIS/FROZEN
+        and while system_active (curator/re-moderator) is true.
+      - At each tick, finds the slot whose last fire is oldest among the
+        slots that:
+          (a) have a persona assigned
+          (b) are not currently busy (LLM in flight)
+          (c) are past the per-slot cooldown (SAME_SLOT_COOLDOWN_S)
+      - AWAITS that agent_tick directly (no create_task) — agent_tick
+        acquires state.seminar_turn_lock for its whole window, so the
+        scheduler naturally blocks until the chosen slot finishes, then
+        picks the next. The result: continuous serial firing.
+      - Curator / re-moderator are still triggered by round counters
+        inside agent_tick itself; they race for the same seminar_turn_lock
+        via state.canvas_write_lock + state.system_active.
+      - When state.wake_immediate is set (human posted new input), we
+        reset every slot's last-fire so the next eligible slot fires
+        with no cooldown delay.
+    """
+    SAME_SLOT_COOLDOWN_S = 3.0   # don't let one agent dominate by firing back-to-back
+    IDLE_POLL_S = 0.4
+
+    log(f"scheduler armed (v21 race-queue). serial via seminar_turn_lock; "
+        f"same-slot cooldown {SAME_SLOT_COOLDOWN_S}s; "
+        f"CURATOR every {CURATOR_EVERY_N_ROUNDS} rounds; "
+        f"RE-MODERATOR every {RE_MODERATE_EVERY_N_ROUNDS} rounds")
+    last_per_slot = {"A": 0.0, "B": 0.0, "C": 0.0}
+    rotation = ["A", "B", "C"]
+
     while True:
-        now = dt.datetime.now()
-        sec = now.second
-        ts = now.timestamp()
-        for slot, fire_seconds in SLOT_FIRE_SECONDS.items():
-            if sec in fire_seconds:
-                if ts - state.last_fired[slot] >= 10:
-                    state.last_fired[slot] = ts
-                    asyncio.create_task(agent_tick(slot, state, client))
-        await asyncio.sleep(1.0)
+        # v24: solo @mention takes priority over phase. If the user pinged
+        # a specific persona while the discussion is FROZEN (post-SYNTHESIS),
+        # unfreeze just enough to fire that one response.
+        if state.solo_target_slug and state.phase in ("FROZEN", "SYNTHESIS"):
+            log(f"scheduler: solo @mention unfreezing phase={state.phase} → ACTIVE")
+            state.phase = "ACTIVE"
+            state.synthesis_fired = False
+
+        if state.phase != "ACTIVE" or state.system_active:
+            await asyncio.sleep(IDLE_POLL_S)
+            continue
+
+        # v21: human just posted new input → reset cooldowns so any slot fires
+        # immediately instead of waiting.
+        if state.wake_immediate:
+            log("scheduler: wake_immediate — resetting cooldowns")
+            for s in rotation:
+                last_per_slot[s] = 0.0
+            state.wake_immediate = False
+
+        # v24: @mention solo route — find the slot for solo_target_slug
+        # and fire it with the 1-on-1 long-response flag, then clear.
+        # Other slots wait through this turn.
+        if state.solo_target_slug:
+            target_slug = state.solo_target_slug
+            target_slot = next((s for s in rotation if state.active.get(s) == target_slug), None)
+            if target_slot and not state.busy.get(target_slug):
+                log(f"scheduler: solo route → {target_slug}/{target_slot}")
+                last_per_slot[target_slot] = time.time()
+                solo_q = state.solo_question
+                # Clear BEFORE firing so a parallel watcher re-arming doesn't double-set
+                state.solo_target_slug = None
+                state.solo_question = ""
+                await agent_tick(target_slot, state, client, solo_question=solo_q)
+                continue
+            else:
+                # Target persona is busy or no longer active — drop solo, fall through.
+                log(f"scheduler: solo target {target_slug} unavailable, dropping route")
+                state.solo_target_slug = None
+                state.solo_question = ""
+
+        now = time.time()
+        eligible = []
+        for s in rotation:
+            slug = state.active.get(s)
+            if not slug:
+                continue
+            if state.busy.get(slug):
+                continue
+            if now - last_per_slot[s] < SAME_SLOT_COOLDOWN_S:
+                continue
+            eligible.append(s)
+
+        if not eligible:
+            await asyncio.sleep(IDLE_POLL_S)
+            continue
+
+        # Fairness: pick the slot whose last fire is oldest (longest waiting).
+        slot = min(eligible, key=lambda s: last_per_slot[s])
+        last_per_slot[slot] = now
+        # Await directly — agent_tick acquires seminar_turn_lock for its whole
+        # window, so this serializes turns naturally. No need for sleep here:
+        # if agent_tick returns immediately (skip / no new content), the loop
+        # iterates to the next eligible slot.
+        await agent_tick(slot, state, client)
 
 
 # --------------------------------------------------------------------------------------
 # SYNTHESIS phase — closing ceremony when conclusions saturate
 # --------------------------------------------------------------------------------------
+def _wrap_synthesis_text(s: str) -> str:
+    """v23.2: insert \\n after Chinese/English sentence enders so a long
+    synthesis paragraph wraps to multiple lines on the canvas. Idempotent:
+    if the LLM already inserted \\n, this won't add duplicates."""
+    import re as _re
+    # Split on sentence enders but KEEP them in the output. We add \n
+    # AFTER each sentence ender (when not already followed by whitespace
+    # or end-of-string).
+    out = _re.sub(r"([。！？；.!?;])(?!\s|$)", r"\1\n", s)
+    # Collapse 3+ newlines to 2 (paragraph breaks)
+    out = _re.sub(r"\n{3,}", "\n\n", out)
+    return out.strip()
+
+
 async def run_synthesis(state: State, client: httpx.AsyncClient) -> None:
-    """When the discussion converges (3+ Conclusion: texts), freeze normal
-    agent cron and run a final two-step closing:
-      step 1: ONE picked agent writes a long-form summary at the left side
-              (x=40-650, y=1300-1900) — paragraph form, 80-150 chars.
-      step 2: ANOTHER picked agent builds a mind-map on the right
-              (x=700-1380, y=1300-1900) — center ellipse + 4-6 radiating
-              labeled child ellipses (no decorative arrows — just the
-              radial links inherent to the mind-map shape).
-    After both run, state.phase becomes 'FROZEN' so no further agent_tick
-    fires until canvas is cleared or a new human question appears.
+    """v23: when the discussion converges (3+ Conclusion: texts), have
+    each of the 3 currently-active personas (A/B/C) write a long closing
+    summary in their own voice, side-by-side at the bottom of the canvas.
+
+    Removed in v23: the mind-map ceremony (center ellipse + 5 radial
+    children + 5 arrows). Was too geometrically rigid and the labels
+    rarely reflected what was actually said.
+
+    Layout (left → middle → right, stacked horizontally so the reader
+    can scan 3 perspectives in parallel):
+      A: x=40,   y=1300, width=440
+      B: x=480,  y=1300, width=440
+      C: x=920,  y=1300, width=440
+
+    After all 3 land, state.phase becomes 'FROZEN' so no further
+    agent_tick fires until canvas is cleared or a new human question
+    appears.
     """
     state.system_active = True   # halt scheduled ticks
     state.phase = "SYNTHESIS"
     try:
         active_slots = [s for s in ["A", "B", "C"] if state.active.get(s)]
-        if len(active_slots) < 2:
-            log("[synthesis] need >= 2 active personas, skipping")
+        if not active_slots:
+            log("[synthesis] no active personas — skipping")
             return
 
-        # pick summarizer (most-verbose agent) + mindmapper (the other)
         elements = await canvas_get_elements(client)
-        author_counts: dict[str, int] = {}
         active_set_now = active_colors(state)
-        for e in elements:
-            if is_header(e.get("id", "")):
-                continue
-            sc = (e.get("strokeColor") or "").lower()
-            if sc in active_set_now:
-                author_counts[sc] = author_counts.get(sc, 0) + 1
-        # sort by element count desc
-        ranked_slugs = sorted(
-            [(slug, author_counts.get(state.pool_by_slug[slug].color.lower(), 0))
-             for slug in state.active.values() if slug],
-            key=lambda kv: -kv[1],
-        )
-        summarizer_slug = ranked_slugs[0][0]
-        mindmapper_slug = ranked_slugs[1][0]
-        log(f"[synthesis] summarizer={summarizer_slug}  mindmapper={mindmapper_slug}")
-
-        # ── 1. long summary ────────────────────────────────────────────
-        sum_persona = state.pool_by_slug[summarizer_slug]
         canvas_digest = render_canvas_digest(elements, active_set_now)
-        sum_user = f"""[SYNTHESIS — long summary]
 
-The discussion has reached convergence (3+ Conclusion: lines). The other
-active personas wrote the bulk of opinions. As the most-vocal voice,
-you write the closing paragraph.
+        # Per-slot summary placements. Width 440 + ~40 padding fits 3
+        # columns in the standard 1400-wide discussion zone.
+        SLOT_PLACEMENT = {
+            "A": {"x":  40, "y": 1300, "width": 440},
+            "B": {"x": 480, "y": 1300, "width": 440},
+            "C": {"x": 920, "y": 1300, "width": 440},
+        }
 
-Constraints:
-- ONE create_element call with a single text element.
-- Place at x=40, y=1300 (left side, below diagram zone).
-- fontSize=18, width=620 (allow line-wrap by inserting \\n between sentences).
-- text: 80-150 Chinese characters (or English equivalent), prose form.
-- Stay in YOUR persona voice. Reference 1-2 specific Conclusion lines from
-  the canvas. Add the missing thread that ties them together.
-- strokeColor: {sum_persona.color}
-- DO NOT add prefix "Conclusion:" — this IS the summary, not another bullet.
+        for slot in active_slots:
+            slug = state.active.get(slot)
+            if not slug:
+                continue
+            persona = state.pool_by_slug[slug]
+            placement = SLOT_PLACEMENT[slot]
+
+            user_prompt = f"""[SYNTHESIS — closing remarks]
+
+讨论已经收敛 (画板上已经积累了 3+ 条 'Conclusion:' 发言)。现在轮到你这位
+研究者给出**一段长的总结**——用你 soul 里的判断标准和品味，把整场讨论
+真正值得留下的东西，按你这个研究者会怎么概括的方式说出来。
+
+约束：
+- 输出 1 个 text action (不要画框、不要画箭头、不要弹幕)。
+- 位置: x={placement['x']}, y={placement['y']}, width={placement['width']}.
+- fontSize: 16, strokeColor: {persona.color}
+- 长度: 250-500 个中文字符 (相当于 4-8 句完整段落)。该长就长，能短的话短一点也行，但**必须是有结构的段落**，不是关键词清单。
+- **换行**: 在每个句号、问号、叹号、分号后面插入一个 `\\n`，让段落在白板上分行显示而不是一长条。例如:"...观察。\\n但是...判断。\\n所以..."
+- 别用 "Conclusion:" 前缀——这是你的总结发言，不是再加一条 bullet。
+- 内容要求:
+  1) 用你这位研究者会用的语言节奏说话
+  2) 至少回应画板上 1-2 条具体已有发言（用对方的关键词或原意）
+  3) 给出你的最终判断 / 收口 / 未尽事项
+  4) 如果讨论之外还有一条你觉得别人没说清的话，加进来
+- 不要引用 paper 名称、paper_id、年份+会议这种学术 citation 形式
+- 自然结尾，不要写"以上是我的看法"这种 ChatBot 落款
 
 Canvas digest:
 {canvas_digest}
 
-Output the JSON {{actions:[{{type:"text", x:40, y:1300, text:"...", fontSize:18}}]}}.
+输出 strict JSON: {{"reasoning":"<one line>","actions":[
+  {{"type":"text", "x":{placement['x']}, "y":{placement['y']}, "width":{placement['width']}, "text":"<your closing paragraph>", "fontSize":16}}
+]}}.
 """
-        try:
-            text1 = await call_llm(sum_persona.system_prompt, sum_user, client, max_tokens=4000)
-            obj1 = extract_json(text1) or {}
-            for action in (obj1.get("actions") or [])[:1]:
-                el = action_to_element(action, sum_persona.color)
-                if el:
-                    await canvas_post(client, el)
-            log(f"[synthesis] summary posted by {summarizer_slug}")
-        except Exception as exc:
-            log(f"[synthesis] summary failed: {exc}")
-
-        await asyncio.sleep(2.0)
-
-        # ── 2. mind-map ────────────────────────────────────────────────
-        mm_persona = state.pool_by_slug[mindmapper_slug]
-        # v15: precompute 5 explicit child positions so the LLM doesn't have
-        # to do trig. We pre-bake angles 90/162/234/306/18° at r=260 around
-        # (1040, 1500) — the model just fills the text labels.
-        import math as _math
-        cx, cy, r = 1040.0, 1500.0, 260.0
-        children = []
-        for i, deg in enumerate([90, 162, 234, 306, 18]):
-            rad = _math.radians(deg)
-            children.append({
-                "x": round(cx + r * _math.cos(rad)) - 70,  # ellipse top-left
-                "y": round(cy + r * _math.sin(rad)) - 35,
-                "cx": round(cx + r * _math.cos(rad)),       # ellipse center
-                "cy": round(cy + r * _math.sin(rad)),
-                "i": i + 1,
-            })
-        child_block = "\n".join(
-            f"  Child {c['i']}: ellipse top-left at ({c['x']},{c['y']}), "
-            f"center at ({c['cx']},{c['cy']}). Arrow x1=1040,y1=1500 → x2={c['cx']},y2={c['cy']}."
-            for c in children
-        )
-
-        mm_user = f"""[SYNTHESIS — mind map]
-
-Pull the 5 most important themes from the discussion and lay them out as a
-mind-map AROUND a central topic ellipse.
-
-You MUST emit EXACTLY 11 actions in this exact order — coordinates ARE
-PRE-COMPUTED for you so you don't have to think about geometry:
-
-ACTIONS 1-6 (ellipses):
-1. CENTER ellipse — at top-left (950, 1465), width=180, height=70.
-   text = ONE SHORT phrase capturing the discussion's central theme
-   (4-10 Chinese characters). All actions strokeColor must equal {mm_persona.color}.
-
-2-6. FIVE CHILD ellipses — width=140, height=70 each. Use these EXACT positions
-   AND pull each ellipse's text from a distinct insight on the canvas:
-{child_block}
-
-   For each child ellipse, text = ONE punchy insight (5-12 Chinese characters)
-   distilled from a real text on the canvas (do not invent — paraphrase what
-   the personas actually said).
-
-ACTIONS 7-11 (arrows):
-   ONE arrow from center to each child. The arrow x1,y1 is ALWAYS (1040, 1500).
-   The arrow x2,y2 is each child's center as listed above.
-
-Canvas digest (extract themes from these):
-{canvas_digest}
-
-OUTPUT REQUIREMENTS:
-- emit 11 actions total in one JSON object: 1 center ellipse + 5 child
-  ellipses + 5 arrows (in that order).
-- every action's strokeColor: {mm_persona.color}
-- every ellipse MUST have non-empty `text` field
-- every arrow uses x1/y1/x2/y2 (NOT startElementId)
-- output strict JSON: {{"reasoning":"<one line>","actions":[...]}}
-"""
-        try:
-            text2 = await call_llm(mm_persona.system_prompt, mm_user, client, max_tokens=4000)
-            obj2 = extract_json(text2) or {}
-            current = await canvas_get_elements(client)
-            counts = await apply_actions(client, obj2.get("actions") or [],
-                                         mm_persona, current, is_tidy=False)
-            log(f"[synthesis] mind-map by {mindmapper_slug}: {counts}")
-        except Exception as exc:
-            log(f"[synthesis] mind-map failed: {exc}")
+            try:
+                text = await call_llm(persona.system_prompt, user_prompt, client, max_tokens=4000)
+                obj = extract_json(text) or {}
+                actions = (obj.get("actions") or [])[:1]
+                # v23.2: post-process — ensure line breaks after every
+                # Chinese/English sentence-ender so the closing paragraph
+                # wraps as multiple lines on canvas instead of one long
+                # strip. LLM may or may not have already inserted \n.
+                for a in actions:
+                    if a.get("type") == "text" and isinstance(a.get("text"), str):
+                        a["text"] = _wrap_synthesis_text(a["text"])
+                current = await canvas_get_elements(client)
+                counts = await apply_actions(client, actions,
+                                             persona, current, is_tidy=False,
+                                             text_max_chars=800)
+                log(f"[synthesis] {slug}/{slot} closing: {counts}")
+            except Exception as exc:
+                log(f"[synthesis] {slug}/{slot} closing failed: {exc}")
+            await asyncio.sleep(1.5)
 
         state.phase = "FROZEN"
         log("[synthesis] done — phase=FROZEN. Clear canvas or post new question to resume.")

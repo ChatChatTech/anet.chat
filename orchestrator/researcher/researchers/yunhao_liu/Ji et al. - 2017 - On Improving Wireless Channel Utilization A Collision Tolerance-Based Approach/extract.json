@@ -1,0 +1,41 @@
+{
+  "paper_id": "Ji et al. - 2017 - On Improving Wireless Channel Utilization A Collision Tolerance-Based Approach",
+  "doi": null,
+  "title": "On Improving Wireless Channel Utilization: A Collision Tolerance-based Approach",
+  "year": 2017,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "Collision avoidance protocols waste channel capacity through backoff overhead and idle slots, especially in dense networks with intensive traffic.",
+  "problem_framing": "Formulate channel utilization as an optimization problem over transmission probability p, where collision tolerance enables concurrent successful transmissions.",
+  "key_insight": "Capture effect at the physical layer allows successful reception of a stronger signal amid collisions, enabling tolerance instead of avoidance.",
+  "method_signature": "Coco protocol: sender alignment via ACK-triggered SFD interrupts, plus feedback control of transmission probability p for optimal concurrency.",
+  "evaluation_criteria": "Channel utilization improvement (≥20%), protocol lightness, fairness index, convergence speed measured in diverse topologies.",
+  "negative_result_or_admitted_limitation": "Average reception ratio drops to near zero when >7 senders transmit; concurrency must be strictly limited (≤4 optimal).",
+  "evidence_for_taste": [
+    "collision avoidance comes at the cost of miscellaneous overhead",
+    "an inherent conflict between collision avoidance and channel utilization",
+    "tolerate or even allow collisions instead of simply avoiding them",
+    "controlling the transmission concurrency is relatively effective and easy to implement"
+  ],
+  "thinking_moves": [
+    "从协议层传统假设反推物理层能力被低估",
+    "将最优化理论模型作为算法收敛的目标标准",
+    "通过实验观察发现并发数阈值(≤4)的硬约束",
+    "把时序对齐问题转化为SFD中断触发的同步机制"
+  ],
+  "topic_tags": [
+    "collision-tolerance",
+    "capture-effect",
+    "802.15.4-MAC",
+    "channel-utilization-optimization",
+    "feedback-control"
+  ],
+  "cites_own_work": [
+    "Walking down the stairs (INFOCOM 2014)",
+    "Voice over the DINS (ICNP 2013)",
+    "Hitchhike (INFOCOM 2014)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

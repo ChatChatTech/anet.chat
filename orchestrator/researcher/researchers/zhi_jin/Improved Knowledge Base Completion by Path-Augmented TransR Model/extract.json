@@ -1,0 +1,37 @@
+{
+  "paper_id": "Improved Knowledge Base Completion by Path-Augmented TransR Model",
+  "doi": "10.48550/arxiv.1610.04073",
+  "title": "Improved Knowledge Base Completion by Path-Augmented TransR Model",
+  "year": 2016,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "知识库不完备，需要自动补全；现有方法仅用单跳关系，面临数据稀疏问题",
+  "problem_framing": "将多跳路径信息建模为正则项，加入TransR的评分函数进行链接预测",
+  "key_insight": "用TransR作基座模型比TransE好，将路径增强技术移植到更强的基座上可进一步提升",
+  "method_signature": "PTransR=TransR+路径可靠性加权正则+PCRA路径评分",
+  "evaluation_criteria": "MeanRank和Hits@10(filter)在FB15k实体预测任务上的表现",
+  "negative_result_or_admitted_limitation": "仅考虑2跳路径，3跳路径改善不显著；计算开销较大",
+  "evidence_for_taste": [
+    "TransR achieves the highest performance",
+    "not every path is equally useful",
+    "we are curious whether we can combine the worlds",
+    "path information is useful in solving data sparsity",
+    "PTransR the state-of-the-art model"
+  ],
+  "thinking_moves": [
+    "将两个已有工作(TransR+PTransE)进行正交组合",
+    "从稀疏性问题反推需要多跳信息来正则化单跳模型",
+    "先验证路径增强有益，再证明可迁移到更强的基座"
+  ],
+  "topic_tags": [
+    "知识库补全",
+    "链接预测",
+    "TransR变体",
+    "多跳路径建模",
+    "嵌入学习"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

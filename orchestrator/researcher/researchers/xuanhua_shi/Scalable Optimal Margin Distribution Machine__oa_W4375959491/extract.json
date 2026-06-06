@@ -1,0 +1,39 @@
+{
+  "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4375959491",
+  "doi": "10.48550/arxiv.2305.04837",
+  "title": "Scalable Optimal Margin Distribution Machine",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "ODM拥有比传统大间隔方法更好的泛化性能,但面临核方法的可扩展性问题(计算时间和内存存储)",
+  "problem_framing": "通过分布感知的数据划分策略使局部ODM接近全局ODM,并结合分布式SVRG加速线性核训练",
+  "key_insight": "借鉴分层抽样思想在RKHS中构造层次,使每条数据在所有划分中比例一致,从而局部解快速收敛到全局解",
+  "method_signature": "分布感知划分+双坐标下降+分布式SVRG加速",
+  "evaluation_criteria": "测试准确率和训练时间,对比Ca-ODM/DiP-ODM/DC-ODM等基线方法",
+  "negative_result_or_admitted_limitation": "最大化最小主角度的问题难以求解,只能近似优化;尚未考虑联邦学习场景(数据分散无法聚合)",
+  "evidence_for_taste": [
+    "data distribution-unaware sampling",
+    "ignore the intrinsic structure",
+    "huge difference between the distribution",
+    "leverage data as heavily as possible",
+    "the smaller the K, the more close"
+  ],
+  "thinking_moves": [
+    "将统计学中分层抽样思想迁移到RKHS空间设计数据划分策略",
+    "通过追踪划分解与全局解的差距建立理论收敛上界",
+    "先识别ODM相比通用QP的特殊结构,再针对性设计加速算法",
+    "利用warm-start:合并前一轮p个局部解作为下一轮的初始点加速收敛",
+    "线性核场景下转战原始形式以避免核矩阵的存储和计算开销"
+  ],
+  "topic_tags": [
+    "kernel_methods_scalability",
+    "margin_distribution_learning",
+    "distribution_aware_partition",
+    "dual_coordinate_descent",
+    "stratified_sampling_RKHS"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

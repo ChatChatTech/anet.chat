@@ -1,0 +1,40 @@
+{
+  "paper_id": "Towards Sustainable Satellite Edge Computing",
+  "doi": "10.48550/arxiv.2203.06065",
+  "title": "Towards Sustainable Satellite Edge Computing",
+  "year": 2022,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "卫星边缘计算引入耗能组件增加放电深度,加速电池老化,影响在轨运行",
+  "problem_framing": "将电池寿命延长问题建模为放电深度最小化的在线凸优化问题",
+  "key_insight": "利用卫星周期性运动产生的光暗和连接模式信息构建模式感知基准,实现亚线性遗憾",
+  "method_signature": "模式感知在线能量调度算法,基于虚拟队列的在线凸优化",
+  "evaluation_criteria": "放电深度、累积遗憾、约束违反程度",
+  "negative_result_or_admitted_limitation": "无法像发明新材料那样从根本上延长电池寿命,只能优化使用策略",
+  "evidence_for_taste": [
+    "cannot be applied directly to the satellite edge",
+    "none of them attempts to extend the batteries' life",
+    "Our algorithm is simple as it either selects",
+    "The regret gets smaller with the increase of β",
+    "cannot fundamentally extend batteries’ life"
+  ],
+  "thinking_moves": [
+    "指出现有地面能量调度工作无法应对卫星高速移动挑战",
+    "利用轨道周期运动产生的光暗交替和连接可用性模式信息",
+    "将问题框定为模式感知的在线凸优化学习问题",
+    "引入虚拟队列将长期约束转化为队列长度变化",
+    "先建立模式感知基准(静态与动态 regret 的推广)",
+    "通过理论分析证明 O(√T) 遗憾和约束违反渐近为零"
+  ],
+  "topic_tags": [
+    "satellite-edge-computing",
+    "depth-of-discharge",
+    "online-convex-optimization",
+    "pattern-aware-scheduling",
+    "battery-life-extension"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注具体 venue,作者排名中 Wang 为第二作者且为通讯作者邮箱持有者,但未标注 corresponding author 字样;论文缺少完整的方法步骤描述和部分图片内容"
+}

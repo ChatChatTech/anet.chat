@@ -1,0 +1,41 @@
+{
+  "paper_id": "Adapter-based Selective Knowledge Distillation for Federated Multi-domain Meeting Summarization",
+  "doi": "10.48550/arxiv.2308.03275",
+  "title": "Adapter-based Selective Knowledge Distillation for Federated Multi-domain Meeting Summarization",
+  "year": 2023,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "会议数据高度敏感,无法集中收集,现有集中式方法无法满足真实场景需求",
+  "problem_framing": "联邦学习下非IID数据导致领域漂移,且预训练大模型参数交换带来高通信开销",
+  "key_insight": "用全局适配器传递服务器知识,用本地适配器保留本地领域,同时用熵值过滤不确定的全局知识",
+  "method_signature": "ADAFEDSELECTKD:全局-本地适配器+选择性知识蒸馏",
+  "evaluation_criteria": "ROUGE-1/2/L自动评估+人工评价,与集中式训练方法对比",
+  "negative_result_or_admitted_limitation": "数据集变异性不足,模拟环境缺乏不确定性,真实场景仍存差距",
+  "evidence_for_taste": [
+    "global knowledge with high entropy has no confidence",
+    "the higher the entropy, the more uncertain the knowledge",
+    "the gold standard meeting summaries continue to demonstrate advantages",
+    "impossible for local models to focus on their own domain",
+    "immaturity parameters provided by the server inevitably introduce useless information"
+  ],
+  "thinking_moves": [
+    "将联邦学习通信开销问题重新定义为参数高效微调问题",
+    "用熵值作为不确定性的代理指标来过滤蒸馏知识",
+    "分离全局适配器和本地适配器以解耦全局知识与领域专注",
+    "通过消融实验揭示名词和动词是知识蒸馏的核心学习对象"
+  ],
+  "topic_tags": [
+    "federated-meeting-summarization",
+    "adapter-fine-tuning",
+    "selective-knowledge-distillation",
+    "non-IID-data-learning",
+    "entropy-based-filtering"
+  ],
+  "cites_own_work": [
+    "Dialogue discourse-aware graph model and data augmentation for meeting summarization (IJCAI 2020)",
+    "A survey on dialogue summarization: Recent advances and new frontiers (2021)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

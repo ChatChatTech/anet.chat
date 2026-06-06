@@ -1,0 +1,73 @@
+{
+  "slug": "hailong_sun",
+  "n_papers": 2,
+  "n_indexed": 2,
+  "anchors": [
+    "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process",
+    "LLMBoost_ Make Large Language Models Stronger with Boosting"
+  ],
+  "by_id": {
+    "LLMBoost_ Make Large Language Models Stronger with Boosting": {
+      "title": "LLMBOOST: MAKE LARGE LANGUAGE MODELS STRONGER WITH BOOSTING",
+      "year": 2025,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "打破黑盒壁垒,让后续模型在层级别访问前驱模型的中间隐状态实现分层错误纠正",
+      "method_signature": "跨模型注意力+错误抑制损失+近并行层间流水线推理",
+      "tags": [
+        "LLM-ensemble",
+        "cross-model-attention",
+        "boosting",
+        "error-correction",
+        "hidden-representation-fusion"
+      ],
+      "quality": "partial"
+    },
+    "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process": {
+      "title": "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process",
+      "year": null,
+      "venue": "Preprint",
+      "doi": null,
+      "key_insight": "借鉴学术同行评审机制：评分(LLM-as-Judge)→推理(Truth Inference)→选择最优",
+      "method_signature": "LLM-PeerReview: 翻转三元组评分 + Dawid-Skene加权聚合",
+      "tags": [
+        "LLM-ensemble",
+        "LLM-as-a-judge",
+        "peer-review",
+        "Dawid-Skene",
+        "weak-supervision"
+      ],
+      "quality": "partial"
+    }
+  },
+  "by_tag": {
+    "LLM-ensemble": [
+      "LLMBoost_ Make Large Language Models Stronger with Boosting",
+      "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    ],
+    "cross-model-attention": [
+      "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    ],
+    "boosting": [
+      "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    ],
+    "error-correction": [
+      "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    ],
+    "hidden-representation-fusion": [
+      "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    ],
+    "LLM-as-a-judge": [
+      "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    ],
+    "peer-review": [
+      "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    ],
+    "Dawid-Skene": [
+      "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    ],
+    "weak-supervision": [
+      "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    ]
+  }
+}

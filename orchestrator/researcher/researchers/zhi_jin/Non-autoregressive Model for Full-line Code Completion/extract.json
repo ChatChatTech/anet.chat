@@ -1,0 +1,38 @@
+{
+  "paper_id": "Non-autoregressive Model for Full-line Code Completion",
+  "doi": "10.48550/arxiv.2204.09877",
+  "title": "Non-autoregressive Model for Full-line Code Completion",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "AR模型逐token生成导致代码补全延迟高，无法在开发者设备上即时响应",
+  "problem_framing": "代码行内token依赖弱于NMT，可并行生成；左到右生成顺序非最优",
+  "key_insight": "通过依赖分析验证代码token可并行预测，语法感知采样策略可增强NAR训练",
+  "method_signature": "SANAR：编码器-解码器Transformer + 条件独立因式分解 + 语法感知采样",
+  "evaluation_criteria": "BLEU、精确匹配率、编辑相似度、延迟、加速比",
+  "negative_result_or_admitted_limitation": "NAR模型token重复率略高于AR模型但未造成实际问题",
+  "evidence_for_taste": [
+    "the generation is not parallelizable and thus particularly slow",
+    "the dependency among code tokens is weaker than that among tokens in natural languages",
+    "left-to-right is not always optimal for code completion",
+    "our syntax-guided sampling strategy can increase the probability of glancing the keyword, operators, and identifiers",
+    "only evaluating the quality by comparing the exact match with the ground truth is not convincing enough"
+  ],
+  "thinking_moves": [
+    "先验证假设：分析代码token依赖弱于NMT，逆转生成顺序验证非必需",
+    "从NMT成功经验迁移NAR到代码生成，论证领域特殊性",
+    "设计针对代码语法的采样策略（关键词、标识符、操作符优先）",
+    "用多种指标评估生成质量（BLEU、编辑相似度而非仅精确匹配）"
+  ],
+  "topic_tags": [
+    "code-completion",
+    "non-autoregressive-generation",
+    "syntax-aware-sampling",
+    "transformer",
+    "parallel-decoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

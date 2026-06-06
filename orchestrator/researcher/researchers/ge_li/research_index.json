@@ -1,0 +1,1336 @@
+{
+  "slug": "ge_li",
+  "n_papers": 44,
+  "n_indexed": 44,
+  "anchors": [
+    "Backward and Forward Language Modeling for Constrained Sentence Generation",
+    "How Transferable are Neural Networks in NLP Applications___oa_W2964352358",
+    "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling",
+    "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901",
+    "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588",
+    "Are We Building on the Rock_ On the Importance of Data Preprocessing for Code Summarization",
+    "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434",
+    "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970",
+    "Benchmarking Long-Context Language Models on Long Code Understanding"
+  ],
+  "by_id": {
+    "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2165560648": {
+      "title": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.1508.03721",
+      "key_insight": "L2 of embeddings helps optimization; regularization acts locally; weights and embeddings are complementary when combined",
+      "method_signature": "Systematic comparison of penalizing weights, penalizing embeddings, re-embedding, and dropout",
+      "tags": [
+        "neural-NLP-regularization",
+        "embedding-overfitting",
+        "hyperparameter-tuning",
+        "dropout-vs-L2",
+        "incremental-training"
+      ],
+      "quality": "full"
+    },
+    "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901": {
+      "title": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks",
+      "year": 2015,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/d15-1252",
+      "key_insight": "L2惩罚嵌入向量意外帮助优化——大语料预训练的嵌入倾向于大值,L2惩罚将其推向小值,利于梯度下降",
+      "method_signature": "L2范数惩罚(权重/嵌入)、词重嵌入、Dropout的对照实验",
+      "tags": [
+        "embedding-regularization-comparison",
+        "NLP-overfitting",
+        "incremental-hyperparameter-tuning",
+        "dropout-l2-complementary",
+        "CNN-RNN-regularization"
+      ],
+      "quality": "full"
+    },
+    "A Survey on Code Generation with LLM-based Agents": {
+      "title": "A Survey on Code Generation with LLM-based Agents",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2508.00083",
+      "key_insight": "从被动代码补全转为主动工作流管理,开发者角色转变为任务定义者、过程监督者和最终结果审查者",
+      "method_signature": "系统综述:单智能体+多智能体架构、全生命周期应用、评估基准与工具",
+      "tags": [
+        "LLM代码生成智能体",
+        "单智能体规划推理",
+        "多智能体协作架构",
+        "软件开发生命周期自动化",
+        "工具集成与检索增强"
+      ],
+      "quality": "full"
+    },
+    "Are We Building on the Rock_ On the Importance of Data Preprocessing for Code Summarization": {
+      "title": "Are We Building on the Rock? On the Importance of Data Preprocessing for Code Summarization",
+      "year": 2022,
+      "venue": "ESEC/FSE",
+      "doi": "10.48550/arxiv.2207.05579",
+      "key_insight": "噪声数据广泛存在于31%-66%的样本中,移除噪声后BLEU-4提升21%-27%",
+      "method_signature": "基于启发式if-else规则的CAT清洗工具,检测并修正/移除12类代码-注释对噪声",
+      "tags": [
+        "code-summarization",
+        "data-quality",
+        "benchmark-dataset-noise",
+        "rule-based-data-cleaning",
+        "empirical-software-engineering"
+      ],
+      "quality": "full"
+    },
+    "Backbone Language Modeling for Constrained Natural Language Generation": {
+      "title": "Backward and Forward Language Modeling for Constrained Sentence Generation",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "若某词必须出现,以该词为根节点构建贝叶斯网络",
+      "method_signature": "B/F双通道RNN同步或异步从约束词生成前后文",
+      "tags": [
+        "constrained-text-generation",
+        "bidirectional-language-model",
+        "RNN-constrained-LM",
+        "word-embedding-constraint",
+        "scientific-title-generation"
+      ],
+      "quality": "partial"
+    },
+    "Backward and Forward Language Modeling for Constrained Sentence Generation": {
+      "title": "Backward and Forward Language Modeling for Constrained Sentence Generation",
+      "year": 2015,
+      "venue": "unknown",
+      "doi": "10.48550/arxiv.1512.06612",
+      "key_insight": "从给定词同时向两端生成,无需首词约束即可保证该词出现在任意位置",
+      "method_signature": "双向/异步B/F RNN语言模型,基于GRU的条件概率乘积分解",
+      "tags": [
+        "constrained-text-generation",
+        "bidirectional-RNN-LM",
+        "arXiv-title-generation",
+        "Bayesian-network-decomposition",
+        "GRU-language-model"
+      ],
+      "quality": "full"
+    },
+    "Benchmarking Long-Context Language Models on Long Code Understanding": {
+      "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code Understanding",
+      "year": 2025,
+      "venue": "ACL 2025 Long Papers",
+      "doi": "10.18653/v1/2025.acl-long.1324",
+      "key_insight": "用真实代码仓库构造基准，而非拼接独立代码片段；通过时间约束（2024-06后仓库）减少数据污染",
+      "method_signature": "LONGCODEU四方面八任务基准，含500条/任务，长度0-128K，基于召回率和精确率多粒度自动评估",
+      "tags": [
+        "LCLM基准测试",
+        "长代码理解评估",
+        "代码仓库级软件工程",
+        "上下文窗口长度外推",
+        "代码理解任务分解"
+      ],
+      "quality": "full"
+    },
+    "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation": {
+      "title": "ChatCoder: Chat-based Refine Requirement Improves LLMs' Code Generation",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2311.00272",
+      "key_insight": "让LLM从预设的工程规格视角（IEEE SRS）引导用户补充遗漏信息、纠正错误理解，比自由改写更有效",
+      "method_signature": "两轮对话框架：第一轮Paraphrase+Extend用五个角度让LLM展开需求，第二轮Going-deep让LLM追问歧义，人类循环修正",
+      "tags": [
+        "LLM-code-generation",
+        "requirements-refinement",
+        "human-LLM-collaboration",
+        "prompt-engineering",
+        "dialogue-framework"
+      ],
+      "quality": "full"
+    },
+    "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path": {
+      "title": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+      "year": 2015,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1508.03720",
+      "key_insight": "最短依存路径浓缩最相关信息且消除噪声;分两子路径处理可捕获关系方向性r(a,b)≠r(b,a)",
+      "method_signature": "SDP-LSTM:多通道LSTM沿SDP两子路径分别传播,经max pooling拼接后softmax分类",
+      "tags": [
+        "Relation classification",
+        "Shortest dependency path",
+        "LSTM recurrent network",
+        "Multichannel neural architecture",
+        "SemEval-2010 Task 8"
+      ],
+      "quality": "full"
+    },
+    "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths": {
+      "title": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths",
+      "year": 2015,
+      "venue": "ACL",
+      "doi": "10.18653/v1/d15-1206",
+      "key_insight": "最短依存路径集中了分类所需的最相关词汇，同时排除无关噪声",
+      "method_signature": "SDP-LSTM：沿最短依存路径分离双向子路径的多通道LSTM网络",
+      "tags": [
+        "relation-classification",
+        "shortest-dependency-path",
+        "LSTM-recurrent-network",
+        "multichannel-word-embedding",
+        "directed-relation-detection"
+      ],
+      "quality": "full"
+    },
+    "CodePAD_ Sequence-based Code Generation with Pushdown Automaton": {
+      "title": "CodePAD: Sequence-based Code Generation with Pushdown Automaton",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2211.00818",
+      "key_insight": "编程语言是PDA可识别语言的子集，利用PDA状态约束token候选集可确保语法正确",
+      "method_signature": "PDA模块+状态表示+状态预测任务+联合预测约束生成过程",
+      "tags": [
+        "code-generation-grammar-constraint",
+        "pushdown-automaton-PDA",
+        "sequence-based-neural-code-generation",
+        "grammatical-correctness-guarantee",
+        "PDA-state-prediction"
+      ],
+      "quality": "full"
+    },
+    "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment": {
+      "title": "CODERL+: Improving Code Generation via Reinforcement with Execution Semantics Alignment",
+      "year": 2025,
+      "venue": "ArXiv preprint",
+      "doi": "10.48550/arxiv.2510.18471",
+      "key_insight": "利用失败 rollout 程序推断变量级执行轨迹,提供执行语义的直接学习信号",
+      "method_signature": "联合优化代码生成与执行语义对齐的双目标RL框架",
+      "tags": [
+        "RLVR-code-generation",
+        "execution-semantics-alignment",
+        "variable-trace-inference",
+        "LLM-post-training",
+        "program-state-modeling"
+      ],
+      "quality": "full"
+    },
+    "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588": {
+      "title": "Compressing Neural Language Models by Sparse Word Representations",
+      "year": null,
+      "venue": "ACL",
+      "doi": "10.18653/v1/p16-1022",
+      "key_insight": "词典中陌生词由常用词定义，词嵌入与上下文向量共享内部结构，可用同一组稀疏码同时压缩嵌入层和预测层",
+      "method_signature": "预计算稀疏码压缩LSTM语言模型嵌入层和预测层，参数规模与词表大小近乎无关",
+      "tags": [
+        "稀疏词向量表示",
+        "神经语言模型压缩",
+        "LSTM-RNN",
+        "NCE训练稳定性",
+        "词汇参数约简"
+      ],
+      "quality": "full"
+    },
+    "Compressing Neural Language Models by Sparse Word Representations__oa_W2949059244": {
+      "title": "Compressing Neural Language Models by Sparse Word Representations",
+      "year": 2016,
+      "venue": null,
+      "doi": "10.48550/arxiv.1610.03950",
+      "key_insight": "词典中陌生词由常用词定义→稀有词嵌入可由常用词的稀疏线性组合重构",
+      "method_signature": "基于稀疏编码的词表示压缩,每词仅需4-8个非零值,结合ZRegression稳定NCE训练",
+      "tags": [
+        "neural-language-models",
+        "model-compression",
+        "sparse-representations",
+        "word-embeddings",
+        "LSTM"
+      ],
+      "quality": "full"
+    },
+    "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4399252447": {
+      "title": "DevEval: A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2405.19856",
+      "key_insight": "DevEval按500真实仓库的数据分布构建，对齐代码和依赖的类型分布",
+      "method_signature": "仓库级代码生成结合Pass@k和Recall@k指标评估",
+      "tags": [
+        "LLM代码生成评估",
+        "仓库级代码生成",
+        "代码基准构建",
+        "依赖关系分析",
+        "上下文窗口限制"
+      ],
+      "quality": "full"
+    },
+    "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434": {
+      "title": "DevEval: A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories",
+      "year": 2024,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2024.findings-acl.214",
+      "key_insight": "真实仓库有73%非独立代码和跨文件依赖，现有基准忽略这些分布导致评测失真",
+      "method_signature": "DevEval含1825样本从115仓库，标注需求/参考代码/依赖，提供Pass@k和Recall@k评测",
+      "tags": [
+        "LLM代码生成评测",
+        "真实仓库代码基准",
+        "多文件依赖召回",
+        "上下文窗口限制",
+        "代码生成幻觉检测"
+      ],
+      "quality": "full"
+    },
+    "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W1784932861": {
+      "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+      "year": 2015,
+      "venue": null,
+      "doi": "10.48550/arxiv.1504.01106",
+      "key_insight": "在句法树上应用固定深度的子树检测器做卷积，所有特征检测器到输出层都有短路径，从而有效学习结构特征",
+      "method_signature": "基于句法树( constituency或dependency)的卷积神经网络，用子树窗口提取结构特征后max pooling聚合",
+      "tags": [
+        "tree-structured-NLP",
+        "convolutional-neural-networks",
+        "sentiment-analysis",
+        "question-classification",
+        "syntactic-parsing-utilization"
+      ],
+      "quality": "full"
+    },
+    "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035": {
+      "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+      "year": 2015,
+      "venue": "ACL",
+      "doi": "10.18653/v1/d15-1279",
+      "key_insight": "树结构上应用固定深度子树的特征检测器，所有节点到输出层路径等长",
+      "method_signature": "树卷积核滑动过整棵语法树，max pooling聚合特征",
+      "tags": [
+        "tree-based-convolution",
+        "sentiment-analysis",
+        "question-classification",
+        "constituency-parsing",
+        "dependency-parsing"
+      ],
+      "quality": "full"
+    },
+    "Distilling Word Embeddings_ An Encoding Approach": {
+      "title": "Distilling Word Embeddings: An Encoding Approach",
+      "year": 2015,
+      "venue": "CIKM-16 (short paper); RL4NLP Workshop @ACL-16",
+      "doi": "10.48550/arxiv.1506.04488",
+      "key_insight": "嵌入知识受维度约束，次要属性(如情感)在低维会丢失，监督编码可蒸馏任务特定知识",
+      "method_signature": "非线性编码层将300d嵌入映射到50d，保留任务相关信息",
+      "tags": [
+        "word-embedding-distillation",
+        "model-compression",
+        "neural-network-efficiency",
+        "low-dimensional-embeddings",
+        "task-specific-knowledge-transfer"
+      ],
+      "quality": "full"
+    },
+    "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories": {
+      "title": "EvoCodeBench: An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2404.00599",
+      "key_insight": "非独立代码依赖仓库内上下文,基准应模拟开发者编写仓库代码的真实场景",
+      "method_signature": "仓库级代码生成任务,提供签名+需求+完整仓库+参考代码+依赖+测试用例",
+      "tags": [
+        "LLM代码生成评估",
+        "代码基准测试",
+        "仓库级代码生成",
+        "依赖关系召回",
+        "真实世界代码仓库"
+      ],
+      "quality": "full"
+    },
+    "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations": {
+      "title": "EvoCodeBench: An Evolving Code Generation Benchmark with Domain-Specific Evaluations",
+      "year": 2024,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2410.22821",
+      "key_insight": "通过Domain-Specific Improvement(DSI)量化模型在不同领域的相对优势,可识别舒适域(strange domains)",
+      "method_signature": "四阶段自动流水线构建:仓库筛选→执行过滤→自动标注→基准构建",
+      "tags": [
+        "code-generation-benchmark",
+        "data-leakage-detection",
+        "domain-specific-evaluation",
+        "LLM-evaluation",
+        "repo-level-code-completion"
+      ],
+      "quality": "full"
+    },
+    "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation": {
+      "title": "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation",
+      "year": 2024,
+      "venue": "ACM Trans. Softw. Eng. Methodol.",
+      "doi": "10.48550/arxiv.2403.00046",
+      "key_insight": "Revised code from error corrections is closer in model representation space (6.39) than original dataset samples (12.35), enabling more efficient learning",
+      "method_signature": "DEED: Error-driven four-step loop (collect errors → Self-Revise → optimize → iterate)",
+      "tags": [
+        "LLM-fine-tuning",
+        "code-generation",
+        "error-driven-learning",
+        "data-efficient-adaptation",
+        "self-revision"
+      ],
+      "quality": "full"
+    },
+    "FAN_ Fourier Analysis Networks": {
+      "title": "FAN: Fourier Analysis Networks",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2410.02675",
+      "key_insight": "通过FAN层同时引入傅里叶分量与非线性激活,使Fourier系数表示能力随深度正相关",
+      "method_signature": "FAN层=[cos(W_px)||sin(W_px)||σ(B̄_p+W̄_px)],替换MLP层",
+      "tags": [
+        "Fourier分析网络",
+        "周期性建模",
+        "神经网络归纳偏置",
+        "OOD泛化",
+        "深度网络可扩展性"
+      ],
+      "quality": "full"
+    },
+    "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively": {
+      "title": "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2211.01642",
+      "key_insight": "用梯度累积矩阵动态追踪参数重要性，每轮循环自适应选择高潜力子网络更新",
+      "method_signature": "DPS: 循环两阶段更新，Stage I累积梯度, Stage II排序选取重要子网络",
+      "tags": [
+        "BERT-finetuning",
+        "subnetwork-optimization",
+        "adaptive-parameter-selection",
+        "gradient-accumulation",
+        "stability-regularization"
+      ],
+      "quality": "full"
+    },
+    "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4392223959": {
+      "title": "Generalization or Memorization: Data Contamination and Trustworthy Evaluation for Large Language Models",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2402.15938",
+      "key_insight": "污染会使模型输出分布变得尖锐(peakedness)，即采样文本的编辑距离趋近于零，可用此检测污染",
+      "method_signature": "CDD通过计算采样文本与贪婪搜索输出的编辑距离密度识别尖峰；TED通过排除尖峰和去重纠正分布",
+      "tags": [
+        "LLM-data-contamination",
+        "output-distribution-detection",
+        "edit-distance-metrics",
+        "trustworthy-evaluation",
+        "black-box-LLM-testing"
+      ],
+      "quality": "full"
+    },
+    "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101": {
+      "title": "Generalization or Memorization: Data Contamination and Trustworthy Evaluation for Large Language Models",
+      "year": 2024,
+      "venue": "Findings of ACL",
+      "doi": "10.18653/v1/2024.findings-acl.716",
+      "key_insight": "训练数据会使LLM输出分布变得更集中（峰度增加），通过编辑距离分布的峰度可以检测隐式和显式污染",
+      "method_signature": "CDD用编辑距离分布峰度检测污染，TED通过排除峰度和去重修正评估分布",
+      "tags": [
+        "LLM-data-contamination",
+        "output-distribution-peakedness",
+        "edit-distance-distribution",
+        "trustworthy-evaluation",
+        "black-box-detection"
+      ],
+      "quality": "full"
+    },
+    "How Transferable are Neural Networks in NLP Applications___oa_W2310102669": {
+      "title": "How Transferable are Neural Networks in NLP Applications?",
+      "year": 2016,
+      "venue": null,
+      "doi": "10.48550/arxiv.1603.06111",
+      "key_insight": "NLP中迁移性取决于任务语义相似度,不同于图像处理",
+      "method_signature": "逐层转移分析(LSTM/CNN),冻结vs微调对照",
+      "tags": [
+        "neural-network-transfer-learning",
+        "nlp-semantic-generalization",
+        "layer-wise-transferability-analysis",
+        "multi-task-learning-comparison",
+        "parameter-initialization-nlp"
+      ],
+      "quality": "full"
+    },
+    "How Transferable are Neural Networks in NLP Applications___oa_W2964352358": {
+      "title": "How Transferable are Neural Networks in NLP Applications",
+      "year": 2016,
+      "venue": "EMNLP 2016",
+      "doi": "10.18653/v1/d16-1046",
+      "key_insight": "NLP中神经网络是否可迁移主要取决于任务间语义相似程度，这不同于图像处理中底层特征几乎总是可迁移的共识",
+      "method_signature": "在6个数据集上用LSTM和CNN逐层分析INIT和MULT的可迁移性",
+      "tags": [
+        "neural-network-transfer-learning",
+        "NLP-sentence-classification",
+        "multi-task-learning-vs-initialization",
+        "layer-wise-transferability",
+        "semantic-similarity-in-adaptation"
+      ],
+      "quality": "full"
+    },
+    "Integrating Tree Path in Transformer for Code Representation": {
+      "title": "Integrating Tree Path in Transformer for Code Representation",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "Relative paths reveal token relationships (patterns like for-loops); absolute paths reveal per-token program behavior; both can bias self-attention",
+      "method_signature": "TPTrans: modify Transformer attention with path-encoded relative position representations and layer-normalized GRU encoders",
+      "tags": [
+        "code-representation-learning",
+        "AST-path-encoding",
+        "Transformer-structural-bias",
+        "code-summarization",
+        "relative-absolute-positional-encoding"
+      ],
+      "quality": "partial"
+    },
+    "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding": {
+      "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code Understanding",
+      "year": 2025,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2503.04359",
+      "key_insight": "LCLMs' performance drops dramatically when length exceeds 32K, far short of claimed 128K-1M context windows",
+      "method_signature": "Benchmark with 8 tasks across 4 understanding aspects, 3,983 examples, 0-128K token lengths",
+      "tags": [
+        "long-context-LM-evaluation",
+        "code-understanding-benchmark",
+        "context-window-limitation",
+        "software-engineering-LLM",
+        "retrieval-evaluation-metrics"
+      ],
+      "quality": "full"
+    },
+    "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2469057590": {
+      "title": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching",
+      "year": 2015,
+      "venue": null,
+      "doi": "10.48550/arxiv.1512.08422",
+      "key_insight": "依赖树卷积比序列卷积更能捕获结构信息,且向量差操作能捕捉句子对应关系",
+      "method_signature": "TBCNN编码句子+拼接/元素积/元素差匹配",
+      "tags": [
+        "tree-based convolution",
+        "natural language inference",
+        "sentence pair modeling",
+        "dependency parsing",
+        "heuristic matching"
+      ],
+      "quality": "full"
+    },
+    "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825": {
+      "title": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching",
+      "year": 2016,
+      "venue": "ACL",
+      "doi": "10.18653/v1/p16-2022",
+      "key_insight": "树结构卷积比递归网络传播路径更短，且显式使用元素级差异heuristics能带来优化收益",
+      "method_signature": "TBCNN捕获结构语义 + concatenation/product/difference启发式匹配层",
+      "tags": [
+        "tree-based convolution",
+        "heuristic matching",
+        "sentence pair modeling",
+        "dependency parse",
+        "natural language inference"
+      ],
+      "quality": "full"
+    },
+    "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4386081037": {
+      "title": "PACE: Improving Prompt with Actor-Critic Editing for Large Language Model",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2308.10088",
+      "key_insight": "prompt如同policy,利用LLM双重角色(执行+批判)形成闭环反馈实现自动编辑",
+      "method_signature": "PACE迭代算法:Actor执行prompt生成response,Critic评估提供反馈,聚合n个反馈更新prompt",
+      "tags": [
+        "LLM-prompt-optimization",
+        "actor-critic-algorithm",
+        "automatic-prompt-editing",
+        "iterative-prompt-refinement",
+        "in-context-learning"
+      ],
+      "quality": "full"
+    },
+    "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970": {
+      "title": "PACE: Improving Prompt with Actor-Critic Editing for Large Language Model",
+      "year": 2024,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2024.findings-acl.436",
+      "key_insight": "将提示视为策略，借鉴强化学习actor-critic范式让LLM同时扮演执行者和评价者",
+      "method_signature": "LLM双角色actor-critic迭代优化提示，多个actor-critic对提供多样化反馈",
+      "tags": [
+        "automatic-prompt-editing",
+        "actor-critic-paradigm",
+        "LLM-optimization",
+        "reinforcement-learning-analogy",
+        "prompt-refinement"
+      ],
+      "quality": "full"
+    },
+    "SAGA_ Summarization-Guided Assert Statement Generation": {
+      "title": "SAGA: Summarization-Guided Assert Statement Generation",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.14808",
+      "key_insight": "开发者撰写的摘要包含意图相关参数（如delta值），可补充源代码中缺失的关键断言信息",
+      "method_signature": "基于CodeT5预训练模型，用特殊token隔离测试前缀、焦点方法和摘要三种输入模态",
+      "tags": [
+        "assert-statement-generation",
+        "code-summarization",
+        "pre-trained-language-model",
+        "test-case-generation",
+        "codeNL-pairs"
+      ],
+      "quality": "full"
+    },
+    "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation": {
+      "title": "Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation",
+      "year": 2016,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1607.00970",
+      "key_insight": "用PMI而非最大概率预测关键词 penalizes 高频通用词；seq2BF从关键词双向生成突破顺序约束",
+      "method_signature": "PMI关键词预测 + seq2BF双向序列生成（含关键词的条件解码）",
+      "tags": [
+        "neural-dialogue-generation",
+        "keyword-prediction",
+        "seq2seq-variants",
+        "content-introducing",
+        "universal-reply-problem"
+      ],
+      "quality": "full"
+    },
+    "Sequence to Backward and Forward Sequences_ A Content-Introducing∩ü£n Approach to Generative Short-Text Conversation": {
+      "title": "Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation",
+      "year": 2016,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1607.00970",
+      "key_insight": "用PMI预测关键词作为生成起点,seq2BF模型从关键词同时向后向前生成,确保关键词出现在任意位置且语义丰富",
+      "method_signature": "seq2BF模型:序列到向后和向前序列",
+      "tags": [
+        "neural-dialogue-generation",
+        "seq2seq-universal-reply",
+        "content-introducing",
+        "constrained-text-generation",
+        "open-domain-conversation"
+      ],
+      "quality": "full"
+    },
+    "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing": {
+      "title": "TBCNN: A Tree-Based Convolutional Neural Network for Programming Language Processing",
+      "year": 2015,
+      "venue": "unknown",
+      "doi": null,
+      "key_insight": "将任意子树视为二叉树以处理节点数可变的AST",
+      "method_signature": "TBCNN: 编码准则+树卷积+三路池化",
+      "tags": [
+        "AST-based-program-representation",
+        "tree-convolutional-neural-network",
+        "programming-language-processing",
+        "continuous-binary-tree",
+        "code-pretraining"
+      ],
+      "quality": "full"
+    },
+    "Theoretical Proof that Auto-regressive Language Models Collapse when Real-world Data is a Finite Set": {
+      "title": "Theoretical Proof that Auto-regressive Language Models Collapse when Real-world Data is a Finite Set",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2412.14872",
+      "key_insight": "无论生成数据量多小，只要实数据有限且不断积累，崩溃必然发生",
+      "method_signature": "建立递推关系→求闭式解→证误差级数发散→输出分布偏离真分布",
+      "tags": [
+        "model-collapse-theory",
+        "auto-regressive-LM",
+        "recursive-training",
+        "finite-data-regime",
+        "theoretical-proof"
+      ],
+      "quality": "full"
+    },
+    "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling": {
+      "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+      "year": 2015,
+      "venue": "EMNLP",
+      "doi": null,
+      "key_insight": "在树上设计固定深度窗口做卷积+池化,任意节点到输出的路径都很短,同时获得结构信息和有效传播",
+      "method_signature": "TBCNN:树上卷积窗口+max pooling+全连接+softmax,支持成分树(c-TBCNN)和依存树(d-TBCNN)",
+      "tags": [
+        "tree-convolution",
+        "sentence-modeling",
+        "sentiment-classification",
+        "dependency-parsing",
+        "constituency-parsing"
+      ],
+      "quality": "full"
+    },
+    "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs": {
+      "title": "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs",
+      "year": 2025,
+      "venue": "ArXiv preprint",
+      "doi": "10.48550/arxiv.2503.15341",
+      "key_insight": "代码行首的预测难度显著高于其他位置，不确定性高时触发CoT-decoding生成多条推理路径选最优",
+      "method_signature": "UnCert-CoT：基于熵或概率差的线级不确定性阈值触发CoT-decoding",
+      "tags": [
+        "LLM-code-generation",
+        "chain-of-thought-reasoning",
+        "uncertainty-decoding",
+        "adaptive-inference",
+        "code-generation-efficiency"
+      ],
+      "quality": "full"
+    },
+    "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation": {
+      "title": "Why Do Neural Dialog Systems Generate Short and Meaningless Replies? A Comparison between Dialog and Translation",
+      "year": 2017,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1712.02250",
+      "key_insight": "Shuffling translation pairs creates unaligned distribution, reproducing short replies—confirming the conjecture.",
+      "method_signature": "Shuffle source-target pairs in translation to mimic dialog's multiple-plausible-replies property.",
+      "tags": [
+        "seq2seq-dialog-collapse",
+        "unaligned-conditional-distribution",
+        "translation-vs-dialog-comparison",
+        "universal-reply-mitigation",
+        "data-shuffling-hypothesis"
+      ],
+      "quality": "full"
+    },
+    "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion": {
+      "title": "Aligning LLMs to Fully Utilize the Cross-file Context in Repository-level Code Completion",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2503.15301",
+      "key_insight": "通过构造上下文感知代码(跨文件API调用和相似代码片段)强制LLMs主动查找跨文件相关信息",
+      "method_signature": "COLA两阶段训练(SFT+DPO)基于132K仓库级补全数据集",
+      "tags": [
+        "long-context-alignment",
+        "cross-file-code-completion",
+        "LLM-fine-tuning",
+        "preference-optimization",
+        "code-repository-context"
+      ],
+      "quality": "full"
+    },
+    "aiXcoder-7B_ A Lightweight and Effective Large Language Model for Code Completion": {
+      "title": "aiXcoder-7B: A Lightweight and Effective Large Language Model for Code Completion",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.32388/atahd0",
+      "key_insight": "SFIM用语法树约束生成完整代码段,配合跨文件采样策略,让小模型习得结构化代码能力",
+      "method_signature": "SFIM+NTP+FIM多目标训练,TFIDF/路径/依赖/随机四策略采样",
+      "tags": [
+        "code-completion-LLM",
+        "structured-fill-in-middle",
+        "cross-file-context",
+        "lightweight-model",
+        "syntax-tree-training"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "code-summarization": [
+      "Are We Building on the Rock_ On the Importance of Data Preprocessing for Code Summarization",
+      "Integrating Tree Path in Transformer for Code Representation",
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "constrained-text-generation": [
+      "Backbone Language Modeling for Constrained Natural Language Generation",
+      "Backward and Forward Language Modeling for Constrained Sentence Generation",
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing∩ü£n Approach to Generative Short-Text Conversation"
+    ],
+    "LLM-code-generation": [
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation",
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "model-compression": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2949059244",
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "LLM代码生成评估": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4399252447",
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "仓库级代码生成": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4399252447",
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "上下文窗口限制": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4399252447",
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    ],
+    "sentiment-analysis": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W1784932861",
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035"
+    ],
+    "question-classification": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W1784932861",
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035"
+    ],
+    "constituency-parsing": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035",
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "dependency-parsing": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035",
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "LLM-fine-tuning": [
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation",
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "LLM-data-contamination": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4392223959",
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "trustworthy-evaluation": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4392223959",
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "neural-network-transfer-learning": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2310102669",
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    ],
+    "tree-based convolution": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2469057590",
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "natural language inference": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2469057590",
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "sentence pair modeling": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2469057590",
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "heuristic matching": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2469057590",
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "automatic-prompt-editing": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4386081037",
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "neural-dialogue-generation": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation",
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing∩ü£n Approach to Generative Short-Text Conversation"
+    ],
+    "content-introducing": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation",
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing∩ü£n Approach to Generative Short-Text Conversation"
+    ],
+    "neural-NLP-regularization": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2165560648"
+    ],
+    "embedding-overfitting": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2165560648"
+    ],
+    "hyperparameter-tuning": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2165560648"
+    ],
+    "dropout-vs-L2": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2165560648"
+    ],
+    "incremental-training": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2165560648"
+    ],
+    "embedding-regularization-comparison": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "NLP-overfitting": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "incremental-hyperparameter-tuning": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "dropout-l2-complementary": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "CNN-RNN-regularization": [
+      "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    ],
+    "LLM代码生成智能体": [
+      "A Survey on Code Generation with LLM-based Agents"
+    ],
+    "单智能体规划推理": [
+      "A Survey on Code Generation with LLM-based Agents"
+    ],
+    "多智能体协作架构": [
+      "A Survey on Code Generation with LLM-based Agents"
+    ],
+    "软件开发生命周期自动化": [
+      "A Survey on Code Generation with LLM-based Agents"
+    ],
+    "工具集成与检索增强": [
+      "A Survey on Code Generation with LLM-based Agents"
+    ],
+    "data-quality": [
+      "Are We Building on the Rock_ On the Importance of Data Preprocessing for Code Summarization"
+    ],
+    "benchmark-dataset-noise": [
+      "Are We Building on the Rock_ On the Importance of Data Preprocessing for Code Summarization"
+    ],
+    "rule-based-data-cleaning": [
+      "Are We Building on the Rock_ On the Importance of Data Preprocessing for Code Summarization"
+    ],
+    "empirical-software-engineering": [
+      "Are We Building on the Rock_ On the Importance of Data Preprocessing for Code Summarization"
+    ],
+    "bidirectional-language-model": [
+      "Backbone Language Modeling for Constrained Natural Language Generation"
+    ],
+    "RNN-constrained-LM": [
+      "Backbone Language Modeling for Constrained Natural Language Generation"
+    ],
+    "word-embedding-constraint": [
+      "Backbone Language Modeling for Constrained Natural Language Generation"
+    ],
+    "scientific-title-generation": [
+      "Backbone Language Modeling for Constrained Natural Language Generation"
+    ],
+    "bidirectional-RNN-LM": [
+      "Backward and Forward Language Modeling for Constrained Sentence Generation"
+    ],
+    "arXiv-title-generation": [
+      "Backward and Forward Language Modeling for Constrained Sentence Generation"
+    ],
+    "Bayesian-network-decomposition": [
+      "Backward and Forward Language Modeling for Constrained Sentence Generation"
+    ],
+    "GRU-language-model": [
+      "Backward and Forward Language Modeling for Constrained Sentence Generation"
+    ],
+    "LCLM基准测试": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "长代码理解评估": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "代码仓库级软件工程": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "上下文窗口长度外推": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "代码理解任务分解": [
+      "Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "requirements-refinement": [
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation"
+    ],
+    "human-LLM-collaboration": [
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation"
+    ],
+    "prompt-engineering": [
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation"
+    ],
+    "dialogue-framework": [
+      "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation"
+    ],
+    "Relation classification": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path"
+    ],
+    "Shortest dependency path": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path"
+    ],
+    "LSTM recurrent network": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path"
+    ],
+    "Multichannel neural architecture": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path"
+    ],
+    "SemEval-2010 Task 8": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path"
+    ],
+    "relation-classification": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths"
+    ],
+    "shortest-dependency-path": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths"
+    ],
+    "LSTM-recurrent-network": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths"
+    ],
+    "multichannel-word-embedding": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths"
+    ],
+    "directed-relation-detection": [
+      "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths"
+    ],
+    "code-generation-grammar-constraint": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "pushdown-automaton-PDA": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "sequence-based-neural-code-generation": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "grammatical-correctness-guarantee": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "PDA-state-prediction": [
+      "CodePAD_ Sequence-based Code Generation with Pushdown Automaton"
+    ],
+    "RLVR-code-generation": [
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment"
+    ],
+    "execution-semantics-alignment": [
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment"
+    ],
+    "variable-trace-inference": [
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment"
+    ],
+    "LLM-post-training": [
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment"
+    ],
+    "program-state-modeling": [
+      "CodeRL+_ Improving Code Generation via Reinforcement with Execution Semantics Alignment"
+    ],
+    "稀疏词向量表示": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "神经语言模型压缩": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "LSTM-RNN": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "NCE训练稳定性": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "词汇参数约简": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    ],
+    "neural-language-models": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2949059244"
+    ],
+    "sparse-representations": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2949059244"
+    ],
+    "word-embeddings": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2949059244"
+    ],
+    "LSTM": [
+      "Compressing Neural Language Models by Sparse Word Representations__oa_W2949059244"
+    ],
+    "代码基准构建": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4399252447"
+    ],
+    "依赖关系分析": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4399252447"
+    ],
+    "LLM代码生成评测": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    ],
+    "真实仓库代码基准": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    ],
+    "多文件依赖召回": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    ],
+    "代码生成幻觉检测": [
+      "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    ],
+    "tree-structured-NLP": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W1784932861"
+    ],
+    "convolutional-neural-networks": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W1784932861"
+    ],
+    "syntactic-parsing-utilization": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W1784932861"
+    ],
+    "tree-based-convolution": [
+      "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035"
+    ],
+    "word-embedding-distillation": [
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "neural-network-efficiency": [
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "low-dimensional-embeddings": [
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "task-specific-knowledge-transfer": [
+      "Distilling Word Embeddings_ An Encoding Approach"
+    ],
+    "代码基准测试": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "依赖关系召回": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "真实世界代码仓库": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories"
+    ],
+    "code-generation-benchmark": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations"
+    ],
+    "data-leakage-detection": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations"
+    ],
+    "domain-specific-evaluation": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations"
+    ],
+    "LLM-evaluation": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations"
+    ],
+    "repo-level-code-completion": [
+      "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations"
+    ],
+    "code-generation": [
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation"
+    ],
+    "error-driven-learning": [
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation"
+    ],
+    "data-efficient-adaptation": [
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation"
+    ],
+    "self-revision": [
+      "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation"
+    ],
+    "Fourier分析网络": [
+      "FAN_ Fourier Analysis Networks"
+    ],
+    "周期性建模": [
+      "FAN_ Fourier Analysis Networks"
+    ],
+    "神经网络归纳偏置": [
+      "FAN_ Fourier Analysis Networks"
+    ],
+    "OOD泛化": [
+      "FAN_ Fourier Analysis Networks"
+    ],
+    "深度网络可扩展性": [
+      "FAN_ Fourier Analysis Networks"
+    ],
+    "BERT-finetuning": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "subnetwork-optimization": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "adaptive-parameter-selection": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "gradient-accumulation": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "stability-regularization": [
+      "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively"
+    ],
+    "output-distribution-detection": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4392223959"
+    ],
+    "edit-distance-metrics": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4392223959"
+    ],
+    "black-box-LLM-testing": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4392223959"
+    ],
+    "output-distribution-peakedness": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "edit-distance-distribution": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "black-box-detection": [
+      "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101"
+    ],
+    "nlp-semantic-generalization": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2310102669"
+    ],
+    "layer-wise-transferability-analysis": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2310102669"
+    ],
+    "multi-task-learning-comparison": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2310102669"
+    ],
+    "parameter-initialization-nlp": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2310102669"
+    ],
+    "NLP-sentence-classification": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    ],
+    "multi-task-learning-vs-initialization": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    ],
+    "layer-wise-transferability": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    ],
+    "semantic-similarity-in-adaptation": [
+      "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    ],
+    "code-representation-learning": [
+      "Integrating Tree Path in Transformer for Code Representation"
+    ],
+    "AST-path-encoding": [
+      "Integrating Tree Path in Transformer for Code Representation"
+    ],
+    "Transformer-structural-bias": [
+      "Integrating Tree Path in Transformer for Code Representation"
+    ],
+    "relative-absolute-positional-encoding": [
+      "Integrating Tree Path in Transformer for Code Representation"
+    ],
+    "long-context-LM-evaluation": [
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "code-understanding-benchmark": [
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "context-window-limitation": [
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "software-engineering-LLM": [
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "retrieval-evaluation-metrics": [
+      "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding"
+    ],
+    "dependency parsing": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2469057590"
+    ],
+    "dependency parse": [
+      "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825"
+    ],
+    "LLM-prompt-optimization": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4386081037"
+    ],
+    "actor-critic-algorithm": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4386081037"
+    ],
+    "iterative-prompt-refinement": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4386081037"
+    ],
+    "in-context-learning": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4386081037"
+    ],
+    "actor-critic-paradigm": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "LLM-optimization": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "reinforcement-learning-analogy": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "prompt-refinement": [
+      "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    ],
+    "assert-statement-generation": [
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "pre-trained-language-model": [
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "test-case-generation": [
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "codeNL-pairs": [
+      "SAGA_ Summarization-Guided Assert Statement Generation"
+    ],
+    "keyword-prediction": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation"
+    ],
+    "seq2seq-variants": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation"
+    ],
+    "universal-reply-problem": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation"
+    ],
+    "seq2seq-universal-reply": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing∩ü£n Approach to Generative Short-Text Conversation"
+    ],
+    "open-domain-conversation": [
+      "Sequence to Backward and Forward Sequences_ A Content-Introducing∩ü£n Approach to Generative Short-Text Conversation"
+    ],
+    "AST-based-program-representation": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "tree-convolutional-neural-network": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "programming-language-processing": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "continuous-binary-tree": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "code-pretraining": [
+      "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing"
+    ],
+    "model-collapse-theory": [
+      "Theoretical Proof that Auto-regressive Language Models Collapse when Real-world Data is a Finite Set"
+    ],
+    "auto-regressive-LM": [
+      "Theoretical Proof that Auto-regressive Language Models Collapse when Real-world Data is a Finite Set"
+    ],
+    "recursive-training": [
+      "Theoretical Proof that Auto-regressive Language Models Collapse when Real-world Data is a Finite Set"
+    ],
+    "finite-data-regime": [
+      "Theoretical Proof that Auto-regressive Language Models Collapse when Real-world Data is a Finite Set"
+    ],
+    "theoretical-proof": [
+      "Theoretical Proof that Auto-regressive Language Models Collapse when Real-world Data is a Finite Set"
+    ],
+    "tree-convolution": [
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "sentence-modeling": [
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "sentiment-classification": [
+      "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    ],
+    "chain-of-thought-reasoning": [
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "uncertainty-decoding": [
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "adaptive-inference": [
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "code-generation-efficiency": [
+      "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs"
+    ],
+    "seq2seq-dialog-collapse": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "unaligned-conditional-distribution": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "translation-vs-dialog-comparison": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "universal-reply-mitigation": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "data-shuffling-hypothesis": [
+      "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation"
+    ],
+    "long-context-alignment": [
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "cross-file-code-completion": [
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "preference-optimization": [
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "code-repository-context": [
+      "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion"
+    ],
+    "code-completion-LLM": [
+      "aiXcoder-7B_ A Lightweight and Effective Large Language Model for Code Completion"
+    ],
+    "structured-fill-in-middle": [
+      "aiXcoder-7B_ A Lightweight and Effective Large Language Model for Code Completion"
+    ],
+    "cross-file-context": [
+      "aiXcoder-7B_ A Lightweight and Effective Large Language Model for Code Completion"
+    ],
+    "lightweight-model": [
+      "aiXcoder-7B_ A Lightweight and Effective Large Language Model for Code Completion"
+    ],
+    "syntax-tree-training": [
+      "aiXcoder-7B_ A Lightweight and Effective Large Language Model for Code Completion"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Steganography in animated emoji using self-reference",
+  "doi": "10.1007/s00530-020-00723-z",
+  "title": "Steganography in animated emoji using self-reference",
+  "year": 2021,
+  "venue": "Multimedia Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Animated emoji is widely used in OSN but lacks secure steganography; existing GIF methods are fragile against modern steganalysis.",
+  "problem_framing": "How to embed secret data into animated GIF with minimal distortion by leveraging self-reference to estimate the pre-compression original image.",
+  "key_insight": "If we construct a reference image close to the original image before GIF compression, we can modify pixels toward original values, reducing extra error from embedding.",
+  "method_signature": "Self-reference algorithm using DnCNN to construct reference images; modify pixels based on RGB vector angles between compression and embedding distortion.",
+  "evaluation_criteria": "Security evaluated by minimal total error PE using ensemble classifier with SPAM and SRMQ1 features against steganalysis.",
+  "negative_result_or_admitted_limitation": "HILL alone is not effective for GIF due to texture simplicity, producing pepper and salt noises; method only outperforms baseline in most cases.",
+  "evidence_for_taste": [
+    "obvious pepper and salt noises can be found",
+    "no obvious noises in the edge and texture areas",
+    "outperforms state-of-the-art works",
+    "the data hider does not have the original content",
+    "better visual quality as well as security"
+  ],
+  "thinking_moves": [
+    "把GIF压缩过程类比为添加噪声的过程,用去噪网络逆向估计原始图像",
+    "利用RGB向量的几何角度判断嵌入方向与压缩方向的相对关系,急性角被惩罚",
+    "联合帧内嵌入成本与帧间嵌入成本形成组合失真函数",
+    "借鉴通信理论中的STC框架而非单纯修改LSB"
+  ],
+  "topic_tags": [
+    "GIF-steganography",
+    "self-reference-distortion",
+    "DnCNN-denoising",
+    "syndrome-trellis-coding",
+    "animated-emoji-covert-communication"
+  ],
+  "cites_own_work": [
+    "Distortion function for emoji image steganography (2019)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

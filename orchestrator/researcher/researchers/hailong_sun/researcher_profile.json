@@ -1,0 +1,124 @@
+{
+  "slug": "hailong_sun",
+  "n_extracts": 2,
+  "n_full": 0,
+  "n_partial": 2,
+  "n_thin": 0,
+  "year_range": [
+    2025,
+    2025
+  ],
+  "top_tags": [
+    [
+      "LLM-ensemble",
+      2
+    ],
+    [
+      "cross-model-attention",
+      1
+    ],
+    [
+      "boosting",
+      1
+    ],
+    [
+      "error-correction",
+      1
+    ],
+    [
+      "hidden-representation-fusion",
+      1
+    ],
+    [
+      "LLM-as-a-judge",
+      1
+    ],
+    [
+      "peer-review",
+      1
+    ],
+    [
+      "Dawid-Skene",
+      1
+    ],
+    [
+      "weak-supervision",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2025,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "LLM-ensemble",
+          1
+        ],
+        [
+          "cross-model-attention",
+          1
+        ],
+        [
+          "boosting",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "翻转三元组虽有效但增加计算开销，quadruple-half性能更优但复杂度高达O(J!)"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "true potential remains largely untapped",
+      "paper_id": "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    },
+    {
+      "quote": "conceptually simple and empirically powerful",
+      "paper_id": "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    },
+    {
+      "quote": "transparent and interpretable framework",
+      "paper_id": "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    },
+    {
+      "quote": "fully unsupervised provides flexibility",
+      "paper_id": "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    },
+    {
+      "quote": "performance gain validates debiasing impact",
+      "paper_id": "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process"
+    },
+    {
+      "quote": "overlooking the rich information embedded in the hidden representations",
+      "paper_id": "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    },
+    {
+      "quote": "break the black-box barrier",
+      "paper_id": "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    },
+    {
+      "quote": "enabling state-driven hierarchical interaction",
+      "paper_id": "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    },
+    {
+      "quote": "successor models can adaptively access and fuse",
+      "paper_id": "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    },
+    {
+      "quote": "rectify the key tokens of its predecessor",
+      "paper_id": "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    },
+    {
+      "quote": "suppresses the maximal (incorrect) logit",
+      "paper_id": "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    },
+    {
+      "quote": "achieving performance close to that of a single model",
+      "paper_id": "LLMBoost_ Make Large Language Models Stronger with Boosting"
+    }
+  ]
+}

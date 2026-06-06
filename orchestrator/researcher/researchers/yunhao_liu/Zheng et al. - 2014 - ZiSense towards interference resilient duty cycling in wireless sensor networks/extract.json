@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zheng et al. - 2014 - ZiSense towards interference resilient duty cycling in wireless sensor networks",
+  "doi": null,
+  "title": "ZiSense: Towards Interference Resilient Duty Cycling in Wireless Sensor Networks",
+  "year": 2014,
+  "venue": "SenSys'14",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "无线传感器网络中干扰导致虚假唤醒和空闲监听,能耗浪费严重",
+  "problem_framing": "LPL阈值检测过于宽松允许干扰唤醒,LPP探针检测过于严格丢失传输机会",
+  "key_insight": "基于RSSI时域序列特征(PAP R/空中时间/MPI/UNF)识别ZigBee信号,只在检测到ZigBee时才唤醒节点",
+  "method_signature": "提取短时RSSI序列特征并用规则判断识别ZigBee传输",
+  "evaluation_criteria": "虚假唤醒率、能耗duty cycle、抗干扰环境性能",
+  "negative_result_or_admitted_limitation": "清洁环境下ZiSense比BoX-MAC高0.08%能耗,因为RSSI处理时间更长,AEDP在干扰RSSI高于链路RSSI时失效",
+  "evidence_for_taste": [
+    "energy detection in LPL is too simple",
+    "probe decoding in LPP is too strict",
+    "conservative design principle",
+    "ZiSense keeps a low false wake-up ratio",
+    "wake up only when there is a ZigBee transmission"
+  ],
+  "thinking_moves": [
+    "从现场高虚假唤醒率出发诊断根本原因",
+    "将问题重新框架为信号模式识别而非阈值判断",
+    "利用调制技术差异提取可区分特征",
+    "保守设计优先捕获所有ZigBee再考虑开销",
+    "承认在无干扰环境有轻微额外开销"
+  ],
+  "topic_tags": [
+    "wireless-sensor-networks",
+    "duty-cycling",
+    "interference-resilience",
+    "MAC-protocol-optimization",
+    "ZigBee-signal-detection",
+    "RSSI-pattern-analysis"
+  ],
+  "cites_own_work": [
+    "AEDP"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

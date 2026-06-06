@@ -1,0 +1,38 @@
+{
+  "paper_id": "2023_WWW_CoTel_camera_ready",
+  "doi": null,
+  "title": "CoTel: Ontology-Neural Co-Enhanced Text Labeling",
+  "year": 2023,
+  "venue": "WWW '23",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "手工标注成本高、耗时且劳动密集,而公开数据集不足以支持实际应用。",
+  "problem_framing": "将规则驱动与学习驱动的文本标注方法融合,通过本体-神经协同增强框架提升资源效率。",
+  "key_insight": "使显式标注规则(本体)与隐式标注模型(神经网络)相互增强,形成协同优化循环。",
+  "method_signature": "CoTel框架通过关键本体提取和本体增强损失预测实现规则与神经模块的交替协同增强。",
+  "evaluation_criteria": "相同准确率下节省时间成本64.75%、减少标注数量62.07%。",
+  "negative_result_or_admitted_limitation": "单独使用规则方法覆盖样本有限(14.75%/12.6%),需学习模块补充。",
+  "evidence_for_taste": [
+    "ignores the underlying correlation",
+    "losing potential hidden optimization opportunities",
+    "critical ontological schema to boost",
+    "the antecedent of the rule is usually composed of ontologies",
+    "integrated critical ontologies bring significant improvement"
+  ],
+  "thinking_moves": [
+    "从两阶段方法的缺陷反推协同增强的必要性",
+    "将人类标注行为模式化为可自动生成的规则",
+    "通过关键本体提取将规则知识迁移到损失预测中",
+    "用神经模型筛选的高置信伪标签反哺规则生成"
+  ],
+  "topic_tags": [
+    "text-labeling-cost-reduction",
+    "ontology-neural-co-enhancement",
+    "rule-learning-hybrid",
+    "active-learning-loss-prediction",
+    "ontology-extraction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

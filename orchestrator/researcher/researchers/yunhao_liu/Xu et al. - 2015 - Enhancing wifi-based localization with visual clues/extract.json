@@ -1,0 +1,39 @@
+{
+  "paper_id": "Xu et al. - 2015 - Enhancing wifi-based localization with visual clues",
+  "doi": null,
+  "title": "Enhancing WiFi-based Localization with Visual Clues",
+  "year": 2015,
+  "venue": "UbiComp",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "WiFi fingerprinting suffers from ambiguity due to multipath fading, and existing motion/peer-assisted solutions are impractical",
+  "problem_framing": "Two distinct locations may possess similar RSS fingerprints, causing large localization errors",
+  "key_insight": "Extract geometric constraints from crowdsourced photos via SfM and map them onto fingerprint space to resolve ambiguity",
+  "method_signature": "Joint optimization of WiFi fingerprints and SfM-derived geometric polygon constraints",
+  "evaluation_criteria": "Localization error (meters), latency (seconds), energy overhead (milliwatts)",
+  "negative_result_or_admitted_limitation": "Large errors exist for low quality WiFi samples, extreme distances, similar POI appearance, and POI obstruction",
+  "evidence_for_taste": [
+    "triples the localization accuracy",
+    "limit the mean localization error to less than 1m",
+    "acceptable as long as the majority of POI is clearly taken",
+    "the degeneration is acceptable",
+    "Argus may degenerate to multi-sample WiFi localization"
+  ],
+  "thinking_moves": [
+    "Identify WiFi-only limitation through observation: large errors from ambiguous fingerprints",
+    "Repurpose SfM output (relative positions) as constraints rather than absolute coordinates",
+    "Frame localization as combinatorial optimization with geometric constraints",
+    "Replace human effort with crowdsourced image collection",
+    "Address practical concerns (device diversity, latency, energy) as first-class requirements"
+  ],
+  "topic_tags": [
+    "WiFi fingerprinting",
+    "Structure from Motion",
+    "indoor localization",
+    "geometric constraints",
+    "crowdsourced imagery"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

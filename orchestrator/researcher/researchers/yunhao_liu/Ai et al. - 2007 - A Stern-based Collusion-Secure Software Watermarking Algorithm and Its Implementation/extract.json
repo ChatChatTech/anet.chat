@@ -1,0 +1,37 @@
+{
+  "paper_id": "Ai et al. - 2007 - A Stern-based Collusion-Secure Software Watermarking Algorithm and Its Implementation",
+  "doi": null,
+  "title": "A Stern-based Collusion-Secure Software Watermarking Algorithm and Its Implementation",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Stern算法无法抵抗共谋攻击，且实现困难，需改进以提升安全性和实用性",
+  "problem_framing": "通过重排codebook中元素顺序，使攻击者难以推断codebook结构，从而抵抗共谋攻击",
+  "key_insight": "攻击者通过比较不同水印应用来推断codebook，重排元素顺序使推断难度达到n!",
+  "method_signature": "基于秘钥k对codebook元素重排，基于统计指令频率修改嵌入水印",
+  "evaluation_criteria": "相似度z_nc≥0.9判定为有水印，≤0.6无水印，测试7种攻击",
+  "negative_result_or_admitted_limitation": "代码替换有严格限制，无法找到足够语义等价指令组，且冗余指令插入会增加代码大小",
+  "evidence_for_taste": [
+    "make it has the ability of resisting collusive attacks",
+    "code substitutions have very strict limit",
+    "make those instruction groups can resilient to",
+    "the difficulty of collusive attack will amount to n!",
+    "Simplify the implementation by embedding"
+  ],
+  "thinking_moves": [
+    "识别Stern算法弱点在于codebook静态性，攻击者可比较不同水印应用推断",
+    "将codebook保护问题转化为元素重排问题，利用排列组合复杂性",
+    "承认代码替换的语义等价约束限制，通过冗余指令补充嵌入能力",
+    "使用归一化相关检测替代精确匹配，增强鲁棒性"
+  ],
+  "topic_tags": [
+    "软件水印",
+    "共谋攻击",
+    "Stern算法改进",
+    "MSIL实现",
+    "指令频率统计水印"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

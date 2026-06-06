@@ -1,0 +1,39 @@
+{
+  "paper_id": "Enterprise Interoperability",
+  "doi": "10.1007/978-3-642-33068-1",
+  "title": "Enterprise Interoperability",
+  "year": 2012,
+  "venue": "IWEI 2012",
+  "venue_tier": "workshop",
+  "role": "senior",
+  "motivation": "全球化与企业边界消失使跨组织协作成为竞争关键，企业需在动态网络中与任意规模伙伴互操作",
+  "problem_framing": "如何实现跨组织灵活协作，在业务与技术层面提供集成支持",
+  "key_insight": "价值创造从单向转向双向，企业成功取决于与任意伙伴的互操作能力",
+  "method_signature": "IWEI会议征稿覆盖理论框架、架构方法、成熟度模型与应用案例的完整研究谱系",
+  "evaluation_criteria": "通过严格评审流程，每篇论文至少三位专家评审",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "success of an enterprise more and more depends on its ability to interoperate",
+    "flexible cross-organizational collaboration",
+    "achieving their business goals",
+    "interoperability solutions",
+    "value being created in both directions"
+  ],
+  "thinking_moves": [
+    "识别全球化驱动的企业边界消失趋势",
+    "将企业互操作定位为竞争优势来源",
+    "从孤立技术问题转向动态网络价值创造",
+    "强调业务与技术层面的集成支持",
+    "建立成熟度模型评价体系"
+  ],
+  "topic_tags": [
+    "enterprise-interoperability",
+    "cross-organizational-collaboration",
+    "networked-enterprises",
+    "service-modeling",
+    "future-internet"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Xiaofei Xu以General Chair和Volume Editor身份组织此会议。作为主编角色，本提取基于会议前言部分而非具体论文。他同时以作者身份参与了104页的《A Value-Oriented Iterative Service Modeling Process》论文。该文件为会议论文集而非单一论文，故以会议为分析单元。"
+}

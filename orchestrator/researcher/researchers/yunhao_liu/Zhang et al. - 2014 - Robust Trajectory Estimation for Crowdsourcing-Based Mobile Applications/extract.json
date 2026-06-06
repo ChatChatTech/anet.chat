@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zhang et al. - 2014 - Robust Trajectory Estimation for Crowdsourcing-Based Mobile Applications",
+  "doi": null,
+  "title": "Robust Trajectory Estimation for Crowdsourcing-Based Mobile Applications",
+  "year": 2014,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "众包数据含异常值导致轨迹估计不准确，影响室内定位等应用",
+  "problem_framing": "将异常数据问题形式化为鲁棒统计估计问题",
+  "key_insight": "众包数据提供冗余性可用于鲁棒估计；提出用户级鲁棒性以区分正常/异常用户",
+  "method_signature": "TrMCD: 基于MCD估计器的鲁棒轨迹估计方法",
+  "evaluation_criteria": "映射误差(米)；对比LS和LV估计器",
+  "negative_result_or_admitted_limitation": "在大规模开放环境中可能失效（如大厅、博物馆）；方法受限于建筑类型",
+  "evidence_for_taste": [
+    "data quality has not received sufficient attention",
+    "none of the proposed methods considered whether the estimated trajectories are robust",
+    "we propose to form a higher level concept of robustness based on users",
+    "no prior methods have been developed to deal with measurement errors in crowdsourcing from the robust statistical point of view"
+  ],
+  "thinking_moves": [
+    "将定位问题重新框定为鲁棒估计问题",
+    "从点估计扩展到用户级鲁棒性",
+    "利用数据的统计冗余性克服空间分布不均衡",
+    "借鉴WSN鲁棒方法但针对多维轨迹数据的差异化建模"
+  ],
+  "topic_tags": [
+    "crowdsourcing-trajectory",
+    "robust-statistics-MCD",
+    "indoor-localization-fingerprint",
+    "outlier-detection-mobile-sensing",
+    "user-classification-robustness"
+  ],
+  "cites_own_work": [
+    "UnLoc",
+    "Zee",
+    "LiFS"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

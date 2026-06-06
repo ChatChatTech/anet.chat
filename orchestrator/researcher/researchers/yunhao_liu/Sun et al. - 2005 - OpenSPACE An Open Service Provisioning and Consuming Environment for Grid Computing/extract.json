@@ -1,0 +1,38 @@
+{
+  "paper_id": "Sun et al. - 2005 - OpenSPACE An Open Service Provisioning and Consuming Environment for Grid Computing",
+  "doi": null,
+  "title": "OpenSPACE: An Open Service Provisioning and Consuming Environment for Grid Computing",
+  "year": 2005,
+  "venue": "6th International Workshop on Advanced Parallel Processing Technologies",
+  "venue_tier": "workshop",
+  "role": "corresponding",
+  "motivation": "CROWN实现中发现服务专业机构无计算资源,而强大资源却因所有者不擅长服务开发而闲置",
+  "problem_framing": "当前服务网格(如GT3/GT4)未分离服务与底层资源,导致效率低、资源利用率差、成本高",
+  "key_insight": "将服务提供商与资源提供商分离,让用户/调度器/中间件自主选择RS部署到合适的UR",
+  "method_signature": "OpenSPACE架构含DSR(分布式服务仓库)、服务容器、Service Explorer实现RS/DS/UR分离",
+  "evaluation_criteria": "工作处理时间(service coverage rate),资源利用率,与非分离方案的对比实验",
+  "negative_result_or_admitted_limitation": "当scr达80%时,两方案结果几乎相同;部署时间代价增大时优势缩小",
+  "evidence_for_taste": [
+    "现有系统没有分离服务和资源",
+    "不擅长开发的组织闲置强大资源",
+    "OpenSPACE帮助更多在于低scr",
+    "时间消耗等于或大于所得时优势减少"
+  ],
+  "thinking_moves": [
+    "从CROWN网格实现中的真实痛点归纳问题:专业者无资源、有资源者不开发",
+    "将绑定问题拆分为效率、成本、安全三个维度分别论证",
+    "引入raw service和deployed service的二元区分建立形式化模型",
+    "设计组件(DSE/SE/Service Container)逐一解决分离后的具体工程挑战",
+    "通过实验边界条件揭示方法适用范围:高覆盖时优势消失"
+  ],
+  "topic_tags": [
+    "grid-service-resource-separation",
+    "raw-service-deployment",
+    "distributed-service-repository",
+    "CROWN-grid",
+    "service-container-architecture"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

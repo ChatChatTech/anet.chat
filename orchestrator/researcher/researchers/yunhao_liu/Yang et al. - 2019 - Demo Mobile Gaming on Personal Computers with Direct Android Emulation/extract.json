@@ -1,0 +1,39 @@
+{
+  "paper_id": "Yang et al. - 2019 - Demo Mobile Gaming on Personal Computers with Direct Android Emulation",
+  "doi": null,
+  "title": "Demo: Mobile Gaming on Personal Computers with Direct Android Emulation",
+  "year": 2019,
+  "venue": "ACM MobiCom '19",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "移动游戏市场巨大，用户希望在PC上以更好体验玩安卓游戏，但现有模拟器运行重型3D游戏时性能不足",
+  "problem_framing": "AOVB架构通过完全虚拟化运行安卓游戏，导致重型3D游戏出现不可接受的卡顿，需消除虚拟化开销",
+  "key_insight": "直接安卓模拟：让安卓二进制直接访问PC硬件而非通过虚拟机，实现接近原生硬件性能",
+  "method_signature": "数据驱动指令重写+syscall仿真+图形映射优化",
+  "evaluation_criteria": "流畅度(0.76→0.92)、启动时间(-48%)、内存占用(-22%)",
+  "negative_result_or_admitted_limitation": "即使使用VirtIO、GPU加速、Intel VT等优化，虚拟化方案对重型3D游戏的体验仍远不令人满意",
+  "evidence_for_taste": [
+    "pragmatic approach is employed",
+    "prioritize the support for the popular",
+    "nearly native hardware performance",
+    "the boundary of virtualization needs to be broken"
+  ],
+  "thinking_moves": [
+    "通过30M用户的测量数据定位虚拟化是性能瓶颈",
+    "接受不完全正确性换取效率：只重写常用指令模式而非全部ARM指令",
+    "工程分解：将跨层差异(ISA/OS/设备控制)逐个解决",
+    "用profiling数据指导优化优先级"
+  ],
+  "topic_tags": [
+    "Android-emulation-on-x86",
+    "direct-execution-emulator",
+    "mobile-gaming-emulation",
+    "syscall-emulation",
+    "cross-architecture-binary-translation"
+  ],
+  "cites_own_work": [
+    "Full technical details of DAOW [2] will be presented at the main conference of ACM MobiCom 2019"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

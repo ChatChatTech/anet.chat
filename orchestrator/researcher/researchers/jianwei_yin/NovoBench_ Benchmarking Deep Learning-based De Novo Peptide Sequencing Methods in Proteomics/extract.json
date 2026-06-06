@@ -1,0 +1,41 @@
+{
+  "paper_id": "NovoBench_ Benchmarking Deep Learning-based De Novo Peptide Sequencing Methods in Proteomics",
+  "doi": "10.48550/arxiv.2406.11906",
+  "title": "NovoBench: Benchmarking Deep Learning-based De Novo Peptide Sequencing Methods in Proteomics",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有文献使用不同数据集和有限指标,导致模型比较不公平且 robustness 被忽视",
+  "problem_framing": "构建统一 benchmark,整合多样数据集、模型和综合评估指标",
+  "key_insight": "通过统一评估揭示:Transformer模型置信度高但π-HelixNovo跨数据集最稳健,缺失 fragmentation 显著影响精度",
+  "method_signature": "集成6个模型于3个数据集,新增PTM级指标和鲁棒性评估",
+  "evaluation_criteria": "氨基酸/肽段级精度召回,PTM识别,置信度,效率,NSR/MFR/肽长鲁棒性",
+  "negative_result_or_admitted_limitation": "当前 DIA 模型开源可用性有限,工作限于 DDA 质谱数据",
+  "evidence_for_taste": [
+    "lack of thorough comparisons",
+    "obscure the true progress",
+    "fail to evaluate some important abilities",
+    "noise peaks have a relatively smaller impact",
+    "nearly all models are highly affected",
+    "Instanovo model exhibits poor robustness"
+  ],
+  "thinking_moves": [
+    "将公平比较问题归因于数据集不一致",
+    "识别当前指标体系的局限性,扩展PTM和效率评估",
+    "用可视化图表揭示各因素对模型精度的影响曲线",
+    "通过跨数据集对比发现 InstaNovo 脆弱的鲁棒性"
+  ],
+  "topic_tags": [
+    "de-novo-peptide-sequencing",
+    "benchmarking",
+    "deep-learning-proteomics",
+    "mass-spectrometry",
+    "model-evaluation"
+  ],
+  "cites_own_work": [
+    "Xia et al. 2024 (AdaNovo)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "2023_MSN_camera_ready",
+  "doi": null,
+  "title": "Adaptive and Efficient Participant Selection in Vertical Federated Learning",
+  "year": 2023,
+  "venue": "MSN",
+  "venue_tier": "workshop",
+  "role": "unknown",
+  "motivation": "VFL训练中参与方增加导致通信开销剧增, 但性能提升微乎其微(如8方vs4方通信增加700GB而精度仅提升2.8%)",
+  "problem_framing": "在训练前选择参与方子集, 平衡模型精度与通信开销, 通过最大化增益函数确定参与方数量和身份",
+  "key_insight": "用联合互信息(JMI)作为模型性能的代理指标, 将通信开销显式纳入增益函数, 通过贪婪算法求解",
+  "method_signature": "VFLMG: 基于最大增益的贪婪参与方选择, 结合JMI采样计算与同态加密隐私保护",
+  "evaluation_criteria": "测试精度与通信开销的权衡, 在相似精度下对比通信成本节省",
+  "negative_result_or_admitted_limitation": "假设key server诚实但聚合服务器和参与方好奇, 采样虽降开销但引入了误差界(如MNIST需23000样本才能保证精度)",
+  "evidence_for_taste": [
+    "an efficient and privacy-preserving participant selection method is urgently needed",
+    "when the number of participants exceeds a certain size, the addition of extra participants leads to marginal improvement",
+    "the straightforward calculation of JMI requires large communication and computation cost",
+    "existing approaches can not directly scale to participant-level selection"
+  ],
+  "thinking_moves": [
+    "用数据驱动分析揭示通信开销与性能提升的边际递减规律",
+    "将优化目标从精度最大化重新表述为增益函数最大化",
+    "用JMI作为代理指标避免实际训练模型来评估参与方贡献",
+    "利用子模性证明贪婪算法可获得近似最优解",
+    "通过采样策略将JMI计算的通信复杂度从O(N²)降至可接受范围"
+  ],
+  "topic_tags": [
+    "vertical-federated-learning",
+    "participant-selection",
+    "joint-mutual-information",
+    "communication-overhead-reduction",
+    "greedy-algorithm-submodular"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

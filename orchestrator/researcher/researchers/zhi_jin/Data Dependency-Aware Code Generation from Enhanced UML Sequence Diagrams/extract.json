@@ -1,0 +1,36 @@
+{
+  "paper_id": "Data Dependency-Aware Code Generation from Enhanced UML Sequence Diagrams",
+  "doi": "10.48550/arxiv.2508.03379",
+  "title": "Data Dependency-Aware Code Generation from Enhanced UML Sequence Diagrams",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLMs从自然语言生成代码时,隐式数据依赖难以正确推断,导致复杂服务架构代码生成失败",
+  "problem_framing": "将数据依赖推断作为独立任务,从UML时序图中显式构建数据依赖图后再合成代码",
+  "key_insight": "用数学形式化建模数据依赖问题,可利用LLM数学推理优势,分离控制流重建与依赖推断",
+  "method_signature": "增强时序图+数学形式化提示+可达性剪枝的DDI任务",
+  "evaluation_criteria": "DDI用Prec/Rec/F1,代码生成用编译通过率和单元测试通过率",
+  "negative_result_or_admitted_limitation": "Action类型依赖F1仅71.11%,低于API的92.25%;QueryParentAccounts全测试通过率下降11%",
+  "evidence_for_taste": [
+    "forces LLMs to simultaneously reconstruct control flow and infer implicit data dependencies",
+    "directly leverages LLMs inherent strength in mathematical reasoning",
+    "reducing hallucination probability and noise interference"
+  ],
+  "thinking_moves": [
+    "从LLM认知负荷过载角度识别根本问题",
+    "将模糊的自然语言问题转化为严格数学问题",
+    "先构建可达性图剪枝冗余上下文再推理",
+    "模块化分解:先DDI再代码生成"
+  ],
+  "topic_tags": [
+    "UML-sequence-diagram",
+    "data-dependency-inference",
+    "LLM-code-generation",
+    "mathematical-formalization",
+    "reachability-pruning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

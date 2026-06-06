@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhuang et al. - 2018 - FBSleuth Fake Base Station Forensics via Radio Frequency Fingerprinting",
+  "doi": null,
+  "title": "FBSleuth: Fake Base Station Forensics via Radio Frequency Fingerprinting",
+  "year": 2018,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有FBS检测/追踪方法只辅助抓捕,但无法收集可用于定罪的证据;法律要求证明发送超过5000条消息才能定重罪",
+  "problem_framing": "将FBS取证的法学需求形式化为两个子问题:信号源验证(RF指纹匹配)和内容数量验证(解调计数)",
+  "key_insight": "利用TSC训练序列的恒定特性提取稳态信号的瞬时相位/频率特征,可抗SNR变化且不依赖瞬态信号",
+  "method_signature": "从调制域(频偏/相偏/IQ偏移)和波形域(TSC的FFT/小波特征)提取51维特征,SVM分类识别FBS",
+  "evaluation_criteria": "精确率>99%,召回率>96%,F1>97%,跨频点/电压/SNR/接收机的鲁棒性",
+  "negative_result_or_admitted_limitation": "硬件改造或信号级噪声注入可逃避取证,但会增加成本和降低攻击范围;大规模FBS池可能导致准确率下降",
+  "evidence_for_taste": [
+    "collecting evidence accurately to support a proper conviction has not been addressed yet",
+    "Such a method creates an enhanced fingerprint and imposes low requirements on the sampling rate",
+    "Due to cost constrains and manufacture limitations, an FBS is often assembled with low-precision oscillators",
+    "Quad Err. and Mag Err. increase rapidly with SNR decreases, which indicates they are sensitive",
+    "a larger FBS pool results in lower accuracy"
+  ],
+  "thinking_moves": [
+    "将取证问题分解为'谁发的'和'发了多少'两个可独立验证的子问题",
+    "通过法律阈值(5000条消息)逆向定义取证成功的评价标准",
+    "利用低成本硬件的缺陷反而成为可辨识的指纹特征",
+    "排除SNR敏感特征(Quad Err./Mag Err.),保留抗噪声干扰的特征",
+    "从瞬态信号转向稳态TSC片段,降低采样率要求"
+  ],
+  "topic_tags": [
+    "RF-fingerprinting",
+    "GSM-security",
+    "fake-base-station-forensics",
+    "hardware-imperfection",
+    "evidence-verification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

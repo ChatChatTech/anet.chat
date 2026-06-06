@@ -1,0 +1,43 @@
+{
+  "paper_id": "MegaScale-Infer_ Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism",
+  "doi": "10.48550/arxiv.2504.02263",
+  "title": "MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "MoE稀疏激活导致FFN模块GPU利用率低，计算资源浪费和运营成本增加",
+  "problem_framing": "将MoE推理效率问题形式化为注意力模块(内存密集型)和FFN模块(计算密集型)之间的资源错配",
+  "key_insight": "解聚注意力和FFN模块，独立扩展并使用异构GPU，使每个专家处理的批次增大恢复计算密集性",
+  "method_signature": "乒乓球管道并行+自定义M2N通信库，消除GPU-CPU拷贝和同步开销",
+  "evaluation_criteria": "每GPU吞吐量、每成本吞吐量、延迟SLO约束下最大化B/T_total",
+  "negative_result_or_admitted_limitation": "现有通信库(NCCL)在M2N模式下延迟高且不稳定，需要专门优化",
+  "evidence_for_taste": [
+    "sparsity lowers the GPU utilization",
+    "mismatch between LLM inference characteristics",
+    "T_a ≈ T_e",
+    "T_c < T_f",
+    "eliminates unnecessary GPU-to-CPU data copies"
+  ],
+  "thinking_moves": [
+    "用Roofline模型严格证明稀疏度与GPU利用率的关系(TopK/#Expert)",
+    "将全局批处理分解为微批次实现管道并行来隐藏通信开销",
+    "通过数学约束条件(Ta≈Te, Tc<Tf)推导最小微批次数量公式",
+    "针对特定通信模式(M2N)定制库而非修改通用库",
+    "利用屋顶线模型和算术强度分析分离内存密集型与计算密集型操作"
+  ],
+  "topic_tags": [
+    "MoE-serving",
+    "disaggregated-inference",
+    "expert-parallelism",
+    "pipeline-parallelism",
+    "M2N-communication"
+  ],
+  "cites_own_work": [
+    "MegaScale",
+    "DistServe",
+    "Loongserve"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

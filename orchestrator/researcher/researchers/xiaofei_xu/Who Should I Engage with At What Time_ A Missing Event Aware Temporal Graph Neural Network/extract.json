@@ -1,0 +1,37 @@
+{
+  "paper_id": "Who Should I Engage with At What Time_ A Missing Event Aware Temporal Graph Neural Network",
+  "doi": "10.48550/arxiv.2301.08399",
+  "title": "Who Should I Engage with At What Time? A Missing Event Aware Temporal Graph Neural Network",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "现实场景中事件常因传感器故障等原因不可观测，现有方法假设所有历史事件都可见，且时间预测被视为辅助任务",
+  "problem_framing": "将缺失事件建模为与观测事件耦合的时序点过程，在统一框架下同时预测链接和事件时间",
+  "key_insight": "缺失事件应作为独立的时序点过程与观测事件耦合，通过变分推断处理不可观测的缺失事件",
+  "method_signature": "MTGN：耦合观测/缺失事件TPP，用对数正态混合分布参数化时间，联合预测链接与时间",
+  "evaluation_criteria": "链接预测用HITS@K，时间预测用MAE，在5个真实数据集上对比",
+  "negative_result_or_admitted_limitation": "当观测事件过少时（如遮蔽>50%）性能急剧下降，MTGN可能失效；编码时间间隔在某些数据集上略微降低链接预测性能",
+  "evidence_for_taste": [
+    "event time prediction as a second-class citizen",
+    "predicting when an event will occur is as important",
+    "all the temporal GNNs mentioned above do not model missing events",
+    "The performance degrades dramatically if the number of observed events is too small",
+    "MTGN may fail when the number of observed events is too small"
+  ],
+  "thinking_moves": [
+    "将时间预测从辅助地位提升为第一公民任务",
+    "把缺失事件视为独立但耦合的时序点过程",
+    "用变分推断处理不可观测的缺失事件分布",
+    "统一结构嵌入和时间嵌入而非分开学习",
+    "通过对数正态混合分布获得闭合形式的时间似然"
+  ],
+  "topic_tags": [
+    "missing-event-aware-TGNN",
+    "temporal-point-process",
+    "event-time-estimation",
+    "variational-inference",
+    "coupled-TPP"
+  ],
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

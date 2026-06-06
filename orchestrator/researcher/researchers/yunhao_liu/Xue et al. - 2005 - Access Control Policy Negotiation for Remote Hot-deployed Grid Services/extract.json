@@ -1,0 +1,42 @@
+{
+  "paper_id": "Xue et al. - 2005 - Access Control Policy Negotiation for Remote Hot-deployed Grid Services",
+  "doi": null,
+  "title": "Access Control Policy Negotiation for Remote Hot-deployed Grid Services",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Grid services have deployers and containers in different autonomous domains, so access control cannot be determined unilaterally.",
+  "problem_framing": "How to jointly determine access control policy for a remotely deployed grid service when neither deployer nor container owns both service and resources.",
+  "key_insight": "Use three types of rule-based meta-policies (proposal making, combining algorithm selection, validity checking) to automate policy negotiation between deployers and containers.",
+  "method_signature": "Non-recursive stratified Datalog with constraints policy language + meta-policy controlled negotiation procedure",
+  "evaluation_criteria": "Negotiation time vs policy size parameters and concurrent request count in CROWN Grid deployment",
+  "negative_result_or_admitted_limitation": "Worst-case validation query evaluation is at least co-NP-hard; we do not see any single combining algorithm suitable for all grid conflicts.",
+  "evidence_for_taste": [
+    "existing grid deployment solutions do not address this unique requirement",
+    "cannot be determined by the deployer or the container only",
+    "we do not see any single combining algorithm suitable",
+    "the worst-case complexity is at least co-NP hard",
+    "most cases are simple according to our experiences",
+    "the deployer and container owner usually concern with different authorization factors"
+  ],
+  "thinking_moves": [
+    "Identifies unique requirement absent from existing grid solutions",
+    "Acknowledges theoretical intractability then argues practical tractability",
+    "Distinguishes deployer concerns (user identity) from container concerns (raw resources)",
+    "Proposes meta-policies over single fixed algorithm to handle heterogeneity"
+  ],
+  "topic_tags": [
+    "grid-access-control-negotiation",
+    "policy-language-Datalog-constraints",
+    "remote-hot-deployment",
+    "meta-policy-automation",
+    "constraint-logic-programming"
+  ],
+  "cites_own_work": [
+    "Huai, Liu, Li, Hu - Early Experiences with CROWN Grid 2005",
+    "Hu, Zhu, Huai, Liu, Ni - Efficient Information Service Management Using Service Club in CROWN Grid 2005"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

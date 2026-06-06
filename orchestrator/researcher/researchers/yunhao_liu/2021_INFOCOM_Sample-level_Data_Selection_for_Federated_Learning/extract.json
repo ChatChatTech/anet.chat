@@ -1,0 +1,38 @@
+{
+  "paper_id": "2021_INFOCOM_Sample-level_Data_Selection_for_Federated_Learning",
+  "doi": null,
+  "title": "Sample-level Data Selection for Federated Learning",
+  "year": 2021,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "FL中错误样本、分布偏斜、低多样性的客户端会导致模型精度严重下降和收敛不稳定",
+  "problem_framing": "在预算约束和隐私保护下,从N个客户端中选择高质量训练样本的优化问题",
+  "key_insight": "数据质量维度(统计同质性、内容多样性、样本重要性)对FL模型性能有决定性影响,需用DPP联合优化",
+  "method_signature": "两阶段层次化选择:训前PSI过滤+HE同质性+草图多样性DPP,训练时梯度上界重要性+异常过滤",
+  "evaluation_criteria": "测试精度、收敛速度、计算/通信开销",
+  "negative_result_or_admitted_limitation": "现有重要性采样方法会把错误样本排在前面,导致精度下降和训练不稳定",
+  "evidence_for_taste": [
+    "erroneous samples have obviously larger losses",
+    "gradient norm based importance sampling is superior",
+    "直接访问embedding向量违反隐私",
+    "erroneous samples have significantly greater importance values"
+  ],
+  "thinking_moves": [
+    "从数据驱动实验提炼设计原则",
+    "将质量维度数学形式化(定义1-4)",
+    "利用加密协议(PSI/HE)实现隐私保护下的质量评估",
+    "用DPP将多目标优化转为行列式点过程求解",
+    "利用梯度上界范数降低重要性计算成本"
+  ],
+  "topic_tags": [
+    "federated-learning-client-selection",
+    "data-quality-in-fl",
+    "privacy-preserving-sampling",
+    "determinantal-point-process",
+    "error-aware-importance-sampling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Energy-Efficient GPU Clusters Scheduling for Deep Learning",
+  "doi": "10.48550/arxiv.2304.06381",
+  "title": "Energy-Efficient GPU Clusters Scheduling for Deep Learning",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "DNN训练导致数据中心能耗激增,需在能耗预算内尽早完成训练任务",
+  "problem_framing": "在能耗预算约束下最小化平均JCT的资源分配与GPU频率调度优化问题",
+  "key_insight": "定义能量效率为每单位能耗带来的吞吐量,通过性能模型动态调配GPU和频率",
+  "method_signature": "基于性能模型的贪心GPU分配+频率调整算法,结合网络打包与伙伴分配",
+  "evaluation_criteria": "相同能耗下平均JCT提升倍数(1.57-3.39×),基于1901-jobtrace模拟",
+  "negative_result_or_admitted_limitation": "现有调度器忽略GPU级配置如频率,未考虑能耗特征导致资源碎片化",
+  "evidence_for_taste": [
+    "training deep neural networks (DNNs) is a major workload in datacenters today",
+    "GPU DVFS...at an early stage",
+    "lacks the consideration of running multiple jobs",
+    "Pareto optimality",
+    "The larger the throughput, the smaller the JCT"
+  ],
+  "thinking_moves": [
+    "将能耗与吞吐量解耦为性能模型,支撑配置空间探索",
+    "从整个集群视角而非单作业视角权衡能耗效率",
+    "通过Pareto前沿定义最节能配置子集,指导调度方向",
+    "用能量效率这一复合指标统一JCT最小化与能耗约束的异构目标"
+  ],
+  "topic_tags": [
+    "GPU集群调度",
+    "深度学习训练能耗优化",
+    "DVFS动态调频",
+    "资源弹性分配",
+    "性能建模预测"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

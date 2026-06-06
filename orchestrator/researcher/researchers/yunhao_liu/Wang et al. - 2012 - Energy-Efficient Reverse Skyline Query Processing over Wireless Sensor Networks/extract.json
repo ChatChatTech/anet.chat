@@ -1,0 +1,43 @@
+{
+  "paper_id": "Wang et al. - 2012 - Energy-Efficient Reverse Skyline Query Processing over Wireless Sensor Networks",
+  "doi": null,
+  "title": "Energy-Efficient Reverse Skyline Query Processing over Wireless Sensor Networks",
+  "year": 2012,
+  "venue": "IEEE Transactions on Knowledge and Data Engineering",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "无线传感器节点电池电量有限,现有不考虑能效的中心化方法无法直接应用于分布式传感环境",
+  "problem_framing": "逆Skyline查询是不可分解的,无法直接利用网络内聚合技术降低通信开销",
+  "key_insight": "通过引入full dominance使查询可分解,再以2-full-skyband过滤假阳性,使RS查询能在WSN中高效执行",
+  "method_signature": "基于full skyband的能效逆Skyline查询处理,转换为可分解算子进行网络内处理",
+  "evaluation_criteria": "通信开销(消息数量和传输数据量)作为能效主要衡量指标",
+  "negative_result_or_admitted_limitation": "2-full-skyband结果集大于full skyline,存在一定冗余",
+  "evidence_for_taste": [
+    "RS query is not decomposable",
+    "we cannot simply distribute tasks",
+    "cannot be used in WSNs to answer RS queries",
+    "eliminate false positives",
+    "if we can reduce the amount of communication",
+    "we propose a novel concept, called semidominance",
+    "Interestingly, we prove that the full skyline query is decomposable",
+    "the set of reverse skyline points is a subset of full skylines"
+  ],
+  "thinking_moves": [
+    "将不可分解的查询问题重新形式化为可分解的替代问题",
+    "通过引入新的支配关系概念(full dominance)建立传递性",
+    "先证明集合包含关系(RS⊆FS),再分析为何不相等",
+    "识别假阳性的根本原因(full-dominated points不在结果集中)",
+    "迭代收紧搜索空间: skyline→skyband→marked full skyline",
+    "理论证明与工程验证相结合"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-query-processing",
+    "reverse-skyline",
+    "energy-efficient-aggregation",
+    "in-network-processing",
+    "skyband"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "A downscaling approach to compare COVID-19 count data from databases aggregated at different spatial scales",
+  "doi": "10.1101/2020.06.17.20133959",
+  "title": "A downscaling approach to compare COVID-19 count data from databases aggregated at different spatial scales",
+  "year": 2020,
+  "venue": "medRxiv",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "COVID-19数据来源差异大,政策制定需要可靠数据支撑干预措施",
+  "problem_framing": "将省级聚合数据downscaling至5km网格,与城市级真实数据比较质量",
+  "key_insight": "多源数据在95%可信区间内基本一致,但Xu等数据覆盖更完整、偏差更小",
+  "method_signature": "贝叶斯Poisson downscaling,Matérn空间随机场,多协变量回归",
+  "evaluation_criteria": "MAE/RMSE逐省留出验证,网格预测与城市级报告对比",
+  "negative_result_or_admitted_limification": "无法获取更细粒度参考数据验证预测;未区分年龄性别;urbanity系数结论不确定",
+  "evidence_for_taste": [
+    "数据比较用传统统计方法不可行",
+    "Xu等数据有更大覆盖且更接近模型预测",
+    "结果提示解聚数据在可信区间内基本一致",
+    "仅用人为因素协变量预测性能最高"
+  ],
+  "thinking_moves": [
+    "用贝叶斯downscaling将粗粒度数据转换为细粒度预测作为参照标准",
+    "通过省留出交叉验证评估模型外推能力",
+    "量化多源数据差异而非只看单一数据源",
+    "考虑生态学谬误和MAUP问题,强调用细粒度协变量建模底层过程"
+  ],
+  "topic_tags": [
+    "COVID-19数据质量评估",
+    "贝叶斯空间downscaling",
+    "多源数据融合比较",
+    "传染病空间建模",
+    "生态学谬误MAUP"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)__oa_W2971160629",
+  "doi": "10.18653/v1/d19-1310",
+  "title": "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)",
+  "year": 2019,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有方法将表格编码为一维序列或记录集合，忽略了行列结构和时序历史信息，导致生成文本出现事实错误",
+  "problem_framing": "将表格重新建模为行列时三个维度的层次结构，通过层级编码器学习每个单元格在三个维度上的表示，再通过记录融合门自适应组合",
+  "key_insight": "当描述某项统计时，相关记录（如同行中的FG/FGA）和历史表现（如近三场双双）会被同时提及，因此编码时必须同时建模同行、同列、时序三个维度的上下文",
+  "method_signature": "三层层级编码器（记录编码层→记录融合门→行级编码层）+ 双注意力解码器，先选重要行再关注记录",
+  "evaluation_criteria": "BLEU评估流畅性，RG评估内容忠实度，CS评估内容选择能力，CO评估记录排序能力，配合人工评估语法性、连贯性、简洁性",
+  "negative_result_or_admitted_limitation": "模板系统在RG P%上表现最好因为包含大量事实，但僵硬结构导致CO和BLEU低；金标准文本也存在少量事实矛盾（字段命中率错误）",
+  "evidence_for_taste": [
+    "we claim that their encoding of tables as sets of records or a long sequence is not suitable",
+    "it clearly produce wrong statements since he didn't get double-double in this match",
+    "the absence of row-level encoder hurts our model's performance across all metrics",
+    "self-attention (SA) cell achieved better overall performance",
+    "our model's ability to select and accurately convey information is better"
+  ],
+  "thinking_moves": [
+    "质疑主流方法将表格视为一维序列的合理性",
+    "从人类撰写篮球报道的认知过程推断模型需要建模历史信息",
+    "通过消融实验验证每个组件的必要性",
+    "层层递进：从单元格表示→融合→行级→解码",
+    "将表格结构（行列）与时序数据统一建模"
+  ],
+  "topic_tags": [
+    "table-to-text generation",
+    "hierarchical encoder",
+    "neural NLG",
+    "multi-dimensional table encoding",
+    "time-series data-to-text",
+    "content selection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

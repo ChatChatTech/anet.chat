@@ -1,0 +1,37 @@
+{
+  "paper_id": "Retrieval-Generation Synergy Augmented Large Language Models",
+  "doi": "10.48550/arxiv.2310.05149",
+  "title": "Retrieval-Generation Synergy Augmented Large Language Models",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有获取有效文档的方法分为检索和生成两类，两者孤立缺乏协同，无法解决LLM在知识密集任务中的知识不足问题",
+  "problem_framing": "如何通过迭代式检索-生成协作，同时利用参数化和非参数化知识，帮助模型找到正确的推理路径",
+  "key_insight": "GAR与RAG形成闭环，每次迭代的生成结果扩展查询提升检索，检索结果又生成新文档，两者互相增强",
+  "method_signature": "ITRG迭代框架：GAR扩展查询+RAG基于检索文档生成新段落，重复T次迭代",
+  "evaluation_criteria": "Exact Match (EM) on NQ/TriviaQA/2WikiMultiHopQA/HotpotQA",
+  "negative_result_or_admitted_limitation": "仅用预训练阶段学习的参数化知识，生成的文档可能不完整；之前生成的文档中错误或幻觉会产生负面影响",
+  "evidence_for_taste": [
+    "semantic gaps between them",
+    "the generated documents may be incomplete",
+    "negative effect of errors or hallucinations",
+    "a closed loop, and can improve each other",
+    "very important for tasks that require multi-step reasoning"
+  ],
+  "thinking_moves": [
+    "发现现有方法孤立→提出协作框架闭环",
+    "针对语义鸿沟问题→提出查询扩展方法",
+    "考虑之前生成错误的影响→设计refresh策略规避",
+    "验证迭代逐步提升→观察文档召回率伴随EM提升"
+  ],
+  "topic_tags": [
+    "retrieval-augmented generation",
+    "query expansion",
+    "iterative reasoning",
+    "knowledge-intensive QA",
+    "multi-hop reasoning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

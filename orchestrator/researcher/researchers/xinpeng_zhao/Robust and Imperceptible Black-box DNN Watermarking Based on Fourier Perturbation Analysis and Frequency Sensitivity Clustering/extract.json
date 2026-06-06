@@ -1,0 +1,37 @@
+{
+  "paper_id": "Robust and Imperceptible Black-box DNN Watermarking Based on Fourier Perturbation Analysis and Frequency Sensitivity Clustering",
+  "doi": "10.48550/arxiv.2208.03944",
+  "title": "Robust and Imperceptible Black-box DNN Watermarking Based on Fourier Perturbation Analysis and Frequency Sensitivity Clustering",
+  "year": 2022,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "主流方法在空域插入明显模式到触发样本，导致可感知性差且鲁棒性有限，不适合实际应用",
+  "problem_framing": "如何在频域构造既不可感知又鲁棒的触发样本，并分析不同频率成分对水印性能的影响",
+  "key_insight": "基于频率原理，DNN从低频到高频拟合目标函数，中低频扰动最适合构造触发样本，且聚类使扰动具有模型依赖性",
+  "method_signature": "傅里叶扰动分析 + 频率敏感度K-means聚类确定触发频率",
+  "evaluation_criteria": "原始任务分类精度Acc_o、水印任务精度Acc_w、PSNR、SSIM",
+  "negative_result_or_admitted_limitation": "无法保证方法对所有真实攻击都鲁棒，因为我们无法预见所有攻击方式",
+  "evidence_for_taste": [
+    "we cannot ensure that the proposed watermarking system is robust against all the real-world attacks",
+    "the most important advantage of using K-means clustering is that it is model dependent",
+    "it is very necessary to find a general way to determine the frequencies",
+    "makes a step towards interpretable DNN watermarking"
+  ],
+  "thinking_moves": [
+    "利用频率原理从理论层面推导中低频扰动适合DNN训练",
+    "从图像水印的频域鲁棒性类比到DNN触发样本设计",
+    "用K-means聚类实现模型自适应的频率选择",
+    "区分扰动鲁棒性与水印鲁棒性以便分析"
+  ],
+  "topic_tags": [
+    "DNN水印",
+    "傅里叶扰动分析",
+    "频率敏感度聚类",
+    "黑盒验证",
+    "触发样本生成"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Multi-task Learning based Pre-trained Language Model for Code Completion",
+  "doi": "10.48550/arxiv.2012.14631",
+  "title": "Multi-task Learning based Pre-trained Language Model for Code Completion",
+  "year": 2020,
+  "venue": "ASE '20",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有代码补全模型使用静态嵌入忽略上下文差异，且在标识符补全上表现差、忽视类型信息",
+  "problem_framing": "将代码补全建模为多任务学习问题，预测令牌时同时预测其类型并利用类型辅助令牌预测",
+  "key_insight": "先预测标识符类型、再用类型约束令牌预测，比联合预测能获得更准确的类型约束",
+  "method_signature": "CugLM预训练Transformer通过MLM/NCP/ULM三目标联合学习，下游微调时预测类型+令牌",
+  "evaluation_criteria": "Top-1准确率：正确补全建议出现在预测列表首位的比例",
+  "negative_result_or_admitted_limitation": "BERT的双向性使其难以应用于代码生成任务；Pointer Mixture网络用token级输入可能低估其精度",
+  "evidence_for_taste": [
+    "which are much easier to complete than identifiers, but these completions are not that beneficial to developers",
+    "the type information of the identifiers is ignored",
+    "the surrounding tokens of the program entities usually contain certain information",
+    "only leftward contextual tokens are allowed",
+    "constrain our model to make more accurate prediction on the type"
+  ],
+  "thinking_moves": [
+    "将代码补全问题拆解为令牌预测加类型预测两步，利用类型信息作为中间约束增强主任务",
+    "借鑒BERT预训练思想但去除NSP改用代码段预测NCP，保持代码理解能力同时适配生成任务",
+    "指出静态嵌入丢失上下文差异的关键局限，呼应IDE类型提示的现实需求"
+  ],
+  "topic_tags": [
+    "code-completion",
+    "pre-trained-language-model",
+    "multi-task-learning",
+    "type-prediction",
+    "transformer"
+  ],
+  "cites_own_work": [
+    "Liu et al. 2019",
+    "Li et al. 2018"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

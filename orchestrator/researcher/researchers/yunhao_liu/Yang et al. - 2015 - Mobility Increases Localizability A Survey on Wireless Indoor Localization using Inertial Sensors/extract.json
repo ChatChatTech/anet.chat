@@ -1,0 +1,45 @@
+{
+  "paper_id": "Yang et al. - 2015 - Mobility Increases Localizability A Survey on Wireless Indoor Localization using Inertial Sensors",
+  "doi": null,
+  "title": "Mobility Increases Localizability: A Survey on Wireless Indoor Localization using Inertial Sensors",
+  "year": 2015,
+  "venue": "ACM Computing Surveys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "WiFi定位面临三大挑战：定位误差大、部署成本高、缺乏位置语义上下文",
+  "problem_framing": "将惯性传感器测得的人体移动信息与无线信号融合以提升室内定位能力",
+  "key_insight": "移动性与位置本质相关，当前位置取决于历史位置与运动轨迹的联合推断",
+  "method_signature": "系统综述惯性传感器辅助的智能手机室内定位技术，涵盖传感器、位移/方向提取及误差处理",
+  "evaluation_criteria": "步数检测错误率(2%-3%)、转向检测精度(85%召回率)、定位误差对比",
+  "negative_result_or_admitted_limitation": "研究者不得不回避直接使用低成本传感器的航位推算，转而采用行人运动建模；航向漂移通常主导误差",
+  "evidence_for_taste": [
+    "location and mobility are by nature related",
+    "The current location depends on both past location and movements",
+    "avoid the direct use of dead reckoning with low cost sensors",
+    "heading drift typically dominates the errors",
+    "even small errors may drift dramatically",
+    "errors accumulate quadratically when deriving displacement"
+  ],
+  "thinking_moves": [
+    "从物理本质建立移动性与定位的关联性论证",
+    "系统分类传感器类型与移动信息层次",
+    "比较不同算法在时域/频域/特征聚类上的权衡",
+    "指出低成本传感器的工厂校准缺失导致必须另辟蹊径"
+  ],
+  "topic_tags": [
+    "pedestrian-dead-reckoning",
+    "WiFi-fingerprinting",
+    "smartphone-IMU",
+    "motion-modeling",
+    "sensor-fusion"
+  ],
+  "cites_own_work": [
+    "Yang et al. 2012",
+    "Wu et al. 2013a",
+    "Wu et al. 2013b",
+    "Wang et al. 2012",
+    "Shen et al. 2013"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

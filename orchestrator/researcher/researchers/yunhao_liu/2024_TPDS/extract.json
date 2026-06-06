@@ -1,0 +1,39 @@
+{
+  "paper_id": "2024_TPDS",
+  "doi": null,
+  "title": "Privacy-Preserving Data Selection for Horizontal and Vertical Federated Learning",
+  "year": 2024,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "在联邦学习系统中，低质量样本和特征严重影响模型准确性和稳定性，而隐私顾虑阻碍数据共享和样本选择",
+  "problem_framing": "在货币预算约束下，为给定FL任务选取高质量样本和特征，同时保护参与者本地数据和服务器标签集的隐私",
+  "key_insight": "用DPP同时最大化统计同质性和内容多样性，结合错误感知的重要性采样在训练中动态过滤异常样本",
+  "method_signature": "层次化样本选择：先用PSI过滤相关客户端，再DPP选客户端，最后错误感知重要性采样选样本",
+  "evaluation_criteria": "测试准确率、收敛速度、计算和通信开销 reduction，与随机/loss/梯度范数采样对比",
+  "negative_result_or_admitted_limitation": "现有重要性采样方法因错误样本具有异常大的loss和梯度范数而失效",
+  "evidence_for_taste": [
+    "erroneous samples have obviously larger losses and gradient norms than correct ones",
+    "the loss based method achieves lower but comparable performance with our method",
+    "these methods cannot be directly applied to FL systems"
+  ],
+  "thinking_moves": [
+    "通过数据驱动分析揭示样本质量如何影响模型性能",
+    "从 centralized learning 的重要性采样得到启发但指出其不适用于FL",
+    "将客户选择问题建模为DPP以平衡同质性和多样性",
+    "观察到错误样本具有异常大的重要性值导致现有方法失效",
+    "设计分层选择策略：先选客户再选样本以节省成本"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "data-quality-assessment",
+    "privacy-preserving-MPC",
+    "sample-selection",
+    "determinantal-point-process"
+  ],
+  "cites_own_work": [
+    "imporved from conference version [14] Sample-level data selection for federated learning"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "提供了完整的方法论、实验细节和动机分析，论文结构完整 | md truncated to head40k+tail20k"
+}

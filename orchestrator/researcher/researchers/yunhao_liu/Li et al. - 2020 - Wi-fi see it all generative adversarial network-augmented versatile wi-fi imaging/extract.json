@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2020 - Wi-fi see it all generative adversarial network-augmented versatile wi-fi imaging",
+  "doi": null,
+  "title": "Wi-Fi See It All: Generative Adversarial Network-augmented Versatile Wi-Fi Imaging",
+  "year": 2020,
+  "venue": "ACM SenSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Wi-Fi可穿透遮挡与暗光环境，RGB相机无法应对隐私安检等场景",
+  "problem_framing": "现有方法仅支持二值检测或需高成本天线阵列，无法实现多目标分割识别",
+  "key_insight": "将成像平面推至物体侧，用偏振特征区分材质，用cGAN精修边界",
+  "method_signature": "波前构建+像素级偏振照明+cGAN分割精修三模块级联",
+  "evaluation_criteria": "分割相似度s与分类准确度t，对比Mask R-CNN在遮挡/暗光场景",
+  "negative_result_or_admitted_limitation": "β=0时无法接近真值；β=2时引发mode collapse导致分割失败",
+  "evidence_for_taste": [
+    "a zero β means no utilization of pixel loss",
+    "a larger β can reduce the impact of the L_cycle, inducing the mode collapse problem",
+    "cannot correctly segment the laptop",
+    "Mask R-CNN cannot work at all",
+    "overlapping area between the clusters",
+    "effective distance to transceivers is up to 2.1m"
+  ],
+  "thinking_moves": [
+    "将成像问题类比光学相机设计，复用光学成像的概念框架",
+    "从通信信道CSI提取中逆向还原像素级波前",
+    "用偏振物理特性扩展Wi-Fi特征空间以实现多目标区分",
+    "通过相对运动将非均匀采样转化为2D IFFT可解问题",
+    "GAN的对抗训练用于弥补Wi-Fi成像分辨率不足"
+  ],
+  "topic_tags": [
+    "Wi-Fi-imaging",
+    "polarization-sensing",
+    "cGAN-segmentation",
+    "through-wall-sensing",
+    "COTS-device-sensing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

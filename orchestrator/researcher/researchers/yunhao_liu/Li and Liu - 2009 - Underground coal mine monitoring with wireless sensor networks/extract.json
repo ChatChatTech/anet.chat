@@ -1,0 +1,41 @@
+{
+  "paper_id": "Li and Liu - 2009 - Underground coal mine monitoring with wireless sensor networks",
+  "doi": null,
+  "title": "Underground Coal Mine Monitoring with Wireless Sensor Networks",
+  "year": 2009,
+  "venue": "ACM Trans. Sensor Netw.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "煤矿坍塌占美国近10年矿难死亡人数50%以上,亟需快速检测塌陷区域",
+  "problem_framing": "将物理坍塌检测问题重新建模为传感器网络拓扑变化检测",
+  "key_insight": "利用六边形规则网格中节点邻居关系的几何约束,通过检测丢失邻居的边缘节点构建凸包来定位坍塌区域",
+  "method_signature": "结构感知自适应系统SASA:规则信标机制+边缘节点检测+多路径签名文件聚合",
+  "evaluation_criteria": "检测误差、检测精度、重配置延迟、包丢失率、查询相对误差",
+  "negative_result_or_admitted_limitation": "RSS值在煤矿环境中高度动态,基于接收信号强度的邻居检测方法在原型实验中失败",
+  "evidence_for_taste": [
+    "naïve method... failed in our prototype",
+    "a na ïve method... failed in our prototype implementation experiment",
+    "it was observed that the neighbor set of a node is highly unstable",
+    "If two adjacent nodes fail simultaneously, the algorithm fails",
+    "a small hole affecting only one sensor node cannot be detected",
+    "the distributed algorithm suffers from longer latency",
+    "the communication channel is assumed to have a packet loss rate of 15%"
+  ],
+  "thinking_moves": [
+    "从物理层RSS信号失效反推需要依赖拓扑几何约束而非信号强度",
+    "从实时性需求出发设计信标机制替代主动探测以降低开销",
+    "通过数学定理证明边缘节点凸包对坍陷区域的几何包围上界",
+    "先集中式后分布式分层设计以平衡延迟与网络距离依赖",
+    "用矩形近似凸包以压缩消息长度节省功率"
+  ],
+  "topic_tags": [
+    "wireless-sensor-networks",
+    "hole-detection",
+    "underground-monitoring",
+    "structure-aware",
+    "multi-path-routing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

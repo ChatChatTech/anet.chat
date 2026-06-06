@@ -1,0 +1,43 @@
+{
+  "paper_id": "Liu et al. - 2016 - Duplicate Detectable Opportunistic Forwarding in Duty-Cycled Wireless Sensor Networks",
+  "doi": null,
+  "title": "Duplicate Detectable Opportunistic Forwarding in Duty-Cycled Wireless Sensor Networks",
+  "year": 2016,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Opportunistic routing in duty-cycled WSN产生大量重复包,特别在高流量负载下导致信道退化和能耗剧增",
+  "problem_framing": "如何让发送方在多个唤醒的潜在转发节点中检测并区分优先级,实现确定性单播而非广播",
+  "key_insight": "利用ACK时隙的时间多样性让发送方感知所有潜在转发者,再通过包头携带的时隙信息指定唯一转发者",
+  "method_signature": "基于探针的时隙ACK协调机制,附带隧道传输批量数据包和有限重传策略",
+  "evaluation_criteria": "重复率、radio duty-cycle(能耗)、网络产量(PRR)、延迟(前导码次数)",
+  "negative_result_or_admitted_limitation": "固定时隙数在稀疏网络中不够节能;软件ACK在高流量下脆弱导致PRR低于80%",
+  "evidence_for_taste": [
+    "duplicates significantly degrade the system performance",
+    "the coordination restricts concurrent transmissions",
+    "the software ACK is vulnerable when the traffic load is high",
+    "the strategy of fixed slot number is not the most energy-efficient",
+    "ORW cannot support high-traffic-load applications"
+  ],
+  "thinking_moves": [
+    "通过实际测试床实验发现状态-of-the-art在高流量下失效的现实痛点",
+    "从概率模型分析多转发节点同时唤醒的条件,量化问题严重程度",
+    "将duplicate问题重新frame为发送方的协调问题而非接收方的抑制问题",
+    "利用时隙MAC已有硬件中断触发点实现无额外开销的协调",
+    "承认固定参数策略的局限并讨论自适应时隙数的优化方向"
+  ],
+  "topic_tags": [
+    "duty-cycled-WSN-opportunistic-routing",
+    "duplicate-suppression-slotting",
+    "LPL-XMAC-probe-coordination",
+    "EDC-routing-metric",
+    "testbed-evaluation-TelosB"
+  ],
+  "cites_own_work": [
+    "ORW (Landsiedel et al.)",
+    "L^2 (CaO et al.)",
+    "GreenOrbs/CitySee sensing systems"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

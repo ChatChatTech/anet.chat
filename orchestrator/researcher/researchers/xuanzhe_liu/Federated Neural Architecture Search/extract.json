@@ -1,0 +1,38 @@
+{
+  "paper_id": "Federated Neural Architecture Search",
+  "doi": "10.48550/arxiv.2002.06352",
+  "title": "Federated Neural Architecture Search",
+  "year": 2020,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "隐私约束的去中心化训练使神经架构搜索更困难，移动端资源受限加剧此挑战",
+  "problem_framing": "在去中心化数据上进行自动神经架构搜索，生成不同资源预算下的模型序列",
+  "key_insight": "充分利用NAS过程中模型候选人的不充分再训练特征，通过并行、动态、异构方式降低客户端开销",
+  "method_signature": "DecNAS框架结合并行训练、早期丢弃候选、动态轮数三项优化",
+  "evaluation_criteria": "模型精度与集中式NAS相当，客户端计算和通信成本降低至百分之一",
+  "negative_result_or_admitted_limitation": "过于激进的早期丢弃(100%丢弃率)导致简化至15%复杂度时精度下降31.3%；增大分组数会牺牲精度换取更低开销",
+  "evidence_for_taste": [
+    "optimal candidate often quickly outperforms others",
+    "accuracy degradation 31.3%",
+    "misleading the candidate selection",
+    "accuracy drops to zero",
+    "accumulation of insufficient training"
+  ],
+  "thinking_moves": [
+    "通过实验观察发现最优候选在早期就超越其他候选，逆向推导可早期丢弃的非最优方案",
+    "从通信开销公式识别瓶颈维度，通过减少轮数和并行分组来压缩开销",
+    "将NAS的不充分微调特征从限制条件转化为优化机会",
+    "区分短期微调与长期微调的不同目标，短期微调只需保留足够选择候选的能力"
+  ],
+  "topic_tags": [
+    "federated-NAS",
+    "decentralized-architecture-search",
+    "on-device-NN-optimization",
+    "client-resource-constraint",
+    "architecture-pruning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

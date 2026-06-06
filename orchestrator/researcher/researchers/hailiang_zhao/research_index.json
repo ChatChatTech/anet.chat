@@ -1,0 +1,426 @@
+{
+  "slug": "hailiang_zhao",
+  "n_papers": 13,
+  "n_indexed": 13,
+  "anchors": [
+    "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+    "Placement is not Enough: Embedding with Proactive Stream Mapping on the Heterogenous Edge",
+    "DPoS: Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+    "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+    "CADRef: Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging",
+    "Agentic Services Computing",
+    "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+    "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+  ],
+  "by_id": {
+    "Agentic Services Computing": {
+      "title": "Agentic Services Computing",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2509.24380",
+      "key_insight": "ASC用四阶段生命周期（Design/Deployment/Operation/Evolution）组织研究，四大支柱（感知、决策、协作、信任）横向贯穿。",
+      "method_signature": "SCALE五特征框架+四阶段生命周期+研究框架矩阵",
+      "tags": [
+        "LLM-based agents",
+        "multi-agent systems",
+        "service lifecycle governance",
+        "autonomous decision-making",
+        "trustworthiness alignment"
+      ],
+      "quality": "full"
+    },
+    "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging": {
+      "title": "CADRef: Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2503.00325",
+      "key_insight": "样本特征与类感知平均特征的相对误差可作为判别准则，且通过符号对齐关系解耦正负误差后分别缩放可放大ID与OOD的区分度",
+      "method_signature": "CARef计算类感知相对特征误差，CADRef在正负特征上分别用样本级和训练集级对数得分归一化后融合",
+      "tags": [
+        "out-of-distribution-detection",
+        "neural-network-safety",
+        "feature-decoupling",
+        "class-aware-feature",
+        "post-hoc-ood-detection"
+      ],
+      "quality": "full"
+    },
+    "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks": {
+      "title": "DPoS: Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2012.14108",
+      "key_insight": "利用原始对偶框架结合公布价格机制，将决策权归还各参与方，从源头阻断隐私泄露",
+      "method_signature": "基于原始对偶方法和公布价格机制的去中心化在线切片算法，MVNO复杂度O(NC)，租户复杂度O(C)",
+      "tags": [
+        "network-slicing",
+        "decentralized-algorithm",
+        "posted-price-mechanism",
+        "privacy-preserving",
+        "primal-dual-approach"
+      ],
+      "quality": "full"
+    },
+    "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions": {
+      "title": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2407.08584",
+      "key_insight": "通过搜索空间收缩和分段线性化可将非凸问题转化为可解形式,且WF算法可获得紧的K-近似比",
+      "method_signature": "OBTA收缩搜索空间+分段线性化; WF水填充获得K-近似; RD全局迭代删除副本; OCWF-ACC早期退出加速",
+      "tags": [
+        "data-locality-scheduling",
+        "task-assignment",
+        "distributed-job-execution",
+        "water-filling-approximation",
+        "bipartite-matching"
+      ],
+      "quality": "full"
+    },
+    "Distributed Redundant Placement for Microservice-based Applications at the Edge": {
+      "title": "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+      "year": 2019,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1911.03600",
+      "key_insight": "Redundancy allowing one candidate dispatched to multiple edge sites alleviates single-site bottleneck risk and balances requests from different end users",
+      "method_signature": "SAA-RP framework with GA-based Server Selection (GASS) algorithm for sequential combinatorial microservice structure",
+      "tags": [
+        "edge-service-placement",
+        "microservice-redundancy",
+        "multi-access-edge-computing",
+        "stochastic-optimization",
+        "kubernetes-deployment"
+      ],
+      "quality": "full"
+    },
+    "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence": {
+      "title": "Edge Intelligence: The Confluence of Edge Computing and Artificial Intelligence",
+      "year": 2020,
+      "venue": "IEEE Internet of Things Journal",
+      "doi": "10.1109/jiot.2020.2984887",
+      "key_insight": "QoE多目标联合优化需涵盖性能、成本、隐私、效率、可靠性，而非单一指标",
+      "method_signature": "自底向上拓扑-内容-服务分层 + 自顶向下模型适配-框架设计-处理器加速",
+      "tags": [
+        "edge intelligence taxonomy",
+        "device-edge-cloud synergy",
+        "federated learning",
+        "QoE optimization",
+        "distributed AI inference"
+      ],
+      "quality": "full"
+    },
+    "Frequency Matching in Spiking Neural Networks for mmWave Sensing": {
+      "title": "Frequency Matching in Spiking Neural Networks for mmWave Sensing",
+      "year": 2026,
+      "venue": "Proceedings of the 43rd International Conference on Machine Learning",
+      "doi": null,
+      "key_insight": "Match LIF effective bandwidth to discriminative spectral content to suppress noise while preserving signal",
+      "method_signature": "Frequency-Matching Score (FMS) for β selection via maximum-deviation rule on FMS curve",
+      "tags": [
+        "spiking neural network",
+        "mmWave sensing",
+        "frequency matching",
+        "LIF dynamics",
+        "edge inference",
+        "low-pass filtering"
+      ],
+      "quality": "full"
+    },
+    "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance": {
+      "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2511.01320",
+      "key_insight": "Contamination-free fusion requires explicitly disentangling shared and private representations with orthogonal decomposition, preserving modality-specific cues while enabling cross-modal interaction.",
+      "method_signature": "C2F mechanism with shared/private separation, proxy-based cross-modal attention, and recursive refinement pathway anchoring fusion to original features.",
+      "tags": [
+        "multimodal-fusion",
+        "predictive-maintenance",
+        "tool-wear-monitoring",
+        "cross-modal-attention",
+        "service-oriented-systems"
+      ],
+      "quality": "full"
+    },
+    "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge": {
+      "title": "Placement is not Enough: Embedding with Proactive Stream Mapping on the Heterogenous Edge",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2012.04158",
+      "key_insight": "放置不够，需主动进行流映射和数据分割——同一函数放置下不同流路由可产生显著不同的makespan。",
+      "method_signature": "基于动态规划的DPE算法，通过RPF找所有简单路径、OSM求解最优数据分割。",
+      "tags": [
+        "edge-computing-DAG-scheduling",
+        "function-placement-stream-mapping",
+        "heterogeneous-edge-embedding",
+        "data-splitting-optimization",
+        "makespan-minimization"
+      ],
+      "quality": "full"
+    },
+    "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning": {
+      "title": "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2305.06572",
+      "key_insight": "沿奖励梯度上升方向分配资源可使遗憾次线性增长，O(√T)为凹函数奖励下的SOTA界",
+      "method_signature": "OGASCHED基于KKT条件快速投影实现O(log K)复杂度，内层并行外层迭代的在线梯度上升",
+      "tags": [
+        "multi-server-job-scheduling",
+        "online-gradient-ascent",
+        "regret-analysis",
+        "concave-utility-allocation",
+        "bipartite-graph-scheduling"
+      ],
+      "quality": "full"
+    },
+    "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples": {
+      "title": "SeMi: When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2501.06004",
+      "key_insight": "低置信度阈值访问难例,熵值大赋予大权重,平衡置信度衰减记忆库增强伪标签确定性,三者形成互补",
+      "method_signature": "SeMi框架:OHEML(在线难例挖掘学习)+平衡置信度衰减记忆库+伪标签确定性增强+解耦学习",
+      "tags": [
+        "class-imbalanced semi-supervised learning",
+        "hard example mining",
+        "pseudo-label certainty enhancement",
+        "memory bank",
+        "tail class performance"
+      ],
+      "quality": "full"
+    },
+    "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems": {
+      "title": "Tail-Learning: Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2312.16883",
+      "key_insight": "虽然原始问题对ω_j非凸,但对Laplace变换参数x_j却变成凸,可利用此upper bound设计RL状态",
+      "method_signature": "Laplace变换推导tail bound,结合一二阶导数作为增强状态,共享表征层+多智能体降低动作空间",
+      "tags": [
+        "tail-latency-mitigation",
+        "edge-computing-scheduling",
+        "reinforcement-learning-queuing",
+        "laplace-transform-bound",
+        "parallel-task-offloading"
+      ],
+      "quality": "full"
+    },
+    "When Does Hierarchy Help_ Benchmarking Agent Coordination in Event-Driven Industrial Scheduling": {
+      "title": "When Does Hierarchy Help? Benchmarking Agent Coordination in Event-Driven Industrial Scheduling",
+      "year": null,
+      "venue": null,
+      "doi": null,
+      "key_insight": "协调设计根本性地塑造agent系统行为,结构性权衡无法被结果指标单独刻画",
+      "method_signature": "DESBench离散事件调度基准测试平台,支持Plant-Area-Cell层级多agent协调",
+      "tags": [
+        "multi-agent-coordination-benchmark",
+        "discrete-event-scheduling",
+        "hierarchical-agent-system",
+        "LLM-agent-orchestration",
+        "coordination-paradigm-comparison"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "LLM-based agents": [
+      "Agentic Services Computing"
+    ],
+    "multi-agent systems": [
+      "Agentic Services Computing"
+    ],
+    "service lifecycle governance": [
+      "Agentic Services Computing"
+    ],
+    "autonomous decision-making": [
+      "Agentic Services Computing"
+    ],
+    "trustworthiness alignment": [
+      "Agentic Services Computing"
+    ],
+    "out-of-distribution-detection": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "neural-network-safety": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "feature-decoupling": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "class-aware-feature": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "post-hoc-ood-detection": [
+      "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    ],
+    "network-slicing": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "decentralized-algorithm": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "posted-price-mechanism": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "privacy-preserving": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "primal-dual-approach": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "data-locality-scheduling": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "task-assignment": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "distributed-job-execution": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "water-filling-approximation": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "bipartite-matching": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "edge-service-placement": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "microservice-redundancy": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "multi-access-edge-computing": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "stochastic-optimization": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "kubernetes-deployment": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "edge intelligence taxonomy": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "device-edge-cloud synergy": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "federated learning": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "QoE optimization": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "distributed AI inference": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "spiking neural network": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "mmWave sensing": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "frequency matching": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "LIF dynamics": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "edge inference": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "low-pass filtering": [
+      "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    ],
+    "multimodal-fusion": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "predictive-maintenance": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "tool-wear-monitoring": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "cross-modal-attention": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "service-oriented-systems": [
+      "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    ],
+    "edge-computing-DAG-scheduling": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "function-placement-stream-mapping": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "heterogeneous-edge-embedding": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "data-splitting-optimization": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "makespan-minimization": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "multi-server-job-scheduling": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "online-gradient-ascent": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "regret-analysis": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "concave-utility-allocation": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "bipartite-graph-scheduling": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "class-imbalanced semi-supervised learning": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "hard example mining": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "pseudo-label certainty enhancement": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "memory bank": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "tail class performance": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "tail-latency-mitigation": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "edge-computing-scheduling": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "reinforcement-learning-queuing": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "laplace-transform-bound": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "parallel-task-offloading": [
+      "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems"
+    ],
+    "multi-agent-coordination-benchmark": [
+      "When Does Hierarchy Help_ Benchmarking Agent Coordination in Event-Driven Industrial Scheduling"
+    ],
+    "discrete-event-scheduling": [
+      "When Does Hierarchy Help_ Benchmarking Agent Coordination in Event-Driven Industrial Scheduling"
+    ],
+    "hierarchical-agent-system": [
+      "When Does Hierarchy Help_ Benchmarking Agent Coordination in Event-Driven Industrial Scheduling"
+    ],
+    "LLM-agent-orchestration": [
+      "When Does Hierarchy Help_ Benchmarking Agent Coordination in Event-Driven Industrial Scheduling"
+    ],
+    "coordination-paradigm-comparison": [
+      "When Does Hierarchy Help_ Benchmarking Agent Coordination in Event-Driven Industrial Scheduling"
+    ]
+  }
+}

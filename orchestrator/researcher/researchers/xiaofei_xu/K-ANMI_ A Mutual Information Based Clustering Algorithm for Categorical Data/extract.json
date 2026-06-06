@@ -1,0 +1,39 @@
+{
+  "paper_id": "K-ANMI_ A Mutual Information Based Clustering Algorithm for Categorical Data",
+  "doi": "10.48550/arxiv.cs/0511013",
+  "title": "K-ANMI: A Mutual Information Based Clustering Algorithm for Categorical Data",
+  "year": 2005,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Categorical data clustering lacks efficient algorithms; existing ensemble approaches rely on intuitive heuristics that cannot guarantee reasonable solutions.",
+  "problem_framing": "Define categorical clustering as optimization problem maximizing ANMI (Average Normalized Mutual Information) borrowed from cluster ensemble literature.",
+  "key_insight": "Treating each attribute's value partition as a clustering result allows reformulating categorical clustering as a cluster ensemble consensus problem.",
+  "method_signature": "k-means style iterative algorithm directly optimizing ANMI objective using histogram-based data structures for scalability.",
+  "evaluation_criteria": "Clustering accuracy (r = sum of a_i / n) compared against Squeezer, GAClust, and ccdByEnsemble on UCI datasets.",
+  "negative_result_or_admitted_limitation": "Algorithm terminates at local optimum; worst-case complexity O(I*n*k²*r*p²) requires practical assumptions on small p.",
+  "evidence_for_taste": [
+    "intuitive heuristics rather than from vantage point",
+    "can't guarantee to find a reasonable solution",
+    "direct optimization strategy utilized in k-ANMI is more desirable",
+    "algorithm is capable of handing large categorical datasets"
+  ],
+  "thinking_moves": [
+    "把直观启发式方法替换为直接优化目标函数",
+    "借用cluster ensemble框架中的ANMI作为聚类准则",
+    "用直方图/哈希表实现避免访问原始数据集",
+    "先分析理论复杂度再验证实际线性可扩展性"
+  ],
+  "topic_tags": [
+    "categorical-data-clustering",
+    "mutual-information",
+    "cluster-ensemble",
+    "k-means-paradigm",
+    "optimization"
+  ],
+  "cites_own_work": [
+    "He et al. 2005 (ccdByEnsemble)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Authors reference their own ccdByEnsemble work as baseline to beat; this demonstrates internal motivation to improve prior approach. Venue inferred as data mining conference but arxiv version doesn't specify."
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Detecting Code Clones with Graph Neural Networkand Flow-Augmented Abstract Syntax Tree",
+  "doi": "10.48550/arxiv.2002.08653",
+  "title": "Detecting Code Clones with Graph Neural Network and Flow-Augmented Abstract Syntax Tree",
+  "year": 2020,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有AST方法缺乏控制流和数据流等语义信息,导致语义克隆(Type-4)检测效果差",
+  "problem_framing": "将代码对相似度检测建模为学习从代码片段到特征向量的映射函数,使得预测相似度与真实标签接近",
+  "key_insight": "FA-AST在AST基础上显式添加控制流和数据流边,让GNN同时捕获语法结构和语义信息",
+  "method_signature": "FA-AST构建加边+GNN消息传递+余弦相似度",
+  "evaluation_criteria": "F1/Precision/Recall on GCJ and BigCloneBench",
+  "negative_result_or_admitted_limitation": "现有数据集不够难,当前深度学习模型在此类数据集上已接近饱和",
+  "evidence_for_taste": [
+    "AST can reflect the rich structural information for program syntax",
+    "it does not contain some semantic information such as control flow",
+    "GGNN cannot effectively distinguish dissimilar code fragments",
+    "some widely-used code clone datasets are not difficult enough to test the power of current deep learning models",
+    "ASTNN cannot capture the similarity between them"
+  ],
+  "thinking_moves": [
+    "不选AST也不选CFG,而是提出FA-AST融合两者",
+    "把AST加边问题拆解为5种语法边+3种控制流边,逐类说明必要性",
+    "区分GGNN和GMN:GMN通过cross-graph attention建模两个图之间的交互,GGNN分别独立编码",
+    "指出ASTNN等方法丢失结构信息的具体方式(转为二叉树/深度遍历拆分)",
+    "承认数据集局限性:现有数据集规模/复杂度不足以真正挑战模型能力"
+  ],
+  "topic_tags": [
+    "code-clone-detection",
+    "flow-augmented-AST",
+    "graph-neural-network",
+    "semantic-clone",
+    "control-data-flow-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Zhi Jin为合作作者角色,论文为arXiv预印本,venue信息缺失故填null"
+}

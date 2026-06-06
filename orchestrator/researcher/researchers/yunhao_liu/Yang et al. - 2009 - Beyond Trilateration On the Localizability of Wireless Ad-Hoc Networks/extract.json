@@ -1,0 +1,39 @@
+{
+  "paper_id": "Yang et al. - 2009 - Beyond Trilateration On the Localizability of Wireless Ad-Hoc Networks",
+  "doi": null,
+  "title": "Beyond Trilateration: On the Localizability of Wireless Ad-Hoc Networks",
+  "year": 2009,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Trilateration是定位算法基础但在许多情况下将可定位图错误识别为不可定位,导致大量可定位节点被遗漏",
+  "problem_framing": "图的局部可定位性问题:给定距离图和约束,判断网络是否可定位,或识别其中可定位的节点",
+  "key_insight": "三边测量法实际上是轮图(4节点)的特例,通过识别邻居图中的块结构可找到所有1-hop可定位节点",
+  "method_signature": "基于轮图结构在邻居图中通过计算2-连通块识别可定位节点",
+  "evaluation_criteria": "识别的可定位节点数量与三边测量法及理论上限的对比",
+  "negative_result_or_admitted_limitation": "缺乏WHEEL与三边测量法之间差距的理论分析,也未给出与理论上限的差距",
+  "evidence_for_taste": [
+    "trilateration wrongly recognizes",
+    "fails to identify the entire graph",
+    "too critical to be realistic",
+    "the hitting radius of global rigidity",
+    "It is still lack of theoretical analyses"
+  ],
+  "thinking_moves": [
+    "将感知问题重构为图论通信问题:通过图刚性性质判断节点位置唯一性",
+    "发现简单结构的数学包含关系:三边测量=最小轮图,启发扩展思路",
+    "放松充分条件得到必要充分条件:从3-连通降至2-连通配特定边结构",
+    "用具体反例暴露现有方法缺陷:地理间隙和边界节点两类失败情况",
+    "承认理论与实践的落差:仿真显示优势但缺乏严格理论保证"
+  ],
+  "topic_tags": [
+    "wireless-ad-hoc-localization",
+    "graph-rigidity-theory",
+    "distributed-localizability-test",
+    "wheel-graph-identification",
+    "sensor-network-positioning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注发表venue,根据结构推断为会议论文但无法确定;理论贡献明确但作者承认缺乏差距分析"
+}

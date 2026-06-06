@@ -1,0 +1,38 @@
+{
+  "paper_id": "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition",
+  "doi": "10.48550/arxiv.2507.11202",
+  "title": "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现实场景中传感器故障或隐私保护导致多模态数据缺失，训练梯度在不同模态组合间相互冲突",
+  "problem_framing": "将缺失模态的不完全多模态学习问题重新形式化为参数高效微调问题，通过低秩分解解耦模态组合特征",
+  "key_insight": "单一模态在不同模态组合中提供的特征信息存在差异，需要区分公共信息与特征信息并动态调整训练概率",
+  "method_signature": "MCULoRA框架：MCLA模态组合感知低秩适配+DPFT动态参数微调",
+  "evaluation_criteria": "CMU-MOSEI和IEMOCAP数据集上ACC/F1、WA/UA指标对比固定缺失和随机缺失协议",
+  "negative_result_or_admitted_limitation": "MCULoRA在低秩适应过程中仍假设所有模态数据可用，实际应用中难以收集到完整模态训练数据",
+  "evidence_for_taste": [
+    "梯度冲突在模态组合损失之间",
+    "信息冗余在同质和异质特征之间",
+    "弱模态组合的特征提取能力",
+    "模态组合的判别性特征信息",
+    "不同模态组合要求的特征信息不同"
+  ],
+  "thinking_moves": [
+    "从梯度冲突反推出需要解耦模态组合间的参数空间",
+    "将参数高效微调的LoRA思想引入不完全多模态学习",
+    "用JS散度量化单模态解耦难度以动态调整训练概率",
+    "通过软正交约束减少同质与异质特征间的信息冗余"
+  ],
+  "topic_tags": [
+    "incomplete-multimodal-learning",
+    "low-rank-adaptation",
+    "emotion-recognition",
+    "parameter-efficient-fine-tuning",
+    "modality-combination-aware"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的方法描述、实验设计和消融分析，Deng作为作者之一在论文中署名，实验验证了MCULoRA在各种不完全多模态场景下的鲁棒性 | md truncated to head40k+tail20k"
+}

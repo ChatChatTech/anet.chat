@@ -1,0 +1,420 @@
+{
+  "slug": "lei_ren",
+  "n_extracts": 11,
+  "n_full": 7,
+  "n_partial": 4,
+  "n_thin": 0,
+  "year_range": [
+    2007,
+    2025
+  ],
+  "top_tags": [
+    [
+      "人机交互心理模型",
+      1
+    ],
+    [
+      "感知-认知-动作三模块",
+      1
+    ],
+    [
+      "多模态并行交互",
+      1
+    ],
+    [
+      "分布式认知",
+      1
+    ],
+    [
+      "具身认知理论",
+      1
+    ],
+    [
+      "pen-based interaction",
+      1
+    ],
+    [
+      "dynamic geometry",
+      1
+    ],
+    [
+      "sketch recognition",
+      1
+    ],
+    [
+      "context-aware HCI",
+      1
+    ],
+    [
+      "computer-aided teaching",
+      1
+    ],
+    [
+      "evolutionary game theory",
+      1
+    ],
+    [
+      "prisoner's dilemma",
+      1
+    ],
+    [
+      "spatial reciprocity",
+      1
+    ],
+    [
+      "strategy updating",
+      1
+    ],
+    [
+      "phase transitions",
+      1
+    ],
+    [
+      "cloud manufacturing platform",
+      1
+    ],
+    [
+      "virtualization of hard-resources",
+      1
+    ],
+    [
+      "manufacturing resource perception",
+      1
+    ],
+    [
+      "knowledge-based semantic integration",
+      1
+    ],
+    [
+      "layered architecture design",
+      1
+    ],
+    [
+      "federated-learning-non-iid",
+      1
+    ],
+    [
+      "material-image-segmentation",
+      1
+    ],
+    [
+      "privacy-preserving-data-sharing",
+      1
+    ],
+    [
+      "style-transfer-gan",
+      1
+    ],
+    [
+      "materials-informatics",
+      1
+    ],
+    [
+      "industrial-multivariate-time-series-generation",
+      1
+    ],
+    [
+      "diffusion-model",
+      1
+    ],
+    [
+      "conditional-AIGC",
+      1
+    ],
+    [
+      "Ada-MMD",
+      1
+    ],
+    [
+      "temporal-decomposition",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2007,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "pen-based interaction",
+          1
+        ],
+        [
+          "dynamic geometry",
+          1
+        ],
+        [
+          "sketch recognition",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2011,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "cloud-manufacturing-capability",
+          1
+        ],
+        [
+          "description-logics",
+          1
+        ],
+        [
+          "dynamic-description-logics",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2018,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "人机交互心理模型",
+          1
+        ],
+        [
+          "感知-认知-动作三模块",
+          1
+        ],
+        [
+          "多模态并行交互",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "federated-learning-non-iid",
+          1
+        ],
+        [
+          "material-image-segmentation",
+          1
+        ],
+        [
+          "privacy-preserving-data-sharing",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "industrial-multivariate-time-series-generation",
+          1
+        ],
+        [
+          "diffusion-model",
+          1
+        ],
+        [
+          "conditional-AIGC",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 8,
+      "top_tags": [
+        [
+          "digital-genealogy",
+          1
+        ],
+        [
+          "DG-DNA",
+          1
+        ],
+        [
+          "industrial-embodied-ai",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "模型未能涉及情绪情感领域;未开展针对性实验验证;缺乏定量化参数描述;未细化分布式架构",
+    "IPW可靠性评分(3.91)低于CPT(4.42)，系统稳定性不足，需要扩充识别库",
+    "Pair approximation qualitatively agrees but over/underestimates cooperation levels compared to simulation.",
+    "当前云计算的虚拟化技术只能处理软资源虚拟化，无法解决硬资源（如车床和加工设备）的封装问题",
+    "FedTransfer仍使全局测试集MAP(0.575)低于集中训练(0.590), 性能差距未能完全消除",
+    "GAN方法判别分数普遍高于0.94,说明合成时序与真实时序分布差异大,GAN难以生成复杂MTS数据",
+    "DG-VAE在新颖性指标上略低于HNC-CAD，因为更好地学习了训练数据分布导致生成数据与训练集更接近",
+    "We are developing a CSP prototype now,论文未给出实现结果或验证数据",
+    "小规模RFT不足以克服格式泛化障碍,模型在陌生格式下过度依赖有缺陷的直接推理",
+    "OWL-S和WSMO无法描述服务行为的状态转换、服务间复杂关系及进行中的交互",
+    "现有服务描述语言(OWL、OWL-S、SHOE)无法满足仿真能力服务化的复杂性、不确定性和知识性需求"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "现有模型已经不能满足当前的需求",
+      "paper_id": "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    },
+    {
+      "quote": "该模型对3个处理器的环路循环周期时间的设定非常随意和主观",
+      "paper_id": "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    },
+    {
+      "quote": "该模型本质上是面向人工智能的心理模型,没有涉及信息的输入和输出",
+      "paper_id": "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    },
+    {
+      "quote": "现有的人机交互模型仍然停留在旧交互模式的阶段",
+      "paper_id": "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    },
+    {
+      "quote": "还只是一个概念模型,缺少定量化参数",
+      "paper_id": "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    },
+    {
+      "quote": "训练场景与数据极度匮乏",
+      "paper_id": "Digital genealogy_ empowering industrial embodied intelligence world model"
+    },
+    {
+      "quote": "DG-DNA基因机制",
+      "paper_id": "Digital genealogy_ empowering industrial embodied intelligence world model"
+    },
+    {
+      "quote": "多代演化的相似数字实体",
+      "paper_id": "Digital genealogy_ empowering industrial embodied intelligence world model"
+    },
+    {
+      "quote": "继承核心DG-DNA属性",
+      "paper_id": "Digital genealogy_ empowering industrial embodied intelligence world model"
+    },
+    {
+      "quote": "提升操作对象泛化性",
+      "paper_id": "Digital genealogy_ empowering industrial embodied intelligence world model"
+    },
+    {
+      "quote": "符合工业生产性能要求",
+      "paper_id": "Digital genealogy_ empowering industrial embodied intelligence world model"
+    },
+    {
+      "quote": "多型号生产对象与多样化生产空间的排列组合",
+      "paper_id": "Digital genealogy_ empowering industrial embodied intelligence world model"
+    },
+    {
+      "quote": "WIMP范式适于离散性交互而不能很好地适应连续性交互",
+      "paper_id": "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    },
+    {
+      "quote": "笔交互具备连续性与隐含性特点",
+      "paper_id": "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    },
+    {
+      "quote": "动态几何有助于增强学生的理解力",
+      "paper_id": "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    },
+    {
+      "quote": "基于交互上下文与知识库中的规则对笔画进行识别",
+      "paper_id": "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    },
+    {
+      "quote": "教师通过IPW直接与胶片交互不需要在电脑与黑板之间切换",
+      "paper_id": "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    },
+    {
+      "quote": "GAN-based methods generally obtain a discriminative score above 0.94",
+      "paper_id": "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    },
+    {
+      "quote": "In some settings, DiffWave slightly outperforms Diff-MTS",
+      "paper_id": "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    },
+    {
+      "quote": "Diff-MTS w/o Ada-MMD achieves an average predictive score of 21.840",
+      "paper_id": "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    },
+    {
+      "quote": "some unique characteristics of the datasets or specific noise factors",
+      "paper_id": "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    },
+    {
+      "quote": "DiffWave slightly outperforms Diff-MTS, such as FD001 with lengths of 96",
+      "paper_id": "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    },
+    {
+      "quote": "interestingly, it is found",
+      "paper_id": "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    },
+    {
+      "quote": "the most pronounced phenomenon",
+      "paper_id": "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    },
+    {
+      "quote": "we also demonstrate the robustness",
+      "paper_id": "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    },
+    {
+      "quote": "qualitatively agree",
+      "paper_id": "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    },
+    {
+      "quote": "well reproduced",
+      "paper_id": "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    },
+    {
+      "quote": "缺乏必要的变量控制",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "mitigates memorization issues",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "allowing for nuanced insights",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "enabling effective reinforcement fine-tuning",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "hallucination phenomenon",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "fabricate solver calls",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "hallucinated shortcuts",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "the gap between task types is pronounced",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "cross-format generalization remains notably difficult",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "small-scale RFT may not be sufficient",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "overfitted to a specific Math-style reasoning pattern",
+      "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    },
+    {
+      "quote": "cannot penetrate through the underlying infrastructure especially for the hard-resources",
+      "paper_id": "Cloud manufacturing platform architecture"
+    },
+    {
+      "quote": "does not provide incentives for manufacturing service providers",
+      "paper_id": "Cloud manufacturing platform architecture"
+    }
+  ]
+}

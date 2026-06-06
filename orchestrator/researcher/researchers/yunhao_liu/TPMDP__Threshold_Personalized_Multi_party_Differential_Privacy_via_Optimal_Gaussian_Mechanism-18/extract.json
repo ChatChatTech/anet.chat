@@ -1,0 +1,38 @@
+{
+  "paper_id": "TPMDP__Threshold_Personalized_Multi_party_Differential_Privacy_via_Optimal_Gaussian_Mechanism-18",
+  "doi": null,
+  "title": "TPMDP: Threshold Personalized Multi-party Differential Privacy via Optimal Gaussian Mechanism",
+  "year": 2023,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Multi-party collaborative computing (federated learning, AIoT)需要保护异质隐私需求,防止半诚实合谋者窃取私有信息",
+  "problem_framing": "在t个半诚实合谋者场景下,为每个参与方分配合适的个性化差分隐私预算(ε_i, δ_i)",
+  "key_insight": "利用LP约束的结构特性,将指数复杂度的通用求解器优化为O(n)线性算法",
+  "method_signature": "多参与方Gaussian机制 + 结构化LP最优方差分配",
+  "evaluation_criteria": "噪声方差(utility loss)、运行时间、空间复杂度",
+  "negative_result_or_admitted_limitation": "当t接近n时,总体噪声方差等于严格隐私预算参与方的必要噪声方差之和",
+  "evidence_for_taste": [
+    "easy-to-implement multi-party Gaussian mechanism",
+    "exploit the specific structure of this LP problem",
+    "state-of-the-art generic LP solver",
+    "superior utility especially in heterogeneous scenarios",
+    "outperforms both TMDP and PLDP mechanisms"
+  ],
+  "thinking_moves": [
+    "将MPC的阈值安全和PDP个性化隐私结合成TPMDP新框架",
+    "把效用优化问题形式化为线性规划问题",
+    "从通用LP求解器的指数复杂度反推结构化快速算法",
+    "通过分析子情况分类讨论不同U+和t组合下的最优解"
+  ],
+  "topic_tags": [
+    "differential-privacy",
+    "multi-party-computation",
+    "personalized-privacy",
+    "gaussian-mechanism",
+    "federated-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文被截断,部分实验结果和结论缺失。DOI和具体venue未知。 | md truncated to head40k+tail20k"
+}

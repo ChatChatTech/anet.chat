@@ -1,0 +1,39 @@
+{
+  "paper_id": "Additional articles of special issue on Real-time image watermarking and forensics in cloud computing",
+  "doi": "10.1007/s11554-019-00897-4",
+  "title": "Additional articles of special issue on Real-time image watermarking and forensics in cloud computing",
+  "year": 2019,
+  "venue": "Journal of Real-Time Image Processing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Guest editorial overviewing five additional papers addressing watermarking, reversible data hiding, and visual secret sharing techniques",
+  "problem_framing": "Providing structured overview of research directions in real-time image watermarking/forensics for cloud environments",
+  "key_insight": "DH-VSS methods emerging as effective technique for data transmission protection with reversibility and high capacity",
+  "method_signature": "Editorial synthesis of five papers: FPGA accelerator, MLR prediction, OPVO, CDM-based RDH, and adaptive DH-VSS",
+  "evaluation_criteria": "Throughput, embedding capacity, prediction accuracy, rate-distortion performance, computational complexity",
+  "negative_result_or_admitted_limitation": "Conventional prediction methods with fixed predictors limited by arithmetic combination of neighboring pixels",
+  "evidence_for_taste": [
+    "simplifies DCT/IDCT algorithms",
+    "only involves addition and shift operations",
+    "improves hiding capacity",
+    "satisfying computational complexity",
+    "guarantee data transmission security"
+  ],
+  "thinking_moves": [
+    "将复杂乘法/除法运算简化为加法和移位操作",
+    "利用像素局部一致性进行误差预测",
+    "利用相邻像素相关性提高隐藏容量",
+    "结合码分复用策略实现安全数据传输",
+    "在4-LSB位平面嵌入秘密数据实现高容量"
+  ],
+  "topic_tags": [
+    "FPGA硬件加速",
+    "可逆数据隐藏",
+    "视觉秘密共享",
+    "医学图像水印",
+    "LSB嵌入"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "This is a guest editorial summarizing multiple papers, not an original research contribution. Extracted taste signals reflect what the editorial emphasizes as important contributions across the covered papers rather than the target author's individual research philosophy."
+}

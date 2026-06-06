@@ -1,0 +1,41 @@
+{
+  "paper_id": "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning",
+  "doi": "10.48550/arxiv.2305.06572",
+  "title": "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "多服务器作业需要权衡并行计算增益与通信开销，现有方法难以在在线场景下实现高效资源分配",
+  "problem_framing": "将在线调度问题形式化为累积奖励最大化，采用遗憾(regret)衡量在线策略与离线最优的差距",
+  "key_insight": "沿奖励梯度上升方向分配资源可使遗憾次线性增长，O(√T)为凹函数奖励下的SOTA界",
+  "method_signature": "OGASCHED基于KKT条件快速投影实现O(log K)复杂度，内层并行外层迭代的在线梯度上升",
+  "evaluation_criteria": "与DRF/FAIR-NESS/BINPACKING/SPREADING基线对比累积奖励，覆盖不同利用率和效用函数场景",
+  "negative_result_or_admitted_limitation": "仅考虑跨节点通信开销，节点内通信建模留待未来工作",
+  "evidence_for_taste": [
+    "gain-overhead tradeoff",
+    "SOTA regret",
+    "decreases successively when increasing participated resources",
+    "the dominant communication overhead",
+    "nice setup",
+    "parallel sub-procedures"
+  ],
+  "thinking_moves": [
+    "将调度问题重新框定为在线学习中的遗憾最小化问题",
+    "用凹函数建模并行计算的边际效益递减现象",
+    "借鉴缓存领域的在线梯度上升方法扩展到资源分配",
+    "通过KKT条件构造并行投影子问题加速计算"
+  ],
+  "topic_tags": [
+    "multi-server-job-scheduling",
+    "online-gradient-ascent",
+    "regret-analysis",
+    "concave-utility-allocation",
+    "bipartite-graph-scheduling"
+  ],
+  "cites_own_work": [
+    "IEEE TPDS 2023 paper on 'Learning to schedule multi-server jobs with fluctuated processing speeds' as reference [5]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

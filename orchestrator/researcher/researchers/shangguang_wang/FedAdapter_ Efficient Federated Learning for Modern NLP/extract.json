@@ -1,0 +1,39 @@
+{
+  "paper_id": "FedAdapter_ Efficient Federated Learning for Modern NLP",
+  "doi": "10.48550/arxiv.2205.10162",
+  "title": "FedAdapter: Efficient Federated Learning for Modern NLP",
+  "year": 2022,
+  "venue": "arxiv",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "FedNLP训练因大模型和高通信开销极慢,需实用化",
+  "problem_framing": "Adapter配置空间大且无银弹配置,需自动化",
+  "key_insight": "渐进训练+旁路试验可快速学习浅层知识并探测最优配置",
+  "method_signature": "Adapter配置动态演进+跨轮激活缓存",
+  "evaluation_criteria": "时间到精度/网络流量/能耗",
+  "negative_result_or_admitted_limitation": "Layer freezing收益有限,选错配置可使收敛慢4.7倍",
+  "evidence_for_taste": [
+    "There is no silver-bullet configuration",
+    "Picking a non-optimal configuration could slow down model convergence by up to 4.7x",
+    "the profits of such an approach are modest",
+    "the optimal configuration varies across downstream NLP tasks",
+    "the convergence rate often sees diminishing returns as the population of participant devices grows"
+  ],
+  "thinking_moves": [
+    "识别关键瓶颈:从全模型微调到adapter只需调<1%参数",
+    "将参数高效学习思想迁移到联邦学习系统设计",
+    "借鉴课程学习思想:从浅层到深层渐进提升模型复杂度",
+    "利用联邦学习中多余设备的边际效益递减特性做配置试验",
+    "跨轮缓存固定层的激活值避免重复计算"
+  ],
+  "topic_tags": [
+    "federated-learning-NLP",
+    "adapter-modules",
+    "time-to-accuracy",
+    "mobile-edge-inference",
+    "configuration-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4401306654",
+  "doi": "10.48550/arxiv.2407.21488",
+  "title": "Breaking the Hourglass Phenomenon of Residual Quantization: Enhancing the Upper Bound of Generative Retrieval",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "工业场景中RQ-SID的中间层token过度集中,导致表示能力受限",
+  "problem_framing": "将Hourglass现象形式化为路径稀疏和长尾分布问题",
+  "key_insight": "残差量化固有特性导致层级间非均匀→均匀交替分布,是Hourglass的本质成因",
+  "method_signature": "启发式删除第二层 + 自适应变长token移除策略(top@K)",
+  "evaluation_criteria": "Recall@K及无效ID比例",
+  "negative_result_or_admitted_limitation": "方法简单高效但非最优,只能缓解而非彻底解决Hourglass现象",
+  "evidence_for_taste": [
+    "critical issue termed the \"Hourglass\"",
+    "path sparsity and long-tailed distribution",
+    "intrinsic nature of progressively quantizing",
+    "simple yet effective methods",
+    "can only alleviate, but not completely resolve"
+  ],
+  "thinking_moves": [
+    "从工程现象(hourglass)反推底层量化机制失效",
+    "将长尾分布问题归因于残差的固有属性",
+    "提出简单启发式解法而非复杂重构"
+  ],
+  "topic_tags": [
+    "generative-retrieval",
+    "residual-quantization",
+    "semantic-ID",
+    "e-commerce-recommendation",
+    "codebook-utilization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

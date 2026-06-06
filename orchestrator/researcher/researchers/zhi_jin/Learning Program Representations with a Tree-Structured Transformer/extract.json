@@ -1,0 +1,38 @@
+{
+  "paper_id": "Learning Program Representations with a Tree-Structured Transformer",
+  "doi": "10.48550/arxiv.2208.08643",
+  "title": "Learning Program Representations with a Tree-Structured Transformer",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有树/图神经网络无法捕获程序的全局依赖,且无法为叶节点学习有效的上下文表示",
+  "problem_framing": "程序语法树的节点级预测需要每个节点能获取所有其他节点信息,而现有方法只能单向传播",
+  "key_insight": "双向(自底向上+自顶向下)传播让每个节点都能捕获全局上下文信息",
+  "method_signature": "Tree-Transformer用多头注意力建模兄弟和父子依赖,结合双向传播",
+  "evaluation_criteria": "树级任务(程序分类)和节点级任务(错误定位、类型推断)的准确率",
+  "negative_result_or_admitted_limitation": "Tree-Transformer时间效率低于顺序Transformer/GNN,深度堆叠时差距更大",
+  "evidence_for_taste": [
+    "fail to capture long-term dependencies",
+    "cannot learn useful node representations",
+    "cannot obtain sufficient context information for low-level tree nodes",
+    "Tree-LSTM does not show significant improvements",
+    "time efficiency of Tree-Transformer is lower"
+  ],
+  "thinking_moves": [
+    "用表格系统梳理现有方法的失败模式,发现每个方法都缺失某项关键能力",
+    "通过具体AST示例说明GNN的1-hop邻域限制和Tree-LSTM叶节点信息匮乏",
+    "从预训练模型在C++上表现差的现象,推断标识符敏感性问题",
+    "用消融实验验证双向传播比单向更有效"
+  ],
+  "topic_tags": [
+    "AST表示学习",
+    "树结构Transformer",
+    "多头注意力",
+    "程序理解",
+    "节点级预测"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

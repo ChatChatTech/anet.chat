@@ -1,0 +1,7 @@
+# Spotlight: Multiple-Object Localization by Mobile Photo Fusion
+
+Jiaxi Gu, Lan Zhang, Jiliang Wang, Zhiwen Yu, Xiaozhe Xin, Yunhao Liu
+
+Abstract— With the evolution of mobile social network, photo sharing becomes more and more popular. Objects appearing in overlapped field-of-view (FOV) often indicate that they draw most people's attention and are usually more popular. Successfully locating these objects can greatly facilitate many applications such as criminal investigation, event summary, crowdsourcing-based Geographical Information System (GIS), etc. Existing methods either need prior knowledge of the environment or intentional photographing. In this paper, we present a seamless approach namely "Spotlight" for passive localization using crowdsourced photos. Using a graph-based model, we combine object images across multiple camera views. Within each bunch of combined object images, an image shooting map is built on which object localization is achieved using plane geometry. We implement the system using photos in various scenarios and evaluate its localization accuracy extensively. The results show our approach is effective for passive object localization and achieves a high accuracy.
+
+For the published version of reco rd document, go to: http://dx.doi.org/10. 1109/B1GC0M.2018.000 44

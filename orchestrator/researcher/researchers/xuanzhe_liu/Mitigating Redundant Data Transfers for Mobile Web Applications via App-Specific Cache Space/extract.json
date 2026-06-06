@@ -1,0 +1,43 @@
+{
+  "paper_id": "Mitigating Redundant Data Transfers for Mobile Web Applications via App-Specific Cache Space",
+  "doi": "10.48550/arxiv.1605.06678",
+  "title": "Mitigating Redundant Data Transfers for Mobile Web Applications via App-Specific Cache Space",
+  "year": 2016,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Mobile Web apps suffer from redundant transfers causing traffic waste, slow load, energy drain; current cache mechanisms are far from satisfactory",
+  "problem_framing": "How to accurately identify stable resources that can be packaged and loaded locally for long periods to reduce redundant transfers",
+  "key_insight": "Native apps control resources explicitly via packages; Web apps should adopt similar app-specific resource management instead of relying on shared browser cache",
+  "method_signature": "ReWAP packages stable resources with engine-generated manifest, uses HTML5 AppCache wrapper for app-specific local storage",
+  "evaluation_criteria": "Traffic savings vs original cache-enabled apps, runtime overhead, page load time for cold/warm starts",
+  "negative_result_or_admitted_limitation": "Page load time does not always improve due to checking update with server-side components; energy drain not addressed",
+  "evidence_for_taste": [
+    "cache policies is not a desirable mechanism",
+    "app-specific logics to control the resources",
+    "the variance of saved data traffic is significantly large",
+    "there is hardly improvement",
+    "using cache policies is not a desirable mechanism"
+  ],
+  "thinking_moves": [
+    "Borrow mechanism design from native apps to solve Web cache failures",
+    "Frame the problem as app-specific resource management rather than browser-level cache tuning",
+    "Measure actual cache hit gaps before proposing solution",
+    "Normalize resources with same content but different URLs into single entity",
+    "Predict update time using gradient descent on evolution history",
+    "Leverage existing HTML5 standards (AppCache) for easy deployment"
+  ],
+  "topic_tags": [
+    "mobile-web-caching",
+    "resource-packaging",
+    "redundant-transfer-reduction",
+    "app-specific-cache",
+    "browser-performance-optimization"
+  ],
+  "cites_own_work": [
+    "Measurement and analysis of mobile web cache performance (WWW 2016)",
+    "Demystifying the imperfect client-side cache performance of mobile web browsing"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

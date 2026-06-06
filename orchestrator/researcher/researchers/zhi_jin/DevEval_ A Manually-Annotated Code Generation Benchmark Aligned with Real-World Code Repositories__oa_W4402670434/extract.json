@@ -1,0 +1,42 @@
+{
+  "paper_id": "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434",
+  "doi": "10.18653/v1/2024.findings-acl.214",
+  "title": "DevEval: A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories",
+  "year": 2024,
+  "venue": "ACL 2024 Findings",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有基准测试与真实代码仓库差距大，LLM在这些基准上的表现与开发者实际体验不一致",
+  "problem_framing": "定义好代码生成基准应满足的四个特征：真实仓库、真实代码分布、全面标注、鲁棒评估",
+  "key_insight": "DevEval通过匹配500个真实仓库的代码和依赖分布（27% standalone/73% non-standalone），构建更贴近实际的评测场景",
+  "method_signature": "收集1825个样本，包含六要素：签名、需求、仓库上下文、参考代码、参考依赖、测试用例",
+  "evaluation_criteria": "Pass@k评估功能正确性，Recall@k评估生成的依赖召回率",
+  "negative_result_or_admitted_limitation": "上下文过长且异构导致LLM忽略相关知识甚至产生幻觉（如调用不存在的create_connection而非有效的connect）",
+  "evidence_for_taste": [
+    "LLMs struggle with understanding contexts",
+    "the contexts are too long",
+    "the contexts are heterogeneous",
+    "gpt-4 achieves 88.4 on HumanEval, whereas it scores 17.00 on Pass@1",
+    "the highest Pass@1 of gpt-4 only is 53.04%",
+    "LLMs often ignore available dependencies",
+    "Recall@k values in DevEval may have slight biases"
+  ],
+  "thinking_moves": [
+    "分析百万函数以定义好基准应满足的特征",
+    "按真实仓库分布确定benchmark中standalone与non-standalone比例",
+    "通过实验揭示LLM在真实场景下的真实能力（而非刷榜高分）",
+    "承认Recall@k因动态语言存在parser偏差，但量化评估其影响"
+  ],
+  "topic_tags": [
+    "LLM代码生成评估",
+    "代码生成基准测试",
+    "仓库级代码生成",
+    "依赖召回评测",
+    "上下文理解"
+  ],
+  "cites_own_work": [
+    "ClassEval",
+    "SWE-bench"
+  ],
+  "extraction_quality": "full"
+}

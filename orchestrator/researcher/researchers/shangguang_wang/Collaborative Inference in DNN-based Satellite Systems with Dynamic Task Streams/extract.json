@@ -1,0 +1,36 @@
+{
+  "paper_id": "Collaborative Inference in DNN-based Satellite Systems with Dynamic Task Streams",
+  "doi": "10.48550/arxiv.2311.06073",
+  "title": "Collaborative Inference in DNN-based Satellite Systems with Dynamic Task Streams",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LEO卫星算力有限且卫星-地面链路不稳定，难以满足DNN推理任务的延迟约束",
+  "problem_framing": "将动态任务流的多出口DNN分区卸载问题建模为分组背包优化问题",
+  "key_insight": "通过任务增益函数融合任务完成数与用户满意度，动态选择早退出点和分区点实现延迟-精度权衡",
+  "method_signature": "任务增益感知的推理卸载算法(Algorithm1+2)",
+  "evaluation_criteria": "总任务增益、任务完成率、平均任务延迟",
+  "negative_result_or_admitted_limitation": "问题被分类为NP-hard，难以获得精确最优解；未考虑LEO任务从HEO返回最终结果的传输时间",
+  "evidence_for_taste": [
+    "significantly outperforms baseline",
+    "problem is classified as NP-hard",
+    "we do not consider the time it takes",
+    "efficient trade-off between task completion",
+    "the interdependence between adjacent tasks"
+  ],
+  "thinking_moves": [
+    "将多出口DNN推理卸载问题归约为分组背包问题",
+    "利用任务增益函数将延迟约束与精度满意度统一量化",
+    "考虑相邻任务间的时间依赖性而非仅关注单任务决策"
+  ],
+  "topic_tags": [
+    "satellite-edge-inference",
+    "multi-exit-DNN",
+    "model-partition-offloading",
+    "latency-constraint-optimization",
+    "LEO-HEO-collaboration"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

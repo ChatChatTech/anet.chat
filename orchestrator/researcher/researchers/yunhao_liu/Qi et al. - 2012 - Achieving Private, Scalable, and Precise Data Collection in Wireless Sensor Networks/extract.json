@@ -1,0 +1,38 @@
+{
+  "paper_id": "Qi et al. - 2012 - Achieving Private, Scalable, and Precise Data Collection in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Achieving Private, Scalable, and Precise Data Collection in Wireless Sensor Networks",
+  "year": 2012,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传感器网络数据收集面临隐私、效率、准确率的三角困境，现有方案只能兼顾其中两项",
+  "problem_framing": "将隐私保护数据收集问题形式化为同时满足隐私性、通信效率、准确恢复三个约束的协议设计问题",
+  "key_insight": "利用空间相关性数据的压缩特性(CS)结合轻量级密码学，使加密数据可在网络内部直接聚合而不解密",
+  "method_signature": "两阶段加密压缩：先用PRP生成随机报告，再用对称/AHE加密后CS聚合",
+  "evaluation_criteria": "数据准确率、节点能效均衡、总体传输能耗",
+  "negative_result_or_admitted_limitation": "第一方案中CS本身无法抵抗窃听攻击，需配合对称加密；第二方案通信开销略高于简单聚合方案",
+  "evidence_for_taste": [
+    "CS technique itself to provide data privacy",
+    "potential to hide the underlying data reports",
+    "lower bound of computation complexity",
+    "sacrifices data accuracy",
+    "slightly higher than private data aggregation"
+  ],
+  "thinking_moves": [
+    "通过计算复杂度下界而非经验测试来定义安全性",
+    "将CS的数据压缩能力重新解读为隐私保护潜力",
+    "承认方案间的性能权衡而非声称全面超越",
+    "从攻击者视角(窃听vs妥协)分层论证隐私强度"
+  ],
+  "topic_tags": [
+    "compressive-sensing-privacy",
+    "wireless-sensor-aggregation",
+    "additively-homomorphic-encryption",
+    "energy-balanced-routing",
+    "compromise-resistance"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少venue信息，从作者单位推断为会议/期刊论文但具体出处未在正文中标注；系统模型假设部分细节(如网络拓扑生成方式)未完整呈现"
+}

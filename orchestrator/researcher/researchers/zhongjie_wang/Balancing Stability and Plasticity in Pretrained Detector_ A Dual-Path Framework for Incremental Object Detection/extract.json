@@ -1,0 +1,36 @@
+{
+  "paper_id": "Balancing Stability and Plasticity in Pretrained Detector_ A Dual-Path Framework for Incremental Object Detection",
+  "doi": "10.48550/arxiv.2504.10214",
+  "title": "Balancing Stability and Plasticity in Pretrained Detector: A Dual-Path Framework for Incremental Object Detection",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有PTMIOD方法在领域内任务表现良好,但跨领域场景下的可塑性不足",
+  "problem_framing": "预训练检测器中定位模块具有跨域稳定性而分类模块需增强可塑性",
+  "key_insight": "冻结定位路径保持几何先验,用LoRA微调分类路径增强跨域判别",
+  "method_signature": "双路径框架:定位路径冻结,分类路径用LoRA+伪特征回放",
+  "evaluation_criteria": "VOC/TT100K的mAP@50及COCO的mAP@50:95",
+  "negative_result_or_admitted_limitation": "TT100K上Lrpy1+Lrpy2组合比单独Lrpy2效果差,因小样本下高斯建模不可靠",
+  "evidence_for_taste": [
+    "we conduct a thorough component-wise analysis",
+    "localization modules exhibit inherent cross-domain stability",
+    "we discover a fundamental discrepancy",
+    "This visual evidence underscores the importance of"
+  ],
+  "thinking_moves": [
+    "对预训练检测器进行组件级稳定性与可塑性分析",
+    "将定位问题重新定义为几何先验捕获而非领域特征学习",
+    "利用DETR的查询机制进行特征统计建模来 replay"
+  ],
+  "topic_tags": [
+    "incremental-object-detection",
+    "pretrained-model-adaptation",
+    "stability-plasticity-dilemma",
+    "DETR-finetuning",
+    "cross-domain-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

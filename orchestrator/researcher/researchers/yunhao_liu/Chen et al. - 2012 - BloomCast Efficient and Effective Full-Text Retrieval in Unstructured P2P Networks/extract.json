@@ -1,0 +1,38 @@
+{
+  "paper_id": "Chen et al. - 2012 - BloomCast Efficient and Effective Full-Text Retrieval in Unstructured P2P Networks",
+  "doi": null,
+  "title": "BloomCast: Efficient and Effective Full-Text Retrieval in Unstructured P2P Networks",
+  "year": 2012,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "未结构化P2P无法保证召回率,且现有方案靠大量复制原始文档导致通信存储开销过大",
+  "problem_framing": "将全文本检索问题形式化为数据副本与查询副本的随机分布问题,通过概率论证明下界",
+  "key_insight": "数据副本与查询副本均匀随机分布时,命中概率为1-e^(-rg/N),使得O(√N)通信成本可保证召回",
+  "method_signature": "混合轻量DHT+非结构化P2P,使用Bloom Filter代替原始文档进行复制",
+  "evaluation_criteria": "召回率91%,超WP算法18%,延迟降低57%,流量降低89%",
+  "negative_result_or_admitted_limitation": "随机游走策略不具容错性,且简单复制元数据无法支持全文本检索",
+  "evidence_for_taste": [
+    "the strategy is inefficient for solving insoluble queries",
+    "random walk-based scheme is not fault-tolerant",
+    "the length of the set is roughly proportional to the size of the network",
+    "recall cannot be guaranteed unless a query is flooded exhaustively",
+    "may lead to a slight decrease of the precision"
+  ],
+  "thinking_moves": [
+    "将稀有查询问题归因于流行度感知策略失效,转向不依赖流行度的复制方案",
+    "随机游走容错差→用DHT做随机节点采样代替",
+    "原始文档复制成本高→用Bloom Filter有损压缩替代",
+    "先证明数学下界(定理1,2),再设计具体协议",
+    "混合架构:结构化层只负责采样和估计,不参与核心检索"
+  ],
+  "topic_tags": [
+    "P2P-full-text-search",
+    "Bloom-filter-replication",
+    "unstructured-peer-to-peer",
+    "probabilistic-guaranteed-recall",
+    "DHT-hybrid-architecture"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

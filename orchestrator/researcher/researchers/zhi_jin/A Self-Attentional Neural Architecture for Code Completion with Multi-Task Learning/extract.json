@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning",
+  "doi": "10.48550/arxiv.1909.06983",
+  "title": "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning",
+  "year": 2020,
+  "venue": "ICPC '20",
+  "venue_tier": "regional",
+  "role": "senior",
+  "motivation": "IDE代码补全依赖统计语言模型,但现有模型未能利用AST层级结构、长距离语义依赖和多任务知识共享。",
+  "problem_framing": "代码AST节点序列的层级结构在展平过程中被忽略;LSTM仅能建模约200词上下文;类型预测与值预测被独立训练而未共享约束。",
+  "key_insight": "从预测节点到根节点的路径编码了该节点的层级位置信息,且类型与值任务相互约束,联合学习可利用这种相关性改善泛化。",
+  "method_signature": "Transformer-XL编码AST序列 + BiLSTM编码path2root路径 + MTL硬参数共享联合学习类型与值预测。",
+  "evaluation_criteria": "Node Type/Value预测Top-1准确率,配合归一化提升率(Imp.Accuracy)和统计显著性检验(p值+Cliff's Delta效应量)。",
+  "negative_result_or_admitted_limitation": "JavaScript数据集上提升幅度不如Python/Java,原因是JavaScript类型类别少(仅95类)导致类型-值相关性弱于其他语言。",
+  "evidence_for_taste": [
+    "the hierarchical level of the AST nodes is ignored",
+    "LSTM language models use 200 context words on average",
+    "type can serve as a constraint to the value",
+    "the difference between the training loss and test loss is large",
+    "MTL can help the model focus its attention on the features that actually matter"
+  ],
+  "thinking_moves": [
+    "将AST展平时被忽略的层级信息显式编码为path2root路径,这是从结构损失反推表示缺陷的动机驱动。",
+    "以LSTM仅建模200词上下文作为经验证据,论证Transformer-XL的必要性而非单纯追新。",
+    "把代码补全的两任务(类型/值)建模为约束关系:知道类型可推断值域,知道值可回馈类型分布。",
+    "通过消融实验(去掉MTL、去掉path2root、去掉recurrence)量化每个组件的边际贡献,而非仅报告最终结果。",
+    "用归一化提升率替代原始准确率差值,防止低基线时出现>100%提升的统计幻觉。",
+    "观察训练-测试loss差距,定性地解释MTL为何能缓解过拟合(共享隐层作为正则化)。"
+  ],
+  "topic_tags": [
+    "code-completion",
+    "AST-hierarchical-structure",
+    "Transformer-XL",
+    "multi-task-learning",
+    "program-representation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

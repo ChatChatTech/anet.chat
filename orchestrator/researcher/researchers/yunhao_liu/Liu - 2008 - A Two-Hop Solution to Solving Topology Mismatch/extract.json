@@ -1,0 +1,45 @@
+{
+  "paper_id": "Liu - 2008 - A Two-Hop Solution to Solving Topology Mismatch",
+  "doi": null,
+  "title": "A Two-Hop Solution to Solving Topology Mismatch",
+  "year": 2008,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "P2P系统贡献大量互联网流量,但overlay与物理拓扑不匹配导致严重资源浪费和延迟增加",
+  "problem_framing": "将overlay优化问题形式化为DMAD问题,在度约束下最小化平均跳距,并证明NP-hard",
+  "key_insight": "利用两跳邻居信息进行局部决策:查询消息携带邻居距离,P2P可独立判断断开哪条长边",
+  "method_signature": "THANCS分布式heuristic:查询携带距离信息piggyback,比较两跳三角路径选最优",
+  "evaluation_criteria": "mismatch路径占比降45%,流量降60%,响应时间降40%,接近brute force最优解",
+  "negative_result_or_admitted_limitation": "无法扩展到CAN/Chord等非flooding P2P,THANCS只能获得次优overlay而非全局最优",
+  "evidence_for_taste": [
+    "即使有全局知识,寻找最优overlay仍是NP-hard",
+    "THANCS只能获得suboptimal overlay",
+    "无法同时最小化流量和响应时间",
+    "NNT优于PPB因此采用NNT",
+    "it is impossible to find an overlay with both minimum traffic cost and minimum average response time",
+    "a suboptimal overlay",
+    "cannot be extended to non-flooding-based P2Ps"
+  ],
+  "thinking_moves": [
+    "先证NP-hard下界,再设计无全局知识的局部启发式解",
+    "承认局部决策只能次优但强调接近最优",
+    "通过traces驱动模拟验证,对比brute force最优baseline",
+    "比较PPB和NNT两种机制,根据开销和效果选择后者"
+  ],
+  "topic_tags": [
+    "P2P-overlay-optimization",
+    "topology-mismatch",
+    "distributed-heuristic",
+    "two-hop-probing",
+    "trace-driven-simulation"
+  ],
+  "cites_own_work": [
+    "AOTO (2003)",
+    "LTM (2005)",
+    "Location-Aware Topology Matching (2004)",
+    "SBO (2007)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

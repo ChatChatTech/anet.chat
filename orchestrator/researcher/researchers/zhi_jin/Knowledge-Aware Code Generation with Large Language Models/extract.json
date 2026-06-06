@@ -1,0 +1,44 @@
+{
+  "paper_id": "Knowledge-Aware Code Generation with Large Language Models",
+  "doi": "10.48550/arxiv.2401.15940",
+  "title": "Knowledge-Aware Code Generation with Large Language Models",
+  "year": 2024,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLMs在训练中见过的题目上表现好,但面对未见过的竞赛级新问题时能力急剧下降,需要增强其解决陌生问题的能力",
+  "problem_framing": "现有测试集可能与LLM训练数据重叠,导致评测结果虚高。需构建无数据泄露的新数据集来验证真实性能",
+  "key_insight": "通过外部知识库注入算法和数据结构知识,引导LLM生成知识感知的提示词,可提升其解决全新编程问题的能力",
+  "method_signature": "KareCoder: 两阶段(提示工程+编码)+知识库匹配,使用知识描述/伪代码/步骤三种格式",
+  "evaluation_criteria": "Pass@1/3/5指标,其中Pass@1最重要,更贴近实际应用需求",
+  "negative_result_or_admitted_limitation": "在APPS数据集上直接生成的ChatGPT超越其他所有方法,因APPS可能与训练数据重叠,额外知识注入未发挥作用",
+  "evidence_for_taste": [
+    "92.7% 相对差异",
+    "Pass@1 aligns more with practical application needs",
+    "over-optimized results",
+    "inflation of actual results",
+    "multiple shots may lead to waste of resources",
+    "KareCoder still outperformed other methods, but it didn't achieve the significant gains",
+    "may not always be the most fitting",
+    "knowledge library has yet to achieve optimality"
+  ],
+  "thinking_moves": [
+    "用训练数据截断时间构造无污染测试集来验证数据泄露假设",
+    "将问题解决过程类比人类程序员:先规划知识再写代码",
+    "设计三种知识库格式进行消融实验以确定最优知识注入方式",
+    "承认方法在重叠数据上无效,将APPS实验定性为辅助验证"
+  ],
+  "topic_tags": [
+    "LLM代码生成",
+    "知识注入提示工程",
+    "竞赛编程数据集",
+    "算法数据结构知识库",
+    "Pass@k评测指标"
+  ],
+  "cites_own_work": [
+    "Self-planning",
+    "Self-collaboration code generation"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

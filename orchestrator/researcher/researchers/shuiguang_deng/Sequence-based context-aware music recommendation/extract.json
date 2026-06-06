@@ -1,0 +1,42 @@
+{
+  "paper_id": "Sequence-based context-aware music recommendation",
+  "doi": "10.1007/s10791-017-9317-7",
+  "title": "Sequence-based context-aware music recommendation",
+  "year": 2017,
+  "venue": "Information Retrieval Journal",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "音乐偏好高度依赖上下文,但移动设备普及使实时上下文难以直接获取",
+  "problem_framing": "从用户听歌序列中学习音乐嵌入,推断用户的一般偏好和情境偏好",
+  "key_insight": "用户的情境偏好反映在当前交互会话中的听歌序列里,而非显式上下文",
+  "method_signature": "music2vec + session-music2vec学习序列嵌入,结合一般与情境偏好做Top-N推荐",
+  "evaluation_criteria": "Top-N推荐的Precision/Recall/F1/Hit-rate,稀疏数据下的表现",
+  "negative_result_or_admitted_limitation": "CSM-TN中一般与情境偏好的线性组合方式可能不够合理;仅用一般偏好(M-TN)在所有方法中表现最差",
+  "evidence_for_taste": [
+    "M-TN performs the worst",
+    "simple weighted linear addition may be not reasonable enough",
+    "CSM-TN improvement is no more than 5%"
+  ],
+  "thinking_moves": [
+    "将情境信息从显式获取转为从交互序列中隐式推断",
+    "用户层面偏好与会话层面偏好的分离建模",
+    "借鉴NLP词嵌入思想学习音乐的分布式表示",
+    "嵌入技术与协同过滤的结合使用"
+  ],
+  "topic_tags": [
+    "music-recommendation",
+    "context-aware",
+    "sequence-embedding",
+    "neural-networks",
+    "collaborative-filtering"
+  ],
+  "cites_own_work": [
+    {
+      "title": "Improving Music Recommendation Using Distributed Representation",
+      "venue": "WWW 2016 Poster",
+      "relation": "extended version"
+    }
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

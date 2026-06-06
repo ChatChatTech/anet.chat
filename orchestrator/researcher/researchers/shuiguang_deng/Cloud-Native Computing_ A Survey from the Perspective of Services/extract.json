@@ -1,0 +1,38 @@
+{
+  "paper_id": "Cloud-Native Computing_ A Survey from the Perspective of Services",
+  "doi": "10.48550/arxiv.2306.14402",
+  "title": "Cloud-Native Computing: A Survey from the Perspective of Services",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "尽管云原生在工业界势头强劲,但仍缺乏清晰的研究路线图。",
+  "problem_framing": "从服务视角将云原生应用生命周期解耦为四个状态进行系统综述。",
+  "key_insight": "云原生应用可视为由松耦合微服务组成的分布式弹性系统,需按生命周期各状态系统梳理关键问题。",
+  "method_signature": "survey: 按building/orchestration/operate/maintenance四状态组织文献并总结性能指标。",
+  "evaluation_criteria": "应用层延迟/响应时间、平台层可扩展性/稳定性、基础设施层资源利用率。",
+  "negative_result_or_admitted_limitation": "现有survey主要提供高层观点,忽略对state-of-the-art research works的review,in the lack of systematic knowledge。",
+  "evidence_for_taste": [
+    "clear research roadmap on this topic is still missing",
+    "mainly provide high-level opinions",
+    "in the lack of systematic knowledge",
+    "lack high portability and compatibility",
+    "To the best of our knowledge, this is the first survey focusing on key issues during the life-cycle"
+  ],
+  "thinking_moves": [
+    "识别现有survey缺乏系统性知识梳理的gap",
+    "提出pipeline式设计组织研究领域",
+    "将生命周期解耦为building→orchestration→operate→maintenance四个状态",
+    "自上而下分解云原生架构为应用层/平台层/基础设施层三层性能指标"
+  ],
+  "topic_tags": [
+    "cloud-native-computing",
+    "microservices-architecture",
+    "container-orchestration",
+    "kubernetes",
+    "service-lifecycle-management"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

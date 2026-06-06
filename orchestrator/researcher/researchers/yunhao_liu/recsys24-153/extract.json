@@ -1,0 +1,38 @@
+{
+  "paper_id": "recsys24-153",
+  "doi": null,
+  "title": "Utilizing Non-click Samples via Semi-supervised Learning for Conversion Rate Prediction",
+  "year": 2024,
+  "venue": "RecSys '24",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "CTCVR任务将所有非点击样本的CVR标签隐式设为负，加剧了假阴性问题，损害模型性能",
+  "problem_framing": "非点击样本未必代表用户不感兴趣，可能是曝光偏差或位置偏差导致，需重新定义CVR训练方式",
+  "key_insight": "将非点击样本视为未标注而非负样本，用模型预测作伪标签进行半监督学习，同时解决FNS、SSB和DS问题",
+  "method_signature": "丢弃CTCVR任务，用NISE框架在全部空间建模CVR，动态调整CTR/CVR任务权重",
+  "evaluation_criteria": "AUC、LogLoss、KS指标对比SOTA基线，Ali-CCP和Kuaipure公开数据集及腾讯生产数据集",
+  "negative_result_or_admitted_limitation": "CTCVR任务虽缓解SSB和DS，但代价是加剧FNS问题，现有方法均未充分考虑",
+  "evidence_for_taste": [
+    "Nevertheless, it intensifies the false negative sample (FNS) problem",
+    "This oversight can negatively impact CVR model performance",
+    "we advocate for discarding the CTCVR task",
+    "treating all samples in N as unlabeled leads to a performance improvement of 0.55%",
+    "if too much attention is allocated to the CVR task, the potential benefit of parameter transfer introduced by the CTR task diminishes"
+  ],
+  "thinking_moves": [
+    "先识别现有方法(CTCVR)被忽视的副作用，再设计新框架",
+    "通过消融实验分离各组件贡献，验证半监督信号的有效性",
+    "从损失函数形式推导entropy含义，理解模型为何向边界预测",
+    "对比负样本vs未标注的实验设计直接验证核心假设"
+  ],
+  "topic_tags": [
+    "CVR预测",
+    "假阴性样本",
+    "半监督学习",
+    "多任务学习",
+    "推荐系统去偏"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

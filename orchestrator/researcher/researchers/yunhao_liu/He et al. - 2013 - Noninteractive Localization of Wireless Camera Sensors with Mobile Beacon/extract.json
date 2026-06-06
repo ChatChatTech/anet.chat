@@ -1,0 +1,45 @@
+{
+  "paper_id": "He et al. - 2013 - Noninteractive Localization of Wireless Camera Sensors with Mobile Beacon",
+  "doi": null,
+  "title": "Noninteractive Localization of Wireless Camera Sensors with Mobile Beacon",
+  "year": 2011,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "GreenOrbs森林部署中GPS信号被树冠遮挡失效，且每个节点100美元的GPS成本在大规模网络中不可承受",
+  "problem_framing": "现有WCSN定位方法都是交互式的，需双向通信，导致易受窃听攻击、能耗高、实现困难",
+  "key_insight": "利用相机本身的方向感知能力，将定位问题转化为纯角度测量：节点只需被动监听信标、计算弧线交点即可自定位",
+  "method_signature": "移动信标轨迹设计+图像特征提取+角度距离几何求解",
+  "evaluation_criteria": "定位误差、方向误差、相对FOV误差、感知成本(图像捕获次数)",
+  "negative_result_or_admitted_limitation": "障碍物恰好占据大多数候选信标位置时节点可能无法定位；图像质量对精度影响不大，但靠近图像中心的信标图像更准确",
+  "evidence_for_taste": [
+    "less than 80 percent of the real FOV is covered",
+    "relative error is over 20 percent",
+    "tiny estimation errors of the location",
+    "the beacon images captured by those five nodes are all near to the center of the image",
+    "beacon images correspond to lower distortions",
+    "accuracy of LISTEN is almost not affected by the image quality",
+    "Only slightly better than those on the camera sensors"
+  ],
+  "thinking_moves": [
+    "将定位问题从通信交互框架转化为纯感知几何问题",
+    "利用相机传感器的方向性FOV作为天然的几何测量仪",
+    "信标移动轨迹设计必须能保证所有节点都满足几何可达条件",
+    "先证明2D三点的充分必要条件，再扩展到3D需要四点且满足共线约束",
+    "从实际部署异常(图像中心畸变小)反向优化参数选择"
+  ],
+  "topic_tags": [
+    "WCSN定位",
+    "移动信标辅助定位",
+    "非交互式定位",
+    "视觉几何三角化",
+    "GreenOrbs应用"
+  ],
+  "cites_own_work": [
+    "LISTEN outperforms other approaches",
+    "The accuracy of RSSI-based localization is sensitive to various factors",
+    "The power consumption of sensing once on a camera sensor is much higher than that on a scalar sensor"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

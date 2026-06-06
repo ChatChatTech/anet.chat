@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhu et al. - 2007 - Low-Power Distributed Event Detection in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Low-Power Distributed Event Detection in Wireless Sensor Networks",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Tiny sensor nodes have limited energy; duty cycling saves energy but degrades event detection performance",
+  "problem_framing": "Quantify tradeoffs between detection delay/detectability and network lifetime in low duty-cycled WSNs",
+  "key_insight": "Neighboring sensors should evenly separate wakeup times to minimize detection delay variance",
+  "method_signature": "CAS: distributed cooperative wakeup scheduling via variance reduction of wakeup separations",
+  "evaluation_criteria": "Detection delay (mean/std), detectability percentage, tradeoff with network lifetime",
+  "negative_result_or_admitted_limitation": "The theoretical lower bounds are over optimistic and can never be achieved in reality",
+  "evidence_for_taste": [
+    "it is apparent for applications that smaller delay and higher detectability are more preferable",
+    "the fundamental property of the evenly distributed wakeups is that the variance of the separations",
+    "CAS regards the cooperative neighbors as equally important",
+    "A smaller NR incurs less message exchanges but results in a lower degree of optimization",
+    "When CR is large a sensor over considers those sensors whose coverage actually overlaps little"
+  ],
+  "thinking_moves": [
+    "Decompose complex network behavior into point-level detection analysis then aggregate",
+    "Derive closed-form theoretical bounds to establish baseline before empirical optimization",
+    "Identify the variance of wakeup separations as the control lever for distributed scheduling",
+    "Characterize the fundamental tradeoff curve between detection quality and energy cost"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-duty-cycling",
+    "event-detection-optimization",
+    "distributed-wakeup-scheduling",
+    "detection-delay-analysis",
+    "cooperative-sensor-networking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

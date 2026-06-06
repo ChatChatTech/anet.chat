@@ -1,0 +1,36 @@
+{
+  "paper_id": "Zhang et al. - 2020 - Making Sense of Spatio-Temporal Preserving Representations for EEG-Based Human Intention Recognition",
+  "doi": null,
+  "title": "Making Sense of Spatio-Temporal Preserving Representations for EEG-Based Human Intention Recognition",
+  "year": 2020,
+  "venue": "IEEE Transactions on Cybernetics",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "EEG-BCI信号解读困难，现有方法难以捕捉复杂依赖关系",
+  "problem_framing": "如何同时保留原始EEG流的空间和时间信息",
+  "key_insight": "CNN和RNN级联或并行组合可分别提取空间时间特征并保持互信息",
+  "method_signature": "时空保持的CNN-RNN联合框架",
+  "evaluation_criteria": "运动意图EEG数据集准确率及实际脑机打字应用",
+  "negative_result_or_admitted_limitation": "现有工作仅把EEG当链式序列，忽略相邻信号复杂依赖",
+  "evidence_for_taste": [
+    "challenging to interpret EEG signals effectively",
+    "neglecting complex dependencies",
+    "preserved spatial and temporal information",
+    "good generalization over different kinds of intentions"
+  ],
+  "thinking_moves": [
+    "将时空关系建模从单一序列化视角转为联合保持视角",
+    "用两种架构(级联/并行)验证同一假设的互补性",
+    "用大规模108被试数据增强对方法泛化性的置信"
+  ],
+  "topic_tags": [
+    "EEG-BCI",
+    "spatio-temporal-representation",
+    "deep-learning-intention-recognition",
+    "brain-typing-BCI",
+    "CNN-RNN-hybrid"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "仅提供摘要部分，无方法细节和实验结果具体描述，无法提取完整技术细节和作者评判标准的完整证据"
+}

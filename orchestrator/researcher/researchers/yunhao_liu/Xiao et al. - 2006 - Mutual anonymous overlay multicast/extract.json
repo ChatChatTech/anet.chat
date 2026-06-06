@@ -1,0 +1,43 @@
+{
+  "paper_id": "Xiao et al. - 2006 - Mutual anonymous overlay multicast",
+  "doi": null,
+  "title": "Mutual anonymous overlay multicast",
+  "year": 2006,
+  "venue": "Journal of Parallel and Distributed Computing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Multicast services缺乏anon支持；军事/应急/商务应用需要发送方和接收方互相隐藏身份",
+  "problem_framing": "将multicast anon问题形式化为AM-NM/AM-AM连接和树结构anon度分析",
+  "key_insight": "匿名multicast必须围绕树结构而非多播unicast；invite MO节点可将AM比例控制在~50%阈值以保持效率",
+  "method_signature": "MAM协议含AM-NM单向anon、AM-AM双向anon协议及树构造与MO邀请优化",
+  "evaluation_criteria": "RRU相对资源使用率和AWD最坏延迟与Optimal/RAND基准对比",
+  "negative_result_or_admitted_limitation": "若所有成员都是AM，即使最优解也和RAND一样差；过多AM-AM连接需invite MO节点补救",
+  "evidence_for_taste": [
+    "cannot be directly applied to multicast",
+    "centers on the concept of the tree",
+    "a set of unicast communications is inefficient",
+    "average cost is at least two times greater",
+    "significant bandwidth efficiency can be achieved with little sacrifice",
+    "inviting more MO nodes is not as effective"
+  ],
+  "thinking_moves": [
+    "识别multicast anon与unicast anon的根本差异在于group关系和树结构暴露风险",
+    "将anon协议按连接类型分层设计(AM-NM/AM-AM/MO)以解耦复杂性",
+    "通过数值分析揭示broken ratio/树度/深度与anon度的数学关联",
+    "用IT阈值(≈50%)将协议开销与性能做工程权衡",
+    "先证incomplete tree可获高带宽效率且anon度损失小，再用于仿真验证"
+  ],
+  "topic_tags": [
+    "overlay-multicast",
+    "mutual-anonymity",
+    "application-layer-multicast",
+    "tree-optimization",
+    "security-privacy"
+  ],
+  "cites_own_work": [
+    "Xiao et al. - 2006 - A design of overlay anonymous multicast protocol",
+    "Xiao et al. - 2003 - Low-cost and reliable mutual anonymity protocols"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

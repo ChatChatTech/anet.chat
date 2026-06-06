@@ -1,0 +1,39 @@
+{
+  "paper_id": "Li et al. - 2012 - Mobile Sensing and Actuating with Ubiquitous Computing",
+  "doi": null,
+  "title": "Mobile Sensing and Actuating with Ubiquitous Computing",
+  "year": 2012,
+  "venue": "International Journal of Distributed Sensor Networks",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "无线传感网络技术使移动感知成为可能，在环境监控、交通物流等领域有广泛应用",
+  "problem_framing": "核心挑战是系统在动态环境中保持可持续性、移动性、可扩展性和容错性",
+  "key_insight": "移动感知系统需要在服务保障与资源约束之间进行精细的调度权衡",
+  "method_signature": "特殊issue编辑综述，涉及RFID隐私、传感网路由等多元问题",
+  "evaluation_criteria": "unknown",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "静态Bounding检测延迟",
+    "统计Bound事件检测延迟",
+    "forward secrecy轻量级",
+    "能量高效的CKN算法",
+    "O(n log n)算法趋近最优"
+  ],
+  "thinking_moves": [
+    "以调度约束为边界条件反向定义系统能力",
+    "将隐私认证问题转化为密钥更新机制设计",
+    "用概率模型量化随机休眠对网络寿命的影响",
+    "把网络连通性保持与节点堆叠作为约束条件处理",
+    "将路由决策问题形式化为混合位置转发策略"
+  ],
+  "topic_tags": [
+    "sensor-network-duty-cycle",
+    "RFID-privacy-authentication",
+    "mobile-element-rendezvous",
+    "DTN-routing-vehicular",
+    "3D-RFID-localization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "本文为期刊editorial，总结special issue收录的多篇论文。原文未详述每篇论文的方法细节，仅概述各论文解决的问题类型。提取的thinking_moves基于editorial对9篇论文研究问题的描述推断，而非直接引用。"
+}

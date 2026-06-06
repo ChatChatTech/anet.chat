@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhou et al. - 2015 - WiFi-Based Indoor Line-of-Sight Identification",
+  "doi": null,
+  "title": "WiFi-based Indoor Line-Of-Sight Identification",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WiFi已广泛部署,但现有LOS识别方案需专用设备或修改硬件,无法在商品WiFi上实现",
+  "problem_framing": "将LOS识别建模为二值假设检验,通过似然比判决区分H0(LOS)和H1(NLOS)",
+  "key_insight": "自然移动会放大NLOS路径随机性,同时保留LOS路径确定性,结合PHY层CSI提取时频域统计特征",
+  "method_signature": "利用CSI在移动链路提取主导路径功率偏度与频域差异峰度,进行二值假设检验",
+  "evaluation_criteria": "LOS检测率与误报率,通过ROC曲线与不同场景(距离/速度/障碍物)验证",
+  "negative_result_or_admitted_limitation": "静态链路识别性能显著差于移动链路,形状特征因WiFi带宽限制不可行,Rician-K因子误差大",
+  "evidence_for_taste": [
+    "coarse multipath resolution",
+    "shape-based features are infeasible",
+    "still yield large errors",
+    "notably outperforms that on static links",
+    "lightweight and independent on specific distribution modeling"
+  ],
+  "thinking_moves": [
+    "将带宽限制转化为移动放大随机性的机会",
+    "先证明现有方法在WiFi上不可行再提出新方案",
+    "用统计特征替代模型拟合以适应环境变化",
+    "从两个正交域(时域/频域)提取特征形成互补"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-LOS-identification",
+    "mobility-enhanced-channel-profiling",
+    "NLOS-mitigation",
+    "hypothesis-test-based-detection",
+    "indoor-wireless-sensing"
+  ],
+  "cites_own_work": [
+    "Zhou et al., 2014 (conference version)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "缺少venue与DOI的显式信息,部分性能数据为conference版本的补充"
+}

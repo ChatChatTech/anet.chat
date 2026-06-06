@@ -1,0 +1,40 @@
+{
+  "paper_id": "Resisting Backdoor Attacks in Federated Learning via Bidirectional Elections and Individual Perspective",
+  "doi": "10.48550/arxiv.2309.16456",
+  "title": "Resisting Backdoor Attacks in Federated Learning via Bidirectional Elections and Individual Perspective",
+  "year": 2023,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有防御要么牺牲模型精度,要么假设良性/感染模型有清晰边界,但实践中数据非IID导致边界模糊",
+  "problem_framing": "将后门检测重框为无监督异常检测:良性感染混合时如何识别恶意模型更新",
+  "key_insight": "从全局视角换成个体视角:每个模型投票给最近的模型,多数良性使恶意被淘汰",
+  "method_signature": "Snowball双向选举:自底向上投票+K均值,自顶向下用VAE学差异逐步扩充",
+  "evaluation_criteria": "后门任务准确率BA与主任务准确率MA,多数据集复杂非IID高恶意比例场景",
+  "negative_result_or_admitted_limitation": "FLIP遇NaN失败;极强非IID(α=0.1)且MCR≥20%时失败;时间开销高于同行",
+  "evidence_for_taste": [
+    "benign and infected model updates are easy to be mixed",
+    "from a global perspective",
+    "defenses of the models, by the models, for the models",
+    "each model update votes for several ones closest to it",
+    "learning the differences instead of benign patterns themselves"
+  ],
+  "thinking_moves": [
+    "从全局视角转向个体视角规避边界模糊问题",
+    "用K-means自底向上找种子再用VAE自顶向下扩充",
+    "学差异而非原始模型使学习目标更简单",
+    "承认方法不万能,建议与现有方法组合使用"
+  ],
+  "topic_tags": [
+    "federated-learning-backdoor-defense",
+    "individual-perspective",
+    "bidirectional-election",
+    "VAE-anomaly-detection",
+    "non-IID-data-heterogeneity"
+  ],
+  "cites_own_work": [
+    "Qin et al. 2024"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

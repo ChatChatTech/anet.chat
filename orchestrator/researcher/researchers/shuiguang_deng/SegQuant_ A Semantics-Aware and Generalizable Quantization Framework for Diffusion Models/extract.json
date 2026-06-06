@@ -1,0 +1,40 @@
+{
+  "paper_id": "SegQuant_ A Semantics-Aware and Generalizable Quantization Framework for Diffusion Models",
+  "doi": "10.48550/arxiv.2507.14811",
+  "title": "SegQuant: A Semantics-Aware and Generalizable Quantization Framework for Diffusion Models",
+  "year": 2025,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "工业部署工具依赖静态图分析,而现有扩散模型量化方法依赖运行时动态数据或架构特定规则,造成Compiler Gap",
+  "problem_framing": "如何设计既高性能又compiler-native的PTQ框架,兼容预训练模型且无需重训练或特定领域数据",
+  "key_insight": "利用静态计算图结构自动识别语义分段模式,对正负激活分别使用双尺度量化,在保留细节的同时保持硬件原生实现",
+  "method_signature": "SegLinear(语义分段量化)+DualScale(双极性量化)+模块化Optimizer/Calibrator接口",
+  "evaluation_criteria": "FID/LPIPS/PSNR/SSIM/ImageReward多维指标评估生成质量与保真度",
+  "negative_result_or_admitted_limitation": "SEG对FID提升有限(23.36→23.36),主要收益来自DualScale,说明并非所有组件等效重要",
+  "evidence_for_taste": [
+    "these deployment tools depend on static graph analysis",
+    "creating a \"Compiler Gap\"",
+    "Preserving the native GPU computation path",
+    "quantization interference",
+    "a non-generalizable fix",
+    "no such domain-specific heuristics"
+  ],
+  "thinking_moves": [
+    "从部署工具链约束反推方法设计边界",
+    "将复杂层内部异质性归因于隐式语义分段操作",
+    "把一个perception问题重新frame成compiler compatibility问题",
+    "通过BatchedGEMM双路径计算消除额外延迟",
+    "先观察F范数误差分布差异,再定位敏感组件"
+  ],
+  "topic_tags": [
+    "diffusion-model-quantization",
+    "static-graph-analysis",
+    "semantic-segmentation",
+    "polarity-preserving-quantization",
+    "compiler-native-deployment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

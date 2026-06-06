@@ -1,0 +1,35 @@
+{
+  "paper_id": "Emage_ Non-Autoregressive Text-to-Image Generation",
+  "doi": "10.48550/arxiv.2312.14988",
+  "title": "Emage: Non-Autoregressive Text-to-Image Generation",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Autoregressive models需要千次推理，扩散模型需要数百次去噪步骤，推理延迟过高",
+  "problem_framing": "将文本到图像生成分解为并行生成图像token，而非顺序生成",
+  "key_insight": "允许模型在迭代中同时预测新token并修订早期错误，比纯并行解码更有效",
+  "method_signature": "迭代式非自回归mask-predict解码，支持对已生成token的修订",
+  "evaluation_criteria": "零样本FID指标和单V100 GPU生成图像的延迟秒数",
+  "negative_result_or_admitted_limitation": "全并行模型训练几乎不收敛；模型难以生成美观的人脸图像",
+  "evidence_for_taste": [
+    "hardly converges",
+    "struggles to generate beautiful human face",
+    "mitigate this huge performance gap",
+    "the best one simultaneously makes predictions"
+  ],
+  "thinking_moves": [
+    "从最直觉的完全并行方案开始，验证其训练不收敛后转向迭代方案",
+    "通过训练与推理的暴露偏差问题识别出两阶段forward pass的必要性",
+    "发现允许修订错误比仅预测新token能产生全局一致性更好的结果"
+  ],
+  "topic_tags": [
+    "非自回归图像生成",
+    "迭代mask预测",
+    "文本到图像并行解码",
+    "VQVAE图像分词器"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

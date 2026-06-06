@@ -1,0 +1,39 @@
+{
+  "paper_id": "Steganalysis of Neural Networks Based on Symmetric Histogram Distribution",
+  "doi": "10.3390/sym15051079",
+  "title": "Steganalysis of Neural Networks Based on Symmetric Histogram Distribution",
+  "year": 2023,
+  "venue": "Symmetry",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "神经网络已成为数据隐藏的新载体，但对应的神经隐写分析技术仍为空白",
+  "problem_framing": "将神经网络视为黑盒，通过输出预测向量检测其中是否嵌入了额外数据",
+  "key_insight": "利用动态交互式模型的特性，通过简单查询提取特征向量进行盲检测，无需访问内部结构",
+  "method_signature": "基于直方图分布的对称隐写分析方法，使用SVM和集成分类器",
+  "evaluation_criteria": "检测准确率随嵌入容量、数据集和网络结构复杂度变化",
+  "negative_result_or_admitted_limitation": "随着训练集增大SVM计算效率大幅降低，不再适用于大规模标签预测",
+  "evidence_for_taste": [
+    "data hiding in neural networks could pose",
+    "the proposed scheme is the first of its kind",
+    "the computational efficiency of the SVM classifier is greatly reduced",
+    "some cases become unclassifiable",
+    "the universality on different network structures of the proposed scheme can be improved"
+  ],
+  "thinking_moves": [
+    "将传统针对静态数字媒体的隐写分析范式扩展到动态神经网络模型",
+    "从简单到复杂的渐进式实验设计，逐一放宽条件约束探索方法极限",
+    "利用神经网络的动态交互特性，将分析转化为简单的黑盒查询操作",
+    "通过直方图分布的对称处理找到最优决策阈值",
+    "当单一模型效率不足时转向集成分类器"
+  ],
+  "topic_tags": [
+    "neural-network-steganalysis",
+    "black-box-detection",
+    "symmetric-histogram-method",
+    "data-hiding-detection",
+    "deep-learning-security"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文内容完整，包含完整的动机、问题定义、方法、实验和结论。研究者Xinpeng Zhang为共同作者，作者列表为Xiong Tang, Zichi Wang, Xinpeng Zhang，Zichi Wang为通讯作者。 | md truncated to head40k+tail20k"
+}

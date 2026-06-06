@@ -1,0 +1,37 @@
+{
+  "paper_id": "Semantic Approach for Service Oriented Requirements Modeling",
+  "doi": "10.1007/978-3-642-16327-2_8",
+  "title": "Semantic Approach for Service Oriented Requirements Modeling",
+  "year": 2010,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统需求工程方法难以适应SOA的业务敏捷性和服务复用需求，建模费时易错",
+  "problem_framing": "服务提供方与请求方之间存在语义鸿沟，需建立统一语义语言桥接业务需求与服务能力",
+  "key_insight": "通过环境本体刻画服务对环境的影响(状态变迁和信息转换)来统一描述业务需求与服务能力",
+  "method_signature": "基于环境本体的SOA服务能力形式化描述，采用输入输出、条件与状态转换三元组",
+  "evaluation_criteria": "用在线购物案例展示从业务需求捕获服务模型的过程，验证可节省建模工作量",
+  "negative_result_or_admitted_limitation": "EC4WS环境本体仅支持简单推理(蕴含和等价)，状态机组合存在固有不可能性问题",
+  "evidence_for_taste": [
+    "it missed the point that the SOA paradigm",
+    "this is more fundamental than the first issue",
+    "it cannot effectively handle web services composition",
+    "only enables simple inference mechanism"
+  ],
+  "thinking_moves": [
+    "将业务需求与服务能力的语义匹配问题归结为环境状态变化描述问题",
+    "借用Jackson问题框架思想，从观察环境间接推断软件功能",
+    "将服务能力解耦为信息转换和状态变迁两个正交维度",
+    "指出现有语义方案无法有效处理粒度问题的根本原因"
+  ],
+  "topic_tags": [
+    "SOA需求工程",
+    "环境本体建模",
+    "服务语义描述",
+    "服务能力匹配",
+    "业务-IT对齐"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "会议名称和确切年份无法从正文确认，仅能从DOI格式推断为2010年。论文给出了完整方法论框架但缺乏严格的实验评估，仅用单一案例说明。"
+}

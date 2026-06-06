@@ -1,0 +1,45 @@
+{
+  "paper_id": "Sun et al. - 2008 - RCT A distributed tree for supporting efficient range and multi-attribute queries in grid computing",
+  "doi": null,
+  "title": "RCT: A distributed tree for supporting efficient range and multi-attribute queries in grid computing",
+  "year": 2008,
+  "venue": "Journal of Systems Architecture (implied Elsevier)",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Grid systems with millions of resources treat all resources equally without categorizing, forcing full-overlay traversal for queries",
+  "problem_framing": "Resource discovery with two challenges: (1) efficiency without full traversal, (2) support for range and multi-attribute queries on categorized resources",
+  "key_insight": "Categorize resources by primary attributes matching application requirements; use balanced AVL tree preserving locality; higher nodes don't bear more load",
+  "method_signature": "RCT (Resource Category Tree): distributed AVL overlay with primary attribute ranges, load-aware adaptation, fault tolerance",
+  "evaluation_criteria": "Query load per node, average search length (ASL), standard deviation of query load across HR nodes",
+  "negative_result_or_admitted_limitation": "Parallel search uses stale range info when nodes adapt; fallback to sequential Algorithm 4; no mechanism for frequent HR updates",
+  "evidence_for_taste": [
+    "DHT destroys data locality",
+    "higher-level nodes...not required to maintain more information",
+    "average search length will be less than that of complete BST",
+    "ASL with RCT is between 8.5 and 9",
+    "merge of light-loaded HRs will lead to higher efficiency",
+    "RCT outperforms an hierarchical scheme"
+  ],
+  "thinking_moves": [
+    "Binary search tree structure applied to distributed resource categorization, borrowing well-known balanced tree properties",
+    "Identify practical DHT weakness (locality destruction) to justify non-DHT approach",
+    "Systematic query taxonomy: four types from two dimensions (range vs point, single vs multi-attribute)",
+    "Load thresholds define system states: light/warning/over to trigger adaptation (engineering heuristic)",
+    "Analyze worst/best case search bounds mathematically before empirical validation",
+    "Claim novelty through categorizing mechanism, not just indexing structure"
+  ],
+  "topic_tags": [
+    "grid-resource-discovery",
+    "distributed-AVL-tree",
+    "range-query",
+    "multi-attribute-query",
+    "load-balancing-overlay"
+  ],
+  "cites_own_work": [
+    "CROWN project",
+    "ROST service deployment",
+    "OpenSPACE"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Full venue name not explicitly stated in paper; DOI missing; the paper was substantially truncated in the provided text (Section 5.5 complexity analysis cut off) | md truncated to head40k+tail20k"
+}

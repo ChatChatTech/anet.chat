@@ -1,0 +1,40 @@
+{
+  "paper_id": "Gong et al. - 2011 - Directional diagnosis for wireless sensor networks",
+  "doi": null,
+  "title": "Directional Diagnosis for Wireless Sensor Networks",
+  "year": 2011,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有WSN诊断的信息收集和根因推断相互独立，导致通信冗余或推理不完整",
+  "problem_framing": "将诊断信息获取与推理引擎耦合，使探测过程由推理结果引导",
+  "key_insight": "用概率推理模型的中间结果指导下一步探测，而非预先固定探测计划",
+  "method_signature": "信念网络+增量探测+节点追踪重建拓扑的定向诊断框架",
+  "evaluation_criteria": "检测率、误报率、拓扑恢复时间、通信开销",
+  "negative_result_or_admitted_limitation": "小规模网络(<60节点)推理性能较差，多故障时检测率下降误报率上升",
+  "evidence_for_taste": [
+    "information collection process is independent with root-cause deduction",
+    "diagnosis information acquirement is guided by the fault inference process",
+    "may either result in redundant information",
+    "the small size of belief network always performs better"
+  ],
+  "thinking_moves": [
+    "识别现有方法中信息收集与推理解耦的根本缺陷",
+    "将WSN的动态拓扑特性作为设计约束而非简化假设",
+    "用节点追踪重建局部拓扑以规避先验拓扑不可得的困难",
+    "把探测选择问题转化为最小集合覆盖的启发式求解",
+    "用贝叶斯因果网络编码节点、链路、感知功能的依赖关系"
+  ],
+  "topic_tags": [
+    "WSN故障诊断",
+    "信念网络推理",
+    "增量探测选择",
+    "拓扑重建",
+    "GreenOrbs森林监测"
+  ],
+  "cites_own_work": [
+    "Liu et al. PAD (2008)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue信息未在论文正文中明确给出，仅能从论文风格推测为会议论文"
+}

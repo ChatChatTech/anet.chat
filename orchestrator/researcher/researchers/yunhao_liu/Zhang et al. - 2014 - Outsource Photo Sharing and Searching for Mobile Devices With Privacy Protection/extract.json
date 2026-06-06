@@ -1,0 +1,37 @@
+{
+  "paper_id": "Zhang et al. - 2014 - Outsource Photo Sharing and Searching for Mobile Devices With Privacy Protection",
+  "doi": null,
+  "title": "Outsource Photo Sharing and Searching for Mobile Devices With Privacy Protection",
+  "year": 2014,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "移动设备资源受限但用户既想使用云存储又担心隐私泄露(自动人脸识别追踪等)",
+  "problem_framing": "云端执行图像搜索但不能获知任何照片内容或查询结果的非交互式隐私保护",
+  "key_insight": "通过同态加密+密码学协议把搜索任务外包给云端,主人无需在线即可完成隐私搜索",
+  "method_signature": "SouTu框架: Paillier同态加密+CP-ABE访问控制+混淆电路实现非交互隐私搜索",
+  "evaluation_criteria": "计算开销/通信开销/存储成本与搜索准确率,与其他方法对比",
+  "negative_result_or_admitted_limitation": "Owners有数百张照片时处理时间略超可接受范围,需k-d树等优化;k-n OT在大规模数据库上构建代价极高",
+  "evidence_for_taste": [
+    "disabling automatic recognition is not the best solution",
+    "we do not fully exploit the advantage of it",
+    "slightly beyond acceptable",
+    "extremely expensive to construct a k-n OT"
+  ],
+  "thinking_moves": [
+    "把隐私威胁(自动识别)重新frame为可接受的utility,不禁用而保护",
+    "模块化分解: public bag/private bag/search bag分离不同功能",
+    "非交互性作为核心设计目标解决owner不在线的问题",
+    "精确度换效率: binary descriptor减半计算开销"
+  ],
+  "topic_tags": [
+    "privacy-preserving image search",
+    "cloud outsourcing",
+    "homomorphic encryption",
+    "mobile photo sharing",
+    "feature vector search"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

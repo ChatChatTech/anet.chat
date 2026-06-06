@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zheng et al. - 2016 - Bulk Data Dissemination in Wireless Sensor Networks Analysis, Implications and Improvement",
+  "doi": null,
+  "title": "Bulk Data Dissemination in Wireless Sensor Networks: Analysis, Implications and Improvement",
+  "year": 2016,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Bulk data dissemination协议(如Deluge)中协商过程占据总时间71%,导致网络更新频繁中断",
+  "problem_framing": "在可靠但慢的协商与快但不可靠的泛洪之间寻找自适应切换的最优时间点",
+  "key_insight": "协商不必贯穿整个扩散过程,泛洪可快速达到初始可靠性再切换协商完成剩余部分",
+  "method_signature": "SurF基于时延-可靠性模型计算最优泛洪轮数n*,自适应选择泛洪或协商",
+  "evaluation_criteria": "降低40%扩散时间同时保持100%可靠性",
+  "negative_result_or_admitted_limitation": "使用最差链路质量选择策略会导致过多冗余泛洪轮数",
+  "evidence_for_taste": [
+    "negotiation is not always needed",
+    "71% of the total dissemination time",
+    "turning to it too late may also degrade",
+    "the fittest one to facilitate",
+    "negotiation should be adopted but not during the whole process"
+  ],
+  "thinking_moves": [
+    "从实测异常现象(协商开销71%)反推原范式的效率问题",
+    "将通信可靠性问题形式化为时延-可靠性曲线的动态优化",
+    "先验证两种方法各自的有效区间,再寻找组合的最优切换点",
+    "用数学性质(单调性、唯一性)证明最优点存在且可计算",
+    "通过控制变量实验揭示'过早切换'和'过晚切换'的双重代价"
+  ],
+  "topic_tags": [
+    "WSN-bulk-dissemination",
+    "adaptive-flooding-negotiation",
+    "time-reliability-modeling",
+    "TinyOS-firmware-update",
+    "probabilistic-broadcast"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

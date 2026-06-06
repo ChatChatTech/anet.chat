@@ -1,0 +1,38 @@
+{
+  "paper_id": "A community-centric approach to automated service composition",
+  "doi": "10.1007/s11434-010-9996-6",
+  "title": "A community-centric approach to automated service composition",
+  "year": null,
+  "venue": "Sci China Inf Sci",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "用户难以从海量服务中快速选择和访问",
+  "problem_framing": "构建服务社区实现自动化服务访问",
+  "key_insight": "利用社区集体智慧共享和复用已有解决方案",
+  "method_signature": "服务池+任务模板的社区框架",
+  "evaluation_criteria": "原型系统验证概念可行性",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "precise and feasible solution",
+    "solid implementation",
+    "enriches research results"
+  ],
+  "thinking_moves": [
+    "引入服务社区概念",
+    "识别核心组件(服务池+任务模板)",
+    "定义两种组合风格",
+    "采用图形化模型生成建议"
+  ],
+  "topic_tags": [
+    "service-composition",
+    "community-intelligence",
+    "web-services",
+    "user-centric",
+    "service-access"
+  ],
+  "cites_own_work": [
+    "Liu X Z, Huang G, Mei H. Discovering homogeneous web services community in the user-centric web environment. IEEE Trans Serv Comput, 2009"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为概念性工作,方法细节和评估数据不足,未提供具体实验结果或性能指标"
+}

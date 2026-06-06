@@ -1,0 +1,39 @@
+{
+  "paper_id": "Assignment problem in requirements driven agent collaboration and its implementation",
+  "doi": "10.5555/1838206.1838318",
+  "title": "Assignment Problem in Requirements Driven Agent Collaboration and its Implementation",
+  "year": 2010,
+  "venue": "9th Int. Conf. on Autonomous Agents and Multiagent Systems (AAMAS 2010)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "SOA ignores autonomy of service providers and consumers; providers cannot participate in discovery/composition.",
+  "problem_framing": "NP-complete task allocation among self-interested agents with reservation payoff constraints in decentralized setting.",
+  "key_insight": "Bridging assignment problem with normative systems via Kripke structure enables leveraging existing game/mechanism theory.",
+  "method_signature": "Negotiation-based task allocation modeled as Kripke structure with CTL-expressed normative constraints.",
+  "evaluation_criteria": "Maximizing total satisfaction degree (service + request agents) while satisfying reservation payoff thresholds.",
+  "negative_result_or_admitted_limitation": "96% success rate but 4/100 failed; agents with higher proportion often break negotiation quickly.",
+  "evidence_for_taste": [
+    "the autonomy of the two parties has been ignored",
+    "it is NP-complete",
+    "agents may not want to disclose their reservation payoff",
+    "not an agent which can satisfy the request agent by its own",
+    "65 of them have the value larger than 0.9",
+    "76 of them are higher than 3.3"
+  ],
+  "thinking_moves": [
+    "从NP-complete证明反向建立理论框架，通过Kripke结构将组合优化问题连接到规范系统领域",
+    "先展示形式化复杂性(n=2特殊情况的归约证明)，再提出可扩展的谈判机制作为启发式解",
+    "用CTL逻辑表达每个agent的目标，将系统目标转化为合取式，实现规范系统的可组合性",
+    "将隐私约束作为方法论障碍显式承认，而非绕过它"
+  ],
+  "topic_tags": [
+    "multiagent-task-allocation",
+    "normative-systems-Kripke",
+    "service-oriented-computing",
+    "decentralized-negotiation",
+    "reservation-payoff-constraints"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "All core signals extracted from paper content. Authors cite prior RDAC work [17][16] but this is not self-citation for current paper's core contribution."
+}

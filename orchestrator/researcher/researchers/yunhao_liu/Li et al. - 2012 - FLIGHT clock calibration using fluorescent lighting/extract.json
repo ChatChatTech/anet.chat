@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2012 - FLIGHT clock calibration using fluorescent lighting",
+  "doi": null,
+  "title": "FLIGHT: Clock Calibration Using Fluorescent Lighting",
+  "year": 2012,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "通信同步协议开销大、能耗高，且误差随跳数指数累积，难以扩展",
+  "problem_framing": "把时钟同步问题规约为利用荧光灯周期性信号校准本地时钟频率",
+  "key_insight": "荧光灯光强随AC半周期稳定变化(100Hz)，且光传感器功耗远低于无线电",
+  "method_signature": "光强采样→6阶低通滤波→周期检测→频率比估算",
+  "evaluation_criteria": "逻辑时间误差(μs)、能耗(μW)、覆盖范围(m²)",
+  "negative_result_or_admitted_limitation": "需荧光灯可用性；光传感器需暴露环境；滤波设计对接近100Hz的噪声敏感",
+  "evidence_for_taste": [
+    "时钟漂移率30-50 ppm",
+    "通信开销导致显著能耗",
+    "误差随跳数指数增长",
+    "采样光传感器能耗远低于无线电",
+    "误差通常在[600,800]μs",
+    "能量消耗通常低于5μW"
+  ],
+  "thinking_moves": [
+    "从物理层稳定信号切入解决上层同步问题",
+    "滤波参数选择通过实验迭代确定最优阶数",
+    "轻量化设计:滤波仅需缓存6个样本和12次乘法运算",
+    "单灯覆盖大范围使方案稀疏部署可行",
+    "移动性测试验证方案在动态环境鲁棒性"
+  ],
+  "topic_tags": [
+    "light-sensing-clock-synchronization",
+    "fluorescent-lighting-periodicity",
+    "low-power-clock-calibration",
+    "wireless-sensor-networks",
+    "body-area-networks"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Yunhao Liu为合著者，论文采用基于荧光灯的物理信号实现低功耗时钟同步，体现了跨层利用环境信号解决通信问题的思路 | md truncated to head40k+tail20k"
+}

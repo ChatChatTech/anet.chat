@@ -1,0 +1,41 @@
+{
+  "paper_id": "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs",
+  "doi": "10.48550/arxiv.2112.02456",
+  "title": "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs",
+  "year": 2021,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有调度策略在deadline约束下无法保证理论优越性,存在理论空白",
+  "problem_framing": "将多服务器作业调度建模为社会福利最大化问题,使用时空资源网格",
+  "key_insight": "利用边际成本估计和v/ι比率设计在线调度策略,实现α≥2的竞争比保证",
+  "method_signature": "ONSOCMAX: 基于边际成本估计的α竞争比在线调度算法",
+  "evaluation_criteria": "社会福利值、竞争比理论证明、模拟实验对比基线算法",
+  "negative_result_or_admitted_limitation": "当utility为对数或多项式函数时竞争比会变差,因为波动率v/ι增加导致更多任务边际成本落入第二段函数",
+  "evidence_for_taste": [
+    "fill the theoretical gap",
+    "rigorously proved to be α-competitive",
+    "α-competitive for some α≥2",
+    "well designed pseudo functions",
+    "economic phenomenon, a thing is valued in proportion to its rarity",
+    "the theoretical superiority cannot be guaranteed"
+  ],
+  "thinking_moves": [
+    "识别现有方法的理论缺陷:deadline约束下无法保证优越性",
+    "构建时空资源网格模型捕捉节点和时间两个维度",
+    "将耦合的资源分配问题转化为可分离的伪社会福利最大化",
+    "利用边际成本函数估计资源稀缺性价值",
+    "通过KKT条件建立对偶变量与原始解的联系",
+    "先证明最坏情况竞争比下界,再通过模拟验证实用性"
+  ],
+  "topic_tags": [
+    "online job scheduling",
+    "deadline-aware dispatching",
+    "competitive analysis",
+    "social welfare maximization",
+    "resource mesh model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

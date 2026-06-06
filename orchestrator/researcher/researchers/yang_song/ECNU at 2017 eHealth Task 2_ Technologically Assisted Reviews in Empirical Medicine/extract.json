@@ -1,0 +1,48 @@
+{
+  "paper_id": "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine",
+  "doi": null,
+  "title": "ECNU at 2017 eHealth Task 2: Technologically Assisted Reviews in Empirical Medicine",
+  "year": 2017,
+  "venue": "CLEF 2017 eHealth Evaluation Lab",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "医学文献检索中专家筛选负担重,需自动化工具辅助快速定位相关文档",
+  "problem_framing": "系统性评审中文档排序问题,将布尔检索返回的文档按相关性降序排列",
+  "key_insight": "L2R模型与Word2vec模型互补,两者组合(α=0.8,β=0.2)优于单独使用",
+  "method_signature": "L2R模型(特征:BM25/PL2/BB2得分+排名)+Word2vec语义相似度加权融合",
+  "evaluation_criteria": "ap(平均精度)、wss(节省工作量)、NCG@N(归一化累积增益)、cost_total(总代价)",
+  "negative_result_or_admitted_limitation": "Word2vec单独使用表现差(ap=0.091),需改进以避免语义信息丢失",
+  "evidence_for_taste": [
+    "combination of the two methods achieves a better performance",
+    "the performance of our word2vec model needs to be improved",
+    "avoid losing semantic information"
+  ],
+  "thinking_moves": [
+    "通过实验对比发现不同方法互补,进而选择组合策略",
+    "承认Word2vec模型的局限,明确下一步改进方向",
+    "在特征工程中引入多个检索模型(BM25/PL2/BB2)的分数和排名作为特征"
+  ],
+  "topic_tags": [
+    "医疗信息检索",
+    "学习排序",
+    "系统性评审",
+    "文档排序",
+    "词向量语义匹配"
+  ],
+  "cites_own_work": [
+    {
+      "reference": "Yang et al. 2015 eHealth Task 2",
+      "context": "采用类似的方法"
+    },
+    {
+      "reference": "Chen et al. 2014 TREC Microblog",
+      "context": "Query Expansion阶段"
+    },
+    {
+      "reference": "Yang et al. 2015 CDS Track",
+      "context": "Query Expansion阶段"
+    }
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文,包含摘要、方法、实验、结论。部分评价指标含义(如lastrel、loss_e)需领域知识理解但不影响核心信息提取。"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Revisit Self-Debugging with Self-Generated Tests for Code Generation",
+  "doi": "10.48550/arxiv.2501.12793",
+  "title": "Revisit Self-Debugging with Self-Generated Tests for Code Generation",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Oracle tests unavailable in real-world scenarios; self-generated tests for self-debugging lack full exploration of limitations",
+  "problem_framing": "Evaluate self-debugging with self-generated tests across basic (HumanEval/MBPP) and competitive (LiveCodeBench) programming tasks",
+  "key_insight": "Bias from self-generated tests causes false negatives; in-execution (intermediate states) avoids this bias vs post-execution (output comparison)",
+  "method_signature": "Two paradigms: post-execution (compare outputs) vs in-execution (analyze runtime traces per basic block)",
+  "evaluation_criteria": "Pass rate on benchmark tests (HumanEval+, MBPP+, LiveCodeBench); test suite accuracy measurement",
+  "negative_result_or_admitted_limitation": "Post-execution self-debugging with self-generated tests causes performance declines on basic problems; models struggle to recognize faulty feedback",
+  "evidence_for_taste": [
+    "post-execution self-debugging struggles on basic problems",
+    "performance on MBPP may improve initially but ultimately become worse",
+    "The model is expected to determine whether failure is due to bugs in program or errors in the test",
+    "efficacy depends not only on model ability to identify defects but also on ability to recognize faulty feedback"
+  ],
+  "thinking_moves": [
+    "对比post-execution与in-execution两种反馈模式的适用边界",
+    "从性能不一致反推bias引入机制",
+    "区分test质量与program正确性的判断能力",
+    "通过program contracts量化self-generated test的有效性"
+  ],
+  "topic_tags": [
+    "LLM code generation",
+    "self-debugging",
+    "self-generated tests",
+    "execution trace analysis",
+    "runtime state feedback"
+  ],
+  "cites_own_work": [
+    "Kechi Zhang et al., Self-edit: Fault-aware code editor for code generation, ACL 2023",
+    "Li Zhong et al., Debug like a human, ACL 2024"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

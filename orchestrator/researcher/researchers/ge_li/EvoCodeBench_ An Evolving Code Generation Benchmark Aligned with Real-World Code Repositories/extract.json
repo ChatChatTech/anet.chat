@@ -1,0 +1,38 @@
+{
+  "paper_id": "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories",
+  "doi": "10.48550/arxiv.2404.00599",
+  "title": "EvoCodeBench: An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有基准测试与真实代码仓库对齐不足,无法全面评估LLM的编程能力",
+  "problem_framing": "代码生成基准应满足真实仓库、真实代码分布、综合标注、鲁棒指标、避免数据泄露五个特征",
+  "key_insight": "非独立代码依赖仓库内上下文,基准应模拟开发者编写仓库代码的真实场景",
+  "method_signature": "仓库级代码生成任务,提供签名+需求+完整仓库+参考代码+依赖+测试用例",
+  "evaluation_criteria": "Pass@k衡量功能正确性,Recall@k衡量参考依赖召回率",
+  "negative_result_or_admitted_limitation": "即使最强模型GPT-4在此基准上Pass@1仅20.73%,远低于HumanEval上的88.4%",
+  "evidence_for_taste": [
+    "none of the existing benchmarks satisfies",
+    "LLMs' performance drops dramatically",
+    "logic errors and incomplete contexts",
+    "gpt-4 achieves a Pass@1 score of 88.4 on HumanEval, while it scores 7.27"
+  ],
+  "thinking_moves": [
+    "分析100万函数统计真实仓库的代码和依赖分布",
+    "区分独立代码与非独立代码的差异",
+    "提出仓库级代码生成任务模拟开发者编码过程",
+    "设计双维度指标同时评估功能正确性和依赖生成能力",
+    "通过演化更新基准规避数据泄露问题"
+  ],
+  "topic_tags": [
+    "LLM代码生成评估",
+    "代码基准测试",
+    "仓库级代码生成",
+    "依赖关系召回",
+    "真实世界代码仓库"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

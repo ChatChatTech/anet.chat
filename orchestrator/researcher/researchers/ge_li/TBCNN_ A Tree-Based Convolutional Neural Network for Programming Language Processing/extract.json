@@ -1,0 +1,40 @@
+{
+  "paper_id": "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing",
+  "doi": null,
+  "title": "TBCNN: A Tree-Based Convolutional Neural Network for Programming Language Processing",
+  "year": 2015,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "深度学习在NLP等领域成功但未应用于编程语言处理",
+  "problem_framing": "如何用深度神经网络处理程序中的树结构信息",
+  "key_insight": "将任意子树视为二叉树以处理节点数可变的AST",
+  "method_signature": "TBCNN: 编码准则+树卷积+三路池化",
+  "evaluation_criteria": "程序分类准确率与向量表示聚类质量",
+  "negative_result_or_admitted_limitation": "RNN无法有效训练，仅学习标签分布而非结构特征",
+  "evidence_for_taste": [
+    "we are the first to analyze programs by deep neural networks",
+    "RNN is not trained effectively in our setting",
+    "RNN merely learns a distribution over labels",
+    "root features are the bottleneck",
+    "TBCNN and BOW capture different aspects of programs"
+  ],
+  "thinking_moves": [
+    "指出自然语言的嵌套结构不同于编程语言的显式树结构",
+    "通过RNN失败案例反推出信息瓶颈问题",
+    "用连续二叉树统一处理不同形状子树",
+    "结合结构特征与统计特征(BOW)验证互补性"
+  ],
+  "topic_tags": [
+    "AST-based-program-representation",
+    "tree-convolutional-neural-network",
+    "programming-language-processing",
+    "continuous-binary-tree",
+    "code-pretraining"
+  ],
+  "cites_own_work": [
+    "Mou et al. 2014 arXiv preprint on building program vector representations"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

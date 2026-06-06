@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2011 - Multicast Throughput for Hybrid Wireless Networks under Gaussian Channel Model",
+  "doi": null,
+  "title": "Multicast Throughput for Hybrid Wireless Networks under Gaussian Channel Model",
+  "year": 2011,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有混合网络多播容量研究均基于阈值信道模型,而高斯信道模型更贴近实际物理层,缺少该模型下的研究",
+  "problem_framing": "在混合扩展网络(HEN)和混合密集网络(HDN)中,根据m(基站数)、n(节点数)、n_d(目标数)的不同关系推导可达多播吞吐量",
+  "key_insight": "三类策略(混合策略、普通ad hoc策略、BS策略)在不同参数区域下有各自优势,需根据m、n_d的关系动态选择最优策略",
+  "method_signature": "基于欧式生成树、渗透理论、并行传输调度的多策略设计",
+  "evaluation_criteria": "per-session multicast throughput的阶数下界(Θ符号)",
+  "negative_result_or_admitted_limitation": "即使对于无线ad hoc网络,在高斯信道模型下仍无匹配上下界,且本文未考虑B-O链路的瓶颈",
+  "evidence_for_taste": [
+    "there is indeed a gap of factor",
+    "we find that for most cases the bottlenecks locate on B-O links",
+    "we designedly derive the throughput without taking the possible bottlenecks on the B-O links into account",
+    "this is the first work that addresses the multicast routing"
+  ],
+  "thinking_moves": [
+    "将混合网络容量问题按m数量级分段讨论,不同区间适用不同策略",
+    "用渗透理论构建高速公路和连接路径,实现并行传输调度",
+    "通过瓶颈原理识别系统中的薄弱环节(B-O链路)",
+    "承认结果与前人工作的差距,指出其Lemmas可能有误"
+  ],
+  "topic_tags": [
+    "multicast capacity",
+    "hybrid wireless networks",
+    "Gaussian channel model",
+    "percolation theory",
+    "network throughput scaling"
+  ],
+  "cites_own_work": [
+    "[1] C. Wang et al., ICDCS 2009 ( preliminary version)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

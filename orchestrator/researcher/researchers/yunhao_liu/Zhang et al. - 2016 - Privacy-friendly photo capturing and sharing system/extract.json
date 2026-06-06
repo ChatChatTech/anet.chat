@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zhang et al. - 2016 - Privacy-friendly photo capturing and sharing system",
+  "doi": null,
+  "title": "Privacy-friendly Photo Capturing and Sharing System",
+  "year": 2016,
+  "venue": "UbiComp",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Smart cameras enable secretive photographing that violates portrait privacy without notification or consent",
+  "problem_framing": "Erase invisible users from photos while preserving privacy during matching against untrusted cloud",
+  "key_insight": "Vector distance is dimension-order-independent, enabling encryption-free privacy-preserving matching via scrambling + LSH",
+  "method_signature": "Graph-based portrait profile + voting graph matching + privacy-preserving vector transformation",
+  "evaluation_criteria": "False negative/positive rates, communication cost, computation runtime, recall/precision",
+  "negative_result_or_admitted_limitation": "Accuracy depends on people detection and segmentation; complicated environment may cause high error rate",
+  "evidence_for_taste": [
+    "visible tags on cloth are inaesthetic",
+    "face recognition suffers when there is a lack of a clear front view",
+    "the computation overhead is large for homomorphic encryption",
+    "the accuracy is highly dependent on the performance of people detection"
+  ],
+  "thinking_moves": [
+    "把隐私保护重新frame成图片 erasing问题而非遮挡问题",
+    "将人脸识别精度问题转嫁为图匹配鲁棒性设计",
+    "利用向量距离的维度顺序无关性绕过加密计算",
+    "用图结构替代原图来降低传输隐私风险"
+  ],
+  "topic_tags": [
+    "portrait privacy",
+    "graph matching",
+    "privacy-preserving vector distance",
+    "smart camera",
+    "invisibility cloak"
+  ],
+  "cites_own_work": [
+    "Zhang et al. - 2014 - iGaze",
+    "Zhang et al. - 2015a - PIC",
+    "Zhang et al. - 2015b - POP",
+    "Zhang et al. - 2015 - Message in a sealed bottle"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

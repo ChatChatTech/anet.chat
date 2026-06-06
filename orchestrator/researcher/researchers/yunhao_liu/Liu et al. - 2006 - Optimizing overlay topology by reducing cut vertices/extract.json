@@ -1,0 +1,35 @@
+{
+  "paper_id": "Liu et al. - 2006 - Optimizing overlay topology by reducing cut vertices",
+  "doi": null,
+  "title": "Optimizing Overlay Topology by Reducing Cut Vertices",
+  "year": 2006,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "自组织 overlay 网络缺乏中心管理，cut vertices 导致网络分割风险高，需在无全局信息情况下解决",
+  "problem_framing": "将 cut vertex 检测问题形式化为：节点在无全局拓扑信息时，通过本地探测判断移除自身后图是否连通",
+  "key_insight": "通过让来自不同连接的探测消息互相‘相遇’，可推断这些连接对应的 reachable sets 是否相交",
+  "method_signature": "CAM: probe 消息 + CAM 图 + 中性化三阶段分布式算法",
+  "evaluation_criteria": "准确率(CAR)、误报率(CFPR)、误判率(CFNR)、失效后组件数、新 cut vertex 比例",
+  "negative_result_or_admitted_limigation": "TTL=1 时几乎所有节点都会被误报为 cut vertices，需 trade 精度和开销",
+  "evidence_for_taste": [
+    "CAM errors mainly result from false alarms",
+    "accuracy rate is over 70% even when TTL=1",
+    "CAM with TTL larger than 1 induces more new cut vertices",
+    "lowest CAR when TTL is set to 1"
+  ],
+  "thinking_moves": [
+    "把图论 cut vertex 定义转化为分布式可达性探测问题",
+    "用 TTL 控制探测开销，以精度换开销",
+    "设计消息相遇机制让节点推断全局拓扑属性",
+    "先理论证明再实验验证，承认实验误差",
+    "承认 trade-off 存在，给出推荐参数"
+  ],
+  "topic_tags": [
+    "cut-vertex-detection",
+    "overlay-network-reliability",
+    "distributed-algorithms",
+    "P2P-topology",
+    "probe-message"
+  ]
+}

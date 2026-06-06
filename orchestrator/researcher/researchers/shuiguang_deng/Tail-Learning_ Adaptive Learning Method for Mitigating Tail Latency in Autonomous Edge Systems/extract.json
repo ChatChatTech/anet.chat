@@ -1,0 +1,48 @@
+{
+  "paper_id": "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems",
+  "doi": "10.48550/arxiv.2312.16883",
+  "title": "Tail-Learning: Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "分布式边缘计算中并行执行任务的响应时间由最慢子任务决定,导致尾延迟放大,严重影响AR/VR等实时应用体验",
+  "problem_framing": "将尾延迟概率最小化问题建模为非凸优化,但发现对Laplace变换参数凸,遂转向强化学习求解",
+  "key_insight": "用Laplace变换技术推导出尾延迟概率的上界,该上界对变换参数凸,可作为RL状态的强力表征",
+  "method_signature": "Tail-Learning: tandem queue建模 + Chernoff界推导 + 分层多智能体RL概率调度",
+  "evaluation_criteria": "p50/p90/p95/p99/p99.9百分位延迟对比,收敛稳定性,与QLA基线对比",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "tail latency amplification",
+    "non-convex",
+    "becomes convex for the Laplace transform parameters",
+    "significantly superior",
+    "nearly in the same order of magnitude",
+    "far exceed",
+    "mitigating higher percentiles",
+    "0.256%",
+    "0.319%",
+    "0.441%",
+    "0.557%"
+  ],
+  "thinking_moves": [
+    "将非凸优化问题转化为对变换参数凸的等价形式",
+    "用Chernoff界将尾延迟概率与调度决策建立可分析连接",
+    "分层多智能体结构降维避免费罗巴赫乘法空间爆炸",
+    "从queue length状态增强到包含概率上界信息的复合状态"
+  ],
+  "topic_tags": [
+    "edge computing tail latency",
+    "Laplace transform bound",
+    "reinforcement learning scheduling",
+    "tandem queue analysis",
+    "Chernoff bound"
+  ],
+  "cites_own_work": [
+    "[48] Zhao et al. 2018 QoE-aware offloading",
+    "[52] Zhao et al. 2019 mobility-aware offloading",
+    "[51] Zhao et al. 2022 distributed redundant placement"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "完整提取了论文的核心认知信号,包括问题动机、理论框架、关键洞察和实验评估。论文未明确说明Shuiguang Deng的具体角色,但他作为合著者存在;无明确承认的局限或负面结果。 | md truncated to head40k+tail20k"
+}

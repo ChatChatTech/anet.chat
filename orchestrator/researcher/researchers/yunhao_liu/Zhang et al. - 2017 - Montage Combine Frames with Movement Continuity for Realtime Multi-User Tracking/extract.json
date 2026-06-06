@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zhang et al. - 2017 - Montage Combine Frames with Movement Continuity for Realtime Multi-User Tracking",
+  "doi": null,
+  "title": "Montage: Combine Frames with Movement Continuity for Realtime Multi-User Tracking",
+  "year": 2017,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有室内追踪方案需要大量锚点、预采集指纹或用户特定先验知识,无法实现无基础设施的多用户实时追踪",
+  "problem_framing": "如何仅用一个锚点结合声学测距和惯性传感器估计的运动向量,实现多用户亚米级连续轨迹追踪",
+  "key_insight": "距离向量与运动向量满足D_ij(t_u+1)=M_j-M_i方程,利用测距+运动向量的双重约束可消除定位歧义",
+  "method_signature": "用Gold码编码音频同时测距多用户,惯性传感器估计步长和方向,向量方程连接连续快照追踪轨迹",
+  "evaluation_criteria": "步长误差<9cm、方向误差<20度、单用户追踪平均偏差0.87米、多用户最大偏差约1米",
+  "negative_result_or_admitted_limitation": "小部分大偏差(约3米)出现在60步左右,因为办公室格局导致大多数转弯发生在50-70步之间",
+  "evidence_for_taste": [
+    "most turns happen between 50 and 70 steps",
+    "cannot decide the value of distance vector",
+    "provides a tradeoff",
+    "the third case... require further information",
+    "to avoid the impact of measurement error",
+    "Montage achieves a tracking error of about 2.5%",
+    "we consider the reason as"
+  ],
+  "thinking_moves": [
+    "将追踪问题分解为距离向量(测距)和运动向量(惯性)两部分,两者的数学关系成为连接点",
+    "用三角形约束方程R_ij+R_jk-R_ik=0消除歧义,将几何一致性作为筛选条件",
+    "从单个锚点出发,迭代添加用户到已定位集合,宽搜优先减少累积误差",
+    "Gold码提供容量和相关性之间的权衡,而非追求单一最优特性",
+    "将连续拓扑快照通过运动向量连接,利用时序一致性而非空间锚点固定轨迹"
+  ],
+  "topic_tags": [
+    "acoustic-ranging",
+    "multi-user-tracking",
+    "inertial-sensors",
+    "indoor-localization",
+    "movement-vector-estimation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

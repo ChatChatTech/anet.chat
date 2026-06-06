@@ -1,0 +1,38 @@
+{
+  "paper_id": "Liao et al. - 2006 - AnySee Peer-to-Peer Live Streaming",
+  "doi": null,
+  "title": "AnySee: Peer-to-Peer Live Streaming",
+  "year": 2006,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有P2P直播系统在单overlay优化下资源利用率低、延迟高、播放不连续,大规模用户同时加入时问题尤为严重",
+  "problem_framing": "将跨overlay的全局资源优化形式化为NP难问题,提出分布式启发式算法求解",
+  "key_insight": "允许节点同时加入多个overlay形成备份路径集,可跨overlay寻找最近节点服务从而改善全局资源分配",
+  "method_signature": "inter-overlay优化管理器+mesh底层+reverse tracing探测+key节点 admission control",
+  "evaluation_criteria": "连续性指数、资源利用率、启动延迟、源端延迟",
+  "negative_result_or_admitted_limitation": "即使拥有全局知识,资源最优分配仍是NP难问题;完全分布式下达到设计目标并非易事",
+  "evidence_for_taste": [
+    "AnySee only needs 40 seconds, while Coolstreaming needs 120-second buffer",
+    "if the path S1→S2→D is used, the cost is only 4",
+    "finding an optimal assignment of resources is still NP-hard",
+    "Without global network knowledge is not trivial",
+    "users have great patience for live streaming services with large delay"
+  ],
+  "thinking_moves": [
+    "从单overlay局部最优的困境出发,提出跨overlay全局优化的视角翻转",
+    "将通信问题重新框定为资源分配与队列优化问题,引入M/M/m/K模型求解admission control",
+    "承认分布式启发式的次优性,但论证实用性优先于全局最优",
+    "从用户行为日志反推系统参数设计,如ADL指标动态调整优化频率"
+  ],
+  "topic_tags": [
+    "P2P-live-streaming",
+    "inter-overlay-optimization",
+    "overlay-multicast",
+    "resource-utilization",
+    "distributed-heuristic"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者为通讯作者之一,论文完整包含动机、方法、模拟和实现;deployed系统在CERNET运行数月,有真实用户行为数据"
+}

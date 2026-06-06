@@ -1,0 +1,39 @@
+{
+  "paper_id": "Li et al. - 2012 - Towards energy-fairness in asynchronous duty-cycling sensor networks",
+  "doi": null,
+  "title": "Towards Energy-Fairness in Asynchronous Duty-Cycling Sensor Networks",
+  "year": 2012,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传感器网络流量分布不均导致部分节点能量过度消耗形成瓶颈，传统相同睡眠间隔策略失效",
+  "problem_framing": "将睡眠间隔控制问题形式化为凸优化，目标最小化网络最大能量消耗率实现公平性",
+  "key_insight": "增加睡眠间隔不一定降低本节点能耗（需权衡发送者成本），贪婪策略无法保证收敛到最优解",
+  "method_signature": "利用凸优化性质分解全局问题为局部子问题，设计分布式迭代算法GDSIC",
+  "evaluation_criteria": "最小化网络最大能量消耗率（min-max fairness），网络寿命延长，50节点测试床验证",
+  "negative_result_or_admitted_limitation": "贪婪策略无法保证最优min-max公平性落在所形成区间内，equal策略导致最大最小能耗差达48.9%",
+  "evidence_for_taste": [
+    "hardly perform well in practice",
+    "urgently need to develop",
+    "beyond such an intuition",
+    "not always effective",
+    "challenges the algorithm design",
+    "hardly achieve the min-max energy fairness"
+  ],
+  "thinking_moves": [
+    "从物理能量守恒建模发送者-接收者能耗权衡",
+    "通过定理证明简单策略（相同间隔、贪婪）理论上的局限性",
+    "识别问题凸性后利用优化理论分解实现分布式求解",
+    "从网络全局视角看局部调整的传播效应"
+  ],
+  "topic_tags": [
+    "duty-cycling MAC",
+    "min-max energy fairness",
+    "convex optimization",
+    "distributed algorithm",
+    "wireless sensor networks"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的技术方案，包含数学建模、定理证明、算法设计和实验验证。venue信息未明确提供。"
+}

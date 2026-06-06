@@ -1,0 +1,40 @@
+{
+  "paper_id": "An Empirical Study on Deployment Faults of Deep Learning Based Mobile Applications",
+  "doi": "10.48550/arxiv.2101.04930",
+  "title": "An Empirical Study on Deployment Faults of Deep Learning Based Mobile Applications",
+  "year": 2021,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "移动端深度学习应用被数十亿用户使用,但部署故障特征尚未被充分研究",
+  "problem_framing": "从Stack Overflow和GitHub收集304个部署故障,通过人工标注构建症状分类体系",
+  "key_insight": "48.4%的部署故障发生在模型转换阶段,其中不支持的操作是最常见症状(占转换阶段31.3%)",
+  "method_signature": "经验性研究,手动标注故障样本,归纳式构建层级症状分类树(23类)",
+  "evaluation_criteria": "标注一致性(Cohen's Kappa),故障类别频率分布,修复策略出现频次",
+  "negative_result_or_admitted_limitation": "数据准备和模型更新阶段样本很少,因为移动端训练计算资源需求大且框架支持不足",
+  "evidence_for_taste": [
+    "most frequent category in the model conversion stage",
+    "a post is assigned to all related categories",
+    "model quantization reduces the precision representations",
+    "the remaining three frequent fix strategies have been described",
+    "A post is assigned to all related categories if it is related to multiple faults"
+  ],
+  "thinking_moves": [
+    "从开发者社区的实际问题中归纳故障模式",
+    "通过层级分类树揭示部署过程的多样性故障",
+    "将修复策略与症状类别建立对应关系",
+    "对比TensorFlow Lite和Core ML的故障分布差异"
+  ],
+  "topic_tags": [
+    "mobile DL deployment",
+    "model conversion fault",
+    "TF Lite",
+    "Core ML",
+    "empirical software engineering"
+  ],
+  "cites_own_work": [
+    "chen2020comprehensive"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

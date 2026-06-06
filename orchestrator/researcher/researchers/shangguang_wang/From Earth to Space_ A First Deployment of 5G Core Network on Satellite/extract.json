@@ -1,0 +1,43 @@
+{
+  "paper_id": "From Earth to Space_ A First Deployment of 5G Core Network on Satellite",
+  "doi": "10.48550/arxiv.2210.05405",
+  "title": "From Earth to Space: A First Deployment of 5G Core Network on Satellite",
+  "year": 2022,
+  "venue": "China Communications",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "LEO卫星成本下降,在轨计算资源增长,5G核心网上星具备可行性,可消除回传延迟、提升用户体验",
+  "problem_framing": "验证5G核心网在真实卫星上部署的可行性,通过注册和会话建立流程检验在轨功能正常性",
+  "key_insight": "星载5G核心网消除不必要回传,显著降低控制面信令交互延迟,加速用户接入过程",
+  "method_signature": "在TY20卫星上部署轻量化5G核心网(AMF/SMF/UPF),联合地面5G专网进行注册与会话实验",
+  "evaluation_criteria": "CPU占用率约16%、内存20KB、信令延迟约200ms、QUIC建连约4.93ms",
+  "negative_result_or_admitted_limitation": "更多综合测量研究留作未来工作,当前仅验证基本流程,未做完整性能评估",
+  "evidence_for_taste": [
+    "We are the first to deploy",
+    "lightweight 5G core network",
+    "can function normally",
+    "The result is acceptable",
+    "leave more comprehensive measurement study",
+    "signaling storms and the data session migrations",
+    "stateless design"
+  ],
+  "thinking_moves": [
+    "以轻量化最小可行系统验证可行性,先跑通再优化",
+    "将地面5G标准功能适配到受限卫星环境,做功能裁剪而非完整实现",
+    "通过遥测数据直接证明在轨运行,非仿真或离线实验",
+    "承认当前架构的简化,以换取首次实操的可行性验证"
+  ],
+  "topic_tags": [
+    "satellite-terrestrial-integrated-network",
+    "5G-core-network-deployment",
+    "LEO-satellite-edge-computing",
+    "in-orbit-network-function",
+    "satellite-5G-integration"
+  ],
+  "cites_own_work": [
+    "[20] stateless mobile core network",
+    "[31] cognitive service architecture for 6G",
+    "[32] world's first in-satellite 5G core"
+  ],
+  "extraction_quality": "full"
+}

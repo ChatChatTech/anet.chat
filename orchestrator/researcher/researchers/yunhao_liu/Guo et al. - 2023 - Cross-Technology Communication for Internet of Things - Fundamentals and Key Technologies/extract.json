@@ -1,0 +1,49 @@
+{
+  "paper_id": "Guo et al. - 2023 - Cross-Technology Communication for Internet of Things - Fundamentals and Key Technologies",
+  "doi": null,
+  "title": "Cross-Technology Communication for Internet of Things: Fundamentals and Key Technologies",
+  "year": 2023,
+  "venue": "Springer Nature Singapore",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "无线技术多样性导致跨技术干扰问题日益严重，直接信息交换是IoT互操作的基础需求",
+  "problem_framing": "将异构设备无法直接通信问题建模为需要构造侧信道来跨越协议不兼容性的技术挑战",
+  "key_insight": "不同无线技术的可区分特征(如能量、CSI、相位)可作为侧信道实现跨技术直接通信",
+  "method_signature": "从包级、物理级、上层协议三层面递进式设计CTC技术,利用各层特征构造跨技术通信",
+  "evaluation_criteria": "吞吐量、可靠性、硬件修改成本、并发性能等多维度对比(state-of-the-art)",
+  "negative_result_or_admitted_limitation": "RSSI方式无法实现ZigBee到WiFi的CTC;包级CTC在带宽和符号同步上存在根本性限制",
+  "evidence_for_taste": [
+    "the key challenge for CTC lies in the heterogeneity",
+    "Direct and timely information exchange",
+    "leverage the distinguishable features",
+    "take the signal strength as the side channel",
+    "takes the channel state information as the side channel",
+    "feasibility of energy communication",
+    "incompatibility of technical standards",
+    "asymmetry of connection capability"
+  ],
+  "thinking_moves": [
+    "把跨技术干扰问题重新frame为通信问题",
+    "分层递进:从包级到物理层再到上层协议",
+    "利用侧信道(能量/CSI/相位)绕过协议不兼容性",
+    "从物理层约束推导CTC设计边界",
+    "用理论分析+实验验证双重验证设计"
+  ],
+  "topic_tags": [
+    "cross-technology-communication",
+    "heterogeneous-iot",
+    "wireless-coexistence",
+    "side-channel-communication",
+    "physical-layer-CTC"
+  ],
+  "cites_own_work": [
+    "Weizheng",
+    "Freebee",
+    "ZigFi",
+    "LEGO-Fi",
+    "WIDE",
+    "BiCord"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "这是一本系统性著作而非单一论文,包含5章具体技术工作。提取的是该书preface和目录中反映的整体研究思路,具体章节的细节未能充分展开。"
+}

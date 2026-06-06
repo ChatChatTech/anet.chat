@@ -1,0 +1,44 @@
+{
+  "paper_id": "Wu et al. - 2018 - Wireless Indoor Localization - A Crowdsourcing Approach",
+  "doi": null,
+  "title": "Wireless Indoor Localization: A Crowdsourcing Approach",
+  "year": 2018,
+  "venue": "Springer",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "室内定位可支撑智能建筑等应用,但传统WiFi指纹定位需人工现场勘测,成本高难扩展",
+  "problem_framing": "将WiFi指纹定位的三大瓶颈(部署成本、维护开销、定位精度)形式化为可解问题",
+  "key_insight": "利用用户携带手机自然移动产生的众包数据,自动完成无线电地图构建和更新",
+  "method_signature": "众包驱动的WiFi指纹定位:自动指纹采集+梯度指纹+视觉线索辅助",
+  "evaluation_criteria": "定位精度(米级误差)、部署效率、维护成本、系统可扩展性",
+  "negative_result_or_admitted_limitation": "指纹不一致性是定位误差主因,需自校准技术处理长期RSS变化;图像法依赖用户配合",
+  "evidence_for_taste": [
+    "labour-intensive and time-consuming",
+    "sensitive to temporal environmental dynamics",
+    "suffers from large location errors",
+    "requiring no additional hardware",
+    "self-calibration techniques",
+    "no small undertaking"
+  ],
+  "thinking_moves": [
+    "将室内定位工程问题拆解为部署-维护-精度三层递进结构",
+    "用'众包'重构定位范式,降低对专用设备依赖",
+    "从工程异常(RSS波动、指纹漂移)反推底层信号模型假设失效",
+    "先识别最坏误差来源,再设计组合式模块化方案",
+    "承认简单阈值法AP筛选的局限性,提出判别因子概念"
+  ],
+  "topic_tags": [
+    "WiFi-fingerprint-localization",
+    "crowdsourcing-radio-map",
+    "adaptive-radio-map-updating",
+    "fingerprint-spatial-gradient",
+    "visual-WiFi-fusion"
+  ],
+  "cites_own_work": [
+    "Wu et al. 2015 IEEE TMC (Smartphones based crowdsourcing)",
+    "Wu et al. 2015 IEEE INFOCOM (Static power self-updating)",
+    "Wu et al. 2015 IEEE TPDS (Human mobility GPS accuracy)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "本书为Springer出版著作,系统性整合了作者多年研究成果。众包定位视角贯穿全文,将工程瓶颈形式化为可解模块。 | md truncated to head40k+tail20k"
+}

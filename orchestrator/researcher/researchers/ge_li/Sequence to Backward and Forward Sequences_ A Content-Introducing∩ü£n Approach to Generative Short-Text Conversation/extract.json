@@ -1,0 +1,42 @@
+{
+  "paper_id": "Sequence to Backward and Forward Sequences_ A Content-Introducing∩ü£n Approach to Generative Short-Text Conversation",
+  "doi": "10.48550/arxiv.1607.00970",
+  "title": "Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation",
+  "year": 2016,
+  "venue": "arXiv preprint",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "神经网络对话系统倾向于生成安全但无实质内容的通用回复(如I don t know、me too)",
+  "problem_framing": "不是生成概率最大的回复,而是强制在回复中引入反映主要意思的关键词",
+  "key_insight": "用PMI预测关键词作为生成起点,seq2BF模型从关键词同时向后向前生成,确保关键词出现在任意位置且语义丰富",
+  "method_signature": "seq2BF模型:序列到向后和向前序列",
+  "evaluation_criteria": "人类评估(逐点/配对)、回复长度、信息熵",
+  "negative_result_or_admitted_limitation": "seq2BF无关键词时得分最低,证明简单切分序列并非建模自然语言的有效方式;放弃BLEU因人类回复多样度过高导致零覆盖",
+  "evidence_for_taste": [
+    "neural networks' performance is far from satisfactory",
+    "universal reply",
+    "carries little meaning",
+    "not a fancy way of modeling",
+    "significantly outperforms",
+    "reliable",
+    "reluctant to introduce concrete concepts"
+  ],
+  "thinking_moves": [
+    "把通用回复问题重新frame成内容注入问题而非优化目标函数",
+    "先用简单统计方法(PMI)预测关键词,再用神经网络围绕关键词生成",
+    "通过对比有无关键词的seq2BF变体验证内容注入的必要性",
+    "通过熵分解证明关键词改变了后续词的生成分布",
+    "放弃BLEU因发现人类回复间无n-gram重叠的极端多样性"
+  ],
+  "topic_tags": [
+    "neural-dialogue-generation",
+    "seq2seq-universal-reply",
+    "content-introducing",
+    "constrained-text-generation",
+    "open-domain-conversation"
+  ],
+  "cites_own_work": [
+    "Backward and forward language modeling (Mou et al., 2015)"
+  ],
+  "extraction_quality": "full"
+}

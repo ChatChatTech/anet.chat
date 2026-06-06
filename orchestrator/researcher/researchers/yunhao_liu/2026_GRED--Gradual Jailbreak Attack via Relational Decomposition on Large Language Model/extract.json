@@ -1,0 +1,39 @@
+{
+  "paper_id": "2026_GRED--Gradual Jailbreak Attack via Relational Decomposition on Large Language Model",
+  "doi": null,
+  "title": "GRED: Gradual Jailbreak Attack via Relational Decomposition on Large Language Model",
+  "year": 2026,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有多轮越狱攻击缺乏语义一致性与目的对齐,导致攻击偏离原意",
+  "problem_framing": "将原始恶意问题通过实体-关系-实体三元组分解,保持攻击过程与目标的语义对齐",
+  "key_insight": "通过关系分解提取关键信息生成子问题,在上下文污染后逐步引导模型回答原问题",
+  "method_signature": "攻击LLM提取三元组→生成子问题→污染上下文→迭代优化过渡问题→完成越狱",
+  "evaluation_criteria": "AdvBench上的攻击成功率(ASR)",
+  "negative_result_or_admitted_limitation": "在Qwen2.5上性能略低于DrAttack",
+  "evidence_for_taste": [
+    "lack to guarantee of semantic coherence",
+    "struggle to distill meaningful information",
+    "overlook semantic nuances",
+    "resulting in question drift",
+    "model tends to compose answers from context",
+    "limited independent reasoning"
+  ],
+  "thinking_moves": [
+    "将复杂问题分解为实体-关系-实体结构以保持语义锚定",
+    "通过上下文污染使模型依赖给定知识而非独立推理",
+    "迭代优化过渡问题以逐步逼近原始恶意目标",
+    "验证模型对上下文一致性的偏好而非独立推理能力"
+  ],
+  "topic_tags": [
+    "LLM安全",
+    "越狱攻击",
+    "黑盒攻击",
+    "关系分解",
+    "多轮对话攻击"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文提供了完整方法描述和实验结果,但缺少完整出版信息(无DOI,venue信息不完整)。关于越狱内容的警告表明这是安全研究论文。"
+}

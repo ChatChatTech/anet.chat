@@ -1,0 +1,37 @@
+{
+  "paper_id": "2021_BIGCOM_Collaborative_Deep_Sensing_by_Dynamically_Fusing_Multiple_Models",
+  "doi": null,
+  "title": "Collaborative Deep Sensing by Dynamically Fusing Multiple Models",
+  "year": 2021,
+  "venue": "BIGCOM",
+  "venue_tier": "regional",
+  "role": "unknown",
+  "motivation": "智能家居场景下多模态感知需要实时响应，但计算资源受限；现有工作仅定性考虑能耗，忽略严格量化的资源约束",
+  "problem_framing": "将多模态感知问题建模为二维矩形装箱问题，在内存和时间正交约束下最大化识别准确率",
+  "key_insight": "通过Actor-Critic一次处理资源约束与准确率优化的冲突；通过堆叠法解耦模型评估与资源分配以支持可迁移性",
+  "method_signature": "Actor-Critic在线决策+Steinberg定理验证 + 堆叠法两阶段选择融合",
+  "evaluation_criteria": "识别准确率 vs 资源消耗(内存/时间延迟)",
+  "negative_result_or_admitted_limitation": "堆叠法准确率低于Actor-Critic，因为模型融合正确的概率不等于各模型正确概率之和(P(A)≠∑P(a))",
+  "evidence_for_taste": [
+    "资源约束和准确率优化的冲突",
+    "one shot处理两个约束",
+    "解耦模型评估和资源分配",
+    "支持可迁移性"
+  ],
+  "thinking_moves": [
+    "将连续权重向量选择问题用Actor-Critic处理，因标签不可得且非唯一",
+    "用Steinberg定理作为矩形装箱可行性的充分条件判断资源调度",
+    "用堆叠法将模型正确概率估计与资源分配分离，支持资源变化时的迁移",
+    "承认堆叠法目标与实际目标不一致：概率求和≠联合正确概率"
+  ],
+  "topic_tags": [
+    "multi-modal-sensing",
+    "resource-constrained-inference",
+    "actor-critic-RL",
+    "rectangle-knapsack",
+    "model-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "研究者slug(yunhao_liu)与论文四位作者(Liu Mengjing, Lan Zhang, Daren Zheng, Xiangyang Li)不匹配，无法确定具体作者角色"
+}

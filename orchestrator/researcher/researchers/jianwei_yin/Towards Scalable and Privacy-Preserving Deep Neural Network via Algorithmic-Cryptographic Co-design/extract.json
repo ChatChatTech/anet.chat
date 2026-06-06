@@ -1,0 +1,36 @@
+{
+  "paper_id": "Towards Scalable and Privacy-Preserving Deep Neural Network via Algorithmic-Cryptographic Co-design",
+  "doi": "10.48550/arxiv.2012.09364",
+  "title": "Towards Scalable and Privacy-Preserving Deep Neural Network via Algorithmic-Cryptographic Co-design",
+  "year": 2021,
+  "venue": "ACM Transactions on Intelligent Systems and Technology",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "数据孤岛问题导致各机构无法共享敏感数据训练DNN，但现有方案在隐私保护与效率之间存在不可调和的矛盾",
+  "problem_framing": "垂直分区数据场景下，如何让多方协作训练DNN而不暴露原始特征和标签，同时支持大规模深度网络",
+  "key_insight": "仅对第一层隐藏层（涉及私有数据）采用密码学计算，其余层委托半诚实服务器明文计算，实现隐私与效率的协同",
+  "method_signature": "SPNN框架通过秘密共享或同态加密实现首层安全计算，剩余层由服务器明文执行",
+  "evaluation_criteria": "模型准确率(AUC)、训练效率(每轮耗时)、隐私泄露程度(属性攻击AUC)",
+  "negative_result_or_admitted_limitation": "DP-SGD在实践中可能导致显著精度下降，因此采用SGLD来减少信息泄露",
+  "evidence_for_taste": [
+    "efficiency is usually at the expense of sacrificing model performance",
+    "strong privacy guarantee, but difficult to scale",
+    "significantly affect efficiency",
+    "enjoys good scalability"
+  ],
+  "thinking_moves": [
+    "识别两种现有方法的根本矛盾：算法方法牺牲隐私换效率，密码学方法牺牲效率保隐私",
+    "将矛盾定位在第一层隐藏层：私有数据相关计算必须加密，其余层可委托服务器明文执行",
+    "通过对比实验揭示：SPNN在效率上远超SecureML，在精度上超过SplitNN"
+  ],
+  "topic_tags": [
+    "privacy-preserving-deep-learning",
+    "secret-sharing",
+    "homomorphic-encryption",
+    "split-neural-network",
+    "federated-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

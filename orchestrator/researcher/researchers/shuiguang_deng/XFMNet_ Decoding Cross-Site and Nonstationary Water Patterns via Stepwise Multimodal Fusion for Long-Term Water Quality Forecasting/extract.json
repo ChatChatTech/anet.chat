@@ -1,0 +1,37 @@
+{
+  "paper_id": "XFMNet_ Decoding Cross-Site and Nonstationary Water Patterns via Stepwise Multimodal Fusion for Long-Term Water Quality Forecasting",
+  "doi": "10.48550/arxiv.2508.08279",
+  "title": "XFMNet: Decoding Cross-Site and Nonstationary Water Patterns via Stepwise Multimodal Fusion for Long-Term Water Quality Forecasting",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Water quality prediction suffers from complex periodicity and nonstationarity, amplified by spatial heterogeneity across monitoring sites and dynamic environmental factors like rainfall.",
+  "problem_framing": "Multi-site long-term water quality forecasting integrating heterogeneous time series (sensor) and remote sensing imagery, requiring aligned temporal resolution and cross-modal fusion.",
+  "key_insight": "Stepwise progressive-recursive fusion with explicit trend-cycle decomposition disentangles multi-scale periodicity and preserves site-specific ecological context from imagery.",
+  "method_signature": "Multiscale aligned downsampling → LocTrend trend-cycle decomposition → XGateFusion progressive cross-attention → recursive refinement → multi-scale aggregation",
+  "evaluation_criteria": "MSE and MAE across multiple prediction horizons (96-720 steps) on three real-world datasets (BJ, BTH, Ala) against 12 baseline methods",
+  "negative_result_or_admitted_limitation": "Ablation shows removing recursive fusion noticeably degrades performance; replacing XGateFusion with MLP causes substantial accuracy loss, indicating each component is critical.",
+  "evidence_for_taste": [
+    "removing Recursive Fusion noticeably degrades performance",
+    "A single fusion step may overlook subtle or evolving features",
+    "Stepwise visual integration models spatially uneven and dynamic hydrometeorological impacts",
+    "explicitly disentangling complex periodicity and enhancing temporal interpretability",
+    "enhancing robustness to nonstationarity and site-specific anomalies"
+  ],
+  "thinking_moves": [
+    "Empirical pattern analysis drives architectural choices: cross-site periodic coupling identified via periodogram analysis motivates multiscale decomposition design",
+    "Nonstationarity and ACF decay patterns from data analysis inform the decision to incorporate remote sensing imagery as ecological context",
+    "Criticizes prior work for treating spatial context statically despite rainfall dynamically reshaping upstream-downstream relationships",
+    "Identifies specific failure mode (irreversible information loss in one-shot fusion) and designs recursive refinement as targeted fix"
+  ],
+  "topic_tags": [
+    "water-quality-forecasting",
+    "multimodal-time-series-fusion",
+    "remote-sensing-integration",
+    "trend-cycle-decomposition",
+    "spatially-distributed-prediction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

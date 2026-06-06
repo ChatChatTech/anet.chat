@@ -1,0 +1,41 @@
+{
+  "paper_id": "Parf_ An Adaptive Abstraction-Strategy Tuner for Static Analysis",
+  "doi": "10.1007/s11390-025-5140-6",
+  "title": "PARF: An Adaptive Abstraction-Strategy Tuner for Static Analysis",
+  "year": 2025,
+  "venue": "JOURNAL OF COMPUTER SCIENCE AND TECHNOLOGY",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "静态分析器参数空间巨大且依赖专家经验，手动调参耗时耗力且难以找到高精度参数配置",
+  "problem_framing": "将参数调优建模为概率分布上的迭代采样-分析-精化过程，在有限时间预算内最小化RTE误报数量",
+  "key_insight": "将每个参数分解为P_base与P_delta对偶随机变量：前者通过meet-join精化实现增量知识保留，后者通过完成率自适应缩放实现探索-资源权衡",
+  "method_signature": "基于格结构的概率分布迭代精化框架，通过P_base和P_delta对偶变量实现单调知识保留与资源感知探索",
+  "evaluation_criteria": "在OSCS基准和SV-COMP上对比报警数量、验证得分和完成率，Parf在89.2%基准上达到最少报警",
+  "negative_result_or_admitted_limitation": "Parf无法完全消除误报，因静态分析的本质精度-可靠性权衡；且假设参数独立，忽略参数间复杂依赖关系",
+  "evidence_for_taste": [
+    "the use of sound static analysis tools still relies heavily on expert knowledge and experience",
+    "Parf achieves the least number of alarms on 33/37 (89.2%) benchmarks",
+    "Parf cannot fully eliminate false positives due to the fundamental precision-soundness tradeoffs",
+    "Parf models each parameter as an independent random variable",
+    "Parf misses only 3"
+  ],
+  "thinking_moves": [
+    "将调参问题从离散搜索重框架为概率分布的迭代精化问题，利用格结构保证单调性",
+    "通过dual random variable (P_base+P_delta) 分离'知识保留'与'探索扩张'两个正交目标",
+    "用完成率η_c作为自适应缩放因子，将资源预算约束内化为对探索强度的动态调节",
+    "借鉴抽象解释的格结构语义，将meet-join操作转化为参数空间的增量学习算法",
+    "承认随机性与实用性的张力：报告Parf_Opt与Parf_Avg以区分最佳与平均表现"
+  ],
+  "topic_tags": [
+    "static-analysis-parameter-tuning",
+    "abstract-interpretation",
+    "probability-distribution-refinement",
+    "frama-c-eva",
+    "false-alarm-reduction"
+  ],
+  "cites_own_work": [
+    "Parf: Adaptive Parameter Refining for Abstract Interpretation. ASE 2024"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

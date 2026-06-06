@@ -1,0 +1,41 @@
+{
+  "paper_id": "Wu et al. - 2015 - PhaseU Real-time LOS identification with WiFi",
+  "doi": null,
+  "title": "PhaseU: Real-time LOS identification with WiFi",
+  "year": 2015,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "NLOS propagation deteriorates communication and localization;现有方法因带宽限制无法在 commodity WiFi 上实时识别 LOS",
+  "problem_framing": "将 LOS 识别建模为二元假设检验,核心在于提取有效特征来区分 LOS 和 NLOS 条件",
+  "key_insight": "天线间相位差的方差在 NLOS 条件下更大,且加权多子载波可放大该差异",
+  "method_signature": "利用天线空间分集+子载波频率分集,提出 ρ 因子特征进行实时二元判决",
+  "evaluation_criteria": "LOS detection rate, NLOS detection rate, ROC 曲线, 延迟(ms 级)",
+  "negative_result_or_admitted_limitation": "单天线相位方差不足以准确区分 LOS/NLOS,阈值敏感且无明显 gap",
+  "evidence_for_taste": [
+    "none of existing approaches is directly feasible",
+    "variances in NLOS conditions are magnified",
+    "phase information is an excellent indicator",
+    "no clear gap can be found between the variances",
+    "both LiFi and Rician-K fail to identify"
+  ],
+  "thinking_moves": [
+    "先发现单天线相位方差不足,再引入多天线相位差增强判别力",
+    "从 amplitude 统计假设分布转向 phase 无分布偏好的方差特征",
+    "把移动场景中连续运动分解为瞬时静止片段进行识别",
+    "借鉴 MIMO 空间分集思想但基于 commodity 设备实测验证而非仿真"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-phase-feature",
+    "LOS-NLOS-identification",
+    "MIMO-spatial-diversity",
+    "indoor-localization",
+    "mobile-sensing"
+  ],
+  "cites_own_work": [
+    "LiFi (Zhou et al., IEEE INFOCOM 2014)",
+    "prior work on CSI amplitude features"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

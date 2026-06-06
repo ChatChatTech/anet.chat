@@ -1,0 +1,39 @@
+{
+  "paper_id": "Yang et al. - 2014 - Demo high-precision RFID tracking using COTS devies",
+  "doi": null,
+  "title": "Demo: High-Precision RFID Tracking Using COTS Devices",
+  "year": 2014,
+  "venue": "ACM MobiCom",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "机器人装配线需要厘米级甚至毫米级定位精度",
+  "problem_framing": "从带噪声的相位测量反推标签位置",
+  "key_insight": "利用天线与标签相对运动生成虚拟阵列,通过差分消除硬件差异项",
+  "method_signature": "DAH hologram-based 动态轨迹恢复",
+  "evaluation_criteria": "误差降至10mm以内",
+  "negative_result_or_admitted_limitation": "Naive hologram给出不分明结果,存在大范围高值连续区域",
+  "evidence_for_taste": [
+    "phase measurement as a Gaussian random variable",
+    "cannot be ignored in practice",
+    "which means that the tag diversity is hard to infer",
+    "cannot give distinctive result about the initial position",
+    "The error can be reduced to within 10mm"
+  ],
+  "thinking_moves": [
+    "把天线移动建模为虚拟阵列以获得多视角观测",
+    "从误差分析反推方法设计:先验证噪声分布再建模",
+    "分层递进:先简化可控场景,再放松假设推广"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "COTS-device-tracking",
+    "phase-based-hologram",
+    "virtual-antenna-array",
+    "mm-accuracy-tracking"
+  ],
+  "cites_own_work": [
+    "Tagoram: Real-time tracking of mobile rfid tags to high precision using COTS devices"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "2021_DCOSS_MM_Recognizing_Multiple_Co-evolving_Activities_From_Multi-source_Videos",
+  "doi": null,
+  "title": "M&M: Recognizing Multiple Co-evolving Activities From Multi-source Videos",
+  "year": 2021,
+  "venue": "DCOSS",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "监控系统中多相机重叠视野导致单视图信息不完整，现有方法无法处理多异步共演化活动",
+  "problem_framing": "从多源视频中识别多个异步共演化活动，每个相机仅捕获部分信息，需解决单视图歧义",
+  "key_insight": "将多源视频作为重建3D视角不变模型的机遇，而非直接在2D视频上识别",
+  "method_signature": "多视角2D骨架重建3D模型，图嵌入后底向上约简识别，HMM时序建模",
+  "evaluation_criteria": "Accuracy1正确活动标签，Accuracy2同时正确活动和人数",
+  "negative_result_or_admitted_limitation": "相关物体小难检测(瓶、手机)，相关姿态细微难区分，导致活动识别率仅75%",
+  "evidence_for_taste": [
+    "recognizing multiple co-evolving",
+    "3D view-invariant model",
+    "good scalability",
+    "small set of training samples",
+    "bottom-up manner"
+  ],
+  "thinking_moves": [
+    "把多源信息融合问题重新frame成几何重建问题",
+    "用约简方法替代端到端训练以获得小样本可扩展性",
+    "从异常case(单视图歧义)反推需要3D重建",
+    "分层抽象: 底向上图粗化解析多活动区域"
+  ],
+  "topic_tags": [
+    "multi-view-activity-recognition",
+    "3D-skeleton-reconstruction",
+    "graph-reduction-recognition",
+    "multi-camera-surveillance",
+    "co-evolving-activity-parsing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

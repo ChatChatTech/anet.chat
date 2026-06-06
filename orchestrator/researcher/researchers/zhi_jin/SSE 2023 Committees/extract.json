@@ -1,0 +1,25 @@
+{
+  "paper_id": "SSE 2023 Committees",
+  "doi": "10.1109/sse60056.2023.00011",
+  "title": "SSE 2023 Committees",
+  "year": 2023,
+  "venue": "IEEE SSE 2023",
+  "venue_tier": "workshop",
+  "role": "senior",
+  "motivation": "会议组织架构公示",
+  "problem_framing": "委员会名单编排",
+  "key_insight": "会议服务职能分配",
+  "method_signature": "无",
+  "evaluation_criteria": "无",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [],
+  "thinking_moves": [],
+  "topic_tags": [
+    "conference-organization",
+    "software-engineering",
+    "service-computing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "thin",
+  "extraction_notes": "该文档为会议委员会名单列表，非研究论文。内容仅为组织架构信息（General Chairs、Program Chairs、Program Committee成员名单），无研究动机、问题定义、方法、实验或结论等学术内容。"
+}

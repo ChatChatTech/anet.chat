@@ -1,0 +1,38 @@
+{
+  "paper_id": "FreeEagle_ Detecting Complex Neural Trojans in Data-Free Cases",
+  "doi": "10.48550/arxiv.2302.14500",
+  "title": "FreeEagle: Detecting Complex Neural Trojans in Data-Free Cases",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Model-sharing platforms need to detect trojaned models, but lack access to clean validation data or samples with triggers.",
+  "problem_framing": "Data-free detection of complex backdoors including class-specific attacks and evasive triggers without any auxiliary data.",
+  "key_insight": "Trojaned classifier assigns trigger features higher priority than benign features; generating dummy IRs reveals this priority shift.",
+  "method_signature": "Generate dummy intermediate representations at classifier input via gradient descent; detect posterior outliers.",
+  "evaluation_criteria": "Detection effectiveness across diverse datasets, model architectures, trigger types, and attack strategies.",
+  "negative_result_or_admitted_limitation": "DF-TND is ineffective against class-specific backdoors and evasive triggers, and does not generalize to small models.",
+  "evidence_for_taste": [
+    "focus on analyzing the behavior of the classifier part",
+    "generating dummy intermediate representations rather than dummy raw inputs",
+    "inspecting the classifier part rather than the entire model significantly reduces the time cost",
+    "inspired by the classic anomaly detection method box plot"
+  ],
+  "thinking_moves": [
+    "把数据缺失问题转化为优化生成dummy样本问题",
+    "聚焦于模型分类器部分而非整体以降低搜索空间",
+    "从统计异常检测(box plot)角度设计异常度量指标",
+    "预判可能自适应攻击而设置分离层位置策略",
+    "利用生成dummy中间表示规避真实数据依赖"
+  ],
+  "topic_tags": [
+    "data-free-backdoor-detection",
+    "neural-trojan",
+    "classifier-inspection",
+    "feature-priority-anomaly",
+    "dummy-representation-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

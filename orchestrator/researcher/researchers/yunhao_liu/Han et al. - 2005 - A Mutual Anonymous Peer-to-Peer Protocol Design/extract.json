@@ -1,0 +1,40 @@
+{
+  "paper_id": "Han et al. - 2005 - A Mutual Anonymous Peer-to-Peer Protocol Design",
+  "doi": null,
+  "title": "A Mutual Anonymous Peer-to-Peer Protocol Design",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "P2P文件共享缺乏匿名性，查询者和响应者身份均被邻居和路径上攻击者暴露",
+  "problem_framing": "在去中心化P2P系统中设计双向匿名协议，需同时隐藏发起方、响应方及通信路径",
+  "key_insight": "用Shamir秘密分享将查询信息分割为n份随机分布，任何收到k份的节点可恢复并洪泛查询",
+  "method_signature": "Shamir秘密分享+SIDA信息分散+洋葱路由实现P2P双向匿名通信",
+  "evaluation_criteria": "查询覆盖范围、响应时间、安全开销、通信开销",
+  "negative_result_or_admitted_limitation": "降低Shamir阈值可加速但会增加流量；Shortcut协议比SSMP慢40-60%而非更快",
+  "evidence_for_taste": [
+    "cannot provide anonymity guarantees",
+    "high degree of anonymity",
+    "low cryptography processing overhead",
+    "optimize the balance between",
+    "computational security to responders",
+    "malicious peers may cooperate",
+    "probabilistic forwarding method"
+  ],
+  "thinking_moves": [
+    "把匿名问题拆解为发起方、响应方、通信路径三层，分别用不同密码学原语保护",
+    "观察现有P2P系统匿名性的两个具体漏洞：邻居暴露身份、路径上攻击者窃取",
+    "将查询洪泛重新设计为秘密分享分布式查询，利用概率触发而非全局广播",
+    "通过延迟确认机制避免响应者直接暴露，在洋葱路径上建立双向返回通道"
+  ],
+  "topic_tags": [
+    "P2P匿名通信",
+    "秘密分享协议",
+    "洋葱路由",
+    "信息分散算法",
+    "去中心化系统"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "作者列表完整但venue信息未在正文中明确给出，方法细节完整但缺乏对失败场景的系统性讨论"
+}

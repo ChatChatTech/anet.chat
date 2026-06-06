@@ -1,0 +1,37 @@
+{
+  "paper_id": "Liu et al. - 2016 - Lasagna towards deep hierarchical understanding and searching over mobile sensing data",
+  "doi": null,
+  "title": "Lasagna: Towards Deep Hierarchical Understanding and Searching over Mobile Sensing Data",
+  "year": 2016,
+  "venue": "ACM MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有方法只能识别预定义活动，需要标注数据，无法处理任意活动的深层理解和语义搜索",
+  "problem_framing": "将任意活动的表示建模为在运动基向量空间中的嵌入，基向量通过无监督深度学习从多样化未标注数据中提取",
+  "key_insight": "将线性代数中basis概念引入运动数据空间，不同层级的卷积核提供多分辨率感知场，实现时间不变的分层描述符",
+  "method_signature": "堆叠CRBM无监督提取运动基，多分辨率分层描述符，DBSCAN聚类构建语义索引进行活动搜索",
+  "evaluation_criteria": "活动分类精度98.9%、搜索召回率近100%、搜索精度约90%",
+  "negative_result_or_admitted_limitation": "连续运动数据的合理分割比文本处理更具挑战；缺乏活动词汇表使语义索引难以构建；仅验证于加速计和陀螺仪运动数据",
+  "evidence_for_taste": [
+    "Neglecting the hierarchical nature",
+    "rich dynamics and wide-spectrum make it laboursome",
+    "Lack of prior knowledge greatly increase the challenge",
+    "is still inefficient to apply all recognition models"
+  ],
+  "thinking_moves": [
+    "将活动识别问题从分类任务重新框定为嵌入空间表示问题",
+    "从线性代数basis概念获得灵感，将运动基向量作为原子表示",
+    "利用CRBM多层池化结构实现不同分辨率的层级表示",
+    "通过snapshot结构解决查询数据与搜索数据之间的时间尺度不匹配问题"
+  ],
+  "topic_tags": [
+    "mobile-sensing-activity-recognition",
+    "unsupervised-deep-learning-CRBM",
+    "hierarchical-motion-descriptor",
+    "semantic-activity-search",
+    "time-invariant-representation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

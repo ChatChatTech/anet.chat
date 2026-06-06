@@ -1,0 +1,39 @@
+{
+  "paper_id": "ZC3_ Zero-Shot Cross-Language Code Clone Detection",
+  "doi": "10.48550/arxiv.2308.13754",
+  "title": "ZC3: Zero-Shot Cross-Language Code Clone Detection",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "跨语言代码克隆检测需求增长，但跨语言平行数据稀缺且收集成本高昂",
+  "problem_framing": "零样本跨语言代码克隆检索问题，在无标注平行语料情况下对齐不同编程语言的语义表示",
+  "key_insight": "通过对比片段预测构造异构表示空间，结合领域对抗学习和循环一致性学习实现语言间对齐与克隆类型区分",
+  "method_signature": "CSP构造异构空间+领域对抗学习+循环一致性学习约束",
+  "evaluation_criteria": "MAP指标，在CSN_CC/CodeJam/AtCoder/XLCoST四个跨语言数据集上验证",
+  "negative_result_or_admitted_limitation": "模型性能依赖于实现细节和超参数调优",
+  "evidence_for_taste": [
+    "without any parallel data",
+    "isomorphic representation space",
+    "aligned among different languages",
+    "diacritical for different types",
+    "子句关系统一表示",
+    "语言无关的对抗训练"
+  ],
+  "thinking_moves": [
+    "把跨语言对齐问题分解为异构空间构造+对抗对齐+循环一致性三重约束",
+    "用 monolingual 数据训练跨语言能力，避免昂贵的平行语料",
+    "借鉴自然语言处理域适应技术(GRL)到代码表示场景",
+    "将图像翻译的循环一致性思想迁移到代码语义对齐"
+  ],
+  "topic_tags": [
+    "zero-shot-cross-language-clone-detection",
+    "code-representation-alignment",
+    "contrastive-snippet-prediction",
+    "adversarial-domain-learning",
+    "cycle-consistency-code"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

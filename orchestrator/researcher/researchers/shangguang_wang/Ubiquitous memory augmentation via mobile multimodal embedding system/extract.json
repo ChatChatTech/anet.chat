@@ -1,0 +1,38 @@
+{
+  "paper_id": "Ubiquitous memory augmentation via mobile multimodal embedding system",
+  "doi": "10.1038/s41467-025-60802-5",
+  "title": "Ubiquitous memory augmentation via mobile multimodal embedding system",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Mobile devices generate multimodal data but lack efficient retrieval; MEM inference is too slow and energy-intensive for on-device deployment",
+  "problem_framing": "On-device multimodal embedding as memory palace service with resource-constrained execution requiring trade-offs between throughput, accuracy, and energy",
+  "key_insight": "Offload full embedding cost to infrequent query phase via coarse-grained early-exit embeddings, mirroring brain's selective memory retention",
+  "method_signature": "Early-exit multimodal embedding with data-aware pre-exit prediction, progressive LoRA healing, and speculative fine-grained retrieval",
+  "evaluation_criteria": "Throughput improvement, retrieval accuracy relative to full model, energy reduction, memory footprint on mobile devices",
+  "negative_result_or_admitted_limitation": "Reminisce has slightly higher peak memory than naive layer-wise baseline due to batching parallelism overhead, though still within practical range",
+  "evidence_for_taste": [
+    "early exit aligns with our design principles",
+    "mirrors the human brain",
+    "acceptable tradeoff",
+    "unreasonable ineffectiveness",
+    "little to no benefit during inference"
+  ],
+  "thinking_moves": [
+    "把完整的embedding计算卸载到查询阶段",
+    "从人脑记忆机制获得设计启发",
+    "承认早退出方法的并行度缺陷并提出预判策略",
+    "用progressive方式解决LoRA参数共享与精度损失的矛盾"
+  ],
+  "topic_tags": [
+    "on-device ML inference",
+    "multimodal embedding",
+    "early-exit neural networks",
+    "mobile system optimization",
+    "memory augmentation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "WassFFed_ Wasserstein Fair Federated Learning",
+  "doi": "10.48550/arxiv.2411.06881",
+  "title": "WassFFed: Wasserstein Fair Federated Learning",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "FL训练数据地理分布多态,现有公平方法使用代理函数导致优化结果与真实分类结果不一致,且非IID数据使局部公平模型聚合后难以保证全局公平。",
+  "problem_framing": "将公平性约束从离散的指示函数放松为连续输出分布间的Wasserstein距离,通过在全局barycenter对齐各敏感组输出分布来实现组公平。",
+  "key_insight": "不计算基于代理函数的公平损失,直接约束模型输出分布独立于敏感属性,从而绕过代理函数带来的估计误差。",
+  "method_signature": "基于Wasserstein barycenter对齐局部模型输出分布,使用最优传输矩阵指导梯度下降更新。",
+  "evaluation_criteria": "Accuracy(↑), M_DP(↓), M_EOP(↓)在Adult/Compas/CelebA三个数据集上与FedAvg及SOTA公平FL方法对比。",
+  "negative_result_or_admitted_limitation": "WassFFed consistently excels in more complex classification tasks, showcasing its remarkable generalizability.",
+  "evidence_for_taste": [
+    "fail to deal with the inconsistency",
+    "does not always yield a globally fair model",
+    "inherent estimation errors associated with the use of surrogate functions",
+    "avoids any inconsistency between the global model and local models",
+    "ensure that the outputs...remain independent of various user groups"
+  ],
+  "thinking_moves": [
+    "识别代理函数与真实指标函数的gap,用Figure 1可视化不一致案例说明问题本质",
+    "将公平优化问题重新框架为输出分布对齐问题,而不是约束优化问题",
+    "利用Wasserstein barycenter的几何性质(三边形不等式)保证传输路径最优",
+    "在服务器端计算全局barycenter而非修改局部系数,应对非IID数据异构性"
+  ],
+  "topic_tags": [
+    "federated-learning-fairness",
+    "wasserstein-barycenter",
+    "optimal-transport-fairness",
+    "group-fairness-multi-group",
+    "non-IID-federated-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

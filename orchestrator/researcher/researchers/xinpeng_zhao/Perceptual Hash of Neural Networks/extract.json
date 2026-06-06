@@ -1,0 +1,37 @@
+{
+  "paper_id": "Perceptual Hash of Neural Networks",
+  "doi": "10.3390/sym14040810",
+  "title": "Perceptual Hash of Neural Networks",
+  "year": 2022,
+  "venue": "Symmetry",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "DNN模型面临被盗版窃取风险,需技术手段发现上传模型是否涉嫌侵权,检索相似模型",
+  "problem_framing": "将DNN模型检索形式化为感知哈希问题,通过图结构编码+汉明距离快速检索",
+  "key_insight": "把神经网络模型视为计算图,用ONNX统一转换框架兼容性,合并操作层为节点以提取语义信息",
+  "method_signature": "两阶段图神经网络HNN-Net:图生成器转DNN为图,GNN生成Q-bit紧凑二值哈希码",
+  "evaluation_criteria": "Top-k召回率/精确率/F1分数,对比GHashing及 ablation study验证各组件贡献",
+  "negative_result_or_admitted_limitation": "64位哈希码可能过拟合导致测试集性能下降;当前对网络深层功能信息利用有限",
+  "evidence_for_taste": [
+    "avalanche effect不适合感知哈希",
+    "merge operation brings huge performance improvements",
+    "overfitting can result, leading to a decrease in performance",
+    "the use of deep information in DNN is very limited"
+  ],
+  "thinking_moves": [
+    "把图像哈希的perceptual概念迁移到模型检索,强调相似输入产生相似哈希",
+    "利用ONNX标准统一不同框架的模型格式,保证方法通用性",
+    "借鉴GHashing用嵌入函数学习优于直接学习哈希函数的思想",
+    "通过ablation验证分类损失和合并操作的必要性"
+  ],
+  "topic_tags": [
+    "DNN模型版权保护",
+    "神经网络感知哈希",
+    "图神经网络模型检索",
+    "模型结构相似度",
+    "哈希编码量化"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

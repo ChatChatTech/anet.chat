@@ -1,0 +1,38 @@
+{
+  "paper_id": "Non-Interactive and Secure Data Aggregation Scheme for Internet of Things",
+  "doi": "10.3390/electronics10202464",
+  "title": "Non-Interactive and Secure Data Aggregation Scheme for Internet of Things",
+  "year": 2021,
+  "venue": "Electronics",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "现有数据聚合方案需要大量用户间交互，导致高计算和通信开销，移动设备可能随时掉线",
+  "problem_framing": "设计一种非交互式多维安全数据聚合方案，使用加法秘密分享掩码数据并发往两台非共谋服务器",
+  "key_insight": "通过加法秘密分享将数据分成两部分，用户分别发给两服务器，利用两服务器非共谋假设消除用户间交互需求",
+  "method_signature": "非交互式秘密分享聚合+双非共谋服务器+随机数掩码+可验证计算",
+  "evaluation_criteria": "计算复杂度、通信开销降低，支持用户离线，验证聚合结果正确性，保护输入输出隐私",
+  "negative_result_or_admitted_limitation": "两台云服务器一旦共谋，隐私可能受影响；本文安全假设较强是局限；未来将聚焦单服务器场景",
+  "evidence_for_taste": [
+    "does not realize non-interactivity",
+    "the probability is negligible",
+    "will not fail to be performed properly",
+    "our scheme has certain advantages",
+    "the other three schemes is much higher than ours"
+  ],
+  "thinking_moves": [
+    "指出前人方案的核心缺陷（需要用户间交互），并将此作为创新切入点",
+    "通过分解问题为非交互性和隐私保护两个子目标，分别设计加法秘密分享和双服务器架构",
+    "将服务器诚实但好奇模型下的隐私泄露风险量化为概率2^(-|p|)",
+    "通过对比表格显式宣称相比[12][13][16][20]的优势，承认自身局限性",
+    "基于BDHE难题证明验证算法安全性，将直觉的安全直觉形式化为可证明安全性"
+  ],
+  "topic_tags": [
+    "IoT-data-aggregation",
+    "secret-sharing",
+    "non-interactive-protocol",
+    "privacy-preserving",
+    "verifiable-computation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

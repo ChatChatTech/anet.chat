@@ -1,0 +1,44 @@
+{
+  "paper_id": "Oleszkiewicz et al. - 2004 - Parallel Network RAM Effectively Utilizing Global Cluster Memory for Large Data-Intensive Parallel",
+  "doi": null,
+  "title": "Parallel Network RAM: Effectively Utilizing Global Cluster Memory for Large Data-Intensive Parallel Programs",
+  "year": 2004,
+  "venue": "Michigan State University",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Disk paging在并行计算中代价极高,且现有并行调度不考虑内存需求,导致节点过载",
+  "problem_framing": "并行进程需同步,各节点独立申请网络RAM会导致分配不均,最慢进程拖慢整体",
+  "key_insight": "需要协调机制使同一并行作业的节点获得等量网络RAM,使进程同速运行",
+  "method_signature": "PNR通过本地管理器(super-peer)协调分配网络RAM,实现进程级透明远程分页",
+  "evaluation_criteria": "平均响应时间、PNR相对DP的优化率、节点内存分配均匀度",
+  "negative_result_or_admitted_limitation": "10 Mbps网络下PNR性能远逊于纯磁盘分页;轻负载下NR略优于PNR",
+  "evidence_for_taste": [
+    "should be avoided",
+    "Coordination is required",
+    "Optimization rate is a modest 31%",
+    "PNR should not be considered on systems with low bandwidth",
+    "NR has consistently lower optimization rates",
+    "less synchronization per parallel process",
+    "extremely expensive in the context of scientific parallel computing"
+  ],
+  "thinking_moves": [
+    "将并行调度中内存与CPU资源解耦,单独优化",
+    "从同步约束推导出协调分配的必要性,非简单借用串行网络RAM",
+    "用仿真实验揭示参数边界:网络带宽低时方案失效",
+    "通过收敛性分析说明方案适用范围而非声称普适"
+  ],
+  "topic_tags": [
+    "cluster-memory-allocation",
+    "parallel-job-scheduling",
+    "network-RAM",
+    "peer-to-peer-virtual-memory",
+    "page-fault-mitigation"
+  ],
+  "cites_own_work": [
+    "Xiao et al. 2002",
+    "Xiao et al. 2004",
+    "Xiao et al. 2000"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Yunhao Liu为合作作者身份;论文为会议/期刊论文但具体venue未在文中标明;含大量实验数据和边界条件讨论,提取完整"
+}

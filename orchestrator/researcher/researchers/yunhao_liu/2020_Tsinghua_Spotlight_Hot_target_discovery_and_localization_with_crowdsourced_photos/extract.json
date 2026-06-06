@@ -1,0 +1,38 @@
+{
+  "paper_id": "2020_Tsinghua_Spotlight_Hot_target_discovery_and_localization_with_crowdsourced_photos",
+  "doi": null,
+  "title": "Spotlight: Hot Target Discovery and Localization with Crowdsourced Photos",
+  "year": 2020,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "Crowd photos capture attention but现有定位方法需要prior deployment或intentional photographing，无法passive localization",
+  "problem_framing": "Define hot targets: objects with overlapping FOVs in crowdsourced photos; localize using camera GPS+azimuth rays",
+  "key_insight": "Objects drawing attention produce overlapping FOVs; localization by ray intersection from multi-view photos on ground plane",
+  "method_signature": "K-partite graph + maximum weight clique + plane geometry ray intersection localization",
+  "evaluation_criteria": "Localization error (meters) vs number of overlapping valid photos (5/10/15)",
+  "negative_result_or_admitted_limitation": "incorrectly combined object image produces significant error; incomplete combination less harmful than false combination",
+  "evidence_for_taste": [
+    "Incompletely combined ones are better than incorrectly combined ones",
+    "a small error in the azimuth is likely to lead to a very poor localization result",
+    "an incorrectly combined object image produces a significant error in localization",
+    "the absence of a single object image will make little difference"
+  ],
+  "thinking_moves": [
+    "把perception问题reframe成DFPL device-free passive localization问题",
+    "利用crowdsourcing天然冗余性抑制个体测量误差",
+    "宁可false negative不要false positive以保护后续定位精度",
+    "把object combination问题建模为图论的最大加权团问题",
+    "强调strict combining strategy而非aggressive path search"
+  ],
+  "topic_tags": [
+    "crowdsourced photo localization",
+    "device-free passive localization",
+    "multi-view object combination",
+    "K-partite graph clique optimization",
+    "mobile photo azimuth estimation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Yunhao Liu appears as last author (Changjiang professor, dean of School of Software at Tsinghua), indicating senior role. Venue not explicitly stated in paper text."
+}

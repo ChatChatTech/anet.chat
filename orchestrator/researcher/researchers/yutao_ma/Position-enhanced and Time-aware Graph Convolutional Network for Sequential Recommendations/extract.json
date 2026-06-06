@@ -1,0 +1,44 @@
+{
+  "paper_id": "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations",
+  "doi": "10.48550/arxiv.2107.05235",
+  "title": "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations",
+  "year": 2021,
+  "venue": "ACM Transactions on Information Systems",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有方法只关注用户动态行为,忽视物品的时间演化特性;现有方法只建模第一阶用户-物品交互,忽视高阶连接信息",
+  "problem_framing": "将用户-物品交互建模为二部图,通过图卷积操作同时学习用户和物品的动态表示,捕获高阶连通性",
+  "key_insight": "在图卷积中引入位置编码和时间编码,利用自注意力聚合器同时建模序列模式和时序影响,堆叠多层图卷积捕获高阶协作信号",
+  "method_signature": "PTGCN:基于二部图的时序感知图卷积网络,自注意力聚合器聚合邻居节点特征,多层图卷积编码高阶连接",
+  "evaluation_criteria": "Hit Ratio (HR@K) 和 Normalized Discounted Cumulative Gain (NDCG@K) 两个排序评估指标",
+  "negative_result_or_admitted_limitation": "现有GCN方法无法显式编码用户-物品二部图中的高阶连接,无法统一建模用户和物品的时序动态",
+  "evidence_for_taste": [
+    "fail to capture short- and long-term sequential information",
+    "neglecting the temporal dynamics of item properties",
+    "consider only direct user-item interactions",
+    "cannot effectively capture the high-order collaborative information",
+    "make a better trade-off between recommendation performance and model training efficiency"
+  ],
+  "thinking_moves": [
+    "识别现有方法的两大缺陷:忽视物品时序动态和缺乏高阶连接建模",
+    "将时序推荐问题从序列建模重新框架为图结构问题",
+    "通过二部图显式编码用户-物品交互的高阶连接",
+    "设计自注意力聚合器同时建模序列模式和时序影响",
+    "通过消融实验验证各模块贡献"
+  ],
+  "topic_tags": [
+    "sequential-recommendation",
+    "graph-convolutional-network",
+    "bipartite-graph",
+    "self-attention-aggregator",
+    "high-order-connectivity",
+    "temporal-dynamics"
+  ],
+  "cites_own_work": [
+    "Multi-modal Bayesian embedding for POI recommendation (2020)",
+    "Attention-based spatiotemporal LSTM network (2019)",
+    "DAN-SNR deep attentive network (2021)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文结构完整,包含完整的动机分析、问题定义、方法设计、实验验证和结论。方法设计细节充分,包括嵌入层、卷积层和预测层的完整描述。消融实验验证了物品时序动态和高阶连接的有效性。 | md truncated to head40k+tail20k"
+}

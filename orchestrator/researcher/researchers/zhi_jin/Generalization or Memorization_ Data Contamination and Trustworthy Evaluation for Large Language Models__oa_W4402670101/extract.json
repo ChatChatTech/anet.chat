@@ -1,0 +1,37 @@
+{
+  "paper_id": "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101",
+  "doi": "10.18653/v1/2024.findings-acl.716",
+  "title": "Generalization or Memorization: Data Contamination and Trustworthy Evaluation for Large Language Models",
+  "year": 2024,
+  "venue": "ACL Findings",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "LLM评测结果可能源于记忆而非真正的泛化能力，且训练数据的黑箱性使污染检测极具挑战",
+  "problem_framing": "将数据污染检测形式化为通过分析LLM输出分布的峰值程度来识别测试数据是否被训练过",
+  "key_insight": "训练会使模型输出分布更尖峰——记忆导致模型倾向于生成与训练数据相同或高度相似的文本",
+  "method_signature": "CDD利用编辑距离分布的峰值检测污染，TED通过排除峰值和去重修正输出分布",
+  "evaluation_criteria": "检测任务用Accuracy/F1/AUC，评测任务用Pass@1性能衰减程度",
+  "negative_result_or_admitted_limitation": "LoRA微调代替全参数微调可能与真实污染场景有差异，且假设基础模型未受污染",
+  "evidence_for_taste": [
+    "impact of data contamination is substantial",
+    "CDD alone maintains robust performance",
+    "main function is provided by exclude peakedness",
+    "The advantage of TED is that the performance influence on the uncontaminated model is small and almost negligible"
+  ],
+  "thinking_moves": [
+    "把记忆导致输出相似的直觉转化为可量化的编辑距离分布峰值度量",
+    "用贪婪搜索输出s_t=0替代原始答案y以捕获隐式污染",
+    "先通过模拟不同污染程度验证假设，再用真实场景测试",
+    "检测与纠偏双管齐下，而非只做检测"
+  ],
+  "topic_tags": [
+    "LLM-data-contamination-detection",
+    "output-distribution-peakedness",
+    "edit-distance-distribution",
+    "trustworthy-evaluation",
+    "contamination-mitigation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

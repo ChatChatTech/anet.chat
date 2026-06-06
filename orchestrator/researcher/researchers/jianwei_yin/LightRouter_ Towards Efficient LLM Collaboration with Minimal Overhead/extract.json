@@ -1,0 +1,38 @@
+{
+  "paper_id": "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead",
+  "doi": "10.48550/arxiv.2505.16221",
+  "title": "LightRouter: Towards Efficient LLM Collaboration with Minimal Overhead",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "LLM选择面临成本与性能权衡困境，现有集成方法开销过大(如MoA超单模型600%)",
+  "problem_framing": "将多模型协同建模为语义一致性与总token成本的多目标优化问题",
+  "key_insight": "借鉴Kubernetes轻量级探测机制，用少量boot tokens快速评估模型潜力并提前淘汰低质量候选",
+  "method_signature": "双阶段自适应选择：boot token评估→top-k筛选→聚合输出",
+  "evaluation_criteria": "多基准精度(SOTA对比)与推理成本削减比例(Pareto前沿分析)",
+  "negative_result_or_admitted_limitation": "对开放域和新颖任务适应性不确定；无法限制CoT推理长度；静态token预算不区分任务难度",
+  "evidence_for_taste": [
+    "requires only a minimal number of boot tokens",
+    "the actual impact depends heavily on the distribution",
+    "can severely degrade the aggregated results",
+    "relying on a single model or a single response is insufficient",
+    "optimal k* balances semantic consistency improvement and cost"
+  ],
+  "thinking_moves": [
+    "从分布式系统调度(Kubernetes)类比迁移到LLM路由设计",
+    "将集成方法的方差削减理论形式化并推导出最优k*选择条件",
+    "通过boxplot揭示MoA对候选池组成敏感的经验观察",
+    "用violin plot可视化单模型输出不稳定性来论证聚合必要性"
+  ],
+  "topic_tags": [
+    "LLM-routing",
+    "multi-model-ensemble",
+    "cost-efficient-inference",
+    "adaptive-model-selection",
+    "early-exit-strategy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "作者角色和具体年份无法从arXiv元数据确定；论文未明确标注NeurIPS投稿但包含检查表，推测为会议投稿"
+}

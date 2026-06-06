@@ -1,0 +1,37 @@
+{
+  "paper_id": "2019_TON_firestar",
+  "doi": null,
+  "title": "Finding the Stars in the Fireworks: Deep Understanding of Motion Sensor Fingerprint",
+  "year": 2019,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "手机传感器硬件差异产生可追踪指纹,现有方法在动态场景下性能大幅下降,用户隐私面临威胁",
+  "problem_framing": "通过理论容量模型分析设备区分能力;设计端到端深度网络自动提取鲁棒特征;平衡匿名化与数据可用性",
+  "key_insight": "多LSTM结构能从噪声传感器数据中自动学习设备固有特征,而非依赖人工设计特征",
+  "method_signature": "多LSTM指纹提取+生成对抗匿名化",
+  "evaluation_criteria": "动态场景下F-score、精度、多数投票准确率",
+  "negative_result_or_admitted_limitation": "现有70特征方法在动态场景下F-score从93%骤降至79%,依赖手工特征的鲁棒性不足",
+  "evidence_for_taste": [
+    "state-of-the-art work achieves 79% F-score",
+    "handcrafted features cannot capture essential characteristics",
+    "take us about 5 seconds to extract 70 features",
+    "accuracy reduces to 89% due to influence of human behavior fingerprints",
+    "the calibration requires specialized equipments"
+  ],
+  "thinking_moves": [
+    "先建立理论容量模型回答'能否区分足够多设备',再设计数据驱动的端到端方法",
+    "将传感器指纹问题从传统特征工程转向序列建模",
+    "用对抗生成框架同时解决匿名化与可用性矛盾"
+  ],
+  "topic_tags": [
+    "motion-sensor-fingerprint",
+    "LSTM-sequential-modeling",
+    "device-privacy",
+    "anonymization-utility-tradeoff",
+    "multidimensional-capacity-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

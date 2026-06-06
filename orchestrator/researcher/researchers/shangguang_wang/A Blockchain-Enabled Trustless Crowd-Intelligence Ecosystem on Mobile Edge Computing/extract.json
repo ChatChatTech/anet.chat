@@ -1,0 +1,42 @@
+{
+  "paper_id": "A Blockchain-Enabled Trustless Crowd-Intelligence Ecosystem on Mobile Edge Computing",
+  "doi": "10.1109/tii.2019.2896965",
+  "title": "A Blockchain-Enabled Trustless Crowd-Intelligence Ecosystem on Mobile Edge Computing",
+  "year": 2019,
+  "venue": "IEEE Transactions on Industrial Informatics",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "三方利益冲突导致缺乏互信,数据需经远程平台中转造成网络拥塞",
+  "problem_framing": "将信任问题分解为激励对齐、信任建立、劳动力短缺三个子问题",
+  "key_insight": "区块链智能合约可在边缘服务器上实现去中心化信任,使强纳什均衡成为可能",
+  "method_signature": "奖励惩罚模型+区块链智能合约+边缘计算masternode形成去中心化众智平台",
+  "evaluation_criteria": "任务完成延迟和最终答案准确率",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "dominant strategy for both is to leave",
+    "the only strong Nash equilibrium",
+    "beating the prisoner dilemma",
+    "a larger belief value can gain more",
+    "it can help to reduce excessive latency",
+    "neither does it get stuck in a local optimum",
+    "we successfully find a family of reward-penalty functions"
+  ],
+  "thinking_moves": [
+    "把三方博弈的囚徒困境转化为区块链保障的可信合作",
+    "用强纳什均衡证明边缘服务器有足够激励加入生态系统",
+    "将众包与众感知统一为无差别的人机混合工人池",
+    "通过边缘服务器替代远程云来解决网络拥塞问题",
+    "用预期收益函数设计激励兼容的奖惩函数族"
+  ],
+  "topic_tags": [
+    "crowd-intelligence-incentive",
+    "reward-penalty-model",
+    "blockchain-smart-contract",
+    "mobile-edge-computing",
+    "strong-Nash-equilibrium"
+  ],
+  "cites_own_work": [
+    "Reward or Penalty: Aligning Incentives of Stakeholders in Crowdsourcing, IEEE TMC, 2018"
+  ],
+  "extraction_quality": "full"
+}

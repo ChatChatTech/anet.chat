@@ -1,0 +1,38 @@
+{
+  "paper_id": "LLM as a System Service on Mobile Devices",
+  "doi": "10.48550/arxiv.2403.11805",
+  "title": "LLM as a System Service on Mobile Devices",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLM需要本地执行保护隐私,但LLM上下文(KV缓存)消耗大量内存,传统内存管理不适合",
+  "problem_framing": "如何在受限内存下最小化LLM上下文切换延迟,将LLM作为系统级服务进行统一内存管理",
+  "key_insight": "KV缓存可分块、可不等压、可重算,提出细粒度块级KV缓存压缩与换入换出策略",
+  "method_signature": "LLMS三层技术:容差感知压缩+换入重算流水线+LCTRU块生命周期管理",
+  "evaluation_criteria": "上下文切换延迟相比基线降低2个数量级,6数据集无明显精度损失",
+  "negative_result_or_admitted_limitation": "未讨论chunk size选择的理论下界,块级管理在极端内存压力下的最坏情况开销",
+  "evidence_for_taste": [
+    "LLM context is more likely to be the bottleneck",
+    "LLM contexts are more expensive in terms of time/energy",
+    "The conventional app-level memory management is not satisfactory",
+    "swapping heavy and least recent used chunks out to disk",
+    "maximize the overall information intensity of a context"
+  ],
+  "thinking_moves": [
+    "识别LLM与传统DNN的本质差异:有状态、可压缩、可重算",
+    "借鉴OS分页机制设计块级内存管理,平衡内存利用率与IO带宽",
+    "利用注意力分数量化信息密度,实现全局最优压缩分配",
+    "将LLM上下文管理从app级内存管理中解耦出来"
+  ],
+  "topic_tags": [
+    "mobile-LLM-deployment",
+    "KV-cache-management",
+    "system-level-LLM-service",
+    "context-switching-latency",
+    "chunk-wise-swapping"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

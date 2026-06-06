@@ -1,0 +1,38 @@
+{
+  "paper_id": "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead",
+  "doi": "10.48550/arxiv.2505.16221",
+  "title": "LightRouter: Towards Efficient LLM Collaboration with Minimal Overhead",
+  "year": 2025,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "LLM选择面临性能与成本的权衡困境，单模型不稳定，传统集成方法计算开销过大",
+  "problem_framing": "如何在有限预算下最大化语义一致性S(Y_final, Y_true) - λT_total",
+  "key_insight": "受Kubernetes启发，先用boot tokens快速探测模型潜力，仅让top-k模型继续生成以控制成本",
+  "method_signature": "两阶段自适应选择：boot tokens初筛+top-k聚合",
+  "evaluation_criteria": "多基准准确率与推理成本的帕累托最优权衡",
+  "negative_result_or_admitted_limitation": "MoA有效性不保证，对候选池组成高度敏感；当前仅支持非推理模型，无法限制CoT长度",
+  "evidence_for_taste": [
+    "lightweight GET requests for status checking",
+    "the most promising workloads for resource allocation",
+    "the 200-token budget represents an effective balance point",
+    "LightRouter consistently lies on the Pareto frontier",
+    "Adding noisy candidates increases risk"
+  ],
+  "thinking_moves": [
+    "从分布式系统调度思想获得启发",
+    "将模型选择建模为方差缩减的聚合问题",
+    "用boot tokens实现早期截断决策",
+    "通过帕累托最优性定义方法有效性"
+  ],
+  "topic_tags": [
+    "LLM-routing",
+    "multi-model-ensemble",
+    "cost-efficiency",
+    "adaptive-selection",
+    "token-budgeting"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

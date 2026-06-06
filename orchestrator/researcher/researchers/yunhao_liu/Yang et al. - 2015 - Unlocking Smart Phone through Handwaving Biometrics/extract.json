@@ -1,0 +1,39 @@
+{
+  "paper_id": "Yang et al. - 2015 - Unlocking Smart Phone through Handwaving Biometrics",
+  "doi": null,
+  "title": "OpenSesame: Unlocking Smart Phone through Handwaving Biometrics",
+  "year": 2015,
+  "venue": "IEEE Transactions on Mobile Computing (implied)",
+  "venue_tier": "strong",
+  "role": "senior",
+  "motivation": "现有解锁方式(滑动/PIN/图案/指纹)在安全性、成本、可用性上存在缺陷,需要更自然的用户认证方式",
+  "problem_framing": "将手挥动作的加速度序列转化为可区分用户的特征向量,实现身份认证",
+  "key_insight": "用户挥动手臂的习惯由其生理特征(臂长、腕力等)决定,具有唯一性和稳定性",
+  "method_signature": "四类统计波函数(S1-S4)提取特征,SVM分类器验证用户身份",
+  "evaluation_criteria": "误拒率(FNR)、误受率(FPR)、真阳率(TPR),以及解锁时间与用户主观评分",
+  "negative_result_or_admitted_limitation": "普通采样模式仅55%准确率(高频90%);快速运动下FNR轻微上升约7%",
+  "evidence_for_taste": [
+    "simple graphic passwords are easy to be peeked",
+    "distance-based waving functions perform better",
+    "the variance of S4 is smaller than S3",
+    "the inconvenience overweighs the security",
+    "user have a little concerns about the security"
+  ],
+  "thinking_moves": [
+    "从传感器选型出发,排除相机/麦克风等高能耗方案,选择低功耗加速度计",
+    "将连续加速度序列可视化于三维A空间,直观展示不同用户轨迹形态差异",
+    "用概率密度函数(PDF)而非原始数据点表征波形,实现旋转和平移不变性",
+    "比较DTW等时序对齐方法的局限性,突出统计特征对噪声和姿态变化的鲁棒性",
+    "通过消融实验对比四类波函数的稳定性和区分度,逐步锁定S4为最优方案"
+  ],
+  "topic_tags": [
+    "handwaving-biometrics",
+    "accelerometer-authentication",
+    "SVM-user-verification",
+    "smartphone-security",
+    "behavioral-biometrics"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

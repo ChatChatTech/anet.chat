@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhu et al. - 2014 - Context-free Attacks Using Keyboard Acoustic Emanations",
+  "doi": null,
+  "title": "Context-free Attacks Using Keyboard Acoustic Emanations",
+  "year": 2014,
+  "venue": "CCS",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Context-based keystroke attacks fail on random passwords and require costly language model training",
+  "problem_framing": "Geometric localization of keystrokes via TDoA, without knowing keyboard-phone relative pose",
+  "key_insight": "Overlay half-hyperbola bands from multiple microphone pairs to narrow candidate key regions",
+  "method_signature": "TDoA via GCC-PHAT + hyperbola band overlay + keyboard pose estimation",
+  "evaluation_criteria": "72.2% keystroke recovery rate, tested on Apple and Filco keyboards",
+  "negative_result_or_admitted_limitation": "Assumes known keyboard layout; cannot distinguish keyboards with different key arrangements like 'fn' button",
+  "evidence_for_taste": [
+    "high cost at the context learning stage",
+    "not valid in many cases, e.g., passwords",
+    "successive false recognitions",
+    "narrow the effective candidate areas",
+    "a conservative method to estimate the hyperbola band"
+  ],
+  "thinking_moves": [
+    "把context-dependent问题reframe成纯几何定位问题",
+    "先证理论可行(分辨率<键距)，再设计算法",
+    "用conservative保守估计处理非理想采样误差",
+    "从信号处理角度处理reverberation而非用learning",
+    "通过maximum intersections降低枚举搜索复杂度"
+  ],
+  "topic_tags": [
+    "acoustic-side-channel",
+    "keystroke-localization",
+    "TDoA-geometric-methods",
+    "mobile-sensor-security",
+    "keyboard-emanations"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

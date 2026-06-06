@@ -1,0 +1,36 @@
+{
+  "paper_id": "UniEvent_ Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning",
+  "doi": "10.18653/v1/2023.acl-long.391",
+  "title": "Unified Generative Model with Multi-Dimensional Prefix for Zero-Shot Event-Relational Reasoning",
+  "year": 2023,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "事件关系推理任务标注成本高、数据稀缺，现有知识迁移方法难以同时跨关系类型和推理形式泛化",
+  "problem_framing": "将事件关系推理任务按形式类型和事件关系组织为坐标系，通过统一生成模型实现零样本迁移",
+  "key_insight": "多维度前缀分别编码任务形式和关系类型，配合对比正则化防止模型忽略前缀而退化",
+  "method_signature": "基于T5的多任务生成模型+双维度自适应前缀生成器+对比正则化",
+  "evaluation_criteria": "零样本跨形式跨关系迁移性能、平均F1/EM/ACC",
+  "negative_result_or_admitted_limitation": "UNIEVENT在NLU任务上不如QA，原因是预训练生成模型更适合生成任务",
+  "evidence_for_taste": [
+    "formulation-wise prefixes harms performances of TEMP tasks",
+    "T5-unified fails to transfer to tasks both unseen in formulation and relation",
+    "UNIEVENT exceeds T0-3B on a large margin, i.e. 8.12 average scores",
+    "we believe MA suffers from negative transfer of all training sets"
+  ],
+  "thinking_moves": [
+    "把异构任务组织为坐标轴系统来结构化迁移问题",
+    "用前缀同时编码任务形式和关系两个维度",
+    "加入对比损失防止模型走捷径忽略前缀信息"
+  ],
+  "topic_tags": [
+    "zero-shot-transfer",
+    "event-relation-reasoning",
+    "prefix-tuning",
+    "multi-task-learning",
+    "causal-temporal-nlu"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

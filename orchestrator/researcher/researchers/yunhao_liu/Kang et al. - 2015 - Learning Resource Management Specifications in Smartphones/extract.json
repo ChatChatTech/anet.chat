@@ -1,0 +1,36 @@
+{
+  "paper_id": "Kang et al. - 2015 - Learning Resource Management Specifications in Smartphones",
+  "doi": null,
+  "title": "Learning Resource Management Specifications in Smartphones",
+  "year": 2015,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "智能手机资源管理不当导致电池耗尽和系统崩溃，现有工具无法帮助开发者定位源码级bug",
+  "problem_framing": "将资源管理规范发现问题建模为频繁子图挖掘问题，从无需源码的APK文件中自动挖掘",
+  "key_insight": "如果对某资源的操作经常以特定顺序执行，必然包含如何管理该资源的规范",
+  "method_signature": "基于静态分析的APK解析+决策树识别资源类+生命周期嵌入的CSG+闭频繁子图挖掘",
+  "evaluation_criteria": "100款主流APP的解析时间、发现的规范数量、case study验证完整性",
+  "negative_result_or_admitted_limitation": "inter-procedural分析轮次被maxDepth限制导致不完整；决策树分类存在36个false positive",
+  "evidence_for_taste": [
+    "if a set of operations to a resource are frequently performed in a specific order, it must contain the specifications",
+    "only partial information, as illustrated in Figure 9b",
+    "36 are false positives"
+  ],
+  "thinking_moves": [
+    "将资源管理bug诊断问题反向建模为规范挖掘问题",
+    "用频繁性假设替代显式规范定义",
+    "用APK静态分析绕过源码不可得和执行trace难获取的双重困难",
+    "用生命周期先验知识解决事件驱动编程导致的调用顺序未知问题"
+  ],
+  "topic_tags": [
+    "android-resource-management",
+    "specification-mining",
+    "static-analysis",
+    "frequent-subgraph-mining",
+    "energy-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

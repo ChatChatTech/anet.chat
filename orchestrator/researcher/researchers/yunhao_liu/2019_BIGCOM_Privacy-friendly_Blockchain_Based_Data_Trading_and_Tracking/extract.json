@@ -1,0 +1,40 @@
+{
+  "paper_id": "2019_BIGCOM_Privacy-friendly_Blockchain_Based_Data_Trading_and_Tracking",
+  "doi": null,
+  "title": "Privacy-friendly Blockchain based Data Trading and Tracking",
+  "year": 2019,
+  "venue": "BIGCOM",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "数据交易平台要求提交原始数据,但数据易复制、隐私风险高、版权难保护",
+  "problem_framing": "设计同时满足隐私保护、版权追踪和可审计的区块链数据交易系统",
+  "key_insight": "数据指纹结合区块链可验证性,在不上传原始数据前提下实现版权保护",
+  "method_signature": "区块链+智能合约+数据指纹+发送接收记录板的双层架构",
+  "evaluation_criteria": "恶意行为抵抗性、隐私保护程度、指纹检测精度召回率",
+  "negative_result_or_admitted_limitation": "数据和描述一致性的自动检验仍是开放问题",
+  "evidence_for_taste": [
+    "traditional hash method like SHA2 cannot fulfil the requirement",
+    "still an open problem",
+    "works as a punishment to his/her malicious behavior",
+    "unlike Bitcoin or other blockchain-based pure-on-chain",
+    "The platform decrypts it and compares the fingerprint",
+    "The buyer is not allowed to access any data fingerprint"
+  ],
+  "thinking_moves": [
+    "将交易场景分解为经纪人和转售商两种角色分别设计",
+    "用数据指纹替代哈希以抵抗轻微修改攻击",
+    "结合链上分布式账本和链下数据表实现安全与效率平衡",
+    "通过双盲指纹比对检测数据伪造行为",
+    "用经济惩罚机制遏制恶意行为而非纯技术手段"
+  ],
+  "topic_tags": [
+    "blockchain-data-trading",
+    "data-fingerprint",
+    "smart-contract-privacy",
+    "ownership-tracking",
+    "off-chain-storage"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

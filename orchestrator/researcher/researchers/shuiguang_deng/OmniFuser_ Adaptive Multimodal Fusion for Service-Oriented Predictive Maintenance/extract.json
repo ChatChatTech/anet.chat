@@ -1,0 +1,41 @@
+{
+  "paper_id": "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+  "doi": "10.48550/arxiv.2511.01320",
+  "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "工业车间传感器信号与视觉图像异步异构，单模态方法无法捕获工具磨损的完整退化动态",
+  "problem_framing": "将预测性维护定义为可封装为可复用服务模块的智能服务，输入时序传感器序列和工具表面图像，输出多步力信号预测与磨损状态分类",
+  "key_insight": "通过正交投影将模态分解为共享与私有分量，防止跨模态信息污染；递归精炼路径锚定原始特征防止信息漂移",
+  "method_signature": "C2F（Contamination-free Cross-modal Fusion）正交分解+代理跨模态注意力+混合门控+递归精炼",
+  "evaluation_criteria": "MSE/MAE用于力信号预测，Accuracy/Precision用于磨损状态分类，覆盖12-96步多预测 horizons",
+  "negative_result_or_admitted_limitation": "单模态方法\"fail to capture the full spectrum of degradation dynamics\"且\"remain highly sensitive to lighting changes, occlusions, and viewpoint variations\"",
+  "evidence_for_taste": [
+    "fail to capture the full spectrum",
+    "explicitly preserving modality-specific information",
+    "retaining residual information",
+    "contamination as cross-modal redundancy",
+    "orthogonality between shared and private subspaces",
+    "mitigating redundancy",
+    "information drift"
+  ],
+  "thinking_moves": [
+    "从信号处理中的时频分辨率矛盾推导出多尺度分解的必要性",
+    "用互信息下界证明正交分解能保留跨模态依赖而不丢失信息",
+    "将跨模态注意力复杂度从O(T²d)降低到O(Tkd)通过自适应地标选择",
+    "从服务工程角度将模型封装为可复用的微服务模块",
+    "通过奇异谱分析验证趋势子空间的低维紧致假设"
+  ],
+  "topic_tags": [
+    "multimodal-fusion",
+    "predictive-maintenance",
+    "tool-wear-monitoring",
+    "cross-modal-attention",
+    "service-oriented-arch"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文方法细节完整但涉及多定理证明，部分数学推导段落截断；消融实验和对比实验表格完整；C2F机制设计细节充分 | md truncated to head40k+tail20k"
+}

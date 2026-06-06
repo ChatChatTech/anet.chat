@@ -1,0 +1,42 @@
+{
+  "paper_id": "Gradient Purification_ Defense Against Poisoning Attack in Decentralized Federated Learning",
+  "doi": "10.48550/arxiv.2501.04453",
+  "title": "Gradient Purification: Defense Against Poisoning Attack in Decentralized Federated Learning",
+  "year": 2025,
+  "venue": "Frontiers of Computer Science (arXiv preprint)",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "现有防御方法要么逐迭代拒绝可疑梯度，要么重启后完全排除恶意客户端，均未考虑恶意客户端中可能存在的有益贡献",
+  "problem_framing": "将防御问题形式化为两个子目标：分别减轻梯度中的有害影响，同时保留模型权重中嵌入的收益",
+  "key_insight": "梯度用于优化模型权重，因此梯度中的有用信息可被已优化的模型权重捕获，从而实现梯度净化与收益保留的解耦",
+  "method_signature": "GPD通过记录变量追踪邻居历史梯度聚合，利用一致性检测识别恶意邻居并一次性清除所有恶意梯度",
+  "evaluation_criteria": "在iid和非iid数据分布下对抗多种数据中毒攻击的模型准确率，以及与最先进防御方法的对比",
+  "negative_result_or_admitted_limitation": "标签分布偏斜(non-overlap和label-dir)下其他基线方法均出现大幅准确率下降，而GPD仍保持显著优势",
+  "evidence_for_taste": [
+    "neglect the potentially beneficial components",
+    "rashly discard the potentially beneficial components",
+    "beneficial component is generalizable knowledge",
+    "complete cognitive loss of that data label",
+    "GPD harvests the best model accuracy",
+    "significantly outperforms state-of-the-art",
+    "Upper method achieves 0% test accuracy on label 1",
+    "GPD successfully defends while attaining 28.35% test accuracy"
+  ],
+  "thinking_moves": [
+    "将防御问题从整体处理分解为两个正交子问题：梯度有害性消除 vs 模型权重收益保留",
+    "借鉴梯度追踪机制设计记录变量，实现对邻居历史梯度的一致性追踪",
+    "利用DSGT中梯度追踪变量的收敛特性（最终收敛到所有良性客户端的平均梯度）作为检测依据",
+    "通过一次性清除所有历史聚合恶意梯度，避免逐迭代处理的累积误差",
+    "设计sign函数触发记录变量归零，实现修复与优化的无缝衔接"
+  ],
+  "topic_tags": [
+    "decentralized-federated-learning",
+    "data-poisoning-defense",
+    "gradient-purification",
+    "consistency-based-detection",
+    "beneficial-component-retention"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文包含引言、方法、实验分析和结论各节；提取了全部核心方法设计细节和实验结果中的关键判断依据 | md truncated to head40k+tail20k"
+}

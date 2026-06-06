@@ -1,0 +1,38 @@
+{
+  "paper_id": "Code Difference Guided Adversarial Example Generation for Deep Code Models",
+  "doi": "10.48550/arxiv.2301.02412",
+  "title": "Code Difference Guided Adversarial Example Generation for Deep Code Models",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有对抗样本生成技术因搜索空间巨大容易陷入局部最优，且频繁调用模型影响效率",
+  "problem_framing": "从目标输入x找到使模型预测结果改变但保持语法语义正确的对抗样本x'",
+  "key_insight": "利用参考输入与目标输入之间的代码差异来缩小成分空间，指引语义保持的转换生成",
+  "method_signature": "CODA通过参考输入选择+等价结构转换+标识符重命名转换生成对抗样本",
+  "evaluation_criteria": "RFR揭示故障率、时间效率、自然度评分、鲁棒性提升",
+  "negative_result_or_admitted_limitation": "过小的成分空间可能遗漏太多有用的成分，故选择多个参考输入以平衡",
+  "evidence_for_taste": [
+    "likely to fall into local optimum",
+    "The main novelty lies in the code-difference-guided transformation process",
+    "the ingredient space is reduced as the one constituted by only code differences",
+    "ensuring the naturalness of generated examples is important",
+    "may help transform more target inputs to fault-revealing examples"
+  ],
+  "thinking_moves": [
+    "把巨大搜索空间问题转化为参考输入引导的差异空间缩减",
+    "将无效但能触发故障的参考输入视为生成有效对抗样本的成分来源",
+    "等价结构转换优先保证自然度，标识符重命名其次保证有效性",
+    "先验证效率提升再验证鲁棒性增强的正反馈设计"
+  ],
+  "topic_tags": [
+    "deep-code-model-adversarial-testing",
+    "code-difference-guided-generation",
+    "ingredient-space-reduction",
+    "semantic-preserving-transformation",
+    "fault-revealing-example"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

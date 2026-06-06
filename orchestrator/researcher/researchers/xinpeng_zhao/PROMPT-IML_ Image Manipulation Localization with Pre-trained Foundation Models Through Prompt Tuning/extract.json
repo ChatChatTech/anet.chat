@@ -1,0 +1,40 @@
+{
+  "paper_id": "PROMPT-IML_ Image Manipulation Localization with Pre-trained Foundation Models Through Prompt Tuning",
+  "doi": "10.48550/arxiv.2401.00653",
+  "title": "PROMPT-IML: Image Manipulation Localization with Pre-trained Foundation Models Through Prompt Tuning",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有方法依赖高频特征定位篡改区域，但易受后处理操作破坏导致泛化性差；而人类同时利用语义和高频信息判断图像真伪",
+  "problem_framing": "将图像篡改定位问题重新定义为语义特征与高频特征的多视角融合定位任务",
+  "key_insight": "预训练视觉基础模型蕴含丰富语义知识，通过提示调优可将语义信息与高频信息对齐融合，提升模型鲁棒性",
+  "method_signature": "双分支Swin-Transformer提取语义和频率特征，FAF模块用通道/空间/可变型注意力对齐融合，Mask2Former解码输出",
+  "evaluation_criteria": "在8个数据集上以F1-score(AUC=0.5阈值)评估，6种后处理扰动下测AUC鲁棒性",
+  "negative_result_or_admitted_limitation": "EVP方法因特征融合设计简单泛化性能不佳；仅用高频分支(0.392)或语义分支(0.481)均效果有限",
+  "evidence_for_taste": [
+    "aligns more with the logic circuit of human judgment",
+    "semantic features are more robust to image post-processing",
+    "due to the simple feature fusion design, their model performs poorly",
+    "either semantic or high-frequency information is vital",
+    "comprehensively consider both global and local information"
+  ],
+  "thinking_moves": [
+    "将人类认知机制(语义+高频联合判断)作为算法设计灵感来源",
+    "从预训练大模型的通用语义能力切入解决小样本学习难题",
+    "通过消融实验逐步验证各模块必要性(语义/高频/对齐/融合)",
+    "借鉴NLP提示调优范式到视觉领域实现高效适应"
+  ],
+  "topic_tags": [
+    "图像篡改定位",
+    "视觉提示调优",
+    "多模态特征融合",
+    "基础模型适应",
+    "篡改检测鲁棒性"
+  ],
+  "cites_own_work": [
+    "DRAW (ICCV 2023)",
+    "Learning to immunize images (TPAMI 2023)"
+  ],
+  "extraction_quality": "full"
+}

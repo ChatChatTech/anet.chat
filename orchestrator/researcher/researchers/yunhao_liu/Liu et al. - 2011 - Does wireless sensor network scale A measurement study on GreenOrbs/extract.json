@@ -1,0 +1,39 @@
+{
+  "paper_id": "Liu et al. - 2011 - Does wireless sensor network scale A measurement study on GreenOrbs",
+  "doi": null,
+  "title": "Does Wireless Sensor Network Scale? A Measurement Study on GreenOrbs",
+  "year": 2011,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有传感器网络研究缺乏真实大规模部署的系统级测量,无法回答网络是否真正可扩展",
+  "problem_framing": "通过GreenOrbs 330节点森林部署实验,系统测量网络从物理层到路由层的跨层行为",
+  "key_insight": "瓶颈节点分散在网络各处而非集中在 sink 周围;网络动态主要源于并发竞争而非环境变化",
+  "method_signature": "跨协议栈多数据源测量:路由跟踪+链路跟踪+节点统计+嗅探器+信标+本地日志",
+  "evaluation_criteria": "网络 yield、链路 PRR、PDR、端到端时延、包丢失分类统计",
+  "negative_result_or_admitted_limitation": "提高发射功率无法稳定链路质量或改善网络 yield;ETX 指标无法捕捉转发节点的丢包",
+  "evidence_for_ttaste": [
+    "the area around the sink is not the rendezvous of packet losses",
+    "A higher transmission power does not help to stabilize the link quality",
+    "ETX indicator does not capture packet drops on a forwarding node",
+    "such node drops all the incoming packets",
+    "the routing structure often overreacts to the ETX increases"
+  ],
+  "thinking_moves": [
+    "用实测数据推翻社区广泛接受的sink热区假设",
+    "通过独立对照组实验区分环境因素与网络并发的贡献",
+    "从全局网络指标追溯到单个关键节点的故障行为",
+    "质疑现有指标的完备性,提出需要聚合指标同时反映链路质量和节点转发质量",
+    "用固定路由表实验验证静态路由在某些条件下可行"
+  ],
+  "topic_tags": [
+    "sensor-network-scalability",
+    "large-scale-measurement",
+    "GreenOrbs",
+    "routing-dynamics",
+    "bottleneck-node-identification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition",
+  "doi": "10.48550/arxiv.2507.11202",
+  "title": "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传感器故障或隐私保护导致实际应用中常出现模态缺失，完整数据训练的模型性能严重下降",
+  "problem_framing": "现有方法通过额外梯度平衡训练，但不同模态组合的梯度相互冲突，损害最终预测性能",
+  "key_insight": "单个模态在不同模态组合中提供的特征信息存在差异，核心挑战是如何充分探索每个组合所需的独特特征信息",
+  "method_signature": "MCULoRA通过模态组合感知低秩适配与动态参数微调实现模态特征解耦",
+  "evaluation_criteria": "CMU-MOSEI的ACC/F1、IEMOCAP的WA/UA、固定缺失与随机缺失协议下的性能",
+  "negative_result_or_admitted_limitation": "目前MCULoRA仍假设所有模态数据可用，实际应用中难以收集完整模态训练数据",
+  "evidence_for_taste": [
+    "训练梯度相互冲突",
+    "不同模态组合的特征信息存在差异",
+    "优先组合在提取特征信息方面更具优势",
+    "梯度冲突最终阻碍模型达到最佳性能"
+  ],
+  "thinking_moves": [
+    "将梯度冲突问题归因于不同模态组合对特征信息的差异化需求",
+    "借鉴LoRA低秩分解思想，将其应用于不完整多模态学习场景",
+    "通过软正交约束减少同质与异质特征间的信息冗余",
+    "利用JS散度量化模态组合的解耦难度，动态调整训练概率平衡学习",
+    "从完整模态编码器提取特征后，针对缺失模态场景进行轻量级参数适配"
+  ],
+  "topic_tags": [
+    "incomplete-multimodal-learning",
+    "low-rank-adaptation",
+    "emotion-recognition",
+    "gradient-conflict",
+    "modality-combination-aware",
+    "parameter-efficient-training"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Invertible Image Dataset Protection",
+  "doi": "10.48550/arxiv.2112.14420",
+  "title": "INVERTIBLE IMAGE DATASET PROTECTION",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Companies fear stolen datasets used to train pirated models by competitors",
+  "problem_framing": "Generate reversible adversarial images that remain adversarial even after defense processing",
+  "key_insight": "Train the INN generator with a defense simulation layer so perturbations survive JPEG/blur/resize",
+  "method_signature": "RAEG uses U-shaped invertible INN with DSAC blocks and ensemble classifiers, trained with defense simulation",
+  "evaluation_criteria": "Classification accuracy drop on protected images; PSNR/SSIM; robustness under JPEG/ComDefend/DIPDefend",
+  "negative_result_or_admitted_limitation": "\"there exist a trade-off between the adversary and the visual quality of the protected image\"",
+  "evidence_for_taste": [
+    "robust to defensive operations",
+    "can almost perfectly restore",
+    "fragile to adversarial defense",
+    "cannot be well trained",
+    "fixes the weakness of a fixed classifier"
+  ],
+  "thinking_moves": [
+    "把对抗防御纳入训练过程而非事后补救",
+    "将可逆性作为一等公民而不是事后嵌入的水印",
+    "用INN的可逆性天然保证正向和反向操作一致性",
+    "用集成多个分类器防止攻击模式过于单一"
+  ],
+  "topic_tags": [
+    "invertible-neural-network",
+    "adversarial-dataset-protection",
+    "reversible-adversarial-examples",
+    "defense-robustness",
+    "steganography-watermarking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

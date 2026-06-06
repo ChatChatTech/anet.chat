@@ -1,0 +1,41 @@
+{
+  "paper_id": "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation",
+  "doi": "10.24963/ijcai.2023/245",
+  "title": "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation",
+  "year": 2023,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "隐私法規使跨域共享用戶評分不可行;現有CDR假設可訪問跨域交互數據",
+  "problem_framing": "定義為隱私保護多域推薦問題,用戶評分矩陣無法跨域直接共享",
+  "key_insight": "用高斯分布代替點嵌入建模用戶偏好,通過全局服務器聚合分佈",
+  "method_signature": "FPPDM: GCN建模本地分佈 + 全局服務器 Wasserstein 聚合",
+  "evaluation_criteria": "HR@5/10, NDCG@5/10 在 Douban 和 Amazon 數據集",
+  "negative_result_or_admitted_limitation": "FedMF浅层模型无法刻画复杂用户-物品关系;现有方法只用embeddings而非分布",
+  "evidence_for_taste": [
+    "such knowledge sharing process will break the privacy protection policy",
+    "most of current CDR models only utilize embeddings rather than distributions",
+    "FedMF only adopted a shallow model and thus cannot depict the complex user-item relationship well",
+    "the scattered latent distributions will hurdle the model performance",
+    "Previous methods mainly focus on the simple embedding situation"
+  ],
+  "thinking_moves": [
+    "指出现有CDR方法隐私假设不成立,需重新定义问题约束",
+    "用概率分布代替确定性嵌入捕捉用户偏好的不确定性",
+    "图神经网络建模本地交互结构,全局服务器聚合分布",
+    "通过谱约束rank(L)=N-M将聚类目标转化为谱优化问题"
+  ],
+  "topic_tags": [
+    "federated-recommendation",
+    "probabilistic-preference-modeling",
+    "cross-domain-recommendation",
+    "privacy-preserving-ml",
+    "co-clustering"
+  ],
+  "cites_own_work": [
+    "Liu et al., 2022",
+    "Liu and et al, 2023"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "IJCAI 2023, 浙江大学作者群;论文完整包含动机、方法、实验和局限性分析"
+}

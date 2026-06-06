@@ -1,0 +1,37 @@
+{
+  "paper_id": "Qiao et al. - 2021 - Beyond QoE Diversity Adaptation in Video Streaming at the Edge",
+  "doi": null,
+  "title": "Beyond QoE: Diversity Adaptation in Video Streaming at the Edge",
+  "year": 2021,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有ABR算法使用固定QoE函数，但用户QoE需求多样化，导致误导性比特率选择",
+  "problem_framing": "将比特率选择建模为带柔性约束的效用最大化问题，通过更新约束而非重算模型来适应QoE多样性",
+  "key_insight": "用更新系统框架将QoE多样性映射为可在线调整的约束参数，避免重算开销",
+  "method_signature": "基于更新系统的漂移加惩罚优化，通过虚拟队列实现实时比特率选择",
+  "evaluation_criteria": "固定QoE下达MPC/Pensieve的90%；QoE多样性下超越MPC 7%、Pensieve 3%",
+  "negative_result_or_admitted_limitation": "Elephanta在固定QoE下仅为MPC的90%；6/21用户因交互挫折不愿使用；需提供多版本算法",
+  "evidence_for_taste": [
+    "MPC suffers 15% of QoE degradation",
+    "Elephanta achieves 90% performance",
+    "6/21 of them were not",
+    "frustration encountered by users"
+  ],
+  "thinking_moves": [
+    "从现实用户体验反推算法假设失效",
+    "将固定参数优化问题重构为约束满足问题",
+    "用更新系统数学框架统一建模在线参数更新",
+    "先承认方法局限(90%性能)再证其优势场景"
+  ],
+  "topic_tags": [
+    "adaptive-bitrate-algorithm",
+    "QoE-diversity",
+    "video-streaming",
+    "renewal-system-optimization",
+    "edge-computing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

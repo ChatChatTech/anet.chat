@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2008 - A robust proportional controller for AQM based on optimized second-order system model",
+  "doi": null,
+  "title": "A robust proportional controller for AQM based on optimized second-order system model",
+  "year": 2008,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Existing AQM schemes are sensitive to network traffic changes and lack flexibility; controllers prone to instability due to strong correlation between control parameters and network variables.",
+  "problem_framing": "Design a robust proportional controller for Active Queue Management that detaches control parameters from unknown network variables (N, R) using optimized second-order system theory.",
+  "key_insight": "By targeting the damping factor ζ = 0.707 in the optimized second-order system model, the TCP/AQM interconnection achieves both asymptotic stability and fastest convergence without overshoot.",
+  "method_signature": "AOPC uses packet loss ratio measurement and TCP throughput model to estimate N, then tunes control parameter γ(k) via optimized second-order criteria.",
+  "evaluation_criteria": "Queue stability, convergence speed, link utilization, responsiveness to sudden traffic load changes, and robustness across varying RTT and link capacity.",
+  "negative_result_or_admitted_limitation": "TCP throughput formula produces uncertain estimation errors in light load networks; feedback delay ignored which harms stability for large-delay networks; only TCP Reno modeled.",
+  "evidence_for_taste": [
+    "strong correlation between the control parameters",
+    "insensitive to RTT variation in real network condition",
+    "maintains closed-loop performance in face of varying network conditions",
+    "detaches the correlation of control parameter from network load",
+    "obtains smaller steady-state error than LRED",
+    "faster convergence rate than LRED",
+    "best tradeoff between utilization and delay",
+    "more responsive to time-varying network conditions"
+  ],
+  "thinking_moves": [
+    "把控制参数与网络变量解耦: 先用TCP吞吐量公式估计N, 再用二阶系统模型优化γ",
+    "从LRED的稳定性条件推导出参数与N,R的隐式依赖, 反推出需在线估计N的障碍",
+    "用二阶系统阻尼因子ζ=0.707作为稳定且快速收敛的最优目标, 反推出γ(k)的解析公式",
+    "先证明steady-state error和settling time都是θ的单调递减函数, 说明大θ必然好",
+    "用ζ作为分类标准(欠阻尼/临界/过阻尼)来定义'优化'系统"
+  ],
+  "topic_tags": [
+    "AQM-controller-design",
+    "TCP-congestion-control",
+    "optimized-second-order-system",
+    "proportional-control",
+    "damping-factor-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue tier cannot be determined; venue name not explicitly stated though references suggest Computer Communications journal. Role extraction is partial - corresponding author status confirmed for first author Wang."
+}

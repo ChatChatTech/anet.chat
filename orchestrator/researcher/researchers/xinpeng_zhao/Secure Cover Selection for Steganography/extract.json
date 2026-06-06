@@ -1,0 +1,36 @@
+{
+  "paper_id": "Secure Cover Selection for Steganography",
+  "doi": "10.1109/access.2019.2914226",
+  "title": "Secure Cover Selection for Steganography",
+  "year": 2019,
+  "venue": "IEEE Access",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有cover选择方法在individual-level不安全，可被pooled steganalysis识别",
+  "problem_framing": "cover图像子集的统计特性与全体图像不同导致steganographer可被聚类检测",
+  "key_insight": "用MMD距离约束选择过程，保持stego集与clear集的距离不超过任意两clear集的距离阈值",
+  "method_signature": "MMD约束下的最小失真图像搜索策略",
+  "evaluation_criteria": "图像级P_E(分类错误率)与individual级DA(检测准确率)",
+  "negative_result_or_admitted_limitation": "method in [21] performs best in image level but loses all in individual level, trade-off exists",
+  "evidence_for_taste": [
+    "detection accuracy is still 100%",
+    "spare no pains to increase image level without considering individual",
+    "the steganographer can be easily identified",
+    "the abnormality is evidence of guilt"
+  ],
+  "thinking_moves": [
+    "从steganalysis检测结果反推统计特性异常",
+    "将individual-level security形式化为MMD距离约束",
+    "在约束条件下做贪心搜索优化图像级安全性",
+    "承认image-level与individual-level security存在trade-off"
+  ],
+  "topic_tags": [
+    "steganography-cover-selection",
+    "pooled-steganalysis",
+    "MMD-distance",
+    "individual-level-security",
+    "statistical-detectability"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wu et al. - 2015 - Human Mobility Enhances Global Positioning Accuracy for Mobile Phone Localization",
+  "doi": null,
+  "title": "Human Mobility Enhances Global Positioning Accuracy for Mobile Phone Localization",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "GPS误差(1-20m)限制了位置服务应用，现有增强系统依赖固定基础设施",
+  "problem_framing": "将手机惯性传感的局部轨迹与GPS全局坐标对齐来提升精度",
+  "key_insight": "死计算的局部轨迹结构比GPS测量更接近真实轨迹,可据此校正GPS",
+  "method_signature": "FSM步态检测+学习步长估计+陀螺仪方向+ Horn坐标变换",
+  "evaluation_criteria": "GPS平均误差减少30%,从5-10m降至约3m,能耗可忽略",
+  "negative_result_or_admitted_limitation": "当GPS原始测量严重偏离真实位置时,GloCal精度也受限",
+  "evidence_for_taste": [
+    "realizing accurate dead reckoning is non-trivial",
+    "we shy away them by using only short trajectories",
+    "can be gracefully tolerated since a scaling factor",
+    "the difficulty still remains since that the stride lengths vary",
+    "Albeit counter-intuitive, this crucial property"
+  ],
+  "thinking_moves": [
+    "用相对坐标系统完全规避绝对方向依赖,避开罗盘噪声",
+    "短轨迹策略消除累积误差而非尝试补偿",
+    "将perception问题重构为coordinate transformation问题",
+    "将步态积分的累积误差转化为步数×步长避免了直接积分",
+    "承认死计算误差存在但用坐标变换的缩放因子容忍之"
+  ],
+  "topic_tags": [
+    "GPS-accuracy-augmentation",
+    "dead-reckoning",
+    "mobile-phone-localization",
+    "inertial-sensing",
+    "coordinate-transformation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "paper完整但缺少具体会议名称,DOI信息缺失"
+}

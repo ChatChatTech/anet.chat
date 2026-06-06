@@ -1,0 +1,41 @@
+{
+  "paper_id": "Ji et al. - 2014 - Hitchhike Riding control on preambles",
+  "doi": null,
+  "title": "Hitchhike: Riding Control on Preambles",
+  "year": 2014,
+  "venue": "IEEE",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "控制报文(RTS/CTS)占用大量空口时间, 而现有载于payload的带内方案在低SNR下失效且多用户干扰严重",
+  "problem_framing": "利用前导码与payload之间约10dB的SNR差距, 将控制信号从前导码传输, 实现控制与数据的完全解耦",
+  "key_insight": "前导码采用相关检测而非比特解码, 只需更低SNR即可识别, 故可承载控制信息而不影响payload",
+  "method_signature": "在前导码叠加64-chip PN序列正交码, 采用减法-相关检测算法分离并识别控制信号",
+  "evaluation_criteria": "前导码检测误差、控制信号检测精度、对比Side-channel的数据丢包率",
+  "negative_result_or_admitted_limitation": "控制信号叠加可能引起前导码漏检, 需精心设计正交码长度; 频率偏移影响检测准确性",
+  "evidence_for_taste": [
+    "the stronger signal dominates the output",
+    "low false negative ratio is more desirable",
+    "correlation using the processed signal leads",
+    "the redundancy margin may be very limited",
+    "does not carefully consider where to put"
+  ],
+  "thinking_moves": [
+    "利用协议层冗余(前导码重复结构)承载额外信息",
+    "将物理层特性差异(SNR需求gap)转化为设计机会",
+    "通过正交性设计将干扰转化为可叠加的并发信号",
+    "先检测主信号再相减, 增强弱信号的检测效果",
+    "从Payload承载转向Preamble承载, 重新定义控制平面位置"
+  ],
+  "topic_tags": [
+    "in-band control signaling",
+    "preamble-based communication",
+    "correlation detection",
+    "802.15.4 PHY layer",
+    "wireless coexistence"
+  ],
+  "cites_own_work": [
+    "Side-channel (prior work by same group)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "DOI和具体会议名称未在文中给出, 仅从参考文献格式推断为IEEE会议(可能是INFOCOM); role基于署名顺序第三位非通讯作者判定"
+}

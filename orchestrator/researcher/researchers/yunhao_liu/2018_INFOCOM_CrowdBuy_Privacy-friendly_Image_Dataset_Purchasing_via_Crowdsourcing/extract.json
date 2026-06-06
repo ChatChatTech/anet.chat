@@ -1,0 +1,45 @@
+{
+  "paper_id": "2018_INFOCOM_CrowdBuy_Privacy-friendly_Image_Dataset_Purchasing_via_Crowdsourcing",
+  "doi": null,
+  "title": "CrowdBuy: Privacy-friendly Image Dataset Purchasing via Crowdsourcing",
+  "year": 2018,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "机器学习缺乏高质量训练数据的瓶颈,同时个人设备上图片被闲置",
+  "problem_framing": "将数据集采购问题形式化为隐私保护、保证质量、预算可行三个约束的机制设计问题",
+  "key_insight": "将图片降维到2维特征空间后可在保护原始图片隐私的同时实现质量驱动的选择",
+  "method_signature": "两阶段隐私保护图片采购机制:特征选择+交付验证",
+  "evaluation_criteria": "数据集质量(数量/相似度/多样性)、隐私等级、计算通信开销、对恶意用户的鲁棒性",
+  "negative_result_or_admitted_limitation": "Autoencoder的decoder可以重建1000维特征造成隐私泄露,需升级到CROWDBUY++",
+  "evidence_for_taste": [
+    "is still not solved",
+    "extremely hard for sellers to prove",
+    "privacy leakage",
+    "is considered not applicable",
+    "we take a first step",
+    "we prove that"
+  ],
+  "thinking_moves": [
+    "将隐私保护问题与质量选择问题在降维特征空间中同时求解",
+    "利用预训练CNN+自编码器将高维特征压缩到2维以实现效率与隐私的平衡",
+    "将差分隐私概念泛化为特征不可区分性以保护特征向量",
+    "从机制设计理论出发证明真实性和预算可行性而非仅做实验验证",
+    "通过覆盖体积建模多样性指标实现形式化定义"
+  ],
+  "topic_tags": [
+    "privacy-preserving-crowdsourcing",
+    "image-dataset-purchasing",
+    "mechanism-design",
+    "feature-indistinguishability",
+    "quality-driven-selection"
+  ],
+  "cites_own_work": [
+    "[26] Pic privacy-preserving image search",
+    "[27] finding experts locally",
+    "[28] verifiable private multi-party",
+    "[29] privacy-friendly photo system"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "paper目录slug为yunhao_liu但作者列表中无此人,可能为研究组其他成员或合作者"
+}

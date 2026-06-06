@@ -1,0 +1,41 @@
+{
+  "paper_id": "Xiao et al. - 2003 - On scalable and locality-aware web document sharing",
+  "doi": null,
+  "title": "On scalable and locality-aware web document sharing",
+  "year": 2003,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Web浏览器的本地缓存虽大却未被共享,导致可复用资源被浪费,而代理服务器完全忽视浏览器缓存中的数据",
+  "problem_framing": "将浏览器缓存共享问题形式化为:浏览器中有大量被代理缓存已淘汰但仍保留的文档,以及浏览器缓存空间在增长的趋势下未被充分利用",
+  "key_insight": "浏览器缓存中存在大量可共享的数据局部性,可通过让代理服务器感知浏览器索引来复用远程浏览器缓存中的文档",
+  "method_signature": "代理服务器维护所有客户端浏览器缓存的URL索引,查索引找远程命中后再转发或取回文档",
+  "evaluation_criteria": "请求命中率、字节命中率、内存命中率、通信开销占比、预取流量节省",
+  "negative_result_or_admitted_limitation": "当客户端数量很少(如CA*netII只有3个客户端)时,浏览器感知代理的性能提升不足1%,收益不明显",
+  "evidence_for_taste": [
+    "the amount of sharable data in browser caches is significant",
+    "sharable data locality proportionally increases as browser cache size increases",
+    "the larger the browser cache size is set, the more spatial locality will be underutilized",
+    "we are only able to use 1 day's log file, whose total requested document size is less than 16 GB",
+    "which implies that browsers-aware proxy server does not cause bursty hits to remote browser caches"
+  ],
+  "thinking_moves": [
+    "识别出三个被忽视的实际原因:浏览器缓存不共享、软件简洁与隐私考虑、历史上认为命中率低",
+    "从技术趋势(内存增大、缓存切换、内存缓存)论证浏览器缓存局部性将持续改善",
+    "先定性论证共享可能性,再定量回答'有多少数据可共享'和'性能提升多少'",
+    "用5种缓存策略的对比来结构化消融实验,分离浏览器感知贡献",
+    "通过内存字节命中率而非磁盘命中率来衡量延迟,揭示更高层的系统收益",
+    "用Bloom filter等紧凑表示来回应存储开销的工程顾虑",
+    "预取场景下论证代理索引可消除不必要的文件重复传输"
+  ],
+  "topic_tags": [
+    "browser-cache-sharing",
+    "proxy-caching",
+    "distributed-caching",
+    "web-prefetching",
+    "peer-to-peer-caching"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

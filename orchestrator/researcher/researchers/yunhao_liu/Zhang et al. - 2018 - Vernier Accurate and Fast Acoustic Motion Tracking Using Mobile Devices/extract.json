@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhang et al. - 2018 - Vernier Accurate and Fast Acoustic Motion Tracking Using Mobile Devices",
+  "doi": null,
+  "title": "Vernier: Accurate and Fast Acoustic Motion Tracking Using Mobile Devices",
+  "year": 2018,
+  "venue": "ACM MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有声学追踪方法需长信号窗口和复杂频谱分析,无法同时实现高精度和低延迟,制约VR/游戏等实时应用",
+  "problem_framing": "将声学运动追踪中精度-延迟矛盾定义为需同时解决的核心问题,要求mm级精度且运行于普通手机",
+  "key_insight": "类比游标卡尺原理:用信号样本作游标尺,原始信号局部极大值作主尺,通过两窗口局部极大值数差异直接算相移,避开FFT",
+  "method_signature": "差异化窗口样本计数求相移DW-PC",
+  "evaluation_criteria": "追踪误差<4mm,延迟<3ms,支持7m距离,抗噪声/多径",
+  "negative_result_or_admitted_limitation": "时钟不一致导致频率漂移,需线性频率补偿校正",
+  "evidence_for_taste": [
+    "cannot improve the frequency resolution",
+    "high accuracy and small delay is difficult",
+    "the influence of multipath effect in our experiment is slight",
+    "somewhere in the drawing may not be as smooth",
+    "error is under 2 mm even when distance is 7 m",
+    "tracking speed achieves 3x improvement"
+  ],
+  "thinking_moves": [
+    "将频率分析问题类比为测量工具(游标卡尺),用离散样本分布一致性(Lemma 2)构建精确相移计算框架",
+    "先证理论误差上界2π/q,再通过实际参数(F0=20000Hz,q=100)量化得0.17mm",
+    "主动承认并处理时钟不一致导致的频率漂移问题,提出线性补偿",
+    "从1D追踪扩展到2D/3D时保持方法一致性,仅用距离约束求解坐标",
+    "用真实绘图轨迹对比验证系统可用性,而非仅报数值误差"
+  ],
+  "topic_tags": [
+    "acoustic-motion-tracking",
+    "phase-change-calculation",
+    "mobile-sensing",
+    "vernier-caliper-analogy",
+    "low-latency-tracking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文结构完整,含完整设计、理论分析、实现与评估。Lemma证明清晰,evaluation覆盖accuracy/delay/robustness三个维度。证据片段多直接引用原文评价性语句。"
+}

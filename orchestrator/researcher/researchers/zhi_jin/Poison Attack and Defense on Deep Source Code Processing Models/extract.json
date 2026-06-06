@@ -1,0 +1,38 @@
+{
+  "paper_id": "Poison Attack and Defense on Deep Source Code Processing Models",
+  "doi": "10.48550/arxiv.2210.17029",
+  "title": "Poison Attack and Defense on Deep Source Code Processing Models",
+  "year": 2022,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "SE从业者从开源社区爬取训练数据，但这些数据可能被攻击者植入后门，污染训练集进而控制已部署模型",
+  "problem_framing": "将源码处理模型的poison attack建模为攻击者通过篡改训练数据植入触发器(defect detection误判、clone detection失效、code repair注入漏洞)，防御者需在未知触发器类型情况下检测并移除poison样本",
+  "key_insight": "源码有编译约束和命名规范限制，不能简单复用NLP的字符级trigger；需利用代码的结构性特征(identifier renaming、dead-code insertion)生成编译通过且人类难以察觉的poison样本",
+  "method_signature": "CodePoisoner利用规则+语言模型生成代码trigger；CodeDetector用integrated gradients定位influential tokens并通过性能下降探测trigger",
+  "evaluation_criteria": "攻击成功率(平均98.3%，最高100%，仅2% poisoning rate)和防御检测率(最高100%)",
+  "negative_result_or_admitted_limitation": "虽然rule-based策略有效，但context-free的固定trigger仍有被人工审查发现的风险；LM-guided策略每个样本trigger不同，但仍需依赖CodeGPT生成质量",
+  "evidence_for_taste": [
+    "code embedded with triggers is compilable",
+    "triggers still have risks of being detected",
+    "the LM-guided poisoning strategy essentially regards the certain distribution",
+    "hard for ONION to detect those natural-looking triggers",
+    "the rigid grammatical constraint of programming languages"
+  ],
+  "thinking_moves": [
+    "发现NLP方法不适配源码约束，遂提出code-specific poisoning策略",
+    "从后门攻击的本质出发：trigger是influential且abnormal的token，用integrated gradients探查",
+    "攻击与防御的博弈建模：攻击者追求stealthy+reliable，防御者追求complete detection without false positives",
+    "将源码的语言学特征(identifier命名、AST结构)映射为trigger设计的结构化约束"
+  ],
+  "topic_tags": [
+    "backdoor-attack-on-DL",
+    "source-code-processing-DL",
+    "poison-sample-detection",
+    "integrated-gradients-for-backdoor",
+    "code-model-security"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为完整投稿版本，但实验结果部分有图表截断；venue信息不完整，仅知为ACM格式提交；Zhi Jin角色基于作者机构推断为co-author | md truncated to head40k+tail20k"
+}

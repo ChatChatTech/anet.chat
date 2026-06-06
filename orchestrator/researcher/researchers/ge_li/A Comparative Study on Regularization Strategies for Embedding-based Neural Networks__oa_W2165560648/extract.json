@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2165560648",
+  "doi": "10.48550/arxiv.1508.03721",
+  "title": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Embedding-based neural NLP models suffer severe overfitting due to high dimensionality",
+  "problem_framing": "Compare four regularization strategies systematically on CNN and RNN for relation extraction and sentiment",
+  "key_insight": "L2 of embeddings helps optimization; regularization acts locally; weights and embeddings are complementary when combined",
+  "method_signature": "Systematic comparison of penalizing weights, penalizing embeddings, re-embedding, and dropout",
+  "evaluation_criteria": "Training vs validation accuracy improvement; generalization gain across dataset sizes",
+  "negative_result_or_admitted_limitation": "Re-embedding words is not effective; dropout performs slightly worse than L2 penalty in experiments",
+  "evidence_for_taste": [
+    "severely overfitting",
+    "unexpectedly helps optimization",
+    "mainly serves as a local effect",
+    "not effective in our experiments",
+    "very small L2 penalty"
+  ],
+  "thinking_moves": [
+    "从超参搜索耗时出发,探索增量调参可行性",
+    "把regularization的作用分为优化帮助和泛化帮助两类",
+    "对比不同正则化策略的互补性而非单独最优",
+    "从相同样本量出发,实验结果在类似场景可推广"
+  ],
+  "topic_tags": [
+    "neural-NLP-regularization",
+    "embedding-overfitting",
+    "hyperparameter-tuning",
+    "dropout-vs-L2",
+    "incremental-training"
+  ],
+  "cites_own_work": [
+    "Mou et al.2015",
+    "Xu et al.2015"
+  ],
+  "extraction_quality": "full"
+}

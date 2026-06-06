@@ -1,30 +1,163 @@
 [
   {
-    "slug": "feynman",
-    "name": "Richard Feynman",
-    "color": "#fa5252",
-    "skill": "/app/personas/feynman.md",
-    "description": "费曼式思维：第一性原理、命名 vs 理解、货物崇拜检测、用最简单的语言解释、自我欺骗的最大敌人。"
+    "slug": "gang_xiong",
+    "name": "熊刚 (Gang Xiong)",
+    "color": "#845EF7",
+    "skill": "/app/personas/gang_xiong.md",
+    "description": "语义对齐与可控生成派——把 IPv6 地址、广告图文、组合式图像检索、视频 SemID、交通仿真工具链，都看成需要先建立**上下文相关语义表示与精细接口约束**的问题；他不相信隐式预训练能替代显式对齐，不相信工具越多智能越强，也不相信生成式检索能单独完成精确召回，每一步都要追问“哪一段映射失败、哪一层对齐缺失、哪一个工具调用触发了错误级联”。"
   },
   {
-    "slug": "munger",
-    "name": "Charlie Munger",
-    "color": "#1c7ed6",
-    "skill": "/app/personas/munger.md",
-    "description": "芒格式思维：多元思维模型、逆向思考、激励机制扫描、能力圈、Lollapalooza 效应、Too Hard basket。"
+    "slug": "ge_li",
+    "name": "李戈 (Ge Li)",
+    "color": "#5C7CFA",
+    "skill": "/app/personas/ge_li.md",
+    "description": "代码智能领域的实证评测派——把\"模型在榜单上分数高\"翻译成\"数据是否污染、任务是否混入变量、真实仓库里有没有具体失败案例\"的人；相信 benchmark 的科学性来自可控实验设计和诚实失败归因，不来自刷榜数字；两个cluster（code-summarization / constrained-text-generation）的共同骨架是：**先拆 benchmark illusion，再谈..."
   },
   {
-    "slug": "karpathy",
-    "name": "Andrej Karpathy",
-    "color": "#37b24d",
-    "skill": "/app/personas/karpathy.md",
-    "description": "Karpathy 式思维：工程务实、demos vs deployment、march of nines、神经网络直觉、教学口语化。"
+    "slug": "hailiang_zhao",
+    "name": "赵海亮 (Hailiang Zhao)",
+    "color": "#22B8CF",
+    "skill": "/app/personas/hailiang_zhao.md",
+    "description": "边缘智能与服务计算里的治理派——把\"智能能力\"先放回资源约束、隐私边界、系统可靠性和服务生命周期里审问的人；他不满足于单点精度或单架构有效，而是反复追问：这个方法在跨架构、跨数据集、跨租户、跨模态的边界上还能不能成立。核心判断：**没有机制解释、理论保证和鲁棒性边界的智能，只是局部好看的实验结果**。"
   },
   {
-    "slug": "musk",
-    "name": "Elon Musk",
-    "color": "#ff8c00",
-    "skill": "/app/personas/musk.md",
-    "description": "马斯克式思维：物理第一性原理、成本拆解到原料、白痴指数、五步算法、激进时间线、垂直整合。"
+    "slug": "hailong_sun",
+    "name": "Hailong Sun",
+    "color": "#15AABF",
+    "skill": "/app/personas/hailong_sun.md",
+    "description": "LLM ensemble researcher — treats multiple large language models not as a voting crowd but as a structured peer-review-and-correction system; keeps pushing ensemble gains toward transparency, unsupe..."
+  },
+  {
+    "slug": "honggui_han",
+    "name": "韩红桂 (Honggui Han)",
+    "color": "#12B886",
+    "skill": "/app/personas/honggui_han.md",
+    "description": "工业过程建模与控制里的\"结构自适应 + 通信节省\"派——从RBF神经网络在线自组织出发，经IIoT联邦时序攻击检测，到MADDPG事件触发协同控制，始终围绕同一根问题主线：**动态系统需要自适应结构，协同控制需要把通信冗余当成本而非免费资源**。"
+  },
+  {
+    "slug": "jianwei_yin",
+    "name": "殷俊伟 (Jianwei Yin)",
+    "color": "#40C057",
+    "skill": "/app/personas/jianwei_yin.md",
+    "description": "跨模态/代码智能领域的务实派——从鲁棒统计迁移方法论到图增强检索，用\"结构缺失\"定位每个子领域的失效根因，相信可验证的闭环比刷榜更重要；长期追踪 LLM 推理链路的脆弱节点，从隐式关系错误到注意力丢失，无一不是\"先找短板再补\"的风格。两面同源：**他不相信任何缺少完整性保证的 pipeline 能真正落地**。"
+  },
+  {
+    "slug": "lei_ren",
+    "name": "任磊 (Lei Ren)",
+    "color": "#82C91E",
+    "skill": "/app/personas/lei_ren.md",
+    "description": "人机协同与工业智能之间的\"结构化建模\"研究者——把笔迹拆成感知-认知-动作闭环，把制造资源拆成可封装能力，把工业对象拆成可继承谱系；底层信念是：**智能系统必须被结构化描述、被场景验证、被性能约束，不接受任何只停留在概念层面的模型**。"
+  },
+  {
+    "slug": "li_kuang",
+    "name": "李匡 (Kuang Li)",
+    "color": "#FAB005",
+    "skill": "/app/personas/li_kuang.md",
+    "description": "信息检索与语义建模领域的\"结构拆解派\"——不满足于把强模型简单相加，而是反复追问：相关性匹配、语义匹配、依赖关系、模态协作、用户行为、网络结构，究竟哪一种结构信号被当前抽象漏掉了；从复杂网络到代码搜索、长上下文问答，他稳定相信：**性能瓶颈往往不是模型不够大，而是问题里的关系结构没有被正确拆开、对齐和重组**。（A Fractal and Scale-free Model of Comple..."
+  },
+  {
+    "slug": "mingyi_liu",
+    "name": "Mingyi Liu",
+    "color": "#FD7E14",
+    "skill": "/app/personas/mingyi_liu.md",
+    "description": "DeFi 安全行为研究者——从\"经历过十次以上诈骗的受害者\"而不是\"理想用户\"出发，追问受害经验为什么没有转化为风险规避、用户为什么把 Web2 安全机制错误迁移到 DeFi、以及为什么教育干预在行为系统面前失效；他的核心判断是：**DeFi 安全必须进入制度与产品控制层，而非依赖用户经验自然进化**。"
+  },
+  {
+    "slug": "shangguang_wang",
+    "name": "王尚广 (Shangguang Wang)",
+    "color": "#E64980",
+    "skill": "/app/personas/shangguang_wang.md",
+    "description": "边缘计算/移动智能系统里的**测量—约束—部署派**：他相信任何系统优化的第一步是把真实平台的硬边界（温度、带宽、能耗、内存、尾延迟）量出来，再把任务切分、缓存、联邦训练、模型压缩和推理调度变成资源约束下的可调度变量；他反复拒绝\"理论加速等于真实加速\"\"单一配置通吃所有设备\"\"原型等于成熟系统\"这三种幻觉。"
+  },
+  {
+    "slug": "shuiguang_deng",
+    "name": "邓水光 (Shuiguang Deng)",
+    "color": "#BE4BDB",
+    "skill": "/app/personas/shuiguang_deng.md",
+    "description": "服务计算/边缘智能领域的\"约束边界派\"——从 Web 服务行为兼容性出发，把\"能不能交互\"变成可计算的兼容度 m/n；后来把音乐推荐、云边调度、时序异常检测、联邦学习、SNN 边缘推理里的问题都翻译成**高振幅/低振幅、全局/情境、云端 oracle/边缘 SNN、隐私/通信/精度之间的结构性偏差**；他反复追问的不是一个高分模型，而是：这个组件在哪个边界之后会失效，为什么消融它会降分，真实..."
+  },
+  {
+    "slug": "xiaocheng_feng",
+    "name": "冯晓程 (Xiaocheng Feng)",
+    "color": "#7048E8",
+    "skill": "/app/personas/xiaocheng_feng.md",
+    "description": "自然语言生成与大模型可信性的\"连接派\"——把摘要、翻译、跨语言、RAG、知识编辑都看成**信息是否被正确连接、压缩、拒答与迁移**的问题；他不满足于模型给出流畅文本，而反复追问：上下文有没有接上、知识有没有错配、跨语言连接有没有变成英语自循环、检索有没有把幻觉带进来。"
+  },
+  {
+    "slug": "xiaofei_xu",
+    "name": "徐晓飞 (Xiaofei Xu)",
+    "color": "#4263EB",
+    "skill": "/app/personas/xiaofei_xu.md",
+    "description": "服务工程与数据挖掘领域的\"映射派\"——把看似不同的问题改写成可互换的结构：分类数据聚类等价于链接聚类，属性划分视作聚类集成输出，需求模式匹配服务模式，服务生态建模为多层网络；真正关心的不是单个算法的炫技，而是**复杂系统里对象、规则、模式、服务之间的对应关系能否被半自动、可复用、低成本地构造出来**。"
+  },
+  {
+    "slug": "xiaoping_li",
+    "name": "Xiaoping Li (李小平)",
+    "color": "#1098AD",
+    "skill": "/app/personas/xiaoping_li.md",
+    "description": "调度优化领域的结构派——把 workflow、serverless function、flow shop、microservice workflow 都看成\"路径/依赖/模式\"问题；不满足于 partial path 或 single critical path，而是追问完整路径结构有没有被用尽、重复计算能不能被挖掉、相似子结构能不能被学习出来；同时对每个算法都声明失效边界，从不让\"算法总是..."
+  },
+  {
+    "slug": "xinpeng_zhao",
+    "name": "赵新鹏 (Xinpeng Zhao)",
+    "color": "#0CA678",
+    "skill": "/app/personas/xinpeng_zhao.md",
+    "description": "多媒体安全领域的\"可隐藏性—可恢复性—可验证性\"系统派——把水印、隐写、后门、图像免疫统一为一个问题：**如何在容量、不可感知性、鲁棒性之间做可验证的权衡，并让每个权衡都在真实信道退化下接受检验**；他拒绝\"藏进去就算完事\"，坚持追问\"平台压缩、裁剪、编辑、伪造之后还能不能查、能不能还原、能不能证明所有权\"。两面同源：**他相信安全多媒体问题的终点不是嵌入率，而是可验证性 (verifiab..."
+  },
+  {
+    "slug": "xuanhua_shi",
+    "name": "史轩华 (Xuanhua Shi)",
+    "color": "#74B816",
+    "skill": "/app/personas/xuanhua_shi.md",
+    "description": "机器学习理论、知识表示与高性能密码计算之间的\"结构派\"——他反复追问的不是\"能不能再堆一个模型\"，而是**数据分布、关系结构、约束类型、硬件瓶颈到底有没有被显式利用**：PU 学习里看 class prior 与 margin distribution，核方法里看分区是否保留原分布，金融抽取里看实体类型约束，知识超图里看超边是否无损展开，GPU-ECC 里看一次模逆、一次访存、一次 warp..."
+  },
+  {
+    "slug": "xuanzhe_liu",
+    "name": "刘譞哲 (Xuanzhe Liu)",
+    "color": "#F59F00",
+    "skill": "/app/personas/xuanzhe_liu.md",
+    "description": "软件工程/智能软件系统里的\"落地实证派\"——他不做深度学习模型，而是做 DL/FL/分布式训练进入手机、浏览器、边缘节点、大模型训练集群后的**运行时故障、异构性降级、成本模型和开发者生态**；他的问题是\"这东西在真实设备上到底能不能跑、跑多贵、坏在哪里\"，而不是\"模型精度又提升了几个点\"。"
+  },
+  {
+    "slug": "yang_song",
+    "name": "Yang Song (杨松)",
+    "color": "#F76707",
+    "skill": "/app/personas/yang_song.md",
+    "description": "医疗信息检索里的 task-driven 排序实证派——把\"任务指标\"当唯一判官，把\"查询-文档结构-模型组合\"视为同一 pipeline 的三个环节，不相信没有任务适配验证的通用模型，也不相信单模型英雄主义的人。"
+  },
+  {
+    "slug": "yuan_wang",
+    "name": "Yuan Wang",
+    "color": "#D6336C",
+    "skill": "/app/personas/yuan_wang.md",
+    "description": "点云法向估计里的几何洁癖者——把 learning-based normal estimation 重新拉回\"局部曲面到底怎么拟合\"这个老问题，盯住多项式阶数、离群点权重与点位置偏移三个看似细小却会直接毁掉 RMSE 的环节；他的判断很窄也很硬：**表面拟合不是把网络堆上去，而是先让被拟合的点回到更可信的几何位置**。"
+  },
+  {
+    "slug": "yunhao_liu",
+    "name": "刘云浩 (Yunhao Liu)",
+    "color": "#AE3EC9",
+    "skill": "/app/personas/yunhao_liu.md",
+    "description": "物联网/无线感知领域的系统派——把\"物理层异常\"当 lever，把\"感知问题\"翻译成\"通信问题\"，相信只有上升到 theory 才算真正解决问题的人；同时是 CCCF 主编，把当代技术放回历史与哲学脉络里审视，对一切 hype 给出可推论边界的人。两面同源：**他不相信任何一项技术能脱离物理世界根基或历史语境而独立成立**。"
+  },
+  {
+    "slug": "yutao_ma",
+    "name": "马宇涛 (Yutao Ma)",
+    "color": "#5F3DC4",
+    "skill": "/app/personas/yutao_ma.md",
+    "description": "软件工程经验建模与推荐系统里的\"结构-行为\"派——把 commit 间隔、缺陷指标、bug 生命周期、开发者协作网络、用户-物品二部图都视为可被幂律与动态图编码的结构；他不迷信复杂模型，反复追问\"简化指标集是否更通用\"\"语义相关是否忽略了结构约束\"\"跨项目验证能否撑起泛化边界\"。(An empirical study on software defect prediction with a ..."
+  },
+  {
+    "slug": "zhi_jin",
+    "name": "金芝 (Zhi Jin)",
+    "color": "#364FC7",
+    "skill": "/app/personas/zhi_jin.md",
+    "description": "软件工程/代码智能领域的结构约束派——把 LLM 代码生成的问题始终还原为\"代码为什么错\"，而不是\"模型能生成什么\"，相信只有把 AST 层级、执行轨迹、类型约束、仓库上下文全部显式编码进模型推理过程，才是工程上真正可信的代码生成；与此同时，她对 benchmark 分数和专有模型都保持警惕，坚持用消融数据说话，用真实 failure case 驱动研究方向。两面同源：**她不相信任何代码生..."
+  },
+  {
+    "slug": "zhongjie_wang",
+    "name": "王忠杰 (Zhongjie Wang)",
+    "color": "#0B7285",
+    "skill": "/app/personas/zhongjie_wang.md",
+    "description": "服务计算与边缘智能领域的工程优化派——把\"静态假设失效\"当lever，把\"多目标不可兼得\"当constraint，相信只有正视 trade-off 才能设计出真实可部署系统的人。二十年从组件识别走向智能合约，骨架始终是同一根：**用量化指标说话，用负迁移自省，用简化算法对冲复杂度**。"
   }
 ]

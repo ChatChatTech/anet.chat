@@ -1,0 +1,35 @@
+{
+  "paper_id": "Physical Invisible Backdoor Based on Camera Imaging",
+  "doi": "10.48550/arxiv.2309.07428",
+  "title": "Physical Invisible Backdoor Based on Camera Imaging",
+  "year": 2023,
+  "venue": "ACM MM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有后门攻击需修改像素导致隐蔽性差,且物理实现困难",
+  "problem_framing": "将后门触发从像素级修改转向利用相机指纹特征实现不可见触发",
+  "key_insight": "利用不同相机硬件缺陷和算法差异产生的独特指纹作为触发器,无需改动任何像素",
+  "method_signature": "三阶段训练:相机识别模型→脆弱教师模型→蒸馏学生模型",
+  "evaluation_criteria": "EACC(良性准确率)、EASR(验证攻击成功率)、TASR(测试攻击成功率)",
+  "negative_result_or_admitted_limitation": "教师模型在VGG11架构下NC检测异常值2.7超过阈值2.5,未通过检测",
+  "evidence_for_taste": [
+    "classical backdoor attacks work ineffectively",
+    "the peculiar architecture of the model may easily arouse suspicion",
+    "EASR of Wanet with PhysicalBA on VGG11 is only 10.288%",
+    "the loss of image semantic information during the process of camera fingerprint extraction"
+  ],
+  "thinking_moves": [
+    "将攻击触发从像素空间转向相机硬件特征空间",
+    "通过教师-学生蒸馏解决经典架构无法直接注入后门的问题",
+    "利用CFA插值算法的差异性增强边缘特征提取能力"
+  ],
+  "topic_tags": [
+    "camera-fingerprint-backdoor",
+    "physical-backdoor-attack",
+    "model-distillation-defense",
+    "CFA-interpolation",
+    "invisible-trigger"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

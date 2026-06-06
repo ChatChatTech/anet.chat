@@ -1,0 +1,41 @@
+{
+  "paper_id": "Guo et al. - 2021 - LEGO-Fi Transmitter-Transparent CTC With Cross-Demapping",
+  "doi": null,
+  "title": "LEGO-Fi: Transmitter-Transparent CTC With Cross-Demapping",
+  "year": 2021,
+  "venue": "IEEE Internet of Things Journal",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Physical-level CTC需要发射端复杂处理,无法支持从低能力设备到高能力设备的通信,阻碍双向高吞吐CTC",
+  "problem_framing": "如何让标准WiFi模块复用接收ZigBee数据包,实现发射端透明的跨技术通信",
+  "key_insight": "ZigBee包经过WiFi模块时留下可区分特征;WiFi丰富的处理能力可灵活处理ZigBee简单编码调制",
+  "method_signature": "跨解映射(cross-demapping):将CTC解码问题转化为模式识别问题,复用WiFi模块解码ZigBee符号",
+  "evaluation_criteria": "吞吐量(kb/s)、符号误码率(SER)、分组接收率(PRR)",
+  "negative_result_or_admitted_limitation": "直接解码ZigBee信号在WiFi上不可行,需将解码问题转化为模式识别",
+  "evidence_for_taste": [
+    "directly decoding a ZigBee signal on WiFi appears to be infeasible",
+    "we translate the ZigBee decoding problem into the pattern identification problem",
+    "the asymmetry in devices' capacity offers extra flexibility",
+    "unique protocol features also provide important basis",
+    "physical-level manipulation is more reliable than packet-level controls"
+  ],
+  "thinking_moves": [
+    "将看似不可行的直接解码问题重新frame为模式识别问题",
+    "利用协议层的重复结构(前导码周期性)作为检测依据而非丢弃信号",
+    "复用现有WiFi模块(前导检测、符号同步、正交解调器)实现跨技术接收",
+    "通过动态时间规整(DTW)处理信道噪声和时序抖动带来的序列失配"
+  ],
+  "topic_tags": [
+    "cross-technology-communication",
+    "ZigBee-to-WiFi",
+    "transmitter-transparent",
+    "physical-layer-reuse",
+    "pattern-identification"
+  ],
+  "cites_own_work": [
+    "WiZig",
+    "LEGO-Fi (INFOCOM 2019 version)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文含全部方法细节与评估,但方法章节有轻微截断不影响核心贡献提取 | md truncated to head40k+tail20k"
+}

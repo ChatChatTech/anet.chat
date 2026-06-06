@@ -1,0 +1,38 @@
+{
+  "paper_id": "Ni et al. - 2003 - ANDMARC Indoor Location Sensing Using Active RFID",
+  "doi": null,
+  "title": "LANDMARC: Indoor Location Sensing Using Active RFID",
+  "year": 2003,
+  "venue": "IEEE International Conference on Pervasive Computing and Communications (PerCom)",
+  "venue_tier": "strong",
+  "role": "unknown",
+  "motivation": "GPS fails indoors; existing indoor solutions (infrared/802.11/ultrasonic) suffer from line-of-sight, cost, or accuracy issues.",
+  "problem_framing": "Can commodity RFID technology enable cost-effective indoor location sensing despite not being designed for it?",
+  "key_insight": "Use extra fixed reference tags as calibration landmarks; comparing signal strength patterns between reference and tracking tags compensates for environmental dynamics.",
+  "method_signature": "k-nearest neighbor using Euclidean distance in signal strength space, weighted by inverse-square E value.",
+  "evaluation_criteria": "Location error e = linear distance between real and computed coordinates; analyzed via cumulative percentile distributions.",
+  "negative_result_or_admitted_limitation": "First reader-coverage approach failed: even static objects reported in different sub-regions due to dynamics; higher tag density improvement less than expected.",
+  "evidence_for_taste": [
+    "optimization problem turns out to be useless",
+    "even a static object could be reported in different sub-regions",
+    "the improvement is not as great as we expected",
+    "error due to dynamics of environment can hardly be alleviated",
+    "such an error is often unpredictable"
+  ],
+  "thinking_moves": [
+    "先证现有方法失效: 证明基于读者覆盖子区域的优化问题无法工作",
+    "将定位问题重新框架为模式匹配: 比较参考标签与跟踪标签的信号强度模式",
+    "利用环境干扰的对称性: 参考标签与跟踪标签受相同环境影响",
+    "经验调参确定超参数: 通过实验选择k=4最优值"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "reference-tags-calibration",
+    "k-nearest-neighbor",
+    "indoor-positioning",
+    "signal-strength-proximity"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

@@ -1,0 +1,819 @@
+{
+  "slug": "xiaofei_xu",
+  "n_papers": 26,
+  "n_indexed": 26,
+  "anchors": [
+    "A Link Clustering Based Approach for Clustering Categorical Data",
+    "K-ANMI_ A Mutual Information Based Clustering Algorithm for Categorical Data",
+    "Clustering Mixed Numeric and Categorical Data_ A Cluster Ensemble Approach",
+    "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces",
+    "A Construction Approach of Model Transformation Rules Based on Rough Set Theory",
+    "Mass Customization Oriented and Cost-Effective Service Network",
+    "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection",
+    "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service",
+    "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models",
+    "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+  ],
+  "by_id": {
+    "A Construction Approach of Model Transformation Rules Based on Rough Set Theory": {
+      "title": "A Construction Approach of Model Transformation Rules Based on Rough Set Theory",
+      "year": 2011,
+      "venue": "Springer LNCS 6191",
+      "doi": "10.1007/978-3-642-19680-5_4",
+      "key_insight": "将粗糙集理论扩展到支持不同元模型之间的映射,重新定义条件属性和决策属性,实现转换规则的半自动构建。",
+      "method_signature": "基于扩展粗糙集理论构建模型转换规则rsCRT算法,包含决策表生成、兼容性检测、决策矩阵构建和规则生成四步。",
+      "tags": [
+        "model-transformation",
+        "rough-set-theory",
+        "MDA",
+        "metamodel-matching",
+        "semi-automatic-rule-construction"
+      ],
+      "quality": "full"
+    },
+    "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models": {
+      "title": "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2004.10383",
+      "key_insight": "引入'事件'作为演化触发器，用多层网络融合利益相关者、服务、特征与领域",
+      "method_signature": "MSEM多层网络模型+新闻语料NLP联合学习+主动学习标注",
+      "tags": [
+        "服务生态系统",
+        "多层网络模型",
+        "事件抽取",
+        "主动学习",
+        "知识图谱融合"
+      ],
+      "quality": "full"
+    },
+    "A Design Method of Reusable Components Based on Feature Matching": {
+      "title": "A Design Method of Reusable Components Based on Feature Matching",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "用图结构层次聚类+扩展Sorenson系数自动计算实体相似度,无需人工权重",
+      "method_signature": "基于图的层次聚类+扩展Sorenson系数+领域词库语义相似度",
+      "tags": [
+        "组件复用",
+        "特征匹配",
+        "层次聚类",
+        "领域业务模型",
+        "Sorenson系数"
+      ],
+      "quality": "partial"
+    },
+    "A FP-Tree Based Approach for Mining All Strongly Correlated Pairs without Candidate Generation": {
+      "title": "A FP-Tree Based Approach for Mining All Strongly Correlated Pairs without Candidate Generation",
+      "year": 2004,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.cs/0411035",
+      "key_insight": "利用FP-tree结构直接计算所有物品对的相关系数, 无需候选生成和上界剪枝, 对阈值θ不敏感",
+      "method_signature": "Tcp: 构建完整FP-tree + 模式增长计算相关系数",
+      "tags": [
+        "FP-tree",
+        "correlation-mining",
+        "candidate-elimination",
+        "pattern-growth",
+        "pearson-correlation"
+      ],
+      "quality": "full"
+    },
+    "A Link Clustering Based Approach for Clustering Categorical Data": {
+      "title": "A Link Clustering Based Approach for Clustering Categorical Data",
+      "year": 2004,
+      "venue": "unknown",
+      "doi": "10.48550/arxiv.cs/0412019",
+      "key_insight": "CDC问题与LC问题等价，两个领域的算法可以互换使用",
+      "method_signature": "将分类数据属性等价类映射为链接，应用LC的概率生成模型聚类",
+      "tags": [
+        "categorical-data-clustering",
+        "link-clustering",
+        "cross-domain-algorithm-transfer",
+        "probabilistic-generative-model",
+        "equivalence-class-link-mapping"
+      ],
+      "quality": "full"
+    },
+    "A Log-based and Traceability-Oriented Business Object Association Model for Code Generation": {
+      "title": "A Log-based and Traceability-Oriented Business Object Association Model for Code Generation",
+      "year": null,
+      "venue": null,
+      "doi": null,
+      "key_insight": "将关联从对象内部剥离为独立日志,使简单操作处理单对象状态变更,复杂操作通过操作关联日志实现对象关联追踪",
+      "method_signature": "业务对象模型+状态日志+关联日志+简单/复杂操作分离+代码生成工具",
+      "tags": [
+        "business-object-association",
+        "log-based-traceability",
+        "code-generation",
+        "ESA-agile-reconfiguration",
+        "separation-of-concerns"
+      ],
+      "quality": "partial"
+    },
+    "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service": {
+      "title": "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service",
+      "year": 2016,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1608.08342",
+      "key_insight": "将软件服务工程重构为双向两阶段范式：自上而下需求工程与自下而上领域服务工程，以服务上下文作为需求模式与服务模式匹配的媒介",
+      "method_signature": "RE2SEP范式含服务导向需求工程、领域导向服务工程、软件开发方法三个组件",
+      "tags": [
+        "big-service-ecosystem",
+        "service-pattern-reuse",
+        "requirement-pattern-matching",
+        "service-oriented-requirement-engineering",
+        "domain-oriented-service-engineering"
+      ],
+      "quality": "full"
+    },
+    "A Survey Of Business Component Identification Methods And Related Techniques": {
+      "title": "A Survey of Business Component Identification Methods and Related Techniques",
+      "year": null,
+      "venue": "unknown",
+      "doi": "10.5281/zenodo.1062023",
+      "key_insight": "现有方法各有侧重：领域工程方法优化复用性与稳定性，聚类方法降低复用成本，CRUD方法保证语义完整性",
+      "method_signature": "将组件识别方法分为四类：领域工程法、聚类分析法、CRUD矩阵法、其他方法并进行比较分析",
+      "tags": [
+        "组件识别",
+        "软件复用",
+        "业务建模",
+        "多目标优化",
+        "聚类分析"
+      ],
+      "quality": "partial"
+    },
+    "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces": {
+      "title": "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces",
+      "year": 2005,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.cs/0505060",
+      "key_insight": "所有现有离群点检测方法都可视为子空间集合和组合函数两种参数的不同取值",
+      "method_signature": "SOE1算法：仅用一维权值子空间，两次扫描数据集，基于直方图计算",
+      "tags": [
+        "subspace-outlier-ensemble",
+        "high-dimensional-outlier-detection",
+        "ensemble-learning-unification",
+        "histogram-based-algorithm",
+        "categorical-data-mining"
+      ],
+      "quality": "full"
+    },
+    "Clustering Categorical Data Streams": {
+      "title": "Clustering Categorical Data Streams",
+      "year": 2003,
+      "venue": null,
+      "doi": "10.48550/arxiv.cs/0412058",
+      "key_insight": "Apply lossy counting histogram approximation to Squeezer algorithm yields bounded memory one-pass categorical clustering",
+      "method_signature": "StreamCluCD combines Squeezer clustering with lossy counting histogram pruning",
+      "tags": [
+        "categorical-data-stream-clustering",
+        "lossy-counting",
+        "bounded-memory-algorithms",
+        "one-pass-clustering",
+        "histogram-approximation"
+      ],
+      "quality": "full"
+    },
+    "Clustering Mixed Numeric and Categorical Data_ A Cluster Ensemble Approach": {
+      "title": "Clustering Mixed Numeric and Categorical Data: A Cluster Ensemble Approach",
+      "year": 2005,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.cs/0509011",
+      "key_insight": "聚类输出本身是类别标签,可作为类别属性处理;利用Squeezer算法支持加权属性相似度计算来解决不同子数据集的权重平衡",
+      "method_signature": "CEBMDC: 先分割数据集为纯类别和纯数值子集,分别聚类后合并为类别数据集再聚类集成",
+      "tags": [
+        "mixed-type-attribute-clustering",
+        "cluster-ensemble",
+        "categorical-data-clustering",
+        "divide-and-conquer-framework",
+        "Squeezer-algorithm"
+      ],
+      "quality": "full"
+    },
+    "Community-Based Service Ecosystem Evolution Analysis": {
+      "title": "Community-Based Service Ecosystem Evolution Analysis",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2005.02729",
+      "key_insight": "服务社区比整体生态系统更敏感，能更早感知生态系统演化趋势，提供整体层面无法获取的独特洞察",
+      "method_signature": "随机森林分类器+SHAP可解释性分析，从社区视角预测服务生态演化",
+      "tags": [
+        "service-ecosystem-evolution",
+        "community-detection",
+        "SHAP-interpretation",
+        "business-level-analysis",
+        "service-community"
+      ],
+      "quality": "full"
+    },
+    "Domain Priori Knowledge based Integrated Solution Design for Internet of Services": {
+      "title": "Domain Priori Knowledge based Integrated Solution Design for Internet of Services",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2009.02065",
+      "key_insight": "利用历史UR与历史ISS的共性与相似性提取需求模式(RP)和服务模式(SP),构建双向概率匹配矩阵。",
+      "method_signature": "I-Tree建模→RP覆盖→PMM匹配SP→ISS快速生成",
+      "tags": [
+        "service-pattern-mining",
+        "requirement-modeling",
+        "bilateral-pattern-matching",
+        "IoS-integrated-solution",
+        "probabilistic-matching-matrix"
+      ],
+      "quality": "full"
+    },
+    "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation": {
+      "title": "DySR: A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2108.03360",
+      "key_insight": "通过可学习的仿射变换函数消除表示鸿沟,利用动态图表示学习捕捉服务的演化社会环境,实现无需交互历史即可推荐",
+      "method_signature": "DySR结合动态图表示学习(DyRep变体)、表示对齐(仿射变换)和GAN风格协同训练",
+      "tags": [
+        "service-bundle-recommendation",
+        "cold-start",
+        "representation-alignment",
+        "dynamic-graph-learning",
+        "service-ecosystem-evolution"
+      ],
+      "quality": "full"
+    },
+    "Enterprise Interoperability": {
+      "title": "Enterprise Interoperability",
+      "year": 2012,
+      "venue": "IWEI 2012",
+      "doi": "10.1007/978-3-642-33068-1",
+      "key_insight": "价值创造从单向转向双向，企业成功取决于与任意伙伴的互操作能力",
+      "method_signature": "IWEI会议征稿覆盖理论框架、架构方法、成熟度模型与应用案例的完整研究谱系",
+      "tags": [
+        "enterprise-interoperability",
+        "cross-organizational-collaboration",
+        "networked-enterprises",
+        "service-modeling",
+        "future-internet"
+      ],
+      "quality": "full"
+    },
+    "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities": {
+      "title": "External Service Sensing (ESS): Research Framework, Challenges and Opportunities",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2106.09208",
+      "key_insight": "ESS是其他服务计算问题的上游任务,需先感知变化才能提升实用性",
+      "method_signature": "四维框架:感知对象、内容、渠道、技术组合定义具体ESS问题",
+      "tags": [
+        "services-computing",
+        "service-change-sensing",
+        "research-framework",
+        "service-dynamics",
+        "upstream-tasks"
+      ],
+      "quality": "full"
+    },
+    "IDENTIFYING BUSINESS COMPONENTS FROM BUSINESS MODEL_ A METHOD BASED ON FEATURE MATHCING": {
+      "title": "IDENTIFYING BUSINESS COMPONENTS FROM BUSINESS MODEL: A METHOD BASED ON FEATURE MATCHING",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "引入等价特征关系，通过扩展Sorenson系数计算多元素相似度进行聚类",
+      "method_signature": "基于等价特征关系划分特征集+层次聚类识别业务组件",
+      "tags": [
+        "business-component-identification",
+        "feature-matching-clustering",
+        "domain-business-model",
+        "equivalent-feature-relation",
+        "hierarchical-clustering"
+      ],
+      "quality": "partial"
+    },
+    "K-ANMI_ A Mutual Information Based Clustering Algorithm for Categorical Data": {
+      "title": "K-ANMI: A Mutual Information Based Clustering Algorithm for Categorical Data",
+      "year": 2005,
+      "venue": null,
+      "doi": "10.48550/arxiv.cs/0511013",
+      "key_insight": "Treating each attribute's value partition as a clustering result allows reformulating categorical clustering as a cluster ensemble consensus problem.",
+      "method_signature": "k-means style iterative algorithm directly optimizing ANMI objective using histogram-based data structures for scalability.",
+      "tags": [
+        "categorical-data-clustering",
+        "mutual-information",
+        "cluster-ensemble",
+        "k-means-paradigm",
+        "optimization"
+      ],
+      "quality": "full"
+    },
+    "K-Histograms_ An Efficient Clustering Algorithm for Categorical Dataset": {
+      "title": "K-Histograms: An Efficient Clustering Algorithm for Categorical Dataset",
+      "year": 2005,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.cs/0509033",
+      "key_insight": "用直方图完整保留属性值频率分布，比mode更能刻画类别聚类的内部结构",
+      "method_signature": "用直方图表示簇，以公式(6)计算对象与直方图差异度，迭代优化聚类目标函数",
+      "tags": [
+        "categorical-clustering",
+        "histogram-representation",
+        "k-means-extension",
+        "dissimilarity-measure",
+        "outlier-robustness"
+      ],
+      "quality": "full"
+    },
+    "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework": {
+      "title": "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification: An Outfit Generation Framework",
+      "year": 2022,
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "doi": "10.1109/tnnls.2022.3202842",
+      "key_insight": "引入语义对齐模块捕获输入输出图像间的长程依赖关系,用Bi-LSTM建模顺序兼容性来监督生成过程",
+      "method_signature": "OutfitGAN框架包含SAM语义对齐模块和CCM搭配分类模块,基于LSGAN目标和L1/perceptual损失",
+      "tags": [
+        "fashion-compatible-generation",
+        "semantic-alignment-module",
+        "collocation-classification",
+        "outfit-gan",
+        "mask-guided-synthesis"
+      ],
+      "quality": "full"
+    },
+    "Lightweight Secure Directed Diffusion for Wireless Sensor Networks": {
+      "title": "Lightweight Secure Directed Diffusion for Wireless Sensor Networks",
+      "year": 2014,
+      "venue": "Hindawi Publishing Corporation (Mathematical Problems in Engineering)",
+      "doi": "10.1155/2014/415143",
+      "key_insight": "用延迟容忍单向哈希链认证配合黑名单机制，可在低开销下抵御多种路由攻击",
+      "method_signature": "扩展定向扩散协议，集成延迟容忍单向哈希链认证和黑名单技术",
+      "tags": [
+        "wireless-sensor-network-security",
+        "directed-diffusion-routing",
+        "one-way-hash-chain-authentication",
+        "lightweight-cryptography",
+        "denial-of-service-defense"
+      ],
+      "quality": "full"
+    },
+    "Mass Customization Oriented and Cost-Effective Service Network": {
+      "title": "Mass Customization Oriented and Cost-Effective Service Network",
+      "year": 2013,
+      "venue": "Springer LNCS (Service-Oriented Computing)",
+      "doi": "10.1007/978-3-642-36796-0_15",
+      "key_insight": "将服务网络作为持久基础设施而非临时组合，通过特征选择与组合优化实现动态定制。",
+      "method_signature": "基于IN_Pool/OUT_Pool/Service_Pool的服务网络形式化定义与两阶段优化算法。",
+      "tags": [
+        "service-composition",
+        "mass-customization",
+        "service-network",
+        "cost-effectiveness",
+        "competency-assessment"
+      ],
+      "quality": "full"
+    },
+    "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection": {
+      "title": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection",
+      "year": 2016,
+      "venue": "IEEE Transactions on Services Computing",
+      "doi": "10.1109/tsc.2016.2612663",
+      "key_insight": "Continuous ABC's success stems from 'optimality continuity' property (similar variables yield similar function values); discrete ABC lacks this because neighborhood covers entire solution space; approximating this property via QoS-similarity-based neighbors improves convergence.",
+      "method_signature": "Three algorithms (IBA/PBA/EBA) achieve approximate optimality continuity through ratio-based, partition-based, and experience-based neighborhood definitions respectively.",
+      "tags": [
+        "ABC-continuous-analogy",
+        "discrete-optimization-approximation",
+        "neighborhood-search-redesign",
+        "QoS-aware-service-selection",
+        "service-composition-metaheuristic"
+      ],
+      "quality": "full"
+    },
+    "Online Deployment Algorithms for Microservice Systems with Complex Dependencies": {
+      "title": "Online Deployment Algorithms for Microservice Systems with Complex Dependencies",
+      "year": 2021,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2107.09308",
+      "key_insight": "响应时间沿函数链可分解为相邻函数对响应时间之和,使FPP可转化为二次比值和问题(QSRFP)大幅降低复杂度",
+      "method_signature": "基于Theorem 1将FPP转化为QSRFP,提出B/D/BD-QSRFP三种贪心部署算法",
+      "tags": [
+        "microservice-deployment",
+        "service-placement-problem",
+        "fractional-polynomial-optimization",
+        "edge-cloud-computing",
+        "greedy-algorithm"
+      ],
+      "quality": "full"
+    },
+    "Semantic Relation Based Exception Detection in Workflow Systems": {
+      "title": "Semantic Relation Based Exception Detection in Workflow Systems",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "数据依赖图G_Data是控制依赖图G_Ctrl的超图，利用数据依赖规则作为控制规则的语义补充，可在不改变schema结构的前提下检测异常路径",
+      "method_signature": "基于BFS的路径枚举(AllPath)+数据依赖规则验证(ExceptionChecking)+异常路径搜索(SearchAllExceptionPath)",
+      "tags": [
+        "workflow-exception-detection",
+        "data-dependency-rule",
+        "control-dependency-graph",
+        "semantic-relation",
+        "path-enumeration-algorithm"
+      ],
+      "quality": "partial"
+    },
+    "Who Should I Engage with At What Time_ A Missing Event Aware Temporal Graph Neural Network": {
+      "title": "Who Should I Engage with At What Time? A Missing Event Aware Temporal Graph Neural Network",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2301.08399",
+      "key_insight": "缺失事件应作为独立的时序点过程与观测事件耦合，通过变分推断处理不可观测的缺失事件",
+      "method_signature": "MTGN：耦合观测/缺失事件TPP，用对数正态混合分布参数化时间，联合预测链接与时间",
+      "tags": [
+        "missing-event-aware-TGNN",
+        "temporal-point-process",
+        "event-time-estimation",
+        "variational-inference",
+        "coupled-TPP"
+      ],
+      "quality": null
+    }
+  },
+  "by_tag": {
+    "categorical-data-clustering": [
+      "A Link Clustering Based Approach for Clustering Categorical Data",
+      "Clustering Mixed Numeric and Categorical Data_ A Cluster Ensemble Approach",
+      "K-ANMI_ A Mutual Information Based Clustering Algorithm for Categorical Data"
+    ],
+    "cluster-ensemble": [
+      "Clustering Mixed Numeric and Categorical Data_ A Cluster Ensemble Approach",
+      "K-ANMI_ A Mutual Information Based Clustering Algorithm for Categorical Data"
+    ],
+    "service-ecosystem-evolution": [
+      "Community-Based Service Ecosystem Evolution Analysis",
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "model-transformation": [
+      "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    ],
+    "rough-set-theory": [
+      "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    ],
+    "MDA": [
+      "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    ],
+    "metamodel-matching": [
+      "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    ],
+    "semi-automatic-rule-construction": [
+      "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    ],
+    "服务生态系统": [
+      "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    ],
+    "多层网络模型": [
+      "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    ],
+    "事件抽取": [
+      "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    ],
+    "主动学习": [
+      "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    ],
+    "知识图谱融合": [
+      "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    ],
+    "组件复用": [
+      "A Design Method of Reusable Components Based on Feature Matching"
+    ],
+    "特征匹配": [
+      "A Design Method of Reusable Components Based on Feature Matching"
+    ],
+    "层次聚类": [
+      "A Design Method of Reusable Components Based on Feature Matching"
+    ],
+    "领域业务模型": [
+      "A Design Method of Reusable Components Based on Feature Matching"
+    ],
+    "Sorenson系数": [
+      "A Design Method of Reusable Components Based on Feature Matching"
+    ],
+    "FP-tree": [
+      "A FP-Tree Based Approach for Mining All Strongly Correlated Pairs without Candidate Generation"
+    ],
+    "correlation-mining": [
+      "A FP-Tree Based Approach for Mining All Strongly Correlated Pairs without Candidate Generation"
+    ],
+    "candidate-elimination": [
+      "A FP-Tree Based Approach for Mining All Strongly Correlated Pairs without Candidate Generation"
+    ],
+    "pattern-growth": [
+      "A FP-Tree Based Approach for Mining All Strongly Correlated Pairs without Candidate Generation"
+    ],
+    "pearson-correlation": [
+      "A FP-Tree Based Approach for Mining All Strongly Correlated Pairs without Candidate Generation"
+    ],
+    "link-clustering": [
+      "A Link Clustering Based Approach for Clustering Categorical Data"
+    ],
+    "cross-domain-algorithm-transfer": [
+      "A Link Clustering Based Approach for Clustering Categorical Data"
+    ],
+    "probabilistic-generative-model": [
+      "A Link Clustering Based Approach for Clustering Categorical Data"
+    ],
+    "equivalence-class-link-mapping": [
+      "A Link Clustering Based Approach for Clustering Categorical Data"
+    ],
+    "business-object-association": [
+      "A Log-based and Traceability-Oriented Business Object Association Model for Code Generation"
+    ],
+    "log-based-traceability": [
+      "A Log-based and Traceability-Oriented Business Object Association Model for Code Generation"
+    ],
+    "code-generation": [
+      "A Log-based and Traceability-Oriented Business Object Association Model for Code Generation"
+    ],
+    "ESA-agile-reconfiguration": [
+      "A Log-based and Traceability-Oriented Business Object Association Model for Code Generation"
+    ],
+    "separation-of-concerns": [
+      "A Log-based and Traceability-Oriented Business Object Association Model for Code Generation"
+    ],
+    "big-service-ecosystem": [
+      "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service"
+    ],
+    "service-pattern-reuse": [
+      "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service"
+    ],
+    "requirement-pattern-matching": [
+      "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service"
+    ],
+    "service-oriented-requirement-engineering": [
+      "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service"
+    ],
+    "domain-oriented-service-engineering": [
+      "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service"
+    ],
+    "组件识别": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "软件复用": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "业务建模": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "多目标优化": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "聚类分析": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "subspace-outlier-ensemble": [
+      "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces"
+    ],
+    "high-dimensional-outlier-detection": [
+      "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces"
+    ],
+    "ensemble-learning-unification": [
+      "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces"
+    ],
+    "histogram-based-algorithm": [
+      "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces"
+    ],
+    "categorical-data-mining": [
+      "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces"
+    ],
+    "categorical-data-stream-clustering": [
+      "Clustering Categorical Data Streams"
+    ],
+    "lossy-counting": [
+      "Clustering Categorical Data Streams"
+    ],
+    "bounded-memory-algorithms": [
+      "Clustering Categorical Data Streams"
+    ],
+    "one-pass-clustering": [
+      "Clustering Categorical Data Streams"
+    ],
+    "histogram-approximation": [
+      "Clustering Categorical Data Streams"
+    ],
+    "mixed-type-attribute-clustering": [
+      "Clustering Mixed Numeric and Categorical Data_ A Cluster Ensemble Approach"
+    ],
+    "divide-and-conquer-framework": [
+      "Clustering Mixed Numeric and Categorical Data_ A Cluster Ensemble Approach"
+    ],
+    "Squeezer-algorithm": [
+      "Clustering Mixed Numeric and Categorical Data_ A Cluster Ensemble Approach"
+    ],
+    "community-detection": [
+      "Community-Based Service Ecosystem Evolution Analysis"
+    ],
+    "SHAP-interpretation": [
+      "Community-Based Service Ecosystem Evolution Analysis"
+    ],
+    "business-level-analysis": [
+      "Community-Based Service Ecosystem Evolution Analysis"
+    ],
+    "service-community": [
+      "Community-Based Service Ecosystem Evolution Analysis"
+    ],
+    "service-pattern-mining": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "requirement-modeling": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "bilateral-pattern-matching": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "IoS-integrated-solution": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "probabilistic-matching-matrix": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "service-bundle-recommendation": [
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "cold-start": [
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "representation-alignment": [
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "dynamic-graph-learning": [
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "enterprise-interoperability": [
+      "Enterprise Interoperability"
+    ],
+    "cross-organizational-collaboration": [
+      "Enterprise Interoperability"
+    ],
+    "networked-enterprises": [
+      "Enterprise Interoperability"
+    ],
+    "service-modeling": [
+      "Enterprise Interoperability"
+    ],
+    "future-internet": [
+      "Enterprise Interoperability"
+    ],
+    "services-computing": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "service-change-sensing": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "research-framework": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "service-dynamics": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "upstream-tasks": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "business-component-identification": [
+      "IDENTIFYING BUSINESS COMPONENTS FROM BUSINESS MODEL_ A METHOD BASED ON FEATURE MATHCING"
+    ],
+    "feature-matching-clustering": [
+      "IDENTIFYING BUSINESS COMPONENTS FROM BUSINESS MODEL_ A METHOD BASED ON FEATURE MATHCING"
+    ],
+    "domain-business-model": [
+      "IDENTIFYING BUSINESS COMPONENTS FROM BUSINESS MODEL_ A METHOD BASED ON FEATURE MATHCING"
+    ],
+    "equivalent-feature-relation": [
+      "IDENTIFYING BUSINESS COMPONENTS FROM BUSINESS MODEL_ A METHOD BASED ON FEATURE MATHCING"
+    ],
+    "hierarchical-clustering": [
+      "IDENTIFYING BUSINESS COMPONENTS FROM BUSINESS MODEL_ A METHOD BASED ON FEATURE MATHCING"
+    ],
+    "mutual-information": [
+      "K-ANMI_ A Mutual Information Based Clustering Algorithm for Categorical Data"
+    ],
+    "k-means-paradigm": [
+      "K-ANMI_ A Mutual Information Based Clustering Algorithm for Categorical Data"
+    ],
+    "optimization": [
+      "K-ANMI_ A Mutual Information Based Clustering Algorithm for Categorical Data"
+    ],
+    "categorical-clustering": [
+      "K-Histograms_ An Efficient Clustering Algorithm for Categorical Dataset"
+    ],
+    "histogram-representation": [
+      "K-Histograms_ An Efficient Clustering Algorithm for Categorical Dataset"
+    ],
+    "k-means-extension": [
+      "K-Histograms_ An Efficient Clustering Algorithm for Categorical Dataset"
+    ],
+    "dissimilarity-measure": [
+      "K-Histograms_ An Efficient Clustering Algorithm for Categorical Dataset"
+    ],
+    "outlier-robustness": [
+      "K-Histograms_ An Efficient Clustering Algorithm for Categorical Dataset"
+    ],
+    "fashion-compatible-generation": [
+      "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    ],
+    "semantic-alignment-module": [
+      "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    ],
+    "collocation-classification": [
+      "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    ],
+    "outfit-gan": [
+      "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    ],
+    "mask-guided-synthesis": [
+      "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    ],
+    "wireless-sensor-network-security": [
+      "Lightweight Secure Directed Diffusion for Wireless Sensor Networks"
+    ],
+    "directed-diffusion-routing": [
+      "Lightweight Secure Directed Diffusion for Wireless Sensor Networks"
+    ],
+    "one-way-hash-chain-authentication": [
+      "Lightweight Secure Directed Diffusion for Wireless Sensor Networks"
+    ],
+    "lightweight-cryptography": [
+      "Lightweight Secure Directed Diffusion for Wireless Sensor Networks"
+    ],
+    "denial-of-service-defense": [
+      "Lightweight Secure Directed Diffusion for Wireless Sensor Networks"
+    ],
+    "service-composition": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "mass-customization": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "service-network": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "cost-effectiveness": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "competency-assessment": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "ABC-continuous-analogy": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "discrete-optimization-approximation": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "neighborhood-search-redesign": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "QoS-aware-service-selection": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "service-composition-metaheuristic": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "microservice-deployment": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "service-placement-problem": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "fractional-polynomial-optimization": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "edge-cloud-computing": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "greedy-algorithm": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "workflow-exception-detection": [
+      "Semantic Relation Based Exception Detection in Workflow Systems"
+    ],
+    "data-dependency-rule": [
+      "Semantic Relation Based Exception Detection in Workflow Systems"
+    ],
+    "control-dependency-graph": [
+      "Semantic Relation Based Exception Detection in Workflow Systems"
+    ],
+    "semantic-relation": [
+      "Semantic Relation Based Exception Detection in Workflow Systems"
+    ],
+    "path-enumeration-algorithm": [
+      "Semantic Relation Based Exception Detection in Workflow Systems"
+    ],
+    "missing-event-aware-TGNN": [
+      "Who Should I Engage with At What Time_ A Missing Event Aware Temporal Graph Neural Network"
+    ],
+    "temporal-point-process": [
+      "Who Should I Engage with At What Time_ A Missing Event Aware Temporal Graph Neural Network"
+    ],
+    "event-time-estimation": [
+      "Who Should I Engage with At What Time_ A Missing Event Aware Temporal Graph Neural Network"
+    ],
+    "variational-inference": [
+      "Who Should I Engage with At What Time_ A Missing Event Aware Temporal Graph Neural Network"
+    ],
+    "coupled-TPP": [
+      "Who Should I Engage with At What Time_ A Missing Event Aware Temporal Graph Neural Network"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Reliable Microservice Tail Latency Prediction via Decoupled Dual-Stream Learning and Gradient Modulation",
+  "doi": "10.48550/arxiv.2508.01635",
+  "title": "Reliable Microservice Tail Latency Prediction via Decoupled Dual-Stream Learning and Gradient Modulation",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "Microservice tail latency prediction fails due to misaligned feature representations from mixing heterogeneous traffic and resource signals",
+  "problem_framing": "Formulates latency prediction as snapshot spatial regression over aggregate dependency graph, explicitly separating demand from capacity",
+  "key_insight": "Decouple physical modeling of traffic propagation (GNN) from resource saturation (gMLP) and modulate gradients to prevent one stream from dominating",
+  "method_signature": "Dual-stream GNN+gMLP with hierarchical tensor fusion and reliability-aware gradient modulation (RAGM)",
+  "evaluation_criteria": "MAPE, MAE, RMSE on window-level P95 latency across Online Boutique, Sock Shop, Train Ticket benchmarks",
+  "negative_result_or_admitted_limitation": "Framework prioritizes instantaneous spatial states, inherently limiting exploitation of long-term temporal dependencies",
+  "evidence_for_taste": [
+    "lack of explicit separation causes misaligned feature representations",
+    "unified architectures fail to isolate cascading dependencies",
+    "resource features converge faster and dominate gradient updates",
+    "the model overfits to the fast-converging infrastructure capacity signals",
+    "this entanglement fails to address structural dichotomy"
+  ],
+  "thinking_moves": [
+    "把异质性数据处理问题上升为物理机制解耦",
+    "把优化不平衡问题类比为课程学习中的落后_stream放大策略",
+    "把隐性资源竞争建模为虚拟全连接竞争图",
+    "从收敛速度差异反推出梯度压制问题"
+  ],
+  "topic_tags": [
+    "microservice-tail-latency-prediction",
+    "dual-stream-learning",
+    "gradient-modulation-optimization",
+    "graph-neural-network-demand-modeling",
+    "gated-mlp-resource-encoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "arXiv paper without peer-reviewed venue. Full paper text provided, ablation studies present, but year inferred from DOI format arxiv.2508.01635 | md truncated to head40k+tail20k"
+}

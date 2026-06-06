@@ -1,0 +1,43 @@
+{
+  "paper_id": "A Reversible Data hiding Scheme in Encrypted Domain for Secret Image Sharing based on Chinese Remainder Theorem",
+  "doi": "10.48550/arxiv.2010.08502",
+  "title": "A Reversible Data hiding Scheme in Encrypted Domain for Secret Image Sharing based on Chinese Remainder Theorem",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "现有加密域可逆信息隐藏主要针对端到端通信，多方安全场景缺乏技术支撑",
+  "problem_framing": "在(t,n)阈值秘密图像共享框架下，实现从图像分存和重构图像中可分离地提取数据",
+  "key_insight": "利用CRT秘密共享的加法同态性质，在加密域直接进行差分扩展嵌入，无需重构图像",
+  "method_signature": "HDE-ED同态差分扩展 + DE-IS分存差分扩展",
+  "evaluation_criteria": "嵌入容量、PSNR、可逆性、相关性、熵、计算复杂度",
+  "negative_result_or_admitted_limitation": "设置w=7时可压缩MSB将Blowup Factor降至1，但实现细节留作未来工作",
+  "evidence_for_taste": [
+    "separability has been so far an important attribute",
+    "the dealer could authenticate the identity and check the integrity",
+    "realizes homomorphic embedding modifications on the image content",
+    "the number of the available pixel pairs determines the EC",
+    "maintains the random distribution"
+  ],
+  "thinking_moves": [
+    "识别现有方法局限于端到端通信，多方安全需秘密共享方案",
+    "将可逆信息隐藏与CRT秘密共享结合实现可分离性",
+    "利用CRT加法同态性在加密域直接修改图像内容",
+    "区分两类提取场景：重构前（DE-IS）与重构后（HDE-ED）",
+    "通过约束条件保障嵌入后不产生溢出问题"
+  ],
+  "topic_tags": [
+    "CRT-secret-sharing",
+    "separable-RDH-ED",
+    "homomorphic-difference-expansion",
+    "secret-image-sharing",
+    "multi-party-security"
+  ],
+  "cites_own_work": [
+    "Ke2016",
+    "Ke2018",
+    "Ke2020"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

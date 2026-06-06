@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2013 - Challenges, Designs, and Performances of Large-Scale Open-P2SP Content Distribution",
+  "doi": null,
+  "title": "Challenges, Designs, and Performances of Large-Scale Open-P2SP Content Distribution",
+  "year": 2013,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有内容分发模式(server-based/P2P/P2SP)各有缺陷,P2SP封闭性导致内容丰富度和服务器带宽受限",
+  "problem_framing": "设计大规模开放P2SP系统需解决第三方服务器动态、带宽限制、差异化加速、利益分配四类问题",
+  "key_insight": "基于大规模实测找中等实用解而非完美解,用40%阈值控制额外带宽利用率实现与服务器提供商共存",
+  "method_signature": "QQXuanfeng系统:内容爬虫+验证器+数据调度器(53台服务器),跟踪百万服务器服务500万peer",
+  "evaluation_criteria": "peer加速效果(57→158KBps)、服务器带宽贡献比(45%)、额外带宽利用率(EBU<40%)",
+  "negative_result_or_admitted_limitation": "从未找到任何问题的完美解决方案;17.5%用户下载率仍低于基本期望;无商业成熟先例可循",
+  "evidence_for_taste": [
+    "never figured out a perfect solution",
+    "moderate and practical solution",
+    "extremely low hash conflict probability",
+    "proper tradeoff",
+    "affordable download traffic"
+  ],
+  "thinking_moves": [
+    "从工程约束反推阈值(40% EBU)",
+    "用测量数据定义'基本期望'(30KBps)",
+    "对不同规模swarm采用差异化ATD阈值",
+    "用三方验证代替中心控制处理动态性"
+  ],
+  "topic_tags": [
+    "open-P2SP",
+    "content-distribution",
+    "hybrid-server-P2P",
+    "download-acceleration",
+    "bandwidth-scheduling"
+  ],
+  "cites_own_work": [
+    "[10] Li et al. - IWQoS 2012",
+    "[28] Huang et al. - ACM-MM 2011"
+  ],
+  "extraction_quality": "full"
+}

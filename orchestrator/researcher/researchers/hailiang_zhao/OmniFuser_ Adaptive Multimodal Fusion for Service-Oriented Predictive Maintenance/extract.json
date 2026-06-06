@@ -1,0 +1,41 @@
+{
+  "paper_id": "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+  "doi": "10.48550/arxiv.2511.01320",
+  "title": "OmniFuser: Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "Unplanned tool failures cause quality degradation, downtime, and cost in manufacturing; current unimodal monitoring is insufficient.",
+  "problem_framing": "Predictive maintenance as intelligent service requiring joint modeling of slow degradation trends and rapid operational dynamics from heterogeneous sensor streams and images.",
+  "key_insight": "Contamination-free fusion requires explicitly disentangling shared and private representations with orthogonal decomposition, preserving modality-specific cues while enabling cross-modal interaction.",
+  "method_signature": "C2F mechanism with shared/private separation, proxy-based cross-modal attention, and recursive refinement pathway anchoring fusion to original features.",
+  "evaluation_criteria": "MSE/MAE for multi-step force forecasting; accuracy/precision for tool wear state classification across prediction horizons 12-96.",
+  "negative_result_or_admitted_limitation": "Image-based methods heavily influenced by lighting variability and fail to capture dynamic changes in cutting process critical for early failure prediction.",
+  "evidence_for_taste": [
+    "contamination as cross-modal redundancy",
+    "explicitly preserving modality-specific information",
+    "recursive refinement pathway functions as an anchor mechanism",
+    "contamination-free and information-sufficient basis for fusion",
+    "fails to resolve these slow variations",
+    "lacks persistent markers of cumulative wear",
+    "ensuring consistent performance when deployed"
+  ],
+  "thinking_moves": [
+    "把融合问题重新定义为信息污染问题：交叉模态冗余导致私有信息丢失",
+    "通过正交分解形式化共享/私有分离，保证互信息下界不降低",
+    "用奇异谱分析(SSA)实证分解信号中的趋势vs残差能量分布，支撑低维趋势子空间假设",
+    "从服务工程角度反向设计模块化：每个组件设计为松耦合可复用服务模块",
+    "复杂度优化理论：二次复杂度O(T²d)压缩到线性O(Tkd)，以landmark近似主导交互子空间"
+  ],
+  "topic_tags": [
+    "multimodal-fusion",
+    "predictive-maintenance",
+    "tool-wear-monitoring",
+    "cross-modal-attention",
+    "service-oriented-systems"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

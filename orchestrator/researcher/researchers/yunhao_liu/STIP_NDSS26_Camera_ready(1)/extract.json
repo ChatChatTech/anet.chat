@@ -1,0 +1,40 @@
+{
+  "paper_id": "STIP_NDSS26_Camera_ready(1)",
+  "doi": null,
+  "title": "STIP: Three-Party Privacy-Preserving and Lossless Inference for Large Transformers in Production",
+  "year": 2026,
+  "venue": "NDSS",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有HE+2PC协议计算开销过大(25分钟/90GiB生成单个token)，不适用于实时大模型推理",
+  "problem_framing": "三 party威胁模型下，在 commodity硬件上实现隐私保护与无损精度的平衡",
+  "key_insight": "利用Transformer特征空间置换对称性，仅在端点共享置换矩阵，中间层置换信息仅开发者持有",
+  "method_signature": "半对称置换+轻量TEE保护参数的三方Transformer隐私推理系统",
+  "evaluation_criteria": "延迟比肩无保护云推理、隐私泄露有理论上界、抗KPA/BFA攻击",
+  "negative_result_or_admitted_limitation": "若P1与P2串通则隐私失效，需依赖更强的密码学协议",
+  "evidence_for_taste": [
+    "does not truly align with the demands of real-world applications",
+    "prohibitive computing and communication overheads",
+    "commercially infeasible",
+    "still vulnerable to known-plaintext attacks",
+    "semi-symmetric scheme to resist known-plaintext attack"
+  ],
+  "thinking_moves": [
+    "从真实服务观察到model developer≠model server，反推两方设置不符合实际",
+    "利用Transformer的置换对称性而非引入密码学假设",
+    "借鉴图像加密的半对称设计保护中间层参数"
+  ],
+  "topic_tags": [
+    "privacy-preserving-inference",
+    "transformer-model-protection",
+    "feature-space-permutation",
+    "three-party-setting",
+    "commodity-hardware-deployment"
+  ],
+  "cites_own_work": [
+    "campus chatbot",
+    "vehicle cabin assistant"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

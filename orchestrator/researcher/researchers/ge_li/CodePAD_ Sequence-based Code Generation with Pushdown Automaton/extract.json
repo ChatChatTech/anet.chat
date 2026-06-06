@@ -1,0 +1,38 @@
+{
+  "paper_id": "CodePAD_ Sequence-based Code Generation with Pushdown Automaton",
+  "doi": "10.48550/arxiv.2211.00818",
+  "title": "CodePAD: Sequence-based Code Generation with Pushdown Automaton",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "序列到序列代码生成无法保证语法正确性，阻碍生成代码的可用性",
+  "problem_framing": "将代码生成形式化为PDA可识别语言约束下的序列生成问题",
+  "key_insight": "编程语言是PDA可识别语言的子集，利用PDA状态约束token候选集可确保语法正确",
+  "method_signature": "PDA模块+状态表示+状态预测任务+联合预测约束生成过程",
+  "evaluation_criteria": "语法正确率(GCP)、CodeBLEU、EM、BLEU四项指标",
+  "negative_result_or_admitted_limitation": "PDA需为每种编程语言单独构建，且仅保证语法正确不保证编译正确",
+  "evidence_for_taste": [
+    "most sequence-based approaches generate codes with no guarantee of grammatical correctness",
+    "each part of CodePAD contributes",
+    "PDA module is the most critical part of CodePAD",
+    "pre-training models have the ability to answer questions, but do not know how to organize them into well-formed codes",
+    "GC is the foundation of compilation"
+  ],
+  "thinking_moves": [
+    "发现现有序列方法忽视语法约束的根本问题",
+    "将编程语言形式化为PDA可识别语言",
+    "从解析器工作原理获得启发，设计PDA模块约束生成",
+    "通过消融实验验证各组件贡献度",
+    "把PDA状态信息作为辅助学习信号引入神经网络"
+  ],
+  "topic_tags": [
+    "code-generation-grammar-constraint",
+    "pushdown-automaton-PDA",
+    "sequence-based-neural-code-generation",
+    "grammatical-correctness-guarantee",
+    "PDA-state-prediction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

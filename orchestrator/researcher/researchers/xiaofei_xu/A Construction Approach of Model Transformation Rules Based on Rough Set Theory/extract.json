@@ -1,0 +1,39 @@
+{
+  "paper_id": "A Construction Approach of Model Transformation Rules Based on Rough Set Theory",
+  "doi": "10.1007/978-3-642-19680-5_4",
+  "title": "A Construction Approach of Model Transformation Rules Based on Rough Set Theory",
+  "year": 2011,
+  "venue": "Springer LNCS 6191",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "Transformation rules在工业界通常手动创建,随着模型规模和不确定性增加,手动设计变得越来越困难。",
+  "problem_framing": "将模型转换规则发现问题形式化为从源模型到目标模型的隐式匹配关系发现过程,利用粗糙集处理不确定性。",
+  "key_insight": "将粗糙集理论扩展到支持不同元模型之间的映射,重新定义条件属性和决策属性,实现转换规则的半自动构建。",
+  "method_signature": "基于扩展粗糙集理论构建模型转换规则rsCRT算法,包含决策表生成、兼容性检测、决策矩阵构建和规则生成四步。",
+  "evaluation_criteria": "使用支持度(support)、准确度(accuracy)和覆盖率(coverage)三个指标评价和筛选转换规则。",
+  "negative_result_or_admitted_limitation": "方法为半自动构建而非全自动,实验验证了方法但未在实际工业场景中验证;\"we plan to analysis the transformation rules and compose some transformation rules to improve the efficiency\"表明当前规则效率有待优化。",
+  "evidence_for_taste": [
+    "Transformation rules are typically created manually",
+    "efficient design of transformation rules has become a major challenge",
+    "selection from rules set is also a challengeable task",
+    "complex and uncertain relationships are difficult to derive",
+    "we try to discover both explicit and implicit matching relationships"
+  ],
+  "thinking_moves": [
+    "将手工规则创建问题重新框定为隐式关系发现问题",
+    "引入粗糙集处理模型转换中的不确定性和不完整数据",
+    "通过测量指标将规则选择问题从主观判断转为可量化评估",
+    "先用形式化定义构建决策表,再通过等价类划分实现规则发现",
+    "从实验三个维度(样本数、元模型数、属性约简)验证各因素对规则质量的影响规律"
+  ],
+  "topic_tags": [
+    "model-transformation",
+    "rough-set-theory",
+    "MDA",
+    "metamodel-matching",
+    "semi-automatic-rule-construction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

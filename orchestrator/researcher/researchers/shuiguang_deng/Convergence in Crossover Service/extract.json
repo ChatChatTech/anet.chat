@@ -1,0 +1,39 @@
+{
+  "paper_id": "Convergence in Crossover Service",
+  "doi": "10.1007/978-981-19-8844-8",
+  "title": "Convergence in Crossover Service",
+  "year": 2023,
+  "venue": "Advanced Topics in Science and Technology in China (Springer)",
+  "venue_tier": "strong",
+  "role": "editor (senior)",
+  "motivation": "新信息技术重新定义认知边界,传统边界阻碍效率,需跨组织服务融合",
+  "problem_framing": "服务跨边界运行时需在模式/需求/环境/质量/价值多维实现收敛",
+  "key_insight": "3C特征(跨域/收敛/复杂)决定跨界服务需多维协同收敛机制",
+  "method_signature": "从概念建模→计算仿真→基础设施→价值质量优化的全链路框架",
+  "evaluation_criteria": "模式熵,价值质量对齐度,冲突检测与消解效果",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "基于当前知识首次聚焦收敛问题",
+    "errors and defects are inevitable",
+    "需要权衡价值冲突",
+    "需要多维属性收敛",
+    "需提供透明虚拟融合环境"
+  ],
+  "thinking_moves": [
+    "把认知边界问题归因于人类能力有限",
+    "从抽象概念(3C特征)到具体基础设施的层次化展开",
+    "将融合问题分解为模式/需求/环境/质量/价值五个维度",
+    "先定义概念框架再提供工具化支撑",
+    "用案例研究验证全流程可行性"
+  ],
+  "topic_tags": [
+    "service-convergence",
+    "crossover-service",
+    "multi-dimensional-optimization",
+    "service-network",
+    "value-quality-alignment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "这是Springer出版的专著,非传统会议/期刊论文。书中各章节有不同作者,shuiguang_deng为editor(senior author)。提取基于preface和各章目录,无完整方法/结果细节。价值质量优化章节结构完整,提供了较丰富的思维特征证据。"
+}

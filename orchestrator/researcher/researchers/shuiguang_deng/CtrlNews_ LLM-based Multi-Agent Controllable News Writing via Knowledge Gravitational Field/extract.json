@@ -1,0 +1,39 @@
+{
+  "paper_id": "CtrlNews_ LLM-based Multi-Agent Controllable News Writing via Knowledge Gravitational Field",
+  "doi": "10.18653/v1/2025.findings-emnlp.461",
+  "title": "CtrlNews: LLM-based Multi-Agent Controllable News Writing via Knowledge Gravitational Field",
+  "year": 2025,
+  "venue": "EMNLP 2025 Findings",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有新闻写作系统依赖浅层检索和简单知识列举,输出浅显重复无序;且缺乏叙事观点的可控性,无法对齐用户偏好",
+  "problem_framing": "现有方法存在三大缺陷:多智能体协作深度不足、知识结构化低效(树/列表结构无法表示复杂推理)、观点稀释失控导致文章缺乏一致性和新闻诚信",
+  "key_insight": "通过物理引力类比构建层级引力图,利用扩张-反思循环在核心/中间/外围层间组织知识,实现深度分析与精确观点控制的平衡",
+  "method_signature": "多智能体专家提问+层级引力图组织+三元属性(偏见/情感/夸张)精确控制+自反思精修的新闻写作框架",
+  "evaluation_criteria": "质量(8维度:相关性/广度/深度/新意/连贯/表达/主题发展/智识价值)+控制效果(Coverage/Score_ccv/TCPI)+传播效果评估+人工评估",
+  "negative_result_or_admitted_limitation": "处理冲突观点时多源整合能力需优化;当前方法'further optimization is needed for balancing multi-source integration when handling conflicting perspectives'",
+  "evidence_for_taste": [
+    "both tree and list structures are inadequate",
+    "shallow multi-agent collaboration",
+    "uncontrolled viewpoint dilution",
+    "tree structure increases Novelty but reduces Coherence",
+    "list structure improves Coherence at the expense of Depth"
+  ],
+  "thinking_moves": [
+    "将知识组织问题物理化为引力场,借用质量/距离/力的概念量化知识节点关系强度",
+    "用层级结构(core/intermediate/peripheral)区分理论本质与应用观点的语义距离",
+    "扩张-反思循环解决'无约束扩张导致主题漂移'的核心矛盾",
+    "树结构增新意但损连贯,列表结构增连贯但损深度→推断需引入受控探索机制",
+    "视角控制稀释问题通过控制一致性验证(CCV)迭代修复而非一次性生成解决"
+  ],
+  "topic_tags": [
+    "LLM-agent-news-writing",
+    "knowledge-graph-structured-generation",
+    "viewpoint-controllability",
+    "multi-perspective-questioning",
+    "gravitational-field-analogy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

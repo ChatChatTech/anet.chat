@@ -1,0 +1,37 @@
+{
+  "paper_id": "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4392737420",
+  "doi": "10.48550/arxiv.2403.06840",
+  "title": "RA-ISF: Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RAG中无关检索文本会损害模型性能，且内外部知识融合困难",
+  "problem_framing": "将问答系统分解为自我知识判断、段落相关性评估、问题分解三个迭代子模块",
+  "key_insight": "通过级联判断逐步缩小问题范围——先问模型知不知道，再问检索是否相关，最后才分解问题",
+  "method_signature": "三个微调子模型(M_know/M_rel/M_decom)与主LLM迭代协作，含D_th迭代上限",
+  "evaluation_criteria": "Exact Match (EM) 在NQ/TriviaQA/HotpotQA/StrategyQA/2WikiMQA五个数据集",
+  "negative_result_or_admitted_limitation": "迭代式分解会导致问题分支过多，且问题表述方式会影响分解模块效果",
+  "evidence_for_taste": [
+    "irrelevant texts will impair the LLMs' ability",
+    "mitigates the impact of irrelevant text interference",
+    "may even introduce misleading factors",
+    "continuously explores a problem without finding solutions"
+  ],
+  "thinking_moves": [
+    "把RAG的核心失败case归因于无关文本干扰，而非检索本身",
+    "将单一问答决策链拆解为三个独立评估子任务",
+    "用迭代深度阈值D_th控制问题分支爆炸风险",
+    "通过蒸馏小模型实现子模块而非直接调用大模型API节省成本"
+  ],
+  "topic_tags": [
+    "retrieval-augmented-generation",
+    "self-knowledge-assessment",
+    "question-decomposition",
+    "iterative-self-feedback",
+    "hallucination-mitigation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "实验部分被截断，未见完整的方法细节和全部数据集结果，但主体框架和评估设计清晰 | md truncated to head40k+tail20k"
+}

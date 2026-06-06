@@ -1,0 +1,39 @@
+{
+  "paper_id": "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation",
+  "doi": "10.48550/arxiv.2511.05609",
+  "title": "Walking the Schrödinger Bridge: A Direct Trajectory for Text-to-3D Generation",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "SDS requires high CFG values causing over-saturation/over-smoothing artifacts, while low-CFG variants fail on 3DGS",
+  "problem_framing": "Learning optimal direct transport trajectory between current rendering distribution and target distribution",
+  "key_insight": "SDS is a special case of Schrödinger Bridge—when endpoint is Gaussian noise, Schrödinger Bridge score collapses to SDS score function",
+  "method_signature": "TraCe constructs diffusion bridge from current rendering to text-conditioned denoised target, trains LoRA on bridge score dynamics",
+  "evaluation_criteria": "CLIP Score, GPTEval3D, ImageReward, visual quality comparison with CFG=20",
+  "negative_result_or_admitted_limitation": "Very low CFG (e.g., 5) yields reduced visual fidelity; results stable only at CFG ~15-20",
+  "evidence_for_taste": [
+    "score estimates are noisy and not guaranteed to represent optimal direction for 3D optimization",
+    "forces the optimization process to cope with score functions optimized for 2D image generation",
+    "requires large-scale, high-quality 3D datasets required for direct supervised training",
+    "not strictly correspond to the gradient of a well-defined probability distribution",
+    "naive Schrödinger Bridge approach results in comparatively smoother, less detailed rendering"
+  ],
+  "thinking_moves": [
+    "Theoretical derivation connecting SDS to Schrödinger Bridge via score function equivalence",
+    "Reformulating optimization as explicit bridge construction between rendering endpoints",
+    "Bridging gap between noisy 2D score estimates and optimal transport path learning",
+    "Decomposing optimization into explicit trajectory sampling and LoRA-based score learning"
+  ],
+  "topic_tags": [
+    "text-to-3D-generation",
+    "schrodinger-bridge",
+    "score-distillation",
+    "gaussian-splatting",
+    "optimal-transport",
+    "lora-adaptation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

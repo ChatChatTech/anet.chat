@@ -1,0 +1,41 @@
+{
+  "paper_id": "Wang et al. - 2015 - Connecting the Dots Reconstructing Network Behavior with Individual and Lossy Logs",
+  "doi": null,
+  "title": "Connecting the Dots: Reconstructing Network Behavior with Individual and Lossy Logs",
+  "year": 2015,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Local logs on individual nodes in distributed networks are underutilized; existing log analysis methods cannot handle lossy logs from multiple nodes",
+  "problem_framing": "Reconstruct network-wide 'event flows' from individual, incomplete, unsynchronized event logs across distributed nodes",
+  "key_insight": "Implicit intra-node and inter-node event correlations (e.g., send implies prior recv, recv on B implies send on A) can connect FSM-based inference engines to infer lost events",
+  "method_signature": "FSM inference engine per node; normal/intra-node/inter-node transitions; recursive transition algorithm to infer lost events from correlations",
+  "evaluation_criteria": "Accuracy of event flow reconstruction; ability to locate packet loss positions and root causes; actionable network diagnosis",
+  "negative_result_or_admitted_limitation": "Not all lost events can be inferred by the inference engine",
+  "evidence_for_taste": [
+    "logs are an important resource",
+    "we can also infer lost events",
+    "even when there is only one event",
+    "the correct ordering for events are also recovered",
+    "which seems to be subtle",
+    "not revealed until we thoroughly analyze"
+  ],
+  "thinking_moves": [
+    "把跨节点的事件关联作为连接日志的隐式锚点，而非依赖同步时钟",
+    "从协议语义出发定义'必然事件'，用FSM建模可推导的状态转移",
+    "用失败案例(case 1-4)展示传统方法为何失效，而非只证明新方法有效",
+    "从sink端的宏观丢包率反推底层RS232连接不稳定的物理根因"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-diagnosis",
+    "lossy-log-reconstruction",
+    "finite-state-machine-inference",
+    "distributed-network-monitoring",
+    "packet-loss-root-cause-analysis"
+  ],
+  "cites_own_work": [
+    "CitySee"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue not explicitly stated in text; DOI not provided; first author identified as 'corresponding' but not explicitly marked; FSM formal definitions present but not evaluated in comparative benchmarks"
+}

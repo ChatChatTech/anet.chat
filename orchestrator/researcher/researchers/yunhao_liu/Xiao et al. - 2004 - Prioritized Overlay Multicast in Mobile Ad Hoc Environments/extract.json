@@ -1,0 +1,38 @@
+{
+  "paper_id": "Xiao et al. - 2004 - Prioritized Overlay Multicast in Mobile Ad Hoc Environments",
+  "doi": null,
+  "title": "Prioritized Overlay Multicast in Mobile Ad Hoc Environments",
+  "year": 2004,
+  "venue": "ISSRE 2004",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "MANET multicast routing protocols lack efficiency and robustness; existing overlay approaches cannot handle role-based priority differentiation",
+  "problem_framing": "Build overlay trees where nodes can belong to multiple priority trees and ignore lower-priority messages while receiving higher-priority ones",
+  "key_insight": "Application-layer priority filtering enables nodes to switch between trees based on importance, with location info guiding efficient tree formation",
+  "method_signature": "Priority token-based tree formation with location-aware orphan handling and DSR as underlying unicast",
+  "evaluation_criteria": "Drop ratio, protocol overhead, and file transfer completion time across movement scenarios",
+  "negative_result_or_admitted_limitation": "AMRoute uses static virtual mesh and is inefficient; location info brings little improvement when nodes are isolated or lack coverage overlap",
+  "evidence_for_taste": [
+    "AMRoute is inefficient because",
+    "DSDVR has a high protocol",
+    "AODVR's drop ratio increases",
+    "even location information brings",
+    "AMRoute is inefficient because it uses a static virtual mesh"
+  ],
+  "thinking_moves": [
+    "Compare multiple unicast protocols to identify best underlying routing for overlay",
+    "Use real-world scenario (stadium security) to motivate role-based network partitioning",
+    "Identify why existing approaches (AMRoute, PAST-DM, LGT) fail for priority use case",
+    "Admit limitation when location info fails in extreme isolation scenarios"
+  ],
+  "topic_tags": [
+    "overlay-multicast",
+    "MANET-priority-tree",
+    "location-aware-tree",
+    "role-based-partition",
+    "unicast-protocol-selection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

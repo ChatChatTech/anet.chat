@@ -1,0 +1,41 @@
+{
+  "paper_id": "Du et al. - 2023 - NELoRa-Bench A Benchmark for Neural-enhanced LoRa Demodulation",
+  "doi": null,
+  "title": "NELoRa-Bench: A Benchmark for Neural-enhanced LoRa Demodulation",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LoRa在复杂环境中通信距离远低于预期，阻塞衰减严重降低SNR导致解码失败",
+  "problem_framing": "把LoRa解码建模为分类问题，将带宽分成2^SF个频率，2^SF个符号对应2^SF类",
+  "key_insight": "标准解调只看频域能量峰值丢失时域信息，神经网络可高效提取多维特征增强解码",
+  "method_signature": "CNN降噪+分类的双网络架构，将信号STFT转为双通道图像训练",
+  "evaluation_criteria": "符号误码率(SER) vs SNR，10% SER阈值的SNR增益",
+  "negative_result_or_admitted_limitation": "数据集仅覆盖室内环境采集，未来需更多样化符号训练",
+  "evidence_for_taste": [
+    "the dechirp distinguishes the LoRa signal from noise by only examining the energy in the frequency domain, and might miss valuable information in the time domain",
+    "NELoRa achieves 1.84–2.35 dB SNR gain",
+    "neural networks are suitable for efficiently extracting such multi-dimensional information",
+    "the communication range of LoRa is far from the expectation"
+  ],
+  "thinking_moves": [
+    "把感知问题(信号解码)重新定义为分类问题",
+    "认为标准方法的'只关注频域'是信息损失根源",
+    "神经网络擅长从多维数据中自动提取特征",
+    "构建benchmark推动领域复现与对比",
+    "把计算开销推到网关端保持端侧低功耗"
+  ],
+  "topic_tags": [
+    "LoRa-demodulation",
+    "neural-enhanced-wireless",
+    "benchmark-dataset",
+    "LPWAN",
+    "weak-signal-decoding"
+  ],
+  "cites_own_work": [
+    "NELoRa (Li et al., 2021)",
+    "NELoRa (Li et al., 2022)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注投稿 venues，且关键方法细节(如具体网络架构参数)需参考引用的 NELoRa 原版论文"
+}

@@ -1,0 +1,44 @@
+{
+  "paper_id": "Tail-Learning_ Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems",
+  "doi": "10.48550/arxiv.2312.16883",
+  "title": "Tail-Learning: Adaptive Learning Method for Mitigating Tail Latency in Autonomous Edge Systems",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "边缘计算中分布式范式放大尾延迟,导致线头阻塞问题,传统排队方法难以处理动态请求",
+  "problem_framing": "将尾延迟概率最小化问题formulate为非凸优化,决策变量为概率调度ω_j",
+  "key_insight": "虽然原始问题对ω_j非凸,但对Laplace变换参数x_j却变成凸,可利用此upper bound设计RL状态",
+  "method_signature": "Laplace变换推导tail bound,结合一二阶导数作为增强状态,共享表征层+多智能体降低动作空间",
+  "evaluation_criteria": "p50/p90/p95/p99/p99.9响应时间,尤其关注高百分位比值(60.78% at p99.9)",
+  "negative_result_or_admitted_limitation": "当服务资源有限时,优先级变得重要,且未处理任务依赖关系的尾延迟优化",
+  "evidence_for_taste": [
+    "tail latency amplification",
+    "non-convex formulations",
+    "optimal upper bound for κ",
+    "convex for the Laplace transform parameters",
+    "enhanced state",
+    "lack a theoretical analysis",
+    "simple heuristic techniques may fail"
+  ],
+  "thinking_moves": [
+    "通过变量替换(ω_j→x_j)将非凸问题转化为凸问题求解",
+    "用概率论将确定性问题变成可学习的调度策略",
+    "将理论推导的bound作为RL状态特征来引导学习",
+    "用分组智能体结构压缩动作空间维度"
+  ],
+  "topic_tags": [
+    "tail-latency-mitigation",
+    "edge-computing-scheduling",
+    "reinforcement-learning-queuing",
+    "laplace-transform-bound",
+    "parallel-task-offloading"
+  ],
+  "cites_own_work": [
+    "Zhao et al. 2018",
+    "Zhao et al. 2019",
+    "Zhang et al. 2018"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

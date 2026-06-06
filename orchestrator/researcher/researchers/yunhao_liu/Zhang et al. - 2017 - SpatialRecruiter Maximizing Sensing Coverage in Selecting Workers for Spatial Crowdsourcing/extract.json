@@ -1,0 +1,45 @@
+{
+  "paper_id": "Zhang et al. - 2017 - SpatialRecruiter Maximizing Sensing Coverage in Selecting Workers for Spatial Crowdsourcing",
+  "doi": null,
+  "title": "SpatialRecruiter: Maximizing Sensing Coverage in Selecting Workers for Spatial Crowdsourcing",
+  "year": 2017,
+  "venue": "IEEE",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "招募两套工人分别完成查询任务和感知任务效率低",
+  "problem_framing": "联合最大化查询任务完成率与感知覆盖面积",
+  "key_insight": "利用工人到查询任务目的地之间的轨迹同时覆盖感知区域",
+  "method_signature": "角度估计和熵估计函数+贪心选择",
+  "evaluation_criteria": "覆盖面积、覆盖效率、完成率",
+  "negative_result_or_admitted_limitation": "随k增大性能下降,距离度量对覆盖影响不大",
+  "evidence_for_taste": [
+    "recruiting two sets of workers is not efficient",
+    "makes travelling trajectories of workers valuable",
+    "designed to accommodate the unknown mobility of workers",
+    "coverage estimation functions were designed to accommodate the unknown mobility",
+    "covers the largest angular interval",
+    "entropy of the query task",
+    "submodular function",
+    "0.63-approximation factor"
+  ],
+  "thinking_moves": [
+    "找到两个范式之间的关键连接点",
+    "在无先验知识情况下设计覆盖估计函数",
+    "用集合论证明覆盖函数是次模的",
+    "从几何直觉出发转化为角度区间覆盖问题",
+    "用信息熵度量工人分布多样性"
+  ],
+  "topic_tags": [
+    "spatial crowdsourcing",
+    "mobile crowdsensing",
+    "coverage maximization",
+    "worker selection",
+    "task assignment"
+  ],
+  "cites_own_work": [
+    "Zhang et al. 2014",
+    "Zhang et al. 2016"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

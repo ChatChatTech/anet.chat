@@ -1,0 +1,41 @@
+{
+  "paper_id": "Guo et al. - 2008 - Perpendicular Intersection Locating Wireless Sensors with Mobile Beacon",
+  "doi": null,
+  "title": "Perpendicular Intersection: Locating Wireless Sensors with Mobile Beacon",
+  "year": 2008,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "绝对RSSI值在复杂环境中不可靠，难以映射到物理距离，而OceanSense项目的漂浮传感器部署受环境干扰严重",
+  "problem_framing": "定位问题被重构为:避免直接映射RSSI到距离,转而利用RSSI差值的几何关系计算节点位置",
+  "key_insight": "RSSI差值而非绝对值反映距离对比;移动信标轨迹上最大RSSI对应最近点(投影点),两投影联立求交点",
+  "method_signature": "移动信标广播含位置信标,传感器监听记录最大RSSI对应位置,利用垂直相交几何关系计算坐标",
+  "evaluation_criteria": "估计误差、通信开销、计算存储开销;室内外多场景对比PI、BI、TRL三种方法",
+  "negative_result_or_admitted_limitation": "信标离散广播导致理论估计误差上界为V/F,平均误差0.8218V/F;实验误差略高于理论值",
+  "evidence_for_taste": [
+    "RSS is sensitive to channel noise",
+    "not a universal signal propagation model",
+    "difference in RSSI values consistently reflect",
+    "the largest RSSI value...corresponds to the point on the line",
+    "We find that, the closer a node is",
+    "eliminating the side-effect of the irregularity",
+    "both the computation and storage overhead are applicable"
+  ],
+  "thinking_moves": [
+    "从环境实验观察RSSI行为规律,发现相对变化比绝对值更可靠",
+    "将定位问题从距离估计重新框定为几何投影问题",
+    "通过理论证明最优轨迹为边长R的等边三角形覆盖最大面积",
+    "对边界情况(如接收多于2对起止信号)做系统性分类并给出取舍规则",
+    "建立误差上界与V/F的定量关系式指导参数选取"
+  ],
+  "topic_tags": [
+    "RSSI相对变化定位",
+    "移动信标三角轨迹",
+    "垂直相交几何定位",
+    "传感器网络定位",
+    "投影点最远距离法则"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注发表会议/期刊及年份,需根据引用文献推断;第一作者与通信作者角色未在文中明确区分"
+}

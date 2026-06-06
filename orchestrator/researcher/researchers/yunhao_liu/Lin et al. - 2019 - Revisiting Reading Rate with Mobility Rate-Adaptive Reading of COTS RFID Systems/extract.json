@@ -1,0 +1,41 @@
+{
+  "paper_id": "Lin et al. - 2019 - Revisiting Reading Rate with Mobility Rate-Adaptive Reading of COTS RFID Systems",
+  "doi": null,
+  "title": "Revisiting Reading Rate with Mobility: Rate-Adaptive Reading of COTS RFID Systems",
+  "year": 2019,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "COTS RFID系统标签众多但移动标签占比小(<20%)，静态标签竞争信道导致移动标签读取率严重下降",
+  "problem_framing": "将读取率问题从通信层重新定义为感知层问题——不同运动状态的标签需要不同的采样率",
+  "key_insight": "移动标签状态变化急迫需高频采样，静态标签状态不变无需高频采样，可通过运动检测后选择性读取提升移动标签IRR",
+  "method_signature": "两阶段读取：Phase I用GMM检测运动状态，Phase II选择性读取移动标签",
+  "evaluation_criteria": "移动标签个体读取率提升倍数(5%移动时3.2×, 10%移动时1.9×)",
+  "negative_result_or_admitted_limitation": "当移动标签超过20%时，IRR增益趋近1，自适应读取反而增加额外开销，无效果",
+  "evidence_for_taste": [
+    "revisits the reading rate from a distinctive perspective",
+    "To the best of our knowledge, we are the first to accurately model",
+    "the cost may counteract its gains",
+    "leaving very limited room for us to improve",
+    "We surprisedly found that all these exceptional readings come from those tags which are actually not moved"
+  ],
+  "thinking_moves": [
+    "从实际trace异常数据反推问题根源(静态标签被重复读取挤压移动标签)",
+    "将perception采样问题reframe为communication资源分配问题",
+    "用Fresnel区理论解释多径相位跳变并建模为GMM",
+    "把选择性读取转换为集合覆盖问题求解"
+  ],
+  "topic_tags": [
+    "RFID-rate-adaptive",
+    "COTS-RFID-mobility-detection",
+    "Gaussian-Mixture-model-motion",
+    "RFID-channel-contention",
+    "selective-reading-scheduling"
+  ],
+  "cites_own_work": [
+    "TrackPoint",
+    "Tagoram"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文后半部分有大量实验和应用案例，但venue信息未明确给出，提取为unknown | md truncated to head40k+tail20k"
+}

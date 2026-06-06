@@ -1,0 +1,38 @@
+{
+  "paper_id": "Anatomizing Deep Learning Inference in Web Browsers",
+  "doi": "10.48550/arxiv.2402.05981",
+  "title": "Anatomizing Deep Learning Inference in Web Browsers",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "现有研究关注本地DL推理性能,但浏览器作为中间层隔离了底层硬件,in-browser推理的实际性能及其对QoE的影响尚未被充分探索",
+  "problem_framing": "首次对浏览器内DL推理进行系统性性能测量,提出响应性、平滑度、推理精度三个新指标,对比50款PC设备和20款移动设备上的9个DL模型",
+  "key_insight": "降低推理延迟不等于提升QoE,WebGL推理虽快但因资源冲突导致平滑度下降62.7%,需在延迟与体验间权衡",
+  "method_signature": "模型级+核级性能剖析,对比Wasm/WebGL后端与原生环境,从SIMD利用率、运行时开销、资源竞争多角度归因延迟差距",
+  "evaluation_criteria": "延迟(模型级/核级)、内存占用、响应性、平滑度、推理精度",
+  "negative_result_or_admitted_limitation": "TF.js的Wasm后端仅支持4个模型,远不如ORT.js的9个模型支持;WebGPU尚未成熟被排除出研究",
+  "evidence_for_taste": [
+    "reducing inference latency does not necessarily equate to improvement in QoE",
+    "WebGL-based inference...results in significant degradation of up to 62.7% in smoothness",
+    "memory footprint can escalate to 334.6× the model size",
+    "the latency gap averages 16.9 times slower on CPU",
+    "insufficient support for models"
+  ],
+  "thinking_moves": [
+    "先量化浏览器与原生环境的性能差距(16.9× CPU, 4.9× GPU),再分层归因至硬件指令集/运行时开销/资源竞争",
+    "突破传统QoE仅关注页面加载速度的范式,提出响应性、平滑度、推理精度三维度指标体系",
+    "通过核级剖析识别Wasm中FMA指令缺失、SIMD位宽限制等底层硬件抽象差异",
+    "揭示速度与体验的悖论:WebGL快但平滑度降,提示性能优化需考虑整体用户体验而非单一度量"
+  ],
+  "topic_tags": [
+    "in-browser DL inference",
+    "WebAssembly performance",
+    "WebGL GPU abstraction",
+    "QoE measurement",
+    "browser-native performance gap"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588",
+  "doi": "10.18653/v1/p16-1022",
+  "title": "Compressing Neural Language Models by Sparse Word Representations",
+  "year": null,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "神经语言模型参数量随词表线性增长，内存受限设备难部署，稀有词梯度稀疏导致词向量学习不充分",
+  "problem_framing": "将词表分为常用词基集和稀有词集，用基词的稀疏线性组合表示稀有词嵌入和输出层权重",
+  "key_insight": "词典中陌生词由常用词定义，词嵌入与上下文向量共享内部结构，可用同一组稀疏码同时压缩嵌入层和预测层",
+  "method_signature": "预计算稀疏码压缩LSTM语言模型嵌入层和预测层，参数规模与词表大小近乎无关",
+  "evaluation_criteria": "困惑度(PPL)和内存 reduction 百分比",
+  "negative_result_or_admitted_limitation": "压缩存在信息损失，仅当稀有词参数估计精度提升占优时性能才改善；词表超过20k时LSTM-z,wb略逊于LSTM-z",
+  "evidence_for_taste": [
+    "which stabilizes the training process",
+    "which is potentially applicable to other LMs",
+    "strictly speaking, increases at an extremely small rate",
+    "we find the memory consumption grows imperceptibly",
+    "which is unexpected"
+  ],
+  "thinking_moves": [
+    "借鉴词典学直觉：用常用词定义稀有词",
+    "从压缩收益与信息损失的张力中界定方法适用范围",
+    "从NCE训练不稳定现象反向诊断归一化因子问题",
+    "提出ZRegression层作为通用稳定机制"
+  ],
+  "topic_tags": [
+    "稀疏词向量表示",
+    "神经语言模型压缩",
+    "LSTM-RNN",
+    "NCE训练稳定性",
+    "词汇参数约简"
+  ],
+  "cites_own_work": [
+    "Mou et al., 2015a",
+    "Mou et al., 2015b"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

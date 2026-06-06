@@ -1,0 +1,37 @@
+{
+  "paper_id": "Semantic-aware Contrastive Learning for Electroencephalography-to-Text Generation with Curriculum Learning",
+  "doi": "10.48550/arxiv.2301.09237",
+  "title": "Semantic-aware Contrastive Learning for Electroencephalography-to-Text Generation with Curriculum Learning",
+  "year": 2023,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Patients with neurological conditions need BCI to restore communication; current EEG-to-Text models suffer from subject-dependent representation drift.",
+  "problem_framing": "EEG representations cluster by subject rather than by semantic content, causing many-to-one mapping problem and hindering cross-subject generalization.",
+  "key_insight": "Use contrastive learning to pull same-sentence EEG across subjects together while pushing different-sentence EEG apart, with curriculum ordering from easy to hard pairs.",
+  "method_signature": "C-SCL: contrastive pre-encoder training + seq2seq fine-tuning, with cosine-similarity-based curriculum levels for positive/negative pair difficulty.",
+  "evaluation_criteria": "ROUGE, BLEU, and WER on ZuCo benchmark; ablation on single-subject, low-resource, and zero-shot settings.",
+  "negative_result_or_admitted_limitation": "Generated sentences still have spelling errors and fail to capture linguistic structure; large gap remains between generation and reference.",
+  "evidence_for_taste": [
+    "nearly 45.93% of total constructed contrastive pairs already satisfy the final objective",
+    "directly leveraging hard pairs is quite challenging for the model learning",
+    "achieving a desirable semantic-dependent EEG representation space is a challenging task",
+    "easy pairs are insignificant but directly leveraging hard pairs is quite challenging"
+  ],
+  "thinking_moves": [
+    "把subject-dependent representation drift问题重新frame成contrastive learning的pair construction问题",
+    "用t-SNE可视化原始EEG的subject clustering来诊断问题本质",
+    "从经验观察(45.93% pairs already satisfy)推断随机选择的冗余,提出curriculum筛选",
+    "证easy pairs和hard pairs各有缺陷,需要curriculum scheduler串联才能有效学习",
+    "通过单一curriculum level实验证明progressive learning的必要性"
+  ],
+  "topic_tags": [
+    "EEG-to-Text generation",
+    "brain-computer interface",
+    "contrastive learning for EEG",
+    "curriculum learning",
+    "subject-invariant representations"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

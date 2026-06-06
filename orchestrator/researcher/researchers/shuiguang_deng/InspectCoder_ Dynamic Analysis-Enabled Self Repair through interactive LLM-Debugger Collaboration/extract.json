@@ -1,0 +1,37 @@
+{
+  "paper_id": "InspectCoder_ Dynamic Analysis-Enabled Self Repair through interactive LLM-Debugger Collaboration",
+  "doi": "10.48550/arxiv.2510.18327",
+  "title": "InspectCoder: Dynamic Analysis-Enabled Self Repair through Interactive LLM-Debugger Collaboration",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLMs generate buggy code with complex logic errors; existing self-repair approaches miss runtime behaviors exposing bug root causes",
+  "problem_framing": "LLM-based program repair via active dynamic analysis through interactive debugger control instead of static/log-based methods",
+  "key_insight": "Dual-agent framework separates Program Inspector for debugger-driven root cause analysis from Patch Coder for grounded patch synthesis",
+  "method_signature": "InspectWare middleware enables stateful LLM-debugger interaction with breakpoints, runtime inspection and reversible state modification",
+  "evaluation_criteria": "Resolve rate on BigCodeBench-R/LiveCodeBench-R; #Fixes/Hour; #Fixes/Dollar; Pass Rate on full benchmarks",
+  "negative_result_or_admitted_limitation": "LLMs struggle with direct debugger interaction, experiencing frequent state corruption and error loops without middleware abstraction",
+  "evidence_for_taste": [
+    "transforming LLM debugging paradigm from blind trial-and-error into systematic root cause diagnosis",
+    "missing the in-depth runtime behaviors that often expose bug root causes",
+    "marks a paradigm shift from passive consumption of post-hoc logs",
+    "LLMs lack training data on agentic debugger usage"
+  ],
+  "thinking_moves": [
+    "把被动消费执行日志重新框定为主动LLM驱动的运行时分析",
+    "分离调试分析与补丁合成的职责边界",
+    "通过状态机抽象解决debugger状态管理复杂度",
+    "从一次性修复转向增量式调试验证"
+  ],
+  "topic_tags": [
+    "LLM程序修复",
+    "交互式动态分析",
+    "Debugger集成",
+    "双智能体框架",
+    "过程奖励信号"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

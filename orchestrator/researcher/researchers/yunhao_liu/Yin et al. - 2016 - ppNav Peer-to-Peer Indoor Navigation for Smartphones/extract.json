@@ -1,0 +1,40 @@
+{
+  "paper_id": "Yin et al. - 2016 - ppNav Peer-to-Peer Indoor Navigation for Smartphones",
+  "doi": null,
+  "title": "ppNav: Peer-to-Peer Indoor Navigation for Smartphones",
+  "year": 2016,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "现有室内导航需要预部署定位服务和精确地图，成本高难获取，迫切需要轻量易部署方案",
+  "problem_framing": "将导航问题重新定义为P2P模式：前人记录轨迹后人复用，通过WiFi指纹序列对齐实现动态同步",
+  "key_insight": "WiFi指纹序列转为图像形式(fingeram)后，其RSS峰值和视觉特征对采样率和设备差异具有鲁棒性",
+  "method_signature": "fingeram双特征(无线标记+视觉标记)对齐加指纹距离趋势偏离检测",
+  "evaluation_criteria": "轨迹跟踪空间误差(90分位1.6m)和偏离检测延迟(最多4.5s/9样本)",
+  "negative_result_or_admitted_limitation": "用户任意行为(如走走停停、左右晃动)会损害轨迹质量，能耗亦需优化",
+  "evidence_for_taste": [
+    "the applicability of previous attempts... is significantly limited by labor-intensive deployment",
+    "we observe that fingeram holds nice properties",
+    "different images with similar visual pattern but different sizes... could be accurately matched",
+    "the unique advantages of fingeram lie on two fronts"
+  ],
+  "thinking_moves": [
+    "把sequential fingerprint问题frame成image matching问题，引入计算机视觉特征SURF",
+    "从环境动态性和设备异质性中找出不变性(RSS峰值的空间稳定性)",
+    "用指纹距离轮廓的V形趋势来隐式检测偏离，而非依赖绝对阈值",
+    "借鉴生物记忆概念命名fingeram，把痕迹复用思想具象化"
+  ],
+  "topic_tags": [
+    "WiFi-fingerprint-navigation",
+    "peer-to-peer-localization",
+    "image-feature-matching-SURF",
+    "trajectory-synchronization",
+    "deviation-detection"
+  ],
+  "cites_own_work": [
+    "Travi-Navi",
+    "WiFi fingerprint matching"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue未在正文中明确标注；实验环境为两个真实建筑但未说明具体会议或期刊；DOI缺失"
+}

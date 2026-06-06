@@ -1,0 +1,37 @@
+{
+  "paper_id": "Gong et al. - 2016 - Fast and Adaptive Continuous Scanning in Large-Scale RFID Systems",
+  "doi": null,
+  "title": "Fast and Adaptive Continuous Scanning in Large-Scale RFID Systems",
+  "year": 2016,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "连续扫描时相邻读取区域存在标签重叠，现有方法在重叠比例小时效率低，开销大于收益",
+  "problem_framing": "在连续扫描中识别未知标签(A-B)，需在Collect All与Select Unknown两种策略间自适应选择，关键参数为集合包含度C(A,B)",
+  "key_insight": "扫描性能与重叠比例存在临界阈值关系：若C(A,B)≥λ/γt_id则选SU策略，否则选CA策略",
+  "method_signature": "ACOS结合MinHash重叠估计器与Bloom过滤器实现自适应策略选择",
+  "evaluation_criteria": "读写器与标签间的无线通信时间",
+  "negative_result_or_admitted_limitation": "CU方法在小重叠时效率低，选择阶段开销淹没收益。最坏情况下SHE代价与MHE相同",
+  "evidence_for_taste": [
+    "performance heavily depends",
+    "overhead of selection phase overwhelms",
+    "lightweight property of our estimator",
+    "communication time between reader"
+  ],
+  "thinking_moves": [
+    "通过数学推导量化扫描性能与重叠比例的函数关系",
+    "借用MinHash思想解决集合包含度估计问题",
+    "将策略选择转化为阈值比较决策问题",
+    "承认CU方法缺陷后提出自适应改进方案"
+  ],
+  "topic_tags": [
+    "RFID-continuous-scanning",
+    "MinHash-set-similarity",
+    "adaptive-strategy-selection",
+    "Bloom-filter-tag-selector",
+    "slotted-ALOHA-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

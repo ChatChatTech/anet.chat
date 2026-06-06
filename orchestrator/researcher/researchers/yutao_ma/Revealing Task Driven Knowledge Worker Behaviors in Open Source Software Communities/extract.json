@@ -1,0 +1,40 @@
+{
+  "paper_id": "Revealing Task Driven Knowledge Worker Behaviors in Open Source Software Communities",
+  "doi": "10.48550/arxiv.1702.07900",
+  "title": "Revealing Task Driven Knowledge Worker Behaviors in Open Source Software Communities",
+  "year": 2017,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Open-source software dominates modern IT systems, but how developers behave under workload stress remains unclear",
+  "problem_framing": "Empirically quantify developer behavioral changes when transitioning from normal to overload working states",
+  "key_insight": "Developers exhibit opposite behavioral patterns in spatial vs temporal scale when overloaded; processing times follow stretched exponential, not power law",
+  "method_signature": "Empirical analysis of Eclipse/Mozilla bug-tracking data with workload-performance curve fitting and Kruskal-Wallis tests",
+  "evaluation_criteria": "99% confidence intervals for curve fitting; Kruskal-Wallis H test at 0.01 significance; Vuong closeness test for distribution comparison",
+  "negative_result_or_admitted_limitation": "Cannot precisely describe developers' true states due to lack of real behavioral data; intrinsic relationships between spatial and temporal behavior remain unknown",
+  "evidence_for_taste": [
+    "work overload is observed during the collaborative SDR activities",
+    "a fundamental issue in developer behavior analysis is still unclear",
+    "which differs from the previous findings on the timing of human behavior",
+    "the phenomenon of work overload is observed",
+    "We have to admit that the working states presented here cannot describe developers' true states precisely",
+    "the intrinsic relationships between developer's spatial behavior and temporal behavior remain unknown"
+  ],
+  "thinking_moves": [
+    "从绩效曲线拐点反推工作负荷阈值的存在",
+    "把开发者行为分解为空间尺度(队列位置)和时间尺度(处理时长)两个维度",
+    "用二阶导数趋近零的条件形式化定义稳态/过载转变点",
+    "对比前人power-law发现, 用Vuong检验证明stretched exponential更优",
+    "跨两个OSS社区(Eclipse/Mozilla)验证行为模式一致性"
+  ],
+  "topic_tags": [
+    "knowledge-worker-behavior",
+    "open-source-software",
+    "workload-overload-detection",
+    "bug-triage-dynamics",
+    "human-dynamics-distribution"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

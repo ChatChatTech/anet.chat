@@ -1,0 +1,41 @@
+{
+  "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding",
+  "doi": "10.18653/v1/2025.acl-long.1324",
+  "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code Understanding",
+  "year": 2025,
+  "venue": "ACL 2025 Long Papers",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有长上下文模型支持128K-1M窗口，但缺乏对长代码理解能力的严格评估框架，阻碍该领域进展",
+  "problem_framing": "将长代码理解解耦为四方面八任务：代码单元感知、单元内理解、单元间关系理解、文档理解，现有基准无法隔离该能力",
+  "key_insight": "用真实代码仓库构造基准，而非拼接独立代码片段；通过时间约束（2024-06后仓库）减少数据污染",
+  "method_signature": "LONGCODEU四方面八任务基准，含500条/任务，长度0-128K，基于召回率和精确率多粒度自动评估",
+  "evaluation_criteria": "按输出粒度选用EM/LCS/CodeBLEU/BLEU指标，结合人类标注验证自动评估可靠性",
+  "negative_result_or_admitted_limitation": "LCLM在代码长度超过32K时性能急剧下降，远未达到宣称的128K-1M上下文窗口能力",
+  "evidence_for_taste": [
+    "❸ faces issues with data contamination",
+    "❺ entangle code understanding with other task-specific challenges",
+    "reducing the risk of data contamination",
+    "inter-code unit relation understanding is the most challenging"
+  ],
+  "thinking_moves": [
+    "识别现有基准的根本缺陷后，将其分类并逐一批判",
+    "将长代码理解能力解耦为四个正交的认知维度",
+    "用实证方法（性能随长度衰减曲线）揭示模型的真实能力边界",
+    "通过任务设计隔离长上下文理解，而非混入下游任务"
+  ],
+  "topic_tags": [
+    "LCLM基准测试",
+    "长代码理解评估",
+    "代码仓库级软件工程",
+    "上下文窗口长度外推",
+    "代码理解任务分解"
+  ],
+  "cites_own_work": [
+    "DevEval",
+    "EvoCodeBench",
+    "Codeagent"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

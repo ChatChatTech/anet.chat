@@ -1,0 +1,39 @@
+{
+  "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+  "doi": "10.48550/arxiv.2012.14108",
+  "title": "DPoS: Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "现有算法存在高复杂度、隐私泄露、离线设定不现实等问题，无法满足5G多租户网络切片的实际业务需求。",
+  "problem_framing": "将网络切片资源分配建模为全局社会福利最大化问题，在线求解并满足去中心化、隐私保护和低复杂度约束。",
+  "key_insight": "利用原始对偶方法结合标价机制，每租户根据公开价格自主决策，无需透露私有信息即可实现次优社会福利。",
+  "method_signature": "去中心化原始对偶在线算法，标价机制驱动，多资源切片，线性复杂度O(NC)和O(C)。",
+  "evaluation_criteria": "竞争比(α)作为理论保证，社会福利、算法开销、执行时间作为实验指标。",
+  "negative_result_or_admitted_limitation": "当成本函数非严格线性时，标价函数构造需解一阶两点边值问题，理论分析复杂度增加。",
+  "evidence_for_taste": [
+    "高算法复杂度、隐私泄露、离线设定",
+    "take-it-or-leave-it, i.e., posted price, is a more practical option",
+    "only a small flow of privacy-irrelevant information are transferred",
+    "how much to use, how much to rent. No resource will be wasted",
+    "optimal competitive ratio when the cost function of each resource is linear"
+  ],
+  "thinking_moves": [
+    "将隐私泄露问题重新定义为信息流控制问题，而非技术实现问题",
+    "用原始对偶框架统一在线资源分配与经济学机制设计",
+    "通过竞争比界证明算法的最坏情况最优性，而非仅凭实验验证",
+    "先建立离线基准问题，再放松约束使其可分布式求解",
+    "从市场经济学角度理解定价函数与资源稀que程度的关系"
+  ],
+  "topic_tags": [
+    "network-slicing",
+    "primal-dual-online-algorithm",
+    "posted-price-mechanism",
+    "privacy-preserving-allocation",
+    "multi-tenant-resource-slicing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文完整版本被截断，理论分析部分 Proposition 4 后续内容缺失，无法提取完整竞争比证明细节和实验完整描述。理论贡献描述清晰，但实验具体结果数据提取受限。 | md truncated to head40k+tail20k"
+}

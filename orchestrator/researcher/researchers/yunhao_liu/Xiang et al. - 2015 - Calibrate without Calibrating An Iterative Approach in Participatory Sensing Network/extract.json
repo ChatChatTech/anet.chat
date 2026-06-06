@@ -1,0 +1,38 @@
+{
+  "paper_id": "Xiang et al. - 2015 - Calibrate without Calibrating An Iterative Approach in Participatory Sensing Network",
+  "doi": null,
+  "title": "Calibrate without Calibrating: An Iterative Approach in Participatory Sensing Network",
+  "year": 2015,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Participatory sensing participants are uncooperative and uncontrollable; existing calibration methods require collaboration or explicit calibration process",
+  "problem_framing": "Joint estimation of sensor noise, source presences, and source parameters as MLE problem with three tightly coupled unknowns",
+  "key_insight": "Sensing diversity across multiple sources enables implicit calibration: a participant sensing multiple pollution sources provides enough structure to estimate sensor noise without explicit calibration",
+  "method_signature": "Two-level EM-like iterative algorithm (ACTION): outer loop estimates source presences, inner loop alternates between sensor noise and source parameter estimation",
+  "evaluation_criteria": "Estimation accuracy of sensor bias and noise deviation compared with ML-H1, ML-H0, and EM-TS baseline methods",
+  "negative_result_or_admitted_limitation": "Initial values have slight influence on calibration accuracy due to convergence; sampling frequency is tradeoff between calibration accuracy and energy cost",
+  "evidence_for_taste": [
+    "participants are uncontrollable and uncooperative",
+    "tightly coupled with each other",
+    "inspired by EM method",
+    "calibrate sensors without explicit or cooperative calibrating process",
+    "expected likelihood increases step by step"
+  ],
+  "thinking_moves": [
+    "把三个相互耦合的未知量拆解成两层迭代结构，化整为零",
+    "利用参与者自然漫游产生的 sensing diversity 作为隐式约束条件",
+    "将不可控的校准问题重新 frame 成最大似然估计问题",
+    "先证 expected likelihood 是 likelihood 的下界，再证明最优解等价性"
+  ],
+  "topic_tags": [
+    "participatory-sensing-calibration",
+    "EM-algorithm",
+    "sensor-noise-estimation",
+    "pollution-source-monitoring",
+    "iterative-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

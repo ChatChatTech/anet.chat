@@ -1,0 +1,42 @@
+{
+  "paper_id": "Shangguan et al. - 2015 - Relative Localization of RFID Tags using Spatial-Temporal Phase Profiling",
+  "doi": null,
+  "title": "Relative Localization of RFID Tags using Spatial-Temporal Phase Profiling",
+  "year": 2015,
+  "venue": "NSDI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Librarians cannot find misplaced books because existing RFID localization yields absolute coordinates with error margins larger than book spacing; baggage handlers need correct ordering, not absolute positions.",
+  "problem_framing": "Define relative localization as finding spatial ORDER among tags, not absolute coordinates; error margins of 16cm exceed typical inter-tag distances of 1-10cm.",
+  "key_insight": "Moving reader creates symmetric V-zone in phase profile with minimum at perpendicular point; ordering tags reduces to finding which V-zones reach their bottom first.",
+  "method_signature": "STPP uses COTS RFID readers, captures phase sequences over time (phase profiles), applies DTW to detect V-zones despite varying reader speed, quadratic fitting for noise, segmentation for efficiency.",
+  "evaluation_criteria": "Ordering accuracy (fraction of correctly ordered adjacent tag pairs) in real library and airport deployments with 84% and 95% accuracy respectively.",
+  "negative_result_or_admitted_limitation": "Phase profiles outside V-zone are fragmentary due to channel instability, making whole-profile connection error-prone; accuracy degrades when tag population exceeds 30 in reading zone.",
+  "evidence_for_taste": [
+    "RSSI values fluctuate and their peak RSSI values appear before the reader moves across them",
+    "Phase profiles outside the V-zone are fragmentary",
+    "It is thus error-prone to connect the whole profile into a big V-zone",
+    "G-RSSI achieves similar low ordering accuracy values of below 25%",
+    "Accuracy still has room to improve",
+    "the line may not be strictly straight in practice"
+  ],
+  "thinking_moves": [
+    "通过移动观察者而非标签来产生相位时间序列",
+    "利用物理对称性（距离先减后增）作为定位锚点而非计算绝对距离",
+    "将V-zone检测问题转化为序列匹配问题，用DTW处理速度变化",
+    "通过分割降采样降低DTW复杂度，从O(MN)降至O(MN/w²)",
+    "直接比较V-zone斜率而非拟合参数来确定Y轴顺序",
+    "承认方法局限：多径导致相位碎片化，连不成完整V-zone",
+    "把感知问题重新定义为通信模式识别问题"
+  ],
+  "topic_tags": [
+    "RFID-relative-localization",
+    "phase-profile-V-zone",
+    "spatial-temporal-pattern-matching",
+    "DTW-optimization",
+    "COTS-RFID-tracking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "A Distributional Lens for Multi-Aspect Controllable Text Generation__oa_W4385572988",
+  "doi": "10.18653/v1/2022.emnlp-main.67",
+  "title": "A Distributional Lens for Multi-Aspect Controllable Text Generation",
+  "year": 2022,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "多属性控制器融合时相互干扰导致属性退化",
+  "problem_framing": "现有方法用多个控制器的插值中心组合属性,但插值点与真实交集区域可能不重合",
+  "key_insight": "直接搜索多个属性分布的交集区域而非插值中心",
+  "method_signature": "属性空间估计+迭代交集搜索+前缀调优解码器",
+  "evaluation_criteria": "属性相关性(情感/主题/解毒)、困惑度、多样性、人类评估",
+  "negative_result_or_admitted_limitation": "在解毒属性上不是最优；分布非凸导致稀疏区域难以采样；K值过小则噪声显著导致不稳定",
+  "evidence_for_taste": [
+    "interpolation point and intersection",
+    "our method can alleviate this problem",
+    "does not need and preferably does not converge too well",
+    "distributions of attributes is asymmetric",
+    "even non-convex with an isolated cluster"
+  ],
+  "thinking_moves": [
+    "从插值点与真实交集不重合的几何观察出发反推方法缺陷",
+    "把多属性控制重新定义为在概率空间中搜索交集区域而非融合中心",
+    "基于邻域思想设计迭代算法：交集区域的点其邻域应包含所有目标属性的样本",
+    "承认模型对长尾分布和噪声敏感，K值需在稀疏区域搜索与稳定性之间平衡"
+  ],
+  "topic_tags": [
+    "multi-aspect-controllable-text-generation",
+    "attribute-distribution-intersection",
+    "prefix-tuning",
+    "autoencoder-latent-space",
+    "iterative-neighbor-search"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

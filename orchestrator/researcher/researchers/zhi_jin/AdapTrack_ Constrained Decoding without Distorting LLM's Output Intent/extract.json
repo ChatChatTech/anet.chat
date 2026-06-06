@@ -1,0 +1,38 @@
+{
+  "paper_id": "AdapTrack_ Constrained Decoding without Distorting LLM's Output Intent",
+  "doi": "10.48550/arxiv.2510.17376",
+  "title": "AdapTrack: Constrained Decoding without Distorting LLM's Output Intent",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Constrained decoding forces the model to produce code satisfying constraints but misaligned with intent, e.g., ranking probability flips from 0.20% to 57.70% for undesired tokens.",
+  "problem_framing": "Goal: sample distribution P(s|c) ∝ P(s)c(s) for valid sequences, preserving ratio P(s)/P(s′) between any two valid complete sequences s, s′.",
+  "key_insight": "When a top-ranked token becomes invalid, backtrack by adaptive rejection sampling proportional to invalidated probability mass, not full resampling.",
+  "method_signature": "AdapTrack: maintain Q[x] estimate of P(c|x), sample N[x] from P_Q(·|x), backtrack via Bernoulli rejection when Q drops.",
+  "evaluation_criteria": "Exact match at k (EM@k) on TFv1 synthetic and TFv1Real real-world datasets; KL divergence on DSL problems; general benchmarks HumanEval/MBPP.",
+  "negative_result_or_admitted_limitation": "AdapTrack invokes LM 20-60% more than constrained decoding, and requires longer backtracking distance for TensorFlow v2 settings (4-8 vs 2).",
+  "evidence_for_taste": [
+    "model considers it highly unsuitable",
+    "deviate from the model's original output intent",
+    "truly misaligned with its output intent",
+    "wasteful of time and computational resources",
+    "short backtracking distance is enough"
+  ],
+  "thinking_moves": [
+    "从实际API调用失败案例出发，观察概率分布异常而非简单性能指标下降",
+    "将问题重新 frame 为采样分布保持问题，而非法则满足问题",
+    "借鉴人类写代码时的回退行为，提出自适应回退机制",
+    "用概率比值 formalize '意图扭曲' 程度，而非二元判断"
+  ],
+  "topic_tags": [
+    "constrained-decoding",
+    "LLM-code-generation",
+    "adaptive-backtracking",
+    "intent-preservation",
+    "API-version-handling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

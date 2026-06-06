@@ -1,0 +1,37 @@
+{
+  "paper_id": "Lu et al. - 2009 - ACTION Breaking the Privacy Barrier for RFID Systems",
+  "doi": null,
+  "title": "ACTION: Breaking the Privacy Barrier for RFID Systems",
+  "year": 2009,
+  "venue": "PerCom",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Balance-tree based RFID privacy protocols leak keys across tags; compromising just 20 tags enables near-100% tracking probability",
+  "problem_framing": "Achieve O(log N) search while eliminating key correlation among tags to defend against compromising attacks",
+  "key_insight": "Assign each tag completely independent random keys; use sparse tree path derived from key bits, not shared infrastructure",
+  "method_signature": "Sparse tree with per-tag independent (path_key, leaf_key) pair; recursive hash-based identification and key-updating",
+  "evaluation_criteria": "Compromising attack success probability, tag key storage (O(1)), reader key storage (O(N)), lookup complexity (O(log N))",
+  "negative_result_or_admitted_limitation": "Key-extracting attack possible on path key subparts; fixed by leaf key involvement in updates (Section V.B)",
+  "evidence_for_taste": [
+    "compromise twenty tags probability close to 100%",
+    "balance-tree approaches are efficient, not secure",
+    "eliminate the correlation among the keys",
+    "probability of two tags having a similar path is negligible"
+  ],
+  "thinking_moves": [
+    "从折衷困境出发:现有方案在安全性和效率间只能选一个,我寻找两全其美的设计",
+    "从妥协的不彻底性反推根本解:既然SPA只是缓解而非根治,则必须消除键值关联本身",
+    "把密钥独立性从直觉提升为可证明的安全性质:random oracle model下的形式化证明"
+  ],
+  "topic_tags": [
+    "RFID-privacy-preserving-authentication",
+    "compromise-resilient-protocols",
+    "sparse-tree-key-organization",
+    "hash-based-authentication",
+    "tradeoff-security-storage-efficiency"
+  ],
+  "cites_own_work": [
+    "Lu et al. SPA 2007"
+  ],
+  "extraction_quality": "full"
+}

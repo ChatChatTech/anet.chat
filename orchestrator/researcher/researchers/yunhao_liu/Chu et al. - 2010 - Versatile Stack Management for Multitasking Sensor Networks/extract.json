@@ -1,0 +1,39 @@
+{
+  "paper_id": "Chu et al. - 2010 - Versatile Stack Management for Multitasking Sensor Networks",
+  "doi": null,
+  "title": "Versatile Stack Management for Multitasking Sensor Networks",
+  "year": 2010,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统栈管理技术在资源受限的传感器网络上 multitasking 能力严重受限",
+  "problem_framing": "在小内存平台上如何高效管理多任务栈以实现灵活的 preemptive multitasking",
+  "key_insight": "在 base station 端进行完整 binary translation 而非 on-node rewrite，使代码高度优化并迁移计算开销",
+  "method_signature": "Base station binary rewriting + logical address translation + automatic stack relocation",
+  "evaluation_criteria": "代码膨胀率、执行时间开销、CPU 利用率、最大可调度任务数、栈重定位次数",
+  "negative_result_or_admitted_limitation": "适用于 CPU 利用率低于 30% 的应用；内存地址翻译开销较高；间接分支高开销",
+  "evidence_for_taste": [
+    "None of these facts are true in low-power computing",
+    "appears to be a heavyweight solution, but the cost is, in fact, surprisingly low",
+    "CPU cycles are, however, usually not a bottleneck",
+    "weak 'stack versatility'",
+    "the benefit ... out-weights the overhead",
+    "we feel confidently that occasional sub-millisecond delays ... is a small and welcomed cost"
+  ],
+  "thinking_moves": [
+    "识别 fundamental limitation: textbook solution 的三个假设在低功耗系统均不成立",
+    "引入新术语 'stack versatility' 重新 frame 问题域",
+    "挑战常识: heavy 看起来的 solution 在小内存系统成本意外低",
+    "计算迁移: 将重开销转移到有充裕资源的 base station",
+    "co-design: binary rewriting 与 kernel runtime 协同设计而非独立优化"
+  ],
+  "topic_tags": [
+    "sensor-network-os",
+    "binary-translation",
+    "stack-management",
+    "logical-addressing",
+    "preemptive-multitasking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

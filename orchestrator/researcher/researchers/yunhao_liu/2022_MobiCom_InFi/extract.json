@@ -1,0 +1,38 @@
+{
+  "paper_id": "2022_MobiCom_InFi",
+  "doi": null,
+  "title": "InFi: End-to-end Learnable Input Filter for Resource-efficient Mobile-centric Inference",
+  "year": 2022,
+  "venue": "ACM MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "移动端AI应用资源受限，需要通过过滤冗余输入来提升推理效率",
+  "problem_framing": "将输入过滤问题形式化为学习问题，通过假设复杂度比较分析filterability",
+  "key_insight": "SKIP等价于REUSE零输入的NONE结果，从而统一两种方法；端到端学习可获得鲁棒判别特征",
+  "method_signature": "基于Siamese网络的度量学习框架，统一SKIP和REUSE，支持六种输入模态",
+  "evaluation_criteria": "过滤率、准确率、吞吐量、带宽节省率",
+  "negative_result_or_admitted_limitation": "预训练或手工特征在很多情况下判别性很差，现有方法无法有效工作",
+  "evidence_for_taste": [
+    "Not all inference workloads have the optimization potential",
+    "trial-and-error process is still very cumbersome",
+    "handcrafted features are not optimal in accuracy",
+    "poorly discriminative in many cases",
+    "unguaranteed discriminability to these diversities"
+  ],
+  "thinking_moves": [
+    "从理论复杂度分析出发，先证明可过滤性再设计系统",
+    "将看似不同的SKIP和REUSE方法统一到同一个框架下",
+    "识别出预训练/手工特征的根本缺陷：缺乏端到端学习的鲁棒判别性",
+    "从application-oriented视角转向理论指导视角"
+  ],
+  "topic_tags": [
+    "mobile inference optimization",
+    "input filtering",
+    "Siamese network",
+    "hypothesis complexity analysis",
+    "feature embedding learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的理论分析和系统设计，证据充分 | md truncated to head40k+tail20k"
+}

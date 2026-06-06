@@ -1,0 +1,40 @@
+{
+  "paper_id": "Oleszkiewicz et al. - 2006 - Effectively Utilizing Global Cluster Memory for Large Data-Intensive Parallel Programs",
+  "doi": null,
+  "title": "Effectively Utilizing Global Cluster Memory for Large Data-Intensive Parallel Programs",
+  "year": 2006,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "集群系统中并行作业内存分配不均导致磁盘分页开销极高",
+  "problem_framing": "将全局内存资源作为内存层次结构中的一层，以减少分页惩罚",
+  "key_insight": "访问远程内存与本地磁盘的速度差距持续扩大，使网络RAM成为可行方案",
+  "method_signature": "四种PNR设计CEN/CLI/MAN/BB的模拟对比评估",
+  "evaluation_criteria": "平均响应时间和优化比率（相比纯磁盘分页）",
+  "negative_result_or_admitted_limitation": "PNR设计并不总是能平滑内存使用分布，某些情况下反而更不均匀",
+  "evidence_for_taste": [
+    "surprising result",
+    "This comes as a surprise",
+    "It is difficult to choose",
+    "does not always smooth out",
+    "CLI performs poorly",
+    "very sensitive to network performance"
+  ],
+  "thinking_moves": [
+    "设计多种架构变体并通过模拟对比",
+    "发现出乎意料的结果后重新审视假设",
+    "根据负载/网络条件识别不同设计的适用场景",
+    "承认简单方法CLI在某些情况下反而最优"
+  ],
+  "topic_tags": [
+    "cluster-memory-allocation",
+    "parallel-job-scheduling",
+    "network-RAM",
+    "peer-to-peer-memory",
+    "disk-paging"
+  ],
+  "cites_own_work": [
+    "Oleszkiewicz et al. 2004 ICPP preliminary version"
+  ],
+  "extraction_quality": "full"
+}

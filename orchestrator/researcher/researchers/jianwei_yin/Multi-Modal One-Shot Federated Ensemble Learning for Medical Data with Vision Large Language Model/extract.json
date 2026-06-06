@@ -1,0 +1,35 @@
+{
+  "paper_id": "Multi-Modal One-Shot Federated Ensemble Learning for Medical Data with Vision Large Language Model",
+  "doi": "10.48550/arxiv.2501.03292",
+  "title": "Multi-Modal One-Shot Federated Ensemble Learning for Medical Data with Vision Large Language Model",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有联邦学习方法通信开销大,且医疗领域多为单模态数据,限制诊断准确性",
+  "problem_framing": "在单轮通信的联邦集成学习框架中融合视觉与文本多模态信息,解决数据隐私与异构性问题",
+  "key_insight": "vLLM生成的文本报告作为辅助特征,经BERT提取后与视觉特征融合,且需降维以保证视觉主导",
+  "method_signature": "视觉特征(ResNet-18)+降维文本特征(BERT)+投票集成",
+  "evaluation_criteria": "多数据集多非IID分布下的分类准确率,对比现有one-shot FL方法",
+  "negative_result_or_admitted_limitation": "vLLM直接分类准确率仅29%,远低于纯视觉模型80%,不宜单独使用",
+  "evidence_for_taste": [
+    "vLLM only achieves a classification accuracy of 29%",
+    "textual features might inadvertently suppress the visual modality",
+    "performance deteriorates markedly as the textual feature size increases to 512"
+  ],
+  "thinking_moves": [
+    "承认vLLM直接分类的局限性,转而作为辅助工具增强视觉模型",
+    "通过维度约束确保视觉模态主导地位,避免文本喧宾夺主",
+    "从单轮通信约束出发构建one-shot联邦集成框架"
+  ],
+  "topic_tags": [
+    "one-shot-federated-learning",
+    "multi-modal-medical-images",
+    "vision-LLM",
+    "federated-ensemble",
+    "BERT-feature-extraction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

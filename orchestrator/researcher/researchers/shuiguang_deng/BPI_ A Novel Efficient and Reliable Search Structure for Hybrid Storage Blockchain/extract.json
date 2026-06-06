@@ -1,0 +1,38 @@
+{
+  "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain",
+  "doi": "10.48550/arxiv.2509.00480",
+  "title": "BPI: A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain",
+  "year": 2025,
+  "venue": "arXiv (accepted to ACM SIGMOD 2026)",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "HSB存储瓶颈与SP返回不完整结果的风险",
+  "problem_framing": "ADS仅能验证单条结果存在性，无法防止SP遗漏有效结果",
+  "key_insight": "利用区块链不可变性，仅检索新数据而非全量数据",
+  "method_signature": "BMF+森林结构+Articulated Search增量查询",
+  "evaluation_criteria": "搜索性能、维护开销、存储空间、验证安全",
+  "negative_result_or_admitted_limitation": "BPI仅支持关键词搜索，不擅长度查询和条件查询",
+  "evidence_for_taste": [
+    "ADS可以验证单个结果的存在性，但不足以防止SP遗漏有效结果",
+    "B+树在动态区块链环境中维护成本高",
+    "BPI特别适合需要高搜索性能和低维护成本且支持Articulated Search的场景",
+    "传统数据库的CRUD操作不匹配区块链的只读特性",
+    "BMF+的存储开销减少超过99%"
+  ],
+  "thinking_moves": [
+    "将查询完整性问题重新定义为利用不可变性避免重复验证",
+    "从B+树的频繁结构性修改转向位图森林的增量扩展",
+    "把区块链只读特性转化为搜索范围收缩的工程优势",
+    "将验证开销从结果集大小解耦为可调节的多层映射空间"
+  ],
+  "topic_tags": [
+    "hybrid-storage-blockchain",
+    "authenticated-data-structure",
+    "bitmap-index",
+    "incremental-search",
+    "query-verification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

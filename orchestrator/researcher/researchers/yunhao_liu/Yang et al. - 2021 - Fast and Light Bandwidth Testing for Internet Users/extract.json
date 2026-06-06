@@ -1,0 +1,40 @@
+{
+  "paper_id": "Yang et al. - 2021 - Fast and Light Bandwidth Testing for Internet Users",
+  "doi": null,
+  "title": "Fast and Light Bandwidth Testing for Internet Users",
+  "year": 2021,
+  "venue": "NSDI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有BTS服务速度慢、耗数据、需大量服务器部署，成本高昂且不实用",
+  "problem_framing": "将BTS定义为带噪声的采样问题，效率低下来自于过度冗余而非不可避免",
+  "key_insight": "不抑制噪声而是用模糊拒绝采样框架 accomodate and exploit the noise",
+  "method_signature": "模糊拒绝采样：弹性带宽探测+关键区间采样+数据驱动选服务器+自适应多归属",
+  "evaluation_criteria": "accuracy(r/R)、test duration、data usage三项指标",
+  "negative_result_or_admitted_limitation": "DSS有cold start问题；AMH需多轮收敛；当服务器无法饱和下行带宽时测试时长增加",
+  "evidence_for_taste": [
+    "accommodate and exploit the noise",
+    "root in their methodology",
+    "rather poor accuracy (0.09)",
+    "accuracy is still unsatisfactory",
+    "the inefficiency and cost of these BTSes fundamentally root in",
+    "less than 4% in our measurements"
+  ],
+  "thinking_moves": [
+    "将工程问题重构为统计采样问题，从rejection sampling角度建模",
+    "用convex hull算法优化关键区间搜索复杂度从O(N²)降到O(N log N)",
+    "从20个商业BTS的逆向工程反推全领域的共性缺陷",
+    "接受部分 pathological cases存在，通过三机制兜底而非追求完美覆盖",
+    "将BBR拥塞控制adapt为带宽探测，优化收敛速度同时保持非侵入性"
+  ],
+  "topic_tags": [
+    "bandwidth-testing",
+    "network-measurement",
+    "rejection-sampling",
+    "congestion-control-adaptation",
+    "5G-networks"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

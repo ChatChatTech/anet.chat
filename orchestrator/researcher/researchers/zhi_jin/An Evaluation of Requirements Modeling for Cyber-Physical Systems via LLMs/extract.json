@@ -1,0 +1,40 @@
+{
+  "paper_id": "An Evaluation of Requirements Modeling for Cyber-Physical Systems via LLMs",
+  "doi": "10.48550/arxiv.2408.02450",
+  "title": "An Evaluation of Requirements Modeling for Cyber-Physical Systems via LLMs",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "CPS需求建模依赖人工从自然语言文档中提取,耗时费力且易出错,亟需自动化",
+  "problem_framing": "将需求建模分解为实体识别和交互抽取两个任务,基于问题图方法评估LLM能力",
+  "key_insight": "LLM对通用概念理解较好但对专业概念(RD、DD、RC)理解不足,且召回率仅约60%",
+  "method_signature": "构建CPSBENCH基准集,使用few-shot推理评估7种LLM",
+  "evaluation_criteria": "微精确率、召回率、F1分数",
+  "negative_result_or_admitted_limitation": "LLM召回率仅约60%,几乎遗漏一半建模元素,实际应用效果不足",
+  "evidence_for_taste": [
+    "time-consuming, labor-intensive, and error-prone",
+    "do not achieve sufficient effectiveness",
+    "failing to recognize almost half of the modeling elements",
+    "better understanding of general concepts than specialized concepts",
+    "LLMs lack knowledge of concepts such as Design Domain",
+    "recall rate is more valued"
+  ],
+  "thinking_moves": [
+    "将需求建模流程分解为实体识别和交互抽取两个流水线任务",
+    "通过真实企业级文档构建基准集,缩小评估与实际应用的差距",
+    "用Cohen's Kappa验证标注一致性,确保ground truth可靠性",
+    "按实体类型和交互类型分别统计,揭示LLM的知识盲区",
+    "建立幻觉类型分类体系,指导未来改进方向"
+  ],
+  "topic_tags": [
+    "CPS需求建模",
+    "问题图方法",
+    "LLM评估",
+    "实体识别",
+    "交互抽取"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

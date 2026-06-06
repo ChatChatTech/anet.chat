@@ -1,0 +1,38 @@
+{
+  "paper_id": "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds",
+  "doi": "10.48550/arxiv.2108.05836",
+  "title": "AdaFit: Rethinking Learning-based Normal Estimation on Point Clouds",
+  "year": 2021,
+  "venue": "ICCV",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "点云法向量估计在噪声和密度变化下仍不够鲁棒，主流加权最小二乘拟合存在根本性问题",
+  "problem_framing": "分析加权最小二乘表面拟合的两个固有缺陷：多项式阶次不一致导致过拟合/欠拟合，以及对离群点的敏感性",
+  "key_insight": "预测额外的点偏移量可同时解决多项式阶次不匹配和离群点敏感两个问题，使网络能灵活调整点分布",
+  "method_signature": "网络同时预测点权重和偏移量，在偏移后的邻域点上用加权最小二乘拟合多项式曲面",
+  "evaluation_criteria": "法向量角度RMSE和AUC曲线，在PCPNet、SceneNN、Semantic3D数据集上评估",
+  "negative_result_or_admitted_limitation": "去噪预处理不能将点投影到真实表面位置，仍导致较大RMSE；权重重置方法不如偏移预测有效",
+  "evidence_for_taste": [
+    "we find that it is hard to determine the polynomial order",
+    "the fitting surface is sensitive to outliers",
+    "even small weights on outliers will thoroughly mess up",
+    "truncating indeed slightly improves but is still inferior",
+    "denoising pre-processing still results in a larger RMSE"
+  ],
+  "thinking_moves": [
+    "对现有方法的数学性质进行严格分析，推导出Proposition 1揭示权重敏感性与残差的关系",
+    "从工程失败案例反推底层数学假设失效（多项式阶次不匹配+离群点影响）",
+    "用简洁的偏移预测一个操作同时解决两个看似不相关的理论问题",
+    "通过消融实验验证各组件必要性，特别是对比简单的阈值截断策略"
+  ],
+  "topic_tags": [
+    "point-cloud-normal-estimation",
+    "weighted-least-squares-fitting",
+    "neural-network-surface-fitting",
+    "outlier-robust-estimation",
+    "multi-scale-feature-aggregation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

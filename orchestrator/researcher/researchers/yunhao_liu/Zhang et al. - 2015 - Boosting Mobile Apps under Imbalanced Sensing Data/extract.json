@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhang et al. - 2015 - Boosting Mobile Apps under Imbalanced Sensing Data",
+  "doi": null,
+  "title": "Boosting Mobile Apps under Imbalanced Sensing Data",
+  "year": 2015,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "strong",
+  "role": "senior",
+  "motivation": "Mobile sensing apps generate massive data but interesting events are rare, making traditional classifiers fail to detect positives (low recall).",
+  "problem_framing": "Imbalanced classification in mobile sensing where positive (interesting) class is severely underrepresented; labeled data expensive, unlabeled also imbalanced.",
+  "key_insight": "Bridge under-sampling and semi-supervised learning via similarity-based sampling to use both techniques simultaneously.",
+  "method_signature": "SLIM: under-sampling negative class + similarity-based pseudo-labeling of unlabeled data + SVM ensemble per sensor dimension.",
+  "evaluation_criteria": "F-Measure as primary metric for imbalanced data (balances precision and recall); also accuracy, precision, recall.",
+  "negative_result_or_admitted_limitation": "Semi-supervised S3VM can perform worse than imbalanced-only models because unlabeled data 'may enhance the distribution skew so severely that it has canceled the benefit.'",
+  "evidence_for_taste": [
+    "the interesting events are rare",
+    "accuracy of 90 percent is obviously unacceptable",
+    "less than half of the positive instances are correctly recognized",
+    "it is not as straightforward as it seems",
+    "unlabelled data may result in helping a little, or even jeopardizing",
+    "both techniques separately will not suffice"
+  ],
+  "thinking_moves": [
+    "从实验数据揭示精度/召回率的背离现象反推问题本质",
+    "将 unlabeled data 的使用困难归因于其自身也是 imbalanced",
+    "把两种独立方法(under-sampling + semi-supervised)通过 similarity sampling 桥接起来",
+    "用 pilot experiment 验证 baseline 方法在 recall 上的缺陷再提出新框架",
+    "用 accuracy 和 F-Measure 的对比揭示单一指标的误导性"
+  ],
+  "topic_tags": [
+    "mobile-sensing-imbalance",
+    "semi-supervised-learning",
+    "under-sampling",
+    "SVM-ensemble",
+    "context-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

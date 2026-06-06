@@ -1,0 +1,40 @@
+{
+  "paper_id": "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W1784932861",
+  "doi": "10.48550/arxiv.1504.01106",
+  "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+  "year": 2015,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CNNs有效提取近邻特征但忽略结构；RNNs利用结构但传播路径过长导致梯度消失和学习困难。两者优势无法兼得",
+  "problem_framing": "能否将CNNs的短传播路径优势与RNNs的结构建模能力结合，用于句子的判别性建模",
+  "key_insight": "在句法树上应用固定深度的子树检测器做卷积，所有特征检测器到输出层都有短路径，从而有效学习结构特征",
+  "method_signature": "基于句法树( constituency或dependency)的卷积神经网络，用子树窗口提取结构特征后max pooling聚合",
+  "evaluation_criteria": "斯坦福情感树库5类/2类分类准确率；TREC问题分类6类准确率；对比state-of-the-art结果",
+  "negative_result_or_admitted_limitation": "3-slot pooling for c-TBCNN是'hard mechanism'暂时方案；复杂pooling效果提升不大，模型对pooling方法不敏感",
+  "evidence_for_taste": [
+    "structures are important when modeling",
+    "compact tree expressiveness is more important",
+    "complicated pooling ... effect is not strong",
+    "the gap ... increases when sentences contain more than 20 words",
+    "our models are not that sensitive to pooling methods",
+    "first time that neural networks beat dedicated human engineering"
+  ],
+  "thinking_moves": [
+    "对比CNNs和RNNs的具体缺陷：CNN缺结构、RNN路径长梯度消失",
+    "将问题reframe为设计目标：短路径+结构信息利用",
+    "通过可视化验证特征提取是否与任务相关",
+    "用句子长度分段实验揭示RNN的长距离依赖劣势",
+    "承认c-TBCNN的3-slot pooling是临时方案，开放未来改进"
+  ],
+  "topic_tags": [
+    "tree-structured-NLP",
+    "convolutional-neural-networks",
+    "sentiment-analysis",
+    "question-classification",
+    "syntactic-parsing-utilization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

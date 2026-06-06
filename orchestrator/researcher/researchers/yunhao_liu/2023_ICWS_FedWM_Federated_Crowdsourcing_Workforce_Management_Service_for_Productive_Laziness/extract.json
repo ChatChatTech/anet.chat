@@ -1,0 +1,39 @@
+{
+  "paper_id": "2023_ICWS_FedWM_Federated_Crowdsourcing_Workforce_Management_Service_for_Productive_Laziness",
+  "doi": null,
+  "title": "FedWM: Federated Crowdsourcing Workforce Management Service for Productive Laziness",
+  "year": 2023,
+  "venue": "ICWS",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有联邦众包研究激励客户投入更多精力,但忽视了人类需要在工作与休息间平衡的痛点",
+  "problem_framing": "将工作-休息调度问题建模为基于Lyapunov优化的动态调度问题,结合客户贡献变化率(紧迫性)与情绪(生产力)",
+  "key_insight": "用虚拟队列跟踪贡献紧迫性,用情绪衡量生产力,两者共同决定工作/休息决策,实现'高效懒惰'",
+  "method_signature": "基于Lyapunov优化的虚拟队列动态调度,贡献变化率定义紧迫性,情绪影响生产力系数",
+  "evaluation_criteria": "测试准确率与平均工作时间之间的权衡,消融实验验证双因素协同必要性",
+  "negative_result_or_admitted_limitation": "FedWM(MT)虽工作时间最短但准确率最低;FedWM(QT)工作时间显著更长,两者都不能单独达到最优权衡",
+  "evidence_for_taste": [
+    "overlooked by existing federated crowdsourcing research",
+    "the first federated crowdsourcing workforce management decision support approach",
+    "achieves significantly more advantageous trade-offs",
+    "FedWM achieves the most advantageous trade-off",
+    "It does not consider that clients will receive the global aggregated model"
+  ],
+  "thinking_moves": [
+    "识别文献gap:联邦众包中的工作-休息平衡被忽视",
+    "跨领域概念迁移:从众包'高效懒惰'概念引入联邦众包",
+    "将紧迫性重新定义:用贡献变化率而非工作积压描述",
+    " Lyapunov优化应用于FL调度,形式化虚拟队列稳定性",
+    "通过消融实验验证多因素协同优于单一因素"
+  ],
+  "topic_tags": [
+    "federated-crowdsourcing",
+    "workforce-management",
+    "lyapunov-optimization",
+    "productive-laziness",
+    "work-rest-scheduling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

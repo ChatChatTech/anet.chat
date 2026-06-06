@@ -1,0 +1,39 @@
+{
+  "paper_id": "EvoCodeBench_ An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories",
+  "doi": "10.48550/arxiv.2404.00599",
+  "title": "EvoCodeBench: An Evolving Code Generation Benchmark Aligned with Real-World Code Repositories",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有代码生成基准测试与真实代码仓库对齐差，无法全面评估LLM在实际项目中的编码能力",
+  "problem_framing": "将代码生成基准定义为需满足五大特征：真实仓库来源、真实代码分布、全面标注、鲁棒评测指标、避免数据泄露",
+  "key_insight": "代码生成应是\"仓库级\"任务，需理解上下文依赖(类内/文件内/跨文件)，而非简单的需求到代码映射",
+  "method_signature": "构建EvoCodeBench，包含275样本，提出仓库级代码生成任务和Pass@k+Recall@k双指标",
+  "evaluation_criteria": "Pass@k衡量功能正确性，Recall@k衡量依赖调用召回率，覆盖standalone和non-standalone代码",
+  "negative_result_or_admitted_limitation": "GPT-4在HumanEval达80%但EvoCodeBench仅20.73%；现有LLM性能远未达到实际应用水平",
+  "evidence_for_taste": [
+    "none of the existing benchmarks satisfies all",
+    "dramatically compared to their performance",
+    "still low and far from practical applications",
+    "main reasons why programs...fail are logic errors",
+    "existing LLMs' reasoning and coding abilities need to be improved"
+  ],
+  "thinking_moves": [
+    "通过分析500个真实仓库的100万+函数，量化真实代码分布而非假设",
+    "用表格系统对比9种现有基准的5个维度，明确差距",
+    "对50个失败案例进行人工错误分析，归纳失败原因",
+    "区分指令微调模型(GPT家族)和标准语言模型的行为差异",
+    "提出Recall@k指标评估LLM生成依赖的能力"
+  ],
+  "topic_tags": [
+    "LLM代码生成评测",
+    "仓库级代码生成",
+    "基准测试对齐性",
+    "依赖调用召回",
+    "上下文感知代码生成"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Xi et al. - 2009 - Run to Potential Sweep Coverage in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Run to Potential: Sweep Coverage in Wireless Sensor Networks",
+  "year": 2009,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Full coverage and barrier coverage incur prohibitive cost in large-scale sparse sensor networks for applications like farming monitoring",
+  "problem_framing": "Define sweep coverage for dynamic POIs where mobile nodes must retrieve data within delay bound T, requiring no fixed rendezvous points",
+  "key_insight": "Build virtual 3D potential field where POIs form peaks; mobile nodes climb gradients toward POIs using only local neighbor information",
+  "method_signature": "Potential-guided distributed sweep algorithm with anti-collision agents and virtual 3D gradient map",
+  "evaluation_criteria": "Average sweep delay (time to retrieve POI data) and average moving distance per mobile node",
+  "negative_result_or_admitted_limitation": "Sweep delay with 26 nodes is a bit larger than bound because mobile nodes follow marked paths not strict lines; worse than DSweep-global which assumes global information",
+  "evidence_for_taste": [
+    "performance close to the ideal",
+    "better than that of DSweep",
+    "is a bit larger than the bound",
+    "much smaller than that of naive method"
+  ],
+  "thinking_moves": [
+    "先证理论下界再设计算法",
+    "把导航问题转成势场爬山问题",
+    "用coupon collector模型推导节点需求",
+    "通过agent预标记路径解决碰撞问题"
+  ],
+  "topic_tags": [
+    "sweep-coverage",
+    "mobile-sensor-networks",
+    "potential-field-navigation",
+    "dynamic-POIs",
+    "distributed-algorithm"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Venue tier unknown because not explicitly stated in paper text. The paper structure (intro/method/eval/conclusion with references to prior work) suggests a conference publication."
+}

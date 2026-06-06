@@ -1,0 +1,38 @@
+{
+  "paper_id": "Image Generation Network for Covert Transmission in Online Social Network",
+  "doi": "10.48550/arxiv.2207.10292",
+  "title": "Image Generation Network for Covert Transmission in Online Social Network",
+  "year": 2022,
+  "venue": "ACM MM '22",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "OSN普及使私密信息传递成为可能，但传统隐写因修改载体而留痕易被检测",
+  "problem_framing": "用GAN直接合成图像传递秘密信息，而非修改图像像素",
+  "key_insight": "用秘密消息控制AdaIN的scale和bias，实现语义层面的信息编码",
+  "method_signature": "CIS-Net四模块：生成+对抗+噪声模拟+提取",
+  "evaluation_criteria": "FID衡量视觉质量，提取准确率验证鲁棒性",
+  "negative_result_or_admitted_limitation": "网络在高纹理区域产生噪声，直接训练效果不佳；16-bit时random_noise有效，32-bit时几乎失效",
+  "evidence_for_taste": [
+    "the quality of generated images is still the heel of Achilles",
+    "the network tends to leave noise in the high-frequency area",
+    "we find that the effect of random noise is obvious when the length of secret messages is 16",
+    "Since we can not achieve 100% extraction accuracy",
+    "new unknown noises may reduce accuracy"
+  ],
+  "thinking_moves": [
+    "把steganography重新frame成semantic synthesis问题",
+    "从实验异常(高频频域噪声)反推预处理失效",
+    "把不可微分JPEG处理成constant tensor以实现端到端训练",
+    "用retrained模型的多样性解决检测泛化问题"
+  ],
+  "topic_tags": [
+    "coverless-steganography",
+    "GAN-image-synthesis",
+    "AdaIN-semantic-control",
+    "JPEG-robustness",
+    "social-network-covert-channel"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "研究者slug为xinpeng_zhao，但论文作者为Xinpeng Zhang，可能存在姓名不匹配或提取目标有误的情况"
+}

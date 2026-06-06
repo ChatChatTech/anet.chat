@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wu et al. - 2013 - DorFin WiFi Fingerprint-based Localization Revisited",
+  "doi": null,
+  "title": "DorFin: WiFi Fingerprint-based Localization Revisited",
+  "year": 2013,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WiFi指纹定位在移动环境下精度急剧下降，现有方法需额外硬件或物理层信息，缺乏实用方案",
+  "problem_framing": "将定位误差归因于三个被忽视的根因：AP判别力差异、指纹不一致性、RSS过时性",
+  "key_insight": "通过区分AP的判别力权重、鲁棒回归处理异常值、幽灵指纹补偿过时测量，三管齐下解决移动环境下定位失效",
+  "method_signature": "DorFin系统：判别因子+鲁棒回归(LMS)+幽灵指纹组装+统一相似度度量",
+  "evaluation_criteria": "平均误差≤2米，第95百分位误差≤5.5米，相比Horus和RADAR降低56%和69%",
+  "negative_result_or_admitted_limitation": "承认移动场景性能比静态场景略有下降，但强调仍远优于基线方法",
+  "evidence_for_taste": [
+    "surprising overlooked or even unseen",
+    "root causes of location errors",
+    "counter-intuitively that simpler algorithms",
+    "not been adequately addressed",
+    "tackle the outdated RSS problem",
+    "phased fingerprint",
+    "discrimination diversity",
+    "outdated fingerprints"
+  ],
+  "thinking_moves": [
+    "从定位失效反推被忽视的底层物理现象",
+    "将AP判别力差异量化为权重因子",
+    "识别出RSS过时这一移动设备特有硬件限制",
+    "用鲁棒回归代替欧氏距离容忍异常RSS",
+    "幽灵指纹：将多位置测量重新组合以匹配过时查询",
+    "先揭示根因再提出针对性解决方案"
+  ],
+  "topic_tags": [
+    "WiFi-fingerprint-localization",
+    "mobile-indoor-localization",
+    "robust-regression",
+    "dead-reckoning",
+    "RSS-signal-fluctuation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

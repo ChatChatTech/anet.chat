@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2019 - Spatio-Temporal Analysis and Prediction of Cellular Traffic in Metropolis",
+  "doi": null,
+  "title": "Spatio-Temporal Analysis and Prediction of Cellular Traffic in Metropolis",
+  "year": 2019,
+  "venue": "IEEE",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "5G时代运营商需要精准预测流量以优化资源配置,城市管理部门需要检测异常集会事件",
+  "problem_framing": "将蜂窝流量分解为in-tower和inter-tower两类,利用图神经网络建模城市级大规模cell tower的时空依赖关系",
+  "key_insight": "远距离cell tower之间存在强烈的空间依赖(城市交通使人员可在半小时内穿越全市),现有方法忽视此问题",
+  "method_signature": "图神经网络分解in-tower/inter-tower流量预测城市级蜂窝流量",
+  "evaluation_criteria": "MAE, MARE, MAPE指标,在1.5M用户5929个cell tower大规模数据集上验证",
+  "negative_result_or_admitted_limitation": "without traffic decomposition, the neural network has similar encoding capacity to LSTM - 流量分解缺失导致GNN-A性能与LSTM相当",
+  "evidence_for_taste": [
+    "overlooked in previous works",
+    "fail to capture the intensive long-distance spatial dependency",
+    "spatial dependencies may not necessarily be local",
+    "fast urban-scale mobility introduces enormous long-distance spatial dependency",
+    "GNN-D method outperforms the baselines",
+    "even with an imbalanced training dataset, our method still outperforms others"
+  ],
+  "thinking_moves": [
+    "从数据中发现被忽视的时空模式:远距离cell tower间存在强依赖",
+    "将总流量分解为可解释的in-tower和inter-tower两部分以显式建模空间依赖",
+    "用图结构而非网格结构表示cell tower拓扑,适应实际网络管理需求",
+    "通过PageRank centrality量化spatial dependency验证方法优势",
+    "对比实验展示分解必要性:无分解时GNN等同于LSTM"
+  ],
+  "topic_tags": [
+    "cellular-traffic-prediction",
+    "graph-neural-networks",
+    "spatio-temporal-modeling",
+    "urban-mobility",
+    "fine-grained-forecasting"
+  ],
+  "cites_own_work": [
+    "基于ICNP 2017 preliminary version的完整扩展"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

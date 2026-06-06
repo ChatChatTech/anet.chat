@@ -1,0 +1,36 @@
+{
+  "paper_id": "The Role of Summarization in Generative Agents_ A Preliminary Perspective",
+  "doi": "10.48550/arxiv.2305.01253",
+  "title": "The Role of Summarization in Generative Agents: A Preliminary Perspective",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "认为摘要能力是生成式智能体最基础且不可或缺的,现有研究缺乏从摘要视角的系统理解",
+  "problem_framing": "将生成式智能体的各功能模块(Retrieve/Reflect/Plan/Act)统一形式化为摘要任务",
+  "key_insight": "summarization is the most fundamental and indispensable capacity of generative agents manifested across diverse scenarios",
+  "method_signature": "从摘要视角重帧智能体架构,枚举6类摘要技术对应各模块",
+  "evaluation_criteria": null,
+  "negative_result_or_admitted_limitation": "We assume the implicit query \"[name]'s previous day plan\" is used... — 对Previous Day Summary的实现细节只是假设,未验证",
+  "evidence_for_taste": [
+    "we believe summarization is the most fundamental",
+    "This is also in line with the previous related work",
+    "we assume the implicit query...we believe that when facing long and verbose dialogue histories",
+    "a picture is worth a thousand words"
+  ],
+  "thinking_moves": [
+    "把复杂系统分解后重新用统一框架归类",
+    "用成熟NLP任务(摘要)解释新兴系统(智能体)各模块",
+    "承认细节需假设而非实测: we assume...we believe"
+  ],
+  "topic_tags": [
+    "generative-agent-architecture",
+    "summarization-as-unifying-framework",
+    "LLM-agent-design",
+    "multi-module-formalization"
+  ],
+  "cites_own_work": [
+    "Feng et al., 2021"
+  ],
+  "extraction_quality": "partial"
+}

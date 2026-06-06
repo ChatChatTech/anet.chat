@@ -1,0 +1,42 @@
+{
+  "paper_id": "Huai et al. - 2007 - ROST Remote and hot service deployment with trustworthiness in CROWN Grid",
+  "doi": null,
+  "title": "ROST: Remote and hot service deployment with trustworthiness in CROWN Grid",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CROWN Grid中计算节点过载时,需要把服务副本部署到远程节点实现负载均衡,但现有方案只能冷部署",
+  "problem_framing": "远程热部署缺失两个关键问题:安全信任建立和运行时环境动态更新无需重启",
+  "key_insight": "通过RHD动态更新容器配置加载服务,同时用自动信任协商(TNA)解决跨域安全信任问题",
+  "method_signature": "ROST = Trust Negotiation Agent (TNA) + Remote Hot Deployment (RHD)",
+  "evaluation_criteria": "部署响应时间、任务执行时间、作业处理效率对比冷部署",
+  "negative_result_or_admitted_limitation": "当前信任协商导致显著时间开销,需进一步优化效率",
+  "evidence_for_taste": [
+    "there is no successful solution",
+    "traditionally, remote deployment is supported in a cold fashion",
+    "great security challenges arise",
+    "the current trust negotiation causes much time overhead",
+    "significantly improves service efficiency",
+    "more than 80% of jobs have efficiency of nearly 90%"
+  ],
+  "thinking_moves": [
+    "从现实痛点(节点过载)导出部署需求,将现有方案缺失定义为冷部署缺陷",
+    "把安全问题拆解为两个子问题:恶意服务和不可信容器",
+    "将ATN自动信任协商机制适配到网格部署场景",
+    "用TrustTicket机制缓存协商结果优化重复部署效率",
+    "通过引用计数器保证更新/卸载时已有用户不中断服务"
+  ],
+  "topic_tags": [
+    "grid-service-hot-deployment",
+    "cross-domain-trust-negotiation",
+    "CROWN-grid",
+    "runtime-environment-dynamic-update",
+    "service-load-balancing"
+  ],
+  "cites_own_work": [
+    "J. Huai, Y. Liu, X. Li, C. Hu, Early experiences with CROWN grid, Technical Report, 2005"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "paper完整但venue字段缺失,无法确定发表 venue"
+}

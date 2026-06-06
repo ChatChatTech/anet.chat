@@ -1,0 +1,39 @@
+{
+  "paper_id": "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4388747891",
+  "doi": "10.48550/arxiv.2311.08588",
+  "title": "CodeScope: An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "workshop",
+  "role": "senior",
+  "motivation": "现有代码评测基准仅用BLEU等表面相似度指标,无法反映代码实际可执行性与功能正确性",
+  "problem_framing": "将代码LLM评测定义为多语言、多任务、多维度的执行结果验证问题",
+  "key_insight": "代码词法相似度与执行正确性弱相关,execution-based指标更能捕获实际可用性",
+  "method_signature": "MultiCodeEngine多语言代码执行引擎 + 三维评测框架(长度/难度/效率)",
+  "evaluation_criteria": "Pass@K测试正确率、DSR@K调试成功率、Opt@K优化提升率",
+  "negative_result_or_admitted_limitation": "GPT-4在automated testing任务表现不佳,难以生成与实际执行输出一致的测试用例",
+  "evidence_for_taste": [
+    "execution correctness are weakly correlated",
+    "may not reflect the practical applicability",
+    "still has room for improvement",
+    "benchmark accuracy rate being too high",
+    "it is too easy"
+  ],
+  "thinking_moves": [
+    "从实际软件工程需求出发指出多语言多任务的必要性,批判现有基准覆盖不足",
+    "通过execution-based指标替代matching-based指标来捕获功能正确性而非表面形式",
+    "引入长度/难度/效率三维框架实现细粒度差异化评测",
+    "识别现有基准的隐性缺陷:Russian语言数据污染、cheat codes、数据错误",
+    "通过Hard/Easy难度分级揭示模型在真实编程挑战中的能力边界"
+  ],
+  "topic_tags": [
+    "LLM代码生成评测",
+    "execution-based评估",
+    "多语言编程评测",
+    "代码优化效率度量",
+    "benchmark设计"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

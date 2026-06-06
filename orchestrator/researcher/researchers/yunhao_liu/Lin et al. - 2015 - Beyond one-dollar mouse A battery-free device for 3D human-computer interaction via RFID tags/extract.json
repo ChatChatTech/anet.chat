@@ -1,0 +1,41 @@
+{
+  "paper_id": "Lin et al. - 2015 - Beyond one-dollar mouse A battery-free device for 3D human-computer interaction via RFID tags",
+  "doi": null,
+  "title": "Beyond One-dollar Mouse: A Battery-free Device for 3D Human-Computer Interaction via RFID Tags",
+  "year": 2015,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "鼠标统治人机交互半个世纪,但无法适配3D显示技术;现有方案(视觉/传感器/无设备)均有局限",
+  "problem_framing": "如何用N个被动标签追踪刚体球的状态(位置+姿态),而非独立定位每个标签",
+  "key_insight": "将N个标签视为整体而非独立个体,利用已知几何约束,通过EKF将相位测量建模为球状态的观测",
+  "method_signature": "基于EKF的刚体球状态追踪,结合相关法初始估计和RTS平滑",
+  "evaluation_criteria": "翻译精度1.5cm,旋转精度1.8°,对比7种现有方法",
+  "negative_result_or_admitted_limitation": "相位测量含随机误差且有多普尔效应;小球空间密集部署难以定位;人手遮挡信号",
+  "evidence_for_taste": [
+    "naive method is infeasible",
+    "not appropriate for real-time",
+    "RF-IDraw considers the tag's trajectory as a series of isolated points instead of a continuous process",
+    "major difference between Butterfly and Tagball is that the latter takes the behaviors of group tags into consideration",
+    "Tagball outperforms the translation accuracy over RSS by over 41×"
+  ],
+  "thinking_moves": [
+    "把独立定位N个标签的感知问题,重新frame成刚体协同追踪的通信问题",
+    "利用已知几何约束将N个自由度问题压缩到6维状态空间",
+    "用CWNA模型为用户随机操作建模,捕获不确定性",
+    "通过RTS后向递归平滑克服EKF因果估计的延迟问题",
+    "相位差分消除设备多样性和短时多普尔效应影响"
+  ],
+  "topic_tags": [
+    "RFID-group-tracking",
+    "EKF-rigid-body-state-estimation",
+    "battery-free-HCI",
+    "3D-interaction-device",
+    "phase-based-localization"
+  ],
+  "cites_own_work": [
+    "Tagoram",
+    "RF-IDraw"
+  ],
+  "extraction_quality": "full"
+}

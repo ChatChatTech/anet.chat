@@ -1,0 +1,38 @@
+{
+  "paper_id": "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting",
+  "doi": "10.1109/jiot.2020.3026733",
+  "title": "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting",
+  "year": 2021,
+  "venue": "IEEE Internet of Things Journal",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有负荷预测研究只关注精度，忽视模型实际部署能力（鲁棒性、外部数据依赖性、存储大小）",
+  "problem_framing": "从四个维度定义模型可部署性：预测性能、鲁棒性、外部数据依赖性、存储大小",
+  "key_insight": "从重构视角处理负荷序列，将高频分量置零重构可有效去噪同时保留周期特征",
+  "method_signature": "MWCNN：使用2级高频置零小波重构+CNN+多小波集成，仅用负荷数据，模型仅497KB",
+  "evaluation_criteria": "MAPE/MAE/RMSE（精度）、高斯噪声扰动下的MAE变化（鲁棒性）、存储空间（KB）",
+  "negative_result_or_admitted_limitation": "软阈值小波重构导致结果很差（MAPE 16.32%）；SE注意力机制反而降低性能（引入额外参数导致过拟合）；集成规模超过6后性能不再提升",
+  "evidence_for_taste": [
+    "MWCNN-soft-1-level MAPE=16.32",
+    "increasing SE does not increase performance",
+    "performance does not increase with increasing integration scale",
+    "soft thresholding will lead to a bad result",
+    "the level of wavelet decomposition has a certain influence on the method of high-frequency zeroing but has a minimal influence on the method of hard threshold"
+  ],
+  "thinking_moves": [
+    "从工程约束（部署性）而非精度出发定义研究问题",
+    "通过消融实验验证模型结构局部最优性",
+    "将预测误差的范围和标准差纳入评估指标（管理成本视角）",
+    "用可解释性分析反向验证模型捕获了负荷周期性的假设"
+  ],
+  "topic_tags": [
+    "short-term-load-forecasting",
+    "wavelet-reconstruction",
+    "convolutional-neural-network",
+    "model-deployability",
+    "interpretable-prediction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

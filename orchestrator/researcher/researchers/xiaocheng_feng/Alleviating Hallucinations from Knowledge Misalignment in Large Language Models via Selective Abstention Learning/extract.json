@@ -1,0 +1,38 @@
+{
+  "paper_id": "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning",
+  "doi": "10.18653/v1/2025.acl-long.1199",
+  "title": "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning",
+  "year": 2025,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "LLMs hallucinate when fine-tuning introduces new factual knowledge not in model's parametric memory, forcing fabrication.",
+  "problem_framing": "Knowledge misalignment between pretraining and SFT makes model fit unknown samples, leading to overconfident wrong answers.",
+  "key_insight": "Introduce [REJ] token to absorb uncertainty; model can choose to abstain instead of blindly fitting ground truth.",
+  "method_signature": "Abstention tuning + abstention-aware beam search decoding using [REJ] probability as uncertainty penalty.",
+  "evaluation_criteria": "Factuality accuracy (short-form QA), FActScore/F1 (long-form QA), AlpacaEval/IFEval (instruction following).",
+  "negative_result_or_admitted_limitation": "POPULAR baseline struggles in long-form QA; ratio-based confidence capture is 'simple' and may miss other uncertainty patterns.",
+  "evidence_for_taste": [
+    "rather than blindly assigning high probability",
+    "avoiding overfitting to misaligned knowledge",
+    "acknowledging the insufficiency of knowledge",
+    "turn trash into treasure",
+    "significantly correlation between REJ and factuality"
+  ],
+  "thinking_moves": [
+    "把未知样本问题从数据过滤重新定义为训练目标修改",
+    "用特殊token吸收不确定性,给模型一个'拒绝回答'的选项",
+    "训练信号转化为解码约束,形成从学习到推理的一致性",
+    "先在小规模数据验证因果机制,再扩展到复杂生成任务"
+  ],
+  "topic_tags": [
+    "LLM-hallucination-mitigation",
+    "knowledge-misalignment-SFT",
+    "abstention-learning",
+    "uncertainty-calibration",
+    "selective-rejection-token"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,44 @@
+{
+  "paper_id": "CAME_ Content- and Context-Aware Music Embedding for Recommendation",
+  "doi": "10.1109/tnnls.2020.2984665",
+  "title": "CAME: Content- and Context-Aware Music Embedding for Recommendation",
+  "year": 2020,
+  "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传统推荐方法因数据稀疏导致性能受限，而音乐领域存在大量辅助信息尚未充分利用",
+  "problem_framing": "如何将内容信息（歌词、标签）与上下文信息（用户行为序列）统一建模以学习音乐嵌入",
+  "key_insight": "同一音乐在与其他音乐交互时呈现不同方面特征，需用注意力机制动态捕获这种相关性",
+  "method_signature": "异构信息网络结合CNN与注意力机制学习content-context感知的音乐嵌入",
+  "evaluation_criteria": "HR@10、Precision@10、Recall@10等推荐准确率指标及稀疏数据处理能力",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "one music piece generally highlights different aspects",
+    "play together with various kinds of music",
+    "adaptively cope with various aspects of items",
+    "attention mechanism enables the pooling layer",
+    "capture the key features of music pieces as well as their dynamic relevance adaptively",
+    "alleviate the data sparsity problem"
+  ],
+  "thinking_moves": [
+    "将音乐内容与用户行为数据统一建模为异构信息网络",
+    "用网络嵌入方法将高维符号数据映射到低维实值向量空间",
+    "通过CNN与注意力机制捕获词级别的局部语义依赖",
+    "引入注意力矩阵动态计算音乐对之间的特征相关性",
+    "区分一般偏好与情境偏好进行双重推荐推断"
+  ],
+  "topic_tags": [
+    "music-recommendation",
+    "heterogeneous-information-network",
+    "content-context-aware-embedding",
+    "attention-mechanism",
+    "CNN-text-embedding"
+  ],
+  "cites_own_work": [
+    "D. Wang, S. Deng, S. Liu, and G. Xu, Improving music recommendation using distributed representation, 2016",
+    "D. Wang, S. Deng, X. Zhang, and G. Xu, Learning to embed music and metadata for context-aware music recommendation, 2018",
+    "D. Wang, G. Xu, and S. Deng, Music recommendation via heterogeneous information graph embedding, 2017"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

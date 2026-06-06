@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zhang et al. - 2018 - Internet of Things Meets Brain-Computer Interface A Unified Deep Learning Framework for Enabling Hu",
+  "doi": null,
+  "title": "Internet of Things Meets Brain-Computer Interface: A Unified Deep Learning Framework for Enabling Human-Thing Cognitive Interactivity",
+  "year": 2018,
+  "venue": "IEEE Pervasive Computing and Communications (PerCom)",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "BCI-based IoT control受限于低信噪比，且特征工程耗时且依赖领域专家知识",
+  "problem_framing": "从原始脑电信号中准确识别用户意图，转化为IoT设备可执行的命令",
+  "key_insight": "样本自相似性高于互相似性，即intra-intent内聚力强于inter-intent；利用强化学习自动搜索最具区分性的特征片段",
+  "method_signature": "RS特征变换 + Dueling DQN选择性注意力机制(SAM) + WAS-LSTM跨维依赖分类",
+  "evaluation_criteria": "准确率/精确率/召回率/F1-score、延迟、混淆矩阵、ROC/AUC",
+  "negative_result_or_admitted_limitation": "仅7名受试者；SAM增加训练迭代时间；RS后最优顺序无法保证；需足够多的EEG通道数才能提供充分信息",
+  "evidence_for_taste": [
+    "the eye-closed state is the easiest to be recognized",
+    "LSTM can remember longer sequences than GRU",
+    "the optimal order can not be guaranteed to appear after the RS",
+    "the accuracy has an approximately linear relationship with the reward"
+  ],
+  "thinking_moves": [
+    "将脑电信号重新frame为communication问题而非仅perception",
+    "利用强化学习自动搜索最优特征子集，避免人工特征工程",
+    "将时序依赖改为空间跨维依赖(WAS-LSTM)",
+    "用轻量奖励模型G近似替代耗时的分类奖励F，节省98.3%训练时间",
+    "通过复制和随机打乱突破EEG通道固定顺序对维度依赖分析的限制"
+  ],
+  "topic_tags": [
+    "EEG classification",
+    "BCI deep learning",
+    "IoT cognitive interactivity",
+    "reinforcement learning attention",
+    "spatial LSTM"
+  ],
+  "cites_own_work": [
+    "Converting your thoughts to texts: Enabling brain typing via deep feature learning of EEG signals (PerCom 2018)",
+    "Intent recognition in smart living through deep recurrent neural networks (ICONIP 2017)",
+    "MindID: Person identification from brain waves through attention-based recurrent neural network (UbiComp 2018)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

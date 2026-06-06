@@ -1,0 +1,40 @@
+{
+  "paper_id": "LLMBoost_ Make Large Language Models Stronger with Boosting",
+  "doi": null,
+  "title": "LLMBOOST: MAKE LARGE LANGUAGE MODELS STRONGER WITH BOOSTING",
+  "year": 2025,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有LLM集成仅在输出层融合,忽略了模型内部隐表示这一丰富信息,无法实现细粒度的跨模型交互",
+  "problem_framing": "将boosting思想引入LLM集成,让后继模型通过跨模型注意力访问并修正前驱模型的隐藏状态",
+  "key_insight": "打破黑盒壁垒,让后续模型在层级别访问前驱模型的中间隐状态实现分层错误纠正",
+  "method_signature": "跨模型注意力+错误抑制损失+近并行层间流水线推理",
+  "evaluation_criteria": "commonsense和arithmetic推理准确率提升,推理延迟降低",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "overlooking the rich information embedded in the hidden representations",
+    "break the black-box barrier",
+    "enabling state-driven hierarchical interaction",
+    "successor models can adaptively access and fuse",
+    "rectify the key tokens of its predecessor",
+    "suppresses the maximal (incorrect) logit",
+    "achieving performance close to that of a single model"
+  ],
+  "thinking_moves": [
+    "将LLM集成从黑盒输出融合升级为内部状态交互",
+    "用boosting范式重新定义sequential error correction",
+    "通过层级别流水线并行掩盖模型间依赖的开销",
+    "先证MSE单调下降的理论边界,再设计经验训练目标"
+  ],
+  "topic_tags": [
+    "LLM-ensemble",
+    "cross-model-attention",
+    "boosting",
+    "error-correction",
+    "hidden-representation-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注venue和DOI,Role信息需从作者列表推导。部分理论细节和附录在提供的markdown中已截断提取。 | md truncated to head40k+tail20k"
+}

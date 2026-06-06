@@ -1,0 +1,37 @@
+{
+  "paper_id": "ChatUniTest_ A Framework for LLM-Based Test Generation",
+  "doi": "10.48550/arxiv.2305.04764",
+  "title": "ChatUniTest: A Framework for LLM-Based Test Generation",
+  "year": 2024,
+  "venue": "FSE Companion '24",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "手动编写单元测试费时费力，现有LLM工具因上下文限制和验证不足产生错误代码",
+  "problem_framing": "将LLM生成测试的问题分解为上下文过长和信息不足、生成错误难以修复两个关键限制",
+  "key_insight": "通过自适应焦点上下文机制选择关键信息，配合生成-验证-修复循环纠正错误，实现可靠测试生成",
+  "method_signature": "自适应焦点上下文 + 生成-验证-修复循环的LLM测试生成框架",
+  "evaluation_criteria": "行覆盖率对比TestSpark/EvoSuite，用户研究验证实用性，多阶段验证通过率",
+  "negative_result_or_admitted_limitation": "TestSpark因提示超出令牌限制无法生成Csv测试；LLM常产生编译错误或运行时断言失败需人工修复",
+  "evidence_for_taste": [
+    "context surpasses the token limit",
+    "LLMs often produce incorrect tests",
+    "requires considerable effort for manual repair",
+    "TestSpark fails to generate tests"
+  ],
+  "thinking_moves": [
+    "将LLM生成限制分解为输入端和输出端两个子问题分别攻克",
+    "用流水线式验证-修复机制替代端到端生成，接受中间失败并循环改进",
+    "通过行覆盖率这一可量化指标建立与搜索式工具的公平竞争基准",
+    "承认基线工具的失败案例，将其归因于技术局限而非方法缺陷"
+  ],
+  "topic_tags": [
+    "LLM-based-unit-test-generation",
+    "adaptive-context-selection",
+    "test-validation-repair",
+    "code-coverage-evaluation",
+    "software-testing-automation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

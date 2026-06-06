@@ -1,0 +1,629 @@
+{
+  "slug": "jianwei_yin",
+  "n_extracts": 85,
+  "n_full": 74,
+  "n_partial": 11,
+  "n_thin": 0,
+  "year_range": [
+    2006,
+    2026
+  ],
+  "top_tags": [
+    [
+      "retrieval-augmented-generation",
+      3
+    ],
+    [
+      "knowledge-distillation",
+      2
+    ],
+    [
+      "optimal-transport",
+      2
+    ],
+    [
+      "参数高效微调",
+      2
+    ],
+    [
+      "federated-learning",
+      2
+    ],
+    [
+      "privacy-preserving-ml",
+      2
+    ],
+    [
+      "one-shot-federated-learning",
+      2
+    ],
+    [
+      "abstract-interpretation",
+      2
+    ],
+    [
+      "question-decomposition",
+      2
+    ],
+    [
+      "iterative-self-feedback",
+      2
+    ],
+    [
+      "hallucination-mitigation",
+      2
+    ],
+    [
+      "secure-code-generation",
+      2
+    ],
+    [
+      "in-context-learning",
+      2
+    ],
+    [
+      "dense-retrieval",
+      2
+    ],
+    [
+      "user-churn-prediction",
+      1
+    ],
+    [
+      "latent-feeling-estimation",
+      1
+    ],
+    [
+      "RNN-LSTM-variant",
+      1
+    ],
+    [
+      "behavior-sequence-modeling",
+      1
+    ],
+    [
+      "online-game-analytics",
+      1
+    ],
+    [
+      "incomplete-multimodal-learning",
+      1
+    ],
+    [
+      "low-rank-adaptation",
+      1
+    ],
+    [
+      "emotion-recognition",
+      1
+    ],
+    [
+      "gradient-conflict",
+      1
+    ],
+    [
+      "modality-combination-aware",
+      1
+    ],
+    [
+      "parameter-efficient-training",
+      1
+    ],
+    [
+      "COVID-19数据质量评估",
+      1
+    ],
+    [
+      "贝叶斯空间downscaling",
+      1
+    ],
+    [
+      "多源数据融合比较",
+      1
+    ],
+    [
+      "传染病空间建模",
+      1
+    ],
+    [
+      "生态学谬误MAUP",
+      1
+    ]
+  ],
+  "topic_clusters": [
+    {
+      "tag": "retrieval-augmented-generation",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4402670862",
+          "year": 2024,
+          "venue": "ACL Findings",
+          "key_insight": "通过迭代自反馈机制，当模型无初始答案或检索到无关文本时，分解问题为子问题逐步解决",
+          "method_signature": "三个预训练子模型(M_know, M_rel, M_decom)与LLM和检索器协同迭代求解",
+          "score": 18
+        },
+        {
+          "paper_id": "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding",
+          "year": 2025,
+          "venue": "ArXiv",
+          "key_insight": "采用\"先理解,后补全\"范式,通过静态分析提取多粒度上下文指导生成",
+          "method_signature": "静态分析+图选择+结构重排的多粒度理解框架",
+          "score": 16
+        },
+        {
+          "paper_id": "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4392737420",
+          "year": 2024,
+          "venue": "arXiv",
+          "key_insight": "通过级联判断逐步缩小问题范围——先问模型知不知道，再问检索是否相关，最后才分解问题",
+          "method_signature": "三个微调子模型(M_know/M_rel/M_decom)与主LLM迭代协作，含D_th迭代上限",
+          "score": 13
+        }
+      ]
+    }
+  ],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2006,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "incremental-manifold-learning",
+          1
+        ],
+        [
+          "LTSA",
+          1
+        ],
+        [
+          "eigenvalue-incremental-update",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2009,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "cross-organizational ESB",
+          1
+        ],
+        [
+          "enterprise application integration",
+          1
+        ],
+        [
+          "domain-based coordination",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2012,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "text-based classification",
+          1
+        ],
+        [
+          "association rules mining",
+          1
+        ],
+        [
+          "decision tree",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2018,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "hand-pose-estimation",
+          1
+        ],
+        [
+          "depth-image",
+          1
+        ],
+        [
+          "spatio-temporal-modeling",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2019,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "edge-computing-service-placement",
+          1
+        ],
+        [
+          "microservice-redundancy",
+          1
+        ],
+        [
+          "stochastic-optimization",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "COVID-19数据质量评估",
+          1
+        ],
+        [
+          "贝叶斯空间downscaling",
+          1
+        ],
+        [
+          "多源数据融合比较",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "BAT开源生态",
+          1
+        ],
+        [
+          "开源项目分类",
+          1
+        ],
+        [
+          "国际化努力",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "VLP模型诊断",
+          1
+        ],
+        [
+          "Image-Text-Matching评估",
+          1
+        ],
+        [
+          "hard negative采样",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 64,
+      "top_tags": [
+        [
+          "privacy-preserving-ml",
+          2
+        ],
+        [
+          "MLLM预eval",
+          1
+        ],
+        [
+          "序列视觉推理",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 136,
+      "top_tags": [
+        [
+          "retrieval-augmented-generation",
+          2
+        ],
+        [
+          "question-decomposition",
+          2
+        ],
+        [
+          "iterative-self-feedback",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 92,
+      "top_tags": [
+        [
+          "incomplete-multimodal-learning",
+          1
+        ],
+        [
+          "low-rank-adaptation",
+          1
+        ],
+        [
+          "emotion-recognition",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2026,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "仓库级代码补全",
+          1
+        ],
+        [
+          "图增强RAG",
+          1
+        ],
+        [
+          "层级代码融合",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "BMM-UCP单独使用效果差于LSTM,因引入游戏内数据导致过拟合",
+    "目前MCULoRA仍假设所有模态数据可用，实际应用中难以收集完整模态训练数据",
+    "经验丰富开发者反而最不认同开源(ExpHigh最负面)",
+    "CLIP对属性和关系变体理解能力极低，尤其Relation-spatial；小目标和角落目标识别受限",
+    "BPI is restricted to keyword searches and may not fully cover conditional and range queries due to lack of support for arbitrary interval queries",
+    "some triggers have inconsistent performance between the two datasets which is opposite to the result in sophisticated word",
+    "所有模型在抽象模式推理上表现极差,视频训练模型(Otter)反而最差",
+    "Coreference resolution struggles with ambiguous references or high complexity contexts, leading to inaccurate mention replacements; effectiveness may diminish for shorter contexts",
+    "Random method sometimes slightly outperforms SRW because regularization samples do not consistently improve performance and even cause drops.",
+    "TestSpark因prompt超token限制无法处理Csv项目,EvoSuite因JDK版本不兼容无法处理Ecommerce项目",
+    "承认若不消除变量,28变量问题产生989深度电路无法在NISQ设备执行",
+    "现有综述主要提供高层观点，忽略对最新研究工作的综述，导致挑战和解决方案缺乏高可移植性",
+    "静态分析规则可能遗漏复杂结构的边缘情况,且多粒度上下文可能超出模型上下文窗口",
+    "15-60mm范围内不如3D CNN,因为3D CNN捕获了更充分的3D空间信息;切片3D分支因丢失深度信息而性能最差",
+    "因为知识有限，书中错误和缺陷不可避免，欢迎读者批评指正",
+    "直接放整个模型到TEE导致约50倍效率下降;PPTE保护权重过少易重建;ShadowNet单token产生需1.3GB传输、几百秒延迟,不可行。",
+    "当r足够小时旁路调优性能显著下降；可逆网络需要更多训练步数才能达到稳定",
+    "该算法仅在线性成本函数下具有最优竞争力比，对于严格凸成本函数需解一阶两点边值问题。",
+    "扩散模型固有局限带来额外计算开销和训练时间延长，但通信成本不增加",
+    "WF的最坏情况近似比可达K（任务组数），理论上是紧界但实际可能性能不佳",
+    "关联规则关联过多类别时,无法找到最合适的决策节点,导致某些类别精度很低",
+    "几乎所有GAN imputation算法仅在MCAR假设下有效，复杂缺失机制下效果受限",
+    "直接融合过渡模式可能产生负迁移，之前的粗粒度建模导致LLM对动态/静态特征感知不完整",
+    "仅考虑线性结构应用，DAG扩展留待未来工作；超参数对最优性影响较小",
+    "在符号推理等实体关系较少的任务上性能提升不明显,且k值过大时会引入幻觉",
+    "Performance improvement is not significant for tasks with fewer entity relationships like symbolic reasoning.",
+    "null",
+    "HIVAE和GAIN在Criteo数据集上10^5秒内无法完成;MNAR机制下精度低于MCAR/MAR;缺失值分布研究比预期更复杂",
+    "自蒸馏在non-iid场景下易过拟合局部模型导致收敛震荡",
+    "FedMF浅层模型无法刻画复杂用户-物品关系;现有方法只用embeddings而非分布",
+    "DF-TND is ineffective against class-specific backdoors and evasive triggers, and does not generalize to small models.",
+    "交叉注意力在大规模检索上下文时成为主要瓶颈",
+    "即使最先进模型在所有子任务上表现均不佳,当前能力与实际应用存在显著差距。",
+    "标签分布偏斜(non-overlap和label-dir)下其他基线方法均出现大幅准确率下降，而GPD仍保持显著优势",
+    "使用预测类别时性能下降，因数据集存在目标不明确、语法不规范、无目标词等问题",
+    "现有防御机制(释义/扩展top-k)不足以抵御HIJACKRAG,白盒攻击ASR反而低于黑盒",
+    "小样本(7例)限制结论泛化性,数据量(105样本)不足以充分训练模型",
+    "Text-Image检索模块使用通用VLM,难以将遥感视觉概念与文本描述关联,慢路径失败时性能受限",
+    "TRD病程延长可能掩盖SFC变化,早期识别仍有挑战;相关性分析在全患者组整体不显著,需亚组分析",
+    "静态模型难以应对设备内部动态变化,模型漂移导致长期性能退化;ML模型泛化到未见场景仍存挑战",
+    "现有FedLLM框架常忽视安全隐私威胁，这是首次分析FedLLMs的安全隐私威胁",
+    "Most ESB products make simplified assumptions about security and heterogeneity requirements",
+    "OSBP等方法在特征空间中未知类样本与已知类混合导致低置信度分类",
+    "高效代码可能更复杂难以阅读，需在效率与可维护性间取舍",
+    "ESDP对线性可分效用有较低遗憾，但性能保证不适用于非线性情形",
+    "对开放域和新颖任务适应性不确定；无法限制CoT推理长度；静态token预算不区分任务难度",
+    "现有简单定价策略无法反映数据真实价值",
+    "vLLM直接分类准确率仅29%,远低于纯视觉模型80%,不宜单独使用",
+    "直接在CXL内存运行应用产生10-82%性能降解，即使TPP动态页迁移仍增加尾延迟",
+    "当前 DIA 模型开源可用性有限,工作限于 DDA 质谱数据",
+    "Higher computation cost: each client trains S models instead of 1 model; simply increasing local epochs causes overfitting.",
+    "Parf将静态分析器视为黑盒,未利用分析器特定功能如数据/控制流分析,且假设参数间独立忽略依赖关系",
+    "Parf无法完全消除误报，因静态分析的本质精度-可靠性权衡；且假设参数独立，忽略参数间复杂依赖关系",
+    "算法复杂度O(N!)在完全连通图下，但实际边缘场景N较小且可离线执行",
+    "直接应用二进制属性方法到多类场景会导致计算复杂度O(T²)爆炸和推荐性能下降",
+    "Math domain synthesis produced wrong calculations and simple derivations; SFT with math data caused noticeable benchmark degradation. No universal benchmark exists for synthetic data quality evaluation.",
+    "Truth是理想化概念,探测捕获的未必是真正的truth",
+    "当前仅支持静态量子电路可视化,缺乏实时动态展示能力",
+    "迭代式分解会导致问题分支过多，且问题表述方式会影响分解模块效果",
+    "迭代问题分解可能导致过度分叉，对数学推理、符号推理等专业领域未验证",
+    "PEFT方法不能达到全量微调的同等效果;数据存在地理分布不均问题",
+    "完整PromVPat反而不如单独使用代码编码(F1从0.1179降至0.0263),特征融合产生噪声放大效应。PromVPat-code优于PromVPat-mess,补丁本质上涉及代码修改而非消息文本。",
+    "Arnoldi产生差估计且计算成本是EK-FAC的~120倍；TRAK估计质量最低且计算成本最高；GDP/CKA等梯度相似方法产生低质量估计",
+    "未精确区分节点内与节点间通信开销，仅粗粒度处理",
+    "C++改进仅6.14%，是Python的一半；上下文长度限制演示数量",
+    "C++改进仅6.14%对比Python的14.99%，上下文长度限制可用demonstration数量",
+    "需要用户手动选择表单和块，完全自动化程度有限；NLP工具尚未正式引入",
+    "微调IP-Adapter效果最差，存在过拟合问题；扩大数据集反而导致CLIP/DINOv2下降；用户反馈建议过于简单(全说去看医生)；相似疾病难以区分",
+    "现有特征模型无法完整支持不同领域的多样化特征依赖表达",
+    "vanilla KAN在高维数据上导致性能崩溃，且对小型结构分割困难",
+    "实验仅限数学推理域,对齐模型限制:未探索基模型适用性,Magpie类方法会降低数学能力",
+    "对数/多项式效用会增大波动率v,导致更多作业边际成本落入φ_r第二段,social welfare下降",
+    "k值过小时不同功能工具被混在一起,导致错误的工具调用",
+    "DP-SGD在实践中可能导致显著精度下降，因此采用SGLD来减少信息泄露",
+    "FLOPs metric is platform-irrelevant; no systematic hardware overhead evaluation across diverse environments",
+    "未解释为何ITM高分模型下游任务分数反而低；CLIP空间关系理解最差(49.1%)",
+    "框架性能受制于底层LLM推理质量，且non-obvious查询存在cold start问题",
+    "Very low CFG (e.g., 5) yields reduced visual fidelity; results stable only at CFG ~15-20",
+    "WassFFed consistently excels in more complex classification tasks, showcasing its remarkable generalizability.",
+    "模型在RS/Position任务上下降12.95%,因无法关联全图与子图的方位关系;在MO/Orientation上基础能力不足",
+    "SmoothGrad等方法需要极大样本量才能保证置信界正确,计算开销沉重,且小样本时均值对异常值敏感"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "implicit relationship inference is prone to errors",
+      "paper_id": "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    },
+    {
+      "quote": "A reasonable number of implicit relationships contributes to a better understanding",
+      "paper_id": "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    },
+    {
+      "quote": "excessively large number may lead to hallucinations",
+      "paper_id": "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    },
+    {
+      "quote": "If the relationships are correctly inferred, the model is likely to answer questions correctly",
+      "paper_id": "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    },
+    {
+      "quote": "Small LLMs still possess the ability to identify implicit relationships",
+      "paper_id": "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    },
+    {
+      "quote": "original methods take more than 10^5 seconds",
+      "paper_id": "Efficient and effective data imputation with influence functions"
+    },
+    {
+      "quote": "HIVAE and GAIN are unavailable over Criteo",
+      "paper_id": "Efficient and effective data imputation with influence functions"
+    },
+    {
+      "quote": "the study of missing value distributions is more complicated than expected",
+      "paper_id": "Efficient and effective data imputation with influence functions"
+    },
+    {
+      "quote": "some training samples may have little or even negative effects",
+      "paper_id": "Efficient and effective data imputation with influence functions"
+    },
+    {
+      "quote": "the second equation follows by ignoring the first term",
+      "paper_id": "Efficient and effective data imputation with influence functions"
+    },
+    {
+      "quote": "one can directly derive the imputation loss without retraining",
+      "paper_id": "Efficient and effective data imputation with influence functions"
+    },
+    {
+      "quote": "malicious SP can undermine completeness",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "B+ tree queries introduce unnecessary overhead",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "skip previously queried data",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "constant overhead in data insertion",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "achieves balance between security and communication overhead",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "greatly limits their real-world threats",
+      "paper_id": "Backdoor Pre-trained Models Can Transfer to All"
+    },
+    {
+      "quote": "the basic requirement for a successful backdoor model",
+      "paper_id": "Backdoor Pre-trained Models Can Transfer to All"
+    },
+    {
+      "quote": "the same trigger has a certain consistency on the performance across the two datasets",
+      "paper_id": "Backdoor Pre-trained Models Can Transfer to All"
+    },
+    {
+      "quote": "may raise suspicion",
+      "paper_id": "Backdoor Pre-trained Models Can Transfer to All"
+    },
+    {
+      "quote": "should not be considered as a good trigger since it is too long",
+      "paper_id": "Backdoor Pre-trained Models Can Transfer to All"
+    },
+    {
+      "quote": "LLM often produce incorrect tests",
+      "paper_id": "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    },
+    {
+      "quote": "lost-in-the-middle effect",
+      "paper_id": "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    },
+    {
+      "quote": "outperforms TestSpark and Evo-Suite",
+      "paper_id": "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    },
+    {
+      "quote": "89% use ChatUniTest to assist",
+      "paper_id": "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    },
+    {
+      "quote": "Token limit of the model",
+      "paper_id": "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    },
+    {
+      "quote": "TestSpark fails to generate tests",
+      "paper_id": "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    },
+    {
+      "quote": "smashing quantum advantages",
+      "paper_id": "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    },
+    {
+      "quote": "lacking the generality",
+      "paper_id": "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    },
+    {
+      "quote": "trotter decomposition [36]",
+      "paper_id": "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    },
+    {
+      "quote": "The execution time is estimated",
+      "paper_id": "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    },
+    {
+      "quote": "going far beyond the executable depth",
+      "paper_id": "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    },
+    {
+      "quote": "such knowledge sharing process will break the privacy protection policy",
+      "paper_id": "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation"
+    },
+    {
+      "quote": "most of current CDR models only utilize embeddings rather than distributions",
+      "paper_id": "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation"
+    },
+    {
+      "quote": "FedMF only adopted a shallow model and thus cannot depict the complex user-item relationship well",
+      "paper_id": "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation"
+    },
+    {
+      "quote": "the scattered latent distributions will hurdle the model performance",
+      "paper_id": "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation"
+    },
+    {
+      "quote": "Previous methods mainly focus on the simple embedding situation",
+      "paper_id": "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation"
+    },
+    {
+      "quote": "while a few studies attempt to incorporate simple graph structures",
+      "paper_id": "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    },
+    {
+      "quote": "their utilization of code structural information remains rudimentary",
+      "paper_id": "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    },
+    {
+      "quote": "entirely ignores potential structural relationships",
+      "paper_id": "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    }
+  ]
+}

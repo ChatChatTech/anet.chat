@@ -1,0 +1,43 @@
+{
+  "paper_id": "Towards Semantic e-Science for Traditional Chinese Medicine",
+  "doi": "10.1186/1471-2105-8-s3-s6",
+  "title": "Towards Semantic e-Science for Traditional Chinese Medicine",
+  "year": 2007,
+  "venue": "BMC Bioinformatics",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "TCM信息资源分布异构，科学家难以跨库查询和复用数据，需协调各种服务支持协作科研",
+  "problem_framing": "将知识密集型TCM领域的信息集成和服务协调问题，形式化为基于本体的语义中介和动态服务匹配",
+  "key_insight": "用LAV方法将关系数据库定义为对本体的视图，新数据库加入时无需修改中介模式，实现可扩展的语义集成",
+  "method_signature": "三层语义架构：资源层→语义层(本体+映射)→功能层(语义查询/搜索/工作流)，用Dart工具链实施",
+  "evaluation_criteria": "CATCM平台接入50+数据库和800+服务，通过\"Sini汤剂影响GST基因表达\"场景验证协作流程",
+  "negative_result_or_admitted_limitation": "方法倾向于结构化资源，对非/半结构化资源整合不足；交互过程对不懂语义的TCM科学家仍复杂",
+  "evidence_for_taste": [
+    "we should improve the usage and convenience",
+    "TCM scientists who have even not familiar with computer",
+    "large-scale ontology is a laborious work",
+    "LAV provides greater extensibility than GAV",
+    "the addition of new sources is less likely to require a change"
+  ],
+  "thinking_moves": [
+    "把信息集成问题转化为本体映射问题，用语义层隔离底层数据库异构性",
+    "选择LAV而非GAV是因为TCM新数据库不断加入，需要更好的可扩展性",
+    "将SPARQL查询reduce为计算满足类定义的本体实例，而非直接操作SQL",
+    "用语义相似度公式量化服务匹配程度，支持自动服务发现和组合",
+    "承认语义技术的复杂性可能成为普通TCM科学家的使用障碍"
+  ],
+  "topic_tags": [
+    "TCM-ontology-integration",
+    "semantic-database-mapping",
+    "service-workflow-composition",
+    "knowledge-discovery-TCM",
+    "e-Science-infrastructure"
+  ],
+  "cites_own_work": [
+    "Chen et al. 2006 - DartGrid",
+    "Deng et al. 2006 - service matchmaking",
+    "Zhou et al. 2004 - TCM ontology development"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

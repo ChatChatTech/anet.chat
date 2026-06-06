@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Survey on Code Generation with LLM-based Agents",
+  "doi": "10.48550/arxiv.2508.00083",
+  "title": "A Survey on Code Generation with LLM-based Agents",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM代码生成智能体快速发展,但缺乏系统性综述,需要为该领域研究者提供知识基础",
+  "problem_framing": "代码生成智能体与前期技术的三个核心区别:自主性、任务范围扩展、工程实用性转向",
+  "key_insight": "从被动代码补全转为主动工作流管理,开发者角色转变为任务定义者、过程监督者和最终结果审查者",
+  "method_signature": "系统综述:单智能体+多智能体架构、全生命周期应用、评估基准与工具",
+  "evaluation_criteria": "按方法论视角分类而非应用视角,整合最新研究进展与挑战",
+  "negative_result_or_admitted_limitation": "智能体生成的代码常含逻辑缺陷、性能陷阱或安全漏洞,难以被单元测试覆盖",
+  "evidence_for_taste": [
+    "三个核心区别",
+    "研究重点从算法创新转向工程实践",
+    "代码生成智能体往往包含逻辑缺陷",
+    "从纯模型生成能力扩展到系统设计",
+    "进入经典软件工程领域",
+    "与传统论文审阅周期存在一定滞后"
+  ],
+  "thinking_moves": [
+    "追溯技术发展轨迹:形式化规范→数据驱动→LLM→智能体",
+    "用'三个核心区别'定义新范式的本质特征",
+    "按方法论而非应用场景分类技术",
+    "区分单智能体与多智能体系统的认知框架",
+    "承认当前挑战:整合真实开发环境、非公开信息利用"
+  ],
+  "topic_tags": [
+    "LLM代码生成智能体",
+    "单智能体规划推理",
+    "多智能体协作架构",
+    "软件开发生命周期自动化",
+    "工具集成与检索增强"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

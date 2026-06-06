@@ -1,0 +1,39 @@
+{
+  "paper_id": "A Survey Of Business Component Identification Methods And Related Techniques",
+  "doi": "10.5281/zenodo.1062023",
+  "title": "A Survey of Business Component Identification Methods and Related Techniques",
+  "year": 2005,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "软件复用深度发展需要从业务模型中识别出高复用价值的业务组件，但现有方法缺乏统一框架",
+  "problem_framing": "将组件识别定义为一个多目标优化问题，涉及复用性、成本、效率、稳定性、粒度、内聚、耦合等相互制约的指标",
+  "key_insight": "组件识别不能只追求单一指标优化，需在多个相互制约的指标间实现全局优化平衡",
+  "method_signature": "survey-based taxonomy: DE方法、cohesion-coupling聚类方法、CRUD矩阵方法、其他方法",
+  "evaluation_criteria": "通过Table I的7类指标体系（复用性、成本、效率、稳定性、粒度、内聚、耦合）评估组件性能",
+  "negative_result_or_admitted_limitation": "现有方法只关注部分性能指标，忽略其他指标，导致组件性能不完整；大多数方法自动化程度低，需要手工完成",
+  "evidence_for_taste": [
+    "这些原则不完全适合组件设计",
+    "cannot reach optimization at the same time",
+    "cannot realize optimization on granularity",
+    "have not considered reusability and adaptability",
+    "lack of standard method architecture",
+    "requires component designers to manually identify"
+  ],
+  "thinking_moves": [
+    "将组件识别问题从单一优化重构为多目标优化问题",
+    "通过对比分析揭示不同方法只关注部分指标的局限性",
+    "提出集成多种方法以弥补单一方法不足的解决思路",
+    "用特征空间统一表示不同形式的业务模型"
+  ],
+  "topic_tags": [
+    "component-identification",
+    "software-reuse",
+    "multi-objective-optimization",
+    "business-component",
+    "granularity-control"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Miao et al. - 2011 - Agnostic diagnosis Discovering silent failures in wireless sensor networks",
+  "doi": null,
+  "title": "Agnostic Diagnosis: Discovering Silent Failures in Wireless Sensor Networks",
+  "year": 2011,
+  "venue": "IEEE INFOCOM (implied by style)",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "GreenOrbs部署八个月后发现大量silent failures，现有supervised方法无法发现未知类型的故障",
+  "problem_framing": "把unknown failures检测重新定义为correlation pattern violation问题，通过跨节点和时序的相关性异常来发现",
+  "key_insight": "单个metric值正常不代表节点正常——metric间的correlation patterns才是关键，violation即故障信号",
+  "method_signature": "Correlation Graph + Temporal CUSUM + Spatial PCA聚类两阶段交叉验证",
+  "evaluation_criteria": "case studies + 30节点人工对比验证spatial detection准确率",
+  "negative_result_or_admitted_limitation": "K-Means需要预先给定K值；window长度存在检测延迟与误报率的trade-off",
+  "evidence_for_taste": [
+    "individual metric is insufficient to uncover failures",
+    "exploiting correlations of metrics uncovers significantly more failures",
+    "the diagnostic capacity is restricted by our incomplete knowledge",
+    "individual examination of metrics may overlook silent failures",
+    "static correlation rules are inapplicable"
+  ],
+  "thinking_moves": [
+    "从单个metric异常判断转向metric间correlation异常判断",
+    "用Pearson系数将相关性量化为可追踪的时序信号",
+    "先时序检测后空间聚类，双重过滤减少误报",
+    "PCA降维解决高维相关性矩阵的聚类难题"
+  ],
+  "topic_tags": [
+    "WSN diagnosis",
+    "correlation graph",
+    "silent failure detection",
+    "temporal-spatial cross-validation",
+    "GreenOrbs deployment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "venue信息在文中未明确标注，根据内容风格推断为IEEE INFOCOM; role根据作者列表和abstract署名判断"
+}

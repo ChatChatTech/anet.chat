@@ -1,0 +1,41 @@
+{
+  "paper_id": "TOSN",
+  "doi": null,
+  "title": "Toward Accurate and Efficient Model Integrity Verification against Dishonest Servers",
+  "year": 2026,
+  "venue": "ACM Transactions on Sensor Networks",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "MLaaS中服务器可能篡改模型（后门、量化、剪枝），用户缺乏白盒访问权限进行完整性验证",
+  "problem_framing": "现有基于决策边界的方法因忽视边界移动方向和幅度差异，导致高假阳性率",
+  "key_insight": "不同决策边界对篡改的敏感程度不同，应在高度敏感的边界附近生成验证样本",
+  "method_signature": "决策边界可视化→敏感边界识别→水平位移度量→自适应过滤去冗余样本",
+  "evaluation_criteria": "检测准确率、验证样本数量、时间开销、对观察/噪声/自适应攻击的鲁棒性",
+  "negative_result_or_admitted_limitation": "识别敏感边界需轻微修改模型参数，若服务器完全复制模型行为仍可能绕过检测",
+  "evidence_for_taste": [
+    "the direction and magnitude of decision boundary shifts are not fixed",
+    "Unlike previous works that focus on generating verification samples near decision boundaries",
+    "some positions always shift by a relatively large amount",
+    "These samples have the same effect on integrity verification and are therefore redundant",
+    "A key advantage of this approach is that it allows the integrity of the deployed model to be verified using pre-generated verification samples"
+  ],
+  "thinking_moves": [
+    "将现有方法的设计缺陷（边界移动不可预测）转化为新问题（识别敏感边界）",
+    "利用可视化作为推理工具，从现象归纳规律而非从理论推导",
+    "把边界敏感度量化为水平位移距离，使模糊直觉变为可排序的指标",
+    "通过贪心距离检查解决验证样本冗余问题而非穷举所有组合",
+    "承认强对抗者假设但不放弃，论证攻击成本远高于防御成本"
+  ],
+  "topic_tags": [
+    "model-integrity-verification",
+    "decision-boundary-sensitivity",
+    "MLaaS-security",
+    "backdoor-detection",
+    "black-box-authentication"
+  ],
+  "cites_own_work": [
+    "Zirong Zhuang, Lan Zhang, Chen Tang, Yaliang Li. 2024. DEEPREG"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

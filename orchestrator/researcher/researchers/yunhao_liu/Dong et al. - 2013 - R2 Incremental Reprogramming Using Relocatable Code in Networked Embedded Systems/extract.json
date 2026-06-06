@@ -1,0 +1,39 @@
+{
+  "paper_id": "Dong et al. - 2013 - R2 Incremental Reprogramming Using Relocatable Code in Networked Embedded Systems",
+  "doi": null,
+  "title": "R2: Incremental Reprogramming Using Relocatable Code in Networked Embedded Systems",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "大规模传感器网络GreenOrbs部署中手动重编程不可行，需减少传输开销和能耗",
+  "problem_framing": "程序版本间相似度低导致增量更新delta过大；现有方案（slop regions/间接表）存在碎片化、执行效率低等问题",
+  "key_insight": "复用动态链接中的可重定位代码技术解耦符号引用与定义，使引用指令在版本间保持不变",
+  "method_signature": "R2sim生成可重定位代码 + R2diff字节级差分算法 + 内容感知元数据压缩",
+  "evaluation_criteria": "Delta大小、传播时间、数据包传输数量、节点重构开销、能耗",
+  "negative_result_or_admitted_limitation": "重定位条目开销开始成为限制整体delta大小的因素",
+  "evidence_for_taste": [
+    "sending a single bit consumes 1000 instructions energy",
+    "The metadata overhead of the relocation table can be large",
+    "R2 results in the smallest delta size for sufficiently large n",
+    "it is novel to employ relocatable code for incremental reprogramming"
+  ],
+  "thinking_moves": [
+    "把动态链接领域的成熟技术引入无线传感网增量重编程领域",
+    "先识别现有方案共同缺陷（函数移位/数据移位处理割裂），再提出统一方案",
+    "通过压缩重定位条目结构（12字节→4字节）降低元数据开销",
+    "针对重定位表结构特征设计内容感知差分命令（CE/CEX/CEY/CEXY）"
+  ],
+  "topic_tags": [
+    "wireless-sensor-networks",
+    "incremental-reprogramming",
+    "relocatable-code",
+    "delta-dissemination",
+    "code-similarity"
+  ],
+  "cites_own_work": [
+    "GreenOrbs"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文方法部分完整，评估包含TinyOS基准测试和GreenOrbs真实案例；venue未在正文中明确声明具体期刊名称 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,44 @@
+{
+  "paper_id": "Zhang et al. - 2023 - A Survey of mmWave-Based Human Sensing Technology, Platforms and Applications",
+  "doi": null,
+  "title": "A Survey of mmWave-based Human Sensing: Technology, Platforms and Applications",
+  "year": 2023,
+  "venue": "IEEE",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "mmWave sensing emerging but lacks comprehensive survey to bridge technology, platforms and applications",
+  "problem_framing": "Existing surveys focus on narrow scopes (communication, autonomous driving); none comprehensively review human sensing works",
+  "key_insight": "Proposed taxonomy based on sensing granularity: tracking/localization, motion recognition, biometric measurement, human imaging",
+  "method_signature": "Survey: categorize existing works by sensing granularity, compare hardware platforms and key techniques",
+  "evaluation_criteria": "Comprehensiveness of taxonomy, coverage of hardware platforms, identification of core challenges",
+  "negative_result_or_admitted_limitation": "Most radars limited in antenna number, leading to limited angular resolution and insufficient point cloud outputs",
+  "evidence_for_taste": [
+    "mmWave sensing presents unique technical challenges",
+    "human vital signal usually has a low signal-to-noise ratio",
+    "differences among individuals are significant",
+    "fragile robustness for practical applications",
+    "none of the current surveys particularly summarizes",
+    "how to overcome these differences between individuals"
+  ],
+  "thinking_moves": [
+    "通过对比现有survey的不足来定位研究空白",
+    "将分散的mmWave人类感知工作按感知粒度统一分类",
+    "承认硬件限制（天线数量少导致角分辨率低）影响鲁棒性",
+    "从技术挑战反推研究方向的必要性"
+  ],
+  "topic_tags": [
+    "mmWave-radar-sensing",
+    "human-tracking",
+    "vital-sign-monitoring",
+    "gesture-recognition",
+    "sensing-taxonomy"
+  ],
+  "cites_own_work": [
+    "Soli [1]",
+    "[2]",
+    "[3]–[7]",
+    "[37]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

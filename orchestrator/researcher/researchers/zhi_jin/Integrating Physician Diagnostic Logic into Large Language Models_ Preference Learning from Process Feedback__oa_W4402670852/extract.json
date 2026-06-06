@@ -1,0 +1,38 @@
+{
+  "paper_id": "Integrating Physician Diagnostic Logic into Large Language Models_ Preference Learning from Process Feedback__oa_W4402670852",
+  "doi": "10.18653/v1/2024.findings-acl.144",
+  "title": "Integrating Physician Diagnostic Logic into Large Language Models: Preference Learning from Process Feedback",
+  "year": 2024,
+  "venue": "ACL Findings",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有医学LLM要么过早给出诊断而未充分收集信息，要么陷入无限收集信息而不给出诊断的矛盾行为",
+  "problem_framing": "将医生诊断逻辑形式化为流程图规则，用偏好学习训练模型遵循诊断流程而非仅优化最终结果",
+  "key_insight": "用流程图显式编码诊断逻辑依赖关系，通过轨迹预测获得多轮对话的未来影响，再用REM评分进行偏好排序",
+  "method_signature": "规则建模(REM)→偏好数据生成(轨迹预测+REM评分)→DPO偏好对齐",
+  "evaluation_criteria": "标准化病人测试(CSPT)中的症状收集、医学检查和疾病诊断准确率",
+  "negative_result_or_admitted_limitation": "定义的流程相对简单，更复杂流程需额外测试；模型精度仍不足以实际应用，仍会产生幻觉",
+  "evidence_for_taste": [
+    "standardising the medical dialogue process is the key",
+    "simultaneous learning from these two divergent preferences likely precipitates the disarray",
+    "relying solely on the REM score may result in responses lacking fluency",
+    "The accuracy of the model is still not high enough for practical use"
+  ],
+  "thinking_moves": [
+    "将医生诊断逻辑形式化为流程图规则以标准化对话过程",
+    "用REM自动评估对话是否遵循特定规则而非依赖人工标注",
+    "用轨迹预测获得传统RLHF无法覆盖的多轮对话未来状态",
+    "通过折扣因子和规则依赖权重整合未来影响而非仅评估即时响应",
+    "用对比学习而非纯RL保证回答流畅性的同时学习流程合规性"
+  ],
+  "topic_tags": [
+    "medical-dialogue-generation",
+    "diagnostic-process-standardization",
+    "preference-learning",
+    "rule-evaluation-model",
+    "standardized-patient-testing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

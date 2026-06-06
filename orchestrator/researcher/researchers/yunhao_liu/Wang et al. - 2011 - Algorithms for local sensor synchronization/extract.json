@@ -1,0 +1,44 @@
+{
+  "paper_id": "Wang et al. - 2011 - Algorithms for local sensor synchronization",
+  "doi": null,
+  "title": "Algorithms for Local Sensor Synchronization",
+  "year": 2011,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "无线传感网电池受限,现有全局同步方案导致能耗浪费",
+  "problem_framing": "给定路由树,求各节点网络频率F_i使总频率最小且局部同步",
+  "key_insight": "只需与父子节点局部同步而非全局同步,可大幅降低频率",
+  "method_signature": "动态规划求最优F_i + 启发式树拓扑优化",
+  "evaluation_criteria": "总网络频率Φ vs 全局同步基准的能耗节省",
+  "negative_result_or_admitted_limitation": "Problem 2 is NP-hard(通过集合覆盖归约证明)",
+  "evidence_for_taste": [
+    "locally optimal solutions do not necessarily lead to globally optimal ones",
+    "our most important theoretical result",
+    "leads to substantial energy savings compared to the globally synchronized framework",
+    "The first solution is better because the total increase is smaller",
+    "without delaying packet transmissions",
+    "a counter-example using Prim's algorithm",
+    "Fig. 3c, is not because"
+  ],
+  "thinking_moves": [
+    "先证局部最优不导致全局最优,再构建更复杂反例",
+    "引入正则网络频率概念简化无限搜索空间",
+    "利用分段线性性质将不规则频率问题归约到规则频率",
+    "从动态规划视角分解子树代价的递归计算",
+    "证NP难再退而求启发式解法",
+    "用真实数据集验证而非仅理论分析"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network",
+    "local-synchronization",
+    "energy-optimization",
+    "dynamic-programming",
+    "routing-tree-optimization"
+  ],
+  "cites_own_work": [
+    "GreenOrbs数据集(本文组部署)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "venue信息未在文中明确给出,可能在引用列表或正式发表版本中 | md truncated to head40k+tail20k"
+}

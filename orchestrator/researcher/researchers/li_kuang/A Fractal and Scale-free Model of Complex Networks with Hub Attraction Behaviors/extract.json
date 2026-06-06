@@ -1,0 +1,38 @@
+{
+  "paper_id": "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors",
+  "doi": "10.48550/arxiv.1311.3087",
+  "title": "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors",
+  "year": 2010,
+  "venue": "Wuhan University Journal",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "主流认为分形源于hub排斥,但这与某些优化网络事实不符,需重新审视假设前提",
+  "problem_framing": "DGM模型假设所有跨盒链接同概率e,忽视了真实网络中hub的全局性定义",
+  "key_insight": "让概率e随节点度灵活变化,让hub之间更高概率互联,可生成hub吸引的分形网络",
+  "method_signature": "灵活概率e机制+盒内链接增长法,修改跨盒连接规则",
+  "evaluation_criteria": "盒覆盖法计算分形维数d_B,度分布幂律性,相关系数R(k1,k2)",
+  "negative_result_or_admitted_limitation": "DGM网络仅是旋转树结构,缺乏真实网络的环路",
+  "evidence_for_taste": [
+    "counter-examples of former beliefs",
+    "fundamental challenge to the former researches",
+    "presumed the most connected nodes in each box as the hubs",
+    "most of the highest degree nodes in boxes have much lower degree",
+    "structural equilibrium in fractal networks"
+  ],
+  "thinking_moves": [
+    "从工程异常反推底层物理假设失效",
+    "发现概念定义与模型实现的错配",
+    "用counter-example挑战主流结论",
+    "识别直径指数增长是分形的本质条件"
+  ],
+  "topic_tags": [
+    "complex-network-fractality",
+    "hub-attraction-disassortativity",
+    "dynamical-growth-model",
+    "scale-free-network",
+    "box-covering-renormalization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者通过识别DGM模型中对hub定义的隐含假设错误,提出灵活概率机制作为修正杠杆,最终产出counter-example证明分形与hub吸引可以共存。思维路径清晰:质疑假设→重新定义→建模验证→挑战主流。"
+}

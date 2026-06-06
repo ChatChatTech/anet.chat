@@ -1,0 +1,39 @@
+{
+  "paper_id": "Li et al. - 2014 - Topology shaping for time synchronization in wireless sensor networks",
+  "doi": null,
+  "title": "Topology Shaping for Time Synchronization in Wireless Sensor Networks",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有时间同步算法未考虑网络拓扑属性，导致实际系统中性能意外下降",
+  "problem_framing": "通过构建虚拟覆盖层来优化同步性能，将问题转化为最大化拉普拉斯矩阵第二小特征值",
+  "key_insight": "虚拟覆盖层的有效直径决定同步性能，而非底层网络本身，可通过添加两跳邻居间的虚拟链接来改善",
+  "method_signature": "topo-refiner：基于拉普拉斯特征值的虚拟覆盖层优化模型，使用RBS方案构建",
+  "evaluation_criteria": "全局偏移量、局部偏移量、拓扑直径缩减率",
+  "negative_result_or_admitted_limitation": "最优化问题时间复杂度为O(n^(2m))，网络节点众多时不可行",
+  "evidence_for_taste": [
+    "the only delicate difference",
+    "topology fine-tuning",
+    "diameter reduction profit",
+    "does not change much",
+    "almost 8μs improved"
+  ],
+  "thinking_moves": [
+    "从拓扑的微妙差异中发现性能影响规律",
+    "将同步问题从通信层面重新frame为拓扑优化问题",
+    "利用代数图论中的谱理论作为优化理论基础",
+    "通过构建虚拟层而非修改物理拓扑来绕过部署限制",
+    "承认计算复杂度的限制，提出近似次优解的贪心算法"
+  ],
+  "topic_tags": [
+    "wireless-sensor-networks",
+    "time-synchronization",
+    "topology-optimization",
+    "graph-laplacian",
+    "virtual-overlay"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文仅提供摘要和部分正文，缺少完整的实验数据表格和完整的方法描述。DOI和具体发表 venue 未在文中明确给出。"
+}

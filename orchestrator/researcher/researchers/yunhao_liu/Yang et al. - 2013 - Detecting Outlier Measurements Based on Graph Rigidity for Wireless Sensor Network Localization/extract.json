@@ -1,0 +1,41 @@
+{
+  "paper_id": "Yang et al. - 2013 - Detecting Outlier Measurements Based on Graph Rigidity for Wireless Sensor Network Localization",
+  "doi": null,
+  "title": "Detecting Outlier Measurements Based on Graph Rigidity for Wireless Sensor Network Localization",
+  "year": 2013,
+  "venue": "IEEE Transactions on Vehicular Technology",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Outlier ranging measurements severely degrade localization accuracy, yet existing triangle inequality methods fail to precisely identify outliers",
+  "problem_framing": "Given a distance graph G, determine if an edge e=(u,v) is an outlier by checking if G-e still contains enough information to compute distance(u,v)",
+  "key_insight": "If G-e is globally rigid, the distance between u and v is uniquely determined across all realizations, allowing definitive verification of W(e)",
+  "method_signature": "Verifiable edge detection via globally rigid subgraphs and MGRS voting for outlier sifting",
+  "evaluation_criteria": "Percentage of verifiable edges/graphs vs node density; location error with/without outlier sifting",
+  "negative_result_or_admitted_limitation": "Sufficient and necessary conditions for edge verifiability remain an open problem; MGRS finding lacks theoretical foundation",
+  "evidence_for_taste": [
+    "triangle inequality has serious drawbacks",
+    "only a coarse-grained evidence",
+    "cannot identify them",
+    "mark e as an outlier",
+    "deterministically sift outlier edges"
+  ],
+  "thinking_moves": [
+    "把定位问题中'足够信息'反推为图论中全局刚性的冗余约束",
+    "从单边验证扩展到整图验证,建立层级化的理论条件",
+    "承认充分必要条件未知,主动限定研究范围排除棘手情况",
+    "引入MGRS概念将验证问题转化为最小支撑子图搜索问题"
+  ],
+  "topic_tags": [
+    "wireless sensor network localization",
+    "graph rigidity theory",
+    "outlier detection",
+    "edge verifiability",
+    "range-based localization"
+  ],
+  "cites_own_work": [
+    "Z. Yang et al. 2010 - Beyond trilateration",
+    "T. Eren et al. 2004 - Rigidity computation randomization"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

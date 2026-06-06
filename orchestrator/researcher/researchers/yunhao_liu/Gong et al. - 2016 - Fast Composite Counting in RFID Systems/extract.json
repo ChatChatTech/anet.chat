@@ -1,0 +1,38 @@
+{
+  "paper_id": "Gong et al. - 2016 - Fast Composite Counting in RFID Systems",
+  "doi": null,
+  "title": "Fast Composite Counting in RFID Systems",
+  "year": 2016,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有RFID计数只能处理单集,无法支持仓库管理等多-reader场景下的复合集合表达式计数需求",
+  "problem_framing": "将复合计数问题形式化为任意集合表达式的基数估计,要求满足(ε,δ)-近似保证",
+  "key_insight": "用hash函数将标签ID映射为均匀分布的小样本(synopsis),可在synopsis上直接做集合运算来估计原集合表达式基数",
+  "method_signature": "基于hash的 synopsis 采样 + 集合代数操作估计基数,通信复杂度达到下界的对数因子内",
+  "evaluation_criteria": "通信复杂度与理论下界比较,原型系统准确性,模拟规模下的时间效率",
+  "negative_result_or_admitted_limitation": "当相对误差ε > 1/|S1∩S2|时,简单识别可能比概率估计更高效;理论界通常过于宽松,实际k值可更小",
+  "evidence_for_taste": [
+    "cannot be trivially solved",
+    "naive identification approaches would be more efficient",
+    "theoretical bound is usually very loose",
+    "a much smaller value for k will achieve satisfactory result",
+    "which is 322 > 100 if we set ε=δ=0.1"
+  ],
+  "thinking_moves": [
+    "用通信复杂度理论建立下界,为协议性能提供基准",
+    "将概率估计问题还原为集合采样问题,利用hash函数构造均匀分布样本",
+    "通过中间问题(I)桥接RFID多主体通信模型与传统两方通信模型,实现 reduction 证明",
+    "先证理论界的存在,再通过迭代调整在实际中找到有效参数"
+  ],
+  "topic_tags": [
+    "RFID-cardinality-estimation",
+    "composite-set-expression",
+    "synopsis-sampling",
+    "communication-complexity-lower-bound",
+    "hash-based-estimation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

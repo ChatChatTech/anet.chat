@@ -1,0 +1,38 @@
+{
+  "paper_id": "LLM-Based Misconfiguration Detection for AWS Serverless Computing",
+  "doi": "10.48550/arxiv.2411.00642",
+  "title": "LLM-Based Misconfiguration Detection for AWS Serverless Computing",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "服务器less配置错误导致真实数据泄露事件(如COVID检测数据泄露、DoorDash数据泄露),现有数据驱动方法因配置复杂性和数据集不完整而失效",
+  "problem_framing": "在AWS SAM YAML配置文件中检测配置错误,采用LLM零样本学习结合多维约束引导推理",
+  "key_insight": "将配置错误检测重新框定为LLM推理任务,通过Chain of Thought技术引导模型按资源类型-条目-值-依赖维度逐步验证",
+  "method_signature": "SlsDetector: 零样本LLM框架,多维约束(资源类型/条目/值/依赖)+CoT推理+结构化输出",
+  "evaluation_criteria": "配置参数级别的精确率、召回率和F1分数,对比数据驱动基线和无约束LLM基线",
+  "negative_result_or_admitted_limitation": "数据驱动方法因无法覆盖所有配置和模式识别困难而效果有限;LLM固有随机性通过设置temperature=0和5次重复实验缓解",
+  "evidence_for_taste": [
+    "misconfigurations pose a significant challenge",
+    "complexity of serverless configurations hinders pattern recognition",
+    "challenging to gather complete datasets",
+    "outperforms state-of-the-art data-driven approaches by 53.82 percentage points"
+  ],
+  "thinking_moves": [
+    "将配置错误检测从数据驱动的模式匹配问题转化为LLM推理任务",
+    "基于AWS SAM配置特征设计五个维度的约束规则(资源类型/条目/值/条目依赖/值依赖)",
+    "应用Chain of Thought技术将复杂配置验证分解为逐步推理过程",
+    "采用零样本学习避免few-shot带来的样本选择偏差和标注成本",
+    "通过结构化输出(START/END定界符)消除LLM幻觉产生的冗余内容"
+  ],
+  "topic_tags": [
+    "serverless-computing",
+    "misconfiguration-detection",
+    "LLM-prompt-engineering",
+    "AWS-SAM",
+    "chain-of-thought"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

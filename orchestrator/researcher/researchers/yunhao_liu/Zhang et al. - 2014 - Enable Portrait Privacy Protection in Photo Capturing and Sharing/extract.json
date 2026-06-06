@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhang et al. - 2014 - Enable Portrait Privacy Protection in Photo Capturing and Sharing",
+  "doi": null,
+  "title": "Enable Portrait Privacy Protection in Photo Capturing and Sharing",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "智能眼镜等设备可在不知情下偷拍,用户肖像隐私面临威胁,现有方案简单粗暴",
+  "problem_framing": "隐私保护的照片拍摄问题:用户如何表达需求,系统如何准确关联并删除照片中的人像",
+  "key_insight": "向量距离具有维度顺序无关性,结合LSH可用轻量 scrambling 实现隐私保护的向量匹配",
+  "method_signature": "基于图结构的肖像轮廓生成+隐私保护的向量距离协议(scrambling+LSH)",
+  "evaluation_criteria": "匹配准确率(FN/FP)、通信开销、计算延迟、系统总时延",
+  "negative_result_or_admitted_limitation": "LSH导致精度损失:Basic的0.5% FN/2.1% FP在Advanced变为0.7%/2.9%;纯全身特征时误检率上升",
+  "evidence_for_taste": [
+    "these methods are broad-brush",
+    "significantly hurt the applications",
+    "the matching cost on the cloud side is still quite small",
+    "the scrambling retains the accurate distance",
+    "LSH could cause some accuracy loss",
+    "false positive rate raises to 4.9%"
+  ],
+  "thinking_moves": [
+    "将隐私匹配问题重新定义为向量距离计算问题",
+    "利用通信协议设计(group key agreement)来生成隐私变换种子",
+    "从计算卸载角度减轻移动端负担",
+    "通过图结构而非单点特征来提升鲁棒性",
+    "先用简单baseline证明可行,再叠加隐私保护层"
+  ],
+  "topic_tags": [
+    "portrait-privacy-protection",
+    "graph-matching-portrait",
+    "privacy-preserving-vector-distance",
+    "locality-sensitive-hashing",
+    "mobile-camera-privacy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,43 @@
+{
+  "paper_id": "Ensuring Consistency for In-Image Translation",
+  "doi": "10.48550/arxiv.2412.18139",
+  "title": "Ensuring Consistency for In-Image Translation",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有方法忽略图像内翻译的一致性要求,实际场景如电影海报翻译需要高质量视觉输出",
+  "problem_framing": "定义翻译一致性和图像生成一致性两个维度,前者在翻译中整合图像信息,后者保持风格和背景",
+  "key_insight": "现有MMLLM倾向于逐字翻译而忽略图像语境,扩散模型难以生成风格一致的文本图像,需分别解决",
+  "method_signature": "两阶段框架:MMLLM+CoT做翻译,扩散模型+风格潜模块做图像回填",
+  "evaluation_criteria": "翻译质量(BLEU/COMET)、图像相似度(SSIM/L1)、人工评估和LLM评估",
+  "negative_result_or_admitted_limitation": "扩散模型在文本图像生成上仍有质量问题,生成风格一致图像仍困难[Anytext仍不能完全满足]",
+  "evidence_for_taste": [
+    "existing methods frequently neglect the aspect of consistency",
+    "these models tend to produce literal translations",
+    "struggle to generate stylistically consistent images",
+    "still do not fully meet the requirements",
+    "error accumulation and high latency"
+  ],
+  "thinking_moves": [
+    "从实际问题(电影海报翻译)抽象出两个一致性维度",
+    "识别MMLLM在翻译任务上的逐字翻译倾向,而非简单提升性能",
+    "风格一致性通过构建伪平行图像对而非收集真实配对解决",
+    "两阶段流水线分离翻译和图像生成以解耦任务复杂度"
+  ],
+  "topic_tags": [
+    "in-image-translation",
+    "multimodal-machine-translation",
+    "diffusion-model-style-consistency",
+    "text-image-generation",
+    "chain-of-thought-learning"
+  ],
+  "cites_own_work": [
+    {
+      "paper": "Aligning translation-specific understanding to general understanding",
+      "context": "用于说明大型语言模型在翻译理解与通用理解之间的对齐问题"
+    }
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,423 @@
+{
+  "slug": "gang_xiong",
+  "n_extracts": 14,
+  "n_full": 12,
+  "n_partial": 2,
+  "n_thin": 0,
+  "year_range": [
+    2020,
+    2025
+  ],
+  "top_tags": [
+    [
+      "vision-language-alignment",
+      2
+    ],
+    [
+      "zero-shot-composed-image-retrieval",
+      2
+    ],
+    [
+      "IPv6目标生成",
+      1
+    ],
+    [
+      "地址语义嵌入",
+      1
+    ],
+    [
+      "网络测量深度学习",
+      1
+    ],
+    [
+      "Transformer语言模型",
+      1
+    ],
+    [
+      "主动主机发现",
+      1
+    ],
+    [
+      "cross-modal-sponsored-search",
+      1
+    ],
+    [
+      "weakly-supervised-learning",
+      1
+    ],
+    [
+      "ads-relevance-modeling",
+      1
+    ],
+    [
+      "structure-consistency-hypothesis",
+      1
+    ],
+    [
+      "blockchain-layer-security",
+      1
+    ],
+    [
+      "smart-contract-vulnerabilities",
+      1
+    ],
+    [
+      "consensus-attacks",
+      1
+    ],
+    [
+      "cryptocurrency-theft",
+      1
+    ],
+    [
+      "regulatory-sandbox",
+      1
+    ],
+    [
+      "zero-shot composed image retrieval",
+      1
+    ],
+    [
+      "context-dependent image-to-word mapping",
+      1
+    ],
+    [
+      "CLIP-based retrieval",
+      1
+    ],
+    [
+      "learnable query visual extraction",
+      1
+    ],
+    [
+      "vision-language alignment",
+      1
+    ],
+    [
+      "image-to-word-mapping",
+      1
+    ],
+    [
+      "denoising-visual-redundancy",
+      1
+    ],
+    [
+      "pseudo-triplet-construction",
+      1
+    ],
+    [
+      "HTAP",
+      1
+    ],
+    [
+      "distributed-database",
+      1
+    ],
+    [
+      "OLTP-optimization",
+      1
+    ],
+    [
+      "global-deadlock-detection",
+      1
+    ],
+    [
+      "Greenplum",
+      1
+    ],
+    [
+      "one-phase-commit",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2020,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "IPv6目标生成",
+          1
+        ],
+        [
+          "地址语义嵌入",
+          1
+        ],
+        [
+          "网络测量深度学习",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 6,
+      "top_tags": [
+        [
+          "HTAP",
+          1
+        ],
+        [
+          "distributed-database",
+          1
+        ],
+        [
+          "OLTP-optimization",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "IPv6地址关联攻击",
+          1
+        ],
+        [
+          "TLS加密流量分析",
+          1
+        ],
+        [
+          "异构图神经网络",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "cross-modal-sponsored-search",
+          1
+        ],
+        [
+          "vision-language-alignment",
+          1
+        ],
+        [
+          "weakly-supervised-learning",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "zero-shot-composed-image-retrieval",
+          1
+        ],
+        [
+          "image-to-word-mapping",
+          1
+        ],
+        [
+          "denoising-visual-redundancy",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "vision-language-model-prompt-optimization",
+          1
+        ],
+        [
+          "evolution-algorithm-prompt-search",
+          1
+        ],
+        [
+          "one-shot-classification",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "IPv6地址语义不透明且存在多种寻址方案,导致难以有效训练学习模型并设计有效的目标生成算法",
+    "仅使用100%数据时完整模型最优,去除任一对齐阶段均导致性能下降",
+    "现有共识机制不完善，难以找到既安全又快速的共识机制；监管沙盒计划遇冷，区块链初创公司不感兴趣",
+    "直接使用跨注意力(Q=描述)替代Context-I2W导致性能大幅下降10.30%，证明所提映射策略有效性。",
+    "处理复杂冗余操控描述时失败，主要源于CLIP语言编码器难以充分理解和处理复杂意图",
+    "OLAP performance slows 2x in GPDB 6 due to OLTP resource preemption; throughput declines beyond 600 clients due to LWLock bottleneck",
+    "Memory Update模块对最优精度影响不大，仍比完整模型低2%",
+    "没有类别标签时方法不适用；距离范围不对称需更大λ平衡参数； pairwise训练数据有限时难以泛化",
+    "语义感知裁剪策略会限制训练样本多样性，导致Fashion-IQ细粒度属性操作下降6.15%；不同crop大小导致位置嵌入不匹配，性能下降",
+    "粗粒度数据集收益小，因差异已清晰；场景识别受限因图像易混淆，仅文本侧优化不够",
+    "引入SC-Tune后在RefCOCO上有轻微性能下降,但这是泛化能力的可接受代价",
+    "预加载所有工具时,智能体更易出现工具过载,忘记既定工作流,产生错误级联",
+    "单一混淆方法无法有效防御SIAMHAN，需同时限制地址和流量特征关联",
+    "生成阶段召回有限，无法单独实现精确检索；需两阶段级联；新视频插入Vi-SemTree需200ms/视频的代价计算"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "the same token ... expresses different concept due to their different prefixes",
+      "paper_id": "T2VIndexer_ A Generative Video Indexer for Efficient Text-Video Retrieval"
+    },
+    {
+      "quote": "This part has the most significant impact on the model's results",
+      "paper_id": "T2VIndexer_ A Generative Video Indexer for Efficient Text-Video Retrieval"
+    },
+    {
+      "quote": "For lower-performing models, this removal of irrelevant videos is useful",
+      "paper_id": "T2VIndexer_ A Generative Video Indexer for Efficient Text-Video Retrieval"
+    },
+    {
+      "quote": "the generative retrieval effect is currently limited",
+      "paper_id": "T2VIndexer_ A Generative Video Indexer for Efficient Text-Video Retrieval"
+    },
+    {
+      "quote": "the retrieved SemID has stronger matching relationship than ground-truth video",
+      "paper_id": "T2VIndexer_ A Generative Video Indexer for Efficient Text-Video Retrieval"
+    },
+    {
+      "quote": "its security is far behind",
+      "paper_id": "An Overview of Blockchain Security Analysis"
+    },
+    {
+      "quote": "the key is everything",
+      "paper_id": "An Overview of Blockchain Security Analysis"
+    },
+    {
+      "quote": "violates the principle of decentralization",
+      "paper_id": "An Overview of Blockchain Security Analysis"
+    },
+    {
+      "quote": "lacks an effective correction mechanism",
+      "paper_id": "An Overview of Blockchain Security Analysis"
+    },
+    {
+      "quote": "cannot rely solely on short-term anomaly transaction monitoring",
+      "paper_id": "An Overview of Blockchain Security Analysis"
+    },
+    {
+      "quote": "suffered a cold spot as soon as it was launched",
+      "paper_id": "An Overview of Blockchain Security Analysis"
+    },
+    {
+      "quote": "CLIP embedding captures main object while missing fine-grained details",
+      "paper_id": "Missing Target-Relevant Information Prediction with World Model for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "predict the missing visual content guided by action",
+      "paper_id": "Missing Target-Relevant Information Prediction with World Model for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "Dynamic cropping strategy ensures richer and more variable training samples",
+      "paper_id": "Missing Target-Relevant Information Prediction with World Model for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "limiting the diversity of training samples",
+      "paper_id": "Missing Target-Relevant Information Prediction with World Model for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "discrepancies in position embeddings",
+      "paper_id": "Missing Target-Relevant Information Prediction with World Model for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "every SUMO simulation step must still be performed manually",
+      "paper_id": "SUMO-MCP_ Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization"
+    },
+    {
+      "quote": "these systems expose only a small set of hand-wrapped commands",
+      "paper_id": "SUMO-MCP_ Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization"
+    },
+    {
+      "quote": "keep the server lightweight",
+      "paper_id": "SUMO-MCP_ Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization"
+    },
+    {
+      "quote": "tool overload problem",
+      "paper_id": "SUMO-MCP_ Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization"
+    },
+    {
+      "quote": "agent is more prone to tool overload",
+      "paper_id": "SUMO-MCP_ Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization"
+    },
+    {
+      "quote": "occasionally forgot its established workflow",
+      "paper_id": "SUMO-MCP_ Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization"
+    },
+    {
+      "quote": "reduces the likelihood of parameter errors",
+      "paper_id": "SUMO-MCP_ Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization"
+    },
+    {
+      "quote": "virtual eliminates common scripting errors",
+      "paper_id": "SUMO-MCP_ Leveraging the Model Context Protocol for Autonomous Traffic Simulation and Optimization"
+    },
+    {
+      "quote": "Human intervention may result in the algorithm overly dependent on experience",
+      "paper_id": "6VecLM_ Language Modeling in Vector Space for IPv6 Target Generation"
+    },
+    {
+      "quote": "lacking IPv6 semantics and adaptability",
+      "paper_id": "6VecLM_ Language Modeling in Vector Space for IPv6 Target Generation"
+    },
+    {
+      "quote": "entropy clustering to classify the hitlist",
+      "paper_id": "6VecLM_ Language Modeling in Vector Space for IPv6 Target Generation"
+    },
+    {
+      "quote": "IPv6 address consisting entirely of digits misses semantics",
+      "paper_id": "6VecLM_ Language Modeling in Vector Space for IPv6 Target Generation"
+    },
+    {
+      "quote": "the model can generate creative and semantically similar sequences",
+      "paper_id": "6VecLM_ Language Modeling in Vector Space for IPv6 Target Generation"
+    },
+    {
+      "quote": "hard to satisfy fine-grained sponsored search",
+      "paper_id": "Align before Search_ Aligning Ads Image to Text for Accurate Cross-Modal Sponsored Search"
+    },
+    {
+      "quote": "challenging to accurately achieve fine-grained alignment",
+      "paper_id": "Align before Search_ Aligning Ads Image to Text for Accurate Cross-Modal Sponsored Search"
+    },
+    {
+      "quote": "data-exhaustive to achieve optimal performance",
+      "paper_id": "Align before Search_ Aligning Ads Image to Text for Accurate Cross-Modal Sponsored Search"
+    },
+    {
+      "quote": "explicit vision and language alignment by VALSE is more beneficial for relevance modeling than implicit alignment by pre-training",
+      "paper_id": "Align before Search_ Aligning Ads Image to Text for Accurate Cross-Modal Sponsored Search"
+    },
+    {
+      "quote": "only part of the visual content is relevant",
+      "paper_id": "Context-I2W_ Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "limits the model's flexibility",
+      "paper_id": "Context-I2W_ Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "context-dependent word mapping strategy",
+      "paper_id": "Context-I2W_ Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "model '5' brings a bigger decrease",
+      "paper_id": "Context-I2W_ Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "The first two queries mainly focus on the object attributes",
+      "paper_id": "Context-I2W_ Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "adaptive attention to the reference image",
+      "paper_id": "Context-I2W_ Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval"
+    },
+    {
+      "quote": "removing either IVS or VTE causes obvious decrease",
+      "paper_id": "Context-I2W_ Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval"
+    }
+  ]
+}

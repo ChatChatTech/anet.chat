@@ -1,0 +1,42 @@
+{
+  "paper_id": "Convolutional Neural Networks over Tree Structures for Programming Language Processing",
+  "doi": "10.48550/arxiv.1409.5718",
+  "title": "Convolutional Neural Networks over Tree Structures for Programming Language Processing",
+  "year": 2014,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "传统NLP模型无法捕获程序丰富且明确的树结构信息",
+  "problem_framing": "将程序抽象语法树作为输入，设计卷积核提取结构特征",
+  "key_insight": "连续二叉树处理变长子节点数，动态池化解决不同AST的规模和形状差异",
+  "method_signature": "TBCNN：编码层+树卷积层+动态池化层+全连接层",
+  "evaluation_criteria": "程序功能分类准确率、冒泡排序检测准确率",
+  "negative_result_or_admitted_limitation": "RNN在结构较大时性能退化；预训练加速训练但对最终精度提升有限",
+  "evidence_for_taste": [
+    "we think more effective neural models are in need",
+    "the result is quite sensible because it is consistent with human understanding",
+    "pretraining has a limited effect on the final accuracy",
+    "RNN's accuracy is lower than shallow methods",
+    "a boost of 1.3% in considering child nodes' order information",
+    "TBCNN's performance boost is not merely caused by using a better classifier"
+  ],
+  "thinking_moves": [
+    "先用定性聚类验证向量表示合理性，再定量比较下游任务",
+    "承认预训练的局限：AST符号少(44个)，有监督学习足够",
+    "选择1-way而非3-way池化：简单方法同样有效则不增加复杂度",
+    "主动对比RNN显式指出其不适合大树结构，体现方法选择的审慎",
+    "将性能提升归因于结构特征提取而非分类器改进，区分贡献来源"
+  ],
+  "topic_tags": [
+    "programming-language-processing",
+    "tree-based-CNN",
+    "AST-convolution",
+    "code-classification",
+    "deep-learning"
+  ],
+  "cites_own_work": [
+    "Peng et al. 2015 on program vector representations",
+    "Mou et al. 2015 on tree-based convolution for NLP"
+  ],
+  "extraction_quality": "full"
+}

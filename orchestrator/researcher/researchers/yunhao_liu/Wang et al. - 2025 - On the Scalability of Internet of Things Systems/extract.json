@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2025 - On the Scalability of Internet of Things Systems",
+  "doi": null,
+  "title": "On the Scalability of Internet of Things Systems",
+  "year": 2025,
+  "venue": "Journal of Computer Science and Technology",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "IoT设备数量激增,小规模系统的低效在大规模时会急剧放大",
+  "problem_framing": "将IoT可扩展性分解为感知层、网络层、控制层三层资源约束问题",
+  "key_insight": "三层的资源消耗应保持平衡才能实现最优SI;过度中心化导致二次方控制开销",
+  "method_signature": "提出可扩展性指标SI模型,通过资源约束方程定量评估三层效率",
+  "evaluation_criteria": "SI随网络规模是否增长,资源消耗是否超线性",
+  "negative_result_or_admitted_limitation": "全局状态方案控制开销O(N²),不适用于大规模IoT部署",
+  "evidence_for_taste": [
+    "quadratic growth of resource costs",
+    "create a hard cap on scalability",
+    "diminishing performance and a lack of scalability",
+    "not a complete solution for managing large-scale IoT"
+  ],
+  "thinking_moves": [
+    "将IoT系统三层分解后独立建模资源约束",
+    "用表列出早期WSN系统的规模与数据收集率映射到问题",
+    "通过方程推导找到感知与路由容量平衡点",
+    "从最坏情况(如全连通网络)推导资源消耗上界",
+    "比较 flooding/O(1/N) 与 weak-state/ O(1/√N) 的效率量级差异"
+  ],
+  "topic_tags": [
+    "IoT-scalability-metric",
+    "three-layer-IoT-model",
+    "routing-efficiency-scaling",
+    "weak-state-routing",
+    "participatory-sensing"
+  ],
+  "cites_own_work": [
+    "GreenOrbs project",
+    "CitySee system",
+    "Agnostic Diagnosis"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Yun-Hao Liu为第6位作者,非第一或通讯作者,贡献为 senior author。论文为理论建模与调研工作,非原创实验论文,但其方法论清晰——从真实系统(GreenOrbs/CitySee)经验出发,提炼出可量化的SI框架。"
+}

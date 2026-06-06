@@ -1,0 +1,36 @@
+{
+  "paper_id": "IRCoCo_ Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion",
+  "doi": "10.48550/arxiv.2401.16637",
+  "title": "IRCoCo: Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion",
+  "year": 2024,
+  "venue": "ACM FSE",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "SFT的teacher-forcing策略导致暴露偏差，错误逐token累积",
+  "problem_framing": "代码补全的context动态变化且无法用单元测试评估partial code",
+  "key_insight": "为每个生成的token提供即时reward，让模型感知context的实时变化",
+  "method_signature": "Actor-Critic框架，Actor为预训练LM，Critic为BLEU/Edit-Sim训练的评估器",
+  "evaluation_criteria": "Edit-Sim, EM, BLEU-4, CodeBLEU四项指标",
+  "negative_result_or_admitted_limitation": "BLEU/Edit-Sim只看表面匹配，不捕捉代码语义，等价表达式被错误标记",
+  "evidence_for_taste": [
+    "reward redistribution-based strategies cannot be adapted to code completion",
+    "This approach fails to capture the nuanced alterations",
+    "the model fails to allocate rewards during intermediate states",
+    "such exact match-based metrics overlook the semantics of code"
+  ],
+  "thinking_moves": [
+    "把code completion的动态context变化类比为RL中的state变化",
+    "把code completion评估问题从execution-based转化为similarity-based",
+    "用critic网络把sparse delayed reward转化为dense immediate reward"
+  ],
+  "topic_tags": [
+    "code-completion",
+    "actor-critic-RL",
+    "immediate-reward",
+    "exposure-bias",
+    "supervised-fine-tuning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

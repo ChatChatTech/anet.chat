@@ -1,0 +1,45 @@
+{
+  "paper_id": "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs",
+  "doi": "10.48550/arxiv.2509.00930",
+  "title": "SATQuest: A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "缺乏可控可扩展的工具进行细粒度分析,难以系统评估LLM推理能力",
+  "problem_framing": "用CNF实例生成逻辑推理问题,通过三个正交维度(规模/类型/格式)控制问题空间",
+  "key_insight": "三维正交结构化SAT问题+PySAT客观验证,可缓解记忆化并生成细粒度推理洞察",
+  "method_signature": "CNF生成多样SAT逻辑题+三维正交控制+PySAT自动验证+RLVR微调",
+  "evaluation_criteria": "20类任务准确率(跨规模/类型/格式)+响应长度+跨维度泛化",
+  "negative_result_or_admitted_limitation": "小规模RFT不足以克服格式泛化障碍,模型在陌生格式下过度依赖有缺陷的直接推理",
+  "evidence_for_taste": [
+    "缺乏必要的变量控制",
+    "mitigates memorization issues",
+    "allowing for nuanced insights",
+    "enabling effective reinforcement fine-tuning",
+    "hallucination phenomenon",
+    "fabricate solver calls",
+    "hallucinated shortcuts",
+    "the gap between task types is pronounced",
+    "cross-format generalization remains notably difficult",
+    "small-scale RFT may not be sufficient",
+    "overfitted to a specific Math-style reasoning pattern"
+  ],
+  "thinking_moves": [
+    "把评估问题重构为可验证的符号逻辑任务而非依赖人工标注",
+    "用CNF+PySAT建立客观ground-truth消除评分者主观性",
+    "识别LLM在复杂实例上产生幻觉性推理而非真实推导",
+    "观察到Math格式过度训练导致结构化思维能力的退化",
+    "从单任务训练反向推导出更复杂任务蕴含的推理能力子集"
+  ],
+  "topic_tags": [
+    "LLM-logical-reasoning-evaluation",
+    "CNF-SAT-problem-generation",
+    "multi-dimensional-benchmark-design",
+    "RLVR-reinforcement-fine-tuning",
+    "format-generalization-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

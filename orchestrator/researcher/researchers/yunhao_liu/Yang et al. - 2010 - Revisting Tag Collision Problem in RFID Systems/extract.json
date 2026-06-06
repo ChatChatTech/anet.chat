@@ -1,0 +1,43 @@
+{
+  "paper_id": "Yang et al. - 2010 - Revisting Tag Collision Problem in RFID Systems",
+  "doi": null,
+  "title": "Revisting Tag Collision Problem in RFID Systems",
+  "year": 2010,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CRC-based collision detection requires >100 instructions and O(l) complexity, becoming the bottleneck for low-cost RFID tags with extremely limited computation capacity.",
+  "problem_framing": "Collision detection problem formalized as: determining whether f(∨r_i) = ∨f(r_i) using only simple functions feasible on capacity-limited RFID tags.",
+  "key_insight": "Using bitwise complement f(r)=r̄ as collision function achieves O(1) complexity with only 1 instruction vs CRC's O(l) complexity and >100 instructions.",
+  "method_signature": "Quick Collision Detection (QCD) using bitwise complement plus 16-bit collision preamble, replaces CRC for faster identification.",
+  "evaluation_criteria": "Efficiency Improvement (EI) defined as (t_crc - t_qcd)/t_crc, measured alongside accuracy, utilization rate, and identification delay.",
+  "negative_result_or_admitted_limitation": "QCD correctness assumes at least two collided tags emit different random integers; this assumption can fail with probability 0.5^(lm) ≤ 0.5^(2l).",
+  "evidence_for_taste": [
+    "CRC-CD becomes the barrier",
+    "only 37% slots are used",
+    "more than 63% slots are under utilized",
+    "simplify the IC design",
+    "requires more than 100 instructions"
+  ],
+  "thinking_moves": [
+    "识别出计算复杂度是实际系统瓶颈，而非理论最优",
+    "将碰撞检测函数设计从复杂CRC重定义为简单布尔运算",
+    "先建立CRC-CD的理论效率上界(Lemma 1&2)，再证明新方法的超越性",
+    "在严格数学证明(Theorem 1)后仍强调工程可实现性",
+    "提出碰撞前导码机制以缩短空闲/碰撞时隙的通信时间"
+  ],
+  "topic_tags": [
+    "RFID-anticollision",
+    "bitwise-complement-detection",
+    "low-complexity-protocol",
+    "tag-collision-arbitration",
+    "RFID-hardware-constraints"
+  ],
+  "cites_own_work": [
+    "Liu et al. 2003 LANDMARC",
+    "Liu et al. 2010 localization",
+    "Lu et al. 2007 RFID-auth"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

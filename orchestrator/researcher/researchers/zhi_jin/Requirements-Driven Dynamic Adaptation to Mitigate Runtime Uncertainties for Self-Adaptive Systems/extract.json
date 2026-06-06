@@ -1,0 +1,40 @@
+{
+  "paper_id": "Requirements-Driven Dynamic Adaptation to Mitigate Runtime Uncertainties for Self-Adaptive Systems",
+  "doi": "10.48550/arxiv.1704.00419",
+  "title": "Requirements-Driven Dynamic Adaptation to Mitigate Runtime Uncertainties for Self-Adaptive Systems",
+  "year": 2017,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "In self-adaptive systems, runtime changes cannot be exhaustively anticipated at design time, so dynamic adaptation mechanisms must be provided at requirements phase",
+  "problem_framing": "Runtime uncertainty as context uncertainty (environment) and components uncertainty (system itself); adaptation must be derived from requirements model specifications",
+  "key_insight": "Treat requirements model as runtime entity that evolves with MAPE loop; parametric adaptation handles context uncertainty violations, structural adaptation handles components uncertainty violations",
+  "method_signature": "REDAPT uses Adaptive Goal Model (AGM) with temporal logic grammar to derive MAPE-based adaptation mechanism algorithms from requirements specifications",
+  "evaluation_criteria": "Simulation experiments on Highway-Rail Control System demonstrating parametric adaptation for NFR and functional requirements satisfaction",
+  "negative_result_or_admitted_limitation": "For the third case in NFR violation experiment, 'further tuning is needed' — one adaptive goal could not be satisfied with current parameter adjustments",
+  "evidence_for_taste": [
+    "exploring problem world for identifying",
+    "AGM as runtime entity, which can evolve",
+    "deriving adaptation mechanism algorithms",
+    "classifying violations into four kinds",
+    "iterative verification",
+    "further tuning is needed"
+  ],
+  "thinking_moves": [
+    "把运行时不确定性严格区分为context uncertainty和components uncertainty两类",
+    "把goal model扩展为runtime entity，在运行时动态演化",
+    "用temporal logic grammar形式化AGM元素以弥合需求模型与adaptation mechanisms之间的gap",
+    "通过violation分类匹配对应的adaptation mechanism algorithm (parametric vs structural)",
+    "在实验中使用utility function对NFR satisfaction degree进行量化验证"
+  ],
+  "topic_tags": [
+    "self-adaptive systems requirements",
+    "adaptive goal modeling",
+    "runtime uncertainty",
+    "requirements-driven adaptation",
+    "MAPE loop integration"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Paper is from arXiv preprint without traditional venue. Zhi Jin listed as co-author with email; role unclear (not first or corresponding). Some algorithm details appear truncated in figures. NFR experiment shows one case where adaptation failed."
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling",
+  "doi": null,
+  "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+  "year": 2015,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "CNNs capture locality但无法建模结构;RNNs可建模结构但路径过长导致梯度消失和学习困难",
+  "problem_framing": "句子分类问题,利用句法树(依存或成分)作为结构骨架,在树上做卷积提取特征",
+  "key_insight": "在树上设计固定深度窗口做卷积+池化,任意节点到输出的路径都很短,同时获得结构信息和有效传播",
+  "method_signature": "TBCNN:树上卷积窗口+max pooling+全连接+softmax,支持成分树(c-TBCNN)和依存树(d-TBCNN)",
+  "evaluation_criteria": "情感分析5类/2类准确率,问句分类6类准确率,与CNN/RNN/LSTM等对比",
+  "negative_result_or_admitted_limitation": "c-TBCNN略逊于d-TBCNN; pooling方法对结果影响不大,模型对pooling不敏感",
+  "evidence_for_taste": [
+    "propagation paths in RNNs are deep",
+    "gradients tend to vanish (or blow up)",
+    "may lead to information loss",
+    "TBCNNs are not that sensitive to pooling methods",
+    "c-TBCNN is slightly worse",
+    "complex convolution windows...is a 'hard mechanism' temporarily"
+  ],
+  "thinking_moves": [
+    "合并两种架构优势:CNN短路径+RNN结构建模",
+    "把卷积核从线性序列迁移到树形结构",
+    "依存树变长问题:用依存类型而非位置分配权重",
+    "池化策略作为必要工程折中,承认其局限",
+    "可视化验证特征聚焦于情感相关窗口"
+  ],
+  "topic_tags": [
+    "tree-convolution",
+    "sentence-modeling",
+    "sentiment-classification",
+    "dependency-parsing",
+    "constituency-parsing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "LTP_ A New Active Learning Strategy for CRF-Based Named Entity Recognition",
+  "doi": "10.48550/arxiv.2001.02524",
+  "title": "LTP: A New Active Learning Strategy for CRF-Based Named Entity Recognition",
+  "year": 2020,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "深度学习需要大量标注数据，标注成本高；现有主动学习方法存在偏好长序列和需要侵入模型的缺陷",
+  "problem_framing": "提出一种不确定性驱动的主动学习策略，既不偏好长序列，又无需侵入模型修改",
+  "key_insight": "利用CRF输出的最优标签序列 y*，在全局最优解中找局部最不确定的token，同时兼顾全局一致性与局部信息",
+  "method_signature": "LTP = argmin_{y*_i in y*} P(y*_i | x_i; A)，取最优序列中概率最低的token对应的句子",
+  "evaluation_criteria": "实体级F1分数与句子级准确率并重，尤其关注句子级准确率对下游任务的价值",
+  "negative_result_or_admitted_limitation": "Token Entropy (TE) 策略在中文NER数据集上效果不如随机基准，证明简单聚合token不确定性的方法存在根本缺陷",
+  "evidence_for_taste": [
+    "LTP does not favor long sequences",
+    "does not need to invade the model",
+    "most informative token",
+    "entity-level F1-score is sometimes misleading",
+    "our strategy LTP is better than the rest of methods"
+  ],
+  "thinking_moves": [
+    "从实际应用痛点出发：annotator负担和developer负担是两种不同性质的代价，需要分别对待",
+    "发现现有方法存在隐式偏好（长序列），追溯到公式推导中的求和项结构（如LC的乘积展开自然偏向长句子）",
+    "将local（token级）和global（sentence级）信息融合：不是简单叠加，而是在全局最优解的条件下评估局部不确定性",
+    "批判性使用评价指标：指出实体级F1在社交媒体等语料上具有误导性，主张同时评估句子级准确率"
+  ],
+  "topic_tags": [
+    "active-learning-strategy-design",
+    "CRF-based-NER",
+    "uncertainty-sampling",
+    "annotation-cost-reduction",
+    "sentence-level-evaluation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文结构完整，包含abstract/introduction/related-work/method/experiment/conclusion；作者署名顺序第五位，属合作者角色；表格2提供了清晰的策略对比框架；实验涵盖中英文六个数据集，结果有说服力"
+}

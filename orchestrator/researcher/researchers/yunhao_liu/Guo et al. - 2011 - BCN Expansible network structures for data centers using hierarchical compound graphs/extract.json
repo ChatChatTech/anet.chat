@@ -1,0 +1,39 @@
+{
+  "paper_id": "Guo et al. - 2011 - BCN Expansible network structures for data centers using hierarchical compound graphs",
+  "doi": null,
+  "title": "BCN: Expansible Network Structures for Data Centers Using Hierarchical Compound Graphs",
+  "year": 2011,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有数据中心网络结构在扩展时需要修改已有服务器配置,影响运行中的应用",
+  "problem_framing": "如何设计仅使用双端口服务器、可真正扩展且具备规则性和对称性的网络结构",
+  "key_insight": "利用层次复合图通过仅给少数服务器添加一条链接即可实现与服务器度数无关的扩展",
+  "method_signature": "HCN递归构建基础模块,BCN双维度层次复合,master/slave服务器角色分离",
+  "evaluation_criteria": "网络规模、路径长度、容错性、规则对称性",
+  "negative_result_or_admitted_limitation": "当前路由协议不能完全实现最短路径路由,BCN的路由路径略长于最短路径",
+  "evidence_for_taste": [
+    "major drawback of these topologies is that they are not truly expansible",
+    "do not entirely realize the shortest path routing",
+    "low degree of regularity and symmetry"
+  ],
+  "thinking_moves": [
+    "从现有方案的根本缺陷(扩展时需改动已有服务器)出发定义问题",
+    "通过master/slave角色分离实现双维度独立扩展",
+    "递归构造保持结构规则性便于模块化部署",
+    "先用数学定理确定上界,再用仿真验证实际性能",
+    "主动承认路由算法非最短路径的局限性"
+  ],
+  "topic_tags": [
+    "data-center-networking",
+    "hierarchical-compound-graphs",
+    "server-centric-architecture",
+    "network-expansibility",
+    "dual-port-servers"
+  ],
+  "cites_own_work": [
+    "[10] Guo et al., Tech Rep. Dec 2010"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供完整DOI信息,会议名称从参考文献推断为SIGCOMM/INFOCOM级别,但未明确标注;动机与问题框架提取较为完整,但关键insight的精确表述可能需进一步验证"
+}

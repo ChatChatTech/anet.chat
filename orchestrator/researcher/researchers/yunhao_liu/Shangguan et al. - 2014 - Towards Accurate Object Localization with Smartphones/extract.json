@@ -1,0 +1,40 @@
+{
+  "paper_id": "Shangguan et al. - 2014 - Towards Accurate Object Localization with Smartphones",
+  "doi": null,
+  "title": "Towards Accurate Object Localization with Smartphones",
+  "year": 2014,
+  "venue": "IEEE Pervasive Computing and Communications (PerCom)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "用户想查询远处物体信息但不愿走过去或暴露己位；现有目标定位需多角度拍照计算量大且用户负担重",
+  "problem_framing": "把目标定位建模为照片比例测距+传感器位移测量，利用手机现有传感器组合实现低成本单点测距",
+  "key_insight": "臂伸拉伸充当已知位移基准，将两次拍照的物体比例变化与手臂位移结合，用镜头公式反推物距",
+  "method_signature": "三阶段加速度滤波(定向校准+漂移剔除+Kalman平滑)+图像缩放比提取+罗盘方位校正+物理坐标映射",
+  "evaluation_criteria": "位移计算误差<5cm；测距绝对误差<30m；物理定位准确率89%(稀疏)/72%(密集)",
+  "negative_result_or_admitted_limitation": "仅5%原始加速度轨迹达到<10cm误差，系统不可行；廉价传感器仍是瓶颈，密集区72%准确率仍不理想",
+  "evidence_for_taste": [
+    "light-weighted CV techniques",
+    "no complex photograph survey",
+    "considerable projected variation",
+    "no need for database construction",
+    "eliminate sensor noise",
+    "more suitable for location-based services"
+  ],
+  "thinking_moves": [
+    "从已知物理原理(镜头公式)出发，但识别出实际系统的传感器噪声瓶颈",
+    "系统诊断三类噪声根源：定向偏差、锯齿漂移、高斯波动，针对性设计三阶段滤波",
+    "将积分两次放大误差的问题分解为子区间优化+约束推断，转化为线性规划求解",
+    "用传感器融合(加速度+陀螺仪+罗盘+GPS)弥补单一传感器精度不足",
+    "用物体在CCD中心这一成像假设简化目标识别，避免复杂特征匹配"
+  ],
+  "topic_tags": [
+    "smartphone-sensing",
+    "photograph-based-ranging",
+    "object-localization",
+    "accelerometer-denosing",
+    "sensor-fusion-localization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的动机-问题-方法-实验链路，包含明确的负面结果承认(仅5%原始轨迹可用)和系统性能上限讨论，证据充分"
+}

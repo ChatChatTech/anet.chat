@@ -1,0 +1,41 @@
+{
+  "paper_id": "Game-theoretic Analysis to Parameterized Reversible Watermarking",
+  "doi": "10.1080/02564602.2020.1739574",
+  "title": "Game-theoretic Analysis to Content-adaptive Reversible Watermarking",
+  "year": 2020,
+  "venue": "Journal of Information Hiding and Multimedia Signal Processing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "理论结果有助于指导设计新的可逆水印系统，作者重新用博弈论分析可逆水印",
+  "problem_framing": "将可逆水印建模为两个竞争编码器Alice和Bob之间的博弈，以率失真为优化目标",
+  "key_insight": "非合作博弈下每个玩家的最优响应只依赖自身失真约束，合作博弈的均衡取决于双方共享的边信息",
+  "method_signature": "双编码器博弈模型，率失真优化，求解纳什均衡策略",
+  "evaluation_criteria": "嵌入容量(bit)、率失真性能、博弈均衡的存在性",
+  "negative_result_or_admitted_limitation": "当Bob产生的错误过多时，Alice可能无法嵌入任何有效载荷，导致博弈不公平",
+  "evidence_for_taste": [
+    "theoretical results is helpful",
+    "surprisingly, depends on his or her own",
+    "It can be effectively solved by binary search",
+    "we do not require that both Alice and Bob"
+  ],
+  "thinking_moves": [
+    "把单编码器场景扩展为双玩家竞争博弈",
+    "通过率失真函数定义每个玩家的收益",
+    "分析合作与非合作两种博弈模式",
+    "从博弈均衡条件推导最优策略比例关系",
+    "将高维优化问题转化为可求解的二元搜索"
+  ],
+  "topic_tags": [
+    "reversible-watermarking",
+    "game-theory",
+    "rate-distortion-optimization",
+    "content-adaptive-embedding",
+    "multi-player-steganography"
+  ],
+  "cites_own_work": [
+    "Wu et al. 2016 PPE-based RDH",
+    "Zhang et al. 2013 recursive histogram modification"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "作者slug对应Xinpeng Zhang，确认该论文为作者参与工作；DOI完整；论文为理论分析性质，无实验数据集；博弈论框架完整包含非合作和合作两种均衡分析"
+}

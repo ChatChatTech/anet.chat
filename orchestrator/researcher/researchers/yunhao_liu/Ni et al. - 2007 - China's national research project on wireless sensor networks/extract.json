@@ -1,0 +1,44 @@
+{
+  "paper_id": "Ni et al. - 2007 - China's national research project on wireless sensor networks",
+  "doi": null,
+  "title": "China's National Research Project on Wireless Sensor Networks",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "中国面临矿难、水污染、交通拥堵等严峻社会问题，需低成本技术方案",
+  "problem_framing": "现有WSN研究缺乏系统性集成，孤立方案整合时可能冲突",
+  "key_insight": "采用应用驱动方法论，将多项技术整合为系统性方案解决问题",
+  "method_signature": "七个工作包：节点平台、核心协议、通信协议、网络连接、数据管理、演示开发、测试床",
+  "evaluation_criteria": "2000+节点大规模测试床、真实环境部署、商业化潜力",
+  "negative_result_or_admitted_limitation": "现有项目缺乏系统性研究，孤立方案可能相互冲突，很少在实际环境长期测试",
+  "evidence_for_taste": [
+    "application-driven methodology",
+    "systematic approach throughout",
+    "isolated solutions may conflict",
+    "lack of a systematic study",
+    "rarely tested in a running application",
+    "ambitious goal of solving practical problems"
+  ],
+  "thinking_moves": [
+    "识别现有研究碎片化问题，认为缺乏系统整合",
+    "提出以应用为驱动的项目方法论",
+    "强调整合式系统性方案优于孤立算法",
+    "强调真实环境验证和商业化导向"
+  ],
+  "topic_tags": [
+    "national-research-project",
+    "wireless-sensor-networks",
+    "application-driven-design",
+    "system-integration",
+    "coal-mine-surveillance"
+  ],
+  "cites_own_work": [
+    "Rendered Path (2007)",
+    "SASA underground monitoring (2007)",
+    "Iso-Map contour mapping (2007)",
+    "Sea depth measurement RFS (2007)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "本文是项目概述论文，非具体研究论文。Yunhao Liu为第三作者，主要贡献列举了多篇具体工作，但论文本身聚焦于项目框架介绍，缺乏深度技术细节。关键认知信号：从批判现有WSN研究碎片化出发，强调系统整合和应用驱动。"
+}

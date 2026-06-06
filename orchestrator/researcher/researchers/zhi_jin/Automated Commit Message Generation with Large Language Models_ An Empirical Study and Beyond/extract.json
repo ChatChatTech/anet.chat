@@ -1,0 +1,41 @@
+{
+  "paper_id": "Automated Commit Message Generation with Large Language Models_ An Empirical Study and Beyond",
+  "doi": "10.48550/arxiv.2404.14824",
+  "title": "Automated Commit Message Generation with Large Language Models: An Empirical Study and Beyond",
+  "year": 2024,
+  "venue": "IEEE Transactions on Software Engineering",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有CMG数据集质量差，导致无法客观评估模型性能；实践中commit消息质量普遍低下",
+  "problem_framing": "将CMG问题定义为：生成包含What（代码变更内容）和Why（变更原因）的高质量commit消息",
+  "key_insight": "MCMD数据集中的ground truth本身缺少What/Why信息，GPT-3.5生成的消息反而更完整",
+  "method_signature": "ERICommiter：两步过滤+语义/词法检索的ICL框架",
+  "evaluation_criteria": "自动指标(BLEU/METEOR/ROUGE-L)+人工指标(Accuracy/Integrity/Readability/Applicability)",
+  "negative_result_or_admitted_limitation": "LLM倾向于传达更多What信息，但因代码上下文有限而缺乏Why细节",
+  "evidence_for_taste": [
+    "ground truths themselves are inherently flawed",
+    "lacking critical What and Why information",
+    "different LLMs carry different advantages",
+    "retrieval-augmented approaches perform better",
+    "highly effective and efficient LLM-based CMG approach",
+    "slightly weaker than that reported in the original paper"
+  ],
+  "thinking_moves": [
+    "通过pilot analysis发现数据集质量导致评估异常，而非模型能力不足",
+    "从实践角度定义good commit message应包含What和Why两个维度",
+    "三层筛选机制构建高质量测试集：自动过滤→Bi-LSTM预筛→人工精选",
+    "引入Cohen's kappa系数验证人工评估的信度",
+    "比较自动化指标与人工评估的差异，揭示指标局限",
+    "借鉴 retrieval-augmented在CMG任务中的成功，设计ICL框架"
+  ],
+  "topic_tags": [
+    "LLM代码生成",
+    "Commit Message Generation",
+    "In-Context Learning",
+    "实证研究",
+    "检索增强生成"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

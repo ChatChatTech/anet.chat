@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2012 - Scaling Laws of Multicast Capacity for Power-Constrained Wireless Networks under Gaussian Channel Mo",
+  "doi": null,
+  "title": "Scaling Laws of Multicast Capacity for Power-Constrained Wireless Networks under Gaussian Channel Model",
+  "year": 2012,
+  "venue": "IEEE Transactions on Computers",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "GCM比ProM和PhyM对REN更现实,前人bounds不够紧",
+  "problem_framing": "求REN下multicast容量的asymptotic scaling laws with power constraint",
+  "key_insight": "GCM下per-session capacity呈分段Theta形式,与nd和n的关系决定哪段",
+  "method_signature": "percolation highways + lattice view + EMST load bounding",
+  "evaluation_criteria": "上下界是否match,达到Theta即为order-optimal",
+  "negative_result_or_admitted_limitation": "nd:[n/(log n)^{α+1}, n/log n]区间仍有gap未闭合",
+  "evidence_for_taste": [
+    "overoptimistic and unrealistic",
+    "order-optimal when",
+    "Observe that there is a gap",
+    "improves the previously best known",
+    "to the best of our knowledge, are not used"
+  ],
+  "thinking_moves": [
+    "用percolation theory构建hierarchical路由结构",
+    "将网络划分lattice view做cell-level load分析",
+    "先证最坏情况上界,再设计scheme达下界",
+    "识别网络瓶颈点并量化其对throughput的约束",
+    "分段讨论不同nd regime的capacity order"
+  ],
+  "topic_tags": [
+    "wireless-network-capacity-scaling",
+    "multicast-capacity-GCM",
+    "percolation-theory-routing",
+    "random-extended-networks",
+    "asymptotic-throughput-bounds"
+  ],
+  "cites_own_work": [
+    "Li et al. 2010",
+    "Wang et al. 2009 INFOCOM"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "A First Look at Blockchain-based Decentralized Applications",
+  "doi": "10.48550/arxiv.1909.00939",
+  "title": "A First Look at Blockchain-based Decentralized Applications",
+  "year": 2019,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "缺乏对区块链DApp生态系统的全面理解，工业报告只关注基本统计，学术研究聚焦底层系统",
+  "problem_framing": "基于995个以太坊DApp和近三千万条交易记录的经验研究，回答三个研究问题",
+  "key_insight": "DApp流行度遵循帕累托分布，金融类DApp主导市场，仅15.7%完全开源，75%仅用单一智能合约",
+  "method_signature": "大规模经验分析：995 DApp、5158智能合约、29846075条交易",
+  "evaluation_criteria": "流行度(用户/交易/交易量)、开源程度、智能合约使用模式、Gas部署与执行成本",
+  "negative_result_or_admitted_limitation": "我们不能仅通过DApp信息检索智能合约并分析其工作方式，筛选后仅剩995个DApp",
+  "evidence_for_taste": [
+    "我们进行首次全面经验研究",
+    "仅15.7%的DApp完全开源",
+    "75%由单一智能合约支持",
+    "仅50%的预付费用被实际使用",
+    "开发者倾向于公开合约而非DApp"
+  ],
+  "thinking_moves": [
+    "从生态系统视角系统性梳理DApp全貌",
+    "将智能合约组织模式归纳为三种架构模式",
+    "通过Gas消耗量化合约复杂度与执行成本",
+    "将开源行为与DApp流行度建立关联分析"
+  ],
+  "topic_tags": [
+    "Ethereum-DApp-empirical-study",
+    "smart-contract-pattern-analysis",
+    "blockchain-cost-modeling",
+    "DApp-ecosystem-characterization",
+    "gas-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

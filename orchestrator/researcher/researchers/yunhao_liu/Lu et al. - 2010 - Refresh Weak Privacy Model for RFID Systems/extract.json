@@ -1,0 +1,38 @@
+{
+  "paper_id": "Lu et al. - 2010 - Refresh Weak Privacy Model for RFID Systems",
+  "doi": null,
+  "title": "Refresh: Weak Privacy Model for RFID Systems",
+  "year": 2010,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "强隐私模型要求标签输出随机化,导致合法读者需O(n)穷举搜索,不适用于大规模RFID系统",
+  "problem_framing": "隐私与认证效率存在本质权衡,需在可接受隐私下实现O(1)认证",
+  "key_insight": "标签输出可含短暂时不变字段用于reader索引,但认证后立即刷新以抗跟踪",
+  "method_signature": "Refresh弱隐私模型:允许输出含temporally constant field供reader快速定位",
+  "evaluation_criteria": "形式化证明满足Refresh Privacy,认证复杂度O(1)",
+  "negative_result_or_admitted_limitation": "Refresh仅适用于标签频繁被盘点的场景,不适用物流等追踪场景",
+  "evidence_for_taste": [
+    "adopt Strong Privacy, PPA schemes have to employ brute-force search",
+    "weakens strict constrains on the output of tags, such as randomization",
+    "a little privacy degradation can bring significant benefit",
+    "achieving privacy as well as high authentication efficiency"
+  ],
+  "thinking_moves": [
+    "从Strong Privacy的穷举代价反推其过强假设",
+    "将隐私-效率权衡显式建模为weak vs strong",
+    "设计刷新机制使敌手无法关联两次输出"
+  ],
+  "topic_tags": [
+    "RFID-authentication",
+    "privacy-model",
+    "strong-vs-weak-privacy",
+    "O(1)-authentication",
+    "hash-based-RFID"
+  ],
+  "cites_own_work": [
+    "Lu et al. (2007) Dynamic Key-updating"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注会议/期刊名称,但引用格式和内容质量表明为IEEE PerCom级别顶会。Refresh模型的多读者扩展问题已在future work中承认。"
+}

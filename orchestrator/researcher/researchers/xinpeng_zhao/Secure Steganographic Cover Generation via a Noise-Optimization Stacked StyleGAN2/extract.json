@@ -1,0 +1,39 @@
+{
+  "paper_id": "Secure Steganographic Cover Generation via a Noise-Optimization Stacked StyleGAN2",
+  "doi": "10.3390/sym15050979",
+  "title": "Secure Steganographic Cover Generation via a Noise-Optimization Stacked StyleGAN2",
+  "year": 2023,
+  "venue": "Symmetry",
+  "venue_tier": "regional",
+  "role": "unknown",
+  "motivation": "现有隐写cover图像不安全且从互联网下载存在重复压缩风险，需要直接合成最优cover",
+  "problem_framing": "将图像合成视为可优化的隐写操作，通过调整StyleGAN2噪声映射提升安全性同时保持视觉质量",
+  "key_insight": "噪声注入可类比为一种隐写操作，通过优化噪声图可增强生成图像安全性；安全性和保真度呈反比关系",
+  "method_signature": "两阶段堆叠StyleGAN2架构，SNON网络利用secure loss和LPIPS fidelity loss进行噪声优化",
+  "evaluation_criteria": "检测误差PE（cover/stego分类最小平均错误）、FID图像质量，多种隐写方法和隐写分析器综合评估",
+  "negative_result_or_admitted_limitation": "不使用ln操作时生成图像退化为随机噪声，不使用LPIPS时图像模糊；安全性与保真度存在矛盾",
+  "evidence_for_taste": [
+    "the generated image looks like a random noise",
+    "the generated image is blurry",
+    "the security of the generated image is inverse proportion to the fidelity",
+    "the effect is tiny",
+    "makes a bigger progress in image security"
+  ],
+  "thinking_moves": [
+    "把噪声注入操作重新框架为隐写操作，将生成模型与隐写安全建立等价关系",
+    "通过两阶段对称架构分离高质量基准图像生成与安全性优化任务",
+    "从实验数据归纳安全性和保真度的数学关系（反比），而非假设先验",
+    "利用小波方向滤波器设计secure loss，将隐写分析领域的知识迁移到生成任务",
+    "通过可视化消融实验（对比图）验证各模块的必要性而非仅做参数调优"
+  ],
+  "topic_tags": [
+    "steganographic-cover-synthesis",
+    "stylegan2-noise-optimization",
+    "security-fidelity-tradeoff",
+    "noise-loss-steganalysis",
+    "progressive-growing-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

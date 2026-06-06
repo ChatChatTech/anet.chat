@@ -1,0 +1,38 @@
+{
+  "paper_id": "2020_IWQOS_High-quality_Activity-Level_Video_Advertising",
+  "doi": null,
+  "title": "High-quality Activity-Level Video Advertising",
+  "year": 2020,
+  "venue": "IWQOS",
+  "venue_tier": "workshop",
+  "role": "unknown",
+  "motivation": "视频广告CTR仅0.3%远低于其他广告，72.5%广告需求与活动相关但现有系统仅关注物体/人脸而忽略活动",
+  "problem_framing": "构建可扩展的活动图表示实现非预定义活动匹配，同时优化收益、内容相关性和用户侵入感",
+  "key_insight": "用图结构建模多模态原子特征间的语义关系而非训练动作分类器，实现零训练数据的灵活活动匹配",
+  "method_signature": "Activity Graph多模态嵌入加NMS贪婪广告分配算法，10K FPS检索速度",
+  "evaluation_criteria": "主观相关性好坏率、分配价值vs侵入感预算、算法时间效率",
+  "negative_result_or_admitted_limitation": "设计具有理论性能保证的广告分配算法仍然是具有挑战性的任务",
+  "evidence_for_taste": [
+    "72.5% advertising demands are relevant to activities",
+    "no training data for diverse activities",
+    "requires no training data for diverse activities",
+    "The intrusiveness effect among successive advertisements has not been studied adequately",
+    "requires no training data",
+    "designing an assignment algorithm with theoretical performance guarantee is still a very challenging task"
+  ],
+  "thinking_moves": [
+    "将活动识别难题重新定位为图匹配问题以避免依赖标注数据",
+    "用NMS启发式压缩优化搜索空间而非穷举所有分配组合",
+    "从市场调研数据(150种需求)归纳出广告主真正关心的原子特征类型",
+    "用侵入感函数建模连续广告的时间累积效应而非孤立考虑每次插入"
+  ],
+  "topic_tags": [
+    "activity-level-video-advertising",
+    "activity-graph-multimodal-embedding",
+    "ad-assignment-optimization",
+    "non-maximum-suppression-algorithm",
+    "content-relevance-measurement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

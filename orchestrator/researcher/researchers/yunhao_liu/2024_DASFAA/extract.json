@@ -1,0 +1,39 @@
+{
+  "paper_id": "2024_DASFAA",
+  "doi": null,
+  "title": "AdaShifter: An Online Data Annotation Framework Under Human-Machine Collaboration",
+  "year": 2024,
+  "venue": "DASFAA",
+  "venue_tier": "regional",
+  "role": "corresponding",
+  "motivation": "静态预测模型在动态环境中不可靠，人类专家资源有限，需要自适应决定何时请求人工标注",
+  "problem_framing": "在线增量学习框架中决定何时接受模型预测、何时请求人工标注，最小化累计后悔",
+  "key_insight": "将互信息转化为期望增益增长决策准则，自适应判断模型不可靠时请求专家",
+  "method_signature": "AdaShifter: 基于历史标注数据的在线增量shifter策略，计算预测损失与互信息增益",
+  "evaluation_criteria": "累计后悔(cumulative regret)和标注错误率",
+  "negative_result_or_admitted_limitation": "噪声增加时效果下降，估计预测模型可靠性变得更困难，能力与噪声纠缠",
+  "evidence_for_taste": [
+    "cannot ensure robust performance",
+    "only when it is likely to be beneficial",
+    "when to transition between prediction models",
+    "minimize cumulative regret",
+    "aligned with our intended objective"
+  ],
+  "thinking_moves": [
+    "把标注决策问题重新框定为在线决策理论问题",
+    "将信息论准则(互信息)转化为决策准则(期望增益增长)",
+    "关注系统级决策而非模型精度本身",
+    "自适应地在模型预测与人工标注之间切换",
+    "考虑人类专家工作负载预算的可调节性"
+  ],
+  "topic_tags": [
+    "human-machine-collaboration",
+    "online-learning",
+    "active-annotation",
+    "adaptive-shifter",
+    "mutual-information"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

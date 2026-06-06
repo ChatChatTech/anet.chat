@@ -1,0 +1,37 @@
+{
+  "paper_id": "Learning Fine-Grained Grounded Citations for Attributed Large Language Models__oa_W4402670531",
+  "doi": "10.18653/v1/2024.findings-acl.838",
+  "title": "Learning Fine-Grained Grounded Citations for Attributed Large Language Models",
+  "year": 2024,
+  "venue": "ACL Findings",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "LLMs hallucinate and current attributed systems suffer from suboptimal citation quality due to reliance on in-context learning, with citations too coarse for users to pinpoint specific evidence",
+  "problem_framing": "Teach LLMs to generate responses where each statement cites specific extractive quotes (not just document IDs), requiring high-quality attributed training data and proper grounding-guidance architecture",
+  "key_insight": "First extract supporting quotes from source documents (grounding), then condition the generation process on those quotes — this provides supervision signals AND serves as fine-grained attribution",
+  "method_signature": "Two-stage training: Grounding Guided Generation (extract quotes → guide generation) + Consistency-Aware Alignment via DPO to align grounding with attribution",
+  "evaluation_criteria": "Citation quality (precision/recall/F1 via TRUE) and correctness (EM/claim recall) on ASQA/ELI5/QAMPARI",
+  "negative_result_or_admitted_limitation": "FRONT encounters lower Rec.-5 on QAMPARI dataset because answers consist of concatenated entities, diverging significantly from training data",
+  "evidence_for_taste": [
+    "citations are typically presented in the form of either document identifiers",
+    "complicate the process for users to pinpoint exact supporting evidence",
+    "such discrepancies challenge the attempt to employ these grounding quotes",
+    "the nature of its answers, which consist of concatenated entities, diverging significantly from our training data"
+  ],
+  "thinking_moves": [
+    "把引用粒度从文档级降低到句子级 quotes",
+    "先做 grounding 再 guided generation 的两阶段 pipeline",
+    "用弱模型 (7B) 监督强模型偏好训练的 weak-to-strong 思路",
+    "对 citation quality 和 correctness 分别评估, 承认两者 trade-off"
+  ],
+  "topic_tags": [
+    "attributed-LLM",
+    "fine-grained-citation",
+    "retrieval-augmented-generation",
+    "grounded-generation",
+    "citation-quality"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

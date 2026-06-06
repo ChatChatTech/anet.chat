@@ -1,0 +1,38 @@
+{
+  "paper_id": "Sun et al. - 2025 - iPanda An LLM-based Agent for Automated Conformance Testing of Communication Protocols",
+  "doi": null,
+  "title": "iPanda: An LLM-based Agent for Automated Conformance Testing of Communication Protocols",
+  "year": 2025,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "传统协议合规测试依赖人工编写大量测试用例和脚本，耗时耗力，效率低下，亟需自动化解决方案",
+  "problem_framing": "将模糊的协议规范文本转换为结构化可执行测试逻辑，弥合抽象规则与具体API之间的差距",
+  "key_insight": "87.5%的CoAP RFC文档遵循RFC 2119规范，使用MUST/SHALL等大写关键词标记功能点，可据此自动提取测试用例",
+  "method_signature": "关键词驱动测试用例生成 + 代码导向RAG + 自定义CoT + 迭代优化调试",
+  "evaluation_criteria": "Pass@1测试程序生成成功率，迭代次数与重复次数的边际效益分析",
+  "negative_result_or_admitted_limitation": "测试用例生成模块为可选项，用户可导入自己的测试用例；LLM对新兴库的预训练知识不足导致生成质量下降",
+  "evidence_for_taste": [
+    "LLM的训练数据是固有的过时",
+    "代码幻觉定义为调用不存在的库类",
+    "边际效益逐步下降",
+    "选择最优的最大迭代次数至关重要",
+    "区分真实合规测试结果与偶发代码生成错误"
+  ],
+  "thinking_moves": [
+    "利用协议文档格式规范性的结构化特征，从文本关键词直接反推可测试的功能点",
+    "通过迭代执行反馈逐步校准LLM的程序生成，取代一次性生成的不确定性",
+    "将复杂测试用例按参与者角色和操作时序分解为独立子程序，降低推理复杂度",
+    "根据不同库的预训练知识覆盖度动态调整RAG策略的启用与否"
+  ],
+  "topic_tags": [
+    "LLM-agent-testing",
+    "protocol-conformance-testing",
+    "automated-test-generation",
+    "CoAP-RSocket-protocols",
+    "iterative-code-refinement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

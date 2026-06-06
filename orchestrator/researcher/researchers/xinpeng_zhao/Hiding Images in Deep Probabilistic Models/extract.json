@@ -1,0 +1,42 @@
+{
+  "paper_id": "Hiding Images in Deep Probabilistic Models",
+  "doi": "10.48550/arxiv.2210.02257",
+  "title": "Hiding Images in Deep Probabilistic Models",
+  "year": 2022,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有基于自编码器的DNN隐写方法存在三个局限：解码网络需传输、缺乏安全性、难以隐藏多张图像给不同接收者",
+  "problem_framing": "将图像隐藏重新定义为在学习的概率分布中嵌入秘密图像位置，而非编码器-解码器框架",
+  "key_insight": "用DNN建模覆盖图像的概率密度，通过共享嵌入密钥生成特定噪声映射到秘密图像，实现分布层面的隐藏",
+  "method_signature": "SinGAN学习单张覆盖图像的内部patch分布，在训练时将重建损失从覆盖图像改为秘密图像",
+  "evaluation_criteria": "提取精度(PSNR/SSIM/DISTS)、模型安全性(生成质量/权重分布/泄露风险)、多图像场景",
+  "negative_result_or_admitted_limitation": "提取精度仍有很大提升空间，对精确恢复的应用需优化网络结构和使用感知损失",
+  "evidence_for_taste": [
+    "less practical",
+    "less secure",
+    "less flexible",
+    "feasible",
+    "statistically indistinguishable",
+    "graceful performance degradation"
+  ],
+  "thinking_moves": [
+    "把隐写问题从通信/编解码框架重新框定为概率分布采样问题",
+    "先建立理论直觉(分布距离)，再通过实验验证(权重分布直方图比较)",
+    "从单一图像扩展到多图像时保留安全性和精度graceful degradation",
+    "绕过传统steganalysis工具而非直接对抗，承认缺乏针对DNN输入的steganalysis方法"
+  ],
+  "topic_tags": [
+    "SinGAN-steganography",
+    "deep-probabilistic-hiding",
+    "multi-user-image-hiding",
+    "model-security-probing",
+    "generative-model-watermarking"
+  ],
+  "cites_own_work": [
+    "Wang et al. 2021 (multiple receivers)",
+    "Li & Zhang 2019 (construction-based data hiding)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

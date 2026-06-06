@@ -1,0 +1,41 @@
+{
+  "paper_id": "He et al. - 2017 - Pervasive Floorplan Generation Based on Only Inertial Sensing Feasibility, Design, and Implementati",
+  "doi": null,
+  "title": "Pervasive Floorplan Generation Based on Only Inertial Sensing: Feasibility, Design, and Implementation",
+  "year": 2017,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Floorplans are in great demand but unavailable due to commercial/security reasons; existing approaches rely on infrastructural references that may be unavailable to users.",
+  "problem_framing": "How to generate indoor floorplans using only low-quality inertial sensing from crowdsourced smartphones, coping with noise, ambiguity, and behavior diversity.",
+  "key_insight": "People's behavior offers meaningful clues—turns at corners and stationary stops at featured locations (water dispensers) enable labeling pathlets for progressive bundling into floorplans.",
+  "method_signature": "Nail (featured location) + TriNail (triangle of three Nails) as minimal stable structure for robust pathlet bundling under noisy conditions.",
+  "evaluation_criteria": "Hallway shape precision/recall/F-measure and room size error, compared against CrowdInside and Jigsaw baselines.",
+  "negative_result_or_admitted_limitation": "Two analogous sub-structures when not covered by any pathlet cannot be filtered, leading to small fraction of pathlets bundled to wrong places, but generally does not change floorplan shape.",
+  "evidence_for_taste": [
+    "people make turns at corners",
+    "stay stationary for a short",
+    "feature labels corresponding to a pathlet",
+    "the worst case caused by false negatives",
+    "the chance of a same false positive",
+    "we admit that there might be both false positives",
+    "generally does not change the floorplan"
+  ],
+  "thinking_moves": [
+    "从行为模式提取位置特征: 利用人走路在拐角转弯、在饮水机停留的规律性行为作为定位线索",
+    "定义最小稳定单元解决噪声问题: 三个点构成三角形是平面结构的最小要求,TriNail能消除矛盾干扰",
+    "容错近似而非精确匹配: 用重叠面积比阈值判断三角相似性,容忍惯性传感的定位误差",
+    "迭代优先选择过滤类似子结构: 通过出现频率和禁用原则逐步消除歧义,而非一次性全局解决"
+  ],
+  "topic_tags": [
+    "crowdsourced-floorplan-generation",
+    "inertial-sensing",
+    "pathlet-bundling",
+    "Nail-TriNail-structure",
+    "indoor-localization"
+  ],
+  "cites_own_work": [
+    "SenseWit (IEEE DCOSS 2016) - earlier conference version of this work"
+  ],
+  "extraction_quality": "full"
+}

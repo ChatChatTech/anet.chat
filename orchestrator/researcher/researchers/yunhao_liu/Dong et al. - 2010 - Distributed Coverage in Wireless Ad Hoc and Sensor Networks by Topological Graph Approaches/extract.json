@@ -1,0 +1,39 @@
+{
+  "paper_id": "Dong et al. - 2010 - Distributed Coverage in Wireless Ad Hoc and Sensor Networks by Topological Graph Approaches",
+  "doi": null,
+  "title": "Distributed Coverage in Wireless Ad Hoc and Sensor Networks by Topological Graph Approaches",
+  "year": 2010,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有覆盖调度方法依赖精确位置信息或距离测量,在资源受限网络中难以获取",
+  "problem_framing": "提出τ-confine coverage定义,用图论框架实现仅基于连通性信息的可配置覆盖粒度",
+  "key_insight": "边界 cycle 的 τ-partitionability 可替代 homology group 作为覆盖充分条件,从而松弛 Ghrist 方法的限制",
+  "method_signature": "基于 cycle-partition 的分布式覆盖算法,通过 void preserving transformation 删除冗余节点",
+  "evaluation_criteria": "覆盖集大小、相比 HGC 节省节点数、实际 trace 拓扑实验",
+  "negative_result_or_admitted_limitation": "homology group 条件过强,导致全覆盖网络被误判为有洞;Ghrist 方法只能处理三角形,造成不必要浪费",
+  "evidence_for_taste": [
+    "condition is rather strong",
+    "may introduce false positives",
+    "causes unnecessary waste",
+    "still providing a sufficient criterion",
+    "tolerate the irregularity"
+  ],
+  "thinking_moves": [
+    "识别已有方法(Ghrist)的三大局限:集中计算、假阳性、三角形约束",
+    "从 algebraic topology 重新 frame 到 graph theory",
+    "放松 homology criterion 强度,保持充分性保证",
+    "以 mobius band 反例展示 homology 方法失效而 cycle-partition 方法有效",
+    "工程上用 MIS 分布式删除节点实现稀疏覆盖集"
+  ],
+  "topic_tags": [
+    "wireless sensor networks coverage",
+    "connectivity-based location-free",
+    "cycle partition",
+    "distributed scheduling algorithm",
+    "topological graph methods"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Paper is conference submission with no explicit venue info; Yunhao Liu is co-author (not first/corresponding)"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "CLMTracing_ Black-box User-level Watermarking for Code Language Model Tracing__oa_W4416255597",
+  "doi": "10.48550/arxiv.2509.13982",
+  "title": "CLMTracing: Black-box User-level Watermarking for Code Language Model Tracing",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Open-source code LMs on platforms like Hugging Face face unauthorized commercial exploitation and redistribution, requiring user-level tracing for enforcement.",
+  "problem_framing": "Black-box watermarking for user-level code LM tracing requires simultaneously ensuring harmlessness, robustness, and efficient embedding with minimal samples.",
+  "key_insight": "Redundant parameters in code LMs can be repurposed to store watermarks while preserving model utility, and selective parameter updates resistant to fine-tuning.",
+  "method_signature": "Rule-based watermark + utility-preserving injection with SRW parameter selection + adversarial training for black-box embedding.",
+  "evaluation_criteria": "WSR (effectiveness), pass@all (harmlessness), robustness against fine-tuning and detection attacks.",
+  "negative_result_or_admitted_limitation": "Random method sometimes slightly outperforms SRW because regularization samples do not consistently improve performance and even cause drops.",
+  "evidence_for_taste": [
+    "significantly harmless improvements",
+    "negligible impact on model utility",
+    "ensuring minimal impact on performance",
+    "lower pass@all indicates superior harmlessness",
+    "empirically determined to minimize risk"
+  ],
+  "thinking_moves": [
+    "Reframe model tracing as parameter-level poisoning with utility preservation constraints",
+    "Exploit redundancy in code LMs by targeting only parameters with high watermark relevance and low performance relevance",
+    "Enhance robustness through adversarial perturbations that prepare watermark to adapt to parameter shifts",
+    "Aggregate multiple degradation metrics (pass@all) to resolve contradictory conclusions across different k values"
+  ],
+  "topic_tags": [
+    "code-LM-watermarking",
+    "black-box-ownership-verification",
+    "user-level-model-tracing",
+    "parameter-selection-robustness",
+    "IP-protection-open-source"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

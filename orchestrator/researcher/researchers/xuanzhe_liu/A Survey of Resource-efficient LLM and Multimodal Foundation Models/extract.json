@@ -1,0 +1,43 @@
+{
+  "paper_id": "A Survey of Resource-efficient LLM and Multimodal Foundation Models",
+  "doi": "10.48550/arxiv.2401.08092",
+  "title": "A Survey of Resource-Efficient LLM and Multimodal Foundation Models",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "大模型训练部署消耗巨额GPU算力与能源, 仅少数大厂有能力参与, 阻碍AI民主化",
+  "problem_framing": "在性能和资源消耗之间寻求平衡, 从算法和系统两个层面压缩模型",
+  "key_insight": "效率优化需贯穿训练到部署全流程, 结合模型压缩与系统调度协同设计",
+  "method_signature": "综述顶会论文中模型架构、训练/服务算法、系统设计等资源优化策略",
+  "evaluation_criteria": "资源消耗(GPU小时/内存/能耗)与任务精度/生成质量之比",
+  "negative_result_or_admitted_limitation": "目前手机端模型仅限10B以下规模, 尚未实现真正落地部署",
+  "evidence_for_taste": [
+    "substantial cost in terms of hardware resources",
+    "scalable and environmentally sustainable way",
+    "models are served on clouds instead of devices",
+    "only a few major players capable of training",
+    "hinder democratization",
+    "exponential resource requirements"
+  ],
+  "thinking_moves": [
+    "用算力小时数和碳排放量化资源代价, 将生态可持续性纳入AI发展核心矛盾",
+    "从云端向边缘端延伸问题域, 关注隐私和设备端部署限制",
+    "按资源类型(计算/内存/带宽)分类效率挑战, 结构化综述框架",
+    "引用Scaling Law作为背景, 对比小模型蒸馏压缩的可行性"
+  ],
+  "topic_tags": [
+    "LLM压缩",
+    "模型服务系统",
+    "边缘AI",
+    "多模态模型效率",
+    "能耗优化",
+    "分布式训练"
+  ],
+  "cites_own_work": [
+    "Mengwei Xu",
+    "Xuanzhe Liu"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Learning to embed music and metadata for context-aware music recommendation",
+  "doi": "10.1007/s11280-017-0521-6",
+  "title": "Learning to Embed Music and Metadata for Context-Aware Music Recommendation",
+  "year": 2017,
+  "venue": "World Wide Web",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "海量音乐内容造成选择悖论，用户在不同情境下偏好不同，但实时情境难以直接获取",
+  "problem_framing": "从用户历史听歌序列和元数据中学习音乐嵌入表示，区分全局偏好与情境偏好进行推荐",
+  "key_insight": "情境信息可从用户当前播放序列中推断，全局和情境偏好分别对应历史全部记录和最近session",
+  "method_signature": "Music Embedding Model (MEM) 结合滑动窗口局部上下文与用户全局历史学习嵌入",
+  "evaluation_criteria": "Precision/Recall/F1 score/Hitrate，以及稀疏数据集上的性能对比",
+  "negative_result_or_admitted_limitation": "嵌入维度增大提升性能但计算成本线性增长，需在准确率和效率间权衡",
+  "evidence_for_taste": [
+    "上下文反映在播放序列中",
+    "相似音乐应有相似嵌入",
+    "稀疏数据下性能下降更明显",
+    "BPR和FISM对稀疏更敏感"
+  ],
+  "thinking_moves": [
+    "借鉴NLP词嵌入思想处理音乐嵌入问题",
+    "将用户偏好分解为全局和情境两层分别建模",
+    "用元数据约束嵌入空间使相似音乐聚拢",
+    "先定性验证嵌入质量再定量对比基线"
+  ],
+  "topic_tags": [
+    "music-embedding",
+    "context-aware-recommendation",
+    "collaborative-filtering",
+    "user-preference-modeling",
+    "sparse-data-handling"
+  ],
+  "cites_own_work": [
+    "Deng et al. (2015) on microblog emotion for music recommendation"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

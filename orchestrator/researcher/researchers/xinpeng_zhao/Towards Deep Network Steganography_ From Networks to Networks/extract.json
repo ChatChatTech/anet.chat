@@ -1,0 +1,39 @@
+{
+  "paper_id": "Towards Deep Network Steganography_ From Networks to Networks",
+  "doi": "10.48550/arxiv.2307.03444",
+  "title": "Towards Deep Network Steganography: From Networks to Networks",
+  "year": 2022,
+  "venue": "ACM Conference (acronym 'XX')",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有隐写方案将DNN模型当作普通数据嵌入图片/视频，导致通信负担大且无法无损提取",
+  "problem_framing": "将DNN模型隐写问题重新定义为网络到网络的隐写，通过构造伪装任务实现DNN模型的隐秘传输",
+  "key_insight": "在秘密DNN中插入干扰滤波器并伪装成执行另一任务的普通DNN，仅训练干扰参数实现无损恢复",
+  "method_signature": "梯度滤波插入+侧信息隐藏+部分优化策略的端到端DNN隐写框架",
+  "evaluation_criteria": "可恢复性(BER=0)、保真度(性能下降<1%)、容量(扩展率约1.5)和不可检测性(检测率≈50%)",
+  "negative_result_or_admitted_limitation": "使用随机滤波插入策略性能明显下降，单纯使用任务损失函数会导致参数分布偏移被检测",
+  "evidence_for_taste": [
+    "随机选择的位置可能不敏感",
+    "使用mean和standard deviation足以描述高斯分布",
+    "检测准确率接近50%",
+    "性能下降不到1%",
+    " BER of 0"
+  ],
+  "thinking_moves": [
+    "把感知/模型传输问题重新框架为通信/隐写问题",
+    "从模型架构层面而非数据层面设计隐写载体",
+    "通过梯度重要性排序选择最有效的插入位置以减少干扰滤波器数量",
+    "用参数统计分布(均值/方差)约束而非逐层匹配来保证不可检测性",
+    "冻结原始参数仅训练干扰参数确保无损恢复的数学保证"
+  ],
+  "topic_tags": [
+    "DNN-steganography",
+    "model-concealment",
+    "gradient-based-filter-insertion",
+    "partial-optimization",
+    "parameter-statistical-undetectability"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

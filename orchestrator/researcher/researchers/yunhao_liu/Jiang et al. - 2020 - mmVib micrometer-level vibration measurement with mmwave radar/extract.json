@@ -1,0 +1,43 @@
+{
+  "paper_id": "Jiang et al. - 2020 - mmVib micrometer-level vibration measurement with mmwave radar",
+  "doi": null,
+  "title": "mmVib: Micrometer-Level Vibration Measurement with mmWave Radar",
+  "year": 2020,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "工业场景需要非接触式振动测量，现有方案(传感器/激光)要么侵入式部署成本高，要么精度不足",
+  "problem_framing": "多径丰富的工业环境中，微米级振动信号被噪声掩盖，直接相位估计误差超80%",
+  "key_insight": "通过多频+多天线属性构造观测一致性，用MSC模型拟合消除背景反射以恢复振动弧线",
+  "method_signature": "MSC信号模型 + 多频 chirp group 生成 + 联合圆拟合 + AoA 精细化",
+  "evaluation_criteria": "8.2%相对幅度误差, 0.5%相对频率误差; 100μm振动幅度下中位误差3.4μm",
+  "negative_result_or_admitted_limitation": "金属/厚墙阻挡会导致失效；同range bin多目标需空间谱分析或盲分离；金属多径干扰时性能下降",
+  "evidence_for_taste": [
+    "our experiments provide a different observation",
+    "But those approaches cannot provide highly precise",
+    "the vibration-induced changes in the reflected signal are obscured",
+    "due to the existence of the background reflection",
+    "our insight is that increasing the number of observations",
+    "Mikhelson et al. overcome the above problem by analyzing the mmWave signal in IQ domain",
+    "However, this work can't deal with the tiny vibration",
+    "how to find the correct circle centers with the knowledge of this property",
+    "we can improve the spatial resolution by reducing the frequency shift"
+  ],
+  "thinking_moves": [
+    "从直接相位估计失败反推问题根因：背景反射干扰+低SNR",
+    "将振动信号建模为IQ平面旋转弧线，背景反射为静态偏移",
+    "利用多频属性产生不同旋转角的观测以扩大弧线半径抗噪声",
+    "用迭代圆拟合+约束逐步逼近真实intrinsic circle",
+    "多天线AoA估计将测量投影恢复为真实振动方向"
+  ],
+  "topic_tags": [
+    "mmWave振动传感",
+    "多径抑制",
+    "非接触工业监测",
+    "IQ域信号建模",
+    "多频联合估计"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

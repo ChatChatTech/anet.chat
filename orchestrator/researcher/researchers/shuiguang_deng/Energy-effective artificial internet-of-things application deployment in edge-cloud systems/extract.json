@@ -1,0 +1,40 @@
+{
+  "paper_id": "Energy-effective artificial internet-of-things application deployment in edge-cloud systems",
+  "doi": "10.1007/s12083-021-01273-5",
+  "title": "Energy-effective artificial internet-of-things application deployment in edge-cloud systems",
+  "year": 2021,
+  "venue": "Cluster Computing",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "边缘服务器资源受限且能耗高,部署AIoT服务时需权衡性能与成本",
+  "problem_framing": "将AIoT应用建模为DAG,转化为双目标优化问题CA3D",
+  "key_insight": "利用DAG刻画服务依赖关系,通过MOEA/D在Pareto前沿搜索性能-能耗平衡解",
+  "method_signature": "MOEA/D分解式多目标进化算法,结合遗传算子求解CA3D",
+  "evaluation_criteria": "Pareto前沿覆盖度、Hyper-volume指标、Alibaba集群与Montage工作流数据集",
+  "negative_result_or_admitted_limitation": "方案仅提供良好起点,在快速变化环境下无法保证效率",
+  "evidence_for_taste": [
+    "we are going to consider the uncertainty",
+    "the proposed solution may not guarantee its efficiency",
+    "we turn to the heuristic method like MOEA/D",
+    "try to find some sub-optimal solutions"
+  ],
+  "thinking_moves": [
+    "将AI模型(如DeepFM)视为DAG结构,继承深度学习工作流建模习惯",
+    "把性能-能耗联合优化问题拆解为标量子问题并行求解",
+    "从物理电路特性出发建立能耗模型(E∝f²)",
+    "承认启发式方法只能找到次优解,明确算法适用范围"
+  ],
+  "topic_tags": [
+    "AIoT服务部署",
+    "边缘计算多目标优化",
+    "DAG建模",
+    "MOEA/D算法",
+    "能耗-延迟权衡"
+  ],
+  "cites_own_work": [
+    "Xiang et al. 2020",
+    "Deng et al. 2020"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

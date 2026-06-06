@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2020 - Experience aging or glitching why does android stop responding and what can we do about it",
+  "doi": null,
+  "title": "Experience: Aging or Glitching? Why Does Android Stop Responding and What Can We Do About It?",
+  "year": 2020,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Android用户频繁遇到ANR/SNR导致直接用户体验中断,但学界对其流行程度和根因缺乏大规模实测理解",
+  "problem_framing": "在30000台真实手机上进行众包测量,构建自动化根因分析pipeline对ANR/SNR事件进行聚类和诊断",
+  "key_insight": "WAM的discard命令因fsync变成准同步阻塞写入,是ANR/SNR最大根因(35%),可通过细粒度批处理消除",
+  "method_signature": "Android-MOD修改200行代码收集系统调用栈,wait-for图定位关键线程,similar-stack聚类自动分类根因",
+  "evaluation_criteria": "WAM修复后>99%消除相关ANR/SNR,写速度仅下降3%,已部署至约20M用户",
+  "negative_result_or_admitted_limitation": "资源竞争和内存不足是经典OS挑战,没有银弹;应用缺陷更是无法根本解决",
+  "evidence_for_taste": [
+    "hardware does not seem to relieve the problem",
+    "ANR and SNR are more of a software issue",
+    "no silver bullet for bugs and defects",
+    "surprising find that largest root cause comes from flawed design",
+    "simple system tuning can yield great performance benefits",
+    "domain knowledge could be properly applied to enhance ML quality"
+  ],
+  "thinking_moves": [
+    "从现象(ANR/SNR高发)追溯到系统设计缺陷而非硬件或应用bug",
+    "用wait-for图将阻塞传播链逆向追踪到最关键线程",
+    "将异构特征分离使用不同相似度度量后再合并以提高聚类精度",
+    "将real-time WAM和lazy WAM两极策略折中为细粒度批处理",
+    "用领域知识指导ML特征表示而非盲目调参"
+  ],
+  "topic_tags": [
+    "android-anr-snr",
+    "write-amplification-mitigation",
+    "crowdsourced-measurement",
+    "root-cause-analysis",
+    "mobile-storage-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

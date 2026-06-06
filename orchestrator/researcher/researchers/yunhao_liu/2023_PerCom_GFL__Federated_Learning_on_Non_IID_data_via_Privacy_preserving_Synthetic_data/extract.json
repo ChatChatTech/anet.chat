@@ -1,0 +1,37 @@
+{
+  "paper_id": "2023_PerCom_GFL__Federated_Learning_on_Non_IID_data_via_Privacy_preserving_Synthetic_data",
+  "doi": null,
+  "title": "GFL: Federated Learning on Non-IID data via Privacy-preserving Synthetic data",
+  "year": 2023,
+  "venue": "PerCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Federated learning suffers severe accuracy degradation (up to 85% drop) under Non-IID data distribution across clients",
+  "problem_framing": "解决Non-IID数据分布问题同时保护隐私，现有方法要么只限制模型距离(治标不治本)，要么共享原始数据(违反FL隐私原则)",
+  "key_insight": "用DPGAN生成带随机分布的合成数据，上传服务器后取IID子集平衡分布，并用epoch decay逐步减少合成数据使用以对抗mode collapse",
+  "method_signature": "GFL: DPGAN生成隐私保护合成数据→服务器IID化→带epoch decay的FL聚合",
+  "evaluation_criteria": "测试准确率、收敛速度、成员推断攻击准确率、额外计算/通信开销",
+  "negative_result_or_admitted_limitation": "ε过小虽能降低攻击准确率至11.66%，但合成数据质量差导致FL准确率仅52.79%，需在隐私与性能间trade-off",
+  "evidence_for_taste": [
+    "cannot address the root cause",
+    "sharing raw data should be forbidden",
+    "mode collapse and low-quality",
+    "privacy and performance trade-off"
+  ],
+  "thinking_moves": [
+    "识别现有方法只约束模型距离而非解决数据分布根因",
+    "从'被动聚合参数'转为'主动利用服务器资源训练额外IID数据'",
+    "用随机分布掩盖真实数据分布保护隐私",
+    "用epoch decay动态平衡合成数据的利弊"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "non-IID-data",
+    "differential-privacy",
+    "GAN-synthetic-data",
+    "membership-inference-attack"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供完整DOI和详细作者贡献信息，基于目录名推断年份和venue | md truncated to head40k+tail20k"
+}

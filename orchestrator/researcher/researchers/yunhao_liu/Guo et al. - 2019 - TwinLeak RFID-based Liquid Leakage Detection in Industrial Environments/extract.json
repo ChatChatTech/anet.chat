@@ -1,0 +1,37 @@
+{
+  "paper_id": "Guo et al. - 2019 - TwinLeak RFID-based Liquid Leakage Detection in Industrial Environments",
+  "doi": null,
+  "title": "TwinLeak: RFID-based Liquid Leakage Detection in Industrial Environments",
+  "year": 2019,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传统方案存在侵入性部署、高成本、高功耗问题，阻碍大规模工业监测",
+  "problem_framing": "利用粗粒度RSSI和相位读数实现低延迟的精准泄漏检测",
+  "key_insight": "相邻标签间的感应耦合对泄漏液体高度敏感，利用双标签信号关系检测",
+  "method_signature": "短信号段特征提取+轻量分类器+模型引导泄漏追踪",
+  "evaluation_criteria": "TPR>97.2%、FPR<0.5%、属性估计误差~10%、4.6mL触发预警",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "inductive coupling between two adjacent tags",
+    "relationship between the signals of two tags",
+    "light-weight classifier",
+    "intrusive deployment, high cost",
+    "model-guided method for leakage progress tracking"
+  ],
+  "thinking_moves": [
+    "将感知问题从单标签个体分析转向双标签关系分析",
+    "利用物理现象(感应耦合)指导信号特征工程",
+    "同时解决检测和估算两个层次的问题"
+  ],
+  "topic_tags": [
+    "RFID sensing",
+    "industrial IoT",
+    "liquid leakage detection",
+    "wireless sensing",
+    "passive sensing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "仅提供摘要部分，缺乏方法细节和实验结果描述，无法提取更深入的设计考量或局限性承认"
+}

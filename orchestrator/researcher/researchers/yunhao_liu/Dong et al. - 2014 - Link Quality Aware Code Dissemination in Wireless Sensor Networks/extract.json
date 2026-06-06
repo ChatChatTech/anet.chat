@@ -1,0 +1,42 @@
+{
+  "paper_id": "Dong et al. - 2014 - Link Quality Aware Code Dissemination in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Link Quality Aware Code Dissemination in Wireless Sensor Networks",
+  "year": 2014,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Wireless reprogramming is essential when physically collecting deployed sensor nodes is infeasible; GreenOrbs deployment required 127 software upgrades",
+  "problem_framing": "Existing protocols suffer from low channel efficiency (14.3% for CC2420 with small packets) and suboptimal sender selection that ignores link quality",
+  "key_insight": "Weight senders by uncovered neighbors multiplied by outbound link quality; larger packets improve efficiency but require link-aware sender selection to avoid losses",
+  "method_signature": "ECD uses configurable packet sizes, link-quality-weighted impact estimation, and impact-based backoff timers for fast implicit coordination",
+  "evaluation_criteria": "Completion time and data traffic volume compared against Deluge and MNP on 25-node testbed and TOSSIM simulations",
+  "negative_result_or_admitted_limitation": "Large packets (92-byte payload) suffer performance degradation due to wireless loss susceptibility; sender selection cannot prevent hidden-terminal collisions",
+  "evidence_for_taste": [
+    "efficiency ratio is only 14.3 percent",
+    "put less weight on nodes with poor outbound link qualities",
+    "largest impact sender is most likely to transmit",
+    "largest packets does not lead to best performance",
+    "sender selection reduces 3-4 times collisions"
+  ],
+  "thinking_moves": [
+    "从部署现场痛点(版本升级需求)抽象出协议效率瓶颈",
+    "用具体数值(e.g., 14.3%效率)量化隐性问题",
+    "用拓扑示例(80 vs 50 transmissions)展示机制威力",
+    "承认大包策略有副作用,需配合sender selection",
+    "将MNP的显式多轮协调替换为隐式backoff机制"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-reprogramming",
+    "code-dissemination-protocol",
+    "link-quality-estimation",
+    "sender-selection-algorithm",
+    "TinyOS-implementation"
+  ],
+  "cites_own_work": [
+    "Dong et al. - DPLC (2010)",
+    "Dong et al. - Elon (2010)",
+    "Dong et al. - Bulk Data Dissemination (2009)"
+  ],
+  "extraction_quality": "full"
+}

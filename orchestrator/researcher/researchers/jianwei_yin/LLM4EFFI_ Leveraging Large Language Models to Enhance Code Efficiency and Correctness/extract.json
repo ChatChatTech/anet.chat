@@ -1,0 +1,38 @@
+{
+  "paper_id": "LLM4EFFI_ Leveraging Large Language Models to Enhance Code Efficiency and Correctness",
+  "doi": "10.48550/arxiv.2502.18489",
+  "title": "LLM4EFFI: Leveraging Large Language Models to Enhance Code Efficiency and Correctness",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM生成代码虽正确但需人工优化效率，无法开箱即用",
+  "problem_framing": "把代码效率优化问题分为逻辑域和代码域，先效率后正确",
+  "key_insight": "分离逻辑域算法探索与代码域实现优化，先求效率再保正确",
+  "method_signature": "两域分离+先效后正的代码生成框架",
+  "evaluation_criteria": "DPS_norm/Beyond/eff@1效率指标与Pass@1正确率",
+  "negative_result_or_admitted_limitation": "高效代码可能更复杂难以阅读，需在效率与可维护性间取舍",
+  "evidence_for_taste": [
+    "ECCO效率提升往往以牺牲正确性为代价",
+    "Effi-Learner过于关注运行时间而忽视代码准确性",
+    "LLM4EFFI可同时提升正确性和效率",
+    "现有方法受初始代码算法设计限制只能增量改进",
+    "通过消融实验验证各组件的必要性"
+  ],
+  "thinking_moves": [
+    "把代码效率问题拆解为逻辑域算法探索和代码域实现优化",
+    "模仿人类开发者的思考流程：先算法设计再实现优化",
+    "先效率后正确的顺序避免过早约束算法选择空间",
+    "消融实验拆解两个独特性贡献"
+  ],
+  "topic_tags": [
+    "LLM代码生成",
+    "代码效率优化",
+    "算法复杂度",
+    "测试用例验证",
+    "代码正确性保证"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

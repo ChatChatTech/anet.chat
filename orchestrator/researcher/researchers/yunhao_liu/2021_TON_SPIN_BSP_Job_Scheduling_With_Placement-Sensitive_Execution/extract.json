@@ -1,0 +1,40 @@
+{
+  "paper_id": "2021_TON_SPIN_BSP_Job_Scheduling_With_Placement-Sensitive_Execution",
+  "doi": null,
+  "title": "SPIN: BSP Job Scheduling With Placement-Sensitive Execution",
+  "year": 2021,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有调度器针对大数据任务设计，不适用于BSP任务的gang调度和placement敏感性特征",
+  "problem_framing": "联合优化placement选择和调度顺序，最小化makespan，且需容忍执行时间估计误差",
+  "key_insight": "通过LP松弛+随机舍入将gang调度约束松弛化，可得近似比保证且对估计误差鲁棒",
+  "method_signature": "LP松弛(Program 1) + 随机舍入(Algorithm 1)实现placement敏感的gang调度近似算法",
+  "evaluation_criteria": "makespan降低倍数、作业平均完成时间减少、估计误差下的鲁棒性验证",
+  "negative_result_or_admitted_limitation": "SPIN不适用于短运行延迟敏感任务，仅适合长时运行作业",
+  "evidence_for_taste": [
+    "first approximate algorithm for gang scheduling placement-sensitive jobs",
+    "NP-hard to find a solution that is O(log np / 2√log log np)-approximate",
+    "SPIN is not suitable for scheduling short-running latency-sensitive jobs",
+    "Retrofitting schedulers designed for big-data jobs to our BSP jobs could lead to inefficient executions",
+    "to the best of our knowledge, this is the first approximate algorithm"
+  ],
+  "thinking_moves": [
+    "先证近似难度下界，再构造可行近似算法",
+    "将整数约束松弛为LP，利用舍入技术恢复整数解",
+    "用概率论工具(Chernoff bound)量化舍入误差与估计误差的影响",
+    "将gang调度约束从严格同步放宽，通过概率保证同步性"
+  ],
+  "topic_tags": [
+    "BSP_job_scheduling",
+    "placement_sensitive_execution",
+    "gang_scheduling",
+    "GPU_cluster_scheduling",
+    "LP_relaxation_rounding"
+  ],
+  "cites_own_work": [
+    "preliminary version titled \"Scheduling Placement-Sensitive BSP Jobs with Inaccurate Execution Time Estimation\" at INFOCOM 2020"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

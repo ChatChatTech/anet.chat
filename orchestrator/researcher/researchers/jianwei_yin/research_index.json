@@ -1,0 +1,2658 @@
+{
+  "slug": "jianwei_yin",
+  "n_papers": 85,
+  "n_indexed": 85,
+  "anchors": [
+    "Efficient and effective data imputation with influence functions",
+    "Backdoor Pre-trained Models Can Transfer to All",
+    "Federated Probabilistic Preference Distribution Modelling",
+    "ERA-CoT: Improving Chain-of-Thought through Entity Relationship Analysis",
+    "ChatUniTest: A Framework for LLM-Based Test Generation",
+    "BPI: A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain",
+    "Choco-Q: Commute Hamiltonian-based QAOA for Constrained Binary Optimization",
+    "GRACE: Graph-Guided Repository-Aware Code Completion",
+    "Backdoor Pre-trained Models Can Transfer to All",
+    "RA-ISF: Learning to Answer from Retrieval Augmentation via Iterative Self-Feedback",
+    "Completion by Comprehension",
+    "More Rigorous Cardinality Estimation",
+    "Quality of Trilateration Confidence-Based Iterat",
+    "Locating in fingerprint space"
+  ],
+  "by_id": {
+    "A Latent Feelings-aware RNN Model for User Churn Prediction with Behavioral Data": {
+      "title": "A Latent Feelings-aware RNN Model for User Churn Prediction with Behavioral Data",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.1911.02224",
+      "key_insight": "用户满意度决定logout时长(aspiration),游戏内行为间隔由欲望决定;通过时间预测任务可反向提取情感潜变量",
+      "method_signature": "LaFee双LSTM结构同时学习satisfaction和aspiration潜变量,共享参数独立输出",
+      "tags": [
+        "user-churn-prediction",
+        "latent-feeling-estimation",
+        "RNN-LSTM-variant",
+        "behavior-sequence-modeling",
+        "online-game-analytics"
+      ],
+      "quality": "full"
+    },
+    "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition": {
+      "title": "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2507.11202",
+      "key_insight": "单个模态在不同模态组合中提供的特征信息存在差异，核心挑战是如何充分探索每个组合所需的独特特征信息",
+      "method_signature": "MCULoRA通过模态组合感知低秩适配与动态参数微调实现模态特征解耦",
+      "tags": [
+        "incomplete-multimodal-learning",
+        "low-rank-adaptation",
+        "emotion-recognition",
+        "gradient-conflict",
+        "modality-combination-aware",
+        "parameter-efficient-training"
+      ],
+      "quality": "full"
+    },
+    "A downscaling approach to compare COVID-19 count data from databases aggregated at different spatial scales": {
+      "title": "A downscaling approach to compare COVID-19 count data from databases aggregated at different spatial scales",
+      "year": 2020,
+      "venue": "medRxiv",
+      "doi": "10.1101/2020.06.17.20133959",
+      "key_insight": "多源数据在95%可信区间内基本一致,但Xu等数据覆盖更完整、偏差更小",
+      "method_signature": "贝叶斯Poisson downscaling,Matérn空间随机场,多协变量回归",
+      "tags": [
+        "COVID-19数据质量评估",
+        "贝叶斯空间downscaling",
+        "多源数据融合比较",
+        "传染病空间建模",
+        "生态学谬误MAUP"
+      ],
+      "quality": "full"
+    },
+    "Agentic Services Computing": {
+      "title": "Agentic Services Computing",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2509.24380",
+      "key_insight": "智能服务不再是被调用的固定函数，而是具备感知、推理、行动、协作能力的主动参与者",
+      "method_signature": "SCALE特征框架(五项)+四阶段生命周期(Design/Deployment/Operation/Evolution)与四能力维度交织矩阵",
+      "tags": [
+        "agentic-services-computing",
+        "LLM-agent-lifecycle",
+        "multi-agent-collaboration",
+        "trustworthy-AI-services",
+        "service-ecosystem-orchestration"
+      ],
+      "quality": "full"
+    },
+    "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent": {
+      "title": "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent",
+      "year": 2021,
+      "venue": null,
+      "doi": "10.48550/arxiv.2103.01590",
+      "key_insight": "国际化程度高的项目（含英文readme）平均获得更多stars(1197 vs 471)",
+      "method_signature": "GitHub项目数据收集(1000个)+问卷调查(101份响应)混合方法",
+      "tags": [
+        "BAT开源生态",
+        "开源项目分类",
+        "国际化努力",
+        "开发者动机调查",
+        "GitHub实证分析"
+      ],
+      "quality": "full"
+    },
+    "An Explainable Toolbox for Evaluating Pre-trained Vision-Language Models": {
+      "title": "An Explainable Toolbox for Evaluating Pre-trained Vision-Language Models",
+      "year": 2022,
+      "venue": "EMNLP Demos",
+      "doi": "10.18653/v1/2022.emnlp-demos.4",
+      "key_insight": "minor input changes会暴露模型能力边界，hard negative采样策略是诊断的核心",
+      "method_signature": "VL-CheckList: 语言变体(Object/Attribute/Relation)+视觉变体(object-level augmentation)",
+      "tags": [
+        "VLP模型诊断",
+        "Image-Text-Matching评估",
+        "hard negative采样",
+        "vision-language模型可解释性",
+        "细粒度能力探针"
+      ],
+      "quality": "full"
+    },
+    "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain": {
+      "title": "BPI: A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain",
+      "year": 2025,
+      "venue": "ACM SIGMOD 2026",
+      "doi": "10.48550/arxiv.2509.00480",
+      "key_insight": "Blockchain immutability allows users to skip previously queried data and focus on new data only, enabling Articulated Search via stop-location tokens to narrow search scope",
+      "method_signature": "BMF+ forest structure with feature mask encoding and bitwise operations; CRC-based variable-length VO compression for fine-grained validation",
+      "tags": [
+        "hybrid-storage-blockchain",
+        "keyword-search-index",
+        "query-verification",
+        "append-only-data-structures",
+        "bitwise-search"
+      ],
+      "quality": "full"
+    },
+    "Backdoor Pre-trained Models Can Transfer to All": {
+      "title": "Backdoor Pre-trained Models Can Transfer to All",
+      "year": 2021,
+      "venue": "CCS '21",
+      "doi": "10.1145/3460120.3485370",
+      "key_insight": "将trigger映射到预训练模型目标token的输出表征(POR)而非标签，使后门随下游任务复用该表征而自动转移",
+      "method_signature": "伪孪生网络训练：冻结参考模型参数，指导目标模型在中毒文本上逼近POR同时保持其他表征正常",
+      "tags": [
+        "backdoor-attack",
+        "pre-trained-language-models",
+        "transfer-learning",
+        "NLP-security",
+        "output-representation-manipulation"
+      ],
+      "quality": "full"
+    },
+    "Benchmarking Sequential Visual Input Reasoning and Prediction in Multimodal Large Language Models": {
+      "title": "Benchmarking Sequential Visual Input Reasoning and Prediction in Multimodal Large Language Models",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2310.13473",
+      "key_insight": "图像训练的模型(LLaVA)反而优于视频训练的模型(Otter),简单架构泛化更强",
+      "method_signature": "三任务benchmark配三种LLM评判器(SGAE/PPE/MGAE)进行多维度评估",
+      "tags": [
+        "MLLM预eval",
+        "序列视觉推理",
+        "未来预测",
+        "多模态基准测试",
+        "LLM-as-Judge"
+      ],
+      "quality": "partial"
+    },
+    "Bridging Context Gaps_ Leveraging Coreference Resolution for Long Contextual Understanding": {
+      "title": "Bridging Context Gaps: Leveraging Coreference Resolution for Long Contextual Understanding",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2410.01671",
+      "key_insight": "Resolving coreferences and replacing vague mentions with representative mentions systematically partitions context into easier-to-handle segments for LLMs",
+      "method_signature": "LQCA: coreference resolution on sub-documents + mentions distance computation + representative mention definition + QA with mention replacement",
+      "tags": [
+        "long-context-LLM",
+        "coreference-resolution",
+        "mention-clustering",
+        "text-quality-enhancement",
+        "question-answering"
+      ],
+      "quality": "full"
+    },
+    "CLMTracing_ Black-box User-level Watermarking for Code Language Model Tracing__oa_W4416255597": {
+      "title": "CLMTracing: Black-box User-level Watermarking for Code Language Model Tracing",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2509.13982",
+      "key_insight": "Redundant parameters in code LMs can be repurposed to store watermarks while preserving model utility, and selective parameter updates resistant to fine-tuning.",
+      "method_signature": "Rule-based watermark + utility-preserving injection with SRW parameter selection + adversarial training for black-box embedding.",
+      "tags": [
+        "code-LM-watermarking",
+        "black-box-ownership-verification",
+        "user-level-model-tracing",
+        "parameter-selection-robustness",
+        "IP-protection-open-source"
+      ],
+      "quality": "full"
+    },
+    "ChatUniTest_ A Framework for LLM-Based Test Generation": {
+      "title": "ChatUniTest: A Framework for LLM-Based Test Generation",
+      "year": null,
+      "venue": "FSE Companion '24",
+      "doi": "10.48550/arxiv.2305.04764",
+      "key_insight": "自适应焦点上下文机制在token限制内最大化有价值信息,同时生成-验证-修复闭环修正错误",
+      "method_signature": "基于AST解析和依赖分析构建上下文,经生成-三层验证-规则/LLM修复的完整流程",
+      "tags": [
+        "LLM自动化测试生成",
+        "自适应上下文选择",
+        "测试用例修复机制",
+        "Java单元测试",
+        "生成验证修复闭环"
+      ],
+      "quality": "full"
+    },
+    "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization": {
+      "title": "Choco-Q: Commute Hamiltonian-based QAOA for Constrained Binary Optimization",
+      "year": 2025,
+      "venue": "IEEE International Symposium on High-Performance Computer Architecture (HPCA)",
+      "doi": "10.1109/hpca61900.2025.00031",
+      "key_insight": "利用Heisenberg绘景中算子与哈密顿量对易则期望值不变的特性,发明对易哈密顿量作为驱动哈密顿量",
+      "method_signature": "对易哈密顿量+序列化+等价分解+变量消除三层优化",
+      "tags": [
+        "QAOA-constraint-encoding",
+        "commute-Hamiltonian",
+        "quantum-circuit-decomposition",
+        "NISQ-deployability",
+        "Hamiltonian-serialization"
+      ],
+      "quality": "full"
+    },
+    "Cloud-Native Computing_ A Survey from the Perspective of Services": {
+      "title": "Cloud-Native Computing: A Survey from the Perspective of Services",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2306.14402",
+      "key_insight": "云原生本质是基于微服务架构的分布式弹性可扩展系统，关键在于资源虚拟化与弹性供给实现业务敏捷",
+      "method_signature": "解耦生命周期+三层性能指标体系+基础功能模块的综述框架",
+      "tags": [
+        "cloud-native-lifecycle",
+        "microservice-orchestration",
+        "container-resource-virtualization",
+        "kubernetes-ecosystem",
+        "service-level-objective"
+      ],
+      "quality": "full"
+    },
+    "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding": {
+      "title": "Completion by Comprehension: Guiding Code Generation with Multi-Granularity Understanding",
+      "year": 2025,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2512.04538",
+      "key_insight": "采用\"先理解,后补全\"范式,通过静态分析提取多粒度上下文指导生成",
+      "method_signature": "静态分析+图选择+结构重排的多粒度理解框架",
+      "tags": [
+        "repository-level-code-completion",
+        "multi-granularity-code-understanding",
+        "structure-aware-retrieval",
+        "static-analysis-AST",
+        "retrieval-augmented-generation"
+      ],
+      "quality": "full"
+    },
+    "Context-Aware Deep Spatiotemporal Network for Hand Pose Estimation From Depth Images": {
+      "title": "Context-Aware Deep Spatio-Temporal Network for Hand Pose Estimation from Depth Images",
+      "year": 2018,
+      "venue": "IEEE Transactions on Cybernetics",
+      "doi": "10.1109/tcyb.2018.2873733",
+      "key_insight": "通过自适应融合网络动态组合空间网络和时序网络的预测,而不是简单平均或固定权重",
+      "method_signature": "CADSTN: 切片3D体素表示+LSTM时序建模+可学习权重融合",
+      "tags": [
+        "hand-pose-estimation",
+        "depth-image",
+        "spatio-temporal-modeling",
+        "3D-volumetric-representation",
+        "adaptive-fusion"
+      ],
+      "quality": "full"
+    },
+    "Convergence in Crossover Service": {
+      "title": "Convergence in Crossover Service",
+      "year": 2023,
+      "venue": "Advanced Topics in Science and Technology in China",
+      "doi": "10.1007/978-981-19-8844-8",
+      "key_insight": "跨域服务以3C为特征(跨域、融合、复杂)，融合是实现跨域服务的关键",
+      "method_signature": "多维度收敛框架：模式→需求→运行时环境→质量→价值的系统方法",
+      "tags": [
+        "service-computing",
+        "crossover-service",
+        "convergence-framework",
+        "service-ecosystem",
+        "cross-organizational-process"
+      ],
+      "quality": "partial"
+    },
+    "CoreGuard_ Safeguarding Foundational Capabilities of LLMs Against Model Stealing in Edge Deployment": {
+      "title": "CoreGuard: Safeguarding Foundational Capabilities of LLMs Against Model Stealing in Edge Deployment",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2410.13903",
+      "key_insight": "通过行置换权重矩阵锁定模型,配合传播协议使单次初始授权即可授权所有后续层,从而实现TEE授权与GPU计算的高效结合。",
+      "method_signature": "行置换权重+列置换传播授权:仅需一次TEE授权即可保护所有层,将TEE-GPU传输降至5轮。",
+      "tags": [
+        "LLM-model-stealing-defense",
+        "edge-deployment-security",
+        "permutation-based-model-locking",
+        "TEE-GPU-offloading",
+        "trusted-execution-environment"
+      ],
+      "quality": "partial"
+    },
+    "DP-MemArc_ Differential Privacy Transfer Learning for Memory Efficient Language Models": {
+      "title": "DP-MemArc: Differential Privacy Transfer Learning for Memory Efficient Language Models",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2406.11087",
+      "key_insight": "通过旁路网络压缩激活函数维度或用可逆网络从输出重建中间状态，可将内存优化与隐私保护解耦",
+      "method_signature": "DP-MemArc_side + DP-MemArc_rev 双架构，BK-MixOpt差分隐私优化",
+      "tags": [
+        "differential-privacy-finetuning",
+        "memory-efficient-LLM",
+        "side-network-tuning",
+        "reversible-networks",
+        "parameter-efficient-transfer"
+      ],
+      "quality": "full"
+    },
+    "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks": {
+      "title": "DPoS: Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2012.14108",
+      "key_insight": "采用posted price机制实现take-it-or-leave-it交易，每租户根据公布的资源价格自行决策，无需向MVNO披露任何隐私信息。",
+      "method_signature": "基于原始对偶方法的在线切片算法DPoS，由DPoS-MVNO和DPoS-TNT_n两部分组成，复杂度分别为O(NC)和O(C)。",
+      "tags": [
+        "network-slicing",
+        "decentralized-algorithm",
+        "posted-price-mechanism",
+        "privacy-preserving",
+        "primal-dual"
+      ],
+      "quality": "full"
+    },
+    "Data-Free Federated Class Incremental Learning with Diffusion-Based Generative Memory": {
+      "title": "Data-Free Federated Class Incremental Learning with Diffusion-Based Generative Memory",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2405.17457",
+      "key_insight": "扩散模型相比GAN更稳定可控，可本地训练生成样本，结合熵过滤筛选高质量生成数据",
+      "method_signature": "DFedDGM：扩散模型+均衡采样器+熵过滤+知识蒸馏特征正则",
+      "tags": [
+        "federated-class-incremental-learning",
+        "diffusion-model-generation",
+        "data-free-privacy",
+        "knowledge-distillation",
+        "entropy-filtering"
+      ],
+      "quality": "full"
+    },
+    "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions": {
+      "title": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2407.08584",
+      "key_insight": "通过将搜索空间按服务器初始忙时划分为不重叠子区间，将非线性能耗约束转化为线性约束，从而高效求解",
+      "method_signature": "OBTA窄化搜索空间+分段线性化；WF水填充K-近似；RD全局优化副本删除；OCWF-ACC早退出加速",
+      "tags": [
+        "data-locality-scheduling",
+        "distributed-job-execution",
+        "bipartite-graph-matching",
+        "approximation-algorithm",
+        "water-filling-heuristic"
+      ],
+      "quality": "full"
+    },
+    "Decision Tree Construction Algorithm Based on Association Rules": {
+      "title": "Decision Tree Construction Algorithm Based on Association Rules",
+      "year": 2012,
+      "venue": "ICCASM",
+      "doi": "10.2991/iccasm.2012.191",
+      "key_insight": "用关联规则'有效规则'(effective rules)来构建决策树节点",
+      "method_signature": "先用Apriori挖掘关联规则,再用有效规则引导决策树分裂",
+      "tags": [
+        "text-based classification",
+        "association rules mining",
+        "decision tree",
+        "product classification",
+        "B2C e-commerce"
+      ],
+      "quality": "full"
+    },
+    "Differentiable and Scalable Generative Adversarial Models for Data Imputation": {
+      "title": "Differentiable and Scalable Generative Adversarial Models for Data Imputation",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2201.03202",
+      "key_insight": "利用最优传输理论设计掩码Sinkhorn散度使GAN可微，从而可解析推导精度保证下的最小训练样本数",
+      "method_signature": "SCIS = DIM(MS散度损失) + SSE(最小样本量估计)",
+      "tags": [
+        "GAN-imputation",
+        "optimal-transport",
+        "sample-size-estimation",
+        "vanishing-gradient",
+        "large-scale-missing-data"
+      ],
+      "quality": "full"
+    },
+    "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation": {
+      "title": "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2504.10538",
+      "key_insight": "用双塔MLLM解耦知识表征和过渡感知特征，通过互信息估计进行分层对齐",
+      "method_signature": "K-MLLM+T-MLLM双塔结构结合过渡模式对齐模块TPA的两阶段蒸馏",
+      "tags": [
+        "LLM-enhanced推荐",
+        "多模态会话推荐",
+        "知识蒸馏",
+        "过渡模式建模",
+        "参数高效微调"
+      ],
+      "quality": "full"
+    },
+    "Distributed Redundant Placement for Microservice-based Applications at the Edge": {
+      "title": "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+      "year": 2019,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1911.03600",
+      "key_insight": "同一候选服务可部署在多个边缘站点实现冗余，通过多路访问加速响应同时保证高可用性",
+      "method_signature": "SAA-RP框架结合GASS遗传算法求解，每个候选服务的部署实例数和位置作为决策变量",
+      "tags": [
+        "edge-computing-service-placement",
+        "microservice-redundancy",
+        "stochastic-optimization",
+        "genetic-algorithm",
+        "kubernetes-edge"
+      ],
+      "quality": "full"
+    },
+    "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4392737534": {
+      "title": "ERA-CoT: Improving Chain-of-Thought through Entity Relationship Analysis",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2403.06932",
+      "key_insight": "通过显式关系提取→隐式关系推理→关系判别过滤,可增强LLM对实体关系的理解从而提升推理准确性",
+      "method_signature": "5步pipeline:实体提取→显式关系→隐式推理→阈值过滤→问答",
+      "tags": [
+        "LLM-CoT增强",
+        "实体关系抽取",
+        "零样本推理",
+        "隐式关系推断",
+        "问答系统"
+      ],
+      "quality": "full"
+    },
+    "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544": {
+      "title": "ERA-CoT: Improving Chain-of-Thought through Entity Relationship Analysis",
+      "year": 2024,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2024.acl-long.476",
+      "key_insight": "Filtering unreliable implicit relationships via scoring threshold eliminates erroneous relations that otherwise degrade reasoning.",
+      "method_signature": "Five-step ERA-CoT pipeline: entity extraction, explicit RE, implicit inference, discrimination scoring, Q&A.",
+      "tags": [
+        "LLM-reasoning",
+        "chain-of-thought",
+        "entity-relationship-analysis",
+        "zero-shot-prompting",
+        "multi-hop-reasoning"
+      ],
+      "quality": "full"
+    },
+    "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence": {
+      "title": "Edge Intelligence: The Confluence of Edge Computing and Artificial Intelligence",
+      "year": 2020,
+      "venue": "IEEE Internet of Things Journal",
+      "doi": "10.1109/jiot.2020.2984887",
+      "key_insight": "AI与边缘计算是双向互动关系:AI为边缘提供优化技术,边缘为AI提供场景与平台",
+      "method_signature": "survey视角,用层次化路线图组织文献,QoE作为优化目标统一两个方向",
+      "tags": [
+        "edge-intelligence-taxonomy",
+        "federated-learning-edge",
+        "computation-offloading",
+        "learning-driven-communication",
+        "device-edge-cloud-synergy"
+      ],
+      "quality": "full"
+    },
+    "Editorial_ ACM_Springer Mobile Networks &amp; Applications - Special Issue on Mobile Service Computing and Applications": {
+      "title": "Editorial: ACM/Springer Mobile Networks & Applications - Special Issue on Mobile Service Computing and Applications",
+      "year": 2019,
+      "venue": "Mobile Networks & Applications",
+      "doi": "10.1007/s11036-019-01306-7",
+      "key_insight": "服务不再是传统平台限定,可部署在移动设备或云服务器通过无线网络交付",
+      "method_signature": "综述特刊六篇高质量论文,无原创方法提出",
+      "tags": [
+        "mobile-service-computing",
+        "collaborative-filtering-recommendation",
+        "edge-computing-deployment",
+        "augmented-reality-collaboration",
+        "vm-scheduling-energy-efficiency"
+      ],
+      "quality": "partial"
+    },
+    "Efficient and effective data imputation with influence functions": {
+      "title": "Efficient and Effective Data Imputation with Influence Functions",
+      "year": 2021,
+      "venue": "PVLDB",
+      "doi": "10.14778/3494124.3494143",
+      "key_insight": "利用影响函数的加性性质,将单个样本的参数扰动和损失变化通过链式法则扩展到样本集,从而实现无需重训练即可估算添加样本后的精度",
+      "method_signature": "EDIT系统含IIE模块计算影响功率,RSS模块选择最小代表集,加权损失函数驱动模型关注高影响样本",
+      "tags": [
+        "数据插补",
+        "影响函数",
+        "代表样本选择",
+        "参数模型加速",
+        "缺失数据处理"
+      ],
+      "quality": "full"
+    },
+    "Federated Learning on Non-iid Data via Local and Global Distillation": {
+      "title": "Federated Learning on Non-iid Data via Local and Global Distillation",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2306.14443",
+      "key_insight": "利用dropout机制实现单模型自蒸馏，用随机噪声经自适应更新生成蒸馏样本替代外部数据集",
+      "method_signature": "FedSND: 自蒸馏(客户端)+噪声蒸馏(服务器端)双模块协同",
+      "tags": [
+        "federated-learning",
+        "non-iid-data",
+        "knowledge-distillation",
+        "self-distillation",
+        "noise-generation"
+      ],
+      "quality": "full"
+    },
+    "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation": {
+      "title": "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation",
+      "year": 2023,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2023/245",
+      "key_insight": "用高斯分布代替點嵌入建模用戶偏好,通過全局服務器聚合分佈",
+      "method_signature": "FPPDM: GCN建模本地分佈 + 全局服務器 Wasserstein 聚合",
+      "tags": [
+        "federated-recommendation",
+        "probabilistic-preference-modeling",
+        "cross-domain-recommendation",
+        "privacy-preserving-ml",
+        "co-clustering"
+      ],
+      "quality": "full"
+    },
+    "FreeEagle_ Detecting Complex Neural Trojans in Data-Free Cases": {
+      "title": "FreeEagle: Detecting Complex Neural Trojans in Data-Free Cases",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2302.14500",
+      "key_insight": "Trojaned classifier assigns trigger features higher priority than benign features; generating dummy IRs reveals this priority shift.",
+      "method_signature": "Generate dummy intermediate representations at classifier input via gradient descent; detect posterior outliers.",
+      "tags": [
+        "data-free-backdoor-detection",
+        "neural-trojan",
+        "classifier-inspection",
+        "feature-priority-anomaly",
+        "dummy-representation-generation"
+      ],
+      "quality": "full"
+    },
+    "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion": {
+      "title": "GRACE: Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion",
+      "year": 2026,
+      "venue": "ICSE",
+      "doi": "10.48550/arxiv.2509.05980",
+      "key_insight": "图结构优于文本序列,混合检索(结构+语义)配合图融合可防止结构信息丢失",
+      "method_signature": "多层级图构建→混合图检索器→图重排→图融合增强→LLM补全",
+      "tags": [
+        "仓库级代码补全",
+        "图增强RAG",
+        "层级代码融合",
+        "结构化检索",
+        "代码图表示"
+      ],
+      "quality": "full"
+    },
+    "GUI Testing Arena_ A Unified Benchmark for Advancing Autonomous GUI Testing Agent": {
+      "title": "GUI Testing Arena: A Unified Benchmark for Advancing Autonomous GUI Testing Agent",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2412.18426",
+      "key_insight": "通过Transition Tuple数据结构解耦GUI缺陷表示,使大规模缺陷数据集构建成为可能,并实现可复现的标准化评估。",
+      "method_signature": "GTArena统一基准+Transition Tuple缺陷模型+POMDP决策框架",
+      "tags": [
+        "autonomous-GUI-testing-agent",
+        "multimodal-LLM-benchmark",
+        "GUI-defect-detection",
+        "visual-based-agent-evaluation",
+        "POMDP-GUI-automation"
+      ],
+      "quality": "full"
+    },
+    "Gradient Purification_ Defense Against Poisoning Attack in Decentralized Federated Learning": {
+      "title": "Gradient Purification: Defense Against Poisoning Attack in Decentralized Federated Learning",
+      "year": 2025,
+      "venue": "Frontiers of Computer Science (arXiv preprint)",
+      "doi": "10.48550/arxiv.2501.04453",
+      "key_insight": "梯度用于优化模型权重，因此梯度中的有用信息可被已优化的模型权重捕获，从而实现梯度净化与收益保留的解耦",
+      "method_signature": "GPD通过记录变量追踪邻居历史梯度聚合，利用一致性检测识别恶意邻居并一次性清除所有恶意梯度",
+      "tags": [
+        "decentralized-federated-learning",
+        "data-poisoning-defense",
+        "gradient-purification",
+        "consistency-based-detection",
+        "beneficial-component-retention"
+      ],
+      "quality": "full"
+    },
+    "GroundVLP_ Harnessing Zero-shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection": {
+      "title": "GroundVLP: Harnessing Zero-shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2312.15043",
+      "key_insight": "通过加权分级公式融合 VLP 生成的语义热图与 OVD 检测的类别特定候选框，平衡置信度与空间相关性",
+      "method_signature": "VLP(GradCAM热图) + OVD(候选框) + 加权分级融合",
+      "tags": [
+        "zero-shot-visual-grounding",
+        "vision-language-pretraining",
+        "open-vocabulary-detection",
+        "GradCAM-heatmaps",
+        "weighted-fusion"
+      ],
+      "quality": "full"
+    },
+    "HijackRAG_ Hijacking Attacks against Retrieval-Augmented Large Language Models": {
+      "title": "HIJACKRAG: Hijacking Attacks against Retrieval-Augmented Large Language Models",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2410.22832",
+      "key_insight": "将恶意文本分解为R(检索)⊕H(劫持注意力)⊕I(指令)三组件,可同时满足检索相关性和生成操控",
+      "method_signature": "R⊕H⊕I分解框架:黑盒用查询作R,白盒用HotFlip梯度优化R",
+      "tags": [
+        "RAG-security",
+        "prompt-injection",
+        "retrieval-attacks",
+        "adversarial-llm",
+        "knowledge-poisoning"
+      ],
+      "quality": "full"
+    },
+    "HypomimiaCoach_ An AU-based Digital Therapy System for Hypomimia Detection &amp; Rehabilitation with Parkinson's Disease": {
+      "title": "HypomimiaCoach: An AU-based Digital Therapy System for Hypomimia Detection & Rehabilitation with Parkinson's Disease",
+      "year": 2024,
+      "venue": "ACM IUI 2025",
+      "doi": "10.48550/arxiv.2410.09772",
+      "key_insight": "AU 不是独立特征而是相互关联的系统,用 GCN 建模 AU 关系可提升检测性能",
+      "method_signature": "检测: Swin Transformer+GCN+CNN; 康复: OpenGraphAU 实时反馈+中国戏曲音乐交互",
+      "tags": [
+        "Parkinson-hypomimia",
+        "AU-facial-action-unit",
+        "digital-therapy",
+        "graph-convolutional-network",
+        "rehabilitation-system"
+      ],
+      "quality": "full"
+    },
+    "ImageRAG_ Enhancing Ultra High Resolution Remote Sensing Imagery Analysis with ImageRAG": {
+      "title": "ImageRAG: Enhancing Ultra High Resolution Remote Sensing Imagery Analysis with ImageRAG",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2411.07688",
+      "key_insight": "类比LLM的RAG思想,用Text-Image检索定位视觉块,快路径失败时用慢路径(外部数据库锚定视觉概念)兜底",
+      "method_signature": "双路径视觉RAG框架:快路径(文本-图像直接检索)与慢路径(通过RS域数据库做图像-图像检索)",
+      "tags": [
+        "UHR-remote-sensing-VQA",
+        "visual-retrieval-augmented-generation",
+        "multi-scale-patch-retrieval",
+        "MLLM-efficiency-constraint",
+        "remote-sensing-specific-CLIP"
+      ],
+      "quality": "full"
+    },
+    "Impaired regional structure-function coupling as novel neurophenotype_ mechanistic insights and diagnostic exploration in treatment-resistant depression": {
+      "title": "Impaired regional structure-function coupling as novel neurophenotype: mechanistic insights and diagnostic exploration in treatment-resistant depression",
+      "year": 2026,
+      "venue": "Nature Mental Health",
+      "doi": "10.1038/s44184-026-00206-5",
+      "key_insight": "右侧额中回等区域的SFC解耦是TRD特异性神经表型,可作为影像标志物用于鉴别诊断",
+      "method_signature": "KL散度计算区域GMV-ALFF耦合,XGBoost/SVM二分类,双 atlas验证+半样本重复",
+      "tags": [
+        "structure-function-coupling",
+        "treatment-resistant-depression",
+        "multimodal-MRI",
+        "KL-divergence",
+        "machine-learning-classification"
+      ],
+      "quality": "full"
+    },
+    "Incremental Manifold Learning Via Tangent Space Alignment": {
+      "title": "Incremental Manifold Learning Via Tangent Space Alignment",
+      "year": 2006,
+      "venue": "unknown (appears to be conference proceedings)",
+      "doi": "10.1007/11829898_10",
+      "key_insight": "LTSA对齐矩阵结构高度局部，新数据影响仅限k近邻子集，且扰动矩阵的特征向量保持接近",
+      "method_signature": "ILTSA通过局部切空间更新+子空间迭代+Ritz加速实现增量特征分解",
+      "tags": [
+        "incremental-manifold-learning",
+        "LTSA",
+        "eigenvalue-incremental-update",
+        "LASSO-landmark-selection",
+        "tangent-space-alignment"
+      ],
+      "quality": "partial"
+    },
+    "Integrating Artificial Intelligence into Operating Systems_ A Survey on Techniques, Applications, and Future Directions": {
+      "title": "Integrating Artificial Intelligence into Operating Systems: A Survey on Techniques, Applications, and Future Directions",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2407.14567",
+      "key_insight": "AI与OS不再是单向关系,而是相互增强:AI引入智能自动化,OS创新为AI提供基础设施支撑,两者形成正反馈循环",
+      "method_signature": "综述分类:按OS组件层(调度/内存/存储/网络/安全)与AI工具类型(ML/LLM/Agent)构建交叉分类体系",
+      "tags": [
+        "AI-for-OS",
+        "OS-for-AI",
+        "intelligent-scheduling",
+        "kernel-embedded-inference",
+        "self-optimizing-OS",
+        "LLM-agent-OS"
+      ],
+      "quality": "full"
+    },
+    "Integration of Large Language Models and Federated Learning": {
+      "title": "Integration of Large Language Models and Federated Learning",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2307.08925",
+      "key_insight": "LLM与FL互补——FL解决LLM数据稀缺，LLM增强FL任务泛化能力",
+      "method_signature": "综述框架，按子技术融合与整体合并分类现有工作",
+      "tags": [
+        "federated-llm",
+        "llm-data-scarcity",
+        "privacy-preserving-ml",
+        "distributed-training",
+        "instruction-tuning"
+      ],
+      "quality": "full"
+    },
+    "JTangSynergy 3.0_ A framework and software tool for integrating cross-organizational applications": {
+      "title": "JTangSynergy 3.0: A Framework and Software Tool for Integrating Cross-Organizational Applications",
+      "year": 2009,
+      "venue": "CollaborateCom",
+      "doi": "10.4108/icst.collaboratecom2009.8314",
+      "key_insight": "领域控制器可协调不同域间的安全策略，实现跨组织异构应用互操作",
+      "method_signature": "基于领域的跨组织ESB框架，包含领域控制器与CO-ESB容器集群",
+      "tags": [
+        "cross-organizational ESB",
+        "enterprise application integration",
+        "domain-based coordination",
+        "heterogeneous data service integration",
+        "e-government system"
+      ],
+      "quality": "partial"
+    },
+    "Joint Partial Optimal Transport for Open Set Domain Adaptation": {
+      "title": "Joint Partial Optimal Transport for Open Set Domain Adaptation",
+      "year": 2020,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2020/352",
+      "key_insight": "利用部分最优传输排除远距离配对，仅传输高相似度样本对来避免负迁移",
+      "method_signature": "JPOT结合部分最优传输损失与联合判别原型紧致损失",
+      "tags": [
+        "open-set-domain-adaptation",
+        "partial-optimal-transport",
+        "negative-transfer",
+        "discriminative-prototype",
+        "unknown-class-recognition"
+      ],
+      "quality": "full"
+    },
+    "LLM4EFFI_ Leveraging Large Language Models to Enhance Code Efficiency and Correctness": {
+      "title": "LLM4EFFI: Leveraging Large Language Models to Enhance Code Efficiency and Correctness",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2502.18489",
+      "key_insight": "分离逻辑域算法探索与代码域实现优化，先求效率再保正确",
+      "method_signature": "两域分离+先效后正的代码生成框架",
+      "tags": [
+        "LLM代码生成",
+        "代码效率优化",
+        "算法复杂度",
+        "测试用例验证",
+        "代码正确性保证"
+      ],
+      "quality": "full"
+    },
+    "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds": {
+      "title": "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2204.04371",
+      "key_insight": "虽然实际处理速度随时间波动，但其来自硬件规格决定的潜在分布，算法可通过探索-利用学习该分布",
+      "method_signature": "ESDP结合在线学习与动态规划，通过求解一系列松弛的整数规划问题实现多项式时间求解",
+      "tags": [
+        "multi-server job scheduling",
+        "fluctuated processing speeds",
+        "service locality",
+        "online learning",
+        "dynamic programming"
+      ],
+      "quality": "full"
+    },
+    "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead": {
+      "title": "LightRouter: Towards Efficient LLM Collaboration with Minimal Overhead",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2505.16221",
+      "key_insight": "借鉴Kubernetes轻量级探测机制，用少量boot tokens快速评估模型潜力并提前淘汰低质量候选",
+      "method_signature": "双阶段自适应选择：boot token评估→top-k筛选→聚合输出",
+      "tags": [
+        "LLM-routing",
+        "multi-model-ensemble",
+        "cost-efficient-inference",
+        "adaptive-model-selection",
+        "early-exit-strategy"
+      ],
+      "quality": "partial"
+    },
+    "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey": {
+      "title": "Modern Data Pricing Models: Taxonomy and Comprehensive Survey",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2306.04945",
+      "key_insight": "首次建立数据定价模型的形式化分类体系",
+      "method_signature": "构建三层分类树,对13种定价模型深入分析比较",
+      "tags": [
+        "data marketplace",
+        "query pricing",
+        "feature-based pricing",
+        "ML model pricing",
+        "taxonomy construction",
+        "arbitrage-free pricing",
+        "data valuation",
+        "federated learning pricing"
+      ],
+      "quality": "full"
+    },
+    "Multi-Modal One-Shot Federated Ensemble Learning for Medical Data with Vision Large Language Model": {
+      "title": "Multi-Modal One-Shot Federated Ensemble Learning for Medical Data with Vision Large Language Model",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2501.03292",
+      "key_insight": "vLLM生成的文本报告作为辅助特征,经BERT提取后与视觉特征融合,且需降维以保证视觉主导",
+      "method_signature": "视觉特征(ResNet-18)+降维文本特征(BERT)+投票集成",
+      "tags": [
+        "one-shot-federated-learning",
+        "multi-modal-medical-images",
+        "vision-LLM",
+        "federated-ensemble",
+        "BERT-feature-extraction"
+      ],
+      "quality": "full"
+    },
+    "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey": {
+      "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2412.20249",
+      "key_insight": "CXL通过三种协议提供低延迟、可扩展的内存语义互联，可解决内存墙和异构协作问题",
+      "method_signature": "Survey: 分类汇总单机到分布式系统的CXL研究，含性能基准测试和仿真平台评估",
+      "tags": [
+        "CXL内存扩展",
+        "内存墙解决",
+        "异构计算互联",
+        "内存解耦池化",
+        "近存处理架构"
+      ],
+      "quality": "full"
+    },
+    "NovoBench_ Benchmarking Deep Learning-based De Novo Peptide Sequencing Methods in Proteomics": {
+      "title": "NovoBench: Benchmarking Deep Learning-based De Novo Peptide Sequencing Methods in Proteomics",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2406.11906",
+      "key_insight": "通过统一评估揭示:Transformer模型置信度高但π-HelixNovo跨数据集最稳健,缺失 fragmentation 显著影响精度",
+      "method_signature": "集成6个模型于3个数据集,新增PTM级指标和鲁棒性评估",
+      "tags": [
+        "de-novo-peptide-sequencing",
+        "benchmarking",
+        "deep-learning-proteomics",
+        "mass-spectrometry",
+        "model-evaluation"
+      ],
+      "quality": "full"
+    },
+    "One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity": {
+      "title": "One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity",
+      "year": 2024,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2404.12130",
+      "key_insight": "Local model pool with diverse starting points enables knowledge transfer across clients; averaging diverse models improves generalization beyond single-trajectory training.",
+      "method_signature": "FedELMY: model pool per client, initialize new model as average of pool, distance regularization d1 (diversify) + d2 (prevent divergence).",
+      "tags": [
+        "one-shot-federated-learning",
+        "sequential-federated-learning",
+        "non-IID-data",
+        "model-diversity",
+        "local-training-regularization"
+      ],
+      "quality": "full"
+    },
+    "Parf_ Adaptive Parameter Refining for Abstract Interpretation": {
+      "title": "Parf: Adaptive Parameter Refining for Abstract Interpretation",
+      "year": 2024,
+      "venue": "ASE '24",
+      "doi": "10.48550/arxiv.2409.05794",
+      "key_insight": "基于已积累的中间结果增量精炼概率分布,使参数配置在期望上产生更准确分析或在分析失败时以更高概率终止",
+      "method_signature": "在格参数空间上建模概率分布,迭代Sample-Analyze-Refine流程精炼参数",
+      "tags": [
+        "parameter-tuning",
+        "abstract-interpretation",
+        "static-analysis",
+        "probabilistic-modeling",
+        "adaptive-refinement"
+      ],
+      "quality": "full"
+    },
+    "Parf_ An Adaptive Abstraction-Strategy Tuner for Static Analysis": {
+      "title": "PARF: An Adaptive Abstraction-Strategy Tuner for Static Analysis",
+      "year": 2025,
+      "venue": "JOURNAL OF COMPUTER SCIENCE AND TECHNOLOGY",
+      "doi": "10.1007/s11390-025-5140-6",
+      "key_insight": "将每个参数分解为P_base与P_delta对偶随机变量：前者通过meet-join精化实现增量知识保留，后者通过完成率自适应缩放实现探索-资源权衡",
+      "method_signature": "基于格结构的概率分布迭代精化框架，通过P_base和P_delta对偶变量实现单调知识保留与资源感知探索",
+      "tags": [
+        "static-analysis-parameter-tuning",
+        "abstract-interpretation",
+        "probability-distribution-refinement",
+        "frama-c-eva",
+        "false-alarm-reduction"
+      ],
+      "quality": "full"
+    },
+    "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge": {
+      "title": "Placement is not Enough: Embedding with Proactive Stream Mapping on the Heterogenous Edge",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2012.04158",
+      "key_insight": "仅优化函数放置不够(stream mapping是主动设计决策而非被动生成)，需将数据流拆分到多条路径以最小化最慢路径延迟",
+      "method_signature": "DPE动态规划嵌入算法，通过RPF找全部简单路径后用OSM最优分配各路径数据量",
+      "tags": [
+        "edge-computing-dag-embedding",
+        "stream-mapping-optimization",
+        "data-splitting-routing",
+        "heterogeneous-edge-scheduling",
+        "dynamic-programming-optimization"
+      ],
+      "quality": "full"
+    },
+    "Post-Training Attribute Unlearning in Recommender Systems": {
+      "title": "Post-Training Attribute Unlearning in Recommender Systems",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2403.06737",
+      "key_insight": "用锚分布替代两两分布比对可降复杂度O(T²)至O(T);函数空间正则化比参数空间L2范数更能保留推荐功能",
+      "method_signature": "两分量损失函数:分布到分布区分损失+函数空间排序正则损失",
+      "tags": [
+        "recommender-system-unlearning",
+        "attribute-inference-defense",
+        "distribution-distance-MMD",
+        "function-space-regularization",
+        "post-training-model-editing"
+      ],
+      "quality": "partial"
+    },
+    "Preserving Knowledge in Large Language Model with Model-Agnostic Self-Decompression": {
+      "title": "Preserving Knowledge in Large Language Model with Model-Agnostic Self-Decompression",
+      "year": 2024,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2406.11354",
+      "key_insight": "Treating text generation from LLMs as a 'self-decompression' process preserves original knowledge by using LLMs as offline data generators to dump training corpus.",
+      "method_signature": "Tree Generation (TG-SFT): layered tree expansion with alternating user/assistant roles, semantic deduplication, tunable N_i branching factors per layer.",
+      "tags": [
+        "LLM-catastrophic-forgetting",
+        "synthetic-data-generation",
+        "self-decompression",
+        "tree-structured-dialogue",
+        "knowledge-preservation"
+      ],
+      "quality": "full"
+    },
+    "Probing the Geometry of Truth_ Consistency and Generalization of Truth Directions in LLMs Across Logical Transformations and Question Answering Tasks__oa_W4414893717": {
+      "title": "Probing the Geometry of Truth: Consistency and Generalization of Truth Directions in LLMs Across Logical Transformations and Question Answering Tasks",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2506.00823",
+      "key_insight": "并非所有LLM都有consistent真值方向,强模型更一致,简单线性探测就足够",
+      "method_signature": "四类探测器的跨逻辑变换和QA泛化实验",
+      "tags": [
+        "LLM-interpretability",
+        "truth-direction-probing",
+        "selective-QA",
+        "logical-negation-generalization",
+        "representation-geometry"
+      ],
+      "quality": "full"
+    },
+    "Quantivine_ A Visualization Approach for Large-scale Quantum Circuit Representation and Analysis": {
+      "title": "Quantivine: A Visualization Approach for Large-scale Quantum Circuit Representation and Analysis",
+      "year": 2023,
+      "venue": "arXiv / IEEE Transactions on Visualization and Computer Graphics",
+      "doi": "10.48550/arxiv.2307.08969",
+      "key_insight": "从量子程序代码中提取AST语义结构,用于指导电路分组聚合和模式抽象",
+      "method_signature": "语义结构树引导的电路分割、量子门分组与比特捆绑、模式抽象可视化",
+      "tags": [
+        "quantum-circuit-visualization",
+        "semantic-analysis",
+        "graph-abstraction",
+        "hierarchical-clustering",
+        "quantum-computing-tools"
+      ],
+      "quality": "partial"
+    },
+    "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4392737420": {
+      "title": "RA-ISF: Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2403.06840",
+      "key_insight": "通过级联判断逐步缩小问题范围——先问模型知不知道，再问检索是否相关，最后才分解问题",
+      "method_signature": "三个微调子模型(M_know/M_rel/M_decom)与主LLM迭代协作，含D_th迭代上限",
+      "tags": [
+        "retrieval-augmented-generation",
+        "self-knowledge-assessment",
+        "question-decomposition",
+        "iterative-self-feedback",
+        "hallucination-mitigation"
+      ],
+      "quality": "partial"
+    },
+    "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4402670862": {
+      "title": "RA-ISF: Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback",
+      "year": 2024,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2024.findings-acl.281",
+      "key_insight": "通过迭代自反馈机制，当模型无初始答案或检索到无关文本时，分解问题为子问题逐步解决",
+      "method_signature": "三个预训练子模型(M_know, M_rel, M_decom)与LLM和检索器协同迭代求解",
+      "tags": [
+        "retrieval-augmented-generation",
+        "iterative-self-feedback",
+        "question-decomposition",
+        "knowledge-filtering",
+        "hallucination-mitigation"
+      ],
+      "quality": "full"
+    },
+    "RS5M and GeoRSCLIP_ A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing": {
+      "title": "RS5M and GeoRSCLIP: A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2306.11300",
+      "key_insight": "通过构建大规模遥感图像-文本配对数据集RS5M并微调CLIP,可有效弥合领域差距",
+      "method_signature": "过滤大规模图文数据集+BLIP2为遥感图生成caption+PEFT微调CLIP",
+      "tags": [
+        "遥感视觉-语言模型",
+        "领域自适应",
+        "大规模图文数据集构建",
+        "参数高效微调",
+        "零样本遥感分类"
+      ],
+      "quality": "full"
+    },
+    "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution": {
+      "title": "Revisiting Vulnerability Patch Localization: An Empirical Study and LLM-Based Solution",
+      "year": null,
+      "venue": "arxiv preprint",
+      "doi": "10.48550/arxiv.2509.15777",
+      "key_insight": "通过版本信息过滤减少搜索空间,并结合LLM的多轮对话推理能力,可以突破复杂特征融合和预训练语义理解的局限性,实现知识驱动的精准补丁定位。",
+      "method_signature": "两阶段框架：版本驱动候选过滤 + LLM多轮对话投票",
+      "tags": [
+        "vulnerability-patch-localization",
+        "LLM-based-code-analysis",
+        "version-range-filtering",
+        "empirical-software-security",
+        "knowledge-driven-patch-detection"
+      ],
+      "quality": "full"
+    },
+    "Scalable Multi-Stage Influence Function for Large Language Models via Eigenvalue-Corrected Kronecker-Factored Parameterization": {
+      "title": "Scalable Multi-Stage Influence Function for Large Language Models via Eigenvalue-Corrected Kronecker-Factored Parameterization",
+      "year": 2025,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2025/892",
+      "key_insight": "EK-FAC参数化可高效近似多阶段IF，且MLP参数比MHA参数贡献更大影响，可作为实践中的计算权衡",
+      "method_signature": "多阶段IF + EK-FAC近似 + 语义相似度候选筛选",
+      "tags": [
+        "LLM influence function",
+        "multi-stage training attribution",
+        "EK-FAC curvature approximation",
+        "transformer interpretability",
+        "factual knowledge tracing"
+      ],
+      "quality": "full"
+    },
+    "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning": {
+      "title": "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.06572",
+      "key_insight": "沿奖励梯度上升方向分配资源，利用并行投影加速，子线性遗憾O(√T)对一般凹奖励",
+      "method_signature": "OGASCHED在线梯度上升调度算法，含快速投影的并行子过程",
+      "tags": [
+        "multi-server-job-scheduling",
+        "online-gradient-ascent",
+        "sublinear-regret",
+        "computation-communication-tradeoff",
+        "bipartite-scheduling",
+        "concave-reward-optimization"
+      ],
+      "quality": "full"
+    },
+    "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4403851697": {
+      "title": "SecCoder: Towards Generalizable and Robust Secure Code Generation",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2410.01488",
+      "key_insight": "利用ICL无需重训练即可适应新漏洞，结合独立安全代码库保证演示安全性",
+      "method_signature": "密集检索器选择安全演示+上下文学习引导+四阶段流水线(扩展-选择-整合-生成)",
+      "tags": [
+        "secure-code-generation",
+        "in-context-learning",
+        "code-LLM-adversarial-robustness",
+        "dense-retrieval",
+        "CWE-vulnerability-mitigation"
+      ],
+      "quality": "full"
+    },
+    "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4404782576": {
+      "title": "SecCoder: Towards Generalizable and Robust Secure Code Generation",
+      "year": 2024,
+      "venue": "EMNLP 2024",
+      "doi": "10.18653/v1/2024.emnlp-main.806",
+      "key_insight": "用in-context learning加密集检索的safe demonstration实现免重训练的安全加固",
+      "method_signature": "四阶段框架(Expansion→Selection→Integration→Generation)，用INSTRUCTOR稠密检索器选相关安全代码作demonstration",
+      "tags": [
+        "secure-code-generation",
+        "in-context-learning",
+        "code-LM-safety",
+        "dense-retrieval",
+        "generalization-robustness"
+      ],
+      "quality": "full"
+    },
+    "Service Wrapper_ a system for converting web data into web services": {
+      "title": "Service Wrapper: a system for converting web data into web services",
+      "year": 2019,
+      "venue": null,
+      "doi": "10.48550/arxiv.1910.07786",
+      "key_insight": "通过自动化的表单检测、块分割和规则生成，让用户以傻瓜式操作完成wrapper到service的转换",
+      "method_signature": "Service Extractor + Service Invoker双组件架构，含6个处理模块",
+      "tags": [
+        "web-data-extraction",
+        "wrapper-generation",
+        "web-service-generation",
+        "block-segmentation",
+        "GUI-based-automation"
+      ],
+      "quality": "full"
+    },
+    "SkinGEN_ an Explainable Dermatology Diagnosis-to-Generation Framework with Interactive Vision-Language Models": {
+      "title": "SkinGEN: an Explainable Dermatology Diagnosis-to-Generation Framework with Interactive Vision-Language Models",
+      "year": 2024,
+      "venue": "IUI 2025",
+      "doi": "10.48550/arxiv.2404.14755",
+      "key_insight": "用Stable Diffusion从诊断结果生成参考演示图像，让用户通过视觉对比自行理解病情，而非依赖LLM的文本解释",
+      "method_signature": "VLM诊断+LoRA/IP-Adapter双适配器融合生成可视化病情图谱",
+      "tags": [
+        "dermatology-diagnosis",
+        "visual-explainability",
+        "vision-language-model",
+        "stable-diffusion-generation",
+        "medical-ai-trust"
+      ],
+      "quality": "full"
+    },
+    "Software Product Line Oriented Feature Map": {
+      "title": "Software Product Line Oriented Feature Map",
+      "year": null,
+      "venue": null,
+      "doi": "10.1007/978-3-540-72586-2_156",
+      "key_insight": "通过引入资源实体层(超结构)并叠加到特征依赖基础设施上，实现快速定位和组装",
+      "method_signature": "特征映射定义为七元组FM=(F,A,C,R,λA,λC,λR)，以OWL本体作为元模型表示基础",
+      "tags": [
+        "software-product-line",
+        "feature-modeling",
+        "ontology-representation",
+        "variability-management",
+        "resource-navigation"
+      ],
+      "quality": "partial"
+    },
+    "TK-Mamba_ Marrying KAN With Mamba for Text-Driven 3D Medical Image Segmentation": {
+      "title": "TK-Mamba: Marrying KAN With Mamba for Text-Driven 3D Medical Image Segmentation",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2505.18525",
+      "key_insight": "Mamba的动态聚合必须配合同样动态的变换——用3D-GR-KAN替换固定激活函数以解决表达瓶颈",
+      "method_signature": "K-Mamba模块(Tri-oriented Mamba+3D-GR-KAN) + 双分支文本驱动机制(PuMedCLIP)",
+      "tags": [
+        "3D医学图像分割",
+        "Mamba状态空间模型",
+        "Kolmogorov-Arnold网络",
+        "视觉-语言对齐",
+        "多器官分割"
+      ],
+      "quality": "full"
+    },
+    "The Self-Improvement Paradox_ Can Language Models Bootstrap Reasoning Capabilities without External Scaffolding___oa_W4407764284": {
+      "title": "The Self-Improvement Paradox: Can Language Models Bootstrap Reasoning Capabilities without External Scaffolding?",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2502.13441",
+      "key_insight": "对齐模型自身可通过\"诱饵提示→拒绝采样去重→多数投票共识\"三步生成高质量域内QA对,实现真正的零监督自改进",
+      "method_signature": "CRESCENT:诱饵提示引导问题生成+拒绝采样自去重+多数投票共识增强",
+      "tags": [
+        "LLM自改进",
+        "拒绝采样去重",
+        "多数投票共识",
+        "合成数据自举",
+        "数学推理能力提升"
+      ],
+      "quality": "full"
+    },
+    "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs": {
+      "title": "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs",
+      "year": 2021,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2112.02456",
+      "key_insight": "通过伪社会福利函数和边际成本估计,将离线对偶变量构造为资源使用成本,实现α≥2竞争比",
+      "method_signature": "ONSOCMAX算法:伪社会福利最大化+增广拉格朗日求解器",
+      "tags": [
+        "online-scheduling",
+        "deadline-constraint",
+        "multi-server-jobs",
+        "social-welfare-maximization",
+        "competitive-analysis"
+      ],
+      "quality": "full"
+    },
+    "Tool-Planner_ Task Planning with Clusters across Multiple Tools": {
+      "title": "TOOL-PLANNER: TASK PLANNING WITH CLUSTERS ACROSS MULTIPLE TOOLS",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2406.03807",
+      "key_insight": "通过SimCSE将API按功能聚类成toolkit,工具失败时先在同toolkit内替换,避免全局重规划",
+      "method_signature": "工具聚类(SimCSE+k-means++) → toolkit级规划 → 工具失败优先同toolkit替换 → 全局重规划兜底",
+      "tags": [
+        "tool-learning",
+        "LLM-planning",
+        "tool-clustering",
+        "API-orchestration",
+        "toolkit-search"
+      ],
+      "quality": "full"
+    },
+    "Towards Scalable and Privacy-Preserving Deep Neural Network via Algorithmic-Cryptographic Co-design": {
+      "title": "Towards Scalable and Privacy-Preserving Deep Neural Network via Algorithmic-Cryptographic Co-design",
+      "year": 2021,
+      "venue": "ACM Transactions on Intelligent Systems and Technology",
+      "doi": "10.48550/arxiv.2012.09364",
+      "key_insight": "仅对第一层隐藏层（涉及私有数据）采用密码学计算，其余层委托半诚实服务器明文计算，实现隐私与效率的协同",
+      "method_signature": "SPNN框架通过秘密共享或同态加密实现首层安全计算，剩余层由服务器明文执行",
+      "tags": [
+        "privacy-preserving-deep-learning",
+        "secret-sharing",
+        "homomorphic-encryption",
+        "split-neural-network",
+        "federated-learning"
+      ],
+      "quality": "full"
+    },
+    "TransLinkGuard_ Safeguarding Transformer Models Against Model Stealing in Edge Deployment": {
+      "title": "TransLinkGuard: Safeguarding Transformer Models Against Model Stealing in Edge Deployment",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2404.11121",
+      "key_insight": "Avoid direct TEE computation entirely—use permutation matrices to disrupt positional info, authorization only rearranges features (lightweight)",
+      "method_signature": "Weight permutation + TEE-based OTP-encrypted authorization with MLP integration across all transformer layers",
+      "tags": [
+        "edge-LLM-security",
+        "model-stealing-defense",
+        "TEE-authorization",
+        "weight-permutation",
+        "transformer-IP-protection"
+      ],
+      "quality": "full"
+    },
+    "VL-CheckList_ Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations": {
+      "title": "VL-CheckList: Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations",
+      "year": 2022,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2207.00221",
+      "key_insight": "借用NLP的CheckList思想，用ITM统一评估并通过负采样构造hard negative测试细粒度能力",
+      "method_signature": "ITM作为统一评估器 + taxonomy三层解耦 + linguistic-aware负采样",
+      "tags": [
+        "vision-language-pretraining evaluation",
+        "image-text-matching",
+        "negative sampling",
+        "model capability profiling",
+        "multimodal interpretability"
+      ],
+      "quality": "full"
+    },
+    "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding": {
+      "title": "Video-QTR: Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2512.09354",
+      "key_insight": "Saliency与relevance不同，视觉显著区域未必与查询相关；LLM应控制感知时机与位置",
+      "method_signature": "四组件迭代循环：RTP生成时序计划→Perception选择性获取→TCR时序一致性校验→TM跨迭代图记忆",
+      "tags": [
+        "query-driven-video-understanding",
+        "iterative-reasoning-perception-loop",
+        "temporal-consistency-refinement",
+        "lightweight-multimodal-LLM",
+        "graph-based-temporal-memory"
+      ],
+      "quality": "full"
+    },
+    "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation": {
+      "title": "Walking the Schrödinger Bridge: A Direct Trajectory for Text-to-3D Generation",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2511.05609",
+      "key_insight": "SDS is a special case of Schrödinger Bridge—when endpoint is Gaussian noise, Schrödinger Bridge score collapses to SDS score function",
+      "method_signature": "TraCe constructs diffusion bridge from current rendering to text-conditioned denoised target, trains LoRA on bridge score dynamics",
+      "tags": [
+        "text-to-3D-generation",
+        "schrodinger-bridge",
+        "score-distillation",
+        "gaussian-splatting",
+        "optimal-transport",
+        "lora-adaptation"
+      ],
+      "quality": "full"
+    },
+    "WassFFed_ Wasserstein Fair Federated Learning": {
+      "title": "WassFFed: Wasserstein Fair Federated Learning",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2411.06881",
+      "key_insight": "不计算基于代理函数的公平损失,直接约束模型输出分布独立于敏感属性,从而绕过代理函数带来的估计误差。",
+      "method_signature": "基于Wasserstein barycenter对齐局部模型输出分布,使用最优传输矩阵指导梯度下降更新。",
+      "tags": [
+        "federated-learning-fairness",
+        "wasserstein-barycenter",
+        "optimal-transport-fairness",
+        "group-fairness-multi-group",
+        "non-IID-federated-learning"
+      ],
+      "quality": "full"
+    },
+    "ZoomEye_ Enhancing Multimodal LLMs with Human-Like Zooming Capabilities through Tree-Based Image Exploration__oa_W4404986947": {
+      "title": "ZoomEye: Enhancing Multimodal LLMs with Human-Like Zooming Capabilities through Tree-Based Image Exploration",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2411.16044",
+      "key_insight": "用置信度驱动的排名函数和停止准则引导树搜索,模拟人类先全局扫描再逐步放大感兴趣区域的视觉行为",
+      "method_signature": "训练无关的树搜索算法,基于现有置信度和潜在置信度加权排序节点",
+      "tags": [
+        "vision-level reasoning",
+        "tree search algorithm",
+        "multimodal LLM",
+        "high-resolution image understanding",
+        "zoom-in mechanism"
+      ],
+      "quality": "full"
+    },
+    "_Is your explanation stable___ A Robustness Evaluation Framework for Feature Attribution": {
+      "title": "Is your explanation stable? A Robustness Evaluation Framework for Feature Attribution",
+      "year": 2022,
+      "venue": "CCS '22",
+      "doi": "10.48550/arxiv.2209.01782",
+      "key_insight": "通过采样邻域输入并对中位数进行假设检验，将未知分布转换为伯努利分布，获得小样本下的精确置信界",
+      "method_signature": "MeTFA: 对特征归属分布的中位数进行假设检验,生成显著性图和光滑化图",
+      "tags": [
+        "XAI-robustness-evaluation",
+        "feature-attribution-stability",
+        "hypothesis-testing-explainability",
+        "adversarial-explanation-defense",
+        "median-based-inference"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "retrieval-augmented-generation": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding",
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4392737420",
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4402670862"
+    ],
+    "knowledge-distillation": [
+      "Data-Free Federated Class Incremental Learning with Diffusion-Based Generative Memory",
+      "Federated Learning on Non-iid Data via Local and Global Distillation"
+    ],
+    "optimal-transport": [
+      "Differentiable and Scalable Generative Adversarial Models for Data Imputation",
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "参数高效微调": [
+      "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation",
+      "RS5M and GeoRSCLIP_ A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing"
+    ],
+    "federated-learning": [
+      "Federated Learning on Non-iid Data via Local and Global Distillation",
+      "Towards Scalable and Privacy-Preserving Deep Neural Network via Algorithmic-Cryptographic Co-design"
+    ],
+    "privacy-preserving-ml": [
+      "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation",
+      "Integration of Large Language Models and Federated Learning"
+    ],
+    "one-shot-federated-learning": [
+      "Multi-Modal One-Shot Federated Ensemble Learning for Medical Data with Vision Large Language Model",
+      "One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity"
+    ],
+    "abstract-interpretation": [
+      "Parf_ Adaptive Parameter Refining for Abstract Interpretation",
+      "Parf_ An Adaptive Abstraction-Strategy Tuner for Static Analysis"
+    ],
+    "question-decomposition": [
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4392737420",
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4402670862"
+    ],
+    "iterative-self-feedback": [
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4392737420",
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4402670862"
+    ],
+    "hallucination-mitigation": [
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4392737420",
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4402670862"
+    ],
+    "secure-code-generation": [
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4403851697",
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4404782576"
+    ],
+    "in-context-learning": [
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4403851697",
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4404782576"
+    ],
+    "dense-retrieval": [
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4403851697",
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4404782576"
+    ],
+    "user-churn-prediction": [
+      "A Latent Feelings-aware RNN Model for User Churn Prediction with Behavioral Data"
+    ],
+    "latent-feeling-estimation": [
+      "A Latent Feelings-aware RNN Model for User Churn Prediction with Behavioral Data"
+    ],
+    "RNN-LSTM-variant": [
+      "A Latent Feelings-aware RNN Model for User Churn Prediction with Behavioral Data"
+    ],
+    "behavior-sequence-modeling": [
+      "A Latent Feelings-aware RNN Model for User Churn Prediction with Behavioral Data"
+    ],
+    "online-game-analytics": [
+      "A Latent Feelings-aware RNN Model for User Churn Prediction with Behavioral Data"
+    ],
+    "incomplete-multimodal-learning": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "low-rank-adaptation": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "emotion-recognition": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "gradient-conflict": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "modality-combination-aware": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "parameter-efficient-training": [
+      "A Robust Incomplete Multimodal Low-Rank Adaptation Approach for Emotion Recognition"
+    ],
+    "COVID-19数据质量评估": [
+      "A downscaling approach to compare COVID-19 count data from databases aggregated at different spatial scales"
+    ],
+    "贝叶斯空间downscaling": [
+      "A downscaling approach to compare COVID-19 count data from databases aggregated at different spatial scales"
+    ],
+    "多源数据融合比较": [
+      "A downscaling approach to compare COVID-19 count data from databases aggregated at different spatial scales"
+    ],
+    "传染病空间建模": [
+      "A downscaling approach to compare COVID-19 count data from databases aggregated at different spatial scales"
+    ],
+    "生态学谬误MAUP": [
+      "A downscaling approach to compare COVID-19 count data from databases aggregated at different spatial scales"
+    ],
+    "agentic-services-computing": [
+      "Agentic Services Computing"
+    ],
+    "LLM-agent-lifecycle": [
+      "Agentic Services Computing"
+    ],
+    "multi-agent-collaboration": [
+      "Agentic Services Computing"
+    ],
+    "trustworthy-AI-services": [
+      "Agentic Services Computing"
+    ],
+    "service-ecosystem-orchestration": [
+      "Agentic Services Computing"
+    ],
+    "BAT开源生态": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "开源项目分类": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "国际化努力": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "开发者动机调查": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "GitHub实证分析": [
+      "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent"
+    ],
+    "VLP模型诊断": [
+      "An Explainable Toolbox for Evaluating Pre-trained Vision-Language Models"
+    ],
+    "Image-Text-Matching评估": [
+      "An Explainable Toolbox for Evaluating Pre-trained Vision-Language Models"
+    ],
+    "hard negative采样": [
+      "An Explainable Toolbox for Evaluating Pre-trained Vision-Language Models"
+    ],
+    "vision-language模型可解释性": [
+      "An Explainable Toolbox for Evaluating Pre-trained Vision-Language Models"
+    ],
+    "细粒度能力探针": [
+      "An Explainable Toolbox for Evaluating Pre-trained Vision-Language Models"
+    ],
+    "hybrid-storage-blockchain": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "keyword-search-index": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "query-verification": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "append-only-data-structures": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "bitwise-search": [
+      "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    ],
+    "backdoor-attack": [
+      "Backdoor Pre-trained Models Can Transfer to All"
+    ],
+    "pre-trained-language-models": [
+      "Backdoor Pre-trained Models Can Transfer to All"
+    ],
+    "transfer-learning": [
+      "Backdoor Pre-trained Models Can Transfer to All"
+    ],
+    "NLP-security": [
+      "Backdoor Pre-trained Models Can Transfer to All"
+    ],
+    "output-representation-manipulation": [
+      "Backdoor Pre-trained Models Can Transfer to All"
+    ],
+    "MLLM预eval": [
+      "Benchmarking Sequential Visual Input Reasoning and Prediction in Multimodal Large Language Models"
+    ],
+    "序列视觉推理": [
+      "Benchmarking Sequential Visual Input Reasoning and Prediction in Multimodal Large Language Models"
+    ],
+    "未来预测": [
+      "Benchmarking Sequential Visual Input Reasoning and Prediction in Multimodal Large Language Models"
+    ],
+    "多模态基准测试": [
+      "Benchmarking Sequential Visual Input Reasoning and Prediction in Multimodal Large Language Models"
+    ],
+    "LLM-as-Judge": [
+      "Benchmarking Sequential Visual Input Reasoning and Prediction in Multimodal Large Language Models"
+    ],
+    "long-context-LLM": [
+      "Bridging Context Gaps_ Leveraging Coreference Resolution for Long Contextual Understanding"
+    ],
+    "coreference-resolution": [
+      "Bridging Context Gaps_ Leveraging Coreference Resolution for Long Contextual Understanding"
+    ],
+    "mention-clustering": [
+      "Bridging Context Gaps_ Leveraging Coreference Resolution for Long Contextual Understanding"
+    ],
+    "text-quality-enhancement": [
+      "Bridging Context Gaps_ Leveraging Coreference Resolution for Long Contextual Understanding"
+    ],
+    "question-answering": [
+      "Bridging Context Gaps_ Leveraging Coreference Resolution for Long Contextual Understanding"
+    ],
+    "code-LM-watermarking": [
+      "CLMTracing_ Black-box User-level Watermarking for Code Language Model Tracing__oa_W4416255597"
+    ],
+    "black-box-ownership-verification": [
+      "CLMTracing_ Black-box User-level Watermarking for Code Language Model Tracing__oa_W4416255597"
+    ],
+    "user-level-model-tracing": [
+      "CLMTracing_ Black-box User-level Watermarking for Code Language Model Tracing__oa_W4416255597"
+    ],
+    "parameter-selection-robustness": [
+      "CLMTracing_ Black-box User-level Watermarking for Code Language Model Tracing__oa_W4416255597"
+    ],
+    "IP-protection-open-source": [
+      "CLMTracing_ Black-box User-level Watermarking for Code Language Model Tracing__oa_W4416255597"
+    ],
+    "LLM自动化测试生成": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "自适应上下文选择": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "测试用例修复机制": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "Java单元测试": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "生成验证修复闭环": [
+      "ChatUniTest_ A Framework for LLM-Based Test Generation"
+    ],
+    "QAOA-constraint-encoding": [
+      "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    ],
+    "commute-Hamiltonian": [
+      "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    ],
+    "quantum-circuit-decomposition": [
+      "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    ],
+    "NISQ-deployability": [
+      "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    ],
+    "Hamiltonian-serialization": [
+      "Choco-Q_ Commute Hamiltonian-based QAOA for Constrained Binary Optimization"
+    ],
+    "cloud-native-lifecycle": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services"
+    ],
+    "microservice-orchestration": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services"
+    ],
+    "container-resource-virtualization": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services"
+    ],
+    "kubernetes-ecosystem": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services"
+    ],
+    "service-level-objective": [
+      "Cloud-Native Computing_ A Survey from the Perspective of Services"
+    ],
+    "repository-level-code-completion": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding"
+    ],
+    "multi-granularity-code-understanding": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding"
+    ],
+    "structure-aware-retrieval": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding"
+    ],
+    "static-analysis-AST": [
+      "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding"
+    ],
+    "hand-pose-estimation": [
+      "Context-Aware Deep Spatiotemporal Network for Hand Pose Estimation From Depth Images"
+    ],
+    "depth-image": [
+      "Context-Aware Deep Spatiotemporal Network for Hand Pose Estimation From Depth Images"
+    ],
+    "spatio-temporal-modeling": [
+      "Context-Aware Deep Spatiotemporal Network for Hand Pose Estimation From Depth Images"
+    ],
+    "3D-volumetric-representation": [
+      "Context-Aware Deep Spatiotemporal Network for Hand Pose Estimation From Depth Images"
+    ],
+    "adaptive-fusion": [
+      "Context-Aware Deep Spatiotemporal Network for Hand Pose Estimation From Depth Images"
+    ],
+    "service-computing": [
+      "Convergence in Crossover Service"
+    ],
+    "crossover-service": [
+      "Convergence in Crossover Service"
+    ],
+    "convergence-framework": [
+      "Convergence in Crossover Service"
+    ],
+    "service-ecosystem": [
+      "Convergence in Crossover Service"
+    ],
+    "cross-organizational-process": [
+      "Convergence in Crossover Service"
+    ],
+    "LLM-model-stealing-defense": [
+      "CoreGuard_ Safeguarding Foundational Capabilities of LLMs Against Model Stealing in Edge Deployment"
+    ],
+    "edge-deployment-security": [
+      "CoreGuard_ Safeguarding Foundational Capabilities of LLMs Against Model Stealing in Edge Deployment"
+    ],
+    "permutation-based-model-locking": [
+      "CoreGuard_ Safeguarding Foundational Capabilities of LLMs Against Model Stealing in Edge Deployment"
+    ],
+    "TEE-GPU-offloading": [
+      "CoreGuard_ Safeguarding Foundational Capabilities of LLMs Against Model Stealing in Edge Deployment"
+    ],
+    "trusted-execution-environment": [
+      "CoreGuard_ Safeguarding Foundational Capabilities of LLMs Against Model Stealing in Edge Deployment"
+    ],
+    "differential-privacy-finetuning": [
+      "DP-MemArc_ Differential Privacy Transfer Learning for Memory Efficient Language Models"
+    ],
+    "memory-efficient-LLM": [
+      "DP-MemArc_ Differential Privacy Transfer Learning for Memory Efficient Language Models"
+    ],
+    "side-network-tuning": [
+      "DP-MemArc_ Differential Privacy Transfer Learning for Memory Efficient Language Models"
+    ],
+    "reversible-networks": [
+      "DP-MemArc_ Differential Privacy Transfer Learning for Memory Efficient Language Models"
+    ],
+    "parameter-efficient-transfer": [
+      "DP-MemArc_ Differential Privacy Transfer Learning for Memory Efficient Language Models"
+    ],
+    "network-slicing": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "decentralized-algorithm": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "posted-price-mechanism": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "privacy-preserving": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "primal-dual": [
+      "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    ],
+    "federated-class-incremental-learning": [
+      "Data-Free Federated Class Incremental Learning with Diffusion-Based Generative Memory"
+    ],
+    "diffusion-model-generation": [
+      "Data-Free Federated Class Incremental Learning with Diffusion-Based Generative Memory"
+    ],
+    "data-free-privacy": [
+      "Data-Free Federated Class Incremental Learning with Diffusion-Based Generative Memory"
+    ],
+    "entropy-filtering": [
+      "Data-Free Federated Class Incremental Learning with Diffusion-Based Generative Memory"
+    ],
+    "data-locality-scheduling": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "distributed-job-execution": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "bipartite-graph-matching": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "approximation-algorithm": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "water-filling-heuristic": [
+      "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    ],
+    "text-based classification": [
+      "Decision Tree Construction Algorithm Based on Association Rules"
+    ],
+    "association rules mining": [
+      "Decision Tree Construction Algorithm Based on Association Rules"
+    ],
+    "decision tree": [
+      "Decision Tree Construction Algorithm Based on Association Rules"
+    ],
+    "product classification": [
+      "Decision Tree Construction Algorithm Based on Association Rules"
+    ],
+    "B2C e-commerce": [
+      "Decision Tree Construction Algorithm Based on Association Rules"
+    ],
+    "GAN-imputation": [
+      "Differentiable and Scalable Generative Adversarial Models for Data Imputation"
+    ],
+    "sample-size-estimation": [
+      "Differentiable and Scalable Generative Adversarial Models for Data Imputation"
+    ],
+    "vanishing-gradient": [
+      "Differentiable and Scalable Generative Adversarial Models for Data Imputation"
+    ],
+    "large-scale-missing-data": [
+      "Differentiable and Scalable Generative Adversarial Models for Data Imputation"
+    ],
+    "LLM-enhanced推荐": [
+      "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation"
+    ],
+    "多模态会话推荐": [
+      "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation"
+    ],
+    "知识蒸馏": [
+      "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation"
+    ],
+    "过渡模式建模": [
+      "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation"
+    ],
+    "edge-computing-service-placement": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "microservice-redundancy": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "stochastic-optimization": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "genetic-algorithm": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "kubernetes-edge": [
+      "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    ],
+    "LLM-CoT增强": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4392737534"
+    ],
+    "实体关系抽取": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4392737534"
+    ],
+    "零样本推理": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4392737534"
+    ],
+    "隐式关系推断": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4392737534"
+    ],
+    "问答系统": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4392737534"
+    ],
+    "LLM-reasoning": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    ],
+    "chain-of-thought": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    ],
+    "entity-relationship-analysis": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    ],
+    "zero-shot-prompting": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    ],
+    "multi-hop-reasoning": [
+      "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544"
+    ],
+    "edge-intelligence-taxonomy": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "federated-learning-edge": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "computation-offloading": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "learning-driven-communication": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "device-edge-cloud-synergy": [
+      "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence"
+    ],
+    "mobile-service-computing": [
+      "Editorial_ ACM_Springer Mobile Networks &amp; Applications - Special Issue on Mobile Service Computing and Applications"
+    ],
+    "collaborative-filtering-recommendation": [
+      "Editorial_ ACM_Springer Mobile Networks &amp; Applications - Special Issue on Mobile Service Computing and Applications"
+    ],
+    "edge-computing-deployment": [
+      "Editorial_ ACM_Springer Mobile Networks &amp; Applications - Special Issue on Mobile Service Computing and Applications"
+    ],
+    "augmented-reality-collaboration": [
+      "Editorial_ ACM_Springer Mobile Networks &amp; Applications - Special Issue on Mobile Service Computing and Applications"
+    ],
+    "vm-scheduling-energy-efficiency": [
+      "Editorial_ ACM_Springer Mobile Networks &amp; Applications - Special Issue on Mobile Service Computing and Applications"
+    ],
+    "数据插补": [
+      "Efficient and effective data imputation with influence functions"
+    ],
+    "影响函数": [
+      "Efficient and effective data imputation with influence functions"
+    ],
+    "代表样本选择": [
+      "Efficient and effective data imputation with influence functions"
+    ],
+    "参数模型加速": [
+      "Efficient and effective data imputation with influence functions"
+    ],
+    "缺失数据处理": [
+      "Efficient and effective data imputation with influence functions"
+    ],
+    "non-iid-data": [
+      "Federated Learning on Non-iid Data via Local and Global Distillation"
+    ],
+    "self-distillation": [
+      "Federated Learning on Non-iid Data via Local and Global Distillation"
+    ],
+    "noise-generation": [
+      "Federated Learning on Non-iid Data via Local and Global Distillation"
+    ],
+    "federated-recommendation": [
+      "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation"
+    ],
+    "probabilistic-preference-modeling": [
+      "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation"
+    ],
+    "cross-domain-recommendation": [
+      "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation"
+    ],
+    "co-clustering": [
+      "Federated Probabilistic Preference Distribution Modelling with Compactness Co-Clustering for Privacy-Preserving Multi-Domain Recommendation"
+    ],
+    "data-free-backdoor-detection": [
+      "FreeEagle_ Detecting Complex Neural Trojans in Data-Free Cases"
+    ],
+    "neural-trojan": [
+      "FreeEagle_ Detecting Complex Neural Trojans in Data-Free Cases"
+    ],
+    "classifier-inspection": [
+      "FreeEagle_ Detecting Complex Neural Trojans in Data-Free Cases"
+    ],
+    "feature-priority-anomaly": [
+      "FreeEagle_ Detecting Complex Neural Trojans in Data-Free Cases"
+    ],
+    "dummy-representation-generation": [
+      "FreeEagle_ Detecting Complex Neural Trojans in Data-Free Cases"
+    ],
+    "仓库级代码补全": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "图增强RAG": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "层级代码融合": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "结构化检索": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "代码图表示": [
+      "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion"
+    ],
+    "autonomous-GUI-testing-agent": [
+      "GUI Testing Arena_ A Unified Benchmark for Advancing Autonomous GUI Testing Agent"
+    ],
+    "multimodal-LLM-benchmark": [
+      "GUI Testing Arena_ A Unified Benchmark for Advancing Autonomous GUI Testing Agent"
+    ],
+    "GUI-defect-detection": [
+      "GUI Testing Arena_ A Unified Benchmark for Advancing Autonomous GUI Testing Agent"
+    ],
+    "visual-based-agent-evaluation": [
+      "GUI Testing Arena_ A Unified Benchmark for Advancing Autonomous GUI Testing Agent"
+    ],
+    "POMDP-GUI-automation": [
+      "GUI Testing Arena_ A Unified Benchmark for Advancing Autonomous GUI Testing Agent"
+    ],
+    "decentralized-federated-learning": [
+      "Gradient Purification_ Defense Against Poisoning Attack in Decentralized Federated Learning"
+    ],
+    "data-poisoning-defense": [
+      "Gradient Purification_ Defense Against Poisoning Attack in Decentralized Federated Learning"
+    ],
+    "gradient-purification": [
+      "Gradient Purification_ Defense Against Poisoning Attack in Decentralized Federated Learning"
+    ],
+    "consistency-based-detection": [
+      "Gradient Purification_ Defense Against Poisoning Attack in Decentralized Federated Learning"
+    ],
+    "beneficial-component-retention": [
+      "Gradient Purification_ Defense Against Poisoning Attack in Decentralized Federated Learning"
+    ],
+    "zero-shot-visual-grounding": [
+      "GroundVLP_ Harnessing Zero-shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection"
+    ],
+    "vision-language-pretraining": [
+      "GroundVLP_ Harnessing Zero-shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection"
+    ],
+    "open-vocabulary-detection": [
+      "GroundVLP_ Harnessing Zero-shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection"
+    ],
+    "GradCAM-heatmaps": [
+      "GroundVLP_ Harnessing Zero-shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection"
+    ],
+    "weighted-fusion": [
+      "GroundVLP_ Harnessing Zero-shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection"
+    ],
+    "RAG-security": [
+      "HijackRAG_ Hijacking Attacks against Retrieval-Augmented Large Language Models"
+    ],
+    "prompt-injection": [
+      "HijackRAG_ Hijacking Attacks against Retrieval-Augmented Large Language Models"
+    ],
+    "retrieval-attacks": [
+      "HijackRAG_ Hijacking Attacks against Retrieval-Augmented Large Language Models"
+    ],
+    "adversarial-llm": [
+      "HijackRAG_ Hijacking Attacks against Retrieval-Augmented Large Language Models"
+    ],
+    "knowledge-poisoning": [
+      "HijackRAG_ Hijacking Attacks against Retrieval-Augmented Large Language Models"
+    ],
+    "Parkinson-hypomimia": [
+      "HypomimiaCoach_ An AU-based Digital Therapy System for Hypomimia Detection &amp; Rehabilitation with Parkinson's Disease"
+    ],
+    "AU-facial-action-unit": [
+      "HypomimiaCoach_ An AU-based Digital Therapy System for Hypomimia Detection &amp; Rehabilitation with Parkinson's Disease"
+    ],
+    "digital-therapy": [
+      "HypomimiaCoach_ An AU-based Digital Therapy System for Hypomimia Detection &amp; Rehabilitation with Parkinson's Disease"
+    ],
+    "graph-convolutional-network": [
+      "HypomimiaCoach_ An AU-based Digital Therapy System for Hypomimia Detection &amp; Rehabilitation with Parkinson's Disease"
+    ],
+    "rehabilitation-system": [
+      "HypomimiaCoach_ An AU-based Digital Therapy System for Hypomimia Detection &amp; Rehabilitation with Parkinson's Disease"
+    ],
+    "UHR-remote-sensing-VQA": [
+      "ImageRAG_ Enhancing Ultra High Resolution Remote Sensing Imagery Analysis with ImageRAG"
+    ],
+    "visual-retrieval-augmented-generation": [
+      "ImageRAG_ Enhancing Ultra High Resolution Remote Sensing Imagery Analysis with ImageRAG"
+    ],
+    "multi-scale-patch-retrieval": [
+      "ImageRAG_ Enhancing Ultra High Resolution Remote Sensing Imagery Analysis with ImageRAG"
+    ],
+    "MLLM-efficiency-constraint": [
+      "ImageRAG_ Enhancing Ultra High Resolution Remote Sensing Imagery Analysis with ImageRAG"
+    ],
+    "remote-sensing-specific-CLIP": [
+      "ImageRAG_ Enhancing Ultra High Resolution Remote Sensing Imagery Analysis with ImageRAG"
+    ],
+    "structure-function-coupling": [
+      "Impaired regional structure-function coupling as novel neurophenotype_ mechanistic insights and diagnostic exploration in treatment-resistant depression"
+    ],
+    "treatment-resistant-depression": [
+      "Impaired regional structure-function coupling as novel neurophenotype_ mechanistic insights and diagnostic exploration in treatment-resistant depression"
+    ],
+    "multimodal-MRI": [
+      "Impaired regional structure-function coupling as novel neurophenotype_ mechanistic insights and diagnostic exploration in treatment-resistant depression"
+    ],
+    "KL-divergence": [
+      "Impaired regional structure-function coupling as novel neurophenotype_ mechanistic insights and diagnostic exploration in treatment-resistant depression"
+    ],
+    "machine-learning-classification": [
+      "Impaired regional structure-function coupling as novel neurophenotype_ mechanistic insights and diagnostic exploration in treatment-resistant depression"
+    ],
+    "incremental-manifold-learning": [
+      "Incremental Manifold Learning Via Tangent Space Alignment"
+    ],
+    "LTSA": [
+      "Incremental Manifold Learning Via Tangent Space Alignment"
+    ],
+    "eigenvalue-incremental-update": [
+      "Incremental Manifold Learning Via Tangent Space Alignment"
+    ],
+    "LASSO-landmark-selection": [
+      "Incremental Manifold Learning Via Tangent Space Alignment"
+    ],
+    "tangent-space-alignment": [
+      "Incremental Manifold Learning Via Tangent Space Alignment"
+    ],
+    "AI-for-OS": [
+      "Integrating Artificial Intelligence into Operating Systems_ A Survey on Techniques, Applications, and Future Directions"
+    ],
+    "OS-for-AI": [
+      "Integrating Artificial Intelligence into Operating Systems_ A Survey on Techniques, Applications, and Future Directions"
+    ],
+    "intelligent-scheduling": [
+      "Integrating Artificial Intelligence into Operating Systems_ A Survey on Techniques, Applications, and Future Directions"
+    ],
+    "kernel-embedded-inference": [
+      "Integrating Artificial Intelligence into Operating Systems_ A Survey on Techniques, Applications, and Future Directions"
+    ],
+    "self-optimizing-OS": [
+      "Integrating Artificial Intelligence into Operating Systems_ A Survey on Techniques, Applications, and Future Directions"
+    ],
+    "LLM-agent-OS": [
+      "Integrating Artificial Intelligence into Operating Systems_ A Survey on Techniques, Applications, and Future Directions"
+    ],
+    "federated-llm": [
+      "Integration of Large Language Models and Federated Learning"
+    ],
+    "llm-data-scarcity": [
+      "Integration of Large Language Models and Federated Learning"
+    ],
+    "distributed-training": [
+      "Integration of Large Language Models and Federated Learning"
+    ],
+    "instruction-tuning": [
+      "Integration of Large Language Models and Federated Learning"
+    ],
+    "cross-organizational ESB": [
+      "JTangSynergy 3.0_ A framework and software tool for integrating cross-organizational applications"
+    ],
+    "enterprise application integration": [
+      "JTangSynergy 3.0_ A framework and software tool for integrating cross-organizational applications"
+    ],
+    "domain-based coordination": [
+      "JTangSynergy 3.0_ A framework and software tool for integrating cross-organizational applications"
+    ],
+    "heterogeneous data service integration": [
+      "JTangSynergy 3.0_ A framework and software tool for integrating cross-organizational applications"
+    ],
+    "e-government system": [
+      "JTangSynergy 3.0_ A framework and software tool for integrating cross-organizational applications"
+    ],
+    "open-set-domain-adaptation": [
+      "Joint Partial Optimal Transport for Open Set Domain Adaptation"
+    ],
+    "partial-optimal-transport": [
+      "Joint Partial Optimal Transport for Open Set Domain Adaptation"
+    ],
+    "negative-transfer": [
+      "Joint Partial Optimal Transport for Open Set Domain Adaptation"
+    ],
+    "discriminative-prototype": [
+      "Joint Partial Optimal Transport for Open Set Domain Adaptation"
+    ],
+    "unknown-class-recognition": [
+      "Joint Partial Optimal Transport for Open Set Domain Adaptation"
+    ],
+    "LLM代码生成": [
+      "LLM4EFFI_ Leveraging Large Language Models to Enhance Code Efficiency and Correctness"
+    ],
+    "代码效率优化": [
+      "LLM4EFFI_ Leveraging Large Language Models to Enhance Code Efficiency and Correctness"
+    ],
+    "算法复杂度": [
+      "LLM4EFFI_ Leveraging Large Language Models to Enhance Code Efficiency and Correctness"
+    ],
+    "测试用例验证": [
+      "LLM4EFFI_ Leveraging Large Language Models to Enhance Code Efficiency and Correctness"
+    ],
+    "代码正确性保证": [
+      "LLM4EFFI_ Leveraging Large Language Models to Enhance Code Efficiency and Correctness"
+    ],
+    "multi-server job scheduling": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "fluctuated processing speeds": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "service locality": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "online learning": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "dynamic programming": [
+      "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds"
+    ],
+    "LLM-routing": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "multi-model-ensemble": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "cost-efficient-inference": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "adaptive-model-selection": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "early-exit-strategy": [
+      "LightRouter_ Towards Efficient LLM Collaboration with Minimal Overhead"
+    ],
+    "data marketplace": [
+      "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey"
+    ],
+    "query pricing": [
+      "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey"
+    ],
+    "feature-based pricing": [
+      "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey"
+    ],
+    "ML model pricing": [
+      "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey"
+    ],
+    "taxonomy construction": [
+      "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey"
+    ],
+    "arbitrage-free pricing": [
+      "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey"
+    ],
+    "data valuation": [
+      "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey"
+    ],
+    "federated learning pricing": [
+      "Modern Data Pricing Models_ Taxonomy and Comprehensive Survey"
+    ],
+    "multi-modal-medical-images": [
+      "Multi-Modal One-Shot Federated Ensemble Learning for Medical Data with Vision Large Language Model"
+    ],
+    "vision-LLM": [
+      "Multi-Modal One-Shot Federated Ensemble Learning for Medical Data with Vision Large Language Model"
+    ],
+    "federated-ensemble": [
+      "Multi-Modal One-Shot Federated Ensemble Learning for Medical Data with Vision Large Language Model"
+    ],
+    "BERT-feature-extraction": [
+      "Multi-Modal One-Shot Federated Ensemble Learning for Medical Data with Vision Large Language Model"
+    ],
+    "CXL内存扩展": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "内存墙解决": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "异构计算互联": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "内存解耦池化": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "近存处理架构": [
+      "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey"
+    ],
+    "de-novo-peptide-sequencing": [
+      "NovoBench_ Benchmarking Deep Learning-based De Novo Peptide Sequencing Methods in Proteomics"
+    ],
+    "benchmarking": [
+      "NovoBench_ Benchmarking Deep Learning-based De Novo Peptide Sequencing Methods in Proteomics"
+    ],
+    "deep-learning-proteomics": [
+      "NovoBench_ Benchmarking Deep Learning-based De Novo Peptide Sequencing Methods in Proteomics"
+    ],
+    "mass-spectrometry": [
+      "NovoBench_ Benchmarking Deep Learning-based De Novo Peptide Sequencing Methods in Proteomics"
+    ],
+    "model-evaluation": [
+      "NovoBench_ Benchmarking Deep Learning-based De Novo Peptide Sequencing Methods in Proteomics"
+    ],
+    "sequential-federated-learning": [
+      "One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity"
+    ],
+    "non-IID-data": [
+      "One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity"
+    ],
+    "model-diversity": [
+      "One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity"
+    ],
+    "local-training-regularization": [
+      "One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity"
+    ],
+    "parameter-tuning": [
+      "Parf_ Adaptive Parameter Refining for Abstract Interpretation"
+    ],
+    "static-analysis": [
+      "Parf_ Adaptive Parameter Refining for Abstract Interpretation"
+    ],
+    "probabilistic-modeling": [
+      "Parf_ Adaptive Parameter Refining for Abstract Interpretation"
+    ],
+    "adaptive-refinement": [
+      "Parf_ Adaptive Parameter Refining for Abstract Interpretation"
+    ],
+    "static-analysis-parameter-tuning": [
+      "Parf_ An Adaptive Abstraction-Strategy Tuner for Static Analysis"
+    ],
+    "probability-distribution-refinement": [
+      "Parf_ An Adaptive Abstraction-Strategy Tuner for Static Analysis"
+    ],
+    "frama-c-eva": [
+      "Parf_ An Adaptive Abstraction-Strategy Tuner for Static Analysis"
+    ],
+    "false-alarm-reduction": [
+      "Parf_ An Adaptive Abstraction-Strategy Tuner for Static Analysis"
+    ],
+    "edge-computing-dag-embedding": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "stream-mapping-optimization": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "data-splitting-routing": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "heterogeneous-edge-scheduling": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "dynamic-programming-optimization": [
+      "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+    ],
+    "recommender-system-unlearning": [
+      "Post-Training Attribute Unlearning in Recommender Systems"
+    ],
+    "attribute-inference-defense": [
+      "Post-Training Attribute Unlearning in Recommender Systems"
+    ],
+    "distribution-distance-MMD": [
+      "Post-Training Attribute Unlearning in Recommender Systems"
+    ],
+    "function-space-regularization": [
+      "Post-Training Attribute Unlearning in Recommender Systems"
+    ],
+    "post-training-model-editing": [
+      "Post-Training Attribute Unlearning in Recommender Systems"
+    ],
+    "LLM-catastrophic-forgetting": [
+      "Preserving Knowledge in Large Language Model with Model-Agnostic Self-Decompression"
+    ],
+    "synthetic-data-generation": [
+      "Preserving Knowledge in Large Language Model with Model-Agnostic Self-Decompression"
+    ],
+    "self-decompression": [
+      "Preserving Knowledge in Large Language Model with Model-Agnostic Self-Decompression"
+    ],
+    "tree-structured-dialogue": [
+      "Preserving Knowledge in Large Language Model with Model-Agnostic Self-Decompression"
+    ],
+    "knowledge-preservation": [
+      "Preserving Knowledge in Large Language Model with Model-Agnostic Self-Decompression"
+    ],
+    "LLM-interpretability": [
+      "Probing the Geometry of Truth_ Consistency and Generalization of Truth Directions in LLMs Across Logical Transformations and Question Answering Tasks__oa_W4414893717"
+    ],
+    "truth-direction-probing": [
+      "Probing the Geometry of Truth_ Consistency and Generalization of Truth Directions in LLMs Across Logical Transformations and Question Answering Tasks__oa_W4414893717"
+    ],
+    "selective-QA": [
+      "Probing the Geometry of Truth_ Consistency and Generalization of Truth Directions in LLMs Across Logical Transformations and Question Answering Tasks__oa_W4414893717"
+    ],
+    "logical-negation-generalization": [
+      "Probing the Geometry of Truth_ Consistency and Generalization of Truth Directions in LLMs Across Logical Transformations and Question Answering Tasks__oa_W4414893717"
+    ],
+    "representation-geometry": [
+      "Probing the Geometry of Truth_ Consistency and Generalization of Truth Directions in LLMs Across Logical Transformations and Question Answering Tasks__oa_W4414893717"
+    ],
+    "quantum-circuit-visualization": [
+      "Quantivine_ A Visualization Approach for Large-scale Quantum Circuit Representation and Analysis"
+    ],
+    "semantic-analysis": [
+      "Quantivine_ A Visualization Approach for Large-scale Quantum Circuit Representation and Analysis"
+    ],
+    "graph-abstraction": [
+      "Quantivine_ A Visualization Approach for Large-scale Quantum Circuit Representation and Analysis"
+    ],
+    "hierarchical-clustering": [
+      "Quantivine_ A Visualization Approach for Large-scale Quantum Circuit Representation and Analysis"
+    ],
+    "quantum-computing-tools": [
+      "Quantivine_ A Visualization Approach for Large-scale Quantum Circuit Representation and Analysis"
+    ],
+    "self-knowledge-assessment": [
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4392737420"
+    ],
+    "knowledge-filtering": [
+      "RA-ISF_ Learning to Answer and Understand from Retrieval Augmentation via Iterative Self-Feedback__oa_W4402670862"
+    ],
+    "遥感视觉-语言模型": [
+      "RS5M and GeoRSCLIP_ A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing"
+    ],
+    "领域自适应": [
+      "RS5M and GeoRSCLIP_ A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing"
+    ],
+    "大规模图文数据集构建": [
+      "RS5M and GeoRSCLIP_ A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing"
+    ],
+    "零样本遥感分类": [
+      "RS5M and GeoRSCLIP_ A Large Scale Vision-Language Dataset and A Large Vision-Language Model for Remote Sensing"
+    ],
+    "vulnerability-patch-localization": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "LLM-based-code-analysis": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "version-range-filtering": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "empirical-software-security": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "knowledge-driven-patch-detection": [
+      "Revisiting Vulnerability Patch Localization_ An Empirical Study and LLM-Based Solution"
+    ],
+    "LLM influence function": [
+      "Scalable Multi-Stage Influence Function for Large Language Models via Eigenvalue-Corrected Kronecker-Factored Parameterization"
+    ],
+    "multi-stage training attribution": [
+      "Scalable Multi-Stage Influence Function for Large Language Models via Eigenvalue-Corrected Kronecker-Factored Parameterization"
+    ],
+    "EK-FAC curvature approximation": [
+      "Scalable Multi-Stage Influence Function for Large Language Models via Eigenvalue-Corrected Kronecker-Factored Parameterization"
+    ],
+    "transformer interpretability": [
+      "Scalable Multi-Stage Influence Function for Large Language Models via Eigenvalue-Corrected Kronecker-Factored Parameterization"
+    ],
+    "factual knowledge tracing": [
+      "Scalable Multi-Stage Influence Function for Large Language Models via Eigenvalue-Corrected Kronecker-Factored Parameterization"
+    ],
+    "multi-server-job-scheduling": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "online-gradient-ascent": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "sublinear-regret": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "computation-communication-tradeoff": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "bipartite-scheduling": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "concave-reward-optimization": [
+      "Scheduling Multi-Server Jobs with Sublinear Regrets via Online Learning"
+    ],
+    "code-LLM-adversarial-robustness": [
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4403851697"
+    ],
+    "CWE-vulnerability-mitigation": [
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4403851697"
+    ],
+    "code-LM-safety": [
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4404782576"
+    ],
+    "generalization-robustness": [
+      "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4404782576"
+    ],
+    "web-data-extraction": [
+      "Service Wrapper_ a system for converting web data into web services"
+    ],
+    "wrapper-generation": [
+      "Service Wrapper_ a system for converting web data into web services"
+    ],
+    "web-service-generation": [
+      "Service Wrapper_ a system for converting web data into web services"
+    ],
+    "block-segmentation": [
+      "Service Wrapper_ a system for converting web data into web services"
+    ],
+    "GUI-based-automation": [
+      "Service Wrapper_ a system for converting web data into web services"
+    ],
+    "dermatology-diagnosis": [
+      "SkinGEN_ an Explainable Dermatology Diagnosis-to-Generation Framework with Interactive Vision-Language Models"
+    ],
+    "visual-explainability": [
+      "SkinGEN_ an Explainable Dermatology Diagnosis-to-Generation Framework with Interactive Vision-Language Models"
+    ],
+    "vision-language-model": [
+      "SkinGEN_ an Explainable Dermatology Diagnosis-to-Generation Framework with Interactive Vision-Language Models"
+    ],
+    "stable-diffusion-generation": [
+      "SkinGEN_ an Explainable Dermatology Diagnosis-to-Generation Framework with Interactive Vision-Language Models"
+    ],
+    "medical-ai-trust": [
+      "SkinGEN_ an Explainable Dermatology Diagnosis-to-Generation Framework with Interactive Vision-Language Models"
+    ],
+    "software-product-line": [
+      "Software Product Line Oriented Feature Map"
+    ],
+    "feature-modeling": [
+      "Software Product Line Oriented Feature Map"
+    ],
+    "ontology-representation": [
+      "Software Product Line Oriented Feature Map"
+    ],
+    "variability-management": [
+      "Software Product Line Oriented Feature Map"
+    ],
+    "resource-navigation": [
+      "Software Product Line Oriented Feature Map"
+    ],
+    "3D医学图像分割": [
+      "TK-Mamba_ Marrying KAN With Mamba for Text-Driven 3D Medical Image Segmentation"
+    ],
+    "Mamba状态空间模型": [
+      "TK-Mamba_ Marrying KAN With Mamba for Text-Driven 3D Medical Image Segmentation"
+    ],
+    "Kolmogorov-Arnold网络": [
+      "TK-Mamba_ Marrying KAN With Mamba for Text-Driven 3D Medical Image Segmentation"
+    ],
+    "视觉-语言对齐": [
+      "TK-Mamba_ Marrying KAN With Mamba for Text-Driven 3D Medical Image Segmentation"
+    ],
+    "多器官分割": [
+      "TK-Mamba_ Marrying KAN With Mamba for Text-Driven 3D Medical Image Segmentation"
+    ],
+    "LLM自改进": [
+      "The Self-Improvement Paradox_ Can Language Models Bootstrap Reasoning Capabilities without External Scaffolding___oa_W4407764284"
+    ],
+    "拒绝采样去重": [
+      "The Self-Improvement Paradox_ Can Language Models Bootstrap Reasoning Capabilities without External Scaffolding___oa_W4407764284"
+    ],
+    "多数投票共识": [
+      "The Self-Improvement Paradox_ Can Language Models Bootstrap Reasoning Capabilities without External Scaffolding___oa_W4407764284"
+    ],
+    "合成数据自举": [
+      "The Self-Improvement Paradox_ Can Language Models Bootstrap Reasoning Capabilities without External Scaffolding___oa_W4407764284"
+    ],
+    "数学推理能力提升": [
+      "The Self-Improvement Paradox_ Can Language Models Bootstrap Reasoning Capabilities without External Scaffolding___oa_W4407764284"
+    ],
+    "online-scheduling": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "deadline-constraint": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "multi-server-jobs": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "social-welfare-maximization": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "competitive-analysis": [
+      "Theoretically Guaranteed Online Workload Dispatching for Deadline-Aware Multi-Server Jobs"
+    ],
+    "tool-learning": [
+      "Tool-Planner_ Task Planning with Clusters across Multiple Tools"
+    ],
+    "LLM-planning": [
+      "Tool-Planner_ Task Planning with Clusters across Multiple Tools"
+    ],
+    "tool-clustering": [
+      "Tool-Planner_ Task Planning with Clusters across Multiple Tools"
+    ],
+    "API-orchestration": [
+      "Tool-Planner_ Task Planning with Clusters across Multiple Tools"
+    ],
+    "toolkit-search": [
+      "Tool-Planner_ Task Planning with Clusters across Multiple Tools"
+    ],
+    "privacy-preserving-deep-learning": [
+      "Towards Scalable and Privacy-Preserving Deep Neural Network via Algorithmic-Cryptographic Co-design"
+    ],
+    "secret-sharing": [
+      "Towards Scalable and Privacy-Preserving Deep Neural Network via Algorithmic-Cryptographic Co-design"
+    ],
+    "homomorphic-encryption": [
+      "Towards Scalable and Privacy-Preserving Deep Neural Network via Algorithmic-Cryptographic Co-design"
+    ],
+    "split-neural-network": [
+      "Towards Scalable and Privacy-Preserving Deep Neural Network via Algorithmic-Cryptographic Co-design"
+    ],
+    "edge-LLM-security": [
+      "TransLinkGuard_ Safeguarding Transformer Models Against Model Stealing in Edge Deployment"
+    ],
+    "model-stealing-defense": [
+      "TransLinkGuard_ Safeguarding Transformer Models Against Model Stealing in Edge Deployment"
+    ],
+    "TEE-authorization": [
+      "TransLinkGuard_ Safeguarding Transformer Models Against Model Stealing in Edge Deployment"
+    ],
+    "weight-permutation": [
+      "TransLinkGuard_ Safeguarding Transformer Models Against Model Stealing in Edge Deployment"
+    ],
+    "transformer-IP-protection": [
+      "TransLinkGuard_ Safeguarding Transformer Models Against Model Stealing in Edge Deployment"
+    ],
+    "vision-language-pretraining evaluation": [
+      "VL-CheckList_ Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations"
+    ],
+    "image-text-matching": [
+      "VL-CheckList_ Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations"
+    ],
+    "negative sampling": [
+      "VL-CheckList_ Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations"
+    ],
+    "model capability profiling": [
+      "VL-CheckList_ Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations"
+    ],
+    "multimodal interpretability": [
+      "VL-CheckList_ Evaluating Pre-trained Vision-Language Models with Objects, Attributes and Relations"
+    ],
+    "query-driven-video-understanding": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "iterative-reasoning-perception-loop": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "temporal-consistency-refinement": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "lightweight-multimodal-LLM": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "graph-based-temporal-memory": [
+      "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding"
+    ],
+    "text-to-3D-generation": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "schrodinger-bridge": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "score-distillation": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "gaussian-splatting": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "lora-adaptation": [
+      "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation"
+    ],
+    "federated-learning-fairness": [
+      "WassFFed_ Wasserstein Fair Federated Learning"
+    ],
+    "wasserstein-barycenter": [
+      "WassFFed_ Wasserstein Fair Federated Learning"
+    ],
+    "optimal-transport-fairness": [
+      "WassFFed_ Wasserstein Fair Federated Learning"
+    ],
+    "group-fairness-multi-group": [
+      "WassFFed_ Wasserstein Fair Federated Learning"
+    ],
+    "non-IID-federated-learning": [
+      "WassFFed_ Wasserstein Fair Federated Learning"
+    ],
+    "vision-level reasoning": [
+      "ZoomEye_ Enhancing Multimodal LLMs with Human-Like Zooming Capabilities through Tree-Based Image Exploration__oa_W4404986947"
+    ],
+    "tree search algorithm": [
+      "ZoomEye_ Enhancing Multimodal LLMs with Human-Like Zooming Capabilities through Tree-Based Image Exploration__oa_W4404986947"
+    ],
+    "multimodal LLM": [
+      "ZoomEye_ Enhancing Multimodal LLMs with Human-Like Zooming Capabilities through Tree-Based Image Exploration__oa_W4404986947"
+    ],
+    "high-resolution image understanding": [
+      "ZoomEye_ Enhancing Multimodal LLMs with Human-Like Zooming Capabilities through Tree-Based Image Exploration__oa_W4404986947"
+    ],
+    "zoom-in mechanism": [
+      "ZoomEye_ Enhancing Multimodal LLMs with Human-Like Zooming Capabilities through Tree-Based Image Exploration__oa_W4404986947"
+    ],
+    "XAI-robustness-evaluation": [
+      "_Is your explanation stable___ A Robustness Evaluation Framework for Feature Attribution"
+    ],
+    "feature-attribution-stability": [
+      "_Is your explanation stable___ A Robustness Evaluation Framework for Feature Attribution"
+    ],
+    "hypothesis-testing-explainability": [
+      "_Is your explanation stable___ A Robustness Evaluation Framework for Feature Attribution"
+    ],
+    "adversarial-explanation-defense": [
+      "_Is your explanation stable___ A Robustness Evaluation Framework for Feature Attribution"
+    ],
+    "median-based-inference": [
+      "_Is your explanation stable___ A Robustness Evaluation Framework for Feature Attribution"
+    ]
+  }
+}

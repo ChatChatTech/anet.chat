@@ -1,0 +1,42 @@
+{
+  "paper_id": "Yang and Liu - 2012 - Understanding Node Localizability of Wireless Ad Hoc and Sensor Networks",
+  "doi": null,
+  "title": "Understanding Node Localizability of Wireless Ad Hoc and Sensor Networks",
+  "year": 2012,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "实测海洋监测网络中几乎所有时刻网络都无法整体定位,但大部分节点实际可唯一确定位置,现有测试只返回\"失败\"",
+  "problem_framing": "将网络整体可定位性重新定义为单个节点的位置唯一性,提出节点可定位性概念,回答哪些节点可定位及有多少节点可定位",
+  "key_insight": "网络可定位性的必要条件(如三连通性)对单节点可定位性不再必需,隐边和冗余刚性是关键区分特征",
+  "method_signature": "基于冗余刚性与三顶点独立路径推导出节点可定位性的RR3P充分条件和RR-3P必要条件",
+  "evaluation_criteria": "可定位节点比例、节能效果、连边削减率,与3P/TRI条件对比实验",
+  "negative_result_or_admitted_limitation": "仍有少量节点无法被RR-3P或RR3P判定,RR3P必要性证明留作未来工作",
+  "evidence_for_taste": [
+    "to our surprise and disappointment",
+    "less meaningful in practice",
+    "a large portion of nodes can be uniquely located",
+    "not sufficient as illustrated in Fig. 4a",
+    "cannot be directly applied"
+  ],
+  "thinking_moves": [
+    "从实际部署网络异常反推理论不足:发现\"fail\"答案无法指导实践",
+    "质疑全局必要条件对局部问题的适用性:三连通性不再是单节点必要条件",
+    "构造反例揭示现有方法的误判:图1中u节点被错误标记为不可定位",
+    "引入隐边概念弥合充分条件过严问题:隐性约束可被显式利用",
+    "将组合问题规约为已知多项式算法可解的问题:利用pebble game和network flow"
+  ],
+  "topic_tags": [
+    "节点可定位性",
+    "图刚性理论",
+    "无线传感器网络定位",
+    "冗余刚性",
+    "海洋监测传感器网络"
+  ],
+  "cites_own_work": [
+    "OceanSense Project",
+    "Sea Depth Measurement with Restricted Floating Sensors"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供完整的理论证明框架和充分的实验验证,包含motivation-example-theorem-proof完整链路,证据充分"
+}

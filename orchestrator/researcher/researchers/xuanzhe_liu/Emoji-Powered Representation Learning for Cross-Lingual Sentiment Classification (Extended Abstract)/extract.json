@@ -1,0 +1,40 @@
+{
+  "paper_id": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification (Extended Abstract)",
+  "doi": "10.24963/ijcai.2020/649",
+  "title": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification (Extended Abstract)",
+  "year": 2020,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "非英语用户(74.8%)获得的情感分析服务质量不平等,根源是标注数据英语远超其他语言",
+  "problem_framing": "跨语言情感分类:从英语迁移到目标语言,但机器翻译丢失语言特有的情感表达(language discrepancy problem)",
+  "key_insight": "表情符号既是情感标签的代理又是语言间桥梁,可同时捕获跨语言通用情感和语言特有情感模式",
+  "method_signature": "ELSA:用表情符号预测作为监督学习语言特有情感表示,结合翻译后的双语表示做情感分类",
+  "evaluation_criteria": "Amazon评论数据集准确率(3目标语言×3领域=9任务)",
+  "negative_result_or_admitted_limitation": "无法获取基线方法的单个预测,无法报告McNemar检验的统计显著性",
+  "evidence_for_taste": [
+    "machine translation does not tackle well",
+    "fails to capture sentiment knowledge specific to the target language",
+    "language discrepancy problem",
+    "not dominated by the source language",
+    "incorporating language-specific knowledge for both languages is critical"
+  ],
+  "thinking_moves": [
+    "诊断现有MT方法失败根因:追求跨语言泛化时丢失语言特有情感知识",
+    "寻找全球通用的情感表达信号作为翻译的补充桥梁",
+    "用表情符号预测作为远程监督学习语言特有表示,避免显式标注",
+    "通过消融实验验证双向语言特有表示的必要性"
+  ],
+  "topic_tags": [
+    "cross-lingual sentiment classification",
+    "emoji-powered representation learning",
+    "language discrepancy problem",
+    "distant supervision via emojis",
+    "bilingual representation alignment"
+  ],
+  "cites_own_work": [
+    "Chen et al., 2019 (WWW 2019 full version)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "extended abstract of WWW 2019 paper; full method and evaluation details available; IJCAI 2020 venue confirms top-tier status"
+}

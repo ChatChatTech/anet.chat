@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2019 - A Quantitative and Comparative Study of Network-Level Efficiency for Cloud Storage Services",
+  "doi": null,
+  "title": "A Quantitative and Comparative Study of Network-Level Efficiency for Cloud Storage Services",
+  "year": 2019,
+  "venue": "ACM Trans. Model. Perform. Eval. Comput. Syst.",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "云存储服务产生大量同步流量，造成财务成本和性能损失，用户面临意外流量费用",
+  "problem_framing": "定义TUE指标量化流量使用效率，对比8个云存储服务的同步机制",
+  "key_insight": "TUE揭示大部分同步流量可优化：增量同步、压缩、去重、批处理等九类方法",
+  "method_signature": "基准实验+逆向工程8个云存储服务的同步流程",
+  "evaluation_criteria": "TUE值、流量开销、带宽、延迟、客户端硬件配置的影响",
+  "negative_result_or_admitted_limitation": "无法破解5个服务的HTTPS加密内容；Web和移动端增量同步因JavaScript效率和电池问题未实现",
+  "evidence_for_taste": [
+    "block-level dedup exhibits trivial superiority",
+    "users with poor hardware save on sync traffic",
+    "much of the data sync traffic is wasteful"
+  ],
+  "thinking_moves": [
+    "用TUE指标揭示流量效率的本质问题",
+    "通过逆向工程发现服务商的隐式优化策略",
+    "发现意外的负面效果（并行传输导致流量浪费）",
+    "证明理论上有用的方法在工程中不实用"
+  ],
+  "topic_tags": [
+    "cloud-storage-traffic-efficiency",
+    "TUE-metric",
+    "sync-mechanism-optimization",
+    "reverse-engineering-cloud-services",
+    "incremental-sync"
+  ],
+  "cites_own_work": [
+    "[33] Towards network-level efficiency for cloud storage services 2014",
+    "[36] Efficient batched synchronization 2013",
+    "[37] Coarse-grained cloud synchronization 2013"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

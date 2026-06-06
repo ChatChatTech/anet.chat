@@ -1,0 +1,38 @@
+{
+  "paper_id": "Chen et al. - 2007 - Difficulty-aware Hybrid Search in Peer-to-Peer Networks",
+  "doi": null,
+  "title": "Difficulty-aware Hybrid Search in Peer-to-Peer Networks",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "混合P2P搜索中，现有方法假设\"项目多=节点多\"，但用户偏好存储相似项目，导致该假设失效。",
+  "problem_framing": "如何准确估计有多少个对等节点能够回答给定查询，以选择泛洪或DHT搜索策略。",
+  "key_insight": "\"Many items ≠ many peers\"——由于兴趣局部性，同一查询的相关项目可能集中在少数节点；需用IPF和apTF加权来估计实际覆盖的节点数。",
+  "method_signature": "基于apTF×IPF权重和SVM分类器的查询难度感知混合搜索协议QRank。",
+  "evaluation_criteria": "召回率、响应延迟、通信开销、搜索效率(召回/开销)、综合效用。",
+  "negative_result_or_admitted_limitation": "P2P查询极短导致f_{q,t}恒为1，传统TF失效；动态网络下统计精度受节点在线时间影响。",
+  "evidence_for_taste": [
+    "estimating the number of peers that can answer a question",
+    "cannot distinguish whether items distributed in many peers or in a few peers",
+    "terms more frequently used in a query are likely important",
+    "different from queries in traditional information retrieval application, P2P queries are typically short",
+    "the accuracy of QRank is influenced by the uptime of a peer"
+  ],
+  "thinking_moves": [
+    "从工程失效反推底层假设错误——\"many items → many peers\"假设被兴趣局部性否定",
+    "将P2P搜索选择问题类比为信息检索中的词权重问题",
+    "针对P2P查询极短的特点改造TF公式，引入apTF",
+    "用SVM而非简单阈值来处理多维决策空间(ϖ_q, σ_q)"
+  ],
+  "topic_tags": [
+    "P2P-hybrid-search",
+    "query-difficulty-estimation",
+    "gossip-aggregation",
+    "SVM-classifier",
+    "term-weighting"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

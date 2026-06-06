@@ -1,0 +1,43 @@
+{
+  "paper_id": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+  "doi": "10.48550/arxiv.1508.03720",
+  "title": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+  "year": 2015,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统关系分类依赖特征工程或核函数设计，难以自动学习特征；深度学习虽可自动学习但人类知识注入仍有价值",
+  "problem_framing": "将关系分类定义为沿最短依存路径的双向LSTM序列建模问题，利用路径方向性捕捉关系方向",
+  "key_insight": "将SDP在公共祖先节点处分为两条子路径，分别用LSTM建模，可显式捕捉关系方向性且保留最相关语义信息",
+  "method_signature": "SDP-LSTM：四通道(词/POS/依存关系/WordNet)LSTM网络处理最短依存路径双路子路径",
+  "evaluation_criteria": "SemEval-2010 Task 8官方宏平均F1值(排除Other类)",
+  "negative_result_or_admitted_limitation": "dropout LSTM内部单元会损害模型性能，即使dropout率仅为0.1",
+  "evidence_for_taste": [
+    "most relevant information",
+    "diminishing less relevant noise",
+    "direction matters",
+    "direction-sensitive manner",
+    "complementary to each other",
+    "dropout of LSTM units hurts",
+    "inimical to our model",
+    "higher than competing methods"
+  ],
+  "thinking_moves": [
+    "先验证LSTM有效，再验证方向性有效，形成控制实验递进",
+    "观察依存树天然适合关系分类，因其聚焦动作和施事者",
+    "将方向性问题转化为对公共祖先节点的双路子路径建模",
+    "通过消融实验验证各通道的互补性而非简单叠加",
+    "对dropout策略进行系统探索，发现LSTM dropout不可行"
+  ],
+  "topic_tags": [
+    "relation-classification",
+    "SDP-LSTM",
+    "dependency-path-RNN",
+    "multichannel-embedding",
+    "directional-relation"
+  ],
+  "cites_own_work": [
+    "Mou et al., 2015"
+  ],
+  "extraction_quality": "full"
+}

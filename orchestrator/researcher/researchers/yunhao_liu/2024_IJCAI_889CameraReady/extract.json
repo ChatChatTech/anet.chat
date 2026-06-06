@@ -1,0 +1,36 @@
+{
+  "paper_id": "2024_IJCAI_889CameraReady",
+  "doi": null,
+  "title": "Bandits with Concave Aggregated Reward",
+  "year": 2024,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现实中边际效用递减（如广告投放CTR衰减），传统MAB的线性聚合假设失效",
+  "problem_framing": "在未知凹聚合函数f下，最大化f(Σv_{a_t}(t))，奖励r(t)无法直接反映臂值v(t)",
+  "key_insight": "滑动窗口机制可消解凹函数导致的不同时刻权重差异，用多数比较做臂淘汰保证留优",
+  "method_signature": "SW-BCAR：滑动窗口+轮询探索+多数比较臂淘汰；SWUCB-BCAR：加置信上界",
+  "evaluation_criteria": "遗憾比E[R(T)]/OPT，验证算法能否达到(1-o(1))OPT",
+  "negative_result_or_admitted_limitation": "当f(x)=x退化为标准MAB时，SW-BCAR比专用UCB1表现更差",
+  "evidence_for_taste": [
+    "the rewards r(t) obtained by sampling cannot reflect the value v(t)",
+    "the algorithm with a sublinear regret upper bound may not achieve a reward of (1-o(1))OPT",
+    "the longer the advertising time, the more people learn about the product, and the diminishing marginal utility",
+    "if a lousy arm is preserved, the slope of the reward function will change fast"
+  ],
+  "thinking_moves": [
+    "用相对OPT的归一化遗憾替代绝对遗憾，应对聚合函数非线性导致的基准漂移",
+    "将臂均值估计问题转化为权重时变问题，设计滑动窗口隔离早期大权重影响",
+    "通过定义i-better/i-worse比较将臂质量判断转化为可量化的多数淘汰规则",
+    "先证最坏情况Ω(√(KT))下界，再分情况给出算法实现上界"
+  ],
+  "topic_tags": [
+    "concave-aggregated-reward",
+    "diminishing-marginal-utility",
+    "sliding-window-bandit",
+    "regret-normalization",
+    "arm-elimination"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

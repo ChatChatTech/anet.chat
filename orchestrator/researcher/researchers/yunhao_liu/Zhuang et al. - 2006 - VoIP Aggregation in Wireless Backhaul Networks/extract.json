@@ -1,0 +1,36 @@
+{
+  "paper_id": "Zhuang et al. - 2006 - VoIP Aggregation in Wireless Backhaul Networks",
+  "doi": null,
+  "title": "VoIP Aggregation in Wireless Backhaul Networks",
+  "year": 2006,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "无线回程网络中大量小数据包导致MAC开销大，VoIP容量严重受限",
+  "problem_framing": "将聚合速率选择建模为优化问题，目标是最小化整体时延，约束为信道容量和MTU限制",
+  "key_insight": "聚合速率不能由本地决定，需协调相邻TAP的竞争才能优化信道利用率",
+  "method_signature": "基于拉格朗日松弛的分布式协调聚合算法，通过价格机制调整各链路聚合率",
+  "evaluation_criteria": "端到端时延、丢包率、VoIP容量、拓扑扩展性",
+  "negative_result_or_admitted_limitation": "优化问题(P)需要全局信息，实际只能近似求解",
+  "evidence_for_taste": [
+    "cannot be determined by local knowledge only",
+    "not adaptive to the change of channel conditions",
+    "Without coordination, this sharing is unable to lead to optimal channel utilization",
+    "the fundamental question is how to choose T_l",
+    "simple aggregation is sensitive to queuing buffer size"
+  ],
+  "thinking_moves": [
+    "把VoIP容量问题重新帧为聚合速率优化问题",
+    "用拉格朗日松弛将全局优化转化为可分布式实现的迭代调整策略",
+    "将竞争信道建模为最大团(clique)，用价格机制刻画资源竞争"
+  ],
+  "topic_tags": [
+    "wireless-backhaul",
+    "VoIP-aggregation",
+    "distributed-optimization",
+    "802.11-MAC-overhead",
+    "clique-scheduling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

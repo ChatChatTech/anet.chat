@@ -1,0 +1,40 @@
+{
+  "paper_id": "Tuning adaptive computations for the performance improvement of applications in JEE server",
+  "doi": "10.1007/s13174-012-0060-4",
+  "title": "Tuning adaptive computations for the performance improvement of applications in JEE server",
+  "year": 2012,
+  "venue": "The Brazilian Computer Society (Middleware '10 Best Workshop Papers)",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "JEE服务器的自适应计算消耗CPU/内存,与业务争抢资源,重负载下性能下降",
+  "problem_framing": "资源有限竞争环境下,如何在自适应计算与业务功能间动态分配资源",
+  "key_insight": "自适应计算可按 autonomic level 细粒度降级(S3→S0)而非粗暴启停,实现灵活的资源权衡",
+  "method_signature": "基于MAPE控制环的AC层级调优模型,设计CLAT等算法动态升降AC层级控制资源消耗",
+  "evaluation_criteria": "ECperf和RUBiS基准的吞吐量、90%响应时间、成功请求数",
+  "negative_result_or_admitted_limitation": "Markov预测调度开销抵消调优效果,实验结果不够好",
+  "evidence_for_taste": [
+    "runtime overhead brought about by prediction will offset the tuning effects",
+    "ACs can incur performance penalties",
+    "such possibility that an AC never wants its level to be tuned",
+    "resource-hungry algorithms should not be used"
+  ],
+  "thinking_moves": [
+    "类比OS进程调度设计AC调优算法,但指出AC有多状态(S0-S3)而非仅有启停",
+    "以AC maturity和gain value推断优先级,而非精确建模",
+    "承认Markov预测方案不work后转投简单有效的调度算法",
+    "聚焦高负载场景下的资源竞争问题,低负载则让AC全速运行"
+  ],
+  "topic_tags": [
+    "autonomic-computing",
+    "JEE-server-tuning",
+    "adaptive-computation-resource-allocation",
+    "autonomic-level-degradation"
+  ],
+  "cites_own_work": [
+    "[5] position paper on AC tuning",
+    "[9] PkuAS platform",
+    "[10] thread-pool adjuster"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,35 @@
+{
+  "paper_id": "Guo et al. - 2014 - On the Feasibility of Gradient-Based Data-Centric Routing Using Bloom Filters",
+  "doi": null,
+  "title": "On the Feasibility of Gradient-Based Data-Centric Routing Using Bloom Filters",
+  "year": 2014,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有梯度路由机制因噪声淹没有效信息而退化为洪泛,查询无法到达目标",
+  "problem_framing": "推导出梯度路由可行的两条必要条件:正确路由项信息递增且噪声不压过信号",
+  "key_insight": "路由项对多条衰减BF取并集导致位全为1,信号与噪声无法区分,Wader通过接收端设计使路由项保持稀疏",
+  "method_signature": "Wader接收端导向BF设计满足梯度路由可行性的充要条件",
+  "evaluation_criteria": "单播/组播/无效决策概率,冗余查询数量,终止概率",
+  "negative_result_or_admitted_limitation": "现有梯度路由降级为洪泛,节点无法识别正确转发方向",
+  "evidence_for_taste": [
+    "noise in unrelated routing entries is very likely equal to even outweigh information",
+    "deteriorate to a flooding-like mechanism",
+    "cannot distinguish right outgoing links from other interfering ones"
+  ],
+  "thinking_moves": [
+    "从系统级失效现象(路由降级为洪泛)反推底层数学模型假设失效",
+    "将设计目标形式化为两条可验证的条件而非笼统的优化问题",
+    "先证明必要充分条件,再构造满足该条件的方案而非试错"
+  ],
+  "topic_tags": [
+    "bloom-filter-routing",
+    "data-centric-networking",
+    "gradient-based-routing",
+    "multihop-networks",
+    "information-potential"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

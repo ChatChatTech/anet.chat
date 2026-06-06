@@ -1,0 +1,37 @@
+{
+  "paper_id": "T2VIndexer_ A Generative Video Indexer for Efficient Text-Video Retrieval",
+  "doi": "10.1145/3664647.3680673",
+  "title": "T2VIndexer: A Generative Video Indexer for Efficient Text-Video Retrieval",
+  "year": 2024,
+  "venue": "ACM MM '24",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有文本-视频检索需要逐个计算查询与所有候选视频的相似度，时间复杂度线性增长，无法扩展到大场景",
+  "problem_framing": "将检索任务重新定义为序列生成问题：输入文本查询，直接生成视频的语义标识符(SemID)来定位候选视频集",
+  "key_insight": "通过构建语义树Vi-SemTree为每个视频分配层次化标识符，生成阶段具备常数时间复杂度，预筛选出小候选集后再做精确检索",
+  "method_signature": "基于T5的Seq2Seq生成模型+层级聚类Vi-SemTree+PAWA解码器+多视角查询扩增",
+  "evaluation_criteria": "R@K召回率与推理时间，验证30%-50%时间压缩下R@1仍有提升(+1.0%~+1.8%)",
+  "negative_result_or_admitted_limitation": "生成阶段召回有限，无法单独实现精确检索；需两阶段级联；新视频插入Vi-SemTree需200ms/视频的代价计算",
+  "evidence_for_taste": [
+    "the same token ... expresses different concept due to their different prefixes",
+    "This part has the most significant impact on the model's results",
+    "For lower-performing models, this removal of irrelevant videos is useful",
+    "the generative retrieval effect is currently limited",
+    "the retrieved SemID has stronger matching relationship than ground-truth video"
+  ],
+  "thinking_moves": [
+    "将one-to-all相似度匹配问题重新frame为生成式直接定位问题",
+    "借鉴文档检索中NCI的Prefix-Aware权重适配器处理层次标识符中同token不同语义的问题",
+    "通过ablation验证多视角查询扩增对泛化能力的关键作用而非单纯靠模型容量",
+    "观察到粗粒度SemID可覆盖更多相似视频，用truncation换取召回率与候选集规模的平衡"
+  ],
+  "topic_tags": [
+    "generative-retrieval",
+    "text-video-retrieval",
+    "video-indexing",
+    "semantic-tree-indexing",
+    "constant-time-complexity-retrieval"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

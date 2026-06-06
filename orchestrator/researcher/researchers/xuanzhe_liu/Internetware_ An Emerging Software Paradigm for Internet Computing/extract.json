@@ -1,0 +1,46 @@
+{
+  "paper_id": "Internetware_ An Emerging Software Paradigm for Internet Computing",
+  "doi": "10.1007/s11390-011-1159-y",
+  "title": "Internetware: An Emerging Software Paradigm for Internet Computing",
+  "year": 2011,
+  "venue": "Journal of Computer Science and Technology",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传统软件技术在开放、动态、不可控的互联网环境下面临模型、平台、工程方法和质量等多方面挑战",
+  "problem_framing": "将互联网视为一台“全球泛在计算机”，需要新的软件范式来支持互联网环境下软件的开发、运行和质量保证",
+  "key_insight": "Internetware的核心是支持“涌现式协作”——目标在协作执行前不明确或不确定，需按需动态组装自治软件实体",
+  "method_signature": "架构中心的技术解决方案框架，覆盖软件模型、中间件和工程方法三个层面",
+  "evaluation_criteria": "通过案例（如CDC-H1N1应急场景）验证on-demand协作能力，以系统可信性和服务质量为质量衡量标准",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "软件范式一直是软件技术演化的核心驱动力",
+    "从宏观视角，实体可自组织形成应用域或兴趣社区",
+    "Internetware开发是自底向上、由内而外、螺旋式的过程",
+    "在Internet计算环境中，越来越多的目标在协作执行前不明确",
+    "Internetware应用必须执行在线演化",
+    "HOW-WELL将成为Internetware的关键问题"
+  ],
+  "thinking_moves": [
+    "以范式演进视角观察软件技术发展规律，将Internetware定位为继结构化、面向对象、组件化、服务化之后的下一代范式",
+    "从四个维度（what/how-to-develop/how-to-run/how-well）系统化拆解软件范式挑战，对应给出模型、平台、工程、质量四个解决方向",
+    "借用“Internet-as-a-Computer”隐喻，将互联网计算环境的特殊性归结为开放性、动态性和不可控性",
+    "识别涌现式协作（emergent collaboration）作为区别于已有范式的关键新特征",
+    "将软件架构作为全生命周期治理的中心，通过RSA实现运行时协作的全局可控"
+  ],
+  "topic_tags": [
+    "Internetware软件范式",
+    "涌现式软件协作",
+    "运行时软件架构",
+    "自主组件模型",
+    "互联网中间件"
+  ],
+  "cites_own_work": [
+    "PKUAS",
+    "OnceAS",
+    "SM@RT",
+    "ABC方法论",
+    "Artemis-*"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

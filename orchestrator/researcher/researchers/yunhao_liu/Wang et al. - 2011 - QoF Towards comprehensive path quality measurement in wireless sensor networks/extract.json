@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2011 - QoF Towards comprehensive path quality measurement in wireless sensor networks",
+  "doi": null,
+  "title": "QoF: Towards Comprehensive Path Quality Measurement in Wireless Sensor Networks",
+  "year": 2011,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "GreenOrbs部署中发现ETX选路导致部分节点包丢失严重，但现有指标无法量化节点内部问题",
+  "problem_framing": "将路径质量问题定义为链路层指标与节点内部转发质量的不完整估计",
+  "key_insight": "节点内部存在gray zone(packet forwarding quality)，与link quality同等重要，需合并为QoF指标",
+  "method_signature": "generic link model统一物理链路和虚拟链路，定义QoF=data yield/actual transmissions",
+  "evaluation_criteria": "data yield, transmission cost, normalized transmission cost (per successful delivery)",
+  "negative_result_or_admitted_limitation": "ETX在端到端不可靠假设下表现不佳，重传次数需谨慎选择以平衡PDR和资源消耗",
+  "evidence_for_taste": [
+    "ETX fails to capture the path reliability",
+    "overlook the forwarding capabilities inside the sensor nodes",
+    "reveal the limitations of existing link-based indicators",
+    "the gray zone inside the sensor node",
+    "node unreliability",
+    "cannot effectively capture the gray zone"
+  ],
+  "thinking_moves": [
+    "从大规模部署异常(22-40%丢包)反推现有指标的假设失效",
+    "把节点内部转发失败这一工程现象重新frame为virtual link的可靠性问题",
+    "提出unified model同时覆盖physical link和virtual link",
+    "通过three scenarios展示ETX与QoF在路径选择上的本质差异"
+  ],
+  "topic_tags": [
+    "wireless sensor network routing",
+    "path quality metric",
+    "node forwarding reliability",
+    "ETX limitation",
+    "CTP protocol modification"
+  ],
+  "cites_own_work": [
+    "GreenOrbs",
+    "CTP"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Paper lists authors and affiliations but DOI and specific venue are not provided; year is extracted from title"
+}

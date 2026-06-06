@@ -1,0 +1,40 @@
+{
+  "paper_id": "Anti-diabetic effect of anthocyanin cyanidin-3-O-glucoside_ data from insulin resistant hepatocyte and diabetic mouse",
+  "doi": "10.1038/s41387-024-00265-7",
+  "title": "Anti-diabetic effect of anthocyanin cyanidin-3-O-glucoside: data from insulin resistant hepatocyte and diabetic mouse",
+  "year": 2024,
+  "venue": "Nutrition and Diabetes",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "化学药物有副作用,天然产物因来源广、无毒优势受到关注,需验证C3G缓解IR的机制",
+  "problem_framing": "IR导致的葡萄糖代谢紊乱是T2DM核心,通过增强胰岛素敏感性改善",
+  "key_insight": "C3G通过抑制PTP1B解除对IRS-2磷酸化的阻断,恢复胰岛素信号传导",
+  "method_signature": "HepG2/L02细胞IR模型+db/db小鼠6周干预,Western blot/qRT-PCR",
+  "evaluation_criteria": "葡萄糖消耗/摄取、糖原合成、胰岛素敏感指数、PTP1B/p-IRS-2表达",
+  "negative_result_or_admitted_limitation": "OGTT缺少C57BL/6J对照,无法量化db/db小鼠IR程度;仅OGTT和HOMA-IR不能构成对IR改善的稳健论证",
+  "evidence_for_taste": [
+    "two distinct liver cell lines, HepG2 and L02, were used to eliminate cell line-specific variations",
+    "these results alone do not constitute a robust demonstration",
+    "acknowledged that these results alone do not constitute a robust demonstration"
+  ],
+  "thinking_moves": [
+    "针对PTP1B负调控胰岛素信号的已知机制提出抑制假设",
+    "用两种肝细胞系排除细胞系特异性变异",
+    "从体外剂量依赖效应推导体内剂量选择",
+    "承认单一指标不能充分证明IR改善,需补充 clamp 实验"
+  ],
+  "topic_tags": [
+    "anthocyanin-C3G",
+    "insulin-resistance",
+    "PTP1B-inhibition",
+    "hepatocyte-glucose-metabolism",
+    "type-2-diabetes-mouse-model"
+  ],
+  "cites_own_work": [
+    "Ye et al. 2021",
+    "Yan et al. 2016",
+    "Chen et al. 2020"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

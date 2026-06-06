@@ -1,0 +1,80 @@
+{
+  "slug": "yuan_wang",
+  "n_extracts": 1,
+  "n_full": 1,
+  "n_partial": 0,
+  "n_thin": 0,
+  "year_range": [
+    2021,
+    2021
+  ],
+  "top_tags": [
+    [
+      "point-cloud-normal-estimation",
+      1
+    ],
+    [
+      "weighted-least-squares-fitting",
+      1
+    ],
+    [
+      "neural-network-surface-fitting",
+      1
+    ],
+    [
+      "outlier-robust-estimation",
+      1
+    ],
+    [
+      "multi-scale-feature-aggregation",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2021,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "point-cloud-normal-estimation",
+          1
+        ],
+        [
+          "weighted-least-squares-fitting",
+          1
+        ],
+        [
+          "neural-network-surface-fitting",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "去噪预处理不能将点投影到真实表面位置，仍导致较大RMSE；权重重置方法不如偏移预测有效"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "we find that it is hard to determine the polynomial order",
+      "paper_id": "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    },
+    {
+      "quote": "the fitting surface is sensitive to outliers",
+      "paper_id": "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    },
+    {
+      "quote": "even small weights on outliers will thoroughly mess up",
+      "paper_id": "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    },
+    {
+      "quote": "truncating indeed slightly improves but is still inferior",
+      "paper_id": "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    },
+    {
+      "quote": "denoising pre-processing still results in a larger RMSE",
+      "paper_id": "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    }
+  ]
+}

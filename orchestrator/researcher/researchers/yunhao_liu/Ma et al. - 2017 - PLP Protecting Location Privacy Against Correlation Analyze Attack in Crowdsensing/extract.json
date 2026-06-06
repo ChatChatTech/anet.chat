@@ -1,0 +1,40 @@
+{
+  "paper_id": "Ma et al. - 2017 - PLP Protecting Location Privacy Against Correlation Analyze Attack in Crowdsensing",
+  "doi": null,
+  "title": "PLP: Protecting Location Privacy against Correlation Analyze Attack in Crowdsensing",
+  "year": 2017,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "用户在众感应用中不愿共享可能泄露位置隐私的传感数据，导致数据收集困难",
+  "problem_framing": "对强敌手已知系统过滤策略和时空相关性的情况下，如何设计隐私保护方案",
+  "key_insight": "用条件随机场CRF建模时空相关性，相比HMM能更灵活地描述长程依赖以防御更强攻击",
+  "method_signature": "基于CRF建模时空特征，通过学习抑制概率实现δ-隐私保证下的最大效用",
+  "evaluation_criteria": "隐私通过后验与先验概率差异δ衡量，效用通过非空上报比例衡量",
+  "negative_result_or_admitted_limitation": "defender无法保证覆盖所有攻击，adversary总能构建更好的模型",
+  "evidence_for_taste": [
+    "HMM has severe limitations",
+    "existing approaches are vulnerable",
+    "MaskSensitive can be attacked",
+    "adversary can breach privacy",
+    "defender can never say with certainty"
+  ],
+  "thinking_moves": [
+    "假设最强敌手模型反过来定义防御目标",
+    "通过具体反例揭示HMM的conditional independence缺陷导致隐私泄露",
+    "用monotonicity性质将搜索空间从指数压缩到线性"
+  ],
+  "topic_tags": [
+    "location-privacy-crowdsensing",
+    "conditional-random-field",
+    "spatio-temporal-correlation",
+    "privacy-utility-tradeoff",
+    "adversarial-modeling"
+  ],
+  "cites_own_work": [
+    "WILL: Wireless Indoor Localization Without Site Survey (INFOCOM 2012)",
+    "LifS (MobiCom 2012)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Paper truncated at 6239 chars, preventing full venue and DOI extraction. References to prior work (WILL, LifS) suggest this venue may be comparable in tier. CRF learning details truncated. Privacy check algorithm complexity discussion incomplete. | md truncated to head40k+tail20k"
+}

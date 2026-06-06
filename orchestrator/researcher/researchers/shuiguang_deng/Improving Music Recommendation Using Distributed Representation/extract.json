@@ -1,0 +1,35 @@
+{
+  "paper_id": "Improving Music Recommendation Using Distributed Representation",
+  "doi": "10.1145/2872518.2889399",
+  "title": "Improving Music Recommendation Using Distributed Representation",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "帮助用户在海量音乐中找到感兴趣的曲目",
+  "problem_framing": "从用户历史播放记录中学习音乐的分布式表示并推断用户偏好",
+  "key_insight": "相似音乐应有相似上下文,skip-gram可迁移到音乐序列学习",
+  "method_signature": "music2vec(skip-gram)+用户偏好均值+余弦相似度排序",
+  "evaluation_criteria": "F1分数和Hitrate在推荐列表长度10/20下的表现",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_tape": [
+    "more effective than baselines",
+    "capture useful features effectively",
+    "much more efficient as well as memory-saving"
+  ],
+  "thinking_moves": [
+    "将NLP词向量方法(skip-gram)跨领域迁移到音乐推荐",
+    "先可视化验证表示质量再跑对比实验",
+    "用相对提升百分比量化优越性而非绝对精度"
+  ],
+  "topic_tags": [
+    "music-recommendation",
+    "distributed-representation",
+    "skip-gram",
+    "collaborative-filtering",
+    "embedding-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

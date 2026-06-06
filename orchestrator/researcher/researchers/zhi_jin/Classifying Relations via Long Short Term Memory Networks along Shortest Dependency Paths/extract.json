@@ -1,0 +1,37 @@
+{
+  "paper_id": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths",
+  "doi": "10.18653/v1/d15-1206",
+  "title": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths",
+  "year": 2015,
+  "venue": "ACL-DEMOS",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传统特征工程和核方法难以自动学习特征,且最短依存路径包含关系分类的核心信息",
+  "problem_framing": "将关系分类建模为沿最短依存路径的双向LSTM特征提取问题,利用多通道异构信息",
+  "key_insight": "依存路径是有向图,拆分SDP为两个子路径可捕获关系的方向性,且多通道信息(词性、语法关系、WordNet)互补",
+  "method_signature": "SDP-LSTM:多通道LSTM沿最短依存路径双向传播,最大池化后拼接分类",
+  "evaluation_criteria": "SemEval-2010 Task 8 macro-averaged F1-score",
+  "negative_result_or_admitted_limitation": "dropout LSTM内部单元会损害模型,即使dropout率为0.1",
+  "evidence_for_taste": [
+    "direction matters",
+    "Shortest dependency paths are informative",
+    "the boosts are not simply added",
+    "dropout of LSTM units turns out to be inimical",
+    "human engineering is still important and beneficial"
+  ],
+  "thinking_moves": [
+    "利用依存图的有向性拆分路径捕获方向性",
+    "多通道异构信息互补而非简单叠加",
+    "通过消融实验对比验证LSTM单元和路径拆分的有效性",
+    "dropout在循环网络中需谨慎使用,仅对embedding和顶层有效"
+  ],
+  "topic_tags": [
+    "relation-classification",
+    "SDP-LSTM",
+    "dependency-parsing",
+    "multichannel-LSTM",
+    "neural-networks"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

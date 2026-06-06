@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2012 - Triggercast Enabling Wireless Collisions Constructive",
+  "doi": null,
+  "title": "Triggercast: Enabling Wireless Collisions Constructive",
+  "year": 2012,
+  "venue": "ACM/IEEE IPSN",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Concurrent transmissions waste energy; CI promises N²-fold power gain",
+  "problem_framing": "Achieve CI in WSNs via chip-level sync and SNR-constrained link selection",
+  "key_insight": "Perfect chip sync insufficient; must satisfy SNR ratio bounds and phase constraints",
+  "method_signature": "CLS + LSA algorithms compensate delay and select co-senders for CI",
+  "evaluation_criteria": "PRR improvements (5%→70%), RSSI gains, 250ns sync accuracy",
+  "negative_result_or_admitted_limitation": "NDI provides no guarantee of power gains; more senders can degrade PRR",
+  "evidence_for_taste": [
+    "NDI provides no guarantee of power gains",
+    "more senders might degrade PRR significantly",
+    "capture effect dominates the packet reception",
+    "The accuracy is bounded by the running frequency",
+    "even perfectly aligned signals with different link qualities might also superpose destructively"
+  ],
+  "thinking_moves": [
+    "从工程异常反推底层假设失效：实验发现NDI不保证功率增益，推翻盲目并发假设",
+    "理论最坏情况推导：证明完美chip同步仍可能CI失效，需SNR比值约束",
+    "物理层约束→系统算法：把时延补偿和链路选择形式化为可求解问题",
+    "承认硬件硬边界：同步精度受MCU频率限制，而非算法不足"
+  ],
+  "topic_tags": [
+    "wireless-sensor-networks",
+    "constructive-interference",
+    "concurrent-transmission",
+    "IEEE-802.15.4",
+    "chip-level-synchronization"
+  ],
+  "cites_own_work": [
+    "Wang et al., 2012 - Exploiting Constructive Interference for Scalable Flooding in Wireless Networks (IEEE INFOCOM)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

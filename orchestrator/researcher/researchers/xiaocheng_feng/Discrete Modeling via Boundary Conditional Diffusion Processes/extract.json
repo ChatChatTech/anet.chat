@@ -1,0 +1,39 @@
+{
+  "paper_id": "Discrete Modeling via Boundary Conditional Diffusion Processes",
+  "doi": "10.48550/arxiv.2410.22380",
+  "title": "Discrete Modeling via Boundary Conditional Diffusion Processes",
+  "year": 2024,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "连续扩散模型无法处理离散数据, 因将离散样本简化为连续空间的单点导致概率轮廓与离散边界失配",
+  "problem_framing": "将离散数据的连续表示视为面积区域而非单点, 建模边界作为先验分布",
+  "key_insight": "利用ODE精确计算前向轨迹与离散边界交点t0, 再重缩放轨迹使噪声点条件于边界分布",
+  "method_signature": "两阶段前向过程: 边界估计+轨迹重缩放构建边界条件扩散模型",
+  "evaluation_criteria": "翻译BLEU/摘要ROUGE分数; 图像生成FID指标; 对标SOTA扩散语言模型和AR-transformer",
+  "negative_result_or_admitted_limitation": "预测误差累积导致τ偏离训练分布使错误爆炸; 预测ε再恢复x0效率低且误差放大导致模型崩溃",
+  "evidence_for_taste": [
+    "the learned contours deviate from the boundary",
+    "errors will accumulate if the predicted pseudo target changes frequently",
+    "a small error in predicting epsilon will be amplified by eq. (23)",
+    "prevent oscillations and even collapses during training",
+    "Gaussian sampling will further introduce random noises at each reverse step"
+  ],
+  "thinking_moves": [
+    "发现离散数据本质是连续空间中的区域而非点, 从几何角度重新定义问题",
+    "将概率轮廓与离散边界的不匹配归因于缺失边界指导信号",
+    "用ODE描述确定性轨迹以消除条件转换中的随机性使推导可处理",
+    "先数学推导边界交点公式, 再将其转化为实际可计算的置信因子r",
+    "通过重缩放而非重建来嫁接边界信息到标准扩散框架"
+  ],
+  "topic_tags": [
+    "离散扩散模型",
+    "边界条件生成",
+    "语言建模diffusion",
+    "概率轮廓对齐",
+    "离散图像生成"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

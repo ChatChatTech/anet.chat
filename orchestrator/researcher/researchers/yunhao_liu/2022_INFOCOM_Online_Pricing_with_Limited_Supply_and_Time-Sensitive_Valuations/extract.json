@@ -1,0 +1,42 @@
+{
+  "paper_id": "2022_INFOCOM_Online_Pricing_with_Limited_Supply_and_Time-Sensitive_Valuations",
+  "doi": null,
+  "title": "Online Pricing with Limited Supply and Time-Sensitive Valuations",
+  "year": 2022,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有在线定价机制忽略时间敏感估值且假设供给无限，无法处理真实市场场景",
+  "problem_framing": "将有限供给+时间敏感估值的在线定价问题建模为对抗性背包-bandit优化",
+  "key_insight": "通过两阶段探索-利用框架，先估计最优固定分布再自适应开采，可达到对数竞争比",
+  "method_signature": "RRLA两阶段算法：纯探索估计OPT_FD + 自适应开采使用IPS技术",
+  "evaluation_criteria": "竞争比(Competitive Ratio)衡量算法收益与最优固定分布benchmark的比值",
+  "negative_result_or_admitted_limitation": "Theorem 2的结论仅当OPT_FD > Ω(N^(7/8))时才有意义",
+  "evidence_for_taste": [
+    "optimal fixed distribution policy is believed to perform significantly better",
+    "algorithm has to decide the amount of inventory to save for the future",
+    "every decision is highly risky for the future",
+    "the algorithm will not run out of the inventories during the play",
+    "CappedUCB can not adapt to time-sensitive valuations well"
+  ],
+  "thinking_moves": [
+    "从无限搜索空间压缩到离散价格集以适配bandit框架",
+    "先证明下界Ω(log(1/α))再设计算法实现紧上界O(log(1/α))",
+    "利用浓度不等式Hoeffding从采样数据逆向估计底层分布F",
+    "将时间敏感函数的偏差α构造性地引入分布重缩放",
+    "通过线性规划松弛将连续定价问题转化为可计算形式"
+  ],
+  "topic_tags": [
+    "Online-Pricing",
+    "Time-Sensitive-Valuations",
+    "Bandits-with-Knapsacks",
+    "Revenue-Maximization",
+    "Adversarial-MAB"
+  ],
+  "cites_own_work": [
+    "BiasedUCB",
+    "EXP3.P"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Bias Behind the Wheel_ Fairness Testing of Autonomous Driving Systems",
+  "doi": "10.48550/arxiv.2308.02935",
+  "title": "Bias Behind the Wheel: Fairness Testing of Autonomous Driving Systems",
+  "year": 2024,
+  "venue": "ACM Trans. Softw. Eng. Methodol.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "自动驾驶系统的公平性测试研究匮乏,而行人检测中的偏见可能危害边缘群体安全",
+  "problem_framing": "将行人检测中的群体公平性量化为不同人口统计学属性的漏检率差异",
+  "key_insight": "特定驾驶条件下,行人检测器可同时实现更优公平性和更高性能,挑战传统公平性-性能权衡理论",
+  "method_signature": "八种DL检测器在四数据集上的多维度公平性测试与场景分层分析",
+  "evaluation_criteria": "EOD(漏检率差异)作为公平性指标,双比例z检验验证统计显著性",
+  "negative_result_or_admitted_limitation": "皮肤色调数据仅在BDD100k上有足够多样性,其他欧洲数据集暗肤色样本稀缺",
+  "evidence_for_taste": [
+    "公平性是一种非功能属性",
+    "挑战公平性-性能权衡",
+    "fairness testing seeks to uncover fairness issues",
+    "how far are we from solving pedestrian detection",
+    "a crucial but under-explored issue"
+  ],
+  "thinking_moves": [
+    "从传统鲁棒性测试转向公平性测试的视角转换",
+    "通过场景分层揭示偏见的条件依赖性",
+    "用大规模实证研究挑战领域共识假设",
+    "通过多检测器对比识别系统性问题"
+  ],
+  "topic_tags": [
+    "autonomous-driving-fairness",
+    "pedestrian-detection-bias",
+    "group-fairness-testing",
+    "demographic-disparity",
+    "software-testing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Xuanzhe Liu为合作作者,非第一或通讯作者。论文在RQ2中发现与主流理论相悖的发现时,表现出学术诚实性并主动挑战'fairness-performance trade-off'这一公认假设。 | md truncated to head40k+tail20k"
+}

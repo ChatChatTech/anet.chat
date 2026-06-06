@@ -1,0 +1,38 @@
+{
+  "paper_id": "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples",
+  "doi": "10.48550/arxiv.2501.06004",
+  "title": "SeMi: When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现实数据类别分布不均衡,现有CISSL方法重数据集重平衡而忽视难例的潜在价值,导致大量无标签数据未被充分利用",
+  "problem_framing": "将难例挖掘问题形式化为:如何通过降低置信度阈值并结合熵重加权来访问更多难例,同时保持伪标签可靠性",
+  "key_insight": "低置信度阈值访问难例,熵值大赋予大权重,平衡置信度衰减记忆库增强伪标签确定性,三者形成互补",
+  "method_signature": "SeMi框架:OHEML(在线难例挖掘学习)+平衡置信度衰减记忆库+伪标签确定性增强+解耦学习",
+  "evaluation_criteria": "Top-1准确率,重点关注尾类性能,尤其在反向(γu=1/100)等困难设置下的表现",
+  "negative_result_or_admitted_limitation": "移除BC(平衡分类器)模块对两个数据集影响显著,表明尾类偏置输出的平衡至关重要",
+  "evidence_for_taste": [
+    "ignore the potential of using hard examples",
+    "the masked probability is typically below 80%",
+    "hard examples are often from tail classes",
+    "directly utilizing the pseudo-labels with low confidence can seriously jeopardize",
+    "if there is no limitation on the embeddings, low confidence are also inserted"
+  ],
+  "thinking_moves": [
+    "从伪标签利用率不足80%的现象反推高置信度阈值策略的失效",
+    "将难例价值从数据集重平衡问题中独立出来,作为新的优化方向",
+    "通过记忆库置信度衰减机制解决易例占位导致的样本多样性缺失",
+    "语义伪标签与线性伪标签动态混合补偿降低阈值后的标签不确定性问题"
+  ],
+  "topic_tags": [
+    "class-imbalanced semi-supervised learning",
+    "hard example mining",
+    "pseudo-label certainty enhancement",
+    "memory bank",
+    "tail class performance"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的方法论和实验验证,包括消融实验、可视化分析和混淆矩阵对比,能清晰展示作者的设计判断"
+}

@@ -1,0 +1,36 @@
+{
+  "paper_id": "Exploring the Potential of Large Language Models in Self-adaptive Systems",
+  "doi": "10.48550/arxiv.2401.07534",
+  "title": "Exploring the Potential of Large Language Models in Self-adaptive Systems",
+  "year": 2024,
+  "venue": "SEAMS'24",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "LLM在SAS领域文献稀少,潜力未探索;SAS跨学科特性可从相关领域获取创新思路",
+  "problem_framing": "通过文献综述将跨领域LLM研究映射到MAPE-K模型各功能类别,回答两个RQ",
+  "key_insight": "MAPE-K可作为结构化框架,将LLM能力系统映射到SAS各阶段功能",
+  "method_signature": "5步文献综述,从相关领域收集1363篇论文,按MAPE-K分类",
+  "evaluation_criteria": "文献分类的完整性;对SAS各功能模块的覆盖度",
+  "negative_result_or_admitted_limitation": "未发现LLM与形式验证/控制理论结合的研究;HITL领域研究仍有限",
+  "evidence_for_taste": [
+    "LLMs empower context awareness",
+    "the potential remains unexplored",
+    "we did not find work combining",
+    "requires further exploration"
+  ],
+  "thinking_moves": [
+    "用MAPE-K作为分类框架将异质研究统一映射",
+    "跨领域整合而非发明新技术",
+    "承认未覆盖区域而非过度承诺"
+  ],
+  "topic_tags": [
+    "LLM-SAS-mapping",
+    "MAPE-K literature review",
+    "cross-disciplinary survey",
+    "autonomous agents",
+    "self-adaptive systems engineering"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Zhi Jin为第六作者(非corresponding),论文为SEAMS会议的survey文章,非原创技术工作。文献分类过程涉及多研究者讨论,有主观性。提取结果反映survey型论文的有限洞察力。"
+}

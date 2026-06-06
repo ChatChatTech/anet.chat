@@ -1,0 +1,40 @@
+{
+  "paper_id": "Reversible Data Hiding With Image Enhancement Using Histogram Shifting",
+  "doi": "10.1109/access.2019.2909560",
+  "title": "Reversible Data Hiding With Image Enhancement Using Histogram Shifting",
+  "year": 2019,
+  "venue": "IEEE Access",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传统RDH只关注MSE失真最小化,但图像质量也可通过图像处理实现,作者想在嵌入数据的同时提升对比度",
+  "problem_framing": "如何放松MSE约束,用SSIM等结构相似性指标评价,在增强对比度的同时实现可逆信息隐藏",
+  "key_insight": "通过最大化直方图熵来构造转移矩阵,让直方图 vacancies 迭代分配给峰值,实现熵增最大的嵌入",
+  "method_signature": "RDH-CE双阶段框架:基线嵌入(vacancy reservation + transfer matrix) + 扩展嵌入(预测误差直方图)",
+  "evaluation_criteria": "PSNR、SSIM、PCQI、RCE、REE、RMQE等多指标综合评估,不单靠MSE",
+  "negative_result_or_admitted_limitation": "现有RDH-CE方法存在视觉质量保持不足、直方图利用效率低、可能产生椒盐噪声等问题;当histogram vacancy数量少时嵌入率低",
+  "evidence_for_taste": [
+    "good quality with the sense of structural similarity",
+    "maximizing the entropy of the histogram",
+    "MSE distortion is relaxed",
+    "image quality is evaluated mainly by SSIM",
+    "result in noticeable artifacts",
+    "salt and pepper noises"
+  ],
+  "thinking_moves": [
+    "把MSE优化问题重新frame为SSIM结构相似性优化问题",
+    "从信息论角度将直方图vacancy分配建模为熵最大化迭代过程",
+    "将contrast enhancement与reversible embedding统一在同一个histogram shifting框架下",
+    "先用基线嵌入做对比度增强,再拼接MSE-based嵌入扩大payload",
+    "从artifact问题反推histogram peak preprocessing的局限"
+  ],
+  "topic_tags": [
+    "reversible data hiding",
+    "contrast enhancement",
+    "histogram shifting",
+    "structural similarity",
+    "entropy maximization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

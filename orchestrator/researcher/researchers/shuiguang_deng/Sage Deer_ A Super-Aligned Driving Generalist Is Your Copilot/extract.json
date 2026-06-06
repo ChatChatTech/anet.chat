@@ -1,0 +1,37 @@
+{
+  "paper_id": "Sage Deer_ A Super-Aligned Driving Generalist Is Your Copilot",
+  "doi": "10.48550/arxiv.2505.10257",
+  "title": "Sage Deer: A Super-Aligned Driving Generalist Is Your Copilot",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "智能驾驶座舱需匹配不同用户的舒适、交互和安全需求,现有研究未解决个体化适配问题",
+  "problem_framing": "将超对齐定义为模型根据个体用户需求执行相应动作,通用性定义为整合多视角多模态输入",
+  "key_insight": "用隐式连续链式思维激活LLM内在推理能力,不依赖显式COT标注即可增强模型泛化与对齐能力",
+  "method_signature": "多视角/多模态tokenizer+可学习RAG+CLCE机制构成超对齐驾驶通用体",
+  "evaluation_criteria": "AIDE和DMD数据集上的BLEU/SPICE分数,评估情感/行为/场景/状态四类任务",
+  "negative_result_or_admitted_limitation": "CL-COT嵌入存在平凡解,token自相似性过高且值域范围小,会预测无效token而非有效COT过程",
+  "evidence_for_taste": [
+    "Satisfying both of these requires large-scale tailored training data, which is also lacking",
+    "our approach achieves significant improvements over the baseline",
+    "These results highlight the limitations of LLMs in handling long text inputs",
+    "The CLC token tends to predict an invalid token rather than the valid COT process"
+  ],
+  "thinking_moves": [
+    "从COT标签缺失的现实约束出发,用隐空间等长输出强制LLM生成隐式推理链",
+    "将平凡解问题诊断为L1正则不足,通过负L1损失反向驱动使能嵌入有效化",
+    "把用户个性化需求文档chunk化后作为可学习RAG的外部知识源而非硬编码输入",
+    "承认现有MLLM在长文本处理和细粒度响应上的根本局限,选择引入RAG而非盲目堆模型"
+  ],
+  "topic_tags": [
+    "driving-cockpit-personalization",
+    "continuous-latent-chain-elicitation",
+    "learnable-RAG",
+    "multi-view-multi-modal-tokenizer",
+    "super-aligned-driving-agent"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

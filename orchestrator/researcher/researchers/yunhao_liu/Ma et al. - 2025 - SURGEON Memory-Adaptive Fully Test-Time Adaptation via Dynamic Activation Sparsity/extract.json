@@ -1,0 +1,37 @@
+{
+  "paper_id": "Ma et al. - 2025 - SURGEON Memory-Adaptive Fully Test-Time Adaptation via Dynamic Activation Sparsity",
+  "doi": null,
+  "title": "SURGEON: Memory-Adaptive Fully Test-Time Adaptation via Dynamic Activation Sparsity",
+  "year": 2025,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "移动终端部署深度模型时,环境干扰导致精度显著下降,但反向传播的内存开销阻碍了资源受限设备的测试时适应方法部署",
+  "problem_framing": "在完全测试时适应(FTTA)中,最小化内存成本同时最大化精度提升,优化瓶颈是反向传播中用于梯度计算的激活缓存",
+  "key_insight": "利用梯度重要性(G)和层激活内存(M)计算层重要性指标I,再转化为层级别剪枝比例,实现数据敏感的动态激活稀疏",
+  "method_signature": "层级别动态激活剪枝,根据梯度贡献和内存效率确定每层剪枝比率,前向传播时稀疏化并缓存,反向传播用于梯度计算",
+  "evaluation_criteria": "Mean Online Error(%)衡量精度,Cache Size(MB)衡量内存,跨数据集、网络架构和任务评估",
+  "negative_result_or_admitted_limitation": "在DeeplabV3+的ACDC分割任务上,所有TTA基线方法均未能超过Source的精度,因像素级任务伪标签不准确导致误差累积",
+  "evidence_for_taste": [
+    "activation memory can consume over 80%",
+    "different layers exhibit distinct activation usage",
+    "leaving room for accuracy improvement",
+    "highlighting its limitations when applied to transformer",
+    "fail to surpass the accuracy of Source"
+  ],
+  "thinking_moves": [
+    "从内存瓶颈反推优化目标:激活缓存占80%以上内存",
+    "将层间差异性作为改进杠杆:静态全局剪枝忽略了不同层贡献差异",
+    "用梯度大小量化精度贡献:梯度大=对损失影响大=更重要",
+    "将问题从绝对精度转向帕累托最优:α·Memory-β·Accuracy"
+  ],
+  "topic_tags": [
+    "test-time-adaptation",
+    "memory-efficient",
+    "activation-pruning",
+    "fully-test-time",
+    "dynamic-sparsity"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

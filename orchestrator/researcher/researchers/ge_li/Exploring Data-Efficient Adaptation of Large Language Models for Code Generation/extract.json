@@ -1,0 +1,42 @@
+{
+  "paper_id": "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation",
+  "doi": "10.48550/arxiv.2403.00046",
+  "title": "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation",
+  "year": 2024,
+  "venue": "ACM Trans. Softw. Eng. Methodol.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "LLMs struggle in specific code generation scenarios where limited training data leads to poor performance",
+  "problem_framing": "How to effectively adapt LLMs with few training samples while avoiding performance degradation",
+  "key_insight": "Revised code from error corrections is closer in model representation space (6.39) than original dataset samples (12.35), enabling more efficient learning",
+  "method_signature": "DEED: Error-driven four-step loop (collect errors → Self-Revise → optimize → iterate)",
+  "evaluation_criteria": "Pass@k via test case execution on HumanEval, MBPP, DataScience benchmarks",
+  "negative_result_or_admitted_limitation": "Self-refine and Self-debug underperform on small LLMs; full fine-tuning is computationally expensive",
+  "evidence_for_taste": [
+    "compelling LLMs to relearn is inefficient",
+    "may learn undesirable features",
+    "error-driven learning requires learners to identify errors",
+    "Raise a Child in Large Language Model",
+    "Self-Edit: Fault-Aware Code Editor"
+  ],
+  "thinking_moves": [
+    "把人从错误中学习的认知机制迁移到模型适应",
+    "用表示空间的距离度量论证为何纠错样本比原始样本更有效",
+    "把主流微调批为低效：要求模型重新学习完整样本而非针对性修正",
+    "迭代优化而非一次性微调以实现持续改进"
+  ],
+  "topic_tags": [
+    "LLM-fine-tuning",
+    "code-generation",
+    "error-driven-learning",
+    "data-efficient-adaptation",
+    "self-revision"
+  ],
+  "cites_own_work": [
+    "[21] Self-collaboration Code Generation via ChatGPT",
+    "[73] Self-Edit: Fault-Aware Code Editor for Code Generation",
+    "[35] ROCODE"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

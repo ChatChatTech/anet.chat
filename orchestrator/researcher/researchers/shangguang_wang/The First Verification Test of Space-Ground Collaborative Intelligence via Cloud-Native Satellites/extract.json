@@ -1,0 +1,36 @@
+{
+  "paper_id": "The First Verification Test of Space-Ground Collaborative Intelligence via Cloud-Native Satellites",
+  "doi": "10.48550/arxiv.2311.06078",
+  "title": "The First Verification Test of Space-Ground Collaborative Intelligence via Cloud-Native Satellites",
+  "year": 2023,
+  "venue": "China Communications",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "LEO卫星产生海量数据(10TB/天)，bent-pipe架构导致高通信成本，80-90%原始数据因云覆盖无效",
+  "problem_framing": "现有星上推理架构精度低、部署不灵活；单星计算能力有限难以独立完成复杂任务",
+  "key_insight": "轻量级星上模型预处理+高精度地面模型协同推理，以50%精度提升换90%数据削减",
+  "method_signature": "基于KubeEdge/Sedna的云原生卫星协同推理框架，分发YOLOv3-tiny/YOLOv3模型",
+  "evaluation_criteria": "目标检测mAP精度、数据削减率、星上能耗占比",
+  "negative_result_or_admitted_limitation": "受限于星上计算能力，无法处理高分辨率图像，需先分割再推理",
+  "evidence_for_taste": [
+    "one satellite task lost 80% of its data packets",
+    "cannot handle high-resolution images",
+    "the models are one-size-fits-all",
+    "low accuracy levels that fail to meet the demanding requirements"
+  ],
+  "thinking_moves": [
+    "从物理约束(下行可用性)出发定义问题边界",
+    "把perception问题reframe成communication问题",
+    "用云原生技术栈(container/microservice)作为工程杠杆",
+    "用真实卫星发射验证系统可行性而非仅仿真"
+  ],
+  "topic_tags": [
+    "cloud-native satellite",
+    "orbital edge computing",
+    "collaborative AI inference",
+    "satellite-ground coordination",
+    "edge-cloud orchestration"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing",
+  "doi": "10.1007/978-3-642-45005-1_15",
+  "title": "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing",
+  "year": null,
+  "venue": "Springer Lecture Notes in Computer Science",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "云环境中工作流调度需在成本与截止时间间平衡，现有方法未充分利用路径结构信息",
+  "problem_framing": "NP难DAG工作流调度问题：在满足先后约束和截止时间D下最小化总资源租用成本",
+  "key_insight": "迭代生成完整关键路径而非部分关键路径，将路径优化松弛为多阶段决策过程(MDP)用动态规划求解",
+  "method_signature": "CPI启发式：迭代构造完整关键路径，动态规划Pareto方法(DPPM)优化路径",
+  "evaluation_criteria": "ANC(平均归一化租用成本)、ARDI(平均相对偏差指数)、VAR(方差)、运行时间",
+  "negative_result_or_admitted_limitation": "CPLEX在小规模和简单结构问题上优于CPI；CPI计算时间高于PCP和DET",
+  "evidence_for_taste": [
+    "path structure information is not fully used",
+    "complete critical paths as opposed to the partial ones",
+    "distinct from the single critical path way",
+    "the stability of CPLEX decreases rapidly",
+    "VAR of CPI decreases as N increases"
+  ],
+  "thinking_moves": [
+    "批评现有方法未充分利用路径结构信息",
+    "将工作流分解为关键路径序列逐步优化",
+    "将路径优化问题松弛为多阶段决策过程",
+    "动态规划求Pareto前沿而非单一解",
+    "分析算法复杂度与问题规模的关系"
+  ],
+  "topic_tags": [
+    "workflow-scheduling",
+    "cloud-computing",
+    "critical-path-heuristic",
+    "dynamic-programming",
+    "utility-computing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注年份；通过DOI可推断约2013年但未直接验证"
+}

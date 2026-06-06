@@ -1,0 +1,44 @@
+{
+  "slug": "yuan_wang",
+  "n_papers": 1,
+  "n_indexed": 1,
+  "anchors": [
+    "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds",
+    "（corpus 极小（1篇），以上为全量标注；后续若有新工作需补充）"
+  ],
+  "by_id": {
+    "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds": {
+      "title": "AdaFit: Rethinking Learning-based Normal Estimation on Point Clouds",
+      "year": 2021,
+      "venue": "ICCV",
+      "doi": "10.48550/arxiv.2108.05836",
+      "key_insight": "预测额外的点偏移量可同时解决多项式阶次不匹配和离群点敏感两个问题，使网络能灵活调整点分布",
+      "method_signature": "网络同时预测点权重和偏移量，在偏移后的邻域点上用加权最小二乘拟合多项式曲面",
+      "tags": [
+        "point-cloud-normal-estimation",
+        "weighted-least-squares-fitting",
+        "neural-network-surface-fitting",
+        "outlier-robust-estimation",
+        "multi-scale-feature-aggregation"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "point-cloud-normal-estimation": [
+      "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    ],
+    "weighted-least-squares-fitting": [
+      "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    ],
+    "neural-network-surface-fitting": [
+      "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    ],
+    "outlier-robust-estimation": [
+      "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    ],
+    "multi-scale-feature-aggregation": [
+      "AdaFit_ Rethinking Learning-based Normal Estimation on Point Clouds"
+    ]
+  }
+}

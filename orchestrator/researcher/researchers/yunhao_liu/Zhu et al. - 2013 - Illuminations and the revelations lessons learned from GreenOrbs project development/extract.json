@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zhu et al. - 2013 - Illuminations and the revelations lessons learned from GreenOrbs project development",
+  "doi": null,
+  "title": "Illuminations and the Revelations: Lessons Learned from GreenOrbs Project Development",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有WSN项目缺乏长期大规模部署的经验,难以揭示真实挑战",
+  "problem_framing": "从森林到城市的扩展中,协议假设与实际环境的偏差问题",
+  "key_insight": "高流量节点未必高功耗;中间质量链路最难预测;诊断需本地与中心互补",
+  "method_signature": "大规模实测+根因归因+网络指标空间分布分析",
+  "evaluation_criteria": "空间分布模式/根因覆盖率/路由链路PRR分布",
+  "negative_result_or_admitted_limitation": "大规模WSN调试仍无经济有效的方案;远程源码级调试面临符号和效率挑战",
+  "evidence_for_taste": [
+    "should we reconsider a new network architecture",
+    "over 20% routing links whose PRRs are less than 0.9",
+    "does not have an affordable and effective solution so far",
+    "sink often fails to obtain complete and credible information"
+  ],
+  "thinking_moves": [
+    "用表格对比暴露领域空白,建立研究必要性",
+    "从空间分布图提炼反直觉现象(如近sink高功耗)",
+    "把网络性能问题归因到可测量的物理/环境因素",
+    "从工程失败中提炼对现有协议假设的质疑"
+  ],
+  "topic_tags": [
+    "WSN大规模部署",
+    "网络测量与诊断",
+    "链路质量建模",
+    "森林城市双场景对比",
+    "传感器网络运维"
+  ],
+  "cites_own_work": [
+    "[5] Does wireless sensor network scale?",
+    "[7] Canopy closure estimates with GreenOrbs",
+    "[6] CitySee: Urban CO2 monitoring"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少venue信息和完整的方法描述,主要基于经验报告和未来方向讨论提取认知信号"
+}

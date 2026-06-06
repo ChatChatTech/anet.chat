@@ -1,0 +1,42 @@
+{
+  "paper_id": "Liu et al. - 2005 - Location Awareness in Unstructured Peer-to-Peer Systems",
+  "doi": null,
+  "title": "Location Awareness in Unstructured Peer-to-Peer Systems",
+  "year": 2005,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "P2P flooding搜索中peer随机选择邻居导致逻辑拓扑与物理拓扑严重不匹配,产生大量冗余流量",
+  "problem_framing": "拓扑不匹配问题:overlay中同一物理链路被同一消息多次穿越,以及查询在多条路径汇合到同一点",
+  "key_insight": "通过局部TTL2探测器测量局部路径代价,切割慢连接并优先连接物理近距离节点,在保留搜索范围的同时削减流量",
+  "method_signature": "TTL2探测器泛洪+慢连接切割+源peer探测三步局部优化,无需全局知识",
+  "evaluation_criteria": "流量代价vs搜索范围、平均邻居距离、查询响应时间、查询成功率",
+  "negative_result_or_admitted_limitation": "若TTL>2则探测器流量大增;若切割连接代价差异不大则绕路代价更高;需时钟同步",
+  "evidence_for_taste": [
+    "about 75 percent of the paths suffer from the topology mismatch problem",
+    "one-step LTM reduces the traffic cost significantly",
+    "retain the search scope",
+    "only one tenth of the original traffic cost",
+    "the overhead of LTM is trivial",
+    "does not affect the searching scope"
+  ],
+  "thinking_moves": [
+    "将拓扑不匹配问题量化为可测量指标(路径重合率)",
+    "从全局观察转向局部测量(TTL=2限制探测器范围)",
+    "承认测量误差并设计补偿机制(如用PS估算SP)",
+    "先静态验证再动态调参(分阶段实验)",
+    "引入will-cut list应对动态环境中响应丢失问题"
+  ],
+  "topic_tags": [
+    "P2P-overlay-topology-matching",
+    "flooding-search-optimization",
+    "location-aware-overlay",
+    "traffic-reduction",
+    "distributed-topology-adaptation"
+  ],
+  "cites_own_work": [
+    "INFOCOM 2004 Conference preliminary results"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的动机、问题定义、方法、仿真环境和结果,证据充分。关键参数(LTM频率、will-cut生命周期)通过实验确定,体现了实证工程思维。"
+}

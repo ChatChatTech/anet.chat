@@ -1,0 +1,38 @@
+{
+  "paper_id": "Clustering Mixed Numeric and Categorical Data_ A Cluster Ensemble Approach",
+  "doi": "10.48550/arxiv.cs/0509011",
+  "title": "Clustering Mixed Numeric and Categorical Data: A Cluster Ensemble Approach",
+  "year": 2005,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现实数据挖掘应用中常见混合类型属性数据集,但现有聚类算法仅能处理纯数值或纯类别数据",
+  "problem_framing": "将混合属性聚类问题形式化为:分割-聚类-集成三阶段框架,把聚类ensemble问题重新视为类别数据聚类",
+  "key_insight": "聚类输出本身是类别标签,可作为类别属性处理;利用Squeezer算法支持加权属性相似度计算来解决不同子数据集的权重平衡",
+  "method_signature": "CEBMDC: 先分割数据集为纯类别和纯数值子集,分别聚类后合并为类别数据集再聚类集成",
+  "evaluation_criteria": "聚类精度r=Σa_i/n,即各簇中支配类标签实例数之和占比,实验对比k-prototypes",
+  "negative_result_or_admitted_limitation": "算法的聚类精度最终由分割后子数据集的聚类质量决定,组件算法选择至关重要;且当类别属性多于数值属性时,最终结果几乎等同于类别数据聚类结果",
+  "evidence_for_taste": [
+    "improper weights may result in biased treatment",
+    "complexity of the SBAC algorithm is quadratic",
+    "existing cluster combination methods have some limitations",
+    "the BIRCH algorithm has the drawback that it may not work well when clusters are not spherical"
+  ],
+  "thinking_moves": [
+    "把cluster ensemble问题reinterpret为categorical data clustering问题",
+    "用divide-and-conquer策略将混合数据问题拆解为可独立解决的同质子问题",
+    "利用现有成熟算法组件,通过集成框架而非新算法解决问题",
+    "从距离度量缺陷反推需重新formulate相似度计算方式"
+  ],
+  "topic_tags": [
+    "mixed-type-attribute-clustering",
+    "cluster-ensemble",
+    "categorical-data-clustering",
+    "divide-and-conquer-framework",
+    "Squeezer-algorithm"
+  ],
+  "cites_own_work": [
+    "Z. He, X. Xu, S. Deng: Squeezer algorithm (2002)"
+  ],
+  "extraction_quality": "full"
+}

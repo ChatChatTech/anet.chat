@@ -1,0 +1,39 @@
+{
+  "paper_id": "2026_MobiCom_IoT_Brain__Grounding_LLMs_for_Semantic_Spatial_Sensor_Scheduling_Final_version修改版",
+  "doi": null,
+  "title": "IoT-Brain: Grounding LLMs for Semantic-Spatial Sensor Scheduling",
+  "year": 2026,
+  "venue": "MobiCom '26",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "大规模传感器网络从预设监控转向意图驱动操作时存在语义-物理映射鸿沟",
+  "problem_framing": "将「何时感知什么」的前置决策问题形式化为S3语义-空间传感器调度",
+  "key_insight": "LLM计划常与物理约束不符,需采用verify-before-commit原则将开放规划转为可验证图优化",
+  "method_signature": "STG空间轨迹图:意图形式化→假设验证→优化合成的三阶段神经符号范式",
+  "evaluation_criteria": "任务成功率、令牌消耗、执行延迟、轨迹覆盖率、带宽节省",
+  "negative_result_or_admitted_limitation": "LLM本质是satisficer而非optimizer,直接端到端规划不可靠",
+  "evidence_for_taste": [
+    "satisficing nature of LLMs",
+    "oracle-like access is infeasible",
+    "unconstrained end-to-end black-box planner",
+    "execute a speculative unverified plan is prohibitively expensive",
+    "unverified hypotheses are actively harmful"
+  ],
+  "thinking_moves": [
+    "把perception问题重新定义为proactive scheduling的前置决策",
+    "用STG中间表示将模糊语义转换为可验证的结构化图",
+    "观察LLM行为发现其计划不可靠,遂提出verify-before-commit纪律",
+    "LLM负责语义推理,确定性算法负责资源优化,职责分离",
+    "验证开销随查询复杂度近线性而非指数增长"
+  ],
+  "topic_tags": [
+    "LLM-grounded sensor scheduling",
+    "neurosymbolic planning",
+    "semantic-to-physical mapping",
+    "IoT intent-driven operation",
+    "topological verification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

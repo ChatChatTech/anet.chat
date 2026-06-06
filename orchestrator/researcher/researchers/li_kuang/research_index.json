@@ -1,0 +1,759 @@
+{
+  "slug": "li_kuang",
+  "n_papers": 24,
+  "n_indexed": 24,
+  "anchors": [
+    "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors",
+    "A comprehensive ranking model for tweets big data in online social network",
+    "CSRS_ Code Search with Relevance Matching and Semantic Matching",
+    "Multimodal temporal-clinical note network for mortality prediction",
+    "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting",
+    "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval",
+    "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training",
+    "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+  ],
+  "by_id": {
+    "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors": {
+      "title": "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors",
+      "year": 2010,
+      "venue": "Wuhan University Journal",
+      "doi": "10.48550/arxiv.1311.3087",
+      "key_insight": "让概率e随节点度灵活变化,让hub之间更高概率互联,可生成hub吸引的分形网络",
+      "method_signature": "灵活概率e机制+盒内链接增长法,修改跨盒连接规则",
+      "tags": [
+        "complex-network-fractality",
+        "hub-attraction-disassortativity",
+        "dynamical-growth-model",
+        "scale-free-network",
+        "box-covering-renormalization"
+      ],
+      "quality": "full"
+    },
+    "A comprehensive ranking model for tweets big data in online social network": {
+      "title": "A comprehensive ranking model for tweets big data in online social network",
+      "year": 2016,
+      "venue": "EURASIP Journal on Wireless Communications and Networking",
+      "doi": "10.1186/s13638-016-0532-5",
+      "key_insight": "80/20法则可用于推文影响力建模，用户类型应按马斯洛需求理论划分以实现个性化权重",
+      "method_signature": "基于推文流行度、用户亲密度、兴趣匹配三个维度加权求和的排序模型",
+      "tags": [
+        "microblog-ranking",
+        "personalized-recommendation",
+        "social-intimacy",
+        "user-behavior-modeling",
+        "information-overload"
+      ],
+      "quality": "full"
+    },
+    "A simple model clarifies the complicated relationships of complex networks": {
+      "title": "A simple model clarifies the complicated relationships of complex networks",
+      "year": 2014,
+      "venue": "Scientific Reports",
+      "doi": "10.1038/srep06197",
+      "key_insight": "平均路径长度c如同分光光谱,可区分完整网络、Delta分布、紧凑、社区、逾渗、分形等类型",
+      "method_signature": "基于三度量(节点度、边度、平均路径)的双目标优化,贪婪策略求解Pareto前沿",
+      "tags": [
+        "complex-networks-optimization",
+        "bi-objective-Pareto-network-generation",
+        "average-path-length-spectral-parameter",
+        "scale-free-unification-theory",
+        "network-taxonomy-derivation"
+      ],
+      "quality": "full"
+    },
+    "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4401306654": {
+      "title": "Breaking the Hourglass Phenomenon of Residual Quantization: Enhancing the Upper Bound of Generative Retrieval",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2407.21488",
+      "key_insight": "残差量化固有特性导致层级间非均匀→均匀交替分布,是Hourglass的本质成因",
+      "method_signature": "启发式删除第二层 + 自适应变长token移除策略(top@K)",
+      "tags": [
+        "generative-retrieval",
+        "residual-quantization",
+        "semantic-ID",
+        "e-commerce-recommendation",
+        "codebook-utilization"
+      ],
+      "quality": "full"
+    },
+    "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4404783962": {
+      "title": "Breaking the Hourglass Phenomenon of Residual Quantization: Enhancing the Upper Bound of Generative Retrieval",
+      "year": 2024,
+      "venue": "EMNLP Industry Track",
+      "doi": "10.18653/v1/2024.emnlp-industry.50",
+      "key_insight": "Root cause lies in progressive quantization of high-dimensional residuals, naturally producing non-uniform then uniform layer distributions.",
+      "method_signature": "Two-layer removal: heuristic (drop layer 2 entirely) vs adaptive variable-length token (remove top@K tokens from layer 2).",
+      "tags": [
+        "residual-quantization",
+        "generative-retrieval",
+        "hourglass-phenomenon",
+        "e-commerce-recommendation",
+        "long-tail-distribution"
+      ],
+      "quality": "full"
+    },
+    "CSRS_ Code Search with Relevance Matching and Semantic Matching": {
+      "title": "CSRS: Code Search with Relevance Matching and Semantic Matching",
+      "year": 2022,
+      "venue": "ICPC '22",
+      "doi": "10.48550/arxiv.2203.07736",
+      "key_insight": "IR方法捕获词汇匹配信号、DL方法捕获语义关联，两者结合可丰富匹配信息并提升搜索能力",
+      "method_signature": "CNN编码模块生成n-gram嵌入+神经IR相关性匹配模块+共注意力语义匹配模块的组合模型",
+      "tags": [
+        "code-search",
+        "relevance-matching",
+        "semantic-matching",
+        "neural-IR",
+        "co-attention-mechanism"
+      ],
+      "quality": "full"
+    },
+    "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts": {
+      "title": "CSTree-SRI: Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts",
+      "year": 2025,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2025.acl-long.1286",
+      "key_insight": "通过内省专家动态验证逻辑连贯性，配合认知语义树分层合成，实现超长上下文的结构化导航",
+      "method_signature": "四专家模块(RE/SE/IE/AE)协同构建认知语义树，内省驱动动态检索与迭代优化",
+      "tags": [
+        "long-context-LLM",
+        "multi-turn-QA",
+        "cognitive-semantic-tree",
+        "retrieval-augmented-generation",
+        "introspection-mechanism"
+      ],
+      "quality": "full"
+    },
+    "Deep learning to mobile hypermedia and multimedia": {
+      "title": "Deep learning to mobile hypermedia and multimedia",
+      "year": 2022,
+      "venue": "Wireless Networks",
+      "doi": "10.1007/s11276-022-02902-4",
+      "key_insight": "深度学习在人工智能多领域取得突破",
+      "method_signature": "无原创方法，为特刊编辑摘要",
+      "tags": [
+        "mobile-multimedia",
+        "deep-learning",
+        "edge-computing",
+        "federated-learning",
+        "IoT"
+      ],
+      "quality": "thin"
+    },
+    "Edge intelligence in wireless networks": {
+      "title": "Edge intelligence in wireless networks",
+      "year": 2024,
+      "venue": "Wireless Networks",
+      "doi": "10.1007/s11276-024-03881-4",
+      "key_insight": "边缘智能让深度模型本地运行于IoT设备，需整合端设备、边缘节点和云数据中心的分层资源",
+      "method_signature": "Guest editorial介绍特刊论文，非原创研究",
+      "tags": [
+        "edge intelligence",
+        "IoT data processing",
+        "edge-cloud hierarchy",
+        "deep neural network offloading",
+        "5G edge networks"
+      ],
+      "quality": "partial"
+    },
+    "Editorial_ Collaborative Computing in AI Empowered Mobile Networks": {
+      "title": "Editorial: Collaborative Computing in AI Empowered Mobile Networks",
+      "year": 2022,
+      "venue": "Mobile Networks and Applications",
+      "doi": "10.1007/s11036-022-02008-3",
+      "key_insight": "AI-empowered mobile networks require integration of wireless, privacy, routing, and edge learning techniques",
+      "method_signature": "editorial overview of six independent submissions",
+      "tags": [
+        "federated-edge-learning",
+        "congestion-control",
+        "cognitive-radio-routing",
+        "pilot-contamination-security",
+        "D2D-caching",
+        "differential-privacy-DNN"
+      ],
+      "quality": "partial"
+    },
+    "Keywords Guided Method Name Generation": {
+      "title": "Keywords Guided Method Name Generation",
+      "year": 2021,
+      "venue": null,
+      "doi": "10.48550/arxiv.2103.11118",
+      "key_insight": "方法名中约62%的token来自方法实现,共享token信息可用于提升方法命名效果",
+      "method_signature": "GNN编码器+双选择性门+双注意力解码器的两阶段关键词引导生成模型",
+      "tags": [
+        "method-naming",
+        "code-summarization",
+        "graph-neural-network",
+        "keywords-extraction",
+        "encoder-decoder"
+      ],
+      "quality": "full"
+    },
+    "Multimodal temporal-clinical note network for mortality prediction": {
+      "title": "Multimodal temporal-clinical note network for mortality prediction",
+      "year": 2021,
+      "venue": "BMC Medical Informatics and Decision Making",
+      "doi": "10.1186/s13326-021-00235-3",
+      "key_insight": "对慢性患者和非慢性患者的临床文本采用差异化处理——慢性患者纳入病史信息，非慢性患者仅用近期记录",
+      "method_signature": "LSTM时序嵌入 + Label-aware CNN临床文本嵌入 + 慢性/非慢性患者差异化处理",
+      "tags": [
+        "mortality-prediction",
+        "clinical-notes",
+        "multimodal-learning",
+        "chronic-patient-modeling",
+        "label-aware-attention"
+      ],
+      "quality": "full"
+    },
+    "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting": {
+      "title": "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting",
+      "year": 2021,
+      "venue": "IEEE Internet of Things Journal",
+      "doi": "10.1109/jiot.2020.3026733",
+      "key_insight": "从重构视角处理负荷序列，将高频分量置零重构可有效去噪同时保留周期特征",
+      "method_signature": "MWCNN：使用2级高频置零小波重构+CNN+多小波集成，仅用负荷数据，模型仅497KB",
+      "tags": [
+        "short-term-load-forecasting",
+        "wavelet-reconstruction",
+        "convolutional-neural-network",
+        "model-deployability",
+        "interpretable-prediction"
+      ],
+      "quality": "full"
+    },
+    "Pretraining Chinese BERT for Detecting Word Insertion and Deletion Errors": {
+      "title": "Pretraining Chinese BERT for Detecting Word Insertion and Deletion Errors",
+      "year": 2022,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2204.12052",
+      "key_insight": "Introduce [null] token whose prediction represents non-existence of a word; jointly train with substitution and insertion corruption operations",
+      "method_signature": "Chinese BERT pretrained with [null] token added to vocabulary for word insertion/deletion detection via masked language modeling",
+      "tags": [
+        "Chinese grammatical error correction",
+        "word insertion detection",
+        "word deletion detection",
+        "BERT pretraining",
+        "null token prediction"
+      ],
+      "quality": "full"
+    },
+    "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training": {
+      "title": "RE3SYN: A Dependency-Based Data Synthesis Framework for Long-Context Post-training",
+      "year": 2025,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2025.acl-long.1518",
+      "key_insight": "高质量长文档的特征是更强的前向/后向依赖，perplexity可量化依赖强度",
+      "method_signature": "基于语义相似聚类文档，用小模型计算perplexity识别依赖，拓扑排序重排序",
+      "tags": [
+        "long-context-post-training",
+        "data-synthesis",
+        "document-dependency",
+        "semantic-ordering",
+        "LLM-pretraining"
+      ],
+      "quality": "full"
+    },
+    "Reasoning on Context Satisfiability for Service Recommendation in Mobile Network": {
+      "title": "Reasoning on Context Satisfiability for Service Recommendation in Mobile Network",
+      "year": 2011,
+      "venue": "Journal of Digital Information Management",
+      "doi": null,
+      "key_insight": "基于轻量级DL形式化前提条件，实现上下文可满足性推理",
+      "method_signature": "上下文本体+DL前提条件形式化+可满足性推理",
+      "tags": [
+        "mobile-service-recommendation",
+        "DL-precondition-reasoning",
+        "context-ontology",
+        "service-discovery-context-matching",
+        "ubiquitous-computing"
+      ],
+      "quality": "partial"
+    },
+    "SERS nose arrays based on a signal differentiation approach for TNT gas detection": {
+      "title": "SERS nose arrays based on a signal differentiation approach for TNT gas detection",
+      "year": 2025,
+      "venue": "Communications Chemistry",
+      "doi": "10.1038/s42004-025-01656-2",
+      "key_insight": "通过MXene材料差异化化学增强、AuNBP物理热点、分子单层差异化吸附三重机制产生信号分化，结合机器学习实现结构相似爆炸物的分类识别",
+      "method_signature": "六通道SD-SERS阵列(Ti3C2/Mo2C MXene-AuNBP + PATP/4MBA/6MNA单层) + ML分类",
+      "tags": [
+        "SERS生物鼻",
+        "MXene-AuNBP异质结构",
+        "TNT气相检测",
+        "信号分化策略",
+        "机器学习分类"
+      ],
+      "quality": "full"
+    },
+    "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples": {
+      "title": "SeMi: When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2501.06004",
+      "key_insight": "适度降低置信度阈值(0.70)并结合熵加权重分配注意力，同时通过语义伪标签与分类器伪标签动态混合来增强伪标签确定性",
+      "method_signature": "OHEML(熵加权) + 平衡置信度衰减记忆库 + PLCE(动态混合伪标签) + 解耦平衡分类器",
+      "tags": [
+        "class-imbalanced semi-supervised learning",
+        "hard example mining",
+        "pseudo-label certainty enhancement",
+        "confidence decay memory bank",
+        "entropy-based reweighting"
+      ],
+      "quality": "full"
+    },
+    "Social media data mining and knowledge discovery under wireless network": {
+      "title": "Social media data mining and knowledge discovery under wireless network",
+      "year": 2021,
+      "venue": "Wireless Networks",
+      "doi": "10.1007/s11276-021-02576-4",
+      "key_insight": "社交媒体数据可连接用户行为与无线网络服务,支撑API推荐等应用",
+      "method_signature": "特刊引言综述六篇论文,不提供原创方法",
+      "tags": [
+        "VANET广播协议",
+        "关键语句分类",
+        "高速公路支付趋势",
+        "WSN节能调度",
+        "API推荐系统"
+      ],
+      "quality": "partial"
+    },
+    "Special Issue on Deep Learning in Mobile and Wireless Networks_ Algorithms, Models and Techniques": {
+      "title": "Special Issue on Deep Learning in Mobile and Wireless Networks: Algorithms, Models and Techniques",
+      "year": 2021,
+      "venue": "Mobile Networks & Applications",
+      "doi": "10.1007/s11036-021-01871-w",
+      "key_insight": "数据收集与预测阶段可本地执行,训练阶段需轻量化模型",
+      "method_signature": "特邀综述七篇精选论文,涵盖轻量检测、边缘路由、隐私协议等",
+      "tags": [
+        "deep-learning-mobile-deployment",
+        "edge-computing",
+        "object-detection",
+        "privacy-protocol",
+        "misinformation-detection"
+      ],
+      "quality": "partial"
+    },
+    "The Ergodicity of the Collatz Process in Positive Integer Field": {
+      "title": "The Ergodicity of the Collatz Process in Positive Integer Field",
+      "year": 2013,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1311.5690",
+      "key_insight": "Introduce models M2→M1→MS→M0: prove properties in relaxed models then transfer to original via edge removal",
+      "method_signature": "Cluster decomposition (9/5/3-cluster) and succession theorems TDDFFBBT, DFFBTT in ternary representation",
+      "tags": [
+        "Collatz-conjecture",
+        "graph-theory",
+        "3x+1-problem",
+        "non-deterministic-process",
+        "cluster-analysis"
+      ],
+      "quality": "full"
+    },
+    "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval": {
+      "title": "UniCoR: Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval",
+      "year": 2026,
+      "venue": "ICSE '26",
+      "doi": "10.48550/arxiv.2512.10452",
+      "key_insight": "通过构造功能等效但形式多样的正样本,强制模型超越表面词共现,学习代码背后的深层计算逻辑",
+      "method_signature": "多视角监督对比学习+表示分布一致性学习,实现模态对齐和跨语言泛化",
+      "tags": [
+        "cross-language-code-retrieval",
+        "hybrid-code-search",
+        "supervised-contrastive-learning",
+        "modality-fusion",
+        "language-agnostic-representation"
+      ],
+      "quality": "full"
+    },
+    "Using location semantics to realize personalized road network location privacy protection": {
+      "title": "Using location semantics to realize personalized road network location privacy protection",
+      "year": 2019,
+      "venue": "EURASIP Journal on Wireless Communications and Networking",
+      "doi": "10.1186/s13638-019-1618-7",
+      "key_insight": "利用强化学习智能选取低敏感度道路段作为协作路段进行k匿名，并用双向k扰动同时保护用户位置和查询位置",
+      "method_signature": "PSWA权重分配 + CSM强化学习路段匹配 + 双向k扰动",
+      "tags": [
+        "location-based-service-privacy",
+        "road-network-k-anonymity",
+        "location-semantics-sensitivity",
+        "reinforcement-learning-Q-table",
+        "bidirectional-query-disturbance"
+      ],
+      "quality": "full"
+    },
+    "ViTAD_ Timing Violation-Aware Debugging of RTL Code using Large Language Models": {
+      "title": "ViTAD: Timing Violation-Aware Debugging of RTL Code using Large Language Models",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "Joint modeling of code structure and timing via Signal Timing Dependency Graph enables LLM to reason about violation causes with explicit causality",
+      "method_signature": "STDG construction + violation path extraction + scenario-based knowledge retrieval + dynamic repair template generation",
+      "tags": [
+        "RTL-timing-violation-debugging",
+        "LLM-assisted-hardware-repair",
+        "Signal-Timing-Dependency-Graph",
+        "VLSI-static-timing-analysis",
+        "domain-knowledge-retrieval-augmented-LLM"
+      ],
+      "quality": "partial"
+    }
+  },
+  "by_tag": {
+    "generative-retrieval": [
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4401306654",
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4404783962"
+    ],
+    "residual-quantization": [
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4401306654",
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4404783962"
+    ],
+    "e-commerce-recommendation": [
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4401306654",
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4404783962"
+    ],
+    "edge-computing": [
+      "Deep learning to mobile hypermedia and multimedia",
+      "Special Issue on Deep Learning in Mobile and Wireless Networks_ Algorithms, Models and Techniques"
+    ],
+    "complex-network-fractality": [
+      "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors"
+    ],
+    "hub-attraction-disassortativity": [
+      "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors"
+    ],
+    "dynamical-growth-model": [
+      "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors"
+    ],
+    "scale-free-network": [
+      "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors"
+    ],
+    "box-covering-renormalization": [
+      "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors"
+    ],
+    "microblog-ranking": [
+      "A comprehensive ranking model for tweets big data in online social network"
+    ],
+    "personalized-recommendation": [
+      "A comprehensive ranking model for tweets big data in online social network"
+    ],
+    "social-intimacy": [
+      "A comprehensive ranking model for tweets big data in online social network"
+    ],
+    "user-behavior-modeling": [
+      "A comprehensive ranking model for tweets big data in online social network"
+    ],
+    "information-overload": [
+      "A comprehensive ranking model for tweets big data in online social network"
+    ],
+    "complex-networks-optimization": [
+      "A simple model clarifies the complicated relationships of complex networks"
+    ],
+    "bi-objective-Pareto-network-generation": [
+      "A simple model clarifies the complicated relationships of complex networks"
+    ],
+    "average-path-length-spectral-parameter": [
+      "A simple model clarifies the complicated relationships of complex networks"
+    ],
+    "scale-free-unification-theory": [
+      "A simple model clarifies the complicated relationships of complex networks"
+    ],
+    "network-taxonomy-derivation": [
+      "A simple model clarifies the complicated relationships of complex networks"
+    ],
+    "semantic-ID": [
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4401306654"
+    ],
+    "codebook-utilization": [
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4401306654"
+    ],
+    "hourglass-phenomenon": [
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4404783962"
+    ],
+    "long-tail-distribution": [
+      "Breaking the Hourglass Phenomenon of Residual Quantization_ Enhancing the Upper Bound of Generative Retrieval__oa_W4404783962"
+    ],
+    "code-search": [
+      "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    ],
+    "relevance-matching": [
+      "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    ],
+    "semantic-matching": [
+      "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    ],
+    "neural-IR": [
+      "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    ],
+    "co-attention-mechanism": [
+      "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    ],
+    "long-context-LLM": [
+      "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    ],
+    "multi-turn-QA": [
+      "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    ],
+    "cognitive-semantic-tree": [
+      "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    ],
+    "retrieval-augmented-generation": [
+      "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    ],
+    "introspection-mechanism": [
+      "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    ],
+    "mobile-multimedia": [
+      "Deep learning to mobile hypermedia and multimedia"
+    ],
+    "deep-learning": [
+      "Deep learning to mobile hypermedia and multimedia"
+    ],
+    "federated-learning": [
+      "Deep learning to mobile hypermedia and multimedia"
+    ],
+    "IoT": [
+      "Deep learning to mobile hypermedia and multimedia"
+    ],
+    "edge intelligence": [
+      "Edge intelligence in wireless networks"
+    ],
+    "IoT data processing": [
+      "Edge intelligence in wireless networks"
+    ],
+    "edge-cloud hierarchy": [
+      "Edge intelligence in wireless networks"
+    ],
+    "deep neural network offloading": [
+      "Edge intelligence in wireless networks"
+    ],
+    "5G edge networks": [
+      "Edge intelligence in wireless networks"
+    ],
+    "federated-edge-learning": [
+      "Editorial_ Collaborative Computing in AI Empowered Mobile Networks"
+    ],
+    "congestion-control": [
+      "Editorial_ Collaborative Computing in AI Empowered Mobile Networks"
+    ],
+    "cognitive-radio-routing": [
+      "Editorial_ Collaborative Computing in AI Empowered Mobile Networks"
+    ],
+    "pilot-contamination-security": [
+      "Editorial_ Collaborative Computing in AI Empowered Mobile Networks"
+    ],
+    "D2D-caching": [
+      "Editorial_ Collaborative Computing in AI Empowered Mobile Networks"
+    ],
+    "differential-privacy-DNN": [
+      "Editorial_ Collaborative Computing in AI Empowered Mobile Networks"
+    ],
+    "method-naming": [
+      "Keywords Guided Method Name Generation"
+    ],
+    "code-summarization": [
+      "Keywords Guided Method Name Generation"
+    ],
+    "graph-neural-network": [
+      "Keywords Guided Method Name Generation"
+    ],
+    "keywords-extraction": [
+      "Keywords Guided Method Name Generation"
+    ],
+    "encoder-decoder": [
+      "Keywords Guided Method Name Generation"
+    ],
+    "mortality-prediction": [
+      "Multimodal temporal-clinical note network for mortality prediction"
+    ],
+    "clinical-notes": [
+      "Multimodal temporal-clinical note network for mortality prediction"
+    ],
+    "multimodal-learning": [
+      "Multimodal temporal-clinical note network for mortality prediction"
+    ],
+    "chronic-patient-modeling": [
+      "Multimodal temporal-clinical note network for mortality prediction"
+    ],
+    "label-aware-attention": [
+      "Multimodal temporal-clinical note network for mortality prediction"
+    ],
+    "short-term-load-forecasting": [
+      "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    ],
+    "wavelet-reconstruction": [
+      "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    ],
+    "convolutional-neural-network": [
+      "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    ],
+    "model-deployability": [
+      "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    ],
+    "interpretable-prediction": [
+      "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    ],
+    "Chinese grammatical error correction": [
+      "Pretraining Chinese BERT for Detecting Word Insertion and Deletion Errors"
+    ],
+    "word insertion detection": [
+      "Pretraining Chinese BERT for Detecting Word Insertion and Deletion Errors"
+    ],
+    "word deletion detection": [
+      "Pretraining Chinese BERT for Detecting Word Insertion and Deletion Errors"
+    ],
+    "BERT pretraining": [
+      "Pretraining Chinese BERT for Detecting Word Insertion and Deletion Errors"
+    ],
+    "null token prediction": [
+      "Pretraining Chinese BERT for Detecting Word Insertion and Deletion Errors"
+    ],
+    "long-context-post-training": [
+      "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training"
+    ],
+    "data-synthesis": [
+      "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training"
+    ],
+    "document-dependency": [
+      "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training"
+    ],
+    "semantic-ordering": [
+      "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training"
+    ],
+    "LLM-pretraining": [
+      "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training"
+    ],
+    "mobile-service-recommendation": [
+      "Reasoning on Context Satisfiability for Service Recommendation in Mobile Network"
+    ],
+    "DL-precondition-reasoning": [
+      "Reasoning on Context Satisfiability for Service Recommendation in Mobile Network"
+    ],
+    "context-ontology": [
+      "Reasoning on Context Satisfiability for Service Recommendation in Mobile Network"
+    ],
+    "service-discovery-context-matching": [
+      "Reasoning on Context Satisfiability for Service Recommendation in Mobile Network"
+    ],
+    "ubiquitous-computing": [
+      "Reasoning on Context Satisfiability for Service Recommendation in Mobile Network"
+    ],
+    "SERS生物鼻": [
+      "SERS nose arrays based on a signal differentiation approach for TNT gas detection"
+    ],
+    "MXene-AuNBP异质结构": [
+      "SERS nose arrays based on a signal differentiation approach for TNT gas detection"
+    ],
+    "TNT气相检测": [
+      "SERS nose arrays based on a signal differentiation approach for TNT gas detection"
+    ],
+    "信号分化策略": [
+      "SERS nose arrays based on a signal differentiation approach for TNT gas detection"
+    ],
+    "机器学习分类": [
+      "SERS nose arrays based on a signal differentiation approach for TNT gas detection"
+    ],
+    "class-imbalanced semi-supervised learning": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "hard example mining": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "pseudo-label certainty enhancement": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "confidence decay memory bank": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "entropy-based reweighting": [
+      "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples"
+    ],
+    "VANET广播协议": [
+      "Social media data mining and knowledge discovery under wireless network"
+    ],
+    "关键语句分类": [
+      "Social media data mining and knowledge discovery under wireless network"
+    ],
+    "高速公路支付趋势": [
+      "Social media data mining and knowledge discovery under wireless network"
+    ],
+    "WSN节能调度": [
+      "Social media data mining and knowledge discovery under wireless network"
+    ],
+    "API推荐系统": [
+      "Social media data mining and knowledge discovery under wireless network"
+    ],
+    "deep-learning-mobile-deployment": [
+      "Special Issue on Deep Learning in Mobile and Wireless Networks_ Algorithms, Models and Techniques"
+    ],
+    "object-detection": [
+      "Special Issue on Deep Learning in Mobile and Wireless Networks_ Algorithms, Models and Techniques"
+    ],
+    "privacy-protocol": [
+      "Special Issue on Deep Learning in Mobile and Wireless Networks_ Algorithms, Models and Techniques"
+    ],
+    "misinformation-detection": [
+      "Special Issue on Deep Learning in Mobile and Wireless Networks_ Algorithms, Models and Techniques"
+    ],
+    "Collatz-conjecture": [
+      "The Ergodicity of the Collatz Process in Positive Integer Field"
+    ],
+    "graph-theory": [
+      "The Ergodicity of the Collatz Process in Positive Integer Field"
+    ],
+    "3x+1-problem": [
+      "The Ergodicity of the Collatz Process in Positive Integer Field"
+    ],
+    "non-deterministic-process": [
+      "The Ergodicity of the Collatz Process in Positive Integer Field"
+    ],
+    "cluster-analysis": [
+      "The Ergodicity of the Collatz Process in Positive Integer Field"
+    ],
+    "cross-language-code-retrieval": [
+      "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    ],
+    "hybrid-code-search": [
+      "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    ],
+    "supervised-contrastive-learning": [
+      "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    ],
+    "modality-fusion": [
+      "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    ],
+    "language-agnostic-representation": [
+      "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    ],
+    "location-based-service-privacy": [
+      "Using location semantics to realize personalized road network location privacy protection"
+    ],
+    "road-network-k-anonymity": [
+      "Using location semantics to realize personalized road network location privacy protection"
+    ],
+    "location-semantics-sensitivity": [
+      "Using location semantics to realize personalized road network location privacy protection"
+    ],
+    "reinforcement-learning-Q-table": [
+      "Using location semantics to realize personalized road network location privacy protection"
+    ],
+    "bidirectional-query-disturbance": [
+      "Using location semantics to realize personalized road network location privacy protection"
+    ],
+    "RTL-timing-violation-debugging": [
+      "ViTAD_ Timing Violation-Aware Debugging of RTL Code using Large Language Models"
+    ],
+    "LLM-assisted-hardware-repair": [
+      "ViTAD_ Timing Violation-Aware Debugging of RTL Code using Large Language Models"
+    ],
+    "Signal-Timing-Dependency-Graph": [
+      "ViTAD_ Timing Violation-Aware Debugging of RTL Code using Large Language Models"
+    ],
+    "VLSI-static-timing-analysis": [
+      "ViTAD_ Timing Violation-Aware Debugging of RTL Code using Large Language Models"
+    ],
+    "domain-knowledge-retrieval-augmented-LLM": [
+      "ViTAD_ Timing Violation-Aware Debugging of RTL Code using Large Language Models"
+    ]
+  }
+}

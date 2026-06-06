@@ -1,0 +1,40 @@
+{
+  "paper_id": "The Synergy between Data and Multi-Modal Large Language Models_ A Survey from Co-Development Perspective",
+  "doi": "10.48550/arxiv.2407.08583",
+  "title": "The Synergy between Data and Multi-Modal Large Language Models: A Survey from Co-Development Perspective",
+  "year": 2024,
+  "venue": "arXiv:2407.08583",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "现有调查多为模型视角,缺乏数据与模型互益关系的系统梳理",
+  "problem_framing": "将数据模型协同发展形式化为双层优化问题,回答哪些数据方法提升哪些模型能力",
+  "key_insight": "数据和模型发展相互交织而非分离,大模型可反哺数据质量形成良性循环",
+  "method_signature": "基于协同发展的新分类法,从数据贡献模型和模型贡献数据双向梳理文献",
+  "evaluation_criteria": "匹配数据方法与模型能力,明确模型在数据管理中的角色",
+  "negative_result_or_admitted_limitation": "自增强范式在LLM有效但多模态LLM缺乏研究;各方法组合效果尚未充分探索",
+  "evidence_for_taste": [
+    "intertwined rather than separate",
+    "exponential data growth can lead to linear performance improvements",
+    "optimizing diversity may bias the dataset towards simpler samples"
+  ],
+  "thinking_moves": [
+    "将众多调查的模型视角与数据视角对立起来,提出协同发展的新框架",
+    "把数据模型关系形式化为双层优化问题,统一描述协同发展",
+    "从Objective-driven组织数据贡献,从Role-driven组织模型贡献",
+    "通过追问你哪些能力能被哪些数据方法提升来结构化问题",
+    "识别自增强范式在多模态领域的未探索空白"
+  ],
+  "topic_tags": [
+    "multimodal LLM",
+    "data-centric AI",
+    "data-model co-development",
+    "instruction tuning",
+    "model-assisted data curation"
+  ],
+  "cites_own_work": [
+    "Data-juicer sandbox (2024)",
+    "Federated full-parameter tuning (2024)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

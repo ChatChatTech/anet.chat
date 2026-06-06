@@ -1,0 +1,43 @@
+{
+  "paper_id": "A Common Method of Share Authentication in Image Secret Sharing",
+  "doi": "10.1109/tcsvt.2020.3025527",
+  "title": "A Common Method of Share Authentication in Image Secret Sharing",
+  "year": 2020,
+  "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有ISS方案中,参与者向未知方发送真实share时会被欺骗,导致真实share泄露",
+  "problem_framing": "设计(k,n)阈值的ISS,同时支持 dealer participatory 和 dealer nonparticipatory 认证,且满足无像素扩展、无辅助加密、无损解密",
+  "key_insight": "通过筛选操作(screening operation)使多项式份额的低4位XOR等于VSS加密的认证位,融合多项式ISS和无像素扩展VSS的优势",
+  "method_signature": "多项式ISS与(2,2)随机网格VSS融合,使用素域P=257,筛选系数满足XOR4LBs约束",
+  "evaluation_criteria": "对比度α、加密效率、解密复杂度、暴力攻击难度(NA≥4)、视觉可识别性",
+  "negative_result_or_admitted_limitation": "当n-k较大时需要更多迭代且N_A减少,建议(n-k)/n ≤ 1/2;认证依赖HVS视觉识别,无法定位篡改位置",
+  "evidence_for_taste": [
+    "her real share is already sent to the fake participant",
+    "the dealer fails to decrypt and cannot distinguish the fake one",
+    "The advantages of VSS and polynomial-based ISS are skillfully fused",
+    "a screening operation is an operation that screens the polynomial coefficients satisfying some requirements",
+    "N_A ≥ 4 is suggested for an acceptable performance",
+    "may have failed authentication with a larger value of n-k"
+  ],
+  "thinking_moves": [
+    "识别现有方案的安全漏洞:认证过程中真实share被暴露",
+    "将两种互补的ISS方法(多项式高质量+VSS简单解密)进行巧妙融合",
+    "用筛选操作作为融合机制,替代显式信息嵌入",
+    "在素域257而非251上工作以实现无损解密",
+    "将认证问题转化为VSS的视觉对比度问题,利用人眼感知"
+  ],
+  "topic_tags": [
+    "image-secret-sharing",
+    "share-authentication",
+    "polynomial-based-ISS",
+    "visual-secret-sharing",
+    "screening-operation"
+  ],
+  "cites_own_work": [
+    "Yan et al. 2020 (Secret image sharing with separate shadow authentication ability)",
+    "Jiang et al. 2020 (Secret image sharing with dealer-participatory and non-dealer-participatory)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

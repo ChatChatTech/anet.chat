@@ -1,0 +1,36 @@
+{
+  "paper_id": "Zheng et al. - 2018 - RED RFID-based Eccentricity Detection for High-speed Rotating Machinery",
+  "doi": null,
+  "title": "RED: RFID-based Eccentricity Detection for High-speed Rotating Machinery",
+  "year": 2018,
+  "venue": "IEEE RFID",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "旋转机械偏心检测成本高、难部署,工业界需要非侵入式低成本的实时检测方案",
+  "problem_framing": "将偏心检测定义为:在高转速离散采样条件下,检测转子中心轴是否偏离初始位置",
+  "key_insight": "虽然单次读取杂乱无章,但读写分布稳定;偏心时分布变化,分布差异反映偏心程度",
+  "method_signature": "提取E点的时间间隔Int和相位差Diff,用Markov链RUM模型追踪分布变化判断偏心",
+  "evaluation_criteria": "TPR(真阳性率)、FPR(假阳性率)、检测延迟;综合准确率93.59%,延迟0.68秒",
+  "negative_result_or_admitted_limitation": "1mm精度时TPR仅85.01%且FPR达16.14%;距天线越远性能越差;E点减少时判断困难",
+  "evidence_for_taste": [
+    "the distribution of readings is stable",
+    "it is infeasible to identify eccentricity",
+    "low accuracy means more unnecessary downtime",
+    "economic loss brings by low accuracy is unacceptable"
+  ],
+  "thinking_moves": [
+    "将单点时序信号分析转为分布统计特征提取",
+    "利用RFID采样率与转速不匹配产生的离散性反而作为检测依据",
+    "不依赖偏心样本训练,纯理论推导估计偏心时的分布参数",
+    "承认精度与延迟的工程权衡,明确'4个样本为最优平衡点'"
+  ],
+  "topic_tags": [
+    "RFID-sensing",
+    "eccentricity-detection",
+    "rotating-machinery",
+    "Markov-chain-model",
+    "non-intrusive-monitoring"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

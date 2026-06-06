@@ -1,0 +1,37 @@
+{
+  "paper_id": "Li et al. - 2008 - Capacity of large scale wireless networks under Gaussian channel model",
+  "doi": null,
+  "title": "Capacity of Large Scale Wireless Networks Under Gaussian Channel Model",
+  "year": 2008,
+  "venue": "ACM MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Need to estimate achievable throughput when randomly deploying n wireless nodes in sensor network applications",
+  "problem_framing": "Asymptotic multicast capacity of random wireless networks under Gaussian channel with n nodes, ns sessions, k receivers each",
+  "key_insight": "Percolation theory enables constructing highway system that achieves per-flow rate Ω(√n/(ns√k)), generalizing unicast capacity results",
+  "method_signature": "Bond percolation on grid forms highways; Euclidean spanning tree for multicast; TDMA scheduling on short hops",
+  "evaluation_criteria": "Feasible per-flow rate with high probability; asymptotic order Θ(f(n)) definition with constants c, c'",
+  "negative_result_or_admitted_limitation": "Only proved for k=O(n/(log n)^(2α+6)); upper bound for arbitrary k remains open; network coding not considered",
+  "evidence_for_taste": [
+    "using percolation theory",
+    "w.h.p. there are Ω(m) paths",
+    "legality ensures no backward traversal",
+    "closes the gap when Gaussian link model is used",
+    "we leave it as future work"
+  ],
+  "thinking_moves": [
+    "借用渗流理论将通信问题建模为网格边渗流",
+    "先构建下界(构造性协议), 再证上界匹配",
+    "将多播路由问题拆解为三个独立相位分析"
+  ],
+  "topic_tags": [
+    "wireless-multicast-capacity",
+    "percolation-theory",
+    "Gaussian-channel-model",
+    "scaling-laws",
+    "highway-system"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Full paper available with complete methods, analysis, and conclusions. Found explicit discussion of limitations and future work. | md truncated to head40k+tail20k"
+}

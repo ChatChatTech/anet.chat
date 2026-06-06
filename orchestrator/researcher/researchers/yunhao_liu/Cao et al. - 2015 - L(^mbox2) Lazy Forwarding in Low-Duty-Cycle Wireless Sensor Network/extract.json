@@ -1,0 +1,45 @@
+{
+  "paper_id": "Cao et al. - 2015 - L(^mbox2) Lazy Forwarding in Low-Duty-Cycle Wireless Sensor Network",
+  "doi": null,
+  "title": "Lazy Forwarding in Low-Duty-Cycle Wireless Sensor Network",
+  "year": 2015,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有低占空比WSN中,X-MAC长前导码严重浪费能量且信道利用率低,而4-bit等链路估计方案在高占空比假设下失效。",
+  "problem_framing": "将数据转发设计解耦为媒体接入、链路估计、路由策略三个维度,联合优化能耗与交付率。",
+  "key_insight": "利用多元伯努利链路模型刻画突发丢失,配合同步会面和动态多前向器调度,用极少的分组传输实现高可靠转发。",
+  "method_signature": "窗口式单播+多元伯努利链路估计+动态多前向器贪心调度,基于EDQ(Expected Delivery Quality)作为路由度量。",
+  "evaluation_criteria": "PDR、Radio Duty Cycle、前导码长度、信道竞争次数、端到端延迟",
+  "negative_result_or_admitted_limitation": "确定性L²的PDR与Sync X-MAC几乎相同,因同步偏差导致分组丢失;动态转发在候选前向器很少时退化为确定性转发。",
+  "evidence_for_taste": [
+    "overly consumes energy in communications",
+    "Misled by such overestimates",
+    "tends to make improper forwarding decisions",
+    "maximize the network yield",
+    "The above optimization problem is NP-hard",
+    "The greedy algorithm seeks to maximize one hop PDR",
+    "The time and space complexity of the greedy algorithm is O(Ψ log m)",
+    "no energy budget on any node, the network throughput is exactly denoted by EPDR",
+    "a metric that makes more sense is how many packets can be successfully received"
+  ],
+  "thinking_moves": [
+    "从GreenOrbs大规模实地经验出发,揭示标准协议栈(X-MAC+4-bit+CTP)的三重低效:前导码过长、竞争严重、过度监听",
+    "将链路突发性建模为多元伯努利分布,将长程与短程行为分离估计",
+    "将路由冗余视为机会而非负担,通过约束条件保证动态选择不会差于确定性选择",
+    "将NP-hard联合优化问题分解为贪心序列决策,复杂度O(Ψlog m)可嵌入传感器节点",
+    "用EDQ替代ETX,在能量预算约束下重新定义'好路由'"
+  ],
+  "topic_tags": [
+    "low-duty-cycle WSN forwarding",
+    "multivariate Bernoulli link model",
+    "synchronized rendezvous",
+    "dynamic multi-forwarder scheduling",
+    "EDQ routing metric"
+  ],
+  "cites_own_work": [
+    "GreenOrbs [1]",
+    "Cao's prior work"
+  ],
+  "extraction_quality": "full"
+}

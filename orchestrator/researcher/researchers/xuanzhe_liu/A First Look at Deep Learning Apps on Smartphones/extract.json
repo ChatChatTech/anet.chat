@@ -1,0 +1,43 @@
+{
+  "paper_id": "A First Look at Deep Learning Apps on Smartphones",
+  "doi": "10.48550/arxiv.1812.05448",
+  "title": "A First Look at Deep Learning Apps on Smartphones",
+  "year": 2018,
+  "venue": "WWW'19",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "移动端深度学习研究火热，但缺乏对实际应用场景的实证理解",
+  "problem_framing": "首次大规模静态分析16000+款Android应用的深度学习使用情况",
+  "key_insight": "实际部署的DL模型极小(中位数2.47MB/10M FLOPs)，比预期轻两个数量级",
+  "method_signature": "基于APK静态分析的DL Sniffer和Model Extractor工具链",
+  "evaluation_criteria": "DL应用流行度/下载量/模型复杂度/框架使用率/优化率",
+  "negative_result_or_admitted_limitation": "仅6%模型包含已知优化技术，模型保护严重不足",
+  "evidence_for_taste": [
+    "history has proven that such early adopters heavily influence or even decide the evolution of new technologies",
+    "DL is used as core building blocks",
+    "smartphone DL in our case",
+    "making DL work in the wild, though appealing, takes a lot of engineering efforts",
+    "we deem such multi-usage as (potentially) bad practice",
+    "motivates DL accelerator designs to give priority to the layers popular among mobile DL models",
+    "urges optimizations on deep learning models deployed on smartphones",
+    "validation of research ideas on these models"
+  ],
+  "thinking_moves": [
+    "从市场现象反推技术演进规律",
+    "对比学术期望与实际部署的模型大小差距",
+    "通过工具自动化实现大规模实证研究",
+    "从多个时间点快照追踪技术采纳趋势",
+    "列举反面实践来衬托正确做法",
+    "将研究发现转化为对不同利益相关者的具体建议"
+  ],
+  "topic_tags": [
+    "mobile-deep-learning",
+    "android-app-analysis",
+    "model-deployment",
+    "empirical-study",
+    "on-device-inference"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "Gong et al. - 2013 - Informative counting fine-grained batch authentication for large-scale RFID systems",
+  "doi": null,
+  "title": "Informative Counting: Fine-grained Batch Authentication for Large-Scale RFID Systems",
+  "year": 2013,
+  "venue": "MobiHoc'13",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Counterfeiting costs >600B yearly; deterministic per-tag auth too expensive for fast-moving consumer goods (clothes, wines)",
+  "problem_framing": "Prior batch auth only yields binary 0/1 result; need scalable fine-grained count estimation for counterfeit and genuine tags",
+  "key_insight": "Extend FM-Sketch into Authentication Synopsis; geometric-hash slot occupancy reveals |C| and |G| via set-difference ratio",
+  "method_signature": "AS-based batch auth achieving O(N/n·log N) sublinear cost with (ε,δ) approximations",
+  "evaluation_criteria": "Relative error |θ̂-θ|/θ ≤ ε with prob ≥ 1-δ; compare scanning slots and comm bytes vs ACTION/SEBA",
+  "negative_result_or_admitted_limitation": "Sanity bound B is pessimistic due to worst-case analysis; may need extra round for undecided singleton slots",
+  "evidence_for_taste": [
+    "approximate count of counterfeits and genuines with accuracy and error probability guarantees",
+    "result is binary, merely indicating the existence of counterfeits",
+    "the possibility of this luck is rather small and negligible",
+    "our analysis are based on the worst-case analysis"
+  ],
+  "thinking_moves": [
+    "把批认证问题reframe成基数估计+集合势比例问题",
+    "把FM-Sketch扩展为Authentication Synopsis实现几何划分",
+    "先证Chernoff bound保证，再推导最优参数γ=0.618, α=2",
+    "承认worst-case bound过悲观的实际限制"
+  ],
+  "topic_tags": [
+    "RFID-batch-authentication",
+    "FM-Sketch-extension",
+    "probabilistic-cardinality-estimation",
+    "sublinear-authentication",
+    "set-difference-estimation"
+  ],
+  "cites_own_work": [
+    "Lu et al. - Refresh (2010)",
+    "Zheng et al. - PET (2012)",
+    "Sheng et al. - continuous scanning (2010)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

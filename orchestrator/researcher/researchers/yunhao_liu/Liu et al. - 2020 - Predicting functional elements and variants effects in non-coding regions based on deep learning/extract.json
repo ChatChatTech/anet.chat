@@ -1,0 +1,36 @@
+{
+  "paper_id": "Liu et al. - 2020 - Predicting functional elements and variants effects in non-coding regions based on deep learning",
+  "doi": null,
+  "title": "Predicting functional elements and variants effects in non-coding regions based on deep learning",
+  "year": 2020,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "非编码区变异影响人类疾病，但现有方法在特征空间扩展时性能下降",
+  "problem_framing": "从序列预测大规模染色质特征注解，需解决全局特征提取和特征空间可扩展性问题",
+  "key_insight": "用注意力机制(GPWM)补充卷积(LPWM)，多通道架构提升高阈值容忍度",
+  "method_signature": "DeepMSA：1000bp输入→多通道层(注意力+卷积)→2584维染色质特征预测",
+  "evaluation_criteria": "AUROC阈值S=0.5/0.7和AUPRC比较三模型(gkmSVM/DeepSEA/DeepMSA)",
+  "negative_result_or_admitted_limitation": "深度学习和机器学习模型都敏感于占多数的特征，对较小但同样重要的特征信息关注不足",
+  "evidence_for_taste": [
+    "AUROC score can be increased by 3%",
+    "maintain high accuracy at higher thresholds",
+    "sensitive to the features that account for the majority",
+    "paying attention to the relatively small but equally important feature information"
+  ],
+  "thinking_moves": [
+    "特征空间扩展导致性能下降→提出多通道特征提取架构",
+    "注意力机制与卷积操作互补→GPWM全局权重与LPWM局部权重结合",
+    "验证跨物种迁移能力→用小鼠数据测试模型通用性"
+  ],
+  "topic_tags": [
+    "non-coding-variant-effects-prediction",
+    "chromatin-feature-prediction",
+    "attention-mechanism",
+    "multi-channel-CNN",
+    "epigenomics"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "方法细节描述较抽象，部分公式和图示内容未完整提取；venue信息缺失"
+}

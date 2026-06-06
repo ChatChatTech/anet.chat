@@ -1,0 +1,41 @@
+{
+  "paper_id": "Effective LSTMs for Target-Dependent Sentiment Classification__oa_W2529550020",
+  "doi": "10.48550/arxiv.1512.01100",
+  "title": "Effective LSTMs for Target-Dependent Sentiment Classification",
+  "year": 2015,
+  "venue": "arXiv preprint",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "手动设计目标相关特征劳动密集,且离散特征难以编码目标-上下文关联性",
+  "problem_framing": "目标相关情感分类被建模为文本分类,需捕捉目标词与上下文词的语义关联",
+  "key_insight": "标准LSTM无法区分不同目标的不同情感,必须将目标信息融入句子表示",
+  "method_signature": "TD-LSTM双方向建模前后上下文;TC-LSTM在输入层拼接目标向量",
+  "evaluation_criteria": "Twitter数据集上 Accuracy 和 Macro-F1",
+  "negative_result_or_admitted_limitation": "注意力机制LSTM性能反而低于标准LSTM,可能因参数过多小数据集难以优化",
+  "evidence_for_taste": [
+    "basic LSTM approach performs worst",
+    "does not capture any target information",
+    "attention component has a negative impact",
+    "cannot be easily optimized with the small number of corpus",
+    "we cannot obtain better result with such an attention model"
+  ],
+  "thinking_moves": [
+    "从人类认知出发:人天然会关注与目标相关的上下文词",
+    "失败实验驱动架构简化:注意力机制参数过多导致过拟合",
+    "消融对比:移除目标信息验证其必要性",
+    "从简单到复杂渐进扩展:先LSTM再TD-LSTM再TC-LSTM"
+  ],
+  "topic_tags": [
+    "target-dependent-sentiment",
+    "LSTM-variant",
+    "target-context-connection",
+    "Twitter-sentiment-classification",
+    "neural-network-architectural-design"
+  ],
+  "cites_own_work": [
+    "Tang et al., 2014",
+    "Tang et al., 2015"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "作者 Feng 是共同作者,论文为arXiv预印本未发表在会议或期刊,但在情感分析领域有较高影响力。实验部分完整,包含消融实验、词向量对比、注意力机制失败案例和错误分析。"
+}

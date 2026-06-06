@@ -1,0 +1,38 @@
+{
+  "paper_id": "2022_BIGCOM_tanjuntao-final",
+  "doi": null,
+  "title": "Residue-based Label Protection Mechanisms in Vertical Logistic Regression",
+  "year": 2022,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Vertical FL中存在严重的标签泄露漏洞，攻击者可通过残差变量推断私有标签",
+  "problem_framing": "利用解密梯度和本地数据集构造线性方程组，求解残差以推断Bob的私有标签y_i",
+  "key_insight": "当特征数大于batch大小时，线性系统唯一解可直接求出残差，从而泄露标签",
+  "method_signature": "三种残差保护机制：加性噪声、乘性噪声、结合LDP与HE的混合机制",
+  "evaluation_criteria": "模型精度、AUC分数、训练时间、隐私预算ε的影响",
+  "negative_result_or_admitted_limitation": "加性噪声和乘性噪声在隐私预算较小时会显著降低模型性能",
+  "evidence_for_taste": [
+    "without actually decrypting the residues",
+    "both a small b1 and a large b1 are not good enough",
+    "which is really small",
+    "the extra noise improves the robustness",
+    "how to search for the optimal clipping bounds is out of scope"
+  ],
+  "thinking_moves": [
+    "识别现有攻击方法的假设不切实际，转而针对广泛使用的vertical LR协议设计攻击",
+    "从线性代数角度发现系统方程可解的条件（d^A > |B|）",
+    "设计多个互补的保护机制并分别验证ε-LDP性质",
+    "通过clipping边界的trade-off分析指导参数选择"
+  ],
+  "topic_tags": [
+    "vertical-federated-learning",
+    "label-inference-attack",
+    "residue-protection",
+    "local-differential-privacy",
+    "homomorphic-encryption"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "paper未明确说明会议名称，目录名暗示BIGCOM但已标记venue为null"
+}

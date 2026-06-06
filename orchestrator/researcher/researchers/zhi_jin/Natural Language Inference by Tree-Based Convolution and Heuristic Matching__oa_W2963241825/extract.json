@@ -1,0 +1,41 @@
+{
+  "paper_id": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching__oa_W2963241825",
+  "doi": "10.18653/v1/p16-2022",
+  "title": "Natural Language Inference by Tree-Based Convolution and Heuristic Matching",
+  "year": 2016,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Existing neural methods fail to fully leverage syntactic info or suffer from long propagation paths in recursive networks",
+  "problem_framing": "NLI as sentence pair classification via TBCNN sentence encoder + heuristic matching layers (concat, product, difference)",
+  "key_insight": "Element-wise difference matching is mathematically reducible to concatenation but explicitly optimizing it yields 1-2% accuracy boost",
+  "method_signature": "TBCNN-pair: tree-based convolution for sentence encoding + concatenation/product/difference matching heuristics",
+  "evaluation_criteria": "Accuracy on SNLI benchmark; matching complexity O(1) vs O(n) vs O(n²) for alternatives",
+  "negative_result_or_admitted_limitation": "Element-wise product alone performs significantly worse than concatenation or difference alone",
+  "evidence_for_taste": [
+    "fail to fully make use of the syntactical information",
+    "difficult to train due to the long propagation path",
+    "explicitly specifying this heuristic significantly improves",
+    "element-wise product alone is significantly worse",
+    "verifies that vector offset is useful in capturing generic sentence relationships"
+  ],
+  "thinking_moves": [
+    "Compare structural convolution against sequential convolution on word order distortion robustness",
+    "Verify mathematical equivalence of heuristics then show explicit optimization differs in practice",
+    "Draw analogy between word embedding offset and sentence-level vector difference",
+    "Prioritize matching complexity for real-world retrieval scenarios"
+  ],
+  "topic_tags": [
+    "tree-based convolution",
+    "NLI entailment recognition",
+    "heuristic matching layers",
+    "dependency parse trees",
+    "Siamese architecture"
+  ],
+  "cites_own_work": [
+    "Mou et al., 2015 (TBCNN for sentence classification)",
+    "Mou et al., 2016 (TBCNN for program code)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

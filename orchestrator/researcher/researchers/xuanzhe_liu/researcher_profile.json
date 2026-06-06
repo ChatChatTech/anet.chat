@@ -1,0 +1,591 @@
+{
+  "slug": "xuanzhe_liu",
+  "n_extracts": 62,
+  "n_full": 54,
+  "n_partial": 7,
+  "n_thin": 0,
+  "year_range": [
+    2011,
+    2026
+  ],
+  "top_tags": [
+    [
+      "taxonomy-construction",
+      2
+    ],
+    [
+      "android-app-analysis",
+      2
+    ],
+    [
+      "on-device-inference",
+      2
+    ],
+    [
+      "federated-learning-heterogeneity",
+      2
+    ],
+    [
+      "empirical-software-engineering",
+      2
+    ],
+    [
+      "cross-device-FL",
+      2
+    ],
+    [
+      "pipeline-parallelism",
+      2
+    ],
+    [
+      "stock-trend-prediction",
+      2
+    ],
+    [
+      "news-mining",
+      2
+    ],
+    [
+      "hybrid-attention-networks",
+      2
+    ],
+    [
+      "self-paced-learning",
+      2
+    ],
+    [
+      "mobile-DNN",
+      2
+    ],
+    [
+      "DL-software-deployment",
+      1
+    ],
+    [
+      "Stack-Overflow-empirical-study",
+      1
+    ],
+    [
+      "mobile-deployment",
+      1
+    ],
+    [
+      "browser-deployment",
+      1
+    ],
+    [
+      "Ethereum-DApp-empirical-study",
+      1
+    ],
+    [
+      "smart-contract-pattern-analysis",
+      1
+    ],
+    [
+      "blockchain-cost-modeling",
+      1
+    ],
+    [
+      "DApp-ecosystem-characterization",
+      1
+    ],
+    [
+      "gas-optimization",
+      1
+    ],
+    [
+      "mobile-deep-learning",
+      1
+    ],
+    [
+      "model-deployment",
+      1
+    ],
+    [
+      "empirical-study",
+      1
+    ],
+    [
+      "LLM压缩",
+      1
+    ],
+    [
+      "模型服务系统",
+      1
+    ],
+    [
+      "边缘AI",
+      1
+    ],
+    [
+      "多模态模型效率",
+      1
+    ],
+    [
+      "能耗优化",
+      1
+    ],
+    [
+      "分布式训练",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2011,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "Internetware软件范式",
+          1
+        ],
+        [
+          "涌现式软件协作",
+          1
+        ],
+        [
+          "运行时软件架构",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2012,
+      "paper_count": 4,
+      "top_tags": [
+        [
+          "autonomic-computing",
+          1
+        ],
+        [
+          "JEE-server-tuning",
+          1
+        ],
+        [
+          "adaptive-computation-resource-allocation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "WS-BPEL移动扩展",
+          1
+        ],
+        [
+          "DSL声明式UI编程",
+          1
+        ],
+        [
+          "MVC控制器自动化",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2017,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "android-deep-links",
+          1
+        ],
+        [
+          "static-dynamic-analysis-cooperation",
+          1
+        ],
+        [
+          "intent-filter-automation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2018,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "stock-trend-prediction",
+          2
+        ],
+        [
+          "news-mining",
+          2
+        ],
+        [
+          "hybrid-attention-networks",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2019,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "Ethereum-DApp-empirical-study",
+          1
+        ],
+        [
+          "smart-contract-pattern-analysis",
+          1
+        ],
+        [
+          "blockchain-cost-modeling",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 35,
+      "top_tags": [
+        [
+          "DL-software-deployment",
+          1
+        ],
+        [
+          "Stack-Overflow-empirical-study",
+          1
+        ],
+        [
+          "mobile-deployment",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 40,
+      "top_tags": [
+        [
+          "mobile DL deployment",
+          1
+        ],
+        [
+          "model conversion fault",
+          1
+        ],
+        [
+          "TF Lite",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 30,
+      "top_tags": [
+        [
+          "mobile-DL-inference",
+          1
+        ],
+        [
+          "DL-library-benchmark",
+          1
+        ],
+        [
+          "performance-fragmentation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 30,
+      "top_tags": [
+        [
+          "empirical-software-engineering",
+          2
+        ],
+        [
+          "WebAssembly-runtime-bugs",
+          1
+        ],
+        [
+          "bug-taxonomy",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 41,
+      "top_tags": [
+        [
+          "LLM压缩",
+          1
+        ],
+        [
+          "模型服务系统",
+          1
+        ],
+        [
+          "边缘AI",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 26,
+      "top_tags": [
+        [
+          "pipeline-parallelism",
+          2
+        ],
+        [
+          "on-device-LLM",
+          1
+        ],
+        [
+          "SLO-elasticity",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2026,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "prompt-engineering-methodology",
+          1
+        ],
+        [
+          "LLM-as-runtime-environment",
+          1
+        ],
+        [
+          "software-engineering-lifecycle",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "DL in browsers is still at dawn，browser问题太少",
+    "我们不能仅通过DApp信息检索智能合约并分析其工作方式，筛选后仅剩995个DApp",
+    "仅6%模型包含已知优化技术，模型保护严重不足",
+    "目前手机端模型仅限10B以下规模, 尚未实现真正落地部署",
+    "仅考虑CPU,未建模GPU功耗;视频解码实验精度降至90%",
+    "数据准备和模型更新阶段样本很少,因为移动端训练计算资源需求大且框架支持不足",
+    "TF.js的Wasm后端仅支持4个模型,远不如ORT.js的9个模型支持;WebGPU尚未成熟被排除出研究",
+    "Objects of app-specific classes in intents cannot be populated; static analysis cannot analyze dynamic fragments; low coverage of dynamic analysis",
+    "INT8量化加速仅0.8×-3.0×远低于理论4×；GPU在某些模型上比CPU更慢",
+    "皮肤色调数据仅在BDD100k上有足够多样性,其他欧洲数据集暗肤色样本稀缺",
+    "必须依赖heuristics和manual validation,无法保证所有标记账户真正是bot,仅提供下界",
+    "q-FedAvg在异质性-aware设置下解决公平性问题效果减弱;压缩算法几乎无法加速收敛",
+    "无法复现部分bug报告,检测器难以覆盖所有模式",
+    "Memory usage not considered; only 3 devices and 8 models tested",
+    "chunked-prefill等技术'cannot eliminate the interference'且增加O(N^2)内存访问开销",
+    "taxonomy可能不完整; 手动识别方法不可扩展; 仅为下界估计",
+    "Navigation Analyzer cannot reach activities requiring login; graph is incomplete. Security/privacy risks for exposing sensitive data via indexes",
+    "如果TLM输出决策无法满足SLO会回退到随机策略，因DNN黑盒属性无法完全保证",
+    "机器翻译方法无法保留语言特有情感知识，现有方法在日语任务上准确率都低于0.8",
+    "无法获取基线方法的单个预测,无法报告McNemar检验的统计显著性",
+    "现有调度器忽略GPU级配置如频率,未考虑能耗特征导致资源碎片化",
+    "机器学习与数据挖掘等高级分析技术很少使用,智能追踪分析仍处于起步阶段",
+    "外部因素(天气/事件)难以统一泛化建模,被排除以保证公平比较;数据驱动方法高度依赖数据量与质量",
+    "梯度压缩算法在异构环境下收敛时间延长2.5×，client-selection算法的选优效果在异构下降低73.9%，现有算法在真实场景收益大幅缩水。",
+    "静态分析无法100%准确识别可达函数，但保守策略通过按需加载兜底",
+    "过于激进的早期丢弃(100%丢弃率)导致简化至15%复杂度时精度下降31.3%；增大分组数会牺牲精度换取更低开销",
+    "NEP仍无法(或勉强)满足VR/AR等低延迟应用需求;边缘资源分布极不均衡(跨站点731倍差异);粗粒度计费模型可能对某些应用不利",
+    "q-FedAvg在异构设置下公平性改善效果大幅削弱;FedProx对状态异构性无效;梯度压缩算法几乎无法加速收敛,训练时间反而可能延长3.5倍",
+    "LanFL only works with LAN domains having at least 10 devices; current design relies on manual parameter tuning; simulation-based without real deployment",
+    "单纯增加流水线并行度会导致GPU共享，影响推理性能；增加GPU内存会提高资源成本",
+    "未讨论chunk size选择的理论下界,块级管理在极端内存压力下的最坏情况开销",
+    "推测生成导致内存使用超90%产生竞争，使目标模型计算时间增加2.2-2.3倍、加载时间增加1.05-1.09倍",
+    "选择太少股票导致高换手率,交易成本抵消利润",
+    "当某股票连续10天以上无新闻时(占8.4%),难以进行新闻导向预测;早期SPL学习速度慢于标准训练",
+    "静态混合并行和复制并行无法应对动态推理负载，在重负载下需谨慎平衡DoP",
+    "KV replication会增大网络通信量; d_cp过大时需跨节点通信; Double-Ring-Attention在长序列时效果受限(通信已可被计算覆盖)",
+    "Web应用访问设备服务(蓝牙/摄像头/本地存储)受限,HTML5 API实现不完整;Web应用常被认为逊于原生应用",
+    "朴素DSP训练引擎性能增益有限甚至为负,需专门优化",
+    "现有通信库(NCCL)在M2N模式下延迟高且不稳定，需要专门优化",
+    "Context parallelism faces workload imbalance due to causal masking, zigzag策略仍难以完美平衡",
+    "Page load time does not always improve due to checking update with server-side components; energy drain not addressed",
+    "ConvNetJS调用栈深度仅3而TensorFlow.js为48，暴露框架开销问题；nGPU训练时间反而长于iGPU因WebGL调用开销大",
+    "MuxFlow错误率0.9%略高于Online-only的0.7%；多负载共享存在挑战",
+    "100%淘汰率时精度下降31.3%;组数过大超过候选数时端到端搜索时间不再减少;模型精度偶尔不如NetAdapt",
+    "框架未实现或实证验证，实际效果未知",
+    "短视频范围(<分钟)直接上传即可;DIVA不适用于非稳态摄像头;依赖摄像头存储可靠性",
+    "当top-k较大时文档排列组合爆炸导致重用率低,需在命中率与缓存效率间权衡",
+    "误差信息难以理解导致安装失败类故障难以进一步分类（\"error messages in this stage are difficult to understand\"）。",
+    "serverless工具成熟度低,event-driven/distributed特性使应用架构复杂、执行流难以复现",
+    "实际请求可能偏离服务特征分布，破坏调度算法最优性",
+    "不适用于极短视频范围；依赖存储可靠性；非平稳摄像机表现可能欠佳；未考虑极低带宽场景",
+    "Markov预测调度开销抵消调优效果,实验结果不够好",
+    "3%应用占95%下载量是极端长尾，普通方法难揭示；用户评分与下载量不总一致",
+    "eWASM VMs在所有256位基准和大部分64位基准上慢于EVMs,开销占总执行时间84.9%-99.9%",
+    "预测窗口过小(如3min)导致不稳定,过大(如40min)无法捕获瞬态负载动态",
+    "仅6%模型使用已知优化如量化;39.2%模型未混淆,19.2%未加密,模型保护很差;24个应用嵌入多个DL框架被标注为bad practice"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "deployment is more challenging",
+      "paper_id": "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software"
+    },
+    {
+      "quote": "median response time is about 3 times",
+      "paper_id": "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software"
+    },
+    {
+      "quote": "questions are more difficult to answer",
+      "paper_id": "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software"
+    },
+    {
+      "quote": "still at dawn",
+      "paper_id": "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software"
+    },
+    {
+      "quote": "unsupported operation error",
+      "paper_id": "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software"
+    },
+    {
+      "quote": "history has proven that such early adopters heavily influence or even decide the evolution of new technologies",
+      "paper_id": "A First Look at Deep Learning Apps on Smartphones"
+    },
+    {
+      "quote": "DL is used as core building blocks",
+      "paper_id": "A First Look at Deep Learning Apps on Smartphones"
+    },
+    {
+      "quote": "smartphone DL in our case",
+      "paper_id": "A First Look at Deep Learning Apps on Smartphones"
+    },
+    {
+      "quote": "making DL work in the wild, though appealing, takes a lot of engineering efforts",
+      "paper_id": "A First Look at Deep Learning Apps on Smartphones"
+    },
+    {
+      "quote": "we deem such multi-usage as (potentially) bad practice",
+      "paper_id": "A First Look at Deep Learning Apps on Smartphones"
+    },
+    {
+      "quote": "motivates DL accelerator designs to give priority to the layers popular among mobile DL models",
+      "paper_id": "A First Look at Deep Learning Apps on Smartphones"
+    },
+    {
+      "quote": "urges optimizations on deep learning models deployed on smartphones",
+      "paper_id": "A First Look at Deep Learning Apps on Smartphones"
+    },
+    {
+      "quote": "validation of research ideas on these models",
+      "paper_id": "A First Look at Deep Learning Apps on Smartphones"
+    },
+    {
+      "quote": "assumptions could be too ideal",
+      "paper_id": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data"
+    },
+    {
+      "quote": "non-trivial performance degradation",
+      "paper_id": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data"
+    },
+    {
+      "quote": "optimizations are not always effective as reported",
+      "paper_id": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data"
+    },
+    {
+      "quote": "can hardly speed up",
+      "paper_id": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data"
+    },
+    {
+      "quote": "less effective in ensuring fairness",
+      "paper_id": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data"
+    },
+    {
+      "quote": "机器翻译工具通常训练于捕捉跨语言共享模式而非语言特有模式",
+      "paper_id": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    },
+    {
+      "quote": "emoji预测作为工具学习每种语言的情感感知表征",
+      "paper_id": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    },
+    {
+      "quote": "语言特有模式帮助解决语言差异问题",
+      "paper_id": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    },
+    {
+      "quote": "none of the existing approaches can achieve an accuracy over 0.85",
+      "paper_id": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    },
+    {
+      "quote": "none of the previous methods have been able to achieve an accuracy above 0.8（日语）",
+      "paper_id": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    },
+    {
+      "quote": "ELSA significantly improves the state-of-the-art results",
+      "paper_id": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    },
+    {
+      "quote": "too ideal for FL deployment",
+      "paper_id": "Heterogeneity-Aware Federated Learning"
+    },
+    {
+      "quote": "first empirical study to demystify",
+      "paper_id": "Heterogeneity-Aware Federated Learning"
+    },
+    {
+      "quote": "not always effective as reported",
+      "paper_id": "Heterogeneity-Aware Federated Learning"
+    },
+    {
+      "quote": "state heterogeneity is often more responsible",
+      "paper_id": "Heterogeneity-Aware Federated Learning"
+    },
+    {
+      "quote": "heterogeneity cannot be simply ignored",
+      "paper_id": "Heterogeneity-Aware Federated Learning"
+    },
+    {
+      "quote": "error messages in this stage are difficult to understand",
+      "paper_id": "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    },
+    {
+      "quote": "making it challenging to debug",
+      "paper_id": "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    },
+    {
+      "quote": "faults share the same fault symptoms",
+      "paper_id": "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    },
+    {
+      "quote": "have frequent fix patterns",
+      "paper_id": "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    },
+    {
+      "quote": "about half of the faults are related to system-level configurations",
+      "paper_id": "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    },
+    {
+      "quote": "accurate knowledge on a sparse sample",
+      "paper_id": "Supporting Video Queries on Zero-Streaming Cameras"
+    },
+    {
+      "quote": "much more useful than inaccurate knowledge",
+      "paper_id": "Supporting Video Queries on Zero-Streaming Cameras"
+    },
+    {
+      "quote": "opposite to existing designs",
+      "paper_id": "Supporting Video Queries on Zero-Streaming Cameras"
+    },
+    {
+      "quote": "the key is to refine query results",
+      "paper_id": "Supporting Video Queries on Zero-Streaming Cameras"
+    },
+    {
+      "quote": "maximizing the rate of true positive",
+      "paper_id": "Supporting Video Queries on Zero-Streaming Cameras"
+    },
+    {
+      "quote": "never omits any region",
+      "paper_id": "Supporting Video Queries on Zero-Streaming Cameras"
+    }
+  ]
+}

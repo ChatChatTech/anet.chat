@@ -1,0 +1,38 @@
+{
+  "paper_id": "Summarizing Source Code with Transferred API Knowledge",
+  "doi": "10.24963/ijcai.2018/314",
+  "title": "Summarizing Source Code with Transferred API Knowledge",
+  "year": 2018,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "缺乏高质量代码注释困扰开发者,手写注释耗时费力,且注释常缺失、错配或过时",
+  "problem_framing": "将代码摘要建模为从代码+API序列到自然语言描述的序列到序列翻译任务",
+  "key_insight": "API调用序列比源代码更能反映功能本质,且规律性强,可从API摘要任务迁移知识辅助代码摘要",
+  "method_signature": "TL-CodeSum:双编码器(代码+迁移API)带注意力机制,两阶段迁移学习",
+  "evaluation_criteria": "BLEU、METEOR分数及精确率/召回率/F值对比基准模型",
+  "negative_result_or_admitted_limitation": "微调整个网络时精确率反而下降;模型常遗漏或以UNK替换标识符",
+  "evidence_for_taste": [
+    "API sequences tend to be regular",
+    "precision decreases when fine-tuning",
+    "Learning the identifiers is challenging",
+    "misses some identifiers or replaces them with UNK"
+  ],
+  "thinking_moves": [
+    "从代码命名不规范问题出发,转向分析更规律的API调用模式",
+    "将一个任务中学到的知识显式迁移到另一个相关任务而非隐式学习",
+    "先用固定参数验证迁移效果,再探索微调策略的权衡"
+  ],
+  "topic_tags": [
+    "code-summarization",
+    "transfer-learning",
+    "API-knowledge-mining",
+    "sequence-to-sequence",
+    "attention-mechanism"
+  ],
+  "cites_own_work": [
+    "Hu et al., 2018"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

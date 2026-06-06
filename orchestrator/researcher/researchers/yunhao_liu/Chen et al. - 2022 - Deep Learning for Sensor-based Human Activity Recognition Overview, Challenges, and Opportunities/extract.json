@@ -1,0 +1,38 @@
+{
+  "paper_id": "Chen et al. - 2022 - Deep Learning for Sensor-based Human Activity Recognition Overview, Challenges, and Opportunities",
+  "doi": null,
+  "title": "Deep Learning for Sensor-based Human Activity Recognition: Overview, Challenges, and Opportunities",
+  "year": 2021,
+  "venue": "ACM Computing Surveys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传感器与物联网普及推动活动识别应用，但实际场景中存在大量挑战影响系统性能",
+  "problem_framing": "将深度学习活动识别方法按挑战类型组织，而非按模型结构组织",
+  "key_insight": "按挑战组织方法形成问题-解决方案结构，为研究者选择课题提供粗略指南",
+  "method_signature": "综述现有深度学习方法，按挑战分类并分析各解决方案的优缺点",
+  "evaluation_criteria": "方法是否能有效应对特定挑战，对同类解决方案的比较与评价",
+  "negative_result_or_admitted_limitation": "深度学习因其 abrupt success、bustling innovation、lack of theoretical support 而受到研究者的抵触接受",
+  "evidence_for_taste": [
+    "Unlike the existing surveys related",
+    "deep learning is still confronted with reluctant acceptance",
+    "carefully engineered and heuristic",
+    "challenge-method-analysis format aims to build",
+    "list the pros and cons"
+  ],
+  "thinking_moves": [
+    "将现有综述按模型结构组织的范式翻转成按挑战组织",
+    "区分通用模式识别挑战与传感器活动识别的专属挑战",
+    "为每个挑战列举多种方法并比较其优缺点",
+    "通过挑战-方法-分析格式构建问题解决结构"
+  ],
+  "topic_tags": [
+    "传感器活动识别综述",
+    "深度学习按挑战分类",
+    "可穿戴传感器",
+    "多模态融合",
+    "跨领域分布差异"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

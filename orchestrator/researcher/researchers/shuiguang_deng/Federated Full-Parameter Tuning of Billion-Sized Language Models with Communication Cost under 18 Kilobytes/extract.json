@@ -1,0 +1,38 @@
+{
+  "paper_id": "Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes",
+  "doi": "10.48550/arxiv.2312.06353",
+  "title": "Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes",
+  "year": 2024,
+  "venue": "ICML 2024 (PMLR 235)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "LLM微调需分布式私有数据但全参数调优通信代价O(d)不可承受，而PEFT精度不足",
+  "problem_framing": "联邦全参数调优LLM中模型参数传输代价过高，需将通信复杂度从O(d)降至O(1)",
+  "key_insight": "ZOO中每步更新可仅用随机种子+标量梯度两个值表征，从而用种子传输替代模型传输",
+  "method_signature": "FedKSeed用K个有限种子复现ZOO更新，通信仅传K个种子和标量梯度",
+  "evaluation_criteria": "Rouge-L在hold-out任务上精度，客户端每轮通信字节数，峰值显存",
+  "negative_result_or_admitted_limitation": "BP类方法在端侧设备上不实用，因其显存消耗巨大而非通信",
+  "evidence_for_taste": [
+    "PEFT is not a universal solution",
+    "these costs become prohibitive",
+    "impact of seed restrictions is greatly limited",
+    "FedKSeed delivers top-tier performance",
+    "marginal gain...becomes increasingly smaller"
+  ],
+  "thinking_moves": [
+    "把ZOO的两值表征性质作为通信压缩的杠杆",
+    "利用内蕴维数理论指导种子池大小K的选择",
+    "从种子重复利用角度解决同步计算代价无限增长问题",
+    "非均匀采样概率将重要扰动与普通扰动区分对待"
+  ],
+  "topic_tags": [
+    "federated-learning-zeroth-order-optimization",
+    "LLM-full-parameter-fine-tuning",
+    "communication-cost-reduction",
+    "random-seed-sampling",
+    "billion-sized-model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文来自ICML 2024，含完整理论分析、实验和附录。已提取全部核心认知信号。 | md truncated to head40k+tail20k"
+}

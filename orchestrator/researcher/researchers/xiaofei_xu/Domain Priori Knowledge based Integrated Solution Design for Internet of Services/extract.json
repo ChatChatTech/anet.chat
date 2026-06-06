@@ -1,0 +1,40 @@
+{
+  "paper_id": "Domain Priori Knowledge based Integrated Solution Design for Internet of Services",
+  "doi": "10.48550/arxiv.2009.02065",
+  "title": "Domain Priori Knowledge based Integrated Solution Design for Internet of Services",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "IoS中服务过多,需在构造效率与解精度间寻找权衡,且用户需求粒度粗、跨域。",
+  "problem_framing": "ISS构造本质是供需匹配问题——快且准地将用户需求侧与服务提供侧匹配。",
+  "key_insight": "利用历史UR与历史ISS的共性与相似性提取需求模式(RP)和服务模式(SP),构建双向概率匹配矩阵。",
+  "method_signature": "I-Tree建模→RP覆盖→PMM匹配SP→ISS快速生成",
+  "evaluation_criteria": "覆盖率最高且RP数量最少的组合方案为最优。",
+  "negative_result_or_admitted_limitation": "现有方法仍无法准确高效地构造服务,满足个性化需求仍繁琐耗时。",
+  "evidence_for_taste": [
+    "a tradeoff between the construction efficiency and the precision",
+    "large-granularity SPs have lower reusability, but high reuse value",
+    "a big challenge is how to look for a tradeoff",
+    "a cumbersome and time-consuming activity",
+    "a complex requirement can be decomposed into different sub-modules"
+  ],
+  "thinking_moves": [
+    "将粗粒度需求与细粒度原子服务间的匹配问题,转化为需求模式与服务模式间的模块化匹配",
+    "用双向模式(RP+SP)替代单侧匹配,以利用供需双侧先验知识压缩搜索空间",
+    "通过历史ISS挖掘业务共现模式,变优化问题为查表问题",
+    "在效率与精度间取平衡——大粒度SP低重用但高复用价值"
+  ],
+  "topic_tags": [
+    "service-pattern-mining",
+    "requirement-modeling",
+    "bilateral-pattern-matching",
+    "IoS-integrated-solution",
+    "probabilistic-matching-matrix"
+  ],
+  "cites_own_work": [
+    "RE2SEP (Requirement-Engineering Two-Phase of Service Engineering Paradigm)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

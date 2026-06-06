@@ -1,0 +1,40 @@
+{
+  "paper_id": "Guo et al. - 2011 - Quasi-Kautz Digraphs for Peer-to-Peer Networks",
+  "doi": null,
+  "title": "Quasi-Kautz Digraphs for Peer-to-Peer Networks",
+  "year": 2011,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "P2P网络需要任意阶数和度数的拓扑以应对节点动态操作,但Kautz图只支持离散阶数无法满足此需求",
+  "problem_framing": "将Kautz图的阶数约束问题转化为弧覆盖问题,通过1-因子分解构造准Kautz图实现任意阶数",
+  "key_insight": "Kautz图中每条弧对应一个新顶点,选取k个1-因子形成n=k(d^D+d^(D-1))顶点的准Kautz图,保持常数度d",
+  "method_signature": "基于1-因子分解的准Kautz图构造,支持任意阶数和度数",
+  "evaluation_criteria": "直径、平均路径长度、度分布、拥塞,与CAN/BF/de Bruijn/Kautz比较",
+  "negative_result_or_admitted_limitation": "仅在相对静态或适度动态环境下工作良好,在高度动态环境中稳健性较低",
+  "evidence_for_taste": [
+    "diameter is not larger than 1.2log_4 n",
+    "only works well under a relative static",
+    "suffers from low robustness in highly dynamic",
+    "the only difference is that the node degree of distance-halving must be two",
+    "random selection cannot ensure connectivity"
+  ],
+  "thinking_moves": [
+    "把图论中的度-直径问题重新形式化为P2P拓扑约束",
+    "从Kautz图的离散阶数缺陷出发,提出准Kautz图作为解决方案",
+    "用1-因子分解性质保证准Kautz图的构造正确性",
+    "通过选择不同弧集策略平衡连通性与实现复杂度"
+  ],
+  "topic_tags": [
+    "structured-P2P-topology",
+    "Kautz-digraph",
+    "degree-diameter-problem",
+    "quasi-Kautz-construction",
+    "constant-degree-overlay"
+  ],
+  "cites_own_work": [
+    "[26] BAKE balanced Kautz tree structure"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

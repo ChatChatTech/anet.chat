@@ -1,0 +1,34 @@
+{
+  "paper_id": "IEEE 2020 World Congress on Services Message from the Program Chairs in Chief__oa_W3111965701",
+  "doi": "10.1109/edge50951.2020.00006",
+  "title": "IEEE 2020 World Congress on Services Message from the Program Chairs in Chief",
+  "year": 2020,
+  "venue": "IEEE World Congress on Services",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": null,
+  "problem_framing": null,
+  "key_insight": null,
+  "method_signature": null,
+  "evaluation_criteria": null,
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "rigorous scientific review process",
+    "excellent set of regular research papers",
+    "early reports of novel ideas",
+    "promising preliminary research results",
+    "strong research communities",
+    "multi-disciplinary view"
+  ],
+  "thinking_moves": [],
+  "topic_tags": [
+    "service-computing",
+    "edge-computing",
+    "IoT",
+    "smart-data-services",
+    "cloud-computing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "thin",
+  "extraction_notes": "This is a front matter / welcome message from conference chairs, not a research paper. Contains no research contributions, methodology, or evaluation. The document only communicates organizational structure, acknowledgments, and general congress values."
+}

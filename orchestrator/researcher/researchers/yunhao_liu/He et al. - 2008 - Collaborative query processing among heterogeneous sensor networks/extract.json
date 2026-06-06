@@ -1,0 +1,40 @@
+{
+  "paper_id": "He et al. - 2008 - Collaborative query processing among heterogeneous sensor networks",
+  "doi": null,
+  "title": "Collaborative Query Processing among Heterogeneous Sensor Networks",
+  "year": 2008,
+  "venue": "HeterSANET'08",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "现实场景中多个异构传感器网络需协同查询,但独立查询能耗过高,无法长期使用",
+  "problem_framing": "将协同查询建模为有向加权图上的排列优化问题EE-QPS,目标是找到最小总能耗的管道调度",
+  "key_insight": "利用网络间的蕴含关系(implication),先前查询网络的数据可部分推断后续网络数据,从而减少感知和通信能耗",
+  "method_signature": "IAP贪婪算法:O(N²)时间复杂度,通过启发式函数U(v)迭代选择下一网络节点构造管道",
+  "evaluation_criteria": "通过仿真对比naive、random和IAP三种方法的总能耗,统计能耗节省百分比",
+  "negative_result_or_admitted_limitation": "论文承认\"难以准确估计网络间蕴含的累积效应\",简化假设各sij相互独立,且EE-QPS问题被证明为NP-hard",
+  "evidence_for_taste": [
+    "EE-QPS problem is NP-hard",
+    "It is difficult to accurately estimate",
+    "implications among sensor networks",
+    "minimize the total energy cost",
+    "heuristic approach named IAP",
+    "a greedy approach called IAP"
+  ],
+  "thinking_moves": [
+    "将查询管道建模为有向环图而非线性链",
+    "用信息熵量化网络间蕴含关系的强度sij",
+    "先证NP-hard再设计启发式求解",
+    "将累积效应简化为上游sij的连乘积",
+    "启发式函数U(v)取当前选择对剩余网络的最大上界"
+  ],
+  "topic_tags": [
+    "heterogeneous-sensor-network",
+    "energy-efficient-query",
+    "implication-aware-processing",
+    "pipeline-scheduling",
+    "entropy-based-correlation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

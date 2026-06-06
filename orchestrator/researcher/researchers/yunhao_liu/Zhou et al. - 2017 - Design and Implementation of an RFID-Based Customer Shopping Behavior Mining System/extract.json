@@ -1,0 +1,43 @@
+{
+  "paper_id": "Zhou et al. - 2017 - Design and Implementation of an RFID-Based Customer Shopping Behavior Mining System",
+  "doi": null,
+  "title": "Design and Implementation of an RFID-Based Customer Shopping Behavior Mining System",
+  "year": 2017,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Physical retailers lack methods to identify customer behaviors before checkout; only sales history is available, missing browsing and attention data",
+  "problem_framing": "Three behavior mining tasks: popular category (browse), hot items (pick-out/turn-around), correlated items (pair-up)",
+  "key_insight": "Phase readings of RFID tags show distinct patterns: body blocking causes changes within π, but pick-out/turn-around causes changes exceeding π",
+  "method_signature": "Gaussian change-point detection for popular category; KL-divergence segmentation + variance/autocorrelation for hot items; DDTW clustering for correlated items",
+  "evaluation_criteria": "TPR, accuracy, FPR for behavior detection; detection accuracy for correlated items across different scenarios",
+  "negative_result_or_admitted_limitation": "Threshold δ=0.65 requires re-calibration per shop; parameters cannot transfer across diverse activities and multipath-rich environments; metal items unreadable, limiting grocery store applicability",
+  "evidence_for_taste": [
+    "phase changes due to blocking effect are usually within π",
+    "while those induced by pick-out often exceed π",
+    "phase dynamics exerted by multipath is small and follows a Gaussian distribution",
+    "such a method is error-prone due to the following two reasons",
+    "The driven power will be absorbed by the clothes and diminishes rapidly",
+    "re-calibration of this threshold for different shops",
+    "it remain open how to transfer parameters"
+  ],
+  "thinking_moves": [
+    "把多径干扰和高频变化重新解读为可区分的信号源，而非噪声",
+    "利用相位值域约束(π)作为动作类型的天然分界",
+    "从图像处理的背景检测迁移变化点检测方法到RFID领域",
+    "通过相邻标签的相位相似性差异来区分不同动作",
+    "将行为识别问题重构为通信模式识别问题"
+  ],
+  "topic_tags": [
+    "RFID-phase-sensing",
+    "shopping-behavior-mining",
+    "change-point-detection",
+    "DTW-clustering",
+    "human-object-interaction"
+  ],
+  "cites_own_work": [
+    "L. Shangguan et al., Shopminer at ACM SenSys 2015"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

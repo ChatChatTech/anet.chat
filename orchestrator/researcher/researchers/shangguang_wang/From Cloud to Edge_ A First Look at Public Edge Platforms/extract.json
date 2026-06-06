@@ -1,0 +1,40 @@
+{
+  "paper_id": "From Cloud to Edge_ A First Look at Public Edge Platforms",
+  "doi": "10.48550/arxiv.2109.03395",
+  "title": "From Cloud to Edge: A First Look at Public Edge Platforms",
+  "year": 2021,
+  "venue": "IMC '21",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "边缘计算的优势已定性知晓,但缺乏运营环境的定量特征刻画",
+  "problem_framing": "从用户视角和提供商视角首次对商业化公版边缘平台进行测量研究",
+  "key_insight": "NEP的VM资源配置过度且利用率低,延迟关键应用仍无法满足,计费模型粗粒度是经济性隐患",
+  "method_signature": "众包网络测量+自建QoE应用+3个月VM workload追踪",
+  "evaluation_criteria": "端到端延迟/吞吐量/应用QoE/VM资源使用/ monetary cost",
+  "negative_result_or_admitted_limitation": "NEP仍无法满足云VR/AR(5-20ms)和自动驾驶(10ms)需求,吞吐量仅在>200Mbps时改善, billing model粗粒度",
+  "evidence_for_taste": [
+    "we believe that throughput is not a primary advantage",
+    "existing resource allocation challenges are amplified",
+    "draw our conclusions in a conservative and cautious manner",
+    "only when we are confident that the disparities",
+    "this comparison is not perfectly apples-to-apples",
+    "has not generally sunk into cellular core networks as envisioned"
+  ],
+  "thinking_moves": [
+    "首次测量研究建立新兴领域的定量基线",
+    "dual approach揭示边缘生态全貌",
+    "承认Azure对比的局限性并保守下结论",
+    "从定性已知反推定量未知的系统性空白",
+    "hop-level latency breakdown追溯瓶颈所在"
+  ],
+  "topic_tags": [
+    "edge-platform-measurement",
+    "edge-workload-characterization",
+    "public-edge-platform",
+    "crowd-sourced-network-measurement",
+    "edge-economics"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

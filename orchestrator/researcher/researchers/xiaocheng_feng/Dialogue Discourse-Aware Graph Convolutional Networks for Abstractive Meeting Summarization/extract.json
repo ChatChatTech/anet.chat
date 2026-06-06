@@ -1,0 +1,40 @@
+{
+  "paper_id": "Dialogue Discourse-Aware Graph Convolutional Networks for Abstractive Meeting Summarization",
+  "doi": null,
+  "title": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization",
+  "year": 2021,
+  "venue": "ACL/IJCNLP or similar",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "会议作为线性序列建模时忽视了 utterances 之间的丰富交互关系，且训练数据极度匮乏（AMI 仅 137 篇 vs CNN/DM 的 312K 篇）",
+  "problem_framing": "将 meeting utterances 及其对话篇章关系建模为 Levi 图， utterances 和 relation 作为不同类型顶点通过图卷积交互",
+  "key_insight": "对话篇章关系（QA/Contrast/Continuation）能显式刻画 utterances 间信息流，QA 关系的 question 包含后续讨论的核心 topics 可作为伪摘要",
+  "method_signature": "DDAMS 图编码器 + DDADA QA关系伪摘要数据增强 + gate机制区分不同 discourse relation 的信息流",
+  "evaluation_criteria": "ROUGE-1/2/L F1 自动评估 +  relevance/informativeness 人工评分",
+  "negative_result_or_admitted_limitation": "w/o fine-tune 仅达 28.35 R-1，表明伪摘要预训练不能独立完成摘要任务；Ground truth 得分仍高于生成模型，说明任务难度大",
+  "evidence_for_taste": [
+    "making the meeting modeling inadequate",
+    "only one-thousandth of the traditional news",
+    "not suitable for identifying important discourse",
+    "directly removing them from the meeting graph will do harm",
+    "higher quality of discourse parser, the higher ROUGE score",
+    "indicating the challenge of this task"
+  ],
+  "thinking_moves": [
+    "将 sequential 编码问题重新 frame 成 graph interaction 问题",
+    "观察到 question sparks discussion 这一对话现象，提取为伪摘要信号的来源",
+    "通过 gate 机制对不同 discourse relation 做差异化信息过滤，而非均匀接受",
+    "区分 in/out edge 类型以适应不同顶点类型的特征空间差异",
+    "先用伪数据预训练做 warm start，再 fine-tune 解决 in-domain 数据不足"
+  ],
+  "topic_tags": [
+    "meeting-summarization",
+    "dialogue-discourse-parsing",
+    "graph-convolutional-network",
+    "data-augmentation",
+    "multi-party-conversation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue 未明确给出完整名称；role 推断为 first author；数据增强策略 filtering 步骤部分细节（具体哪些 relations 被过滤）在 appendix 但不完整"
+}

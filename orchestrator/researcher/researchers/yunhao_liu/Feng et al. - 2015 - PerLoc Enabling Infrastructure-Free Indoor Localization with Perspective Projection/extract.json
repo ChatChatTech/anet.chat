@@ -1,0 +1,38 @@
+{
+  "paper_id": "Feng et al. - 2015 - PerLoc Enabling Infrastructure-Free Indoor Localization with Perspective Projection",
+  "doi": null,
+  "title": "PerLoc: Enabling Infrastructure-Free Indoor Localization with Perspective Projection",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "室内定位依赖基础设施部署成本高，指纹法需要穷举测量且鲁棒性差，图像匹配存储开销大且延迟高",
+  "problem_framing": "将室内定位问题建模为基于视觉特征点的最近邻搜索，通过透视投影模型反推用户位置",
+  "key_insight": "利用双目测距获取特征点深度进而计算地理坐标，SURF特征高度区分性且视角不变",
+  "method_signature": "SURF特征+双目测距+透视投影逆定位+两阶段聚类搜索",
+  "evaluation_criteria": "定位误差均值、累积分布函数、定位延迟、数据库规模对精度的影响",
+  "negative_result_or_admitted_limitation": "数据库规模最小时平均误差达19.4m，精度与开销存在权衡，最小参考点密度会导致定位失败",
+  "evidence_for_taste": [
+    "displacement of an access point can significantly degrade",
+    "distinct locations with similar signatures",
+    "The location with low consensus is possible to be inaccurate",
+    "if three reference points in one trine are close to each other, then the solution is more prone to error",
+    "there is a tradeoff between overhead and localization accuracy"
+  ],
+  "thinking_moves": [
+    "将定位问题重新表述为几何逆问题：通过已知三维参考点和图像投影关系反推相机中心位置",
+    "从感知转向通信思路：用双目测距的几何约束代替信号指纹的统计匹配",
+    "先建立最坏情况约束再逐项优化：设定视角容忍阈值推导出采样间隔，再设计过滤和搜索算法",
+    "承认系统级取舍：用更大数据库换取精度，而非追求单一最优参数"
+  ],
+  "topic_tags": [
+    "vision-based localization",
+    "binocular ranging",
+    "SURF features",
+    "perspective projection",
+    "cluster-based search"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

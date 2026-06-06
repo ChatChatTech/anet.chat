@@ -1,0 +1,37 @@
+{
+  "paper_id": "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading",
+  "doi": "10.48550/arxiv.2206.07509",
+  "title": "Mandheling: Mixed-Precision On-Device DNN Training with DSP Offloading",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "On-device DNN training is prohibitively expensive (ResNet-50训练需4.6GB内存/36.4秒),现有inference优化不适用于training",
+  "problem_framing": "如何通过DSP卸载+混合精度训练协同优化on-device训练性能,同时保证收敛精度",
+  "key_insight": "DSP擅长INT8矩阵运算,但需解决4个training特有的挑战: DSP不友好算子、动态rescaling开销、DSP缓存压力、图准备开销",
+  "method_signature": "CPU-DSP协同调度+自适应rescaling+batch分割+子图复用",
+  "evaluation_criteria": "训练时间、能耗、收敛精度损失;对比TFLite/MNN/FP32基线",
+  "negative_result_or_admitted_limitation": "未支持FP8和某些INT8训练算法,因缺乏对应低精度算子支持",
+  "evidence_for_taste": [
+    "some operators like Transpose and Normalization run slowly on DSP",
+    "we observe a disparity between using DSP to serve training and inference tasks",
+    "a vanilla DSP training engine can achieve very limited or even negative performance gain",
+    "preparing the compute graph takes a considerable amount of time"
+  ],
+  "thinking_moves": [
+    "将inference优化方法与training workload对比,指出不能直接迁移的原因",
+    "通过micro-experiments发现scale factor在训练后期稳定在少量取值",
+    "将OS内存管理思想(MRU)引入DSP子图复用,利用训练中模型结构不变的特点",
+    "用动态规划求解算子到CPU/DSP的最优分配问题,考虑context switch开销"
+  ],
+  "topic_tags": [
+    "on-device-training",
+    "mixed-precision-training",
+    "DSP-offloading",
+    "mobile-DNN",
+    "resource-efficient-ML"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "2021_TPDS_Privacy-preserving_Efficient_Federated-Learning_Model_Debugging",
+  "doi": null,
+  "title": "Privacy-preserving Efficient Federated-Learning Model Debugging",
+  "year": 2021,
+  "venue": "IEEE TPDS",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "联邦学习中客户端私有数据不可见，导致错误训练样本难以定位和修复",
+  "problem_framing": "如何从不可见数据中识别导致测试误差的客户端和训练样本",
+  "key_insight": "利用训练日志中的模型更新差异先定位问题客户端，再分层分析样本影响函数",
+  "method_signature": "分层影响分析：训练日志定位客户端 + 差分隐私影响函数定位样本",
+  "evaluation_criteria": "样本识别精度/召回率、客户端识别准确率、计算通信开销对比",
+  "negative_result_or_admitted_limitation": "直接计算Hessian矩阵需要O(np²+p³)操作，在大规模FL中不可接受",
+  "evidence_for_taste": [
+    "significantly greater than those of clients without any erroneous samples",
+    "direct transmission of the estimator may incur privacy risk",
+    "require participants to calculate and upload Hessian matrices",
+    "unacceptable computation and communication overhead",
+    "the noise added would be too large"
+  ],
+  "thinking_moves": [
+    "将集中式影响函数扩展到联邦学习分布式场景",
+    "用训练日志中的模型更新距离代替直接计算Hessian",
+    "分层定位避免对所有客户端计算影响值",
+    "引入差分隐私保护传输参数而非本地数据"
+  ],
+  "topic_tags": [
+    "federated-learning-debugging",
+    "influence-function",
+    "differential-privacy",
+    "hierarchical-analysis",
+    "data-quality-assessment"
+  ],
+  "cites_own_work": [
+    "conference version [23]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的方法论和实验，包括三种识别算法(计算高效、通信高效、自适应)、差分隐私机制、以及大规模模拟验证 | md truncated to head40k+tail20k"
+}

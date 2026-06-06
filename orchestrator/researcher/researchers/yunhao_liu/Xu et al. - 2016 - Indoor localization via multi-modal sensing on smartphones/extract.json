@@ -1,0 +1,40 @@
+{
+  "paper_id": "Xu et al. - 2016 - Indoor localization via multi-modal sensing on smartphones",
+  "doi": null,
+  "title": "Indoor Localization via Multi-Modal Sensing on Smartphones",
+  "year": 2016,
+  "venue": "UbiComp'16",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Pure CV-based indoor localization需要数百张照片和预校准,实际部署成本高",
+  "problem_framing": "如何在仅需少量照片的情况下实现亚米级精度且易部署的室内定位",
+  "key_insight": "利用传感器丰富的照片结合语义信息提取,无需预校准即可建立图像空间到物理空间的映射",
+  "method_signature": "传感器融合+语义几何推理+流形对齐的多模态定位",
+  "evaluation_criteria": "80百分位误差、定位延迟、候选POI数量",
+  "negative_result_or_admitted_limitation": "人类遮挡对定位精度有负面影响,缺乏图像特征时性能严重下降",
+  "evidence_for_taste": [
+    "requires orders more photos to bootstrap",
+    "ClickLoc may suffer significant performance degradation",
+    "the decrease is acceptable as long as the majority of POI is clearly taken",
+    "we dramatically mitigate the error"
+  ],
+  "thinking_moves": [
+    "将图像空间映射到物理空间的难题拆解为缩放、旋转、平移三个子问题逐个估计",
+    "利用地板平面约束和室内几何推理从少量照片中提取物理约束",
+    "先用粗糙定位缩小搜索空间再进行精细图像匹配的两阶段策略",
+    "通过引入误差项将传感器噪声纳入优化目标函数"
+  ],
+  "topic_tags": [
+    "smartphone-indoor-localization",
+    "multi-modal-sensor-fusion",
+    "image-based-positioning",
+    "crowdsourced-database-construction",
+    "structure-from-motion"
+  ],
+  "cites_own_work": [
+    "Xu et al. (2015) - Argus",
+    "Shangguan et al. (2015) - RFID relative localization"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

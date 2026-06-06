@@ -1,0 +1,39 @@
+{
+  "paper_id": "Investigating and Mitigating the Multimodal Hallucination Snowballing in Large Vision-Language Models__oa_W4402671574",
+  "doi": "10.18653/v1/2024.acl-long.648",
+  "title": "Investigating and Mitigating the Multimodal Hallucination Snowballing in Large Vision-Language Models",
+  "year": 2024,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "LVLMs generate hallucinations in conversations, and these errors can corrupt subsequent responses when users ask relevant questions.",
+  "problem_framing": "Propose MMHalSnowball to test whether LVLMs make correct judgments when they could have answered correctly independently but face hallucinatory conversational context.",
+  "key_insight": "LVLMs over-rely on text context and ignore visual information when plausible text clues exist, causing hallucination snowballing; a residual visual prediction can correct this.",
+  "method_signature": "Residual Visual Decoding (RVD) blends visual-only output distribution with full-context distribution using adaptive α based on JSD divergence.",
+  "evaluation_criteria": "Accuracy drop (CleanConv→HalluConv), Flip Rate matching hallucinatory answers, Weak Flip Rate conflicting original answers, WPI contextual ability.",
+  "negative_result_or_admitted_limitation": "Prompt methods hurt performance due to LVLMs' inability to follow complex instructions; VCD harms contextual ability when context is needed; scaling model size shows no improvement in mitigating snowballing.",
+  "evidence_for_taste": [
+    "LVLMs tend to rely on text context",
+    "a higher α indicates a higher model focus on the visual information",
+    "all the LVLMs suffer from multimodal hallucination snowballing",
+    "comparing the same LVLMs with different scale LLM backbones, we find no significant performance improvement",
+    "VCD contrasts the output distribution with the distorted visual input, which could do harm to the model performance"
+  ],
+  "thinking_moves": [
+    "从交互场景出发定义问题：多轮对话中前轮幻觉如何影响后轮判断",
+    "用对照实验（FactConv/IrrConv）排除上下文长度混淆因素",
+    "设计翻转率而非简单准确率来捕捉误导程度",
+    "用JSD度量视觉依赖程度来自适应调节解码权重",
+    "观察到最坏case（imagination hallucination近100%翻转）揭示本质问题"
+  ],
+  "topic_tags": [
+    "multimodal-hallucination-snowballing",
+    "vision-language-model-decoding",
+    "residual-visual-prediction",
+    "adaptive-distribution-blending",
+    "hallucination-evaluation-framework"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

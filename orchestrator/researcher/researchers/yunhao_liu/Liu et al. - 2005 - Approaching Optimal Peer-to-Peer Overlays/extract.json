@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2005 - Approaching Optimal Peer-to-Peer Overlays",
+  "doi": null,
+  "title": "Approaching Optimal Peer-to-Peer Overlays",
+  "year": 2005,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "P2P流量占互联网最大份额,但逻辑拓扑与物理拓扑不匹配导致大量冗余流量",
+  "problem_framing": "定义DMAD问题:给定物理拓扑和 peering 节点子集,在度约束下找最小平均距离的覆盖网络",
+  "key_insight": "通过在查询消息上 piggyback 邻居距离信息,每个 peer 可本地决策邻居取舍,无需全局知识",
+  "method_signature": "THANCS: piggyback邻居距离 + 两跳邻居比较选择",
+  "evaluation_criteria": "流量成本下降率、响应时间下降率、错配路径比例、接近最优解程度",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "computing an optimal overlay is still NP-hard",
+    "THANCS is proven an effective approach optimizing up to 58% out of the 70% mismatched paths",
+    "we adopt NNT policy",
+    "traffic cost, c, decreases by up to 75%",
+    "The variance of data in different simulation runs is very small"
+  ],
+  "thinking_moves": [
+    "先证明最优解NP难,再提出局部启发式逼近",
+    "将全局优化问题转化为分布式局部决策",
+    "用piggyback机制解决信息获取开销问题",
+    "通过理论下界(70%错配)验证工程方案效果(58%优化)"
+  ],
+  "topic_tags": [
+    "P2P-overlay-topology-mismatch",
+    "distributed-heuristic-optimization",
+    "NP-hard-approximation",
+    "traffic-cost-reduction",
+    "gossip-based-information-spreading"
+  ],
+  "cites_own_work": [
+    "[14] Location-Aware Topology Matching",
+    "[15] Distributed Approach to Solving Overlay Mismatch"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注发表venue,作者role基于作者顺序和通讯标记推断"
+}

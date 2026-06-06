@@ -1,0 +1,38 @@
+{
+  "paper_id": "Li et al. - 2020 - Patronus preventing unauthorized speech recordings with support for selective unscrambling",
+  "doi": null,
+  "title": "Patronus: Preventing Unauthorized Speech Recordings with Support for Selective Unscrambling",
+  "year": 2020,
+  "venue": "SenSys '20",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Smart devices create privacy risks of secret recordings; no effective anti-recording solution exists despite real-world consequences (e.g., Ukrainian PM resignation after leaked recording).",
+  "problem_framing": "Design a system achieving three properties: (1) human conversation unaffected, (2) unauthorized devices cannot clearly record, (3) authorized devices CAN record clearly.",
+  "key_insight": "Exploit nonlinear effects of COTS microphones—ultrasonic signals generate low-frequency 'scramble' noise in recordings that can be canceled if the pattern is known.",
+  "method_signature": "Ultrasonic scramble modulation with chirp smoothing, NLMS adaptive filtering for authorized descrambling, reflection layer for coverage.",
+  "evaluation_criteria": "PESQ score, Speech Recognition Vocabulary Accuracy (SRVA), speech recognition error rates; human listening tests with 11 volunteers.",
+  "negative_result_or_admitted_limitation": "Working distance limited to <70 cm with cheap transducers; cannot perfectly handle physical attacks like placing obstacles or covering microphones.",
+  "evidence_for_taste": [
+    "Patronus is the first system to leverage the nonlinear effect",
+    "we do a thorough study around the nonlinear effect",
+    "simply cutting off the high frequency components will result in message loss",
+    "the ringing effect occurs when the input changes suddenly",
+    "patrons cannot perfectly handle such attack models"
+  ],
+  "thinking_moves": [
+    "把硬件非线性从漏洞变为防线",
+    "从攻击者的工具(非线性)反转为防御者的武器",
+    "先提出三个必要条件，再逐一满足",
+    "高频超声+低频掩码=人耳不可闻但录音可检测"
+  ],
+  "topic_tags": [
+    "microphone-nonlinearity",
+    "acoustic-privacy",
+    "adaptive-filtering",
+    "ultrasonic-scrambling",
+    "selective-authorization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

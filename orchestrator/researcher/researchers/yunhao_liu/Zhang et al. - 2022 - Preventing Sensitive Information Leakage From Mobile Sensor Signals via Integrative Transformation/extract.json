@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhang et al. - 2022 - Preventing Sensitive Information Leakage From Mobile Sensor Signals via Integrative Transformation",
+  "doi": null,
+  "title": "Preventing Sensitive Information Leakage from Mobile Sensor Signals via Integrative Transformation",
+  "year": 2022,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传感器数据虽用于活动识别,但隐含的个人信息可被攻击者提取,造成隐私泄露",
+  "problem_framing": "寻找最优变换函数,使敏感信息无法推断,而desired信息(活动)保持不变",
+  "key_insight": "活动具有\"style\"(受个人信息影响的执行方式)和\"content\"(活动本身),可将style转换为随机噪声风格以隐藏敏感信息",
+  "method_signature": "TransNet变换数据+LossNet定义style/content loss,无需敏感信息训练",
+  "evaluation_criteria": "变换后活动识别准确率下降<5%且敏感信息推断性能显著下降",
+  "negative_result_or_admitted_limitation": "变换过程会意外移除独特的活动模式,且Gram矩阵假设缺乏数学支撑",
+  "evidence_for_taste": [
+    "现有方法只支持单一敏感属性",
+    "训练需要用户敏感信息作ground truth",
+    "理想情况下敏感信息被隐藏而desired信息通过",
+    "变换过程不仅隐藏隐私也意外移除独特活动模式",
+    "该假设基于Gram矩阵匹配本质是域适应过程"
+  ],
+  "thinking_moves": [
+    "将隐私保护问题类比图像风格迁移的style/content分解",
+    "用随机噪声作为无风格的训练目标,避免泄露额外隐私",
+    "先训练LossNet固定特征提取器,再训练TransNet进行变换",
+    "引入可用性损失显式保持活动识别精度"
+  ],
+  "topic_tags": [
+    "mobile-sensor-privacy",
+    "human-activity-recognition",
+    "style-transfer",
+    "adversarial-training",
+    "privacy-utility-tradeoff"
+  ],
+  "cites_own_work": [
+    "Zhang et al. 2019 ICDM - Collective Protection"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文未明确给出DOI和具体venue,但包含完整的动机、方法和实验。关键方法细节和loss函数设计均有详细文本支撑。 | md truncated to head40k+tail20k"
+}

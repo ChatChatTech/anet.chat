@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhang et al. - 2014 - NetMaster Taming Energy Devourers on Smartphones",
+  "doi": null,
+  "title": "NetMaster: Taming Energy Devourers on Smartphones",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "手机App众多导致能量和带宽资源紧张，现有方案要么效果有限，要么影响用户体验",
+  "problem_framing": "将网络活动时间调度建模为多背包问题，在保证用户体验前提下最大化节能和带宽利用率",
+  "key_insight": "用户行为具有高度规律性，可通过习惯挖掘预测用户活跃时段，从而智能调度屏幕关闭时的网络活动",
+  "method_signature": "基于用户习惯预测的在线优化算法，使用(1-ε)/2近似解调度屏幕关闭时的网络活动",
+  "evaluation_criteria": "能耗节省率、无线电开机时间、带宽利用率、用户体验中断概率",
+  "negative_result_or_admitted_limitation": "志愿者数量较少，测量使用基于模型方法不如设备级方法精确，隐藏影响存在潜在风险",
+  "evidence_for_taste": [
+    "lack of in-depth understanding",
+    "one-fit-all method cannot be found",
+    "only 1 wrong decision occurs",
+    "gap is only 11.2%",
+    "the gap between interrupted usage and saving energy cannot be filled"
+  ],
+  "thinking_moves": [
+    "从用户行为测量数据反推现有方法的根本局限",
+    "先证问题为NP难，再给出近似比保证的性能界",
+    "将优化问题转化为经典组合优化问题求解",
+    "承认固定间隔延迟/批处理方法无法平衡节能与用户体验的矛盾"
+  ],
+  "topic_tags": [
+    "mobile-energy-optimization",
+    "user-habit-prediction",
+    "network-scheduling",
+    "knapsack-optimization",
+    "screen-off-traffic"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少完整发表信息（无DOI、venue信息）；实验部分信息不完整（志愿者信息、测试平台描述有限）；部分图未显示内容无法提取"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Heterogeneity-Aware Federated Learning",
+  "doi": null,
+  "title": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data",
+  "year": 2021,
+  "venue": "WWW '21",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有FL研究忽视设备异构性,导致算法评估与真实部署效果存在巨大鸿沟",
+  "problem_framing": "通过大规模真实智能手机数据(136k设备),构建异构感知FL平台,系统性比较异构-aware与unaware设置下算法性能差异",
+  "key_insight": "状态异构性(常被忽视)比硬件异构性更导致精度下降,现有先进FL算法在异构感知设置下效果大打折扣",
+  "method_signature": "构建异构感知FL模拟平台,使用136k智能手机真实状态追踪数据驱动仿真,对比多种FL算法性能",
+  "evaluation_criteria": "精度下降幅度、收敛时间倍率、公平性方差、压缩率",
+  "negative_result_or_admitted_limitation": "q-FedAvg在异构设置下公平性改善效果大幅削弱;FedProx对状态异构性无效;梯度压缩算法几乎无法加速收敛,训练时间反而可能延长3.5倍",
+  "evidence_for_taste": [
+    "too ideal for FL deployment",
+    "first empirical study to demystify",
+    "not always effective as reported",
+    "state heterogeneity is often more responsible",
+    "heterogeneity cannot be simply ignored"
+  ],
+  "thinking_moves": [
+    "首次系统性实证研究替代理论推导",
+    "大规模真实数据收集驱动的平台化方法",
+    "因果分解状态异构性与硬件异构性的各自影响",
+    "从工程异常反推底层假设失效",
+    "问题揭示:现有优化在真实异构场景下失效"
+  ],
+  "topic_tags": [
+    "FL-heterogeneity-empirical-study",
+    "smartphone-on-device-training",
+    "FL-algorithm-fairness",
+    "FL-convergence-analysis",
+    "cross-device-FL"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2011 - On multicast throughput scaling of hybrid wireless networks with general node density",
+  "doi": null,
+  "title": "On multicast throughput scaling of hybrid wireless networks with general node density",
+  "year": 2011,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "理解基站基础设施能在多大程度上改善纯无线自组织网络的吞吐量",
+  "problem_framing": "在一般节点密度下分析混合无线网络的多播吞吐量的标度行为",
+  "key_insight": "混合方案的瓶颈集中在基站与普通节点之间的无线链路上(B-O links)",
+  "method_signature": "基于小区的多播路由方案，结合稀疏/密集骨干网与高斯信道模型",
+  "evaluation_criteria": "网络吞吐量随节点数趋于无穷时的渐进标度律",
+  "negative_result_or_admitted_limitation": "即使对纯无线网络，高斯信道模型下的多播容量上下界仍未匹配",
+  "evidence_for_taste": [
+    "the bottlenecks are both located on the wireless links between the ad hoc nodes and BSs",
+    "we purposely derive the multicast throughput without considering the possible bottlenecks on the B-O links",
+    "we expect that these results can be directly exploited in the future work"
+  ],
+  "thinking_moves": [
+    "将扩展网络和密集网络统一为一般节点密度的特例",
+    "识别并隔离关键瓶颈(B-O链路)以指导后续研究",
+    "从组合优化角度选择最优多播方案"
+  ],
+  "topic_tags": [
+    "多播容量标度律",
+    "混合无线网络",
+    "高斯信道模型",
+    "稀疏骨干网",
+    "无线网络基础设施"
+  ],
+  "cites_own_work": [
+    "Wang et al. [26]",
+    "Liu et al. [16]",
+    "C. Wang et al. (2009) IEEE INFOCOM",
+    "X.-Y. Li (2009) IEEE/ACM Trans. Netw."
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

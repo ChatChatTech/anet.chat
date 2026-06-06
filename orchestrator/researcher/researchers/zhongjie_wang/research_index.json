@@ -1,0 +1,581 @@
+{
+  "slug": "zhongjie_wang",
+  "n_papers": 18,
+  "n_indexed": 18,
+  "anchors": [
+    "Business Component Survey",
+    "QoS-aware service Selection",
+    "Model-based Interoperability",
+    "DySR",
+    "External Service Sensing (ESS)",
+    "Intent-Aware IoT",
+    "LDG-AD",
+    "Smart Contract Generation"
+  ],
+  "by_id": {
+    "A Smart Contract Generation Method Based on Blockchain Patterns and Model-driven Multi-party Service Agreements": {
+      "title": "A Smart Contract Generation Method Based on Blockchain Patterns and Model-driven Multi-party Service Agreements",
+      "year": 2024,
+      "venue": "Research Square",
+      "doi": "10.21203/rs.3.rs-4264996/v1",
+      "key_insight": "Combine LLM-assisted clause extraction, MDA-based modeling (CIM→PIM→PSM), and a multi-level smart contract reuse library indexed by blockchain patterns to enable automated code generation.",
+      "method_signature": "MDA-based smart contract generation via LLM extraction + blockchain pattern reuse library",
+      "tags": [
+        "smart-contract-code-generation",
+        "model-driven-architecture-MDA",
+        "blockchain-pattern-reuse-library",
+        "LLM-assisted-contract-analysis",
+        "multi-party-service-agreement"
+      ],
+      "quality": "full"
+    },
+    "A Survey Of Business Component Identification Methods And Related Techniques": {
+      "title": "A Survey of Business Component Identification Methods and Related Techniques",
+      "year": 2005,
+      "venue": null,
+      "doi": "10.5281/zenodo.1062023",
+      "key_insight": "组件识别不能只追求单一指标优化，需在多个相互制约的指标间实现全局优化平衡",
+      "method_signature": "survey-based taxonomy: DE方法、cohesion-coupling聚类方法、CRUD矩阵方法、其他方法",
+      "tags": [
+        "component-identification",
+        "software-reuse",
+        "multi-objective-optimization",
+        "business-component",
+        "granularity-control"
+      ],
+      "quality": "full"
+    },
+    "A Survey on Deep Neural Network Partition over Cloud, Edge and End Devices": {
+      "title": "A Survey on Deep Neural Network Partition over Cloud, Edge and End Devices",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2304.10020",
+      "key_insight": "五维分类框架可完美定义任何现有DNN分区方法,提供统一描述语言",
+      "method_signature": "系统综述:文献收集→五维分类→统一数学模型→评价指标→挑战分析",
+      "tags": [
+        "DNN-partition-taxonomy",
+        "cloud-edge-end-collaboration",
+        "edge-inference-offloading",
+        "distributed-deep-learning",
+        "latency-energy-tradeoff"
+      ],
+      "quality": "full"
+    },
+    "Balancing Stability and Plasticity in Pretrained Detector_ A Dual-Path Framework for Incremental Object Detection": {
+      "title": "Balancing Stability and Plasticity in Pretrained Detector: A Dual-Path Framework for Incremental Object Detection",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2504.10214",
+      "key_insight": "冻结定位路径保持几何先验,用LoRA微调分类路径增强跨域判别",
+      "method_signature": "双路径框架:定位路径冻结,分类路径用LoRA+伪特征回放",
+      "tags": [
+        "incremental-object-detection",
+        "pretrained-model-adaptation",
+        "stability-plasticity-dilemma",
+        "DETR-finetuning",
+        "cross-domain-detection"
+      ],
+      "quality": "full"
+    },
+    "Domain Priori Knowledge based Integrated Solution Design for Internet of Services": {
+      "title": "Domain Priori Knowledge based Integrated Solution Design for Internet of Services",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2009.02065",
+      "key_insight": "从历史UR和ISS中挖掘双侧模式(RPs/SPs)进行粗粒度模块化以缩小问题规模",
+      "method_signature": "I-Tree建模需求→RP推荐覆盖→PMM匹配SP→ISS组合",
+      "tags": [
+        "Internet-of-Services",
+        "service-pattern-mining",
+        "requirement-pattern",
+        "supply-demand-matching",
+        "I-Tree-model"
+      ],
+      "quality": "partial"
+    },
+    "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation": {
+      "title": "DySR: A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation",
+      "year": 2021,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2108.03360",
+      "key_insight": "服务的社会环境演化导致其功能隐式变化，需动态图学习捕获；需求与服务的异构语义空间需可学变换对齐",
+      "method_signature": "可学仿射变换对齐需求服务空间+动态图演化服务表示+GAN风格协同训练",
+      "tags": [
+        "service-bundle-recommendation",
+        "cold-start",
+        "dynamic-graph-learning",
+        "representation-alignment",
+        "service-evolution"
+      ],
+      "quality": "full"
+    },
+    "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities": {
+      "title": "External Service Sensing (ESS): Research Framework, Challenges and Opportunities",
+      "year": 2021,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2106.09208",
+      "key_insight": "服务变化需从外部观察者视角感知,现有工作将感知作为其他问题的附属,降低了其意义和挑战",
+      "method_signature": "四维度ESS框架,通过组合不同维度的值来定义具体ESS问题",
+      "tags": [
+        "services-computing",
+        "service-change-sensing",
+        "quality-of-service-prediction",
+        "service-recommendation",
+        "service-ecosystem-evolution"
+      ],
+      "quality": "full"
+    },
+    "Global-Local Aware Scene Text Editing": {
+      "title": "Global-Local Aware Scene Text Editing",
+      "year": null,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2512.03574",
+      "key_insight": "风格向量与图像尺寸解耦+affine fusion显式控制目标文本大小可有效解决长度变化问题",
+      "method_signature": "GLASTE: FFC背景inpainting + style/content encoder + AdaIN合成 + affine fusion融合",
+      "tags": [
+        "scene-text-editing",
+        "global-local-harmony",
+        "affine-text-style-transfer",
+        "FFT-inpainting",
+        "multi-module-generation"
+      ],
+      "quality": "full"
+    },
+    "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence": {
+      "title": "Intent-aware Interactive Web of Things for Enhanced Collaborative Ambient Intelligence",
+      "year": 2021,
+      "venue": "IEEE International Conference on Multimedia and Expo",
+      "doi": "10.1109/mic.2021.3099599",
+      "key_insight": "将意图推断与PCHID强化学习方法结合,让机械臂通过子目标序列完成复杂任务",
+      "method_signature": "意图推断→语义搜索→PCHID多步目标控制的三阶段框架",
+      "tags": [
+        "Intent-inference",
+        "Web-of-Things",
+        "IoRT-robotic-assistants",
+        "PCHID-RL-control",
+        "Smart-home-activity-recognition"
+      ],
+      "quality": "full"
+    },
+    "LTP_ A New Active Learning Strategy for CRF-Based Named Entity Recognition": {
+      "title": "LTP: A New Active Learning Strategy for CRF-Based Named Entity Recognition",
+      "year": 2020,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2001.02524",
+      "key_insight": "利用CRF输出的最优标签序列 y*，在全局最优解中找局部最不确定的token，同时兼顾全局一致性与局部信息",
+      "method_signature": "LTP = argmin_{y*_i in y*} P(y*_i | x_i; A)，取最优序列中概率最低的token对应的句子",
+      "tags": [
+        "active-learning-strategy-design",
+        "CRF-based-NER",
+        "uncertainty-sampling",
+        "annotation-cost-reduction",
+        "sentence-level-evaluation"
+      ],
+      "quality": "full"
+    },
+    "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism": {
+      "title": "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism",
+      "year": 2021,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2106.01678",
+      "key_insight": "在聚合后主动将变化传播给邻居，弥补非交互事件时的信息空白",
+      "method_signature": "在TPP模型后增加扩散步骤，触发时同步更新邻居",
+      "tags": [
+        "动态图表示学习",
+        "时间点过程模型",
+        "信息传播延迟",
+        "聚合-扩散机制",
+        "链路预测"
+      ],
+      "quality": "full"
+    },
+    "MCBA_ A Matroid Constraint-Based Approach for Composite Service Recommendation Considering Compatibility and Diversity": {
+      "title": "MCBA: A Matroid Constraint-Based Approach for Composite Service Recommendation Considering Compatibility and Diversity",
+      "year": 2024,
+      "venue": "arxiv preprint",
+      "doi": "10.48550/arxiv.2409.01600",
+      "key_insight": "将分区拟阵约束与MMR结合，同时捕获跨类别多样性和最大边际相关性，实现可调多样性保证",
+      "method_signature": "两阶段：压缩-求解斯坦纳树获得候选组合；MMR-PMC筛选生成top-k多样化推荐",
+      "tags": [
+        "API-composition-recommendation",
+        "matroid-constraint-diversity",
+        "minimum-group-steiner-tree",
+        "MMR-diversification",
+        "mashup-development"
+      ],
+      "quality": "full"
+    },
+    "Mass Customization Oriented and Cost-Effective Service Network": {
+      "title": "Mass Customization Oriented and Cost-Effective Service Network",
+      "year": null,
+      "venue": null,
+      "doi": "10.1007/978-3-642-36796-0_15",
+      "key_insight": "借鉴Internet路由机制，服务网络作为持久业务基础设施动态派生具体方案",
+      "method_signature": "服务网络结构(五元组)+两层变换机制(M1/M2)+组合优化",
+      "tags": [
+        "service-composition",
+        "mass-customization",
+        "service-network",
+        "cost-effectiveness",
+        "QoS-optimization"
+      ],
+      "quality": "partial"
+    },
+    "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges": {
+      "title": "Model-based approaches for interoperability of next generation enterprise information systems: state of the art and future challenges",
+      "year": 2016,
+      "venue": "Enterprise Modelling and Information Systems Architectures",
+      "doi": "10.1007/s10257-016-0317-8",
+      "key_insight": "用无歧义的形式化或半形式化模型作为互操作基础",
+      "method_signature": "模型驱动概念框架:语义对齐-转换-发现-社交网络-仿真指标",
+      "tags": [
+        "model-driven-interoperability",
+        "ontology-alignment",
+        "MDA-MDE",
+        "enterprise-modelling",
+        "human-in-the-loop",
+        "reverse-engineering"
+      ],
+      "quality": "full"
+    },
+    "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection": {
+      "title": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection",
+      "year": 2016,
+      "venue": "IEEE Transactions on Services Computing",
+      "doi": "10.1109/tsc.2016.2612663",
+      "key_insight": "连续优化中相似变量值自然导致相似函数值,而离散服务选择缺乏此最优性连续性质,需通过QoS相似性而非编码相似性来定义邻域",
+      "method_signature": "基于人工蜂群算法,提出三种实现近似最优性连续的技术(IBA/PBA/EBA)",
+      "tags": [
+        "QoS-aware service selection",
+        "artificial bee colony algorithm",
+        "discrete optimization",
+        "swarm intelligence",
+        "neighborhood search"
+      ],
+      "quality": "full"
+    },
+    "Online Deployment Algorithms for Microservice Systems with Complex Dependencies": {
+      "title": "Online Deployment Algorithms for Microservice Systems with Complex Dependencies",
+      "year": 2021,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2107.09308",
+      "key_insight": "证明定理将FPP转换为QSRFP,使得每个服务的最优部署仅与其前驱和后继节点相关,无需遍历所有响应路径",
+      "method_signature": "B-QSRFP和D-QSRFP两种贪心算法,基于依赖图的拓扑序部署服务实例",
+      "tags": [
+        "microservice-deployment",
+        "edge-computing",
+        "service-placement",
+        "fractional-optimization",
+        "greedy-algorithm"
+      ],
+      "quality": "full"
+    },
+    "Plug-and-Play Parameter-Efficient Tuning of Embeddings for Federated Recommendation": {
+      "title": "Plug-and-Play Parameter-Efficient Tuning of Embeddings for Federated Recommendation",
+      "year": 2025,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2512.13734",
+      "key_insight": "Freeze pre-trained full embeddings locally, only transmit lightweight compressed embeddings during training",
+      "method_signature": "PEFT-based embedding framework combining frozen full embeddings with fine-tunable compressed embeddings",
+      "tags": [
+        "federated-recommendation",
+        "parameter-efficient-finetuning",
+        "embedding-compression",
+        "communication-efficiency",
+        "LoRA-adaptation"
+      ],
+      "quality": "full"
+    },
+    "User Intention Recognition and Requirement Elicitation Method for Conversational AI Services": {
+      "title": "User Intention Recognition and Requirement Elicitation Method for Conversational AI Services",
+      "year": 2020,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2009.01509",
+      "key_insight": "粒计算能自动划分连续变量模糊边界，无需人工预设阈值，且能多维聚合服务而非逐属性询问",
+      "method_signature": "KG推理+GrC聚类剪枝实现多轮对话策略，替代预设规则和逐属性slot填充",
+      "tags": [
+        "conversational-AI-intention-recognition",
+        "knowledge-graph-fuzzy-reasoning",
+        "granular-computing-dialog-policy",
+        "multi-round-dialogue-pruning",
+        "BERT-fine-tuning-domain-adaptation"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "smart-contract-code-generation": [
+      "A Smart Contract Generation Method Based on Blockchain Patterns and Model-driven Multi-party Service Agreements"
+    ],
+    "model-driven-architecture-MDA": [
+      "A Smart Contract Generation Method Based on Blockchain Patterns and Model-driven Multi-party Service Agreements"
+    ],
+    "blockchain-pattern-reuse-library": [
+      "A Smart Contract Generation Method Based on Blockchain Patterns and Model-driven Multi-party Service Agreements"
+    ],
+    "LLM-assisted-contract-analysis": [
+      "A Smart Contract Generation Method Based on Blockchain Patterns and Model-driven Multi-party Service Agreements"
+    ],
+    "multi-party-service-agreement": [
+      "A Smart Contract Generation Method Based on Blockchain Patterns and Model-driven Multi-party Service Agreements"
+    ],
+    "component-identification": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "software-reuse": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "multi-objective-optimization": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "business-component": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "granularity-control": [
+      "A Survey Of Business Component Identification Methods And Related Techniques"
+    ],
+    "DNN-partition-taxonomy": [
+      "A Survey on Deep Neural Network Partition over Cloud, Edge and End Devices"
+    ],
+    "cloud-edge-end-collaboration": [
+      "A Survey on Deep Neural Network Partition over Cloud, Edge and End Devices"
+    ],
+    "edge-inference-offloading": [
+      "A Survey on Deep Neural Network Partition over Cloud, Edge and End Devices"
+    ],
+    "distributed-deep-learning": [
+      "A Survey on Deep Neural Network Partition over Cloud, Edge and End Devices"
+    ],
+    "latency-energy-tradeoff": [
+      "A Survey on Deep Neural Network Partition over Cloud, Edge and End Devices"
+    ],
+    "incremental-object-detection": [
+      "Balancing Stability and Plasticity in Pretrained Detector_ A Dual-Path Framework for Incremental Object Detection"
+    ],
+    "pretrained-model-adaptation": [
+      "Balancing Stability and Plasticity in Pretrained Detector_ A Dual-Path Framework for Incremental Object Detection"
+    ],
+    "stability-plasticity-dilemma": [
+      "Balancing Stability and Plasticity in Pretrained Detector_ A Dual-Path Framework for Incremental Object Detection"
+    ],
+    "DETR-finetuning": [
+      "Balancing Stability and Plasticity in Pretrained Detector_ A Dual-Path Framework for Incremental Object Detection"
+    ],
+    "cross-domain-detection": [
+      "Balancing Stability and Plasticity in Pretrained Detector_ A Dual-Path Framework for Incremental Object Detection"
+    ],
+    "Internet-of-Services": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "service-pattern-mining": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "requirement-pattern": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "supply-demand-matching": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "I-Tree-model": [
+      "Domain Priori Knowledge based Integrated Solution Design for Internet of Services"
+    ],
+    "service-bundle-recommendation": [
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "cold-start": [
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "dynamic-graph-learning": [
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "representation-alignment": [
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "service-evolution": [
+      "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation"
+    ],
+    "services-computing": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "service-change-sensing": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "quality-of-service-prediction": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "service-recommendation": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "service-ecosystem-evolution": [
+      "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities"
+    ],
+    "scene-text-editing": [
+      "Global-Local Aware Scene Text Editing"
+    ],
+    "global-local-harmony": [
+      "Global-Local Aware Scene Text Editing"
+    ],
+    "affine-text-style-transfer": [
+      "Global-Local Aware Scene Text Editing"
+    ],
+    "FFT-inpainting": [
+      "Global-Local Aware Scene Text Editing"
+    ],
+    "multi-module-generation": [
+      "Global-Local Aware Scene Text Editing"
+    ],
+    "Intent-inference": [
+      "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    ],
+    "Web-of-Things": [
+      "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    ],
+    "IoRT-robotic-assistants": [
+      "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    ],
+    "PCHID-RL-control": [
+      "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    ],
+    "Smart-home-activity-recognition": [
+      "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence"
+    ],
+    "active-learning-strategy-design": [
+      "LTP_ A New Active Learning Strategy for CRF-Based Named Entity Recognition"
+    ],
+    "CRF-based-NER": [
+      "LTP_ A New Active Learning Strategy for CRF-Based Named Entity Recognition"
+    ],
+    "uncertainty-sampling": [
+      "LTP_ A New Active Learning Strategy for CRF-Based Named Entity Recognition"
+    ],
+    "annotation-cost-reduction": [
+      "LTP_ A New Active Learning Strategy for CRF-Based Named Entity Recognition"
+    ],
+    "sentence-level-evaluation": [
+      "LTP_ A New Active Learning Strategy for CRF-Based Named Entity Recognition"
+    ],
+    "动态图表示学习": [
+      "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    ],
+    "时间点过程模型": [
+      "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    ],
+    "信息传播延迟": [
+      "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    ],
+    "聚合-扩散机制": [
+      "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    ],
+    "链路预测": [
+      "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism"
+    ],
+    "API-composition-recommendation": [
+      "MCBA_ A Matroid Constraint-Based Approach for Composite Service Recommendation Considering Compatibility and Diversity"
+    ],
+    "matroid-constraint-diversity": [
+      "MCBA_ A Matroid Constraint-Based Approach for Composite Service Recommendation Considering Compatibility and Diversity"
+    ],
+    "minimum-group-steiner-tree": [
+      "MCBA_ A Matroid Constraint-Based Approach for Composite Service Recommendation Considering Compatibility and Diversity"
+    ],
+    "MMR-diversification": [
+      "MCBA_ A Matroid Constraint-Based Approach for Composite Service Recommendation Considering Compatibility and Diversity"
+    ],
+    "mashup-development": [
+      "MCBA_ A Matroid Constraint-Based Approach for Composite Service Recommendation Considering Compatibility and Diversity"
+    ],
+    "service-composition": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "mass-customization": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "service-network": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "cost-effectiveness": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "QoS-optimization": [
+      "Mass Customization Oriented and Cost-Effective Service Network"
+    ],
+    "model-driven-interoperability": [
+      "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    ],
+    "ontology-alignment": [
+      "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    ],
+    "MDA-MDE": [
+      "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    ],
+    "enterprise-modelling": [
+      "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    ],
+    "human-in-the-loop": [
+      "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    ],
+    "reverse-engineering": [
+      "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges"
+    ],
+    "QoS-aware service selection": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "artificial bee colony algorithm": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "discrete optimization": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "swarm intelligence": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "neighborhood search": [
+      "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    ],
+    "microservice-deployment": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "edge-computing": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "service-placement": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "fractional-optimization": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "greedy-algorithm": [
+      "Online Deployment Algorithms for Microservice Systems with Complex Dependencies"
+    ],
+    "federated-recommendation": [
+      "Plug-and-Play Parameter-Efficient Tuning of Embeddings for Federated Recommendation"
+    ],
+    "parameter-efficient-finetuning": [
+      "Plug-and-Play Parameter-Efficient Tuning of Embeddings for Federated Recommendation"
+    ],
+    "embedding-compression": [
+      "Plug-and-Play Parameter-Efficient Tuning of Embeddings for Federated Recommendation"
+    ],
+    "communication-efficiency": [
+      "Plug-and-Play Parameter-Efficient Tuning of Embeddings for Federated Recommendation"
+    ],
+    "LoRA-adaptation": [
+      "Plug-and-Play Parameter-Efficient Tuning of Embeddings for Federated Recommendation"
+    ],
+    "conversational-AI-intention-recognition": [
+      "User Intention Recognition and Requirement Elicitation Method for Conversational AI Services"
+    ],
+    "knowledge-graph-fuzzy-reasoning": [
+      "User Intention Recognition and Requirement Elicitation Method for Conversational AI Services"
+    ],
+    "granular-computing-dialog-policy": [
+      "User Intention Recognition and Requirement Elicitation Method for Conversational AI Services"
+    ],
+    "multi-round-dialogue-pruning": [
+      "User Intention Recognition and Requirement Elicitation Method for Conversational AI Services"
+    ],
+    "BERT-fine-tuning-domain-adaptation": [
+      "User Intention Recognition and Requirement Elicitation Method for Conversational AI Services"
+    ]
+  }
+}

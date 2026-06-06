@@ -1,0 +1,38 @@
+{
+  "paper_id": "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively",
+  "doi": "10.48550/arxiv.2211.01642",
+  "title": "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "大模型微调在小数据集上易过拟合、且不同随机种子性能差异大，稳定性差",
+  "problem_framing": "将微调稳定性问题建模为子网络优化问题：现有方法忽视参数重要性或忽略更新机会",
+  "key_insight": "用梯度累积矩阵动态追踪参数重要性，每轮循环自适应选择高潜力子网络更新",
+  "method_signature": "DPS: 循环两阶段更新，Stage I累积梯度, Stage II排序选取重要子网络",
+  "evaluation_criteria": "GLUE四项平均分(越高越好)与标准差(越低越好)、域外迁移、低资源场景",
+  "negative_result_or_admitted_limitation": "引入额外内存开销(GAM/FAM)，随batch增大占比减小但仍不可忽略",
+  "evidence_for_taste": [
+    "Fine-tuning instability",
+    "choosing subnetworks randomly ignores importance",
+    "may affect model perception of downstream tasks",
+    "adaptively selects promising subnetworks",
+    "better capture task-relevant parameters"
+  ],
+  "thinking_moves": [
+    "把微调不稳定归因于子网络选择策略不当，而非模型容量问题",
+    "从CHILD-TUNINGD的静态子网络走向动态更新子网络",
+    "用梯度累积替代Fisher信息计算以降低计算开销",
+    "发现频率惩罚因子在短周期内引入波动需阈值控制"
+  ],
+  "topic_tags": [
+    "BERT-finetuning",
+    "subnetwork-optimization",
+    "adaptive-parameter-selection",
+    "gradient-accumulation",
+    "stability-regularization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

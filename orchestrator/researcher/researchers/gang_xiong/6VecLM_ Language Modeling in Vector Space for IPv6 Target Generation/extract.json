@@ -1,0 +1,38 @@
+{
+  "paper_id": "6VecLM_ Language Modeling in Vector Space for IPv6 Target Generation",
+  "doi": "10.48550/arxiv.2008.02213",
+  "title": "6VecLM: Language Modeling in Vector Space for IPv6 Target Generation",
+  "year": 2020,
+  "venue": null,
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "IPv6地址空间过大无法穷举扫描,现有目标生成算法缺乏语义理解,依赖人工经验难以适应不同数据集",
+  "problem_framing": "将IPv6地址视为语言序列,通过向量空间映射捕获语义关系,利用语言模型生成有潜力激活的候选地址",
+  "key_insight": "地址词与索引值组合构建语义单元,Transformer多头注意力学习序列依赖,余弦相似度替代概率实现可控创新生成",
+  "method_signature": "IPv62Vec地址向量化 + Transformer-IPv6语言模型 + 余弦相似度采样生成",
+  "evaluation_criteria": "激活命中率(r_hit)和激活生成率(r_gen),衡量模型学习能力和生成新地址能力",
+  "negative_result_or_admitted_limitation": "IPv6地址语义不透明且存在多种寻址方案,导致难以有效训练学习模型并设计有效的目标生成算法",
+  "evidence_for_taste": [
+    "Human intervention may result in the algorithm overly dependent on experience",
+    "lacking IPv6 semantics and adaptability",
+    "entropy clustering to classify the hitlist",
+    "IPv6 address consisting entirely of digits misses semantics",
+    "the model can generate creative and semantically similar sequences"
+  ],
+  "thinking_moves": [
+    "把IPv6地址映射问题类比为NLP词向量问题",
+    "用余弦相似度替代传统概率预测以实现创造性生成",
+    "softmax温度控制生成多样性与相似性的平衡",
+    "多头注意力机制捕获地址序列中多元依赖关系"
+  ],
+  "topic_tags": [
+    "IPv6目标生成",
+    "地址语义嵌入",
+    "网络测量深度学习",
+    "Transformer语言模型",
+    "主动主机发现"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

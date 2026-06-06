@@ -1,0 +1,39 @@
+{
+  "paper_id": "TBCNN_ A Tree-Based Convolutional Neural Network for Programming Language Processing",
+  "doi": null,
+  "title": "TBCNN: A Tree-Based Convolutional Neural Network for Programming Language Processing",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "深度学习尚未应用于编程语言处理领域，该领域程序包含丰富且明确的树结构信息",
+  "problem_framing": "将程序表示为AST，设计能处理变结构变大小树形数据的神经网络",
+  "key_insight": "连续二叉树机制：用固定数量的权重矩阵组合处理任意叉数的节点",
+  "method_signature": "TBCNN：编码准则+树卷积+3路池化+全连接softmax",
+  "evaluation_criteria": "AST节点向量层次聚类质量、程序分类错误率",
+  "negative_result_or_admitted_limitation": "RNN无法有效训练：代价函数停滞在-log(0.25)≈1.4，仅学习标签分布",
+  "evidence_for_taste": [
+    "编程语言的语法规则\"alias\"了相邻关系",
+    "3层循环在程序中很常见",
+    "程序组件之间并非语义相邻",
+    "连续二叉树中像素颜色组合的类比",
+    "TBCNN与BOW捕获不同层面的程序特征"
+  ],
+  "thinking_moves": [
+    "识别自然语言与编程语言的结构差异：程序嵌套更深但语义分组更严格",
+    "从RNN仅用根特征的瓶颈出发，指出长路径依赖导致训练困难",
+    "用连续二叉树将变叉数问题转化为固定参数的线性组合",
+    "3路池化设计确保结构特征通过短路径到达输出层",
+    "程序分类中结构特征与统计特征互补，验证了模型设计的有效性"
+  ],
+  "topic_tags": [
+    "AST-based-program-representation",
+    "tree-convolution-neural-network",
+    "continuous-binary-tree",
+    "programming-language-NLP",
+    "neural-program-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文文本中未明确标注发表年份和会议/期刊名称，venue信息缺失。方法细节完整，但无法确认这是会议还是期刊论文。"
+}

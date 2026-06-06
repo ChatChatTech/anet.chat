@@ -1,0 +1,38 @@
+{
+  "paper_id": "Wang et al. - 2011 - Component-based localization in sparse wireless networks",
+  "doi": null,
+  "title": "Component-Based Localization in Sparse Wireless Networks",
+  "year": 2011,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "通信密集网络往往是定位稀疏的,现有算法无法在低anchor密度下准确定位。",
+  "problem_framing": "将定位问题从节点粒度重新定义为组件粒度,放宽节点顺序和anchor分布限制。",
+  "key_insight": "组件作为定位的基本单元,通过迭代合并组件直至可实现,比逐节点定位更能共享anchor知识。",
+  "method_signature": "CALL算法:组件生成→组件合并→组件实现,支持有限合并和基于测距模型的估计(RMBE)。",
+  "evaluation_criteria": "定位节点比例(90%@degree7.5+5%anchor)、最少信息需求(LIR)、对比Sweeps性能提升40%。",
+  "negative_result_or_admitted_limitation": "CALL不能保证多项式时间终止,因为候选位置集合在最坏情况下可能指数增长。",
+  "evidence_for_taste": [
+    "CALL locates a superset of nodes when compared to Sweeps.",
+    "CALL outperforms the state-of-the-art design Sweeps by about 40%.",
+    "CALL can even approach the RRT-3B upper limitation and locate more nodes.",
+    "The worst-case complexity could be exponential."
+  ],
+  "thinking_moves": [
+    "把定位的基本单元从节点提升到组件,通过粒度切换实现约束松弛",
+    "先建立理论下界(LIR),再设计算法逼近该界",
+    "承认算法最坏情况指数复杂度的代价,换取定位能力的提升"
+  ],
+  "topic_tags": [
+    "component-based-localization",
+    "rigidity-theory",
+    "sparse-wireless-networks",
+    "range-based-localization",
+    "finite-mergence"
+  ],
+  "cites_own_work": [
+    "X. Wang et al., Component based localization... ICNP 2008"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

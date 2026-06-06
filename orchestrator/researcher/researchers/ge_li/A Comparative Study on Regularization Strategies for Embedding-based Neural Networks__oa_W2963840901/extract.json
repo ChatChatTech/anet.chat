@@ -1,0 +1,42 @@
+{
+  "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901",
+  "doi": "10.18653/v1/d15-1252",
+  "title": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks",
+  "year": 2015,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "嵌入型神经网络在NLP中参数维度高,严重过拟合,且调参耗时",
+  "problem_framing": "系统比较四种正则化策略的行为、增量调参可行性及策略组合效果",
+  "key_insight": "L2惩罚嵌入向量意外帮助优化——大语料预训练的嵌入倾向于大值,L2惩罚将其推向小值,利于梯度下降",
+  "method_signature": "L2范数惩罚(权重/嵌入)、词重嵌入、Dropout的对照实验",
+  "evaluation_criteria": "训练与验证准确率,跨数据集泛化差异",
+  "negative_result_or_admitted_limitation": "词重嵌入方法在实验中无效;Dropout单独使用时不如L2惩罚;本工作目标不是超越或复现最优结果,而是公平比较",
+  "evidence_for_taste": [
+    "re-embedding words is not effective in our experiments",
+    "goal of this paper is not to outperform",
+    "the goal of this paper is not to reproduce",
+    "regularizations mainly serve as a local effect",
+    "dropout performs slightly worse than l2 penalty",
+    "unexpectedly helps optimization",
+    "embedding is sparse in use",
+    "behaviors may be different from those in other scenarios like image recognition"
+  ],
+  "thinking_moves": [
+    "将嵌入与连接权重的正则化效果分开讨论,因为嵌入使用稀疏",
+    "设定固定维度50以保证公平比较而非按验证集调参",
+    "区分正则化的两类假说:初始效应vs终极效应",
+    "增量调参实验验证正则化作用范围是局部的还是全局的",
+    "用表格穷举系数组合寻找互补区间"
+  ],
+  "topic_tags": [
+    "embedding-regularization-comparison",
+    "NLP-overfitting",
+    "incremental-hyperparameter-tuning",
+    "dropout-l2-complementary",
+    "CNN-RNN-regularization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

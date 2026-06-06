@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2024 - TransformLoc Transforming MAVs into Mobile Localization Infrastructures in Heterogeneous Swarms",
+  "doi": null,
+  "title": "TransformLoc: Transforming MAVs into Mobile Localization Infrastructures in Heterogeneous Swarms",
+  "year": 2024,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "BMAVs积累定位误差，现有方案需要基础设施或重算力，灾区快速响应场景无法满足",
+  "problem_framing": "将AMAV资源分配给BMAV的耦合优化问题，含误差未知与动态调度",
+  "key_insight": "把AMAV变成移动定位基础设施，用视觉观测修正BMAV累积误差",
+  "method_signature": "误差感知联合估计+近邻自适应分组调度",
+  "evaluation_criteria": "ATE绝对轨迹误差、导航成功率",
+  "negative_result_or_admitted_limitation": "系统要求AMAV自身定位误差小于10cm，需LiDAR等高端传感器辅助",
+  "evidence_for_taste": [
+    "turning this insight into a practical system is non-trivial",
+    "making it too complicated to run on MAVs",
+    "eliminate the necessity of having the actual locations",
+    "NP-hard nature",
+    "The communication load is deemed manageable"
+  ],
+  "thinking_moves": [
+    "将异构MAV资源差异转化为定位基础设施复用的机会",
+    "用协方差矩阵trace替代真实定位误差实现无参考推断",
+    "用Voronoi图将多对多资源分配拆解为多个一对多子问题",
+    "用δ步前瞻搜索树实现非短视调度"
+  ],
+  "topic_tags": [
+    "MAV-swarm-localization",
+    "heterogeneous-robotics",
+    "mobile-infrastructure",
+    "error-aware-estimation",
+    "multi-agent-scheduling"
+  ],
+  "cites_own_work": [
+    "H-SwarmLoc (SL) [30]"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue信息缺失，摘要及全文未明确标注会议/期刊名称"
+}

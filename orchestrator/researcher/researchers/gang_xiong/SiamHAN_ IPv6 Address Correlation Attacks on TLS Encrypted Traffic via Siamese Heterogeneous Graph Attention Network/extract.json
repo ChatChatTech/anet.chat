@@ -1,0 +1,36 @@
+{
+  "paper_id": "SiamHAN_ IPv6 Address Correlation Attacks on TLS Encrypted Traffic via Siamese Heterogeneous Graph Attention Network",
+  "doi": "10.48550/arxiv.2204.09465",
+  "title": "SIAMHAN: IPv6 Address Correlation Attacks on TLS Encrypted Traffic via Siamese Heterogeneous Graph Attention Network",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "IPv6地址因无NAT保护面临用户活动关联攻击，现有的缓解措施已部署但仍可被绕过",
+  "problem_framing": "通过学习TLS加密流量中的关联函数，判断两个IPv6地址是否属于同一用户",
+  "key_insight": "将地址和流量特征建模为异构图，利用多层次注意力机制和度量学习捕捉相似性",
+  "method_signature": "Siamese异构图注意力网络在成对知识图上做度量学习",
+  "evaluation_criteria": "地址关联准确率、用户追踪准确率、用户发现准确率",
+  "negative_result_or_admitted_limitation": "单一混淆方法无法有效防御SIAMHAN，需同时限制地址和流量特征关联",
+  "evidence_for_taste": [
+    "each single obfuscation method is not effective enough",
+    "client fingerprints contribute more to the correlation attack",
+    "distance metric architecture outperforms the classifier"
+  ],
+  "thinking_moves": [
+    "证明更复杂的方法可克服现有局限性",
+    "将图学习引入地址关联攻击以建模用户行为",
+    "从封闭世界到开放世界数据集的扩展",
+    "分层注意力机制逐层提取语义相似性"
+  ],
+  "topic_tags": [
+    "IPv6地址关联攻击",
+    "TLS加密流量分析",
+    "异构图神经网络",
+    "度量学习",
+    "用户追踪"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文主体部分完整，但实验细节表格和部分结果数据被截断，限制了对其完整技术贡献的评估 | md truncated to head40k+tail20k"
+}

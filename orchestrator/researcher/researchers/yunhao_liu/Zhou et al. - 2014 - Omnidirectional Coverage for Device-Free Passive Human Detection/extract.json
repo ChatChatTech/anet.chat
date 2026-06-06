@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhou et al. - 2014 - Omnidirectional Coverage for Device-Free Passive Human Detection",
+  "doi": null,
+  "title": "Omnidirectional Coverage for Device-Free Passive Human Detection",
+  "year": 2014,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有DfP系统因TX-RX链路架构导致方向性覆盖,无法满足智能空间等场景的全向检测需求",
+  "problem_framing": "在链路中心架构下实现盘状覆盖的被动人体检测问题,分为均衡决策和方位区分两个层次",
+  "key_insight": "利用室内丰富多径效应模糊链路中心特性,通过PHY层CFR特征提取实现近乎全向的覆盖形状",
+  "method_signature": "CSI幅值直方图特征+EMD距离度量+指纹/阈值双检测方案",
+  "evaluation_criteria": "误报率/漏报率/检测率/方位区分准确率/方向性指标",
+  "negative_result_or_admitted_limitation": "Coverage shape is still not perfectly omnidirectional for azimuth distinction; direction along TX-RX link shows lower classification accuracy",
+  "evidence_for_taste": [
+    "disk-like coverage facilitates topology control",
+    "blur the link-centric coverage",
+    "exploit multipath effect to blur the directional coverage",
+    "not perfectly omnidirectional",
+    "finer-grained and more effective features might ultimately contribute to a perfect disk-like coverage"
+  ],
+  "thinking_moves": [
+    "将感知问题重新框架为通信问题:利用多径效应而非消除它",
+    "从理论网络覆盖模型出发寻找与实际传感器设计的差距",
+    "通过跨层信息利用(CFR而非RSSI)突破架构限制",
+    "先定义完美目标(磁盘覆盖),再逆向追溯当前障碍的物理根源"
+  ],
+  "topic_tags": [
+    "device-free-passive-detection",
+    "PHY-layer-CSI-fingerprinting",
+    "omnidirectional-coverage",
+    "WiFi-monitoring",
+    "multipath-utilization"
+  ],
+  "cites_own_work": [
+    "[14] Towards Omnidirectional Passive Human Detection (INFOCOM 2013)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Conference version referenced; journal paper extends with threshold-based method and additional validation"
+}

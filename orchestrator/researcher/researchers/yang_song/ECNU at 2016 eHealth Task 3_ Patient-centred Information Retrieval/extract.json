@@ -1,0 +1,40 @@
+{
+  "paper_id": "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval",
+  "doi": null,
+  "title": "ECNU at 2016 eHealth Task 3: Patient-centred Information Retrieval",
+  "year": 2016,
+  "venue": "CLEF eHealth Evaluation Lab",
+  "venue_tier": "workshop",
+  "role": "first",
+  "motivation": "改善医疗信息检索系统的精度，满足患者为中心的健康信息搜索需求",
+  "problem_framing": "在ClueWeb12-B13语料上，通过查询扩展和模型融合提升医疗领域检索效果",
+  "key_insight": "利用Google爬取网页摘要结合MeSH医学术语库进行查询扩展，并通过多模型组合消除单一模型偏差",
+  "method_signature": "Web查询扩展+多IR模型组合(BM25/PL2/BB2/TFIDF/LM)",
+  "evaluation_criteria": "TREC风格的标准化评估流程，关注相关性排序",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "achieve an outstanding performance",
+    "better understand and satisfy the task",
+    "get rid of the influence of single model",
+    "more representative of the current state"
+  ],
+  "thinking_moves": [
+    "将TREC Microblog和CDS track验证过的方法迁移到eHealth任务",
+    "利用外部Web资源（Google）获取查询扩展候选词",
+    "通过多模型融合降低单一模型的固有偏差",
+    "手动添加诊断/检查/治疗等临床关键词补全查询意图"
+  ],
+  "topic_tags": [
+    "medical-IR-query-expansion",
+    "web-based-query-expansion",
+    "model-combination",
+    "clef-ehealth",
+    "mesh-terminology"
+  ],
+  "cites_own_work": [
+    "ecnu-2014-microblog-track",
+    "ecnu-2015-cds-track",
+    "ecnu-2015-ehealth-task2"
+  ],
+  "extraction_quality": "full"
+}

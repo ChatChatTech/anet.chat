@@ -1,0 +1,42 @@
+{
+  "paper_id": "Patil et al. - 2008 - SOLONet Sub-optimal location-aided overlay network for MANETs",
+  "doi": null,
+  "title": "SOLONet: Sub-optimal location-aided overlay network for MANETs",
+  "year": 2008,
+  "venue": "Springer Wireless Networks",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Overlay multicast gains are offset by overhead of precise location info distribution and maintenance in MANETs",
+  "problem_framing": "Build efficient location-aided overlay trees without requiring expensive location broadcasts or per-node location tables",
+  "key_insight": "Event-based cell-center updates achieve near-optimal trees without per-packet location headers or full topology knowledge",
+  "method_signature": "Cell-partitioned topology with event-based location updates and local leader-based service discovery",
+  "evaluation_criteria": "Performance vs optimal tree, scalability, reconnection costs under varying cell sizes and mobility",
+  "negative_result_or_admitted_limitation": "The resulting tree is sub-optimal; source assumes node location as cell center, not exact position",
+  "evidence_for_taste": [
+    "performance gains are offset by overhead",
+    "doesn't require every packet to carry location info",
+    "strikes a good balance between advantages",
+    "sub-optimal tree performs very similar",
+    "places the minimum burden on each node",
+    "avoids the broadcast storm problem"
+  ],
+  "thinking_moves": [
+    "Accepts sub-optimality as a design feature rather than a failure",
+    "Reframes accuracy vs cost tradeoff into a practical engineering problem",
+    "Verifies against idealized baseline to establish quality floor",
+    "Uses cell structure to localize computation and reduce broadcast scope",
+    "Discovers counter-intuitive result that smaller cells don't always increase reconnections"
+  ],
+  "topic_tags": [
+    "location-aided-overlay-multicast",
+    "MANET",
+    "event-based-updates",
+    "cell-partitioning",
+    "leader-selection"
+  ],
+  "cites_own_work": [
+    "Patil et al. 2004 (earlier SOLONet conference version)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Published 2007 online, indexed as 2008. Full paper with complete method and evaluation sections available. | md truncated to head40k+tail20k"
+}

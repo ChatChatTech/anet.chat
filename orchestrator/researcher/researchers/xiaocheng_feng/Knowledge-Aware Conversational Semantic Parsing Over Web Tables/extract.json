@@ -1,0 +1,39 @@
+{
+  "paper_id": "Knowledge-Aware Conversational Semantic Parsing Over Web Tables",
+  "doi": "10.48550/arxiv.1809.04271",
+  "title": "Knowledge-Aware Conversational Semantic Parsing Over Web Tables",
+  "year": 2018,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "当前方法在处理对话式表格问答时缺乏知识获取和推理能力,无法有效处理co-reference和ellipsis现象",
+  "problem_framing": "将对话式表格问答建模为语义解析任务,把用户话语映射为可执行的逻辑形式(SQL)",
+  "key_insight": "通过整合三类知识(语法知识用于复制先前逻辑形式,专家知识用于模块化设计,外部资源知识用于增强表示)来提升解析性能",
+  "method_signature": "CAMP:知识感知的模块化语义解析器,通过copy actions处理上下文依赖",
+  "evaluation_criteria": "在SequentialQA数据集上的准确率,包括整体准确率和序列准确率",
+  "negative_result_or_admitted_limitation": "错误主要由error propagation和semantic matching problems及grammar limitation引起,当前grammar不覆盖contains in操作符",
+  "evidence_for_taste": [
+    "a decomposable model is more controllable",
+    "grammar knowledge empowers the model to effectively replicate",
+    "Spurious logical forms could be executed to get the correct answer",
+    "The errors are mainly caused by error propagation",
+    "Pruning logical forms is vital for improving model performance"
+  ],
+  "thinking_moves": [
+    "将端到端模型改为模块化可解释架构,增强可控性",
+    "通过引入copy actions主动利用对话历史解决ellipsis问题",
+    "从错误案例反推系统局限:error propagation, semantic matching, grammar coverage",
+    "用ablation study验证各类知识的增量贡献",
+    "设计pruning策略去除spurious logical forms,改善训练信号质量"
+  ],
+  "topic_tags": [
+    "conversational-semantic-parsing",
+    "table-question-answering",
+    "knowledge-aware-neural-models",
+    "logical-form-generation",
+    "multi-turn-dialogue"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

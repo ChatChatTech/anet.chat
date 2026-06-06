@@ -1,0 +1,38 @@
+{
+  "paper_id": "Semantic Parsing with Syntax- and Table-Aware SQL Generation__oa_W2963207291",
+  "doi": "10.18653/v1/p18-1034",
+  "title": "Semantic Parsing with Syntax- and Table-Aware SQL Generation",
+  "year": 2018,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有神经方法逐词生成SQL，导致生成结果与表内容不匹配，无法执行",
+  "problem_framing": "序列到SQL生成：将自然语言问题和表结构映射为可执行的SQL查询",
+  "key_insight": "通过column/value/SQL三通道切换机制学习何时复制列名、单元格或关键词，并利用列-单元格关系约束WHERE子句",
+  "method_signature": "三通道指针网络加切换门，用列-单元格关系增强列向量并约束值通道候选",
+  "evaluation_criteria": "执行准确率Acc_ex(生成的SQL能否得到正确答案)和逻辑形式准确率Acc_lf",
+  "negative_result_or_admitted_limitation": "RL策略未能显著提升性能；列预测仍是主要瓶颈；跨数据集迁移效果不佳",
+  "evidence_for_taste": [
+    "large portion of generated results is incorrect",
+    "no guarantee that a multi-word column name could be successively generated",
+    "a 'semantic gap'",
+    "Incorporating RL strategy does not significantly improve",
+    "this semantic gap is still the main bottleneck"
+  ],
+  "thinking_moves": [
+    "从生成不完整列名的问题出发，倒逼设计以列名为单位的生成通道",
+    "发现单元格可作为问题与列名之间的语义桥梁(支点)",
+    "用列-单元格所属关系约束WHERE值，避免生成无效SQL",
+    "承认RL微调提升有限，将改进方向转向列预测"
+  ],
+  "topic_tags": [
+    "text-to-SQL",
+    "pointer-network",
+    "table-semantic-parsing",
+    "column-cell-relation",
+    "syntax-aware-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2009 - Scaling Laws on Multicast Capacity of Large Scale Wireless Networks",
+  "doi": null,
+  "title": "Scaling Laws on Multicast Capacity of Large Scale Wireless Networks",
+  "year": 2009,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "无线网络容量扩展性是基础理论问题,现有 multicast 容量结果缺乏对所有 n_s 和 n_d 情况的完整分析",
+  "problem_framing": "在 Gaussian Channel 模型下,分析 REN 和 RDN 两种随机网络中多播会话容量随 n, n_s, n_d 的扩展律",
+  "key_insight": "引入第二类高速公路(second-class highway)配合第一类高速公路形成双层架构,并行调度附近链路,避免访问高速的瓶颈",
+  "method_signature": "基于渗透理论构造双层高速公路路由,结合 TDMA 调度与集中度分析证明上下界匹配",
+  "evaluation_criteria": "阶数最优(order-optimal):当 n_d 属于特定区间时,上下界通过 Θ 符号合一",
+  "negative_result_or_admitted_limitation": "存在未闭合的间隙:对于 REN 的 n_d:[(n/log^α+1), n/log n] 以及 RDN 的 n_d:[(n/log^3), n/log n],上下界未完全匹配",
+  "evidence_for_taste": [
+    "contributes to the generality of the paper",
+    "to the best of our knowledge, are not used in previous studies",
+    "order-optimal",
+    "closing the gap",
+    "We show that the per-session multicast throughput derived by our scheme is order-optimal"
+  ],
+  "thinking_moves": [
+    "先用渗透理论建高速公路,再补充无渗透的方案避免瓶颈",
+    "把 multicast 问题分解为七个阶段逐个击破",
+    "用 Azuma 不等式处理多播树的集中度估计",
+    "细胞分割+鸽巢原理证上界,找瓶颈链路证另一上界",
+    "取 n_s=Θ(n) 作为特例展示主要结果"
+  ],
+  "topic_tags": [
+    "wireless-multicast-capacity",
+    "percolation-theory",
+    "scaling-laws",
+    "gaussian-channel-model",
+    "random-network"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文标注为 2009 年,作者列表包含 Yunhao Liu 为第五位,但未明确说明发表 venue,引用格式暗示可能是 IEEE/ACM 会议论文。数学推导部分有部分截断,对某些引理的完整证明需要查阅技术报告。 | md truncated to head40k+tail20k"
+}

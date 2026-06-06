@@ -1,0 +1,42 @@
+{
+  "paper_id": "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation",
+  "doi": null,
+  "title": "From Language to Action: Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation",
+  "year": 2025,
+  "venue": "ASE 2025",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "MCP生态快速扩展,但开发者难以找到适合特定开发任务的MCP服务器,现有方法依赖试错",
+  "problem_framing": "将任务导向MCP服务器推荐定义为结构化检索排序问题,需同时考虑语义相关性和工程约束",
+  "key_insight": "不能仅做语义匹配,必须同时建模结构兼容性(编程语言/系统环境/接口约束),否则推荐的工具虽语义相关但执行时不可用",
+  "method_signature": "T2MRec模型:语义相关性+结构兼容性建模,质心扩展候选,LLM约束重排序",
+  "evaluation_criteria": "多指标对比传统/图方法/LLM方法在排名性能上的提升",
+  "negative_result_or_admitted_limitation": "现有MCP推荐方法主要依赖语义匹配而忽视结构约束,导致概念上匹配但执行时失败",
+  "evidence_for_taste": [
+    "LLM-based agents often struggle to select appropriate tools",
+    "treating MCP server recommendations as a purely semantic matching problem while overlooking structural constraints",
+    "semantically relevant may still be unusable due to mismatches",
+    "Without transparent rationales, developers cannot easily assess the suitability",
+    "still a challenging problem"
+  ],
+  "thinking_moves": [
+    "从生态碎片化问题中抽取出核心需求:任务导向的工具推荐",
+    "将试错成本高归因于语义-结构不匹配,而非推理能力不足",
+    "构建数据集来解决冷启动和监督稀疏问题",
+    "先用检索建立候选集,再用LLM重排来提高覆盖率",
+    "从黑盒推荐转向可解释的交互式推荐agent"
+  ],
+  "topic_tags": [
+    "MCP-server-recommendation",
+    "task-oriented-retrieval",
+    "semantic-structural-mismatch",
+    "LLM-tool-selection",
+    "agent-tool-ecosystem"
+  ],
+  "cites_own_work": [
+    "RGPRec",
+    "He et al. 2026"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

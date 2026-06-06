@@ -1,0 +1,38 @@
+{
+  "paper_id": "Guo et al. - 2014 - RollCaller User-friendly indoor navigation system using human-item spatial relation",
+  "doi": null,
+  "title": "RollCaller: User-Friendly Indoor Navigation System Using Human-Item Spatial Relation",
+  "year": 2014,
+  "venue": "IEEE",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "现实场景中大型图书馆和超市货架上的物品经常乱序,用户难以定位目标物品,现有方法需昂贵基础设施",
+  "problem_framing": "将问题重新定义为导航问题而非定位问题,关注人与物品的相对空间关系而非绝对坐标",
+  "key_insight": "人穿过标签与读写器天线视距时会引起显著多普勒频移,利用该'锚点时间戳'可直接测量人-物空间关系",
+  "method_signature": "基于RFID多普勒频移检测Anchor Time Stamp,结合IMU位移测量实现无定位设施的室内导航",
+  "evaluation_criteria": "锚点时间戳的距离漂移、导航停止点与目标物品的距离误差",
+  "negative_result_or_admitted_limitation": "IMU位移测量随距离累积误差增大,搜索距离目标较远的标签时最大导航误差近40cm",
+  "evidence_for_taste": [
+    "how can the user be navigated to the item he wants?",
+    "the person doesn’t care about the exact coordination",
+    "the relative location between the person and the item he wants can help more",
+    "directly measure the real-time human-item spatial relation",
+    "the maximum values of the Doppler frequency shift remain stable"
+  ],
+  "thinking_moves": [
+    "将定位问题frame为通信问题——用遮挡视距的物理事件替代坐标计算",
+    "放弃全局绝对定位,只追踪相对空间关系以避免误差叠加",
+    "利用遮挡产生的多普勒频移峰值作为感知锚点而非用RSS做测距",
+    "承认IMU长距离累积误差并用多次通过passage的约束来逐步修正"
+  ],
+  "topic_tags": [
+    "RFID-doppler-navigation",
+    "human-item-spatial-relation",
+    "anchor-time-stamp",
+    "indoor-navigation-no-infrastructure",
+    "IMU-displacement-compensation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供完整会议名称、DOI等信息,实验环境为实验室场景,实际部署细节有限"
+}

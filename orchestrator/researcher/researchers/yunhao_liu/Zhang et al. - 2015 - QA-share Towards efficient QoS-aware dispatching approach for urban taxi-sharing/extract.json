@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhang et al. - 2015 - QA-share Towards efficient QoS-aware dispatching approach for urban taxi-sharing",
+  "doi": null,
+  "title": "QA-share: Towards Efficient QoS-Aware Dispatching Approach for Urban Taxi-sharing",
+  "year": 2015,
+  "venue": "IEEE",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Rush-hour taxis hard to hail while occupied taxis have seats; taxi-sharing can help but imbalanced design hurts passengers or drivers",
+  "problem_framing": "Joint optimization of driver profit and passenger QoS under dynamic request arrivals, avoiding schedule oscillation",
+  "key_insight": "Tip decay functions make profit and QoS objectives mathematically consistent—maximizing tips simultaneously maximizes passenger experience",
+  "method_signature": "ILP + heuristic two-phase scheduling with map clustering, candidate taxi search, and weighted bipartite matching",
+  "evaluation_criteria": "Profit increase over baseline, service rate of requests, oscillation percentage, processing window sensitivity",
+  "negative_result_or_admitted_limitation": "ILP only scales to ≤12 requests; oscillation still 3.2% at optimal threshold; travel time estimation could be more accurate",
+  "evidence_for_taste": [
+    "scheduling is rather simplistic",
+    "without considering the Quality of Service",
+    "simply inserts the request to the end",
+    "only leads to a small number of requests",
+    "the execution time of Optimal-Share increases considerably",
+    "we did not notice much oscillation"
+  ],
+  "thinking_moves": [
+    "把调度公平性问题 reframe 成两个正交目标的同时最大化",
+    "通过 tip decay function 把主观 QoS 量化为可优化函数",
+    "用 oscillation 阈值来工程化抑制动态调度副作用",
+    "先证 NP-hard 下界, 再设计可扩展启发式"
+  ],
+  "topic_tags": [
+    "taxi-sharing dispatching",
+    "QoS optimization",
+    "weighted bipartite matching",
+    "ILP scheduling",
+    "oscillation mitigation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

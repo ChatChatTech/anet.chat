@@ -1,0 +1,38 @@
+{
+  "paper_id": "Enhancing Code Generation Performance of Smaller Models by Distilling the Reasoning Ability of LLMs",
+  "doi": "10.48550/arxiv.2403.13271",
+  "title": "Enhancing Code Generation Performance of Smaller Models by Distilling the Reasoning Ability of LLMs",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "LLMs有强推理能力但部署成本高，小模型推理弱导致代码生成差，需将LLM的推理能力蒸馏给小模型",
+  "problem_framing": "将LLM的解决计划(CoT推理)作为监督信号，用多任务学习蒸馏给小模型，使其在推理时自主生成计划并提升代码质量",
+  "key_insight": "后向推理：从正确答案反推解决计划，比LLM直接从前缀题生成计划质量更高；计划采样模拟程序员试错",
+  "method_signature": "CodePLAN多任务框架：前向生成代码+计划生成任务训练；推理时采样多计划+单元测试筛选最优计划",
+  "evaluation_criteria": "pass@k指标(APPS/MBPP基准测试)；相比标准微调pass@1提升超130%",
+  "negative_result_or_admitted_limitation": "低质量解决计划会被模型误认为噪声，反而损害基础能力；N=1时贪婪解码反而比无计划更差",
+  "evidence_for_taste": [
+    "lower-quality plans could be misconstrued by the model as noise",
+    "greedy decoding strategy is insufficient to assure the precision",
+    "CoT strategies shine with massive-parameter models, smaller models struggle",
+    "solution plans derived from backward reasoning using ground truth codes surpass",
+    "the quality of solution plans significantly influences model performance"
+  ],
+  "thinking_moves": [
+    "从正确答案倒推程序员的解决计划，放弃直接让LLM从问题描述生成计划的方案",
+    "将模型采样类比为程序员试错：程序员写代码验证思路，模型采样计划并用单元测试筛选",
+    "发现低质量计划反而损害模型，引入采样+单元测试的筛选机制",
+    "观察到CoT直接微调在代码生成任务上不如多任务学习有效，改为联合训练"
+  ],
+  "topic_tags": [
+    "LLM蒸馏",
+    "小模型代码生成",
+    "思维链CoT蒸馏",
+    "计划采样",
+    "多任务学习"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

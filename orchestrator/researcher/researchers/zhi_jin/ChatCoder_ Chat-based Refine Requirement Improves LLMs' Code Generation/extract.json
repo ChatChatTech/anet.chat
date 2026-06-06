@@ -1,0 +1,41 @@
+{
+  "paper_id": "ChatCoder_ Chat-based Refine Requirement Improves LLMs' Code Generation",
+  "doi": "10.48550/arxiv.2311.00272",
+  "title": "ChatCoder: Chat-based Refine Requirement Improves LLMs' Code Generation",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "人类自然语言需求表达含糊、不完整且歧义,导致LLM误解需求生成错误代码,且用户自身难以有效修正需求",
+  "problem_framing": "将需求精化定义为人机协作过程:用户作为客户,LLM作为供应商,双方需互动才能完成需求精化",
+  "key_insight": "需求精化必须同时依赖人类用户和LLM,缺一不可;LLM引导用户精化比用户自行精化更有效",
+  "method_signature": "两轮对话框架(释义扩展+深度追问循环),基于IEEE SRS的五个分析角度引导LLM生成精化需求",
+  "evaluation_criteria": "HumanEval和Sanitized-MBPP数据集上的pass@k指标",
+  "negative_result_or_admitted_limitation": "Auto-Refine损害LLM代码生成性能;缺乏人类编辑修正时LLM的猜测导致更差结果;精化规范过长给用户带来负担",
+  "evidence_for_taste": [
+    "poor requirement expressions",
+    "Neither the software customer nor the software supplier is qualified",
+    "human intervention is necessary",
+    "Auto-Refine hurts",
+    "Free Paraphrase and Free QA do not instruct",
+    "human users just need to review and edit",
+    "saving lots of human labour",
+    "it is difficult for a human user to refine the requirement"
+  ],
+  "thinking_moves": [
+    "将LLM代码生成问题重新frame为communication问题",
+    "借鉴IEEE SRS标准为LLM设计需求分析角度",
+    "通过消融实验(自动精化/自由 paraphrase/自由QA)验证结构化约束的必要性",
+    "区分信息精化的两类价值:功能正确性(输出/目的/输入)和健壮性(边界/异常)"
+  ],
+  "topic_tags": [
+    "LLM代码生成",
+    "需求工程",
+    "人机协作对话",
+    "prompt工程",
+    "迭代式需求精化"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

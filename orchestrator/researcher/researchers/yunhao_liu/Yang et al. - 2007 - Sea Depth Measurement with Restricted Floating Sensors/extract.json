@@ -1,0 +1,38 @@
+{
+  "paper_id": "Yang et al. - 2007 - Sea Depth Measurement with Restricted Floating Sensors",
+  "doi": null,
+  "title": "Sea Depth Measurement with Restricted Floating Sensors",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Harbor siltation monitoring costs $18M/year; existing methods are labor-intensive and require expensive sonar equipment",
+  "problem_framing": "Define RFS (restricted floating sensors) network; localize floating area (disk center+radius) instead of instantaneous positions",
+  "key_insight": "Sensors float within known geometric constraints; statistical sampling reveals anchor position and radius, enabling depth calculation",
+  "method_signature": "FALA: seed MED + non-seed regression analysis on distance samples to estimate floating area parameters",
+  "evaluation_criteria": "Relative errors: anchor position Ec/r, radius Er/r, sea depth Eh/h",
+  "negative_result_or_admitted_limitation": "RSSI ranging has 150% error; floating model assumption (uniform random) violated near seashore; error propagates with network size",
+  "evidence_for_taste": [
+    "smallest one should be considered the maximum likelihood estimation",
+    "RA outperforms GR when sample capacity is larger than 20",
+    "directly using those localization approaches does not capture the special movement behaviors",
+    "A large sample capacity usually implies a long period of sampling"
+  ],
+  "thinking_moves": [
+    "Define new sensor mobility class between static and mobile",
+    "Recast localization as floating area estimation",
+    "Apply computational geometry (MED) to sampled positions",
+    "Model uncertainty via uniform distribution, derive statistical estimator",
+    "Prefer regression over extreme-value geometric method for robustness"
+  ],
+  "topic_tags": [
+    "restricted-mobility-sensor-network",
+    "sea-depth-estimation",
+    "floating-area-localization",
+    "sensor-network-localization",
+    "statistical-sampling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

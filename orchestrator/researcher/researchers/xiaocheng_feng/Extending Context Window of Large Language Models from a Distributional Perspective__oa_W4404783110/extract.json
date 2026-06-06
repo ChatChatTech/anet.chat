@@ -1,0 +1,39 @@
+{
+  "paper_id": "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110",
+  "doi": "10.18653/v1/2024.emnlp-main.414",
+  "title": "Extending Context Window of Large Language Models from a Distributional Perspective",
+  "year": 2024,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有RoPE缩放方法依赖经验,缺乏对RoPE内部分布的深刻理解,导致上下文窗口扩展性能次优",
+  "problem_framing": "将上下文窗口扩展问题从旋转角分布视角重新形式化,通过最小化旋转角分布扰动来选择扩展策略",
+  "key_insight": "预训练旋转角分布与扩展分布之间的一致性随维度不同而变化,不同维度应采用不同的插值或外推策略",
+  "method_signature": "基于KL散度在每个维度独立选择插值或外推,以最小化旋转角分布扰动",
+  "evaluation_criteria": "LongBench-E基准的长文本任务性能、HuggingFace Open LLM基准的短文本性能、passkey检索准确率",
+  "negative_result_or_admitted_limitation": "方法受限于旋转位置编码,且无法完全达到零扰动的最优情况;分布估计精度受预训练序列长度L限制",
+  "evidence_for_taste": [
+    "lack a profound understanding",
+    "sub-optimal performance",
+    "lacks interpretability",
+    "minimizing the perturbation",
+    "empirically suggest α=1 and β=32",
+    "potentially hinder its generalization"
+  ],
+  "thinking_moves": [
+    "从经验直觉转向对RoPE内部旋转角分布的理论分析",
+    "用分布一致性替代启发式超参数选择",
+    "将扰动量化为KL散度实现策略选择的可计算化",
+    "观察到不同维度需要不同策略的现象后,用分布视角解释其内在机制"
+  ],
+  "topic_tags": [
+    "RoPE上下文扩展",
+    "旋转角分布",
+    "位置嵌入理论",
+    "长度外推",
+    "LLM长文本建模"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

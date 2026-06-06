@@ -1,0 +1,42 @@
+{
+  "paper_id": "High Performance Im2win and Direct Convolutions using Three Tensor Layouts on SIMD Architectures",
+  "doi": "10.48550/arxiv.2408.00278",
+  "title": "High Performance Im2win and Direct Convolutions using Three Tensor Layouts on SIMD Architectures",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "卷积占DNN运算50%-90%且耗时超90%，现有im2win仅优化NCHW布局，缺NHWC/CHWN布局在SIMD的性能特征研究",
+  "problem_framing": "将张量数据布局对内存访问和计算效率的影响进行系统性性能表征，比较三种卷积方法在四种布局上的效果",
+  "key_insight": "im2win结合NHWC布局可达理论峰值的95%，相比NCHW提升11%-355%；CHWN8通过设8N_in为最内层解决向量寄存器约束问题",
+  "method_signature": "三种新布局(NHWC/CHWN/CHWN8)配合hoist、对齐、阻塞、向量化、FMA、循环合并等通用优化",
+  "evaluation_criteria": "TFLOPS吞吐量、机器理论峰值利用率(目标90%+)、内存占用对比",
+  "negative_result_or_admitted_limitation": "直接卷积在NCHW布局上表现很差；CHWN布局对batch size最敏感；无法复现对比[18]的方法因其未开源",
+  "evidence_for_taste": [
+    "direct convolution performs poorly on the NCHW layout",
+    "CHWN layout is most sensitive to the batch size",
+    "im2win_CHWN8 outperforms im2win_CHWN on all benchmarks",
+    "achieve up to 95% of the machine's theoretical peak performance",
+    "the proposed optimization techniques are proven effective"
+  ],
+  "thinking_moves": [
+    "从理论峰值(roofline)倒推优化方向而非仅靠试错",
+    "将布局选择与内存访问模式、向量寄存器约束显式关联",
+    "通过批量合并N_in和H_o维度解决多核负载均衡问题",
+    "用实验数据否定CHWN布局的普适性并针对性改进为CHWN8",
+    "先展示新布局的优势再给出通用的优化技术集合"
+  ],
+  "topic_tags": [
+    "SIMD-convolution-optimization",
+    "tensor-data-layout",
+    "im2win-convolution",
+    "memory-efficiency",
+    "roofline-model"
+  ],
+  "cites_own_work": [
+    "im2win convolution on SIMD architectures (2022 HPEC)",
+    "im2win on GPU (Euro-Par 2023)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

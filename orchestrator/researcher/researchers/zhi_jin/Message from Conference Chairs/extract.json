@@ -1,0 +1,21 @@
+{
+  "paper_id": "Message from Conference Chairs",
+  "doi": "10.1109/sera.2018.8477211",
+  "title": "Message from Conference Chairs",
+  "year": 2018,
+  "venue": "16th IEEE/ACIS International Conference on Software Engineering, Research, Management & Applications (SERA)",
+  "venue_tier": "conference",
+  "role": "co-author",
+  "motivation": null,
+  "problem_framing": null,
+  "key_insight": null,
+  "method_signature": null,
+  "evaluation_criteria": null,
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [],
+  "thinking_moves": [],
+  "topic_tags": [],
+  "cites_own_work": [],
+  "extraction_quality": "thin",
+  "extraction_notes": "Front matter only. This is a conference welcome message from chairs, not a research paper. No problem framing, methodology, evaluation, or authorial taste signals present. Zhi Jin appears as a conference co-chair alongside Shaowen Yao and Xiaohui Cui. Text confirms date (June 13-15, 2018), location (Kunming, China), and acknowledgment of organizers. No research content extractable."
+}

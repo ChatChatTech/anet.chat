@@ -1,0 +1,36 @@
+{
+  "paper_id": "GPT as Psychologist_ Preliminary Evaluations for GPT-4V on Visual Affective Computing",
+  "doi": "10.48550/arxiv.2403.05916",
+  "title": "GPT as Psychologist? Preliminary Evaluations for GPT-4V on Visual Affective Computing",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "缺乏评估多模态大语言模型在情感计算任务上表现的标准基准",
+  "problem_framing": "在5项关键能力上系统评估GPT-4V的视觉情感计算能力",
+  "key_insight": "利用链式推理将表情识别转化为AU识别可提升准确率",
+  "method_signature": "多问题类型(开闭式/判断/选择)+多数据集(DISFA/RAF-DB等)的定性定量混合评估",
+  "evaluation_criteria": "AU检测用F1分数，其余任务用定性分析",
+  "negative_result_or_admitted_limitation": "GPT-4V在微表情识别上无法理解帧间差异，在欺骗检测上无法正确推理",
+  "evidence_for_taste": [
+    "GPT-4V cannot understand the difference between frames",
+    "GPT-4V is still challenging for subjective tasks",
+    "cannot achieve good performance on the subjective task",
+    "this is because emotions are inherently difficult to recognize without context",
+    "the model to first recognize the specific AU representation and then deduce the emotion"
+  ],
+  "thinking_moves": [
+    "把感知问题frame成交流问题——认为情感识别失败是因为缺乏上下文交流语境",
+    "先证AU识别能力再反推表情：用已知强项补弱势",
+    "从失败案例归纳出「客观vs主观」任务分野的认知框架"
+  ],
+  "topic_tags": [
+    "MLLM评估",
+    "视觉情感计算",
+    "面部动作单元检测",
+    "链式推理prompt",
+    "工具调用自我纠错"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035",
+  "doi": "10.18653/v1/d15-1279",
+  "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+  "year": 2015,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "CNNs有效但丢失结构信息,RNNs保留结构但路径过长导致梯度消失和学习困难",
+  "problem_framing": "能否以短传播路径有效利用句子结构进行判别式句子建模",
+  "key_insight": "树上的卷积窗口让任意位置的节点都有到输出层的短传播路径",
+  "method_signature": "TBCNN基于句法树滑动子树特征检测器,max pooling聚合",
+  "evaluation_criteria": "情感分析(5类/2类)和问题分类的准确率",
+  "negative_result_or_admitted_limitation": "复杂pooling效果提升不大,模型对pooling方法不敏感;c-TBCNN比d-TBCNN略差",
+  "evidence_for_taste": [
+    "compact expressiveness is more important",
+    "structures are important when modeling sentences",
+    "pooling is very effective and efficient",
+    "more effective than RNNs to a large extent",
+    "the effect is not strong"
+  ],
+  "thinking_moves": [
+    "从CNNs和RNNs各自的缺陷出发提出组合问题",
+    "通过传播路径长度理论分析架构优劣",
+    "用pooling设计准则约束方案探索空间",
+    "通过可视化验证特征提取的判别性"
+  ],
+  "topic_tags": [
+    "tree-based-convolution",
+    "sentence-modeling",
+    "dependency-parsing",
+    "constituency-parsing",
+    "sentiment-classification"
+  ],
+  "cites_own_work": [
+    "Mou et al., 2014 (TBCNN for programming language)"
+  ],
+  "extraction_quality": "full"
+}

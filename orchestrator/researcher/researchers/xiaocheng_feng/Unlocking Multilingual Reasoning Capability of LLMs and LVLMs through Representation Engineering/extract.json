@@ -1,0 +1,38 @@
+{
+  "paper_id": "Unlocking Multilingual Reasoning Capability of LLMs and LVLMs through Representation Engineering",
+  "doi": "10.48550/arxiv.2511.23231",
+  "title": "Unlocking Multilingual Reasoning Capabilities of LLMs and LVLMs via Representation Engineering",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLMs在英语上的推理能力显著优于低资源语言，存在公平性问题。现有方法依赖昂贵的多语言训练或外部翻译工具。",
+  "problem_framing": "将多语言推理能力差距建模为隐藏状态空间分布差异问题，通过表示工程在推理时干预。",
+  "key_insight": "多语言推理过程中，中间层将隐藏状态转换为英语表示进行推理，后期层再恢复目标语言特征；因此可分两步注入干预向量。",
+  "method_signature": "MRRE：分两层注入预计算的跨语言推理增强向量和目标语言输出锚定向量。",
+  "evaluation_criteria": "准确率(Accuracy)和语言一致性(LC)，覆盖6种模型和4个推理基准。",
+  "negative_result_or_admitted_limitation": "MRRE需要访问模型内部表示，对闭源LLM不可行。Debias方法对LVLM反而导致性能下降。",
+  "evidence_for_taste": [
+    "raising fairness concerns in multilingual applications",
+    "resource-intensive and sensitive to translation quality",
+    "hidden states in reasoning-related layers exhibit significant differences",
+    "does not rely on a particular model architecture",
+    "LVLMs rely predominantly on English data during image-text alignment"
+  ],
+  "thinking_moves": [
+    "从隐藏状态的可视化出发，将英语和非英语的性能差距归因于表示空间分布差异",
+    "利用自回归解码机制的分层特性，将推理增强和语言一致性解耦为两个阶段",
+    "通过t-SNE和KDE可视化验证干预后隐藏状态的迁移轨迹",
+    "验证向量在不同模态间的泛化能力，发现语言主干模型的向量可迁移到LVLM"
+  ],
+  "topic_tags": [
+    "multilingual-reasoning",
+    "representation-engineering",
+    "LLM-LVLM-unification",
+    "inference-time-intervention",
+    "hidden-state-manipulation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

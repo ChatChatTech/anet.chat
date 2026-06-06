@@ -1,0 +1,40 @@
+{
+  "paper_id": "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection",
+  "doi": "10.48550/arxiv.1703.07713",
+  "title": "Hierarchical RNN with Static Sentence-Level Attention for Text-Based Speaker Change Detection",
+  "year": 2017,
+  "venue": "CIKM'17",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Text-based SCD lacks specialized research; needed for OpenSubtitle without speaker IDs and dialog analysis requiring semantics beyond audio",
+  "problem_framing": "Binary sentence-pair classification: judge speaker change between consecutive sentence pairs using surrounding context",
+  "key_insight": "Static attention—only critical sentences search for relevant info—avoids burying them, unlike dynamic cross-RNN attention",
+  "method_signature": "Hierarchical LSTM-RNN with static sentence-level attention for utterance matching before/after decision points",
+  "evaluation_criteria": "Accuracy and F1-measure (imbalanced 25% speaker changes; F1 critical)",
+  "negative_result_or_admitted_limitation": "Dynamic attention hurts 1-2% F1; 'may bury the critical sentences' under context propagation",
+  "evidence_for_taste": [
+    "substantially more efficient",
+    "nearer sentences play",
+    "more suitable for SCD",
+    "bury the critical sentences"
+  ],
+  "thinking_moves": [
+    "Reformulate task as matching problem vs traditional segmentation",
+    "Hierarchical composition: words→sentences→discourses",
+    "Static attention design: fix critical sentences as search queries",
+    "Reverse LSTM direction from far to near sentences"
+  ],
+  "topic_tags": [
+    "text-based speaker change detection",
+    "hierarchical RNN",
+    "sentence-level attention",
+    "dialog modeling",
+    "speaker diarization"
+  ],
+  "cites_own_work": [
+    "[15] session segmentation dialogue",
+    "[7] text-enhanced audio SCD"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Qi et al. - 2016 - Scalable Industry Data Access Control in RFID-Enabled Supply Chain",
+  "doi": null,
+  "title": "Scalable Industry Data Access Control in RFID-Enabled Supply Chain",
+  "year": 2016,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有CP-ABE方案无法满足供应链中百万级产品的可扩展访问控制和权限撤销需求",
+  "problem_framing": "将产品数据访问控制形式化为基于角色属性和标签属性的策略强制问题",
+  "key_insight": "用轻量级标签作为标签属性凭证分发媒介，结合可更新加密实现服务提供商代为更新策略而无需解密",
+  "method_signature": "CP-ABE加可更新加密的双重加密范式",
+  "evaluation_criteria": "大规模模拟和 commodity RFID 系统的实际实现以验证可扩展性和效率",
+  "negative_result_or_admitted_limitation": "CP-ABE设计用于保护用户数据而非产品数据，无法扩展到物品级保护，且密钥授权中心被攻破会导致全供应链数据泄露",
+  "evidence_for_taste": [
+    "not scalable to protect product data",
+    "introduces vulnerability to the product data",
+    "does not involve the key authority",
+    "does not require decryption",
+    "only incurs minimal computation"
+  ],
+  "thinking_moves": [
+    "将CP-ABE的三个局限性(可扩展性/密钥中心脆弱/撤销开销)逐一识别并转化为设计约束",
+    "把标签从单纯数据载体重新定位为凭证分发媒介",
+    "借鉴代理重加密思想但针对标签存储约束重新设计可更新加密方案",
+    "通过双重加密将角色属性与标签属性的管理解耦"
+  ],
+  "topic_tags": [
+    "RFID-supply-chain-access-control",
+    "attribute-based-encryption",
+    "updatable-encryption",
+    "privilege-revocation",
+    "item-level-access-control"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

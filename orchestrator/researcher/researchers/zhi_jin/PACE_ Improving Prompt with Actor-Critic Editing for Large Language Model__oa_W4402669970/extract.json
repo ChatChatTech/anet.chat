@@ -1,0 +1,37 @@
+{
+  "paper_id": "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970",
+  "doi": "10.18653/v1/2024.findings-acl.436",
+  "title": "PACE: Improving Prompt with Actor-Critic Editing for Large Language Model",
+  "year": 2024,
+  "venue": "ACL Findings",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "人类编写prompt质量参差不齐,且提升prompt需要大量人工努力和专业知识",
+  "problem_framing": "将prompt视为policy,利用actor-critic框架将prompt优化形式化为迭代反馈过程",
+  "key_insight": "让LLM同时扮演actor和critic双重角色,actor执行prompt产生响应,critic评估响应反馈批评,从而实现真实反馈驱动的prompt改进",
+  "method_signature": "PACE通过actor-critic范式和迭代算法,使用n个actor执行prompt和n个critic评估响应,聚合反馈后更新prompt",
+  "evaluation_criteria": "在Instruction Induction和Big-Bench上测试,对比W-HWP/M-HWP/B-HWP/Butter Fingers/Ape等多种初始prompt下的性能提升",
+  "negative_result_or_admitted_limitation": "PACE在处理中低难度问题上高效,但面对高度复杂问题时,需要人机协作才能发挥更大潜力",
+  "evidence_for_taste": [
+    "critic possesses a slightly higher significance",
+    "humans can often produce a satisfactory first attempt without much effort",
+    "The real challenge is refining and optimizing these drafts"
+  ],
+  "thinking_moves": [
+    "从强化学习actor-critic算法获得灵感,迁移到prompt工程领域",
+    "把prompt重新定义为policy,把LLM同时作为执行者和评估者",
+    "通过迭代反馈循环而非一次性生成来优化prompt质量"
+  ],
+  "topic_tags": [
+    "LLM-prompt-optimization",
+    "actor-critic-paradigm",
+    "automatic-prompt-editing",
+    "iterative-feedback",
+    "prompt-generation"
+  ],
+  "cites_own_work": [
+    "Self-collaboration code generation via chatgpt (Dong et al., 2023a)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

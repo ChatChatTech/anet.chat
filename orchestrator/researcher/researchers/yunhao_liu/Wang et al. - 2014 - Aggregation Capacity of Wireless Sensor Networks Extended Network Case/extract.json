@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2014 - Aggregation Capacity of Wireless Sensor Networks Extended Network Case",
+  "doi": null,
+  "title": "Aggregation Capacity of Wireless Sensor Networks: Extended Network Case",
+  "year": 2014,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有聚合容量结果仅适用于密集WSN，而实际扩展网络中恒定传输速率假设因功率限制而不成立",
+  "problem_framing": "在广义物理模型下推导随机扩展WSN的聚合容量伸缩律，区分覆盖受限与干扰受限",
+  "key_insight": "扩展网络中容量由最长EMST边的阶决定(Ω(√(log n/n)))，导致每跳速率随距离衰减而非常数",
+  "method_signature": "层次化树路由+TDMA调度，局部聚合+主干聚合两阶段，含分块编码和并行传输调度",
+  "evaluation_criteria": "聚合吞吐量伸缩阶Θ/Ω符号，紧性界证明(上下界匹配)",
+  "negative_result_or_admitted_limitation": "结果局限于可分可完美压缩函数类，且实际实现需调整大量参数和优化常数",
+  "evidence_for_taste": [
+    "over-optimistic and unpractical",
+    "assumption is over-optimistic",
+    "w.h.p.",
+    "not the bottleneck",
+    "tight bounds",
+    "order-optimal",
+    "can be indeed achieved"
+  ],
+  "thinking_moves": [
+    "指出现有模型的物理假设在扩展网络下失效",
+    "用EMST最长边阶定义稠密/扩展网络判据",
+    "先证一般DPC-AF下界，再分类型敏感和类型阈值精细化",
+    "在有限函数类上构造具体聚合scheme并证下界",
+    "通过选择小区域sink节点突破单sink瓶颈",
+    "区分coverage-limited与interference-limited的本质差异"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-capacity",
+    "aggregation-capacity-scaling",
+    "extended-network-model",
+    "generalized-physical-model",
+    "divide-and-conquer-functions"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

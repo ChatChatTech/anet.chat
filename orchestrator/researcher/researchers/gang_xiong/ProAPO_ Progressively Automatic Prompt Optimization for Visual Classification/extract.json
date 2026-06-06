@@ -1,0 +1,39 @@
+{
+  "paper_id": "ProAPO_ Progressively Automatic Prompt Optimization for Visual Classification",
+  "doi": "10.48550/arxiv.2502.19844",
+  "title": "ProAPO: Progressively Automatic Prompt Optimization for Visual Classification",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "VLM性能依赖prompt质量，LLM幻觉导致class-specific prompts不准确且缺乏区分度",
+  "problem_framing": "如何以最少监督、无人工干预找到细粒度类别视觉区分性最优class-specific prompts",
+  "key_insight": "用演化算法从task-specific模板逐步优化到class-specific描述，通过编辑/演化操作避免重复LLM查询，结合entropy约束防止过拟合",
+  "method_signature": "ProAPO演化优化：edit操作(add/del/replace) + evolution操作(crossover/mutation) + entropy约束fitness score + 两级采样策略",
+  "evaluation_criteria": "13个数据集one-shot设置下top-1准确率，迁移到adapter方法和不同backbone的泛化能力",
+  "negative_result_or_admitted_limitation": "粗粒度数据集收益小，因差异已清晰；场景识别受限因图像易混淆，仅文本侧优化不够",
+  "evidence_for_taste": [
+    "hallucination in LLMs",
+    "explosion in the number of class-specific prompts",
+    "overfitting problem appears",
+    "multiple candidate prompts achieve variable and low test results",
+    "language search space impacts performance"
+  ],
+  "thinking_moves": [
+    "把class-specific prompt优化问题形式化为search space爆炸导致的cost/iteration/overfitting三重挑战",
+    "从APO方法借鉴演化过程，但发现仅优化task-specific模板不足，需扩展到class-specific level",
+    "用简单编辑操作替代每次迭代的LLM查询以节省cost",
+    "发现accuracy alone导致过拟合，引入entropy约束作为隐式正则",
+    "识别到不需要遍历所有类别优化，通过采样salient classes降低迭代成本"
+  ],
+  "topic_tags": [
+    "vision-language-model-prompt-optimization",
+    "evolution-algorithm-prompt-search",
+    "one-shot-classification",
+    "LLM-hallucination-mitigation",
+    "fine-grained-visual-recognition"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

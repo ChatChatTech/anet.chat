@@ -1,0 +1,39 @@
+{
+  "paper_id": "Adaptive Multi-pass Decoder for Neural Machine Translation",
+  "doi": "10.18653/v1/d18-1048",
+  "title": "Adaptive Multi-pass Decoder for Neural Machine Translation",
+  "year": 2018,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "固定深度的多轮解码对某些句子反而导致质量下降，需要自适应机制选择合适的解码轮数",
+  "problem_framing": "将多轮解码建模为序贯决策过程，在每轮决定继续还是停止",
+  "key_insight": "使用强化学习policy网络，根据源句复杂度和相邻轮翻译差异自动选择解码深度",
+  "method_signature": "带策略网络的自适应多轮解码器，REINFORCE算法优化BLEU奖励",
+  "evaluation_criteria": "NIST中文-英文翻译的case-insensitive BLEU",
+  "negative_result_or_admitted_limitation": "训练阶段多轮解码比RNNSearch耗时更长，测试阶段额外策略网络带来180s vs 87s的时间开销",
+  "evidence_for_taste": [
+    "in some cases, the more decoding passes perhaps lead to the poor translation",
+    "the 3rd-pass decoding achieves a better result...a drastic decrease arises, when we perform the 4th-pass decoding",
+    "the necessity of flexibility mechanism",
+    "the ratio of samples tends to decrease as the decoding depth rises"
+  ],
+  "thinking_moves": [
+    "从具体bad case反推系统需要自适应机制而非固定深度",
+    "用表格数据展示相邻轮次翻译质量的对比来论证问题的真实性",
+    "观察到固定深度多轮解码各深度效果相近但分布不同，间接证明灵活性必要性",
+    "引入policy网络将解码深度选择建模为强化学习决策问题"
+  ],
+  "topic_tags": [
+    "neural-machine-translation",
+    "multi-pass-decoding",
+    "reinforcement-learning",
+    "adaptive-decoding",
+    "polishing-mechanism"
+  ],
+  "cites_own_work": [
+    "Feng et al. 2017 effective deep memory networks",
+    "Feng et al. 2018 event detection"
+  ],
+  "extraction_quality": "full"
+}

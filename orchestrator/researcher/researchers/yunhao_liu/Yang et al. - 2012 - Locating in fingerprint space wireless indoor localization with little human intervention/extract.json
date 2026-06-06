@@ -1,0 +1,41 @@
+{
+  "paper_id": "Yang et al. - 2012 - Locating in fingerprint space wireless indoor localization with little human intervention",
+  "doi": null,
+  "title": "Locating in Fingerprint Space: Wireless Indoor Localization with Little Human Intervention",
+  "year": 2012,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传统WiFi指纹定位需人工现场勘测，成本高耗时长，限制室内定位技术推广应用",
+  "problem_framing": "如何利用手机传感器自动采集用户运动轨迹，将离散的RSS指纹在空间上关联起来构建指纹数据库",
+  "key_insight": "人类行走路径可以作为约束条件，将原本独立的RSS指纹在几何空间中建立地理关联",
+  "method_signature": "基于MDS构建应力释放平面图与指纹空间，通过走廊识别、房间聚类实现指纹到真实位置的映射",
+  "evaluation_criteria": "定位误差(米)与房间错误率(%)，对比RADAR等传统方法",
+  "negative_result_or_admitted_limitation": "LiFS平均定位误差5.88米差于RADAR的3.42米，仅通过几何特征在对称建筑中可能失效",
+  "evidence_for_taste": [
+    "comparable location accuracy to previous approaches",
+    "larger than RADAR (3.42 meters)",
+    "The unsatisfactory performance of floor-level transformation",
+    "symmetric structure of rooms",
+    "may fail in large open environments"
+  ],
+  "thinking_moves": [
+    "把地理空间中的距离约束问题转化为图论中的最短路径问题",
+    "用MDS将测量距离嵌入到高维欧氏空间以保持成对距离关系",
+    "从建筑拓扑特征(走廊、房间)提取几何不变性作为定位锚点",
+    "先用粗粒度映射定位问题域，再用细粒度房间级变换精化结果",
+    "用步数计数替代积分加速度以避免累积误差"
+  ],
+  "topic_tags": [
+    "WiFi-fingerprint-localization",
+    "MDS-embedding",
+    "crowdsourced-calibration",
+    "indoor-mapping",
+    "pedometer-dead-reckoning"
+  ],
+  "cites_own_work": [
+    "WILL: wireless indoor localization without site survey (2012)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

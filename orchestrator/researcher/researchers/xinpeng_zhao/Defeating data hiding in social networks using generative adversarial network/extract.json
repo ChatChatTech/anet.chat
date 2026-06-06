@@ -1,0 +1,37 @@
+{
+  "paper_id": "Defeating data hiding in social networks using generative adversarial network",
+  "doi": "10.1186/s13640-020-00518-2",
+  "title": "Defeating data hiding in social networks using generative adversarial network",
+  "year": 2020,
+  "venue": "EURASIP Journal on Image and Video Processing",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "恐怖分子利用社交网络图像隐藏数据，服务器难以检测，steganalysis在低载荷时不精确且假阳性率高",
+  "problem_framing": "不是检测隐藏数据，而是直接去除——通过GAN学习从水印图像到干净图像的映射，阻断隐蔽传输",
+  "key_insight": "不同水印算法的数据分布差异大，分开训练模型并随机采样可以防止攻击者发现处理规律，同时保证干净图像不受影响",
+  "method_signature": "GAN with deep residual generator + discriminator with high-pass filter preprocessing, separate models per watermarking algorithm",
+  "evaluation_criteria": "数据提取错误率接近50%表示破坏成功，PSNR和SSIM评估图像质量保持",
+  "negative_result_or_admitted_limitation": "传统攻击要达到足够的数据错误率必然导致图像不可容忍的失真；QIM水印效果最好，SS和ULPM因非盲和纠错码表现稍好",
+  "evidence_for_taste": [
+    "steganalysis is not precise enough",
+    "approach 50% means secret data is completely destroyed",
+    "traditional attacks will cause intolerable distortion",
+    "it can be regarded as a weak noise signal in high frequency",
+    "different types of watermarked images have great differences in data distribution"
+  ],
+  "thinking_moves": [
+    "把检测问题frame成通信阻断问题——不再追求精确检测，而是直接干扰",
+    "水印差异分布导致混合训练不稳定，故采用逐个建模后随机串行",
+    "高pass滤波放大水印信号与图像内容的差异，引导discriminator更好分类",
+    "借鉴steganalysis的先验知识用于discriminator预处理"
+  ],
+  "topic_tags": [
+    "steganography-detection",
+    "GAN-image-restoration",
+    "adversarial-watermark-removal",
+    "social-network-security",
+    "residual-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

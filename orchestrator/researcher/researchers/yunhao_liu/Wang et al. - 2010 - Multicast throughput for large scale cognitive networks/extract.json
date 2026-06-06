@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2010 - Multicast throughput for large scale cognitive networks",
+  "doi": null,
+  "title": "Multicast throughput for large scale cognitive networks",
+  "year": 2010,
+  "venue": "Springer Science+Business Media (Mobile Networks and Applications or similar)",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "licensed spectrum remains idle while bandwidth demand increases; need opportunistic spectrum access without harming primary users",
+  "problem_framing": "define achievable multicast throughput for cognitive network under priority constraint via TDR metric, unify unicast/broadcast results",
+  "key_insight": "SaN achieves same order throughput as standalone if PaN tolerates constant TDR; preservation regions+power regulator protect PaN",
+  "method_signature": "TDMA+multihop routing with preservation regions and power control for dual-network interference management",
+  "evaluation_criteria": "TDR lower bound, IIF upper bound, total/minimum/avg per-session multicast throughput scaling",
+  "negative_result_or_admitted_limitation": "if PaN demands TDR=1 (no impact), SaN suffers arbitrary infinitesimal factor gap θ(n)=o(1) vs standalone",
+  "evidence_for_taste": [
+    "most important constraint is that PaN does not alter its protocol",
+    "simple equal time-sharing can achieve the same order",
+    "not sufficient to maintain the priority",
+    "the characteristics of this paper is that we take account of all cases",
+    "the most challenging issue is to design a scheme for SaN to protect the throughput",
+    "we endow PaN with the right to determine the threshold"
+  ],
+  "thinking_moves": [
+    "把优先级问题量化成可调阈值(TDR),让primary自己决定能容忍多少性能损失",
+    "证明最坏情况下secondary网络仍能达到standalone同阶吞吐量,来保证实用性",
+    "用preservation regions+power regulator构造interference隔离而非简单时间分配",
+    "扩展unicast结果到multicast时考虑所有n_s和n_d的取值,不假设特定范围"
+  ],
+  "topic_tags": [
+    "cognitive-radio-throughput-scaling",
+    "multicast-capacity",
+    "TDMA-multihop-routing",
+    "interference-management-cognitive-networks",
+    "primary-secondary-priority-guarantee"
+  ],
+  "cites_own_work": [
+    "Wang et al. (2009) scaling laws on multicast capacity",
+    "Wang et al. (2009) achievable multicast throughput for homogeneous ad hoc networks"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Journal name truncated in text; DOI missing; limited method detail visible in provided excerpt. Some proof details truncated. | md truncated to head40k+tail20k"
+}

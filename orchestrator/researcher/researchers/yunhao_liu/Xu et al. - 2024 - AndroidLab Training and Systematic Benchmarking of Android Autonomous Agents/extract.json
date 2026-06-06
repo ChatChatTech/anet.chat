@@ -1,0 +1,35 @@
+{
+  "paper_id": "Xu et al. - 2024 - AndroidLab Training and Systematic Benchmarking of Android Autonomous Agents",
+  "doi": null,
+  "title": "AndroidLab: Training and Systematic Benchmarking of Android Autonomous Agents",
+  "year": 2024,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有基准仅测试闭源模型，缺乏开源与闭源的统一比较",
+  "problem_framing": "定义统一操作空间下的XML和SoM两种模式来公平比较LLM和LMM",
+  "key_insight": "通过指令微调可将开源模型成功率从4.59%提升至21.50%",
+  "method_signature": "ANDROIDLAB环境+138任务基准+Android Instruct数据集",
+  "evaluation_criteria": "成功率、子目标成功率、反向冗余比、合理操作比",
+  "negative_result_or_admitted_limitation": "ReAct等复杂推理框架提升有限但推理时间大增",
+  "evidence_for_taste": [
+    "complex reasoning frameworks led to marginal improvements despite significantly increased inference times",
+    "open-source models performed poorly, with the best reaching only around 5% success rate",
+    "SeeAct does not enhance performance consistently due to the model\\'s reasoning limitations with multimodal input"
+  ],
+  "thinking_moves": [
+    "将任务分解为多个子目标来精确评估进度",
+    "通过统一动作空间实现XML与SoM模式公平比较",
+    "用指令微调而非复杂推理框架来提升性能"
+  ],
+  "topic_tags": [
+    "android-agent-benchmarking",
+    "LLM-fine-tuning",
+    "multimodal-agent",
+    "mobile-UI-operation",
+    "instruction-tuning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

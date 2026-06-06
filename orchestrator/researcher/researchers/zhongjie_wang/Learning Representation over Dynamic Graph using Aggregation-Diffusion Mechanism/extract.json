@@ -1,0 +1,38 @@
+{
+  "paper_id": "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism",
+  "doi": "10.48550/arxiv.2106.01678",
+  "title": "Learning Representation over Dynamic Graph using Aggregation-Diffusion Mechanism",
+  "year": 2021,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "信息聚合机制导致动态图更新延迟，影响性能",
+  "problem_framing": "将延迟问题形式化为聚合路径上的信息积累滞后",
+  "key_insight": "在聚合后主动将变化传播给邻居，弥补非交互事件时的信息空白",
+  "method_signature": "在TPP模型后增加扩散步骤，触发时同步更新邻居",
+  "evaluation_criteria": "MAR和HIT@10动态链接预测指标",
+  "negative_result_or_admitted_limitation": "多跳扩散反而降低性能；注意力机制效果不稳健",
+  "evidence_for_taste": [
+    "Diffusing more hops...doesn't result in improved performance",
+    "repeatedly obtaining information through diffusion will lead to negative effect",
+    "The more hops of diffusion, the greater the risk and amount of noise",
+    "LDG-AD-delta have a significant performance decline",
+    "attention mechanism is still meaningful...explore a more suitable attention mechanism"
+  ],
+  "thinking_moves": [
+    "从具体案例fig1反推聚合机制的延迟本质",
+    "通过消融实验系统分离聚合和扩散的贡献",
+    "用图平均路径长度解释扩散跳数的负效应",
+    "跨数据集对比揭示方法局限性（Social Evolution vs Github）"
+  ],
+  "topic_tags": [
+    "动态图表示学习",
+    "时间点过程模型",
+    "信息传播延迟",
+    "聚合-扩散机制",
+    "链路预测"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

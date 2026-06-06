@@ -1,0 +1,37 @@
+{
+  "paper_id": "Qiao et al. - 2022 - Trace-Driven Optimization on Bitrate Adaptation for Mobile Video Streaming",
+  "doi": null,
+  "title": "Trace-Driven Optimization on Bitrate Adaptation for Mobile Video Streaming",
+  "year": 2022,
+  "venue": "IEEE/ACM Transactions on Networking or similar",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "移动视频占据蜂窝流量3/4，但现有ABR算法在蜂窝网络下性能下降严重",
+  "problem_framing": "通过分析4G吞吐量的环境特定马尔可夫属性来提升吞吐量预测准确性",
+  "key_insight": "当识别出网络环境（如室内/公交/户外）后，吞吐量轨迹呈现更清晰的马尔可夫性质可用于预测",
+  "method_signature": "NEIVA：离线HMM训练+在线环境识别+环境特定吞吐量预测",
+  "evaluation_criteria": "吞吐量预测误差、用户QoE（平均码率、重缓冲时间、码率切换）",
+  "negative_result_or_admitted_limitation": "Oboe假设的分段平稳模型在蜂窝网络中49.4%子轨迹仍非平稳，不适用",
+  "evidence_for_taste": [
+    "we do not see any significant property until we plot them by the environment",
+    "it is confusing to find a useful property when mixing all throughput traces",
+    "the global Markov property used in CS2P does not persist under cellular networks",
+    "the proportion of non-stationary traces is 49.4% on average"
+  ],
+  "thinking_moves": [
+    "从预测失败反推假设失效：Oboe的分段平稳假设在蜂窝网络不成立",
+    "通过数据可视化发现隐含结构：画散点图后才看到环境特定的马尔可夫属性",
+    "分层抽象平衡泛化与精度：环境级别定为室内/公交/户外而非具体地点",
+    "小样本快速启动：用dash.js中间吞吐量样本而非等待完整chunk下载"
+  ],
+  "topic_tags": [
+    "cellular-network-throughput-prediction",
+    "environment-specific-markov-property",
+    "HMM-for-video-abr",
+    "mobile-video-streaming",
+    "4G-measurement-study"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,66 @@
+{
+  "paper_id": "Integrating Artificial Intelligence into Operating Systems_ A Survey on Techniques, Applications, and Future Directions",
+  "doi": "10.48550/arxiv.2407.14567",
+  "title": "Integrating Artificial Intelligence into Operating Systems: A Survey on Techniques, Applications, and Future Directions",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "异构硬件与动态工作负载加剧OS可扩展性、适应性、管理性瓶颈,现有AI与OS融合研究碎片化,缺乏统一视角",
+  "problem_framing": "将AI与OS关系形式化为双向框架:AI for OS(AI增强OS设计)与OS for AI(OS架构支持AI负载),并提出阶段化发展路线图",
+  "key_insight": "AI与OS不再是单向关系,而是相互增强:AI引入智能自动化,OS创新为AI提供基础设施支撑,两者形成正反馈循环",
+  "method_signature": "综述分类:按OS组件层(调度/内存/存储/网络/安全)与AI工具类型(ML/LLM/Agent)构建交叉分类体系",
+  "evaluation_criteria": "实时约束与预测准确性平衡,推理延迟<微秒级,内存开销<28KB,延迟降低15-40%",
+  "negative_result_or_admitted_limitation": "静态模型难以应对设备内部动态变化,模型漂移导致长期性能退化;ML模型泛化到未见场景仍存挑战",
+  "evidence_for_taste": [
+    "rapid evolution of workloads驱动new scheduling",
+    "making OS more adaptive, efficient",
+    "mutually reinforcing relationship",
+    "self-optimizing component that adapts in real-time",
+    "balance inference accuracy with low latency",
+    "without a unifying perspective"
+  ],
+  "thinking_moves": [
+    "把碎片化研究归类为AI for OS与OS for AI双向框架",
+    "从个案抽象出通用ML-for-BlockLayer工作流模式",
+    "提出三阶段路线图作为领域发展导航",
+    "识别推理开销与实时性是核心工程约束",
+    "指出模型可维护性与长期漂移是关键隐患"
+  ],
+  "topic_tags": [
+    "AI-for-OS",
+    "OS-for-AI",
+    "intelligent-scheduling",
+    "kernel-embedded-inference",
+    "self-optimizing-OS",
+    "LLM-agent-OS"
+  ],
+  "cites_own_work": [
+    {
+      "paper": "Sortinghat",
+      "authors": [
+        "Y. Zhang",
+        "X. Zhao",
+        "Z. Wang",
+        "Z. Zhou",
+        "G. Cheng",
+        "S. Deng",
+        "J. Yin"
+      ]
+    },
+    {
+      "paper": "Byos",
+      "authors": [
+        "H. Lin",
+        "Y. Li",
+        "H. Luo",
+        "K. Yao",
+        "L. Zhang",
+        "M. Xing",
+        "Y. Wu"
+      ]
+    }
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent",
+  "doi": "10.48550/arxiv.2103.01590",
+  "title": "An Empirical Study of the Landscape of Open Source Projects in Baidu, Alibaba, and Tencent",
+  "year": 2021,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "先前研究聚焦微软/谷歌BAT等中国科技企业开源项目价值尚不明确",
+  "problem_framing": "混合方法定性定量调研BAT开源项目类别特征开发者态度国际化努力",
+  "key_insight": "国际化程度高的项目（含英文readme）平均获得更多stars(1197 vs 471)",
+  "method_signature": "GitHub项目数据收集(1000个)+问卷调查(101份响应)混合方法",
+  "evaluation_criteria": "stars数量衡量流行度统计检验验证显著性差异",
+  "negative_result_or_admitted_limitation": "经验丰富开发者反而最不认同开源(ExpHigh最负面)",
+  "evidence_for_taste": [
+    "prefer to open source frontend",
+    "projects with more internationalization effort",
+    "are more popular",
+    "Gain fame, expand influence",
+    "respondents with the highest experience",
+    "are the least positive"
+  ],
+  "thinking_moves": [
+    "通过问卷补充纯数据分析无法触及的开发者态度和动机",
+    "用卡牌分类法对自由文本响应进行归纳聚类",
+    "将国际化操作化为'是否提供英文readme'进行可验证比较",
+    "统计显著性检验+效应量双重验证避免误判"
+  ],
+  "topic_tags": [
+    "BAT开源生态",
+    "开源项目分类",
+    "国际化努力",
+    "开发者动机调查",
+    "GitHub实证分析"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

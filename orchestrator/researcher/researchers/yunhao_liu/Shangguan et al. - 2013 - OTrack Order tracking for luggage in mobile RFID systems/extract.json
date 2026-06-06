@@ -1,0 +1,38 @@
+{
+  "paper_id": "Shangguan et al. - 2013 - OTrack Order tracking for luggage in mobile RFID systems",
+  "doi": null,
+  "title": "OTrack: Order Tracking for Luggage in Mobile RFID Systems",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Manual luggage processing incurs loss and tremendous financial damage; existing RFID systems cannot track tag order on conveyor belts",
+  "problem_framing": "Infer relative positions of tags on moving belt from communication attributes without direct localization",
+  "key_insight": "Combination of RRR critical region and RSSI peak within it yields stable temporal reference; single attributes fail but their intelligent combination works",
+  "method_signature": "RRR-variance-based critical region detection + RSSI quadratic fitting + insertion sorting",
+  "evaluation_criteria": "Accuracy Ratio = correctly ordered tags / total shipped tags",
+  "negative_result_or_admitted_limitation": "FCFS achieves only 55% accuracy; G-RSSI fails due to RSSI fluctuation; existing localization methods require complex deployment and cause significant error",
+  "evidence_for_taste": [
+    "only 55% of luggage has been ordered correctly",
+    "G-RSSI fails to directly capture the order of tags",
+    "The critical region actually indicates that the tag is of good SNR",
+    "neither of the order of tag identification nor the RSSI provides sufficient evidence",
+    "such a region always exists in the RRR trace of each tag"
+  ],
+  "thinking_moves": [
+    "从单独属性失败反推需要属性组合",
+    "从物理直觉(距离近→信号好)提炼出critical region概念",
+    "用概率论(中心极限定理)严格化启发式观察",
+    "先验证各基线方法都失败,再提出组合方案"
+  ],
+  "topic_tags": [
+    "RFID-order-tracking",
+    "mobile-RFID-conveyor-belt",
+    "signal-attribute-combination",
+    "critical-region-detection",
+    "probabilistic-RFID-modeling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

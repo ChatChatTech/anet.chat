@@ -1,0 +1,44 @@
+{
+  "paper_id": "Dong et al. - 2014 - Measurement and Analysis on the Packet Delivery Performance in a Large-Scale Sensor Network",
+  "doi": null,
+  "title": "Measurement and Analysis on the Packet Delivery Performance in a Large-Scale Sensor Network",
+  "year": 2014,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有大规模WSN部署缺乏对丢包根因的深入分析,无法回答何时何地为何丢包",
+  "problem_framing": "将网络丢包分解为因果图中的各类事件,建立触发器与损失的空间-时间相关性",
+  "key_insight": "通过因果图将总丢包率分解为可追溯至根因的小类别,揭示不同事件的空间分布差异",
+  "method_signature": "MAP三步法:识别损失事件与触发器→因果图跟踪→时空相关性分析",
+  "evaluation_criteria": "各类根因对总丢包的贡献百分比,相关性算法准确率验证",
+  "negative_result_or_admitted_limitation": "现有TinyOS协议栈在大规模网络中表现不足(81.3%远低于99.9%的定制协议)",
+  "evidence_for_taste": [
+    "we usually do not know how and to what extent different factors contribute",
+    "very little is known about: 1) when, where, and under what kind of circumstances",
+    "MAP takes a further step to decompose the overall losses",
+    "the amount of packet losses inside the sink node appears to be small",
+    "the current ready-to-use TinyOS protocols are not good enough in large networks",
+    "93% of the loop events do not cause overflow drops",
+    "the current packet-level CRC mechanism cannot guarantee correctness"
+  ],
+  "thinking_moves": [
+    "从宏观性能指标反推底层因果链",
+    "构建层级因果图将复杂网络事件分类",
+    "通过控制实验验证相关性算法的准确性",
+    "将损失分解为可量化的小类别而非仅报告总体性能",
+    "对比自己部署与前人工作,指出差异贡献"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-measurement",
+    "packet-delivery-analysis",
+    "causal-graph-correlation",
+    "spatial-temporal-analysis",
+    "TinyOS-protocol-stack"
+  ],
+  "cites_own_work": [
+    "Liu et al. 2011 (GreenOrbs)",
+    "INFOCOM 2013 conference version"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

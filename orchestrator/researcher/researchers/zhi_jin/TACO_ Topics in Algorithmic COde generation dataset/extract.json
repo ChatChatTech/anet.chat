@@ -1,0 +1,37 @@
+{
+  "paper_id": "TACO_ Topics in Algorithmic COde generation dataset",
+  "doi": "10.48550/arxiv.2312.14852",
+  "title": "TACO: Topics in Algorithmic COde generation dataset",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有代码生成基准测试难度过低且缺乏细粒度标注,无法全面评估模型的编程挑战能力",
+  "problem_framing": "将程序综合建模为多任务组合,用算法主题详细标注代码数据,弥补现有数据集缺失",
+  "key_insight": "算法是编程的基本字母表,增强算法标注可提升代码理解和生成能力,精细技能分类能针对性增强模型能力",
+  "method_signature": "构建26,443题目的TACO数据集,合并968个原始标签为36个算法类别,多轮验证确保数据质量",
+  "evaluation_criteria": "pass@k(k=1,10,100)按难度等级和编程技能多维度评估模型代码生成能力",
+  "negative_result_or_admitted_limitation": "TACO训练后在APPS和CodeContest上评估不合适,因数据重叠导致无法准确反映模型能力",
+  "evidence_for_taste": [
+    "SOTA模型在HumanEval已达94.4",
+    "APPS数据集假阳性率高达60%",
+    "GPT-4在easy级别仅得31.5分",
+    "其他模型pass@1均低于10"
+  ],
+  "thinking_moves": [
+    "从基准测试饱和度反推出新数据集需求",
+    "将程序综合重新框架为多任务组合问题",
+    "通过算法标签聚合实现精细化能力诊断",
+    "用200个测试用例将假阳性率从60%降至4%"
+  ],
+  "topic_tags": [
+    "code-generation-benchmark",
+    "algorithmic-annotation",
+    "programming-challenge",
+    "multi-task-learning",
+    "fine-grained-evaluation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

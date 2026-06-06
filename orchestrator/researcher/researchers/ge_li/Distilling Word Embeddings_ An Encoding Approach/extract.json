@@ -1,0 +1,42 @@
+{
+  "paper_id": "Distilling Word Embeddings_ An Encoding Approach",
+  "doi": "10.48550/arxiv.1506.04488",
+  "title": "Distilling Word Embeddings: An Encoding Approach",
+  "year": 2015,
+  "venue": "CIKM-16 (short paper); RL4NLP Workshop @ACL-16",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "资源受限系统需要轻量模型，高精度嵌入维度过高难以部署",
+  "problem_framing": "将高维嵌入的知识蒸馏到低维空间，保持任务相关知识",
+  "key_insight": "嵌入知识受维度约束，次要属性(如情感)在低维会丢失，监督编码可蒸馏任务特定知识",
+  "method_signature": "非线性编码层将300d嵌入映射到50d，保留任务相关信息",
+  "evaluation_criteria": "精度、参数量、时间消耗的权衡",
+  "negative_result_or_admitted_limitation": "matching softmax在情感分析任务上反而降低性能0.6%",
+  "evidence_for_taste": [
+    "does not rely on a teacher model",
+    "complementary to matching softmax",
+    "may hurt the student model",
+    "the latter dominates",
+    "our approach does not increase",
+    "is less than or equal to"
+  ],
+  "thinking_moves": [
+    "发现嵌入的特殊性带来新机会，将知识蒸馏问题重新frame为监督学习",
+    "先证明蒸馏模型容量不会增加，再解释为何蒸馏仍有收益",
+    "把知识传递方向分为bottom-up(编码)和top-down(匹配softmax)进行对比分析",
+    "观察到teacher模型准确率低时蒸馏引入的错误可能超过有益知识"
+  ],
+  "topic_tags": [
+    "word-embedding-distillation",
+    "model-compression",
+    "neural-network-efficiency",
+    "low-dimensional-embeddings",
+    "task-specific-knowledge-transfer"
+  ],
+  "cites_own_work": [
+    "Lili Mou (tree-based CNN)",
+    "Y. Xu (SDP-LSTM)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhang et al. - 2023 - A Survey of mmWave-based Human Sensing Technology, Platform and Applications",
+  "doi": null,
+  "title": "A Survey of mmWave-based Human Sensing: Technology, Platforms and Applications",
+  "year": 2023,
+  "venue": "IEEE",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "现有survey缺乏对mmWave人体感知技术的综合综述,无法指导领域发展",
+  "problem_framing": "将mmWave人体感知按感知粒度分为四类:跟踪定位/运动识别/生物特征测量/成像",
+  "key_insight": "需系统性总结技术平台、关键算法和应用场景,指出核心挑战与未来方向",
+  "method_signature": "综述+分类比较+挑战分析+未来方向建议",
+  "evaluation_criteria": "文献完整性/分类合理性/性能对比详尽程度/挑战揭示深度",
+  "negative_result_or_admitted_limitation": "现有FMCW雷达受限于天线数量,导致角分辨率有限、点云输出不足、鲁棒性脆弱",
+  "evidence_for_taste": [
+    "most of them are limited in the number of antennas",
+    "fragile robustness for practical applications",
+    "There is still a significant gap",
+    "How to overcome these differences between individuals",
+    "This leads to limited angular resolution"
+  ],
+  "thinking_moves": [
+    "从性能鸿沟反推研究空白,强调survey的必要性",
+    "将人体感知挑战归类为移动性/SNR/个体差异三大类",
+    "按感知粒度重新组织文献,提供差异化分类维度",
+    "通过硬件对比表揭示参数选择与任务匹配的关系",
+    "承认现有方法与理想感知能力间的巨大差距"
+  ],
+  "topic_tags": [
+    "mmWave-sensing",
+    "human-tracking",
+    "vital-sign-monitoring",
+    "FMCW-radar",
+    "sensing-taxonomy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

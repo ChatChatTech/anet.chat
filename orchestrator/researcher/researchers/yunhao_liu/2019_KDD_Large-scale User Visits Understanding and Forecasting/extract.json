@@ -1,0 +1,39 @@
+{
+  "paper_id": "2019_KDD_Large-scale User Visits Understanding and Forecasting",
+  "doi": null,
+  "title": "Large-scale User Visits Understanding and Forecasting with Deep Spatial-Temporal Tensor Factorization Framework",
+  "year": 2019,
+  "venue": "KDD '19",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "在线广告保价交付中，出版商收入依赖准确预测用户访问量，误差导致经济损失",
+  "problem_framing": "将高维属性组合时序预测问题形式化为张量分解，学习空间/时间潜向量",
+  "key_insight": "结合张量分解与空间注意力和CNN/RNN时序建模，同时捕获属性间相关性与长短期时序特征",
+  "method_signature": "空间-时序张量分解多任务学习框架",
+  "evaluation_criteria": "归一化偏差(ND)和均方根误差(NRMSE)，参数量与训练时间",
+  "negative_result_or_admitted_limitation": "小城市预测误差稍大；冬假时间每年不同导致季节预测困难；20%缺失数据仅轻微精度损失",
+  "evidence_for_taste": [
+    "even one percent accuracy improvement matters for the revenue",
+    "a highly scalable and robust forecasting model is necessary but challenging",
+    "Failing to capture correlations, however, could cause accuracy loss",
+    "avoid task-specific design",
+    "a general design for high-dimensional time series forecasting"
+  ],
+  "thinking_moves": [
+    "从真实数据中提炼出属性组合幂律分布洞察，指导模型设计",
+    "将时序预测问题重新建模为带年份维度的三阶张量分解",
+    "批判性审视现有方法：传统方法忽视属性关联，深度方法缺乏时序长周期特征",
+    "通过多任务学习(自编码器+预测)降低信息损失同时减少参数量",
+    "控制实验逐个移除组件验证各模块贡献度"
+  ],
+  "topic_tags": [
+    "高维时序预测",
+    "在线广告保价交付",
+    "张量分解",
+    "空间-时序建模",
+    "多任务学习"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

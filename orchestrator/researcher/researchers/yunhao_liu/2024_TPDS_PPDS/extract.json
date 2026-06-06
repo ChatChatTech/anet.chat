@@ -1,0 +1,40 @@
+{
+  "paper_id": "2024_TPDS_PPDS",
+  "doi": null,
+  "title": "Privacy-Preserving Data Selection for Horizontal and Vertical Federated Learning",
+  "year": 2024,
+  "venue": "IEEE Trans. Parallel Distrib. Syst.",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "FL系统中低质量样本导致模型精度下降、不稳定，实际部署面临预算约束和隐私保护需求",
+  "problem_framing": "在预算约束下最大化选中客户端的质量值V(Q)，同时满足多方隐私保护要求",
+  "key_insight": "现有重要性采样方法会被错误样本误导(其loss和梯度范数异常大)，需用梯度上界范数并过滤异常值",
+  "method_signature": "分层样本选择(DPP选客户端+上界范数选样本)，PSI过滤相关特征，隐私计算基于HE和随机响应",
+  "evaluation_criteria": "测试精度、收敛速度、计算成本、通信成本，与随机/loss-based/梯度范数采样对比",
+  "negative_result_or_admitted_limitation": "重要性采样方法在含错误样本时训练不稳定、准确率下降显著，无法直接应用于FL",
+  "evidence_for_taste": [
+    "erroneous samples have obviously larger losses and gradient norms than correct ones",
+    "erroneous samples usually have abnormally large importance",
+    "existing importance sampling strategies tend to select erroneous samples",
+    "we first select optimal clients and then their high quality samples",
+    "neither considers other data quality factors"
+  ],
+  "thinking_moves": [
+    "从错误样本对梯度/损失贡献异常大这一观察，反推出现有重要性采样方法在FL中失效的根本原因",
+    "将客户端选择和样本选择分层处理，利用加性性质先选重要客户端再选样本以节省成本",
+    "用数据驱动实验验证五大质量维度原则，而非仅做理论推导",
+    "将隐私保护设计嵌入每个技术环节(PSI过滤特征、DPP中用HE保护分布)"
+  ],
+  "topic_tags": [
+    "federated-learning-sample-selection",
+    "privacy-preserving-data-quality",
+    "determinantal-point-process",
+    "importance-sampling-robustness",
+    "vertical-federated-feature-selection"
+  ],
+  "cites_own_work": [
+    "Sample-level data selection for federated learning (INFOCOM 2021)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整包含intro、method、eval和conclusion，数据驱动分析部分清晰展现了作者的判断标准和失败案例 | md truncated to head40k+tail20k"
+}

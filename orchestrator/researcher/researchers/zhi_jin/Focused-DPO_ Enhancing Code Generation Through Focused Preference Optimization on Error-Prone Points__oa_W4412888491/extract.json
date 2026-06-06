@@ -1,0 +1,42 @@
+{
+  "paper_id": "Focused-DPO_ Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points__oa_W4412888491",
+  "doi": "10.18653/v1/2025.findings-acl.498",
+  "title": "Focused-DPO: Enhancing Code Generation Through Focused Preference Optimization on Error-Prone Points",
+  "year": 2025,
+  "venue": "ACL Findings",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "代码生成中错误集中在特定\"错误易发点\"，即使微小的运算符错误也会导致整个程序功能失效",
+  "problem_framing": "将代码生成中的错误分布不均匀现象形式化为细粒度偏好优化问题，针对错误易发点进行定向优化",
+  "key_insight": "代码中间部分(mid)决定正确性，前后缀只是模式匹配，错误易发点集中在推理复杂的中间代码段",
+  "method_signature": "Focused-DPO通过权重放大(error-prone mid)和排除suffix reward来修改DPO损失函数",
+  "evaluation_criteria": "HumanEval+/MBPP+/LiveCodeBench通过率，尤其关注竞争级难题(Hard)的相对提升",
+  "negative_result_or_admitted_limitation": "Step-DPO在代码生成任务上表现次优；未与DeepSeek-R1等先进RL技术广泛比较",
+  "evidence_for_taste": [
+    "errors are not evenly spread across the code",
+    "existing code generation models lack effective generation capability",
+    "Step-DPO performs suboptimally on code generation tasks",
+    "not all parts of the code contribute equally to correctness",
+    "suffix is often the same or similar"
+  ],
+  "thinking_moves": [
+    "观察到代码错误的经验分布模式而非均匀分布",
+    "识别出代码中间段推理复杂且决定正确性",
+    "将整体代码分解为prefix-mid-suffix三段",
+    "用PageRank算法自动构建正确/错误代码对的偏好数据集",
+    "根据错误易发点重构reward权重分配"
+  ],
+  "topic_tags": [
+    "code-generation-DPO",
+    "error-prone-point-identification",
+    "fine-grained-preference-optimization",
+    "code-model-post-training",
+    "self-verification-synthetic-data"
+  ],
+  "cites_own_work": [
+    "CodeDPO",
+    "Magicoder"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

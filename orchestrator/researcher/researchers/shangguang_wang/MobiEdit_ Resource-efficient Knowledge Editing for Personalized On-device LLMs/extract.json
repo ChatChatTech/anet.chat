@@ -1,0 +1,46 @@
+{
+  "paper_id": "MobiEdit_ Resource-efficient Knowledge Editing for Personalized On-device LLMs",
+  "doi": "10.48550/arxiv.2506.13772",
+  "title": "MobiEdit: Resource-efficient Knowledge Editing for Personalized On-device LLMs",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Prior knowledge editing需要BP但移动端内存<8GB且NPUs不支持训练算子，导致个性化LLM无法本地部署",
+  "problem_framing": "将移动LLM知识编辑建模为资源约束下BP不可行时的替代优化问题，引入零阶估计绕过BP",
+  "key_insight": "零阶梯度估计方差仅取决于两次前向噪声差，不随网络深度增长；而BP链式求导使量化噪声呈指数增长",
+  "method_signature": "用前向loss差估计梯度替代BP，全模型INT8量化，仅编辑层保持FP32",
+  "evaluation_criteria": "编辑成功率、局部性、可移植性 vs 内存/延迟/能耗的权衡",
+  "negative_result_or_admitted_limitation": "MobiEdit仅修改单层MLP，编辑成功率比MEMIT等低约14%，对模糊知识效果更差",
+  "evidence_for_taste": [
+    "activate immediately after forward pass",
+    "quantization noise is recursively accumulated",
+    "products amplification noise multiplicatively",
+    "remains as high as 0.9 even",
+    "slightly improves editing success",
+    "does not negatively affect the editing outcome",
+    "avoid unnecessary forward passes",
+    "reducing overfitting risk"
+  ],
+  "thinking_moves": [
+    "从硬件约束反推算法需求：NPUs只支持前向→零阶梯度估计",
+    "从量化噪声理论分析证明BP不可行但零阶可行",
+    "先承认零阶收敛慢20倍，再用early stopping和prefix cache补效率",
+    "观察easy-to-edit facts分布差异→自适应停止阈值",
+    "观察prefix激活变化缓慢→复用缓存激活而不影响结果"
+  ],
+  "topic_tags": [
+    "on-device-LLM",
+    "knowledge-editing",
+    "zeroth-order-optimization",
+    "mobile-NPU-quantization",
+    "LLM-personalization"
+  ],
+  "cites_own_work": [
+    "MobiEdit builds atop ROME",
+    "FwdLLM (ATC'24)",
+    "mllm-npu (ASPLOS'25)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

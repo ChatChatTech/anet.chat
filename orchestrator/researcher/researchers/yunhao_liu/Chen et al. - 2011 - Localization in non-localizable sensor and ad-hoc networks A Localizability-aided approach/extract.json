@@ -1,0 +1,38 @@
+{
+  "paper_id": "Chen et al. - 2011 - Localization in non-localizable sensor and ad-hoc networks A Localizability-aided approach",
+  "doi": null,
+  "title": "Localization in Non-localizable Sensor and Ad-hoc Networks: A Localizability-aided Approach",
+  "year": 2011,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "实际网络中节点并非全部可定位，既往方法把可定位和不可定位节点同等对待，造成大量无意义的调整和成本",
+  "problem_framing": "如何区分可定位与不可定位节点，对网络进行细粒度调整以实现定位",
+  "key_insight": "先测试节点局部可定位性，再针对性地通过顶点增强添加必要的边，避免对已是可定位的节点做无谓调整",
+  "method_signature": "LAL三阶段：局部可定位性测试→组件树构造→网络调整，单轮调整使网络可定位",
+  "evaluation_criteria": "与传统IND方法比较添加的边数、组件规模，验证调整的有效性和经济性",
+  "negative_result_or_admitted_limitation": "We consider the method is coarse-grained, since it equally treats localizable and non-localizable nodes",
+  "evidence_for_taste": [
+    "we consider the method is coarse-grained",
+    "Ignoring localizability induces a mass of meaningless adjustments",
+    "LAL triggers a single round adjustment",
+    "adjustments made by LAL are purposefully selected",
+    "avoiding meaningless ranging and communication costs"
+  ],
+  "thinking_moves": [
+    "先证理论充分条件(RR3P)，再设计工程方案",
+    "将粗粒度全局调整细分为组件级别的差异化操作",
+    "通过反例(非局部可定位)来揭示既往方法的浪费本质",
+    "把定位问题重新框定为可定位性感知的后处理问题"
+  ],
+  "topic_tags": [
+    "sensor-network-localization",
+    "graph-rigidity-theory",
+    "localizability-analysis",
+    "power-augmentation",
+    "component-tree-decomposition"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning",
+  "doi": "10.1360/sst-2023-0346",
+  "title": "基于深度强化学习的多智能体分布式事件触发优化控制",
+  "year": 2024,
+  "venue": "中国科学: 技术科学",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "多智能体系统在有障碍物的场景下协同运动控制中无线通信成本较高",
+  "problem_framing": "优化通信机制的同时保持协同控制性能, 并赋予避障能力",
+  "key_insight": "触发条件减少冗余观测信息, 联合策略计算期望接收的观测信息, 避免丢掉重要信息",
+  "method_signature": "MADDPG结合事件触发控制, 通信与控制联合策略, 指数函数碰撞惩罚项",
+  "evaluation_criteria": "协同控制性能(MC)、通信成本(DC)、任务成功率与碰撞率",
+  "negative_result_or_admitted_limitation": "上述研究的实验场地均在空旷的场景下, 必须设计避障策略",
+  "evidence_for_taste": [
+    "智能体之间的通信和数据传输往往是冗余的",
+    "优化智能体之间的通信机制",
+    "平衡协同控制性能和通信节省",
+    "以较低的通信成本实现极好的协同运动控制性能",
+    "该方法需要较少的与环境交互的时间"
+  ],
+  "thinking_moves": [
+    "把避障问题重新定义为奖励函数设计问题",
+    "通信决策与控制输入不可分割, 采用联合策略",
+    "先证事件触发能减少冗余, 再与高频率通信对比性能",
+    "通过奖励函数设计显式平衡通信成本与控制性能"
+  ],
+  "topic_tags": [
+    "multi-agent-reinforcement-learning",
+    "distributed-event-triggered-control",
+    "MADDPG",
+    "obstacle-avoidance",
+    "cooperative-motion-control"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

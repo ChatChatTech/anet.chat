@@ -1,0 +1,39 @@
+{
+  "paper_id": "Towards Neural Speaker Modeling in Multi-Party Conversation_ The Task, Dataset, and Models",
+  "doi": "10.48550/arxiv.1708.03152",
+  "title": "Towards Neural Speaker Modeling in Multi-Party Conversation: The Task, Dataset, and Models",
+  "year": 2017,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "corresponding",
+  "motivation": "Neural dialog systems lack established tasks and datasets for speaker modeling; prior work requires massive per-speaker data or explicit mentions",
+  "problem_framing": "提出speaker classification作为speaker modeling的代理任务,用softmax式匹配预测当前 utterance 的说话人",
+  "key_insight": "content信息与temporal信息互补;简单线性插值后训练效果优于复杂门控机制,因为端到端训练带来优化困难",
+  "method_signature": "层次RNN编码utterance,结合speaker内容向量与位置embedding,通过插值或门控融合两路预测",
+  "evaluation_criteria": "数据集严重倾斜,accuracy被majority class主导,选用macro F1作为主要指标以覆盖少数类",
+  "negative_result_or_admitted_limitation": "self-adaptive gating未超越简单插值;注意力机制带来提升极小;端到端混合训练导致优化困难",
+  "evidence_for_taste": [
+    "surrogate task for general speaker modeling",
+    "simple interpolation is surprisingly more efficient",
+    "optimization difficulty in our scenario",
+    "attention mechanisms bring little improvements",
+    "g is sensitive and only yields high performance"
+  ],
+  "thinking_moves": [
+    "把speaker modeling问题重新frame成speaker classification分类任务,类比NUC作为dialog generation的代理任务",
+    "注意到数据集类别倾斜,主动选择macro F1而非accuracy作为主要指标",
+    "观察到content与temporal捕获不同证据,提出hybrid融合而非单一模型",
+    "对复杂门控机制持保留态度,优先尝试简单插值并验证其有效性"
+  ],
+  "topic_tags": [
+    "speaker-classification",
+    "multi-party-conversation",
+    "neural-dialog-systems",
+    "content-temporal-hybrid",
+    "hierarchical-RNN"
+  ],
+  "cites_own_work": [
+    "Meng et al. 2017 (hierarchical RNN with static sentence-level attention)"
+  ],
+  "extraction_quality": "full"
+}

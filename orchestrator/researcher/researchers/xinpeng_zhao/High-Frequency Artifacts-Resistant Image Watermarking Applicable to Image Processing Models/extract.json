@@ -1,0 +1,41 @@
+{
+  "paper_id": "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models",
+  "doi": "10.3390/app14041494",
+  "title": "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models",
+  "year": 2024,
+  "venue": "Applied Sciences",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "生成模型版权保护日益重要，但现有水印方法在频域产生高频伪影，威胁隐蔽性与安全性",
+  "problem_framing": "将图像水印的频域可见性问题形式化为CNN嵌入网络固有缺陷与扰动叠加导致的高频伪影问题",
+  "key_insight": "绕过CNN嵌入网络，直接在低频域嵌入可调频率扰动，可同时规避CNN结构伪影与扰动引入的高频痕迹",
+  "method_signature": "频率扰动生成网络F替代CNN嵌入器，低频域(128×128)叠加扰动，联合训练提取网络E",
+  "evaluation_criteria": "频域不可见性(FP/LPIPS)、空域质量(PSNR>50dB)、提取成功率(100%)、鲁棒性",
+  "negative_result_or_admitted_limitation": "对加性噪声攻击存在脆弱性，无法预测并防御所有潜在攻击策略",
+  "evidence_for_taste": [
+    "our approach diverges from the traditional reliance on CNNs",
+    "minimizes the impact of the watermark embedding process on the high-frequency attributes",
+    "enhance the covertness of the watermark",
+    "does not guarantee absolute robustness",
+    "our framework shows some vulnerability against additive noise attacks"
+  ],
+  "thinking_moves": [
+    "从频谱分析发现现有方法的核心缺陷",
+    "将CNN结构固有缺陷与水印嵌入过程缺陷解耦分析",
+    "将问题从空间域隐蔽性重新框架为频域隐蔽性",
+    "通过替换架构根本性地解决高频伪影问题"
+  ],
+  "topic_tags": [
+    "generative-model-watermarking",
+    "frequency-domain-imperceptibility",
+    "high-frequency-artifacts",
+    "neural-network-ownership-protection",
+    "low-frequency-perturbation"
+  ],
+  "cites_own_work": [
+    "Zhang et al. [18,19]",
+    "Zhang, J.; Chen, D.; Liao, J.; Zhang, W.; Feng, H.; Hua, G.; Yu, N. Deep Model Intellectual Property Protection"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

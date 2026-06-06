@@ -1,0 +1,38 @@
+{
+  "paper_id": "Wu et al. - 2015 - Static power of mobile devices Self-updating radio maps for wireless indoor localization",
+  "doi": null,
+  "title": "Static Power of Mobile Devices: Self-updating Radio Maps for Wireless Indoor Localization",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Radio maps for WiFi indoor localization degrade over time due to environmental dynamics, but repeating site surveys is labor-intensive; mobile devices are mostly static yet unused.",
+  "problem_framing": "How to automatically and continuously update a static radio map using only mobile devices without additional hardware, exploiting devices' static behavior as reference points.",
+  "key_insight": "Mobile devices kept static 80% of the time can serve as movable reference points; the underlying RSS dependency relationship between neighboring locations remains stable over time.",
+  "method_signature": "Trajectory matching for device localization + Partial Least Squares regression for learning RSS relationships between reference points and other locations.",
+  "evaluation_criteria": "RSS prediction error (average <5dB) and localization accuracy improvement (2× better than static map after 6 months).",
+  "negative_result_or_admitted_limitation": "Prediction accuracy still has minor gap (0.34m) from ground truth; requires evenly distributed reference points for best performance.",
+  "evidence_for_taste": [
+    "requires no additional hardware or extra user intervention",
+    "the underlying relationship of how RSS depends on its neighbors would be relatively stable over time",
+    "employs ordinary users' mobile devices as movable reference points",
+    "neither static nor mobile data alone are capable",
+    "the predicted radio map is of no reason to be better"
+  ],
+  "thinking_moves": [
+    "把'移动设备'的静止状态当作未被开发的资源，而非噪声",
+    "利用惯性传感器轨迹的几何约束来约束RSS指纹的不确定性",
+    "用PLS回归处理共线性问题，而非普通多元线性回归",
+    "将局部RSS变化归结为邻居关系的稳定假设"
+  ],
+  "topic_tags": [
+    "WiFi-fingerprint-localization",
+    "radio-map-adaptation",
+    "trajectory-matching",
+    "partial-least-squares-regression",
+    "crowdsourced-indoor-localization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

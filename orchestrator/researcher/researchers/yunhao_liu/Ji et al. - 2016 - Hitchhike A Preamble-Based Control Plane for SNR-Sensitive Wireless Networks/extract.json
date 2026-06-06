@@ -1,0 +1,42 @@
+{
+  "paper_id": "Ji et al. - 2016 - Hitchhike A Preamble-Based Control Plane for SNR-Sensitive Wireless Networks",
+  "doi": null,
+  "title": "Hitchhike: A Preamble-Based Control Plane for SNR-Sensitive Wireless Networks",
+  "year": 2016,
+  "venue": "IEEE Transactions on Wireless Communications",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有in-band控制机制要求高SNR,否则数据和控制都会丢失;且多用户并发传输控制消息会相互干扰",
+  "problem_framing": "如何在preamble上承载控制信息,同时不影响preamble检测精度,且支持多用户并发控制",
+  "key_insight": "Preamble有10dB SNR冗余,可利用此间隙承载控制信号,且preamble与控制信号正交设计可解耦",
+  "method_signature": "Preamble承载控制消息:正交码设计+相关检测+减法检测算法",
+  "evaluation_criteria": "控制消息检测准确率、preamble检测误差、多用户并发场景表现",
+  "negative_result_or_admitted_limitation": "仅适用于802.15.4,WiFi OFDM preamble容量受限;控制码空间有限(37个),sender无法仅用前两符号识别包源",
+  "evidence_for_taste": [
+    "SNR gap can be as large as almost 10 dB",
+    "multiple control messages can be transmitted concurrently",
+    "carefully design orthogonal codes",
+    "subtraction-detection algorithm",
+    "detection threshold can be set to 0.3",
+    "x=64 is a good compromise"
+  ],
+  "thinking_moves": [
+    "发现preamble检测与payload解码之间存在10dB的SNR间隙",
+    "将payload-based控制问题重新框定为preamble冗余利用问题",
+    "通过正交码设计解决多控制消息并发干扰问题",
+    "设计减法检测算法分离preamble信号以提高控制检测精度",
+    "在工程约束下寻求控制码长度与preamble检测精度的平衡"
+  ],
+  "topic_tags": [
+    "preamble-redundancy-exploitation",
+    "in-band-control",
+    "SNR-gap",
+    "orthogonal-code-design",
+    "correlation-detection"
+  ],
+  "cites_own_work": [
+    "conference version at IEEE INFOCOM 2014"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

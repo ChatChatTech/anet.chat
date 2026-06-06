@@ -1,0 +1,39 @@
+{
+  "paper_id": "Chen et al. - 2009 - Difficulty-Aware Hybrid Search in Peer-to-Peer Networks",
+  "doi": null,
+  "title": "Difficulty-Aware Hybrid Search in Peer-to-Peer Networks",
+  "year": 2009,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "混合P2P搜索需估计能回答查询的对等点数量,但现有方法假设项数多=peer多不成立",
+  "problem_framing": "如何区分与查询相关的项是分布在多个peer还是集中在少数peer,以选择 flooding 或 DHT",
+  "key_insight": "Many items ≠ Many peers, 因兴趣局部性, 项可集中在少数peer, 需按查询难度选择搜索策略",
+  "method_signature": "QRank: apTF×IPF 词项加权 + SVM 分类器选择 flooding/DHT 策略",
+  "evaluation_criteria": "召回率、延迟、流量成本、搜索效率和综合效用函数",
+  "negative_result_or_admitted_limitation": "GAB 无法区分项分布在多peer还是少peer, 且选择合适Rmax阈值在不同系统规模下困难",
+  "evidence_for_taste": [
+    "many items does not always mean flooding is more efficient",
+    "terms highly replicated in few peers are difficult ones",
+    "a verbose descriptive query can provide an indication of term importance",
+    "the same Rmax value may not work in different systems"
+  ],
+  "thinking_moves": [
+    "从工程异常反推底层假设失效: GAB假设项数多→peer多, 但兴趣局部性使该假设不成立",
+    "重新定义问题形式化: 从估计项数量转变为估计查询难度分布",
+    "借鉴IR领域TF-IDF到P2P term weighting (apTF×IPF)",
+    "用SVM学习不同查询类型的策略选择模式"
+  ],
+  "topic_tags": [
+    "P2P-hybrid-search",
+    "query-difficulty-awareness",
+    "interest-locality",
+    "SVM-classification",
+    "term-weighting"
+  ],
+  "cites_own_work": [
+    "ICPP 2007 preliminary version"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

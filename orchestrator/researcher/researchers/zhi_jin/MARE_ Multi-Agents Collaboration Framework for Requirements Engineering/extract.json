@@ -1,0 +1,40 @@
+{
+  "paper_id": "MARE_ Multi-Agents Collaboration Framework for Requirements Engineering",
+  "doi": "10.48550/arxiv.2405.03256",
+  "title": "MARE: Multi-Agents Collaboration Framework for Requirements Engineering",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RE需要多种任务协作,但现有深度学习方法只能自动化单个任务,限制效果提升",
+  "problem_framing": "将端到端RE形式化为生成模型G(S|X),从粗糙需求生成完整规范",
+  "key_insight": "多智能体协作可统一RE各任务,无需每个任务专用模型",
+  "method_signature": "5个LLM智能体(Stakeholders/Collector/Modeler/Checker/Documenter)通过共享工作空间协作",
+  "evaluation_criteria": "建模任务用P/R/F1对比SOTA基线;规范生成用人评 completeness/correctness/consistency",
+  "negative_result_or_admitted_limitation": "完整性评分略低于正确性和一致性,因为生成规范各节不够充分,LLM生成长文本时压缩长度",
+  "evidence_for_taste": [
+    "eliminating the need for specialized models",
+    "impressive performance",
+    "more accurate",
+    "slightly lower",
+    "each section is insufficient"
+  ],
+  "thinking_moves": [
+    "将人类RE团队的协作模式映射为多智能体框架",
+    "先验证建模能力,再评估规范质量",
+    "消融实验证明多智能体协作优于单LLM",
+    "通过共享工作空间实现智能体间信息传递"
+  ],
+  "topic_tags": [
+    "LLM-multi-agent",
+    "Requirements-Engineering-automation",
+    "collaborative-AI",
+    "prompt-engineering",
+    "requirements-modeling"
+  ],
+  "cites_own_work": [
+    "D. Jin, C. Wang, and Z. Jin, 'Automating extraction of problem diagrams'"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

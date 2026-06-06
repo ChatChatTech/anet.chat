@@ -1,0 +1,45 @@
+{
+  "paper_id": "Yang et al. - 2015 - See Through Walls with COTS RFID System!",
+  "doi": null,
+  "title": "See Through Walls with COTS RFID System!",
+  "year": 2015,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Emergency responders and civilians need low-cost through-wall tracking, but existing radar tech costs $80K and is restricted to military use.",
+  "problem_framing": "Extract weak object reflections from backscatter signals while drowning out the stronger 'flash' reflections off walls, without hardware modifications.",
+  "key_insight": "RFID backscatter vulnerability to ambient reflections is reframed as an opportunity—tags on outer wall become a virtual antenna array sensing interior objects.",
+  "method_signature": "Subtract empty-room baseline to eliminate flash, divide by LOS signal to cancel device parameters, HMM/Viterbi for trajectory recovery.",
+  "evaluation_criteria": "Median tracking error (cm), wall penetration depth (inches), gesture decoding accuracy (%), system cost (USD).",
+  "negative_result_or_admitted_limitation": "System exceeds FCC power limits with 12dBi antenna; requires pre-learning empty room; tracks only one object; directional dependence limits deployment area.",
+  "evidence_for_taste": [
+    "unlike past work, which considers such vulnerability as detrimental, our design exploits it",
+    "we present Tadar for tracking moving object through walls",
+    "HYPOTHESIS 1. The indirect impact of reflections",
+    "Tadar's approach differs from Wi-Vi",
+    "all unknown parameters relevant to the devices are removed",
+    "cost of each antenna, used in Wision and WiTrack, is able to purchase 40∼50 RFID tags",
+    "a major advantage of our solution prior to other methods"
+  ],
+  "thinking_moves": [
+    "把RFID易受干扰的'弱点'重新frame成感知机会",
+    "通过信号相除消除reader/tag的未知设备参数",
+    "将室内静止物体(flash)建模为虚拟反射点W来消除",
+    "从communication角度理解backscatter: tag用组合信号调制ID",
+    "借鉴computer vision的background subtraction处理false positives",
+    "先用HYPOTHESIS验证两类反射的不同特性再做推导"
+  ],
+  "topic_tags": [
+    "RFID-through-wall-tracking",
+    "backscatter-exploitation",
+    "device-free-localization",
+    "HMM-trajectory-recovery",
+    "COTS-RFID-system"
+  ],
+  "cites_own_work": [
+    "Tagoram (Yang et al. 2014)",
+    "SEASONS (Yang et al. 2011)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Full text available; all sections intact; supplementary figures referenced but not needed for extraction. | md truncated to head40k+tail20k"
+}

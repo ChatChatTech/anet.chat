@@ -1,0 +1,35 @@
+{
+  "paper_id": "Gu et al. - 2018 - Spotlight Multiple-Object Localization by Mobile Photo Fusion",
+  "doi": null,
+  "title": "Spotlight: Multiple-Object Localization by Mobile Photo Fusion",
+  "year": 2018,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "照片分享流行，重叠视野物体反映大众关注度，可用于刑侦、GIS等",
+  "problem_framing": "从被动众包照片中定位重叠视野中的共同物体，无需先验知识",
+  "key_insight": "图模型跨视角组合物体图像+平面几何定位，无需主动拍摄",
+  "method_signature": "图模型合并多视角图像→构建拍摄地图→平面几何定位",
+  "evaluation_criteria": "定位精度和场景适用性",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "objects appearing in overlapped FOV often indicate that they draw most people's attention",
+    "Existing methods either need prior knowledge or intentional photographing",
+    "achieves a high accuracy"
+  ],
+  "thinking_moves": [
+    "从被动行为(照片分享)中挖掘隐式协作信号",
+    "把物体定位问题重新建模为多视角几何约束问题",
+    "用图结构表达跨相机视角的物体关联"
+  ],
+  "topic_tags": [
+    "crowdsourced-localization",
+    "mobile-photo-fusion",
+    "multi-view-geometry",
+    "passive-sensing",
+    "graph-based-modeling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "仅有摘要，方法细节和评估结果缺失，无法验证完整技术路径"
+}

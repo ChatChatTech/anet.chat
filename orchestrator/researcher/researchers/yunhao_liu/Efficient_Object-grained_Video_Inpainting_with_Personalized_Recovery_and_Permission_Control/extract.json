@@ -1,0 +1,37 @@
+{
+  "paper_id": "Efficient_Object-grained_Video_Inpainting_with_Personalized_Recovery_and_Permission_Control",
+  "doi": null,
+  "title": "Efficient Object-grained Video Inpainting with Personalized Recovery and Permission Control",
+  "year": 2024,
+  "venue": "IEEE/ACM",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "视频共享场景中不同用户需要不同对象的访问权限，传统方法为每个用户生成独立版本导致存储和通信开销呈Θ(n)增长",
+  "problem_framing": "将细粒度访问控制问题转化为一次inpainting+功能加密+分层重建的架构设计，实现服务端单次处理与用户侧按权限恢复的平衡",
+  "key_insight": "将对象移除和信息恢复解耦到不同模块——Inpaintor负责像素填充移除对象，RecMap Generator通过特征图传递深度信息，信息的加密传递确保安全性",
+  "method_signature": "RecMap Generator + Inpaintor + Map&Mask Encryptor + Reconstructor联合架构，通过功能加密实现对象级访问控制",
+  "evaluation_criteria": "PSNR/SSIM/VFID/LPIPS评估重建质量，FPS评估实时性能，对比Θ(n) vs Θ(1)复杂度优势",
+  "negative_result_or_admitted_limitation": "无法从理论上保证无法逆转inpainting，且效果依赖精准的对象分割mask质量",
+  "evidence_for_taste": [
+    "semantic conflict",
+    "do not solely rely on the Inpaintor",
+    "the attacker cannot accurately reconstruct",
+    "imperfect effects",
+    "beyond our consideration"
+  ],
+  "thinking_moves": [
+    "将感知问题重新frame为通信问题——通过特征图传递隐藏信息而非依赖生成像素",
+    "承认安全不能完全依赖inpainting效果，即使模型不完美也要保证安全",
+    "通过模块解耦化解inpainting与reconstruction之间的语义冲突",
+    "从工程约束出发倒推架构设计——用户数量增长不应导致服务端处理增加"
+  ],
+  "topic_tags": [
+    "video-inpainting-access-control",
+    "functional-encryption",
+    "object-grained-privacy",
+    "fine-grained-video-sharing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

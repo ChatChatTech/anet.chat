@@ -1,0 +1,39 @@
+{
+  "paper_id": "Towards Practical Few-shot Federated NLP",
+  "doi": "10.48550/arxiv.2212.00192",
+  "title": "Towards Practical Few-shot Federated NLP",
+  "year": 2023,
+  "venue": "EuroMLSys",
+  "venue_tier": "workshop",
+  "role": "first",
+  "motivation": "私有数据分布异构且标注困难，联邦NLP中标签稀缺导致实用性受限",
+  "problem_framing": "用(η,γ)参数化few-shot联邦学习中标签数量和分布倾斜程度",
+  "key_insight": "提示学习让少量标签就能微调，伪标签利用无标注数据补偿倾斜分布的精度损失",
+  "method_signature": "AUG-FedPrompt: 提示学习+伪标签数据增强的联邦少样本系统",
+  "evaluation_criteria": "对比全量微调的精度、在不同数据规模和倾斜度下的性能",
+  "negative_result_or_admitted_limitation": "RoBERTa-large导致内存溢出(>10GB)，推理占总计算87.4%，竞争性能以显著系统开销为代价",
+  "evidence_for_taste": [
+    "no free lunch",
+    "non-trivial system cost",
+    "cannot be overlooked",
+    "87.4% of total",
+    "ran out of memory"
+  ],
+  "thinking_moves": [
+    "用参数化数据生成器显式建模标签稀缺与倾斜的联合分布",
+    "从系统代价视角反推大模型的实践可行性局限",
+    "将伪标签的置信度过滤与模型容量过滤并联作为安全阀"
+  ],
+  "topic_tags": [
+    "federated-NLP",
+    "few-shot-learning",
+    "prompt-learning",
+    "pseudo-labeling",
+    "edge-inference-optimization"
+  ],
+  "cites_own_work": [
+    "AutofedNLP"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

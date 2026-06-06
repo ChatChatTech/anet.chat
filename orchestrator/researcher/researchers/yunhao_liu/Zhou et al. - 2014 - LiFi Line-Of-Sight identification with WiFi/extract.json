@@ -1,0 +1,45 @@
+{
+  "paper_id": "Zhou et al. - 2014 - LiFi Line-Of-Sight identification with WiFi",
+  "doi": null,
+  "title": "LiFi: Line-Of-Sight Identification with WiFi",
+  "year": 2014,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "WiFi已广泛部署,但NLOS传播严重影响定位、通信等应用,需识别LOS路径以增强系统性能",
+  "problem_framing": "在20MHz带宽的商用WiFi上,通过CSI区分LOS/NLOS路径的二值假设检验问题",
+  "key_insight": "自然移动性会放大NLOS路径的随机性,同时保持LOS路径的确定性,使包络分布可区分",
+  "method_signature": "CSI滤波+移动性增强+偏度特征阈值判决的LOS识别方案",
+  "evaluation_criteria": "LOS检测率90.42%、虚警率9.34%,及不同距离/障碍物下的鲁棒性",
+  "negative_result_or_admitted_limitation": "Rician-K因子在所有条件下检测率均低于60%,延迟特征即使有CSI仍产生高误判率;Rayleigh拟合在静态NLOS条件下几乎失效",
+  "evidence_for_taste": [
+    "Rician-K factor...are all below 60%",
+    "mobility magnifies the distinctions",
+    "skewness is a lightweight and general metric",
+    "abundance of scatters...is still incomparable",
+    "a single pre-calibrated threshold tends to be independent",
+    "skewness is applicable for any distributions",
+    "constrain the potential paths",
+    "Rayleigh fitting almost fails"
+  ],
+  "thinking_moves": [
+    "先证明理论模型(延迟特性)在带宽受限下失效,再转向包络分布",
+    "对比两种特征:Rician-K依赖拟合,Rician-K因子效果差则换偏度",
+    "利用移动性将静态环境中的确定性NLOS转为随机,以解决理论模型不适用问题",
+    "从ROC曲线定量比较特征优劣,选择对分布假设最鲁棒的指标",
+    "统一阈值跨越不同距离/障碍物,验证方案的泛化能力"
+  ],
+  "topic_tags": [
+    "WiFi-CSI",
+    "LOS-NLOS识别",
+    "室内定位",
+    "移动感知",
+    "偏度特征"
+  ],
+  "cites_own_work": [
+    "Wu et al., CSI-Based Indoor Localization, TPDS 2013",
+    "Sen et al., Avoiding Multipath to Revive WiFi Localization, MobiSys 2013"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

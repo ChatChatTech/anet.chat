@@ -1,0 +1,39 @@
+{
+  "paper_id": "Boosting DNN Cold Inference on Edge Devices",
+  "doi": "10.48550/arxiv.2206.07446",
+  "title": "Boosting DNN Cold Inference on Devices",
+  "year": 2023,
+  "venue": "MobiSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "DNN inference on edge devices often occurs in cold manner (1.5×-443.5× slower than warm), hurting user experience for apps like PDF scanners and beauty cameras",
+  "problem_framing": "Optimize three tightly coupled stages: weights reading, weights transformation, and model execution across asymmetric edge processors",
+  "key_insight": "Kernel selected by warm inference speed is suboptimal for cold inference; Winograd kernels execute fast but incur heavy transformation cost that dominates cold latency",
+  "method_signature": "Heuristic kernel scheduler balancing operation-to-processor affinity and pipeline overlapping across big.LITTLE cores",
+  "evaluation_criteria": "Cold inference latency reduction vs TFLite/ncnn/AsyMo on Meizu 16T CPU and Jetson TX2 GPU; ablation of each optimization knob",
+  "negative_result_or_admitted_limitation": "Problem is NP-hard, cannot obtain optimal kernel scheduling plan directly; multithreading weights read/transformation has limited benefit",
+  "evidence_for_taste": [
+    "no silver-bullet kernel",
+    "fastest kernel in warm inference does not necessarily best in cold",
+    "weight sharing approaches are not scalable",
+    "we do not need to iterate over all combinations"
+  ],
+  "thinking_moves": [
+    "从工程异常反推设计空间失效: 现有DNN引擎的kernel选择策略只考虑warm inference速度",
+    "识别出三个耦合的优化维度需联合考虑",
+    "利用DNN的layer-by-layer结构特征构建流水线并行机会",
+    "识别操作与硬件的亲和性差异(执行对大核敏感, I/O对资源争用敏感)"
+  ],
+  "topic_tags": [
+    "DNN cold inference optimization",
+    "edge device inference engine",
+    "kernel selection scheduler",
+    "heterogeneous processor scheduling",
+    "weights transformation caching"
+  ],
+  "cites_own_work": [
+    "AsyMo"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Liu et al. - 2025 - Mitigating Scalability Walls of RDMA-based Container Networks",
+  "doi": null,
+  "title": "Mitigating Scalability Walls of RDMA-based Container Networks",
+  "year": 2025,
+  "venue": "USENIX NSDI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "生产环境中容器规模扩展到百万级时RDMA网卡性能骤降,导致带宽下降87%、延迟上升34倍",
+  "problem_framing": "将RNIC视为黑盒,利用灰盒因果推理方法推断网卡内部架构和性能瓶颈",
+  "key_insight": "通过组合因果测试+拓扑约束缩小搜索空间,定位RNIC内部关键路径",
+  "method_signature": "离线RNIC组合因果测试+在线性能预测与网络功能调度优化",
+  "evaluation_criteria": "端到端带宽提升1.4倍,延迟降低31%,解决82%推断根因",
+  "negative_result_or_admitted_limitation": "剩余18%性能问题源于硬件能力上限无法解决;无权限与厂商共享真实工作负载致故障排查困难",
+  "evidence_for_for_taste": [
+    "limited visibility into RNIC internals",
+    "symptoms only manifested in large-scale deployments",
+    "as if the RNIC is refusing to handle them",
+    "hardly reproduce and analyze",
+    "not easy for vendors to reproduce and analyze"
+  ],
+  "thinking_moves": [
+    "从性能异常现象反推网卡内部设计缺陷",
+    "利用拓扑约束将组合爆炸问题降至二次复杂度",
+    "局部敏感度分析定位关键处理路径",
+    "接受18%硬件极限为不可消除代价",
+    "将黑盒测试重新定位为领域知识驱动的灰盒推理"
+  ],
+  "topic_tags": [
+    "RDMA网卡可扩展性",
+    "容器网络性能优化",
+    "硬件黑盒灰盒测试",
+    "因果推理",
+    "网络功能卸载"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

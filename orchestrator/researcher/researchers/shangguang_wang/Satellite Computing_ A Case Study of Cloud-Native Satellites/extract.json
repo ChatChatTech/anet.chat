@@ -1,0 +1,49 @@
+{
+  "paper_id": "Satellite Computing_ A Case Study of Cloud-Native Satellites",
+  "doi": "10.48550/arxiv.2307.08530",
+  "title": "Satellite Computing: A Case Study of Cloud-Native Satellites",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "学术圈缺乏真实卫星计算平台,研究者难以部署验证算法",
+  "problem_framing": "将云原生技术引入LEO卫星实现载荷灵活部署与平台软化",
+  "key_insight": "云原生载荷让卫星功能从硬件绑定变为软件定义,突破传统任务载荷固定限制",
+  "method_signature": "BUPT-1六层云原生卫星架构,支持容器化载荷部署",
+  "evaluation_criteria": "实际部署灵活性、功能定制化程度、测试验证结果",
+  "negative_result_or_admitted_limitation": "现有研究仍处于起步阶段,距实际工业应用还有很长的路要走",
+  "evidence_for_taste": [
+    "数据生成量远超地面下载能力",
+    "执行AI需要足够算力",
+    "云原生技术是关键因素",
+    "负载功能是任务导向的",
+    "载荷功能无法动态调整",
+    "不是理论或模拟平台",
+    "提供了真正的开放平台",
+    "卫星行业难以参与卫星产业",
+    "卫星计算不是现成的商业服务"
+  ],
+  "thinking_moves": [
+    "用云原生技术将卫星计算问题从硬件约束重新定义为软件灵活性问题",
+    "通过明确云原生载荷和云原生平台两个核心概念建立设计语言",
+    "用BUPT-1实际部署代替仿真验证来建立学术可信度",
+    "通过对比表格将云原生卫星优势具体化为可操作维度",
+    "识别行业瓶颈后再提自己解决方案的必要性",
+    "将开放平台本身作为研究贡献来论证"
+  ],
+  "topic_tags": [
+    "cloud-native-satellite",
+    "LEO-satellite-computing",
+    "Tiansuan-constellation",
+    "satellite-edge-computing",
+    "software-defined-payload"
+  ],
+  "cites_own_work": [
+    "Wang et al. 2021 Tiansuan Constellation platform",
+    "Li et al. 2022 service coverage",
+    "Xing et al. 2022 5G core network on satellite",
+    "Li et al. 2021 cognitive service 6G"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

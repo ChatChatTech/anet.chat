@@ -1,0 +1,42 @@
+{
+  "paper_id": "2022_TOSN_MultiSense__Cross_Labelling_and_Learning_Human_Activities_Using_Multimodal_Sensing_Data",
+  "doi": null,
+  "title": "MultiSense: Cross Labelling and Learning Human Activities Using Multimodal Sensing Data",
+  "year": 2022,
+  "venue": "ACM Trans. Sensor Netw.",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "IoT设备产生海量未标注数据，人工标注耗时费力且某些模态数据难以标注",
+  "problem_framing": "多模态数据流自动分段、对齐、交叉标注与模型自进化",
+  "key_insight": "不同模态感知能力互补，利用已识别模态为其他模态交叉标注，形成闭环自进化",
+  "method_signature": "MultiSense多模态分段提议→标签可靠性评估→跨模态对齐→预测聚合→模型迭代更新",
+  "evaluation_criteria": "交叉标注准确率(98.5%)与模型更新后识别精度提升幅度",
+  "negative_result_or_admitted_limitation": "音频和回溯无线信号标注与学习精度仍有待提升，多人场景鲁棒性待加强",
+  "evidence_for_take": [
+    "for better segmentation we need to recognize the activity",
+    "for better activity recognition we need partition the data",
+    "prediction result is not a_j, remove the segment",
+    "the incompetent initial capabilities of machine learning models",
+    "reserve the one whose label has a higher confidence",
+    "use both motion evidence but also motionless evidence"
+  ],
+  "thinking_moves": [
+    "将分段与预测的悖论转化为双阶段迭代求解",
+    "利用所有人可识别的「静止」状态作为跨模态对齐的锚点",
+    "高置信度预测未必可靠，需在特征空间计算距离折扣",
+    "强烈冲突证据下改造D-S证据理论使其容忍未知类别输出",
+    "模型能力差异反而成为交叉学习的驱动力而非障碍"
+  ],
+  "topic_tags": [
+    "multimodal-sensing-cross-labeling",
+    "activity-recognition-self-evolution",
+    "sensor-data-auto-annotation",
+    "cross-modal-learning",
+    "multi-person-tracking"
+  ],
+  "cites_own_work": [
+    "[47] MultiSense conference version (MASS 2021)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

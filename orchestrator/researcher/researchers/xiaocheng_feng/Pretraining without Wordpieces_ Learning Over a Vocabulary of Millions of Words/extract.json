@@ -1,0 +1,41 @@
+{
+  "paper_id": "Pretraining without Wordpieces_ Learning Over a Vocabulary of Millions of Words",
+  "doi": "10.48550/arxiv.2202.12142",
+  "title": "Pretraining without Wordpieces: Learning Over a Vocabulary of Millions of Words",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "subword tokenization breaks words into pieces, causing inconvenience in word-level representation and cloze prediction",
+  "problem_framing": "exploring BERT-style pretraining over word-level vocabulary without subword decomposition",
+  "key_insight": "word-level vocabulary avoids subword fragmentation issues; main advantage is better understanding of low-frequency and rare words",
+  "method_signature": "WordBERT with multi-million word vocabulary, sampling-based softmax training, Transformer architecture",
+  "evaluation_criteria": "cloze test accuracy, machine reading comprehension (EM/F1), POS/chunking/NER F1, probing accuracy across word frequencies",
+  "negative_result_or_admitted_limitation": "WordBERT-Glove underperforms randomly initialized versions; larger vocab causes slower softmax on probing task",
+  "evidence_for_taste": [
+    "it is suboptimal to ignore",
+    "the major advantage lies in understanding for low-frequency words",
+    "BERT tends to generate general words",
+    "WordBERT suffers from out-of-vocabulary (OOV) problem",
+    "our models are able to learn better representation for medium-frequency words",
+    "it has comparable time cost to BERT",
+    "the pipeline is language-independent"
+  ],
+  "thinking_moves": [
+    "识别subword分词在词级任务上的工程不便",
+    "系统性探索不同词表大小(500K, 1M)和初始化策略(Glove)的差异",
+    "通过probing分析定位模型提升的具体来源(低频词理解)",
+    "跨语言验证语言无关性(中英双语实验)",
+    "承认OOV问题但论证其影响有限"
+  ],
+  "topic_tags": [
+    "word-level-tokenization",
+    "BERT-pretraining",
+    "vocabulary-size",
+    "low-frequency-word-representation",
+    "subword-vs-word"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

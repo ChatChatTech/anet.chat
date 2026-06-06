@@ -1,0 +1,39 @@
+{
+  "paper_id": "Dong et al. - 2009 - WormCircle Connectivity-Based Wormhole Detection in Wireless Ad Hoc and Sensor Networks",
+  "doi": null,
+  "title": "WormCircle: Connectivity-Based Wormhole Detection in Wireless Ad Hoc and Sensor Networks",
+  "year": 2009,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有检测方法依赖专用硬件或强假设,在资源受限的传感器网络中不适用",
+  "problem_framing": "将蠕虫洞检测重新定义为拓扑异常检测,基于连通性信息识别蠕虫洞特征圆",
+  "key_insight": "蠕虫洞会改变网络等值线的几何特性:其周长2π(R-r)显著小于正常值2πR",
+  "method_signature": "基于最短路径树追踪等值线圆,通过周长与层级比值检测蠕虫洞圆",
+  "evaluation_criteria": "检测成功率(α类>β类),节点密度影响,部署随机性影响",
+  "negative_result_or_admitted_limitation": "γ类蠕虫洞(两端在边界)与普通桥接无法区分;根节点选择不当时蠕虫洞圆消失",
+  "evidence_for_taste": [
+    "WormCircle potentially can detect some wormholes that cannot be detected by approaches based on Euclidean distance mismatch",
+    "a γ-class wormhole and a common bridge are indistinguishable from the local neighborhood",
+    "most existing solutions of wormhole detection require specialized hardware devices or making strong assumptions",
+    "Wormhole attack can be launched successfully without compromising any legitimate node or breaking cryptographic mechanisms",
+    "it is not perfect"
+  ],
+  "thinking_moves": [
+    "将物理波动现象类比到网络拓扑,利用波前圆的周长异常检测蠕虫洞",
+    "通过连通性验证局部连续性,用跳数近似几何距离,避免硬件依赖",
+    "从连续域证明正确性,再扩展到离散网络实现",
+    "承认方法局限:γ类蠕虫洞不可检测,根选择影响检测率",
+    "迭代改进:从全局最短路径树到纯局部连通性信息"
+  ],
+  "topic_tags": [
+    "wormhole-attack-detection",
+    "wireless-sensor-network-security",
+    "topology-based-anomaly-detection",
+    "connectivity-graph-analysis",
+    "distributed-detection-algorithm"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

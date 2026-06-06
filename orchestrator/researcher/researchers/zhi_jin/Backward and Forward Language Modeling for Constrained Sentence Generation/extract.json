@@ -1,0 +1,41 @@
+{
+  "paper_id": "Backward and Forward Language Modeling for Constrained Sentence Generation",
+  "doi": "10.48550/arxiv.1512.06612",
+  "title": "Backward and Forward Language Modeling for Constrained Sentence Generation",
+  "year": 2015,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "现有语言模型无法保证生成文本中必然出现特定词汇",
+  "problem_framing": "约束生成:给定词必须出现在生成句子的任意位置",
+  "key_insight": "以给定词为根节点生成前后子序列,变单向生成(左→右)为双向生成",
+  "method_signature": "B/F LM:同步(syn)和异步(asyn)两个RNN变体生成前后词",
+  "evaluation_criteria": "困惑度(PPL)和生成文本质量与baseline对比",
+  "negative_result_or_admitted_limitation": "B/F变体困惑度均高于顺序LM,因随机选split word增加不确定性",
+  "evidence_for_taste": [
+    "All B/F variants yield a larger perplexity than a sequential LM",
+    "randomly choosing a split word increases uncertainty",
+    "sequential LM fails to generate grammatically correct sentences",
+    "sep-B/F can hardly generate a sentence containing much substance"
+  ],
+  "thinking_moves": [
+    "将联合概率分解改为贝叶斯网络结构(给定词为根)",
+    "从顺序生成sentence重新frame为前后双向生成",
+    "承认随机split引入的perplexity代价换取约束保证",
+    "实验区分oracle设置下perplexity揭示信息利用能力"
+  ],
+  "topic_tags": [
+    "constrained-text-generation",
+    "bidirectional-language-model",
+    "RNN-generation",
+    "constrained-neural-LM",
+    "arXiv-paper-title-generation"
+  ],
+  "cites_own_work": [
+    "[10]",
+    "[11]",
+    "[12]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

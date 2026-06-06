@@ -1,0 +1,38 @@
+{
+  "paper_id": "Online Deployment Algorithms for Microservice Systems with Complex Dependencies",
+  "doi": "10.48550/arxiv.2107.09308",
+  "title": "Online Deployment Algorithms for Microservice Systems with Complex Dependencies",
+  "year": 2021,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Microservice systems需要快速迭代和持续交付,但现有方法未充分考虑服务间复杂依赖和多实例支持,导致QoS不稳定",
+  "problem_framing": "将服务放置问题建模为分式多项式问题(FPP),要求算法执行时间不超过容器启动时间5-10秒",
+  "key_insight": "响应时间沿函数链可分解为相邻函数对响应时间之和,使FPP可转化为二次比值和问题(QSRFP)大幅降低复杂度",
+  "method_signature": "基于Theorem 1将FPP转化为QSRFP,提出B/D/BD-QSRFP三种贪心部署算法",
+  "evaluation_criteria": "平均响应时间(质量)和算法执行时间(速度),对比GMCAPP/LDSPP/Random/GA",
+  "negative_result_or_admitted_limitation": "BD-QSRFP执行时间在50/100服务器时达11s/52s,过高不适于在线;100服务器已超出算法承受范围",
+  "evidence_for_taste": [
+    "algorithm execution time should not exceed 5~10s",
+    "which is too costly for an online algorithm",
+    "GA performed worse than other experiments",
+    "we suggest dividing it into several small groups whose server size does not exceed 100",
+    "deploying more instances can improve the average response time at the cost of a much higher execution time"
+  ],
+  "thinking_moves": [
+    "将问题分解为子问题:bestServer找最优服务器,DeploySpread处理实例部署和依赖传播",
+    "证明Theorem 1将不可行的FPP转化为可处理的QSRFP,实现复杂度跨越",
+    "从工程约束(容器启动时间)反推算法时间预算,指导算法设计方向",
+    "承认穷举最优解(BD-QSRFP)不适于在线,建议B/D-QSRFP作为实用替代"
+  ],
+  "topic_tags": [
+    "microservice-deployment",
+    "service-placement-problem",
+    "fractional-polynomial-optimization",
+    "edge-cloud-computing",
+    "greedy-algorithm"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

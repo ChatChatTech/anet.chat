@@ -1,0 +1,39 @@
+{
+  "paper_id": "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986",
+  "doi": "10.18653/v1/2024.emnlp-main.603",
+  "title": "GLOBESUMM: A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization",
+  "year": 2024,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "全球化新闻场景中多语言、多视角内容难以统一处理，现有研究仅关注单语言或单文档任务",
+  "problem_framing": "提出MCMS任务统一多语言、跨语言、多文档摘要，核心挑战为冗余、遗漏与冲突",
+  "key_insight": "冲突解决是跨语言多文档摘要的关键能力，协议引导的提示设计可显式指导LLM处理冲突",
+  "method_signature": "CRS迭代式摘要 + KIS压缩 + CLP跨语言对齐 + PGP协议引导",
+  "evaluation_criteria": "ROUGE(内容)、Red(冗余)、NIC(遗漏)、CRE(冲突解决)",
+  "negative_result_or_admitted_limitation": "小型模型ChatGLM3无法理解复杂协议导致性能下降；冲突处理策略未能有效缓解冗余问题；LLM对低资源语言存在偏见",
+  "evidence_for_taste": [
+    "addressing conflicts arising from diverse perspectives",
+    "Protocol-guided prompting depends on the model's capabilities",
+    "preferential performance in CRS with Protocol-guided Prompting",
+    "redundancies tend to persist, even exacerbate",
+    "LLM's prejudices across various languages"
+  ],
+  "thinking_moves": [
+    "把冲突识别从隐式能力变为显式可评测子任务",
+    "从手工标注转向协议引导的LLM自动化标注",
+    "将摘要问题分解为识别(where)和解决(strategies)两步",
+    "迭代式处理优于单次全量处理",
+    "系统性分类冲突类型以指导不同解决方案"
+  ],
+  "topic_tags": [
+    "multilingual-summarization",
+    "cross-lingual-NLP",
+    "conflict-resolution",
+    "protocol-guided-prompting",
+    "event-centric-Retrieval"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

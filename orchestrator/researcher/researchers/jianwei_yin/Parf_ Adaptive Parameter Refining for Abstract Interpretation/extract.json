@@ -1,0 +1,38 @@
+{
+  "paper_id": "Parf_ Adaptive Parameter Refining for Abstract Interpretation",
+  "doi": "10.48550/arxiv.2409.05794",
+  "title": "Parf: Adaptive Parameter Refining for Abstract Interpretation",
+  "year": 2024,
+  "venue": "ASE '24",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "静态分析器的参数调优依赖专家经验,难以自动化,参数空间巨大且包含多种类型参数",
+  "problem_framing": "将参数建模为格上概率分布的随机变量,通过迭代采样-分析-细化机制增量精炼分布",
+  "key_insight": "基于已积累的中间结果增量精炼概率分布,使参数配置在期望上产生更准确分析或在分析失败时以更高概率终止",
+  "method_signature": "在格参数空间上建模概率分布,迭代Sample-Analyze-Refine流程精炼参数",
+  "evaluation_criteria": "相比Expert和Official策略在OSCS基准上达到最低误报数(34/37),并在SV-COMP验证任务中提升得分",
+  "negative_result_or_admitted_limitation": "Parf将静态分析器视为黑盒,未利用分析器特定功能如数据/控制流分析,且假设参数间独立忽略依赖关系",
+  "evidence_for_taste": [
+    "relies heavily on expert knowledge",
+    "often yields suboptimal results",
+    "the first fully automated approach",
+    "Parf is not sensitive to the values",
+    "is often intractable in practice"
+  ],
+  "thinking_moves": [
+    "先形式化参数空间为格结构,再利用单调性假设设计增量精炼策略",
+    "把参数调优问题转化为概率分布的增量更新问题",
+    "将分析器的中间结果(警报子集关系)纳入精炼依据而非仅终态结果",
+    "对不同类型参数(integer/Boolean/set-of-strings)统一建模为随机向量"
+  ],
+  "topic_tags": [
+    "parameter-tuning",
+    "abstract-interpretation",
+    "static-analysis",
+    "probabilistic-modeling",
+    "adaptive-refinement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

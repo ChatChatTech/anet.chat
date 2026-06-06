@@ -1,0 +1,40 @@
+{
+  "paper_id": "Trends in Integration of Knowledge and Large Language Models_ A Survey and Taxonomy of Methods, Benchmarks, and Applications",
+  "doi": "10.48550/arxiv.2311.05876",
+  "title": "Trends in Integration of Knowledge and Large Language Models: A Survey and Taxonomy of Methods, Benchmarks, and Applications",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "LLMs受限于过时数据和领域缺陷,缺乏全面系统综述",
+  "problem_framing": "将知识集成分为知识编辑和检索增强两类进行系统综述",
+  "key_insight": "知识编辑(改参数)与检索增强(保持参数不变)是两条互补路径",
+  "method_signature": "知识编辑与检索增强的综合分类学survey",
+  "evaluation_criteria": "知识编辑评估可靠性/泛化性/局部性",
+  "negative_result_or_admitted_limitation": "输入编辑方法只能增补事实,无法纠正LLM中的错误;检索文档可能含无关噪声;生成式检索无法获取实时信息",
+  "evidence_for_taste": [
+    "lacking a comprehensive and systematic review",
+    "notable absence of a comprehensive survey",
+    "limited capacity to correct errors",
+    "disposable manner, without fundamentally modifying",
+    "noisy information that is irrelevant",
+    "cannot obtain real-time information",
+    "this direction is in an early stage"
+  ],
+  "thinking_moves": [
+    "从工程痛点反推技术路径缺失",
+    "建立统一分类框架整合碎片化工作",
+    "对比知识编辑与检索增强的适用场景",
+    "识别评估维度而非仅罗列方法"
+  ],
+  "topic_tags": [
+    "LLM知识编辑",
+    "检索增强生成RAG",
+    "知识更新方法分类",
+    "幻觉缓解",
+    "模型参数修改"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

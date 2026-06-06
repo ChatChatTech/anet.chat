@@ -1,0 +1,38 @@
+{
+  "paper_id": "He et al. - 2021 - RED RFID-Based Eccentricity Detection for High-Speed Rotating Machinery",
+  "doi": null,
+  "title": "Fast Weighted Total Variation Regularization Algorithm for Blur Identification and Image Restoration",
+  "year": 2016,
+  "venue": "IEEE ACCESS",
+  "venue_tier": "strong",
+  "role": "unknown",
+  "motivation": "Images in unconstrained environments suffer from unknown blur kernels and noise, requiring blind restoration.",
+  "problem_framing": "Jointly estimate unknown image and blur kernel by minimizing TV regularized objective, unlike alternating optimization.",
+  "key_insight": "Local linearization around current estimates preserves convexity, enabling decomposition into two fast denoising subproblems.",
+  "method_signature": "Joint estimation via proximal gradient with separable TV denoising subproblems",
+  "evaluation_criteria": "PSNR, SSIM improvement and convergence time comparison on synthetic/natural grayscale/color images",
+  "negative_result_or_admitted_limitation": "The alternate minimization algorithm has convergence issues and quality degradation per [15] and [33].",
+  "evidence_for_taste": [
+    "the difficulty encountered in a joint estimation method",
+    "destroy the convexity of function F(u,a) in (12)",
+    "approximation cuts off the high frequency information",
+    "alternate minimization step resulted in quality degradation",
+    "tends to produce images with more detailed information"
+  ],
+  "thinking_moves": [
+    "把非凸问题局部线性化以恢复凸性",
+    "将联合估计问题分解为两个独立去噪子问题",
+    "利用弗罗benius范数可分离性实现并行优化",
+    "通过约束确保增量足够小以保证线性近似的有效性"
+  ],
+  "topic_tags": [
+    "blind-deconvolution",
+    "total-variation-regularization",
+    "joint-kernel-image-estimation",
+    "TV-minimization",
+    "image-deblurring"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Paper ID mismatch: header claims He et al. 2021 RFID paper, but content is Liu et al. 2016 IEEE ACCESS TV-based blind deconvolution paper. Extracted based on actual content. | md truncated to head40k+tail20k"
+}

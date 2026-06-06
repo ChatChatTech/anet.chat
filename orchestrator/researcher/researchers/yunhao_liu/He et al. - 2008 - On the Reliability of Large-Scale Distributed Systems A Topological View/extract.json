@@ -1,0 +1,36 @@
+{
+  "paper_id": "He et al. - 2008 - On the Reliability of Large-Scale Distributed Systems A Topological View",
+  "doi": null,
+  "title": "On the Reliability of Large-Scale Distributed Systems - A Topological View",
+  "year": 2008,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "在P2P/WSN中，少量关键节点失效即可导致整个系统分裂，保护全部节点成本过高。",
+  "problem_framing": "将系统建模为无向图，在无全局拓扑信息条件下分布式检测割点(cut vertex)。",
+  "key_insight": "利用泛洪消息的路径信息将邻居归并到不同块中，割点等价于连接多个块的节点。",
+  "method_signature": "零开销自适应检测 + 低成本主动检测 + 割点中和",
+  "evaluation_criteria": "真实轨迹下检测准确率、流量开销、连通性改善程度",
+  "negative_result_or_admitted_limitation": "局部信息无法检测图中很长环路上的节点，使其可能被误判为割点；但假阳性对系统无害。",
+  "evidence_for_taste": [
+    "a 100% accurate algorithm is not necessary",
+    "without global information in our scheme, a tiny portion of nodes might be falsely identified",
+    "false positive nodes will generate no harm to the system"
+  ],
+  "thinking_moves": [
+    "从系统可靠性痛点出发定义关键节点问题",
+    "将全局图论概念(割点)翻译为分布式局部可计算形式",
+    "利用已有通信行为(泛洪)隐式获取拓扑信息，零额外开销",
+    "承认局部信息的局限，接受假阳性但证明其无害"
+  ],
+  "topic_tags": [
+    "cut-vertex-detection",
+    "distributed-topology",
+    "P2P-overlay",
+    "wireless-sensor-network",
+    "zero-overhead-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "完整提取了论文的动机、问题定义、关键思路和作者对局限性的承认。论文中未明确标注会议/期刊名称，venue字段留空。"
+}

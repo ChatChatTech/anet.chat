@@ -1,0 +1,39 @@
+{
+  "paper_id": "Hu et al. - 2007 - S-Club an overlay-based efficient service discovery mechanism in CROWN Grid",
+  "doi": null,
+  "title": "S-Club: an overlay-based efficient service discovery mechanism in CROWN Grid",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CROWN网格中现有GIS网格面临搜索响应时间长、流量开销大的问题",
+  "problem_framing": "将服务发现问题建模为在GIS网格上建立按服务类型划分的覆盖网络以限制洪泛范围",
+  "key_insight": "用户总按服务类型搜索，将提供同类服务的GIS组成服务俱乐部可显著缩小搜索范围",
+  "method_signature": "在GIS网格上构建MST拓扑的服务俱乐部覆盖网络",
+  "evaluation_criteria": "平均响应时间、总流量开销、相对MDS系统的优化率",
+  "negative_result_or_admitted_limitation": "俱乐部过多会产生大量维护开销，存在最优α值",
+  "evidence_for_taste": [
+    "too many clubs may bring much maintenance overhead",
+    "there exists a best value of α to maximize the benefit",
+    "MST suffers from single-point-failure",
+    "Having 1000 GIS nodes, S-Club reduces about 27–35% response time",
+    "when n=200 S-Club reduces traffic by 55%"
+  ],
+  "thinking_moves": [
+    "观察用户行为模式（按类型搜索）作为系统设计的切入点",
+    "用MST覆盖拓扑最小化消息传输成本",
+    "通过usage frequency阈值动态决定建立哪些俱乐部",
+    "承认MST单点故障问题并用Narada协议补救",
+    "用最优α阈值揭示性能与维护开销的权衡"
+  ],
+  "topic_tags": [
+    "grid-information-service",
+    "service-discovery",
+    "overlay-network",
+    "MST-topology",
+    "CROWN-grid"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

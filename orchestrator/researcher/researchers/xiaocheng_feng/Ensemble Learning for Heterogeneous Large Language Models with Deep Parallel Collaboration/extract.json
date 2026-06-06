@@ -1,0 +1,37 @@
+{
+  "paper_id": "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration",
+  "doi": "10.48550/arxiv.2404.12715",
+  "title": "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有LLM集成方法依赖额外训练的奖励/融合模型,泛化困难;且使用文本响应作为通信媒介,忽视内部表征信息",
+  "problem_framing": "异构LLM的词汇表差异导致概率分布无法直接平均融合,需解决token对齐问题",
+  "key_insight": "相对表示在不同模型间保持不变,可通过映射概率分布到相对空间实现异构LLM的分布融合",
+  "method_signature": "DEEPEN将分布映射到相对空间聚合,再通过搜索式逆变换回主模型概率空间",
+  "evaluation_criteria": "在6个benchmark上实现一致提升,稳定性优于MINED等基线,可与其他集成方法互补",
+  "negative_result_or_admitted_limitation": "更多低性能LLM会干扰高性能模型导致性能下降;逆变换存在欠拟合问题",
+  "evidence_for_taste": [
+    "poses a great challenge to the generalization",
+    "ignoring the valuable information in the internal representations",
+    "making it more general",
+    "eliminates this training process via directly aligning tokens"
+  ],
+  "thinking_moves": [
+    "将集成问题从文本层通信重新frame为内部概率分布层通信",
+    "利用相对表示的跨模型不变性绕过词汇表对齐直接融合",
+    "通过搜索式优化实现从相对空间到概率空间的逆变换",
+    "经验发现ensemble效果随模型数量先增后减的临界点现象"
+  ],
+  "topic_tags": [
+    "LLM-ensemble",
+    "probability-distribution-fusion",
+    "relative-representation",
+    "vocabulary-discrepancy",
+    "heterogeneous-models"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

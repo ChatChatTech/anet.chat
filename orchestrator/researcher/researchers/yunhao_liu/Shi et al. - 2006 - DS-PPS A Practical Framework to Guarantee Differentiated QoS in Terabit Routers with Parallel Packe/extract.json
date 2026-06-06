@@ -1,0 +1,40 @@
+{
+  "paper_id": "Shi et al. - 2006 - DS-PPS A Practical Framework to Guarantee Differentiated QoS in Terabit Routers with Parallel Packe",
+  "doi": null,
+  "title": "DS-PPS: A Practical Framework to Guarantee Differentiated QoS in Terabit Routers with Parallel Packet Switch",
+  "year": 2006,
+  "venue": "IEEE INFOCOM (inferred from references)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "PPS在 terabit 路由器中广泛使用，但基本PPS无法支持差异化QoS，而IPTV等延迟敏感应用正在兴起。",
+  "problem_framing": "将差异化QoS需求形式化为三类流量(GD/GB/BE)，通过自适应调整交换平面的分配来精确控制延迟界和丢弃优先级。",
+  "key_insight": "将交换平面分为静态组(SAG)和动态组(DAG)，静态组保证严格延迟界，动态组按需测量分配——利用平面数作为QoS控制的杠杆。",
+  "method_signature": "HAP-LB层次分配策略 + 测量驱动的动态平面划分 + M/D/1队列建模的统计延迟界证明。",
+  "evaluation_criteria": "GD类平均延迟减少率、GB类在hotspot下的吞吐量保障、统计延迟界与理论界的吻合程度。",
+  "negative_result_or_admitted_limitation": "静态类须满足峰值带宽有界条件；动态分配的测量周期(100ms)可能无法跟踪极速流量波动。",
+  "evidence_for_taste": [
+    "both the IntServ and DiffServ are not appropriate",
+    "the IntServ is costly and impractical",
+    "DiffServ is inoperable since it offers little quantitative QoS disciplines",
+    "neither do support the differentiated QoS or are not practical",
+    "no theoretical upper bound on the buffer size is given",
+    "each plane would need to implement large numbers of costly priority queues",
+    "our DS-PPS is universal and scalable"
+  ],
+  "thinking_moves": [
+    "先批判现有方案(IntServ/DiffServ)不适用于PPS场景，指出成本高或缺乏可量化保证",
+    "将QoS问题转化为交换平面分配问题，用平面数作为控制粒度",
+    "将队列论模型(M/D/1)作为延迟界存在性的形式化保证",
+    "将理论界与prototype实测对齐，验证工程可行性"
+  ],
+  "topic_tags": [
+    "parallel-packet-switch",
+    "differentiated-QoS",
+    "terabit-router",
+    "load-balancing-architecture",
+    "CIOQ-emulation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "完整文本，包含完整方法、理论分析、prototype实现与仿真评估。原文存在部分截断但不影响主要认知信号提取。 | md truncated to head40k+tail20k"
+}

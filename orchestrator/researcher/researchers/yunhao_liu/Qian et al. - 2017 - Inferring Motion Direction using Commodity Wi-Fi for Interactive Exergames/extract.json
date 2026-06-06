@@ -1,0 +1,39 @@
+{
+  "paper_id": "Qian et al. - 2017 - Inferring Motion Direction using Commodity Wi-Fi for Interactive Exergames",
+  "doi": null,
+  "title": "Inferring Motion Direction using Commodity Wi-Fi for Interactive Exergames",
+  "year": 2017,
+  "venue": "CHI 2017",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有体感游戏依赖视觉或专用传感器，受光照、视线和成本限制，无法在碎片化场景普及",
+  "problem_framing": "将提取多径环境下完整多普勒频移(含正负符号)建模为通过天线组合消除随机相位噪声的问题",
+  "key_insight": "同接收机天线经历相同相位偏移但空间多样，利用共轭乘法可消除相位噪声同时保留方向性多普勒",
+  "method_signature": "利用双天线共轭乘法消除相位偏移，结合时频分析从CSI提取带符号的多普勒频移",
+  "evaluation_criteria": "八方向舞步动作识别准确率，对比CARM等基线的方向区分能力",
+  "negative_result_or_admitted_limitation": "斜向动作识别弱于正向，因假设玩家严格位于两链路中垂线交点而实际有偏差；幅度比相比符号更难准确估计",
+  "evidence_for_taste": [
+    "only extract the absolute values of Doppler shifts without arithmetic signs",
+    "the amplitudes of Doppler shifts is more difficult to estimate, due to environmental noises",
+    "such assumption holds only when the player moves strictly at the intersection",
+    "no clear correlation between user types and performance",
+    "Enabling recognition of multiple objects still remains an open and challenging problem"
+  ],
+  "thinking_moves": [
+    "将一个perception问题通过巧用硬件特性(天线多样性)转化为communication问题",
+    "先论证为何功率法丢失符号信息，再设计天线组合来恢复",
+    "从物理模型(椭圆焦点与径向速度)出发推导方向与多普勒的映射关系",
+    "用两链路正交投影将速度方向编码为2D向量以消除单链路对称性歧义",
+    "区分两类误差源：相邻方向(幅度比问题)与不相邻方向(符号顺序问题)"
+  ],
+  "topic_tags": [
+    "Wi-Fi-CSI-sensing",
+    "Doppler-motion-direction",
+    "exergame-interface",
+    "antenna-diversity-phase-cleaning",
+    "device-free-gesture-recognition"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

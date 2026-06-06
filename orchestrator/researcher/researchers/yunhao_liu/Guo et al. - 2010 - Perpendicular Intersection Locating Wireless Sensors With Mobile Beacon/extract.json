@@ -1,0 +1,49 @@
+{
+  "paper_id": "Guo et al. - 2010 - Perpendicular Intersection Locating Wireless Sensors With Mobile Beacon",
+  "doi": null,
+  "title": "Perpendicular Intersection: Locating Wireless Sensors With Mobile Beacon",
+  "year": 2010,
+  "venue": "IEEE Transactions on Vehicular Technology",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "OceanSense项目需要在动态海洋环境中定位稀疏部署的浮标传感器，但RSSI绝对值映射距离误差过大",
+  "problem_framing": "将定位问题重新定义为几何投影问题：找到传感器在移动信标轨迹上的投影点，而非直接测量距离",
+  "key_insight": "虽然RSSI绝对值不可靠，但RSSI差异能一致反映物理距离对比；移动时最大RSSI点即为传感器到轨迹的最短投影点",
+  "method_signature": "利用移动信标轨迹上两点投影的垂直线交点计算传感器坐标，绕过RSSI绝对值映射",
+  "evaluation_criteria": "室内外多环境下与TRL和BI方法的定位误差和标准差比较",
+  "negative_result_or_admitted_limitation": "海面实验平均误差7.33m，主要因GPS本身有3-4m误差且船体轨迹不精确",
+  "evidence_for_taste": [
+    "the fundamental stumbling block",
+    "unacceptable localization errors",
+    "the closest point on the line",
+    "monotonically decreases",
+    "tolerating the irregularity"
+  ],
+  "thinking_moves": [
+    "从RSSI实验数据中发现'虽然不光滑但单调'的规律",
+    "将感知问题重新frame为几何问题",
+    "用最优轨迹定理(等边三角形)最小化信标移动时间",
+    "设计扩展方案处理随机轨迹和障碍物场景"
+  ],
+  "topic_tags": [
+    "mobile-beacon-localization",
+    "RSSI-relative-comparison",
+    "geometric-projection",
+    "wireless-sensor-networks",
+    "perpendicular-intersection"
+  ],
+  "cites_own_work": [
+    {
+      "title": "Sea depth measurement with restricted floating sensors",
+      "year": 2007,
+      "venue": "IEEE RTSS"
+    },
+    {
+      "title": "Perpendicular intersection",
+      "year": 2008,
+      "venue": "IEEE RTSS"
+    }
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

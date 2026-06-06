@@ -1,0 +1,38 @@
+{
+  "paper_id": "Trojaning semi-supervised learning model via poisoning wild images on the web",
+  "doi": "10.48550/arxiv.2301.00435",
+  "title": "Trojaning semi-supervised learning model via poisoning wild images on the web",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "Wild images scraped from web for training are vulnerable to backdoor poisoning, but previous attacks assume labeled images while most web images are unlabeled",
+  "problem_framing": "Zero-knowledge backdoor poisoning on unlabeled examples of trained-from-scratch SSL models; victim trains model from scratch using SSL algorithm on poisoned unlabeled data",
+  "key_insight": "Label-inconsistent poisoning fails on SSL because SSL algorithms strive to correct unlabeled examples to correct classes; poisoning only target class examples allows gradient matching to trick SSL",
+  "method_signature": "Gradient matching backdoor generator using surrogate network; poisoned unlabeled images match gradients of target class images",
+  "evaluation_criteria": "Attack Success Rate (ASR), Clean Accuracy (CA), Imperceptibility (IMP via PSNR/SSIM/L-inf)",
+  "negative_result_or_admitted_limitation": "Baseline poisons achieve only 56.88% ASR max; our method requires epsilon budget constraint for imperceptibility",
+  "evidence_for_taste": [
+    "label-inconsistent backdoor poisoning is much more difficult",
+    "backdoor patterns may overfit on the target class",
+    "the attack success rate is not ideal",
+    "reverse engineering relies on classification layers",
+    "gradient information in early training does not carry meaningful information"
+  ],
+  "thinking_moves": [
+    "对比监督与半监督学习机制的差异，发现标签一致/不一致 poisoning 在SSL中的失效机制不同",
+    "从SSL算法校正机制反推 poisoned unlabeled data 必须来自目标类",
+    "利用神经网络迁移性，将对抗性知识从代理网络迁移到目标网络",
+    "把梯度匹配作为代理网络与目标网络之间的桥梁，实现零知识 poisoning"
+  ],
+  "topic_tags": [
+    "backdoor poisoning",
+    "semi-supervised learning",
+    "zero-knowledge attack",
+    "gradient matching",
+    "unlabeled data poisoning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

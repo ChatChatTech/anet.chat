@@ -1,0 +1,32 @@
+{
+  "paper_id": "Liu et al. - 2010 - Oceansense monitoring the sea with wireless sensor networks",
+  "doi": null,
+  "title": "OceanSense: Monitoring the Sea with Wireless Sensor Networks",
+  "year": 2009,
+  "venue": "MobiCom 2009 Poster",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "H.H.港口淤积严重,现有方案需18M美元/年的人工+硬件成本",
+  "problem_framing": "海上传感器节点受风浪影响移动,如何将漂浮节点锚定并在移动约束下反推海深",
+  "key_insight": "锚定节点的漂移范围半径由绳长和海深决定,漂移面积→海深,无需额外硬件",
+  "method_signature": "Restricted Floating Sensors + Perpendicular Intersection定位 + PAD被动诊断",
+  "evaluation_criteria": "16个月连续运行,成本降低95%以上",
+  "negative_result_or_admitted_limitation": "基于RSSI的传统定位在海上有环境干扰;绳索边界处呈悬链线需额外计算",
+  "evidence_for_taste": "\"improve communication quality\"",
+  "thinking_moves": "理解受限漂浮的运动约束,利用锚绳几何约束代替额外测量",
+  "topic_tags": [
+    "ocean-surface-WSN",
+    "sea-depth-measurement",
+    "floating-sensor-localization",
+    "mobile-beacon-PI",
+    "passive-network-diagnosis"
+  ],
+  "cites_own_work": [
+    "[2] OceanSense project page",
+    "[3] Perpendicular Intersection RTSS 2008",
+    "[4] PAD SenSys 2008",
+    "[5] RFS depth RTSS 2007"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

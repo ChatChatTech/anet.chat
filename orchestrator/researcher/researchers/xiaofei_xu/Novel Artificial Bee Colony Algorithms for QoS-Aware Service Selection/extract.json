@@ -1,0 +1,42 @@
+{
+  "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection",
+  "doi": "10.1109/tsc.2016.2612663",
+  "title": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection",
+  "year": 2016,
+  "venue": "IEEE Transactions on Services Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Population-based algorithms for service selection are too complex to configure; existing ABC variants use generic neighborhood search that behaves like random search in discrete space.",
+  "problem_framing": "Formulate QoS-aware service selection as NP-hard discrete optimization with large search space; need to adapt ABC from continuous to discrete domain while preserving its simplicity advantage.",
+  "key_insight": "Continuous ABC's success stems from 'optimality continuity' property (similar variables yield similar function values); discrete ABC lacks this because neighborhood covers entire solution space; approximating this property via QoS-similarity-based neighbors improves convergence.",
+  "method_signature": "Three algorithms (IBA/PBA/EBA) achieve approximate optimality continuity through ratio-based, partition-based, and experience-based neighborhood definitions respectively.",
+  "evaluation_criteria": "Solution accuracy and convergence speed compared against ProHR and GDE3; ablation of individual/partition/experience techniques.",
+  "negative_result_or_admitted_limitation": "New parameters (R, C, H) require tuning; approximation may exclude some qualified neighbors; combinations of algorithms not thoroughly tested.",
+  "evidence_for_taste": [
+    "the neighborhood search of the discrete ABC is quite similar to a random search",
+    "existing population-based algorithms ... are often poor at exploitation",
+    "the former makes it difficult to leverage the unique characteristics of SSP",
+    "poorly-configured parameters could lead to undesirable QoS",
+    "the complexity of finding all the qualified neighbors is comparable with that of the SSP"
+  ],
+  "thinking_moves": [
+    "Identify root cause: discrete ABC neighborhood Eq.(8) covers entire solution space, losing local search property",
+    "Borrow 'optimality continuity' concept from continuous optimization as theoretical anchor",
+    "Map continuous neighborhood structure analogy to justify discrete approximation",
+    "Realize not all qualified neighbors need to be reachable (Table 2 shows even continuous functions miss qualified neighbors)",
+    "Derive three complementary implementations from same principle but different mechanisms"
+  ],
+  "topic_tags": [
+    "ABC-continuous-analogy",
+    "discrete-optimization-approximation",
+    "neighborhood-search-redesign",
+    "QoS-aware-service-selection",
+    "service-composition-metaheuristic"
+  ],
+  "cites_own_work": [
+    "X. Wang, Z. Wang, and X. Xu, \"An improved artificial bee colony approach to qos-aware service selection,\" Proc. ICWS, 2013.",
+    "X. Wang, Z. Wang, and X. Xu, \"Semi-empirical service composition: a clustering based approach,\" Proc. ICWS, 2011."
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

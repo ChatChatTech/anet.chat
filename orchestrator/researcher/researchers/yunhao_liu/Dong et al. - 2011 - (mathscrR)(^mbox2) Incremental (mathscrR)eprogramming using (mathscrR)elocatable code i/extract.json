@@ -1,0 +1,40 @@
+{
+  "paper_id": "Dong et al. - 2011 - (mathscrR)(^mbox2) Incremental (mathscrR)eprogramming using (mathscrR)elocatable code i",
+  "doi": null,
+  "title": "R^2: Incremental Reprogramming using Relocatable Code in Networked Embedded Systems",
+  "year": 2011,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "大规模传感器网络(GreenOrbs)手动重新编程代价高；传输代码量大导致重编程时间长、能耗高。",
+  "problem_framing": "现有增量重编程方案受函数移位和数据移位影响，程序相似度低，delta文件大。",
+  "key_insight": "通过生成可重定位代码，将引用指令中的绝对地址填充为预设值(如零)，使两版本引用指令保持不变，由加载器完成运行时地址修正。",
+  "method_signature": "统一的可重定位代码方法处理函数移位和数据移位；压缩重定位条目从12字节到4字节；优化差分算法生成最小delta。",
+  "evaluation_criteria": "delta大小减少比例；程序相似度(需添加字节数)；与Deluge/Zephyr/Hermes对比。",
+  "negative_result_or_admitted_limitation": "重定位条目开销开始成为贡献整体delta大小的限制因素(the overhead of relocation entries begin to be a limiting factor)。",
+  "evidence_for_taste": [
+    "R^2 achieves the highest degree of similarity",
+    "while R^2 only slightly decreases the similarity",
+    "Hermes decreases the similarity significantly",
+    "R^2 is more general in unifying",
+    "overhead of relocation entries begin to be a limiting factor"
+  ],
+  "thinking_moves": [
+    "将函数调用和数据引用统一到同一技术框架(可重定位代码)下处理",
+    "通过填充零值保留引用指令的不变性，实现跨版本的符号引用解耦",
+    "发现重定位条目存在恒定移位的模式，据此扩展RMTD差分算法",
+    "从工程失败案例(Hermes/Zephyr局限性)反向推导统一方案的必要性"
+  ],
+  "topic_tags": [
+    "sensor-network-reprogramming",
+    "incremental-delta-generation",
+    "relocatable-code",
+    "embedded-systems-ota",
+    "TinyOS"
+  ],
+  "cites_own_work": [
+    "Dong et al. - 2010 - Elon: Enabling Efficient and Long-Term Reprogramming for Wireless Sensor Networks"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注发表 venue/venue_tier; role 推断基于作者排序和致谢推断非 senior/first/corresponding。"
+}

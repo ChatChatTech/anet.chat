@@ -1,0 +1,41 @@
+{
+  "paper_id": "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580",
+  "doi": "10.18653/v1/2025.findings-emnlp.631",
+  "title": "From Hypothesis to Publication: A Comprehensive Survey of AI-Driven Research Support Systems",
+  "year": 2025,
+  "venue": "EMNLP Findings",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "研究过程资源密集且门槛高,而LLM快速发展为AI辅助研究提供了技术基础,亟需系统性综述",
+  "problem_framing": "将AI辅助研究组织为沿人类研究流程的三阶段框架:假设构思→假设验证→论文发表",
+  "key_insight": "通过研究流程框架系统整合各子领域,既覆盖全流程又兼顾专门化研究的深度",
+  "method_signature": "系统性综述+层级化分类学,按研究pipeline组织相关工作",
+  "evaluation_criteria": "提供基准测试与工具的综合对比表格,辅助跨领域探索",
+  "negative_result_or_admitted_limitation": "该领域仍处于起步阶段,大量方向仍处于实验阶段,在实际场景有效应用前需取得实质性进展",
+  "evidence_for_taste": [
+    "predominantly focuses on LLMs, while neglecting the knowledge synthesis",
+    "信息气泡效应和信息视野局限",
+    "reinforce recognition disparities between prominent and lesser-known researchers",
+    "lack of standardized benchmarks and evaluation metrics hinders direct comparison",
+    "remain at an experimental stage"
+  ],
+  "thinking_moves": [
+    "把AI辅助研究按人类研究流程重新结构化,统一离散的子领域",
+    "识别前人综述的缺口:遗漏知识综合与理论验证",
+    "将领域挑战归类为流程整合困难、推理模型集成、伦理风险三大类",
+    "用层级化分类学协调广度覆盖与深度专门化"
+  ],
+  "topic_tags": [
+    "AI-research-workflow-integration",
+    "systematic-survey-taxonomy",
+    "LLM-research-automation",
+    "hypothesis-generation-iteration",
+    "peer-review-simulation"
+  ],
+  "cites_own_work": [
+    "zhu et al., 2023",
+    "weng et al., 2024"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

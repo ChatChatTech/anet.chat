@@ -1,0 +1,38 @@
+{
+  "paper_id": "A Language-Independent Neural Network for Event Detection",
+  "doi": "10.18653/v1/p16-2011",
+  "title": "A Language-Independent Neural Network for Event Detection",
+  "year": 2016,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "语言特定资源匮乏导致方法难以跨语言迁移，需自动从数据学习特征",
+  "problem_framing": "事件检测中词汇语义编码困难，同一触发词在不同语境下类型不同",
+  "key_insight": "Bi-LSTM捕获双向序列信息，CNN捕获局部chunk结构，两者互补形成语言无关表示",
+  "method_signature": "Bi-LSTM+CNN混合神经网络，Skip-Gram词嵌入，softmax分类",
+  "evaluation_criteria": "英语ACE2005/中文ACE2005/西班牙ERE的P/R/F三指标",
+  "negative_result_or_admitted_limitation": "RNN/LSTM仅考虑前向序列，丢失后续重要线索，如release后接20 million euros",
+  "evidence_for_taste": [
+    "Bi-LSTM can capture both preceding and following",
+    "avoid the errors propagated from NLP tools",
+    "CNN is good at capturing salient features",
+    "cannot establish a relation between court and release"
+  ],
+  "thinking_moves": [
+    "通过对比RNN与Bi-LSTM的性能差距，反推单向模型缺失后续信息的代价",
+    "将传统依赖语法解析的方法失败原因归结为跨语言资源不可用",
+    "设计混合架构填补序列模型与局部chunk模型的各自盲区",
+    "从英语实验结论出发，假设该语言无关特性在其他语言同样成立"
+  ],
+  "topic_tags": [
+    "事件检测",
+    "Bi-LSTM",
+    "CNN",
+    "语言无关性",
+    "词嵌入",
+    "触发词抽取"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

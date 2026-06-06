@@ -1,0 +1,39 @@
+{
+  "paper_id": "TIFS_DeepReg__A_Trustworthy_and_Privacy_Friendly_Ownership_Regulatory_Framew(1)",
+  "doi": null,
+  "title": "DEEPREG: A Trustworthy and Privacy-Friendly Ownership Regulatory Framework for Deep Learning Models",
+  "year": 2024,
+  "venue": "IEEE Transactions on Information Forensics and Security",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "模型IP侵权猖獗,但缺乏监管机制来识别模型所有权和检测盗版,无法震慑欺诈者滥用DL模型",
+  "problem_framing": "多方安全博弈:模型所有者、用户、监管者之间存在信任问题,需同时实现不可伪造性、不可抵赖性、不可泄露性",
+  "key_insight": "利用特征提取器的唯一性,通过合成输入与真实输入建立一对多关系,即使API仅返回top-1标签也能创建唯一指纹",
+  "method_signature": "在TEE内提取模型指纹,利用贝叶斯定理迭代验证嫌疑模型,假设检验指导盗版判定",
+  "evaluation_criteria": "盗版模型检测准确率100%,无关模型零假阳性率",
+  "negative_result_or_admitted_limitation": "TEE漏洞如侧信道攻击不在本文范围内,参数优化需权衡安全与成本",
+  "evidence_for_taste": [
+    "sacrifices the accuracy of a well-trained model",
+    "virtually impractical since the suspect is unlikely",
+    "cannot prevent malicious accusations",
+    "prevent alerting the pirate",
+    "forged fingerprints to counter-claim",
+    "no external party can verify the authenticity"
+  ],
+  "thinking_moves": [
+    "从对抗视角列出威胁模型T1-T7,反推设计目标非伪造性、非抵赖性、非泄露性",
+    "将黑盒模型API仅返回top-1标签的约束视为挑战而非障碍,强调方法的高兼容性",
+    "利用迁移学习原理:相似特征图会激活相同标签,绕过输出格式修改的规避",
+    "参数优化问题形式化为在安全约束下最小化成本函数Cost(N,K)=N(K+1)"
+  ],
+  "topic_tags": [
+    "DL模型知识产权保护",
+    "模型指纹识别",
+    "可信执行环境TEE",
+    "黑盒模型所有权验证",
+    "贝叶斯嫌疑检测"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

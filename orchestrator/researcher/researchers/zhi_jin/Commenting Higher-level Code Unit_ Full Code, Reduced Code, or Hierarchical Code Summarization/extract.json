@@ -1,0 +1,37 @@
+{
+  "paper_id": "Commenting Higher-level Code Unit_ Full Code, Reduced Code, or Hierarchical Code Summarization",
+  "doi": "10.48550/arxiv.2503.10737",
+  "title": "Commenting Higher-level Code Unit: Full Code, Reduced Code, or Hierarchical Code Summarization",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有ACS技术主要关注方法级代码，缺乏对文件级和模块级高阶代码单元自动摘要的系统研究",
+  "problem_framing": "探索LLM在上下文窗口和预算约束下生成高质量高阶代码单元摘要的最优策略",
+  "key_insight": "文件级摘要全代码最优，模块级摘要层级策略最优；压缩策略引入信息损失但能降成本",
+  "method_signature": "三策略比较:全代码/缩减代码/层级摘要; GPT-4评估替代人工",
+  "evaluation_criteria": "1-5分人工评估与GPT-4评分相关性验证统计显著性Wilcoxon检验",
+  "negative_result_or_admitted_limitation": "层级摘要策略在文件级表现最差，成本最高；GPT-4可能对自身生成摘要有偏好",
+  "evidence_for_taste": [
+    "压缩会不利影响LLM解释文件代码",
+    "使用层级策略可能生成无意义摘要",
+    "GPT-4会lazy不够详细",
+    "层级策略成本最高且摘要最差"
+  ],
+  "thinking_moves": [
+    "从方法级ACS研究空白推导出高阶代码单元摘要的必要性",
+    "将上下文窗口限制问题具象化为三种可比较的策略",
+    "验证LLM自评可行性以降低人工评估成本",
+    "区分文件级与模块级最优策略的层级差异"
+  ],
+  "topic_tags": [
+    "LLM-code-summarization",
+    "higher-level-code-units",
+    "hierarchical-summarization",
+    "code-commenting",
+    "evaluation-automation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

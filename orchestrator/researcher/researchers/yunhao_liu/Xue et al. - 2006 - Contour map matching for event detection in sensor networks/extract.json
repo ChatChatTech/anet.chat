@@ -1,0 +1,37 @@
+{
+  "paper_id": "Xue et al. - 2006 - Contour map matching for event detection in sensor networks",
+  "doi": null,
+  "title": "Contour Map Matching for Event Detection in Sensor Networks",
+  "year": 2006,
+  "venue": "SIGMOD 2006",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "阈值方法难以指定合适的事件阈值,且无法捕获渐变型事件(如煤矿气体泄漏)",
+  "problem_framing": "将传感器网络事件检测问题重新形式化为时空模式匹配问题",
+  "key_insight": "事件在传感器网络产生时空模式,可借助等高线图实现高效模式匹配",
+  "method_signature": "基于线性回归的等高线区域合并准则进行网内等高线图构建",
+  "evaluation_criteria": "检测精度precision与recall,网络流量通信开销",
+  "negative_result_or_admitted_limitation": "若用户对事件缺乏完整知识,将无法准确指定属性值的时空分布",
+  "evidence_for_taste": [
+    "cannot be easily captured by discrete threshold values",
+    "the communication cost on wireless radio channel is the dominating factor",
+    "combining region area with attribute value, we are able to capture the users' tradeoff",
+    "the smaller the error bound and the larger the size reduction, the larger the merging benefit"
+  ],
+  "thinking_moves": [
+    "从阈值方法失败案例反推模式匹配需求",
+    "将感知问题重新frame为通信问题以强调网内聚合",
+    "用线性回归模型统一误差与面积的权衡",
+    "提出增量更新策略基于事件稀有假设"
+  ],
+  "topic_tags": [
+    "sensor-network-event-detection",
+    "contour-map-pattern-matching",
+    "in-network-aggregation",
+    "linear-regression-contour-merging",
+    "coal-mine-surveillance"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Yunhao Liu为合作作者角色,作者列表第二位。论文完整包含动机、问题定义、方法、实验评估及局限性讨论。 | md truncated to head40k+tail20k"
+}

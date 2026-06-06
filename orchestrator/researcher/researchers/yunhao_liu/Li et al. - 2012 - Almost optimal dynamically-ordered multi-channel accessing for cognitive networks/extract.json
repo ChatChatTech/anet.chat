@@ -1,0 +1,38 @@
+{
+  "paper_id": "Li et al. - 2012 - Almost optimal dynamically-ordered multi-channel accessing for cognitive networks",
+  "doi": null,
+  "title": "Almost Optimal Dynamically-Ordered Multi-Channel Accessing for Cognitive Networks",
+  "year": 2012,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "In cognitive radio networks, the status of channels' availability and quality is difficult to predict and quantify; traditional MAB-based approaches fail to exploit multichannel diversity.",
+  "problem_framing": "Formulate online sequential channel sensing/accessing as a Sequencing Multi-Armed Bandit (SMAB) problem where each sensing order maps to an arm.",
+  "key_insight": "The ordering of channels with descending idle probability upper confidence bounds achieves maximum SCB, reducing storage from O(N^K) to O(N).",
+  "method_signature": "Sequencing Confidence Bound (SCB) algorithm using channel-level instead of order-level statistics",
+  "evaluation_criteria": "Regret in O(N^K log L) polynomial to channels and logarithmic to time; throughput improvement over baseline",
+  "negative_result_or_admitted_limitation": "UCB1 policy achieves zero-regret but performs poorly when number of channels is large, with exponential regret O(N^K log L)",
+  "evidence_for_taste": [
+    "fails to exploit multichannel diversity",
+    "the rewards are no longer independent",
+    "exploring dependency among arms",
+    "learning process could be greatly accelerated",
+    "precise regret by this scheme is hard to achieve"
+  ],
+  "thinking_moves": [
+    "把指数级order空间映射回channel级别统计，从而把O(N^K)存储降到O(N)",
+    "先证UCB1方法的指数级 regret 再提出改进",
+    "发现不同 sensing order 之间存在 reward 依赖关系",
+    "从 order-specific statistics 转变为 channel-related statistics"
+  ],
+  "topic_tags": [
+    "cognitive radio",
+    "multi-armed bandit",
+    "sequential channel sensing",
+    "online learning",
+    "dynamic spectrum access"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "A psychological model of human-computer cooperation for the era of artificial intelligence",
+  "doi": "10.1360/n112017-00225",
+  "title": "面向智能时代的人机合作心理模型",
+  "year": 2018,
+  "venue": "中国科学: 信息科学",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有的人机交互理论滞后40年,MHP和GOMS等经典模型无法满足当前多样化交互需求",
+  "problem_framing": "建构面向智能时代的人机合作心理模型,解释模拟预测人类行为,指导智能系统设计",
+  "key_insight": "人机交互可类比为人际交互,计算机应具备与人相似的感知-认知-动作模块及心理理论能力",
+  "method_signature": "提出人机合作心理模型HCCM,包含感知/认知/动作三模块及双向交互通道",
+  "evaluation_criteria": "能否解释、模拟和预测人类行为;能否指导智能系统和人机交互设计",
+  "negative_result_or_admitted_limitation": "模型未能涉及情绪情感领域;未开展针对性实验验证;缺乏定量化参数描述;未细化分布式架构",
+  "evidence_for_taste": [
+    "现有模型已经不能满足当前的需求",
+    "该模型对3个处理器的环路循环周期时间的设定非常随意和主观",
+    "该模型本质上是面向人工智能的心理模型,没有涉及信息的输入和输出",
+    "现有的人机交互模型仍然停留在旧交互模式的阶段",
+    "还只是一个概念模型,缺少定量化参数"
+  ],
+  "thinking_moves": [
+    "从旧理论滞后痛点出发逆向推演新模型需求",
+    "将人机交互问题reframe成人人交互类比问题",
+    "通过假设分层结构化建构新模型",
+    "整合认知心理学与计算科学的跨学科框架",
+    "承认当前模型局限并指出未来完善方向"
+  ],
+  "topic_tags": [
+    "人机交互心理模型",
+    "感知-认知-动作三模块",
+    "多模态并行交互",
+    "分布式认知",
+    "具身认知理论"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

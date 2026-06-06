@@ -1,0 +1,44 @@
+{
+  "paper_id": "Guo et al. - 2022 - Saiyan Design and Implementation of a Low-power Demodulator for LoRa Backscatter Systems",
+  "doi": null,
+  "title": "Saiyan: Design and Implementation of a Low-power Demodulator for LoRa Backscatter Systems",
+  "year": 2022,
+  "venue": "USENIX NSDI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "长距离LoRa反向散射系统Packet Loss严重，需要下行反馈实现按需重传，但标签无法以极低功耗解调反馈信号",
+  "problem_framing": "标准LoRa解调需40mW以上，但能量采集器仅能每25秒产生1mW；包络检测器不适用因为LoRa信号包络恒定",
+  "key_insight": "利用SAW滤波器的尖锐频率响应实现FM→AM变换，使以功率换频率成为可能",
+  "method_signature": "SAW滤波器+双阈值比较器+循环频移+相关器组合实现低功耗LoRa解调",
+  "evaluation_criteria": "解调距离、误码率(BER)、吞吐量、功耗(93.2µW)",
+  "negative_result_or_admitted_limitation": "阈值U_H和U_L需离线测量不同距离下手动配置，未实现自动增益控制AGC",
+  "evidence_for_taste": [
+    "high threshold alone fails to detect peak due to valleys",
+    "low threshold alone causes false positives",
+    "RLC renders idea infeasible",
+    "the envelope of a LoRa signal is a constant",
+    "11 dB SNR gain",
+    "3.5–5× gain on demodulation range"
+  ],
+  "thinking_moves": [
+    "把communication问题reframe成perception问题:从解调信号变成追踪峰值幅度",
+    "从物理约束反推架构:能量有限→不能ADC→改用比较器",
+    "创造性repurpose:SAW滤波器本用于滤波→改造为FM-AM转换器",
+    "先证明极端情况不可行(RLC带宽不够)再提解决方案",
+    "设计迭代:vanilla版本只到55m→Super版本加SNR增益和相关性到148m",
+    "从系统约束反推信号处理简化:避免FFT和ADC"
+  ],
+  "topic_tags": [
+    "backscatter-communication",
+    "low-power-demodulator",
+    "LoRa-FM-to-AM",
+    "SAW-filter-application",
+    "energy-harvesting-IoT"
+  ],
+  "cites_own_work": [
+    "PLoRa",
+    "Aloba"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

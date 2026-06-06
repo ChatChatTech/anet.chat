@@ -1,0 +1,38 @@
+{
+  "paper_id": "Qian et al. - 2016 - Tuning by turning Enabling phased array signal processing for WiFi with inertial sensors",
+  "doi": null,
+  "title": "Tuning by turning: Enabling Phased Array Signal Processing for WiFi with Inertial Sensors",
+  "year": 2016,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "commodity WiFi devices无法准确估计AoA，因为天线数少、相位偏移不确定，需繁琐校准或人为干预",
+  "problem_framing": "将AoA估计问题重新定义为虚拟时空天线阵列的相对相位测量问题，利用用户自然旋转",
+  "key_insight": "通过两次测量的相位差消除各天线固有相位偏移，同时惯性传感器捕获旋转角度实现解耦",
+  "method_signature": "D-MUSIC差分MUSIC算法，仅需一次旋转即消除相位偏移并计算AoA",
+  "evaluation_criteria": "平均AoA估计误差13°，对比标准MUSIC完全失效",
+  "negative_result_or_admitted_limitation": "小角度旋转误差不可接受；AoA越接近90°误差越大；多径严重时D-MUSIC可能失效；高度差2m时性能急剧下降",
+  "evidence_for_taste": [
+    "still remains unsettled",
+    "totally fails to yield correct",
+    "requires no hardware modifications",
+    "D-MUSIC is envisioned as a promising",
+    "average estimation error of 13°"
+  ],
+  "thinking_moves": [
+    "把相位偏移从干扰变成信号处理的input，利用用户旋转构造差分",
+    "把同一天线在不同时刻的测量看作等效的虚拟天线阵列",
+    "最小化用户交互成本，仅需自然旋转而非走动或校准",
+    "用惯性传感器的角度测量值来解耦信号模型中的耦合变量"
+  ],
+  "topic_tags": [
+    "WiFi AoA estimation",
+    "phased array signal processing",
+    "inertial sensor fusion",
+    "commodity device sensing",
+    "MUSIC algorithm variation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "DOI和具体venue在文本中未提及；Yunhao Liu为署名最后作者（按国内惯例通常为通讯/PI作者）"
+}

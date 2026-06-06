@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhang et al. - 2015 - Message in a Sealed Bottle Privacy Preserving Friending in Mobile Social Networks",
+  "doi": null,
+  "title": "Message in a Sealed Bottle: Privacy Preserving Friending in Mobile Social Networks",
+  "year": 2015,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "移动网络隐私泄露阻碍社交;传统方案依赖公钥加密计算昂贵且需可信第三方",
+  "problem_framing": "去中心化移动社交网络中,双方在互不了解的情况下完成画像匹配并建立安全通信",
+  "key_insight": "请求画像与匹配画像的交集是双方天然共享的秘密,可作为对称密钥实现隐私匹配与安全信道同步构建",
+  "method_signature": "基于对称密码学利用画像交集作为共享密钥实现隐私保护匹配",
+  "evaluation_criteria": "隐私保护、结果可验证、通信与计算效率;真实社交网络数据与手机实现测试",
+  "negative_result_or_admitted_limitation": "字典攻击下恶意用户可恢复完整请求画像;需通过响应时间<1秒和小于12的基数阈值识别恶意回复者",
+  "evidence_for_taste": [
+    "nature common secret shared by the initiator",
+    "Only a matching user can decrypt the message",
+    "significantly more efficient than existing solutions",
+    "lightweight and practical",
+    "thwart cheating about matching result"
+  ],
+  "thinking_moves": [
+    "将隐私匹配问题重新frame为对称加密问题",
+    "利用交集作为天然共享密钥避免预设和可信第三方",
+    "设计余数向量快速排除大多数不匹配用户",
+    "通过提示矩阵支持灵活的模糊搜索",
+    "用动态位置密钥增强静态属性保护"
+  ],
+  "topic_tags": [
+    "隐私保护画像匹配",
+    "去中心化移动社交网络",
+    "对称密码学",
+    "安全信道建立",
+    "邻近发现",
+    "属性基加密替代"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文正文完整但未提供具体会议/期刊名称,DOI缺失,只能从作者机构推断为IEEE系列移动计算相关期刊 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Context-Aware Deep Spatiotemporal Network for Hand Pose Estimation From Depth Images",
+  "doi": "10.1109/tcyb.2018.2873733",
+  "title": "Context-Aware Deep Spatio-Temporal Network for Hand Pose Estimation from Depth Images",
+  "year": 2018,
+  "venue": "IEEE Transactions on Cybernetics",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "人手姿态估计受数据噪声、自由度高、自遮挡影响,需要同时建模空间和时间信息",
+  "problem_framing": "将姿态估计建模为从图像到关节点坐标的映射函数,分别捕获单帧空间信息和帧间时间依赖",
+  "key_insight": "通过自适应融合网络动态组合空间网络和时序网络的预测,而不是简单平均或固定权重",
+  "method_signature": "CADSTN: 切片3D体素表示+LSTM时序建模+可学习权重融合",
+  "evaluation_criteria": "帧好比例(不同阈值下)、每关节点误差、平均误差距离(mm)",
+  "negative_result_or_admitted_limitation": "15-60mm范围内不如3D CNN,因为3D CNN捕获了更充分的3D空间信息;切片3D分支因丢失深度信息而性能最差",
+  "evidence_for_taste": [
+    "we strike a balance between training complexity and efficiency",
+    "no much difference to freeze the Spatial Network and Temporal Network",
+    " fingertips estimation is generally worse than the palm",
+    "the bad performance is because the depth information is sacrificed in sliced 3D volumetric representation"
+  ],
+  "thinking_moves": [
+    "将单图像回归问题分解为空间建模+时序建模两个正交通道",
+    "用LSTM建模帧间运动一致性而非光流",
+    "用可学习权重替代固定加权融合,让网络自适应不同情形",
+    "从纹理体渲染借鉴切片策略使不同关节点分散在不同层"
+  ],
+  "topic_tags": [
+    "hand-pose-estimation",
+    "depth-image",
+    "spatio-temporal-modeling",
+    "3D-volumetric-representation",
+    "adaptive-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

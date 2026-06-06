@@ -1,0 +1,43 @@
+{
+  "paper_id": "Hierarchical Federated Learning through LAN-WAN Orchestration",
+  "doi": "10.48550/arxiv.2010.11612",
+  "title": "Hierarchical Federated Learning through LAN-WAN Orchestration",
+  "year": 2020,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WAN-driven FL incurs high monetary cost (80% of cost is network traffic) and slow convergence (Google reports 3000 rounds, 5 days for RNN)",
+  "problem_framing": "Traditional FL requires 500-10,000 cloud rounds across constrained WAN; need hierarchical aggregation: intra-LAN (frequent) + inter-LAN (infrequent)",
+  "key_insight": "LAN abundant bandwidth (tens of Mbps) can be exploited for frequent local aggregation, reducing reliance on expensive constrained WAN",
+  "method_signature": "LanFL: two-level aggregation hierarchy with P2P intra-LAN topology and dynamic device selection for heterogeneous LAN",
+  "evaluation_criteria": "Model accuracy, convergence speed (clock time), WAN traffic reduction, monetary cost savings",
+  "negative_result_or_admitted_limitation": "LanFL relies on manual parameter tuning through extensive experiments; current design only works for LAN domains with ≥10 devices, introducing selection bias",
+  "evidence_for_taste": [
+    "80% is billed to network traffic",
+    "preliminary efforts are impractical",
+    "such a cost can be amplified",
+    "cannot really speedup model convergence",
+    "ad-hoc parameter tuning",
+    "simulation-based as existing FL platforms",
+    "more abundant than WAN",
+    "much more abundant",
+    "not publicly available yet"
+  ],
+  "thinking_moves": [
+    "把通信瓶颈重新定位到局域网层级而非广域网",
+    "从成本结构(网络费用占比)推导优化方向",
+    "层级化设计: 局部聚合+全局聚合的分治策略",
+    "通过实验发现AP数量影响拓扑选择(PS vs Ring)",
+    "异构性导致同步等待问题 → 动态设备选择平衡训练节奏"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "LAN-WAN-orchestration",
+    "hierarchical-aggregation",
+    "P2P-communication",
+    "edge-computing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

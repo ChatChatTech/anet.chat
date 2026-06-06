@@ -1,0 +1,38 @@
+{
+  "paper_id": "Sun et al. - 2014 - Hello A generic flexible protocol for neighbor discovery",
+  "doi": null,
+  "title": "Hello: A Generic Flexible Protocol for Neighbor Discovery",
+  "year": 2014,
+  "venue": "IEEE",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "无线节点无法一直开启射频,需在duty cycle与discovery latency间权衡,且已有协议参数受限",
+  "problem_framing": "在异步且非对称duty cycle条件下,寻找使worst-case latency最小化的参数配置",
+  "key_insight": "两参数中一个保持无限制,使Hello成为可容纳现有确定性协议的通用框架,从而能遍历参数空间寻找最优解",
+  "method_signature": "Hello(c,n)用guardians+patrols调度,通过c和n的自由组合覆盖Quorum/Disco/U-Connect/Searchlight",
+  "evaluation_criteria": "worst-case latency、CDF of discovery latency、average latency、对称/非对称duty cycle场景",
+  "negative_result_or_admitted_limitation": "目前尚未找到patrol随机化问题的良好形式化表述(We have not found a good formulation)",
+  "evidence_for_taste": [
+    "parameter space under the framework",
+    "expose optimal parameters",
+    "first to our knowledge",
+    "highest degree of freedom",
+    "great flexibility by adjusting itself"
+  ],
+  "thinking_moves": [
+    "从具体协议抽取出统一框架,再遍历框架参数空间寻找理论最优",
+    "先证明最坏情况上界(Lemma 1,2),再通过simulation/experiment验证性能改进",
+    "利用中国剩余定理处理非对称周期重叠问题",
+    "承认patrol放置问题形式化困难,转而采用随机化 heuristic"
+  ],
+  "topic_tags": [
+    "neighbor-discovery-protocol",
+    "duty-cycle-optimization",
+    "asynchronous-wireless",
+    "generic-framework-design",
+    "worst-case-latency-bound"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文有完整的方法、证明、仿真和实现评估;venues信息从DOI格式推断为IEEE顶级会议;未找到DOI原文,但年份2014从版权信息确认"
+}

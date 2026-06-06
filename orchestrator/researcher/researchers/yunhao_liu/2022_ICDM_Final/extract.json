@@ -1,0 +1,39 @@
+{
+  "paper_id": "2022_ICDM_Final",
+  "doi": null,
+  "title": "A Unified Guaranteed Impression Allocation Framework for Online Display Advertising",
+  "year": 2022,
+  "venue": "ICDM",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "现有模型分别处理GD广告和RTB广告,无法在多约束下实现多目标最优分配,限制了整体收益",
+  "problem_framing": "将GD和RTB的统一分配问题建模为非凸QCQP问题,用端到端神经网络框架近似求解",
+  "key_insight": "通过QCQP问题首次统一GD和RTB分配指标,实现端到端最优整体印象分配",
+  "method_signature": "UGA框架:特征变换模块+可微排序网络双损失函数",
+  "evaluation_criteria": "RPM、GPM、CTR、CVR、GPR、eCPM等 revenue quality metrics",
+  "negative_result_or_admitted_limitation": "非凸问题导致训练后期存在小幅振荡",
+  "evidence_for_taste": [
+    "failing to achieve optimal allocation",
+    "cannot maximize the revenue",
+    "time cost is difficult to meet the real-time requirements",
+    "performance is unsatisfactory",
+    "only considers maximizing the revenue of individual ads"
+  ],
+  "thinking_moves": [
+    "把GD和RTB分开处理的问题统一建模为QCQP",
+    "通过变量分析发现只需优化基础变量bidding price",
+    "用端到端神经网络框架替代传统优化求解器",
+    "验证特征变换模块有效提升广告区分度",
+    "验证DSN+rank loss提升广告排序准确性"
+  ],
+  "topic_tags": [
+    "GD-RTB-unified-allocation",
+    "QCQP-optimization",
+    "neural-auction",
+    "display-advertising",
+    "impression-allocation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

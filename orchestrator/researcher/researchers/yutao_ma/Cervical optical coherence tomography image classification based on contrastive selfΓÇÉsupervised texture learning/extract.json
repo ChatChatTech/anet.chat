@@ -1,0 +1,38 @@
+{
+  "paper_id": "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning",
+  "doi": "10.1002/mp.15630",
+  "title": "Cervical Optical Coherence Tomography Image Classification Based on Contrastive Self-Supervised Texture Learning",
+  "year": null,
+  "venue": "Medical Physics",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "OCT图像标注需要专业知识且耗时,限制了深度学习模型的训练,且专家普遍不熟悉OCT影像",
+  "problem_framing": "利用自监督学习处理大量无标注OCT图像学习纹理特征,解决标注数据不足问题",
+  "key_insight": "将LBP局部纹理特征与对比学习结合,增强灰度医学图像的表示学习能力",
+  "method_signature": "CTL自监督预训练+CNN分类器,基于LBP纹理提取和余弦距离对比损失",
+  "evaluation_criteria": "十折交叉验证 AUC、灵敏度、特异度、准确率;与医学专家和四种基线对比",
+  "negative_result_or_admitted_limitation": "误分类38个MI图像为HSIL,因LBP纹理特征相似;CR方法因patch交换噪声表现差;LSIL因样本量小被排除",
+  "evidence_for_taste": [
+    "outperformed two out of four medical experts",
+    "introduce the texture features of cervical OCT images to contrastive learning",
+    "due to similar LBP texture features",
+    "better interpretability based on texture features"
+  ],
+  "thinking_moves": [
+    "利用无标注数据自监督预训练弥补医学图像标注稀缺",
+    "将灰度医学图像的局部纹理作为特征学习切入点",
+    "通过对比学习增强同类纹理特征的聚合能力",
+    "设计可解释的可视化模块辅助临床诊断",
+    "先机器对比验证再人类专家对比验证的递进策略"
+  ],
+  "topic_tags": [
+    "self-supervised-learning",
+    "cervical-OCT-classification",
+    "contrastive-texture-learning",
+    "LBP-feature-extraction",
+    "computer-aided-diagnosis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

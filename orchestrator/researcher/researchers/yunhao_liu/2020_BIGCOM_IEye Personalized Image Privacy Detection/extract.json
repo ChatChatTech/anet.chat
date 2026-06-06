@@ -1,0 +1,35 @@
+{
+  "paper_id": "2020_BIGCOM_IEye Personalized Image Privacy Detection",
+  "doi": null,
+  "title": "IEye: Personalized Image Privacy Detection",
+  "year": 2020,
+  "venue": "BIGCOM",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "用户难以正确配置隐私设置导致隐私泄露，现有种方法不够个性化且结果不可解释",
+  "problem_framing": "将隐私检测问题形式化为从用户标记图像中学习个性化规则集，并用子图匹配检测",
+  "key_insight": "图像隐私本质上是特征表示图的子结构，用规则描述实现可解释的个性化隐私定义",
+  "method_signature": "语义图特征表示 + RIPPER规则学习 + 组合优化保护隐私",
+  "evaluation_criteria": "准确率、精确率、召回率、F1值，与SIFT和深度特征对比",
+  "negative_result_or_admitted_limitation": "PicAlert数据集上准确率78.7%低于深度特征，仅在个性化小样本PPP数据集上表现更好",
+  "evidence_for_taste": [
+    "generic models cannot be adopted to deal with different users",
+    "results are barely interpretable",
+    "it can learn fewer rules, so it has a more concise description",
+    "our method performs better on small sample datasets"
+  ],
+  "thinking_moves": [
+    "从通用分类器无法适配用户差异出发，reframe为规则学习问题",
+    "将隐私检测从黑盒分类转为可解释的子图匹配",
+    "将隐私保护与效用平衡形式化为组合优化选点问题"
+  ],
+  "topic_tags": [
+    "image-privacy-detection",
+    "personalized-rule-learning",
+    "knowledge-graph-representation",
+    "interpretable-machine-learning",
+    "privacy-utility-tradeoff"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

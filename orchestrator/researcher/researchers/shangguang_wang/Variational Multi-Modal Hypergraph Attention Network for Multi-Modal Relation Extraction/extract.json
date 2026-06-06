@@ -1,0 +1,38 @@
+{
+  "paper_id": "Variational Multi-Modal Hypergraph Attention Network for Multi-Modal Relation Extraction",
+  "doi": "10.48550/arxiv.2404.12006",
+  "title": "Variational Multi-Modal Hypergraph Attention Network for Multi-Modal Relation Extraction",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "Multiple entity pairs in one sentence share same context (text+image) but require different relations, and existing MMRE methods cannot distinguish them",
+  "problem_framing": "MMRE must capture high-order correlations among entity pairs, images, and objects for each unique pair",
+  "key_insight": "Hypergraph structure naturally captures multi-way correlations beyond pairwise; variational Gaussian modeling handles entity/relation ambiguity",
+  "method_signature": "VM-HAN constructs multi-modal hypergraph with global/intra/inter-modal hyperedges, uses V-HAN with variational attention in Gaussian space",
+  "evaluation_criteria": "Accuracy, Precision, Recall, F1 on MNRE and MORE benchmark datasets",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "Existing methods are limited by their neglect",
+    "overlook the multiple entity pairs in one sentence",
+    "this still remains under-explored",
+    "Outperforms existing methods"
+  ],
+  "thinking_moves": [
+    "Identifies structural deficiency in prior work: pairwise modeling insufficient",
+    "Maps real-world complexity (multiple pairs per context) to graph-theoretic requirement (high-order edges)",
+    "Transfers hypergraph from 3D vision domain to MMRE, hypothesizing high-order structure captures cross-modal correlations",
+    "Uses variational framework to convert node uncertainty into learnable representations",
+    "Ablates each component to verify contribution of hypergraph structure vs. variational modeling"
+  ],
+  "topic_tags": [
+    "multi-modal-relation-extraction",
+    "hypergraph-neural-networks",
+    "variational-learning",
+    "entity-disambiguation",
+    "cross-modal-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

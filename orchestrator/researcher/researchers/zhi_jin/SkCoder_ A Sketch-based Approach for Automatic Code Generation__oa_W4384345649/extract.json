@@ -1,0 +1,39 @@
+{
+  "paper_id": "SkCoder_ A Sketch-based Approach for Automatic Code Generation__oa_W4384345649",
+  "doi": "10.1109/icse48619.2023.00179",
+  "title": "SKCODER: A Sketch-based Approach for Automatic Code Generation",
+  "year": 2023,
+  "venue": "ICSE 2023",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有copy-based代码生成模型倾向于原样重复相似代码，不做必要修改，导致生成结果错误",
+  "problem_framing": "将开发者代码复用行为形式化为三阶段pipeline：检索→提取草图→编辑",
+  "key_insight": "代码草图提供'怎么写'的结构性指导，自然语言描述提供'写什么'的需求，草图编辑比从头生成更容易产生正确代码",
+  "method_signature": "Retriever(BM25) + Sketcher(Transformer分类器) + Editor(Encoder-Decoder Transformer)两阶段训练",
+  "evaluation_criteria": "EM、BLEU、CodeBLEU、Pass@1、AvgPassRatio五种指标对比20个基线模型",
+  "negative_result_or_admitted_limitation": "REDCODER倾向于重复相似代码而不做必要修改，忽略草图；仅使用Top-1相似代码效果仍优于使用多条的REDCODER",
+  "evidence_for_taste": [
+    "copy-based models tend to repeat the similar code without necessary modifications",
+    "code sketches play a key role in the code reuse",
+    "editing a well-formed sketch is easier to generate the correct code",
+    "compared to the strongest baselines"
+  ],
+  "thinking_moves": [
+    "从开发者行为观察出发，将代码复用认知过程抽象为检索-提取-编辑pipeline",
+    "先验证草图的重要性（消融实验），再调查具体设计选择",
+    "用最严格的指标EM和Pass@1来证明方法优越性而非仅靠BLEU",
+    "两阶段训练解决sketcher中硬分类不可导的问题"
+  ],
+  "topic_tags": [
+    "sketch-based-code-generation",
+    "code-retrieval-augmented",
+    "copy-mechanism-limitation",
+    "developer-code-reuse-mimicking",
+    "LCS-sketch-construction"
+  ],
+  "cites_own_work": [
+    "CERT-PyCodeGPT"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文，含abstract/intro/method/eval/conclusion/related work各节；三个数据集完整结果；消融实验覆盖多个base model；草图设计选择实验完整；包含开发者行为示例说明动机 | md truncated to head40k+tail20k"
+}

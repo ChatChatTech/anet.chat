@@ -1,0 +1,39 @@
+{
+  "paper_id": "Tool-Planner_ Task Planning with Clusters across Multiple Tools",
+  "doi": "10.48550/arxiv.2406.03807",
+  "title": "TOOL-PLANNER: TASK PLANNING WITH CLUSTERS ACROSS MULTIPLE TOOLS",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有工具学习方法在工具调用失败时直接放弃规划路径,导致规划不稳定且执行时间长",
+  "problem_framing": "将工具学习建模为决策树搜索,每个节点不是单个工具而是一组功能相似的工具包(toolkit)",
+  "key_insight": "通过SimCSE将API按功能聚类成toolkit,工具失败时先在同toolkit内替换,避免全局重规划",
+  "method_signature": "工具聚类(SimCSE+k-means++) → toolkit级规划 → 工具失败优先同toolkit替换 → 全局重规划兜底",
+  "evaluation_criteria": "Pass Rate, Win Rate(对比GPT-3.5+ReAct), Hallucination Rate",
+  "negative_result_or_admitted_limitation": "k值过小时不同功能工具被混在一起,导致错误的工具调用",
+  "evidence_for_taste": [
+    "注重thorough exploration of tools",
+    "确保each node is fully utilized",
+    "相比DFSDT的multiple attempts",
+    "provide an ideal paradigm",
+    "the model focuses more on the problems"
+  ],
+  "thinking_moves": [
+    "将工具聚类问题类比为人类分类工具的过程",
+    "从单工具节点扩展到工具包节点以提升搜索效率",
+    "先小范围修复(同toolkit替换)再大范围修复(跨toolkit重规划)的分层策略",
+    "强调规划相对稳定性而非最大化搜索空间",
+    "通过实验验证toolkit层级搜索优于API层级搜索"
+  ],
+  "topic_tags": [
+    "tool-learning",
+    "LLM-planning",
+    "tool-clustering",
+    "API-orchestration",
+    "toolkit-search"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

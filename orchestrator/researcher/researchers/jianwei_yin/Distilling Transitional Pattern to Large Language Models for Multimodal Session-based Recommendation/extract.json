@@ -1,0 +1,38 @@
+{
+  "paper_id": "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation",
+  "doi": "10.48550/arxiv.2504.10538",
+  "title": "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "senior",
+  "motivation": "现有MSBR模型受限于预训练模型质量，提取的多模态表征质量低，制约了推荐性能",
+  "problem_framing": "如何让LLM同时获取过渡模式和多模态知识，以及如何在统一LLM中对齐两类特征",
+  "key_insight": "用双塔MLLM解耦知识表征和过渡感知特征，通过互信息估计进行分层对齐",
+  "method_signature": "K-MLLM+T-MLLM双塔结构结合过渡模式对齐模块TPA的两阶段蒸馏",
+  "evaluation_criteria": "下游MSBR的HR@5/10和NDCG@5/10指标",
+  "negative_result_or_admitted_limitation": "直接融合过渡模式可能产生负迁移，之前的粗粒度建模导致LLM对动态/静态特征感知不完整",
+  "evidence_for_taste": [
+    "distributional inconsistency",
+    "coarse-grained modeling",
+    "negative transfer",
+    "poor generalizability",
+    "overlooks critical multi-order collaborations"
+  ],
+  "thinking_moves": [
+    "把MSBR中交织的知识表征和过渡模式解耦为两个独立的学习路径",
+    "用互信息上界约束特征解耦，用下界指导模式对齐",
+    "从粗粒度建模转向细粒度的双塔解耦结构",
+    "用对比学习增强同一阶过渡模式的判别性和均匀性"
+  ],
+  "topic_tags": [
+    "LLM-enhanced推荐",
+    "多模态会话推荐",
+    "知识蒸馏",
+    "过渡模式建模",
+    "参数高效微调"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "本文提供完整方法论和实验细节，包括数据集统计、基线对比、消融实验。关键判断通过Challenge形式呈现，C1聚焦特征空间不一致问题，C2聚焦模式对齐问题。 | md truncated to head40k+tail20k"
+}

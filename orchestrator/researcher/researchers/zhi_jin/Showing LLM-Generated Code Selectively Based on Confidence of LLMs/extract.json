@@ -1,0 +1,42 @@
+{
+  "paper_id": "Showing LLM-Generated Code Selectively Based on Confidence of LLMs",
+  "doi": "10.48550/arxiv.2410.03234",
+  "title": "Showing LLM-Generated Code Selectively Based on Confidence of LLMs",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM生成代码含错误，直接展示会浪费开发者精力并引入安全风险",
+  "problem_framing": "将代码选择性展示建模为二分类问题：置信度高于阈值则展示，否则拒绝",
+  "key_insight": "LLM自信时生成多版本程序相似度更高，自信度可通过多模态相似度衡量",
+  "method_signature": "采样N个程序，计算文本/句法/数据流/嵌入四模态相似度，取均值作为置信度",
+  "evaluation_criteria": "AUROC和AUCPR衡量置信度估计与正确性标签的相关性",
+  "negative_result_or_admitted_limitation": "现有工作专为自然语言设计，在代码生成上表现次优；深度学习方法缺乏泛化",
+  "evidence_for_taste": [
+    "Reading a program takes ten times longer than writing it",
+    "If humans are confident about a question, their answers are deterministic",
+    "LLMs tend to generate deterministic programs when they are confident",
+    "The higher the similarity, the greater the confidence of LLMs",
+    "sub-optimal performance in code generation"
+  ],
+  "thinking_moves": [
+    "将人类决策置信度现象跨类比到LLM代码生成行为",
+    "用多版本程序一致性替代直接询问置信度的间接测量",
+    "从单模态相似度扩展到文本/句法/数据流/嵌入四模态综合测量"
+  ],
+  "topic_tags": [
+    "LLM代码生成",
+    "置信度估计",
+    "选择性展示",
+    "多模态代码相似度",
+    "程序正确性判断"
+  ],
+  "cites_own_work": [
+    "Jia Li et al. 2024 - Structured Chain-of-Thought Prompting",
+    "Jia Li et al. 2023 - SkCoder",
+    "Jia Li et al. 2024 - AceCoder",
+    "Jia Li et al. 2023 - K-Nearest Neighbor Search related work"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供完整方法论、实验设计和结果。TruthCodeBench数据集规模详细(2265样本)，四个LLM(DeepSeek-Coder和Code Llama各两个规模)，八条基线比较。主要发现：AUROC提升27.79%，AUCPR提升63.74%，时间开销仅0.4秒。Zhi Jin为共同作者(非通讯)。 | md truncated to head40k+tail20k"
+}

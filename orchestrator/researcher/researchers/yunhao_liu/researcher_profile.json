@@ -1,0 +1,3439 @@
+{
+  "slug": "yunhao_liu",
+  "n_extracts": 674,
+  "n_full": 504,
+  "n_partial": 168,
+  "n_thin": 1,
+  "year_range": [
+    2003,
+    2026
+  ],
+  "top_tags": [
+    [
+      "wireless-sensor-networks",
+      15
+    ],
+    [
+      "wireless-sensor-network",
+      11
+    ],
+    [
+      "RFID-localization",
+      11
+    ],
+    [
+      "federated-learning",
+      7
+    ],
+    [
+      "WiFi-fingerprint-localization",
+      7
+    ],
+    [
+      "differential-privacy",
+      6
+    ],
+    [
+      "distributed-algorithm",
+      6
+    ],
+    [
+      "wireless-sensor-network-localization",
+      6
+    ],
+    [
+      "determinantal-point-process",
+      5
+    ],
+    [
+      "vertical-federated-learning",
+      5
+    ],
+    [
+      "graph-rigidity-theory",
+      5
+    ],
+    [
+      "RFID-cardinality-estimation",
+      5
+    ],
+    [
+      "indoor-localization",
+      5
+    ],
+    [
+      "CROWN-grid",
+      5
+    ],
+    [
+      "screen-camera-communication",
+      4
+    ],
+    [
+      "homomorphic-encryption",
+      4
+    ],
+    [
+      "privacy-utility-tradeoff",
+      4
+    ],
+    [
+      "semi-supervised-learning",
+      4
+    ],
+    [
+      "privacy-preserving-ml",
+      4
+    ],
+    [
+      "attention-mechanism",
+      4
+    ],
+    [
+      "model-functionality-stealing",
+      4
+    ],
+    [
+      "knowledge-distillation-attack",
+      4
+    ],
+    [
+      "smartphone-sensing",
+      4
+    ],
+    [
+      "WSN-diagnosis",
+      4
+    ],
+    [
+      "smartphone-indoor-localization",
+      4
+    ],
+    [
+      "percolation-theory",
+      4
+    ],
+    [
+      "in-network-aggregation",
+      4
+    ],
+    [
+      "wireless sensor networks",
+      4
+    ],
+    [
+      "overlay-multicast",
+      4
+    ],
+    [
+      "indoor-positioning",
+      4
+    ]
+  ],
+  "topic_clusters": [
+    {
+      "tag": "wireless-sensor-networks",
+      "paper_count": 10,
+      "exemplars": [
+        {
+          "paper_id": "Liu et al. - 2010 - Passive Diagnosis for Wireless Sensor Networks",
+          "year": 2010,
+          "venue": "IEEE/ACM Transactions on Networking",
+          "key_insight": "通过数据包标记被动获取网络拓扑信息,结合贝叶斯推理模型实现轻量级诊断",
+          "method_signature": "数据包标记+层级概率推理模型",
+          "score": 22
+        },
+        {
+          "paper_id": "Li et al. - 2012 - FLIGHT clock calibration using fluorescent lighting",
+          "year": 2012,
+          "venue": "MobiCom",
+          "key_insight": "荧光灯光强随AC半周期稳定变化(100Hz)，且光传感器功耗远低于无线电",
+          "method_signature": "光强采样→6阶低通滤波→周期检测→频率比估算",
+          "score": 20
+        },
+        {
+          "paper_id": "Zheng et al. - 2014 - ZiSense towards interference resilient duty cycling in wireless sensor networks",
+          "year": 2014,
+          "venue": "SenSys'14",
+          "key_insight": "基于RSSI时域序列特征(PAP R/空中时间/MPI/UNF)识别ZigBee信号,只在检测到ZigBee时才唤醒节点",
+          "method_signature": "提取短时RSSI序列特征并用规则判断识别ZigBee传输",
+          "score": 20
+        },
+        {
+          "paper_id": "Dong et al. - 2009 - Fine-grained boundary recognition in wireless ad hoc and sensor networks by topological methods",
+          "year": 2009,
+          "venue": "MobiHoc",
+          "key_insight": "边界环不能用三角形填充,通过FGP变换保持基本群同时收缩图结构",
+          "method_signature": "FGP图变换提取骨架,最小2-基分离主边界环,间隙边最短路精化",
+          "score": 18
+        },
+        {
+          "paper_id": "Guo et al. - 2010 - Perpendicular Intersection Locating Wireless Sensors With Mobile Beacon",
+          "year": 2010,
+          "venue": "IEEE Transactions on Vehicular Technology",
+          "key_insight": "虽然RSSI绝对值不可靠，但RSSI差异能一致反映物理距离对比；移动时最大RSSI点即为传感器到轨迹的最短投影点",
+          "method_signature": "利用移动信标轨迹上两点投影的垂直线交点计算传感器坐标，绕过RSSI绝对值映射",
+          "score": 18
+        }
+      ]
+    },
+    {
+      "tag": "wireless-sensor-network",
+      "paper_count": 8,
+      "exemplars": [
+        {
+          "paper_id": "Dong et al. - 2012 - Bulk data dissemination in wireless sensor networks Modeling and analysis",
+          "year": 2012,
+          "venue": "Computer Communications",
+          "key_insight": "利用Dijkstra最短路径建模多跳传播，结合拓扑信息、竞争影响和流水线约束可准确估计完成时间",
+          "method_signature": "分层解析模型：物理层(PRR)→单跳传播时间→多跳传播完成时间",
+          "score": 20
+        },
+        {
+          "paper_id": "Zheng et al. - 2017 - Interference Resilient Duty Cycling for Sensor Networks Under Co-Existing Environments",
+          "year": 2017,
+          "venue": "SenSys (prior presentation)",
+          "key_insight": "通过RSSI时域序列特征(On-air时间、MPI、PAPR、UNF)识别ZigBee信号而非依赖能量阈值",
+          "method_signature": "基于规则的时域RSSI特征提取与ZigBee识别",
+          "score": 20
+        },
+        {
+          "paper_id": "Liu and Li - 2007 - Iso-Map Energy-Efficient Contour Mapping in Wireless Sensor Networks",
+          "year": 2007,
+          "venue": "null",
+          "key_insight": "等值线总长O(√n)，仅采集等值线节点即可捕捉轮廓而大幅省 traffic",
+          "method_signature": "局部判别等值线节点→邻居回归求梯度→汇聚重建边界",
+          "score": 18
+        },
+        {
+          "paper_id": "Wang et al. - 2011 - Algorithms for local sensor synchronization",
+          "year": 2011,
+          "venue": null,
+          "key_insight": "只需与父子节点局部同步而非全局同步,可大幅降低频率",
+          "method_signature": "动态规划求最优F_i + 启发式树拓扑优化",
+          "score": 16
+        },
+        {
+          "paper_id": "Wang et al. - 2014 - Sleep in the Dins Insomnia therapy for duty-cycled sensor networks",
+          "year": 2014,
+          "venue": "IEEE",
+          "key_insight": "睡眠间隔与唤醒时间需根据流量速率λ联合优化,固定参数设置必然导致能耗增加",
+          "method_signature": "LAD协议:在线估计流量λ,查表获取最优(ts,tw,td),自适应调整占空比",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "RFID-localization",
+      "paper_count": 8,
+      "exemplars": [
+        {
+          "paper_id": "Liu et al. - 2012 - Mining Frequent Trajectory Patterns for Activity Monitoring Using Radio Frequency Tag Arrays",
+          "year": 2012,
+          "venue": "IEEE Transactions on Parallel and Distributed Systems",
+          "key_insight": "利用物体穿过标签阵列时的信号干扰变化检测轨迹,无需在被追踪对象上安装设备",
+          "method_signature": "fault-tolerant sequential pattern mining",
+          "score": 22
+        },
+        {
+          "paper_id": "Jiang et al. - 2019 - 3D-OmniTrack 3D tracking with COTS RFID systems",
+          "year": 2019,
+          "venue": "IPSN",
+          "key_insight": "通过分析RFID信号传播的极化效应,将标签朝向变化映射为可计算的相位偏移,实现单标签同时追踪位置和朝向",
+          "method_signature": "极化敏感相位模型 + MHT多假设追踪框架",
+          "score": 20
+        },
+        {
+          "paper_id": "Liu et al. - 2014 - Anchor-free backscatter positioning for RFID tags with high accuracy",
+          "year": 2014,
+          "venue": "IEEE",
+          "key_insight": "相位是稳定的位置指示器,且在可行区域内可放松三角形约束仍保证定位能力",
+          "method_signature": "基于相位差的双曲定位,利用可行区域放松天线间距约束",
+          "score": 20
+        },
+        {
+          "paper_id": "Liu et al. - 2016 - BackPos High Accuracy Backscatter Positioning System",
+          "year": 2016,
+          "venue": "IEEE",
+          "key_insight": "相位差可消除标签初始相位旋转θ_TAG，且双曲线分支间区域满足三角形约束，从而放松天线间距要求",
+          "method_signature": "基于相位差的双曲线定位，引入可行域放松λ/2天线间距约束",
+          "score": 20
+        },
+        {
+          "paper_id": "Yang et al. - 2014 - Tagoram real-time tracking of mobile RFID tags to high precision using COTS devices",
+          "year": 2014,
+          "venue": "MobiCom",
+          "key_insight": "Mobility creates virtual antenna array: treating tag as static while antennas move in opposite direction enables hologram construction",
+          "method_signature": "Differential Augmented Hologram (DAH) using phase differences to cancel diversity term c",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "tag": "differential-privacy",
+      "paper_count": 6,
+      "exemplars": [
+        {
+          "paper_id": "2021_TPDS_Privacy-preserving_Efficient_Federated-Learning_Model_Debugging",
+          "year": 2021,
+          "venue": "IEEE TPDS",
+          "key_insight": "利用训练日志中的模型更新差异先定位问题客户端，再分层分析样本影响函数",
+          "method_signature": "分层影响分析：训练日志定位客户端 + 差分隐私影响函数定位样本",
+          "score": 22
+        },
+        {
+          "paper_id": "2023_MobiHoc_DP_DOCO",
+          "year": 2023,
+          "venue": "MobiHoc",
+          "key_insight": "批量更新策略在减少DP噪声(大批量)和保持模型更新速度(小批量)之间存在基本权衡，最优 τ=Θ(d/ε) 可同时改善两者",
+          "method_signature": "PDOM (Private DOCO with Optimal Mini-batch)，含PDOM-O和PDOM-S两种设置，使用拉普拉斯机制添加DP噪声",
+          "score": 20
+        },
+        {
+          "paper_id": "2025_SIGCOMM2025_SCX",
+          "year": 2025,
+          "venue": "SIGCOMM",
+          "key_insight": "利用Transformer前后向传播的顺序性,仅保留首尾层密钥即可锁定推理,中间层密钥可共享降低通信复杂度",
+          "method_signature": "三阶段编码+令牌置换+冗余嵌入+拉普拉斯噪声,实现O(T+L)通信复杂度",
+          "score": 20
+        },
+        {
+          "paper_id": "DP_DOCO",
+          "year": 2023,
+          "venue": "MobiHoc",
+          "key_insight": "最优batch大小 τ 平衡了DP噪声水平与模型更新速度，而非批量更新是τ=1的次优特例",
+          "method_signature": "PDOM: mini-batch策略 + 最优batch大小选择算法",
+          "score": 20
+        },
+        {
+          "paper_id": "2023_PerCom_GFL__Federated_Learning_on_Non_IID_data_via_Privacy_preserving_Synthetic_data",
+          "year": 2023,
+          "venue": "PerCom",
+          "key_insight": "用DPGAN生成带随机分布的合成数据，上传服务器后取IID子集平衡分布，并用epoch decay逐步减少合成数据使用以对抗mode collapse",
+          "method_signature": "GFL: DPGAN生成隐私保护合成数据→服务器IID化→带epoch decay的FL聚合",
+          "score": 17
+        }
+      ]
+    },
+    {
+      "tag": "RFID-cardinality-estimation",
+      "paper_count": 5,
+      "exemplars": [
+        {
+          "paper_id": "Gong et al. - 2016 - Fast Composite Counting in RFID Systems",
+          "year": 2016,
+          "venue": "IEEE/ACM Transactions on Networking",
+          "key_insight": "用hash函数将标签ID映射为均匀分布的小样本(synopsis),可在synopsis上直接做集合运算来估计原集合表达式基数",
+          "method_signature": "基于hash的 synopsis 采样 + 集合代数操作估计基数,通信复杂度达到下界的对数因子内",
+          "score": 20
+        },
+        {
+          "paper_id": "Gong et al. - 2017 - Toward More Rigorous and Practical Cardinality Estimation for Large-Scale RFID Systems",
+          "year": 2017,
+          "venue": "IEEE/ACM Transactions on Networking",
+          "key_insight": "用 pairwise-independent 哈希做粗估计保证常数倍精度,再用t-wise-independent哈希精化,无需完美哈希也能实现严格有界精度",
+          "method_signature": "RPC两阶段方案:第一阶段pairwise独立哈希+loglog计数,第二阶段t-wise独立哈希球箱模型精化",
+          "score": 20
+        },
+        {
+          "paper_id": "Qian et al. - 2011 - Cardinality Estimation for Large-Scale RFID Systems",
+          "year": 2011,
+          "venue": "IEEE Transactions on Parallel and Distributed Systems",
+          "key_insight": "碰撞不再被视为资源浪费,而是将碰撞槽排列成有序模式从中提取基数信息",
+          "method_signature": "Lottery Frame (LoF): 几何分布哈希+ALOHA时隙+右端零位置估计",
+          "score": 20
+        },
+        {
+          "paper_id": "Liu et al. - 2014 - Generic Composite Counting in RFID Systems",
+          "year": 2014,
+          "venue": "null",
+          "key_insight": "用小规模synopsis代替完整tag集,通过hash值排序和Jaccard相似度分解,实现任意集合表达式的概率估计",
+          "method_signature": "基于slotted ALOHA的synopsis收集协议,使用binary search提取k个最小hash值,O(k log n)通信开销",
+          "score": 16
+        },
+        {
+          "paper_id": "Qian et al. - 2008 - Cardinality Estimation for Large-scale RFID Systems",
+          "year": 2008,
+          "venue": "unknown",
+          "key_insight": "利用几何分布哈希让标签选择时隙,OR合并位图消除重复,帧长仅需O(log n)",
+          "method_signature": "Lottery Frame (LoF)利用几何分布哈希函数+位图OR合并实现复制不敏感估计",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "indoor-localization",
+      "paper_count": 5,
+      "exemplars": [
+        {
+          "paper_id": "He et al. - 2017 - Pervasive Floorplan Generation Based on Only Inertial Sensing Feasibility, Design, and Implementati",
+          "year": 2017,
+          "venue": "IEEE Transactions on Mobile Computing",
+          "key_insight": "People's behavior offers meaningful clues—turns at corners and stationary stops at featured locations (water dispensers) enable labeling pathlets for progressive bundling into floorplans.",
+          "method_signature": "Nail (featured location) + TriNail (triangle of three Nails) as minimal stable structure for robust pathlet bundling under noisy conditions.",
+          "score": 20
+        },
+        {
+          "paper_id": "Wu et al. - 2015 - PhaseU Real-time LOS identification with WiFi",
+          "year": 2015,
+          "venue": "IEEE INFOCOM",
+          "key_insight": "天线间相位差的方差在 NLOS 条件下更大,且加权多子载波可放大该差异",
+          "method_signature": "利用天线空间分集+子载波频率分集,提出 ρ 因子特征进行实时二元判决",
+          "score": 20
+        },
+        {
+          "paper_id": "Zhang et al. - 2017 - Montage Combine Frames with Movement Continuity for Realtime Multi-User Tracking",
+          "year": 2017,
+          "venue": "IEEE Transactions on Mobile Computing",
+          "key_insight": "距离向量与运动向量满足D_ij(t_u+1)=M_j-M_i方程,利用测距+运动向量的双重约束可消除定位歧义",
+          "method_signature": "用Gold码编码音频同时测距多用户,惯性传感器估计步长和方向,向量方程连接连续快照追踪轨迹",
+          "score": 18
+        },
+        {
+          "paper_id": "Huang et al. - 2015 - Swadloon Direction Finding and Indoor Localization Using Acoustic Signal by Shaking Smartphones",
+          "year": 2015,
+          "venue": "null",
+          "key_insight": "相对位移与相位偏移成正比，PLL可跟踪相位实现亚毫米级位移分辨率",
+          "method_signature": "利用PLL跟踪声学多普勒相位频率偏移，结合惯性传感器数据线性回归求解方向",
+          "score": 16
+        },
+        {
+          "paper_id": "Liu et al. - 2021 - EyeLoc Smartphone Vision-Enabled Plug-n-Play Indoor Localization in Large Shopping Malls",
+          "year": 2021,
+          "venue": "null",
+          "key_insight": "利用公开可用的楼层平面图图像和手机视觉模仿人类自定位行为",
+          "method_signature": "基于三点几何约束的圆弧相交定位模型",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "screen-camera-communication",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "2015_MobiCom",
+          "year": 2015,
+          "venue": "ACM MobiCom",
+          "key_insight": "利用人眼与相机之间的有限差异（色温混合、闪烁临界频率、滚动快门），设计可被人类视觉融合但导致相机记录失真的帧序列",
+          "method_signature": "将原始帧分解为多个子帧：色度帧分解+亮度帧污染+空间形变，人眼融合为原始色彩，相机记录产生严重失真",
+          "score": 20
+        },
+        {
+          "paper_id": "Zhang et al. - 2015 - Kaleido You Can Watch It But Cannot Record It",
+          "year": 2015,
+          "venue": "MobiCom",
+          "key_insight": "Exploit limited disparities between human vision (low-pass, temporal fusion) and camera (rolling shutter, sampling) to create imperceptible flicker for eyes but distorted recording for camera",
+          "method_signature": "Re-encode video by decomposing frames into chromatic flickers above CFF and illuminance perturbations; human fuses, camera distorts",
+          "score": 20
+        },
+        {
+          "paper_id": "Zhang et al. - 2018 - ChromaCode A Fully Imperceptible Screen-Camera Communication System",
+          "year": 2018,
+          "venue": "MobiCom '18",
+          "key_insight": "利用CIELAB感知均匀色彩空间+CIEDE2000公式可精确控制感知色差，从而在保证不可见性的同时最大化吞吐量",
+          "method_signature": "基于CIELAB空间的 outcome-driven 自适应亮度嵌入+RS+卷积级联纠错码",
+          "score": 20
+        },
+        {
+          "paper_id": "Zhang et al. - 2021 - ChromaCode A Fully Imperceptible Screen-Camera Communication System",
+          "year": 2021,
+          "venue": "null",
+          "key_insight": "利用CIELAB均匀色空间和CIEDE2000色差公式，使亮度变化在感知上均匀一致",
+          "method_signature": "基于感知均匀色空间的逐像素结果驱动自适应嵌入+RS+卷积级联纠错码",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "homomorphic-encryption",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "2023_INFOCOM_Feature_Selection",
+          "year": 2023,
+          "venue": "IEEE INFOCOM",
+          "key_insight": "先用Gini impurity初始化特征重要性(仅需2次通信),再通过随机双门(stochastic dual-gates)在训练中动态筛选特征,实现高效安全选择",
+          "method_signature": "Gini impurity初始化 + 高斯随机双门 + PHE加密 + 噪声机制",
+          "score": 22
+        },
+        {
+          "paper_id": "2017_TPDS_PIC_Enable_Large-Scale_Privacy_Preserving_Content-Based_Image_Search_on_Cloud",
+          "year": 2017,
+          "venue": "IEEE Transactions on Parallel and Distributed Systems",
+          "key_insight": "多层次同态加密配合密钥转换实现云端密文运算，关键代理解密距离而非特征向量",
+          "method_signature": "双层搜索(聚类匹配+近邻搜索)结合MapReduce并行化",
+          "score": 19
+        },
+        {
+          "paper_id": "2022_BIGCOM_tanjuntao-final",
+          "year": 2022,
+          "venue": "null",
+          "key_insight": "当特征数大于batch大小时，线性系统唯一解可直接求出残差，从而泄露标签",
+          "method_signature": "三种残差保护机制：加性噪声、乘性噪声、结合LDP与HE的混合机制",
+          "score": 18
+        },
+        {
+          "paper_id": "Zhang et al. - 2017 - PIC Enable Large-Scale Privacy Preserving Content-Based Image Search on Cloud",
+          "year": 2017,
+          "venue": null,
+          "key_insight": "利用多层同态加密将密钥管理与计算分离,实现非交互式隐私保护搜索",
+          "method_signature": "基于多层同态加密+MapReduce的隐私保护图像搜索系统",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "smartphone-indoor-localization",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "Xu et al. - 2016 - Indoor localization via multi-modal sensing on smartphones",
+          "year": 2016,
+          "venue": "UbiComp'16",
+          "key_insight": "利用传感器丰富的照片结合语义信息提取,无需预校准即可建立图像空间到物理空间的映射",
+          "method_signature": "传感器融合+语义几何推理+流形对齐的多模态定位",
+          "score": 20
+        },
+        {
+          "paper_id": "Huang et al. - 2014 - Shake and walk Acoustic direction finding and fine-grained indoor localization using smartphones",
+          "year": 2014,
+          "venue": "null",
+          "key_insight": "用相位锁环(PLL)替代FFT追踪相位变化,可突破时频分辨率限制,实现亚毫米位移测量精度。",
+          "method_signature": "Swadloon结合声学PLL与惯性传感器的多普勒方向发现,经线性回归融合两路速度。",
+          "score": 16
+        },
+        {
+          "paper_id": "Wu et al. - 2017 - Mitigating Large Errors in WiFi-Based Indoor Localization for Smartphones",
+          "year": 2017,
+          "venue": null,
+          "key_insight": "移动用户采集的指纹是当前位与历史位的RSS混合体，需用幻影指纹匹配",
+          "method_signature": "幻影指纹+鲁棒回归+区分因子，统一指纹相似度度量",
+          "score": 16
+        },
+        {
+          "paper_id": "Huang et al. - 2013 - Accurate Indoor Localization Using Acoustic Direction Finding via Smart Phones",
+          "year": 2013,
+          "venue": "null",
+          "key_insight": "手机摇晃的相对位移和速度对应于接收声信号的多普勒相位和频率细微偏移",
+          "method_signature": "声学多普勒定向+PLL相位跟踪+惯性传感器融合+锚点三角定位",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "percolation-theory",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "Li et al. - 2010 - Multicast Capacity of Wireless Ad Hoc Networks Under Gaussian Channel Model",
+          "year": 2010,
+          "venue": "IEEE/ACM Transactions on Networking",
+          "key_insight": "Use percolation theory to construct highway system enabling optimal per-flow multicast rate Θ(1/√(nk)) in random networks",
+          "method_signature": "Bond percolation on grid creates open paths forming highways; construct Euclidean spanning trees to relay multicast data",
+          "score": 20
+        },
+        {
+          "paper_id": "Li et al. - 2008 - Capacity of large scale wireless networks under Gaussian channel model",
+          "year": 2008,
+          "venue": "ACM MobiCom",
+          "key_insight": "Percolation theory enables constructing highway system that achieves per-flow rate Ω(√n/(ns√k)), generalizing unicast capacity results",
+          "method_signature": "Bond percolation on grid forms highways; Euclidean spanning tree for multicast; TDMA scheduling on short hops",
+          "score": 19
+        },
+        {
+          "paper_id": "Wang et al. - 2013 - Asymptotic throughput for large-scale wireless networks with general node density",
+          "year": 2013,
+          "venue": "Wireless Networks (Springer)",
+          "key_insight": "用动脉道路系统取代渗透理论高速公路系统，可在某些n_d区间取得更优吞吐量",
+          "method_signature": "普通动脉道路M_o与平行动脉道路M_p双scheme协同，根据λ/ns/nd选择最优",
+          "score": 18
+        },
+        {
+          "paper_id": "Wang et al. - 2009 - Scaling Laws on Multicast Capacity of Large Scale Wireless Networks",
+          "year": 2009,
+          "venue": "unknown",
+          "key_insight": "引入第二类高速公路(second-class highway)配合第一类高速公路形成双层架构,并行调度附近链路,避免访问高速的瓶颈",
+          "method_signature": "基于渗透理论构造双层高速公路路由,结合 TDMA 调度与集中度分析证明上下界匹配",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "overlay-multicast",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "Liao et al. - 2006 - AnySee Peer-to-Peer Live Streaming",
+          "year": 2006,
+          "venue": "null",
+          "key_insight": "允许节点同时加入多个overlay形成备份路径集,可跨overlay寻找最近节点服务从而改善全局资源分配",
+          "method_signature": "inter-overlay优化管理器+mesh底层+reverse tracing探测+key节点 admission control",
+          "score": 18
+        },
+        {
+          "paper_id": "Xiao et al. - 2006 - Mutual anonymous overlay multicast",
+          "year": 2006,
+          "venue": "Journal of Parallel and Distributed Computing",
+          "key_insight": "匿名multicast必须围绕树结构而非多播unicast；invite MO节点可将AM比例控制在~50%阈值以保持效率",
+          "method_signature": "MAM协议含AM-NM单向anon、AM-AM双向anon协议及树构造与MO邀请优化",
+          "score": 18
+        },
+        {
+          "paper_id": "Xiao et al. - 2004 - Prioritized Overlay Multicast in Mobile Ad Hoc Environments",
+          "year": 2004,
+          "venue": "ISSRE 2004",
+          "key_insight": "Application-layer priority filtering enables nodes to switch between trees based on importance, with location info guiding efficient tree formation",
+          "method_signature": "Priority token-based tree formation with location-aware orphan handling and DSR as underlying unicast",
+          "score": 16
+        },
+        {
+          "paper_id": "Liu et al. - 2005 - Efficient data retrieving in distributed data-streaming environments",
+          "year": 2005,
+          "venue": "null",
+          "key_insight": "多棵独立的多播树能利用更多物理链路，比单棵树更均匀地分散流量",
+          "method_signature": "分布式MMT协议，端主机自组织成多棵多播树，碎片合并迭代构建",
+          "score": 11
+        }
+      ]
+    },
+    {
+      "tag": "wireless-sensor-network-localization",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "Xi et al. - 2010 - Locating sensors in the wild pursuit of ranging quality",
+          "year": 2010,
+          "venue": "SenSys",
+          "key_insight": "只有少数节点测距准确；用所有节点不加区分地进行校准反而会让结果变差",
+          "method_signature": "CDL结合虚拟跳数定位、本地过滤和逐级测距质量校准三阶段迭代流程",
+          "score": 20
+        },
+        {
+          "paper_id": "Yang and Liu - 2010 - Quality of Trilateration Confidence-Based Iterative Localization",
+          "year": 2010,
+          "venue": "IEEE Transactions",
+          "key_insight": "Different geometric forms of trilaterations provide different accuracy levels; QoT enables selecting best trilaterations and avoiding flip ambiguity.",
+          "method_signature": "QoT metric measures trilateration quality; CIL scheme iteratively selects highest-confidence trilaterations with refinement.",
+          "score": 20
+        },
+        {
+          "paper_id": "Liu et al. - 2010 - Location, Localization, and Localizability",
+          "year": 2010,
+          "venue": null,
+          "key_insight": "误差控制和网络可定位性理论是定位研究的两个关键新兴方向,需同时考虑",
+          "method_signature": "综述分类现有方法,提出误差控制与可定位性分析框架",
+          "score": 18
+        },
+        {
+          "paper_id": "Wang et al. - 2010 - ETOC Obtaining robustness in component-based localization",
+          "year": 2010,
+          "venue": null,
+          "key_insight": "A single node suffers only translation, but components suffer three transformations (translation, rotation, reflection), requiring new robust patterns beyond existing flip-ambiguity methods",
+          "method_signature": "ETOC uses robust coordinate system conversion patterns to achieve guaranteed localization robustness",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "indoor-positioning",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "Ni et al. - 2003 - ANDMARC Indoor Location Sensing Using Active RFID",
+          "year": 2003,
+          "venue": "IEEE International Conference on Pervasive Computing and Communications (PerCom)",
+          "key_insight": "Use extra fixed reference tags as calibration landmarks; comparing signal strength patterns between reference and tracking tags compensates for environmental dynamics.",
+          "method_signature": "k-nearest neighbor using Euclidean distance in signal strength space, weighted by inverse-square E value.",
+          "score": 18
+        },
+        {
+          "paper_id": "Ni et al. - 2004 - LANDMARC Indoor Location Sensing Using Active RFID",
+          "year": 2004,
+          "venue": "null",
+          "key_insight": "Reference tags experiencing identical environmental effects as tracking tags enable relative signal-strength comparison for location estimation.",
+          "method_signature": "k-nearest neighbor with inverse-square weighted Euclidean distance in signal-strength space",
+          "score": 16
+        },
+        {
+          "paper_id": "Zhao et al. - 2007 - VIRE Active RFID-based Localization Using Virtual Reference Elimination",
+          "year": 2007,
+          "venue": "null",
+          "key_insight": "通过线性插值生成虚拟参考标签,结合消除算法过滤不可能位置",
+          "method_signature": "虚拟参考标签+邻近图+阈值消除+加权坐标计算",
+          "score": 16
+        },
+        {
+          "paper_id": "Xu et al. - 2018 - Embracing Spatial Awareness for Reliable WiFi-Based Indoor Location Systems",
+          "year": 2018,
+          "venue": "null",
+          "key_insight": "相邻位置间的RSS差值比单点RSS值更稳定，可利用RSS空间梯度矩阵作为指纹",
+          "method_signature": "ViViPlus系统：RSG矩阵指纹替代RSS向量，联合解决空间歧义与时间漂移",
+          "score": 12
+        }
+      ]
+    },
+    {
+      "tag": "WiFi-fingerprint-localization",
+      "paper_count": 4,
+      "exemplars": [
+        {
+          "paper_id": "Yang et al. - 2012 - Locating in fingerprint space wireless indoor localization with little human intervention",
+          "year": 2012,
+          "venue": "MobiCom",
+          "key_insight": "人类行走路径可以作为约束条件，将原本独立的RSS指纹在几何空间中建立地理关联",
+          "method_signature": "基于MDS构建应力释放平面图与指纹空间，通过走廊识别、房间聚类实现指纹到真实位置的映射",
+          "score": 20
+        },
+        {
+          "paper_id": "Wu et al. - 2018 - Wireless Indoor Localization - A Crowdsourcing Approach",
+          "year": 2018,
+          "venue": "Springer",
+          "key_insight": "利用用户携带手机自然移动产生的众包数据,自动完成无线电地图构建和更新",
+          "method_signature": "众包驱动的WiFi指纹定位:自动指纹采集+梯度指纹+视觉线索辅助",
+          "score": 18
+        },
+        {
+          "paper_id": "Wu et al. - 2015 - Static power of mobile devices Self-updating radio maps for wireless indoor localization",
+          "year": 2015,
+          "venue": "null",
+          "key_insight": "Mobile devices kept static 80% of the time can serve as movable reference points; the underlying RSS dependency relationship between neighboring locations remains stable over time.",
+          "method_signature": "Trajectory matching for device localization + Partial Least Squares regression for learning RSS relationships between reference points and other locations.",
+          "score": 16
+        },
+        {
+          "paper_id": "Wu et al. - 2012 - WILL Wireless indoor localization without site survey",
+          "year": 2012,
+          "venue": null,
+          "key_insight": "用户运动轨迹可将原本独立的WiFi指纹按可达性语义连接，墙体穿透的RSS突变可用于区分房间",
+          "method_signature": "RSS堆叠差分特征+虚拟房间聚类+逻辑平面图到物理平面图的图匹配映射",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "android-malware-detection",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2018_INFOCOM_AppDNA_App_Behavior_Profiling_via_Graph-based_Deep_Learning",
+          "year": 2018,
+          "venue": "INFOCOM",
+          "key_insight": "用被调用的稳定系统函数集来表示用户函数行为,可抵抗重命名/重排序攻击",
+          "method_signature": "函数调用图编码+自编码器无监督学习生成64维行为轮廓",
+          "score": 22
+        },
+        {
+          "paper_id": "2020_TETC_AppDNA_Profiling_App_Behavior_via_Deep-Learning_on_Function_Call_Graphs",
+          "year": 2020,
+          "venue": "IEEE Transactions on Emerging Topics in Computing",
+          "key_insight": "用系统函数集合(稳定一致的)作为行为签名来排序用户函数，可抵御重命名和代码重排",
+          "method_signature": "FCG图编码 + Autoencoder无监督压缩 + 多任务复用",
+          "score": 18
+        },
+        {
+          "paper_id": "Gong et al. - 2021 - Systematically Landing Machine Learning onto Market-Scale Mobile Malware Detection",
+          "year": 2021,
+          "venue": "IEEE Transactions on Parallel and Distributed Systems",
+          "key_insight": "任一环节失败都会导致木桶效应——特征选择、工程化、速度、用户参与、模型演化缺一不可",
+          "method_signature": "API中心动态分析+特征嵌入编码+随机森林分类器+模型月度自动演化",
+          "score": 18
+        }
+      ]
+    },
+    {
+      "tag": "motion-sensor-fingerprint",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2019_TON_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint",
+          "year": 2019,
+          "venue": "IEEE/ACM Transactions on Networking",
+          "key_insight": "Manufacturing heterogeneities的细微噪声差异可被LSTM自动提取,而手工特征被用户活动噪声淹没",
+          "method_signature": "多维Balls-into-Bins理论容量模型+Multi-LSTM自动特征提取+生成式匿名化模型",
+          "score": 22
+        },
+        {
+          "paper_id": "2018_INFOCOM_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint",
+          "year": 2018,
+          "venue": "INFOCOM",
+          "key_insight": "多LSTM网络自动学习被用户运动噪声掩盖的硬件本质特征,而非依赖手工设计特征",
+          "method_signature": "多LSTM指纹提取+生成对抗匿名化模型",
+          "score": 20
+        },
+        {
+          "paper_id": "2019_TON_firestar",
+          "year": 2019,
+          "venue": "IEEE/ACM Transactions on Networking",
+          "key_insight": "多LSTM结构能从噪声传感器数据中自动学习设备固有特征,而非依赖人工设计特征",
+          "method_signature": "多LSTM指纹提取+生成对抗匿名化",
+          "score": 19
+        }
+      ]
+    },
+    {
+      "tag": "incremental-learning",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2019_IJCAI",
+          "year": 2019,
+          "venue": "IJCAI",
+          "key_insight": "Agreement matrix identifies dimensions where cross-modal representations already agree; these dimensions should be frozen via weak constraint distillation, allowing selective update of disagreed dimensions",
+          "method_signature": "ECMH with self-taught distillation loss + common space learning + hash function learning, using agreement matrix as dimension selector",
+          "score": 21
+        },
+        {
+          "paper_id": "2019_IJCAI_ECMH",
+          "year": 2019,
+          "venue": "IJCAI",
+          "key_insight": "通过\"协议矩阵\"识别跨模态表征中已有一致的维度并冻结，仅更新不一致维度，实现选择性学习避免灾难性遗忘",
+          "method_signature": "ECMH通过INet+TNet双网络，利用协议矩阵选择需更新维度，自蒸馏损失保持旧性能",
+          "score": 20
+        },
+        {
+          "paper_id": "ENLD_Efficient_Noisy_Label_Detection_for_Incremental_Datasets_in_Data_Lake",
+          "year": null,
+          "venue": "null",
+          "key_insight": "通过对比采样从库存数据中选取与增量数据中模糊样本特征接近的高质量样本进行微调,可兼顾效率与精度",
+          "method_signature": "两阶段框架:通用模型初始化+带对比采样的细粒度噪声标签检测,采用k近邻特征匹配与多数投票",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "privacy-utility-tradeoff",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Zhang et al. - 2022 - Preventing Sensitive Information Leakage From Mobile Sensor Signals via Integrative Transformation",
+          "year": 2022,
+          "venue": "null",
+          "key_insight": "活动具有\"style\"(受个人信息影响的执行方式)和\"content\"(活动本身),可将style转换为随机噪声风格以隐藏敏感信息",
+          "method_signature": "TransNet变换数据+LossNet定义style/content loss,无需敏感信息训练",
+          "score": 16
+        },
+        {
+          "paper_id": "2020_BIGCOM_IEye Personalized Image Privacy Detection",
+          "year": 2020,
+          "venue": "BIGCOM",
+          "key_insight": "图像隐私本质上是特征表示图的子结构，用规则描述实现可解释的个性化隐私定义",
+          "method_signature": "语义图特征表示 + RIPPER规则学习 + 组合优化保护隐私",
+          "score": 15
+        },
+        {
+          "paper_id": "Ma et al. - 2017 - PLP Protecting Location Privacy Against Correlation Analyze Attack in Crowdsensing",
+          "year": 2017,
+          "venue": "null",
+          "key_insight": "用条件随机场CRF建模时空相关性，相比HMM能更灵活地描述长程依赖以防御更强攻击",
+          "method_signature": "基于CRF建模时空特征，通过学习抑制概率实现δ-隐私保证下的最大效用",
+          "score": 12
+        }
+      ]
+    },
+    {
+      "tag": "semi-supervised-learning",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2024_recsys24-153",
+          "year": 2024,
+          "venue": "RecSys '24",
+          "key_insight": "非点击≠不感兴趣，曝光偏差/位置偏差导致用户可能未注意到商品，这些样本若被点击仍可能转化",
+          "method_signature": "NISE半监督CVR预测，丢弃CTCVR任务，仅用CTR辅助任务和动态加权策略",
+          "score": 22
+        },
+        {
+          "paper_id": "2020_ICONIP_Entropy Repulsion for Semi-Supervised Learning against Class Mismatch",
+          "year": 2020,
+          "venue": "ICONIP",
+          "key_insight": "通过熵排斥损失鼓励已标注样本的输出熵相对低于无标注样本，同时用batch退火机制在训练早期严格过滤高熵样本并随模型准确度提升逐步放宽",
+          "method_signature": "ERCM=熵排斥损失(基于条件熵差)+batch退火(α参数调度)+时序池重载机制,叠加于现有SSL方法的组合损失",
+          "score": 18
+        },
+        {
+          "paper_id": "Zhang et al. - 2015 - Boosting Mobile Apps under Imbalanced Sensing Data",
+          "year": 2015,
+          "venue": "IEEE Transactions on Mobile Computing",
+          "key_insight": "Bridge under-sampling and semi-supervised learning via similarity-based sampling to use both techniques simultaneously.",
+          "method_signature": "SLIM: under-sampling negative class + similarity-based pseudo-labeling of unlabeled data + SVM ensemble per sensor dimension.",
+          "score": 18
+        }
+      ]
+    },
+    {
+      "tag": "feedback-control",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2020_The_architecture_and_key_technologies_for_an_indus",
+          "year": 2020,
+          "venue": "Scientia Sinica Informationis",
+          "key_insight": "通过将报文头部和荷载分离，将变数较大的应用数据转换放在高性能网关上，实现异构网络协议的互联互通",
+          "method_signature": "B ASIC2六层体系结构 + 智感效联迅知谐控四技术体系",
+          "score": 20
+        },
+        {
+          "paper_id": "Ji et al. - 2013 - Voice over the dins Improving wireless channel utilization with collision tolerance",
+          "year": 2013,
+          "venue": "null",
+          "key_insight": "802.15.4's DSSS modulation enables packet capture, allowing concurrent transmissions if aligned within 160μs and limited in number.",
+          "method_signature": "Coco: ACK-synchronized sender alignment + feedback-controlled transmission probability p for bounded concurrency.",
+          "score": 16
+        },
+        {
+          "paper_id": "Ji et al. - 2017 - On Improving Wireless Channel Utilization A Collision Tolerance-Based Approach",
+          "year": 2017,
+          "venue": "unknown",
+          "key_insight": "Capture effect at the physical layer allows successful reception of a stronger signal amid collisions, enabling tolerance instead of avoidance.",
+          "method_signature": "Coco protocol: sender alignment via ACK-triggered SFD interrupts, plus feedback control of transmission probability p for optimal concurrency.",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "EM-algorithm",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2022_IWQOS_Quality-aided_Annotation_Service_Selection_in_MLaaS_Market",
+          "year": 2022,
+          "venue": "IWQOS",
+          "key_insight": "将标注生成过程参数化为概率图模型,通过EM算法联合估计服务质量和任务真值分布,再将服务选择建模为自适应次模最大化问题",
+          "method_signature": "Probabilistic Graph Model + EM参数估计 + 自适应随机贪心算法(1-1/e近似)",
+          "score": 22
+        },
+        {
+          "paper_id": "2021_BIGCOM_Hidden_Markov_based_Truth_Discovery_for_Multi-Agent_Labeling",
+          "year": 2021,
+          "venue": "BIGCOM",
+          "key_insight": "用隐马尔可夫链建模标签间潜在关联,EM迭代交替估计标签真值与智能体精度",
+          "method_signature": "HMM概率图模型+EM算法联合推断多标签真值与智能体可靠性",
+          "score": 18
+        },
+        {
+          "paper_id": "Xiang et al. - 2015 - Calibrate without Calibrating An Iterative Approach in Participatory Sensing Network",
+          "year": 2015,
+          "venue": null,
+          "key_insight": "Sensing diversity across multiple sources enables implicit calibration: a participant sensing multiple pollution sources provides enough structure to estimate sensor noise without explicit calibration",
+          "method_signature": "Two-level EM-like iterative algorithm (ACTION): outer loop estimates source presences, inner loop alternates between sensor noise and source parameter estimation",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "federated-learning-client-selection",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2024_TMC_Joint_Client-and-Sample_Selection_for_Federated_Learning_via_Bi-Level_Optimization",
+          "year": 2024,
+          "venue": "IEEE Transactions on Mobile Computing",
+          "key_insight": "通过操纵梯度流实现类级别权重学习,而不是仅用实例级标量权重,从而保留不同类别梯度流的差异信息",
+          "method_signature": "FedMW-CSS:双层优化框架,元学习在线近似,梯度流类级别权重,分层影响力估计",
+          "score": 22
+        },
+        {
+          "paper_id": "2024_TPDS_Privacy-Preserving_Data_Selection_for_Horizontal_and_Vertical_Federated_Learning",
+          "year": 2024,
+          "venue": "IEEE Transactions on Parallel and Distributed Systems",
+          "key_insight": "分层选择:先用DPP选高质量客户,再用梯度上界范数动态选重要且无错的样本",
+          "method_signature": "DPP+PSI分层客户样本选择+错误感知重要性采样",
+          "score": 22
+        },
+        {
+          "paper_id": "2021_INFOCOM_Sample-level_Data_Selection_for_Federated_Learning",
+          "year": 2021,
+          "venue": "INFOCOM",
+          "key_insight": "数据质量维度(统计同质性、内容多样性、样本重要性)对FL模型性能有决定性影响,需用DPP联合优化",
+          "method_signature": "两阶段层次化选择:训前PSI过滤+HE同质性+草图多样性DPP,训练时梯度上界重要性+异常过滤",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "tag": "attention-mechanism",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2021_UbiComp_KATN Key Activity Detection via Inexact Supervised Learning",
+          "year": 2021,
+          "venue": "ACM Interact. Mob. Wearable Ubiquitous Technol.",
+          "key_insight": "先训练粗粒度二分类深度模型，再用模型行为的注意力权重反推精确边界，而非直接学习精确标注",
+          "method_signature": "Siamese双注意力网络(SAN)提取判别/细节双视角特征，结合时间重要性评分估计精确时段",
+          "score": 14
+        },
+        {
+          "paper_id": "Liu et al. - 2020 - Predicting functional elements and variants effects in non-coding regions based on deep learning",
+          "year": 2020,
+          "venue": null,
+          "key_insight": "用注意力机制(GPWM)补充卷积(LPWM)，多通道架构提升高阈值容忍度",
+          "method_signature": "DeepMSA：1000bp输入→多通道层(注意力+卷积)→2584维染色质特征预测",
+          "score": 14
+        },
+        {
+          "paper_id": "Zhang et al. - 2018 - MindID Person Identification from Brain Waves through Attention-based Recurrent Neural Network",
+          "year": 2018,
+          "venue": "ACM Journal of Computer Science and Cultural Heritage",
+          "key_insight": "Delta频段（0.5-4Hz）同时满足'稳定'和'可区分'——它源于基础生命维持系统，不随意识状态波动而变化，且存在于所有脑状态中",
+          "method_signature": "Delta频段带通滤波 + 注意力加权Encoder-Decoder LSTM特征提取 + XGBoost boosting分类",
+          "score": 14
+        }
+      ]
+    },
+    {
+      "tag": "multi-armed-bandit",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2023_packetgame",
+          "year": 2023,
+          "venue": "ACM SIGCOMM",
+          "key_insight": "元数据与反馈的混合表示:仅用包大小和图片类型等元数据无法区分,必须结合下游推理结果的反馈",
+          "method_signature": "多视角神经网络(独立帧/预测帧分视图)+时序估计器+近似比保证的贪婪组合优化器",
+          "score": 22
+        },
+        {
+          "paper_id": "2022_INFOCOM_ANTIGONE_Accurate_Navigation_Path_Caching_in_Dynamic_Road_Networks_leveraging_Route_APIs",
+          "year": 2022,
+          "venue": "INFOCOM",
+          "key_insight": "Querying multi-hop OD paths costs same as single edge, so selecting long paths maximizes edge coverage per dollar; regular traffic patterns enable prediction-based prioritization.",
+          "method_signature": "Hybrid graph compression + UCB-based path selection + predictor correction + courier trace seeding",
+          "score": 20
+        },
+        {
+          "paper_id": "Li et al. - 2012 - Observation vs statistics Near optimal online channel access in cognitive radio networks",
+          "year": 2012,
+          "venue": "null",
+          "key_insight": "感知顺序(sensing order)对在线信道接入策略设计至关重要,恰当的顺序可实现机会接入并降低计算开销",
+          "method_signature": "CIE学习策略和OSP-in-MAB解耦算法,复杂度从O(KNK̄)降至O(K)",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "tag": "submodular-optimization",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Chen et al. - 2016 - Privacy-Aware High-Quality Map Generation with Participatory Sensing",
+          "year": 2016,
+          "venue": "IEEE Transactions on Mobile Computing",
+          "key_insight": "γ≥1时Crust无法唯一恢复曲线，从而保护用户轨迹；γ控制隐私-效用权衡",
+          "method_signature": "PMG框架：用户上传重排稀疏点，服务器用Crust重建曲线",
+          "score": 20
+        },
+        {
+          "paper_id": "2022_TKDD_Adaptive_Model_Scheduling_for_Resource_efficient_Data_Labeling",
+          "year": 2022,
+          "venue": "ACM Trans. Knowl. Discov. Data",
+          "key_insight": "Executed models' outputs provide semantic hints about unexecuted models' outputs; a DRL agent can learn these implicit relationships to predict model value before execution.",
+          "method_signature": "DRL-based model value prediction combined with cost-profit greedy scheduling under deadline or deadline-memory constraints.",
+          "score": 18
+        },
+        {
+          "paper_id": "Zhang et al. - 2019 - On Reliable Task Assignment for Spatial Crowdsourcing",
+          "year": 2019,
+          "venue": null,
+          "key_insight": "可靠性函数具有单调次模性,可行解空间构成一致拟阵与划分拟阵的交集,可设计具有近似保证的贪心算法",
+          "method_signature": "基于次模函数优化的G-MRA和G-MCA贪心算法,分别保证3-近似和(1+1/β ln(h(E)/αc*))近似",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "tag": "communication-efficiency",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2024_INFOCOM_GraphProxy_Communication-Efficient_Federated_Graph_Learning_with_Adaptive_Proxy",
+          "year": 2024,
+          "venue": "INFOCOM",
+          "key_insight": "可以用本地节点的代理替代外部邻居进行邻域聚合,代理需满足嵌入相似性和类别相关性两个条件",
+          "method_signature": "GraphProxy:代理搜索+动态更新,基于嵌入相似度和类别相关性选择本地代理",
+          "score": 22
+        },
+        {
+          "paper_id": "TVFL_infocom2023",
+          "year": 2023,
+          "venue": "IEEE INFOCOM",
+          "key_insight": "通过判别器识别可独立预测的样本，在不损失精度前提下跳过不必要的联邦推理通信",
+          "method_signature": "TVFL框架：独立推理与联邦推理的智能切换",
+          "score": 22
+        },
+        {
+          "paper_id": "Huang et al. - 2011 - Sampling based algorithms for quantile computation in sensor networks",
+          "year": 2011,
+          "venue": "SIGMOD'11",
+          "key_insight": "打破分解式框架(decomposable framework)，用采样代替完整分位数摘要实现亚线性通信",
+          "method_signature": "概率采样+局部排名估计+树合并压缩",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "tag": "split-learning-privacy-attack",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "2025_TDSC_Functionality_and_Data_Stealing",
+          "year": 2025,
+          "venue": "IEEE Transactions on Dependable and Secure Computing",
+          "key_insight": "服务器模型本身包含足够知识训练伪客户端模型;中间服务器模型序列可引导伪客户端更好收敛",
+          "method_signature": "伪客户端攻击:训练伪客户端映射输入到服务器模型目标特征空间",
+          "score": 20
+        },
+        {
+          "paper_id": "2025_TDSC_Functionality_and_Data_Stealing_by_Pseudo-Client_Attack_and_Target_Defenses_in_Split_Learning",
+          "year": 2025,
+          "venue": "IEEE Transactions on Dependable and Secure Computing",
+          "key_insight": "Well-trained server model alone provides enough info to train pseudo-client model with very limited samples; intermediate server models during SL guide better pseudo-client convergence.",
+          "method_signature": "PCAT: Pseudo-Client Attack trains fake client model using server model as constraint while SL runs normally.",
+          "score": 20
+        },
+        {
+          "paper_id": "PCAT_TDSC_Notation",
+          "year": null,
+          "venue": "null",
+          "key_insight": "A well-trained server model contains sufficient knowledge to construct a pseudo-client model using very limited samples, even without smashed data",
+          "method_signature": "Train pseudo-client model using evolving server models as learning targets via knowledge distillation; label alignment boosts attack",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "GreenOrbs",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Bo et al. - 2012 - Locating sensors in the forest A case study in GreenOrbs",
+          "year": 2012,
+          "venue": "ACM Conference on Embedded Networked Sensor Systems (SenSys)",
+          "key_insight": "用\"功率递增时被触达的邻居节点顺序\"来表征相对距离关系,比原始RSSI值更稳定;由此提出JND(联合邻居距离)替代DV-hop",
+          "method_signature": "EARL三阶段:邻居关系估计→JND-hop定位→边界检测→反向定位校验好节点→好节点辅助标定差节点",
+          "score": 20
+        },
+        {
+          "paper_id": "He et al. - 2010 - LISTEN Non-interactive Localization in Wireless Camera Sensor Networks",
+          "year": 2010,
+          "venue": "null",
+          "key_insight": "利用针孔模型的三角几何关系,通过计算相机视野中信标位置的角距离,实现仅需被动监听即可完成定位",
+          "method_signature": "移动信标广播坐标,节点被动捕获图像提取角距离,几何定理保证唯一可定位性",
+          "score": 16
+        },
+        {
+          "paper_id": "Liu et al. - 2011 - Does wireless sensor network scale A measurement study on GreenOrbs",
+          "year": 2011,
+          "venue": "null",
+          "key_insight": "瓶颈节点分散在网络各处而非集中在 sink 周围;网络动态主要源于并发竞争而非环境变化",
+          "method_signature": "跨协议栈多数据源测量:路由跟踪+链路跟踪+节点统计+嗅探器+信标+本地日志",
+          "score": 14
+        }
+      ]
+    },
+    {
+      "tag": "P2P-search",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Chen et al. - 2012 - Optimizing Bloom Filter Settings in Peer-to-Peer Multikeyword Searching",
+          "year": 2012,
+          "venue": "IEEE Transactions on Knowledge and Data Engineering",
+          "key_insight": "BF最优设置取决于两侧倒排列表的统计信息,而非最小化假阳性率",
+          "method_signature": "基于数值分析的BF最优参数推导与仿真验证",
+          "score": 20
+        },
+        {
+          "paper_id": "Chen et al. - 2010 - TSS Efficient Term Set Search in Large Peer-to-Peer Textual Collections",
+          "year": 2010,
+          "venue": "IEEE Transactions on Parallel and Distributed Systems",
+          "key_insight": "观察到用户查询普遍简短(85%≤3词)且兴趣有限，故只需索引最高相关性的词集，牺牲少量召回率换取指数级索引压缩。",
+          "method_signature": "基于TFxIDF排名的词集剪枝算法，仅发布top λn·log(n)个相关词集到分布式哈希表。",
+          "score": 18
+        },
+        {
+          "paper_id": "Shi et al. - 2007 - Popularity Adaptive Search in Hybrid P2P Systems",
+          "year": 2007,
+          "venue": null,
+          "key_insight": "用少量 smart nodes 作为传感器测量全局动态率 β，修正 gossip 所得的人气值以跟踪副本真实变化",
+          "method_signature": "PASH: smart node 感知动态 + β 修正 gossip 人气值 + flooding/DHT 自适应选择",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "sensor-network-localization",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Chen et al. - 2011 - Localization in non-localizable sensor and ad-hoc networks A Localizability-aided approach",
+          "year": 2011,
+          "venue": "IEEE INFOCOM",
+          "key_insight": "先测试节点局部可定位性，再针对性地通过顶点增强添加必要的边，避免对已是可定位的节点做无谓调整",
+          "method_signature": "LAL三阶段：局部可定位性测试→组件树构造→网络调整，单轮调整使网络可定位",
+          "score": 20
+        },
+        {
+          "paper_id": "Liu and Yang - 2024 - Location, Localization, and Localizability - Location-awareness Technology for Wireless Networks, Se",
+          "year": 2024,
+          "venue": "Springer (2nd edition textbook)",
+          "key_insight": "通过物理测量→单跳定位→多跳网络定位→误差控制→可定位性的递进框架统一表述定位技术",
+          "method_signature": "教科书式系统综述:物理测量方法、单跳定位、多跳网络定位、误差控制、可定位性理论",
+          "score": 17
+        },
+        {
+          "paper_id": "Yang et al. - 2007 - Sea Depth Measurement with Restricted Floating Sensors",
+          "year": 2007,
+          "venue": "null",
+          "key_insight": "Sensors float within known geometric constraints; statistical sampling reveals anchor position and radius, enabling depth calculation",
+          "method_signature": "FALA: seed MED + non-seed regression analysis on distance samples to estimate floating area parameters",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "distributed algorithm",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Li et al. - 2014 - Towards Energy-Fairness in Asynchronous Duty-Cycling Sensor Networks",
+          "year": 2014,
+          "venue": "ACM Transactions on Sensor Networks",
+          "key_insight": "SIC is convex, enabling decomposition into local sub-problems solvable in a distributed manner while achieving global optimum.",
+          "method_signature": "GDSIC: distributed convex optimization via local information exchange among sensor nodes.",
+          "score": 20
+        },
+        {
+          "paper_id": "Li et al. - 2012 - Towards energy-fairness in asynchronous duty-cycling sensor networks",
+          "year": 2012,
+          "venue": "null",
+          "key_insight": "增加睡眠间隔不一定降低本节点能耗（需权衡发送者成本），贪婪策略无法保证收敛到最优解",
+          "method_signature": "利用凸优化性质分解全局问题为局部子问题，设计分布式迭代算法GDSIC",
+          "score": 16
+        },
+        {
+          "paper_id": "Cheng et al. - 2008 - Sweep coverage with mobile sensors",
+          "year": 2008,
+          "venue": "null",
+          "key_insight": "Sweep coverage enables covering many POIs with few mobile sensors by exploiting time-variant coverage; the problem's non-locality (no sensor can locally determine global coverage) necessitates distributed coordination via epidemic information exchange",
+          "method_signature": "CSWEEP: TSP PTAS route + partition into L0 pieces, each sensor patrols one piece; DSWEEP: distributed with epidemic sweep table exchange and urgency-based next POI selection",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "IoT-security",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Dang et al. - 2019 - Understanding Fileless Attacks on Linux-based IoT Devices with HoneyCloud",
+          "year": 2019,
+          "venue": "MobiSys '19",
+          "key_insight": "Read-only文件系统防恶意软件反而阻碍shell日志,形成安全悖论",
+          "method_signature": "多源关联shell命令/文件系统/流量/第三方报告分类fileless攻击",
+          "score": 17
+        },
+        {
+          "paper_id": "Xu et al. - 2021 - Collective Memory for Detecting Nonconcurrent Clones A Localized Approach for Global Topology and I",
+          "year": 2021,
+          "venue": "null",
+          "key_insight": "时空域的身份和拓扑连接可以被压缩成一个字节大小的混沌码,通过本地集体记忆实现全局追踪",
+          "method_signature": "GTI Tracing基于混沌码的本地计算范式,利用扰动放大与收敛模块实现蝴蝶效应传播",
+          "score": 16
+        },
+        {
+          "paper_id": "Liu - 2021 - Editorial from the Editor-in-Chief",
+          "year": 2021,
+          "venue": "ACM Transactions on Sensor Networks",
+          "key_insight": "通过建立特刊、合作会议、扩充编辑团队来匹配扩展的研究范围",
+          "method_signature": "N/A-社论文章",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "tag": "relocatable-code",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Dong et al. - 2013 - R2 Incremental Reprogramming Using Relocatable Code in Networked Embedded Systems",
+          "year": 2013,
+          "venue": "null",
+          "key_insight": "复用动态链接中的可重定位代码技术解耦符号引用与定义，使引用指令在版本间保持不变",
+          "method_signature": "R2sim生成可重定位代码 + R2diff字节级差分算法 + 内容感知元数据压缩",
+          "score": 18
+        },
+        {
+          "paper_id": "Dong et al. - 2011 - (mathscrR)(^mbox2) Incremental (mathscrR)eprogramming using (mathscrR)elocatable code i",
+          "year": 2011,
+          "venue": "null",
+          "key_insight": "通过生成可重定位代码，将引用指令中的绝对地址填充为预设值(如零)，使两版本引用指令保持不变，由加载器完成运行时地址修正。",
+          "method_signature": "统一的可重定位代码方法处理函数移位和数据移位；压缩重定位条目从12字节到4字节；优化差分算法生成最小delta。",
+          "score": 13
+        },
+        {
+          "paper_id": "Dong et al. - 2013 - R3 Optimizing relocatable code for efficient reprogramming in networked embedded systems",
+          "year": 2013,
+          "venue": "null",
+          "key_insight": "用符号索引替代全零填充以保持相似性，用位图替代偏移字段以削减元数据",
+          "method_signature": "R3diff(最优delta生成)+R3sim(相似性保持的二进制格式优化)",
+          "score": 12
+        }
+      ]
+    },
+    {
+      "tag": "link-quality-estimation",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Dong et al. - 2014 - Dynamic Packet Length Control in Wireless Sensor Networks",
+          "year": 2014,
+          "venue": "IEEE Transactions on Wireless Communications",
+          "key_insight": "通过滑动窗口监测PRR并迭代调整分组长度，可逼近最优解而无需预先知道BER或拓扑",
+          "method_signature": "基于TO度量的滑动窗口式分组长度自适应控制",
+          "score": 20
+        },
+        {
+          "paper_id": "Dong et al. - 2014 - Link Quality Aware Code Dissemination in Wireless Sensor Networks",
+          "year": 2014,
+          "venue": "IEEE Transactions on Parallel and Distributed Systems",
+          "key_insight": "Weight senders by uncovered neighbors multiplied by outbound link quality; larger packets improve efficiency but require link-aware sender selection to avoid losses",
+          "method_signature": "ECD uses configurable packet sizes, link-quality-weighted impact estimation, and impact-based backoff timers for fast implicit coordination",
+          "score": 20
+        },
+        {
+          "paper_id": "Dong et al. - 2011 - Link quality aware code dissemination in wireless sensor networks",
+          "year": 2011,
+          "venue": "null",
+          "key_insight": "利用1跳邻居链路质量信息评估发送方影响值,配合基于影响的退避定时器,可实现无需显式协调的快速发送方选择",
+          "method_signature": "ECD:动态可配包大小+链路质量感知发送方选择+基于影响的退避定时器",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "tag": "distributed-algorithm",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Dong et al. - 2013 - Fine-Grained Location-Free Planarization in Wireless Sensor Networks",
+          "year": 2013,
+          "venue": "IEEE Transactions on Mobile Computing",
+          "key_insight": "Using underlying representations (underlying paths) enables dynamically transforming non-CDM edges into conflict-free edges, achieving denser sampling than CDM.",
+          "method_signature": "Construct RWG with underlying representation, compute maximal conflict-free edge set via conflict graph MIS, perform separable conflict resolution.",
+          "score": 22
+        },
+        {
+          "paper_id": "Xi et al. - 2009 - Run to Potential Sweep Coverage in Wireless Sensor Networks",
+          "year": 2009,
+          "venue": null,
+          "key_insight": "Build virtual 3D potential field where POIs form peaks; mobile nodes climb gradients toward POIs using only local neighbor information",
+          "method_signature": "Potential-guided distributed sweep algorithm with anti-collision agents and virtual 3D gradient map",
+          "score": 16
+        },
+        {
+          "paper_id": "Liu et al. - 2004 - Efficient Gnutella-like P2P Overlay Construction",
+          "year": 2004,
+          "venue": "null",
+          "key_insight": "通过优化覆盖网拓扑结构连接物理邻近节点,可显著降低流量而不缩减搜索范围",
+          "method_signature": "LTM用TTL2检测器发现低效链路并切断,SBO用二分染色+MST选择转发连接",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "tag": "GreenOrbs-deployment",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Liao et al. - 2011 - Visualizing anomalies in sensor networks",
+          "year": 2011,
+          "venue": "SIGCOMM'11",
+          "key_insight": "可视化分析比纯算法更适合诊断\"症状和根因前所未知\"的显著失效",
+          "method_signature": "时序展开模型(TEM)将路由拓扑转为有向树，关联图用Pearson系数揭示维度相关，动态投影图用星坐标降维",
+          "score": 20
+        },
+        {
+          "paper_id": "Miao et al. - 2013 - Agnostic Diagnosis Discovering Silent Failures in Wireless Sensor Networks",
+          "year": 2013,
+          "venue": "IEEE Transactions on Wireless Communications",
+          "key_insight": "正常节点的指标之间存在稳定相关性,相关性模式的突变比单个指标值更能揭示故障",
+          "method_signature": "为每个节点构建相关性图矩阵,结合CUSUM时序检测和PCA降维+K-Means空间聚类",
+          "score": 20
+        },
+        {
+          "paper_id": "Dong et al. - 2013 - Measurement and analysis on the packet delivery performance in a large scale sensor network",
+          "year": 2013,
+          "venue": "unknown",
+          "key_insight": "利用因果图对触发事件与丢包事件做时空关联分析,揭示不同丢包类型的空间分布特征各异",
+          "method_signature": "MAP方法学:稳健算法识别丢包与系统事件,因果图追踪交互,时空相关性分析",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "smartphone-sensing",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Gu et al. - 2014 - Intelligent sleep stage mining service with smartphones",
+          "year": 2014,
+          "venue": "UbiComp '14",
+          "key_insight": "不同睡眠阶段伴随特定身体运动和声音事件,CRF可建模时序依赖关系",
+          "method_signature": "加速度+麦克风+光感多模态特征输入CRF,每5分钟检测一次睡眠阶段",
+          "score": 20
+        },
+        {
+          "paper_id": "Shangguan et al. - 2014 - Towards Accurate Object Localization with Smartphones",
+          "year": 2014,
+          "venue": "IEEE Pervasive Computing and Communications (PerCom)",
+          "key_insight": "臂伸拉伸充当已知位移基准，将两次拍照的物体比例变化与手臂位移结合，用镜头公式反推物距",
+          "method_signature": "三阶段加速度滤波(定向校准+漂移剔除+Kalman平滑)+图像缩放比提取+罗盘方位校正+物理坐标映射",
+          "score": 20
+        },
+        {
+          "paper_id": "Yang et al. - 2014 - Sherlock Micro-Environment Sensing for Smartphones",
+          "year": 2014,
+          "venue": "IEEE Transactions on Mobile Computing",
+          "key_insight": "利用手机固有传感器(摄像头/加速度计/麦克风)协作检测,无需额外硬件即可推断微环境",
+          "method_signature": "分层架构+多阶段检测:摄像头检测in-hand,DTW匹配on-body,振动模式识别材质",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "tag": "P2P-overlay-topology",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Liu et al. - 2003 - AOTO adaptive overlay topology optimization in unstructured P2P systems",
+          "year": 2003,
+          "venue": "unknown",
+          "key_insight": "通过构建源节点到直接邻居的overlay组播树+替换远距离邻居为近距离邻居两层操作解决问题",
+          "method_signature": "AOTO算法:选择性洪泛(SF建组播树)+主动拓扑(AT替换远邻)",
+          "score": 15
+        },
+        {
+          "paper_id": "Guo et al. - 2008 - BAKE A Balanced Kautz Tree Structure for Peer-to-Peer Networks",
+          "year": 2008,
+          "venue": null,
+          "key_insight": "利用平衡Kautz树结构处理任意节点数,继承Kautz图的优良拓扑性质",
+          "method_signature": "平衡Kautz树→叶节点映射→最长后缀匹配资源放置→冗余路由",
+          "score": 13
+        },
+        {
+          "paper_id": "Liu et al. - 2004 - A Distributed Approach to Solving Overlay Mismatching Problem",
+          "year": 2004,
+          "venue": "unknown",
+          "key_insight": "本地测量延迟构建最小生成树,再逐步替换远距离邻居而不缩小搜索范围",
+          "method_signature": "三阶段ACE:探测邻居成本表→建最小生成树→替换远处邻居",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "cross-technology-communication",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Guo et al. - 2021 - LEGO-Fi Transmitter-Transparent CTC With Cross-Demapping",
+          "year": 2021,
+          "venue": "IEEE Internet of Things Journal",
+          "key_insight": "ZigBee包经过WiFi模块时留下可区分特征;WiFi丰富的处理能力可灵活处理ZigBee简单编码调制",
+          "method_signature": "跨解映射(cross-demapping):将CTC解码问题转化为模式识别问题,复用WiFi模块解码ZigBee符号",
+          "score": 18
+        },
+        {
+          "paper_id": "Guo et al. - 2023 - Cross-Technology Communication for Internet of Things - Fundamentals and Key Technologies",
+          "year": 2023,
+          "venue": "Springer Nature Singapore",
+          "key_insight": "不同无线技术的可区分特征(如能量、CSI、相位)可作为侧信道实现跨技术直接通信",
+          "method_signature": "从包级、物理级、上层协议三层面递进式设计CTC技术,利用各层特征构造跨技术通信",
+          "score": 16
+        },
+        {
+          "paper_id": "Guo et al. - 2019 - LEGO-Fi Transmitter-Transparent CTC with Cross-Demapping",
+          "year": 2019,
+          "venue": "INFOCOM",
+          "key_insight": "WiFi接收端可通过交叉解映射识别ZigBee信号特征，将处理复杂度从发射端转移到接收端。",
+          "method_signature": "跨技术交叉解映射：利用WiFi接收端的丰富处理能力解析ZigBee包。",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "P2P匿名通信",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Han and Liu - 2006 - Rumor Riding Anonymizing Unstructured Peer-to-Peer Systems",
+          "year": 2006,
+          "venue": null,
+          "key_insight": "将密钥和密文作为分离的\"谣言\"随机游走，在相遇的\"播种者\"节点处组装，利用对称加密替代非对称加密",
+          "method_signature": "基于随机游走的非路径匿名协议，谣言碰撞机制实现端到端匿名",
+          "score": 13
+        },
+        {
+          "paper_id": "Han et al. - 2005 - A Mutual Anonymous Peer-to-Peer Protocol Design",
+          "year": 2005,
+          "venue": "null",
+          "key_insight": "用Shamir秘密分享将查询信息分割为n份随机分布，任何收到k份的节点可恢复并洪泛查询",
+          "method_signature": "Shamir秘密分享+SIDA信息分散+洋葱路由实现P2P双向匿名通信",
+          "score": 13
+        },
+        {
+          "paper_id": "Lu et al. - 2007 - Pseudo Trust Zero-Knowledge Based Authentication in Anonymous Peer-to-Peer Protocols",
+          "year": 2007,
+          "venue": "null",
+          "key_insight": "用单向哈希生成假名(PI)绑定信任值,零知识证明在不泄露秘密的情况下完成双向认证",
+          "method_signature": "基于零知识证明的假名认证协议,包含PI生成、PIC证书和六步交互验证",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "cut-vertex-detection",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "He et al. - 2009 - On the reliability of large-scale distributed systems - A topological view",
+          "year": 2009,
+          "venue": "Computer Networks (Elsevier)",
+          "key_insight": "一个节点是割点当且仅当它是多个block的连接点，通过本地收集 flooding 消息即可归类邻居到不同block",
+          "method_signature": "自适应检测利用已有flooding零开销 + 主动检测用轻量探针补充精度 + 通过添加连接中和割点",
+          "score": 20
+        },
+        {
+          "paper_id": "He et al. - 2008 - On the Reliability of Large-Scale Distributed Systems A Topological View",
+          "year": 2008,
+          "venue": "null",
+          "key_insight": "利用泛洪消息的路径信息将邻居归并到不同块中，割点等价于连接多个块的节点。",
+          "method_signature": "零开销自适应检测 + 低成本主动检测 + 割点中和",
+          "score": 15
+        },
+        {
+          "paper_id": "Liu et al. - 2006 - Optimizing overlay topology by reducing cut vertices",
+          "year": 2006,
+          "venue": null,
+          "key_insight": "通过让来自不同连接的探测消息互相‘相遇’，可推断这些连接对应的 reachable sets 是否相交",
+          "method_signature": "CAM: probe 消息 + CAM 图 + 中性化三阶段分布式算法",
+          "score": 8
+        }
+      ]
+    },
+    {
+      "tag": "WSN-diagnosis",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "He et al. - 2010 - Why are long-term large-scale wireless sensor networks difficult early experience with GreenOrbs",
+          "year": 2009,
+          "venue": "MobiCom 2009 Poster",
+          "key_insight": "野外环境使诊断/定位/路由问题质变为长期大规模部署的核心障碍",
+          "method_signature": "GreenOrbs森林传感系统部署经验总结与未来方向讨论",
+          "score": 21
+        },
+        {
+          "paper_id": "Ma et al. - 2012 - Sherlock is around Detecting network failures with local evidence fusion",
+          "year": 2012,
+          "venue": "null",
+          "key_insight": "Root causes can be partly reflected within a neighborhood; D-S theory with similarity-based weighting achieves associative fusion regardless of order",
+          "method_signature": "Local-Diagnosis (LD2): Naive Bayesian Classifier + improved Dempster-Shafer evidence fusion via fusion tree",
+          "score": 15
+        },
+        {
+          "paper_id": "Li et al. - 2014 - Enhancing Visibility of Network Performance in Large-Scale Sensor Networks",
+          "year": 2014,
+          "venue": "null",
+          "key_insight": "Instead of pre-defining root causes via expert heuristics, latent root cause vectors can be automatically discovered from historical network state data using NMF.",
+          "method_signature": "Inject 43 metrics into nodes, detect anomalies by variance threshold, apply NMF to extract r representative root cause vectors in Ψ",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "grid-information-service",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Hu et al. - 2005 - Efficient Information Service Management Using Service Club in CROWN Grid",
+          "year": 2005,
+          "venue": "null",
+          "key_insight": "Build an overlay of service clubs where GISs sharing the same popular service types are tightly connected via MST, limiting search scope and traffic",
+          "method_signature": "S-Club overlay organizes GISs into service-type-specific clubs using MST topology, frequency thresholds, and distributed maintenance",
+          "score": 16
+        },
+        {
+          "paper_id": "Hu et al. - 2007 - S-Club an overlay-based efficient service discovery mechanism in CROWN Grid",
+          "year": 2007,
+          "venue": "null",
+          "key_insight": "用户总按服务类型搜索，将提供同类服务的GIS组成服务俱乐部可显著缩小搜索范围",
+          "method_signature": "在GIS网格上构建MST拓扑的服务俱乐部覆盖网络",
+          "score": 16
+        },
+        {
+          "paper_id": "Hu et al. - 2005 - S-Club An Overlay based Efficient Service Discovery Mechanism in CROWN Grid",
+          "year": 2005,
+          "venue": "null",
+          "key_insight": "同类热门服务聚成服务俱乐部，将广播搜索限制在俱乐部内而非全网",
+          "method_signature": "基于使用频率阈值构建服务俱乐部，俱乐部内用最小生成树拓扑",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "tag": "CROWN-grid",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Sun et al. - 2005 - OpenSPACE An Open Service Provisioning and Consuming Environment for Grid Computing",
+          "year": 2005,
+          "venue": "6th International Workshop on Advanced Parallel Processing Technologies",
+          "key_insight": "将服务提供商与资源提供商分离,让用户/调度器/中间件自主选择RS部署到合适的UR",
+          "method_signature": "OpenSPACE架构含DSR(分布式服务仓库)、服务容器、Service Explorer实现RS/DS/UR分离",
+          "score": 18
+        },
+        {
+          "paper_id": "Huai et al. - 2006 - Resource management and organization in CROWN grid",
+          "year": 2006,
+          "venue": "null",
+          "key_insight": "通过服务俱乐部(S-Club)在GIS网格上构建覆盖网络,同类服务聚类以减少搜索延迟和流量",
+          "method_signature": "S-Club服务俱乐部Overlay + 信任激励双层P2P架构",
+          "score": 16
+        },
+        {
+          "paper_id": "Huai et al. - 2007 - ROST Remote and hot service deployment with trustworthiness in CROWN Grid",
+          "year": 2007,
+          "venue": "null",
+          "key_insight": "通过RHD动态更新容器配置加载服务,同时用自动信任协商(TNA)解决跨域安全信任问题",
+          "method_signature": "ROST = Trust Negotiation Agent (TNA) + Remote Hot Deployment (RHD)",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "in-network-aggregation",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Xue et al. - 2006 - Contour map matching for event detection in sensor networks",
+          "year": 2006,
+          "venue": "SIGMOD 2006",
+          "key_insight": "事件在传感器网络产生时空模式,可借助等高线图实现高效模式匹配",
+          "method_signature": "基于线性回归的等高线区域合并准则进行网内等高线图构建",
+          "score": 20
+        },
+        {
+          "paper_id": "Li et al. - 2008 - Signature-File-Based Approach for Query Answering Over Wireless Sensor Networks",
+          "year": 2008,
+          "venue": "IEEE Transactions on Vehicular Technology",
+          "key_insight": "签名文件的叠加编码天然去重(OR操作)+可压缩+误报率可精确控制，实现节能与鲁棒性兼得",
+          "method_signature": "签名文件+多径路由+自适应RLE压缩+动态桶分配",
+          "score": 18
+        },
+        {
+          "paper_id": "Liu et al. - 2008 - Continuous answering holistic queries over sensor networks",
+          "year": 2008,
+          "venue": "null",
+          "key_insight": "利用不同轮次间的时序相关性引导范围细化，从而减少通信开销",
+          "method_signature": "F-Bucket精确方案 + 小波式近似方案，根据数据变化速率自适应切换",
+          "score": 12
+        }
+      ]
+    },
+    {
+      "tag": "cloud-storage-sync",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Li et al. - 2014 - Towards Network-level Efficiency for Cloud Storage Services",
+          "year": 2014,
+          "venue": "IMC",
+          "key_insight": "大量同步流量本质上是浪费的，通过精心设计的同步机制可有效避免或大幅降低",
+          "method_signature": "trace测量+对照实验，测量创建/删除/修改等操作的流量TUE，跨PC/网页/移动端",
+          "score": 20
+        },
+        {
+          "paper_id": "Li et al. - 2016 - Content Distribution for Mobile Internet A Cloud-based Approach",
+          "year": 2016,
+          "venue": "Springer (Book)",
+          "key_insight": "通过云端协调代理实现跨应用流量优化，可在不修改应用的前提下透明处理网络流量",
+          "method_signature": "基于生产系统实测的云协调内容分发优化",
+          "score": 20
+        },
+        {
+          "paper_id": "Li et al. - 2013 - T-CloudDisk a tunable cloud storage service for flexible batched synchronization",
+          "year": 2013,
+          "venue": "Middleware 2013 Posters and Demos Track",
+          "key_insight": "将中间件方案升级为独立可调服务,允许用户自定义同步参数以平衡流量与体验",
+          "method_signature": "字节计数器+定时器双变量驱动批量同步",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "WiFi-CSI-sensing",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Li et al. - 2022 - Deep AI Enabled Ubiquitous Wireless Sensing A Survey",
+          "year": 2021,
+          "venue": "ACM Computing Surveys",
+          "key_insight": "无线感知与视觉感知在输入输出上具有相似性,WSS绝对可从深度AI获益",
+          "method_signature": "综述三模块中深度学习技术，对比传统方法，分析挑战与趋势",
+          "score": 20
+        },
+        {
+          "paper_id": "Zhou et al. - 2015 - On Multipath Link Characterization and Adaptation for Device-Free Human Detection",
+          "year": 2015,
+          "venue": "IEEE INFOCOM (inferred from references)",
+          "key_insight": "Multipath factor μ—ratio of LOS power to total power—serves as a directly measurable runtime proxy for link sensitivity, enabling subcarrier weighting to boost detection",
+          "method_signature": "Subcarrier + path weighting scheme using multipath factor μ and MUSIC angle-of-arrival",
+          "score": 20
+        },
+        {
+          "paper_id": "Zheng et al. - 2018 - Combating Cross-Technology Interference for Robust Wireless Sensing with COTS WiFi",
+          "year": 2018,
+          "venue": "unknown",
+          "key_insight": "Non-WiFi devices occupy only narrow instant bandwidth, affecting specific subcarriers → can identify and interpolate",
+          "method_signature": "Cyclostationarity-based RFI detection + linear interpolation of distorted subcarriers",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "P2P-overlay-topology-mismatch",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Xiao et al. - 2005 - Improving Unstructured Peer-to-Peer Systems by Adaptive Connection Establishment",
+          "year": 2005,
+          "venue": "IEEE Transactions on Computers",
+          "key_insight": "本地计算MST实现选择性flooding保留搜索范围,再通过探测非flooding邻居的邻居找到更近节点替换远距离邻居",
+          "method_signature": "ACE三阶段:邻居开销表构建交换→MST选择性洪泛→overlay拓扑优化(邻居替换)",
+          "score": 20
+        },
+        {
+          "paper_id": "Liu et al. - 2004 - Building Efficient Overlays",
+          "year": 2004,
+          "venue": null,
+          "key_insight": "通过在局部区域探测延迟并重构逻辑邻居，可同时降低流量成本和查询响应时间，而不缩小搜索范围",
+          "method_signature": "AOTO用最小生成树消除冗余消息复制；LTM用TTL2探测器识别低效链路并切断",
+          "score": 18
+        },
+        {
+          "paper_id": "Liu et al. - 2005 - Approaching Optimal Peer-to-Peer Overlays",
+          "year": 2005,
+          "venue": null,
+          "key_insight": "通过在查询消息上 piggyback 邻居距离信息,每个 peer 可本地决策邻居取舍,无需全局知识",
+          "method_signature": "THANCS: piggyback邻居距离 + 两跳邻居比较选择",
+          "score": 12
+        }
+      ]
+    },
+    {
+      "tag": "wireless sensor networks",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Mao et al. - 2013 - Finding Best and Worst k-Coverage Paths in Multihop Wireless Sensor Networks",
+          "year": 2013,
+          "venue": "null",
+          "key_insight": "最优k-support路径必由完美支撑点线段组成;最优k-breach路径必沿kth-NP Voronoi边",
+          "method_signature": "构建kth-NP Voronoi图,化为加权图最短路问题,复杂度O(k²n log n)",
+          "score": 16
+        },
+        {
+          "paper_id": "Ma et al. - 2011 - Opportunistic concurrency A MAC protocol for wireless sensor networks",
+          "year": 2011,
+          "venue": "null",
+          "key_insight": "CSMA's channel-busy rule is overly conservative; SINR conditions at receivers determine success, not carrier sense alone.",
+          "method_signature": "Local concurrency map + SINR-based decision algorithm integrated with X-MAC for distributed transmission decisions.",
+          "score": 13
+        },
+        {
+          "paper_id": "Wang et al. - 2014 - Robust Component-Based Localizationin Sparse Networks",
+          "year": null,
+          "venue": null,
+          "key_insight": "定义误差容忍度为组件可唯一定位的距离误差上界，通过鲁棒模式将节点自由度从2D/1种变换扩展到组件2D/3种变换",
+          "method_signature": "ETOC：基于内部锚点数量分类的四类鲁棒定位模式加坐标系统转换结果精炼",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "concurrent-transmission",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Ma et al. - 2015 - Opportunistic Concurrency A MAC Protocol for Wireless Sensor Networks",
+          "year": 2015,
+          "venue": "IEEE",
+          "key_insight": "Local SINR map allows each node to independently decide if concurrent transmission will succeed without disturbing ongoing links.",
+          "method_signature": "Concurrency map + SINR-based decision + embedded X-MAC",
+          "score": 18
+        },
+        {
+          "paper_id": "Wang et al. - 2012 - Triggercast Enabling Wireless Collisions Constructive",
+          "year": 2012,
+          "venue": "ACM/IEEE IPSN",
+          "key_insight": "Perfect chip sync insufficient; must satisfy SNR ratio bounds and phase constraints",
+          "method_signature": "CLS + LSA algorithms compensate delay and select co-senders for CI",
+          "score": 18
+        },
+        {
+          "paper_id": "Wang et al. - 2013 - TriggerCas Enabling wireless consrucive collisions",
+          "year": 2013,
+          "venue": "null",
+          "key_insight": "发现数据发送延迟对所有节点相同,通过时钟漂移系数校准可补偿传播和处理延迟,实现250ns同步精度",
+          "method_signature": "芯片级同步(CLS)加时钟漂移校准,链路选择与对齐(LSA),利用大数定律估算预期延迟",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "device-free-localization",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Yang et al. - 2015 - See Through Walls with COTS RFID System!",
+          "year": 2015,
+          "venue": "MobiCom",
+          "key_insight": "RFID backscatter vulnerability to ambient reflections is reframed as an opportunity—tags on outer wall become a virtual antenna array sensing interior objects.",
+          "method_signature": "Subtract empty-room baseline to eliminate flash, divide by LOS signal to cancel device parameters, HMM/Viterbi for trajectory recovery.",
+          "score": 20
+        },
+        {
+          "paper_id": "Qian et al. - 2018 - Enabling Contactless Detection of Moving Humans with Dynamic Speeds Using CSI",
+          "year": 2018,
+          "venue": "ACM Trans. Embed. Comput. Syst.",
+          "key_insight": "Phase difference across antennas has higher variance than linear transformation, yielding better sensitivity to human motion",
+          "method_signature": "Phase difference + outlier filtering → correlation matrix eigenvalues → SVM classification for motion detection",
+          "score": 18
+        },
+        {
+          "paper_id": "Qian et al. - 2014 - PADS Passive detection of moving targets with dynamic speed using PHY layer information",
+          "year": 2014,
+          "venue": "null",
+          "key_insight": "Phase information from CSI after linear transformation is more sensitive to slow motion than amplitude; eigenvalue-based features are power-irrelevant",
+          "method_signature": "CSI phase sanitization + eigenvalue covariance feature + SVM + multi-antenna MIMO fusion",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "dead-reckoning",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Zhang et al. - 2014 - Montage Combine frames with movement continuity for realtime multi-user tracking",
+          "year": 2014,
+          "venue": "IEEE INFOCOM",
+          "key_insight": "距离向量 = 运动向量差；若已知前一时刻距离向量，后续可直接计算，从而避免歧义累积",
+          "method_signature": "Gold码声学信号测距 + 带通滤波步态估计 + 约束优化定位多用户",
+          "score": 20
+        },
+        {
+          "paper_id": "Wu et al. - 2013 - DorFin WiFi Fingerprint-based Localization Revisited",
+          "year": 2013,
+          "venue": "unknown",
+          "key_insight": "通过区分AP的判别力权重、鲁棒回归处理异常值、幽灵指纹补偿过时测量，三管齐下解决移动环境下定位失效",
+          "method_signature": "DorFin系统：判别因子+鲁棒回归(LMS)+幽灵指纹组装+统一相似度度量",
+          "score": 16
+        },
+        {
+          "paper_id": "Wu et al. - 2015 - Human Mobility Enhances Global Positioning Accuracy for Mobile Phone Localization",
+          "year": 2015,
+          "venue": "null",
+          "key_insight": "死计算的局部轨迹结构比GPS测量更接近真实轨迹,可据此校正GPS",
+          "method_signature": "FSM步态检测+学习步长估计+陀螺仪方向+ Horn坐标变换",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "wireless-ad-hoc-localization",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Yang et al. - 2010 - Beyond Trilateration On the Localizability of Wireless Ad Hoc Networks",
+          "year": 2010,
+          "venue": "IEEE/ACM Transactions on Networking",
+          "key_insight": "Trilateration is a special case (minimum wheel graph with four vertices) of wheel graphs",
+          "method_signature": "WHEEL: find wheel vertices by block calculation in N[v]",
+          "score": 20
+        },
+        {
+          "paper_id": "Yang and Liu - 2010 - Understanding Node Localizability of Wireless Ad-hoc Networks",
+          "year": 2010,
+          "venue": "unknown",
+          "key_insight": "RR3P条件(冗余刚性+3条顶点不相交路径)是可定位节点的充要条件, 可在多项式时间测试",
+          "method_signature": "基于图刚性与隐式边的节点可定位性分析, 结合RR-3P必要条件与RR3P充分条件",
+          "score": 18
+        },
+        {
+          "paper_id": "Yang et al. - 2009 - Beyond Trilateration On the Localizability of Wireless Ad-Hoc Networks",
+          "year": 2009,
+          "venue": "null",
+          "key_insight": "三边测量法实际上是轮图(4节点)的特例,通过识别邻居图中的块结构可找到所有1-hop可定位节点",
+          "method_signature": "基于轮图结构在邻居图中通过计算2-连通块识别可定位节点",
+          "score": 13
+        }
+      ]
+    },
+    {
+      "tag": "homomorphic encryption",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Zhang et al. - 2013 - Verifiable private multi-party computation Ranging and ranking",
+          "year": 2013,
+          "venue": "null",
+          "key_insight": "Two attacks discovered on existing schemes: (1) compressive sensing enables reconstructing sparse vectors from O(K log M) dot products; (2) homomorphic signatures allow fake signature generation. Solution: use certificates from trusted authority to bind encrypted values.",
+          "method_signature": "Threshold-based ranging and ranking protocols using Paillier encryption with certificates from trusted third party; both input and outcome verifiable.",
+          "score": 16
+        },
+        {
+          "paper_id": "Zhang et al. - 2014 - Outsource Photo Sharing and Searching for Mobile Devices With Privacy Protection",
+          "year": 2014,
+          "venue": "unknown",
+          "key_insight": "通过同态加密+密码学协议把搜索任务外包给云端,主人无需在线即可完成隐私搜索",
+          "method_signature": "SouTu框架: Paillier同态加密+CP-ABE访问控制+混淆电路实现非交互隐私搜索",
+          "score": 16
+        },
+        {
+          "paper_id": "Zhang et al. - 2015 - POP Privacy-Preserving Outsourced Photo Sharing and Searching for Mobile Devices",
+          "year": 2015,
+          "venue": "null",
+          "key_insight": "利用Paillier同态加密的非交互特性,通过加密形式直接计算欧氏距离,实现无需主客交互的隐私保护搜索",
+          "method_signature": "Paillier同态加密+CP-ABE属性加密+可选的Yao混淆电路,支持实数/二进制特征向量隐私计算",
+          "score": 16
+        }
+      ]
+    }
+  ],
+  "recurring_thinking_moves": [
+    {
+      "move": "Identify why existing BAI methods fail under knapsack constraints: uniform exploration deviates from optimal distribution",
+      "count": 13,
+      "variants": [
+        "Identify WiFi-only limitation through observation: large errors from ambiguous fingerprints",
+        "Identify concrete deferral opportunities via validation experiment on CC2420",
+        "Identify cost-accuracy tradeoff: readers expensive, tags cheap; exploit many cheap tags over few expensive readers",
+        "Identify failure modes in prior work (atomic sections unbounded latency, tight coupling of subsystems)",
+        "Identify monotonicity bug in prior gossip design (always increases never decreases)",
+        "Identify overlooked attack surface in existing privacy-preserving MPC",
+        "Identify practical DHT weakness (locality destruction) to justify non-DHT approach",
+        "Identify that components have higher DOF than single nodes (3 transformations vs 1)",
+        "Identify that increasing receivers only decreases throughput by 1/√k factor",
+        "Identify the variance of wakeup separations as the control lever for distributed scheduling",
+        "Identify three attack vectors for reputation tampering then systematize feedback components",
+        "Identify why existing BAI methods fail under knapsack constraints: uniform exploration deviates from optimal distribution",
+        "Identify why existing approaches (AMRoute, PAST-DM, LGT) fail for priority use case"
+      ],
+      "papers": [
+        "2023_ICML_optimal arms",
+        "Dong et al. - 2011 - SenSpire OS A Predictable, Flexible, and Efficient Operating System for Wireless Sensor Networks",
+        "Han and Liu - 2006 - Dubious feedback fair or not",
+        "Li et al. - 2010 - Multicast Capacity of Wireless Ad Hoc Networks Under Gaussian Channel Model",
+        "Ma et al. - 2015 - Opportunistic Concurrency A MAC Protocol for Wireless Sensor Networks",
+        "Ni et al. - 2004 - LANDMARC Indoor Location Sensing Using Active RFID",
+        "Shi et al. - 2009 - Popularity adaptive search in hybrid P2P systems",
+        "Sun et al. - 2008 - RCT A distributed tree for supporting efficient range and multi-attribute queries in grid computing",
+        "Wang et al. - 2010 - ETOC Obtaining robustness in component-based localization",
+        "Xiao et al. - 2004 - Prioritized Overlay Multicast in Mobile Ad Hoc Environments",
+        "Xu et al. - 2015 - Enhancing wifi-based localization with visual clues",
+        "Zhang et al. - 2013 - Verifiable private multi-party computation Ranging and ranking",
+        "Zhu et al. - 2007 - Low-Power Distributed Event Detection in Wireless Sensor Networks"
+      ]
+    },
+    {
+      "move": "把perception问题(reidentifying contenders)重新frame成communication问题(channel assignment)",
+      "count": 9,
+      "variants": [
+        "把perception问题(reidentifying contenders)重新frame成communication问题(channel assignment)",
+        "把perception问题reframe成DFPL device-free passive localization问题",
+        "把perception问题reframe成communication问题:用声纹一致性过滤替代视频传输",
+        "把perception问题转frame为信息融合问题,多源视频的互补性是机会而非障碍",
+        "把perception问题重新frame为信号处理+概率估计问题",
+        "把perception问题重新frame成communication问题",
+        "把perception问题重新frame成communication问题——商品被拿起时的路径变化是通信而非定位",
+        "把perception问题重新定义为proactive scheduling的前置决策",
+        "把perception限制（CFF）当作安全编码的约束边界而非噪声"
+      ],
+      "papers": [
+        "2019_TMC_Cloak_of_Invisibility_Privacy-Friendly_Photo_Capturing_and_Sharing_System",
+        "2020_Tsinghua_Spotlight_Hot_target_discovery_and_localization_with_crowdsourced_photos",
+        "2021_DCOSS_MampM_Recognizing_Multiple_Co-evolving_Activities_From_Multi-source_Videos",
+        "2023_SECON_E-Talk_Accelerating_Active_Speaker_Detection_with_Audio-Visual_Fusion_and_Edge-Cloud_Computing",
+        "2026_MobiCom_IoT_Brain__Grounding_LLMs_for_Semantic_Spatial_Sensor_Scheduling_Final_version修改版",
+        "Ji et al. - 2014 - Walking down the STAIRS Efficient collision resolution for wireless sensor networks",
+        "Liu et al. - 2015 - TagBooth Deep shopping data acquisition powered by RFID tags",
+        "Zhang et al. - 2015 - Kaleido You Can Watch It But Cannot Record It",
+        "Zhao et al. - 2015 - LMDD Light-Weight Magnetic-Based Door Detection with Your Smartphone"
+      ]
+    },
+    {
+      "move": "从工程异常反推底层假设失效: GAB假设项数多→peer多, 但兴趣局部性使该假设不成立",
+      "count": 5,
+      "variants": [
+        "从工程异常反推底层假设失效: GAB假设项数多→peer多, 但兴趣局部性使该假设不成立",
+        "从工程异常反推底层假设失效：实验发现NDI不保证功率增益，推翻盲目并发假设",
+        "从工程异常反推底层物理假设失效",
+        "从工程异常反推底层物理假设失效:多径导致频率选择性是致命因素"
+      ],
+      "papers": [
+        "Chen et al. - 2009 - Difficulty-Aware Hybrid Search in Peer-to-Peer Networks",
+        "Chen et al. - 2018 - Minimizing the Cask Effect of Multi-Source Content Delivery",
+        "Lin et al. - 2017 - TagScreen Synchronizing social televisions through hidden sound markers",
+        "Sun et al. - 2019 - iTracker Towards Sustained Self-Tracking in Dynamic Feature Environment with Smartphones",
+        "Wang et al. - 2012 - Triggercast Enabling Wireless Collisions Constructive"
+      ]
+    },
+    {
+      "move": "将定位问题重新框架为可定位性((localizability)理论问题",
+      "count": 5,
+      "variants": [
+        "将定位问题重新框定为鲁棒估计问题",
+        "将定位问题重新框架为可定位性((localizability)理论问题",
+        "将定位问题重新框架为感知问题:节点不说话,只被动看",
+        "将定位问题重新框架为模式匹配: 比较参考标签与跟踪标签的信号强度模式",
+        "将定位问题重新框架为结合运动模式的混合推理"
+      ],
+      "papers": [
+        "He et al. - 2010 - LISTEN Non-interactive Localization in Wireless Camera Sensor Networks",
+        "Liu and Yang - 2024 - Location, Localization, and Localizability - Location-awareness Technology for Wireless Networks, Se",
+        "Ni et al. - 2003 - ANDMARC Indoor Location Sensing Using Active RFID",
+        "Sun et al. - 2013 - MoLoc On Distinguishing Fingerprint Twins",
+        "Zhang et al. - 2014 - Robust Trajectory Estimation for Crowdsourcing-Based Mobile Applications"
+      ]
+    },
+    {
+      "move": "Exploit spatial diversity from MIMO to reduce risk of selecting a 'bad' antenna",
+      "count": 4,
+      "variants": [
+        "Exploit asymmetric costs between expert and amateur labor",
+        "Exploit geometry of robust patterns to eliminate ambiguities systematically",
+        "Exploit intermediate training checkpoints as learning targets",
+        "Exploit spatial diversity from MIMO to reduce risk of selecting a 'bad' antenna"
+      ],
+      "papers": [
+        "2022_ICDE_COCA_Cost-Effective_Collaborative_Annotation_System_by_Combining_Experts_and_Amateurs",
+        "2023_usenixsecurity_pcat",
+        "Qian et al. - 2014 - PADS Passive detection of moving targets with dynamic speed using PHY layer information",
+        "Wang et al. - 2010 - ETOC Obtaining robustness in component-based localization"
+      ]
+    },
+    {
+      "move": "将perception问题重帧为communication问题，利用人类视觉系统的 flicker-fusion 特性",
+      "count": 4,
+      "variants": [
+        "将perception算法问题重框为系统通信与调度问题",
+        "将perception采样问题reframe为communication资源分配问题",
+        "将perception问题重帧为communication问题，利用人类视觉系统的 flicker-fusion 特性",
+        "将perception问题重构为coordinate transformation问题"
+      ],
+      "papers": [
+        "Lin et al. - 2019 - Revisiting Reading Rate with Mobility Rate-Adaptive Reading of COTS RFID Systems",
+        "Wu et al. - 2015 - Human Mobility Enhances Global Positioning Accuracy for Mobile Phone Localization",
+        "Xu et al. - 2022 - SwarmMap Scaling Up Real-time Collaborative Visual SLAM at the Edge",
+        "Zhang et al. - 2021 - ChromaCode A Fully Imperceptible Screen-Camera Communication System"
+      ]
+    },
+    {
+      "move": "用Pearson相关系数量化'可区分性'——跨被试相关性越低越容易区分",
+      "count": 3,
+      "variants": [
+        "用Pearson相关系数经验筛选特征而非追求最优特征",
+        "用Pearson相关系数量化'可区分性'——跨被试相关性越低越容易区分",
+        "用Pearson系数将相关性量化为可追踪的时序信号"
+      ],
+      "papers": [
+        "2023_SECON_E-Talk_Accelerating_Active_Speaker_Detection_with_Audio-Visual_Fusion_and_Edge-Cloud_Computing",
+        "Miao et al. - 2011 - Agnostic diagnosis Discovering silent failures in wireless sensor networks",
+        "Zhang et al. - 2018 - MindID Person Identification from Brain Waves through Attention-based Recurrent Neural Network"
+      ]
+    },
+    {
+      "move": "将客户端选择和样本选择分层处理，利用加性性质先选重要客户端再选样本以节省成本",
+      "count": 3,
+      "variants": [
+        "将客户端选择和样本选择分层处理以节省逐样本分析成本",
+        "将客户端选择和样本选择分层处理，利用加性性质先选重要客户端再选样本以节省成本",
+        "将客户端选择和样本选择统一建模为双层优化,外层学选择概率,内层建全局模型"
+      ],
+      "papers": [
+        "2024_TMC_Joint_Client-and-Sample_Selection_for_Federated_Learning_via_Bi-Level_Optimization",
+        "2024_TPDS_PPDS",
+        "Privacy_preserving_Data_Selection_for_Horizontal_and_Vertical_Federated_Learning"
+      ]
+    },
+    {
+      "move": "将感知问题重新frame为通信问题——通过特征图传递隐藏信息而非依赖生成像素",
+      "count": 3,
+      "variants": [
+        "将感知问题重新frame为几何问题",
+        "将感知问题重新frame为通信问题——通过特征图传递隐藏信息而非依赖生成像素",
+        "将感知问题重新frame为通信问题以强调网内聚合"
+      ],
+      "papers": [
+        "Efficient_Object-grained_Video_Inpainting_with_Personalized_Recovery_and_Permission_Control",
+        "Guo et al. - 2010 - Perpendicular Intersection Locating Wireless Sensors With Mobile Beacon",
+        "Xue et al. - 2006 - Contour map matching for event detection in sensor networks"
+      ]
+    },
+    {
+      "move": "将感知问题转化为通信问题:用极化匹配理论解释相位偏移的物理来源",
+      "count": 3,
+      "variants": [
+        "将感知问题转化为序列模式匹配问题（DTW）",
+        "将感知问题转化为通信问题:用极化匹配理论解释相位偏移的物理来源",
+        "将感知问题转化为通信问题——用多普勒相位跟踪代替角度估计"
+      ],
+      "papers": [
+        "Huang et al. - 2015 - Swadloon Direction Finding and Indoor Localization Using Acoustic Signal by Shaking Smartphones",
+        "Jiang et al. - 2019 - 3D-OmniTrack 3D tracking with COTS RFID systems",
+        "Shangguan et al. - 2017 - STPP Spatial-Temporal Phase Profiling-Based Method for Relative RFID Tag Localization"
+      ]
+    },
+    {
+      "move": "把感知问题重新定义为communication中的信道估计问题",
+      "count": 3,
+      "variants": [
+        "把感知问题重新定义为communication中的信道估计问题",
+        "把感知问题重新定义为数据挖掘问题",
+        "把感知问题重新定义为通信模式识别问题"
+      ],
+      "papers": [
+        "Jin et al. - 2021 - Parallel Backscatter Channel Estimation and Beyond",
+        "Liu et al. - 2012 - Mining Frequent Trajectory Patterns for Activity Monitoring Using Radio Frequency Tag Arrays",
+        "Shangguan et al. - 2015 - Relative Localization of RFID Tags using Spatial-Temporal Phase Profiling"
+      ]
+    },
+    {
+      "move": "将感知问题重新框定为通信问题:通过选择而非全量上报来削减流量",
+      "count": 3,
+      "variants": [
+        "将感知问题重新框定为通信问题",
+        "将感知问题重新框定为通信问题:通过选择而非全量上报来削减流量",
+        "将感知问题重新框架为通信问题:利用多径效应而非消除它"
+      ],
+      "papers": [
+        "Li and Liu - 2010 - Iso-Map Energy-Efficient Contour Mapping in Wireless Sensor Networks",
+        "Xu et al. - 2021 - Collective Memory for Detecting Nonconcurrent Clones A Localized Approach for Global Topology and I",
+        "Zhou et al. - 2014 - Omnidirectional Coverage for Device-Free Passive Human Detection"
+      ]
+    },
+    {
+      "move": "将感知问题重构为通信问题:GPS结构歪斜但坐标框架正确,惯性传感结构精确但相对,互补可得真值",
+      "count": 3,
+      "variants": [
+        "将感知问题重构为图论通信问题:通过图刚性性质判断节点位置唯一性",
+        "将感知问题重构为通信问题:GPS结构歪斜但坐标框架正确,惯性传感结构精确但相对,互补可得真值",
+        "将感知问题重构为通信问题:用音频通道而非传感器感知"
+      ],
+      "papers": [
+        "Lin et al. - 2017 - TagScreen Synchronizing social televisions through hidden sound markers",
+        "Wu et al. - 2013 - Footprints elicit the truth Improving global positioning accuracy via local mobility",
+        "Yang et al. - 2009 - Beyond Trilateration On the Localizability of Wireless Ad-Hoc Networks"
+      ]
+    },
+    {
+      "move": "Replace centralized CA with mathematical intractability assumptions (factoring, square roots modulo n)",
+      "count": 3,
+      "variants": [
+        "Replace Smale's continuous equilibrium with discrete iteration for practical grid deployment",
+        "Replace centralized CA with mathematical intractability assumptions (factoring, square roots modulo n)",
+        "Replace human effort with crowdsourced image collection"
+      ],
+      "papers": [
+        "Lu et al. - 2008 - Pseudo Trust Zero-Knowledge Authentication in Anonymous P2Ps",
+        "Xu et al. - 2015 - Enhancing wifi-based localization with visual clues",
+        "Zhang et al. - 2006 - A Framework to Provide Trust and Incentive in CROWN Grid for Dynamic Resource Management"
+      ]
+    },
+    {
+      "move": "先证最坏情况上界,再设计scheme达下界",
+      "count": 3,
+      "variants": [
+        "先证最坏情况上界, 再用实验验证实际性能",
+        "先证最坏情况上界,再设计scheme达下界",
+        "先证最坏情况上界再构建经验补偿方案"
+      ],
+      "papers": [
+        "Tang et al. - 2010 - DAWN Energy efficient data aggregation in WSN with mobile sinks",
+        "Wang et al. - 2012 - Scaling Laws of Multicast Capacity for Power-Constrained Wireless Networks under Gaussian Channel Mo",
+        "Wang et al. - 2013 - TriggerCas Enabling wireless consrucive collisions"
+      ]
+    },
+    {
+      "move": "将定位问题重构为过滤问题：通过邻里匹配区分好节点与坏节点",
+      "count": 3,
+      "variants": [
+        "将定位问题重构为图匹配问题：虚拟房间逻辑图→物理平面图",
+        "将定位问题重构为测距质量提升问题",
+        "将定位问题重构为过滤问题：通过邻里匹配区分好节点与坏节点"
+      ],
+      "papers": [
+        "Wu et al. - 2012 - WILL Wireless indoor localization without site survey",
+        "Xi et al. - 2010 - Locating sensors in the wild pursuit of ranging quality",
+        "Zhao et al. - 2013 - Localization of Wireless Sensor Networks in the Wild Pursuit of Ranging Quality"
+      ]
+    }
+  ],
+  "evolution_arc": [
+    {
+      "year": 2003,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "P2P-overlay-topology",
+          1
+        ],
+        [
+          "topology-mismatching",
+          1
+        ],
+        [
+          "adaptive-multicast-tree",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2004,
+      "paper_count": 58,
+      "top_tags": [
+        [
+          "distributed-algorithm",
+          2
+        ],
+        [
+          "P2P-overlay-topology",
+          1
+        ],
+        [
+          "topology-mismatching",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2005,
+      "paper_count": 80,
+      "top_tags": [
+        [
+          "grid-information-service",
+          2
+        ],
+        [
+          "CROWN-grid",
+          2
+        ],
+        [
+          "overlay-network",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2006,
+      "paper_count": 85,
+      "top_tags": [
+        [
+          "overlay-multicast",
+          2
+        ],
+        [
+          "wide-area-memory-sharing",
+          1
+        ],
+        [
+          "RAM-grid",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2007,
+      "paper_count": 120,
+      "top_tags": [
+        [
+          "CROWN-grid",
+          2
+        ],
+        [
+          "RFID-localization",
+          2
+        ],
+        [
+          "软件水印",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2008,
+      "paper_count": 125,
+      "top_tags": [
+        [
+          "wireless-sensor-network",
+          3
+        ],
+        [
+          "in-network-aggregation",
+          2
+        ],
+        [
+          "range-query",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2009,
+      "paper_count": 110,
+      "top_tags": [
+        [
+          "wireless-sensor-networks",
+          3
+        ],
+        [
+          "hole-detection",
+          2
+        ],
+        [
+          "P2P-full-text-retrieval",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2010,
+      "paper_count": 141,
+      "top_tags": [
+        [
+          "wireless-sensor-network-localization",
+          5
+        ],
+        [
+          "wireless-sensor-networks",
+          3
+        ],
+        [
+          "graph-rigidity-theory",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2011,
+      "paper_count": 150,
+      "top_tags": [
+        [
+          "wireless-sensor-network",
+          2
+        ],
+        [
+          "sensor-network-localization",
+          1
+        ],
+        [
+          "graph-rigidity-theory",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2012,
+      "paper_count": 165,
+      "top_tags": [
+        [
+          "wireless-sensor-networks",
+          2
+        ],
+        [
+          "constructive-interference",
+          2
+        ],
+        [
+          "WiFi-fingerprint-localization",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2013,
+      "paper_count": 234,
+      "top_tags": [
+        [
+          "GreenOrbs-deployment",
+          2
+        ],
+        [
+          "wireless-sensor-networks",
+          2
+        ],
+        [
+          "relocatable-code",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2014,
+      "paper_count": 255,
+      "top_tags": [
+        [
+          "smartphone-sensing",
+          4
+        ],
+        [
+          "RFID-localization",
+          3
+        ],
+        [
+          "link-quality-estimation",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2015,
+      "paper_count": 241,
+      "top_tags": [
+        [
+          "screen-camera-communication",
+          2
+        ],
+        [
+          "rolling-shutter-exploitation",
+          2
+        ],
+        [
+          "indoor-localization",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 166,
+      "top_tags": [
+        [
+          "mobile-sensing-activity-recognition",
+          2
+        ],
+        [
+          "hierarchical-motion-descriptor",
+          2
+        ],
+        [
+          "semantic-activity-search",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2017,
+      "paper_count": 135,
+      "top_tags": [
+        [
+          "homomorphic-encryption",
+          2
+        ],
+        [
+          "privacy-preserving-search",
+          2
+        ],
+        [
+          "image-retrieval",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2018,
+      "paper_count": 130,
+      "top_tags": [
+        [
+          "WiFi-fingerprint-localization",
+          2
+        ],
+        [
+          "motion-sensor-fingerprinting",
+          1
+        ],
+        [
+          "multi-LSTM-fingerprinting",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2019,
+      "paper_count": 190,
+      "top_tags": [
+        [
+          "cross-modal-hashing",
+          2
+        ],
+        [
+          "incremental-learning",
+          2
+        ],
+        [
+          "catastrophic-forgetting",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 151,
+      "top_tags": [
+        [
+          "ad-assignment-optimization",
+          2
+        ],
+        [
+          "image-privacy-detection",
+          1
+        ],
+        [
+          "personalized-rule-learning",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 145,
+      "top_tags": [
+        [
+          "3D-skeleton-reconstruction",
+          2
+        ],
+        [
+          "federated-learning-debugging",
+          2
+        ],
+        [
+          "influence-function",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 159,
+      "top_tags": [
+        [
+          "personalized-differential-privacy",
+          2
+        ],
+        [
+          "privacy-utility-tradeoff",
+          2
+        ],
+        [
+          "smartwatch-authentication",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 155,
+      "top_tags": [
+        [
+          "differential-privacy",
+          4
+        ],
+        [
+          "vertical-federated-learning",
+          3
+        ],
+        [
+          "query-difficulty-prediction",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 120,
+      "top_tags": [
+        [
+          "sample-selection",
+          3
+        ],
+        [
+          "determinantal-point-process",
+          3
+        ],
+        [
+          "semi-supervised-learning",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 150,
+      "top_tags": [
+        [
+          "model-lineage-detection",
+          2
+        ],
+        [
+          "decision-boundary-similarity",
+          2
+        ],
+        [
+          "adversarial-distance",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2026,
+      "paper_count": 50,
+      "top_tags": [
+        [
+          "data-valuation",
+          1
+        ],
+        [
+          "shapley-value",
+          1
+        ],
+        [
+          "training-data-influence",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "对现场观众仍有轻微观看体验下降，防盗录与观看体验之间存在权衡；专业高端电影摄像机无法防御",
+    "现有方法只适用于预定义活动，依赖先验知识或标注数据",
+    "高分辨率图像密文过大，移动设备无法接受；MapReduce直接实现因排序导致reducer只能为1",
+    "人手行为特征确实增加了设备指纹识别难度；如何分离人与设备指纹仍是挑战",
+    "DFS_byFunc在函数重命名后准确率跌至约1%;朴素遍历顺序效果不满意",
+    "Autoencoder的decoder可以重建1000维特征造成隐私泄露,需升级到CROWDBUY++",
+    "同一用户使用多设备时准确率降至89%,难以分离人与设备指纹",
+    "数据和描述一致性的自动检验仍是开放问题",
+    "Self-taught distillation slightly limits new task performance (up to 2.7% MAP decrease vs fine-tuning); trade-off accepted to preserve old knowledge",
+    "微调方法遭受灾难性遗忘导致旧任务性能大幅下降高达11.3%；现有增量学习方法持续增加哈希码维度无法解决跨模态哈希问题",
+    "小城市预测误差稍大；冬假时间每年不同导致季节预测困难；20%缺失数据仅轻微精度损失",
+    "当前ML模型的语义标签仍不够准确全面；多方场景开销需降低；防数据伪造仍是挑战",
+    "random sampling方法accuracy略好但our method更高效; equal weights导致排序与accuracy ranking不一致",
+    "强冲突预测仍难以完美处理，Case 4准确率仅67.9%",
+    "system may be vulnerable to DOS attack; accuracy depends on people detection performance",
+    "Same person same model accuracy drops to 89% due to human behavior fingerprints; calibration requires specialized equipment",
+    "现有70特征方法在动态场景下F-score从93%骤降至79%,依赖手工特征的鲁棒性不足",
+    "延迟略有增加约700ms,I/O瓶颈略微影响效率,SoC本身耗时占93%",
+    "PicAlert数据集上准确率78.7%低于深度特征，仅在个性化小样本PPP数据集上表现更好",
+    "经典epsilon-greedy训练难以收敛，因后期任何动作都只带来负奖励",
+    "在没有类别不匹配情况下,ERCM-SSL方法表现略差于传统SSL方法;传统SSL在晚训练期会被不匹配问题严重伤害",
+    "参数α,β,γ是经验设置；NMS-Greedy只获局部最优；设计有理论保证的分配算法是未来工作",
+    "设计具有理论性能保证的广告分配算法仍然是具有挑战性的任务",
+    "ST-TF在PANGC属性组合下loss在0.2附近震荡无法收敛,其他模型全部失败;RAP的L2距离略大表明代表性问题有轻微损失",
+    "现有方法依赖手工特征和大量标注数据；静态分析无法处理反射、动态加载和Native代码",
+    "现有公众互联网业务承载隔离能力弱，难以满足大量工业企业专线互联需求；企业数据源差，机器设备等实时数据采集存在很大障碍",
+    "incorrectly combined object image produces significant error; incomplete combination less harmful than false combination",
+    "堆叠法准确率低于Actor-Critic，因为模型融合正确的概率不等于各模型正确概率之和(P(A)≠∑P(a))",
+    "THR因稀疏采样覆盖率仅35.6%，页面级方法需计算每个展示机会的eCPM分数非常耗时",
+    "实验仅与Majority Voting比较,未对比标准Truth Discovery基线算法",
+    "RPM在ε较小时纯求和表现差;强迫聚类扰动数据与LDP目的相悖,这是误差主要来源",
+    "相关物体小难检测(瓶、手机)，相关姿态细微难区分，导致活动识别率仅75%",
+    "饮水和打电话识别较差,因相关物体小难检测且姿态细微难区分",
+    "在严重非独立同分布场景下,数据不平衡主导模型精度,误标样本影响不明显导致识别精度下降",
+    "binary measurement based model is only applicable to categorical tasks, however, cannot be adopted for various numerical tasks",
+    "现有重要性采样方法会把错误样本排在前面,导致精度下降和训练不稳定",
+    "Case 4中五模态能力完全不相交,多数投票与改进D-S方法准确率相同,无明显优势",
+    "SPIN不适用于短运行延迟敏感任务，仅适合长时运行作业",
+    "直接计算Hessian矩阵需要O(np²+p³)操作，在大规模FL中不可接受",
+    "当源模型与目标模型语义相关性低时模型链接精度差；模型数量大时成对链接不可行",
+    "预先定义的 golden tasks 非常昂贵且效果不佳；worker abilities 初始化过低会导致算法只关注部分能力而忽略其他能力",
+    "CL-Expansion在某些情况下优于ES-Block，最优初始化方法仍是开放问题",
+    "隐私预算分配策略过于简单（均分到训练迭代），影响机制性能",
+    "HST-based approach requires prior user distribution knowledge which may differ from true distribution",
+    "加性噪声和乘性噪声在隐私预算较小时会显著降低模型性能",
+    "COCA requires k above threshold to outperform SOTA; real amateurs with mistakes need higher k thresholds than simulated amateurs.",
+    "Hessian矩阵直接计算需要O(τnp²)操作，在深度学习大规模参数下开销仍较大",
+    "需公开join结果大小上界m，否则需存O(n²)规模的秘密份额；m泄露是高效方案的不可避免代价",
+    "非凸问题导致训练后期存在小幅振荡",
+    "完全连接拓扑初期loss差更大,这似乎与理论不符,但他们认为这是优化问题超出本文范围",
+    "Predictor-based ANTIGONE error increases initially, requires 3 days to build effective predictors; courier traces are noisy (97% precision rider state classification).",
+    "Theorem 2的结论仅当OPT_FD > Ω(N^(7/8))时才有意义",
+    "FrugalMCT忽略了标注类别的区分作用且未评估不同服务质量,且用真实标签集训练准确率预测器在实际中不可行",
+    "预训练或手工特征在很多情况下判别性很差，现有方法无法有效工作",
+    "当无可识别物体或遮挡面积超过80%时,方法失效;性能受限于底层检测模型",
+    "现有方法仅考虑全局梯度分布而忽略局部梯度分布，难以准确反映参与者贡献。",
+    "Knowledge transfer degrades when content distributions diverge (e.g., training on dog images, testing on human actions); requires 10%-20% of dataset for adequate training samples.",
+    "用户躯体运动会极大干扰系统（creates a huge disruption），仅用10个样本冷启动限制了识别精度上限",
+    "身体运动产生巨大干扰，行走奔跑时系统鲁棒性不足需改进；冷启动仅用10样本限制了初期精度",
+    "音频和回溯无线信号标注与学习精度仍有待提升，多人场景鲁棒性待加强",
+    "交易机制不能有效应对三方联合欺诈，且判定能力不够强大",
+    "When all queries have similar difficulty (extreme easy or hard), the prediction module adds little value; DP(δ=0.001) incurs extra overhead causing higher miss rate",
+    "Static selection results in bad trade-offs (huge accuracy loss OR high miss rate); DES/Gating fail to capture deep model preferences due to high variance and ignore queuing status",
+    "'The 'successive elimination-style' algorithm places excessive emphasis on point aspect and veers widely from the optimal distribution. BASEOAK cannot delete any optimal arm during the game, so the exploration ability is limited.'",
+    "FedWM(MT)虽工作时间最短但准确率最低;FedWM(QT)工作时间显著更长,两者都不能单独达到最优权衡",
+    "当噪声特征较少时,使用全部特征的准确率反而更高;FedSDG-FS在某些情况下仅达到可比的准确率",
+    "REUSE方法无法确定假设族,仅给出一个必要条件",
+    "假设key server诚实但聚合服务器和参与方好奇, 采样虽降开销但引入了误差界(如MNIST需23000样本才能保证精度)",
+    "stochastic setting 中 DP 影响可忽略需满足 T=Ω(d^4/(nε^4))，即需要足够长的学习时间才能发挥算法优势",
+    "ε过小虽能降低攻击准确率至11.66%，但合成数据质量差导致FL准确率仅52.79%，需在隐私与性能间trade-off",
+    "greedy optimizer对一般组合问题可能任意差，需假设解码成本近似分数",
+    "数据重构依赖于客户端模型可逆假设，模型不可逆时无法重构",
+    "数据重建依赖客户端模型可逆假设，当模型不可逆时重建失效（'data reconstruction attack relies on the assumption that the client model is invertible'）",
+    "源目标模型间语义相关性低时模型链接准确率差；成对链接在大规模模型时不实用",
+    "当源模型与目标模型语义相关性低时，模型链接精度较差",
+    "单独使用规则方法覆盖样本有限(14.75%/12.6%),需学习模块补充。",
+    "当前预测器离线训练后部署,无在线参数更新;攻击者可从流量元数据推断隐私敏感推理结果",
+    "UnSplit test accuracy drops to 22.1% on CIFAR-10 with VGG16; norm-based label inference only works for imbalanced binary classification",
+    "强化学习方法需考虑探索-利用权衡,企业不愿频繁基于大数据更新动作函数,故采用概率模型替代",
+    "噪声增加时效果下降，估计预测模型可靠性变得更困难，能力与噪声纠缠",
+    "Proposed mechanism not suitable for vertical FL; assumes semi-honest participants but malicious participants could infer watermark info",
+    "与Vanilla相比时间成本仍有增加，当辅助数据量或参与方数量无限增长时，FedMix会因半监督学习而变慢",
+    "当f(x)=x退化为标准MAB时，SW-BCAR比专用UCB1表现更差",
+    "随机代理在小图cora提升8.69%但大图pubmed降低2.99%,证明随机选择不可行",
+    "bitmap近似策略使准确率略有下降，两方法准确率方差在1%以内",
+    "Shapley值方法计算代价过高无法规模化；统计阈值方法缺乏先验知识；前作FedCSS实例级权重丢弃了类级信息",
+    "之前方法无法同时处理噪声和难样本,因为模型处理两者时对损失值的偏好相互矛盾(low loss噪声vs high loss难样本)",
+    "现有重要性采样方法因错误样本具有异常大的loss和梯度范数而失效",
+    "现有SOTA算法通信复杂度为O(n²T),相比理论下界呈次优,需改进",
+    "重要性采样方法在含错误样本时训练不稳定、准确率下降显著，无法直接应用于FL",
+    "现有方法给错误样本更高优先级,导致在有噪声数据时性能严重下降",
+    "ESCM²-DR在生产数据集和部分实验中出现训练不稳定，LogLoss显著偏高",
+    "很多技术并非对资源孤立优化，单一方法难以解决AIoT推理全链条挑战",
+    "5 个蒸馏模型因决策边界差异过大而被误分类；测试集生成额外耗时约 800 秒",
+    "预训练模型与目标任务数据分布差异大时方法有效性下降",
+    "MKP求解器在m=50且任务数>200时2秒时间限制下无法获得最优解，需动态选择贪婪策略",
+    "A-BBT和A-BMT的性能取决于关键字分布，前者在关键字稀疏时更优，后者在关键字普遍存在时更优",
+    "现有子模型方法均存在参数空间覆盖不完整或收敛不稳定问题，导致全局模型次优",
+    "Multi-GPU部署时需与NVIDIA CC配合使用,存在额外all_gather通信开销",
+    "分解树可能指数级膨胀，查询开销过大",
+    "存在少量任务无论分解多少次风险仍高,但当前LLM尚未能防御所有有害任务(14% GPT-4仍准确响应)",
+    "原始意图添加噪声保护隐私,却意外增强伪客户端窃取能力",
+    "Adding Gaussian noise does NOT prevent PCAT but enhances functionality stealing ability (unexpected). Their proposed defense 'will fail' under improved PCAT in U-shape SL.",
+    "仅覆盖监督任务,AIGC等生成任务需重新训练大模型,设计合理效用函数困难",
+    "在Qwen2.5上性能略低于DrAttack",
+    "Performance may diminish when graph structure is noisy or detrimental to representation learning",
+    "LLM本质是satisficer而非optimizer,直接端到端规划不可靠",
+    "蒸馏模型的决策边界与源模型差异大,导致5对模型误判",
+    "直接加密方法与需求不兼容,ChaoW因方形加密区域限制可被微调攻击恢复,SGX侧信道攻击超出范围",
+    "代码替换有严格限制，无法找到足够语义等价指令组，且冗余指令插入会增加代码大小",
+    "Simple greedy algorithm无法保证MaxIS的大尺寸，在prior work中被误用；Algorithm [12]需要可调传输半径是强假设",
+    "\"RSSI is quite susceptible to environment\"表明放弃纯RSSI方案;\"DV-Hop performs the worst,mean error around 40 meters\"承认传统跳距法在森林中失效",
+    "同步偏差可能导致丢包,确定性转发无法即时提供备份前向者;广播时macdsn计数不完美,P略高估实际概率",
+    "确定性L²的PDR与Sync X-MAC几乎相同,因同步偏差导致分组丢失;动态转发在候选前向器很少时退化为确定性转发。",
+    "P2P查询极短导致f_{q,t}恒为1，传统TF失效；动态网络下统计精度受节点在线时间影响。",
+    "仅支持等长分段,变长分段的PLA索引留作future work",
+    "最小化假阳性率的方案导致通信成本仍然不可接受",
+    "In-network union does not consider complete reverse verification as it would consume more resources than straightforward transmission",
+    "天花板部署无法区分单个慢行人与两紧邻前后行人；需对接收器灵敏度做线性标定",
+    "Bloom Filter的假阳性会导致轻微精确率下降",
+    "GAB 无法区分项分布在多peer还是少peer, 且选择合适Rmax阈值在不同系统规模下困难",
+    "TSS确实降低召回率，且不打算与更精细化的集中式检索算法竞争(first step, TSS does not target at competing with more elaborated centralized retrieval algorithms)。",
+    "We consider the method is coarse-grained, since it equally treats localizable and non-localizable nodes",
+    "随机游走策略不具容错性,且简单复制元数据无法支持全文本检索",
+    "先前研究声称最小化假阳性率是最优的,实则不然",
+    "当干扰功率趋于无穷时传统方案密钥率趋于零；承认secure channel假设过强",
+    "综述性质，缺乏具体方法的实验验证或性能量化比较",
+    "IND方法因网络非2连通而需将所有节点功率提升三倍，造成大量不必要的测量开销",
+    "家庭-办公室等周期性路线无法保证隐私，无论T多大",
+    "多源加速功能约23%无法达到提速目标，实际效果远未理想",
+    "37%的下载几乎无加速(增长0 KBps),多源策略有时反而降低成功率至50%以下",
+    "特征提取是精心设计的启发式方法，缺乏通用方法；RNN变体相比LSTM无显著优势",
+    "We feel it wiser to give up using locks. Cloud services cannot predict real-time editing behavior to determine when to request/release locks.",
+    "深度学习因其 abrupt success、bustling innovation、lack of theoretical support 而受到研究者的抵触接受",
+    "min-sensor sweep-coverage is NP-hard and cannot be approximated within factor 2; centralized CSWEEP not scalable; DSWEEP provides only best-effort, not guaranteed coverage",
+    "\"Infotaxis suffers from trap in patchy areas\"; \"Surge-Cast yields inefficient zig-zag paths and is the most susceptible to spatial and temporal gas concentration fluctuations\"",
+    "We separate sub-problems (mutual trust) and throw away the trivia (zero disk cache) - 承认安全和信任机制被有意分离简化",
+    "适用于 CPU 利用率低于 30% 的应用；内存地址翻译开销较高；间接分支高开销",
+    "压缩比不可预测可能导致循环缓冲区溢出；极端内存过载时需终止任务",
+    "文献[31]的非批量算法是PDOM-O在τ=1时的次优特例，未能发现batch大小的核心作用",
+    "双将军问题在理论上无解,只能通过间接防御(禁用自动退款、时序检测)减轻影响",
+    "软件蜜罐比硬件蜜罐少37%可疑连接;read-only文件系统阻碍检测",
+    "承认无法完全排除恶意节点被选入补丁监控集,仅能降低其被选中的可能性。",
+    "Tradeoff acknowledged: data encoding can further reduce code size but incurs decoding overhead during loading, and delta patching limits flexibility for heterogeneous networks.",
+    "现有方法在小洞密集时难以区分,WGM的割支会合并连通",
+    "γ类蠕虫洞(两端在边界)与普通桥接无法区分;根节点选择不当时蠕虫洞圆消失",
+    "多流场景优化太复杂,当前传感器节点能力不足",
+    "homology group 条件过强,导致全覆盖网络被误判为有洞;Ghrist 方法只能处理三角形,造成不必要浪费",
+    "重定位条目开销开始成为贡献整体delta大小的限制因素(the overhead of relocation entries begin to be a limiting factor)。",
+    "算法基于连通性信息,在真实无线干扰和敌对攻击下需额外机制;无法消除干扰影响只能容忍",
+    "理论不可行：无法在任意0<ρ<1的拟单位圆盘中构造常数伸展因子的平面乘法延伸子",
+    "大包在92字节负载时性能反而下降:大包更易受无线损失影响,需配合发送方选择才能获益",
+    "Two-phase interrupt servicing adds programming complexity: developers must reason about bottom halves vs top halves for synchronization.",
+    "Class-IV蠕虫洞在拓扑上与普通桥梁不可区分,任何拓扑方法都无法检测",
+    "仅考虑单源节点，实际干涉模型需用SINR-PRR；多源场景和多跳干扰未建模",
+    "本文准则为充分非必要条件,存在能实现覆盖但无法判定的网络",
+    "函数计数profiling丢失函数返回值等细粒度信息;无法检测并发交错bug;无法区分Trickle timer正常/异常模式。",
+    "Cannot guarantee constant stretch factor for arbitrary inputs, though simple test exists for correctness and simulations show small stretch.",
+    "数据源仅含数据分组,无法捕获完整系统事件;33.43%丢包无法关联根因",
+    "重定位条目开销开始成为限制整体delta大小的因素",
+    "RMTD算法对复杂程序执行时间60s、内存240MB，不适用于iMote2",
+    "Prior fixed optimization solutions heavily depend on the accurate selection of multiple factors such as the distance between nodes, path loss exponent, shadow fading component, and etc. If those factors are accurately measured, fixed optimization framework can outperform dynamic approaches.",
+    "Elon trades flexibility: needs code annotations upfront; cannot update kernel components without full image; Mica/Harvard-architecture nodes lose lifetime benefit.",
+    "Large packets (92-byte payload) suffer performance degradation due to wireless loss susceptibility; sender selection cannot prevent hidden-terminal collisions",
+    "现有TinyOS协议栈在大规模网络中表现不足(81.3%远低于99.9%的定制协议)",
+    "无法检测并发交错导致的问题；非可复现异常若在开启D2前发生则无法检测；函数计数法丢失返回值等详细执行信息",
+    "视觉SLAM对环境动态敏感且计算密集,难以实时运行",
+    "现有方法无法自动调和不兼容流程,缺乏调和方法",
+    "数据集仅覆盖室内环境采集，未来需更多样化符号训练",
+    "当两个旋转中心距离小于30cm时定位精度下降,因采样点过近带来相位测量不确定性",
+    "标签快速移动时数据包丢失严重,系统无法处理",
+    "NLOS场景精度下降至0.79Hz平均误差,仍优于激光方案但明显弱于LOS",
+    "天线方向角附近存在较大连续高峰区域,易受噪声干扰",
+    "天线距离过近(<0.5m)或过远(>5m)性能均下降,NLOS多径环境下精度从0.32Hz降至0.79Hz",
+    "标签间距过近时准确率下降至84%,DTW需先验知识不适用于本场景",
+    "当噪声率为0.4时F1分数略低于Topofilter,需增大采样规模k才能超过基线",
+    "LSH直接嵌入ABKS导致精确度下降超70%，不可行",
+    "无法从理论上保证无法逆转inpainting，且效果依赖精准的对象分割mask质量",
+    "数据库规模最小时平均误差达19.4m，精度与开销存在权衡，最小参考点密度会导致定位失败",
+    "模型可解释性仍是大挑战，多源数据相关性权重难以确定",
+    "仅测量Android+OpenGL ES，需手动移植Linux系统调用；static timing analysis仍有4%偏差",
+    "小规模网络(<60节点)推理性能较差，多故障时检测率下降误报率上升",
+    "Sanity bound B is pessimistic due to worst-case analysis; may need extra round for undecided singleton slots",
+    "INC方法因未利用关联信息和多比特开销导致表现始终差于WIC,RSE差距达7倍以上",
+    "若多个错误相互遮蔽,则无法被检测;信念网络构造复杂度高达O(V(V+E)),临时故障复制探针仅部分解决",
+    "贪心选最高速率导致部分标签吞吐反而下降,公平性问题留作未来工作",
+    "当相对误差ε > 1/|S1∩S2|时,简单识别可能比概率估计更高效;理论界通常过于宽松,实际k值可更小",
+    "CU方法在小重叠时效率低，选择阶段开销淹没收益。最坏情况下SHE代价与MHE相同",
+    "承认先前方案对非均匀数据失效:'ART fails to achieve desired relative error in the normal distribution',SRC fails under normal distribution due to invalid hash assumption",
+    "Deep learning not used; Monkey UI coverage is bottleneck; bit-vector encoding loses frequency information",
+    "纯API检测有局限，攻击者可用Java反射和intent绕过；FP/FN不可避免，需人工审查",
+    "新TYPE_APPLICATION_OVERLAY无法有效区分恶意应用",
+    "检测准确率64.55%无法媲美专业医学设备,仅提供普适性睡眠服务",
+    "Zeo准确率约75%非金标准；样本量小结论为推测性；光照传感器被挡时用历史值",
+    "现有路由方案在动态环境下健壮性差",
+    "信标离散广播导致理论估计误差上界为V/F,平均误差0.8218V/F;实验误差略高于理论值",
+    "SDBM BUZhash algorithm is less suitable; MCBF needs careful configuration; c cannot be arbitrarily large due to overhead.",
+    "海面实验平均误差7.33m，主要因GPS本身有3-4m误差且船体轨迹不精确",
+    "当前路由协议不能完全实现最短路径路由,BCN的路由路径略长于最短路径",
+    "仅在相对静态或适度动态环境下工作良好,在高度动态环境中稳健性较低",
+    "广义Kautz图每次节点数变化必须重建整个拓扑，开销过大不实用",
+    "HCN规模略小于FiConn;BCN路由路径略长于最短路径;吞吐率低于Fat-Tree/DCell/BCube",
+    "Interference avoidance alone achieves less throughput than stream control; nonstream control may choose worse subchannels",
+    "角度类函数(S1/S2)FNR约20%差于距离类函数(S3/S4)的10%；侧躺姿势下准确率仅76%",
+    "现有梯度路由降级为洪泛,节点无法识别正确转发方向",
+    "IMU位移测量随距离累积误差增大,搜索距离目标较远的标签时最大导航误差近40cm",
+    "增益主要在短中距(≤250 m)，长距需牺牲速率；回传距离受限于信号衰减和能量损耗",
+    "从非视距GMR信号精确提取位移仍有改进空间",
+    "直接解码ZigBee信号在WiFi上不可行,需将解码问题转化为模式识别",
+    "Aloba符号需0 dB SNR解码而LoRa符号可至-30 dB，导致通信距离受限；依赖LoRa占空比且无反馈信道",
+    "RF-Transformer功耗高于Multiscatter等现有反向散射技术,且高性能振荡器和DAC消耗大部分功率",
+    "阈值U_H和U_L需离线测量不同距离下手动配置，未实现自动增益控制AGC",
+    "Vanilla Saiyan解调距离仅55m,需手动配置阈值且留待未来加入AGC",
+    "RSSI方式无法实现ZigBee到WiFi的CTC;包级CTC在带宽和符号同步上存在根本性限制",
+    "Precise validation parameter computation is computationally infeasible in large P2P systems; real-time reputation reporting remains challenging",
+    "理论分析仅考虑理想情况，实际中独立采样假设不成立，实际播种者数量少于估计；协议在全局对手控制网络时失效",
+    "恶意节点超过60%时成功率急剧下降;P5等广播方案在大规模P2P中扩展性差",
+    "降低Shamir阈值可加速但会增加流量；Shortcut协议比SSMP慢40-60%而非更快",
+    "SMA额外延迟约40%正常响应时间，未来需通过自适应机制降低分享洪泛的流量开销",
+    "现有prefetch策略未考虑视频内部内容关联",
+    "早期用户的响应延迟比后期用户稍长，因其无法找到充足的视频源",
+    "论文承认\"难以准确估计网络间蕴含的累积效应\",简化假设各sij相互独立,且EE-QPS问题被证明为NP-hard",
+    "局部信息无法检测图中很长环路上的节点，使其可能被误判为割点；但假阳性对系统无害。",
+    "无全局信息导致极少数节点可能被误判为割点，但这些节点罕见且即使处理也无害",
+    "走廊环境中信标位置远离节点导致角距离小,相对误差增大;尚未实现位置精化步骤",
+    "目前没有universal diagnosis tool, 无法定位和彻底解决问题",
+    "障碍物恰好占据大多数候选信标位置时节点可能无法定位；图像质量对精度影响不大，但靠近图像中心的信标图像更准确",
+    "Two analogous sub-structures when not covered by any pathlet cannot be filtered, leading to small fraction of pathlets bundled to wrong places, but generally does not change floorplan shape.",
+    "The alternate minimization algorithm has convergence issues and quality degradation per [15] and [33].",
+    "Intuitively, too many clubs may bring much maintenance overhead; MST topology suffers from single-point-failure",
+    "MST拓扑易因成员动态加入离开而性能退化，需定期重建",
+    "俱乐部过多会产生大量维护开销，存在最优α值",
+    "null",
+    "俱乐部构建需权衡潜在收益与维护成本,需动态调整以适应服务热度变化",
+    "当前信任协商导致显著时间开销,需进一步优化效率",
+    "g₁仅worst-case最优而非instance-optimal;instance-optimality仅在定义的sampling framework内成立",
+    "最大节点通信改进不如总通信显著，单节点通信下界Ω(1/ε)难突破",
+    "处理6信号时CPU达95.25%；多声源时精度显著下降；遮挡导致信号变弱不稳定",
+    "FFT在速度快速变化时无法精确测量频率,L>40m信号过弱不稳定;多源时误差显著恶化;对声源指向性敏感。",
+    "惯性传感器误差累积导致速度计算不准确；时钟漂移需纳入方程；手机与声源高度不同时公式需要修正",
+    "RL方法在训练分布外流量模式下表现不佳，DP迭代在移动设备上超过100ms不可接受",
+    "Performance advantage diminishes in sparse networks or low traffic; Coco requires receiver-initiated coordination.",
+    "控制信号叠加可能引起前导码漏检, 需精心设计正交码长度; 频率偏移影响检测准确性",
+    "In sparse low-rate networks STAIRS advantages diminish; CSMA backoff shows efficiency in simplicity.",
+    "仅适用于802.15.4,WiFi OFDM preamble容量受限;控制码空间有限(37个),sender无法仅用前两符号识别包源",
+    "Average reception ratio drops to near zero when >7 senders transmit; concurrency must be strictly limited (≤4 optimal).",
+    "基本算法在正常边存在测量误差时失效，需引入误差阈值δ",
+    "在远离天线的位置采样率较低导致初始化误差增大,且未处理多路径效应的完整方案",
+    "多径效应使定位误差增加2.3倍,朝向误差增加3.7倍;穷举初始化需计算10^12种组合",
+    "金属/厚墙阻挡会导致失效；同range bin多目标需空间谱分析或盲分离；金属多径干扰时性能下降",
+    "Tagoram因预先知道运动轨迹而效果最好;当极化方向垂直于天线平面时采样率降低导致误差增大;多人经过会偶尔阻挡视距信号使性能下降",
+    "FlipTracer在低信噪比时误差反而减小，说明高功率时干扰加剧；各标签因相位差异不同而表现各异",
+    "未展示near-far问题的处理能力,留作future work",
+    "类型优先策略(frame-level有效)对patch-level调度帮助甚微(CLES仅58.9%接近随机)",
+    "inter-procedural分析轮次被maxDepth限制导致不完整；决策树分类存在36个false positive",
+    "Approach involves routes exponentially increasing with number of holes in worst case, incurring significant overhead",
+    "RSS-based neighbor detection fails in coal mine due to dynamic signals; single-node holes undetectable",
+    "RSS值在煤矿环境中高度动态,基于接收信号强度的邻居检测方法在原型实验中失败",
+    "超过40%节点失效时方案不可用;节点密度低时保真度下降明显",
+    "Heuristic rules for name disambiguation (weakness admitted); no evaluation of disambiguation accuracy",
+    "SAT方法(tree结构聚合)在高丢包率下recall骤降至0%,完全不可接受",
+    "Name disambiguation only uses heuristic rules; cannot handle cases outside rule patterns",
+    "Only proved for k=O(n/(log n)^(2α+6)); upper bound for arbitrary k remains open; network coding not considered",
+    "随机部署下召回率大幅下降至70%;简单均值聚合最高仅78%召回;SAT方法在丢包网络中几乎失效",
+    "Sketch方法仅支持聚合查询，且在节点稀疏时偏差过大精度极低；等宽桶在非均匀分布下导致bucket竞争误差",
+    "理想场景需密集网络，随机场景最坏情况交集比约51%，稀疏网络性能未保证",
+    "理论界保守,实际仿真性能远优于理论边界",
+    "节点稀疏时骨架轴不连通,需放宽精度换取连通性;路径长度仅为最优的1.5倍左右",
+    "We do not know whether the boundary on k is tight; the boundary most likely is not tight; hidden constants in all formulas are not tight",
+    "个体传感器无法本地判断全局sweep coverage；集中算法不可扩展；机器人领域技术因硬件成本不适用",
+    "UCB1 policy achieves zero-regret but performs poorly when number of channels is large, with exponential regret O(N^K log L)",
+    "标准TinyOS ADC采样率上限约1KHz不足以覆盖100Hz光强周期,需直接访问寄存器绕过",
+    "需荧光灯可用性；光传感器需暴露环境；滤波设计对接近100Hz的噪声敏感",
+    "OSP in MAB将联合优化解耦为两阶段分别求解,难以证明其最优性,且性能略有损失",
+    "prior constant duration model leads to opportunity loss in time domain (premature release) and frequency domain (forced poor transmission)",
+    "贪婪策略无法保证最优min-max公平性落在所形成区间内，equal策略导致最大最小能耗差达48.9%",
+    "从未找到任何问题的完美解决方案;17.5%用户下载率仍低于基本期望;无商业成熟先例可循",
+    "固定λ在大规模网络中无法平衡更新成本和路由效率,需动态调整λ以维持30%以下的更新区域",
+    "RSSI-based ranging error up to 150% severely limits FALA accuracy; floating model assumes randomness but near-shore currents are regular",
+    "UDS中间件需要额外存储空间且使用固定参数",
+    "UCB1和UCB1-VS的存储和计算复杂度随信道数指数增长,在实际场景(信道数常>10)下不可行",
+    "When nodes are removed in local areas (scenario 2), representation is less accurate than in expansive removal (scenario 1).",
+    "检测精度受其他光源干扰;室内检测准确率仅90%",
+    "最优化问题时间复杂度为O(n^(2m))，网络节点众多时不可行",
+    "Greedy SIC strategy leads network to suboptimal value far above optimal result (4.9 vs 2.8 mJ/s in case study).",
+    "压缩与分块去重同时实现技术上困难，建议只实现压缩和全文去重；固定同步延迟在某些场景低效",
+    "现有内容分发技术在云计算和移动互联网环境下常表现出差强人意甚至糟糕的性能",
+    "EndRE方案虽可省10.2%流量但内存开销高数百倍,故被放弃;文本压缩因收效低且耗电被明确拒绝",
+    "无法破解5个服务的HTTPS加密内容；Web和移动端增量同步因JavaScript效率和电池问题未实现",
+    "资源竞争和内存不足是经典OS挑战,没有银弹;应用缺陷更是无法根本解决",
+    "Working distance limited to <70 cm with cheap transducers; cannot perfectly handle physical attacks like placing obstacles or covering microphones.",
+    "ARIMA等复杂模型在有限历史数据下严重过拟合不适用, V-Mobile自用均值法仅68.67%精度",
+    "β=0时无法接近真值；β=2时引发mode collapse导致分割失败",
+    "深度学习技术带来密集训练代价，需要跨域适应解决环境差异",
+    "承认现有技术often exhibit undesirable or even poor performance",
+    "High-end devices with adaptive refresh rates make VSync5 optimization less effective; prediction error may cause frame deadline miss",
+    "假设geocasting期间节点不移动,仅适用于静态网络;EZMG因检查空入口区域导致传输成本过高",
+    "GBD未解决负载均衡问题,需通过改变梯度配置手动调整",
+    "障碍物区域行人无法覆盖导致误差；未测试口袋等更多手机姿态",
+    "若攻击者可破解每跳哈希，基站只能检测错误存在但无法定位恶意链路",
+    "即使拥有全局知识,资源最优分配仍是NP难问题;完全分布式下达到设计目标并非易事",
+    "即使拥有全局知识，最优资源分配也是NP难问题，因此采用分布式启发式算法而非最优解",
+    "推理模型只能关注部分症状，限制了在实际使用中的适用性和效率",
+    "相位测量含随机误差且有多普尔效应;小球空间密集部署难以定位;人手遮挡信号",
+    "When mobile tags exceed 20%, scheduling overhead counteracts gains; system should switch back to reading all",
+    "WeChat在车内多径环境下准确率仅14%;一秒延迟不可消除,因为需收集完整标记(耗时0.97s)",
+    "当移动标签超过20%时，IRR增益趋近1，自适应读取反而增加额外开销，无效果",
+    "无法扩展到CAN/Chord等非flooding P2P,THANCS只能获得次优overlay而非全局最优",
+    "当前技术状态仅支持小规模不连续测量，远未满足林业应用需求",
+    "稀疏部署时仅有离散iso-positions，无法确定等值线如何穿过这些位置（可能对应多种等值线地图）",
+    "传统Wi-Fi指纹定位因数据库维护困难仍停留在实验室,室内定位无法达到室外GPS体验",
+    "虽有优化但未能达到最优IP层组播代价，且最优需要持续迭代开销过大",
+    "R=1时优化率始终<1,ACE不能改善性能;低连接密度需更大h值才能获益",
+    "LTM虽收敛更快、流量节省更多，但其要求全网时钟同步，需额外运行NTP协议，产生额外开销",
+    "LTM需全网节点同步(NTP协议),ACE收敛极慢,两者均因全对等信息交换开销大",
+    "LTM需要时钟同步(增加NTP开销);简单重连近邻可能破坏连通性造成孤立岛屿",
+    "使用更长TTL会增加探测器流量且收益递减,最优选择为TTL=2",
+    "e-ARD需要较大修改现有系统,引入bRDA增加复杂度,且在邻居极少时效果受限",
+    "overlay multicast比IP multicast有更长延迟和更大流量开销",
+    "若TTL>2则探测器流量大增;若切割连接代价差异不大则绕路代价更高;需时钟同步",
+    "RRD和ARD的有效性依赖于系统中每个节点有超过一个转发邻居这一假设",
+    "减少RK冗余可能导致查询延迟增加,需权衡",
+    "预防方法无法阻止P2P中大量代理被招募；cut threshold存在漏判与误判的权衡",
+    "复杂活动中RF阵列外轨迹及多路线交叉处难以检测",
+    "精确方案在数据变化快时效率低下，需频繁执行范围细化导致通信开销激增",
+    "Causality Diagram相比Belief Network牺牲了精确度,但大幅降低计算开销以适应资源受限网络",
+    "Sketch即使无丢包也有约10%相对误差；TAG和Fractional方法不适用于高链路丢包场景",
+    "CDS基础转发策略会错过地图上某些最短路径，导致稍高延迟。",
+    "MDS算法渐近复杂度O(n^3),大多数现有方法在各向异性网络拓扑下失效,RR3P条件的必要性仍未证明",
+    "we can neither validate nor refute this point, because the limited network visibility disables a deterministic answer",
+    "基于RSSI的传统定位在海上有环境干扰;绳索边界处呈悬链线需额外计算",
+    "当同时存在超过5个故障时,检测率下降、误报率上升;因果图模型以牺牲一定精度换取计算效率",
+    "提高发射功率无法稳定链路质量或改善网络 yield;ETX 指标无法捕捉转发节点的丢包",
+    "流量开销在(6,6)-RR最大设置下略高于Shortcut;多rumor虽加速但增加冗余开销;存储开销随查询频率线性增长。",
+    "currently our fault detectors are deterministic, and in future works we plan to extend our model to cope with non-deterministic cases",
+    "非合作用户限制可达隐私度,分布式方案难以同步大量用户",
+    "min_sup=3时准确率降至60%;时间间隔小于20秒的多目标难以区分;复杂活动仍有挑战",
+    "单服务器查询10个月数据需等待约15秒,体验很差;粗粒度云同步导致严重流量浪费",
+    "软件ACK在流量高时脆弱,发送者等待ACK时新包可能到达,ACK丢失和时隙预测误差在高负载下发生,IPI=1s时PRR低于80%。",
+    "ETX指标与实际路径质量'几乎呈现随机效应';固定路由表与CTP动态路由的性能无明显差异;传统hot area假设未被数据支持",
+    "时钟偏斜估计需要约30分钟才能收敛稳定,初期抖动严重",
+    "多径效应问题存在,但超出本文讨论范围留待后续研究",
+    "原型系统因USRP-WISP通信距离限制无法做大规模实验,只能用simulation验证",
+    "Sink must tolerate inconsistent results from different nodes; diagnosis messages themselves can be lost due to congestion",
+    "slotted-CDMA在识别时间上优于Wonder，但Walsh码方案不占用额外频谱",
+    "Intersection-based MBR retrieval insufficient; must filter by orientation (camera direction matters even at same location)",
+    "无法识别具体顾客身份(除非顾客持RFID VIP卡)；无法区分店员整理货架与顾客行为",
+    "多径会降低定位精度，需要后续工作识别直射路径消除多径影响",
+    "数据快速变化时范围细化频繁调用导致通信开销很高,此时近似方法更稳定",
+    "固定时隙数在稀疏网络中不够节能;软件ACK在高流量下脆弱导致PRR低于80%",
+    "连续运动数据的合理分割比文本处理更具挑战；缺乏活动词汇表使语义索引难以构建；仅验证于加速计和陀螺仪运动数据",
+    "无法分析native code、Web应用和动态链接库；因分析条件语句可能引入假阳性",
+    "区块链扩展性阻止实时交易;匿名性使研究者极难从区块链数据集获取有价值信息;共识达成后如何随环境升级是重要问题",
+    "Cricket精度虽达12厘米但高噪声阻止广泛部署;多普勒效应因时频分辨率问题无法实现细粒度定位",
+    "深度学习和机器学习模型都敏感于占多数的特征，对较小但同样重要的特征信息关注不足",
+    "由于运动传感器精度和图像分辨率限制，距离估计误差过大，放弃距离测量，仅使用方向信息",
+    "被动跟踪受多径效应严重影响;主动跟踪存在时间不一致导致累积误差;当初始LOS被阻挡时多径信号相互干扰显著",
+    "当标签数据长度超过32位时逆向结果不满足唯一性；信噪比低于-13dB时无法正确解码",
+    "sophisticated navigation tasks remain a formidable challenge for AI agents",
+    "剩余18%性能问题源于硬件能力上限无法解决;无权限与厂商共享真实工作负载致故障排查困难",
+    "EIoT remains an emerging and largely underexplored field, with numerous open challenges related to architecture, coordination, scalability, and evaluation",
+    "Static tree approaches cannot solve key-updating; updating root-adjacent keys influences half of all tags making the problem intractable without SPA",
+    "PT响应时间约为普通Gnutella的7倍,匿名路径构成主要延迟,认证时间本身可忽略",
+    "PT response time ~7x overt Gnutella due to onion paths; PIC generation costs ~8 seconds on popular PCs (one-time).",
+    "Key-extracting attack possible on path key subparts; fixed by leaf key involvement in updates (Section V.B)",
+    "Refresh仅适用于标签频繁被盘点的场景,不适用物流等追踪场景",
+    "When Cmax > 2, collision mostly happens and performance decreases. OPC slightly increases retransmission cases.",
+    "Existing self-diagnosis leads to inconsistent results; TinyD2 fails to achieve consensus as density increases",
+    "约束反馈几乎无收益,高密度网络推理组合爆炸导致准确率下降至约14%漏报率",
+    "父亲数超过14个时准确率骤降至65.4%;距离越远准确率越低",
+    "网络规模扩大导致DLP解空间组合爆炸，密度增加使推断了困难增大",
+    "When Cmax is 3 or 4, collision increases. More concurrency suffers from hidden-terminal asymmetry.",
+    "D-S theory fails when evidences are highly conflicting; must reduce impact of incorrect and fringe evidences.",
+    "defender无法保证覆盖所有攻击，adversary总能构建更好的模型",
+    "在DeeplabV3+的ACDC分割任务上,所有TTA基线方法均未能超过Source的精度,因像素级任务伪标签不准确导致误差累积",
+    "仅保证1-连通网络，k-连通情况尚无有效方法；随机部署算法性能差约50倍",
+    "Fang等人的binary search算法无法保证最优解,k须为常数减少通用性",
+    "K-Means需要预先给定K值；window长度存在检测延迟与误报率的trade-off",
+    "网络规模增大时检测率下降、误报率上升;sink-based架构导致故障与检测之间的延迟",
+    "仅考虑二元选择任务和匿名工人，实值或多选任务需更复杂测量",
+    "参考节点失效会导致标定问题;目前设计仍处于早期阶段,新增节点需重新训练",
+    "Direct voltage switching fails due to LC transient process lasting >2μs; capacitive sensors have too-large capacitance (100pF+) yielding only 1.5° phase range.",
+    "现有并行解码算法实测仅提升20%，SAW滤波器非理想矩形导致roll-off限制子带数",
+    "SAW introduces ~3dB insertion loss reducing range; only 5 subbands possible due to roll-off; conventional tags can interfere when present",
+    "First reader-coverage approach failed: even static objects reported in different sub-regions due to dynamics; higher tag density improvement less than expected.",
+    "Initial reader-placement approach fails because dynamic interference causes inconsistent detection ranges for static objects.",
+    "现有项目缺乏系统性研究，孤立方案可能相互冲突，很少在实际环境长期测试",
+    "架构仅从数据视角呈现，仍非常conceptual，未涉及网络层连接细节；语义会带来通信开销",
+    "10 Mbps网络下PNR性能远逊于纯磁盘分页;轻负载下NR略优于PNR",
+    "PNR设计并不总是能平滑内存使用分布，某些情况下反而更不均匀",
+    "UnSplit only works for client top model with one layer; existing attacks suffer from large search space when models are deep",
+    "Entire topology as one cell creates star topology, causing significant performance degradation and high collision at source.",
+    "流应用共享边会产生固有的额外排队延迟;算法超出某点数后无额外改善反而可能因拥塞增加延迟",
+    "SplitStream依赖非成员节点协助且时延较高；k-MST算法后期树被迫使用高权重边导致整体时延由最重树决定",
+    "The resulting tree is sub-optimal; source assumes node location as cell center, not exact position",
+    "无现有方法能同时提供强隐私保护、零性能损失和低计算开销;输出隐私扩展引入显著通信增量",
+    "现有重要性采样方法在有错误样本时严重退化,loss和梯度范数都偏向选择错误样本",
+    "第一方案中CS本身无法抵抗窃听攻击，需配合对称加密；第二方案通信开销略高于简单聚合方案",
+    "未考虑网络攻击如互联网蠕虫，仅依赖C1G2标准操作，假设标签不执行密码运算",
+    "传统对称加密不支持无解密策略更新;代理重加密需1024位密钥超出标签512位内存;现有方案仅支持一次性更新",
+    "CP-ABE设计用于保护用户数据而非产品数据，无法扩展到物品级保护，且密钥授权中心被攻破会导致全供应链数据泄露",
+    "逐项签名方案开销过大不可行:Sender需生成n个签名,Relaynode和Receiver需验证n个签名",
+    "USE/UPE需要数百帧长度和多次重传来确定最优帧长,处理时间长",
+    "标签可能非均匀分布时需改进哈希方法;估计精度随哈希数增加而改善但有极限",
+    "RSSI-based approach reaches equally high performance but suffers from temporal variance and unstable performance",
+    "搜索法初始化存在过拟合和潜在位置误差,需提出非学习定位技术",
+    "小角度旋转误差不可接受；AoA越接近90°误差越大；多径严重时D-MUSIC可能失效；高度差2m时性能急剧下降",
+    "斜向动作识别弱于正向，因假设玩家严格位于两链路中垂线交点而实际有偏差；幅度比相比符号更难准确估计",
+    "无训练校准下跟踪误差随距离累积,需间歇性精确定位以避免漂移;当前无法直接适用现有被动定位方法",
+    "用户7异常运动、用户9严重心律不齐导致性能下降,特殊案例需进一步研究。",
+    "PADS cannot detect quasi-static humans; requires motion for detection; theoretical limitation acknowledged",
+    "Cannot be directly deployed on current mobile devices due to lack of CSI hardware support; requires horizontal plane rotation which real users cannot perform perfectly; indirect multipath handling via calibration step is annoying for practical use",
+    "仅支持单目标跟踪;两天线限制AoA/ToF精度导致无法分离多人;NLOS条件下ToF估计失效",
+    "Goodput abruptly decreases when distance >90cm; larger data cells needed at longer distances. Acoustic channel may congest with multiple coexisting screens. Audio control channel requires same-room proximity.",
+    "离线修改需要预先获知每个用户的具体QoE函数;在线修改导致参数更新的巨大重新计算开销",
+    "OBOE的分段平稳假设在蜂窝网络中失效，实测非平稳trace比例高达44%-72%；CS2P在线训练开销是离线的446-932倍",
+    "Elephanta在固定QoE下仅为MPC的90%；6/21用户因交互挫折不愿使用；需提供多版本算法",
+    "Oboe假设的分段平稳模型在蜂窝网络中49.4%子轨迹仍非平稳，不适用",
+    "需依赖云端TEE进行密钥交互以最小化通信开销；RAG场景需在TEE内执行检索组件，非自包含方案",
+    "现有密码学方法和内存隔离方法通常面临高延迟或硬件依赖问题",
+    "若P1与P2串通则隐私失效，需依赖更强的密码学协议",
+    "FCFS achieves only 55% accuracy; G-RSSI fails due to RSSI fluctuation; existing localization methods require complex deployment and cause significant error",
+    "廉价手机传感器限制下，测距和定位精度仍不理想；城市环境罗盘误差扩展",
+    "FCFS方法准确率仅55%失败；G-RSSI因RSSI波动剧烈有多个峰值而失败；G-RRR无法直接区分标签顺序",
+    "仅5%原始加速度轨迹达到<10cm误差，系统不可行；廉价传感器仍是瓶颈，密集区72%准确率仍不理想",
+    "Phase profiles outside V-zone are fragmentary due to channel instability, making whole-profile connection error-prone; accuracy degrades when tag population exceeds 30 in reading zone.",
+    "False alarm rate breaks 40% without variance filtering; cannot distinguish employee from customer via RF signals",
+    "间距较小时（如5cm）性能不佳，标签过密导致相位剖面稀疏，难以定位V底",
+    "静态类须满足峰值带宽有界条件；动态分配的测量周期(100ms)可能无法跟踪极速流量波动。",
+    "GAB 统计在动态环境下完全不准确，副本统计是单调递增函数，无法反映节点离开导致的副本减少",
+    "PASH suffers from cheating if ratio of malicious nodes exceeds 10%, needs trust management",
+    "当scr达80%时,两方案结果几乎相同;部署时间代价增大时优势缩小",
+    "并行搜索使用过期信息时会失败,需回退到普通搜索算法",
+    "Parallel search uses stale range info when nodes adapt; fallback to sequential Algorithm 4; no mechanism for frequent HR updates",
+    "初始定位错误时MoLoc仍存在大误差，因用户运动尚不可用。",
+    "Quorum仅支持对称运行;asymmetric情形下最优调度规约为NP-complete顶点覆盖问题;无全优方案",
+    "目前尚未找到patrol随机化问题的良好形式化表述(We have not found a good formulation)",
+    "当只有一个可见用户时准确率降至11.2%;tense情绪准确率最低约60%,因其使用模式差异最大",
+    "tense情绪准确率仅60%；仅1人可见时准确率降至11.2%；N>25后噪声导致准确率下降",
+    "移动特征是最主要影响因素,存在cold-start问题;漂移从3m降至0.3m仍非零",
+    "测试用例生成模块为可选项，用户可导入自己的测试用例；LLM对新兴库的预训练知识不足导致生成质量下降",
+    "TEE漏洞如侧信道攻击不在本文范围内,参数优化需权衡安全与成本",
+    "识别敏感边界需轻微修改模型参数，若服务器完全复制模型行为仍可能绕过检测",
+    "知识蒸馏模型与无血缘模型无法区分；生成模型因缺乏自然决策边界而难以扩展。",
+    "当t接近n时,总体噪声方差等于严格隐私预算参与方的必要噪声方差之和",
+    "理论证明VFL系统无法完全避免可省略通信，必须在精度和通信间做权衡",
+    "Prior work ignores moving speed of sinks, but real speeds have significant impact on energy dissipation and cannot be simply ignored.",
+    "Choir在节点数增加时频率偏移趋于相似,导致符号聚类错误; mLoRa仅在SNR>5dB有效",
+    "混合系统因缓存重排序引入不可预测延迟，高计算成本无法支持实时流量和QoS保证",
+    "DiCAS比UIC查询成功率下降13%,部分匹配节点被跳过,且存在无法匹配的'死角'对象",
+    "DiCASalone降低流量83%，但查询成功率下降80%，需结合push/select操作补救。",
+    "TCP throughput formula produces uncertain estimation errors in light load networks; feedback delay ignored which harms stability for large-delay networks; only TCP Reno modeled.",
+    "DC-AQM虽针对大时延问题设计,但其使用的Pade近似导致被控对象与模型严重失配,队列无法收敛到参考值。",
+    "未给出高斯信道模型下组播容量的匹配上下界",
+    "存在未闭合的间隙:对于 REN 的 n_d:[(n/log^α+1), n/log n] 以及 RDN 的 n_d:[(n/log^3), n/log n],上下界未完全匹配",
+    "对于某些regime尚无法推导出tight bound，这是future work",
+    "Case 4 requires five edges while optimal pattern requires four; parallel line special case has zero error tolerance and is non-robust",
+    "Wang等人方法在信号不规则网络中心区域误报大空洞",
+    "if PaN demands TDR=1 (no impact), SaN suffers arbitrary infinitesimal factor gap θ(n)=o(1) vs standalone",
+    "承认在扩展网络中ProM和PhyM的基本假设是over-optimistic and unpractical",
+    "Problem 2 is NP-hard(通过集合覆盖归约证明)",
+    "CALL不能保证多项式时间终止,因为候选位置集合在最坏情况下可能指数增长。",
+    "即使对于无线ad hoc网络,在高斯信道模型下仍无匹配上下界,且本文未考虑B-O链路的瓶颈",
+    "即使对纯无线网络，高斯信道模型下的多播容量上下界仍未匹配",
+    "ETX在端到端不可靠假设下表现不佳，重传次数需谨慎选择以平衡PDR和资源消耗",
+    "proxy-based schemes highly rely on remote servers, which will bring more deployment cost in practical, and moreover, how to inherently reduce energy consumption for P2P protocols for mobile environment is still unexplored and challenging",
+    "2-full-skyband结果集大于full skyline,存在一定冗余",
+    "主要在仿真验证,Real-world大规模无线传感器网络测量尚未进行",
+    "OPEN在最小安全距离上比MA低约5%,但MA过于保守反而错过逃生机会",
+    "路由事件(如父节点切换、环路)对WSN延迟影响较小,与Internet不同",
+    "nd:[n/(log n)^{α+1}, n/log n]区间仍有gap未闭合",
+    "NDI provides no guarantee of power gains; more senders can degrade PRR",
+    "当n_d = O(n/(logn)^{α+7})时，REN下吞吐量不如文献[6]；某些区间尚未找到更优scheme",
+    "Theoretical asymmetric bound is loose (we believe real performance is much better); cannot find feasible solution for p=1 (optimal even case) and settle for p=2",
+    "Glossy在CitySee 4000节点网络中PRR仅26%;CIBF scalability problem导致中间节点PRR显著下降",
+    "只能纠正单节点flip，无法处理combined flip，且处理该情况会产生指数级开销",
+    "当packet coming rate很低时,n=0为最优值,即累积反而有害;且受限于传感器节点小packet size(128B)",
+    "5%的导航失败源于动态危险区阻塞所有可行路径,无法成功导航至出口",
+    "直接使用测量延迟补偿无法达到0.5μs精度,需通过时钟漂移校准才能稳定;完美同步也不保证CI实现",
+    "结果局限于可分可完美压缩函数类，且实际实现需调整大量参数和优化常数",
+    "LDA/FineComb遇到丢包重排整组丢弃,无法计算组内延迟;RLI插值假设线性分布无法捕获频繁延迟变化",
+    "当节点所有出链路质量均差时QoF无法帮助规避问题；重传次数过高会降低节点PDR产生权衡",
+    "Case 4需要五条边而最优需要四条；两线平行时误差容忍度为零（非鲁棒）",
+    "仅优化睡眠间隔而不考虑动态扩展时间td无法达到最优,且计算最优参数开销大不适用于资源受限节点",
+    "无法保证最坏情况发现延迟，能耗略高于Searchlight（15% vs 13%电池消耗）",
+    "当m为奇数且p=1时无法找到可行解；asymmetric case只给出宽松上界，实际性能可能更好",
+    "Not all lost events can be inferred by the inference engine",
+    "Glossy因未补偿传播时延且未选链路,性能甚至差于单路径路由",
+    "OPEN在最小安全距离指标上比MA低5%，因为MA过度保守地选择路径而错失潜在逃生机会；CPNST在环境动态变化时表现差",
+    "环境因素（温度湿度）对延迟直接影响有限；WSN中路由事件影响远小于互联网",
+    "在10 Gbps高数据率下开销过高,只能在低数据率链路或离线分析中使用",
+    "TinyOS LPL MAC默认参数在特定场景下导致very poor performance,ContikiMAC并不总是energy efficient",
+    "事件推理因缺乏ground-truth无法充分验证，属于未来工作",
+    "PSO容易陷入局部最优且存在'运动滞后'问题，需引入重采样机制",
+    "without traffic decomposition, the neural network has similar encoding capacity to LSTM - 流量分解缺失导致GNN-A性能与LSTM相当",
+    "LE Secure Connection (Bluetooth 4.2+) uses ECDH key exchange and is not vulnerable to silent pairing; BlueDoor uses LE legacy pairing instead.",
+    "数学模型与实际偏差大;位置精度仅70m;仅测试单一交通模式数据",
+    "VoLoc假设存在静音间隙不适用于多源场景，且单阵列Far-field效应无法分离平行射线",
+    "高速移动(>2m/s)引入多普勒效应导致检测失败;穿越墙壁时信号严重衰减;仅支持单向通信,无法确认ACK",
+    "系统要求AMAV自身定位误差小于10cm，需LiDAR等高端传感器辅助",
+    "当AMA V自身定位误差超过10cm时系统性能下降,需配备LiDAR或深度相机实现VINS等高精度自定位。",
+    "全局状态方案控制开销O(N²),不适用于大规模IoT部署",
+    "事件数据静态场景几乎无事件、高动态爆发输出，处理非均匀数据困难，有意义信号常埋于运动噪声中",
+    "现有算法噪声过滤率精确率和召回率均低于65%，EKF/PF方法存在累积漂移误差",
+    "现有算法召回率和精确率均低于65%; EKF/PF方法产生累积漂移误差; 现有方法处理延迟过大不适用于低延迟定位",
+    "含buckets的cluster方法时域反而更高；难以同时优化能量、时延和消息数",
+    "走廊分段分区误差较大，因无墙体阻隔导致指纹相似度增大；特定虚拟房间难以区分；实验建筑为钢龙骨木板墙而非钢筋混凝土，屏蔽效应弱增加了区分难度",
+    "承认移动场景性能比静态场景略有下降，但强调仍远优于基线方法",
+    "某些虚拟房间无法区分;走廊段之间没有墙壁隔离,指纹相似度较高,分区不够准确(错误率小于19%可接受)。",
+    "当GPS原始测量严重偏离真实位置时,GloCal精度也受限",
+    "多人呼吸叠加难以分离;LOS路径限制实际覆盖范围",
+    "单天线相位方差不足以准确区分 LOS/NLOS,阈值敏感且无明显 gap",
+    "自动生成的radio map精度必然低于人工构建,基本LiFS不如RADAR(5.88m vs 3.42m)",
+    "Prediction accuracy still has minor gap (0.34m) from ground truth; requires evenly distributed reference points for best performance.",
+    "选择部分APs丢弃其他APs并非最佳方案，AP选择是数据依赖的",
+    "指纹不一致性是定位误差主因,需自校准技术处理长期RSS变化;图像法依赖用户配合",
+    "Sweep delay with 26 nodes is a bit larger than bound because mobile nodes follow marked paths not strict lines; worse than DSweep-global which assumes global information",
+    "经过若干轮迭代后定位误差趋于稳定不再下降；模型直接校准不可行",
+    "Initial values have slight influence on calibration accuracy due to convergence; sampling frequency is tradeoff between calibration accuracy and energy cost",
+    "线性误差模型虽非高精度但简单有效；大量AP未被种子用户采样时精度下降；动态人群环境改变信号传播增大误差；长期时变测量影响算法性能",
+    "初始采样间隔设置过大(>70l)时精度显著下降,需人工调参;未考虑每个传感器的独立能耗约束",
+    "当客户端数量很少(如CA*netII只有3个客户端)时,浏览器感知代理的性能提升不足1%,收益不明显",
+    "AMRoute uses static virtual mesh and is inefficient; location info brings little improvement when nodes are isolated or lack coverage overlap",
+    "Cannot minimize superpeer workload and network workload simultaneously; trade-off is fundamental",
+    "仅用随机策略选择替换候选节点效果欠佳,需研究更优候选选择策略",
+    "AM节点过多时性能严重下降,即使最优方案也退化为naïve RAND,且AM-AM连接代价至少两倍于AM-NM连接",
+    "若所有成员都是AM，即使最优解也和RAND一样差；过多AM-AM连接需invite MO节点补救",
+    "WebRsync的缺陷无法通过纯客户端优化根本解决；Native client需额外安装插件，损害了可用性和普适性；Web workers无法减少总同步时间",
+    "无法量化结果对其他MVNO的可推广性,因为缺乏其他运营商的数据。",
+    "光线直线传播，无法直接处理非视距场景；低分辨率图像难以检测标签",
+    "信道分配依赖邻居节点ID获取,默认控制信道需周期性广播ID,部署有一定前提条件",
+    "SAT提升网络吞吐但以增加时延为代价，且对时间约束敏感性强于BST策略",
+    "曼哈顿假设不适用的区域无法工作；复杂建筑结构难以恢复准确顶视图；低分辨率时准确率下降",
+    "Large errors exist for low quality WiFi samples, extreme distances, similar POI appearance, and POI obstruction",
+    "人类遮挡对定位精度有负面影响,缺乏图像特征时性能严重下降",
+    "r过大(4-5)反而降低精度，远邻RSS关系不再稳定；SIFT方法不如特征向量法",
+    "代码序列检测设计适用于直径有限且拓扑变化缓慢的网络,不适用于快速移动网络如车载网络",
+    "现有压缩方法忽略地图质量差异,导致降质;计算导向的划分方案无法应对数据爆炸;现有方案在超过10个代理时超出链路容量",
+    "ReAct等复杂推理框架提升有限但推理时间大增",
+    "Worst-case validation query evaluation is at least co-NP-hard; we do not see any single combining algorithm suitable for all grid conflicts.",
+    "若用户对事件缺乏完整知识,将无法准确指定属性值的时空分布",
+    "自动特征选择方法效果有限;约0.9%应用无法在轻量级模拟器运行",
+    "Location refinement may degrade 20% of nodes, but deterioration is small compared to improvement.",
+    "In coal mine prototype, straightforward multilateration-based localization turns out to be a failure.",
+    "Theorem 3 requires implicit edges which incurs combinational number of graph partitions; RR-3P is still not sufficient",
+    "仍有少量节点无法被RR-3P或RR3P判定,RR3P必要性证明留作未来工作",
+    "RSSI ranging has 150% error; floating model assumption (uniform random) violated near seashore; error propagates with network size",
+    "缺乏WHEEL与三边测量法之间差距的理论分析,也未给出与理论上限的差距",
+    "Lack theoretical analyses of gap between WHEEL and trilateration",
+    "SMP采样方案仍需采样30%的产品才能达到99.99%置信度下0.3%容忍阈值，产生1.1M字节认证数据，仍有较高开销",
+    "QCD correctness assumes at least two collided tags emit different random integers; this assumption can fail with probability 0.5^(lm) ≤ 0.5^(2l).",
+    "Phase-I阶段负载不均衡时低负载读写器需等待高负载读写器;通过切换两阶段顺序可缓解。",
+    "LiFS平均定位误差5.88米差于RADAR的3.42米，仅通过几何特征在对称建筑中可能失效",
+    "Saxe证明图可嵌入性判定是强NP难问题; Sweeps随环规模指数增长",
+    "Sufficient and necessary conditions for edge verifiability remain an open problem; MGRS finding lacks theoretical foundation",
+    "The time resolution remains only sufficient to distinguish path clusters rather than individual multipath components due to limited WiFi bandwidth",
+    "Naive hologram给出不分明结果,存在大范围高值连续区域",
+    "IPDS在低对比度背景(如白墙)或昏暗光照下检测效果下降,且细粒度材质区分困难",
+    "Main accuracy loss from versatile real environment; multipath still affects accuracy slightly (19-60mm)",
+    "当标签数>5000时CSR降至约55%,相位分辨率限制指纹空间为4096",
+    "研究者不得不回避直接使用低成本传感器的航位推算，转而采用行人运动建模；航向漂移通常主导误差",
+    "LANDMARC等定位方法表现最差,因为米级定位精度无法检测1m内运动;MV方法在规则运动模式下易失效",
+    "System exceeds FCC power limits with 12dBi antenna; requires pre-learning empty room; tracks only one object; directional dependence limits deployment area.",
+    "现有方法未利用争议标签信号可被多读写器接收这一特征，导致效率低下",
+    "普通采样模式仅55%准确率(高频90%);快速运动下FNR轻微上升约7%",
+    "SMM和DMM仅区分帧类型，未区分同类型帧的不同位置；AMM对GOP内所有帧和帧内所有数据包同等对待",
+    "GCD方法对谐波频率误差过于敏感，即使0.1Hz误差也会导致数十倍错误；放大因子超过25×后噪声主导导致误差骤增",
+    "放大超过25倍后噪声放大主导导致误差升至4ms;环境必须相对静态要求",
+    "即使使用VirtIO、GPU加速、Intel VT等优化，虚拟化方案对重型3D游戏的体验仍远不令人满意",
+    "兼容性从95%降至92%,为换取高流畅度牺牲少量兼容性",
+    "DSS有cold start问题；AMH需多轮收敛；当服务器无法饱和下行带宽时测试时长增加",
+    "现有调查缺乏对生成模型的系统综述和明确的pipeline集成分类",
+    "RWP向后台应用引入额外存储开销，需为每个标签记录添加表头，对大规模系统（如2^32标签）需约18.5GB",
+    "现有三类主流PPA协议(线性、树型、同步)均被证明在此攻击下不再私有。",
+    "用户任意行为(如走走停停、左右晃动)会损害轨迹质量，能耗亦需优化",
+    "当用户距任何参考轨迹过远时无法引导,用户行为(如停停走走)会影响轨迹质量",
+    "迭代循环引入扩散生成的高计算开销，且推理上界受限于diffusion物理理解和critic验证正确性",
+    "仅在LAN 32节点测试,未考虑大规模P2P动态拓扑和策略协商过程",
+    "Hard incentive alone fails: 'wealthy nodes are not always with higher degree reputation. Simply considering bid price cannot satisfy security concerns.'",
+    "Theorem 1 proof omitted; future work needed for finding groups of experts; ProdScore achieves lower per-hop cost but longer paths.",
+    "在恶意模型下，若对手从其他社交网络构建属性字典且属性空间不大，协议可能暴露请求档案；对称加密本身非抗抵赖",
+    "P1 can launch binary search by adjusting threshold θ to narrow down value range of f(v1,v2); suggests threshold from system or query time limit.",
+    "现有方法对手持设备要求头部位移≥20cm和移动速度2~6m/s，难以用头戴式眼镜实现；对象识别需要大量训练和计算，且易受环境噪声影响",
+    "LSH导致精度损失:Basic的0.5% FN/2.1% FP在Advanced变为0.7%/2.9%;纯全身特征时误检率上升",
+    "误报率与误漏率存在权衡，阈值15%误漏率难以避免；系统假设目标相对静态，无法追踪移动目标；意图捕获与理解仍是待解决的艰巨任务",
+    "当两用户同向同速移动时，r_ij(t1)=r_ij(t0)产生无穷多解；50-70步处大偏差因转向导致",
+    "志愿者数量较少，测量使用基于模型方法不如设备级方法精确，隐藏影响存在潜在风险",
+    "Owners有数百张照片时处理时间略超可接受范围,需k-d树等优化;k-n OT在大规模数据库上构建代价极高",
+    "在大规模开放环境中可能失效（如大厅、博物馆）；方法受限于建筑类型",
+    "Semi-supervised S3VM can perform worse than imbalanced-only models because unlabeled data 'may enhance the distribution skew so severely that it has canceled the benefit.'",
+    "Cannot prevent high-quality pirate video by high-end professional cameras; leaves this as daunting challenge",
+    "当用户声明成本时预算可能无界;发起者仍难以准确估计路径长度和所需预算",
+    "字典攻击下恶意用户可恢复完整请求画像;需通过响应时间<1秒和小于12的基数阈值识别恶意回复者",
+    "基本方案在通用图像上性能下降，针对人脸识别等简单场景更有效",
+    "敌手总可构建更好的模型揭露敏感信息，防御者永远无法确信覆盖所有攻击",
+    "线性扫描所有图片的搜索延迟'稍微超出可接受范围',需借助k-d树等优化算法解决可扩展性问题",
+    "Problem NP-hard with no competitive deterministic online algorithm; approximation ratio to oracle is only 0.775 (0.51-0.91); QATO wastes energy in radio state transitions (RRC_PROMOTION, RRC_Tail)",
+    "ILP only scales to ≤12 requests; oscillation still 3.2% at optimal threshold; travel time estimation could be more accurate",
+    "货币激励中HIDDEN方案效果最差，MACRO参与率最低；娱乐/服务激励通用性受限；现有机制忽视隐私保护",
+    "Accuracy depends on people detection and segmentation; complicated environment may cause high error rate",
+    "小部分大偏差(约3米)出现在60步左右,因为办公室格局导致大多数转弯发生在50-70步之间",
+    "基本方案在高分辨率大图像集时性能下降,传统SMC和简单同态加密因交互开销无法扩展",
+    "信息不对称下的均衡策略导致次优收益，估计偏差会造成主机误判",
+    "随k增大性能下降,距离度量对覆盖影响不大",
+    "实验显示实际value仅达最优的50%-70%，constant competitive保证的常数界在实际中仍偏保守",
+    "BER仍约0.05较高，且编解码速度未达实时能力，acknowledged as 未来工作",
+    "仅7名受试者；SAM增加训练迭代时间；RS后最优顺序无法保证；需足够多的EEG通道数才能提供充分信息",
+    "单样本分类仅反映瞬时意图而非长期稳定意图；强化学习策略跨传感器组合泛化能力有限",
+    "基线和SOTA方法在高音质数据集上表现可接受，但在低音质数据集（EID-M）上Full频段准确率骤降至<0.82，无法应对环境漂移",
+    "VBC-GA与VBC-Greedy获得「相似结果」，实验未能显示遗传算法优于贪婪算法",
+    "时钟不一致导致频率漂移,需线性频率补偿校正",
+    "RS后的最优顺序无法保证出现,分类结果不理想时需多次尝试;SAM增加了LSTM单元的迭代训练时间",
+    "单样本只能反映即时意图而非长期稳定意图;强化策略仅在训练环境有效;RS操作不能总提供最佳空间依赖",
+    "实验仅包含7名受试者,规模有限;可穿戴传感器设备笨重,阻碍大规模部署",
+    "现有工作仅把EEG当链式序列，忽略相邻信号复杂依赖",
+    "Sunlight saturation outdoors causes PD saturation; direct IR remote pointing causes recognition errors",
+    "承认ImplicitCode仅适用于灰度视频；指出InFrame++仍存在明显闪烁问题",
+    "变换过程会意外移除独特的活动模式,且Gram矩阵假设缺乏数学支撑",
+    "Most radars limited in antenna number, leading to limited angular resolution and insufficient point cloud outputs",
+    "现有FMCW雷达受限于天线数量,导致角分辨率有限、点云输出不足、鲁棒性脆弱",
+    "inter-category separation loss (L_sep)是最重要的组件，移除后性能下降最大",
+    "线性插值在复杂情况下不够精确,多项式插值在端点处可能不准确;需要方形真实网格",
+    "RSS在静态场景中因信道变化稀少而失效；α参数存在速率与误码率的根本权衡。",
+    "直接用对数阴影模型校准所有节点输出更差;无过滤时好节点精度反而下降",
+    "平均准确率仅74%,玻璃门最难检测,手机姿态变化导致6-14%精度下降",
+    "FCs with high precision/fast loop frequencies can mitigate attitude changes, potentially causing subtle IMU signals; relying on single modality lacks universality",
+    "当要求100%可靠时,需要无限次flooding才能达到,此时negotiation是必须的(n_F→∞)",
+    "清洁环境下ZiSense比BoX-MAC高0.08%能耗,因为RSSI处理时间更长,AEDP在干扰RSSI高于链路RSSI时失效",
+    "使用最差链路质量选择策略会导致过多冗余泛洪轮数",
+    "穿墙场景准确率急剧下降，TPR在FPR=0.01时仅0.304",
+    "穿墙场景准确率急剧下降(FPR=0.01时TPR仅0.304),单人天线方案在困难场景不稳健",
+    "蓝牙跳频和微波扫描导致TP率降低；远距离干扰或收发近距离时性能显著下降",
+    "Algorithm 1仅识别87.6% ZigBee段,且在强干扰下存在误识风险",
+    "Temporal filters fail on persistent CTI, attenuate motion-induced dynamics, and require sequential data",
+    "1mm精度时TPR仅85.01%且FPR达16.14%;距天线越远性能越差;E点减少时判断困难",
+    "精度随定位定向误差增大而下降,训练需至少4人以覆盖行为多样性",
+    "沿TX-RX链路反向的用户签名区分度仍较低，导致该方向的分类准确率较低，覆盖形状尚未达到理想的全向",
+    "Rician-K因子在所有条件下检测率均低于60%,延迟特征即使有CSI仍产生高误判率;Rayleigh拟合在静态NLOS条件下几乎失效",
+    "Coverage shape is still not perfectly omnidirectional for azimuth distinction; direction along TX-RX link shows lower classification accuracy",
+    "Path weighting causes slight performance drop in some cases due to angle estimation errors >20 degrees with only 3 antennas",
+    "静态链路识别性能显著差于移动链路,形状特征因WiFi带宽限制不可行,Rician-K因子误差大",
+    "Threshold δ=0.65 requires re-calibration per shop; parameters cannot transfer across diverse activities and multipath-rich environments; metal items unreadable, limiting grocery store applicability",
+    "truth discovery假设同模态数据，对跨模态数据融合场景不适用；依赖准确的轨迹预测",
+    "Existing dispatching methods assume near-perfect sensor reliability and neglect monetary incentives required for driver acceptance.",
+    "Bare System无法识别不诚信消费者，所有消费者获得相同服务，产生严重free-rider问题",
+    "The theoretical lower bounds are over optimistic and can never be achieved in reality",
+    "大规模WSN调试仍无经济有效的方案;远程源码级调试面临符号和效率挑战",
+    "日志缺失导致无法精确判断parent change时机,只能近似估计路由链路寿命",
+    "Assumes known keyboard layout; cannot distinguish keyboards with different key arrangements like 'fn' button",
+    "DBFS 仅能覆盖约 77% 的节点（partial coverage problem）；单度量选择路径非最优",
+    "we leave the discussion of the appropriate size ratio to our other papers",
+    "优化问题(P)需要全局信息，实际只能近似求解",
+    "硬件改造或信号级噪声注入可逃避取证,但会增加成本和降低攻击范围;大规模FBS池可能导致准确率下降",
+    "Wei et al.'s discrete neuron freezing strategy did not suffice in preventing security degradation; freezing non-safety layers does not preserve security and may even exacerbate issues",
+    "BASEOAK均匀探索偏离最优分布,无法在游戏中删除任何最优臂",
+    "CTCVR任务虽缓解SSB和DS，但代价是加剧FNS问题，现有方法均未充分考虑",
+    "IBM沃森健康高举高打却因训练数据不足（仅数百例且来自假想数据）导致效果不佳，最终被出售；大模型的数据存量即将耗尽，质量数据支撑不可持续。"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "achieves considerably good but unsatisfying accuracy",
+      "paper_id": "2018_INFOCOM_AppDNA_App_Behavior_Profiling_via_Graph-based_Deep_Learning"
+    },
+    {
+      "quote": "the key problem here is to determine the order",
+      "paper_id": "2018_INFOCOM_AppDNA_App_Behavior_Profiling_via_Graph-based_Deep_Learning"
+    },
+    {
+      "quote": "cannot be adopted as the input",
+      "paper_id": "2018_INFOCOM_AppDNA_App_Behavior_Profiling_via_Graph-based_Deep_Learning"
+    },
+    {
+      "quote": "too coarse-grained and sensitive",
+      "paper_id": "2018_INFOCOM_AppDNA_App_Behavior_Profiling_via_Graph-based_Deep_Learning"
+    },
+    {
+      "quote": "RNN performs the worst",
+      "paper_id": "2018_INFOCOM_AppDNA_App_Behavior_Profiling_via_Graph-based_Deep_Learning"
+    },
+    {
+      "quote": "their small sample sizes",
+      "paper_id": "2018_INFOCOM_AppDNA_App_Behavior_Profiling_via_Graph-based_Deep_Learning"
+    },
+    {
+      "quote": "most challenging issue is how to determine the boundaries",
+      "paper_id": "2019_MASS_SHAD_Privacy-Friendly_Shared_Activity_Detection_and_Data_Sharing"
+    },
+    {
+      "quote": "our core idea is to extract semantic tags",
+      "paper_id": "2019_MASS_SHAD_Privacy-Friendly_Shared_Activity_Detection_and_Data_Sharing"
+    },
+    {
+      "quote": "The better clustering of points will bring better data aggregation",
+      "paper_id": "2019_MASS_SHAD_Privacy-Friendly_Shared_Activity_Detection_and_Data_Sharing"
+    },
+    {
+      "quote": "Incorrect tags have little effect on the calculation results",
+      "paper_id": "2019_MASS_SHAD_Privacy-Friendly_Shared_Activity_Detection_and_Data_Sharing"
+    },
+    {
+      "quote": "semantic tags yielded by current models are still not accurate",
+      "paper_id": "2019_MASS_SHAD_Privacy-Friendly_Shared_Activity_Detection_and_Data_Sharing"
+    },
+    {
+      "quote": "multidimensional Balls-into-Bins",
+      "paper_id": "2019_TON_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint"
+    },
+    {
+      "quote": "collision probability decreases",
+      "paper_id": "2019_TON_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint"
+    },
+    {
+      "quote": "F-score reduces significantly",
+      "paper_id": "2019_TON_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint"
+    },
+    {
+      "quote": "sacrifices some data utility",
+      "paper_id": "2019_TON_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint"
+    },
+    {
+      "quote": "requires specialized equipment",
+      "paper_id": "2019_TON_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint"
+    },
+    {
+      "quote": "are highly sensitive to large noises",
+      "paper_id": "2019_TON_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint"
+    },
+    {
+      "quote": "requires great engineering effort",
+      "paper_id": "2019_TPDS_Enabling_Flexible_Resource_Allocation_in_Mobile_Deep_Learning_Systems"
+    },
+    {
+      "quote": "strenuous but with wonderful effect",
+      "paper_id": "2019_TPDS_Enabling_Flexible_Resource_Allocation_in_Mobile_Deep_Learning_Systems"
+    },
+    {
+      "quote": "is non-trivial",
+      "paper_id": "2019_TPDS_Enabling_Flexible_Resource_Allocation_in_Mobile_Deep_Learning_Systems"
+    },
+    {
+      "quote": "takes us great engineering effort",
+      "paper_id": "2019_TPDS_Enabling_Flexible_Resource_Allocation_in_Mobile_Deep_Learning_Systems"
+    },
+    {
+      "quote": "we went through all the source codes",
+      "paper_id": "2019_TPDS_Enabling_Flexible_Resource_Allocation_in_Mobile_Deep_Learning_Systems"
+    },
+    {
+      "quote": "can impact our system efficiency slightly",
+      "paper_id": "2019_TPDS_Enabling_Flexible_Resource_Allocation_in_Mobile_Deep_Learning_Systems"
+    },
+    {
+      "quote": "cost-profit greedy algorithm",
+      "paper_id": "2020_ICDE_Comprehensive and Efficient Data Labeling via Adaptive Model Scheduling"
+    },
+    {
+      "quote": "maximizing the value of the model output",
+      "paper_id": "2020_ICDE_Comprehensive and Efficient Data Labeling via Adaptive Model Scheduling"
+    },
+    {
+      "quote": "submodular function maximization with a knapsack constraint",
+      "paper_id": "2020_ICDE_Comprehensive and Efficient Data Labeling via Adaptive Model Scheduling"
+    },
+    {
+      "quote": "NP-hard",
+      "paper_id": "2020_ICDE_Comprehensive and Efficient Data Labeling via Adaptive Model Scheduling"
+    },
+    {
+      "quote": "the training process is hard to reach convergence",
+      "paper_id": "2020_ICDE_Comprehensive and Efficient Data Labeling via Adaptive Model Scheduling"
+    },
+    {
+      "quote": "first approximate algorithm for gang scheduling placement-sensitive jobs",
+      "paper_id": "2021_TON_SPIN_BSP_Job_Scheduling_With_Placement-Sensitive_Execution"
+    },
+    {
+      "quote": "NP-hard to find a solution that is O(log np / 2√log log np)-approximate",
+      "paper_id": "2021_TON_SPIN_BSP_Job_Scheduling_With_Placement-Sensitive_Execution"
+    },
+    {
+      "quote": "SPIN is not suitable for scheduling short-running latency-sensitive jobs",
+      "paper_id": "2021_TON_SPIN_BSP_Job_Scheduling_With_Placement-Sensitive_Execution"
+    },
+    {
+      "quote": "Retrofitting schedulers designed for big-data jobs to our BSP jobs could lead to inefficient executions",
+      "paper_id": "2021_TON_SPIN_BSP_Job_Scheduling_With_Placement-Sensitive_Execution"
+    },
+    {
+      "quote": "to the best of our knowledge, this is the first approximate algorithm",
+      "paper_id": "2021_TON_SPIN_BSP_Job_Scheduling_With_Placement-Sensitive_Execution"
+    },
+    {
+      "quote": "significantly greater than those of clients without any erroneous samples",
+      "paper_id": "2021_TPDS_Privacy-preserving_Efficient_Federated-Learning_Model_Debugging"
+    },
+    {
+      "quote": "direct transmission of the estimator may incur privacy risk",
+      "paper_id": "2021_TPDS_Privacy-preserving_Efficient_Federated-Learning_Model_Debugging"
+    },
+    {
+      "quote": "require participants to calculate and upload Hessian matrices",
+      "paper_id": "2021_TPDS_Privacy-preserving_Efficient_Federated-Learning_Model_Debugging"
+    },
+    {
+      "quote": "unacceptable computation and communication overhead",
+      "paper_id": "2021_TPDS_Privacy-preserving_Efficient_Federated-Learning_Model_Debugging"
+    },
+    {
+      "quote": "the noise added would be too large",
+      "paper_id": "2021_TPDS_Privacy-preserving_Efficient_Federated-Learning_Model_Debugging"
+    },
+    {
+      "quote": "model linking achieves higher prediction performance, especially when the amount of training data is small",
+      "paper_id": "2022_AAAI_Mlink"
+    },
+    {
+      "quote": "only introduces negligible additional overheads",
+      "paper_id": "2022_AAAI_Mlink"
+    }
+  ]
+}

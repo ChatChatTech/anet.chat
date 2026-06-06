@@ -1,0 +1,39 @@
+{
+  "paper_id": "2023_InFi_TMC_camera_ready",
+  "doi": null,
+  "title": "InFi: End-to-End Learning to Filter Input for Resource-Efficiency in Mobile-Centric Inference",
+  "year": 2023,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "移动端AI推理资源受限,需消除输入冗余以降低计算成本",
+  "problem_framing": "将输入过滤问题形式化为学习任务,通过Rademacher复杂度分析可过滤性",
+  "key_insight": "SKIP等价于对h(0)结果的REUSE,将两类方法统一于度量学习框架",
+  "method_signature": "端到端Siamese度量网络,统一SKIP/REUSE输入过滤",
+  "evaluation_criteria": "过滤准确率、过滤率、吞吐量/带宽节省",
+  "negative_result_or_admitted_limitation": "REUSE方法无法确定假设族,仅给出一个必要条件",
+  "evidence_for_taste": [
+    "without theoretical guidance",
+    "trial-and-error process is very cumbersome",
+    "leads to unguaranteed discriminability",
+    "neither SKIP nor REUSE method can work effectively"
+  ],
+  "thinking_moves": [
+    "发现现有方法缺理论指导,通过学习理论分析过滤可行性",
+    "将SKIP方法形式化为对特殊输入的REUSE实现方法统一",
+    "采用度量学习的Siamese网络结构替代手工特征",
+    "先证低置信度分类不可过滤(Lemma2),再证类别子集可过滤(Lemma3)"
+  ],
+  "topic_tags": [
+    "input-filtering",
+    "mobile-inference",
+    "resource-efficiency",
+    "metric-learning",
+    "filterability-analysis"
+  ],
+  "cites_own_work": [
+    "Yuan et al. [1] (MobiCom '22)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

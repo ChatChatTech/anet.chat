@@ -1,0 +1,40 @@
+{
+  "paper_id": "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4412887984",
+  "doi": "10.18653/v1/2025.findings-acl.803",
+  "title": "Federated Data-Efficient Instruction Tuning for Large Language Models",
+  "year": 2025,
+  "venue": "ACL Findings",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有联邦微调方法消耗全部本地数据,导致计算开销过大且易过拟合;集中式数据高效方案因隐私无法应用于FL",
+  "problem_framing": "在联邦学习中选择代表性数据子集(coreset)以减少客户端内和跨客户端的数据冗余,同时避免直接共享原始数据",
+  "key_insight": "融合不同Transformer层特征进行聚类,结合层级化选择(先客户端内聚类再服务器端聚类)可在保护隐私同时实现高效数据筛选",
+  "method_signature": "FedHDS: 层级化数据选择,Transformer全层特征融合,HDBSCAN聚类生成coreset进行LoRA微调",
+  "evaluation_criteria": "Rouge-L(未见任务),数据消耗比例,训练时间加速比",
+  "negative_result_or_admitted_limitation": "集中式Coreset-Cent在复杂NI数据集上仍优于我们的方法,说明FL方法仍有改进空间",
+  "evidence_for_taste": [
+    "last layer is not universally optimal",
+    "no single layer excels across all metrics",
+    "indicating room for further improvement",
+    "GlobalSelect may cause poor accuracy",
+    "convergence rate has certain disadvantages"
+  ],
+  "thinking_moves": [
+    "发现现有方法使用全部本地数据导致效率和泛化双重问题",
+    "指出集中式coreset方法隐私不兼容FL的根本限制(L1)",
+    "指出单层特征表示次优的认知局限(L2)",
+    "通过toy example证明任意单层都不全面",
+    "用t-SNE融合全层特征解决表示问题",
+    "层级化聚类(先intra后inter)避免全局聚类的大规模失效"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "LLM-instruction-tuning",
+    "coreset-selection",
+    "data-efficiency",
+    "privacy-preserving-ml"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

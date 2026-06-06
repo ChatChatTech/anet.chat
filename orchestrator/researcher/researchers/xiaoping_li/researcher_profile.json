@@ -1,0 +1,211 @@
+{
+  "slug": "xiaoping_li",
+  "n_extracts": 4,
+  "n_full": 1,
+  "n_partial": 3,
+  "n_thin": 0,
+  "year_range": [
+    2024,
+    2024
+  ],
+  "top_tags": [
+    [
+      "workflow-scheduling",
+      1
+    ],
+    [
+      "cloud-computing",
+      1
+    ],
+    [
+      "critical-path-heuristic",
+      1
+    ],
+    [
+      "dynamic-programming",
+      1
+    ],
+    [
+      "utility-computing",
+      1
+    ],
+    [
+      "serverless-cold-start",
+      1
+    ],
+    [
+      "LSTM-concurrency-prediction",
+      1
+    ],
+    [
+      "affinity-deployment",
+      1
+    ],
+    [
+      "workflow-response-time",
+      1
+    ],
+    [
+      "container-pre-warming",
+      1
+    ],
+    [
+      "permutation-flowshop-scheduling",
+      1
+    ],
+    [
+      "total-flowtime-minimization",
+      1
+    ],
+    [
+      "iterative-heuristics",
+      1
+    ],
+    [
+      "composite-constructive-heuristics",
+      1
+    ],
+    [
+      "pairwise-exchange-improvement",
+      1
+    ],
+    [
+      "microservice workflow scheduling",
+      1
+    ],
+    [
+      "container cloud",
+      1
+    ],
+    [
+      "GNN pattern recognition",
+      1
+    ],
+    [
+      "deadline-constrained optimization",
+      1
+    ],
+    [
+      "scheduling algorithm efficiency",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2024,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "microservice workflow scheduling",
+          1
+        ],
+        [
+          "container cloud",
+          1
+        ],
+        [
+          "GNN pattern recognition",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "CPLEX在小规模和简单结构问题上优于CPI；CPI计算时间高于PCP和DET",
+    "As workflow depth increases, branch misjudgments by ICPS have greater impact on response time",
+    "好的初始解不能保证IRZ有好结果, FLR1反而恶化性能",
+    "当资源不足时,PMWSC的延迟高于HEFT-D和PEFT-D; 算法并非总是最优"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "path structure information is not fully used",
+      "paper_id": "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    },
+    {
+      "quote": "complete critical paths as opposed to the partial ones",
+      "paper_id": "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    },
+    {
+      "quote": "distinct from the single critical path way",
+      "paper_id": "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    },
+    {
+      "quote": "the stability of CPLEX decreases rapidly",
+      "paper_id": "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    },
+    {
+      "quote": "VAR of CPI decreases as N increases",
+      "paper_id": "Critical Path-Based Iterative Heuristic for Workflow Scheduling in Utility and Cloud Computing"
+    },
+    {
+      "quote": "overlook the invocation dependencies",
+      "paper_id": "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    },
+    {
+      "quote": "rarely consider co-location",
+      "paper_id": "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    },
+    {
+      "quote": "misjudgments in branches by ICPS",
+      "paper_id": "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    },
+    {
+      "quote": "interference between them can degrade",
+      "paper_id": "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    },
+    {
+      "quote": "RPD value is lowest",
+      "paper_id": "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    },
+    {
+      "quote": "27 strategy combinations",
+      "paper_id": "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    },
+    {
+      "quote": "accumulation of cold start delays",
+      "paper_id": "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity"
+    },
+    {
+      "quote": "IRZ improves RZ about 5.27 times",
+      "paper_id": "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    },
+    {
+      "quote": "FL nearly 1 times but WY very little",
+      "paper_id": "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    },
+    {
+      "quote": "good initial solution cannot ensure good result for IRZ",
+      "paper_id": "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    },
+    {
+      "quote": "the best two are LR(n) and LR(n/m)",
+      "paper_id": "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    },
+    {
+      "quote": "ITERATIVE METHOD IS DESIRABLE FOR RZ-INSERTION",
+      "paper_id": "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization"
+    },
+    {
+      "quote": "a lot of computations are repeated in a scheduling process",
+      "paper_id": "Pattern learning for scheduling microservice workflow to cloud containers"
+    },
+    {
+      "quote": "little attention has been paid on mining similar substructures",
+      "paper_id": "Pattern learning for scheduling microservice workflow to cloud containers"
+    },
+    {
+      "quote": "the order of tasks from the same pattern is order-preserved",
+      "paper_id": "Pattern learning for scheduling microservice workflow to cloud containers"
+    },
+    {
+      "quote": "no task sorting is needed from the same pattern",
+      "paper_id": "Pattern learning for scheduling microservice workflow to cloud containers"
+    },
+    {
+      "quote": "our framework is more suitable for the environment with sufficient resources",
+      "paper_id": "Pattern learning for scheduling microservice workflow to cloud containers"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+  "doi": "10.48550/arxiv.2407.08584",
+  "title": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "云环境中数据本地性感知的任务调度需减少数据传输开销，现有方法忽略数据复制或缺乏在线适应性",
+  "problem_framing": "将任务分配建模为二部图上的非线性整数规划，最小化作业完成时间，同时处理任务分配和作业排序两个核心挑战",
+  "key_insight": "通过将搜索空间按服务器初始忙时划分为不重叠子区间，将非线性能耗约束转化为线性约束，从而高效求解",
+  "method_signature": "OBTA窄化搜索空间+分段线性化；WF水填充K-近似；RD全局优化副本删除；OCWF-ACC早退出加速",
+  "evaluation_criteria": "平均作业完成时间、计算开销、CDF分布，基于阿里云集群trace验证",
+  "negative_result_or_admitted_limitation": "WF的最坏情况近似比可达K（任务组数），理论上是紧界但实际可能性能不佳",
+  "evidence_for_taste": [
+    "显著降低计算开销",
+    "扩展到异构环境",
+    "任务组数K是近似比紧界",
+    "全局视角优于局部水填充",
+    "商业求解器计算昂贵"
+  ],
+  "thinking_moves": [
+    "为非线性规划问题设计搜索空间窄化技术",
+    "先证WF的K-近似下界(构造最坏情况实例)，再证上界建立紧界",
+    "将非连续约束通过子区间划分线性化",
+    "用全局副本删除替代局部水填充以提升性能",
+    "加入早退出技术加速作业重排序"
+  ],
+  "topic_tags": [
+    "data-locality-scheduling",
+    "distributed-job-execution",
+    "bipartite-graph-matching",
+    "approximation-algorithm",
+    "water-filling-heuristic"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

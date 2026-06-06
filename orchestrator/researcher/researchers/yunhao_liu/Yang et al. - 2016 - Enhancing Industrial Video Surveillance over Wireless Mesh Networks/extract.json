@@ -1,0 +1,40 @@
+{
+  "paper_id": "Yang et al. - 2016 - Enhancing Industrial Video Surveillance over Wireless Mesh Networks",
+  "doi": null,
+  "title": "Enhancing Industrial Video Surveillance over Wireless Mesh Networks",
+  "year": 2016,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "工业4.0需要极端环境下的视频监控，有线部署困难，无线mesh网络需保证视频质量",
+  "problem_framing": "现有mapping和queuing算法趋于复杂但改进空间减小，需挖掘数据粒度的潜力突破性能瓶颈",
+  "key_insight": "同一帧类型的不同位置、不同数据包(帧头vs普通包)对视频质量的贡献不同，应在packet级别区分重要性",
+  "method_signature": "IMesh: 基于帧类型、帧位置、数据包属性在MAC层EDCA的四个AC间进行packet级自适应映射",
+  "evaluation_criteria": "PSNR、SSIM、DFR(解码帧率)衡量视频质量；对比default EDCA、SMM、DMM、AMM基线",
+  "negative_result_or_admitted_limitation": "SMM和DMM仅区分帧类型，未区分同类型帧的不同位置；AMM对GOP内所有帧和帧内所有数据包同等对待",
+  "evidence_for_taste": [
+    "approaching complication",
+    "room for improvement is decreasing",
+    "finest granularity one can achieve",
+    "frames of the same type are of different importance",
+    "data packets of a single frame have different importance",
+    "more important the current frame turns out"
+  ],
+  "thinking_moves": [
+    "指出当前SOTA接近复杂度极限，改进空间减小，从而reframe问题方向",
+    "从frame-level粒度深入到packet-level粒度寻找突破",
+    "识别同一帧类型内部的位置差异性",
+    "识别同一帧内不同数据包(帧头)的价值差异",
+    "多因素综合：frame type + position + packet property + queue load"
+  ],
+  "topic_tags": [
+    "wireless-mesh-network-video",
+    "packet-level-QoS",
+    "802.11e-EDCA-mapping",
+    "video-surveillance-industrial",
+    "cross-layer-design"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文文本中未明确标注会议或期刊名称，venue和doi均未给出。Yunhao Liu为合作作者身份(非第一、非通讯)。"
+}

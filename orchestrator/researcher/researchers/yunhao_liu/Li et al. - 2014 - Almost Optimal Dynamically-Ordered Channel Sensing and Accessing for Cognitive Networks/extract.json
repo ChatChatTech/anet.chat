@@ -1,0 +1,37 @@
+{
+  "paper_id": "Li et al. - 2014 - Almost Optimal Dynamically-Ordered Channel Sensing and Accessing for Cognitive Networks",
+  "doi": null,
+  "title": "Almost Optimal Dynamically-Ordered Channel Sensing and Accessing for Cognitive Networks",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有MAB方法每次只感知一个信道,无法利用多信道瞬时机会,且随信道数增加导致指数量级的遗憾和存储开销",
+  "problem_framing": "将顺序信道感知与接入建模为Sequencing Multi-Armed Bandit问题,每个感知顺序映射为一个臂,臂数为O(N^K)",
+  "key_insight": "利用信道间共享子序列的特性,通过虚拟采样可从一次采样中更新多个臂的统计量;决策从臂级统计变为信道级统计可将存储从O(N^K)降至O(N)",
+  "method_signature": "SCB算法:用信道idle概率的上置信界构造序列置信界,每次选择SCB最大的感知顺序",
+  "evaluation_criteria": "regret上界O(NK log L)、存储复杂度O(N)、仿真中吞吐量提升>30%、学习速度提升>100%",
+  "negative_result_or_admitted_limitation": "UCB1和UCB1-VS的存储和计算复杂度随信道数指数增长,在实际场景(信道数常>10)下不可行",
+  "evidence_for_taste": [
+    "fails to exploit instantaneous opportunities",
+    "exponential in the number of channels",
+    "makes them infeasible in most practical scenarios",
+    "at least (K-1)! arms are updated in each slot"
+  ],
+  "thinking_moves": [
+    "先用UCB1作为baseline,揭示其指数量级遗憾的问题本质",
+    "从奖励函数的结构发现子序列共享特性,提出虚拟采样策略",
+    "放弃维护每个臂的统计,转而维护每个信道的统计以降低复杂度",
+    "通过数学证明(反证法两阶段)展示信道按置信上界降序排列即最优"
+  ],
+  "topic_tags": [
+    "cognitive-radio-networks",
+    "sequencing-multi-armed-bandit",
+    "channel-sensing-order",
+    "multi-channel-diversity",
+    "UCB-confidence-bound"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

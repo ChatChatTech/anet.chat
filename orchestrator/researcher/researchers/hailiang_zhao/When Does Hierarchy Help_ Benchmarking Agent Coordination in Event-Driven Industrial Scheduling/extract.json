@@ -1,0 +1,37 @@
+{
+  "paper_id": "When Does Hierarchy Help_ Benchmarking Agent Coordination in Event-Driven Industrial Scheduling",
+  "doi": null,
+  "title": "When Does Hierarchy Help? Benchmarking Agent Coordination in Event-Driven Industrial Scheduling",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有benchmark评估弱耦合环境下的任务完成,但共享动态演化系统中的协调机制缺乏系统研究",
+  "problem_framing": "用离散事件仿真环境对比四种协调范式,通过多维指标揭示结构性权衡",
+  "key_insight": "协调设计根本性地塑造agent系统行为,结构性权衡无法被结果指标单独刻画",
+  "method_signature": "DESBench离散事件调度基准测试平台,支持Plant-Area-Cell层级多agent协调",
+  "evaluation_criteria": "四维评估:有效性、约束对齐、协调效率、鲁棒性",
+  "negative_result_or_admitted_limitation": "集中式随难度扩展性差;层级式存在跨层失调;异层级通信开销大;全息式失去全局鲁棒性",
+  "evidence_for_taste": [
+    "\"coordination design fundamentally governs system behavior\"",
+    "\"structural trade-offs that cannot be captured by outcome metrics alone\"",
+    "\"each paradigm exposes a distinct bottleneck\"",
+    "\"similar outcome scores can mask substantial differences in internal coordination efficiency\""
+  ],
+  "thinking_moves": [
+    "识别现有benchmark缺失的真实工业协调场景",
+    "构建共享离散事件仿真以隔离协调变量",
+    "系统化比较协调范式以揭示结构性瓶颈",
+    "从结果指标追查内部协调机制差异"
+  ],
+  "topic_tags": [
+    "multi-agent-coordination-benchmark",
+    "discrete-event-scheduling",
+    "hierarchical-agent-system",
+    "LLM-agent-orchestration",
+    "coordination-paradigm-comparison"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

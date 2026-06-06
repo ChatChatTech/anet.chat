@@ -1,0 +1,37 @@
+{
+  "paper_id": "Trigger Where It Hurts_ Unveiling Hidden Backdoors through Sensitivity with Sensitron",
+  "doi": "10.48550/arxiv.2509.19101",
+  "title": "Trigger Where It Hurts: Unveiling Hidden Backdoors through Sensitivity with Sensitron",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有NLP后门攻击缺乏可解释性且无法定量刻画模型脆弱性模式",
+  "problem_framing": "将后门触发位置识别形式化为上下文感知的敏感度预测问题",
+  "key_insight": "可利用SHAP等可解释性工具反推模型决策薄弱环节,建立敏感度分数与攻击效果的数学关联(SRC=0.83)",
+  "method_signature": "Sensitron三阶段: DMSA预测敏感位置→ H-SHAP层级归因精化→ Plug-and-Rank生成排名的上下文触发器",
+  "evaluation_criteria": "攻击成功率(ASR)、语言流畅度(AS)、跨模型迁移性、对抗模型操控的鲁棒性",
+  "negative_result_or_admitted_limitation": "现有可解释性方法仅提供事后解释,无法先验识别最优触发位置,且计算效率不足",
+  "evidence_for_taste": [
+    "lack of a modular framework",
+    "the trade-off between stealthiness and controllability has not been fully resolved",
+    "cannot transfer that exact trigger to another model",
+    "explaining model predictions can also reveal latent decision patterns"
+  ],
+  "thinking_moves": [
+    "将安全攻击问题重新frame为可解释性驱动的敏感度预测任务",
+    "通过层级近似策略解决SHAP计算复杂度与序列长度的矛盾",
+    "模块化设计使触发器生成与注入过程解耦,提升跨任务迁移性",
+    "建立可解释性分数与攻击效果的定量相关性作为方法有效性的理论锚点"
+  ],
+  "topic_tags": [
+    "NLP-backdoor-attack",
+    "sensitivity-analysis",
+    "explainability-weaponization",
+    "hierarchical-attribution",
+    "plug-and-rank-trigger"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

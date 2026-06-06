@@ -1,0 +1,44 @@
+{
+  "paper_id": "When Mobile Apps Going Deep_ An Empirical Study of Mobile Deep Learning",
+  "doi": null,
+  "title": "A First Look at Deep Learning Apps on Smartphones",
+  "year": 2019,
+  "venue": "WWW",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "深度学习在移动端爆发,但研究与实践之间存在gap,需理解真实应用中深度学习如何使用",
+  "problem_framing": "通过大规模静态分析16,500个Android应用,揭示深度学习在移动端的采用模式、用途和模型特征",
+  "key_insight": "移动端深度学习模型出乎意料地轻量(中位数仅2.47MB/10M FLOPs),远小于服务器模型和MobileNet",
+  "method_signature": "构建DL Sniffer静态分析工具,通过检测DL框架而非代码模式来识别DL应用并提取模型",
+  "evaluation_criteria": "下载量/评论数/评分/APK大小/框架大小/模型层类型/计算量/保护程度",
+  "negative_result_or_admitted_limitation": "仅6%模型使用已知优化如量化;39.2%模型未混淆,19.2%未加密,模型保护很差;24个应用嵌入多个DL框架被标注为bad practice",
+  "evidence_for_taste": [
+    "history has proven that such early adopters heavily influence",
+    "DL is used as core building blocks",
+    "most DL models miss obvious optimizations",
+    "DL models are poorly protected",
+    "deem such multi-usage as bad practice",
+    "urges optimizations on deep learning models"
+  ],
+  "thinking_moves": [
+    "从框架检测入手而非代码模式检测,简化识别问题",
+    "通过两时间点快照对比发现DL应用增长趋势",
+    "人工标注DL功能是否为核心功能(essential)",
+    "将实证发现转化为对四类利益相关者的具体建议",
+    "用中位数比较揭示典型模型的实际大小"
+  ],
+  "topic_tags": [
+    "mobile-deep-learning-empirical",
+    "android-app-analysis",
+    "dl-framework-adoption",
+    "on-device-inference",
+    "model-protection"
+  ],
+  "cites_own_work": [
+    "Xu et al. 2019 (same work)",
+    "AppHolmes",
+    "DeepCache"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

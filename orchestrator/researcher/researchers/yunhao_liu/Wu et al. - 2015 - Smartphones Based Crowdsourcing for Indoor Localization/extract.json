@@ -1,0 +1,41 @@
+{
+  "paper_id": "Wu et al. - 2015 - Smartphones Based Crowdsourcing for Indoor Localization",
+  "doi": null,
+  "title": "Smartphones based Crowdsourcing for Indoor Localization",
+  "year": 2015,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "人工现场勘测成本高昂,限制了WiFi指纹定位在全球建筑的适用性",
+  "problem_framing": "如何利用用户移动轨迹自动构建指纹数据库,无需人工标注",
+  "key_insight": "用户步行路径将离散的RSS指纹在步数距离空间中连接起来,与应力释放平面图形成几何相似性",
+  "method_signature": "MDS构建应力释放平面图+指纹空间,通过走廊/房间识别建立映射关系",
+  "evaluation_criteria": "定位误差(米)和房间错误率",
+  "negative_result_or_admitted_limitation": "自动生成的radio map精度必然低于人工构建,基本LiFS不如RADAR(5.88m vs 3.42m)",
+  "evidence_for_trotaste": [
+    "unsatisfactory performance motivated us",
+    "naturally less accurate than manual",
+    "the problem become even more prominent",
+    "may fail in large open environments",
+    "leave as our future work"
+  ],
+  "thinking_moves": [
+    "把定位问题从2D平面转换到高维指纹空间利用几何关系",
+    "用MDS保证距离约束条件满足的数学方法",
+    "从floor-level粗映射到room-level细映射的迭代改进",
+    "用图论中心性(介数)自动识别走廊特征"
+  ],
+  "topic_tags": [
+    "WiFi指纹定位",
+    "众包定位",
+    "多维标度法MDS",
+    "无源校准",
+    "惯性传感器步数计数"
+  ],
+  "cites_own_work": [
+    "Will (2013)",
+    "MobiCom 2012 preliminary"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

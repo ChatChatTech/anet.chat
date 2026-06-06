@@ -1,0 +1,41 @@
+{
+  "paper_id": "Enhancing Content Planning for Table-to-Text Generation with Data Understanding and Verification",
+  "doi": "10.18653/v1/2020.findings-emnlp.262",
+  "title": "Enhancing Content Planning for Table-to-Text Generation with Data Understanding and Verification",
+  "year": 2020,
+  "venue": "EMNLP Findings",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "端到端模型的性能瓶颈在于内容规划阶段，用预言内容计划替换模型推理计划后性能急剧下降",
+  "problem_framing": "将内容规划问题拆解为数值理解不足与MLE训练无法验证重要记录两个子问题",
+  "key_insight": "数值的重要性高度依赖其上下文语境值，需通过预训练学习数值间的相对关系",
+  "method_signature": "DUV：上下文数值表示(Transformer预训练)+内容规划验证(策略梯度强化监督)",
+  "evaluation_criteria": "CS F1%、CO指标(内容选择与排序)、BLEU、RG保真度、人类评估",
+  "negative_result_or_admitted_limitation": "表面实现(Stage 2)影响RG/语法性/简洁性，MLB事件数据是瓶颈，均留待未来工作",
+  "evidence_for_taste": [
+    "NCP mistakenly states that Nets defeated Grizzlies",
+    "model lacks understanding of values",
+    "main challenge indeed lies in the content planning",
+    "Stage 2 can faithfully deliver most information",
+    "performance bottleneck lies in Stage 1"
+  ],
+  "thinking_moves": [
+    "通过对比预言与推理内容计划定位瓶颈",
+    "从输出错误反推编码阶段缺失的语义建模",
+    "将强化学习策略梯度引入内容规划验证",
+    "模块化消融验证每个组件的独立贡献",
+    "可视化数值表示验证排序学习效果"
+  ],
+  "topic_tags": [
+    "table-to-text-generation",
+    "content-planning",
+    "numerical-value-representation",
+    "policy-gradient-verification",
+    "neural-content-planning"
+  ],
+  "cites_own_work": [
+    "Gong et al., 2019"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

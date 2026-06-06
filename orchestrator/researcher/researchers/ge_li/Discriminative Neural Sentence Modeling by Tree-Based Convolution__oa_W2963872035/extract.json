@@ -1,0 +1,39 @@
+{
+  "paper_id": "Discriminative Neural Sentence Modeling by Tree-Based Convolution__oa_W2963872035",
+  "doi": "10.18653/v1/d15-1279",
+  "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+  "year": 2015,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "CNN捕捉局部特征但不捕获结构；RNN捕获结构但路径长导致梯度消失",
+  "problem_framing": "如何利用句子结构同时保持短传播路径",
+  "key_insight": "树结构上应用固定深度子树的特征检测器，所有节点到输出层路径等长",
+  "method_signature": "树卷积核滑动过整棵语法树，max pooling聚合特征",
+  "evaluation_criteria": "情感分析与问题分类的准确率",
+  "negative_result_or_admitted_limitation": "c-TBCNN略逊于d-TBCNN；复杂pooling效果有限；c-TBCNN的3-slot pooling是暂时硬编码",
+  "evidence_for_taste": [
+    "CNNs do not capture inherent sentence structures",
+    "RNNs may have difficulties in learning deep dependencies",
+    "A curious question is whether we can combine",
+    "d-TBCNN achieves higher performance than c-TBCNN",
+    "TBCNNs are not very sensitive to pooling methods",
+    "complicated pooling methods do preserve more information to some extent, but the effect is not large"
+  ],
+  "thinking_moves": [
+    "从CNN和RNN各自的缺陷反推设计需求",
+    "将位置编码改为依赖类型编码以处理变长子节点",
+    "先理论分析传播路径长度，再实验验证长句效果差距"
+  ],
+  "topic_tags": [
+    "tree-based-convolution",
+    "sentiment-analysis",
+    "question-classification",
+    "constituency-parsing",
+    "dependency-parsing"
+  ],
+  "cites_own_work": [
+    "Mou et al. (2014) arXiv TBCNN: A tree-based convolutional neural network for programming language processing"
+  ],
+  "extraction_quality": "full"
+}

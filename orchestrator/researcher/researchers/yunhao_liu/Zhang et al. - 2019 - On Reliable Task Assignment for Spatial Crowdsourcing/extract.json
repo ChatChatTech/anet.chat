@@ -1,0 +1,37 @@
+{
+  "paper_id": "Zhang et al. - 2019 - On Reliable Task Assignment for Spatial Crowdsourcing",
+  "doi": null,
+  "title": "On Reliable Task Assignment for Spatial Crowdsourcing",
+  "year": 2019,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "在大规模工人市场场景下,工人可能提交错误答案或无法在任务到期前完成,可靠性难以保证",
+  "problem_framing": "将任务可靠性建模为概率函数,提出MRA(预算约束下最大化可靠性)和MCA(可靠性约束下最小化成本)两个优化问题",
+  "key_insight": "可靠性函数具有单调次模性,可行解空间构成一致拟阵与划分拟阵的交集,可设计具有近似保证的贪心算法",
+  "method_signature": "基于次模函数优化的G-MRA和G-MCA贪心算法,分别保证3-近似和(1+1/β ln(h(E)/αc*))近似",
+  "evaluation_criteria": "任务可靠性、招募工人数目、算法运行时间",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "G-MRA算法在预算较小时表现尤为突出",
+    "G-MCA对可靠性阈值变化不敏感",
+    "G-MRA在不同置信度范围内均保持高效",
+    "GMM和RANDOM在低置信度场景下表现不佳"
+  ],
+  "thinking_moves": [
+    "将任务可靠性建模为概率形式(product形式)",
+    "识别目标函数的次模性质用于理论保证",
+    "把约束条件转化为拟阵交集形式",
+    "从覆盖问题的角度重新表述MCA问题"
+  ],
+  "topic_tags": [
+    "spatial-crowdsourcing",
+    "task-assignment",
+    "reliability-optimization",
+    "submodular-optimization",
+    "budget-constraint"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文中未明确标注期刊名称,venue信息无法确定;未找到Yunhao Liu在此工作中的具体角色定义(非第一作者且无明确Corresponding Author标注);实验部分结果描述较简略,关键数值结论需对照图示推断 | md truncated to head40k+tail20k"
+}

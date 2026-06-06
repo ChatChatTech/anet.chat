@@ -1,0 +1,581 @@
+{
+  "slug": "xiaocheng_feng",
+  "n_extracts": 82,
+  "n_full": 77,
+  "n_partial": 3,
+  "n_thin": 0,
+  "year_range": [
+    2015,
+    2025
+  ],
+  "top_tags": [
+    [
+      "dialogue-summarization",
+      2
+    ],
+    [
+      "multi-party-conversation",
+      2
+    ],
+    [
+      "faithfulness-hallucination",
+      2
+    ],
+    [
+      "检索增强生成RAG",
+      2
+    ],
+    [
+      "retrieval-augmented-generation",
+      2
+    ],
+    [
+      "cross-lingual-transfer",
+      2
+    ],
+    [
+      "controllable-text-generation",
+      2
+    ],
+    [
+      "target-dependent-sentiment",
+      2
+    ],
+    [
+      "target-context-connection",
+      2
+    ],
+    [
+      "inference-time-intervention",
+      2
+    ],
+    [
+      "parameter-efficient-training",
+      2
+    ],
+    [
+      "knowledge-editing",
+      2
+    ],
+    [
+      "multilingual-reasoning",
+      2
+    ],
+    [
+      "multilingual-NMT",
+      2
+    ],
+    [
+      "multi-aspect-controllable-text-generation",
+      1
+    ],
+    [
+      "attribute-distribution-intersection",
+      1
+    ],
+    [
+      "prefix-tuning",
+      1
+    ],
+    [
+      "autoencoder-latent-space",
+      1
+    ],
+    [
+      "iterative-neighbor-search",
+      1
+    ],
+    [
+      "事件检测",
+      1
+    ],
+    [
+      "Bi-LSTM",
+      1
+    ],
+    [
+      "CNN",
+      1
+    ],
+    [
+      "语言无关性",
+      1
+    ],
+    [
+      "词嵌入",
+      1
+    ],
+    [
+      "触发词抽取",
+      1
+    ],
+    [
+      "domain-specific-summarization",
+      1
+    ],
+    [
+      "pre-trained-language-models",
+      1
+    ],
+    [
+      "LLM幻觉分类",
+      1
+    ],
+    [
+      "事实性幻觉",
+      1
+    ],
+    [
+      "忠实性幻觉",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2015,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "target-dependent-sentiment",
+          1
+        ],
+        [
+          "LSTM-variant",
+          1
+        ],
+        [
+          "target-context-connection",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 6,
+      "top_tags": [
+        [
+          "事件检测",
+          1
+        ],
+        [
+          "Bi-LSTM",
+          1
+        ],
+        [
+          "CNN",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2017,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "distant-supervision-relation-extraction",
+          1
+        ],
+        [
+          "attention-memory-networks",
+          1
+        ],
+        [
+          "multi-instance-multi-label",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2018,
+      "paper_count": 30,
+      "top_tags": [
+        [
+          "neural-machine-translation",
+          1
+        ],
+        [
+          "multi-pass-decoding",
+          1
+        ],
+        [
+          "reinforcement-learning",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2019,
+      "paper_count": 16,
+      "top_tags": [
+        [
+          "knowledge-base-enhanced NLG",
+          1
+        ],
+        [
+          "data-to-text generation",
+          1
+        ],
+        [
+          "Wikipedia infobox-to-text",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "code-representation-pretraining",
+          1
+        ],
+        [
+          "nl-pl-crossmodal-learning",
+          1
+        ],
+        [
+          "replaced-token-detection",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "meeting-summarization",
+          1
+        ],
+        [
+          "dialogue-discourse-parsing",
+          1
+        ],
+        [
+          "graph-convolutional-network",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 30,
+      "top_tags": [
+        [
+          "multi-aspect-controllable-text-generation",
+          1
+        ],
+        [
+          "attribute-distribution-intersection",
+          1
+        ],
+        [
+          "prefix-tuning",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 63,
+      "top_tags": [
+        [
+          "federated-meeting-summarization",
+          1
+        ],
+        [
+          "adapter-fine-tuning",
+          1
+        ],
+        [
+          "selective-knowledge-distillation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 91,
+      "top_tags": [
+        [
+          "retrieval-augmented-generation",
+          2
+        ],
+        [
+          "LLM幻觉分类",
+          1
+        ],
+        [
+          "事实性幻觉",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 100,
+      "top_tags": [
+        [
+          "parameter-efficient-training",
+          2
+        ],
+        [
+          "knowledge-editing",
+          2
+        ],
+        [
+          "multilingual-reasoning",
+          2
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "在解毒属性上不是最优；分布非凸导致稀疏区域难以采样；K值过小则噪声显著导致不稳定",
+    "RNN/LSTM仅考虑前向序列，丢失后续重要线索，如release后接20 million euros",
+    "模型仍难以选重点、易产生幻觉，且标注数据成本高",
+    "RAG系统本身存在局限甚至会产生幻觉",
+    "数据集变异性不足,模拟环境缺乏不确定性,真实场景仍存差距",
+    "ABack难以检测语义混淆的隐性隐私泄露，因实体对齐存在局限",
+    "训练阶段多轮解码比RNNSearch耗时更长，测试阶段额外策略网络带来180s vs 87s的时间开销",
+    "合成数据热身本身无法显著提升引用质量，仅提供初始基础",
+    "DUAT increases latency due to multiple prompts; LLMs still fail on neologisms requiring extrinsic knowledge; difficult word detection remains an open question",
+    "POPULAR baseline struggles in long-form QA; ratio-based confidence capture is 'simple' and may miss other uncertainty patterns.",
+    "仅用正确性项I(X̃;Y|Q)的 ablation 结果劣于完整IB目标，表明简洁性项不可或缺。",
+    "Post-processing strategy fails on Turkish because assumption that first-step annotations are more trustworthy is not valid when second-step precision outperforms first-step",
+    "CAI依赖合适的caption查询可用性;不适用于不依赖multi-head attention的LVLM",
+    "+EN设置下CC-TUNING性能反而下降，因EN2EN连接偏离跨语言目标；实验仅在两个模型验证",
+    "本文方法虽提升多语言能力,但也引入了以英文为中心的语言偏差,跨语言对齐仍是重大挑战",
+    "干预主要激活感知相关注意力头，可能非预期影响推理路径",
+    "除Gemini外几乎所有模型在零样本下接近随机水平,当前LVLMs缺乏有效的多模态思维集成能力",
+    "Incorporating AST into pre-training does not bring improvements; code2seq with AST paths still outperforms",
+    "k_v增大会损害结构质量(CEDS下降、节点数膨胀)，adaptive策略计算开销高但收益有限；固定aspect下剪枝策略破坏高质量聚类",
+    "连续空间采样会集中在高概率小区域,相似语义导致多样性略逊于Discrete的随机采样",
+    "直接最小化熵会导致模型学习捷径,产生尖锐的输出分布;即使如Qwen-VL-Chat等微调过多语言数据的模型也表现出明显的跨语言性能差距",
+    "w/o fine-tune 仅达 28.35 R-1，表明伪摘要预训练不能独立完成摘要任务；Ground truth 得分仍高于生成模型，说明任务难度大",
+    "DDAMS+DDADA (w/o fine-tune) only achieves basic effect - fine-tuning is essential for good performance",
+    "预测误差累积导致τ偏离训练分布使错误爆炸; 预测ε再恢复x0效率低且误差放大导致模型崩溃",
+    "When hop count exceeds 6, results degrade; gradient vanishing problem as memory network goes deeper",
+    "注意力机制LSTM性能反而低于标准LSTM,可能因参数过多小数据集难以优化",
+    "全并行模型训练几乎不收敛；模型难以生成美观的人脸图像",
+    "未能有效处理一词多义问题, 图片通过网页爬取, 可能不完全对应同一语义",
+    "英文和中文词向量分开训练不在同一语义空间，需用线性层映射；且仅在两种关系类型上验证",
+    "表面实现(Stage 2)影响RG/语法性/简洁性，MLB事件数据是瓶颈，均留待未来工作",
+    "Absolute improvement is relatively small on WikiBio since 728K pairs let neural models memorize inference patterns",
+    "更多低性能LLM会干扰高性能模型导致性能下降;逆变换存在欠拟合问题",
+    "扩散模型在文本图像生成上仍有质量问题,生成风格一致图像仍困难[Anytext仍不能完全满足]",
+    "高层级移植破坏语言建模；粗粒度策略对高资源语言收益不一致；多步移植性能下降；挑战依然开放",
+    "方法受限于旋转位置编码,且无法完全达到零扰动的最优情况;分布估计精度受预训练序列长度L限制",
+    "Qwen2.5-Math与其它模型合并时线性模式连接被破坏，性能大幅下降；TIES-Merging和DARE会加剧干扰",
+    "该领域仍处于起步阶段,大量方向仍处于实验阶段,在实际场景有效应用前需取得实质性进展",
+    "小型模型ChatGLM3无法理解复杂协议导致性能下降；冲突处理策略未能有效缓解冗余问题；LLM对低资源语言存在偏见",
+    "大模型无法超越专门训练的LED模型,单纯堆砌知识和参数不是好方案,目录生成需要逻辑推理和归纳能力",
+    "性能依赖于标签数据的质量和代表性，伪标签过程在噪声或模糊数据中仍可能引入错误",
+    "仍有故事不一致(床/被子风格颜色不一致)、角色重复、角色动作错误等问题",
+    "遮蔽超过100个检索头反而降低样本质量,模型生成不连贯",
+    "可训练调节器因伪数据噪声反而不如启发式调节器;多义词关键词(如military)使启发式调节器产生混淆",
+    "CLNER性能较低因其使用基于语言资源的间接特征和跨语言实体映射；这些方法存在错误传播问题",
+    "AbsRL Enhance在正确性上表现最差,因为话语抽取会破坏对话上下文连贯性",
+    "Prompt methods hurt performance due to LVLMs' inability to follow complex instructions; VCD harms contextual ability when context is needed; scaling model size shows no improvement in mitigating snowballing.",
+    "QGNet 用于 QA 任务提升有限(41.5% vs 63.6%),锚点检测覆盖率仅 69.6%",
+    "错误主要由error propagation和semantic matching problems及grammar limitation引起,当前grammar不覆盖contains in操作符",
+    "极小ρ值(如10%)过度聚焦高可分离样本导致多样性降低,已有方法在多语言设置中效果不一致",
+    "即使检测出冗余,模型仍生成含冗余信息的摘要,原因是小数据集导致训练不充分",
+    "Performance trade-offs exist across languages due to pre-training data imbalances; larger-scale model experiments not conducted due to compute limits.",
+    "FRONT encounters lower Rec.-5 on QAMPARI dataset because answers consist of concatenated entities, diverging significantly from training data",
+    "De→En 上落后JM-NAT (31.52 vs 32.24),因教师模型更强",
+    "当使用平行结构等表达时，模型会产生错误表达(如'Davis 20分12篮板1抢断2盖帽'的列表格式错误)；句子级方法在文档级任务上无法保留风格词",
+    "原始MH方法比随机采样更差（40.2% vs 38.8%），需结合重要性采样才有效",
+    "困惑度不足以反映下游任务性能,语言建模存在recency bias,现有benchmark不足以评估外推",
+    "空间推理和端到端推理任务提升有限,因其对语言上下文依赖较弱且固有复杂性超出语言对齐范畴",
+    "多语言模型参数干扰导致性能低于单语言专家模型",
+    "问题生成在复杂逻辑形式上效果不佳，多轮对话场景下生成质量差导致性能下降",
+    "动态权重机制有2-4%的泛化性损失但可接受；集成增强机制导致Counterfact上局部性下降4-6%但整体提升超过12%",
+    "零初始化前DEEPEN初始化依赖LLM分布，导致新知识捕获不足",
+    "WordBERT-Glove underperforms randomly initialized versions; larger vocab causes slower softmax on probing task",
+    "32个头时性能显著下降，因能力头重叠增加导致判别性降低；手动任务分解存在主观性；仅验证至8B模型。",
+    "获取平行数据的成本很高；cross-attention系列方法因参数过多在小型数据集上表现不佳",
+    "仅用预训练阶段学习的参数化知识，生成的文档可能不完整；之前生成的文档中错误或幻觉会产生负面影响",
+    "连续预训练可能导致大语言模型灾难性遗忘，损害通用能力",
+    "语言间数据不平衡导致不同语言对齐程度不等，性能权衡不可避免",
+    "现有方法用固定边界框建模物体,不足以理解视频中物体的移动;只建模单个动作导致信息损失",
+    "RL策略未能显著提升性能；列预测仍是主要瓶颈；跨数据集迁移效果不佳",
+    "Generated sentences still have spelling errors and fail to capture linguistic structure; large gap remains between generation and reference.",
+    "skill set是基于prior knowledge手动定义，可能有更优配置",
+    "模板系统在RG P%上表现最好因为包含大量事实，但僵硬结构导致CO和BLEU低；金标准文本也存在少量事实矛盾（字段命中率错误）",
+    "分离的复制机制与GPT-2生成导致birth date错误和语法不连贯",
+    "注意力增强LSTM反而下降约65%,参数过多小数据集难优化",
+    "规则构建数据集带来瓶颈,弱监督方法训练分布与实际应用存在差距,最佳相关度不到0.5",
+    "We assume the implicit query \"[name]'s previous day plan\" is used... — 对Previous Day Summary的实现细节只是假设,未验证",
+    "人类评估一致性kappa仅0.56；BLEU整体得分偏低，生成任务极具挑战；生成结果存在重复和自相矛盾问题",
+    "训练两个模型使计算成本翻倍；O2M场景下模型1在HRL上会退化",
+    "输入编辑方法只能增补事实,无法纠正LLM中的错误;检索文档可能含无关噪声;生成式检索无法获取实时信息",
+    "训练开销增加（5.7h→7.6h）；LSSD-Adaptive在O2M上因方差过大表现不稳定",
+    "MRRE需要访问模型内部表示，对闭源LLM不可行。Debias方法对LVLM反而导致性能下降。",
+    "现有算法挣扎于实体级遗忘，NPO-GD在构造遗忘集上表现最差(0.0875 vs 0.5253)"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "Bi-LSTM can capture both preceding and following",
+      "paper_id": "A Language-Independent Neural Network for Event Detection"
+    },
+    {
+      "quote": "avoid the errors propagated from NLP tools",
+      "paper_id": "A Language-Independent Neural Network for Event Detection"
+    },
+    {
+      "quote": "CNN is good at capturing salient features",
+      "paper_id": "A Language-Independent Neural Network for Event Detection"
+    },
+    {
+      "quote": "cannot establish a relation between court and release",
+      "paper_id": "A Language-Independent Neural Network for Event Detection"
+    },
+    {
+      "quote": "rather than blindly assigning high probability",
+      "paper_id": "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    },
+    {
+      "quote": "avoiding overfitting to misaligned knowledge",
+      "paper_id": "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    },
+    {
+      "quote": "acknowledging the insufficiency of knowledge",
+      "paper_id": "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    },
+    {
+      "quote": "turn trash into treasure",
+      "paper_id": "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    },
+    {
+      "quote": "significantly correlation between REJ and factuality",
+      "paper_id": "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    },
+    {
+      "quote": "overlook the potential for deeper, latent-level cross-lingual interactions",
+      "paper_id": "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    },
+    {
+      "quote": "cross-lingual connection becomes an EN2EN connection",
+      "paper_id": "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    },
+    {
+      "quote": "underscores CC-TUNING's alignment with its motivation",
+      "paper_id": "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    },
+    {
+      "quote": "an 'easy-to-learn' Transform Matrix",
+      "paper_id": "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    },
+    {
+      "quote": "introduces only negligible interference",
+      "paper_id": "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    },
+    {
+      "quote": "Feed-forward activations contribute the most",
+      "paper_id": "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    },
+    {
+      "quote": "the middle layers may capture more valuable and generalized knowledge",
+      "paper_id": "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    },
+    {
+      "quote": "hindering the exploration of inherently rich interactive relations",
+      "paper_id": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    },
+    {
+      "quote": "a question often sparks a discussion in a meeting",
+      "paper_id": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    },
+    {
+      "quote": "the scale of corpus is significant to the performance",
+      "paper_id": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    },
+    {
+      "quote": "uniformly accepting information from different discourse relations is not suitable",
+      "paper_id": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    },
+    {
+      "quote": "Ground truth obtains the highest scores",
+      "paper_id": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    },
+    {
+      "quote": "neural-based methods are extremely strong performer",
+      "paper_id": "Effective Deep Memory Networks for Distant Supervised Relation Extraction"
+    },
+    {
+      "quote": "DMN provides superior performance to all other methods",
+      "paper_id": "Effective Deep Memory Networks for Distant Supervised Relation Extraction"
+    },
+    {
+      "quote": "when the number of hops exceeds 6, the experimental results become worse",
+      "paper_id": "Effective Deep Memory Networks for Distant Supervised Relation Extraction"
+    },
+    {
+      "quote": "The reason might lie in the gradient vanishing problem",
+      "paper_id": "Effective Deep Memory Networks for Distant Supervised Relation Extraction"
+    },
+    {
+      "quote": "lack a profound understanding",
+      "paper_id": "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    },
+    {
+      "quote": "sub-optimal performance",
+      "paper_id": "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    },
+    {
+      "quote": "lacks interpretability",
+      "paper_id": "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    },
+    {
+      "quote": "minimizing the perturbation",
+      "paper_id": "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    },
+    {
+      "quote": "empirically suggest α=1 and β=32",
+      "paper_id": "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    },
+    {
+      "quote": "potentially hinder its generalization",
+      "paper_id": "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    },
+    {
+      "quote": "predominantly focuses on LLMs, while neglecting the knowledge synthesis",
+      "paper_id": "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    },
+    {
+      "quote": "信息气泡效应和信息视野局限",
+      "paper_id": "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    },
+    {
+      "quote": "reinforce recognition disparities between prominent and lesser-known researchers",
+      "paper_id": "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    },
+    {
+      "quote": "lack of standardized benchmarks and evaluation metrics hinders direct comparison",
+      "paper_id": "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    },
+    {
+      "quote": "remain at an experimental stage",
+      "paper_id": "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    },
+    {
+      "quote": "addressing conflicts arising from diverse perspectives",
+      "paper_id": "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986"
+    },
+    {
+      "quote": "Protocol-guided prompting depends on the model's capabilities",
+      "paper_id": "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986"
+    },
+    {
+      "quote": "preferential performance in CRS with Protocol-guided Prompting",
+      "paper_id": "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986"
+    },
+    {
+      "quote": "redundancies tend to persist, even exacerbate",
+      "paper_id": "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986"
+    }
+  ]
+}

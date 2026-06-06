@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2009 - Multicast Throughput of Hybrid Wireless Networks Under Gaussian Channel Model",
+  "doi": null,
+  "title": "Multicast Throughput of Hybrid Wireless Networks Under Gaussian Channel Model",
+  "year": 2009,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有混合网络容量结果均基于阈值模型,而高斯信道模型更能刻画物理层特性",
+  "problem_framing": "将组播容量问题形式化为HEN中三种策略的最优选择问题",
+  "key_insight": "B-O链路成为大多数情况下瓶颈,优化需考虑m、n、n_d的相对关系",
+  "method_signature": "基于渗透理论和欧几里得生成树的三策略路由调度",
+  "evaluation_criteria": "每会话组播吞吐量下界,按参数区间分类比较",
+  "negative_result_or_admitted_limitation": "未给出高斯信道模型下组播容量的匹配上下界",
+  "evidence_for_taste": [
+    "the bottlenecks are on B-O links",
+    "there is indeed a gap",
+    "still no matching upper bounds",
+    "we also assume the links...have no difference",
+    "if the bandwidth of B-O links can be increased"
+  ],
+  "thinking_moves": [
+    "通过瓶颈分析发现B-O链路为多数场景的制约因素",
+    "按参数空间分区选择最优策略而非单一方案",
+    "将连通性策略和渗透策略统一为混合策略框架",
+    "利用已有单播结果的类比推导组播吞吐界"
+  ],
+  "topic_tags": [
+    "无线网络容量",
+    "组播路由",
+    "混合无线网络",
+    "高斯信道模型",
+    "渗透理论"
+  ],
+  "cites_own_work": [
+    "Wang et al. 2009 [13]",
+    "Wang et al. 2009 [14]",
+    "Wang et al. 2009 [15]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

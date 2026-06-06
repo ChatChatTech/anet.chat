@@ -1,0 +1,38 @@
+{
+  "paper_id": "DyC-STG_ Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT",
+  "doi": "10.48550/arxiv.2509.06483",
+  "title": "DyC-STG: Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "智能家居IoT传感器数据质量决定上层服务可靠性",
+  "problem_framing": "将数据可信度评估形式化为时变图上的时空预测问题",
+  "key_insight": "图拓扑由控制节点物理状态事件驱动调制+因果注意力约束时域 receptive field",
+  "method_signature": "事件驱动动态图 + 因果增强Transformer的双分支融合架构",
+  "evaluation_criteria": "F1-Score、AUC 超越最强基线1.44和0.51个百分点",
+  "negative_result_or_admitted_limitation": "移除因果推理模块导致F1下降10.4%，说明该组件最关键但也最脆弱",
+  "evidence_for_taste": [
+    "静态图拓扑无法捕捉物理事件驱动的动态相关性",
+    "混淆虚假相关与真实因果导致鲁棒性崩塌",
+    "双向Transformer捕获所有相关性而无法区分因果方向",
+    "移除因果推理F1暴跌10.4%是最关键组件",
+    "超过两层的GAT和Transformer出现oversmoothing和优化困难"
+  ],
+  "thinking_moves": [
+    "把传统时空预测任务重新框定为数据可信度检测任务",
+    "选取控制节点作为图拓扑调制的物理事件触发器",
+    "用masked attention强制时域因果顺序而非统计共现",
+    "通过消融实验量化每个组件的边际贡献以验证核心假设",
+    "寻找最优深度配置而非一味加深模型"
+  ],
+  "topic_tags": [
+    "IoT数据可信度评估",
+    "动态图神经网络",
+    "因果注意力机制",
+    "智能家居传感器",
+    "事件驱动图拓扑"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

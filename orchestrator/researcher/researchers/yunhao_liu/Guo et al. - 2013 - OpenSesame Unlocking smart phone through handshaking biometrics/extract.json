@@ -1,0 +1,37 @@
+{
+  "paper_id": "Guo et al. - 2013 - OpenSesame Unlocking smart phone through handshaking biometrics",
+  "doi": null,
+  "title": "OpenSesame: Unlocking Smart Phone through Handshaking Biometrics",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有解锁方式存在安全缺陷(密码/图案)或硬件成本高(指纹)，需要更便捷的用户认证方案",
+  "problem_framing": "利用人手摇晃手机的加速度模式具有唯一性、稳定性，将摇晃数据投影到A-Space提取特征",
+  "key_insight": "不同人的摇晃模式(速度/频率/幅度/手腕扭转)存在显著差异，且同一人习惯稳定可重复",
+  "method_signature": "A-Space中四个摇晃函数(S1-S4)提取角度/距离PDF特征，用SVM二分类验证",
+  "evaluation_criteria": "FNR/FPR/TPR多指标衡量认证准确率和安全性",
+  "negative_result_or_admitted_limitation": "角度类函数(S1/S2)FNR约20%差于距离类函数(S3/S4)的10%；侧躺姿势下准确率仅76%",
+  "evidence_for_taste": [
+    "shaking pattern is kind of unique, stable and distinguishable",
+    "user always shakes in a similar way",
+    "distance-based shaking functions perform better",
+    "invariant to rotation and scaling",
+    "robust because the probability that noises are selected is very low"
+  ],
+  "thinking_moves": [
+    "从生物特征唯一性出发，挖掘日常行为(摇晃手机)作为身份标识",
+    "将三维加速度时序数据投影到几何空间(A-Space)，把时序问题几何化",
+    "设计角度/距离两类摇晃函数，发现距离类更稳定，启发后续特征选择",
+    "用概率分布函数(PDF)而非原始点云表示特征，实现不变性(旋转/缩放)",
+    "承认姿势变化对准确率的影响，标注为鲁棒性局限"
+  ],
+  "topic_tags": [
+    "smartphone-authentication",
+    "behavioral-biometrics",
+    "handshaking-biometrics",
+    "accelerometer-motion-patterns"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

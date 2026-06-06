@@ -1,0 +1,38 @@
+{
+  "paper_id": "icml2023_camera_ready",
+  "doi": null,
+  "title": "Optimal Arms Identification with Knapsacks",
+  "year": 2023,
+  "venue": "ICML",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "BAI忽略资源约束,实际场景如医疗试验需在供料/成本限制下识别最优配方",
+  "problem_framing": "在有限资源预算B下最大化识别全部最优臂的概率,LP松弛定义最优臂集合",
+  "key_insight": "最优臂选择(点)与可行域结构(全局)之间存在几何关系,复杂度测度H桥接两者",
+  "method_signature": "FULLOAK先UCB收敛最优分布,再BASEOAK式逐轮淘汰四分之一臂",
+  "evaluation_criteria": "错误概率的指数上界,匹配下界常数因子",
+  "negative_result_or_admitted_limitation": "BASEOAK均匀探索偏离最优分布,无法在游戏中删除任何最优臂",
+  "evidence_for_taste": [
+    "excessive emphasis on point aspect",
+    "veers widely from the optimal distribution",
+    "cannot delete any optimal arm",
+    "builds a bridge between the OAK setting",
+    "The algorithm needs to search over all possible distributions"
+  ],
+  "thinking_moves": [
+    "从几何LP角度证Reduced cost下界,连接点估计与可行域全局结构",
+    "承认BASEOAK的局限性(偏离最优分布)作为动机改进FULLOAK",
+    "通过构造W个问题实例证instance-dependent下界",
+    "先证明最坏情况上界,再展示算法接近最优"
+  ],
+  "topic_tags": [
+    "best-arm-identification",
+    "bandits-with-knapsacks",
+    "linear-programming-relaxation",
+    "pure-exploration",
+    "optimal-distribution-estimation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

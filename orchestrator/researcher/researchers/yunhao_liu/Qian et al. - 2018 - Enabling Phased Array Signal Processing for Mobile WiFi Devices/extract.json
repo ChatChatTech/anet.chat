@@ -1,0 +1,41 @@
+{
+  "paper_id": "Qian et al. - 2018 - Enabling Phased Array Signal Processing for Mobile WiFi Devices",
+  "doi": null,
+  "title": "Enabling Phased Array Signal Processing for Mobile WiFi Devices",
+  "year": 2018,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "commodity devices have limited antennas and uncertain phase offsets, making accurate AoA estimation non-trivial without elaborate calibration",
+  "problem_framing": "How to achieve accurate AoA measurements on COTS mobile devices without hardware modification and with minimal human interaction?",
+  "key_insight": "Involve natural rotation to formulate virtual spatial-temporal antenna array; taking differential phase between orientations removes unknown phase offsets while rotation angle is captured by inertial sensors",
+  "method_signature": "D-MUSIC: differential MUSIC algorithm eliminating phase offsets via phase differences from rotated antenna measurements",
+  "evaluation_criteria": "AoA estimation error (degrees) compared against standard MUSIC and Phaser; requires natural user rotation only",
+  "negative_result_or_admitted_limitation": "Cannot be directly deployed on current mobile devices due to lack of CSI hardware support; requires horizontal plane rotation which real users cannot perform perfectly; indirect multipath handling via calibration step is annoying for practical use",
+  "evidence_for_taste": [
+    "more than 20% cases have estimation error beyond 60°",
+    "standard MUSIC totally fails to yield correct AoA estimation",
+    "D-MUSIC is envisioned only as early step towards practical scheme",
+    "the operation of calibration is annoying for practical use",
+    "cannot be directly generalized to arbitrary types of arrays",
+    "real users cannot rotate the device perfectly in the horizontal plane"
+  ],
+  "thinking_moves": [
+    "从绝对AoA估计转为相对AoA估计，将相位偏移问题转化为差分消去问题",
+    "利用自然用户行为(旋转)代替硬件改进，将传感器数据与无线信号联合使用",
+    "通过多组测量解模糊，将问题形式化为方程组求交集",
+    "承认当前方法的局限性和工程约束，将多径问题降级为校准步骤而非直接估计"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-AoA-estimation",
+    "phased-array-signal-processing",
+    "mobile-indoor-localization",
+    "virtual-antenna-array-synthesis",
+    "inertial-sensor-assistance"
+  ],
+  "cites_own_work": [
+    "Kun Qian, Chenshu Wu, Zheng Yang, Zimu Zhou, Xu Wang, and Yunhao Liu, 'Tuning by turning: Enabling phased array signal processing for wifi with inertial sensors,' in Proc. of IEEE INFOCOM, 2016."
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

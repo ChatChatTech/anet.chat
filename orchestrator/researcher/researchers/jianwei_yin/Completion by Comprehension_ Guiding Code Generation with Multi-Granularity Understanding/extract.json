@@ -1,0 +1,41 @@
+{
+  "paper_id": "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding",
+  "doi": "10.48550/arxiv.2512.04538",
+  "title": "Completion by Comprehension: Guiding Code Generation with Multi-Granularity Understanding",
+  "year": 2025,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有RAG方法将代码视为纯文本,依赖浅层语义匹配,忽略结构语义和代码特定依赖关系",
+  "problem_framing": "仓库级代码补全需要理解跨文件依赖,但现有检索方法存在语义和结构鸿沟",
+  "key_insight": "采用\"先理解,后补全\"范式,通过静态分析提取多粒度上下文指导生成",
+  "method_signature": "静态分析+图选择+结构重排的多粒度理解框架",
+  "evaluation_criteria": "EM/ES/ID.EM/F1在CrossCodeEval和RepoEval上与SOTA对比",
+  "negative_result_or_admitted_limitation": "静态分析规则可能遗漏复杂结构的边缘情况,且多粒度上下文可能超出模型上下文窗口",
+  "evidence_for_taste": [
+    "treat code as plain natural language",
+    "overlooking structural semantics",
+    "structural mismatch introduces irrelevant",
+    "comprehension before completion",
+    "rather than relying solely on fragment-level retrieval",
+    "handcrafted rules inevitably overlook",
+    "not all parsed information is equally valuable"
+  ],
+  "thinking_moves": [
+    "将RAG的碎片检索问题重新框架为代码理解问题",
+    "借鉴人类开发者先理解后编码的工作流程",
+    "从函数级到项目级分层提取结构语义",
+    "用Personalized PageRank量化多粒度上下文重要性",
+    "同时考虑语义相似度和AST结构一致性"
+  ],
+  "topic_tags": [
+    "repository-level-code-completion",
+    "multi-granularity-code-understanding",
+    "structure-aware-retrieval",
+    "static-analysis-AST",
+    "retrieval-augmented-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zheng et al. - 2013 - Survival of the Fittest Data Dissemination with Selective Negotiation in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Survival of the Fittest: Data Dissemination with Selective Negotiation in Wireless Sensor Networks",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Negotiation-based dissemination协议(如Deluge)占用了过多时间,实验显示negotiation贡献了71%的总耗时",
+  "problem_framing": "在保证可靠性的前提下,如何在flooding和negotiation之间选择最优切换点以最小化完成时间",
+  "key_insight": "Flooding在初期快速但无法保证高可靠; Negotiation保证可靠但开销大; 二者互补,选择性组合可取长补短",
+  "method_signature": "基于时间-可靠性解析模型预测两种方案效率,分布式决策选择最优切换轮次n",
+  "evaluation_criteria": "完成时间(reduction factor)和可靠性",
+  "negative_result_or_admitted_limitation": "当要求100%可靠时,需要无限次flooding才能达到,此时negotiation是必须的(n_F→∞)",
+  "evidence_for_taste": [
+    "negotiation incurs large overhead",
+    "neither flooding nor negotiation is efficient when only one is used",
+    "a naive combination of two schemes with a fixed n is possible to shorten the completion time",
+    "completion time is the chief optimizing goal",
+    "SurF only needs to keep radio on in the flooding-phase, which accounts for only a small fraction"
+  ],
+  "thinking_moves": [
+    "把dissemination问题重新frame为两种scheme的组合优化问题",
+    "通过分解negotiation过程(ADV/REQ/DATA)建立精确解析模型",
+    "用解析模型预测局部最优,进而推导网络级性能提升",
+    "从实验观测反推设计动机:71%时间花在negotiation上"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network",
+    "data-dissemination",
+    "flooding-negotiation-hybrid",
+    "time-reliability-model",
+    "distributed-decision"
+  ],
+  "cites_own_work": [
+    "ECD (2011)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

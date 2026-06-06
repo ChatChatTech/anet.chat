@@ -1,0 +1,40 @@
+{
+  "paper_id": "Liu et al. - 2023 - CRC-based Reliable WiFi Backscatter Communiation for Supply Chain Management",
+  "doi": null,
+  "title": "CRC-based Reliable WiFi Backscatter Communiation for Supply Chain Management",
+  "year": 2023,
+  "venue": "Applied Sciences",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "供应链中监控设备功耗是关键瓶颈，需超低功耗通信技术",
+  "problem_framing": "现有背向散射系统需额外硬件(双AP或受控激励源)，难以大规模部署",
+  "key_insight": "利用802.11b协议中CRC32与数据的内在约束关系，通过CRC逆向算法从FCS字段反向计算原始数据包",
+  "method_signature": "CRC逆向解码器 + 异或差分解码器的单AP环境WiFi背向散射系统",
+  "evaluation_criteria": "误码率、信噪比、解码耗时、冗余位对性能影响",
+  "negative_result_or_admitted_limitation": "当标签数据长度超过32位时逆向结果不满足唯一性；信噪比低于-13dB时无法正确解码",
+  "evidence_for_taste": [
+    "the average decoding time of CRCScatter system is independent of the tag data length",
+    "Adding redundancy check bits can significantly reduce the decoding BER",
+    "the system cannot decode correctly due to excessive noise interference",
+    "the CRC reverse algorithm is better than the brute-force search"
+  ],
+  "thinking_moves": [
+    "将暴力搜索问题转化为利用协议固有约束的逆向计算问题",
+    "利用802.11b协议的CRC冗余字段作为解码的数学约束条件",
+    "将DBPSK与BPSK调制差异导致的相位歧义问题通过差分解码解决",
+    "通过添加冗余校验位而不改变解码算法来提升抗噪性能"
+  ],
+  "topic_tags": [
+    "WiFi背向散射通信",
+    "CRC逆向算法",
+    "单AP解码",
+    "供应链物联网",
+    "环境背向散射"
+  ],
+  "cites_own_work": [
+    "Peng et al., 2020 (PLoRa)",
+    "Zhang et al., 2021 (RapidRider)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography",
+  "doi": "10.48550/arxiv.2501.03245",
+  "title": "GECC: A GPU-Based High-Throughput Framework for Elliptic Curve Cryptography",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "ECC remains bottleneck in throughput-sensitive applications; single EC operation takes >6ms; even ASIC acceleration only yields 12% improvement",
+  "problem_framing": "Maximize throughput for batch EC operations on GPU by addressing: sequential modinv, high memory overhead, and IMAD instruction bottleneck",
+  "key_insight": "Borrow GAS mechanism from parallel graph processing to reduce modinv from 32n to sp; use predicate registers to eliminate IMAD bottleneck; apply find-then-recompute for kernel fusion",
+  "method_signature": "Batch EC operations via Montgomery's trick with GAS mechanism, multi-level cache management, and IMAD-minimized modular multiplication",
+  "evaluation_criteria": "Throughput (ops/s) vs RapidEC (GPU) and CPU-based systems; ECDSA/E CDH speedup; real-world blockchain TPS improvement",
+  "negative_result_or_admitted_limitation": "Some CUDA cores are idle during modinv apply phase; NAF algorithm causes warp divergence issues in parallel UPMUL; memory access overhead limits input scale",
+  "evidence_for_taste": [
+    "significantly affecting overall performance",
+    "remains a bottleneck",
+    "This effectively avoids the divergence issue",
+    "modadd operations are cheaper than global memory access",
+    "the benefit of decreasing computational complexity dominates the increased overhead",
+    "The throughput of gECC with all the optimizations can achieve 36% and 23% improvement"
+  ],
+  "thinking_moves": [
+    "识别模逆操作的顺序依赖性导致的GPU并行瓶颈",
+    "从并行图处理系统借鉴GAS机制来解决批量模逆",
+    "通过成本分析(模加<全局内存访问)决定是否重计算而非存储",
+    "量化权衡Montgomery trick降低复杂度与增加内存开销的收益",
+    "通过微架构级指令分析定位IMAD瓶颈,提出谓词寄存器传递进位信息"
+  ],
+  "topic_tags": [
+    "GPU-ECC-optimization",
+    "Montgomery-trick-batching",
+    "modular-multiplication-IMAD",
+    "elliptic-curve-cryptography",
+    "memory-hierarchy-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

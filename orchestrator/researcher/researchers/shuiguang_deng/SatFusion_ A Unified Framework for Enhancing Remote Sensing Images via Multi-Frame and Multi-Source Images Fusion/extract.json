@@ -1,0 +1,39 @@
+{
+  "paper_id": "SatFusion_ A Unified Framework for Enhancing Remote Sensing Images via Multi-Frame and Multi-Source Images Fusion",
+  "doi": "10.48550/arxiv.2510.07905",
+  "title": "SatFusion: A Unified Framework for Enhancing Remote Sensing Images via Multi-Frame and Multi-Source Images Fusion",
+  "year": null,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "MFSR lacks HR structural priors → blurry textures; Pansharpening is fragile to noise/misalignment due to explicit upsampling",
+  "problem_framing": "Jointly fusing k LR MS frames + HR PAN image to reconstruct HR MS image via unified mapping function F(·)",
+  "key_insight": "Implicit pixel-level alignment via multi-frame redundancy replaces fragile explicit upsampling, breaking both paradigms' bottlenecks simultaneously",
+  "method_signature": "MFIF module aggregates LR MS frames into HR semantic features; MSIF injects PAN textures; SatFusion* adds PAN-guided spatially adaptive Transformer tokens",
+  "evaluation_criteria": "PSNR/SSIM/SAM/ERGAS/MAE/MSE across WorldStrat, WV3, QB, GF2 datasets under varying k and scale factor γ",
+  "negative_result_or_admitted_limitation": "Performance gains saturate as k grows; while additional frames provide more complementary information, they concurrently introduce marginal noise and redundant content",
+  "evidence_for_taste": [
+    "fundamentally bottlenecked",
+    "fragile explicit upsampling",
+    "shatters the inherent MFSR performance ceiling",
+    "breaks this isolated design",
+    "naturally extensible blueprint",
+    "performance collapse"
+  ],
+  "thinking_moves": [
+    "先指出两个孤立范式各自的根本缺陷，再论证其互补性，从缺陷互逆性出发推导统一框架的必然性",
+    "把 Pansharpening 的显式上采样重新定位为脆弱环节，用 MFSR 的多帧冗余信息为其提供隐式对齐",
+    "通过消融验证单一模块的局限性，强调只有双路径协同才能突破各自瓶颈",
+    "将 Transformer 的可变序列长度特性嫁接过来，解决推理时帧数与训练不一致的泛化难题"
+  ],
+  "topic_tags": [
+    "remote-sensing-image-fusion",
+    "multi-frame-super-resolution",
+    "pansharpening",
+    "implicit-alignment",
+    "pan-guided-attention"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Paper is truncated after Section 5.1; loss function details and appendix figures partially visible. Year not explicitly stated in truncated text. | md truncated to head40k+tail20k"
+}

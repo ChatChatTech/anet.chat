@@ -1,0 +1,40 @@
+{
+  "paper_id": "2023_ICML_optimal arms",
+  "doi": null,
+  "title": "Optimal Arms Identification with Knapsacks",
+  "year": 2023,
+  "venue": "ICML",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Medical trials, dynamic pricing, and procurement require identifying optimal decisions under hard resource budgets, not just maximizing cumulative reward",
+  "problem_framing": "Extension of BAI (best arm identification) to resource-constrained setting; optimal arms are those in LP's optimal solution with positive value",
+  "key_insight": "Complexity measure H bridges point-aspect (suboptimality of arms) and global-aspect (feasible domain structure); successive elimination-style algorithms 'veer widely from the optimal distribution'",
+  "method_signature": "BASEOAK/FULLOAK with quarter reject/accept phases; FULLOAK has two-step: first converge to LP-optimal distribution, then eliminate arms",
+  "evaluation_criteria": "Probability of correctly identifying all optimal arms before violating any resource knapsack constraint",
+  "negative_result_or_admitted_limitation": "'The 'successive elimination-style' algorithm places excessive emphasis on point aspect and veers widely from the optimal distribution. BASEOAK cannot delete any optimal arm during the game, so the exploration ability is limited.'",
+  "evidence_for_taste": [
+    "excessive emphasis on point aspect",
+    "veers widely from the optimal",
+    "exploration ability is limited",
+    "successive elimination-style algorithm",
+    "builds a bridge between"
+  ],
+  "thinking_moves": [
+    "Identify why existing BAI methods fail under knapsack constraints: uniform exploration deviates from optimal distribution",
+    "Bridge two previously separate problem classes (BAI and BwK) through a unified complexity measure based on vertex gaps",
+    "Critique own BASEOAK algorithm as insufficient, motivate improved FULLOAK with two-phase approach"
+  ],
+  "topic_tags": [
+    "optimal arm identification",
+    "knapsack constraints",
+    "bandits with knapsacks",
+    "pure exploration",
+    "linear programming relaxation"
+  ],
+  "cites_own_work": [
+    "Badanidiyuru et al., 2013 (BwK)",
+    "Li et al., 2021 (regret minimization BwK)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

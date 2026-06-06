@@ -1,0 +1,38 @@
+{
+  "paper_id": "IIU_ Independent Inference Units for Knowledge-based Visual Question Answering",
+  "doi": "10.48550/arxiv.2408.07989",
+  "title": "IIU: Independent Inference Units for Knowledge-based Visual Question Answering",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有方法将多模态线索纠缠在隐式嵌入中，缺乏可解释性和泛化能力，需要在功能层面分离信息",
+  "problem_framing": "将多模态信息在功能层面分解为独立推理单元，通过单元间通信获取互补信息，实现细粒度多模态推理",
+  "key_insight": "通过独立推理单元在功能层面分解信息，每个单元处理语义特定的模内线索，同时保留单元间的互补信息",
+  "method_signature": "独立推理单元(IIU)：独立GRU模块处理语义特定线索，注意力机制激活单元，跨单元通信聚合",
+  "evaluation_criteria": "OK-VQA和FVQA数据集准确率，与预训练模型对比",
+  "negative_result_or_admitted_limitation": "Memory Update模块对最优精度影响不大，仍比完整模型低2%",
+  "evidence_for_taste": [
+    "focus more on modeling the inter-modal",
+    "lacks interpretability and generalization ability",
+    "to separate the information and process it separately",
+    "the model’s parameter size is only 74M",
+    "Lightweight training and deployment"
+  ],
+  "thinking_moves": [
+    "将复杂推理分解为功能独立的可复用单元",
+    "通过注意力机制在每步推理中动态选择相关单元",
+    "单元独立处理信息但通过通信获取互补线索",
+    "通过Memory Update在推理过程中维护语义相关信息"
+  ],
+  "topic_tags": [
+    "knowledge-based VQA",
+    "independent inference mechanism",
+    "multi-modal heterogeneous graph",
+    "functional-level information decomposition",
+    "interpretable reasoning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

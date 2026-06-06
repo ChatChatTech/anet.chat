@@ -1,0 +1,37 @@
+{
+  "paper_id": "A comprehensive ranking model for tweets big data in online social network",
+  "doi": "10.1186/s13638-016-0532-5",
+  "title": "A comprehensive ranking model for tweets big data in online social network",
+  "year": 2016,
+  "venue": "EURASIP Journal on Wireless Communications and Networking",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "用户在微博上面临信息过载，每日收到大量推文，传统时间排序无法满足个性化阅读需求",
+  "problem_framing": "将推文推荐问题形式化为三个维度的排序问题：流行度、亲密度、兴趣匹配",
+  "key_insight": "80/20法则可用于推文影响力建模，用户类型应按马斯洛需求理论划分以实现个性化权重",
+  "method_signature": "基于推文流行度、用户亲密度、兴趣匹配三个维度加权求和的排序模型",
+  "evaluation_criteria": "Mean Average Precision (MAP)",
+  "negative_result_or_admitted_limitation": "三种用户类型的系数是预定义固定的，未来计划从用户历史行为中学习系数",
+  "evidence_for_taste": [
+    "80% of consequences stem from 20%",
+    "the intelligence of the personalized",
+    "personalization is very important",
+    "a wide gap between personal interests",
+    "Sina performs poorly with 0.46 MAP"
+  ],
+  "thinking_moves": [
+    "用数据分布和80/20法则设计分段评分公式",
+    "将马斯洛需求理论引入用户类型划分",
+    "通过用户交互行为（转发、评论、提及）量化亲密度",
+    "验证个性化与大众关注之间存在鸿沟"
+  ],
+  "topic_tags": [
+    "microblog-ranking",
+    "personalized-recommendation",
+    "social-intimacy",
+    "user-behavior-modeling",
+    "information-overload"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,36 @@
+{
+  "paper_id": "Privacy-Protected Deletable Blockchain",
+  "doi": "10.1109/access.2019.2962816",
+  "title": "Privacy-Protected Deletable Blockchain",
+  "year": 2019,
+  "venue": "IEEE Access",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有可删除区块链中用户身份和交易内容均公开，删除过程中隐私泄露",
+  "problem_framing": "在匿名环境中实现完全透明和问责，同时保护用户隐私",
+  "key_insight": "根据不同删除原因采用不同隐私保护策略：traceable ring signature揭示身份或Pedersen commitment揭示交易内容",
+  "method_signature": "基于proof-of-space共识机制，使用traceable ring signature和linkable multi-signature实现隐私保护可删除区块链",
+  "evaluation_criteria": "实验验证生成和删除区块的时间效率，平均删除时间约为生成时间的两倍",
+  "negative_result_or_admitted_limitation": "方案假设一个区块的所有交易来自同一发送者；MPC策略在permissionless设置下存在扩展性问题",
+  "evidence_for_taste": [
+    "the public data may reveal the users' privacy",
+    "does not rely on complex cryptographic tools",
+    "average deletion time is about twice the generation time",
+    "the real transaction contents and the identity of the receiver are still concealed"
+  ],
+  "thinking_moves": [
+    "将删除原因分类，针对不同原因采用不同的隐私揭示策略",
+    "通过linkable multi-signature检测同一恶意用户使用不同一次性地址的欺骗行为",
+    "使用one-time address作为假名实现删除过程中的身份隐私保护"
+  ],
+  "topic_tags": [
+    "privacy-protected-blockchain",
+    "deletable-blockchain",
+    "proof-of-space",
+    "linkable-multi-signature",
+    "traceable-ring-signature"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

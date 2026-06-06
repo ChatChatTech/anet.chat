@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2004 - Distributed Caching and Adaptive Search in Multilayer P2P Networks",
+  "doi": null,
+  "title": "Distributed Caching and Adaptive Search in Multilayer P2P Networks",
+  "year": 2004,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Gnutella盲目泛洪导致流量指数增长,实测5万节点网络每月产生330TB流量,系统不可扩展",
+  "problem_framing": "统一索引缓存(UIC)在相邻节点间产生大量重复缓存,双CGC实验发现32%缓存命中重叠",
+  "key_insight": "用hash(query) Mod M将查询与节点组ID匹配,仅在匹配节点缓存响应并转发查询,将搜索空间分层",
+  "method_signature": "DiCAS协议:节点随机选取组ID,查询结果只在PeerGroupID=hash(query)ModM的节点缓存转发",
+  "evaluation_criteria": "查询成功率、查询响应时间、网络流量开销三个指标权衡",
+  "negative_result_or_admitted_limitation": "DiCAS比UIC查询成功率下降13%,部分匹配节点被跳过,且存在无法匹配的'死角'对象",
+  "evidence_for_taste": [
+    "duplicated and unnecessary caching",
+    "overlapped cache hits exceed 32%",
+    "forming some dead corners",
+    "the query will miss some peers",
+    "the flooding is mainly restricted"
+  ],
+  "thinking_moves": [
+    "通过Twin CGC实验实测发现相邻节点缓存重叠问题",
+    "从重复缓存问题反推需要分布式缓存机制",
+    "基于hash将缓存与查询匹配,自然形成虚拟分层",
+    "承认选择性转发导致成功率下降,提出push-DiCAS补救"
+  ],
+  "topic_tags": [
+    "P2P搜索优化",
+    "分布式索引缓存",
+    "Gnutella网络",
+    "自适应查询转发",
+    "哈希分组路由"
+  ],
+  "cites_own_work": [
+    "Liu et al., INFOCOM 2004 (location-aware topology matching)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "venue未在论文中明确标注,根据论文风格推测为会议论文但具体会议名称未知"
+}

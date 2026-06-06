@@ -1,0 +1,42 @@
+{
+  "paper_id": "aiXcoder-7B_ A Lightweight and Effective Large Language Model for Code Completion",
+  "doi": "10.32388/atahd0",
+  "title": "aiXcoder-7B: A Lightweight and Effective Large Language Model for Code Completion",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "大模型推理延迟高,降低开发者效率,需轻量模型兼顾速度与精度",
+  "problem_framing": "在保持7B参数规模下提升代码补全精度,超越同规模甚至更大模型",
+  "key_insight": "SFIM用语法树约束生成完整代码段,配合跨文件采样策略,让小模型习得结构化代码能力",
+  "method_signature": "SFIM+NTP+FIM多目标训练,TFIDF/路径/依赖/随机四策略采样",
+  "evaluation_criteria": "NL2Code用Pass@1,FIM用EM/BLEU/CodeBLEU,跨文件用EM/ES",
+  "negative_result_or_admitted_limitation": "因预训练算力成本高,未做全面超参搜索,配置可能非最优",
+  "evidence_for_taste": [
+    "larger LLMs will increase the response time",
+    "effectively improves the performance",
+    "more concise and closer to the human coding style",
+    "align with the practical needs of developers",
+    "learning a broad distribution of code",
+    "strong generalization ability"
+  ],
+  "thinking_moves": [
+    "先识别大模型速度痛点,再以轻量化精度为约束求解",
+    "把代码补全场景细分为NTP/FIM/跨文件三类,分别设计训练目标",
+    "通过语法树把随机span约束为完整代码块,解决FIM生成碎片化问题",
+    "跨文件依赖关系编码进采样过程,隐式训练跨文件推理能力"
+  ],
+  "topic_tags": [
+    "code-completion-LLM",
+    "structured-fill-in-middle",
+    "cross-file-context",
+    "lightweight-model",
+    "syntax-tree-training"
+  ],
+  "cites_own_work": [
+    "aiXcoder-7B",
+    "FIM-Eval"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

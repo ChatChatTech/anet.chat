@@ -1,0 +1,38 @@
+{
+  "paper_id": "Dong et al. - 2011 - Fine-grained location-free planarization in wireless sensor networks",
+  "doi": null,
+  "title": "Fine-grained location-free planarization in wireless sensor networks",
+  "year": 2011,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有位置无关平面化方法无法保证构造图的伸展因子，实用性受限",
+  "problem_framing": "从纯连接图中提取具有常数伸展因子的平面拓扑，定义为TPS问题",
+  "key_insight": "利用拟单位圆盘的边交叉性质：两条边交叉时四点间至少存在三条边",
+  "method_signature": "受限见证图+冲突图+可分冲突测试+惰性添加策略",
+  "evaluation_criteria": "伸展因子(乘性)、连通分支数、节点度数",
+  "negative_result_or_admitted_limitation": "理论不可行：无法在任意0<ρ<1的拟单位圆盘中构造常数伸展因子的平面乘法延伸子",
+  "evidence_for_taste": [
+    "CDM will be disconnected",
+    "large stretch factor",
+    "requires square-like shape",
+    "overlap onto each other",
+    "impossible to solve using only local connectivity"
+  ],
+  "thinking_moves": [
+    "将理论下界作为约束条件而非障碍",
+    "利用几何性质（边交叉检测）替代位置信息",
+    "引入路径同伦概念区分真假冲突",
+    "从最坏情况分析后退到经验验证"
+  ],
+  "topic_tags": [
+    "wireless-planarization",
+    "location-free-networking",
+    "quasi-UDG",
+    "graph-spanner",
+    "connectivity-topology"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

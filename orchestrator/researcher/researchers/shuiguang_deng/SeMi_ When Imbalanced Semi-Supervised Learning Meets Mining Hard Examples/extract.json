@@ -1,0 +1,42 @@
+{
+  "paper_id": "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples",
+  "doi": "10.48550/arxiv.2501.06004",
+  "title": "SeMi: When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有CISSL方法关注数据集重平衡,但忽视了hard examples提升模型性能的巨大潜力",
+  "problem_framing": "把hard examples挖掘定义为提升不平衡SSL性能的关键杠杆,并提出三个核心发现来刻画问题",
+  "key_insight": "通过entropy-based在线挖掘+置信度衰减记忆库+伪标签增强三管齐下,可在低阈值下利用hard examples并保持伪标签可靠性",
+  "method_signature": "OHEML+PLCE(平衡置信衰减记忆库)+解耦分类器的端到端训练",
+  "evaluation_criteria": "在CIFAR10/100-LT、STL10-LT、ImageNet-127上对比SOTA方法 accuracy",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "hard examples are often from tail classes",
+    "making it difficult to fully harness the power of unlabeled data",
+    "masked probability is typically below 80%",
+    "many samples remain unused",
+    "lowering the confidence threshold can enable access to more samples but increases their uncertainty",
+    "simple yet effective approach",
+    "especially in reversed scenarios"
+  ],
+  "thinking_moves": [
+    "从利用率低于80%的观察出发,反推出hard examples未被充分利用的现状",
+    "将high confidence threshold的危害具象化为:拒绝tail class样本参与学习",
+    "通过entropy与confidence的对比关系建立hard example识别标准",
+    "先降低阈值获得更多样本,再通过reweighting和certainty enhancement弥补不确定性增加的问题",
+    "区分三类样本:easy/hard/ultra-hard并设计差异化学习策略",
+    "在reversed scenario( unlabeled minority主导)上验证方法优势,贴近现实分布"
+  ],
+  "topic_tags": [
+    "class-imbalanced semi-supervised learning",
+    "hard example mining",
+    "pseudo-label certainty",
+    "memory bank",
+    "tail class performance"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

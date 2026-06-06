@@ -1,0 +1,42 @@
+{
+  "paper_id": "CCFQA_ A Benchmark for Cross-Lingual and Cross-Modal Speech and Text Factuality Evaluation",
+  "doi": "10.48550/arxiv.2508.07295",
+  "title": "CCFQA: A Benchmark for Cross-Lingual and Cross-Modal Speech and Text Factuality Evaluation",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有MLLM评估缺乏多语言语音场景,导致幻觉问题在跨语言跨模态设置中被忽视",
+  "problem_framing": "将事实一致性定义为:相同事实问题在不同语言和模态下应得到相同答案",
+  "key_insight": "以英文为枢纽语言,通过少量样本学习可将英文QA能力迁移到其他语言的多模态任务",
+  "method_signature": "构建8语言平行语音-文本QA基准,设计英文枢纽的少样本跨语言迁移策略",
+  "evaluation_criteria": "F1分数和LLM评判准确率,测试跨语言(QA→XQA)和跨模态(QA→SQA)一致性",
+  "negative_result_or_admitted_limitation": "本文方法虽提升多语言能力,但也引入了以英文为中心的语言偏差,跨语言对齐仍是重大挑战",
+  "evidence_for_taste": [
+    "even the GPT series models struggle",
+    "underscoring the difficulty of maintaining",
+    "This 'modality gap' highlights",
+    "the design of special tokens needs to carefully",
+    "Low F1 with high accuracy suggests the MLLM knows the facts but struggles to follow instructions",
+    "high F1 but low accuracy indicates fluent, content-rich answers that are factually incorrect"
+  ],
+  "thinking_moves": [
+    "通过基准设计本身揭示MLLM的问题本质,而非仅做性能评测",
+    "把跨语言问题转化为英文枢纽的知识迁移问题",
+    "用一致性比率而非准确率来度量模型稳健性",
+    "从跨模态性能落差中发现对齐难题"
+  ],
+  "topic_tags": [
+    "multilingual-factuality-benchmark",
+    "cross-modal-speech-text",
+    "hallucination-evaluation",
+    "spoken-question-answering",
+    "cross-lingual-transfer"
+  ],
+  "cites_own_work": [
+    "LLM-SRT",
+    "LLM-SQA"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

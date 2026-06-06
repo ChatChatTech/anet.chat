@@ -1,0 +1,41 @@
+{
+  "paper_id": "Tiansuan Constellation_ An Open Research Platform",
+  "doi": "10.48550/arxiv.2112.14957",
+  "title": "Tiansuan Constellation: An Open Research Platform",
+  "year": 2021,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "模拟研究不足以支撑真实卫星网络研究，行业快速发展而学术实验受阻于技术门槛",
+  "problem_framing": "构建可进行真实卫星实验的开放平台，覆盖网络、计算、操作系统、安全等多研究方向",
+  "key_insight": "通过三阶段卫星部署(6→24→300)和统一接口，让不同机构能参与真实卫星网络实验",
+  "method_signature": "设计开放卫星星座平台，集成地面站、载荷与云端计算资源支撑实验",
+  "evaluation_criteria": "已部署B5G核心网和KubeEdge图像推理系统，验证视频通话和AI协同推理",
+  "negative_result_or_admitted_limitation": "地面站部署成本约百万美元，新进入者难以承担；传统交通预测无法应对卫星网络的时空相关性",
+  "evidence_for_taste": [
+    "simulation, which is far from enough",
+    "blocked by the high threshold of space technology",
+    "real experiments on satellite constellations can uncover any pitfalls",
+    "The cost of deploying a ground station is around a million dollars",
+    "traditional traffic forecasting methods have been unable to accurately predict traffic"
+  ],
+  "thinking_moves": [
+    "识别学术界仅靠模拟无法应对工业快速发展的差距",
+    "提出将研究平台本身作为核心贡献的思路",
+    "通过开放生态降低各方参与卫星研究的门槛",
+    "承认地面站高成本和仿真局限性是真实瓶颈",
+    "将具体技术问题(路由、联邦学习)锚定到平台能力上验证"
+  ],
+  "topic_tags": [
+    "LEO卫星星座",
+    "卫星边缘计算",
+    "星上核心网部署",
+    "联邦学习在轨推理",
+    "卫星计算平台编排"
+  ],
+  "cites_own_work": [
+    "Service coverage for satellite edge computing (2021)",
+    "KubeEdge satellite orchestration (2020)"
+  ],
+  "extraction_quality": "full"
+}

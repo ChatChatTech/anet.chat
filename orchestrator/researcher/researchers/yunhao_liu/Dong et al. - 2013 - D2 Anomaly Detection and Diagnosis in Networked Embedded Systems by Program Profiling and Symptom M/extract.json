@@ -1,0 +1,39 @@
+{
+  "paper_id": "Dong et al. - 2013 - D2 Anomaly Detection and Diagnosis in Networked Embedded Systems by Program Profiling and Symptom M",
+  "doi": null,
+  "title": "D2: Anomaly Detection and Diagnosis in Networked Embedded Systems by Program Profiling and Symptom Mining",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传感器网络部署中既有的节点级调试工具无法定位网络中问题,而网络级诊断工具又缺乏程序内部信息,两者存在断层。",
+  "problem_framing": "将异常检测和诊断形式化为:用轻量级函数计数profiling+PCA检测异常,再用统计检验+调用图定位根因函数。",
+  "key_insight": "函数计数之比(而非绝对次数)才反映运行状态,PCA能捕捉多维数据间的相关性从而捕获异常。",
+  "method_signature": "二进制插桩轻量级函数计数profiling+PCA异常检测+统计检验/调用图诊断。",
+  "evaluation_criteria": "开销可接受(RAM/Flash/CPU),且在真实传感器网络案例中发现实际问题(未报告bug)。",
+  "negative_result_or_admitted_limitation": "函数计数profiling丢失函数返回值等细粒度信息;无法检测并发交错bug;无法区分Trickle timer正常/异常模式。",
+  "evidence_for_taste": [
+    "close the gap",
+    "find needle from the haystack",
+    "function ratios matter",
+    "PCA is suitable because it can capture the essence of the correlations",
+    "bugs under the nose"
+  ],
+  "thinking_moves": [
+    "弥合节点调试工具与网络诊断工具之间的断层",
+    "把程序当作黑盒,无需开发者介入,保证可扩展性",
+    "用PCA自动检测异常模式,把高维函数计数投影到低维主成分",
+    "区分单维度异常与多维度相关性异常",
+    "从统计显著性与调用/发布关系两方面约束可疑函数集"
+  ],
+  "topic_tags": [
+    "sensor network diagnosis",
+    "binary instrumentation",
+    "PCA anomaly detection",
+    "function count profiling",
+    "TinyOS debugging"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

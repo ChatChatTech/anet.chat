@@ -1,0 +1,39 @@
+{
+  "paper_id": "HeteRAG_ A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations",
+  "doi": "10.48550/arxiv.2504.10529",
+  "title": "HeteRAG: A Heterogeneous Retrieval-augmented Generation Framework with Decoupled Knowledge Representations",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有RAG方法对检索和生成使用相同的知识块表示，导致两阶段性能无法同时优化",
+  "problem_framing": "将知识块表示问题形式化为检索侧需完整信息而生成侧需简洁信息的矛盾",
+  "key_insight": "通过解耦检索侧(多粒度上下文+元数据)和生成侧(独立短块)的知识表示来消除冲突",
+  "method_signature": "检索侧融合多粒度上下文信号与全局结构化元数据，生成侧使用独立知识块",
+  "evaluation_criteria": "检索任务用nDCG@1/10，生成任务用EM和token级F1",
+  "negative_result_or_admitted_limitation": "当前实验仅覆盖选定领域的常用基准数据集，框架主要优化检索侧而生成侧表示较简单",
+  "evidence_for_taste": [
+    "excessively long chunks may introduce redundant or irrelevant information",
+    "retrieval step requires semantically complete information",
+    "knowledge chunks are expected to provide the most precise information",
+    "HeteRAG maintains model-agnostic robustness",
+    "Late chunking shows limited effectiveness on regular models"
+  ],
+  "thinking_moves": [
+    "从检索与生成的功能差异出发识别表示冲突",
+    "通过解耦架构分别优化两个阶段",
+    "利用文档结构层次性(树状/线性/图)建模多粒度上下文",
+    "用软提示(prompt tuning)适配异构语料结构",
+    "通过消融验证上下文信号与元数据的互补作用"
+  ],
+  "topic_tags": [
+    "retrieval-augmented-generation",
+    "knowledge-representation-decoupling",
+    "dense-retrieval",
+    "multi-granular-context",
+    "adaptive-prompt-tuning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

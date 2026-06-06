@@ -1,0 +1,38 @@
+{
+  "paper_id": "Data privacy protection in microscopic image analysis for material data mining",
+  "doi": "10.48550/arxiv.2111.07892",
+  "title": "Data privacy protection in microscopic image analysis for material data mining",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "材料研究者因隐私顾虑不愿共享数据, 导致数据孤岛, 难以收集大规模数据训练高质量模型",
+  "problem_framing": "联邦学习中不同客户端数据分布Non-IID导致性能下降, 现有数据共享策略因缺乏公开数据集而不可行",
+  "key_insight": "材料微观图像可分解为结构信息(ground truth标签, 隐私敏感)和风格信息(受光照影响, 不敏感), 仅共享风格信息可缓解Non-IID而不泄露隐私",
+  "method_signature": "FedTransfer: 联邦图像风格转换(pix2pixHD生成合成数据) + 联邦训练(FedAvg)",
+  "evaluation_criteria": "MAP, MVI, ARI三项指标综合评估图像分割准确率和聚类质量",
+  "negative_result_or_admitted_limitation": "FedTransfer仍使全局测试集MAP(0.575)低于集中训练(0.590), 性能差距未能完全消除",
+  "evidence_for_taste": [
+    "a generalized model is more important",
+    "the lack of large-scale public dataset",
+    "style information is not privacy sensitive",
+    "reduce the influence of Non-IID data"
+  ],
+  "thinking_moves": [
+    "把隐私保护问题框定为信息解耦问题: 结构信息 vs 风格信息",
+    "利用材料图像中风格信息独立于具体样品的特性设计无隐私风险的数据共享策略",
+    "先通过独立假设验证分解合理性, 再构建端到端联邦学习pipeline"
+  ],
+  "topic_tags": [
+    "federated-learning-non-iid",
+    "material-image-segmentation",
+    "privacy-preserving-data-sharing",
+    "style-transfer-gan",
+    "materials-informatics"
+  ],
+  "cites_own_work": [
+    "Ma, Boyuan, et al. \"Data augmentation in microscopic images for material data mining.\" npj Computational Materials 6.1 (2020)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

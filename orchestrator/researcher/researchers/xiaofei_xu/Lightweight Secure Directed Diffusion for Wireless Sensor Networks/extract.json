@@ -1,0 +1,38 @@
+{
+  "paper_id": "Lightweight Secure Directed Diffusion for Wireless Sensor Networks",
+  "doi": "10.1155/2014/415143",
+  "title": "Lightweight Secure Directed Diffusion for Wireless Sensor Networks",
+  "year": 2014,
+  "venue": "Hindawi Publishing Corporation (Mathematical Problems in Engineering)",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "无线传感网节点资源受限，传统强安全方案开销过大，无法直接应用于路由安全",
+  "problem_framing": "在受限资源下为定向扩散路由协议增加轻量级真实性与完整性保护",
+  "key_insight": "用延迟容忍单向哈希链认证配合黑名单机制，可在低开销下抵御多种路由攻击",
+  "method_signature": "扩展定向扩散协议，集成延迟容忍单向哈希链认证和黑名单技术",
+  "evaluation_criteria": "安全性分析 + NS2模拟，评估通信开销、节点计算量和存储性能",
+  "negative_result_or_admitted_limitation": "公钥方案较慢，仅在初始化引导时使用ECC，且仅保护认证性而非机密性",
+  "evidence_for_taste": [
+    "public key approach is slow",
+    "the cost is relatively low",
+    "it is very costly",
+    "not all nodes joining do require immediate rebootstrapping",
+    "inducing new DOS attacks"
+  ],
+  "thinking_moves": [
+    "逐个枚举攻击类型并给出针对性防御机制",
+    "在开销和安全性之间做工程权衡",
+    "用投票检测机制将恶意节点发现转化为黑名单广播",
+    "引入分形图遍历算法降低哈希链存储开销"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-security",
+    "directed-diffusion-routing",
+    "one-way-hash-chain-authentication",
+    "lightweight-cryptography",
+    "denial-of-service-defense"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

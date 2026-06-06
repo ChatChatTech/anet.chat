@@ -1,0 +1,42 @@
+{
+  "paper_id": "Liang et al. - 2016 - SenseWit Pervasive Floorplan Generation Based on Only Inertial Sensing",
+  "doi": null,
+  "title": "SenseWit: Pervasive Floorplan Generation Based On Only Inertial Sensing",
+  "year": 2016,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "室内平面图需求大但常不可得；现有方案依赖WiFi/摄像头/高精度数据源，泛在性受限",
+  "problem_framing": "利用手机惯性传感数据从嘈杂人群轨迹中自动重建室内平面图，需应对噪声、歧义、行为多样性",
+  "key_insight": "人的行为模式（转弯、停留）可作为定位锚点；三个非共线锚点形成最小稳定结构用于路径捆绑",
+  "method_signature": "Nail特征提取 + TriNail三角形匹配 + 贪心路径捆绑算法",
+  "evaluation_criteria": "走廊形状F值、房间面积误差、与CrowdInside++/Jigsaw对比",
+  "negative_result_or_admitted_limitation": "障碍物区域行人无法覆盖导致误差；未测试口袋等更多手机姿态",
+  "evidence_for_taste": [
+    "the lower priority a TriNail class has",
+    "the later it is used for pathlet bundling",
+    "the negative effect of error is limited",
+    "three points are the minimum to achieve a stable planar structure",
+    "featured locations may correspond to multiple locations",
+    "analogous sub-structures problem"
+  ],
+  "thinking_moves": [
+    "用行为特征重构定位问题：把感知难题转为人行为模式识别",
+    "最小稳定结构原则：三个点才能形成稳定平面结构，据此设计TriNail",
+    "迭代贪心捆绑：从高置信度种子开始，逐步合并路径，避免错误传播",
+    "歧义主动管理：同类子结构导致相同特征向量但不同区域，需优先级筛选处理",
+    "约束松弛策略：允许近似匹配而非精确匹配以容忍定位误差"
+  ],
+  "topic_tags": [
+    "mobile crowdsourcing",
+    "inertial sensing",
+    "indoor floorplan generation",
+    "pathlet bundling",
+    "behavior-based localization"
+  ],
+  "cites_own_work": [
+    "Sun et al. 2013 (MOLOC)",
+    "Shu et al. 2015 (Last-mile navigation)"
+  ],
+  "extraction_quality": "full"
+}

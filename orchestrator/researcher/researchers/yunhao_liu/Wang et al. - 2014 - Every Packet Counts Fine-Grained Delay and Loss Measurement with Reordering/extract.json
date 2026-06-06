@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2014 - Every Packet Counts Fine-Grained Delay and Loss Measurement with Reordering",
+  "doi": null,
+  "title": "Every Packet Counts: Fine-Grained Delay and Loss Measurement with Reordering",
+  "year": 2014,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有方法只提供聚合统计,无法捕获延迟异常,错过关键性能指标",
+  "problem_framing": "如何在不修改数据包的情况下实现细粒度每包延迟测量并处理丢包重排",
+  "key_insight": "利用丢包重排数量远小于正常包这一内在特性,用OPA高效表示恢复顺序和丢包信息",
+  "method_signature": "OPA两层设计:顺序损失层+压缩时间戳层,枚举映射向量恢复",
+  "evaluation_criteria": "每包相对误差2%,聚合相对误差10^-5,额外开销<4×10^-4",
+  "negative_result_or_admitted_limitation": "LDA/FineComb遇到丢包重排整组丢弃,无法计算组内延迟;RLI插值假设线性分布无法捕获频繁延迟变化",
+  "evidence_for_taste": [
+    "fine-grained delay measurements are of great importance",
+    "delay anomalies, which are critical system performance indicators",
+    "fail to capture by existing coarse-grained approaches",
+    "cannot provide delay measurement at such a granularity",
+    "the reordering as well as loss event will not be frequent",
+    "lost and reordering packets should usually be much less than legitimate packets"
+  ],
+  "thinking_moves": [
+    "把顺序信息与时间戳信息分层处理,利用各自不同特性",
+    "从实际网络特性出发:大多数包顺序保持,少数异常",
+    "用线性代数方程组表达约束,通过枚举验证求解映射向量",
+    "通过分组降低搜索复杂度:错误均摊到g组后shift降为d/g",
+    "承认枚举开销随错误数指数增长,提出分组和截断策略"
+  ],
+  "topic_tags": [
+    "network-measurement",
+    "fine-grained-delay",
+    "packet-loss-reordering",
+    "non-intrusive-monitoring",
+    "hash-aggregator"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "未找到DOI和确切Venue,LDA/FineComb/RLI等对比方法的负面结果描述不完整,部分评估细节在截断文本中 | md truncated to head40k+tail20k"
+}

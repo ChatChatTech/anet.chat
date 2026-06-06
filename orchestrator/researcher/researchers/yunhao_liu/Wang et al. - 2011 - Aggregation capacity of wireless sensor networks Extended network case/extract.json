@@ -1,0 +1,41 @@
+{
+  "paper_id": "Wang et al. - 2011 - Aggregation capacity of wireless sensor networks Extended network case",
+  "doi": null,
+  "title": "Aggregation Capacity of Wireless Sensor Networks: Extended Network Case",
+  "year": 2011,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有聚合容量研究仅适用于密集WSN，协议模型和物理模型的常数速率假设在扩展网络中不切实际",
+  "problem_framing": "在广义物理模型下，为随机扩展WSN推导聚合容量的紧致Scaling Laws，重点分析类型敏感和类型阈值PC-AF",
+  "key_insight": "扩展网络中长链路SINR太小导致恒定速率假设失效，必须用广义物理模型捕捉连续链路速率的真实衰减",
+  "method_signature": "树形路由+TDMA调度的两阶段聚合方案A_{N,n}，结合分块编码优化类型阈值函数",
+  "evaluation_criteria": "通过构造性下界方案和基于信息论的上界证明获取紧致容量界 Θ(...)",
+  "negative_result_or_admitted_limitation": "承认在扩展网络中ProM和PhyM的基本假设是over-optimistic and unpractical",
+  "evidence_for_taste": [
+    "over-optimistic and unpractical",
+    "the assumption made in ProM and PhyM",
+    "is over-optimistic for random extended networks",
+    "we point out that unlike random dense WSNs",
+    "Assumption 1 is over-optimistic",
+    "proves that our schemes are optimal"
+  ],
+  "thinking_moves": [
+    "从工程异常（密集网络方法在扩展网络失效）反推底层物理假设失效",
+    "将聚合函数分类为类型敏感和类型阈值，差异化分析容量界",
+    "先建立可实现下界（构造具体聚合方案），再建立信息论上界，最后合并获得紧致界",
+    "引入分块编码技术将局部聚合从collocated network推广到物理信道模型"
+  ],
+  "topic_tags": [
+    "wireless-sensor-networks-aggregation-capacity",
+    "extended-network-scaling-laws",
+    "generalized-physical-model",
+    "perfectly-compressible-functions",
+    "type-sensitive-type-threshold-functions"
+  ],
+  "cites_own_work": [
+    "Liu is also author of [11] Li, Liu, and Li - Capacity of large scale wireless networks"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

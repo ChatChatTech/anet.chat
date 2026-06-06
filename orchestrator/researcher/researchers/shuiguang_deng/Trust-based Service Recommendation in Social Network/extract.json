@@ -1,0 +1,42 @@
+{
+  "paper_id": "Trust-based Service Recommendation in Social Network",
+  "doi": "10.12785/amis/090353",
+  "title": "Trust-based Service Recommendation in Social Network",
+  "year": 2015,
+  "venue": "Applied Mathematics & Information Sciences",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "Web服务数量激增导致用户难以找到合适服务，现有推荐系统不考虑用户间的信任关系",
+  "problem_framing": "结合用户历史调用行为、信任关系和评论来构建特征向量进行服务推荐",
+  "key_insight": "通过信任网络扩展用户偏好向量，结合自身和信任用户的调用历史解决冷启动问题",
+  "method_signature": "基于信任网络的服务推荐：构建用户特征向量→计算相似度→计算候选服务排名→Top-K推荐",
+  "evaluation_criteria": "召回率、准确率、F-measure、排名分数",
+  "negative_result_or_admitted_limitation": "当μ=1时排名分数最低，说明信任关系权重过大会降低推荐质量",
+  "evidence_for_taste": [
+    "they failed to solve the cold start problem",
+    "does not consider service location",
+    "the trust relationships between users are considered, the proposed method can partly solve the cold start problem",
+    "the environment factor and user-input factor can hardly represent users subjective opinions",
+    "The smaller the value of sim, the more similar"
+  ],
+  "thinking_moves": [
+    "将信任问题形式化为用户特征向量的扩展融合",
+    "从具体场景示例（Tom/Merry/Bob/Jack）提炼出信任关系的必要性",
+    "通过参数μ调节自身偏好与信任用户偏好的权重平衡"
+  ],
+  "topic_tags": [
+    "social-network-recommendation",
+    "trust-relationship",
+    "cold-start-problem",
+    "collaborative-filtering",
+    "user-preference-modeling"
+  ],
+  "cites_own_work": [
+    "IEEE Transactions on Automation Science and Engineering 2014",
+    "Expert Systems with Applications 2014",
+    "Knowledge and Information Systems 2013",
+    "Journal of Computer Science and Technology 2014"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

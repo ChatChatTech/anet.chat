@@ -1,0 +1,37 @@
+{
+  "paper_id": "Transferable Watermarking to Self-supervised Pre-trained Graph Encoders by Trigger Embeddings",
+  "doi": "10.48550/arxiv.2406.13177",
+  "title": "Transferable Watermarking to Self-supervised Pre-trained Graph Encoders by Trigger Embeddings",
+  "year": 2024,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "自监督图编码器易被窃取用于侵权，其易插拔特性使版权保护困难",
+  "problem_framing": "将版权保护问题框架为0-bit水印问题，需在黑盒设置下可验证",
+  "key_insight": "迫使编码器将触发实例映射到嵌入空间中唯一的紧凑簇，下游模型继承后门",
+  "method_signature": "损失函数 = 原始任务损失 + 内部聚类损失 + 外部分离损失",
+  "evaluation_criteria": "保真度、可迁移性、唯一性、鲁棒性（模型剪枝）",
+  "negative_result_or_admitted_limitation": "统一因子设置并非对所有模型和数据集都最优，部分情况下性能下降较明显",
+  "evidence_for_taste": [
+    "only using the internal loss is not sufficient",
+    "performance degradation is comparatively obvious",
+    "hard for the adversary to remove the watermark without degrading the model normal performance",
+    "unified factor settings in our experiments may not always lead to optimal solutions"
+  ],
+  "thinking_moves": [
+    "将IP保护问题重新框架为后门注入的可验证水印问题",
+    "利用消息传递范式设计基于key节点的触发集生成",
+    "通过嵌入空间聚类实现水印可迁移性的理论保证",
+    "从 ablation study 发现内部损失不足以达成最优聚类效果"
+  ],
+  "topic_tags": [
+    "graph-neural-network-watermarking",
+    "self-supervised-learning-copyright",
+    "backdoor-watermark",
+    "graph-foundation-model-protection",
+    "black-box-verification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

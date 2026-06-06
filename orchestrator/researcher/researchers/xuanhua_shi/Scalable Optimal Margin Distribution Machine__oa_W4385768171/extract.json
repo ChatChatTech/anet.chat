@@ -1,0 +1,43 @@
+{
+  "paper_id": "Scalable Optimal Margin Distribution Machine__oa_W4385768171",
+  "doi": "10.24963/ijcai.2023/485",
+  "title": "Scalable Optimal Margin Distribution Machine",
+  "year": 2023,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "ODM继承核方法的通用可扩展性痛点——大数据场景下训练时间和存储双瓶颈",
+  "problem_framing": "将全局ODM优化问题分解为分层局部子问题，使局部解逼近全局解",
+  "key_insight": "通过在RKHS中进行分层采样划分数据，保持一阶和二阶统计量，使局部解快速收敛至全局解",
+  "method_signature": "SODM：分布感知分区策略 + 局部ODM串接初始化 + DSVRG加速线性核",
+  "evaluation_criteria": "测试准确率和训练时间，兼与Ca-ODM/DiP-ODM/DC-ODM比较",
+  "negative_result_or_admitted_limitation": "SODM在skin-nonskin数据集上测试准确率略低于DC-ODM",
+  "evidence_for_taste": [
+    "leverage data as heavily as possible",
+    "off-the-shelf solvers usually ignore the intrinsic structure",
+    "preserve the original distribution possibly",
+    "the more representative each partition is",
+    "approximate solution obtained in each partition"
+  ],
+  "thinking_moves": [
+    "识别ODM相比通用核方法有独特结构，一般QP求解器未利用此结构",
+    "把统计学的分层采样思想迁移到RKHS中的数据分区",
+    "用局部解串接作为后续优化的热启动初值，实现快速收敛",
+    "先证近似问题序列收敛至原问题，再设计经验加速策略",
+    "线性核下绕过核矩阵，直接在原问题用DSVRG梯度下降"
+  ],
+  "topic_tags": [
+    "margin-distribution-learning",
+    "kernel-method-scalability",
+    "distributed-QP-solver",
+    "stratified-sampling-in-RKHS",
+    "dual-coordinate-descent"
+  ],
+  "cites_own_work": [
+    "Zhou and Zhou 2016",
+    "Zhang and Zhou 2018a",
+    "Zhang and Zhou 2018b",
+    "Cao et al. 2022"
+  ],
+  "extraction_quality": "full"
+}

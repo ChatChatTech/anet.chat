@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2012 - Clock calibration using fluorescent lighting",
+  "doi": null,
+  "title": "Clock Calibration Using Fluorescent Lighting",
+  "year": 2012,
+  "venue": "ACM MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有时钟同步方案通信开销大、功耗高,且依赖无线电,需要低能耗、网络解耦的新方法",
+  "problem_framing": "将荧光灯的光强周期波动建模为全局时钟参考,通过光传感采样提取周期实现节点时钟校准",
+  "key_insight": "交流电频率稳定(~5×10⁻⁵ Allan方差),荧光灯光强随之周期性变化,光传感器可作无硬件附加的公共时间基准",
+  "method_signature": "光传感高速采样→周期提取→逻辑时钟校正,全链路无射频通信",
+  "evaluation_criteria": "同步精度、一致稳定性、能耗对比、网络断开时保持同步能力",
+  "negative_result_or_admitted_limitation": "标准TinyOS ADC采样率上限约1KHz不足以覆盖100Hz光强周期,需直接访问寄存器绕过",
+  "evidence_for_taste": [
+    "simple heuristics may not precisely extract periods",
+    "simple heuristics may not precisely extract periods",
+    "break all such technical barriers",
+    "The kernel of FLIGHT includes 600 lines",
+    "achieves up to 83KHz in FLIGHT"
+  ],
+  "thinking_moves": [
+    "从功耗痛点反推,寻找无通信的外部时间源",
+    "利用AC供电灯具的物理特性作为天然振荡器替代",
+    "承认标准架构的性能瓶颈,定制驱动突破采样上限",
+    "把室内普遍存在的人工光源转化为传感器基础设施"
+  ],
+  "topic_tags": [
+    "fluorescent-lighting-sensing",
+    "clock-synchronization",
+    "low-power-sensor-networks",
+    "time-reference-extraction",
+    "light-sensor-calibration"
+  ],
+  "cites_own_work": [
+    "Z. Li et al., Mobicom 2012 (full paper related to this demo)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "本文为MobiCom演示系统文章,提供设计动机、挑战和实现细节,但评估数据较少。完整工作见同期Mobicom 2012长文[5]"
+}

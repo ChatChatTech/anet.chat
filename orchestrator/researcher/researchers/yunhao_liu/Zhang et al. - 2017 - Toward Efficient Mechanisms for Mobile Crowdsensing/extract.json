@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhang et al. - 2017 - Toward Efficient Mechanisms for Mobile Crowdsensing",
+  "doi": null,
+  "title": "Toward Efficient Mechanisms for Mobile Crowdsensing",
+  "year": 2017,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "用户不愿参与感知因资源消耗和隐私风险，需激励机制驱动；但现有机制限制了请求者分配任务的灵活性",
+  "problem_framing": "将感知任务分配建模为在线拍卖下的二分图匹配，在预算约束下最大化请求者价值",
+  "key_insight": "使用buck-per-bang率作为统一支付标准，通过多阶段采样-接受过程学习阈值，保证 truthful competitive",
+  "method_signature": "IMC-Z/G: 分阶段采样用户信息，计算b/b阈值，贪心选择用户并按阈值支付",
+  "evaluation_criteria": "constant competitive ratio vs offline optimal; truthfulness via utility maximization plots",
+  "negative_result_or_admitted_limitation": "实验显示实际value仅达最优的50%-70%，constant competitive保证的常数界在实际中仍偏保守",
+  "evidence_for_taste": [
+    "the payment $p_i = \\rho \\cdot v_j \\geq b_i$",
+    "we guarantee that $\\mathbb{E}[u(M_2')] \\geq \\frac{1}{2}\\mathbb{E}[u(M_1')]$",
+    "users achieve their optimal utility when bidding truthfully",
+    "the mechanisms for the offline setting invalid"
+  ],
+  "thinking_moves": [
+    "将问题拆分为两个子模型(Z-model和G-model)分别设计",
+    "以offline最优解为基准定义competitive证明下界",
+    "将用户-任务匹配形式化为二分图加权最大匹配",
+    "将支付计算与阈值更新解耦，实现bid-independence",
+    "用概率论(超几何分布)推导采样阶段期望值的性质"
+  ],
+  "topic_tags": [
+    "mobile crowdsensing",
+    "online auction mechanism",
+    "budget feasible mechanism",
+    "weighted bipartite matching",
+    "truthful incentive design"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为完整全文，含intro/method/eval/conclusion，引用的Goel et al. 2013工作为budget feasible mechanism基础，实验基于Gowalla和T-drive真实数据集验证。Yunhao Liu为通讯作者和senior author。 | md truncated to head40k+tail20k"
+}

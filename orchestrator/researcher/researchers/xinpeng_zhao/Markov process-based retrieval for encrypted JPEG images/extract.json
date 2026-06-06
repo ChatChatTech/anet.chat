@@ -1,0 +1,39 @@
+{
+  "paper_id": "Markov process-based retrieval for encrypted JPEG images",
+  "doi": "10.1186/s13635-015-0028-6",
+  "title": "Markov process-based retrieval for encrypted JPEG images",
+  "year": 2016,
+  "venue": "Eurasip Journal on Information Security",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "Cloud outsourcing of sensitive multimedia requires encryption, but traditional encryption breaks plaintext-based retrieval, creating urgent need for privacy-preserving retrieval on encrypted data.",
+  "problem_framing": "Achieve image retrieval directly on encrypted JPEG images without decryption, while preserving file size and format compliance, by exploiting DCT coefficient dependencies preserved under specific encryption.",
+  "key_insight": "Intra-block, inter-block, and inter-component dependencies among DCT coefficients remain statistically invariant under stream cipher + permutation encryption, enabling Markov-based feature extraction from encrypted images.",
+  "method_signature": "Markov transition probability matrices over DCT VLI code lengths + multi-class SVM dimensionality reduction",
+  "evaluation_criteria": "Precision-recall curves on Corel database; file size preservation comparison with Zhang [13]",
+  "negative_result_or_admitted_limitation": "Intra-block dependency alone yields poor performance because VLI code length replacement conceals actual DCT coefficient values, making little intra-block changes difficult to detect.",
+  "evidence_for_taste": [
+    "the dependencies are similar between similar images",
+    "very difficult to identify little changes between neighboring DCT coefficients",
+    "not sensitive to little changes between DCT coefficients",
+    "performance of the inter-component dependency is worst among all single dependencies"
+  ],
+  "thinking_moves": [
+    "从加密后的JPEG文件结构中寻找统计不变量——利用VLI码长度的统计不变性来绕过需要解密的前提",
+    "借用隐写分析领域的Markov过程模型来处理DCT系数依赖关系，将其引入加密域检索",
+    "用SVM的决策值将高维特征(768维)压缩到类别数维度(w维)，实现监督降维"
+  ],
+  "topic_tags": [
+    "encrypted-domain-retrieval",
+    "JPEG-DCT-markov-features",
+    "privacy-preserving-multimedia",
+    "stream-cipher-partial-encryption",
+    "multi-class-SVM-reduction"
+  ],
+  "cites_own_work": [
+    "13",
+    "14"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

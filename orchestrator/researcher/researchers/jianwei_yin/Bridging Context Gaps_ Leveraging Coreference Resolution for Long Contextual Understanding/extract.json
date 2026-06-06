@@ -1,0 +1,37 @@
+{
+  "paper_id": "Bridging Context Gaps_ Leveraging Coreference Resolution for Long Contextual Understanding",
+  "doi": "10.48550/arxiv.2410.01671",
+  "title": "Bridging Context Gaps: Leveraging Coreference Resolution for Long Contextual Understanding",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLMs struggle to accurately identify key passages from the middle of long contexts and generate effective responses when overwhelmed by excessive information",
+  "problem_framing": "Long texts with numerous pronouns, modifiers, and varying noun phrases cause comprehension challenges for LLMs, especially with ambiguous sentences",
+  "key_insight": "Resolving coreferences and replacing vague mentions with representative mentions systematically partitions context into easier-to-handle segments for LLMs",
+  "method_signature": "LQCA: coreference resolution on sub-documents + mentions distance computation + representative mention definition + QA with mention replacement",
+  "evaluation_criteria": "Rouge-L for summarization, Accuracy for QA, F1 for knowledge extraction across 9 datasets on 5 different LLMs",
+  "negative_result_or_admitted_limitation": "Coreference resolution struggles with ambiguous references or high complexity contexts, leading to inaccurate mention replacements; effectiveness may diminish for shorter contexts",
+  "evidence_for_taste": [
+    "the coreference resolution method using the LLM shows significant shortcomings in answering questions",
+    "the model is currently unable to effectively handle specific downstream tasks",
+    "excessively high threshold may degrade coreference resolution performance",
+    "RQCA-with RAG method helps smaller models extract relevant information"
+  ],
+  "thinking_moves": [
+    "识别到LLM在长上下文中容易混淆指代，先解决coreference再喂给LLM",
+    "把长文档切分成sub-documents来规避模型token限制，再用聚类合并结果",
+    "使用图的最长路径算法来计算跨文档mentions的距离和关联",
+    "验证文本质量本身对模型推理的影响>检索策略本身"
+  ],
+  "topic_tags": [
+    "long-context-LLM",
+    "coreference-resolution",
+    "mention-clustering",
+    "text-quality-enhancement",
+    "question-answering"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

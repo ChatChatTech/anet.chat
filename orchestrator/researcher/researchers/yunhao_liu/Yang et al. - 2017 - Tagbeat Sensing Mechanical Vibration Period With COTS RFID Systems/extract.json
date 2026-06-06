@@ -1,0 +1,43 @@
+{
+  "paper_id": "Yang et al. - 2017 - Tagbeat Sensing Mechanical Vibration Period With COTS RFID Systems",
+  "doi": null,
+  "title": "Tagbeat: Sensing Mechanical Vibration Period With COTS RFID Systems",
+  "year": 2017,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传统振动检测成本高(数百美元)或有遮挡限制;需要低成本、电池-free、非侵入式的通用方案",
+  "problem_framing": "从随机低频RFID读数中恢复周期性振动信号并检测周期,挑战在于欠采样和噪声",
+  "key_insight": "利用标签位移引起的背散射相位变化模式,通过相位微弧度分辨率检测微振动",
+  "method_signature": "数字显微镜放大微振动 + 压缩感知恢复信号 + RF折叠搜索周期",
+  "evaluation_criteria": "平均精度0.36ms,相对误差0.03%;3周期样本误差1.56ms",
+  "negative_result_or_admitted_limitation": "放大超过25倍后噪声放大主导导致误差升至4ms;环境必须相对静态要求",
+  "evidence_for_taste": [
+    "COTS reader supports millidegree resolution",
+    "double-edged sword",
+    "requires an extremely quiet condition",
+    "Tagbeat fails to recover when noise deviation > 0.7",
+    "positive impact dominates signal"
+  ],
+  "thinking_moves": [
+    "从背散射通信信号中提取振动特征而非另辟传感路径",
+    "将微振动放大问题转化为傅里叶域的系数放大",
+    "利用RFID随机读取天然稀疏性做压缩感知",
+    "承认放大器是双刃剑并设定安全阈值25倍",
+    "批评ART需极安静环境并非通用方案"
+  ],
+  "topic_tags": [
+    "RFID-vibration-sensing",
+    "compressive-sampling-undersampling",
+    "backscatter-phase-analysis",
+    "micro-vibration-magnification",
+    "COTS-RFID-sensing"
+  ],
+  "cites_own_work": [
+    "Tagoram: Real-time tracking of mobile RFID tags",
+    "Anti-counterfeiting via federated RFID tags' fingerprints",
+    "TagSee"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

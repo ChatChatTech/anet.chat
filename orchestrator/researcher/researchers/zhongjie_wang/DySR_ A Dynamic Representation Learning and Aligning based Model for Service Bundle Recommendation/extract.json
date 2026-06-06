@@ -1,0 +1,40 @@
+{
+  "paper_id": "DySR_ A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation",
+  "doi": "10.48550/arxiv.2108.03360",
+  "title": "DySR: A Dynamic Representation Learning and Aligning based Model for Service Bundle Recommendation",
+  "year": 2021,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有方法忽视服务随时间的演化和服务与需求间的表示差距，导致推荐性能受限",
+  "problem_framing": "将冷启动、演化社会环境、表示差距三个挑战统一建模为联合学习框架",
+  "key_insight": "服务的社会环境演化导致其功能隐式变化，需动态图学习捕获；需求与服务的异构语义空间需可学变换对齐",
+  "method_signature": "可学仿射变换对齐需求服务空间+动态图演化服务表示+GAN风格协同训练",
+  "evaluation_criteria": "F1@5, Recall@N, Precision@N on ProgrammableWeb",
+  "negative_result_or_admitted_limitation": "主题模型方法在ProgrammableWeb上F1@5仅约30%，当前SOTA不到40%；简单引入预训练模型和深度学习未显著提升性能，因无法直接适配服务推荐且存在负迁移",
+  "evidence_for_taste": [
+    "services' function and quality are static",
+    "each mashup only appears once",
+    "ignoring word orders make the performance",
+    "mixing of features in two different spaces",
+    "cannot really understand semantic",
+    "negative transfer",
+    "F1@5 value below 40%",
+    "simple introduction of PLMs and deep learning"
+  ],
+  "thinking_moves": [
+    "从服务生态角度洞察服务的隐式演化而非显式更新",
+    "将NLP与图学习的异构性重新框架为表示空间差异而非特征差异",
+    "用协同而非对抗的GAN风格训练连接监督与非监督任务",
+    "通过UMAP可视化定性验证动态表示的区分能力"
+  ],
+  "topic_tags": [
+    "service-bundle-recommendation",
+    "cold-start",
+    "dynamic-graph-learning",
+    "representation-alignment",
+    "service-evolution"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

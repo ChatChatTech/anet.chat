@@ -1,0 +1,39 @@
+{
+  "paper_id": "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively",
+  "doi": "10.48550/arxiv.2211.01642",
+  "title": "Fine-Tuning Pre-Trained Language Models Effectively by Optimizing Subnetworks Adaptively",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Fine-tuning大模型存在不稳定性和泛化差问题,现有子网优化方法要么随机选择、要么计算开销大",
+  "problem_framing": "把子网选择从静态/随机改为动态自适应:用梯度累积指导每阶段选重要参数更新",
+  "key_insight": "将子网导出过程与微调过程融合(不分离),通过循环两阶段策略让子网随训练动态更新",
+  "method_signature": "DPS(Dense/Mix): Stage I累积梯度, Stage II基于梯度排序选择子网参数更新",
+  "evaluation_criteria": "GLUE平均分↑、标准差↓、域外迁移、低资源场景、时间效率",
+  "negative_result_or_admitted_limitation": "DPS引入额外内存开销(存GAM/FAM矩阵),虽固定不随batch增长,但仍高于部分方法",
+  "evidence_for_taste": [
+    "choosing subnetworks randomly (Mixout) ignores importance",
+    "ignoring the update of some parameters may affect perception",
+    "accumulating all samples' gradients outside training would induce heavy overhead",
+    "making the model closer to real distribution may facilitate generalization",
+    "CHILD-TUNINGD and Mixout may fail to capture important parameters"
+  ],
+  "thinking_moves": [
+    "先指出两个现有方法各自的根本缺陷:随机忽略重要性 vs 冻住参数影响感知且计算重",
+    "从计算效率切入:把分离的子网导出和微调两过程合为一个循环迭代",
+    "用梯度累积自然实现Fisher Information的在线估计,避免一次性全量计算",
+    "对随机替换策略加上频率惩罚因子,防止高频更新参数占优",
+    "用case study区分easy cases和hard cases来看方法对难例的提升"
+  ],
+  "topic_tags": [
+    "PLM-fine-tuning",
+    "adaptive-subnetwork",
+    "gradient-based-mask",
+    "catastrophic-forgetting",
+    "low-resource-transfer"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

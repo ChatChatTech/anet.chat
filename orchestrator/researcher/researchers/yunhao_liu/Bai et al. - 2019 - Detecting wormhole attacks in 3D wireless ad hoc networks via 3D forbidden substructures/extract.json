@@ -1,0 +1,38 @@
+{
+  "paper_id": "Bai et al. - 2019 - Detecting wormhole attacks in 3D wireless ad hoc networks via 3D forbidden substructures",
+  "doi": null,
+  "title": "Detecting wormhole attacks in 3D wireless ad hoc networks via 3D forbidden substructures",
+  "year": 2019,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "Wormhole attacks严重威胁无线ad hoc网络，但2D方法无法迁移到3D，且现有3D禁止子结构难以直观感知",
+  "problem_framing": "在3D网络中仅用连通性信息检测wormhole，问题可归结为MaxIS计算",
+  "key_insight": "通过引入MaxIS（最大独立集），可在3D单位球模型中证明：3个非相邻节点最多有2个独立公共邻居",
+  "method_signature": "基于MaxIS的3D蠕虫洞检测算法，使用improved greedy algorithm替代simple greedy",
+  "evaluation_criteria": "检测率近乎100%，在平均度≥8时达到最优性能",
+  "negative_result_or_admitted_limitation": "Simple greedy algorithm无法保证MaxIS的大尺寸，在prior work中被误用；Algorithm [12]需要可调传输半径是强假设",
+  "evidence_for_taste": [
+    "this is a misunderstanding about the MaxIS and MIS",
+    "loose bound is given in [2]",
+    "this is significantly important to use the improved greedy",
+    "a simple way to detect the wormhole link"
+  ],
+  "thinking_moves": [
+    "发现2D成果无法直接迁移3D，需重新形式化几何约束",
+    "将检测问题重新frame为图论中的MaxIS问题",
+    "从几何packing问题推导独立集上界",
+    "区分MIS与MaxIS：simple greedy只能找MIS但不能保证size",
+    "引入物理理论（球面距离分布）做理论检测率分析"
+  ],
+  "topic_tags": [
+    "3D wireless ad hoc networks",
+    "wormhole attack detection",
+    "forbidden substructures",
+    "maximum independent set",
+    "topology-based security"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

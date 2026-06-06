@@ -1,0 +1,41 @@
+{
+  "paper_id": "2019_MSN",
+  "doi": null,
+  "title": "TODQA: Efficient Task-Oriented Data Quality Assessment",
+  "year": 2019,
+  "venue": "MSN",
+  "venue_tier": "workshop",
+  "role": "unknown",
+  "motivation": "现有数据质量评估 disconnected from application contexts, measure individual pieces not collections, 无法高效处理大规模数据",
+  "problem_framing": "task-oriented quality assessment: 量化intrinsic/contextual quality dimensions, 用rank aggregation融合不可比的维度并排序datasets",
+  "key_insight": "引入task relevancy和content diversity两个新维度, 用LSH+采样实现near-linear快速计算, 把多维度融合建模成rank aggregation问题",
+  "method_signature": "LSH+采样快速计算task relevancy和content diversity, Kendall tau距离rank aggregation",
+  "evaluation_criteria": "runtime减少90%且accuracy loss很小, 排序结果与模型性能一致",
+  "negative_result_or_admitted_limitation": "random sampling方法accuracy略好但our method更高效; equal weights导致排序与accuracy ranking不一致",
+  "evidence_for_taste": [
+    "disconnected from specific application contexts",
+    "few consider contextual factors",
+    "the latter is more commonly used",
+    "measure quality of an individual data piece",
+    "measurements of different dimensions are not comparable",
+    "our algorithm can save about 90% computing time with little accuracy loss"
+  ],
+  "thinking_moves": [
+    "从衡量单个数据点到衡量数据集整体特性",
+    "把质量融合的incommensurability问题重新frame成rank aggregation",
+    "用LSH近似算法解决exact计算在规模化下的不可行性",
+    "承认random sampling accuracy略好但选择efficiency优先"
+  ],
+  "topic_tags": [
+    "task-oriented-data-quality",
+    "LSH-approximation",
+    "rank-aggregation",
+    "content-diversity",
+    "task-relevancy"
+  ],
+  "cites_own_work": [
+    "Crowdbuy privacy-friendly image dataset purchasing via crowdsourcing"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

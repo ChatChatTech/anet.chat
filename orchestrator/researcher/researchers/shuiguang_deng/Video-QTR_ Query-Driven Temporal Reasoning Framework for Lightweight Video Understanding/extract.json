@@ -1,0 +1,40 @@
+{
+  "paper_id": "Video-QTR_ Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding",
+  "doi": "10.48550/arxiv.2512.09354",
+  "title": "Video-QTR: Query-Driven Temporal Reasoning Framework for Lightweight Video Understanding",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "密集帧编码导致长视频理解计算成本过高、内存消耗大",
+  "problem_framing": "将视频理解从被动处理转变为查询驱动的主动推理范式",
+  "key_insight": "显著性不等于相关性，视觉突出区域未必与查询意图相关，应由查询语义意图动态引导感知",
+  "method_signature": "四组件协同迭代框架：RTP+感知模块+TCR时序一致性精修+时序记忆",
+  "evaluation_criteria": "五个基准测试的准确率/分数与帧消耗削减比例的权衡优化",
+  "negative_result_or_admitted_limitation": "框架性能受底层LLM推理质量约束；分段策略对非显式查询存在冷启动问题，可能遗漏短暂关键事件",
+  "evidence_for_taste": [
+    "saliency and relevance are not synonymous",
+    "a reason-then-perceive approach",
+    "where perception is actively guided by semantic intent",
+    "The RTP is the linchpin of this entire paradigm",
+    "The LLM's initial temporal plan, while generally effective, can sometimes diverge"
+  ],
+  "thinking_moves": [
+    "质疑领域主流范式：process-then-reason的局限",
+    "区分两个不同概念：视觉显著性vs推理相关性",
+    "提出认知不匹配诊断：人类选择性注意vs模型均匀处理",
+    "将计算负担从高维视觉编码器转移到符号域LLM",
+    "通过消融实验定位关键组件的必要性"
+  ],
+  "topic_tags": [
+    "query-driven-video-understanding",
+    "temporal-reasoning",
+    "lightweight-video-understanding",
+    "LLM-agent-planning",
+    "adaptive-perception",
+    "long-video-comprehension"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文，包含方法细节、实验配置、消融研究和提示词模板 | md truncated to head40k+tail20k"
+}

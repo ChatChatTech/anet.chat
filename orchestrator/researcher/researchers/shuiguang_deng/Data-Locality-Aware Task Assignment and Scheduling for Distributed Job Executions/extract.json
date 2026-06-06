@@ -1,0 +1,38 @@
+{
+  "paper_id": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+  "doi": "10.48550/arxiv.2407.08584",
+  "title": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Cloud jobs require data chunks replicated across servers; inefficient data-locality scheduling increases transfer overhead and violates SLAs.",
+  "problem_framing": "Bipartite graph-based task assignment minimizing job completion time under FIFO or prioritized reordering, without future job knowledge.",
+  "key_insight": "Water-filling achieves tight K-approximation where K is task group count; replica-deletion leverages global optimization to surpass WF.",
+  "method_signature": "OBTA narrows search via bounds; WF water-fills across groups; RD deletes replicas globally; OCWF-ACC adds early-exit.",
+  "evaluation_criteria": "Average job completion time, computation overhead, CDF of completion times on Alibaba cluster trace.",
+  "negative_result_or_admitted_limitation": "Theoretical performance analysis of RD is left as future work.",
+  "evidence_for_taste": [
+    "significantly reducing computational overhead",
+    "provides a rigorous proof",
+    "leverages global optimization techniques",
+    "without prior knowledge of future job arrivals"
+  ],
+  "thinking_moves": [
+    "Identify limitations of prior work (SWAG neglects replication, offline methods lack adaptability)",
+    "Prove tight approximation bounds on algorithm behavior",
+    "Narrow solution search space via upper/lower bounds on completion time",
+    "Extend homogeneous algorithm to heterogeneous setting with formal proof",
+    "Design heuristic using global view rather than local sequential processing"
+  ],
+  "topic_tags": [
+    "data-locality",
+    "task-assignment",
+    "distributed-scheduling",
+    "water-filling-approximation",
+    "job-completion-time-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

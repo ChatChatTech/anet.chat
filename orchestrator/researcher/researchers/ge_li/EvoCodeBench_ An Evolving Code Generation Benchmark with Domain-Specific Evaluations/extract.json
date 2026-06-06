@@ -1,0 +1,39 @@
+{
+  "paper_id": "EvoCodeBench_ An Evolving Code Generation Benchmark with Domain-Specific Evaluations",
+  "doi": "10.48550/arxiv.2410.22821",
+  "title": "EvoCodeBench: An Evolving Code Generation Benchmark with Domain-Specific Evaluations",
+  "year": 2024,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有代码生成基准测试存在数据泄露问题,且缺乏领域特定评估,无法可靠地为特定编程领域选择LLM",
+  "problem_framing": "将代码生成评估问题重新定义为:避免数据泄露的动态演化基准+领域感知的模型能力分析",
+  "key_insight": "通过Domain-Specific Improvement(DSI)量化模型在不同领域的相对优势,可识别舒适域(strange domains)",
+  "method_signature": "四阶段自动流水线构建:仓库筛选→执行过滤→自动标注→基准构建",
+  "evaluation_criteria": "Pass@k(功能正确性)、Recall@k(依赖召回率)、DSI(领域特异性改进)",
+  "negative_result_or_admitted_limitation": "EvoCodeBench为单语言(Python)基准,规模小于部分现有基准(Text Processing域仅1样本)",
+  "evidence_for_taste": [
+    "gpt-4 only achieves 20.73 on Pass@1",
+    "the leakage rate drops to less than 3%",
+    "StarCoder 2-15B unexpectedly performs well in Database",
+    "auto-generated annotations are comparable to human-written",
+    "existing LLMs' reasoning and coding abilities need to be improved"
+  ],
+  "thinking_moves": [
+    "将数据泄露问题量化为基准测试的潜在泄露率",
+    "通过领域分布不平衡反推样本采集的时间窗口选择",
+    "用相对改进而非绝对分数来定义领域优势",
+    "用自动化流水线规避人工标注的高成本低效率问题",
+    "通过错误分析将失败归因于实现逻辑或上下文缺失"
+  ],
+  "topic_tags": [
+    "code-generation-benchmark",
+    "data-leakage-detection",
+    "domain-specific-evaluation",
+    "LLM-evaluation",
+    "repo-level-code-completion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

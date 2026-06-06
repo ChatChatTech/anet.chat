@@ -1,0 +1,37 @@
+{
+  "paper_id": "Heterogeneity-Aware Federated Learning",
+  "doi": null,
+  "title": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data",
+  "year": 2021,
+  "venue": "WWW '21",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有FL研究对设备可用性和硬件同质性有过度理想假设，异构性的影响从未被系统研究",
+  "problem_framing": "用136k智能手机数据构建异构感知FL平台，对比异构感知与异构无知设置下的性能差异",
+  "key_insight": "异构性导致非平凡性能下降(9.2%准确率下降、2.32×训练时间延长)，状态异构性比硬件异构性更致准确率下降",
+  "method_signature": "大规模智能手机数据集+异构感知FL仿真平台+对比实验测量",
+  "evaluation_criteria": "收敛准确率、训练时间/轮数、压缩比、准确率方差(公平性)",
+  "negative_result_or_admitted_limitation": "梯度压缩算法几乎无法加速收敛，q-FedAvg在异构感知下保证公平性的效果减弱",
+  "evidence_for_taste": [
+    "non-trivial accuracy drop",
+    "state heterogeneity is often more responsible",
+    "can hardly speed up the model convergence",
+    "optimizations are not always effective as reported"
+  ],
+  "thinking_moves": [
+    "首次系统实证测量FL异构性影响而非提出新算法",
+    "解耦数据分布与异构性以推广到第三方数据集",
+    "分解异构性为硬件与状态两类分别分析影响因子",
+    "从真实部署数据反推仿真假设的合理性"
+  ],
+  "topic_tags": [
+    "federated-learning-heterogeneity",
+    "large-scale-smartphone-measurement",
+    "device-failure-analysis",
+    "participant-bias",
+    "fl-platform-simulation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

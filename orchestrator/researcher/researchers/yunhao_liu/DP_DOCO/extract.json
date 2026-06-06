@@ -1,0 +1,39 @@
+{
+  "paper_id": "DP_DOCO",
+  "doi": null,
+  "title": "Differentially Private Distributed Online Convex Optimization Towards Low Regret and Communication Cost",
+  "year": 2023,
+  "venue": "MobiHoc",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有PDOCO算法的regret随隐私预算减小或模型维度增大而急剧上升，且通信代价过高，不适用于严格隐私要求或高维模型场景",
+  "problem_framing": "在分布式在线凸优化中同时优化 regret 和通信成本，同时保证 ε-差分隐私",
+  "key_insight": "最优batch大小 τ 平衡了DP噪声水平与模型更新速度，而非批量更新是τ=1的次优特例",
+  "method_signature": "PDOM: mini-batch策略 + 最优batch大小选择算法",
+  "evaluation_criteria": "regret上界、消息复杂度、分类误差率",
+  "negative_result_or_admitted_limitation": "文献[31]的非批量算法是PDOM-O在τ=1时的次优特例，未能发现batch大小的核心作用",
+  "evidence_for_taste": [
+    "the regret loss is affected by both",
+    "Finding the optimal batch size that balances",
+    "the optimal batch size is constant in T",
+    "this choice is sub-optimal according to Corollary 1",
+    "the impact of the DP budget ε on the optimal regret",
+    "existing works employ heuristic batch sizes"
+  ],
+  "thinking_moves": [
+    "从regret上界显式解析batch大小依赖关系，找到最优τ",
+    "区分oblivious与stochastic设置的不同最优batch特征",
+    "把batch大小选择问题formulate为最小化regret约束下的优化",
+    "发现mini-batch策略可同时降低噪声和通信成本的双重收益"
+  ],
+  "topic_tags": [
+    "differential-privacy",
+    "distributed-online-learning",
+    "mini-batch-optimization",
+    "communication-cost-reduction",
+    "regret-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

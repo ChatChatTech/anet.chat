@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhang et al. - 2020 - airFinger Micro Finger Gesture Recognition via NIR Light Sensing for Smart Devices",
+  "doi": null,
+  "title": "airFinger: Micro Finger Gesture Recognition via NIR Light Sensing for Smart Devices",
+  "year": 2020,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "Small wearables need unobtrusive input; existing sensing modalities (radar/RF/camera) consume too much energy or have privacy/environment vulnerabilities",
+  "problem_framing": "NIR sensing can't track finger movements—only detect gestures—which limits application scope for micro finger interactions",
+  "key_insight": "RSS patterns from reflected NIR are unique per gesture AND per movement; feature importance feedback selects 25 robust features to handle individual/inconsistency variation",
+  "method_signature": "Custom NIR LED-PD sensor with SBC noise mitigation + Dynamic Threshold segmentation + RF classifier + ZEBRA tracking algorithm",
+  "evaluation_criteria": "Gesture recognition accuracy (98.72%) over 10,000 samples from 10 volunteers; robustness to individual diversity, inconsistency, environment",
+  "negative_result_or_admitted_limitation": "Sunlight saturation outdoors causes PD saturation; direct IR remote pointing causes recognition errors",
+  "evidence_for_taste": [
+    "how to precisely track fingers from RSS patterns is an issue that has not been studied",
+    "Ndyn has a lower magnitude comparing to Sges",
+    "a fixed threshold cannot work",
+    "RF has lower computational expense, which is more suitable for real-time",
+    "velocity is proportional to the time difference delta t"
+  ],
+  "thinking_moves": [
+    "从信号幅值建模转向相对顺序建模",
+    "用特征重要性反馈指导特征选择，而非预设特征",
+    "将tracking问题分解为方向/速度/位移三个独立子问题",
+    "动态阈值替代固定阈值以适应个体差异",
+    "借鉴计算机视觉背景前景分割思想解决分割问题"
+  ],
+  "topic_tags": [
+    "micro-finger-gesture",
+    "NIR-light-sensing",
+    "wearable-interaction",
+    "RSS-fingerprint",
+    "real-time-tracking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

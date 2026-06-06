@@ -1,0 +1,40 @@
+{
+  "paper_id": "Qian et al. - 2018 - Acousticcardiogram Monitoring Heartbeats using Acoustic Signals on Smart Devices",
+  "doi": null,
+  "title": "Acousticcardiogram: Monitoring Heartbeats using Acoustic Signals on Smart Devices",
+  "year": 2018,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "心律失常多为偶发性,但现有ECG和可穿戴设备价格高、使用不便,难以实现日常持续监测。",
+  "problem_framing": "利用商业设备扬声器和麦克风实现非接触式心跳监测,需解决自干扰、厘米级分辨率不足、信号弱等问题。",
+  "key_insight": "FMCW相位跟踪可捕捉亚厘米胸壁运动,结合双麦克风消噪和梳状滤波器提取心音信号。",
+  "method_signature": "FMCW声纳+双麦克风自干扰消除+基带相位跟踪+自适应梳状滤波器+EM算法提取心跳",
+  "evaluation_criteria": "心率误差(bpm)和心跳间隔误差(ms),对比ECG标准、FINGER接触式和FACE非接触式方法",
+  "negative_result_or_admitted_limitation": "用户7异常运动、用户9严重心律不齐导致性能下降,特殊案例需进一步研究。",
+  "evidence_for_taste": [
+    "cannot spot heartbeat signal",
+    "sub-centimetre level amplitudes",
+    "submerged in breath signal",
+    "orders of magnitude weaker",
+    "cannot be directly applied",
+    "dramatically low SNR",
+    "oscillate or converge at wrong local minima"
+  ],
+  "thinking_moves": [
+    "把厘米级运动检测转化为相位追踪问题(突破FMCW距离分辨率限制)",
+    "借用RF领域的EM算法框架处理声信号的极端低信噪比",
+    "通过梳状滤波器将准周期信号与噪声分离,替代简单频域搜索",
+    "承认现有RF方法直接迁移不可行,需要针对声信号特性重新设计"
+  ],
+  "topic_tags": [
+    "acoustic-sensing",
+    "FMCW-sonar",
+    "vital-signs-monitoring",
+    "non-contact-heartbeat",
+    "smartphone-health"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注venue信息,根据内容风格推断为顶级会议但无法确定。"
+}

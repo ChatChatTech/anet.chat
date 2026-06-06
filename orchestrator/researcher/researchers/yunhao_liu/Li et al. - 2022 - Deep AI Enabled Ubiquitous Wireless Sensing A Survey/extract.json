@@ -1,0 +1,43 @@
+{
+  "paper_id": "Li et al. - 2022 - Deep AI Enabled Ubiquitous Wireless Sensing A Survey",
+  "doi": null,
+  "title": "Deep AI Enabled Ubiquitous Wireless Sensing: A Survey",
+  "year": 2021,
+  "venue": "ACM Computing Surveys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有综述分散于不同信号模态与应用，缺乏融合深度学习与无线感知的综合演化框架",
+  "problem_framing": "将WSS分解为信号预处理、高层特征提取、感知模型构建三模块，比较传统方法与深度学习方法",
+  "key_insight": "无线感知与视觉感知在输入输出上具有相似性,WSS绝对可从深度AI获益",
+  "method_signature": "综述三模块中深度学习技术，对比传统方法，分析挑战与趋势",
+  "evaluation_criteria": "综述性论文无新评估标准，比较现有方法性能与适用场景",
+  "negative_result_or_admitted_limitation": "深度学习技术带来密集训练代价，需要跨域适应解决环境差异",
+  "evidence_for_taste": [
+    "综合综述的必要性：existing surveys are scattered",
+    "核心类比：CSI is to RSSI what a rainbow is to sunbeam",
+    "挑战承认：intensive training effort induced by DL",
+    "跨域难题：cross-scenario device-free activity recognition"
+  ],
+  "thinking_moves": [
+    "用视觉领域成功类比论证无线感知采用深度学习的可行性",
+    "将复杂系统分解为三模块逐层比较传统与AI方法",
+    "通过分类表格组织散点文献形成体系",
+    "以物理信号特性(RSSI/CSI/FMCW)为维度建立输入认知框架",
+    "承认深度学习在训练代价和跨域泛化上的局限"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-sensing",
+    "deep-learning-ubiquitous-sensing",
+    "signal-preprocessing-DL",
+    "cross-domain-adaptation",
+    "RF-pose-estimation"
+  ],
+  "cites_own_work": [
+    "Widar",
+    "PADS",
+    "TagScan",
+    "Smokey"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "该文为综述论文,作者为共同署名,Yunhao Liu为中国合作者。论文系统梳理了深度学习增强无线感知的三层架构,提供了丰富的分类表格,体现了对领域方法的系统性驾驭能力。 | md truncated to head40k+tail20k"
+}

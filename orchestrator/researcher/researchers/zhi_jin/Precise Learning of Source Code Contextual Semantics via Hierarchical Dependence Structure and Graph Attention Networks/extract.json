@@ -1,0 +1,41 @@
+{
+  "paper_id": "Precise Learning of Source Code Contextual Semantics via Hierarchical Dependence Structure and Graph Attention Networks",
+  "doi": "10.1016/j.jss.2021.111108",
+  "title": "Precise Learning of Source Code Contextual Semantics via Hierarchical Dependence Structure and Graph Attention Networks",
+  "year": 2021,
+  "venue": "Journal of Systems and Software",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有AST模型捕获语法但无法提取隐式上下文依赖；CFG模型虽能提供上下文依赖，但无法有效表示基本块内部信息",
+  "problem_framing": "如何构建同时融合AST语法结构和CFG上下文依赖的分层源码模型，以精确学习代码语义",
+  "key_insight": "每个CFG基本块对应一个AST子树——基本块的AST结构差异（如null vs NO_FIELDS）比词频更能捕捉语义区别",
+  "method_signature": "MFGNN双层网络：TBCNN提取基本块局部特征，AGN4D（有向多类型边图注意力）学习上下文特征",
+  "evaluation_criteria": "程序分类准确率/F1、缺陷预测AUC、F1、代码克隆检测准确率",
+  "negative_result_or_admitted_limitation": "BoW等文本特征严重依赖词频，无法有效捕捉代码间的细微语义差异",
+  "evidence_for_taste": [
+    "basic blocks, which are the basis of contextual dependencies, are paid little attention",
+    "these methods only utilize the textual features, which significantly relies on the frequency",
+    "cannot effectively capture the difference shown in Figure 1",
+    "the learning of these two words (null and NO_FIELDS) is uneven",
+    "the basic blocks should be prioritized",
+    "a proper source code model should introduce semantic differences",
+    "subtle grammatical differences, are represented by the structural differences of the AST"
+  ],
+  "thinking_moves": [
+    "从缺陷样例反推模型应捕获执行路径和语义差异",
+    "先定义基本块表示为何不足，再提出AST子树的解决方案",
+    "分层处理：先局部后上下文，先树后图",
+    "扩展GAT支持有向边和多类型边以适应CFG",
+    "调整TBCNN权重使深层节点信息更显著"
+  ],
+  "topic_tags": [
+    "AST-CFG混合代码表示",
+    "图注意力网络",
+    "程序缺陷预测",
+    "基本块语义建模",
+    "多类型边有向图"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

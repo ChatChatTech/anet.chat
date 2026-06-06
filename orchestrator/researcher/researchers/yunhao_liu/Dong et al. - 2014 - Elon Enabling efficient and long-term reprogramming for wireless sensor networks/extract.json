@@ -1,0 +1,40 @@
+{
+  "paper_id": "Dong et al. - 2014 - Elon Enabling efficient and long-term reprogramming for wireless sensor networks",
+  "doi": null,
+  "title": "Elon: Enabling Efficient and Long-Term Reprogramming for Wireless Sensor Networks",
+  "year": 2014,
+  "venue": "ACM Trans. Embedd. Comput. Syst.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "WSN nodes deployed in forests/vast areas are physically inaccessible; existing reprogramming protocols waste energy transmitting large kernels and suffer reboot-induced outages.",
+  "problem_framing": "Three orthogonal bottlenecks: (1) transferred code size, (2) reboot cost (state loss), (3) flash-write voltage floor limiting reprogrammable lifetime to first 23% of battery life.",
+  "key_insight": "TinyOS kernel changes slowly while application changes fast; by annotating replaceable vs. system components, disseminate only the delta—making the common case fast.",
+  "method_signature": "Compiler-extended annotations, two-phase linking, system jump table indirection, partial reboot avoiding kernel-state loss.",
+  "evaluation_criteria": "Transferred code size reduction, beacon packet overhead for state recovery, reprogrammable lifetime extension (3.3× TelosB).",
+  "negative_result_or_admitted_limitation": "Elon trades flexibility: needs code annotations upfront; cannot update kernel components without full image; Mica/Harvard-architecture nodes lose lifetime benefit.",
+  "evidence_for_taste": [
+    "make the common case fast",
+    "the TinyOS kernel components are slowly changing while the application component is quickly changing",
+    "the voltage of some nodes quickly falls below 2.7V",
+    "reboots from a software error led to 3-day network outage",
+    "we trade off less flexibility"
+  ],
+  "thinking_moves": [
+    "把系统划分为稳态kernel和动态replaceable两部分，只传变动的部分",
+    "利用Von Neumann架构把代码放RAM，避免flash write的电压约束",
+    "借鉴microreboot思想，设计partial reboot保留kernel状态表",
+    "把annotation成本作为工程代价接受，换性能收益"
+  ],
+  "topic_tags": [
+    "WSN-over-the-air-reprogramming",
+    "TinyOS-kernel-vs-application-boundary",
+    "flash-write-voltage-lifetime",
+    "partial-reboot-state-preservation",
+    "replaceable-component-annotation"
+  ],
+  "cites_own_work": [
+    "GreenOrbs (Mo et al. 2009) is the real-world complex application motivating the design"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Full paper text available with complete design, implementation, and evaluation sections. Yunhao Liu's research taste evident in his focus on practical long-term WSN operation and pragmatic trade-offs. | md truncated to head40k+tail20k"
+}

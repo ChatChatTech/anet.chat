@@ -1,0 +1,44 @@
+{
+  "paper_id": "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer",
+  "doi": "10.1109/tip.2023.3314285",
+  "title": "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer",
+  "year": 2023,
+  "venue": "IEEE Transactions on Image Processing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "CNN只能在小感受野内提取特征,无法处理ORSIs中物体的多方向性、多尺度和多变类别等复杂场景",
+  "problem_framing": "ORSI-SOD遵循局部到情境化范式,缺乏全局建模能力,导致检测不完整、方向不敏感",
+  "key_insight": "用Transformer替换CNN backbone建立全局关系,再对全局特征进行局部增强(全局到局部范式)",
+  "method_signature": "GeleNet使用PVT transformer backbone配合D-SWSAM、KTM、SWSAM三个模块进行显著目标检测",
+  "evaluation_criteria": "F-measure、S-measure、E-measure三个指标在ORSSD、EORSSD、ORSI-4199三个数据集上评估",
+  "negative_result_or_admitted_limitation": "传统spatial attention以全局方式生成注意力图,会遗漏有效信息导致误检背景;SGE忽略子特征间注意力一致性,不友好于SOD",
+  "evidence_for_taste": [
+    "CNNs can only extract features within certain receptive fields",
+    "insufficient to handle challenging scenes of ORSIs",
+    "D-SWSAM comprehensively perceives the orientation information",
+    "channel shuffle operation to explicitly increase the channel interaction",
+    "complementarity between the product and sum"
+  ],
+  "thinking_moves": [
+    "将local-to-contextual范式翻转,从全局建模出发再回到局部增强",
+    "针对不同层级特征设计不同模块(D-SWSAM、SWSAM、KTM)而非统一处理",
+    "引入方向卷积显式捕捉ORSIs中物体方向变化问题"
+  ],
+  "topic_tags": [
+    "ORSI-SOD",
+    "Transformer backbone",
+    "Direction-aware convolution",
+    "Global-to-local paradigm",
+    "Attention mechanism"
+  ],
+  "cites_own_work": [
+    "[13] Lightweight salient object detection via semantic matching",
+    "[15] Nested network with two-stream pyramid",
+    "[16] Adjacent context coordination network",
+    "[17] Lightweight salient object detection via feature correlation",
+    "[20] Multi-content complementation network",
+    "[48] Cascaded partial decoder"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

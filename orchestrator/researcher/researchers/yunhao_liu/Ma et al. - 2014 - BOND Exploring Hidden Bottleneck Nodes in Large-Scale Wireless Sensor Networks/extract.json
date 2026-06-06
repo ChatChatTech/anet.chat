@@ -1,0 +1,42 @@
+{
+  "paper_id": "Ma et al. - 2014 - BOND Exploring Hidden Bottleneck Nodes in Large-Scale Wireless Sensor Networks",
+  "doi": null,
+  "title": "BOND: Exploring Hidden Bottleneck Nodes in Large-Scale Wireless Sensor Networks",
+  "year": 2014,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "GreenOrbs部署中23.5%节点突然停止发包,但诊断包回收率不足10%,无法定位故障根因",
+  "problem_framing": "将路由依赖量化为状态转移概率,找出网络分离时最可能失效的隐藏瓶颈节点",
+  "key_insight": "若节点A强烈依赖父节点B,则A从B切换到其他的概率小,而从其他切换到B的概率大",
+  "method_signature": "HMM建模路由过程,Baum-Welch学习状态转移矩阵,计算Node Dependence图",
+  "evaluation_criteria": "85%以上平均推断准确率;流量预测相对误差约25%",
+  "negative_result_or_admitted_limitation": "父亲数超过14个时准确率骤降至65.4%;距离越远准确率越低",
+  "evidence_for_taste": [
+    "these nodes are mainly enforced to forward data by the protocols",
+    "we quantize the dependence among the nodes based on the measurement of parent change events",
+    "the analysis must be lack of considering the link quality",
+    "what really happens would be omitted"
+  ],
+  "thinking_moves": [
+    "从网络分离现象反推存在隐藏瓶颈节点",
+    "将依赖定义为状态转移概率而非流量大小",
+    "承认简单拓扑分析遗漏链路质量和路由协议因素",
+    "承认bloom filter存在false positive影响推断精度"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-diagnosis",
+    "hidden-markov-model-inference",
+    "bottleneck-node-detection",
+    "network-failure-localization",
+    "bloom-filter-passive-monitoring"
+  ],
+  "cites_own_work": [
+    "Liu et al. 2011 (GreenOrbs measurement)",
+    "Ma et al. 2013 (Link Scanner)",
+    "Liu et al. 2011 (Self-diagnosis)",
+    "Ma et al. 2012 (Sherlock)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文中未明确标注venue信息,从参考文献格式推测为国际会议级别,但具体会议名称和年份未被正文直接提及"
+}

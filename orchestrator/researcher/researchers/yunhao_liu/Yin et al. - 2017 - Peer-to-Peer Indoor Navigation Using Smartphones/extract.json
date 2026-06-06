@@ -1,0 +1,39 @@
+{
+  "paper_id": "Yin et al. - 2017 - Peer-to-Peer Indoor Navigation Using Smartphones",
+  "doi": null,
+  "title": "Peer-to-Peer Indoor Navigation using Smartphones",
+  "year": 2017,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有室内导航依赖预部署定位服务和精确地图,难以快速部署且精度不足,实际场景需求无法满足",
+  "problem_framing": "如何在无预置服务和地图条件下,通过轨迹同步而非绝对定位实现导航指引",
+  "key_insight": "将时序WiFi指纹转换为'指纹图'形式后,某些特征(无线峰和视觉标记)在采样率/速度/噪声变化下保持稳定",
+  "method_signature": "基于前序旅客轨迹的P2P导航,指纹图特征对齐+指纹距离趋势偏差检测",
+  "evaluation_criteria": "轨迹跟踪平均误差0.9m,偏差检测最大延迟4.5s,检测精度93%召回92%",
+  "negative_result_or_admitted_limitation": "当用户距任何参考轨迹过远时无法引导,用户行为(如停停走走)会影响轨迹质量",
+  "evidence_for_taste": [
+    "RSS differences can be as large as 10 dBm",
+    "different sampling frequency and walking speeds",
+    "precision of 93% and recall of 92%",
+    "less than 10 samples",
+    "power consumption is affordable"
+  ],
+  "thinking_moves": [
+    "把定位问题重构为轨迹同步问题,放弃绝对位置依赖",
+    "将离散指纹匹配扩展为时序指纹图匹配,利用图像处理技术",
+    "从单个AP RSS峰值的空间稳定性出发构建无线标记",
+    "用稳健线性回归(RMSE+bisquare权重)对抗异常AP数据",
+    "观察指纹相似度随距离变化的V形模式用于偏差检测"
+  ],
+  "topic_tags": [
+    "WiFi-fingerprint-navigation",
+    "peer-to-peer-localization",
+    "sequential-fingerprint-matching",
+    "trace-synchronization",
+    "deviation-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

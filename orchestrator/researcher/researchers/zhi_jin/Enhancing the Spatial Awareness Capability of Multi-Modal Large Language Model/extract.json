@@ -1,0 +1,38 @@
+{
+  "paper_id": "Enhancing the Spatial Awareness Capability of Multi-Modal Large Language Model",
+  "doi": "10.48550/arxiv.2310.20357",
+  "title": "Enhancing the Spatial Awareness Capability of Multi-Modal Large Language Model",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有MLLM空间感知能力显著落后于人类需求，无法满足自动驾驶等高要求场景",
+  "problem_framing": "MLLM缺乏精确空间信息，将多模态任务解耦为几何定位+语义关系+LLM推理三阶段",
+  "key_insight": "利用预训练小模型(Faster R-CNN+PSG)提供精确几何位置和场景图信息引导LLM",
+  "method_signature": "目标实体提取→目标检测获取几何坐标→场景图生成获取语义关系→Prompt引导LLM",
+  "evaluation_criteria": "MME位置任务准确率、MM-Vet空间感知任务得分",
+  "negative_result_or_admitted_limitation": "\"there is no gold standard, and no one is perfect; present MLLM struggles to effectively accomplish all multi-modal tasks with its intrinsic abilities alone\"",
+  "evidence_for_taste": [
+    "\"present MLLM struggles to effectively accomplish all multi-modal tasks\"",
+    "\"there is no gold standard, and no one is perfect\"",
+    "\"current performance of MLLM in spatial awareness still significantly lags behind\"",
+    "\"This is the first work to combine pretrained smaller models with MLLM\"",
+    "The improvement from fusion was 2.9% higher than cumulative improvements from using two pieces separately"
+  ],
+  "thinking_moves": [
+    "MLLM自身能力不足时求助于外部预训练小模型而非继续挖掘LLM潜力",
+    "将空间感知问题解构为几何定位与语义关系两层信息",
+    "验证融合效果时关注增量是否大于各部分增量之和以证明组合优势",
+    "承认MLLM内在局限而非强行提升模型规模或数据量"
+  ],
+  "topic_tags": [
+    "MLLM空间感知",
+    "目标检测引导生成",
+    "场景图增强VLM",
+    "多模态提示工程",
+    "BLIP-2增强"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Liu et al. - 2005 - Efficient data retrieving in distributed data-streaming environments",
+  "doi": null,
+  "title": "Efficient Data Retrieving in Distributed Datastreaming Environments",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "大规模分布式追踪系统中，查询流量大且分布不均，单点传输瓶颈明显",
+  "problem_framing": "将负载均衡问题形式化为在物理链路和组成员间同时平衡overlay multicast流量",
+  "key_insight": "多棵独立的多播树能利用更多物理链路，比单棵树更均匀地分散流量",
+  "method_signature": "分布式MMT协议，端主机自组织成多棵多播树，碎片合并迭代构建",
+  "evaluation_criteria": "物理流量/节点度偏差/链路应力分布/时延等多维指标",
+  "negative_result_or_admitted_limitation": "overlay multicast比IP multicast有更长延迟和更大流量开销",
+  "evidence_for_tour": [
+    "existing approaches simply pay attention to the load balance among the group members",
+    "one multicast tree only use a small part of all the physical links",
+    "Our MMT has a little higher totally used physical link number",
+    "The performance penalty is longer end-to-end delay",
+    "the routing path ... may not match the optimal routing path at the IP layer"
+  ],
+  "thinking_moves": [
+    "现有方法只关注overlay层负载，忽视物理链路层负载分布",
+    "从单树瓶颈反推多树分流的设计动机",
+    "借鉴分布式最小生成树算法实现碎片合并",
+    "用round-robin保证不同树有均衡机会选到优质链路"
+  ],
+  "topic_tags": [
+    "overlay-multicast",
+    "load-balancing",
+    "distributed-tree-construction",
+    "physical-link-stress",
+    "automobile-tracking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注会议名称或发表 venue，仅能从内容判断为网络/分布式系统领域学术工作"
+}

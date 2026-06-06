@@ -1,0 +1,40 @@
+{
+  "paper_id": "Achieving Adaptation for Adaptive Systems via Runtime Verification_ A Model-Driven Approach",
+  "doi": "10.48550/arxiv.1704.00869",
+  "title": "Achieving Adaptation for Adaptive Systems via Runtime Verification: A Model-Driven Approach",
+  "year": 2017,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Self-adaptive systems需要自动在运行时调整行为,但在变化环境中确保NFRs(可靠性、性能)面临挑战。",
+  "problem_framing": "将需求工程阶段的静态目标模型与动态运行时自适应相桥接,需建模适应机制并支持NFR验证决策。",
+  "key_insight": "verification is used as the decision-making process—verification results直接筛选候选适应方案",
+  "method_signature": "MAPE目标模型→CSP行为模型→变种DTMC/CTMC→PCTL/CSL验证→最优适应决策",
+  "evaluation_criteria": "通过PRISM模型检验验证5类NFRs后逐步削减备选方案直至唯一最优解",
+  "negative_result_or_admitted_limitation": "未讨论self-protecting场景,且假设系统离散化处理连续属性",
+  "evidence_for_taste": [
+    "verification processes serve as the decision-making unit",
+    "model is more concise but easier to be manipulated",
+    "verification is used as a decision-making method",
+    "reducing the decision space"
+  ],
+  "thinking_moves": [
+    "把验证从后验确认重框为决策生成机制",
+    "用CSP算子建立目标模型到行为模型的映射模式",
+    "DTMC/CTMC的变种状态表示候选决策路径",
+    "MAPE控制环作为建模元素直接嵌入需求模型"
+  ],
+  "topic_tags": [
+    "self-adaptive-software",
+    "runtime-verification",
+    "model-driven-requirements",
+    "probabilistic-model-checking",
+    "MAPE-control-loop",
+    "NFR-adaptive-decision"
+  ],
+  "cites_own_work": [
+    "Z. Yang, Z, Jin, Modeling and specifying parametric adaptation mechanism for self-adaptive systems, Springer, 2014"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

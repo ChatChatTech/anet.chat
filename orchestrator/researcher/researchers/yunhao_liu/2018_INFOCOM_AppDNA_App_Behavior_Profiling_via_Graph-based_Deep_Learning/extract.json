@@ -1,0 +1,40 @@
+{
+  "paper_id": "2018_INFOCOM_AppDNA_App_Behavior_Profiling_via_Graph-based_Deep_Learning",
+  "doi": null,
+  "title": "AppDNA: App Behavior Profiling via Graph-based Deep Learning",
+  "year": 2018,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "app市场分类混乱(42.86%不满意),恶意软件激增,用户难找app,需深度行为理解",
+  "problem_framing": "将大规模函数调用图压缩为64维固定长度向量以实现app行为相似性度量",
+  "key_insight": "用被调用的稳定系统函数集来表示用户函数行为,可抵抗重命名/重排序攻击",
+  "method_signature": "函数调用图编码+自编码器无监督学习生成64维行为轮廓",
+  "evaluation_criteria": "恶意软件检测准确率、家族分类准确率、功能分类准确率",
+  "negative_result_or_admitted_limitation": "DFS_byFunc在函数重命名后准确率跌至约1%;朴素遍历顺序效果不满意",
+  "evidence_for_taste": [
+    "achieves considerably good but unsatisfying accuracy",
+    "the key problem here is to determine the order",
+    "cannot be adopted as the input",
+    "too coarse-grained and sensitive",
+    "RNN performs the worst",
+    "their small sample sizes"
+  ],
+  "thinking_moves": [
+    "用稳定信号(系统API)规范化不稳定信号(用户名)",
+    "将图遍历转化为序列问题:遍历顺序决定编码结果",
+    "majority voting思想:大多数系统函数优先级决定用户函数顺序",
+    "权衡粒度:分组哈希降低维度同时保持鲁棒性",
+    "拒绝邻接矩阵:大小不一+标签异构+不鲁棒"
+  ],
+  "topic_tags": [
+    "android-malware-detection",
+    "function-call-graph-encoding",
+    "autoencoder-representation-learning",
+    "app-behavior-profiling",
+    "unsupervised-graph-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

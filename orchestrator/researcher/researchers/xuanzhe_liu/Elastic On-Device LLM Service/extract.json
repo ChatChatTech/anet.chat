@@ -1,0 +1,42 @@
+{
+  "paper_id": "Elastic On-Device LLM Service",
+  "doi": "10.48550/arxiv.2409.09071",
+  "title": "Elastic On-Device LLM Service",
+  "year": 2025,
+  "venue": "ACM MOBICOM '25",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "On-device LLM隐私需求迫切，但单一静态模型无法满足多样化SLO延迟要求",
+  "problem_framing": "定义SLO为<TTFT,TPOT>二元组，将模型弹性化为连续内存切片，但需消除切换开销和编排策略敏感性问题",
+  "key_insight": "Transformer的注意力头和MLP神经元满足置换一致性，可离线重排序使子模型连续，切换仅需移动指针",
+  "method_signature": "基于置换一致单元的一次性重排序+双头微小语言模型编排提示-模型弹性化",
+  "evaluation_criteria": "满足SLO下绝对精度提升、切换开销<1%、内存持平、离线成本<100 GPU小时",
+  "negative_result_or_admitted_limitation": "如果TLM输出决策无法满足SLO会回退到随机策略，因DNN黑盒属性无法完全保证",
+  "evidence_for_taste": [
+    "failing to meet an SLO leads to serious consequences",
+    "their output text quality could differ significantly",
+    "a strategy without careful design may lead to significant degradation",
+    "nearly yet not impossible due to the black-box property of DNNs"
+  ],
+  "thinking_moves": [
+    "将LLM服务弹性问题从工程实现层面归约到数学性质层面",
+    "借鉴可解释AI的梯度重要性度量替代直觉性剪枝",
+    "把提示压缩与模型压缩视为需要联合优化的双决策变量",
+    "发现anchor layers呈现幂律分布(80/20)，通过锁定层而非均匀剪枝提升子模型质量"
+  ],
+  "topic_tags": [
+    "on-device-LLM",
+    "SLO-elasticity",
+    "permutation-consistency",
+    "model-pruning",
+    "prompt-compression",
+    "mobile-AI-agent"
+  ],
+  "cites_own_work": [
+    "LLMCad",
+    "MobileLLM",
+    "ElasticTrainer"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整方法论和详细实验，但评估部分被截断，不影响核心信号提取 | md truncated to head40k+tail20k"
+}

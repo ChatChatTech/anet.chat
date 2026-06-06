@@ -1,0 +1,38 @@
+{
+  "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+  "doi": "10.48550/arxiv.2012.14108",
+  "title": "DPoS: Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有网络切片算法存在高复杂度、隐私泄露和离线设定不切实际的问题，Auction机制需要多轮通信且在在线场景表现不佳。",
+  "problem_framing": "将问题建模为全局社会福利最大化问题，通过松弛为凸优化原问题并推导其对偶问题，实现去中心化在线决策。",
+  "key_insight": "采用posted price机制实现take-it-or-leave-it交易，每租户根据公布的资源价格自行决策，无需向MVNO披露任何隐私信息。",
+  "method_signature": "基于原始对偶方法的在线切片算法DPoS，由DPoS-MVNO和DPoS-TNT_n两部分组成，复杂度分别为O(NC)和O(C)。",
+  "evaluation_criteria": "社会福利实现值、跨智能体通信数据量、算法执行时间、与离线最优的性能差距。",
+  "negative_result_or_admitted_limitation": "该算法仅在线性成本函数下具有最优竞争力比，对于严格凸成本函数需解一阶两点边值问题。",
+  "evidence_for_taste": [
+    "algorithmicaly NP-hard",
+    "take-it-or-leave-it, i.e., posted price",
+    "a thing is valued in proportion to its rarity",
+    "stop the privacy leakage from the source",
+    "The smaller α is, the better the online algorithm"
+  ],
+  "thinking_moves": [
+    "将中心化离线优化问题转化为去中心化在线决策问题",
+    "利用经济学中的posted price机制替代Auction解决在线场景",
+    "通过原始对偶框架设计自适应定价函数实现竞争比保证",
+    "将隐私保护从技术问题转化为架构问题——赋予决策权给各方"
+  ],
+  "topic_tags": [
+    "network-slicing",
+    "decentralized-algorithm",
+    "posted-price-mechanism",
+    "privacy-preserving",
+    "primal-dual"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

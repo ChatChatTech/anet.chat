@@ -1,0 +1,41 @@
+{
+  "paper_id": "2019_MASS_SHAD_Privacy-Friendly_Shared_Activity_Detection_and_Data_Sharing",
+  "doi": null,
+  "title": "SHAD: Privacy-friendly Shared Activity Detection and Data Sharing",
+  "year": 2019,
+  "venue": "MASS",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "手动管理社交关系和共享活动数据繁琐，因为参与者变化快、活动内容多样",
+  "problem_framing": "从含噪声、不完整、异步的多模态数据中检测共享活动，同时保护原始数据和语义信息",
+  "key_insight": "将多模态数据聚类问题转化为基于语义和时间邻近性的聚类，用活动语义图统一表示不同模态活动",
+  "method_signature": "语义标签提取+DBSCAN聚类聚合→活动语义图→PSI安全匹配检测共享活动",
+  "evaluation_criteria": "数据聚合用ARI衡量；共享活动检测用precision和recall衡量；计算开销用时间衡量",
+  "negative_result_or_admitted_limitation": "当前ML模型的语义标签仍不够准确全面；多方场景开销需降低；防数据伪造仍是挑战",
+  "evidence_for_taste": [
+    "most challenging issue is how to determine the boundaries",
+    "our core idea is to extract semantic tags",
+    "The better clustering of points will bring better data aggregation",
+    "Incorrect tags have little effect on the calculation results",
+    "semantic tags yielded by current models are still not accurate"
+  ],
+  "thinking_moves": [
+    "把多模态数据聚合问题重新frame为基于语义和时间邻近性的聚类问题",
+    "利用WordNet层级关系量化语义标签间的距离来处理跨模态匹配",
+    "通过DBSCAN的噪声容忍特性同时解决边界确定和异常标签检测",
+    "把活动表示为带权重的语义图以实现非对称图相似度计算",
+    "用PSI协议将隐私保护问题转化为安全集合交集问题"
+  ],
+  "topic_tags": [
+    "privacy-preserving-computation",
+    "multimodal-data-aggregation",
+    "shared-activity-detection",
+    "activity-semantic-graph",
+    "PSI-based-matching"
+  ],
+  "cites_own_work": [
+    "Socialite (reference [14])"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Image Steganography and Style Transformation Based on Generative Adversarial Network",
+  "doi": "10.3390/math12040615",
+  "title": "Image Steganography and Style Transformation Based on Generative Adversarial Network",
+  "year": 2024,
+  "venue": "Mathematics",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "传统图像隐写修改像素值导致统计分布差异,易被检测;而AIGC艺术风格图像在社交网络流行,成为理想隐蔽载体",
+  "problem_framing": "在风格迁移图像生成过程中嵌入秘密信息,使隐写图与无隐写的风格迁移图统计上不可区分,且无原始cover可供比对",
+  "key_insight": "在图像生成时编码信息而非修改现成图像,消除了cover-stego对,彻底切断隐分析可利用的对比基准",
+  "method_signature": "GAN框架下encoder-decoder风格迁移网络,同步嵌入消息并训练SRNet判别器对抗训练",
+  "evaluation_criteria": "消息提取准确率(目标99%+)、抗隐分析检测误差(需≈0.5随机猜测水平)、视觉质量",
+  "negative_result_or_admitted_limitation": "消息恢复准确率未达100%(实验仅99.2%),且实际信道噪声和平台压缩会进一步降低准确率",
+  "evidence_for_taste": [
+    "The lack of the original cover image makes it difficult for the opponent learning steganalyzer to identify the stego",
+    "the message recovery accuracy did not achieve 100%",
+    "there will be complex noise in the real-world communication channel, and some platforms will compress the image before transmission",
+    "Ours检测误差≈0.5等于随机猜测,说明方法无法被检测"
+  ],
+  "thinking_moves": [
+    "利用社会文化趋势重新定义隐蔽载体:利用AIGC艺术风格图在社交网络的普及性",
+    "将安全问题根源归结为cover-stego对存在性,从消除对比基准角度求解而非增强抗检测能力",
+    "将图像风格迁移重新框架为编码过程:风格信息编码等同于秘密信息编码",
+    "通过对抗训练模拟隐写-隐分析竞争:SRNet判别器学习区分有无隐写的风格迁移图"
+  ],
+  "topic_tags": [
+    "image-steganography",
+    "style-transfer",
+    "GAN-adversarial-training",
+    "coverless-steganography",
+    "AIGC-steganography"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

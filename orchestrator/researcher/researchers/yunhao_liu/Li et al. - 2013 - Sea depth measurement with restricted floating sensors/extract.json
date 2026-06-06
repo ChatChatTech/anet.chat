@@ -1,0 +1,39 @@
+{
+  "paper_id": "Li et al. - 2013 - Sea depth measurement with restricted floating sensors",
+  "doi": null,
+  "title": "Sea Depth Measurement with Restricted Floating Sensors",
+  "year": 2013,
+  "venue": "ACM Trans. Embedd. Comput. Syst.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Harbor siltation monitoring costs $18M/year, traditional sonar boats are expensive and labor-intensive",
+  "problem_framing": "Localized sensor nodes float within anchored disk areas; need to estimate floating areas not instantaneous positions",
+  "key_insight": "Locate constrained mobility areas (disk centered at anchor) rather than tracking mobile sensors, then derive sea depth from rope geometry",
+  "method_signature": "FALA algorithm: RMED for seeds, regression analysis for non-seeds, triangulate anchor positions",
+  "evaluation_criteria": "Sea depth estimation error, anchor position error, radius error (<20% relative error target)",
+  "negative_result_or_admitted_limitation": "RSSI-based ranging error up to 150% severely limits FALA accuracy; floating model assumes randomness but near-shore currents are regular",
+  "evidence_for_taste": [
+    "not suitable for resource-restricted sensor nodes",
+    "more precise distance estimating techniques would help",
+    "we believe a good model of the behaviors of the sea would help diminish their negative impact"
+  ],
+  "thinking_moves": [
+    "从定位瞬时位置退化为定位约束区域,降低问题难度",
+    "将计算几何最小包围圆问题adapt为在线更新算法",
+    "通过样本统计量的线性回归反向推导几何参数",
+    "承认物理模型与实际环境的偏差并指出未来改进方向"
+  ],
+  "topic_tags": [
+    "RFS-network-localization",
+    "floating-area-localization",
+    "sea-depth-sensing",
+    "statistical-localization",
+    "constrained-mobility-WSN"
+  ],
+  "cites_own_work": [
+    "Li et al. 2008 (cable-based mobile sensors)",
+    "Yang et al. 2007 (preliminary RTSS version)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Paper appears to be truncated at Section 5 and again near end of Section 6; method for sea depth calculation from floating area results is incomplete in provided text. FALA detailed algorithm steps partially visible. | md truncated to head40k+tail20k"
+}

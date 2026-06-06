@@ -1,0 +1,41 @@
+{
+  "paper_id": "Exploring LLM-based Data Annotation Strategies for Medical Dialogue Preference Alignment",
+  "doi": "10.48550/arxiv.2410.04112",
+  "title": "Exploring LLM-based Data Annotation Strategies for Medical Dialogue Preference Alignment",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Preference-aligned data annotation in medical dialogue requires expensive expert involvement; current automated evaluation methods are unreliable and LLM preferences deviate from physician preferences.",
+  "problem_framing": "Define the unlabeled preference dataset D = <H, C1, F1, C2, F2> and find effective annotation function f: D → D' for training medical dialogue models using DPO.",
+  "key_insight": "Physicians' preferences can be depicted using flowcharts that represent diagnostic decision logic, which can then be converted into rules for preference data annotation.",
+  "method_signature": "Multi-agent annotation with Planner (long-term goal setting), Ranker (response evaluation), and Rethinker (response generation) to replace expert involvement.",
+  "evaluation_criteria": "Standardized patient testing (CSPT) for user guidance; WebMedQA for instruction following; hybrid multi-round evaluation combining both competencies.",
+  "negative_result_or_admitted_limitation": "Training with Rethinker-generated data alone compromises instruction-following ability due to overfitting to guidance-dominant responses.",
+  "evidence_for_taste": [
+    "GPT-4 preferences deviate from human physicians",
+    "the greater the discrepancy between scores",
+    "rule dependency can effectively modulate GPT-4's preferences",
+    "maintaining correct processes is crucial for aligning medical preferences",
+    "The model becomes overly accustomed to the Rethinker-generated responses"
+  ],
+  "thinking_moves": [
+    "把医生对话能力分解为用户引导和指令跟随两个正交维度",
+    "把医学偏好评估问题类比到标准化病人考试的评估框架",
+    "用流程图形式化医生诊疗决策逻辑以编码专家偏好",
+    "通过多智能体协作让LLM自主生成对话流程而无需专家介入",
+    "对比Tie数据的比例变化来推断训练数据质量与模型能力的关系"
+  ],
+  "topic_tags": [
+    "medical-dialogue-preference-alignment",
+    "RLAIF",
+    "Constitutional-AI",
+    "multi-agent-annotation",
+    "standardized-patient-evaluation"
+  ],
+  "cites_own_work": [
+    "Dou et al. 2024 (ACL2024 Findings)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

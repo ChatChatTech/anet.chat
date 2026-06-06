@@ -1,0 +1,38 @@
+{
+  "paper_id": "Huang et al. - 2013 - Accurate Indoor Localization Using Acoustic Direction Finding via Smart Phones",
+  "doi": null,
+  "title": "Accurate Indoor Localization Using Acoustic Direction Finding via Smart Phones",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "GPS失效于室内；现有WiFi定位误差大(6-8m)且需专用硬件；手机定向在远距离难以精准",
+  "problem_framing": "通过手机摇晃产生的多普勒效应精确测量相位/频率偏移，结合惯性传感器速度实现声源定向",
+  "key_insight": "手机摇晃的相对位移和速度对应于接收声信号的多普勒相位和频率细微偏移",
+  "method_signature": "声学多普勒定向+PLL相位跟踪+惯性传感器融合+锚点三角定位",
+  "evaluation_criteria": "定向误差均值2.1°(32m内)；定位90分位<0.92m；实时跟踪51m路径误差<0.4m",
+  "negative_result_or_admitted_limitation": "处理6信号时CPU达95.25%；多声源时精度显著下降；遮挡导致信号变弱不稳定",
+  "evidence_for_taste": [
+    "the angle becomes lower which is close to the direction of the new source",
+    "standard deviation becomes bigger when both sources have high volume",
+    "when the volume becomes larger",
+    "we only need a small number (less than 10) of acoustic sources",
+    "there is a trade off on choosing the μ"
+  ],
+  "thinking_moves": [
+    "把phone shaking这个看似噪声的动作重新frame成信号产生机制",
+    "用PLL替代FFT解决时频分辨率冲突",
+    "用相对开角代替绝对方向避免不精准的指南针",
+    "通过实验观察到的系统性偏差(如反射导致角度偏移)指导设计改进"
+  ],
+  "topic_tags": [
+    "acoustic-Doppler-direction-finding",
+    "smartphone-indoor-localization",
+    "phase-locked-loop-tracking",
+    "inertial-sensor-fusion",
+    "triangulation-anchor-localization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文被截断，缺少方法章节后半部分和部分实验细节。venue信息缺失，但根据作者机构(中国科技大学等)和研究水平判断为顶级会议 | md truncated to head40k+tail20k"
+}

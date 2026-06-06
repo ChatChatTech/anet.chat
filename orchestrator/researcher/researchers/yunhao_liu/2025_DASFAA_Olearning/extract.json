@@ -1,0 +1,37 @@
+{
+  "paper_id": "2025_DASFAA_Olearning",
+  "doi": null,
+  "title": "OLearning: A Geo-Distributed System for Device-Cloud Collaborative Computing",
+  "year": 2025,
+  "venue": "DASFAA",
+  "venue_tier": "strong",
+  "role": "unknown",
+  "motivation": "现有联邦学习系统忽视设备地理分布差异，导致跨时区训练轮次耗时长、资源利用率低、峰值预留浪费严重",
+  "problem_framing": "将地理分布下的设备-云协同计算问题形式化为多时区同步、数据异构、负载峰值的系统工程挑战",
+  "key_insight": "两层多区架构将全局聚合与区内迭代分离，配合利润驱动的去中心化调度实现弹性资源共享",
+  "method_signature": "双层多区架构+去中心化利润选择器+共享任务弹性聚合器",
+  "evaluation_criteria": "day-to-accuracy（达目标精度所需模拟天数）、资源占用率、调度利润值",
+  "negative_result_or_admitted_limitation": "MKP求解器在m=50且任务数>200时2秒时间限制下无法获得最优解，需动态选择贪婪策略",
+  "evidence_for_taste": [
+    "existing frameworks cannot efficiently support geo-distributed scenarios",
+    "the geo-distribution factor may have a negative impact",
+    "MKP is basically equal to Max regardless of the value of m",
+    "2s solve time limit is no longer sufficient for the solver",
+    "one should dynamically choose between MKP or Greedy"
+  ],
+  "thinking_moves": [
+    "把任务调度问题重新框定为0-1多背包问题并用精确/近似算法求解",
+    "从生产系统资源浪费现象反推架构设计缺陷",
+    "通过分层聚合将时区异构性解耦为层间/层内协同"
+  ],
+  "topic_tags": [
+    "federated-learning-scalability",
+    "geo-distributed-computing",
+    "device-cloud-collaboration",
+    "multi-knapsack-scheduling",
+    "elastic-resource-pool"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者列表中未找到yunhao_liu，role标记为unknown。该论文为工程系统设计论文，实验部分提供充分的效果验证。"
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2012 - Mining Frequent Trajectory Patterns for Activity Monitoring Using Radio Frequency Tag Arrays",
+  "doi": null,
+  "title": "Mining Frequent Trajectory Patterns for Activity Monitoring Using Radio Frequency Tag Arrays",
+  "year": 2012,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "视频监控成本高覆盖有限,RFID阵列提供经济方案",
+  "problem_framing": "从有噪声的RF标签信号序列中挖掘频繁轨迹模式",
+  "key_insight": "利用物体穿过标签阵列时的信号干扰变化检测轨迹,无需在被追踪对象上安装设备",
+  "method_signature": "fault-tolerant sequential pattern mining",
+  "evaluation_criteria": "正确检测轨迹长度与实际路线长度之比",
+  "negative_result_or_admitted_limitation": "min_sup=3时准确率降至60%;时间间隔小于20秒的多目标难以区分;复杂活动仍有挑战",
+  "evidence_for_taste": [
+    "the normal trajectories of moving objects often follow regular patterns",
+    "All the previous proposals assumed the data are precise, therefore, they cannot be applied",
+    "the probability is unknown and hard to be estimated. Thus, the property has to be used as a heuristic",
+    "Such situations can hardly be handled well by video monitoring systems either"
+  ],
+  "thinking_moves": [
+    "把感知问题重新定义为数据挖掘问题",
+    "用Chebyshev不等式证明检测阈值",
+    "用边界检测消除冗余信息",
+    "深度优先搜索扩展频繁段,近者优先扩展以剪枝",
+    "跨读卡器交叉验证消除冗余模式"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "trajectory-pattern-mining",
+    "device-free-monitoring",
+    "fault-tolerant-sequential-pattern",
+    "activity-monitoring"
+  ],
+  "cites_own_work": [
+    "RASS: A Real-Time, Accurate and Scalable System for Tracking Transceiver-Free Objects",
+    "TASA: Tag-Free Activity Sensing Using RFID Tag Arrays"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

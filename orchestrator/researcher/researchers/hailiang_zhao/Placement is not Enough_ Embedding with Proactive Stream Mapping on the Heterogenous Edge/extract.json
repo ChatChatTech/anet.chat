@@ -1,0 +1,37 @@
+{
+  "paper_id": "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge",
+  "doi": "10.48550/arxiv.2012.04158",
+  "title": "Placement is not Enough: Embedding with Proactive Stream Mapping on the Heterogenous Edge",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有边缘计算研究只优化函数放置而忽视数据流路由，导致即使放置更差时通过优化流映射仍可降低makespan。",
+  "problem_framing": "将依赖函数嵌入问题形式化为联合优化函数放置、流映射和数据分割的组合优化问题。",
+  "key_insight": "放置不够，需主动进行流映射和数据分割——同一函数放置下不同流路由可产生显著不同的makespan。",
+  "method_signature": "基于动态规划的DPE算法，通过RPF找所有简单路径、OSM求解最优数据分割。",
+  "evaluation_criteria": "DAG完成时间(makespan)，对比FixDoc和HEFT算法。",
+  "negative_result_or_admitted_limitation": "最坏情况复杂度O(N!)，虽承认NP难但以离线算法和N小为由辩护。",
+  "evidence_for_taste": [
+    "Placement is not Enough",
+    "proactively mapping the data streams",
+    "the passivity here means the routing path",
+    "better utilization of the stream mapping can result in less makespan",
+    "DPE is theoretically verified to achieve the global optimality"
+  ],
+  "thinking_moves": [
+    "指出现有工作只优化placement而被动生成stream mapping的缺陷",
+    "通过反例(Fig.1)揭示流映射独立影响makespan的现象",
+    "将VNE问题类比迁移到IoT函数嵌入场景",
+    "利用动态规划最优子结构性质将组合问题分解求解"
+  ],
+  "topic_tags": [
+    "edge-computing-DAG-scheduling",
+    "function-placement-stream-mapping",
+    "heterogeneous-edge-embedding",
+    "data-splitting-optimization",
+    "makespan-minimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

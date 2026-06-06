@@ -1,0 +1,40 @@
+{
+  "paper_id": "Neural Program Repair with Program Dependence Analysis and Effective Filter Mechanism",
+  "doi": "10.48550/arxiv.2305.09315",
+  "title": "Neural Program Repair with Program Dependence Analysis and Effective Filter Mechanism",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有NPR模型随意对待有bug的上下文，无法捕捉语义关系；同时模型常输出与输入相同的未改变补丁",
+  "problem_framing": "将程序修复形式化为神经机器翻译任务，利用预训练模型CodeT5修复单行Java bug",
+  "key_insight": "利用程序依赖图中的切片提取相关上下文作为修复成分，并设计过滤器机制消除未改变补丁",
+  "method_signature": "程序依赖分析+切片上下文提取+双模型串联过滤",
+  "evaluation_criteria": "精确匹配率(Exact Match)评估生成补丁是否与人工修复完全相同",
+  "negative_result_or_admitted_limitation": "exact match metric does not represent human judgment；超参数次优可能导致内部威胁",
+  "evidence_for_taste": [
+    "most NPR models do not fully exploit the contextual information",
+    "neither captures the semantic relationship",
+    "prediction results may be consistent with the input buggy code snippets",
+    "This phenomenon is unsupervised",
+    "the DL-based approaches mostly adopt similar network architectures",
+    "Exact match is a strict metric",
+    "may introduce biases to some extent"
+  ],
+  "thinking_moves": [
+    "观察神经模型输出与输入高度相似的反常现象，定义'未改变补丁'为可自动检测的错误类型",
+    "类比代码审查场景：交叉检查比自我检查能发现更多bug，推断串联不同NPR模型可提升性能",
+    "借鉴开发者调试过程：从bug语句出发追溯变量定义、使用、修改，以此设计切片提取算法",
+    "区分不同编码器语义鸿沟难以消除的问题，采用单一编码器融合不同输入部分"
+  ],
+  "topic_tags": [
+    "neural-program-repair",
+    "program-dependence-graph",
+    "program-slicing",
+    "unaltered-patch-filter",
+    "codeT5-finetuning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

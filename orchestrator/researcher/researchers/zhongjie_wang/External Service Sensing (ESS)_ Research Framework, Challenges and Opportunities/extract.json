@@ -1,0 +1,42 @@
+{
+  "paper_id": "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities",
+  "doi": "10.48550/arxiv.2106.09208",
+  "title": "External Service Sensing (ESS): Research Framework, Challenges and Opportunities",
+  "year": 2021,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "传统服务计算研究将服务视为静态实体,但实际服务持续变化,导致算法在现实世界失效",
+  "problem_framing": "将服务变化感知问题形式化为四个正交维度框架:感知对象、感知内容、感知渠道、感知技术",
+  "key_insight": "服务变化需从外部观察者视角感知,现有工作将感知作为其他问题的附属,降低了其意义和挑战",
+  "method_signature": "四维度ESS框架,通过组合不同维度的值来定义具体ESS问题",
+  "evaluation_criteria": "准确度(comprehensiveness)、召回度(accuracy)、时效性(timeliness)、成本(cost)四个指标",
+  "negative_result_or_admitted_limitation": "现有研究更关注感知内容的静态指标,而非其变化",
+  "evidence_for_taste": [
+    "do not work in the real world",
+    "greatly lowers the significance",
+    "have not yet received sufficient attention",
+    "not yet been widely recognized",
+    "not independent of each other"
+  ],
+  "thinking_moves": [
+    "从现实失效反推理论缺陷:现有研究不考虑服务变化导致模型失效",
+    "将感知问题重新frame为独立研究领域:不只是其他服务的附属",
+    "用正交维度框架来统一异构问题:四个维度组合定义具体问题",
+    "从实践案例验证框架实用性:COVID-19旅游推荐等案例"
+  ],
+  "topic_tags": [
+    "services-computing",
+    "service-change-sensing",
+    "quality-of-service-prediction",
+    "service-recommendation",
+    "service-ecosystem-evolution"
+  ],
+  "cites_own_work": [
+    "Tu et al. 2021",
+    "Liu et al. 2020",
+    "Song et al. 2020",
+    "Hao et al. 2016"
+  ],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhao et al. - 2012 - Efficient and Secure Key Extraction using CSI without Chasing down Errors",
+  "doi": null,
+  "title": "Efficient and Secure Key Extraction using CSI without Chasing down Errors",
+  "year": 2012,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "无线网络因\"open-air\"特性易受攻击，传统密钥分配依赖基础设施，在动态环境中难以部署。",
+  "problem_framing": "从无线信道测量中提取共享密钥，但CSI测量存在噪声、硬件差异导致比特流不一致，需要信息协调。",
+  "key_insight": "CSI比RSS提供多载波测量、更好对称性、快速距离去相关和更高环境敏感度，可实现高效密钥提取。",
+  "method_signature": "SKECE协议：自适应比特流生成+泄露弹性一致性验证+加权密钥重组，避免逐bit纠错。",
+  "evaluation_criteria": "密钥生成速率、通讯开销、NIST随机性测试、Eve与Alice的相关性。",
+  "negative_result_or_admitted_limitation": "RSS在静态场景中因信道变化稀少而失效；α参数存在速率与误码率的根本权衡。",
+  "evidence_for_taste": [
+    "without Chasing down Errors",
+    "RSS cannot work well in stationary scenarios",
+    "more than 3× throughput gain",
+    "50% reduction on the communication overhead",
+    "unnecessary to verify entire hash values"
+  ],
+  "thinking_moves": [
+    "将信息协调中的逐bit纠错重构为加权重组问题",
+    "利用CSI多载波特性同时生成多比特流",
+    "通过哈希部分位验证实现泄露弹性",
+    "从工程实践(半双工约束)反推协议设计需求"
+  ],
+  "topic_tags": [
+    "physical-layer-security",
+    "secret-key-extraction",
+    "CSI",
+    "wireless-channel-reciprocity",
+    "information-reconciliation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "未找到明确venue信息，DOI缺失。作者署名顺序显示Yunhao Liu为co-author角色。"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Qian et al. - 2021 - AIRCODE Hidden Screen-Camera Communication on an Invisible and Inaudible Dual Channel",
+  "doi": null,
+  "title": "AIRCODE: Hidden Screen-Camera Communication on an Invisible and Inaudible Dual Channel",
+  "year": 2021,
+  "venue": "USENIX NSDI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Video viewers desire extra information but wireless connections require explicit setup, have latency/jitter issues, and cause information leakage.",
+  "problem_framing": "Hidden screen-camera communication faces three contradicting goals: unobtrusiveness to human eyes, high data rate, and reliability.",
+  "key_insight": "Use complementary advantages of dual channels: inaudible audio (~0 PER) as reliable control channel for metadata, invisible visual as high-rate data channel.",
+  "method_signature": "Visual odometry screen tracking + near-ultrasound audio control channel + adaptive concatenated coding on visual data channel.",
+  "evaluation_criteria": "BER, throughput/goodput, PER, screen-tracking accuracy, imperceptibility (user study), parameter sensitivity (distance, angle, signal strength, interference).",
+  "negative_result_or_admitted_limitation": "Goodput abruptly decreases when distance >90cm; larger data cells needed at longer distances. Acoustic channel may congest with multiple coexisting screens. Audio control channel requires same-room proximity.",
+  "evidence_for_taste": [
+    "highly accurate screen detection is necessary",
+    "metadata is more important than data",
+    "enhancing the signal does not help",
+    "facing the dilemma of three contradicting goals",
+    "the acoustic channel will congest",
+    "small but intolerant deviations of screen tracking",
+    "complementary advantages of video and audio",
+    "first time, enabling not only texts but also videos"
+  ],
+  "thinking_moves": [
+    "从通信理论反推感知通道的特殊约束（非增强信号原则）",
+    "将元数据与数据分离到不同可靠性通道",
+    "复用成熟视觉SLAM技术解决屏幕跟踪难题",
+    "通过消融实验揭示系统瓶颈（screen detection error >4 pixels导致BER爆炸）",
+    "从失败案例归纳现有方法根本缺陷"
+  ],
+  "topic_tags": [
+    "screen-camera communication",
+    "visual odometry",
+    "dual-channel communication",
+    "hidden data embedding",
+    "near-ultrasound acoustic communication"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

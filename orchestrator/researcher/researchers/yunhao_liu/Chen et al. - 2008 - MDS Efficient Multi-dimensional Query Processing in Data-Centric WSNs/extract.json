@@ -1,0 +1,39 @@
+{
+  "paper_id": "Chen et al. - 2008 - MDS Efficient Multi-dimensional Query Processing in Data-Centric WSNs",
+  "doi": null,
+  "title": "MDS: Efficient Multi-dimensional Query Processing in Data-Centric WSNs",
+  "year": 2008,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "GHT-based DCS schemes suffer high communication cost when applying multi-dimensional event search in WSNs",
+  "problem_framing": "How to efficiently perform in-network intersection and union operations for multi-dimensional queries with minimal traffic overhead",
+  "key_insight": "Send compact Bloom filter encoding of data sets instead of raw data to enable efficient distributed set operations",
+  "method_signature": "Bloom filter-based distributed intersection/union with popularity-driven optimal parameter selection",
+  "evaluation_criteria": "Energy consumption per query, compression ratio, cache hit rate effect on performance",
+  "negative_result_or_admitted_limitation": "In-network union does not consider complete reverse verification as it would consume more resources than straightforward transmission",
+  "evidence_for_taste": [
+    "minimal extra communication cost is not symmetric",
+    "the order of the intersection operation is critical",
+    "In Section 5 we show how we can achieve BF optimal settings",
+    "we do not consider a complete search mechanism",
+    "slight loss in the result precision due to false positive"
+  ],
+  "thinking_moves": [
+    "Re-frame set operation problem as communication cost optimization problem",
+    "Leverage asymmetry in set sizes to order operations optimally",
+    "Trade exact precision for dramatic energy savings",
+    "Derive optimal BF size analytically from popularity ratios using curve-fitting",
+    "Accept controlled precision loss to enable in-network processing"
+  ],
+  "topic_tags": [
+    "wireless-sensor-networks",
+    "bloom-filter",
+    "data-centric-storage",
+    "multi-dimensional-query",
+    "in-network-computation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue tier and DOI not explicitly stated; extraction quality marked partial as paper may contain more detail on role-specific contributions and author positioning"
+}

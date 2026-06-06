@@ -1,0 +1,39 @@
+{
+  "paper_id": "2023_ICDE_Schemble_camera_ready",
+  "doi": null,
+  "title": "Efficient Deep Ensemble Inference via Query Difficulty-dependent Task Scheduling",
+  "year": 2023,
+  "venue": "ICDE",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Deep ensemble inference causes high deadline miss rates (45% during traffic bursts) in latency-sensitive tasks, with existing approaches ignoring deadline constraints",
+  "problem_framing": "Scheduling problem: dynamically assign subsets of base models to queries based on predicted difficulty and queuing status to maximize accuracy under deadline constraints",
+  "key_insight": "78.3% of samples can be correctly predicted by any single base model; only <11% require all models, indicating massive redundancy exploitable via difficulty-dependent scheduling",
+  "method_signature": "Discrepancy score predicts query difficulty; dynamic programming scheduler assigns model subsets based on accuracy reward maximization",
+  "evaluation_criteria": "Deadline miss rate and accuracy under deadline constraints on text matching, vehicle counting, and image retrieval tasks",
+  "negative_result_or_admitted_limitation": "Static selection results in bad trade-offs (huge accuracy loss OR high miss rate); DES/Gating fail to capture deep model preferences due to high variance and ignore queuing status",
+  "evidence_for_taste": [
+    "78.3% samples predicted correctly by any model",
+    "deadline miss rate reaches 45% during traffic burst",
+    "gating network outputs similar weights for all samples",
+    "existing approaches select models regardless of queue status",
+    "preferences of deep models are complicated and hard to capture"
+  ],
+  "thinking_moves": [
+    "从实际系统瓶颈(deadline miss)反推问题定义",
+    "引入discrepancy score替代ensemble agreement解决heterogeneous模型问题",
+    "将调度问题分解为local subproblems并用DP求解",
+    "通过竞争比分析证明算法最优性下界",
+    "对Gating失败原因做ablation式分析(偏好空间高方差)"
+  ],
+  "topic_tags": [
+    "deep-ensemble-inference",
+    "query-difficulty-prediction",
+    "deadline-constrained-scheduling",
+    "discrepancy-score",
+    "model-selection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

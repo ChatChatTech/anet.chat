@@ -1,0 +1,40 @@
+{
+  "paper_id": "Liu et al. - 2007 - Mining Frequent Trajectory Patterns for Activity Monitoring Using Radio Frequency Tag Arrays",
+  "doi": null,
+  "title": "Mining Frequent Trajectory Patterns for Activity Monitoring Using Radio Frequency Tag Arrays",
+  "year": 2007,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "视频监控昂贵且难以自动分析大范围多摄像头场景",
+  "problem_framing": "从无序RF标签信号序列中挖掘隐式轨迹的故障容忍序列模式挖掘",
+  "key_insight": "利用移动物体对RF标签信号的物理干扰作为探测信号,无需在被追踪物体上附加任何设备",
+  "method_signature": "标签阵列→二进制信号序列→边界检测→频繁段挖掘",
+  "evaluation_criteria": "检测轨迹正确率(正确检测长度/实际路线长度)",
+  "negative_result_or_admitted_limitation": "复杂活动中RF阵列外轨迹及多路线交叉处难以检测",
+  "evidence_for_taste": [
+    "the accuracy drops down to 60%",
+    "miss some segments",
+    "the probability is unknown and hard to be estimated",
+    "activities such as large parties cannot be handled well",
+    "our method may miss some segments"
+  ],
+  "thinking_moves": [
+    "将干扰信号本身当作检测源而非噪声源",
+    "从几何Property 1推导出空间冗余删除和边界检测",
+    "用Chebyshev不等式为检测阈值提供理论保证",
+    "用深度优先搜索+空间优先扩展实现故障容忍模式增长"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "fault-tolerant-mining",
+    "trajectory-pattern",
+    "activity-monitoring",
+    "sensor-array-processing"
+  ],
+  "cites_own_work": [
+    "Landmarc: Indoor Location Sensing using Active RFID"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue和DOI未在论文中明确给出。论文内容完整(含实验验证),但部分关键元数据缺失。"
+}

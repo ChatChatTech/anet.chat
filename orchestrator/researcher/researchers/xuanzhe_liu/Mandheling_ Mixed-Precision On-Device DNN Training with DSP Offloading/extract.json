@@ -1,0 +1,38 @@
+{
+  "paper_id": "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading",
+  "doi": "10.48550/arxiv.2206.07509",
+  "title": "Mandheling: Mixed-Precision On-Device DNN Training with DSP Offloading",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "移动端训练资源消耗巨大(ResNet-50单批次耗时36.4秒、能耗相当于观看111秒视频)",
+  "problem_framing": "将混合精度训练卸载到DSP存在DSP不友好算子、动态rescaling开销、缓存耗尽、图准备开销四大挑战",
+  "key_insight": "DSP擅长INT8整数运算但朴素使用反而更慢,需从训练动态中发现scale factor的稳定模式来优化rescaling",
+  "method_signature": "CPU-DSP协同调度+自适应rescaling+batch拆分+子图复用,释放DSP算力",
+  "evaluation_criteria": "训练耗时降低5.5倍、能耗降低8.9倍、收敛加速10.7倍、精度损失仅1.9%-2.7%",
+  "negative_result_or_admitted_limitation": "朴素DSP训练引擎性能增益有限甚至为负,需专门优化",
+  "evidence_for_taste": [
+    "a vanilla DSP training engine can achieve very limited or even negative performance gain",
+    "we observe a disparity between using DSP to serve training and inference tasks",
+    "dynamic scaling runs slow on DSP for its excessive memory access",
+    "exhausted DSP cache",
+    "preparing a new compute subgraph for each batch"
+  ],
+  "thinking_moves": [
+    "用实测数据揭示inference优化方法不适用于training的工作负载差异",
+    "从inference到training的问题重构:计算模式与精度要求均不同",
+    "从训练动态中发现scale factor在后期趋于稳定的现象,启发周期性rescaling策略",
+    "将训练开销问题拆解为算子级(intra-op)和算子间(inter-op)的双重优化维度"
+  ],
+  "topic_tags": [
+    "on-device-training",
+    "DSP-offloading",
+    "mixed-precision-training",
+    "mobile-DNN",
+    "cache-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

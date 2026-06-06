@@ -1,0 +1,44 @@
+{
+  "paper_id": "SkinGEN_ an Explainable Dermatology Diagnosis-to-Generation Framework with Interactive Vision-Language Models",
+  "doi": "10.48550/arxiv.2404.14755",
+  "title": "SkinGEN: an Explainable Dermatology Diagnosis-to-Generation Framework with Interactive Vision-Language Models",
+  "year": 2024,
+  "venue": "IUI 2025",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "用户难以信任VLM的黑盒诊断结果，且皮肤病症状相似难以区分，现有工具缺乏视觉解释能力",
+  "problem_framing": "将诊断黑箱问题转化为视觉可解释性问题——通过生成相似病情的可视化参考图像来增强用户理解",
+  "key_insight": "用Stable Diffusion从诊断结果生成参考演示图像，让用户通过视觉对比自行理解病情，而非依赖LLM的文本解释",
+  "method_signature": "VLM诊断+LoRA/IP-Adapter双适配器融合生成可视化病情图谱",
+  "evaluation_criteria": "用户研究的信任度、易理解度、认知负担评分，以及生成图像的CLIP/DINOv2/MSE指标",
+  "negative_result_or_admitted_limitation": "微调IP-Adapter效果最差，存在过拟合问题；扩大数据集反而导致CLIP/DINOv2下降；用户反馈建议过于简单(全说去看医生)；相似疾病难以区分",
+  "evidence_for_taste": [
+    "vision, as an intuitive and easily understandable mode of expression",
+    "Solely focusing on a model's predicted diagnosis lacks visual interpretation",
+    "users often find it difficult to trust the diagnostic results",
+    "the diagnosis of certain dermatological conditions is more challenging",
+    "the fine-tuned Ip-adapter (30-shot) produced the least desirable results",
+    "suggesting potential challenges related to overfitting or optimization",
+    "scaling to the full Fitzpatrick17k dataset degrades CLIP",
+    "these results highlight inconsistencies in the benefits",
+    "the suggestions given by SkinGEN are too simple",
+    "for other more similar diseases, I think it is more of a reference"
+  ],
+  "thinking_moves": [
+    "将黑盒诊断问题重新frame为视觉可解释性问题",
+    "从模型能力转向用户体验——用图像生成解决信任危机",
+    "通过用户访谈发现LLM幻觉痛点，强调视觉演示赋予用户主动判断能力",
+    "承认扩大数据反而降低性能，重新审视过拟合问题",
+    "从单一适配器转向双适配器融合策略"
+  ],
+  "topic_tags": [
+    "dermatology-diagnosis",
+    "visual-explainability",
+    "vision-language-model",
+    "stable-diffusion-generation",
+    "medical-ai-trust"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2014 - Robust Component-Based Localizationin Sparse Networks",
+  "doi": null,
+  "title": "Robust Component-based Localization in Sparse Networks",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有组件定位算法对测量误差敏感，结构变形会导致定位结果产生巨大误差",
+  "problem_framing": "将组件定位鲁棒性问题形式化为：如何在有噪声的距离测量下保证组件嵌入的唯一性",
+  "key_insight": "定义误差容忍度为组件可唯一定位的距离误差上界，通过鲁棒模式将节点自由度从2D/1种变换扩展到组件2D/3种变换",
+  "method_signature": "ETOC：基于内部锚点数量分类的四类鲁棒定位模式加坐标系统转换结果精炼",
+  "evaluation_criteria": "定位性能（成功定位节点比例）、精度（SPEE）、计算代价（三角定位次数）",
+  "negative_result_or_admitted_limitation": "Case 4需要五条边而最优需要四条；两线平行时误差容忍度为零（非鲁棒）",
+  "evidence_for_taste": [
+    "structural deformation may lead to huge errors",
+    "no related work on how to deal with measurement noises",
+    "the decrease is acceptable for the overall performance",
+    "the error tolerance of this structure is zero",
+    "Case 4 requires five edges, while the optimal result requires four",
+    "we leave the proof of this proposition in the appendix"
+  ],
+  "thinking_moves": [
+    "识别组件比节点有更高的自由度(3 vs 2)和更多的变换类型(3 vs 1)",
+    "将节点级鲁棒性概念推广到组件级，提出误差容忍度作为量化指标",
+    "通过内部锚点数量枚举所有可能的坐标转换模式",
+    "承认ETOC对pattern(d)的求解是不完备的，接受性能下降",
+    "区分结构性变形误差与累积误差，将结构性变形作为主要矛盾"
+  ],
+  "topic_tags": [
+    "component-based localization",
+    "wireless sensor networks",
+    "robust localization",
+    "distance measurement error",
+    "error tolerance"
+  ],
+  "cites_own_work": [
+    "ETOC is an extension of IEEE ICNP 2010"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供发表年份、venue和DOI信息，基于内容推测为2014年发表。Yunhao Liu为第二作者，非通讯作者。"
+}

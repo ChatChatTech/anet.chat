@@ -1,0 +1,42 @@
+{
+  "paper_id": "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging",
+  "doi": "10.1016/j.knosys.2022.108308",
+  "title": "A Spatial-Temporal Graph Neural Network Framework for Automated Software Bug Triaging",
+  "year": 2022,
+  "venue": "Knowledge-Based Systems",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "Bug reports常被错误分配导致修复延迟，Eclipse项目中一次重新分配平均耗时100天，大规模项目人工分配成本高",
+  "problem_framing": "将开发者协作网络建模为动态图序列，通过图表示学习预测未来时间片的开发者属性和bug修复者",
+  "key_insight": "结合节点重要性(度)和边重要性(权重)的联合随机游走采样策略，能捕获更丰富的局部拓扑信息；开发者行为存在小时/日/周周期性与bug修复模式相关",
+  "method_signature": "ST-DGNN框架：JRWalk联合随机游走采样 + GRCNN(含CNN空间特征提取器与注意力LSTM时序模块)的三周期组件",
+  "evaluation_criteria": "开发者属性预测(DAP)和bug修复者预测(BFP)两项节点分类任务，使用准确率在Eclipse和Mozilla两个大规模真实数据集上评估",
+  "negative_result_or_admitted_limitation": "JRWalk仅适用于同质网络，无法直接应用于异质网络；模型在开源项目以外软件系统上的表现未知",
+  "evidence_for_taste": [
+    "none of the previous studies consider periodic interactions",
+    "jointly considers both node importance and edge importance",
+    "Such a hybrid strategy can improve",
+    "Without additional optimization",
+    "remains unknown for other large-scale"
+  ],
+  "thinking_moves": [
+    "识别先前研究遗漏的因素——开发者活动的周期规律性",
+    "将边偏好与节点声誉联合建模以改进随机游走策略",
+    "从时空图卷积网络(如交通预测)迁移到软件工程中的动态图表示",
+    "通过注意力机制自适应融合不同时间尺度的特征",
+    "将CNN和LSTM组合以同时捕获空间结构和时序依赖"
+  ],
+  "topic_tags": [
+    "bug-triaging",
+    "developer-collaboration-networks",
+    "dynamic-graph-representation",
+    "spatial-temporal-GNN",
+    "joint-random-walk-sampling"
+  ],
+  "cites_own_work": [
+    "Huang et al. 2019",
+    "Wu et al. 2018"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

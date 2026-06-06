@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhang et al. - 2005 - Access Control in Peer-to-Peer Collaborative Systems",
+  "doi": null,
+  "title": "Access Control in Peer-to-Peer Collaborative Systems",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "P2P系统去中心化特性使安全问題复杂化,现有方案依赖中心服务器存在单点故障",
+  "problem_framing": "在无中心服务器的纯分布式P2P系统中实现细粒度属性基访问控制",
+  "key_insight": "用RT语言扩展+多Authority投票机制替代中心CA,同时处理节点动态性和未知性",
+  "method_signature": "基于RT的6种凭证扩展+5阶段联合授权协议+多人安全协作流程",
+  "evaluation_criteria": "平均加入成本、响应时间对比集中式方案",
+  "negative_result_or_admitted_limitation": "仅在LAN 32节点测试,未考虑大规模P2P动态拓扑和策略协商过程",
+  "evidence_for_taste": [
+    "single point of failure",
+    "full decentralization, symmetric abilities, and dynamism",
+    "existing approaches fail to deal with the dynamicity",
+    "identity-based access control... becomes ineffective",
+    "significantly reduced",
+    "we would like to investigate the process of multiple peers' policy negotiation"
+  ],
+  "thinking_moves": [
+    "将中心化安全问题归因于P2P固有属性而非实现缺陷",
+    "用投票机制将信任分布化以消除单点瓶颈",
+    "把身份鉴别替换为属性鉴别以适应动态未知节点",
+    "借鉴定理的RT语言但针对P2P场景扩展凭证类型",
+    "先形式化策略模型再映射到具体协议流程"
+  ],
+  "topic_tags": [
+    "P2P-access-control",
+    "distributed-authorization",
+    "RT-extension",
+    "attribute-based-access",
+    "voting-mechanism"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供DOI、具体会议名称及Yunhao Liu的具体贡献。实验仅在受控LAN环境32节点进行,未讨论在大规模真实P2P网络的表现。"
+}

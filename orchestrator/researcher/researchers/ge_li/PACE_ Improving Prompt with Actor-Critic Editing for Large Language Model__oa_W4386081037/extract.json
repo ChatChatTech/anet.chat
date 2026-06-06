@@ -1,0 +1,40 @@
+{
+  "paper_id": "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4386081037",
+  "doi": "10.48550/arxiv.2308.10088",
+  "title": "PACE: Improving Prompt with Actor-Critic Editing for Large Language Model",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "人类编写的提示词质量差异大,LLM对提示词敏感导致性能波动,改进提示词需大量人工试错",
+  "problem_framing": "将提示工程视为策略优化问题,通过LLM作为Actor和Critic迭代优化提示词",
+  "key_insight": "prompt如同policy,利用LLM双重角色(执行+批判)形成闭环反馈实现自动编辑",
+  "method_signature": "PACE迭代算法:Actor执行prompt生成response,Critic评估提供反馈,聚合n个反馈更新prompt",
+  "evaluation_criteria": "在24个Instruction Induction任务和21个Big-Bench任务上验证,采用Accuracy等实际评测指标",
+  "negative_result_or_admitted_limitation": "PACE处理中高难度问题有效,但面对极复杂问题时建议人机协作,以及闭源模型API限制导致无法访问概率",
+  "evidence_for_taste": [
+    "drafting initial prompts is relatively straightforward",
+    "real challenge is refining and optimizing these drafts",
+    "it is relatively straightforward for humans to draft",
+    "the real challenge is refining and optimizing",
+    "critic possesses a slightly higher significance",
+    "PACE is efficient in handling medium to low-difficulty problems",
+    "for highly complex problems, we firmly believe in the power of human-machine collaboration"
+  ],
+  "thinking_moves": [
+    "将prompt editing与RL的actor-critic范式类比,借用现成算法框架",
+    "指出领域忽视的second stage(改进阶段),重新定位问题重要性",
+    "通过消融实验区分Actor和Critic各自的贡献度",
+    "把提示词质量从best/worst角度量化,构建系统化评测基线"
+  ],
+  "topic_tags": [
+    "LLM-prompt-optimization",
+    "actor-critic-algorithm",
+    "automatic-prompt-editing",
+    "iterative-prompt-refinement",
+    "in-context-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

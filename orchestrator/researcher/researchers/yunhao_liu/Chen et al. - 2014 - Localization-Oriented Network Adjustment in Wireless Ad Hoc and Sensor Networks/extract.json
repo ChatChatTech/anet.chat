@@ -1,0 +1,38 @@
+{
+  "paper_id": "Chen et al. - 2014 - Localization-Oriented Network Adjustment in Wireless Ad Hoc and Sensor Networks",
+  "doi": null,
+  "title": "Localization-Oriented Network Adjustment in Wireless Ad Hoc and Sensor Networks",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "现实网络中节点往往局部不可定位；现有方法粗暴对待所有节点，造成不必要的调整成本和能量开销",
+  "problem_framing": "如何判断哪些节点需要增强测距能力、添加哪些边，使网络可定位而不做过度调整",
+  "key_insight": "通过识别每个节点的可定位性状态，可以针对性地选择调整对象，避免对已知可定位节点的冗余操作",
+  "method_signature": "LAL方法：三阶段(可定位性测试、结构分析、网络调整)，基于图刚性和组件树选择性地进行顶点增强",
+  "evaluation_criteria": "添加的边数、功率提升的节点数、最终网络是否可定位",
+  "negative_result_or_admitted_limitation": "IND方法因网络非2连通而需将所有节点功率提升三倍，造成大量不必要的测量开销",
+  "evidence_for_taste": [
+    "coarse-grained since they equally deal",
+    "Ignoring localizability induces unnecessary adjustments",
+    "purposefully selected adjustments",
+    "avoid meaningless ranging and communication costs"
+  ],
+  "thinking_moves": [
+    "把现有方法的问题定义为coarse-grained，为精细化操作提供理论立足点",
+    "从图刚性的理论层(Theorem 2)出发，构建组件树结构，将全局问题分解为局部可处理的四类情况",
+    "利用最坏情况证明(Theorem 5)保证调整后网络必可定位，再提出启发式优化减少冗余边"
+  ],
+  "topic_tags": [
+    "无线传感网定位",
+    "图刚性理论",
+    "网络可定位性",
+    "功率控制调整",
+    "组件树分解"
+  ],
+  "cites_own_work": [
+    "extended work of a conference publication [14]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

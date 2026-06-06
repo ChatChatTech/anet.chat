@@ -1,0 +1,45 @@
+{
+  "paper_id": "Zhang et al. - 2019 - Know Your Mind Adaptive Cognitive Activity Recognition with Reinforced CNN",
+  "doi": null,
+  "title": "Know Your Mind: Adaptive Cognitive Activity Recognition with Reinforced CNN",
+  "year": 2019,
+  "venue": "IEEE",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "EEG信号处理耗时且依赖专家知识,现有方法域特定且不可泛化,EEG信号低信噪比且混沌",
+  "problem_framing": "设计可直接处理原始EEG数据的通用框架,自适应选择特征维度,用样本级而非片段级分类",
+  "key_insight": "用强化学习自动搜索最优注意力区域,结合CNN卷积映射提取空间依赖关系",
+  "method_signature": "强化选择注意力机制+卷积映射,直接处理原始EEG样本",
+  "evaluation_criteria": "分类精度/延迟/对通道缺失的鲁棒性",
+  "negative_result_or_admitted_limitation": "单样本只能反映即时意图而非长期稳定意图;强化策略仅在训练环境有效;RS操作不能总提供最佳空间依赖",
+  "evidence_for_taste": [
+    "EEGs have the highest STD and range",
+    "time-consuming and highly depend on expertise",
+    "may not apply to other domains",
+    "single EEG sample only contains spatial information without spatial clue",
+    "the exhaustion method is too computationally expensive",
+    "segment-based classification cannot exploit the immediate intention",
+    "requires at least eight EEG channels"
+  ],
+  "thinking_moves": [
+    "通过对比实验揭示EEG信号与其他传感信号的统计差异,量化其混沌特性",
+    "将域特定的EEG分类问题重新定义为通用的可迁移框架设计",
+    "从生物医学通道排列不一定最优的假设出发,设计RS操作穷举潜在组合",
+    "用强化学习框架自动搜索最优注意力区域而非人工设计",
+    "对奖励函数设计非线性指数项以鼓励高层精度提升",
+    "用消融实验验证注意力机制对CNN的增益"
+  ],
+  "topic_tags": [
+    "EEG-cognitive-activity-recognition",
+    "reinforcement-learning-attention",
+    "brain-computer-interface",
+    "raw-EEG-classification",
+    "adaptive-spatial-dependency"
+  ],
+  "cites_own_work": [
+    "Zhang et al. 2018",
+    "Zhang et al. 2019"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

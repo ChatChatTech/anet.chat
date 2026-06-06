@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liao et al. - 2011 - Visualizing anomalies in sensor networks",
+  "doi": null,
+  "title": "Visualizing Anomalies in Sensor Networks",
+  "year": 2011,
+  "venue": "SIGCOMM'11",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传感器网络诊断困难，因资源受限、环境恶劣、无线丢包严重，现有推理模型无法覆盖全部症状",
+  "problem_framing": "将传感器网络时空气三维度的高维动态数据可视化，辅助人类发现未知根因",
+  "key_insight": "可视化分析比纯算法更适合诊断\"症状和根因前所未知\"的显著失效",
+  "method_signature": "时序展开模型(TEM)将路由拓扑转为有向树，关联图用Pearson系数揭示维度相关，动态投影图用星坐标降维",
+  "evaluation_criteria": "通过GreenOrbs真实部署(500节点一年数据)演示定位问题、追溯根因",
+  "negative_result_or_admitted_limitation": "推理模型只能关注部分症状，限制了在实际使用中的适用性和效率",
+  "evidence_for_taste": [
+    "resource-constrained",
+    "previously unknown",
+    "better evidence for the human",
+    "quite messy drawn",
+    "analytics-unfriendly",
+    "interactive display of data"
+  ],
+  "thinking_moves": [
+    "将通信拓扑问题重新frame为可视化问题",
+    "从机器生成假设转为人类决策支撑",
+    "用时序展开将随机图转化为可导航树结构",
+    "通过多视图协同揭示单算法无法覆盖的异常模式"
+  ],
+  "topic_tags": [
+    "sensor-network-diagnosis",
+    "visual-analytics",
+    "anomaly-detection",
+    "GreenOrbs-deployment",
+    "high-dimensional-visualization"
+  ],
+  "cites_own_work": [
+    "GreenOrbs scale measurement study (INFOCOM 2011)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

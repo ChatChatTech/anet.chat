@@ -1,0 +1,40 @@
+{
+  "paper_id": "TenonOS_ A Self-Generating LibOS-on-LibOS Framework for Time-Critical Embedded Operating Systems",
+  "doi": "10.48550/arxiv.2512.00400",
+  "title": "TenonOS: A Self-Generating LibOS-on-LibOS Framework for Time-Critical Embedded Operating Systems",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统OS与hypervisor架构存在资源膨胀与调度行为不可预测,无法满足时间关键应用的延迟抖动需求",
+  "problem_framing": "将hypervisor和OS两层统一为微库池,实现跨层代码复用与一致的细粒度资源管理",
+  "key_insight": "LibOS-on-LibOS架构将hypervisor和OS均分解为细粒度可复用微库,动态编排合成定制化运行时",
+  "method_signature": "Mortise微hypervisor与Tenon实时LibOS双层协同,微库动态组合生成系统",
+  "evaluation_criteria": "调度延迟改善40.28%,内存占用361 KiB,中断延迟及抢占时间对比Zephyr/RT-Thread",
+  "negative_result_or_admitted_limitation": "当前可复用微库集合规模仍小,需持续扩展以提升功能性",
+  "evidence_for_taste": [
+    "eliminate redundant layers, minimize the TCB",
+    "maximizing system responsiveness",
+    "ideal foundation for next-generation",
+    "reduces the need for separate compute nodes",
+    "achieve lower computational costs",
+    "excellent scalability and efficiency"
+  ],
+  "thinking_moves": [
+    "从现有架构问题(层级分离导致双重调度)反推共享基础层的统一可能",
+    "将云端LibOS(Unikraft)的思想向嵌入式实时场景延伸并补足其缺失能力",
+    "通过植物生长隐喻(土壤Mortise→种子Tenon)具象化系统架构层次",
+    "先论证静态分区的隔离确定性,再引入动态模式应对负载波动",
+    "用代码行数与内存占用量化架构轻量化程度"
+  ],
+  "topic_tags": [
+    "embedded-virtualization",
+    "LibOS",
+    "real-time-operating-system",
+    "hypervisor-microkernel",
+    "mixed-criticality-workloads"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

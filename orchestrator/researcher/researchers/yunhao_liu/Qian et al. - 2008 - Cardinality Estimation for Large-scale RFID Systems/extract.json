@@ -1,0 +1,38 @@
+{
+  "paper_id": "Qian et al. - 2008 - Cardinality Estimation for Large-scale RFID Systems",
+  "doi": null,
+  "title": "Cardinality Estimation for Large-scale RFID Systems",
+  "year": 2008,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "RFID tag counting慢,现有估计方案有多读问题,且移动标签难以及时识别",
+  "problem_framing": "多阅读器RFID系统中消除重复计数,实现准确快速低开销的标签基数估计",
+  "key_insight": "利用几何分布哈希让标签选择时隙,OR合并位图消除重复,帧长仅需O(log n)",
+  "method_signature": "Lottery Frame (LoF)利用几何分布哈希函数+位图OR合并实现复制不敏感估计",
+  "evaluation_criteria": "估计误差、处理延迟、通信开销、可扩展性;与USE/UPE/LPE比较",
+  "negative_result_or_admitted_limitation": "USE/UPE需要数百帧长度和多次重传来确定最优帧长,处理时间长",
+  "evidence_for_taste": [
+    "existing schemes report either MAX or SUM",
+    "no need of anti-collision schemes",
+    "statistically, more balls drop, more left the fringe will be",
+    "fixed and short frame length",
+    "tunable estimation accuracy with expense on estimation time"
+  ],
+  "thinking_moves": [
+    "把彩票中奖概率类比标签时隙选择,直观理解几何分布哈希",
+    "用Flajolet-Martin的概率计数定理推导位图边界位置与标签数关系",
+    "通过OR运算证明合并位图等价于并集,从根本上消除重复",
+    "定理4.3证明帧长仅需log2(N)slots,从复杂度上碾压UPE的O(n)"
+  ],
+  "topic_tags": [
+    "RFID-cardinality-estimation",
+    "multi-reader-RFID",
+    "probabilistic-counting",
+    "geometric-distribution-hash",
+    "slotted-ALOHA"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

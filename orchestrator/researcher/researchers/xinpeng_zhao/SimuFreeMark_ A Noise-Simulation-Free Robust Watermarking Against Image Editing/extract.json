@@ -1,0 +1,41 @@
+{
+  "paper_id": "SimuFreeMark_ A Noise-Simulation-Free Robust Watermarking Against Image Editing",
+  "doi": "10.48550/arxiv.2511.11295",
+  "title": "SimuFreeMark: A Noise-Simulation-Free Robust Watermarking Against Image Editing",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "深度学习水印依赖手工噪声模拟层,泛化到未见攻击时失效,且复杂噪声层增加模型设计与训练成本",
+  "problem_framing": "将鲁棒水印问题从「模拟外部攻击」重新定义为「利用图像固有不变性」",
+  "key_insight": "图像低频分量对传统信号处理和AIGC语义编辑均具有内在稳定性,利用预训练VAE将其映射到深度特征空间可兼顾稳定性和语义鲁棒性",
+  "method_signature": "基于FFT低频分解+SD-VAE潜空间嵌入+双阶段训练的水印框架",
+  "evaluation_criteria": "比特准确率(抗攻击性),PSNR/SSIM(视觉质量)",
+  "negative_result_or_admitted_limitation": "SimuFreeMark在P2P指令编辑上仅90.42%准确率,对显式指令引导的语义重写仍有改进空间",
+  "evidence_for_taste": [
+    "低频分量显著更稳定",
+    "靶向模拟可优化特定已知威胁",
+    "提供更广泛更泛化的鲁棒性",
+    "p-values < 10^-4",
+    "操作在像素级缺乏语义关联"
+  ],
+  "thinking_moves": [
+    "对低频/高频分量做系统定量分析,用统计检验验证稳定性差异",
+    "从「模拟攻击」范式转向「利用图像固有属性」范式",
+    "通过消融实验验证低频稳定性和VAE深度特征的各自贡献",
+    "在已知攻击上靶向模拟确实有效,但以牺牲泛化性和视觉质量为代价"
+  ],
+  "topic_tags": [
+    "deep-learning-watermarking",
+    "noise-simulation-free",
+    "low-frequency-stability",
+    "AIGC-editing-robustness",
+    "VAE-latent-embedding"
+  ],
+  "cites_own_work": [
+    "Tang et al. 2024 (robust reversible watermarking)",
+    "Tang et al. 2025 (fractional-order watermarking)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

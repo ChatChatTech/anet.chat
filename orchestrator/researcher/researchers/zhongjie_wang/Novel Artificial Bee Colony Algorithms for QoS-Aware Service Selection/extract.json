@@ -1,0 +1,40 @@
+{
+  "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection",
+  "doi": "10.1109/tsc.2016.2612663",
+  "title": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection",
+  "year": 2016,
+  "venue": "IEEE Transactions on Services Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有群体智能算法参数复杂、收敛慢、利用能力差,需要针对服务选择问题定制简单有效的算法",
+  "problem_framing": "将QoS感知服务选择问题形式化为组合优化问题,通过选择各任务候选服务优化复合QoS",
+  "key_insight": "连续优化中相似变量值自然导致相似函数值,而离散服务选择缺乏此最优性连续性质,需通过QoS相似性而非编码相似性来定义邻域",
+  "method_signature": "基于人工蜂群算法,提出三种实现近似最优性连续的技术(IBA/PBA/EBA)",
+  "evaluation_criteria": "准确性、收敛速度、控制参数数量",
+  "negative_result_or_admitted_limitation": "VNS、ALNS、交叉算子等改进方法对算法效果无显著影响,复杂度与原问题相当",
+  "evidence_for_taste": [
+    "similar variable values naturally lead to similar function values",
+    "neighborhood search is quite similar to a random search",
+    "the fewer control parameters the easier configuration",
+    "no significant impact on our proposed algorithms"
+  ],
+  "thinking_moves": [
+    "把连续优化的最优性连续性质映射到离散服务选择问题",
+    "用QoS相似性替代编码相似性来定义邻域关系",
+    "通过三种不同技术(阈值/分区/经验)实现近似最优性连续",
+    "论证邻域搜索改进与原始ABC探索连续空间的类比性"
+  ],
+  "topic_tags": [
+    "QoS-aware service selection",
+    "artificial bee colony algorithm",
+    "discrete optimization",
+    "swarm intelligence",
+    "neighborhood search"
+  ],
+  "cites_own_work": [
+    "An improved artificial bee colony approach to qos-aware service selection (ICWS 2013)",
+    "Semi-empirical service composition (ICWS 2011)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

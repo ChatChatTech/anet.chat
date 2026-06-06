@@ -1,0 +1,38 @@
+{
+  "paper_id": "Data-Free Federated Class Incremental Learning with Diffusion-Based Generative Memory",
+  "doi": "10.48550/arxiv.2405.17457",
+  "title": "Data-Free Federated Class Incremental Learning with Diffusion-Based Generative Memory",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Federated learning需要协作但不能共享数据，FCIL中旧类别数据无法存储导致灾难性遗忘；GAN生成不稳定且敏感",
+  "problem_framing": "隐私约束下如何在FCIL中生成高质量旧类别样本避免遗忘，同时不增加通信开销",
+  "key_insight": "扩散模型相比GAN更稳定可控，可本地训练生成样本，结合熵过滤筛选高质量生成数据",
+  "method_signature": "DFedDGM：扩散模型+均衡采样器+熵过滤+知识蒸馏特征正则",
+  "evaluation_criteria": "平均准确率(Acc↑)和平均遗忘率(F↓)在EMNIST/CIFAR100/Tiny-ImageNet上评估",
+  "negative_result_or_admitted_limitation": "扩散模型固有局限带来额外计算开销和训练时间延长，但通信成本不增加",
+  "evidence_for_taste": [
+    "GANs exhibit inherent instability",
+    "precise control over generation",
+    "entropy quantifies uncertainty",
+    "filtering out lower-quality samples",
+    "balanced images across classes"
+  ],
+  "thinking_moves": [
+    "对比GANs与扩散模型在生成稳定性上的差异",
+    "从信息论角度将置信度量化为熵值进行样本筛选",
+    "通过均衡采样解决FL中非独立同分布导致的类别不平衡",
+    "引入特征空间一致性损失弥补KL散度忽略语义信息的不足"
+  ],
+  "topic_tags": [
+    "federated-class-incremental-learning",
+    "diffusion-model-generation",
+    "data-free-privacy",
+    "knowledge-distillation",
+    "entropy-filtering"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

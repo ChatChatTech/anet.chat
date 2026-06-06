@@ -1,0 +1,38 @@
+{
+  "paper_id": "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution",
+  "doi": "10.24963/ijcai.2022/393",
+  "title": "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution",
+  "year": 2022,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有PU学习方法对类先验过度估计,且最小间隔优化对标签噪声敏感导致决策边界不稳定",
+  "problem_framing": "将类先验估计建模为从无标签数据到正数据的分布转换问题,并用间隔分布替代最小间隔",
+  "key_insight": "熵正则化最优传输可精确识别无标签中的正负实例,间隔分布优化可克服标签噪声",
+  "method_signature": "PUOTMD: OT估计类先验 + 间隔分布分类器联合优化",
+  "evaluation_criteria": "类先验估计误差和分类准确率(与EN/PE/CAPU等比较)",
+  "negative_result_or_admitted_limitation": "在类先验0.7时输给CAPU的估计精度,理论分析留待未来工作",
+  "evidence_for_taste": [
+    "EN is very prone to overestimate the class prior",
+    "optimizing minimum margin only focuses on a small proportion",
+    "multiple low-density decision boundaries",
+    "verifies the effectiveness of entropy regularized OT",
+    "better generalization performance than minimum margin based methods"
+  ],
+  "thinking_moves": [
+    "识别现有方法的两大成问题:类先验过度估计+最小间隔对噪声敏感",
+    "将问题拆解为两步:先用OT精确估计类先验,再优化间隔分布",
+    "用可视化直觉(Figure 2)说明最小间隔为何产生多个低密度边界",
+    "引入OT解决分布匹配问题,克服传统概率分类器的估计偏差",
+    "引用Zhang的ODM工作作为理论基础,扩展到PU场景"
+  ],
+  "topic_tags": [
+    "positive-unlabeled learning",
+    "optimal transport",
+    "margin distribution optimization",
+    "class prior estimation",
+    "semi-supervised classification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

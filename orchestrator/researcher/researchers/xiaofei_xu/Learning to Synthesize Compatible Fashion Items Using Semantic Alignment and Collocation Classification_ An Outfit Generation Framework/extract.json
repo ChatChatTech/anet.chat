@@ -1,0 +1,39 @@
+{
+  "paper_id": "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework",
+  "doi": "10.1109/tnnls.2022.3202842",
+  "title": "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification: An Outfit Generation Framework",
+  "year": 2022,
+  "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传统设计依赖主观创意存在不确定性,现有生成模型仅关注上下装转换,无法合成完整搭配套装",
+  "problem_framing": "给定时尚单品和目标合成品的参考掩码,学习从现有时尚品到新合成品的映射函数,保持搭配兼容性",
+  "key_insight": "引入语义对齐模块捕获输入输出图像间的长程依赖关系,用Bi-LSTM建模顺序兼容性来监督生成过程",
+  "method_signature": "OutfitGAN框架包含SAM语义对齐模块和CCM搭配分类模块,基于LSGAN目标和L1/perceptual损失",
+  "evaluation_criteria": "SSIM/LPIPS/FID衡量真实感,FCTS测试兼容性,以及相似度和 authenticity 测量",
+  "negative_result_or_admitted_limitation": "特征通道超过64时性能略降;λ参数增大削弱判别器和CCM影响;目前仅支持4类单品;计算复杂度O(N)",
+  "evidence_for_taste": [
+    "no apparent pixel-to-pixel alignment",
+    "non-local in space",
+    "overcome the issue of spatial misalignment",
+    "learn the correspondence relationships",
+    "weakens the influence of the discriminator",
+    "Bi-LSTM based on human vision"
+  ],
+  "thinking_moves": [
+    "识别现有CNN生成器仅能学习局部特征而无法捕获长程依赖",
+    "将搭配生成问题与其他图像翻译任务区分开来(无像素对齐、非局部映射)",
+    "从人类视觉角度出发将时尚单品视为序列建模兼容性",
+    "通过消融实验验证SAM和CCM各模块对整体性能的贡献"
+  ],
+  "topic_tags": [
+    "fashion-compatible-generation",
+    "semantic-alignment-module",
+    "collocation-classification",
+    "outfit-gan",
+    "mask-guided-synthesis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

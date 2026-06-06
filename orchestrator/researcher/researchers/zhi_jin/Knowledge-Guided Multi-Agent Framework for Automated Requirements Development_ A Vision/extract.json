@@ -1,0 +1,42 @@
+{
+  "paper_id": "Knowledge-Guided Multi-Agent Framework for Automated Requirements Development_ A Vision",
+  "doi": "10.48550/arxiv.2506.22656",
+  "title": "Knowledge-Guided Multi-Agent Framework for Automated Requirements Development: A Vision",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有多智能体系统专注于代码开发，缺乏对需求工程的专门设计，导致RE任务仍需大量人工投入",
+  "problem_framing": "将自动化需求开发定义为由六个专业智能体协作完成elicitation、analysis、specification、validation等任务，并以artifacts pool驱动工作流",
+  "key_insight": "每个智能体需配备功能、预定义动作和知识三要素，通过artifacts pool的状态变化触发协作",
+  "method_signature": "六智能体+artifacts pool的多智能体协同框架，模拟RE中的interviewer、end-user、analyst等角色",
+  "evaluation_criteria": "中间产物和最终SRS的质量",
+  "negative_result_or_admitted_limitation": "当前仅有一个案例研究，方法泛化性待验证",
+  "evidence_for_taste": [
+    "primarily focus on code development and lack the design",
+    "just directly assign agents to act as roles",
+    "do not clearly define the software engineering knowledge",
+    "the quality of both the intermediate artifacts and the final SRS is satisfactory",
+    "We conducted a case study to validate the practicality"
+  ],
+  "thinking_moves": [
+    "把RE中的角色职责分配给不同的LLM智能体",
+    "用artifacts pool状态变化驱动智能体间协作",
+    "将黑板机制引入多智能体系统设计",
+    "模拟人类专家的推理过程为智能体注入领域知识",
+    "从代码开发的多智能体系统扩展到需求工程领域"
+  ],
+  "topic_tags": [
+    "automated-requirements-engineering",
+    "multi-agent-LLM-systems",
+    "knowledge-guided-agent-design",
+    "artifacts-pool-collaboration",
+    "requirements-elicitation-automation"
+  ],
+  "cites_own_work": [
+    "MARE: Multiagents Collaboration Framework for Requirements Engineering",
+    "An evaluation of requirements modeling for cyberphysical systems via LLMs"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "作为vision paper，缺乏详细的方法实现描述和系统性的实验评估；关于KGMAF的实际效果主要依赖案例研究的定性展示"
+}

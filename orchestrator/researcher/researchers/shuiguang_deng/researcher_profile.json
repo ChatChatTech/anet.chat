@@ -1,0 +1,822 @@
+{
+  "slug": "shuiguang_deng",
+  "n_extracts": 84,
+  "n_full": 71,
+  "n_partial": 13,
+  "n_thin": 0,
+  "year_range": [
+    2005,
+    2026
+  ],
+  "top_tags": [
+    [
+      "music-recommendation",
+      4
+    ],
+    [
+      "federated-learning",
+      4
+    ],
+    [
+      "collaborative-filtering",
+      4
+    ],
+    [
+      "attention-mechanism",
+      3
+    ],
+    [
+      "time-series-anomaly-detection",
+      3
+    ],
+    [
+      "spiking-neural-network",
+      3
+    ],
+    [
+      "spiking-neural-networks",
+      3
+    ],
+    [
+      "user-preference-modeling",
+      3
+    ],
+    [
+      "encoder-decoder",
+      2
+    ],
+    [
+      "parameter-efficient-fine-tuning",
+      2
+    ],
+    [
+      "service-lifecycle-management",
+      2
+    ],
+    [
+      "brain-inspired-computing",
+      2
+    ],
+    [
+      "edge-computing",
+      2
+    ],
+    [
+      "knowledge-distillation",
+      2
+    ],
+    [
+      "neuromorphic-hardware",
+      2
+    ],
+    [
+      "on-device-inference",
+      2
+    ],
+    [
+      "LLM-instruction-tuning",
+      2
+    ],
+    [
+      "coreset-selection",
+      2
+    ],
+    [
+      "cloud-workload-prediction",
+      1
+    ],
+    [
+      "periodicity-detection",
+      1
+    ],
+    [
+      "heavy-load-burst",
+      1
+    ],
+    [
+      "imbalanced-regression",
+      1
+    ],
+    [
+      "incomplete-multimodal-learning",
+      1
+    ],
+    [
+      "low-rank-adaptation",
+      1
+    ],
+    [
+      "emotion-recognition",
+      1
+    ],
+    [
+      "modality-combination-aware",
+      1
+    ],
+    [
+      "process-service-abstraction",
+      1
+    ],
+    [
+      "time-constraint-management",
+      1
+    ],
+    [
+      "web-service-security",
+      1
+    ],
+    [
+      "interface-equivalence",
+      1
+    ]
+  ],
+  "topic_clusters": [
+    {
+      "tag": "time-series-anomaly-detection",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Cluster-Wide Task Slowdown Detection in Cloud System",
+          "year": 2024,
+          "venue": "KDD '24",
+          "key_insight": "标准注意力机制偏向高振幅子周期,需逐层剥离高振幅再重建低振幅子周期",
+          "method_signature": "SORN:降序剥离子周期振幅+神经最优传输+挑剔损失函数",
+          "score": 21
+        },
+        {
+          "paper_id": "LARA_ A Light and Anti-overfitting Retraining Approach for Unsupervised Time Series Anomaly Detection",
+          "year": 2024,
+          "venue": "WWW '24",
+          "key_insight": "旧模型是历史数据的抽象，可从中恢复历史数据指导潜向量微调；线性调整函数数学上最优且开销最小",
+          "method_signature": "基于VAE的轻量抗过拟合重训练框架，包含ruminate block恢复历史知识和线性调整函数Mz、Mx",
+          "score": 20
+        },
+        {
+          "paper_id": "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection",
+          "year": 2023,
+          "venue": "arXiv",
+          "key_insight": "通过样本与服务正常模式的相关性检测异常，而非仅依赖样本自身；利用频域稀疏性选择子集傅里叶基可提升检测性能",
+          "method_signature": "MACE：模式提取机制+双卷积(峰/谷)+上下文感知DFT/IDFT",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "spiking-neural-network",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Edge Intelligence with Spiking Neural Networks",
+          "year": 2025,
+          "venue": "arXiv",
+          "key_insight": "SNN通过模拟生物神经元动力学，以事件驱动计算替代昂贵的MAC操作，可成为边缘智能的低功耗替代方案",
+          "method_signature": "首个EdgeSNN综合调研，系统梳理神经元模型、学习算法、硬件平台及部署挑战",
+          "score": 15
+        },
+        {
+          "paper_id": "SAFA-SNN_ Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network",
+          "year": 2025,
+          "venue": "arXiv",
+          "key_insight": "通过阈值调控将神经元分为稳定和自适应两类，使大多数突触权重自然保持，仅少数更新，从而保留基类知识。",
+          "method_signature": "阈值动态调节+零阶优化+原型正交子空间投影的联合框架",
+          "score": 13
+        },
+        {
+          "paper_id": "Darkit_ A User-Friendly Software Toolkit for Spiking Large Language Model",
+          "year": null,
+          "venue": "arXiv",
+          "key_insight": "通过统一GUI和自动化工具降低spiking LLM的研究门槛比改进算法更紧迫",
+          "method_signature": "提供10项功能的集成化工具包，含GUI可视化与代码编辑器",
+          "score": 11
+        }
+      ]
+    },
+    {
+      "tag": "spiking-neural-networks",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing",
+          "year": 2026,
+          "venue": "ICML",
+          "key_insight": "LIF dynamics act as implicit low-pass filter; matching effective bandwidth to discriminative spectral content of mmWave signals enables inherent noise suppression",
+          "method_signature": "Frequency-matching criterion for configuring membrane decay factor β by aligning LIF effective bandwidth with discriminative spectrum",
+          "score": 22
+        },
+        {
+          "paper_id": "ECC-SNN_ Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks",
+          "year": 2025,
+          "venue": "arXiv",
+          "key_insight": "用云端大ANN作为oracle通过知识蒸馏指导边缘小SNN，并让边缘通过增量学习自主减少对云的依赖",
+          "method_signature": "ANN-SNN联合训练( logits +特征对齐损失 ) + 熵阈值过滤协作推理 + 自蒸馏增量学习",
+          "score": 16
+        },
+        {
+          "paper_id": "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning",
+          "year": 2024,
+          "venue": "arXiv preprint",
+          "key_insight": "Separate intra-client label calibration for majority/minority imbalance from inter-client knowledge distillation for missing labels; global model as teacher preserves correct optimization direction",
+          "method_signature": "FedLEC: calibrated cross-entropy Lc balances intra-client label learning; KL-divergence distillation loss Ld transfers global distribution for missing labels; ATT aggregation across time steps",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "federated-learning",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4412887984",
+          "year": 2025,
+          "venue": "ACL Findings",
+          "key_insight": "融合不同Transformer层特征进行聚类,结合层级化选择(先客户端内聚类再服务器端聚类)可在保护隐私同时实现高效数据筛选",
+          "method_signature": "FedHDS: 层级化数据选择,Transformer全层特征融合,HDBSCAN聚类生成coreset进行LoRA微调",
+          "score": 18
+        },
+        {
+          "paper_id": "Federated Data-Efficient Instruction Tuning for Large Language Models__oa_W4403573412",
+          "year": 2024,
+          "venue": "arXiv",
+          "key_insight": "Fusing features from all Transformer layers via t-SNE beats last-layer-only; hierarchical intra→inter clustering eliminates inter-client redundancy",
+          "method_signature": "FedHDS: hierarchical data selection via fused multi-layer features + HDBSCAN clustering",
+          "score": 16
+        },
+        {
+          "paper_id": "LSHFed_ Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping",
+          "year": null,
+          "venue": null,
+          "key_insight": "利用LSH将高维梯度不可逆投影为紧凑比特串,通过汉明距离高效识别恶意更新",
+          "method_signature": "LSHGM多超平面投影生成梯度比特串,ScoreQ-Hash角色选举,掩码隐私保护",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "tag": "music-recommendation",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "GEMRec_ A Graph-Based Emotion-Aware Music Recommendation Approach",
+          "year": 2016,
+          "venue": "Springer LNCS (International Conference)",
+          "key_insight": "微博中音乐分享与情感表达的关联可反映用户情感感知音乐偏好,且情感维度是私有效应不应跨用户共享比较",
+          "method_signature": "构建情感感知图(EAG),基于随机游走的关联系传播算法对音乐排序推荐",
+          "score": 18
+        },
+        {
+          "paper_id": "Sequence-based context-aware music recommendation",
+          "year": 2017,
+          "venue": "Information Retrieval Journal",
+          "key_insight": "用户的情境偏好反映在当前交互会话中的听歌序列里,而非显式上下文",
+          "method_signature": "music2vec + session-music2vec学习序列嵌入,结合一般与情境偏好做Top-N推荐",
+          "score": 17
+        },
+        {
+          "paper_id": "Improving Music Recommendation Using Distributed Representation",
+          "year": null,
+          "venue": null,
+          "key_insight": "相似音乐应有相似上下文,skip-gram可迁移到音乐序列学习",
+          "method_signature": "music2vec(skip-gram)+用户偏好均值+余弦相似度排序",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "tag": "user-preference-modeling",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Learning to embed music and metadata for context-aware music recommendation",
+          "year": 2017,
+          "venue": "World Wide Web",
+          "key_insight": "情境信息可从用户当前播放序列中推断，全局和情境偏好分别对应历史全部记录和最近session",
+          "method_signature": "Music Embedding Model (MEM) 结合滑动窗口局部上下文与用户全局历史学习嵌入",
+          "score": 22
+        },
+        {
+          "paper_id": "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention",
+          "year": 2021,
+          "venue": "IEEE Transactions on Cybernetics",
+          "key_insight": "Hawkes过程可在连续时间空间建模事件依赖，注意力可自适应权衡用户的长短期偏好权重",
+          "method_signature": "MHPE-a: 嵌入层+多元Hawkes过程+注意力偏好融合",
+          "score": 20
+        },
+        {
+          "paper_id": "Trust-based Service Recommendation in Social Network",
+          "year": 2015,
+          "venue": "Applied Mathematics & Information Sciences",
+          "key_insight": "通过信任网络扩展用户偏好向量，结合自身和信任用户的调用历史解决冷启动问题",
+          "method_signature": "基于信任网络的服务推荐：构建用户特征向量→计算相似度→计算候选服务排名→Top-K推荐",
+          "score": 17
+        }
+      ]
+    }
+  ],
+  "recurring_thinking_moves": [
+    {
+      "move": "Identify SNN-specific failure mode: layer-wise accumulated gradient drifts from BPTT with surrogate functions cause bias not present in ANNs",
+      "count": 3,
+      "variants": [
+        "Identify SNN-specific failure mode: layer-wise accumulated gradient drifts from BPTT with surrogate functions cause bias not present in ANNs",
+        "Identify limitations of prior work (SWAG neglects replication, offline methods lack adaptability)",
+        "Identify that routing path is passive (SDN-generated) vs should be optimized"
+      ],
+      "papers": [
+        "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+        "Exploiting Label Skewness for Spiking Neural Networks in Federated Learning",
+        "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge"
+      ]
+    },
+    {
+      "move": "通过消融实验验证每个模块贡献，承认 vanilla DFT/IDFT 引入更多基导致性能下降",
+      "count": 3,
+      "variants": [
+        "通过消融实验验证每个模块贡献，承认 vanilla DFT/IDFT 引入更多基导致性能下降",
+        "通过消融实验验证每个组件的必要性,承认结构融合是最关键组件",
+        "通过消融实验验证每个组件的必要性，而非黑箱式叠加"
+      ],
+      "papers": [
+        "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion",
+        "Learning Multi-Pattern Normalities in the Frequency Domain for Efficient Time Series Anomaly Detection",
+        "SRMF_ A Data Augmentation and Multimodal Fusion Approach for Long-Tail UHR Satellite Image Segmentation"
+      ]
+    }
+  ],
+  "evolution_arc": [
+    {
+      "year": 2005,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "process-service-abstraction",
+          1
+        ],
+        [
+          "time-constraint-management",
+          1
+        ],
+        [
+          "web-service-security",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2007,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "π-calculus",
+          1
+        ],
+        [
+          "service-behavior-compatibility",
+          1
+        ],
+        [
+          "web-service-composition",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2015,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "social-network-recommendation",
+          1
+        ],
+        [
+          "trust-relationship",
+          1
+        ],
+        [
+          "cold-start-problem",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "emotion-aware-recommendation",
+          1
+        ],
+        [
+          "music-recommendation",
+          1
+        ],
+        [
+          "graph-based-propagation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2017,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "collaborative-filtering",
+          2
+        ],
+        [
+          "music-embedding",
+          1
+        ],
+        [
+          "context-aware-recommendation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2019,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "MEC服务放置",
+          1
+        ],
+        [
+          "边缘计算冗余",
+          1
+        ],
+        [
+          "容器化微服务",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "attention-mechanism",
+          2
+        ],
+        [
+          "music-recommendation",
+          1
+        ],
+        [
+          "heterogeneous-information-network",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "BAT-open-source",
+          1
+        ],
+        [
+          "internationalization-effort",
+          1
+        ],
+        [
+          "developer-survey",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "blockchain-federated-learning",
+          1
+        ],
+        [
+          "peer-to-peer-FL",
+          1
+        ],
+        [
+          "poisoning-attack-defense",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 50,
+      "top_tags": [
+        [
+          "service-lifecycle-management",
+          2
+        ],
+        [
+          "cloud-workload-prediction",
+          1
+        ],
+        [
+          "periodicity-detection",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 77,
+      "top_tags": [
+        [
+          "time-series-anomaly-detection",
+          2
+        ],
+        [
+          "edge-computing",
+          2
+        ],
+        [
+          "federated-learning",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 146,
+      "top_tags": [
+        [
+          "spiking-neural-network",
+          2
+        ],
+        [
+          "neuromorphic-hardware",
+          2
+        ],
+        [
+          "on-device-inference",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2026,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "mmWave-sensing",
+          1
+        ],
+        [
+          "spiking-neural-networks",
+          1
+        ],
+        [
+          "frequency-matching",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "现有SOTA方法在重负载上误差几乎是整体误差的两倍,且忽略SLA违规风险",
+    "MCULoRA在低秩适应过程中仍假设所有模态数据可用，实际应用中难以收集到完整模态训练数据",
+    "古典MAS受限于手工知识库与刚性规划机制，难以适应开放动态环境；LLM智能体缺乏审计、可解释性与运营严谨性",
+    "声称考虑国际化的73%但实际仅55.2%项目有英文README",
+    "OGTT缺少C57BL/6J对照,无法量化db/db小鼠IR程度;仅OGTT和HOMA-IR不能构成对IR改善的稳健论证",
+    "BPI仅支持关键词搜索，不擅长度查询和条件查询",
+    "CIFAR-10上恶意比例增加时准确率略降,空块比例随恶意参与者增加而上升",
+    "仅考虑静态场景，未考虑用户移动性的动态影响。",
+    "Feature shaping-based methods collapse on ViT/Swin/ConvNeXt (AUROC below 50%); ViM does not fully utilize feature information, closely approximated by Energy alone",
+    "TestSpark因提示超出令牌限制无法生成Csv测试；LLM常产生编译错误或运行时断言失败需人工修复",
+    "现有survey主要提供高层观点,忽略对state-of-the-art research works的review,in the lack of systematic knowledge。",
+    "当时间序列噪声增大且周期严格性降低时性能会下降",
+    "BM25检索带来的提升非常有限；即使用完整仓库上下文，长上下文模型性能提升也很小且指标仍不理想",
+    "GPT-4在automated testing任务表现不佳,难以生成与实际执行输出一致的测试用例",
+    "GPT-4在自动化测试任务表现不佳，无法生成与实际执行输出一致的测试用例；HumanEval准确率94.4%太高基准过易",
+    "基于规则的静态分析可能遗漏复杂结构中的重要执行路径;提取的多粒度上下文可能包含冗余或噪声内容,分散模型注意力",
+    "处理冲突观点时多源整合能力需优化;当前方法'further optimization is needed for balancing multi-source integration when handling conflicting perspectives'",
+    "Most profitable unexploited opportunity persistently exceeds 1 ETH, indicating market inefficiency—traders cannot capture available profit",
+    "当成本函数非严格线性时，标价函数构造需解一阶两点边值问题，理论分析复杂度增加。",
+    "Theoretical performance analysis of RD is left as future work.",
+    "数据泄露风险率约束越低,可行解空间越小,训练延迟越高;去中心化方法牺牲全局最优性换取隐私与可扩展性",
+    "指出先前方法(PN/FSM/automata)一旦服务行为错综复杂就会出现空间爆炸",
+    "冗余并非总是有益，创建过多实例反而导致不可接受的高响应时间甚至系统不稳定。",
+    "移除因果推理模块导致F1下降10.4%，说明该组件最关键但也最脆弱",
+    "复杂数据集(ImageNet)上云边精度差距过大，无法实现精度超越；通信开销在大输入时不可忽略",
+    "limitations of MapReduce；Current Issues and Challenges 章节承认现有方法的不足",
+    "neuromorphic硬件尚未收敛到商业主导平台，现有评估主要在非原生CPU/GPU上进行，结论可能有偏",
+    "Edge Intelligence目前处于早期阶段，概念尚不清晰，问题尚未完全解决",
+    "方案仅提供良好起点,在快速变化环境下无法保证效率",
+    "Algorithms like FLea and Fed-Concat heavily rely on locally extracted features, which may backfire and amplify errors in SNNs due to gradient drift",
+    "小模型能力弱可能导致ExploraCoder效果不佳,且依赖完整NL文档",
+    "FMFT performed inferior to both no fine-tuning and PEFT methods due to overfitting with limited dataset",
+    "Global selection (sending all features to server) causes poor accuracy due to suboptimal clustering on large-scale dataset",
+    "集中式Coreset-Cent在复杂NI数据集上仍优于我们的方法,说明FL方法仍有改进空间",
+    "BP类方法在端侧设备上不实用，因其显存消耗巨大而非通信",
+    "Maximum-deviation rule marks onset of over-low-pass behavior; beyond this point further low-pass bias yields diminishing discriminative spectrum retention",
+    "矩阵求逆复杂度O(n³),虽可用降维估计,但对超大规模数据仍有挑战;且需用户有较多音乐微博",
+    "GPT-4V在微表情识别上无法理解帧间差异，在欺骗检测上无法正确推理",
+    "消融实验显示去除图融合后F1下降6.2%、EM下降5.4%,确认融合机制不可替代",
+    "Details of E. colona hexaploidization could not be uncovered because of the lack of parental genomes",
+    "LLMs struggle with direct debugger interaction, experiencing frequent state corruption and error loops without middleware abstraction",
+    "当新分布与旧分布差异很大时，ruminate block恢复的通用知识可能降低准确性",
+    "当恶意节点超过40%时,Krum等基线方法性能崩溃,本文在50%时仍稳定",
+    "当γ设为1时，双卷积退化为标准卷积，性能严重下降；γ不能无限增长会导致梯度爆炸",
+    "ESDP的遗憾保证不适用于非线性效用函数的情况,且在大多数情况下才满足相关不等式",
+    "嵌入维度增大提升性能但计算成本线性增长，需在准确率和效率间权衡",
+    "SUM_w的一致性至少(3-β)/(1+β)甚至差于SUM的2-β，且完全没有有界鲁棒性",
+    "代码LLM表现劣于通用LLM，Enhanced Features子类别失败率最高",
+    "MoA有效性不保证，对候选池组成高度敏感；当前仅支持非推理模型，无法限制CoT长度",
+    "Traditional Tamarin Prover may fail to prove properties for complex state transitions; solved by designing helping oracle to guide proof.",
+    "动态页迁移技术TPP会增加尾延迟;软件层-tiering在虚拟化环境开销高;FPGA型CXL设备性能显著低于ASIC型",
+    "单模态方法\"fail to capture the full spectrum of degradation dynamics\"且\"remain highly sensitive to lighting changes, occlusions, and viewpoint variations\"",
+    "Complexity O(N!) is of great order; offline algorithm sacrifices runtime for global optimality.",
+    "Framework prioritizes instantaneous spatial states, inherently limiting exploitation of long-term temporal dependencies",
+    "FLIP遇NaN失败;极强非IID(α=0.1)且MCR≥20%时失败;时间开销高于同行",
+    "LLM可能误识别软件名称,版本范围提取不准确,部分CVE无版本信息",
+    "F&R and F&R (FITF) incur O(n² log k) overhead due to recomputing optimal solution; marking-based methods restrict attaining 1-consistency",
+    "零阶优化引入随机采样的计算开销，未来需探索潜在空间中的高效实现",
+    "注意力机制增加模型参数，数据量少时更易过拟合；未来需探索卷积层数等超参数设置",
+    "SRR-TA严重依赖SAM-HQ检测结果；若尾类未被检测到，对应类别性能会显著下降；未见类别出现时融合性能会退化",
+    "CL-COT嵌入存在平凡解,token自相似性过高且值域范围小,会预测无效token而非有效COT过程",
+    "Performance gains saturate as k grows; while additional frames provide more complementary information, they concurrently introduce marginal noise and redundant content",
+    "Future extensions may include more elaborate modeling of intra-node and inter-node communication overheads",
+    "SEG对FID提升有限(23.36→23.36),主要收益来自DualScale,说明并非所有组件等效重要",
+    "CSM-TN中一般与情境偏好的线性组合方式可能不够合理;仅用一般偏好(M-TN)在所有方法中表现最差",
+    "gowalla数据集更稀疏，注意力带来的性能提升不如lastfm显著",
+    "精确解法对大规模网络不实用,启发式算法以最优性换可扩展性",
+    "当用MSE作为损失函数时,两个模型的误差要么复合要么折中在高低值之间,无法抵消,导致性能不如单个模型。",
+    "当前可复用微库集合规模仍小,需持续扩展以提升功能性",
+    "AAA场景的交易到达率（写8333/读41665）超过Quorum链最大吞吐量，该场景不适用",
+    "自增强范式在LLM有效但多模态LLM缺乏研究;各方法组合效果尚未充分探索",
+    "当utility为对数或多项式函数时竞争比会变差,因为波动率v/ι增加导致更多任务边际成本落入第二段函数",
+    "方法倾向于结构化资源，对非/半结构化资源整合不足；交互过程对不懂语义的TCM科学家仍复杂",
+    "当μ=1时排名分数最低，说明信任关系权重过大会降低推荐质量",
+    "框架性能受底层LLM推理质量约束；分段策略对非显式查询存在冷启动问题，可能遗漏短暂关键事件",
+    "Naive Schrödinger Bridge approach yields smoother, less detailed rendering compared to full TraCe",
+    "Ablation shows removing recursive fusion noticeably degrades performance; replacing XGateFusion with MLP causes substantial accuracy loss, indicating each component is critical."
+  ],
+  "taste_quotes": [
+    {
+      "quote": "如何保证各成员服务之间的兼容性至关重要",
+      "paper_id": "Determination and Computation of Behavioral Compatibility for Web Services"
+    },
+    {
+      "quote": "这些方法均只实现兼容性的定性判定",
+      "paper_id": "Determination and Computation of Behavioral Compatibility for Web Services"
+    },
+    {
+      "quote": "均只实现兼容性的定性判定",
+      "paper_id": "Determination and Computation of Behavioral Compatibility for Web Services"
+    },
+    {
+      "quote": "行为兼容性是服务组合中各成员服务之间兼容性的一个重要方面",
+      "paper_id": "Determination and Computation of Behavioral Compatibility for Web Services"
+    },
+    {
+      "quote": "无法实现服务行为兼容性完全的自动判定",
+      "paper_id": "Determination and Computation of Behavioral Compatibility for Web Services"
+    },
+    {
+      "quote": "两个服务之间的兼容度为m/n",
+      "paper_id": "Determination and Computation of Behavioral Compatibility for Web Services"
+    },
+    {
+      "quote": "从而指明服务交互过程中何种情况下无法正常完成交互",
+      "paper_id": "Determination and Computation of Behavioral Compatibility for Web Services"
+    },
+    {
+      "quote": "clarifying when and why SNNs outperform ANNs",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "fully specified, accuracy-agnostic method",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "onset of over-low-pass behavior",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "accuracy-agnostic method to identify reference boundary",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "conservative validity check",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "上下文反映在播放序列中",
+      "paper_id": "Learning to embed music and metadata for context-aware music recommendation"
+    },
+    {
+      "quote": "相似音乐应有相似嵌入",
+      "paper_id": "Learning to embed music and metadata for context-aware music recommendation"
+    },
+    {
+      "quote": "稀疏数据下性能下降更明显",
+      "paper_id": "Learning to embed music and metadata for context-aware music recommendation"
+    },
+    {
+      "quote": "BPR和FISM对稀疏更敏感",
+      "paper_id": "Learning to embed music and metadata for context-aware music recommendation"
+    },
+    {
+      "quote": "we theoretically prove and empirically find the flaw",
+      "paper_id": "Cluster-Wide Task Slowdown Detection in Cloud System"
+    },
+    {
+      "quote": "The subperiod with low amplitude can not be well reconstructed",
+      "paper_id": "Cluster-Wide Task Slowdown Detection in Cloud System"
+    },
+    {
+      "quote": "it performs best on the Ali1 and Ali2 datasets",
+      "paper_id": "Cluster-Wide Task Slowdown Detection in Cloud System"
+    },
+    {
+      "quote": "the effectiveness of our method is positively correlated to the strictness of periodicity",
+      "paper_id": "Cluster-Wide Task Slowdown Detection in Cloud System"
+    },
+    {
+      "quote": "ADS可以验证单个结果的存在性，但不足以防止SP遗漏有效结果",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "B+树在动态区块链环境中维护成本高",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "BPI特别适合需要高搜索性能和低维护成本且支持Articulated Search的场景",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "传统数据库的CRUD操作不匹配区块链的只读特性",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "BMF+的存储开销减少超过99%",
+      "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain"
+    },
+    {
+      "quote": "execution-based metrics...are more reliable",
+      "paper_id": "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    },
+    {
+      "quote": "These metrics may not reflect the practical applicability",
+      "paper_id": "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    },
+    {
+      "quote": "code lexical similarity and execution correctness are weakly correlated",
+      "paper_id": "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    },
+    {
+      "quote": "it is too easy",
+      "paper_id": "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    },
+    {
+      "quote": "we found several flaws in the XCodeEval dataset",
+      "paper_id": "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    },
+    {
+      "quote": "still face considerable challenges",
+      "paper_id": "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827"
+    },
+    {
+      "quote": "we are going to consider the uncertainty",
+      "paper_id": "Energy-effective artificial internet-of-things application deployment in edge-cloud systems"
+    },
+    {
+      "quote": "the proposed solution may not guarantee its efficiency",
+      "paper_id": "Energy-effective artificial internet-of-things application deployment in edge-cloud systems"
+    },
+    {
+      "quote": "we turn to the heuristic method like MOEA/D",
+      "paper_id": "Energy-effective artificial internet-of-things application deployment in edge-cloud systems"
+    },
+    {
+      "quote": "try to find some sub-optimal solutions",
+      "paper_id": "Energy-effective artificial internet-of-things application deployment in edge-cloud systems"
+    },
+    {
+      "quote": "LLMs struggle to directly invoke multiple unseen APIs in a single run",
+      "paper_id": "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    },
+    {
+      "quote": "hallucinate unfamiliar APIs usage",
+      "paper_id": "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    },
+    {
+      "quote": "bug-driven",
+      "paper_id": "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    },
+    {
+      "quote": "self-repair fails to correct",
+      "paper_id": "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    },
+    {
+      "quote": "naive RAG approach",
+      "paper_id": "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration"
+    }
+  ]
+}

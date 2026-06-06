@@ -1,0 +1,38 @@
+{
+  "paper_id": "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process",
+  "doi": null,
+  "title": "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process",
+  "year": null,
+  "venue": "Preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLM存在幻觉和对齐问题，各模型能力差异大，单模型性能不稳定",
+  "problem_framing": "无监督地从多个LLM响应中选出最佳答案，无需标注数据",
+  "key_insight": "借鉴学术同行评审机制：评分(LLM-as-Judge)→推理(Truth Inference)→选择最优",
+  "method_signature": "LLM-PeerReview: 翻转三元组评分 + Dawid-Skene加权聚合",
+  "evaluation_criteria": "TriviaQA/GSM8k/MATH准确率 + AlpacaEval胜率",
+  "negative_result_or_admitted_limitation": "翻转三元组虽有效但增加计算开销，quadruple-half性能更优但复杂度高达O(J!)",
+  "evidence_for_taste": [
+    "true potential remains largely untapped",
+    "conceptually simple and empirically powerful",
+    "transparent and interpretable framework",
+    "fully unsupervised provides flexibility",
+    "performance gain validates debiasing impact"
+  ],
+  "thinking_moves": [
+    "将文本选择问题类比学术同行评审，找到直观锚点",
+    "针对LLM评分的位置偏差和一致性偏差，设计翻转三元组去偏",
+    "复用weak supervision中的Dawid-Skene模型进行可靠性加权聚合",
+    "在性能与效率之间做显式权衡分析"
+  ],
+  "topic_tags": [
+    "LLM-ensemble",
+    "LLM-as-a-judge",
+    "peer-review",
+    "Dawid-Skene",
+    "weak-supervision"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

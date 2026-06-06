@@ -1,0 +1,36 @@
+{
+  "paper_id": "Wang et al. - 2012 - On the Delay Performance Analysis in a Large-Scale Wireless Sensor Network",
+  "doi": null,
+  "title": "On the Delay Performance Analysis in a Large-Scale Wireless Sensor Network",
+  "year": 2012,
+  "venue": "Proceedings of ACM SenSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有工作缺乏对大规模真实WSN的端到端延迟实测验证,理论与实际存在gap",
+  "problem_framing": "在大规模WSN中识别延迟的关键影响因素,并建立可验证的延迟模型",
+  "key_insight": "在LPL网络中,重传次数比跳数更重要;相同ETX下,更长路径反而可能延迟更小",
+  "method_signature": "无同步开销的MAC层时戳测量 + Rulefit自动提取重要因素 + 理论延迟模型验证",
+  "evaluation_criteria": "Pearson相关性、准确率、平衡准确率,模型与实测延迟分布对比",
+  "negative_result_or_admitted_limitation": "路由事件(如父节点切换、环路)对WSN延迟影响较小,与Internet不同",
+  "evidence_for_taste": [
+    "is still missing",
+    "not necessarily the same with that in Internet",
+    "the current CTP design can be improved",
+    "may even be better than shorter ones"
+  ],
+  "thinking_moves": [
+    "从工程约束出发放弃网络同步,改用MAC层时戳的轻量方案",
+    "用Rulefit自动发现重要因素,避免人工假设干扰",
+    "发现反直觉现象:相同ETX下更长路径延迟更小",
+    "用实测数据挑战已有协议的隐含假设"
+  ],
+  "topic_tags": [
+    "WSN延迟测量",
+    "LPL MAC层建模",
+    "Rulefit特征重要性",
+    "大规模实测验证",
+    "CTP协议改进"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,35 @@
+{
+  "paper_id": "He and Liu - 2007 - Supporting VCR in Peer-to-Peer Video-On-Demand",
+  "doi": null,
+  "title": "Supporting VCR in Peer-to-Peer Video-On-Demand",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "VOD用户频繁使用VCR控制导致高延迟或服务器过载",
+  "problem_framing": "如何预测VCR操作中用户将跳转到的视频片段",
+  "key_insight": "利用视频内部片段的内容关联性进行规则挖掘来预测VCR跳转",
+  "method_signature": "基于关联规则挖掘的协作式预取策略",
+  "evaluation_criteria": "累计命中率、并发用户数、启动延迟",
+  "negative_result_or_admitted_limitation": "现有prefetch策略未考虑视频内部内容关联",
+  "evidence_for_taste": [
+    "fail to consider the content-based associations",
+    "provide short startup latencies and good performance",
+    "HR1 + HR2 ≈ 1"
+  ],
+  "thinking_moves": [
+    "观察到VOD用户行为的非连续性特征",
+    "将视频段间的关联性建模为关联规则挖掘问题",
+    "结合已有batching/patchingoverlay构造与新颖的预测预取机制"
+  ],
+  "topic_tags": [
+    "P2P-VOD",
+    "VCR-interactivity",
+    "association-rule-mining",
+    "collaborative-prefetching",
+    "hybrid-caching"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文片段缺少完整venue信息，仅有摘要和部分系统设计内容，无完整实验数据和参考文献列表"
+}

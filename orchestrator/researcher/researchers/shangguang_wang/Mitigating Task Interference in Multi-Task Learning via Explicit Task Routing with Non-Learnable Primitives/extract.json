@@ -1,0 +1,37 @@
+{
+  "paper_id": "Mitigating Task Interference in Multi-Task Learning via Explicit Task Routing with Non-Learnable Primitives",
+  "doi": "10.48550/arxiv.2308.02066",
+  "title": "Mitigating Task Interference in Multi-Task Learning via Explicit Task Routing with Non-Learnable Primitives",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Multi-task networks learn fast initially then degrade due to conflicting gradients from task interference",
+  "problem_framing": "现有MTL方法有两个局限：参数全可学习且共享方式隐式无直接控制",
+  "key_insight": "用非可学习原语提取任务无关特征 + 显式任务路由控制共享vs专有参数配比",
+  "method_signature": "ETR-NLP模块: 非可学习原语并行提取多样特征 + 共享/专有分支显式分离",
+  "evaluation_criteria": "F-score(mIoU) + Δp相对提升 + 参数量/FLOPs对比",
+  "negative_result_or_admitted_limitation": "单类型NLP导致性能下降；γ=1(全共享)导致性能受损；不同任务类型需不同训练策略",
+  "evidence_for_taste": [
+    "a single type of NLP does not benefit MTL",
+    "using more NLPs generally leads to better MTL performance",
+    "performance starts degrading on further training",
+    "gradients point in different directions"
+  ],
+  "thinking_moves": [
+    "从学习曲线追踪性能退化诊断任务干扰根源",
+    "系统枚举31种NLP组合确定最优配置",
+    "引入γ参数将共享比例显式化以精确控制",
+    "观察梯度方向差异验证干扰假设"
+  ],
+  "topic_tags": [
+    "multi-task-learning",
+    "task-interference",
+    "parameter-partitioning",
+    "non-learnable-primitives",
+    "explicit-task-routing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

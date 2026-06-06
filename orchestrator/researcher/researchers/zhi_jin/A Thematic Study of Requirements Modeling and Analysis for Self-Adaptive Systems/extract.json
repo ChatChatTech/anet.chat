@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Thematic Study of Requirements Modeling and Analysis for Self-Adaptive Systems",
+  "doi": "10.48550/arxiv.1704.00420",
+  "title": "A Thematic Study of Requirements Modeling and Analysis for Self-Adaptive Systems",
+  "year": 2017,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有研究缺少对自适应系统需求建模与分析的系统性分类总结,研究者难以把握研究全景",
+  "problem_framing": "将研究问题定义为:通过建模方法与需求活动的视角,对2003-2013年文献进行主题综合",
+  "key_insight": "从109篇文献中提取29种建模方法、35个基础主题、12个组织主题、3个全局主题,揭示需求工程对自适应系统的支撑全景",
+  "method_signature": "系统性文献综述+主题综合法(文本提取→编码→主题聚合)",
+  "evaluation_criteria": "论文频率分布、建模方法使用频次、需求活动时间分布",
+  "negative_result_or_admitted_limitation": "仅覆盖英文文献,无法捕获非英语学术界的研究进展;不足6页的短文被排除可能遗漏重要工作",
+  "evidence_for_taste": [
+    "KAOS is the most widely used goal-oriented method",
+    "44% (activities) are performed at requirements time",
+    "46% (activities) are conducted at runtime",
+    "basic themes were aggregated into organizing themes",
+    "identify research gaps which need to be further studied"
+  ],
+  "thinking_moves": [
+    "用层级结构将散乱文献组织为全局-组织-基础主题树,实现知识聚合",
+    "通过频次统计量化建模方法与需求活动的分布,揭示主流范式",
+    "从研究问题(RQ)出发→搜索策略→选择标准→数据提取的流水线确保可重复性",
+    "区分需求时、设计时、运行时三个时间轴,建立研究主题的坐标框架"
+  ],
+  "topic_tags": [
+    "self-adaptive-systems-requirements",
+    "thematic-synthesis-SLR",
+    "goal-oriented-modeling-KAOS-iStar",
+    "requirements-time-runtime",
+    "uncertainty-handling-fuzzy-logic"
+  ],
+  "cites_own_work": [
+    "A Systematic Literature Review of Requirements Modeling and Analysis for Selfadaptive Systems (2014) - 初步版本,本文扩展时间跨度和详细程度"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

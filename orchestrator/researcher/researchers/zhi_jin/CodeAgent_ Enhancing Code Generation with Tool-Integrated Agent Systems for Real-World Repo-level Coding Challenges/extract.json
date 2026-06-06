@@ -1,0 +1,41 @@
+{
+  "paper_id": "CodeAgent_ Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges",
+  "doi": "10.48550/arxiv.2401.07339",
+  "title": "CODEAGENT: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有LLM仅擅长独立代码片段生成,无法处理70%以上非独立函数的真实代码仓库",
+  "problem_framing": "将代码仓库级别的代码生成形式化为包含文档、上下文依赖和运行时环境的任务",
+  "key_insent": "模拟人类编程流程,通过代码符号导航等五类工具让LLM理解仓库结构而非孤立生成",
+  "method_signature": "LLM Agent + 5编程工具 + 4种Agent策略(ReAct/Rule-based等)",
+  "evaluation_criteria": "Pass@1 pass rate on CODEAGENTBENCH (101 samples)",
+  "negative_result_or_admitted_limitation": "Vicuna-13B等小型模型未见提升,Rule-based策略优于Tool-Planning",
+  "evidence_for_taste": [
+    "more than 70% functions are non-standalone",
+    "mimic this process (gather knowledge, write programs, test)",
+    "code symbol navigation tool is particularly pivotal",
+    "LLMs still lacking proficient mastery of some complex programming tools",
+    "performance on CODEAGENTBENCH is notably poor"
+  ],
+  "thinking_moves": [
+    "从人类编程工具使用习惯类比推理LLM应具备的工具能力",
+    "代码符号导航工具被调用2.45次,远超其他工具,揭示理解仓库结构的瓶颈",
+    "Rule-based顺序工作流优于Tool-Planning自由规划,暗示结构化约束更有效",
+    "IDE产品(如Copilot)受限于补全模式,Agent灵活性带来优势"
+  ],
+  "topic_tags": [
+    "repo-level-code-generation",
+    "LLM-agent",
+    "code-navigation-tools",
+    "software-artifact-interaction",
+    "benchmark-construction"
+  ],
+  "cites_own_work": [
+    "ToolCoder",
+    "Self-Edit"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

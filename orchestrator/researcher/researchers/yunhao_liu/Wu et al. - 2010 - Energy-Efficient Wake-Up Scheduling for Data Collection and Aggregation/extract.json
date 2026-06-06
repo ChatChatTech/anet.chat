@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wu et al. - 2010 - Energy-Efficient Wake-Up Scheduling for Data Collection and Aggregation",
+  "doi": null,
+  "title": "Energy-Efficient Wake-Up Scheduling for Data Collection and Aggregation",
+  "year": 2010,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传感器电池受限，现有TDMA调度忽视状态切换能耗和空闲监听能耗",
+  "problem_framing": "在TDMA框架下最小化节点状态切换次数同时满足数据速率约束",
+  "key_insight": "将子节点簇聚为虚拟簇并发调度，使每节点每周期最多唤醒两次",
+  "method_signature": "聚类优先适配(cluster-first-fit)权值排序调度",
+  "evaluation_criteria": "能量消耗与最优值比、时域跨度与最优值比",
+  "negative_result_or_admitted_limitation": "含buckets的cluster方法时域反而更高；难以同时优化能量、时延和消息数",
+  "evidence_for_taste": [
+    "at most twice",
+    "dramatically reduces the cost",
+    "constant factor of the optimum",
+    "performs much better",
+    "this case is impossible",
+    "contradicts the assumption",
+    "we will prove that"
+  ],
+  "thinking_moves": [
+    "从逐节点调度改为按簇批量调度，reframe问题结构",
+    "把时域最小化类比图着色问题建立理论框架",
+    "先用定理证明常数近似保证再经验验证",
+    "通过构造性反证法(case impossible)推导矛盾"
+  ],
+  "topic_tags": [
+    "TDMA-scheduling",
+    "WSN-energy-conservation",
+    "state-transition-cost",
+    "data-gathering-tree",
+    "approximation-algorithms"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

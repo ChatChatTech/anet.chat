@@ -1,0 +1,38 @@
+{
+  "paper_id": "2025_AAAI_MODEL_LINEAGE_CAMERA_READY",
+  "doi": null,
+  "title": "Model Lineage Closeness Analysis",
+  "year": 2025,
+  "venue": "AAAI",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "现有模型溯源方法对高影响修改技术不鲁棒，且缺乏衡量修改程度的指标",
+  "problem_framing": "如何用决策边界相似性量化模型修改程度，提出 lineage closeness 分数",
+  "key_insight": "距决策边界较远的数据点不受边界位移影响，使方法对修改类型 agnostic",
+  "method_signature": "用训练数据点的平均对抗距离和匹配率计算决策边界相似度作为 lineage closeness",
+  "evaluation_criteria": "97% 准确率判断 lineage 关系；可量化任意两模型的 closeness",
+  "negative_result_or_admitted_limitation": "5 个蒸馏模型因决策边界差异过大而被误分类；测试集生成额外耗时约 800 秒",
+  "evidence_for_ta ste": [
+    "decision boundaries serve as a precise metric",
+    "not affected by shifts of decision boundaries",
+    "less similar to the source model than other modified models",
+    "some parts of decision boundaries are highly sensitive",
+    "do not contribute to the result"
+  ],
+  "thinking_moves": [
+    "通过可视化多种修改技术的决策边界归纳出通用模式",
+    "从修改导致边界位移的观察反推出需用远离边界的数据点",
+    "用间接测量法(迁移学习)解决任务不一致时的维度对齐问题",
+    "设计两步过滤去除敏感和通用决策边界以提升测量精度"
+  ],
+  "topic_tags": [
+    "model-lineage-detection",
+    "decision-boundary-similarity",
+    "adversarial-distance",
+    "model-modification",
+    "fingerprinting"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

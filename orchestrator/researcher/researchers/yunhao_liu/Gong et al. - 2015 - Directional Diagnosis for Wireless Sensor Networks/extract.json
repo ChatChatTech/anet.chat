@@ -1,0 +1,42 @@
+{
+  "paper_id": "Gong et al. - 2015 - Directional Diagnosis for Wireless Sensor Networks",
+  "doi": null,
+  "title": "Directional Diagnosis for Wireless Sensor Networks",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有WSN诊断中信息收集与根因推断两阶段独立,导致要么信息冗余通信开销大,要么信息不足产生误判",
+  "problem_framing": "将诊断信息获取与故障推理过程解耦重组为迭代闭环,让推理结果指导后续探针选择",
+  "key_insight": "diagnostic information acquirement is guided by the fault inference process",
+  "method_signature": "DID方向性诊断:基于信念网络增量探测+节点追踪重建局部拓扑",
+  "evaluation_criteria": "故障检出率、误报率、诊断流量开销、拓扑恢复时间",
+  "negative_result_or_admitted_limitation": "若多个错误相互遮蔽,则无法被检测;信念网络构造复杂度高达O(V(V+E)),临时故障复制探针仅部分解决",
+  "evidence_for_taste": [
+    "diagnosis information acquirement is guided by the fault inference process",
+    "either redundant information...or incomplete information for root-cause inference",
+    "the masked errors are unable to be detected in all online diagnosis models",
+    "the higher of threshold value, the lower of detection ratio and false positive ratio",
+    "the complete solution for this is the main interest of our future research"
+  ],
+  "thinking_moves": [
+    "把诊断的信息收集与根因推断两独立阶段合并为迭代反馈循环",
+    "用信念网络编码网络元素间因果依赖,支持概率推断",
+    "承认遮蔽错误(masked errors)检测的固有限制",
+    "承认信念网络时空复杂度高的工程约束",
+    "迭代细化推理结果直到候选故障集置信度达标"
+  ],
+  "topic_tags": [
+    "wireless-sensor-networks-diagnosis",
+    "belief-network-inference",
+    "incremental-probing",
+    "fault-localization",
+    "node-tracing-topology-recovery"
+  ],
+  "cites_own_work": [
+    "PAD (Liu et al., 2010)",
+    "GreenOrbs forest monitoring project"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358",
+  "doi": "10.18653/v1/d16-1046",
+  "title": "How Transferable are Neural Networks in NLP Applications?",
+  "year": 2016,
+  "venue": "EMNLP",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "神经网络易过拟合,迁移学习理论上很重要,但NLP领域现有研究结论不一致且不系统",
+  "problem_framing": "系统探究NLP神经网络迁移性,区分语义相似/不同任务,比较INIT和MULT两种方法",
+  "key_insight": "NLP中神经网络是否可迁移主要取决于源目标任务的语义相似度,这与图像领域的共识不同",
+  "method_signature": "CNN和LSTM在6个数据集上的INIT与MULT迁移实验,逐层分析",
+  "evaluation_criteria": "测试集准确率,对照基线(无迁移)和先前文献结果",
+  "negative_result_or_admitted_limitation": "隐藏层迁移到语义不同任务无提升甚至略降;MULT+INIT无额外收益;输出层不可迁移",
+  "evidence_for_taste": [
+    "results are not consistent",
+    "conclusions appear to be less clear",
+    "more systematic studies are needed",
+    "our results are rather frustrating",
+    "may be somewhat misinterpreted",
+    "unexplained and lack explanation",
+    "do not obtain further gain"
+  ],
+  "thinking_moves": [
+    "从不一致的已有结论反推该领域缺乏系统研究",
+    "区分语义等价迁移与语义不同迁移两种场景",
+    "逐层解耦分析各层可迁移性(E/H/O)",
+    "用冻结参数设置排除目标域优化因素的干扰",
+    "发现早停迁移反而更好的反常现象后主动承认无法解释",
+    "重新审视Collobert论文的实际贡献,指出其增益主要来自词嵌入"
+  ],
+  "topic_tags": [
+    "neural-network-transfer-learning",
+    "NLP-domain-adaptation",
+    "multi-task-learning",
+    "layer-transferability",
+    "semantic-similarity-transfer"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

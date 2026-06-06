@@ -1,0 +1,41 @@
+{
+  "paper_id": "Rethinking Repetition Problems of LLMs in Code Generation__oa_W4412886913",
+  "doi": "10.18653/v1/2025.acl-long.48",
+  "title": "Rethinking Repetition Problems of LLMs in Code Generation",
+  "year": 2025,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "LLM生成代码时出现结构重复比内容重复更普遍，但现有方法只关注内容重复，无法解决结构重复问题",
+  "problem_framing": "结构重复指代码以固定语法结构重复出现，虽符合语法但内容不同，现有检测方法难以识别",
+  "key_insight": "结构重复的潜在位置由显式语法规则决定，可用下推自动机识别并指数衰减惩罚重复语法规则",
+  "method_signature": "RPG通过语法规则识别重复并指数衰减关键token概率",
+  "evaluation_criteria": "EGP(终止率)、TR-N/TR-S(重复率)、CCP(编译正确率)、Pass@k(功能正确性)",
+  "negative_result_or_admitted_limitation": "需比采样稍多计算资源；未解释LLM为何产生结构重复",
+  "evidence_for_taste": [
+    "content repetition constitutes only a minor portion",
+    "previous approaches tailored for content repetitions are insufficient",
+    "they achieve this at the expense of generated code quality",
+    "Repetition Dropout has little effect on structural repetitions",
+    "mere using grammar rules is not applicable to the structural repetition"
+  ],
+  "thinking_moves": [
+    "从生成输出分布的异常现象(概率自增强)反推问题根源在语法层",
+    "将结构重复与内容重复区分，定义新问题形式化",
+    "借鉴编译原理中语法规则对重复位置的约束来建模",
+    "发现现有内容重复方法失效的原因是无法处理符合语法的结构重复"
+  ],
+  "topic_tags": [
+    "LLM-code-generation",
+    "structural-repetition",
+    "grammar-based-decoding",
+    "pushdown-automaton",
+    "repetition-penalty"
+  ],
+  "cites_own_work": [
+    "Dong et al., 2023b",
+    "Dong et al., 2024a"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

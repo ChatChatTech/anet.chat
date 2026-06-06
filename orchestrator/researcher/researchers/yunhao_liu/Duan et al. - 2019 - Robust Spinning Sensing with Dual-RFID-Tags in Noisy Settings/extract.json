@@ -1,0 +1,46 @@
+{
+  "paper_id": "Duan et al. - 2019 - Robust Spinning Sensing with Dual-RFID-Tags in Noisy Settings",
+  "doi": null,
+  "title": "Robust Spinning Sensing with Dual-RFID-Tags in Noisy Settings",
+  "year": 2019,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "工业环境中设备抖动导致现有RFID转动传感失效,无法在噪声场景下工作",
+  "problem_framing": "将设备抖动建模为未知轨迹位移,要求传感器在未知干扰下仍能恢复周期性转动信号",
+  "key_insight": "双标签间距离恒定不随抖动改变,利用相对相位替代绝对相位可消除抖动影响",
+  "method_signature": "双标签相对转动信号加双压缩读取,实现抗抖动高频转动检测",
+  "evaluation_criteria": "转动频率检测误差sub-hertz级,对比Tagbeat在抖动下的>7Hz误差",
+  "negative_result_or_admitted_limitation": "天线距离过近(<0.5m)或过远(>5m)性能均下降,NLOS多径环境下精度从0.32Hz降至0.79Hz",
+  "evidence_for_taste": [
+    "sequence is split up into many short discontinuous series",
+    "the final received phase is derived from a combination of multiple copies",
+    "the spectrum is out of order and apparently not sparse any more",
+    "Tagbeat, which is driven by compressive sensing, fails to recover",
+    "previous compressive reading technique can not be directly applied",
+    "we utilize RS2 to reflect and inspect the frequency",
+    "even a 5cm noisy translation would make spinning signal unrecoverable"
+  ],
+  "thinking_moves": [
+    "把绝对相位问题转化为相对相位问题,利用不变量消除未知抖动干扰",
+    [
+      "通过定理形式化证明sin(2θ)可消除π相位模糊和半波损失",
+      "证毕后直接声称特性成立而非讨论边界条件"
+    ],
+    "将多径效应分解为常数项和振荡项求和,利用相位相消证明距离无关性",
+    "原始压缩读取因标签时隙错位无法直接应用,遂重新设计DCR方案"
+  ],
+  "topic_tags": [
+    "RFID-spinning-sensing",
+    "anti-shaking-signal-processing",
+    "relative-phase-localization",
+    "dual-tag-compressive-reading",
+    "industrial-rotation-monitoring"
+  ],
+  "cites_own_work": [
+    "Tagbeat (2016)",
+    "Tagtwins INFOCOM 2018 conference version"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Exploring Cross-lingual Latent Transplantation_ Mutual Opportunities and Open Challenges",
+  "doi": "10.48550/arxiv.2412.12686",
+  "title": "Exploring Cross-lingual Latent Transplantation: Mutual Opportunities and Open Challenges",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLM英语中心训练导致多语言能力和文化适应性严重失衡，现有训练方法副作用大",
+  "problem_framing": "能否在推理时同时利用英语和非英语的潜在激活来解锁模型多语言潜力",
+  "key_insight": "语言特异性神经元高度隔离——英语提示遗漏非英语激活，非英语提示削弱英语能力，可通过激活移植实现互补",
+  "method_signature": "X Transplant: 提取源语言某层激活替换目标语言对应层激活，无需额外训练",
+  "evaluation_criteria": "多语言理解(XNLI/XQuAD准确率)、文化适应性(GlobalOpinionQA准确率)",
+  "negative_result_or_admitted_limitation": "高层级移植破坏语言建模；粗粒度策略对高资源语言收益不一致；多步移植性能下降；挑战依然开放",
+  "evidence_for_taste": [
+    "considerable underutilization",
+    "curse of multilinguality",
+    "language-specific neurons",
+    "higher risk of introducing language inconsistency",
+    "a challenge that remains open"
+  ],
+  "thinking_moves": [
+    "将激活移植作为探测工具而非增强手段，揭示模型内部多语言知识的利用上限",
+    "层级粒度分解：注意力模块主管多语言理解，前馈网络主管文化知识，分而治之探查功能分区",
+    "穷举N²配置寻找有效模式，牺牲效率换取对潜在机制的全面覆盖",
+    "从互惠角度建模英↔非英双向移植，避免单向改进的局限"
+  ],
+  "topic_tags": [
+    "cross-lingual-latent-transplantation",
+    "LLM-multilingual-probing",
+    "activation-intervention",
+    "cultural-adaptability",
+    "inference-time-intervention"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

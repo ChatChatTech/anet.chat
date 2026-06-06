@@ -1,0 +1,38 @@
+{
+  "paper_id": "Generating Watermarked Adversarial Texts",
+  "doi": "10.48550/arxiv.2110.12948",
+  "title": "Generating Watermarked Adversarial Texts",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "Adversarial text examples can be maliciously or illegally used, requiring protection mechanisms",
+  "problem_framing": "Joint optimization of watermarking and adversarial text generation as a unified task",
+  "key_insight": "Construct substitution sets where each word can simultaneously serve adversarial perturbation and watermark embedding",
+  "method_signature": "Word-level adversarial generation with partition-based substitution sets for joint watermarking",
+  "evaluation_criteria": "Attack success rate, modification rate, grammaticality, fluency (PPL), watermark extraction accuracy",
+  "negative_result_or_admitted_limitation": "Watermarked adversarial texts show lower attack success rates compared to non-watermarked versions; performance degrades as payload size increases",
+  "evidence_for_taste": [
+    "watermarking adversarial texts is an important yet very challenging task",
+    "a larger l provides a larger embedding capacity, but may cause some substitution sets to be empty",
+    "it is more difficult to generate adversarial texts on SST-2",
+    "the PPLs gradually increase with the increase of the watermark payload size",
+    "a higher accuracy means that more bits are correctly recovered, which reveals better robustness"
+  ],
+  "thinking_moves": [
+    "把两个独立任务（对抗生成和水印）合并为联合优化问题",
+    "通过词性约束保证修改后的文本语法质量",
+    "用MD5哈希函数建立词到比特的确定性映射实现盲提取",
+    "对比不同攻击算法（AEG方法）下，水印的鲁棒性差异"
+  ],
+  "topic_tags": [
+    "adversarial-text-generation",
+    "text-watermarking",
+    "word-level-attacks",
+    "semantic-preservation",
+    "ownership-verification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Full paper with complete intro, method, experiments, and conclusion sections. All evaluation metrics and limitations clearly stated. | md truncated to head40k+tail20k"
+}

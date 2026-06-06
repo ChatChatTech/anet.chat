@@ -1,0 +1,43 @@
+{
+  "paper_id": "Duan et al. - 2018 - Tagspin High Accuracy Spatial Calibration of RFID Antennas via Spinning Tags",
+  "doi": null,
+  "title": "Tagspin: High Accuracy Spatial Calibration of RFID Antennas via Spinning Tags",
+  "year": 2018,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RFID reader calibration manual且耗时(20-30分钟),费力且不准确",
+  "problem_framing": "用低成本设施标签定位reader天线,用旋转标签模拟圆形天线阵列",
+  "key_insight": "标签相位与朝向存在规律性关联,校准后可将精度提升3.7倍",
+  "method_signature": "旋转标签产生虚拟天线阵列,SAR计算角度谱,高斯加权功率剖面定位",
+  "evaluation_criteria": "3D空间定位误差(均值7.3cm,标准差1.8cm)",
+  "negative_result_or_admitted_limitation": "天线方向角附近存在较大连续高峰区域,易受噪声干扰",
+  "evidence_for_taste": [
+    "phase measurements are resistant against tag orientations",
+    "the power profile has a peak at the angle direction",
+    "our idea and method of accounting for tag orientation",
+    "the localization accuracy is impaired to a certain degree",
+    "the accuracy can be further improved"
+  ],
+  "thinking_moves": [
+    "从经典AoA方法推导SAR功率谱,指出传统方法不抗噪",
+    "通过控制变量实验发现相位与朝向的隐性关联",
+    "将reader定位问题反向frame为tag旋转问题",
+    "从理论公式推导发现diversity不影响功率谱峰值位置",
+    "用傅里叶级数拟合相位-朝向关系量化误差"
+  ],
+  "topic_tags": [
+    "RFID-reader-calibration",
+    "spinning-tag-SAR",
+    "phase-orientation-calibration",
+    "enhanced-power-profile",
+    "circular-antenna-array"
+  ],
+  "cites_own_work": [
+    "Tagoram (2014) - phase-based tag localization",
+    "PinIt (2013) - multi-path profile",
+    "LANDMARC (2004) - reference tags"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

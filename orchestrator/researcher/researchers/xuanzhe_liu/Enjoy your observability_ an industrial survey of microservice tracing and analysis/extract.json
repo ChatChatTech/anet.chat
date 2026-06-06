@@ -1,0 +1,37 @@
+{
+  "paper_id": "Enjoy your observability_ an industrial survey of microservice tracing and analysis",
+  "doi": "10.1007/s10664-021-10063-9",
+  "title": "Enjoy your observability: an industrial survey of microservice tracing and analysis",
+  "year": 2021,
+  "venue": "Empirical Software Engineering",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "分布式追踪是否能满足工业微服务的可观测性需求尚不明确",
+  "problem_framing": "通过访谈十家公司开发者与运维工程师,调查追踪分析实践",
+  "key_insight": "微服务追踪分析是软件工程的新大数据问题,智能分析仍处于起步阶段",
+  "method_signature": "25位受访者来自10家公司5个领域,定性访谈+开放编码分析",
+  "evaluation_criteria": "基于访谈发现归纳实践模式、权衡考量与挑战",
+  "negative_result_or_admitted_limitation": "机器学习与数据挖掘等高级分析技术很少使用,智能追踪分析仍处于起步阶段",
+  "evidence_for_taste": [
+    "while more advanced analysis techniques such as machine learning and data mining are seldom used",
+    "microservice tracing and analysis is a new big data problem for software engineering",
+    "the implementations of the pipeline in different companies reflect different tradeoffs",
+    "the quality of the trace data, the lack of trace data annotation, and the ever-changing nature"
+  ],
+  "thinking_moves": [
+    "从行业实践归纳通用模式而非提出新算法",
+    "识别技术采纳中的权衡而非单纯列举工具",
+    "把定性访谈结果结构化为pipeline模型",
+    "承认高级技术落地与现实的差距"
+  ],
+  "topic_tags": [
+    "microservice-observability",
+    "distributed-tracing-pipeline",
+    "industrial-survey",
+    "trace-analysis",
+    "intelligent-analysis-immaturity"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

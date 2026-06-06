@@ -1,0 +1,38 @@
+{
+  "paper_id": "Huang et al. - 2011 - Sampling based algorithms for quantile computation in sensor networks",
+  "doi": null,
+  "title": "Sampling Based Algorithms for Quantile Computation in Sensor Networks",
+  "year": 2011,
+  "venue": "SIGMOD'11",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "无线传输是传感器电池最大消耗源，需减少通信量而非传输全部数据",
+  "problem_framing": "在保持ε-近似精度的条件下，最小化总通信量和单节点最大通信量",
+  "key_insight": "打破分解式框架(decomposable framework)，用采样代替完整分位数摘要实现亚线性通信",
+  "method_signature": "概率采样+局部排名估计+树合并压缩",
+  "evaluation_criteria": "ε-近似分位数误差与通信量(总通信/单点通信)的权衡曲线",
+  "negative_result_or_admitted_limitation": "最大节点通信改进不如总通信显著，单节点通信下界Ω(1/ε)难突破",
+  "evidence_for_taste": [
+    "This may seem surprising",
+    "we would argue the other way round",
+    "deviate from the decomposable framework",
+    "not as drastic as that for the total communication"
+  ],
+  "thinking_moves": [
+    "发现分解式框架存在通信下界壁垒",
+    "用概率采样打破确定性的分解式约束",
+    "在flat model/tree model/partitioned tree三阶段逐步深化",
+    "承认概率保证vs最坏情况保证的权衡",
+    "论证总通信比最大节点通信更具实际意义"
+  ],
+  "topic_tags": [
+    "sensor-network-aggregation",
+    "quantile-computation",
+    "sampling-based-algorithms",
+    "communication-efficiency",
+    "distributed-statistics"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

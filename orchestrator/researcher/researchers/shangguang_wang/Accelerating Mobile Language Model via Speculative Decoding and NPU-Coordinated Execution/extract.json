@@ -1,0 +1,41 @@
+{
+  "paper_id": "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution",
+  "doi": "10.48550/arxiv.2510.15312",
+  "title": "Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "移动端RAG推理受NPU静态图约束和计算资源闲置双重制约，导致延迟高且能效低",
+  "problem_framing": "将NPU执行特性与推测解码结合，提出图切换开销和推理利用率两大优化维度",
+  "key_insight": "图切换可通过分块流水线掩藏开销，拒稿token可回收复用以饱和NPU矩阵单元",
+  "method_signature": "sd.npu: 分块渐进图调度+上下文分布校准+验证感知的draft扩展",
+  "evaluation_criteria": "端到端延迟加速比(1.06-3.81x)和能耗降低(1.07-4.71x)，覆盖3手机4数据集",
+  "negative_result_or_admitted_limitation": "调度的NP-hard性意味着只能采用贪婪启发式，无法保证全局最优；分布校准依赖prefill已计算的logits，若prefill阶段已开销过大则收益有限",
+  "evidence_for_taste": [
+    "29% of the decoding latency",
+    "wasted: 22%",
+    "underutilized: 75%",
+    "over 75% of drafts are shorter than 8 tokens",
+    "38.5% of tokens rejected in one step become valid",
+    "NP-hard via a reduction from the 2-Partition",
+    "constant-cost trap"
+  ],
+  "thinking_moves": [
+    "将NPU运行时开销归因到图切换和利用率两个独立维度进行分解",
+    "用量化指标(wasted/underutilized)将定性观察转化为可优化目标",
+    "通过2-Partition归约证明调度问题的计算复杂性，承认只能求近似解",
+    "将拒稿视为可回收资源而非废弃输出",
+    "利用prefill阶段已计算的logits进行在线校准，避免额外前向传播开销"
+  ],
+  "topic_tags": [
+    "speculative-decoding",
+    "mobile-NPU-acceleration",
+    "on-device-RAG",
+    "graph-scheduling",
+    "draft-extension"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

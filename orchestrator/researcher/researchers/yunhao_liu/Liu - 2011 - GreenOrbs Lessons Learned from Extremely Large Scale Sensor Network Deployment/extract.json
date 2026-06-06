@@ -1,0 +1,40 @@
+{
+  "paper_id": "Liu - 2011 - GreenOrbs Lessons Learned from Extremely Large Scale Sensor Network Deployment",
+  "doi": null,
+  "title": "GreenOrbs: Lessons Learned from Extremely Large Scale Sensor Network Deployment",
+  "year": 2011,
+  "venue": null,
+  "venue_tier": "keynote",
+  "role": "keynote",
+  "motivation": "全球气候变暖和环境污染日益严重，森林碳汇功能关键但缺乏有效监测手段",
+  "problem_framing": "现有林业技术仅支持小规模、断续、异步、粗粒度的测量，成本高昂",
+  "key_insight": "WSN在大规模林业持续监测中具有巨大潜力，可实现长期连续同步感知",
+  "method_signature": "GreenOrbs原型系统部署实践，系统性总结大规模传感器网络部署经验教训",
+  "evaluation_criteria": "网络规模(节点数、覆盖面积)、跳数直径、占空比、连续运行时间",
+  "negative_result_or_admitted_limitation": "当前技术状态仅支持小规模不连续测量，远未满足林业应用需求",
+  "evidence_for_taste": [
+    "state-of-arts techniques however support only small-scale",
+    "we learned a lot of lessons during the deployment",
+    "several open issues for extremely large scale deployment"
+  ],
+  "thinking_moves": [
+    "从大规模实地部署反推传感器网络理论假设的局限性",
+    "以林业应用实际需求来定义WSN核心挑战",
+    "将系统部署经验提炼为领域通用教训"
+  ],
+  "topic_tags": [
+    "WSN大规模部署",
+    "林业环境监测",
+    "GreenOrbs系统",
+    "传感器网络诊断",
+    "链路质量评估"
+  ],
+  "cites_own_work": [
+    "ACM Sensys 2009",
+    "ACM Sigmetrics 2010",
+    "ICNP 2010",
+    "INFOCOM 2010"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "本文为会议主题演讲摘要，仅包含动机背景、部署概况和议题预告，缺乏完整方法论和评估细节"
+}

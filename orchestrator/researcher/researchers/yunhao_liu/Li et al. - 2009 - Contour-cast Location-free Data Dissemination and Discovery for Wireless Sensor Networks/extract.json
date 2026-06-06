@@ -1,0 +1,39 @@
+{
+  "paper_id": "Li et al. - 2009 - Contour-cast Location-free Data Dissemination and Discovery for Wireless Sensor Networks",
+  "doi": null,
+  "title": "Contour-cast: Location-free Data Dissemination and Discovery for Wireless Sensor Networks",
+  "year": 2009,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有方法依赖位置信息，但位置信息难以高效准确地获取，导致数据发现困难且开销大",
+  "problem_framing": "如何在没有位置信息和全局拓扑的情况下，实现消费者与生产者之间的高效发现",
+  "key_insight": "用两个信标构造重叠轮廓覆盖，每个节点仅需存储(b,r)二维坐标，数据沿轮廓散布确保与查询路径以高概率相交",
+  "method_signature": "双信标轮廓叠加+轮廓路由+概率相交定理",
+  "evaluation_criteria": "数据获取成功率、存储开销、负载均衡、误差容忍度",
+  "negative_result_or_admitted_limitation": "理想场景需密集网络，随机场景最坏情况交集比约51%，稀疏网络性能未保证",
+  "evidence_for_taste": [
+    "the average success ratio can reach more than 75%",
+    "The location error can influence its success ratio significantly",
+    "The storage cost of Contour-cast is greater than Double Rulings",
+    "the worst case or lower bound of the intersection ratio achieves maximum",
+    "Our future work will focus on Contour-cast in sparse networks"
+  ],
+  "thinking_moves": [
+    "将拓扑抽象问题转化为二维坐标编码问题",
+    "用几何定理证明概率保证而非依赖仿真",
+    "从理想场景到随机场景逐步放松假设",
+    "承认最坏情况下界并推导期望值",
+    "用边界节点辅助策略弥补理论保证的不足"
+  ],
+  "topic_tags": [
+    "location-free-WSD",
+    "contour-routing",
+    "data-discovery-WSN",
+    "two-beacon-overlay",
+    "probabilistic-guarantee"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "该论文完整呈现了Contour-cast的设计动机、理论证明和评估，作者明确承认了随机场景最坏情况和稀疏网络限制，展现了工程方法与理论保证之间的权衡思考"
+}

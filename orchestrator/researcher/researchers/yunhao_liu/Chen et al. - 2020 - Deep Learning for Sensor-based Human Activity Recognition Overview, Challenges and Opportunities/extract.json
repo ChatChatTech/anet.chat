@@ -1,0 +1,48 @@
+{
+  "paper_id": "Chen et al. - 2020 - Deep Learning for Sensor-based Human Activity Recognition Overview, Challenges and Opportunities",
+  "doi": null,
+  "title": "Deep Learning for Sensor-based Human Activity Recognition: Overview, Challenges and Opportunities",
+  "year": 2018,
+  "venue": "J. ACM",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传感器与物联网的普及使活动识别应用成为可能，但实际场景性能受限",
+  "problem_framing": "将深度学习方法的挑战驱动分类视为核心贡献，而非模型结构本身",
+  "key_insight": "按挑战组织方法形成问题-解决方案结构，为研究者提供方向指南",
+  "method_signature": "基于挑战的深度学习方法新分类法",
+  "evaluation_criteria": "对比同一挑战的不同解决方案，列出优缺点",
+  "negative_result_or_admitted_limitation": "特征提取是精心设计的启发式方法，缺乏通用方法；RNN变体相比LSTM无显著优势",
+  "evidence_for_taste": [
+    "features extracted are carefully engineered and heuristic",
+    "no universal or systematical feature extraction",
+    "could not provide notably superior performance",
+    "reluctant acceptance by researchers",
+    "lack of theoretical support"
+  ],
+  "thinking_moves": [
+    "先界定传统方法的根本缺陷：启发式特征工程缺乏通用性",
+    "论证深度学习成功的内在机制：层叠结构、局部连接、时间依赖建模",
+    "按挑战类别而非模型类型重新组织文献",
+    "针对每个挑战追溯具体网络架构的适配逻辑",
+    "建立问题-方法对照表为后续研究提供路线图"
+  ],
+  "topic_tags": [
+    "深度学习活动识别",
+    "传感器挑战分类",
+    "HAR深度学习综述",
+    "多模态感知融合",
+    "时序特征提取"
+  ],
+  "cites_own_work": [
+    "Yao et al. 2017 Deepsense",
+    "Zhang et al. 2020 TemporalAttention EEG",
+    "Zhang et al. 2019 collective protection",
+    "Zhang et al. 2019 EEG attention model",
+    "Zhang et al. 2018 Ready for Use",
+    "Zhang et al. 2019 cascade parallel RNN EEG",
+    "Zhang et al. 2019 graph attention EEG",
+    "Zhang et al. 2018 cascade attention EEG"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

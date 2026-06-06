@@ -1,0 +1,37 @@
+{
+  "paper_id": "The Current Challenges of Software Engineering in the Era of Large Language Models",
+  "doi": "10.48550/arxiv.2412.14554",
+  "title": "The Current Challenges of Software Engineering in the Era of Large Language Models",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLM4SE渐成趋势,但现有技术面临质量/效率/可靠性挑战",
+  "problem_framing": "系统梳理LLM在软件工程各阶段的26项关键挑战",
+  "key_insight": "从语义鸿沟、数据更新、结果不稳定三方面概括LLM4SE核心局限",
+  "method_signature": "定性研究:24位专家3天研讨会讨论,开放编码归纳挑战",
+  "evaluation_criteria": "无(综述论文)",
+  "negative_result_or_admitted_limitation": "LLM在代码生成中存在幻觉问题,生成结果可能与事实矛盾",
+  "evidence_for_tender_taste": [
+    "serious challenges regarding quality, efficiency, reliability, and trustworthiness",
+    "LLMs may generate results that contradict the facts",
+    "the quality varies in real-world projects",
+    "existing LLMs lack optimization for code review tasks"
+  ],
+  "thinking_moves": [
+    "从工程实践反推LLM4SE的多维挑战",
+    "把LLM能力与SE任务需求进行系统对齐",
+    "通过专家研讨将隐性问题显式化",
+    "区分语法与语义层面的测试质量挑战"
+  ],
+  "topic_tags": [
+    "LLM4SE挑战",
+    "软件工程自动化",
+    "定性研究方法",
+    "代码生成可靠性",
+    "SE特定LLM"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文结构完整但方法部分较简略,缺乏具体案例细节。Zhi Jin作为通讯作者其个人学术品味难以从合著综述中充分提取,建议补充其具体贡献段落。 | md truncated to head40k+tail20k"
+}

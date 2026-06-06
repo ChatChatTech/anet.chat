@@ -1,0 +1,37 @@
+{
+  "paper_id": "Walking the Schro╠êdinger Bridge_ A Direct Trajectory for Text-to-3D Generation",
+  "doi": "10.48550/arxiv.2511.05609",
+  "title": "Walking the Schrödinger Bridge: A Direct Trajectory for Text-to-3D Generation",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "SDS requires high CFG causing over-saturation and over-smoothing; existing variants still rely on noisy score matching",
+  "problem_framing": "Learning optimal direct transport trajectory between current rendering distribution and desired target distribution",
+  "key_insight": "SDS is mathematically equivalent to Schrödinger Bridge under Gaussian noise endpoint condition, enabling principled trajectory design",
+  "method_signature": "TraCe constructs diffusion bridge from current rendering to predicted target, trains LoRA to learn bridge score dynamics",
+  "evaluation_criteria": "CLIP Score, GPTEval3D, ImageReward, time, VRAM across 83 prompts",
+  "negative_result_or_admitted_limitation": "Naive Schrödinger Bridge approach yields smoother, less detailed rendering compared to full TraCe",
+  "evidence_for_taste": [
+    "naive approach to direct Schrödinger Bridge...results in a comparatively smoother, less detailed rendering",
+    "VSD and CSD exhibit less-desired generation (e.g., missing details)",
+    "This reliance on high CFG values is often problematic",
+    "These score estimates can be noisy and are not guaranteed to represent an optimal direction"
+  ],
+  "thinking_moves": [
+    "Prove SDS is special case of Schrödinger Bridge via Nelson duality",
+    "Construct explicit bridge from current rendering to dynamically estimated text-aligned target",
+    "Use t-annealing to progressively focus bridge interpolation toward target",
+    "Ablate both LoRA adaptation and scheduled t-sampling separately and together"
+  ],
+  "topic_tags": [
+    "text-to-3D-generation",
+    "Schrödinger-Bridge",
+    "score-distillation-sampling",
+    "3D-Gaussian-Splatting",
+    "diffusion-bridge"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

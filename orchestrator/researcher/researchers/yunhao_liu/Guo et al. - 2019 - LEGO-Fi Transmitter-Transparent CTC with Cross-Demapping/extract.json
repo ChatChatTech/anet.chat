@@ -1,0 +1,37 @@
+{
+  "paper_id": "Guo et al. - 2019 - LEGO-Fi Transmitter-Transparent CTC with Cross-Demapping",
+  "doi": null,
+  "title": "LEGO-Fi: Transmitter-Transparent CTC with Cross-Demapping",
+  "year": 2019,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "物理层CTC对发射端处理复杂度要求高，低端发射机难以实现。",
+  "problem_framing": "如何让低功耗发射机(ZigBee)直接与高端接收机(WiFi)通信而不改造发射端。",
+  "key_insight": "WiFi接收端可通过交叉解映射识别ZigBee信号特征，将处理复杂度从发射端转移到接收端。",
+  "method_signature": "跨技术交叉解映射：利用WiFi接收端的丰富处理能力解析ZigBee包。",
+  "evaluation_criteria": "吞吐率213.6Kbps，相比FreeBee快13000倍、ZigFi快1200倍。",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "transmitter-transparent",
+    "leaves distinguishable features",
+    "rich processing capacity",
+    "critical advance toward bidirectional",
+    "state-of-the-art works propose physical-level CTC"
+  ],
+  "thinking_moves": [
+    "将处理复杂度从发射端转移到接收端",
+    "利用高端接收机的处理余量来适配低端发射信号",
+    "通过接收端信号特征差异来反向解析"
+  ],
+  "topic_tags": [
+    "cross-technology-communication",
+    "ZigBee-WiFi-interoperability",
+    "transmitter-transparent",
+    "receiver-side-signal-processing",
+    "IoT-low-power-communication"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "仅提供摘要，缺乏方法细节、评估具体参数及局限性讨论；无法确认作者角色的具体分工。"
+}

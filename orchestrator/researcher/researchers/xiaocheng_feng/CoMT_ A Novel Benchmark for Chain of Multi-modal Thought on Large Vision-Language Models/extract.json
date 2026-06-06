@@ -1,0 +1,38 @@
+{
+  "paper_id": "CoMT_ A Novel Benchmark for Chain of Multi-modal Thought on Large Vision-Language Models",
+  "doi": "10.48550/arxiv.2412.12932",
+  "title": "CoMT: A Novel Benchmark for Chain of Multi-modal Thought on Large Vision-Language Models",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有MCoT基准仅支持多模态输入但输出仅文本,缺失视觉操作导致推理模糊且不完整",
+  "problem_framing": "定义链式多模态思维(CoMT)为需要同时生成多模态推理输出(文本+图像)的任务范式",
+  "key_insight": "人类推理时自然融合图像进行具体推理,用文本进行抽象逻辑,模型也应如此生成中间图像",
+  "method_signature": "CoMT基准包含视觉创建/删除/更新/选择四类操作,要求模型在推理链中生成相关图像",
+  "evaluation_criteria": "准确率+Macro-F1衡量模型在四类视觉操作任务上的多模态推理能力",
+  "negative_result_or_admitted_limitation": "除Gemini外几乎所有模型在零样本下接近随机水平,当前LVLMs缺乏有效的多模态思维集成能力",
+  "evidence_for_taste": [
+    "lacks integrated multi-modal reasoning output",
+    "fails to execute visual operations",
+    "perform at or below random levels",
+    "The absence of visual thought significantly increases the difficulty"
+  ],
+  "thinking_moves": [
+    "指出传统范式缺陷:虽有图输入但输出仅文本,无法执行视觉操作",
+    "从人类认知获得灵感:视觉思维用于具体推理,文本思维用于抽象逻辑",
+    "定义新任务范式:要求模型在推理过程中生成图像作为中间步骤",
+    "构建系统化基准:四类视觉操作(创建/删除/更新/选择)全面覆盖",
+    "广泛实验揭示差距:几乎所有零样本方法仅略优于随机"
+  ],
+  "topic_tags": [
+    "multi-modal chain-of-thought",
+    "LVLM benchmark",
+    "visual reasoning evaluation",
+    "multi-modal generation",
+    "reasoning with image generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

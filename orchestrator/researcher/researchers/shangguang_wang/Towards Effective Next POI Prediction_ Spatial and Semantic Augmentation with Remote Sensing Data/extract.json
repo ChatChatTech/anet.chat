@@ -1,0 +1,39 @@
+{
+  "paper_id": "Towards Effective Next POI Prediction_ Spatial and Semantic Augmentation with Remote Sensing Data",
+  "doi": "10.48550/arxiv.2404.04271",
+  "title": "Towards Effective Next POI Prediction: Spatial and Semantic Augmentation with Remote Sensing Data",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "Existing POI prediction models neglect environmental influences (road density, land usage) that shape human mobility patterns.",
+  "problem_framing": "Define three challenges: (1) neglecting environmental factors, (2) ineffective spatial graph due to uneven POI distribution, (3) failing to separate spatial and semantic intents in a unified prediction framework.",
+  "key_insight": "Remote sensing imagery acts as a warehouse of environmental context (land use, urban morphology) that enriches tile representations beyond POI density alone; quad-tree with road network edges solves both granularity and connectivity problems.",
+  "method_signature": "TSPN-RA: two-step prediction (tile selection → POI ranking) with quad-tree road-graph (QR-P) and CNN-encoded remote sensing tile embeddings.",
+  "evaluation_criteria": "Recall@K and MRR on four real-world LBSN datasets (Gowalla, Foursquare, NYC, TKY); inference efficiency (FLOPs, memory, training time).",
+  "negative_result_or_admitted_limitation": "Introducing 20% noise into satellite imagery causes the majority of tiles to appear in inland areas, leading to failed predictions — imagery quality directly impacts spatial filtering.",
+  "evidence_for_taste": [
+    "traditional approaches often fail to consider",
+    "the increase in K leads to a decrease in the ability to narrow down the search space",
+    "unnecessary memory overhead mainly arises from the 2x2 max pooling layers",
+    "it is unnecessary to get high-resolution vision of some areas, such as parks",
+    "directly allowed the POI predictor to make the decision. As shown in Figure 12(c), the model missed the target"
+  ],
+  "thinking_moves": [
+    "把遥感数据跨域迁移到POI推荐任务，视为空间表征学习的仓库",
+    "从工程异常反推架构缺陷：max pooling导致梯度冗余，改用stride-2 CNN",
+    "先论证quad-tree相比grid index的理论优势（多尺度粒度+均匀分布），再构建QR-P图",
+    "对两个预测子任务做难度曲线交叉分析，找到K=10~20的平衡点",
+    "用消融实验（noisy imagery / no tile filtering）反证每个模块的必要性"
+  ],
+  "topic_tags": [
+    "next-POI-prediction",
+    "remote-sensing-augmentation",
+    "quad-tree-graph",
+    "spatial-semantic-intent-separation",
+    "heterogeneous-graph-attention"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

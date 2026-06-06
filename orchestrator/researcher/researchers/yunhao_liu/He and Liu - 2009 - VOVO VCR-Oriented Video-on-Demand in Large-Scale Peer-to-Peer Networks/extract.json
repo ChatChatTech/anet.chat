@@ -1,0 +1,36 @@
+{
+  "paper_id": "He and Liu - 2009 - VOVO VCR-Oriented Video-on-Demand in Large-Scale Peer-to-Peer Networks",
+  "doi": null,
+  "title": "VOVO: VCR-Oriented Video-on-Demand in Large-Scale Peer-to-Peer Networks",
+  "year": 2009,
+  "venue": "IEEE Transactions",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "P2P VOD系统无法很好支持VCR操作，导致用户等待时间长或服务器压力大",
+  "problem_framing": "将VCR操作的响应延迟问题形式化为：通过预测用户跳转行为来优化预取策略",
+  "key_insight": "利用关联规则挖掘视频内部的段间关联性，可以预测用户VCR跳转请求",
+  "method_signature": "关联规则挖掘+协作式预取+批处理补丁混合架构",
+  "evaluation_criteria": "命中率、启动延迟、VCR响应延迟、服务器压力",
+  "negative_result_or_admitted_limitation": "早期用户的响应延迟比后期用户稍长，因其无法找到充足的视频源",
+  "evidence_for_taste": [
+    "the first segment to be prefetched after the third segment should be the seventh segment",
+    "Hit ratio is defined as the probability",
+    "VOVO improves HR2 by 90 percent-120 percent"
+  ],
+  "thinking_moves": [
+    "将用户VCR行为抽象为关联规则挖掘问题",
+    "先通过gossip收集播放历史，再挖掘段间关联预测跳转",
+    "利用邻居节点的协作预取分布来优化局部资源可用性",
+    "理论分析最优hit ratio后再用trace-driven实验验证"
+  ],
+  "topic_tags": [
+    "P2P-VOD",
+    "VCR-interactivity",
+    "association-rule-mining",
+    "collaborative-prefetching",
+    "batching-patching"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

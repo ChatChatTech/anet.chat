@@ -1,0 +1,37 @@
+{
+  "paper_id": "Fairness Testing of Large Language Models in Role-Playing",
+  "doi": "10.48550/arxiv.2411.00585",
+  "title": "Fairness Testing of Large Language Models in Role-Playing",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有公平性测试框架未覆盖角色扮演场景，无法检测LLM在此类场景中展现的社会偏见",
+  "problem_framing": "构建包含角色生成、问题生成和测试预言的自动化公平性测试框架，针对角色扮演场景检测LLM偏见",
+  "key_insight": "角色扮演会激活LLM中不同的偏见知识，移除角色扮演后偏见响应平均下降23.8%",
+  "method_signature": "LLM生成550个角色及33000个问题，结合规则和LLM判断器识别偏见响应",
+  "evaluation_criteria": "10个LLM中检测到的107580个偏见响应数量",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "existing fairness testing frameworks do not cover role-playing scenarios",
+    "role-playing acts as a contextual trigger",
+    "exposing the risk is also a key goal of our fairness testing approach",
+    "rule-based approach may overlook biased responses that lack explanation phrases"
+  ],
+  "thinking_moves": [
+    "从现有框架的覆盖空白出发定位研究问题",
+    "将软件测试中测试输入生成和测试预言生成的概念迁移到LLM公平性测试",
+    "针对不同问题类型采用不同的检测策略（规则vs LLM判断）",
+    "通过移除角色扮演验证其对偏见的激活作用"
+  ],
+  "topic_tags": [
+    "fairness-testing",
+    "LLM-bias-detection",
+    "role-playing",
+    "test-oracle-generation",
+    "social-bias"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文尚未正式发表（引用格式中年份为占位符），作者团队贡献较分散，核心创新点在框架设计和大规模实证评估，但缺少对方法失效情况的明确承认 | md truncated to head40k+tail20k"
+}

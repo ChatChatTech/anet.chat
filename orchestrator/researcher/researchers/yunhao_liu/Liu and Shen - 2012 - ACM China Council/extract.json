@@ -1,0 +1,34 @@
+{
+  "paper_id": "Liu and Shen - 2012 - ACM China Council",
+  "doi": null,
+  "title": "ACM China Council",
+  "year": 2012,
+  "venue": "Communications of the ACM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "ACM在中国缺乏知名度,会员数不足1500人,需建立本地组织推动发展",
+  "problem_framing": "非学术研究,而是ACM在中国的发展战略与执行报告",
+  "key_insight": "与CCF(15000+会员)建立合作,通过YOCSEF等现有网络渗透高校与工业界",
+  "method_signature": "战略合作 MOU 联合活动 会员转化",
+  "evaluation_criteria": "会员数量增长至10000+,章节数扩展至10-20个",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "most, if not all, Chinese professionals thought ACM was an American organization",
+    "we believe ACM China has reached the original goals set during our first meeting in 2010"
+  ],
+  "thinking_moves": [
+    "把国际组织本地化问题转化为已有本地组织合作问题",
+    "通过MOU制度化合作框架,降低持续运营阻力",
+    "利用YOCSEF等活跃网络快速建立基层影响力"
+  ],
+  "topic_tags": [
+    "professional-society-expansion",
+    "ACM-China-Council",
+    "cross-organization-partnership",
+    "member-recruitment-strategy",
+    "academic-industry-outreach"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Li et al. - 2009 - Joint Throughput Optimization for Wireless Mesh Networks",
+  "doi": null,
+  "title": "Joint Throughput Optimization for Wireless Mesh Networks",
+  "year": 2009,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "WMN部署受限于干扰导致的容量衰减,多信道多-radio可缓解但需联合优化",
+  "problem_framing": "将路由/链路调度/信道分配建模为混合整数规划并relax为LP",
+  "key_insight": "虚拟节点分裂法将多radio节点映射为全互联节点,使得调度问题可分离求解",
+  "method_signature": "跨层LP松弛+冲突图着色调度+constant近似比证明",
+  "evaluation_criteria": "fairness和throughput与最优解的常数因子差距",
+  "negative_result_or_admitted_limitation": "理论界保守,实际仿真性能远优于理论边界",
+  "evidence_for_taste": [
+    "we are the first one to prove asymptotic optimal bounds",
+    "performs much better than the theoretical bounds",
+    "To the best of our knowledge, we are the first to study channel combining"
+  ],
+  "thinking_moves": [
+    "统一建模四种干扰模型下的调度问题",
+    "通过虚拟化将异构radio constraints转化为统一图模型",
+    "先证最坏情况常数近似,再凭仿真展示实际优势",
+    "从LP最优解反推调度可行条件作为充分条件"
+  ],
+  "topic_tags": [
+    "wireless-mesh-networks",
+    "multi-radio-multi-channel",
+    "cross-layer-optimization",
+    "TDMA-link-scheduling",
+    "channel-combining"
+  ],
+  "cites_own_work": [
+    "Wang et al. 2006 (link scheduling)",
+    "Kumar et al. 2005 (capacity)",
+    "Alicherry et al. 2005 (joint assignment)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

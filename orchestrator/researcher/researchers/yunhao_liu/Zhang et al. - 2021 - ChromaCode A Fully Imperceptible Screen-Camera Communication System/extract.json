@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhang et al. - 2021 - ChromaCode A Fully Imperceptible Screen-Camera Communication System",
+  "doi": null,
+  "title": "ChromaCode: A Fully Imperceptible Screen-Camera Communication System",
+  "year": 2021,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "65%用户跳过在线视频广告，现有方案仅能同时实现不可见性、速率和可靠性中的1-2个目标",
+  "problem_framing": "将同时实现不可见、高速、可靠通信描述为相互冲突的三角约束问题",
+  "key_insight": "利用CIELAB均匀色空间和CIEDE2000色差公式，使亮度变化在感知上均匀一致",
+  "method_signature": "基于感知均匀色空间的逐像素结果驱动自适应嵌入+RS+卷积级联纠错码",
+  "evaluation_criteria": "原始吞吐量>700kbps、有效吞吐量120kbps、BER=0.05、用户研究验证不可见性",
+  "negative_result_or_admitted_limitation": "承认ImplicitCode仅适用于灰度视频；指出InFrame++仍存在明显闪烁问题",
+  "evidence_for_taste": [
+    "显著性差异",
+    "三个目标同时实现",
+    "首次考虑色空间",
+    "显著优于之前工作",
+    "之前的工作仅实现一个或两个目标"
+  ],
+  "thinking_moves": [
+    "将perception问题重帧为communication问题，利用人类视觉系统的 flicker-fusion 特性",
+    "从色度学标准(CIELAB/CIEDE2000)而非工程经验出发选择颜色空间",
+    "从结果(色差)反向推导输入(亮度变化)，而非直接应用固定亮度变化",
+    "承认三个目标相互冲突是核心挑战，而非尝试用一个方案解决所有",
+    "在感知均匀色空间中，相同的亮度变化ΔL产生相同的视觉色差"
+  ],
+  "topic_tags": [
+    "screen-camera-communication",
+    "imperceptible-embedding",
+    "color-space-perceptual-uniformity",
+    "adaptive-lightness-modification",
+    "concatenated-error-correction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文被截断，缺少部分方法细节和实验结果。DOI和venue信息未在正文中明确给出，无法确认完整venue信息。 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "On End-to-End Program Generation from User Intention by Deep Neural Networks",
+  "doi": "10.48550/arxiv.1510.07211",
+  "title": "On End-to-End Program Generation from User Intention by Deep Neural Networks",
+  "year": 2015,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "软件工程长期追求自动程序生成梦想，需突破传统方法的自动化和抽象能力限制",
+  "problem_framing": "用序列到序列RNN在字符级学习自然语言意图到功能正确代码的映射",
+  "key_insight": "RNN无需真正理解语义，通过隐藏状态切换识别注释意图，混合不同结构和变量仍保持代码连贯",
+  "method_signature": "字符级Seq2Seq LSTM网络，输入注释输出C代码片段",
+  "evaluation_criteria": "生成的约280字符代码仅需手动修正4个字符即可编译运行并通过功能测试",
+  "negative_result_or_admitted_limitation": "RNN无法理解自然语言或编程语言的语义，当前训练任何学习机完全理解两者都不现实",
+  "evidence_for_taste": [
+    "RNN does not understand the meaning",
+    "less capable of capturing semantics",
+    "appears unrealistic currently",
+    "the code should be (almost) correct",
+    "mix different structures and IDs but remain coherent"
+  ],
+  "thinking_moves": [
+    "通过CCFinder检测训练集中最相似代码，排除简单记忆假设",
+    "从结构、变量标识符、代码风格三个维度分解分析RNN生成机制",
+    "将程序生成问题框定为序列生成任务，利用RNN迭代条件概率建模"
+  ],
+  "topic_tags": [
+    "neural-code-generation",
+    "char-level-seq2seq",
+    "program-synthesis-from-NL",
+    "RNN-hidden-state-semantics",
+    "software-engineering-automation"
+  ],
+  "cites_own_work": [
+    "TBCNN (Mou et al., 2015)",
+    "program-vector-representations (Mou et al., 2014)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

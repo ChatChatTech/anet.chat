@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zhang et al. - 2019 - Internet of Things Meets Brain-Computer Interface A Unified Deep Learning Framework for Enabling Hu",
+  "doi": null,
+  "title": "Internet of Things Meets Brain-Computer Interface: A Unified Deep Learning Framework for Enabling Human-Thing Cognitive Interactivity",
+  "year": 2019,
+  "venue": "IEEE Transactions on Emerging Topics in Computational Intelligence",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "BCI控制IoT设备时脑信号低信噪比、特征工程耗时且依赖领域专家",
+  "problem_framing": "将脑信号解读建模为端到端深度学习问题,需自动发现区分性特征",
+  "key_insight": "用强化学习优化选择注意力区域来发现最优维度依赖,绕过手动特征工程",
+  "method_signature": "Reinforcement Learning Selective Attention + WAS-LSTM Classifier",
+  "evaluation_criteria": "准确率/精确率/召回率/F1/AUC/混淆矩阵/延迟",
+  "negative_result_or_admitted_limitation": "RS后的最优顺序无法保证出现,分类结果不理想时需多次尝试;SAM增加了LSTM单元的迭代训练时间",
+  "evidence_for_taste": [
+    "the optimal order can not be guaranteed",
+    "the employment of SAM increases the training time",
+    "7 subjects limited by the practical conditions",
+    "accuracy has an approximately linear relationship with the reward"
+  ],
+  "thinking_moves": [
+    "用强化学习把特征选择问题转化为序贯决策优化",
+    "将时序信号重排以暴露潜在维度依赖关系",
+    "用轮廓系数近似分类精度以降低强化学习奖励模型的训练开销",
+    "将eye-closed状态作为确认命令因其在实验中准确率最高"
+  ],
+  "topic_tags": [
+    "EEG-BCI",
+    "deep-reinforcement-learning",
+    "IoT-cognitive-control",
+    "LSTM-spatial-dependency",
+    "attention-mechanism"
+  ],
+  "cites_own_work": [
+    "Converting your thoughts to texts (PerCom 2018)",
+    "Intent recognition in smart living (ICONIP 2017)",
+    "MindID (UbiComp 2018)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

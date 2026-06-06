@@ -1,0 +1,38 @@
+{
+  "paper_id": "Self-collaboration Code Generation via ChatGPT",
+  "doi": "10.48550/arxiv.2304.07590",
+  "title": "Self-collaboration Code Generation via ChatGPT",
+  "year": 2023,
+  "venue": "ACM Trans. Softw. Eng. Methodol.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "LLMs仍难以处理复杂代码生成任务，而人类通过协作分工能有效应对复杂性",
+  "problem_framing": "将LLM角色化为不同专家组成虚拟团队，通过软件工程方法论协调解决代码生成问题",
+  "key_insight": "角色扮演(role-playing)让LLM在特定领域内推理，约束生成空间激发潜在能力",
+  "method_signature": "自协作框架：角色指令实现分工+协作，三角色(分析师/编码器/测试员)虚拟团队",
+  "evaluation_criteria": "Pass@1测试用例通过率，多基准对比( HumanEval/MBPP/APPS/CoderEval)",
+  "negative_result_or_admitted_limitation": "编译器团队与原三角色团队性能相当；few-shot示例选择可能偏置LLM对人类意图的理解",
+  "evidence_for_taste": [
+    "role-playing approach yields superior results",
+    "role-playing serves to evoke the latent abilities",
+    "Iter-improving sometimes leads to unnecessary modifications",
+    "limited selection of examples might not fully reflect intent",
+    "long prompt could hinder the LLMs effective extraction"
+  ],
+  "thinking_moves": [
+    "把LLM单一智能重新frame为多角色社会协作",
+    "引入软件工程方法论组织LLM虚拟团队",
+    "用角色指令约束LLM生成空间而非提升模型本身",
+    "先 ablation 验证各角色贡献，再探索替代团队配置"
+  ],
+  "topic_tags": [
+    "LLM-code-generation",
+    "multi-agent-collaboration",
+    "role-playing-prompting",
+    "software-engineering-methodology",
+    "ChatGPT"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

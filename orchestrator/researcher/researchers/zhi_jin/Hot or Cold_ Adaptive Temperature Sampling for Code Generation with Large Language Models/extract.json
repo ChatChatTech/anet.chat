@@ -1,0 +1,38 @@
+{
+  "paper_id": "Hot or Cold_ Adaptive Temperature Sampling for Code Generation with Large Language Models",
+  "doi": "10.48550/arxiv.2309.02772",
+  "title": "Hot or Cold? Adaptive Temperature Sampling for Code Generation with Large Language Models",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "现有解码策略从自然语言迁移到代码生成时忽视了编程语言的严格语法约束，导致解码效果下降",
+  "problem_framing": "将代码token按预测难度分为挑战token和自信token，分析其在代码行中的位置分布规律",
+  "key_insight": "代码块起始位置的token预测难度最高(79.8%)，对这些挑战token应提高温度增加多样性，对自信token应降低温度避免随机噪声",
+  "method_signature": "AdapT采样：根据是否为代码块初始token动态切换温度参数a/b",
+  "evaluation_criteria": "pass@5/10/15指标在HumanEval和MBPP数据集上对比SOTA方法",
+  "negative_result_or_admitted_limitation": "语句内部的挑战token分布无清晰统计规律；尝试线性衰减、指数衰减等调温函数均未获实质改进；最常见错误类型是逻辑错误而非语法错误",
+  "evidence_for_taste": [
+    "prediction difficulty of 79.8%",
+    "most likely place for a challenging token",
+    "The most common error type is the wrong answer",
+    "without obtaining substantial improvement",
+    "no clear statistical pattern"
+  ],
+  "thinking_moves": [
+    "从代码token损失值分布中归纳出挑战token与自信token的二分法",
+    "通过位置预测难度统计发现代码块初始位置的规律性",
+    "在语句级挑战token无规律后转向代码块级别的简化策略",
+    "用实证对比证明AdapT超越SOTA温度采样上界"
+  ],
+  "topic_tags": [
+    "LLM代码生成解码",
+    "自适应温度采样",
+    "代码token损失分布分析",
+    "挑战token识别",
+    "代码块结构感知"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文完整包含动机、方法、实验和局限，可提取较完整认知信号。但附录图表细节因格式限制未能完全利用。"
+}

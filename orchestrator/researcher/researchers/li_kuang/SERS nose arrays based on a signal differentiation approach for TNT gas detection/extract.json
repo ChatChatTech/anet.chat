@@ -1,0 +1,39 @@
+{
+  "paper_id": "SERS nose arrays based on a signal differentiation approach for TNT gas detection",
+  "doi": "10.1038/s42004-025-01656-2",
+  "title": "SERS nose arrays based on a signal differentiation approach for TNT gas detection",
+  "year": 2025,
+  "venue": "Communications Chemistry",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "TNT环境残留检测需求迫切，现有方法(GC/MS/THz)设备笨重、操作复杂、成本高、无法便携",
+  "problem_framing": "传统电子鼻依赖一维强度信号，无法提供物质结构信息；SERS检测结构相似化合物时存在光谱重叠和分类复杂性",
+  "key_insight": "通过MXene材料差异化化学增强、AuNBP物理热点、分子单层差异化吸附三重机制产生信号分化，结合机器学习实现结构相似爆炸物的分类识别",
+  "method_signature": "六通道SD-SERS阵列(Ti3C2/Mo2C MXene-AuNBP + PATP/4MBA/6MNA单层) + ML分类",
+  "evaluation_criteria": "TNT与2,4-DNPA分类准确率、浓度梯度区分能力、检测限(15ppb)",
+  "negative_result_or_admitted_limitation": "10^-5 M PATP浓度过高使捕获分子远离热点、过量捕获分子信号干扰检测，10^-6 M最优；检测需20分钟吸附时间",
+  "evidence_for_taste": [
+    "(10^-5 M PATP) dispersed distribution causing TNT molecules located farther from hot spots",
+    "higher concentration of capture molecules may interfere with TNT signal detection",
+    "after 20 min adsorption efficiency gradually declines",
+    "enhancement factor is approximately proportional to the fourth power of (E/E0)",
+    "(Ti3C2) facilitates greater charge transfer to both 4MBA and PATP molecules"
+  ],
+  "thinking_moves": [
+    "通过FDTD模拟比较AuNBPs/AuNSs/AuNRs三种纳米结构在头对头构型下的电磁场分布，验证AuNBP最优",
+    "用DFT计算不同MXene与分子吸附的电荷转移量，预测化学增强差异并实验验证",
+    "系统探索分子单层浓度对热点信号的影响，确定10^-6 M为最优条件",
+    "采用多维信号特征矩阵(6×N)输入机器学习，利用阵列差异化响应而非单一基板区分结构相似物",
+    "与传统电子鼻依赖单一物性响应不同，将SERS结构信息与机器学习结合实现化学选择性"
+  ],
+  "topic_tags": [
+    "SERS生物鼻",
+    "MXene-AuNBP异质结构",
+    "TNT气相检测",
+    "信号分化策略",
+    "机器学习分类"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

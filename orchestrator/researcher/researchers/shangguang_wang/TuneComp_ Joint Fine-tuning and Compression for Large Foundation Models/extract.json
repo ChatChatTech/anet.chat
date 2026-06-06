@@ -1,0 +1,40 @@
+{
+  "paper_id": "TuneComp_ Joint Fine-tuning and Compression for Large Foundation Models",
+  "doi": "10.48550/arxiv.2505.21835",
+  "title": "TuneComp: Joint Fine-tuning and Compression for Large Foundation Models",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Sequential fine-tuning then compression creates oversized intermediate model and sacrifices performance",
+  "problem_framing": "Jointly optimize fine-tuning and compression via progressive knowledge distillation to pruned low-rank structure",
+  "key_insight": "Integrating fine-tuning with compression preserves task-relevant information that sequential approaches discard",
+  "method_signature": "Parallel teacher-student branches with cosine decay blending, activation-aware SVD init, and pruning during distillation",
+  "evaluation_criteria": "Classification accuracy vs compression rate (parameter count) trade-off on ViT transfer learning",
+  "negative_result_or_admitted_limitation": "Distill-only without fine-tuning yields poor accuracy (<40%); heavy pruning (≥60%) degrades trade-off",
+  "evidence_for_taste": [
+    "approximating pretrained weights is suboptimal",
+    "cannot consistently outperform",
+    "may not have a better trade-off",
+    "time-consuming and suboptimal",
+    "is still dominated by"
+  ],
+  "thinking_moves": [
+    "把顺序流程合并为单次优化以保留中间信息",
+    "从PC-LoRA固定系数改为余弦退火动态调整混合比例",
+    "把层间正则化从常数改为迭代衰减以平衡引导与适应",
+    "把激活统计信息融入SVD初始化以优化近似精度"
+  ],
+  "topic_tags": [
+    "joint-finetuning-compression",
+    "low-rank-decomposition",
+    "activation-aware-initialization",
+    "knowledge-distillation",
+    "vision-transformer-compression"
+  ],
+  "cites_own_work": [
+    "SuperLoRA",
+    "PC-LoRA"
+  ],
+  "extraction_quality": "full"
+}

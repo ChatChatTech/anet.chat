@@ -1,0 +1,42 @@
+{
+  "paper_id": "Cheng et al. - 2024 - SniffySquad Patchiness-Aware Gas Source Localization with Multi-Robot Collaboration",
+  "doi": null,
+  "title": "SniffySquad: Patchiness-Aware Gas Source Localization with Multi-Robot Collaboration",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有气体源定位方法在理想仿真环境中表现良好，但在现实世界的斑块状气体分布环境中失效",
+  "problem_framing": "在斑块状气体分布下协调多个机器人平衡探索新气源位置与排除假阳性源位置",
+  "key_insight": "用Langevin扩散驱动机器人移动方向调节,使机器人能逃离虚假气体斑块;通过温度参数控制探索-利用权衡",
+  "method_signature": "斑块感知主动感知(Langevin MCMC驱动) + 势能引导的角色适应(Explorer/Exploiter)",
+  "evaluation_criteria": "成功率、路径效率(轨迹长度/最小距离)、搜索时间",
+  "negative_result_or_admitted_limitation": "\"Infotaxis suffers from trap in patchy areas\"; \"Surge-Cast yields inefficient zig-zag paths and is the most susceptible to spatial and temporal gas concentration fluctuations\"",
+  "evidence_for_taste": [
+    "these approaches typically excel in idealized, simulated environments but fall short in real-world",
+    "rendering them effective only in idealized scenarios with continuous gas concentration fields",
+    "undermine the simultaneous achievement of both objectives",
+    "induce either gathering or scattering behavior",
+    "either too exploitative movement (low temperature) or explorative movement (high temperature) fails to balance the trade-off",
+    "the success rate quickly decreases",
+    "renders this type of algorithms idealistic"
+  ],
+  "thinking_moves": [
+    "把气体源定位问题重新建模为MCMC采样问题",
+    "用Langevin扩散的噪声项来应对传感器观测的随机性和气体分布的非凸性",
+    "通过温度参数将探索-利用权衡形式化为角色分配问题",
+    "先分析现有方法为何失效(斑块状分布突破), 再针对性设计",
+    "实验验证优势在弱源场景下尤其显著,说明方法的鲁棒性价值"
+  ],
+  "topic_tags": [
+    "multi-robot olfaction",
+    "gas source localization",
+    "patchy plume",
+    "Langevin dynamics",
+    "role adaptation",
+    "probabilistic Bayesian estimation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wu et al. - 2013 - WILL Wireless Indoor Localization without Site Survey",
+  "doi": null,
+  "title": "WILL: Wireless Indoor Localization without Site Survey",
+  "year": 2013,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传统基于RSS指纹的室内定位需要耗费大量人力和时间进行现场勘测,成本高且缺乏灵活性。",
+  "problem_framing": "如何在不进行现场勘测的情况下实现室内定位?将用户运动作为连接独立无线指纹的语义桥梁。",
+  "key_insight": "人的运动可以连接原本独立的无线信号签名;WiFi信号穿过墙壁时会产生明显的RSS衰减。",
+  "method_signature": "RSS堆叠差分特征+虚拟房间聚类+基于用户轨迹构建逻辑平面图+子部分映射方法(SSMM)。",
+  "evaluation_criteria": "房间级定位准确率,即指纹被正确分类到其实际采集所在房间的比例。",
+  "negative_result_or_admitted_limitation": "某些虚拟房间无法区分;走廊段之间没有墙壁隔离,指纹相似度较高,分区不够准确(错误率小于19%可接受)。",
+  "evidence_for_taste": [
+    "time consuming, labor intensive",
+    "competitive performance",
+    "over 80 percent",
+    "higher betweenness",
+    "achieves 93 percent",
+    "acceptable as fingerprints in corridors are farraginous"
+  ],
+  "thinking_moves": [
+    "将用户运动作为语义连接器来关联原本独立的指纹",
+    "发明'虚拟房间'概念替代物理房间定义",
+    "利用图的介数中心性进行骨架映射",
+    "通过用户轨迹而非物理测量构建空间关系图",
+    "承认走廊分区困难但认为可接受"
+  ],
+  "topic_tags": [
+    "WiFi室内定位",
+    "指纹聚类",
+    "虚拟房间生成",
+    "平面图映射",
+    "无现场勘测定位"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文提供的信息足够提取主要认知信号,但DOI、年份(推断)和角色(通讯作者)并非直接从文本中明确获取。"
+}

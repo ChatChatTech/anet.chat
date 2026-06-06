@@ -1,0 +1,39 @@
+{
+  "paper_id": "2023_ICDE_Schemble",
+  "doi": null,
+  "title": "Efficient Deep Ensemble Inference via Query Difficulty-dependent Task Scheduling",
+  "year": 2023,
+  "venue": "ICDE",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "Deep ensemble inference causes unacceptably high deadline miss rates in latency-sensitive tasks, reaching 45% during traffic bursts in real Q&A systems",
+  "problem_framing": "Online scheduling problem: maximize inference accuracy under deadline constraints by dynamically selecting and scheduling base model inference tasks for each query",
+  "key_insight": "78.3% of samples can be correctly predicted by any single base model; only <11% require all models, indicating massive execution redundancy that can be eliminated via difficulty-aware scheduling",
+  "method_signature": "Schemble uses discrepancy score (normalized distance to ensemble output) to predict query difficulty, then schedules base model tasks via DP-based algorithm considering queuing status",
+  "evaluation_criteria": "Deadline miss rate and accuracy given deadline constraints, tested on text matching, vehicle counting, and image retrieval tasks",
+  "negative_result_or_admitted_limitation": "When all queries have similar difficulty (extreme easy or hard), the prediction module adds little value; DP(δ=0.001) incurs extra overhead causing higher miss rate",
+  "evidence_for_taste": [
+    "deadline misses would reduce customer satisfaction and even be fatal",
+    "78.3% of samples can be predicted correctly by any of the three base models",
+    "preferences of deep models are complicated and hard to capture",
+    "takes queue status into account",
+    "DP gets higher accuracy than Greedy algorithms",
+    "predicting discrepancy scores requires a smaller model capacity"
+  ],
+  "thinking_moves": [
+    "Break ensemble inference into multiple independent base model tasks",
+    "Define novel discrepancy score instead of using ensemble agreement",
+    "Tackle scheduling via local subproblem DP when global optimal is intractable",
+    "Contrast system-level deadline constraint problem vs ML accuracy optimization"
+  ],
+  "topic_tags": [
+    "ensemble-inference",
+    "deadline-sensitive-scheduling",
+    "query-difficulty-prediction",
+    "deep-ensemble-efficiency",
+    "task-scheduling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

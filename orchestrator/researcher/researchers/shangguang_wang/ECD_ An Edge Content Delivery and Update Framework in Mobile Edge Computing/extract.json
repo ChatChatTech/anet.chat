@@ -1,0 +1,39 @@
+{
+  "paper_id": "ECD_ An Edge Content Delivery and Update Framework in Mobile Edge Computing",
+  "doi": "10.48550/arxiv.1805.10783",
+  "title": "ECD: An Edge Content Delivery and Update Framework in Mobile Edge Computing",
+  "year": 2018,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "移动设备激增导致核心网负载过重，云数据中心距离远延迟高，用户体验差。",
+  "problem_framing": "将CDN的中心化内容分发重新框架为边缘协作式内容分发与更新，使用Floyd-Warshall对缓存池进行位置 ranking。",
+  "key_insight": "基于帕累托原则，只有少数内容被频繁请求，无需将所有内容上传云端，只需将热门内容逐级向上迁移。",
+  "method_signature": "三层架构（端-边-云）结合内容服务器与缓存池，基于内容popularity和cache pool ranking的边缘内容分发与更新方案。",
+  "evaluation_criteria": "通信成本节省（距离×带宽），与CDN对比，在不同基站数量和请求量下进行成本分析。",
+  "negative_result_or_admitted_limitation": "仅考虑静态基站位置，未研究位置依赖特征对内容存储和更新的影响。",
+  "evidence_for_taste": [
+    "majority of the contents are unnecessary",
+    "According to the Pareto principle",
+    "top ranking cache pools will store higher popularity",
+    "the immediately interactive response can be met",
+    "the cache pools have kinds of decision-making capabilities"
+  ],
+  "thinking_moves": [
+    "将CDN的中心化决策重新框架为边缘自治协作式决策",
+    "用Floyd-Warshall算法将网络拓扑代价转化为缓存池ranking",
+    "利用帕累托原则为内容分层上传提供依据",
+    "从工程异常反推：CDN代理服务器距离用户过远导致延迟高",
+    "通过cost计算量化边缘部署的收益，直观展示优势"
+  ],
+  "topic_tags": [
+    "mobile-edge-computing",
+    "edge-content-delivery",
+    "cache-pool-ranking",
+    "content-popularity",
+    "edge-caching-strategy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

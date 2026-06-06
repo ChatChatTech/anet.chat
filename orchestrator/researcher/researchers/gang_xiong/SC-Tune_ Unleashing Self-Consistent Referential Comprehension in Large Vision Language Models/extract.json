@@ -1,0 +1,39 @@
+{
+  "paper_id": "SC-Tune_ Unleashing Self-Consistent Referential Comprehension in Large Vision Language Models",
+  "doi": "10.48550/arxiv.2403.13263",
+  "title": "SC-Tune: Unleashing Self-Consistent Referential Comprehension in Large Vision Language Models",
+  "year": 2024,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有LVLM在bbox-caption-bbox循环一致性上存在显著缺陷,域外泛化能力急剧下降",
+  "problem_framing": "将视觉语言模型的自洽能力定义为REG和REC任务的循环一致性,并提出交替优化框架",
+  "key_insight": "借鉴DQN目标网络思想,describer和locator互为目标网络,通过交替训练实现协同提升",
+  "method_signature": "SC-Tune cyclical fine-tuning with PPO for describer and MLE for locator",
+  "evaluation_criteria": "IoU>0.5的bbox预测准确率,零样本域外泛化性能",
+  "negative_result_or_admitted_limitation": "引入SC-Tune后在RefCOCO上有轻微性能下降,但这是泛化能力的可接受代价",
+  "evidence_for_taste": [
+    "surprisingly, through preliminary experiments",
+    "dramatically drops on out-of-domain",
+    "not to achieve further improvement on a specific benchmark",
+    "this fluctuation is acceptable as a trade-off",
+    "even specialized model for captioning does not perform as well"
+  ],
+  "thinking_moves": [
+    "从初步实验发现现有方法忽视的自洽能力缺口",
+    "将REG和REC的非对称训练重新框架为循环一致性优化",
+    "借鉴DQN目标网络解决梯度回传中的循环依赖",
+    "接受域内性能下降以换取泛化能力的策略性权衡",
+    "通过可视化案例揭示captioning与grounding能力的不匹配"
+  ],
+  "topic_tags": [
+    "self-consistent referential comprehension",
+    "cyclical describer-locator training",
+    "LVLM fine-tuning",
+    "out-of-domain generalization",
+    "PPO reinforcement learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

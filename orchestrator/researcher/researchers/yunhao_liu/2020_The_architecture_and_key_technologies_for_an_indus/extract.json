@@ -1,0 +1,39 @@
+{
+  "paper_id": "2020_The_architecture_and_key_technologies_for_an_indus",
+  "doi": null,
+  "title": "The architecture and key technologies for an industrial Internet with synergy between the cloud and clients",
+  "year": 2020,
+  "venue": "Scientia Sinica Informationis",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有工业互联网云端融合处于'感联知控'初级阶段，无法应对感知复杂、实体多元、快速处理、智能控制等需求",
+  "problem_framing": "云端分离模式无法保证千级用户万级终端、TB级数据毫秒级工控的实时准确安全决策控制",
+  "key_insight": "通过将报文头部和荷载分离，将变数较大的应用数据转换放在高性能网关上，实现异构网络协议的互联互通",
+  "method_signature": "B ASIC2六层体系结构 + 智感效联迅知谐控四技术体系",
+  "evaluation_criteria": "实时性、准确性、安全性、柔性化工业生产决策控制能力",
+  "negative_result_or_admitted_limitation": "现有公众互联网业务承载隔离能力弱，难以满足大量工业企业专线互联需求；企业数据源差，机器设备等实时数据采集存在很大障碍",
+  "evidence_for_taste": [
+    "互连而不互通",
+    "数据烟囱",
+    "传算过程割裂",
+    "传算相谐",
+    "柔性化生产模式将不断涌现"
+  ],
+  "thinking_moves": [
+    "从问题出发系统梳理现有架构不足，发现云端分离模式的核心缺陷",
+    "把云端融合问题形式化为感联知控四环节的纵向协同",
+    "通过解耦报头与荷载解决异构网络互联的扩展性问题",
+    "从静态传算到动态传算重构以支撑柔性生产",
+    "将工业大数据时效处理问题归约为传算耦合机理"
+  ],
+  "topic_tags": [
+    "cloud-client-integration",
+    "industrial-Internet-architecture",
+    "edge-computing",
+    "networked-big-data",
+    "feedback-control"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs",
+  "doi": "10.48550/arxiv.2503.15341",
+  "title": "Uncertainty-Guided Chain-of-Thought for Code Generation with LLMs",
+  "year": 2025,
+  "venue": "ArXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLMs在简单任务上过度使用CoT推理，导致计算资源浪费且可能因错误推理链产生错误代码",
+  "problem_framing": "将问题定义为不确定性感知的解码问题：在代码行首粒度检测不确定性并选择性触发CoT",
+  "key_insight": "代码行首的预测难度显著高于其他位置，不确定性高时触发CoT-decoding生成多条推理路径选最优",
+  "method_signature": "UnCert-CoT：基于熵或概率差的线级不确定性阈值触发CoT-decoding",
+  "evaluation_criteria": "PassRate（通过测试用例执行验证功能正确性）",
+  "negative_result_or_admitted_limitation": "直接应用原始CoT-Decoding于代码生成导致性能下降，因代码序列长且整体置信度难以评估",
+  "evidence_for_taste": [
+    "paradoxically raise the error rate",
+    "overthinking phenomenon",
+    "prediction difficulty at the beginning of a new line",
+    "reducing the risk of error propagation",
+    "a sequence of discrete steps or reasoning"
+  ],
+  "thinking_moves": [
+    "识别反直觉现象（overthinking）并命名",
+    "从全局CoT转向选择性/自适应CoT",
+    "将代码生成分解为离散推理步骤而非整体置信度",
+    "行级粒度的不确定性分析",
+    "多路径采样后按置信度选择最优"
+  ],
+  "topic_tags": [
+    "LLM-code-generation",
+    "chain-of-thought-reasoning",
+    "uncertainty-decoding",
+    "adaptive-inference",
+    "code-generation-efficiency"
+  ],
+  "cites_own_work": [
+    "Hot or Cold? Adaptive Temperature Sampling for Code Generation (AAAI 2024)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

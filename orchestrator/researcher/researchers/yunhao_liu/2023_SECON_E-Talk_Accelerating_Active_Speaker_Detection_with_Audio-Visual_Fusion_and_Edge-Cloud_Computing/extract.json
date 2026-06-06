@@ -1,0 +1,37 @@
+{
+  "paper_id": "2023_SECON_E-Talk_Accelerating_Active_Speaker_Detection_with_Audio-Visual_Fusion_and_Edge-Cloud_Computing",
+  "doi": null,
+  "title": "E-Talk: Accelerating Active Speaker Detection with Audio-Visual Fusion and Edge-Cloud Computing",
+  "year": 2023,
+  "venue": "SECON",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "Large-scale surveillance上传海量视频导致网络拥塞,带宽成为瓶颈",
+  "problem_framing": "将ASD问题重新建模为边-云协同过滤优化问题,用声纹一致性替代视频序列分析",
+  "key_insight": "声纹比对比视频分析更简单轻量,可作为边缘设备speaker切换的判据",
+  "method_signature": "MFCC+ViBe foreground提取+TalkNet云端脸识别+GMM声纹聚类",
+  "evaluation_criteria": "mAP检测精度,延迟13.12ms,90%帧过滤率",
+  "negative_result_or_admitted_limification": "面部DNN模型在多数情况下脸不可见时准确率低,平均脸检出率仅41.69%",
+  "evidence_for_taste": [
+    "voiceprint consistency as the criterion",
+    "MFCC demonstrates the highest correlation",
+    "deep network-based algorithms cannot operate in real-time",
+    "body crops instead of face crops",
+    "speaker is typically the same person"
+  ],
+  "thinking_moves": [
+    "把perception问题reframe成communication问题:用声纹一致性过滤替代视频传输",
+    "用Pearson相关系数经验筛选特征而非追求最优特征",
+    "承认工程约束(脸不可见、算力不足)并绕开而非硬解"
+  ],
+  "topic_tags": [
+    "edge-cloud-collaborative-computing",
+    "active-speaker-detection",
+    "voiceprint-segmentation",
+    "video-filtering",
+    "audio-visual-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

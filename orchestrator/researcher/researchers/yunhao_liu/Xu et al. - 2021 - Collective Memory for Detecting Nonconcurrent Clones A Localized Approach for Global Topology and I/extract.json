@@ -1,0 +1,41 @@
+{
+  "paper_id": "Xu et al. - 2021 - Collective Memory for Detecting Nonconcurrent Clones A Localized Approach for Global Topology and I",
+  "doi": null,
+  "title": "Collective Memory for Detecting Nonconcurrent Clones: A Localized Approach for Global Topology and Identity Tracing in IoT Networks",
+  "year": 2021,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "IoT设备易被物理捕获复制,现有克隆检测需大量原始信息穿越网络,代价高且隐私风险大",
+  "problem_framing": "将克隆检测从通信范式重新定义为计算域问题,提出本地化计算范式GTI Tracing",
+  "key_insight": "时空域的身份和拓扑连接可以被压缩成一个字节大小的混沌码,通过本地集体记忆实现全局追踪",
+  "method_signature": "GTI Tracing基于混沌码的本地计算范式,利用扰动放大与收敛模块实现蝴蝶效应传播",
+  "evaluation_criteria": "检测准确性、隐私保护、通信/存储/计算开销、收敛时间",
+  "negative_result_or_admitted_limitation": "代码序列检测设计适用于直径有限且拓扑变化缓慢的网络,不适用于快速移动网络如车载网络",
+  "evidence_for_taste": [
+    "do we really need so much raw information?",
+    "whether there is an economical alternative",
+    "seems too costly in a network",
+    "Not suitable for fast-moving networks",
+    "may has limited ability in continuously monitoring"
+  ],
+  "thinking_moves": [
+    "用反问挑战领域共识假设",
+    "将感知问题重新框定为通信问题",
+    "从工程实践反向追问理论基础",
+    "引入混沌系统/蝴蝶效应类比分布式计算",
+    "先证四性(传递/收敛/确定/因果)再给算法",
+    "用数学归纳法证明码的表示形式",
+    "提出本地集体记忆概念替代全局收集"
+  ],
+  "topic_tags": [
+    "clone-attack-detection",
+    "IoT-security",
+    "localized-computation",
+    "collective-memory",
+    "topology-identity-tracing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

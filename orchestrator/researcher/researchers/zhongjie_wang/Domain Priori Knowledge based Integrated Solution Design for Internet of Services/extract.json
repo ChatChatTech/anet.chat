@@ -1,0 +1,43 @@
+{
+  "paper_id": "Domain Priori Knowledge based Integrated Solution Design for Internet of Services",
+  "doi": "10.48550/arxiv.2009.02065",
+  "title": "Domain Priori Knowledge based Integrated Solution Design for Internet of Services",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "服务爆炸导致海量个性化需求难以快速满足，需在构建效率与精度间找平衡",
+  "problem_framing": "将ISS构建形式化为供需匹配的多目标优化问题，本质是NP难问题",
+  "key_insight": "从历史UR和ISS中挖掘双侧模式(RPs/SPs)进行粗粒度模块化以缩小问题规模",
+  "method_signature": "I-Tree建模需求→RP推荐覆盖→PMM匹配SP→ISS组合",
+  "evaluation_criteria": "I-Tree覆盖率最高且RP数量最少",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "Our idea is modularizing fine-grained",
+    "probabilistic matching matrix(PMM)",
+    "The matching probability is calculated by",
+    "only our framework provides the supports",
+    "bidirectional strategy of RE-DE"
+  ],
+  "thinking_moves": [
+    "将NP难优化问题转化为知识复用问题",
+    "从原子级组合转向模式级模块化以降低搜索空间",
+    "用概率匹配矩阵在粗粒度上桥接需求模式与服务模式",
+    "通过双侧模式挖掘双向利用需求侧和供给侧的历史知识",
+    "将复杂问题分解为可迭代求解的小规模子问题"
+  ],
+  "topic_tags": [
+    "Internet-of-Services",
+    "service-pattern-mining",
+    "requirement-pattern",
+    "supply-demand-matching",
+    "I-Tree-model"
+  ],
+  "cites_own_work": [
+    "RE2SEP (our previous works)",
+    "X. Xu et al. 2018 (Computing)",
+    "X. Xu et al. 2017 (IEEE SERVICES)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "缺乏具体实验数据验证框架有效性，结论部分为计划性工作(ongoing/future work)"
+}

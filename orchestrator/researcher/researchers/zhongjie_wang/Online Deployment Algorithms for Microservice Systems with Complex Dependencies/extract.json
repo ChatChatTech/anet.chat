@@ -1,0 +1,39 @@
+{
+  "paper_id": "Online Deployment Algorithms for Microservice Systems with Complex Dependencies",
+  "doi": "10.48550/arxiv.2107.09308",
+  "title": "Online Deployment Algorithms for Microservice Systems with Complex Dependencies",
+  "year": 2021,
+  "venue": "arXiv preprint",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "微服务系统中用户需求频繁变化导致QoS下降,而现有算法未充分考虑服务依赖复杂性和多实例部署",
+  "problem_framing": "将服务放置问题(SPPMS)形式化为分数多项式问题(FPP),支持多应用复杂依赖和多实例",
+  "key_insight": "证明定理将FPP转换为QSRFP,使得每个服务的最优部署仅与其前驱和后继节点相关,无需遍历所有响应路径",
+  "method_signature": "B-QSRFP和D-QSRFP两种贪心算法,基于依赖图的拓扑序部署服务实例",
+  "evaluation_criteria": "平均响应时间和执行时间(需<10s满足在线需求)",
+  "negative_result_or_admitted_limitation": "100服务器规模下BD-QSRFP执行时间约52s,不适合在线算法;GA在大规模场景下性能最差",
+  "evidence_for_taste": [
+    "each component is only deployed on one server",
+    "makes them less effective in microservice systems",
+    "too costly for an online algorithm",
+    "GA performed worse than other experiments",
+    "100 servers are too many for our algorithms"
+  ],
+  "thinking_moves": [
+    "将高复杂度的FPP通过定理证明转换为可高效求解的QSRFP形式",
+    "利用函数链的路径可分解性将全局遍历问题转化为局部邻居优化",
+    "通过贪心策略在依赖图拓扑序上逐步部署,避免全局搜索"
+  ],
+  "topic_tags": [
+    "microservice-deployment",
+    "edge-computing",
+    "service-placement",
+    "fractional-optimization",
+    "greedy-algorithm"
+  ],
+  "cites_own_work": [
+    "prior work [31] considered dependencies but uses relaxed ILP unsuitable for online systems"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

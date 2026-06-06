@@ -1,0 +1,37 @@
+{
+  "paper_id": "Chen et al. - 2018 - Minimizing the Cask Effect of Multi-Source Content Delivery",
+  "doi": null,
+  "title": "Minimizing the Cask Effect of Multi-Source Content Delivery",
+  "year": 2018,
+  "venue": "IEEE",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "多源下载加速功能在商业系统中约23%失败，性能不达预期",
+  "problem_framing": "将多源下载性能下降定义为异常现象，通过大规模数据集量化分析根因",
+  "key_insight": "短板决定整体加速效果——最差数据源主导多源传输性能的木桶效应",
+  "method_signature": "基于1.36B任务日志的数据驱动分析，量化DPT与AR的相关性",
+  "evaluation_criteria": "下载速度增长率、下载失败率、加速率AR、DPT指标",
+  "negative_result_or_admitted_limitation": "多源加速功能约23%无法达到提速目标，实际效果远未理想",
+  "evidence_for_taste": [
+    "23% of downloads become slower",
+    "weak points can disturb the acceleration",
+    "cask effect mainly depends on inferior sources",
+    "larger DPT, stronger interference"
+  ],
+  "thinking_moves": [
+    "从工程异常反推底层物理假设失效",
+    "用木桶效应隐喻重新框定问题",
+    "通过大比例尺数据集建立统计相关性",
+    "将直觉洞察量化为DPT/AR比值指标"
+  ],
+  "topic_tags": [
+    "multi-source content delivery",
+    "cask effect bottleneck",
+    "download acceleration anomaly",
+    "M-Downloader dataset",
+    "peer-assisted systems"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

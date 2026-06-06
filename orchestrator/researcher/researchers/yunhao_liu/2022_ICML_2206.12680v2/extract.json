@@ -1,0 +1,38 @@
+{
+  "paper_id": "2022_ICML_2206.12680v2",
+  "doi": null,
+  "title": "Topology-aware Generalization of Decentralized SGD",
+  "year": 2022,
+  "venue": "ICML",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "D-SGD 广泛使用,但通信拓扑如何影响泛化能力缺乏理论理解,现有文献声称结果是vacuous",
+  "problem_framing": "将通信拓扑对泛化的影响形式化为通过spectral gap衡量的稳定性-泛化界",
+  "key_insight": "共识模型的分布式稳定性为 O(m/N + 1/m + λ²),其中spectral gap 1-λ直接控制泛化界质量",
+  "method_signature": "定义分布式on-average stability并连接Hölder连续条件下的泛化界",
+  "evaluation_criteria": "测量不同拓扑下训练损失与验证损失的差值,验证spectral gap与泛化的正相关性",
+  "negative_result_or_admitted_limitation": "完全连接拓扑初期loss差更大,这似乎与理论不符,但他们认为这是优化问题超出本文范围",
+  "evidence_for_taste": [
+    "non-vacuous, even when λ is closed to 1",
+    "contradicts the experimental results",
+    "To our best knowledge, this is the first work",
+    "theoretical evidence for",
+    "our work makes two contributions"
+  ],
+  "thinking_moves": [
+    "将一个perception问题(frame为communication问题)重新用稳定性分析框架处理",
+    "从Sun等人(2021)的projected D-SGD结果中发现其对vanilla D-SGD不适用",
+    "通过empirical observation(weight difference服从正态分布)为理论假设提供依据",
+    "用spectral gap作为桥梁连接communication topology和algorithmic stability"
+  ],
+  "topic_tags": [
+    "decentralized-SGD",
+    "algorithmic-stability",
+    "spectral-gap-generalization",
+    "topology-aware-learning",
+    "consensus-control"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

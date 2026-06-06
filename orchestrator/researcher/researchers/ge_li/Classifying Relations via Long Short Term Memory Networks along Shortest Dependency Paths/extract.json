@@ -1,0 +1,41 @@
+{
+  "paper_id": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths",
+  "doi": "10.18653/v1/d15-1206",
+  "title": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Paths",
+  "year": 2015,
+  "venue": "ACL",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Relation classification需要自动特征学习，现有特征工程和核方法依赖人工设计且改进困难",
+  "problem_framing": "将关系分类建模为沿最短依存路径的双向LSTM序列建模问题",
+  "key_insight": "最短依存路径集中了分类所需的最相关词汇，同时排除无关噪声",
+  "method_signature": "SDP-LSTM：沿最短依存路径分离双向子路径的多通道LSTM网络",
+  "evaluation_criteria": "SemEval 2010 Task 8 macro-averaged F1-score",
+  "negative_result_or_admitted_limitation": "Dropout LSTM内部单元会损害模型性能，即使dropout rate很小(如0.1)",
+  "evidence_for_taste": [
+    "most relevant information",
+    "eliminating irrelevant words",
+    "Direction matters",
+    "direction-sensitive manner",
+    "complementary to each other",
+    "hurts the model"
+  ],
+  "thinking_moves": [
+    "从语言学直觉出发：依存关系是有向的，因此关系也有方向性，需分别处理两个子路径",
+    "将信息分类为异构通道：词、POS标签、依存关系、WordNet上位词，互不干扰并行处理",
+    "通过消融实验发现：LSTM内部dropout有害，但embedding dropout有效，揭示LSTM记忆机制的脆弱性",
+    "观察到不同通道信息'互补'而非简单叠加，判断其具有不同语言学价值"
+  ],
+  "topic_tags": [
+    "relation-classification",
+    "shortest-dependency-path",
+    "LSTM-recurrent-network",
+    "multichannel-word-embedding",
+    "directed-relation-detection"
+  ],
+  "cites_own_work": [
+    "Mou et al. 2015"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

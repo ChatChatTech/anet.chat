@@ -1,0 +1,43 @@
+{
+  "paper_id": "LoongTrain_ Efficient Training of Long-Sequence LLMs with Head-Context Parallelism",
+  "doi": "10.48550/arxiv.2406.18485",
+  "title": "LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "长序列LLM训练面临内存与算力瓶颈,现有序列并行方案在扩展性或通信效率上存在根本性制约",
+  "problem_framing": "Ulysses-Attention受限于注意力头数量,扩展性有上限; Ring-Attention的P2P通信开销在高并行度下成为瓶颈",
+  "key_insight": "将head-parallel与context-parallel组成二维网格d_hp×d_cp,在突破扩展性限制的同时通过限制d_cp减少P2P步骤",
+  "method_signature": "2D-Attention(d_hp×d_cp grid) + Double-Ring-Attention(inner/outer rings) + 设备放置策略",
+  "evaluation_criteria": "Model FLOPs Utilization(MFU), 端到端训练吞吐量(TGS), GPU扩展规模(64-512 GPUs), 序列长度(128K-1M)",
+  "negative_result_or_admitted_limitation": "KV replication会增大网络通信量; d_cp过大时需跨节点通信; Double-Ring-Attention在长序列时效果受限(通信已可被计算覆盖)",
+  "evidence_for_taste": [
+    "P2P encounters issues of low intra-node bandwidth utilization",
+    "communication overheads when scaling out the context-parallel dimension",
+    "computation time per micro-step decreases linearly when d_cp is increased",
+    "SeqAlltoAll leverages the intra-node high-bandwidth NVLINK",
+    "the global batch size poses a challenge for the computation-communication ratio",
+    "Ring-Attention encounters bottlenecks due to the P2P communication",
+    "bubble rate reaches 2 even under zero-bubble mechanisms"
+  ],
+  "thinking_moves": [
+    "从硬件拓扑不对称性(节点内600GB/s vs 节点间400GB/s)推导设备放置策略差异",
+    "将head-parallel和context-parallel的各自局限转化为互补优势: HP受头数约束但通信高效, CP可无限扩展但通信昂贵",
+    "用比例分析揭示Ring-Attention的渐近瓶颈: 计算时间随d_cp平方下降,通信量仅线性减少",
+    "承认KV replication的双刃剑效应: 解锁d_hp扩展但增加网络流量"
+  ],
+  "topic_tags": [
+    "distributed-training",
+    "sequence-parallelism",
+    "attention-mechanism",
+    "LLM-training",
+    "communication-overlap"
+  ],
+  "cites_own_work": [
+    "InternEvo (https://github.com/InternLM/InternEvo)",
+    "AMSP (2023) for sharding strategies"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "完整提取了论文的系统性思考过程,从硬件瓶颈识别→问题形式化→二维分解→双环优化→设备放置的理论分析框架 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,43 @@
+{
+  "paper_id": "Zhang et al. - 2014 - It starts with iGaze visual attention driven networking with smart glasses",
+  "doi": null,
+  "title": "It Starts with iGaze: Visual Attention Driven Networking with Smart Glasses",
+  "year": 2014,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "智能眼镜用户需要与周围物理和网络世界建立联系，但现有方案需要预交换标识符、手势或图像识别，无法根据用户视觉注意意图自动配对设备",
+  "problem_framing": "将视觉注意感知问题形式化为寻找视线向量与设备向量之间的一致性关系，通过双重匹配策略连接用户与目标设备",
+  "key_insight": "利用视线方向与设备方向的内在一致性作为视觉平面与设备平面之间的桥梁，结合多普勒效应精确追踪头部轻微运动实现方向测量",
+  "method_signature": "单目虹膜椭圆反投影法恢复视线方向，PLL相位追踪双扬声器相对位移获取设备方向",
+  "evaluation_criteria": "方向精度<5度，95%注意力捕获正确率，误报率<3%，功耗支持5小时连续工作",
+  "negative_result_or_admitted_limitation": "误报率与误漏率存在权衡，阈值15%误漏率难以避免；系统假设目标相对静态，无法追踪移动目标；意图捕获与理解仍是待解决的艰巨任务",
+  "evidence_for_taste": [
+    "The gap between these two planes raises a challenge",
+    "iGaze applies to scenarios where the visual target is relatively static",
+    "This is clearly a daunting task even for human being",
+    "false negative is about 15%",
+    "considerable performance improvements are possible",
+    "aesthetic design aspects are beyond the scope"
+  ],
+  "thinking_moves": [
+    "把感知问题(眼动追踪)重新框定为通信问题(设备配对)",
+    "定义一致性关系作为连接视觉平面与设备平面的桥梁",
+    "利用头部轻微运动产生的多普勒效应而非依赖大位移",
+    "用陀螺仪检测头部注视状态来触发相机以降低能耗",
+    "承认现有简化假设在实际场景中的局限性"
+  ],
+  "topic_tags": [
+    "gaze-tracking",
+    "smart-glasses",
+    "device-pairing",
+    "doppler-acoustic-ranging",
+    "visual-attention-networking"
+  ],
+  "cites_own_work": [
+    "Zhang et al. - 2013 - Message in a sealed bottle",
+    "Zhang et al. - 2014 - Montage"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

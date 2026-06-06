@@ -1,0 +1,38 @@
+{
+  "paper_id": "Learning to Represent Programs with Heterogeneous Graphs",
+  "doi": "10.48550/arxiv.2012.04188",
+  "title": "Learning to Represent Programs with Heterogeneous Graphs",
+  "year": 2022,
+  "venue": "ICPC '22",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有代码表示的图模型忽视节点和边的语义类型信息,导致无法区分标识符和运算符,且图结构存在歧义(如a-b与b-a无法区分)",
+  "problem_framing": "将AST转化为异构图(HPG),显式编码节点类型和边类型,利用ASDL语法提取类型信息,采用异构图Transformer处理",
+  "key_insight": "借助ASDL语法自然获得节点/边类型,联合元关系(节点类型+边类型+目标节点类型)使模型能区分stmt-body-stmt与Except-body-stmt等不同语义",
+  "method_signature": "HPG(基于ASDL的异构程序图)+HGT(异构图Transformer)",
+  "evaluation_criteria": "方法名预测F1和精确率/召回率;代码分类准确率",
+  "negative_result_or_admitted_limitation": "缺少NextSib或NextToken边时性能显著下降(约1-1.4%);全节点解码比仅子token解码F1下降4.57%",
+  "evidence_for_taste": [
+    "this may cause the learning procedure of the model much easier",
+    "the heterogeneous types in HPG are capable to improve the performance",
+    "the design of each component in HPG+HGT is necessary",
+    "significantly better than those without NextSib",
+    "the model cannot distinguish the type of a, -, and b"
+  ],
+  "thinking_moves": [
+    "从homogeneous图的局限出发:识别类型缺失导致语义模糊问题",
+    "借用ASDL grammar将抽象语法规则转化为显式类型系统",
+    "用meta relation联合建模节点类型和边类型,区分body边在不同上下文的不同语义",
+    "通过消融实验验证每个组件的必要性,非仅与baseline比较"
+  ],
+  "topic_tags": [
+    "code-representation",
+    "heterogeneous-graph-neural-network",
+    "AST-typing",
+    "program-comprehension",
+    "method-name-prediction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

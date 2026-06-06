@@ -1,0 +1,42 @@
+{
+  "paper_id": "Yang et al. - 2010 - Identification-free batch authentication for RFID tags",
+  "doi": null,
+  "title": "Identification-Free Batch Authentication for RFID Tags",
+  "year": 2010,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RFID批认证速度极慢：识别10000标签需100秒，传输认证数据需780秒，导致一台读卡器每天只能验证约103批次产品",
+  "problem_framing": "将批认证重新定义为概率检测问题：不要求检测每一个假冒标签，而是保证批次中假冒比例以高概率低于用户设定的容忍阈值ε",
+  "key_insight": "不需要识别每个标签，而是利用Framed Slotted ALOHA中冲突槽的统计特性，通过检测异常回波来判断批次是否包含假冒标签",
+  "method_signature": "SEBA协议：利用标签密钥而非ID选择时隙，将批次响应抽象为Echo Sketch，在服务端与预期回波比对检测异常",
+  "evaluation_criteria": "检测准确率(1-δ)、扫描时间开销、通信数据量、与SMP和全认证方法的性能对比",
+  "negative_result_or_admitted_limitation": "SMP采样方案仍需采样30%的产品才能达到99.99%置信度下0.3%容忍阈值，产生1.1M字节认证数据，仍有较高开销",
+  "evidence_for_taste": [
+    "not always necessary to ensure the genuineness of every single product",
+    "defective ones shipped from the manufacture",
+    "one reader can only uninterruptedly verify 24×60/14≈103 batches per day",
+    "Extremely low authentication efficiency is unacceptable in practice",
+    "It is equivalent to increasing the ratio of counterfeit tags",
+    "which helps to increase the probability of detecting counterfeit tags"
+  ],
+  "thinking_moves": [
+    "从现实瓶颈（扫描时间+通信开销）反推现有per-tag范式的根本局限",
+    "将确定性问题松弛为概率约束，允许少量漏检以换取效率提升",
+    "把识别问题重新frame成异常检测问题，利用冲突槽统计特性作为检测信号",
+    "从SMP的被动采样转向协议主动构造可检测的异常模式"
+  ],
+  "topic_tags": [
+    "RFID-batch-authentication",
+    "probabilistic-verification",
+    "anti-counterfeiting",
+    "collision-detection",
+    "echo-sketch"
+  ],
+  "cites_own_work": [
+    "Yang et al. - 2010 - Revisiting Tag Collision Problem in RFID Systems",
+    "Lu et al. - 2009 - ACTION: Breaking the Privacy Barrier for RFID Systems"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文正文完整，包含摘要、方法、分析、实验和结论，但缺少明确的会议/期刊名称。实验部分有部分图表引用但基本可推导。 | md truncated to head40k+tail20k"
+}

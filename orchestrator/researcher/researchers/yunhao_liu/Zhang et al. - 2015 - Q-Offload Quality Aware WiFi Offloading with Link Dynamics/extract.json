@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhang et al. - 2015 - Q-Offload Quality Aware WiFi Offloading with Link Dynamics",
+  "doi": null,
+  "title": "Q-offload: Quality Aware WiFi Offloading with Link Dynamics",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WiFi offloading assumed always energy efficient, but experiments show 45.6% download and 20.1% upload cases consume MORE energy than cellular due to link quality variation",
+  "problem_framing": "Online knapsack problem with unknown optimal number of knapsacks; NP-hard, no competitive deterministic online algorithm exists",
+  "key_insight": "Real-time requirements not tight for most traffic; link utilization only 26-30%, allowing rescheduling to good link quality periods",
+  "method_signature": "Iterative MPC-based framework with dynamic window length, greedy local scheme, and deadline guarantee mechanism",
+  "evaluation_criteria": "Energy per KB (Eb), throughput, deadline violation ratio; compared with Wiffler, eTime, QATO, Oracle",
+  "negative_result_or_admitted_limitation": "Problem NP-hard with no competitive deterministic online algorithm; approximation ratio to oracle is only 0.775 (0.51-0.91); QATO wastes energy in radio state transitions (RRC_PROMOTION, RRC_Tail)",
+  "evidence_for_taste": [
+    "problem is still NP-hard",
+    "does not admit any competitive deterministic online algorithm",
+    "we find that in 45.6% download cases",
+    "WiFi offloading brings no energy benefit",
+    "approximation ratio between Q-offload and the oracle scheme is not significant",
+    "the E_b of QATO is the highest among four schemes"
+  ],
+  "thinking_moves": [
+    "从默认假设失效出发：WiFi offloading assumed always energy efficient → empirical falsification",
+    "先证计算复杂度下界(NP-hard), 再转向启发式方法(MPC)",
+    "把能量优化问题重新frame成link quality scheduling问题",
+    "通过CDF量化展示link quality variation的分布特征",
+    "区分throughput改善和energy efficiency: QATO throughput相当但Eb最高"
+  ],
+  "topic_tags": [
+    "WiFi-offloading",
+    "energy-efficient-networking",
+    "link-quality-prediction",
+    "deadline-constrained-scheduling",
+    "smartphone-power-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue tier unclear from paper (appears conference but name not explicitly stated). Role for Yunhao Liu as co-author identified from author list position."
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "Yang et al. - 2010 - Beyond Trilateration On the Localizability of Wireless Ad Hoc Networks",
+  "doi": null,
+  "title": "Beyond Trilateration: On the Localizability of Wireless Ad Hoc Networks",
+  "year": 2010,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": " Trilateration wrongly recognizes localizable graphs as nonlocalizable",
+  "problem_framing": "Test localizability by identifying wheel graphs in one-hop neighborhoods",
+  "key_insight": "Trilateration is a special case (minimum wheel graph with four vertices) of wheel graphs",
+  "method_signature": "WHEEL: find wheel vertices by block calculation in N[v]",
+  "evaluation_criteria": "Recognition rate of localizable nodes vs trilateration baseline",
+  "negative_result_or_admitted_limitation": "Lack theoretical analyses of gap between WHEEL and trilateration",
+  "evidence_for_taste": [
+    "trilateration wrongly reports",
+    "recognizes only a subset",
+    "improve the performance",
+    "achieves the upper-bound",
+    "In practice, RSS-based ranging",
+    "This is a direction of our future studies"
+  ],
+  "thinking_moves": [
+    "把trilateration退化成wheel graph的特例来理解",
+    "从图论 rigidity 性质推导出局部化的充分条件",
+    "先证明必要条件(Lemma 4)再给出充要条件(Theorem 1)",
+    "用prototype+simulation双重验证工程可行性"
+  ],
+  "topic_tags": [
+    "wireless-ad-hoc-localization",
+    "graph-rigidity-localizability",
+    "trilateration-limitation",
+    "wheel-graph-localization",
+    "distributed-algorithm"
+  ],
+  "cites_own_work": [
+    "OceanSense project (prior work on sea depth measurement)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

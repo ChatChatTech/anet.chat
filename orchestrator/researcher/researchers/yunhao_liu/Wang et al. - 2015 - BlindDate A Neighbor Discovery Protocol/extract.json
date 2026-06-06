@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2015 - BlindDate A Neighbor Discovery Protocol",
+  "doi": null,
+  "title": "BlindDate: A Neighbor Discovery Protocol",
+  "year": 2015,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "移动社交和城市传感应用需要高效的邻居发现协议，但设备能量受限且时钟异步，导致现有协议效率低下",
+  "problem_framing": "将邻居发现问题形式化为异步设备间活动时隙的重叠问题，要求在相同时/不同duty cycle下最小化发现延迟",
+  "key_insight": "通过在同一设备的多个Dynamic块中使用相反移动方向的bouncing slots，使不同设备的Dynamic slots在重叠区相遇的概率最大化",
+  "method_signature": "将周期t分为m块、每块s时隙，设Static slot固定+Dynamic slot bouncing移动，k=2,m=5为最优奇数配置",
+  "evaluation_criteria": "worst-case discovery latency bound和average-case latency，在相同时duty cycle下与Disco/U-Connect/Searchlight比较",
+  "negative_result_or_admitted_limitation": "当m为奇数且p=1时无法找到可行解；asymmetric case只给出宽松上界，实际性能可能更好",
+  "evidence_for_taste": [
+    "Unluckily, we cannot find a feasible solution",
+    "the worst-case discovery latency of BD protocol is around 10 percent smaller",
+    "BD protocol achieves 30 40 percent performance gain in average",
+    "we cannot neglect the fact that this increases the energy consumption"
+  ],
+  "thinking_moves": [
+    "case-by-case分析k与m的关系以保证发现成功",
+    "从Searchlight的单probe slot扩展到多 Dynamic slots with opposite directions",
+    "通过bouncing step=2使hyper-period减半，从而延迟减半",
+    "针对alignment case的slot jump问题，用延长beacon时间+平移到相邻slot解决"
+  ],
+  "topic_tags": [
+    "duty-cycled-wireless",
+    "neighbor-discovery",
+    "asynchronous-protocol",
+    "deterministic-scheduling",
+    "mobile-ad-hoc"
+  ],
+  "cites_own_work": [
+    "conference version [24]"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "paper content完整但conference version [24]未提供；role根据署名顺序和senior author位置判断"
+}

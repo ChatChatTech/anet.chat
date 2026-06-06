@@ -1,0 +1,43 @@
+{
+  "paper_id": "Early Validation of Cyber-Physical Space Systems via Multi-Concerns Integration",
+  "doi": "10.48550/arxiv.2007.06719",
+  "title": "Early Validation of Cyber-Physical Space Systems via Multi-Concerns Integration",
+  "year": 2020,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CPSS设计时多关注交织难以探索比较,需分离关注点支持早期验证",
+  "problem_framing": "将CPSS拆分为空间活动、交互、任务三个可独立建模的关注点",
+  "key_insight": "分离关注点建模后系统集成,可获得早期设计洞察虽非完备保证",
+  "method_signature": "分离建模→半自动集成STA→UPPAAL-SMC统计模型检验",
+  "evaluation_criteria": "目标达成概率与分析时间,对比协议和空间布局变化",
+  "negative_result_or_admitted_limitation": "统计模型检验不提供确定性保证,仅能在设计早期提供有价值洞察",
+  "evidence_for_taste": [
+    "validation methods may not offer definitive assurances",
+    "may not offer definitive assurances like formal verification",
+    "Such validation methods may not offer definitive assurances",
+    "scalable even to larger models",
+    "analysis itself is a design time activity",
+    "feasible with traditional, explicit-state model checking"
+  ],
+  "thinking_moves": [
+    "承认方法局限性:统计检验不能给出完备保证,仅提供设计早期洞察",
+    "承认性能代价:500建筑1000受害者的场景需33分钟分析",
+    "将设计权衡显式化:切换协议和空间布局的量化影响",
+    "性能作为设计时活动可接受:分析时间是设计时活动而非运行时"
+  ],
+  "topic_tags": [
+    "separation-of-concerns",
+    "statistical-model-checking",
+    "cyber-physical-systems",
+    "multi-concern-integration",
+    "early-validation"
+  ],
+  "cites_own_work": [
+    "[2] Tsigkanos 2017",
+    "[28] Visconti 2019",
+    "[4] Tsigkanos 2018"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

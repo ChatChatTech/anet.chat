@@ -1,0 +1,41 @@
+{
+  "paper_id": "Architecture and key technologies for Internet of Vehicles_ a survey",
+  "doi": "10.1007/s41650-017-0018-6",
+  "title": "Architecture and key technologies for Internet of Vehicles: a survey",
+  "year": 2017,
+  "venue": "Journal of communications and information networks",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "交通拥堵、事故、能源消耗等问题亟需IoV解决，但现有研究缺乏统一概念和架构",
+  "problem_framing": "将IoV问题定义为开放融合网络系统需四层架构，核心挑战是人一车一环境协同",
+  "key_insight": "从应用层分离出协同计算控制层，并通过虚拟车辆(VV)解决物理空间通信瓶颈",
+  "method_signature": "综述提出四层IoV架构并构建虚拟车辆(VV)作为人一车在赛博空间的智能代理",
+  "evaluation_criteria": "通过对比现有定义、架构和技术，分析IoV发展现状与挑战",
+  "negative_result_or_admitted_limitation": "现有传感技术缺乏有效协同机制；现有研究未考虑车速和带宽等车辆特性",
+  "evidence_for_taste": [
+    "不同人理解不同导致人车协调问题",
+    "IoV是开放融合网络系统",
+    "用虚拟车辆解决通信瓶颈",
+    "将感知问题转化为通信问题",
+    "从中间层连接单车控制与车流控制"
+  ],
+  "thinking_moves": [
+    "统一碎片化认知：不同行业对IoV的不同理解需整合",
+    "架构分层思维：从功能需求和预期目标划分四层结构",
+    "引入中介实体：虚拟车辆作为物理与赛博空间的代理",
+    "问题转化：将感知协同问题重新frame为通信问题",
+    "中间层思维：VV连接单车控制与交通流控制"
+  ],
+  "topic_tags": [
+    "IoV架构设计",
+    "协同计算控制层",
+    "虚拟车辆VV",
+    "人一车一环境协同",
+    "异构网络传输"
+  ],
+  "cites_own_work": [
+    "An overview of internet of vehicles (2014)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为综述性质，首次提出四层IoV架构并创新性引入虚拟车辆(VV)概念，是IoV领域的基础性工作 | md truncated to head40k+tail20k"
+}

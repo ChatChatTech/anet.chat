@@ -1,0 +1,39 @@
+{
+  "paper_id": "Knowledge Based Machine Reading Comprehension",
+  "doi": "10.48550/arxiv.1809.04267",
+  "title": "Knowledge Based Machine Reading Comprehension",
+  "year": 2018,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有 MRC 数据集问题多为浅层匹配,无法测试知识推理能力,需推动基于知识的推理研究",
+  "problem_framing": "将文档转为三元组知识,结合外部知识库,要求模型在知识图谱上进行多跳推理",
+  "key_insight": "知识以三元组表示与外部KB格式一致,便于整合外部知识并提供可解释的推理路径",
+  "method_signature": "PCNet 路径匹配 + KVMemNet 记忆网络 + QGNet 问题生成,三者加权融合",
+  "evaluation_criteria": "P@1 排序精度和 BLEU 生成质量",
+  "negative_result_or_admitted_limitation": "QGNet 用于 QA 任务提升有限(41.5% vs 63.6%),锚点检测覆盖率仅 69.6%",
+  "evidence_for_taste": [
+    "existing datasets are typically dominated",
+    "fails to test this capability",
+    "incorporating side information from external KB",
+    "despite the interpretability of PCNet",
+    "coverage of anchor detection limits the upper bound",
+    "slight improvements on NELL and Reverb"
+  ],
+  "thinking_moves": [
+    "发现现有数据集的 shallow 缺陷,主动构建更具挑战性的评测",
+    "从 KBQA 吸收 ranking-based 思路,用外部 KB 增强文档知识",
+    "将生成式任务(QG)与判别式任务(QA)组合,互为补充",
+    "承认单一模型的 coverage 上限,用 ensemble 突破瓶颈"
+  ],
+  "topic_tags": [
+    "knowledge-based MRC",
+    "open KB integration",
+    "triplet reasoning",
+    "multi-hop QA",
+    "neural-symbolic integration"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

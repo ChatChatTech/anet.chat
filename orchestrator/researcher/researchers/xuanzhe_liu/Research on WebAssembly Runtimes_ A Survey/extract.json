@@ -1,0 +1,40 @@
+{
+  "paper_id": "Research on WebAssembly Runtimes_ A Survey",
+  "doi": "10.48550/arxiv.2404.12621",
+  "title": "Research on WebAssembly Runtimes: A Survey",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Wasm运行时研究快速增加，但缺乏系统性综述来整合该领域",
+  "problem_framing": "从内部(设计/测试/分析)和外部(应用场景)两个角度分类现有研究",
+  "key_insight": "首次提出将Wasm运行时研究按内部与外部双维度系统化分类",
+  "method_signature": "系统文献综述，收集98篇论文，Kitchenham流程，前向/后向滚雪球",
+  "evaluation_criteria": "应用场景分布、研究方向分布、发表 venue 分布",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "To the best of our knowledge, this is the first survey",
+    "the number of papers related to Wasm runtime is rapidly increasing",
+    "we characterize existing studies from two different angles",
+    "the internal research of Wasm runtimes",
+    "the external research of Wasm runtimes"
+  ],
+  "thinking_moves": [
+    "按内部/外部双维度构建分类框架，将分散的研究归入统一视角",
+    "用系统综述流程确认gap而非仅凭直觉声称贡献",
+    "通过venue分布和数据量化展示研究成熟度和多样性",
+    "将JS引擎和独立运行时都纳入Wasm运行时定义，统一研究边界"
+  ],
+  "topic_tags": [
+    "WebAssembly runtime survey",
+    "Wasm runtime classification",
+    "Wasm application scenarios",
+    "literature review methodology",
+    "Wasm security and performance"
+  ],
+  "cites_own_work": [
+    "Characterizing and Detecting WebAssembly Runtime Bugs (2023)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

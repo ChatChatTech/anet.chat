@@ -1,0 +1,40 @@
+{
+  "paper_id": "Learning to Select Bi-Aspect Information for Document-Scale Text Content Manipulation",
+  "doi": "10.48550/arxiv.2002.10210",
+  "title": "Learning to Select Bi-Aspect Information for Document-Scale Text Content Manipulation",
+  "year": 2020,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有数据生成方法只关注内容保真度，缺乏对语言风格的控制能力，体育报道等场景需要生成具有特定写作风格的文档",
+  "problem_framing": "给定结构化记录集和参考文本，生成保留参考风格但描述新记录内容的长文档，无并行数据支撑的监督学习",
+  "key_insight": "通过交互注意力机制建模记录与参考文本的语义关联，实现从双aspect输入中选择合适内容并同时保留风格",
+  "method_signature": "分层记录编码器+交互注意力+复制机制+回译训练",
+  "evaluation_criteria": "内容保真度(CF)、风格保留度(Style BLEU)、内容选择精度/召回率(CS)、人工评估",
+  "negative_result_or_admitted_limitation": "当使用平行结构等表达时，模型会产生错误表达(如'Davis 20分12篮板1抢断2盖帽'的列表格式错误)；句子级方法在文档级任务上无法保留风格词",
+  "evidence_for_taste": [
+    "Style BLEU scores are particularly low",
+    "direct supervised learning is incapable of controlling",
+    "can hardly preserve the style word",
+    "does not satisfy the original intention of content selection",
+    "cannot bring a significant gain"
+  ],
+  "thinking_moves": [
+    "将风格迁移逆问题化为内容操作，利用参考文本提供风格锚点",
+    "从文档级任务反推，发现句子级方法缺乏跨尺度建模能力",
+    "引入回译构造伪训练对，将无监督问题转化为多目标联合训练",
+    "用消融实验验证交互注意力对双aspect信息选择的关键作用"
+  ],
+  "topic_tags": [
+    "document-level-style-transfer",
+    "bi-aspect-attention",
+    "data-to-text-generation",
+    "unsupervised-text-manipulation",
+    "content-selection"
+  ],
+  "cites_own_work": [
+    "Gong et al. 2019a",
+    "Gong et al. 2019b"
+  ],
+  "extraction_quality": "full"
+}

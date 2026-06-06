@@ -1,0 +1,43 @@
+{
+  "slug": "mingyi_liu",
+  "n_papers": 1,
+  "n_indexed": 1,
+  "anchors": [
+    "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+  ],
+  "by_id": {
+    "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures": {
+      "title": "I Experienced More than 10 DeFi Scams: On DeFi Users' Perception of Security Breaches and Countermeasures",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2406.15709",
+      "key_insight": "受害用户不改安全习惯、快速换服务恢复损失,像赌博成瘾",
+      "method_signature": "混合方法:半结构化访谈(N=14)+问卷调查(N=493)",
+      "tags": [
+        "DeFi安全感知",
+        "用户风险行为",
+        "受害后恢复心理",
+        "DeFi监管",
+        "加密货币安全认知"
+      ],
+      "quality": "partial"
+    }
+  },
+  "by_tag": {
+    "DeFi安全感知": [
+      "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+    ],
+    "用户风险行为": [
+      "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+    ],
+    "受害后恢复心理": [
+      "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+    ],
+    "DeFi监管": [
+      "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+    ],
+    "加密货币安全认知": [
+      "I Experienced More than 10 DeFi Scams_ On DeFi Users' Perception of Security Breaches and Countermeasures"
+    ]
+  }
+}

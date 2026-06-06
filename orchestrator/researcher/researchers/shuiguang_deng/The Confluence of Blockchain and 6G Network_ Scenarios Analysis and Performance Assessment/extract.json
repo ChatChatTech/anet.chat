@@ -1,0 +1,40 @@
+{
+  "paper_id": "The Confluence of Blockchain and 6G Network_ Scenarios Analysis and Performance Assessment",
+  "doi": "10.48550/arxiv.2207.04744",
+  "title": "The Confluence of Blockchain and 6G Network: Scenarios Analysis and Performance Assessment",
+  "year": 2022,
+  "venue": "arXiv preprint",
+  "venue_tier": "preprint",
+  "role": "corresponding",
+  "motivation": "5G无法满足6G应用的高安全需求，现有研究缺乏对区块链在6G场景下的性能评估方法",
+  "problem_framing": "将区块链整合6G的问题分解为why-what-when三个维度，抽象出七类场景并分析交易到达率模型",
+  "key_insight": "正确配置的联盟链可满足6G网络性能要求，但需通过泊松分布模型和实验验证各场景的适用性",
+  "method_signature": "七场景抽象+泊松到达率模型+Quorum链多节点实验的性能评估方法论",
+  "evaluation_criteria": "TPS吞吐量、延迟、CPU利用率与内存消耗",
+  "negative_result_or_admitted_limitation": "AAA场景的交易到达率（写8333/读41665）超过Quorum链最大吞吐量，该场景不适用",
+  "evidence_for_taste": [
+    "the maximum TPS becomes smaller and smaller as the number of nodes grows",
+    "Consequently, this scenario is not suitable for the Quorum blockchain",
+    "the system starts to lose steady-state"
+  ],
+  "thinking_moves": [
+    "将6G挑战分类为性能需求与安全需求，定位区块链解决安全类问题",
+    "提出why-what-when三层框架系统分析区块链整合必要性",
+    "从7个应用场景反推区块链交易类型（读/写）与到达率模型",
+    "通过泊松分布将经验数据转化为可比较的性能阈值",
+    "先验证区块链可行再讨论局限（如AAA场景的超标）"
+  ],
+  "topic_tags": [
+    "blockchain-6G-integration",
+    "performance-assessment-methodology",
+    "consortium-blockchain-scalability",
+    "Poisson-transaction-arrival",
+    "read-write-throughput-analysis"
+  ],
+  "cites_own_work": [
+    "[14] Cheng et al. 2021 blockchain mutual authentication",
+    "[15] Jiang et al. 2021 6G survey"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

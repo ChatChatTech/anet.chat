@@ -1,0 +1,36 @@
+{
+  "paper_id": "Xiong et al. - 2015 - SmartGuide Towards Single-image Building Localization with Smartphone",
+  "doi": null,
+  "title": "SmartGuide: Towards Single-image Building Localization with Smartphone",
+  "year": 2015,
+  "venue": "MobiHoc'15",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "游客在陌生城市想快速识别远处建筑，但现有方案要求多张照片、3D重建或数据库支持，不够便捷",
+  "problem_framing": "从单张侧视图提取建筑鸟瞰轮廓，在地图候选建筑中匹配定位，无需先验知识",
+  "key_insight": "利用曼哈顿世界假设从单张照片提取建筑顶部轮廓，结合KDE概率模型消纳传感器噪声实现匹配",
+  "method_signature": "单图像消失点检测→部分顶视图提取→KDE概率模型建筑识别",
+  "evaluation_criteria": "识别准确率、作用距离(20-520m)、处理时间(<6s达到87%)",
+  "negative_result_or_admitted_limitation": "曼哈顿假设不适用的区域无法工作；复杂建筑结构难以恢复准确顶视图；低分辨率时准确率下降",
+  "evidence_for_taste": [
+    "is rather efficient compared with the most relevant previous",
+    "The naive method does not take the shape matching score",
+    "it can hardly recover the partial top view accurately",
+    "near buildings are more likely to be identified correctly"
+  ],
+  "thinking_moves": [
+    "把3D重建问题降维为2D顶视图匹配，利用曼哈顿假设简化几何约束",
+    "用KDE替代朴素距离匹配，将形状/方向/距离误差统一建模为概率分布",
+    "承认传感器噪声不可消除，采用概率融合而非精确求解"
+  ],
+  "topic_tags": [
+    "单图像建筑定位",
+    "曼哈顿世界假设",
+    "KDE概率模型",
+    "智能手机传感融合",
+    "顶视图匹配"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,35 @@
+{
+  "paper_id": "Cloud-Native Computing_ A Survey from the Perspective of Services",
+  "doi": "10.48550/arxiv.2306.14402",
+  "title": "Cloud-Native Computing: A Survey from the Perspective of Services",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "工业界云原生发展迅速但缺乏清晰的研究路线图，研究者难以把握和理解各关键问题",
+  "problem_framing": "将云原生应用视为服务，解耦其生命周期为构建、编排、运行、维护四个状态",
+  "key_insight": "云原生本质是基于微服务架构的分布式弹性可扩展系统，关键在于资源虚拟化与弹性供给实现业务敏捷",
+  "method_signature": "解耦生命周期+三层性能指标体系+基础功能模块的综述框架",
+  "evaluation_criteria": "应用层延迟/响应时间、平台层伸缩性/稳定性、基础设施层资源利用率",
+  "negative_result_or_admitted_limitation": "现有综述主要提供高层观点，忽略对最新研究工作的综述，导致挑战和解决方案缺乏高可移植性",
+  "evidence_for_taste": [
+    "lack of systematic knowledge",
+    "researchers may find it struggling",
+    "help researchers and practitioners to understand"
+  ],
+  "thinking_moves": [
+    "将工业实践与学术研究统一到服务生命周期框架下",
+    "按基础设施-平台-软件三层分解性能指标",
+    "从运维视角反推构建需求"
+  ],
+  "topic_tags": [
+    "cloud-native-lifecycle",
+    "microservice-orchestration",
+    "container-resource-virtualization",
+    "kubernetes-ecosystem",
+    "service-level-objective"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

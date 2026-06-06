@@ -1,0 +1,39 @@
+{
+  "paper_id": "AAAI_25_MODEL_LINEAGE_CAMERA_READY",
+  "doi": null,
+  "title": "Model Lineage Closeness Analysis",
+  "year": 2025,
+  "venue": "AAAI",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "现有模型溯源方法对高影响修改不鲁棒,且缺乏衡量修改程度的指标",
+  "problem_framing": "将模型血缘 closeness 量化为修改程度的连续分数",
+  "key_insight": "决策边界差异是衡量血缘 closeness 的精确指标",
+  "method_signature": "用对抗距离和匹配率计算决策边界相似度",
+  "evaluation_criteria": "血缘判定准确率和 closeness 分数区分度",
+  "negative_result_or_admitted_limitation": "蒸馏模型的决策边界与源模型差异大,导致5对模型误判",
+  "evidence_for_taste": [
+    "differences in models' decision boundaries serve",
+    "precision captures the degree of modification",
+    "overly sensitive to modifications",
+    "both of which distract from accurately",
+    "substantial disparities",
+    "weakly similar decision boundaries"
+  ],
+  "thinking_moves": [
+    "通过可视化决策边界,将血缘相似性归约为几何相似性",
+    "先观察后抽象:不同修改技术对决策边界影响不同→可量化",
+    "排除干扰因素:敏感边界和常见边界不贡献相似度计算",
+    "用间接测量解决维度不一致问题:保留特征提取能力"
+  ],
+  "topic_tags": [
+    "DNN-fingerprinting",
+    "model-lineage-detection",
+    "decision-boundary-analysis",
+    "model-modification-quantification",
+    "adversarial-distance"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

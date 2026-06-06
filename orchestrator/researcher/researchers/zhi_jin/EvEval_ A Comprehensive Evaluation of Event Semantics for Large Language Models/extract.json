@@ -1,0 +1,37 @@
+{
+  "paper_id": "EvEval_ A Comprehensive Evaluation of Event Semantics for Large Language Models",
+  "doi": "10.48550/arxiv.2305.15268",
+  "title": "EVEVAL: A Comprehensive Evaluation of Event Semantics for Large Language Models",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM处理事件语义的能力尚不明确，且缺乏综合评估框架",
+  "problem_framing": "将事件语义处理定义为理解、推理、预测三个层次并设计8个数据集的基准测试",
+  "key_insight": "结构化事件表示（如JSON）与自然语言表现相当，为具身AI提供启示",
+  "method_signature": "构建EVEVAL基准，覆盖理解/推理/预测/CoT/表示五个维度",
+  "evaluation_criteria": "准确率/BLEU/ROUGE指标评估LLM零样本和微调性能",
+  "negative_result_or_admitted_limitation": "CoT对事件语义处理几乎无提升甚至降低性能",
+  "evidence_for_taste": [
+    "LLMs understand individual events, but not the semantic similarity",
+    "most of the tasks would drop if adding CoT prompting",
+    "inter-event semantics is hard to learn",
+    "event causality semantics may be easier to learn and more determined",
+    "requires more event knowledge"
+  ],
+  "thinking_moves": [
+    "将事件语义处理系统化为理解-推理-预测三层能力体系",
+    "从零样本基准测试角度探测LLM的能力边界而非刷SOTA",
+    "承认CoT失效并追问其对事件处理无效的深层原因"
+  ],
+  "topic_tags": [
+    "LLM评估基准",
+    "事件语义处理",
+    "Chain-of-Thought失效分析",
+    "结构化事件表示",
+    "零样本事件推理"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

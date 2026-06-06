@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2016 - BackPos High Accuracy Backscatter Positioning System",
+  "doi": null,
+  "title": "BackPos: High Accuracy Backscatter Positioning System",
+  "year": 2016,
+  "venue": "IEEE",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有RFID定位方法受限于RSS不稳定性和AoA天线间距约束，无法在商业设备上实现精细定位",
+  "problem_framing": "利用背向散射信号的相位差进行双曲定位，解决标签能量和内存受限的约束",
+  "key_insight": "相位差可消除标签初始相位旋转θ_TAG，且双曲线分支间区域满足三角形约束，从而放松天线间距要求",
+  "method_signature": "基于相位差的双曲线定位，引入可行域放松λ/2天线间距约束",
+  "evaluation_criteria": "定位误差(RMSE 12.8cm)、测距误差(<1cm)、标签多样性鲁棒性",
+  "negative_result_or_admitted_limitation": "多径会降低定位精度，需要后续工作识别直射路径消除多径影响",
+  "evidence_for_taste": [
+    "RSS is not a reliable indicator being vulnerable to fluctuation",
+    "commercial polarized antennas are too large to meet the spacing constraint",
+    "phase difference eliminates the initial rotation θ_TAG",
+    "the impact of θ_TAG during applying phase difference is negligible",
+    "sacrificing the feasible region is acceptable",
+    "we do not want to place the poison and foods together"
+  ],
+  "thinking_moves": [
+    "否定现有方法的不适用性：RSS不稳定，AoA天线约束过严",
+    "通过实证研究验证假设：相位服从高斯分布、线性关系稳定",
+    "利用相位差消除标签多样性问题",
+    "将几何约束(三角形)转化为代数形式(分段方程)",
+    "引入可行域概念将硬约束放松为区域约束",
+    "利用询问区域特性论证放松约束的合理性"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "backscatter-positioning",
+    "phase-based-ranging",
+    "hyperbolic-positioning",
+    "feasible-region-relaxation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

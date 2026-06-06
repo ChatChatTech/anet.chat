@@ -1,0 +1,40 @@
+{
+  "paper_id": "Liu et al. - 2013 - Does Wireless Sensor Network Scale A Measurement Study on GreenOrbs",
+  "doi": null,
+  "title": "Does Wireless Sensor Network Scale? A Measurement Study on GreenOrbs",
+  "year": 2013,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有传感器网络研究缺乏真实大规模部署的系统级测量,根本问题'WSN到底能scale吗'仍未被回答",
+  "problem_framing": "将WSN scalability问题从协议设计转换为可测量的系统行为观察,通过对GreenOrbs 330节点森林部署的全栈instrumentation揭示网络行为规律",
+  "key_insight": "网络瓶颈不是sink周围的hot area,而是散落各处的少数critical nodes;网络dynamics主要来自并发操作而非环境变化",
+  "method_signature": "多模态数据收集(回传/嗅探/信标/本地日志)+跨层测量+对照实验(功率/流量/规模变化)",
+  "evaluation_criteria": "网络yield、PRR、PDR、ETX与实际路径质量的相关性系数",
+  "negative_result_or_admitted_limitation": "ETX指标与实际路径质量'几乎呈现随机效应';固定路由表与CTP动态路由的性能无明显差异;传统hot area假设未被数据支持",
+  "evidence_for_taste": [
+    "not the rendezvous of packet losses",
+    "hardly reflects the real path quality",
+    "a random effect between -1 and 1",
+    "no apparent difference on the performance",
+    "traditional opinions may not be the only major concern"
+  ],
+  "thinking_moves": [
+    "用实证数据挑战领域主流假设(hot area theory)",
+    "从跨层测量中归纳出超越单个协议层的系统级规律",
+    "将negative results(ETX失效)转化为新 conjecture 的evidence",
+    "通过对照实验(固定vs动态路由)验证insight",
+    "从物理层RSSI稳定性反推网络dynamics来源"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-scalability",
+    "large-scale-deployment-measurement",
+    "critical-node-bottleneck",
+    "link-quality-ETX-metric",
+    "greenorbs-forest-monitoring"
+  ],
+  "cites_own_work": [
+    "INFOCOM 2011 preliminary work"
+  ],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhao et al. - 2007 - VIRE Active RFID-based Localization Using Virtual Reference Elimination",
+  "doi": null,
+  "title": "VIRE: Active RFID-based Localization Using Virtual Reference Elimination",
+  "year": 2007,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LANDMARC在密闭多径环境中表现差，增加参考标签成本高且会引发RF干扰",
+  "problem_framing": "如何在不增加额外参考标签的情况下提升室内定位精度",
+  "key_insight": "通过线性插值生成虚拟参考标签,结合消除算法过滤不可能位置",
+  "method_signature": "虚拟参考标签+邻近图+阈值消除+加权坐标计算",
+  "evaluation_criteria": "与LANDMARC对比,在三种环境下测试9个跟踪标签的估计误差",
+  "negative_result_or_admitted_limitation": "线性插值在复杂情况下不够精确,多项式插值在端点处可能不准确;需要方形真实网格",
+  "evidence_for_taste": [
+    "linear interpolation is fast and easy. But it is not very precise",
+    "polynomial interpolation may not be so exact after all",
+    "The density of the tags cannot be too dense",
+    "If the threshold is too big, many noisy virtual reference tags will be selected",
+    "finding an appropriate threshold is an important design parameter"
+  ],
+  "thinking_moves": [
+    "从物理限制(标签干扰)反推不能无限增加参考标签",
+    "用插值生成虚拟标签来绕过物理部署的成本与干扰问题",
+    "将定位问题重新frame为多阅读器的交集消除问题",
+    "通过自适应阈值迭代找到最小可能区域"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "RSSI-fingerprinting",
+    "virtual-reference-tags",
+    "indoor-positioning",
+    "elimination-algorithm"
+  ],
+  "cites_own_work": [
+    "LANDMARC (Ni et al., 2003)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

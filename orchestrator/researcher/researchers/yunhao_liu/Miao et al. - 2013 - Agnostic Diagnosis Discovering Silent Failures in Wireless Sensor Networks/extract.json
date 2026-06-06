@@ -1,0 +1,42 @@
+{
+  "paper_id": "Miao et al. - 2013 - Agnostic Diagnosis Discovering Silent Failures in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Agnostic Diagnosis: Discovering Silent Failures in Wireless Sensor Networks",
+  "year": 2013,
+  "venue": "IEEE Transactions on Wireless Communications",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "GreenOrbs长期运行中Silent Failures导致性能下降,但现有监督方法依赖先验知识无法发现未知故障",
+  "problem_framing": "将WSN诊断问题重新定义为:从系统指标的相关性模式违背中发现异常节点",
+  "key_insight": "正常节点的指标之间存在稳定相关性,相关性模式的突变比单个指标值更能揭示故障",
+  "method_signature": "为每个节点构建相关性图矩阵,结合CUSUM时序检测和PCA降维+K-Means空间聚类",
+  "evaluation_criteria": "检测率、误报率、与包投递率(PDR)变化的一致性,330节点真实部署验证",
+  "negative_result_or_admitted_limitation": "网络规模增大时检测率下降、误报率上升;sink-based架构导致故障与检测之间的延迟",
+  "evidence_for_taste": [
+    "individual examination of metrics may overlook silent failures",
+    "the values of both metrics are within the normal range",
+    "the correlation score has a significant change point",
+    "high dimensions, the concept of distance becomes meaningless",
+    "only hardware failures can be detected by some simple rules",
+    "As network size grows, detection ratio tends to decrease"
+  ],
+  "thinking_moves": [
+    "从具体异常案例(同一节点radio-on时间与发包数不匹配)反推诊断需要跨指标相关性分析",
+    "把诊断问题从'枚举已知故障规则'转变成'学习正常相关性模式+检测违背'",
+    "观察到时序和空间两个维度各有盲区,提出双重检测交叉验证提高置信度",
+    "承认高维相关性图的聚类失效问题,主动引入PCA降维解决维度灾难"
+  ],
+  "topic_tags": [
+    "WSN-diagnosis",
+    "silent-failure-detection",
+    "correlation-graph-analysis",
+    "unsupervised-fault-detection",
+    "GreenOrbs-deployment"
+  ],
+  "cites_own_work": [
+    "GreenOrbs related work [2]",
+    "PowerTracing [16]",
+    "Passive diagnosis [15]"
+  ],
+  "extraction_quality": "full"
+}

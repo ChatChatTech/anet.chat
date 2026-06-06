@@ -1,0 +1,37 @@
+{
+  "paper_id": "Theoretical Proof that Auto-regressive Language Models Collapse when Real-world Data is a Finite Set",
+  "doi": "10.48550/arxiv.2412.14872",
+  "title": "Theoretical Proof that Auto-regressive Language Models Collapse when Real-world Data is a Finite Set",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "担心web数据中混入生成数据会损害后续LM训练，但缺乏理论证明",
+  "problem_framing": "将LM崩溃形式化为：实数据有限集+递归生成数据训练下输出分布趋近误差项",
+  "key_insight": "无论生成数据量多小，只要实数据有限且不断积累，崩溃必然发生",
+  "method_signature": "建立递推关系→求闭式解→证误差级数发散→输出分布偏离真分布",
+  "evaluation_criteria": "困惑度上升、输出分布偏离初始语料真实分布",
+  "negative_result_or_admitted_limitation": "假设实数据有限，未考虑后处理或数据过滤，结论仅适用于此假设",
+  "evidence_for_taste": [
+    "不必然推出所有LM都会崩溃",
+    "类比其他生成模型不能证明LM符合崩溃规律",
+    "Replace是与现实不符的模型"
+  ],
+  "thinking_moves": [
+    "将经验观察严格形式化为数学问题",
+    "区分Replace和Accumulate两范式",
+    "建立递推方程捕捉每代误差累积",
+    "求解闭式表达揭示误差项主导机制",
+    "利用正项级数性质证崩溃必然性"
+  ],
+  "topic_tags": [
+    "model-collapse-theory",
+    "auto-regressive-LM",
+    "recursive-training",
+    "finite-data-regime",
+    "theoretical-proof"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

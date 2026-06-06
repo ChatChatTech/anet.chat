@@ -1,0 +1,41 @@
+{
+  "paper_id": "Distilling Word Embeddings_ An Encoding Approach",
+  "doi": "10.48550/arxiv.1506.04488",
+  "title": "Distilling Word Embeddings: An Encoding Approach",
+  "year": 2016,
+  "venue": "CIKM-16 short paper; RL4NLP Workshop @ACL-16",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "轻量级神经网络在资源受限系统中需求迫切，需要在模型复杂度和高精度之间取得平衡",
+  "problem_framing": "将高维词嵌入蒸馏为低维嵌入，用监督编码层实现知识迁移而非依赖教师网络",
+  "key_insight": "大 Embedding 捕获多方面语义，监督编码层可提炼任务相关知识、消除无关信息",
+  "method_signature": "Encoding层: vec(x_i)=f(W_encode·Φ_c·x_i+b_encode) 将300d压缩至50d",
+  "evaluation_criteria": "准确率/F1分数、参数量(#Param)、推理时间(Time)",
+  "negative_result_or_admitted_limitation": "Matching softmax在教师准确率低时(如情感分类50%)会伤害学生模型性能",
+  "evidence_for_taste": [
+    "distilling low-dimensional embeddings from large ones is better",
+    "margin increases when the dimension becomes small",
+    "approach does not rely on a teacher model",
+    "complementary to existing matching softmax",
+    "performance gain increases significantly"
+  ],
+  "thinking_moves": [
+    "先证蒸馏嵌入模型容量不增, 再问为何蒸馏仍有效",
+    "把匹配softmax视为top-down知识蒸馏, 将编码层定位为bottom-up互补方法",
+    "用维度极端化实验验证假设: 小维度时提升更明显",
+    "定理形式化直觉: 小嵌入无约束而蒸馏嵌入受约束"
+  ],
+  "topic_tags": [
+    "word-embedding-distillation",
+    "model-compression",
+    "knowledge-distillation",
+    "neural-NLP",
+    "sentiment-analysis",
+    "relation-classification"
+  ],
+  "cites_own_work": [
+    "Mou et al. EMNLP 2015 (TBCNN)",
+    "Xu et al. EMNLP 2015 (SDP-LSTM)"
+  ],
+  "extraction_quality": "full"
+}

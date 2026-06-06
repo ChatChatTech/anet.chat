@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models",
+  "doi": "10.48550/arxiv.2004.10383",
+  "title": "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有服务生态系统模型视角单一且缺乏真实数据支撑",
+  "problem_framing": "如何全面建模服务生态系统的结构与演化，如何从海量开放数据低成本提取信息",
+  "key_insight": "引入'事件'作为演化触发器，用多层网络融合利益相关者、服务、特征与领域",
+  "method_signature": "MSEM多层网络模型+新闻语料NLP联合学习+主动学习标注",
+  "evaluation_criteria": "覆盖率、语义完整性、语义准确性和构建成本效率",
+  "negative_result_or_admitted_limitation": "事件抽取准确率仅0.718，模型融合存在实体歧义错误，演化关系规则覆盖率46.5%",
+  "evidence_for_taste": [
+    "only covers a single perspective",
+    "damages the credibility",
+    "error propagation",
+    "coverage will increase as the number of rules we summarize",
+    "lacks a widely recognized definition",
+    "traditional community detection algorithms to be directly applied"
+  ],
+  "thinking_moves": [
+    "将生态系统概念类比迁移到服务领域",
+    "将复杂系统分解为结构层+演化层两部分",
+    "用事件触发机制解决动态演化建模问题",
+    "主动学习降低标注成本应对数据稀缺",
+    "联合学习利用任务间潜在关联提升性能"
+  ],
+  "topic_tags": [
+    "服务生态系统",
+    "多层网络模型",
+    "事件抽取",
+    "主动学习",
+    "知识图谱融合"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

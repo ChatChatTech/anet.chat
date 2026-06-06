@@ -1,0 +1,39 @@
+{
+  "paper_id": "More is Different_ Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs",
+  "doi": "10.48550/arxiv.2212.12842",
+  "title": "More is Different: Prototyping and Analyzing a New Form of Edge Server with Massive Mobile SoCs",
+  "year": 2022,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "边缘云能耗高、供电受限、空间紧张,现有服务器架构不适配",
+  "problem_framing": "已部署的SoC集群主要服务云游戏,利用率低,需验证其能否泛化支持其他边缘负载",
+  "key_insight": "移动SoC功耗与负载成比例伸缩,且能效远超传统服务器",
+  "method_signature": "自研60核SoC集群+benchmark对比评测视频转码和深度学习推理",
+  "evaluation_criteria": "单位能耗吞吐量(TpE)、延迟、货币成本、功耗伸缩性",
+  "negative_result_or_admitted_limitation": "跨SoC协作缺失致大模型延迟数百毫秒;视频硬件编码器无法满足低码率约束",
+  "evidence_for_taste": [
+    "demystify whether SoC Cluster can efficiently serve",
+    "urgently need for a DL library to enable collaborative inference",
+    "if the quality loss incurred by MediaCodec is not bearable",
+    "energy efficiency of individual servers",
+    "demystify the performance of SoC Cluster"
+  ],
+  "thinking_moves": [
+    "从商业部署低利用率反推研究空白",
+    "先造硬件原型再测性能,而非纯模拟",
+    "承认现有软件栈不支持跨SoC协作是主要瓶颈",
+    "用成本收益而非仅性能定义可行性",
+    "纵向对比六年移动SoC进化揭示趋势"
+  ],
+  "topic_tags": [
+    "edge-server-energy-efficiency",
+    "mobile-SoC-cluster",
+    "video-transcoding-benchmark",
+    "DL-serving-energy-proportionality",
+    "heterogeneous-edge-hardware"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "One for All_ Update Parameterized Knowledge Across Multiple Models with Once Edit",
+  "doi": "10.18653/v1/2025.acl-long.780",
+  "title": "One for All: Update Parameterized Knowledge Across Multiple Models with Once Edit",
+  "year": 2025,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有知识编辑方法只能单模型编辑，多模型更新成本高且效果不一致",
+  "problem_framing": "如何用一次编辑同时更新多个LLM，保持可靠性、泛化性和局部性",
+  "key_insight": "用轻量级插件模型作为编辑模块，通过[WEIGHT]令牌动态分配权重解决固定权重不适配问题",
+  "method_signature": "插件模型+[WEIGHT]动态权重+零初始化+目标增强的异构模型集成",
+  "evaluation_criteria": "Reliability、Generality、Locality三维度评分",
+  "negative_result_or_admitted_limitation": "零初始化前DEEPEN初始化依赖LLM分布，导致新知识捕获不足",
+  "evidence_for_taste": [
+    "making them unsuitable for knowledge editing",
+    "can lead to the central model becoming biased",
+    "fail to effectively capture the newly injected knowledge",
+    "slight decrease in locality an acceptable compromise"
+  ],
+  "thinking_moves": [
+    "从单模型局限反推多模型需求",
+    "诊断固定权重在编辑场景的失效原因",
+    "识别中心模型偏差是集成方法核心问题",
+    "提出零初始化打破中心模型主导",
+    "用消融验证两机制各自的贡献"
+  ],
+  "topic_tags": [
+    "knowledge-editing",
+    "model-ensemble",
+    "multi-model-editing",
+    "LLM-updating",
+    "heterogeneous-fusion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

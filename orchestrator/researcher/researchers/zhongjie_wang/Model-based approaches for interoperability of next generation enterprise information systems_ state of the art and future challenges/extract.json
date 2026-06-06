@@ -1,0 +1,48 @@
+{
+  "paper_id": "Model-based approaches for interoperability of next generation enterprise information systems_ state of the art and future challenges",
+  "doi": "10.1007/s10257-016-0317-8",
+  "title": "Model-based approaches for interoperability of next generation enterprise information systems: state of the art and future challenges",
+  "year": 2016,
+  "venue": "Enterprise Modelling and Information Systems Architectures",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "企业信息系统缺乏互操作性,阻碍竞争力提升",
+  "problem_framing": "水平(企业间)和垂直(业务-IT)互操作性障碍",
+  "key_insight": "用无歧义的形式化或半形式化模型作为互操作基础",
+  "method_signature": "模型驱动概念框架:语义对齐-转换-发现-社交网络-仿真指标",
+  "evaluation_criteria": "模型匹配质量/仿真验证指标/跨行业认可度量",
+  "negative_result_or_admitted_limitation": "完全自动化模型发现未达,动态行为捕获困难,目前仍为开放问题",
+  "evidence_for_taste": [
+    "integration tackles strong connections",
+    "interoperability is providing looser coupling",
+    "ontologies across different domains can improve design",
+    "completely automated models discovery for existing systems is not reached yet",
+    "the dynamic of the system that is still difficult to capture",
+    "all the current approaches remain limited",
+    "they still fail to be fully scalable"
+  ],
+  "thinking_moves": [
+    "区分integration与interoperability本质差异",
+    "重构互操作问题为语义对齐问题",
+    "从障碍识别倒推研究方向缺口",
+    "承认技术现状局限性而非粉饰",
+    "框架分层组装替代单点突破",
+    "引入人在回路但承认当前整合不足"
+  ],
+  "topic_tags": [
+    "model-driven-interoperability",
+    "ontology-alignment",
+    "MDA-MDE",
+    "enterprise-modelling",
+    "human-in-the-loop",
+    "reverse-engineering"
+  ],
+  "cites_own_work": [
+    "Zacharewicz et al.",
+    "Wang et al.",
+    "Xu and Wang",
+    "FITMAN project"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

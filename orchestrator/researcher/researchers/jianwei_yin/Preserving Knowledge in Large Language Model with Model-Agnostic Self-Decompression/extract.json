@@ -1,0 +1,39 @@
+{
+  "paper_id": "Preserving Knowledge in Large Language Model with Model-Agnostic Self-Decompression",
+  "doi": "10.48550/arxiv.2406.11354",
+  "title": "Preserving Knowledge in Large Language Model with Model-Agnostic Self-Decompression",
+  "year": 2024,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLMs/MLLMs suffer catastrophic forgetting when fine-tuned on domain-specific data; language benchmarks degrade during SFT while vision-language benchmarks improve.",
+  "problem_framing": "Framing LLMs as lossless compressors; model forgetting represents compressed knowledge being overwritten; decompression via synthetic data generation can recover it.",
+  "key_insight": "Treating text generation from LLMs as a 'self-decompression' process preserves original knowledge by using LLMs as offline data generators to dump training corpus.",
+  "method_signature": "Tree Generation (TG-SFT): layered tree expansion with alternating user/assistant roles, semantic deduplication, tunable N_i branching factors per layer.",
+  "evaluation_criteria": "LLM benchmark restoration (should match original backbone score 53.41); MLLM benchmark maintenance; comparison with human-generated ShareGPT data.",
+  "negative_result_or_admitted_limitation": "Math domain synthesis produced wrong calculations and simple derivations; SFT with math data caused noticeable benchmark degradation. No universal benchmark exists for synthetic data quality evaluation.",
+  "evidence_for_taste": [
+    "模型已经开始遗忘其通用语言能力",
+    "合成数据接近人类数据质量",
+    "MLLM benchmarks grew, but LLM benchmarks started to deteriorate",
+    "LLMs not only excel in text compression but also show competitive performance",
+    "synthetic data may include many inaccurate facts",
+    "LLMs tend to generate simple/wrong calculations and derivations"
+  ],
+  "thinking_moves": [
+    "将LLM视为无损压缩器，用'解压'视角重新定义知识保持问题",
+    "用实验观察区分过拟合与遗忘：MLLM性能上升但LLM性能下降说明遗忘而非仅过拟合",
+    "通过tree结构控制生成多样性与深度，而非随机采样",
+    "承认合成数据的局限性（数学领域质量不足），而非夸大方法通用性"
+  ],
+  "topic_tags": [
+    "LLM-catastrophic-forgetting",
+    "synthetic-data-generation",
+    "self-decompression",
+    "tree-structured-dialogue",
+    "knowledge-preservation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "2024_TMC_FedCSS",
+  "doi": null,
+  "title": "Joint Client-and-Sample Selection for Federated Learning via Bi-level Optimization",
+  "year": 2024,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "FL中数据样本重要性差异大，且噪声样本与hard样本均有大loss，现有方法无法区分",
+  "problem_framing": "将客户端-样本联合选择问题建模为双层优化，外层学选择概率，内层建全局模型",
+  "key_insight": "为处理噪声需优先小loss样本，但为识别正影响样本需优先大loss样本，二者冲突构成核心难题",
+  "method_signature": "基于元学习的双层FL优化框架，通过梯度操控实现类级别权重学习与隐私保护",
+  "evaluation_criteria": "测试准确率提升、计算/通信成本降低、收敛率分析",
+  "negative_result_or_admitted_limitation": "Shapley值方法计算代价过高无法规模化；统计阈值方法缺乏先验知识；前作FedCSS实例级权重丢弃了类级信息",
+  "evidence_for_taste": [
+    "to mitigate noisy labels, models often favor samples with small training losses",
+    "Conversely, when attempting to identify positively influential samples, models prioritize those with high training losses",
+    "This is because to mitigate noisy labels, models often favor samples with small training losses as they are more likely to be clean data",
+    "FedCSS alleviates label noise by down-weighting all the gradient flows of the instance while discarding three kinds of information simultaneously",
+    "down-weighting the 'not bird' gradient flow is a waste of information"
+  ],
+  "thinking_moves": [
+    "将看似相似的两类样本（大loss噪声 vs 大loss hard）的冲突目标显式化",
+    "通过双层优化框架将互相冲突的两个子目标统一建模",
+    "通过梯度操控把实例级权重推广到类级别以保留细粒度信息",
+    "用一阶近似替代二阶Hessian计算以降低计算开销",
+    "层次化分析：先选正影响客户端，再分析其样本以节省计算资源"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "bi-level-optimization",
+    "sample-selection",
+    "label-noise-robust",
+    "client-selection",
+    "meta-learning"
+  ],
+  "cites_own_work": [
+    "FedCSS"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文含理论分析和实验，提取充分 | md truncated to head40k+tail20k"
+}

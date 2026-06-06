@@ -1,0 +1,44 @@
+{
+  "paper_id": "Liu et al. - 2015 - TagBooth Deep shopping data acquisition powered by RFID tags",
+  "doi": null,
+  "title": "TagBooth: Deep Shopping Data Acquisition Powered by RFID Tags",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "实体店铺无法像线上电商采集用户关注商品、拿起放下等深层行为数据，RFID标签已附着在商品上提供了机会",
+  "problem_framing": "把检测顾客对商品的pick/toggle行为定义为一个信号处理问题：利用RFID物理层信息(RSS/phase)检测商品运动并区分动作类型",
+  "key_insight": "动作引起的RSS变化频率集中在2Hz以下，而环境干扰频率更高；用FFT频域能量作为运动强度可在干扰存在下仍检测动作",
+  "method_signature": "RSS插值+FFT低频能量检测运动 + 相位去周期化 + 相位步长阈值区分pick/toggle + 层次聚类分离master/slave标签",
+  "evaluation_criteria": "TPR/FPR衡量检测准确性；时间误差(start/duration)衡量实时性；pick和toggle分别评估准确率",
+  "negative_result_or_admitted_limitation": "无法识别具体顾客身份(除非顾客持RFID VIP卡)；无法区分店员整理货架与顾客行为",
+  "evidence_for_taste": [
+    "purely utilizing their changes cannot directly infer",
+    "localization accuracies are not enough to distinguish different customer actions",
+    "we do not have to worry about FPR because of slave tags here",
+    "the higher the sampling frequency is, the better the signal processing result is",
+    "distribution of energy from interference data sets is more uniform"
+  ],
+  "thinking_moves": [
+    "把perception问题重新frame成communication问题——商品被拿起时的路径变化是通信而非定位",
+    "先通过经验观察建立假设(Hypothesis)再形式化——如动作频率<2Hz、多径干扰频率更高",
+    "把一个看似定位/识别的问题拆解为运动检测和动作识别两个独立子问题",
+    "用频域分析区分不同物理来源的信号变化(动作vs多径vs噪声)",
+    "承认定位方法(30cm精度)对动作识别任务是不够的，转而采用低精度但轻量方案"
+  ],
+  "topic_tags": [
+    "RFID-physical-layer-analysis",
+    "customer-behavior-detection",
+    "FFT-frequency-domain-motion-intensity",
+    "retail-analytics",
+    "phase-deperiodicity"
+  ],
+  "cites_own_work": [
+    "PinIt",
+    "Tagoram",
+    "ArrayTrack",
+    "Frogeye"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文文本为完整版本，包含intro/method/eval/conclusion，但未明确标注投稿venue。系统架构和评估细节充分，动机问题清晰。"
+}

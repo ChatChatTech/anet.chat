@@ -1,0 +1,45 @@
+{
+  "paper_id": "Na et al. - 2025 - QuinID Enabling FDMA-Based Fully Parallel RFID with Frequency-Selective Antenna-1",
+  "doi": null,
+  "title": "QuinID: Enabling FDMA-Based Fully Parallel RFID with Frequency-Selective Antenna",
+  "year": 2025,
+  "venue": "ACM MOBICOM '25",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Large-scale logistics/production lines need to scan hundreds of RFID-tagged items simultaneously; existing parallel decoding achieves only 20% improvement",
+  "problem_framing": "Traditional RFID operates in TDMA; digital FDMA cannot be implemented on tags due to ~1μW power budget; need physical-layer frequency selectivity",
+  "key_insight": "Replace digital FDMA with antenna-level frequency selectivity using SAW filters—a passive, battery-free solution that bypasses tag power constraints",
+  "method_signature": "SAW-based frequency-selective antenna + multi-band QuinReader with DUC/DDC and interference cancellation for FDMA operation",
+  "evaluation_criteria": "Read rate (reads/sec), reading distance, tag cost, compatibility with commercial RFID systems",
+  "negative_result_or_admitted_limitation": "SAW introduces ~3dB insertion loss reducing range; only 5 subbands possible due to roll-off; conventional tags can interfere when present",
+  "evidence_for_taste": [
+    "no existing approach achieves genuine and practical parallel RFID reading",
+    "parallel decoding algorithms only marginally accelerate the reading",
+    "a mere 20% increase in the read rate",
+    "power incurred still exceeds the affordable level",
+    "maintains compatibility with conventional RFID systems",
+    "cost of less than 10 cents"
+  ],
+  "thinking_moves": [
+    "把数字FDMA电路的功耗问题, 转化为天线滤波器的物理特性问题",
+    [
+      "不正面强攻tag芯片限制,而是从天线侧找出口"
+    ],
+    "用SAW滤波器固有的高Q值特性直接满足FDMA的频选需求"
+  ],
+  "topic_tags": [
+    "RFID-parallel-reading",
+    "FDMA-RFID",
+    "SAW-filtering-antenna",
+    "backscatter-communication",
+    "frequency-selective-tag"
+  ],
+  "cites_own_work": [
+    "Jin et al. 2017 FlipTracer",
+    "Jin et al. 2018 Parallel Backscatter",
+    "Guo et al. 2022 Saiyan",
+    "Na et al. 2023 Leggiero"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Full paper text available including introduction, method, evaluation, and conclusion sections. All technical claims are backed by specific numerical evidence. | md truncated to head40k+tail20k"
+}

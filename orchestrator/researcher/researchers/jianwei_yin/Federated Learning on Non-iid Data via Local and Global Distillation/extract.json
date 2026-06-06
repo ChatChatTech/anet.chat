@@ -1,0 +1,37 @@
+{
+  "paper_id": "Federated Learning on Non-iid Data via Local and Global Distillation",
+  "doi": "10.48550/arxiv.2306.14443",
+  "title": "Federated Learning on Non-iid Data via Local and Global Distillation",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "联邦学习中非独立同分布数据导致通信开销大且性能下降",
+  "problem_framing": "将非iid问题分解为客户端过拟合与服务器端权重偏移两部分",
+  "key_insight": "利用dropout机制实现单模型自蒸馏，用随机噪声经自适应更新生成蒸馏样本替代外部数据集",
+  "method_signature": "FedSND: 自蒸馏(客户端)+噪声蒸馏(服务器端)双模块协同",
+  "evaluation_criteria": "多数据集(CV/NLP)不同α下的测试准确率与通信轮次收敛速度",
+  "negative_result_or_admitted_limitation": "自蒸馏在non-iid场景下易过拟合局部模型导致收敛震荡",
+  "evidence_for_taste": [
+    "the performance of the other algorithms decreases significantly",
+    "noise distillation is more useful than self-distillation",
+    "the lower threshold results in higher quality noise",
+    "more local epochs tend to lead to greater variation across client models",
+    "the specific value of the sample is no longer important"
+  ],
+  "thinking_moves": [
+    "将知识蒸馏问题从外部教师模型转化为单模型内部机制",
+    "把client-server问题拆解为过拟合与权重偏移分别处理",
+    "用随机噪声代替真实样本实现无数据蒸馏",
+    "观察dropout输出差异作为模型鲁棒性的度量信号"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "non-iid-data",
+    "knowledge-distillation",
+    "self-distillation",
+    "noise-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

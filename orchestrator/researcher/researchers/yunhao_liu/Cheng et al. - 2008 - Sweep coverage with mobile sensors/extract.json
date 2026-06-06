@@ -1,0 +1,37 @@
+{
+  "paper_id": "Cheng et al. - 2008 - Sweep coverage with mobile sensors",
+  "doi": null,
+  "title": "Sweep Coverage with Mobile Sensors",
+  "year": 2008,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Many applications require only periodic monitoring of POIs (patrol inspection), not continuous full coverage; existing static coverage is inefficient and wasteful for such dynamic requirements",
+  "problem_framing": "Define sweep coverage where each POI must be covered at least once every t time units; formulate min-sensor sweep-coverage problem: find minimum number of mobile sensors to satisfy all sweep period requirements",
+  "key_insight": "Sweep coverage enables covering many POIs with few mobile sensors by exploiting time-variant coverage; the problem's non-locality (no sensor can locally determine global coverage) necessitates distributed coordination via epidemic information exchange",
+  "method_signature": "CSWEEP: TSP PTAS route + partition into L0 pieces, each sensor patrols one piece; DSWEEP: distributed with epidemic sweep table exchange and urgency-based next POI selection",
+  "evaluation_criteria": "Cumulative distribution of actual sweep period vs required; fraction of reliable POIs meeting requirements; comparison against RAND randomized scheme",
+  "negative_result_or_admitted_limitation": "min-sensor sweep-coverage is NP-hard and cannot be approximated within factor 2; centralized CSWEEP not scalable; DSWEEP provides only best-effort, not guaranteed coverage",
+  "evidence_for_taste": [
+    "cannot be approximated within a factor of 2",
+    "none of the distributed local algorithms can guarantee",
+    "CSWEEP is not scalable and adaptive",
+    "DSWEEP outperforms the randomized scheme"
+  ],
+  "thinking_moves": [
+    "Reduce sweep coverage to TSP for hardness proof",
+    "Characterize problem non-locality to justify distributed design",
+    "Adapt robotics sweep concept to sensor networks via epidemic routing",
+    "Build distributed algorithm from bottom-up: information exchange then local decision"
+  ],
+  "topic_tags": [
+    "mobile sensor coverage",
+    "sweep coverage",
+    "distributed algorithm",
+    "epidemic routing",
+    "NP-hard scheduling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue tier unknown as no conference/journal name provided in text. Some author roles inferred from affiliation listings."
+}

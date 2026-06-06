@@ -1,0 +1,45 @@
+{
+  "paper_id": "Li et al. - 2010 - Multicast Capacity of Wireless Ad Hoc Networks Under Gaussian Channel Model",
+  "doi": null,
+  "title": "Multicast Capacity of Wireless Ad Hoc Networks Under Gaussian Channel Model",
+  "year": 2010,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Need to understand asymptotic achievable throughput when Θ(n) wireless nodes are randomly deployed in a given region for multicast sessions",
+  "problem_framing": "Model random Poisson network with constant power P, path loss α>2, Gaussian channel; find per-flow multicast capacity scaling with n, n_s, and k",
+  "key_insight": "Use percolation theory to construct highway system enabling optimal per-flow multicast rate Θ(1/√(nk)) in random networks",
+  "method_signature": "Bond percolation on grid creates open paths forming highways; construct Euclidean spanning trees to relay multicast data",
+  "evaluation_criteria": "Minimum per-flow multicast throughput λ_k(n) achievable w.h.p.; compare lower bound vs upper bound O(√n/(n_s√k))",
+  "negative_result_or_admitted_limitation": "We do not know whether the boundary on k is tight; the boundary most likely is not tight; hidden constants in all formulas are not tight",
+  "evidence_for_taste": [
+    "we do not know whether the boundary on k is tight",
+    "we think that the boundary most likely is not tight",
+    "A more careful analysis will further narrow the difference",
+    "the hidden constants in all our formulas are not tight",
+    "We leave it as a future work to study the scenario when network coding is permitted"
+  ],
+  "thinking_moves": [
+    "Extend unicast percolation result to multicast by building spanning trees over highway system",
+    "Compare Gaussian channel model with protocol model results to identify gap",
+    "Prove lower bound via constructive routing, then derive matching upper bound via information-theoretic constraints",
+    "Identify that increasing receivers only decreases throughput by 1/√k factor",
+    "Admit uncertainty about tightness of scaling threshold k=O(n/log^{2α+6}n)"
+  ],
+  "topic_tags": [
+    "wireless-ad-hoc-networks",
+    "multicast-capacity",
+    "gaussian-channel-model",
+    "percolation-theory",
+    "capacity-scaling-laws",
+    "highway-system-routing"
+  ],
+  "cites_own_work": [
+    "Li et al. [15]",
+    "Li [16]",
+    "Wang et al. [26]",
+    "Wang et al. [27]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+  "doi": "10.48550/arxiv.2407.08584",
+  "title": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有调度算法在数据副本和在线动态环境假设下受限,无法有效处理分布式服务系统中的任务分配与工作负载管理问题",
+  "problem_framing": "将任务分配建模为二分图上的非线性整数规划,考虑FIFO和任务重排序两种执行模式",
+  "key_insight": "通过搜索空间收缩和分段线性化可将非凸问题转化为可解形式,且WF算法可获得紧的K-近似比",
+  "method_signature": "OBTA收缩搜索空间+分段线性化; WF水填充获得K-近似; RD全局迭代删除副本; OCWF-ACC早期退出加速",
+  "evaluation_criteria": "平均任务完成时间、计算开销、任务完成时间CDF分布",
+  "negative_result_or_admitted_limitation": "RD启发式算法的理论性能分析留作未来工作,未给出完备保证",
+  "evidence_for_taste": [
+    "显著降低计算开销",
+    "提供近似因子等于任务组数的严格证明",
+    "使用商业求解器如CPLEX",
+    "可提高调度效率",
+    "RD性能优于WF",
+    "left as future work"
+  ],
+  "thinking_moves": [
+    "将非线性约束通过分段技术线性化以适用商业求解器",
+    "先证最坏情况K-近似下界,再构造实例验证紧性",
+    "将任务按可用服务器集合分组,将分配问题局部化",
+    "全局迭代删除副本以平衡服务器负载",
+    "引入早期退出机制减少重排序计算开销"
+  ],
+  "topic_tags": [
+    "data-locality-scheduling",
+    "task-assignment",
+    "distributed-job-execution",
+    "water-filling-approximation",
+    "bipartite-matching"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

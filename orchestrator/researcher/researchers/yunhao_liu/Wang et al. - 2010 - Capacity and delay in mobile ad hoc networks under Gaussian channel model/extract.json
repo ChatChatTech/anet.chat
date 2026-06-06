@@ -1,0 +1,36 @@
+{
+  "paper_id": "Wang et al. - 2010 - Capacity and delay in mobile ad hoc networks under Gaussian channel model",
+  "doi": null,
+  "title": "Capacity and Delay in Mobile Ad Hoc Networks under Gaussian Channel Model",
+  "year": 2010,
+  "venue": "MobiCom Poster",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有工作使用简化的protocol model或physical model分析MANETs，需要用更现实的Gaussian Channel model来填补理论空白",
+  "problem_framing": "在扩展网络中分析HRWMM和DRDMM两种移动模型下two-hop策略的容量和延迟边界",
+  "key_insight": "Gaussian信道下长距离链路的传输数据量相对短链路可忽略，使容量与功率衰减指数无关",
+  "method_signature": "基于临界距离阈值的two-hop中继策略，通过接触间隔和等待间隔分解分析",
+  "evaluation_criteria": "渐近容量Θ(1)和延迟的阶数，通过临界距离l_S的取值范围给出闭式界",
+  "negative_result_or_admitted_limitation": "对于某些regime尚无法推导出tight bound，这是future work",
+  "evidence_for_taste": [
+    "a surprising result arises",
+    "it is an interesting future work",
+    "tight bound of ΔI_S",
+    "intuitive that by a simple scaling",
+    "capacity is independent of"
+  ],
+  "thinking_moves": [
+    "从dense网络到extended网络的简单尺度延拓",
+    "通过tight bound证明最优临界距离的存在区间",
+    "发现i.i.d模型下的反直觉结果——速度和容量可同时达到Θ(1)"
+  ],
+  "topic_tags": [
+    "MANET容量分析",
+    "Gaussian信道模型",
+    "two-hop中继策略",
+    "移动性建模",
+    "扩展网络尺度"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial"
+}

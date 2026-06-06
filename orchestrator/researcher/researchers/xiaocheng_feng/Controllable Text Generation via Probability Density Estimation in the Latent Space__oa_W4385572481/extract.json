@@ -1,0 +1,37 @@
+{
+  "paper_id": "Controllable Text Generation via Probability Density Estimation in the Latent Space__oa_W4385572481",
+  "doi": "10.18653/v1/2023.acl-long.704",
+  "title": "Controllable Text Generation via Probability Density Estimation in the Latent Space",
+  "year": 2023,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有方法在潜在空间中难以有效建模复杂属性分布,控制效果不理想",
+  "problem_framing": "将潜在空间中的非对称、非凸分布建模问题转化为概率密度估计问题",
+  "key_insight": "用Normalizing Flow的 invertible 性质把复杂潜空间映射到简单高斯先验空间,在先验空间做控制后再通过逆变换反馈",
+  "method_signature": "Normalizing Flow + 先验空间插值控制 + 反馈潜空间",
+  "evaluation_criteria": "属性相关性(分类器准确率)、困惑度、多样性、人工评估",
+  "negative_result_or_admitted_limitation": "连续空间采样会集中在高概率小区域,相似语义导致多样性略逊于Discrete的随机采样",
+  "evidence_for_taste": [
+    "cannot effectively model a complex space",
+    "distributions are usually asymmetric and even non-convex",
+    "interpolation may exceed the support set",
+    "making the diversity slightly inferior to Discrete"
+  ],
+  "thinking_moves": [
+    "识别潜在空间几何缺陷(非凸、非对称)是控制失效根因",
+    "利用可逆变换的双射性质构建跨空间桥梁",
+    "把困难空间的优化问题转换到简单空间求解",
+    "从概率密度角度量化控制强度与干扰的关系"
+  ],
+  "topic_tags": [
+    "controllable-text-generation",
+    "normalizing-flow",
+    "latent-space-control",
+    "probability-density-estimation",
+    "interpolation-control"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

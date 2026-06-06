@@ -1,0 +1,42 @@
+{
+  "paper_id": "MegaScale-MoE_ Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production",
+  "doi": "10.1145/3767295.3769325",
+  "title": "MegaScale-MoE: Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production",
+  "year": 2025,
+  "venue": "EuroSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "MoE训练中通信占43.6%前向时间/32%总时间,随硬件提升通信瓶颈愈发严重",
+  "problem_framing": "将MoE层的并行策略按attention和FFN组件分别定制以减少通信量",
+  "key_insight": "将MoE层限制在单节点内利用NVLink高带宽,避免跨节点通信成为瓶颈",
+  "method_signature": "定制通信高效并行+运算符级通信计算重叠+通信压缩",
+  "evaluation_criteria": "MFU和throughput(M tokens/s),对比Megatron-LM提升1.88×",
+  "negative_result_or_admitted_limitation": "Context parallelism faces workload imbalance due to causal masking, zigzag策略仍难以完美平衡",
+  "evidence_for_taste": [
+    "communication accounts for 43.6% of the total time",
+    "TP communication overhead can even surpass the computation time",
+    "the communication on critical paths",
+    "A2A+GEMM and GEMM+A2A kernels",
+    "removing the need for host interference",
+    "CP attention, however, faces workload imbalance"
+  ],
+  "thinking_moves": [
+    "将通信瓶颈归因于硬件计算提升快于带宽提升的趋势",
+    "按组件类型(attention/FFN)定制差异化并行策略而非统一方案",
+    "利用NVLink域内高带宽特性将MoE层约束在节点内",
+    "通过tile级细粒度融合通信进计算kernel避免host干扰",
+    "用选择性激活重计算换取内存减少同时不增加关键路径延迟"
+  ],
+  "topic_tags": [
+    "MoE-distributed-training",
+    "communication-computation-overlap",
+    "NVLink-parallelism",
+    "tile-level-kernel-fusion",
+    "FP8-training-compression"
+  ],
+  "cites_own_work": [
+    "MegaScale (NSDI 2024)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "这是一篇完整论文,包含设计空间分析、方法实现细节和大规模实验评估,Xuanzhe Liu是Peking University的署名作者之一 | md truncated to head40k+tail20k"
+}

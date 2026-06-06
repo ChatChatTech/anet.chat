@@ -1,0 +1,40 @@
+{
+  "paper_id": "Mao et al. - 2012 - CitySee Urban CO2 monitoring with sensors",
+  "doi": null,
+  "title": "CitySee: Urban CO2 Monitoring with Sensors",
+  "year": 2012,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "城市碳排放实测需求迫切，现有方法精度不足且难以长期部署大规模监测网络",
+  "problem_framing": "将传感器节点部署问题抽象为带障碍约束的接力节点放置问题，形式化为G-GSTWH",
+  "key_insight": "将城市障碍物约束下的节点连通问题转化为几何群Steiner树问题，可获2近似比",
+  "method_signature": "G-GSTWH算法求解带孔约束的两层中继节点放置问题",
+  "evaluation_criteria": "中继节点数量最少化、2-近似比保证、仿真性能对比",
+  "negative_result_or_admitted_limitation": "仅保证1-连通网络，k-连通情况尚无有效方法；随机部署算法性能差约50倍",
+  "evidence_for_taste": [
+    "our approach outperforms previous strategies",
+    "a -approximation algorithm based on minimum spanning trees",
+    "the increment trend of G-GSTWH-based algorithm is slower",
+    "Can we have effective and efficient method to guarantee a -connected wireless sensor network?",
+    "approximation ratio of the optimum"
+  ],
+  "thinking_moves": [
+    "将真实物理障碍约束映射为图论中孔的数学表示",
+    "将部署问题拆解为连通组件发现与Steiner树构造两个子问题",
+    "先证明近似比界(2-近似)，再通过仿真验证实际性能",
+    "把每个已有节点簇视为虚拟超节点以简化Group Steiner Tree问题"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-deployment",
+    "relay-node-placement",
+    "carbon-monitoring",
+    "approximation-algorithm",
+    "hole-constraint"
+  ],
+  "cites_own_work": [
+    "GreenOrbs"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

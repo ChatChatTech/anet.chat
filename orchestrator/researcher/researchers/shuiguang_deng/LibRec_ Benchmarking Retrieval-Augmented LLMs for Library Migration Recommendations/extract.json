@@ -1,0 +1,38 @@
+{
+  "paper_id": "LibRec_ Benchmarking Retrieval-Augmented LLMs for Library Migration Recommendations",
+  "doi": "10.48550/arxiv.2508.09791",
+  "title": "LibRec: Benchmarking Retrieval-Augmented LLMs for Library Migration Recommendations",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "Library迁移复杂耗时易错，现有研究多为经验性分析，缺乏自动化推荐框架",
+  "problem_framing": "将库迁移推荐形式化为基于源库+迁移意图+意图类型检索候选目标库的任务",
+  "key_insight": "RAG组件与迁移意图组件协同作用，两者缺一不可；One-shot策略普遍优于CoT",
+  "method_signature": "LLM+RAG检索+迁移意图上下文学习→目标库推荐",
+  "evaluation_criteria": "Top-10候选库排序准确率、Recall@K、MRR等指标",
+  "negative_result_or_admitted_limitation": "代码LLM表现劣于通用LLM，Enhanced Features子类别失败率最高",
+  "evidence_for_taste": [
+    "code LLMs reveals an avenue for future research",
+    "inferior performance of code LLMs",
+    "largest proportion of failures",
+    "both components are critical",
+    "One-shot prompt strategy emerges as the most robust"
+  ],
+  "thinking_moves": [
+    "将自然语言commit信息转化为结构化迁移意图作为上下文信号",
+    "构建大规模基准数据集驱动方法评估",
+    "组件消融验证两组件缺一不可",
+    "对比不同LLM类型(通用/代码/推理)的表现差异"
+  ],
+  "topic_tags": [
+    "RAG增强推荐",
+    "库迁移自动化",
+    "LLM软件工程应用",
+    "上下文学习",
+    "Python依赖管理"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

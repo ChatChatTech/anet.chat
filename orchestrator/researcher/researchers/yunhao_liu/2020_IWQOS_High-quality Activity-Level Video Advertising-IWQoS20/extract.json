@@ -1,0 +1,39 @@
+{
+  "paper_id": "2020_IWQOS_High-quality Activity-Level Video Advertising-IWQoS20",
+  "doi": null,
+  "title": "High-quality Activity-Level Video Advertising",
+  "year": 2020,
+  "venue": "IWQoS",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "YouTube CTR仅0.3%远低于文字广告5%，因广告与视频内容无关；市场调研显示72.5%广告需求涉及活动但被现有系统忽略",
+  "problem_framing": "将视频广告从目标/场景级提升到活动级，需解决：活动多样无训练数据、需求不可预测、多广告叠加体验未建模",
+  "key_insight": "用人体姿态估计代替动作识别模型，将多模态特征建模为活动图(ActGraph)，无需训练样本即可支持非预定义活动",
+  "method_signature": "活动图多模态嵌入 + 图相似度检索(10000 FPS) + NMS-Greedy广告分配优化",
+  "evaluation_criteria": "广告位置检索主观评价(Good/Bad)、多算法对比Assignment Value与Intrusiveness Budget、48人主观侵入度评分",
+  "negative_result_or_admitted_limitation": "参数α,β,γ是经验设置；NMS-Greedy只获局部最优；设计有理论保证的分配算法是未来工作",
+  "evidence_for_taste": [
+    "requires a large amount of labeled videos",
+    "which would be infeasible for the advertising",
+    "the intrusiveness effect among successive advertisements",
+    "is inevitably subjective",
+    "a locally optimal solution"
+  ],
+  "thinking_moves": [
+    "从市场调研数据(72.5%)倒推活动级是刚需，但现有系统未覆盖",
+    "用姿态估计绕过高成本的动作识别，从感知问题转向结构化特征匹配",
+    "将多广告叠加侵入度建模为时域piece-wise函数，捕捉累积效应",
+    "用非极大抑制(NMS)思想改造贪婪分配，实现效率与质量的折中",
+    "承认参数经验性和局部最优，不追求理论完美而追求实用"
+  ],
+  "topic_tags": [
+    "video-advertising",
+    "activity-recognition",
+    "pose-estimation",
+    "ad-assignment-optimization",
+    "multimodal-embedding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为完整全文，含完整方法、实验、结论；DOI缺失；可确认作者均为中国科学技术大学，无明显利益冲突"
+}

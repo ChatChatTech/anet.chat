@@ -1,0 +1,38 @@
+{
+  "paper_id": "Huai et al. - 2005 - Distributed Access Control in CROWN Groups",
+  "doi": null,
+  "title": "Distributed Access Control in CROWN Groups",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "网格环境中动态未知节点导致集中式和基于身份的访问控制失效",
+  "problem_framing": "将访问控制定义为支持分布式委托授权和投票机制的细粒度属性框架",
+  "key_insight": "多 authority 通过投票分布式决策,避免单点故障同时支持动态成员的属性验证",
+  "method_signature": "扩展RT语言,基于属性凭证与投票的分布式委托授权",
+  "evaluation_criteria": "并发加入成功率、平均加入时间、动态阈值下性能",
+  "negative_result_or_admitted_limitation": "null",
+  "evidence_for_taste": [
+    "Most existing group access control mechanisms adapt centralized architecture",
+    "peers are often dynamic and unknown to each other",
+    "avoid single point of failure and enhance scalability",
+    "f × k are yes, then vote is true",
+    "fails to support distributed environments"
+  ],
+  "thinking_moves": [
+    "指出既有方案中央式架构和身份验证的局限",
+    "从信任管理语言RT扩展出分布式凭证链机制",
+    "将投票阈值形式化为动态参数(fixed/dynamic)",
+    "通过并发请求实验展示去中心化带来的效率优势"
+  ],
+  "topic_tags": [
+    "distributed-access-control",
+    "attribute-based-access-control",
+    "grid-security",
+    "voting-authorization",
+    "delegation-mechanism"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "paper does not name specific venue; role extracted as co-author based on author list ordering"
+}

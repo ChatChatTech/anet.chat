@@ -1,0 +1,37 @@
+{
+  "paper_id": "Gao et al. - 2022 - Trinity High-Performance Mobile Emulation through Graphics Projection",
+  "doi": null,
+  "title": "Trinity: High-Performance Mobile Emulation through Graphics Projection",
+  "year": 2022,
+  "venue": "USENIX OSDI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有移动模拟器在图形密集型应用上效率和兼容性均差，无法流畅运行重型3D游戏",
+  "problem_framing": "如何解耦guest-host控制流和数据流，使GPU复用时的VM Exit最小化",
+  "key_insight": "图形操作是handle-based的，Type-1和Type-2调用仅与主存中的轻量句柄交互",
+  "method_signature": "在guest内存中创建投影空间维护shadow contexts和资源句柄，配合流控和数据遥传",
+  "evaluation_criteria": "93.3%原生性能，97.2%应用兼容性，相比其他模拟器提升1.4×至20×",
+  "negative_result_or_admitted_limitation": "仅测量Android+OpenGL ES，需手动移植Linux系统调用；static timing analysis仍有4%偏差",
+  "evidence_for_taste": [
+    "cannot smoothly run many common apps",
+    "considerable tromboning effect",
+    "fully handle-based",
+    "This stems from a common GPU's internal design",
+    "can easily lead to control flow oscillation"
+  ],
+  "thinking_moves": [
+    "从handle机制的本质出发，将昂贵的同步调用转化为异步执行",
+    "借鉴网络MIMD拥塞控制原理解决guest-host执行速度不匹配",
+    "将数据交付过程分解为聚合-持久化-到达通知三阶段以匹配动态情况"
+  ],
+  "topic_tags": [
+    "mobile-emulation",
+    "graphics-virtualization",
+    "guest-host-decoupling",
+    "android-emulator",
+    "GPU-projection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

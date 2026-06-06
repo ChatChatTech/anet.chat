@@ -1,0 +1,41 @@
+{
+  "paper_id": "Dong et al. - 2008 - Self-monitoring for sensor networks",
+  "doi": null,
+  "title": "Self-Monitoring for Sensor Networks",
+  "year": 2008,
+  "venue": "MobiHoc'08",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "现有本地监控方案假设存在足够多的活跃节点,但大规模WSN中实际难以满足,导致监控拓扑设计缺乏理论优化基础。",
+  "problem_framing": "将自监控拓扑设计建模为最小补丁监控集问题(MPMSP),在单位圆盘图(UDG)模型下证明NP完全性并寻求近似算法。",
+  "key_insight": "监控节点选择可通过局部最大元算法等价于集中式贪心算法,实现分布式的最优近似保证。",
+  "method_signature": "基于偏序集的局部最大元选择机制,等价性证明通过top-antichain和规约序列建立。",
+  "evaluation_criteria": "补丁集大小相对于最优解的比值,算法运行轮数随网络规模的可扩展性。",
+  "negative_result_or_admitted_limitation": "承认无法完全排除恶意节点被选入补丁监控集,仅能降低其被选中的可能性。",
+  "evidence_for_taste": [
+    "38 additional nodes vs only 10 nodes needed",
+    "Optimal, LME and LDF demonstrate good threshold phenomenon",
+    "RIS is the worst and hence it is worthy and necessary",
+    "counters to the intuition",
+    "the approximation ratio of sequential greedy algorithm is H(Δ)"
+  ],
+  "thinking_moves": [
+    "从反面案例(38节点vs最优10节点)揭示现有随机选择的严重低效,以此论证优化必要性",
+    "将拓扑设计问题规约为NP完全的组合优化问题,用集合多覆盖框架获得近似比上界",
+    "利用偏序集和top-antichain结构,将分布式局部选择与集中式贪心的等价性严格证明",
+    "用最坏情况构造(如修改Vertex Cover证明)验证理论界的可达性"
+  ],
+  "topic_tags": [
+    "WSN-local-monitoring",
+    "NP-completeness-proof",
+    "distributed-approximation-algorithm",
+    "poset-top-antichain-equivalence",
+    "unit-disk-graph"
+  ],
+  "cites_own_work": [
+    "Khalil et al. [17] propose a on-demand sleep-wake protocol",
+    "Liang et. al have partially observed the similar results we prove here"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

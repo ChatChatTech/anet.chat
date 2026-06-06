@@ -1,0 +1,40 @@
+{
+  "paper_id": "2021_BIGCOM_RPM_Local_Differential_Privacy_based_Inventory_Forecasting",
+  "doi": null,
+  "title": "RPM: Local Differential Privacy based Inventory Forecasting",
+  "year": 2021,
+  "venue": "BIGCOM",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "广告CPM业务中历史数据在共享聚合分析时威胁用户隐私,且法规限制造成数据孤岛",
+  "problem_framing": "在局部差分隐私约束下,支持聚类-采样-求和等复杂计算任务以实现库存预测",
+  "key_insight": "通过分段线性概率密度函数在输入值附近保持高输出概率,牺牲纯求和精度换取聚类效果",
+  "method_signature": "RPM(斜率-片段机制)+PPIF框架(聚类+采样+隐私保护用户PV数据)",
+  "evaluation_criteria": "MAE测数据可用性,ARI测聚类质量,综合评估库存预测精度",
+  "negative_result_or_admitted_limitation": "RPM在ε较小时纯求和表现差;强迫聚类扰动数据与LDP目的相悖,这是误差主要来源",
+  "evidence_for_taste": [
+    "the advantage of RPM does not lie in summation calculation",
+    "These two methods offer inferior clustering results",
+    "can not be applied to clustering tasks at all",
+    "is contrary to the purpose of LDP, which is the main source of error",
+    "deep learning forecasting model and sampling to reduce system complexity",
+    "the perturbed data will be output near the input value with a high probability"
+  ],
+  "thinking_moves": [
+    "识别现有LDP方法在复杂计算任务(聚类)上的局限",
+    "将聚类-采样-求和组合作为整体任务优化,而非单一指标",
+    "用高可用性数据引导低可用性数据的聚类中心初始化,减少迭代次数",
+    "采用软聚类输出用户属于各类别的概率,匹配LDP的概率特性",
+    "承认强迫聚类与LDP目的相悖是误差主要来源,而非试图掩盖"
+  ],
+  "topic_tags": [
+    "local-differential-privacy",
+    "inventory-forecasting",
+    "CPM-advertising",
+    "LDP-clustering",
+    "user-privacy-preservation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

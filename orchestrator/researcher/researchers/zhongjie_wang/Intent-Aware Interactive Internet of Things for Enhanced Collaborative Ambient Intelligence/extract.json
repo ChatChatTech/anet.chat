@@ -1,0 +1,44 @@
+{
+  "paper_id": "Intent-Aware Interactive Internet of Things for Enhanced Collaborative Ambient Intelligence",
+  "doi": "10.1109/mic.2021.3099599",
+  "title": "Intent-aware Interactive Web of Things for Enhanced Collaborative Ambient Intelligence",
+  "year": 2021,
+  "venue": "IEEE International Conference on Multimedia and Expo",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "IoT设备能感知却不能自主执行动作,机器人在智能家居中缺乏物理交互能力",
+  "problem_framing": "多模态传感器数据下的活动预测问题,活动边界模糊且可并发重叠",
+  "key_insight": "将意图推断与PCHID强化学习方法结合,让机械臂通过子目标序列完成复杂任务",
+  "method_signature": "意图推断→语义搜索→PCHID多步目标控制的三阶段框架",
+  "evaluation_criteria": "RLBench任务成功率及训练收敛速度对比HER与DQN",
+  "negative_result_or_admitted_limitation": "环境预设依赖专家劳动,无法动态发现新物品或学习未记录活动",
+  "evidence_for_taste": [
+    "successfully adapted connected things in our daily life",
+    "still require human intervention",
+    "cannot work autonomously",
+    "cannot control any device to take the actions accordingly",
+    "environmental setup is still predefined",
+    "certain amount of expertise labor work"
+  ],
+  "thinking_moves": [
+    "将意图推断问题从感知层面扩展到执行层面",
+    "借鉴机器人领域的PCHID解决语义目标到动作的映射",
+    "承认预设环境是系统瓶颈并指出未来方向",
+    "通过真实演示验证仿真结果的可行性"
+  ],
+  "topic_tags": [
+    "Intent-inference",
+    "Web-of-Things",
+    "IoRT-robotic-assistants",
+    "PCHID-RL-control",
+    "Smart-home-activity-recognition"
+  ],
+  "cites_own_work": [
+    [
+      "Lina Yao et al. 2018 - WITS IoT-endowed framework",
+      "Altulyan et al. 2021 - Contextual Bandit Activity recommendation"
+    ]
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Zhongjie Wang为哈尔滨工业大学合作作者,贡献主要在框架整合与实验验证部分,具体技术细节如PCHID等方法论来自合作团队"
+}

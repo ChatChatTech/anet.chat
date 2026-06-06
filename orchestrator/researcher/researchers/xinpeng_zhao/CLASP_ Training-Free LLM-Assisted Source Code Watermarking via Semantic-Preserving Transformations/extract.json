@@ -1,0 +1,39 @@
+{
+  "paper_id": "CLASP_ Training-Free LLM-Assisted Source Code Watermarking via Semantic-Preserving Transformations",
+  "doi": "10.48550/arxiv.2510.11251",
+  "title": "CLASP: Training-Free LLM-Assisted Source Code Watermarking via Semantic-Preserving Transformations",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "开源代码和LLM代码生成导致未授权重用和知识产权侵权风险加剧，需可靠源码溯源手段",
+  "problem_framing": "现有方法依赖标识符、局部代码模式或手工编辑，易受重命名、重构和自适应水印去除攻击",
+  "key_insight": "将水印嵌入固定语义保持变换空间，利用LLM进行上下文适配选择，结合检索比对提取，避免 decoder 训练",
+  "method_signature": "两阶段框架：语义一致嵌入(LLM选择变换)+差分比对提取(检索对齐+推理恢复)",
+  "evaluation_criteria": "BitAcc(准确率)、Pass(执行通过率)、CodeBLEU(自然性)、鲁棒性(黑盒移除+自适应去水印)",
+  "negative_result_or_admitted_limitation": "CLASP需更长嵌入/提取时间(3.33s vs baseline 0.007s)，自适应攻击下BitAcc仍有明显下降",
+  "evidence_for_taste": [
+    "leaving them vulnerable to renaming, refactoring, and adaptive watermark removal",
+    "limiting automation and practical deployment",
+    "much sharper degradation",
+    "approaching random-guessing level",
+    "sacrifices some inference speed",
+    "maintaining high pass rates after rewriting"
+  ],
+  "thinking_moves": [
+    "把水印恢复问题重新 frame 成代码比对和变换推理问题而非直接模式匹配",
+    "用检索取代训练 decoder，利用多特征相似度匹配重建原始代码参考",
+    "设计固定变换空间使嵌入和提取对齐，避免语言特定解析/AST依赖",
+    "通过类别均衡策略分布水印信号，避免依赖单一变换模式"
+  ],
+  "topic_tags": [
+    "source-code-watermarking",
+    "LLM-assisted-transformation",
+    "semantic-preserving-code-edit",
+    "retrieval-based-watermark-extraction",
+    "code-provenance-verification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

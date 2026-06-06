@@ -1,0 +1,39 @@
+{
+  "paper_id": "A Survey on Hallucination in Large Language Models_ Principles, Taxonomy, Challenges, and Open Questions",
+  "doi": "10.48550/arxiv.2311.05232",
+  "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+  "year": 2024,
+  "venue": "ACM Transactions on Information Systems",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "LLMs hallucinate生成似是而非的内容，威胁信息检索系统的可靠性",
+  "problem_framing": "将幻觉分为事实性幻觉与忠实性幻觉，建立面向LLM的新分类体系",
+  "key_insight": "缓解策略必须直接关联幻觉根源，提供针对性框架",
+  "method_signature": "系统性综述幻觉分类、成因、检测与缓解方法",
+  "evaluation_criteria": "检测方法的准确性、缓解方法的有效性",
+  "negative_result_or_admitted_limitation": "RAG系统本身存在局限甚至会产生幻觉",
+  "evidence_for_taste": [
+    "LLMs will increase the likelihood of generating such false statements due to their remarkable memorization capabilities",
+    "the model’s output fabricates details about the book’s ending",
+    "the models’ inability to reject",
+    "Current systems inherently face limitations and even suffer from hallucinations",
+    "Our proposed mitigation strategies are directly tied to these causes"
+  ],
+  "thinking_moves": [
+    "从预训练、SFT、RLHF三个阶段追溯幻觉根源",
+    "比较现有survey的覆盖范围与组织结构差异",
+    "将缓解方法与幻觉成因建立因果对应关系",
+    "细分幻觉类型为事实性与忠实性两大类",
+    "分析RAG系统自身的局限性"
+  ],
+  "topic_tags": [
+    "LLM幻觉分类",
+    "事实性幻觉",
+    "忠实性幻觉",
+    "知识边界",
+    "检索增强生成RAG"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

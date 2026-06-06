@@ -1,0 +1,42 @@
+{
+  "paper_id": "Key Issues In Cloud Simulation Platform Based On Cloud Computing",
+  "doi": null,
+  "title": "Key Issues In Cloud Simulation Platform Based On Cloud Computing",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "网络化M&S平台难以高效利用分布式异构仿真资源,用户获取服务过程繁琐复杂",
+  "problem_framing": "将云计术思想引入网络化M&S平台,解决仿真资源共享的透明访问与按需使用问题",
+  "key_insight": "通过虚拟化封装和面向服务体系结构屏蔽仿真资源的分布异构性,实现按需服务",
+  "method_signature": "提出分层CSP架构(资源层/中间件层/服务层/门户层)及6项关键技术",
+  "evaluation_criteria": "无实证评估,仅为概念性论文,原型系统尚在开发中",
+  "negative_result_or_admitted_limitation": "We are developing a CSP prototype now,论文未给出实现结果或验证数据",
+  "evidence_for_taste": [
+    "provides a promising solution",
+    "a research map for future research",
+    "we are developing a CSP prototype now",
+    "contribute to the future research",
+    "This paper presents a map"
+  ],
+  "thinking_moves": [
+    "将云计算的IaaS/PaaS/SaaS三层模型映射到仿真领域的功能分层",
+    "从用户痛点出发:先定义'用户需要按需获取透明访问',再逆向推导技术需求",
+    "对关键技术进行系统性分类枚举,提供研究路线图而非具体方案",
+    "采用类比推理:仿真云类似电力Utility Computing按需计费模式",
+    "强调屏蔽复杂性是核心目标:distribution and heterogeneity"
+  ],
+  "topic_tags": [
+    "cloud-simulation",
+    "virtualized-simulation-platform",
+    "service-oriented-M&S",
+    "on-demand-simulation",
+    "networked-simulation-resources"
+  ],
+  "cites_own_work": [
+    "Lei and Lin 2010",
+    "Lei et al. 2011"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为概念性/综述性工作,未提供DOI、年份、具体发表 venue。缺乏实验验证,关键issues列举式展开而无量化评估。自我定位为'future research map'。"
+}

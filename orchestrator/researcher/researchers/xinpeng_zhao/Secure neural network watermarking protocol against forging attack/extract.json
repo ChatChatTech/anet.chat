@@ -1,0 +1,37 @@
+{
+  "paper_id": "Secure neural network watermarking protocol against forging attack",
+  "doi": "10.1186/s13640-020-00527-1",
+  "title": "Secure neural network watermarking protocol against forging attack",
+  "year": 2020,
+  "venue": "EURASIP Journal on Image and Video Processing",
+  "venue_tier": "regional",
+  "role": "corresponding",
+  "motivation": "保护神经网络知识产权,防止攻击者伪造触发集声称所有权",
+  "problem_framing": "把伪造攻击定义为黑盒攻击,需要协议级解决方案使攻击者无法构造合法触发集",
+  "key_insight": "用单向哈希函数生成触发样本链,攻击者无法逆向构造合法触发集",
+  "method_signature": "用双向单向哈希链生成触发集并嵌入所有权验证协议",
+  "evaluation_criteria": "验证成功率、原始分类精度不退化、伪造攻击成功率需≤10^-32",
+  "negative_result_or_admitted_limitation": "嵌入新水印不构成成功攻击,因可提交含单一水印网络证明专属所有权",
+  "evidence_for_taste": [
+    "the forging attack remains a problem",
+    "it is still feasible for an attacker",
+    "eliminate forging attacks completely is the more important point"
+  ],
+  "thinking_moves": [
+    "从所有权验证协议缺陷出发,引入密码学原语解决可信第三方判定问题",
+    "区分黑盒伪造攻击与白盒去除攻击,只考虑去除攻击的鲁棒性",
+    "证明水印不可去除比嵌入多个水印更能保护版权"
+  ],
+  "topic_tags": [
+    "neural-network-watermarking",
+    "forging-attack-defense",
+    "one-way-hash-chain",
+    "black-box-attack",
+    "intellectual-property-protection"
+  ],
+  "cites_own_work": [
+    "xinpeng_zhao"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

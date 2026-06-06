@@ -1,0 +1,43 @@
+{
+  "paper_id": "Zhou et al. - 2026 - QUIDS Quality-Informed Incentive-Driven Multiagent Dispatching System for Mobile Crowdsensing",
+  "doi": null,
+  "title": "QUIDS: Quality-Informed Incentive-Driven Multiagent Dispatching System for Mobile Crowdsensing",
+  "year": 2026,
+  "venue": "IEEE Internet of Things Journal",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Nondedicated vehicles concentrate in high-demand areas, leaving sensing coverage uneven; drivers refuse dispatch without economic compensation.",
+  "problem_framing": "Joint optimization of sensing coverage and reliability under budget constraint, modeled as NP-hard combinatorial problem with nonlinear objective.",
+  "key_insight": "Multiple lower-quality sensors can compensate each other through data aggregation; sensing reliability weighting enables joint optimization of coverage and reliability.",
+  "method_signature": "ASQ metric combining entropy and log coverage weighted by inferred reliability; mutually assisted belief-aware dispatching with monetary incentives.",
+  "evaluation_criteria": "ASQ improvement over baseline and SOTA methods; reconstruction map error reduction across algorithms; real-world deployment with 29 taxis.",
+  "negative_result_or_admitted_limitation": "Existing dispatching methods assume near-perfect sensor reliability and neglect monetary incentives required for driver acceptance.",
+  "evidence_for_taste": [
+    "neglecting sensing reliability may lead to unreliable data and misleading information",
+    "the inherent tradeoff between sensing coverage and sensing reliability",
+    "the customization of an effective monetary incentive strategy",
+    "This imbalance in the spatial distribution of sensing resources undermines QoI",
+    "often fail to account for the monetary incentives"
+  ],
+  "thinking_moves": [
+    "把coverage和reliability的tradeoff合并成单一ASQ指标，用加权策略实现joint optimization",
+    "借用信息论的entropy度量coverage evenness，而非仅计数覆盖率",
+    "用truth discovery框架推断传感器bias和reliability，无需外部ground truth",
+    "把司机经济动机建模进优化约束，将行为不确定性转为可计算约束",
+    "指出现有方法只优化coverage而忽略reliability是根本缺陷"
+  ],
+  "topic_tags": [
+    "mobile-crowdsensing-dispatching",
+    "quality-of-information",
+    "sensing-reliability-inference",
+    "monetary-incentive-mechanism",
+    "vehicular-crowdsensing"
+  ],
+  "cites_own_work": [
+    "Z. Li et al., QUEST (INFOCOM 2024) - prior version of the dispatching system",
+    "X. Chen et al., PAS (IEEE IoT Journal 2020)",
+    "S. Xu et al., ILOCuS (IEEE TMC 2020)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

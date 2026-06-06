@@ -1,0 +1,39 @@
+{
+  "paper_id": "The Ergodicity of the Collatz Process in Positive Integer Field",
+  "doi": "10.48550/arxiv.1311.5690",
+  "title": "The Ergodicity of the Collatz Process in Positive Integer Field",
+  "year": 2013,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Collatz conjecture is an unsolved problem since 1930s with 'random' iteration despite deterministic function",
+  "problem_framing": "Generalize Collatz function into non-deterministic processes, map to graphs, prove reachability via structural analysis",
+  "key_insight": "Introduce models M2→M1→MS→M0: prove properties in relaxed models then transfer to original via edge removal",
+  "method_signature": "Cluster decomposition (9/5/3-cluster) and succession theorems TDDFFBBT, DFFBTT in ternary representation",
+  "evaluation_criteria": "All positive integers reach 1 (Ω₀=ℕ⁺), unique cycle 4→2→1→4",
+  "negative_result_or_admitted_limitation": "Admit 'there exist simpler proofs' but choose complex method 'to illustrate the structure of the Collatz graphs'",
+  "evidence_for_taste": [
+    "very hard to solve because the iteration process is very 'random'",
+    "to illustrate the structure of the Collatz graphs",
+    "there exist simpler proofs on Ω₁=ℕ⁺",
+    "only one circle 4→2→1→4 exists",
+    "after removals, MS becomes M0"
+  ],
+  "thinking_moves": [
+    "从确定性过程放松约束到非确定性,建立层次化模型链(M2→M1→MS→M0)",
+    "在放松模型中证明可达性,再通过删边操作把性质迁移回原模型",
+    "用图论聚类(9-cluster/5-cluster/3-cluster)分解正整数空间,逐块证明连通性",
+    "识别核心动作序列('TDDFFBBT', 'DFFBTT')作为结构生成的 succession 函数",
+    "承认为了阐明结构而选择更复杂的证明路径"
+  ],
+  "topic_tags": [
+    "Collatz-conjecture",
+    "graph-theory",
+    "3x+1-problem",
+    "non-deterministic-process",
+    "cluster-analysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

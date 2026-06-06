@@ -1,0 +1,40 @@
+{
+  "paper_id": "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+  "doi": "10.48550/arxiv.1911.03600",
+  "title": "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+  "year": 2019,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "Kubernetes healing capability is insufficient for high availability under edge heterogeneity and variability; current service placement research ignores composite service structure",
+  "problem_framing": "Stochastic discrete optimization to decide for each microservice candidate how many instances and on which edge sites to place them",
+  "key_insight": "Redundancy allowing one candidate dispatched to multiple edge sites alleviates single-site bottleneck risk and balances requests from different end users",
+  "method_signature": "SAA-RP framework with GA-based Server Selection (GASS) algorithm for sequential combinatorial microservice structure",
+  "evaluation_criteria": "Overall response time minimization under heterogeneous SBS capacity constraints using real-world EUA dataset",
+  "negative_result_or_admitted_limitation": "Redundancy is not always a win; creating too many instances can lead to unacceptably high response times and even instability",
+  "evidence_for_taste": [
+    "high availability cannot be ensured",
+    "the default assignment does not fully take heterogeneity",
+    "redundancy is not always a win",
+    "the outage time could be dozens of minutes"
+  ],
+  "thinking_moves": [
+    "将复合微服务的组合结构纳入边缘部署建模",
+    "通过随机采样(SAA)将随机优化问题转为确定性子问题",
+    "用遗传算法求解每个采样实例以规避组合爆炸",
+    "从生产实践出发,指出Kubernetes默认调度器的不足",
+    "承认冗余策略存在危险性,需权衡实例数量"
+  ],
+  "topic_tags": [
+    "edge-service-placement",
+    "microservice-redundancy",
+    "multi-access-edge-computing",
+    "stochastic-optimization",
+    "kubernetes-deployment"
+  ],
+  "cites_own_work": [
+    "Deploying data-intensive applications with multiple services components on edge (2019)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

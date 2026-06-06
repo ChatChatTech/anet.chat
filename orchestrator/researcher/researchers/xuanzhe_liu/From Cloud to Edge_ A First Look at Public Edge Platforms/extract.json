@@ -1,0 +1,42 @@
+{
+  "paper_id": "From Cloud to Edge_ A First Look at Public Edge Platforms",
+  "doi": "10.48550/arxiv.2109.03395",
+  "title": "From Cloud to Edge: A First Look at Public Edge Platforms",
+  "year": 2021,
+  "venue": "ACM Internet Measurement Conference (IMC '21)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "边缘计算优势已定性地知晓,但其运行环境的定量特性尚未被系统性研究",
+  "problem_framing": "从用户视角(延迟/吞吐/QoE)和提供商视角(工作负载/成本)首次系统性测量商业边缘平台",
+  "key_insight": "当前边缘平台距离愿景仍有差距——服务器距用户仍有5-12跳而非1-2跳,延迟收益有限,但工作负载可预测性更强",
+  "method_signature": "大规模众包测量+受控实验+VM traces统计,用户侧与提供商侧双视角对比",
+  "evaluation_criteria": "端到端延迟/吞吐/QoE/资源利用率/计费成本/负载均衡效果",
+  "negative_result_or_admitted_limitation": "NEP仍无法(或勉强)满足VR/AR等低延迟应用需求;边缘资源分布极不均衡(跨站点731倍差异);粗粒度计费模型可能对某些应用不利",
+  "evidence_for_taste": [
+    "虽然这些优势是定性的",
+    "其定量特征远未得到系统性研究",
+    "理想情况下应与云进行定量比较",
+    "这种比较并非完美apple-to-apple",
+    "NEP仍无法满足延迟敏感应用需求",
+    "我们以保守谨慎的方式得出结论",
+    "现有资源分配挑战在迁移到边缘时被放大"
+  ],
+  "thinking_moves": [
+    "从定性认知缺口出发定义\"首次系统性测量\"的研究价值",
+    "采用用户侧+提供商侧的双视角框架全面揭示边缘生态",
+    "面对数据获取困难时明确承认\"最佳可达到\"而非强行等同",
+    "在跨平台比较不可精确匹配时采用保守结论策略",
+    "从实测数据反推基础设施部署密度的物理限制",
+    "通过hop级分解定位瓶颈所在层级而非笼统论断"
+  ],
+  "topic_tags": [
+    "edge-platform-measurement",
+    "network-latency-characterization",
+    "workload-trace-analysis",
+    "crowdsourced-measurement",
+    "edge-cloud-comparison"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

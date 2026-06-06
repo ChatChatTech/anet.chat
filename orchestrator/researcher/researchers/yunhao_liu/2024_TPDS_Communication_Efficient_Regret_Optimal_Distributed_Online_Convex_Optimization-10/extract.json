@@ -1,0 +1,35 @@
+{
+  "paper_id": "2024_TPDS_Communication_Efficient_Regret_Optimal_Distributed_Online_Convex_Optimization-10",
+  "doi": null,
+  "title": "Communication-Efficient Regret-Optimal Distributed Online Convex Optimization",
+  "year": 2024,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "通信受限网络(如机器人网络)中,通信能耗远高于本地计算,高频通信导致算法不可行",
+  "problem_framing": "分布式在线凸优化中同时最小化累积后悔值和通信代价,建立两者权衡的极小极大下界",
+  "key_insight": "采用双块更新策略使所有损失函数都能贡献模型更新,通过间隔大小调节实现通信复杂度下界",
+  "method_signature": "DB-TDOCO和DB2O算法,分别基于双块BFS树辅助和批量到在线转换实现通信高效",
+  "evaluation_criteria": "最小化后悔界和通信复杂度(消息复杂度),在真实分类数据集验证通信节省率",
+  "negative_result_or_admitted_limitation": "现有SOTA算法通信复杂度为O(n²T),相比理论下界呈次优,需改进",
+  "evidence_for_taste": [
+    "communication cost is typically limited",
+    "our theory implies that algorithms in stochastic DOCO may be considerably more communication-efficient",
+    "the literature lacks algorithms that attain these lower bounds",
+    "significantly reduce the state-of-the-art communication complexity"
+  ],
+  "thinking_moves": [
+    "先建立通信复杂度的理论下界,再反推算法设计目标",
+    "从反馈延迟放大后悔值的研究获取灵感,应用于分布式场景",
+    "将通信资源利用有效性作为算法改进的核心杠杆"
+  ],
+  "topic_tags": [
+    "distributed-online-convex-optimization",
+    "communication-complexity-lower-bounds",
+    "regret-optimal-algorithms",
+    "adversarial-stochastic-settings"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

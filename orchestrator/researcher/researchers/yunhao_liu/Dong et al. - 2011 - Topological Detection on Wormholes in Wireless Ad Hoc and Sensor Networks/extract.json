@@ -1,0 +1,40 @@
+{
+  "paper_id": "Dong et al. - 2011 - Topological Detection on Wormholes in Wireless Ad Hoc and Sensor Networks",
+  "doi": null,
+  "title": "Topological Detection on Wormholes in Wireless Ad Hoc and Sensor Networks",
+  "year": 2011,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有检测方法依赖专用硬件或强假设,限制了在低成本、资源受限网络中的适用性",
+  "problem_framing": "将蠕虫洞攻击重新定义为纯拓扑问题:蠕虫洞必然在网络上引入奇点或更高亏格",
+  "key_insight": "合法网络是亏格为0的2-流形,蠕虫洞会引入额外亏格或边界,可通过检测非分离环来定位",
+  "method_signature": "基于拓扑偏差的分布式蠕虫洞检测,仅用网络连通性信息",
+  "evaluation_criteria": "检测率、节点密度影响、与packing-number方法对比",
+  "negative_result_or_admitted_limitation": "Class-IV蠕虫洞在拓扑上与普通桥梁不可区分,任何拓扑方法都无法检测",
+  "evidence_for_taste": [
+    "a Class-IV wormhole is undetectable with topological method",
+    "adds a bridge on the same boundary",
+    "is indistinguishable with a plain bridge",
+    "neither can any other topological approaches"
+  ],
+  "thinking_moves": [
+    "从几何假设转向拓扑抽象:把网络建模为2-流形曲面",
+    "用组合拓扑中的亏格、非分离环等概念重新形式化安全问题",
+    "证明各类型蠕虫洞与拓扑不变量的对应关系",
+    "连续域理论证明→离散网络算法实现的桥接",
+    "承认拓扑方法的根本局限,指出Class-IV不可检测"
+  ],
+  "topic_tags": [
+    "wormhole-attack-detection",
+    "topological-network-analysis",
+    "wireless-ad-hoc-security",
+    "sensor-network-security",
+    "distributed-detection"
+  ],
+  "cites_own_work": [
+    "[9]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

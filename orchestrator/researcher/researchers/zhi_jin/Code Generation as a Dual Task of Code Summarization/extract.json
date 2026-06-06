@@ -1,0 +1,38 @@
+{
+  "paper_id": "Code Generation as a Dual Task of Code Summarization",
+  "doi": "10.48550/arxiv.1910.05923",
+  "title": "Code Generation as a Dual Task of Code Summarization",
+  "year": 2019,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CS和CG任务独立研究，未利用两者间的直观关联性，浪费了可互相提升的潜力",
+  "problem_framing": "将CS和CG视为对偶任务，通过概率约束和注意力权重重构实现联合训练",
+  "key_insight": "CS的输入是CG的输出、CG的输入是CS的输出——这种对偶性可作为正则化项直接约束模型",
+  "method_signature": "双任务Seq2Seq+概率对偶正则化+注意力对称正则化的联合训练框架",
+  "evaluation_criteria": "CS用BLEU/METEOR/ROUGE-L，CG用BLEU和有效代码率",
+  "negative_result_or_admitted_limitation": "CG任务极具挑战性，有效代码生成比例仍低，未来需整合语法规则",
+  "evidence_for_taste": [
+    "intuitive correlation",
+    "we argue that",
+    "slightly more effective",
+    "non-negligible",
+    "very challenging"
+  ],
+  "thinking_moves": [
+    "把两个独立任务的关系重新 frame 成数学对偶约束",
+    "从概率链式法则推导出条件概率的对偶关系",
+    "从模型结构对称性提出注意力权重应一致的假设",
+    "采用 Jensen-Shannon 散度度量注意力分布相似性"
+  ],
+  "topic_tags": [
+    "code-generation",
+    "code-summarization",
+    "dual-learning",
+    "attention-mechanism",
+    "seq2seq"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

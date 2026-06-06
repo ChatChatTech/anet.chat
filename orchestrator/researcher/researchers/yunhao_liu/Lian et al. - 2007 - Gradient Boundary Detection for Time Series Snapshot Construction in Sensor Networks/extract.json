@@ -1,0 +1,43 @@
+{
+  "paper_id": "Lian et al. - 2007 - Gradient Boundary Detection for Time Series Snapshot Construction in Sensor Networks",
+  "doi": null,
+  "title": "Gradient Boundary Detection for Time Series Snapshot Construction in Sensor Networks",
+  "year": 2007,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Sink需要追踪监测区域的历史数据,全传感器周期传输数据能耗高且不合理",
+  "problem_framing": "在保证快照精度容错范围内,用边界检测替代全局传输以降低能耗",
+  "key_insight": "相邻近区域值高度相关,仅边界传感器传输数据即可重建整片区域",
+  "method_signature": "GBD算法通过VSF遍历检测梯度边界,只传输边界节点数据到汇聚点",
+  "evaluation_criteria": "MERR(平均误差)、BERR(边界误差)、传输能耗节省百分比",
+  "negative_result_or_admitted_limitation": "GBD未解决负载均衡问题,需通过改变梯度配置手动调整",
+  "evidence_for_taste": [
+    "periodic transmitting all sensors is not energy efficient",
+    "high similarity of the temperature values in the vicinity",
+    "sensors close to the boundaries transmit data",
+    "not suitable for historical queries",
+    "data received by the sink are redundant",
+    "changes of temperature distributions automatically balance the load",
+    "if the time interval is too small, very similar to previous snapshot",
+    "if the time interval is too large, difficult to compute accurate estimation"
+  ],
+  "thinking_moves": [
+    "把全局传输问题重新定义为边界检测问题",
+    "利用相邻近空间相关性压缩信息传输量",
+    "引入VSF概念用面遍历近似边界几何",
+    "通过跳过技术减少冗余数据传输",
+    "从最坏情况设计终止条件",
+    "承认方法局限性并给出工程缓解方案"
+  ],
+  "topic_tags": [
+    "sensor-network-snapshot-construction",
+    "boundary-detection-energy-efficiency",
+    "historical-query-support",
+    "gradient-boundary-partitioning",
+    "face-traversal-localized-routing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

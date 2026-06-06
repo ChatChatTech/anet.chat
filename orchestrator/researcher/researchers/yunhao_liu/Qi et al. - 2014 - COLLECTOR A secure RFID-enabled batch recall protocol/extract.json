@@ -1,0 +1,41 @@
+{
+  "paper_id": "Qi et al. - 2014 - COLLECTOR A secure RFID-enabled batch recall protocol",
+  "doi": null,
+  "title": "COLLECTOR: A Secure RFID-Enabled Batch Recall Protocol",
+  "year": 2014,
+  "venue": "IEEE",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统批量召回依赖部件编号或时间段召回，不准确且开销大，RFID技术提供精准物品级召回机会",
+  "problem_framing": "需同时满足追踪性、准确性、生产隐私、召回认证、不可否认性及效率等多维安全要求",
+  "key_insight": "用随机密钥加密知情消息使顾客仅能解密问题产品；批次索引实现零计算量过滤正常产品",
+  "method_signature": "对称加密+签名：recall message=(idx, signed-CT)，identification message含受影响批次索引和签名密钥",
+  "evaluation_criteria": "功能正确性、安全性可证明、 commodity C1G2标签实现验证",
+  "negative_result_or_admitted_limitation": "未考虑网络攻击如互联网蠕虫，仅依赖C1G2标准操作，假设标签不执行密码运算",
+  "evidence_for_taste": [
+    "recall messages without the knowledge of batch numbers",
+    "work in a fine-grained manner",
+    "does not rely on the customer set to securely store secret keys",
+    "especially efficient when a small fraction of end-products are problematic",
+    "COLLECTOR does not require any modifications to commodity tags"
+  ],
+  "thinking_moves": [
+    "将批量召回问题从'标记部件编号'重新框架为'加密知情消息在标签与公开消息间的安全传播'",
+    "利用随机数使攻击者无法猜测加密的知情消息内容",
+    "通过批次索引实现好产品的O(1)过滤，避免对每个产品做解密计算",
+    "centralized key management only at end manufacturer simplifies complexity"
+  ],
+  "topic_tags": [
+    "RFID-batch-recall",
+    "supply-chain-security",
+    "symmetric-encryption-protocol",
+    "production-pattern-privacy",
+    "C1G2-RFID-implementation"
+  ],
+  "cites_own_work": [
+    "Yang et al. 2010 - Identification-free batch authentication",
+    "Gong et al. 2013 - Informative counting"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "paper完整提供动机、问题定义、设计细节、分析和实现验证；第一作者Qi Yuanqing Zheng等；通讯作者Liu Yunhao"
+}

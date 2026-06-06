@@ -1,0 +1,38 @@
+{
+  "paper_id": "Rise of the Planet of Serverless Computing_ A Systematic Review",
+  "doi": "10.48550/arxiv.2206.12275",
+  "title": "Rise of the Planet of Serverless Computing: A Systematic Review",
+  "year": 2022,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "serverless市场快速增长,但缺乏全面文献综述帮助研究者和实践者快速把握全局研究方向",
+  "problem_framing": "现有serverless研究分散在多个社区,缺乏系统性梳理research scope和existing solutions的分析框架",
+  "key_insight": "通过taxonomy将17个研究方向分类,并从解决方案分类、实验设置、发表 venues 四个维度系统分析164篇论文",
+  "method_signature": "基于Kitchenham指南的系统性文献综述,收集164篇论文,构造17个研究类别taxonomy",
+  "evaluation_criteria": "分析research directions、existing solutions、experimental settings、publication venues四个方面",
+  "negative_result_or_admitted_limitation": "serverless工具成熟度低,event-driven/distributed特性使应用架构复杂、执行流难以复现",
+  "evidence_for_taste": [
+    "tool maturity: Low",
+    "no previous work has provided",
+    "making the application architecture more complex"
+  ],
+  "thinking_moves": [
+    "构建taxonomy将分散研究归类为可导航的知识结构",
+    "从研究问题导向到解决方案导向的双重视角分析文献",
+    "用实验设置和评估方法论作为评价研究深度的proxy"
+  ],
+  "topic_tags": [
+    "serverless-computing",
+    "systematic-review",
+    "taxonomy-construction",
+    "function-as-a-service",
+    "cloud-computing-literature"
+  ],
+  "cites_own_work": [
+    "Wen et al. 2021 empirical study on challenges",
+    "Wen and Liu 2021 measurement study"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

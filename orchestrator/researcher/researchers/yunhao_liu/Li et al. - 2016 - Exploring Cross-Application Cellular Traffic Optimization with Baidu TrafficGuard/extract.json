@@ -1,0 +1,43 @@
+{
+  "paper_id": "Li et al. - 2016 - Exploring Cross-Application Cellular Traffic Optimization with Baidu TrafficGuard",
+  "doi": null,
+  "title": "Exploring Cross-Application Cellular Traffic Optimization with Baidu TrafficGuard",
+  "year": 2016,
+  "venue": "NSDI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "移动流量激增导致带宽上限和拥塞,现有方案仅限单一应用",
+  "problem_framing": "构建跨应用的透明流量优化代理系统,同时保证用户体验",
+  "key_insight": "测量发现文本压缩对短文本效果差(仅省1.36%流量),可放弃文本压缩改用轻量方案",
+  "method_signature": "云端VPN代理+自适应JPEG压缩+流量过滤+VBWC缓存",
+  "evaluation_criteria": "流量降低百分比、超额次数、延迟代价、电池消耗",
+  "negative_result_or_admitted_limitation": "EndRE方案虽可省10.2%流量但内存开销高数百倍,故被放弃;文本压缩因收效低且耗电被明确拒绝",
+  "evidence_for_taste": [
+    "仅省1.36%的总HTTP流量",
+    "given the limited network efficiency gains and the toll on battery life, we opt to not compress texts",
+    "breaks the original functionality of websites",
+    "10.6% of images in TGdataset are broken",
+    "Even worse, the server-side memory overhead of EndRE can be hundreds of times higher",
+    "to avoid image distortion",
+    "This is important because many UI layout algorithms (e.g., CSS) are sensitive to the pixel dimensions",
+    "67% of users have chosen to block ads",
+    "95.4% of users selected the ImgQFMiddle scheme"
+  ],
+  "thinking_moves": [
+    "测量驱动:先观察实际流量特征再决策,非先假设再验证",
+    "逆向采纳:所有系统都压缩文本,但测量数据否定了此策略",
+    "工程权衡:宁可省10%计算开销,也拒绝可能破坏UI的激进压缩",
+    "低垂果实:明确指出10.6%损坏图片可丢弃,直接优化",
+    "成本拒绝:EndRE虽压缩率高,但内存开销数百倍于VBWC故放弃"
+  ],
+  "topic_tags": [
+    "mobile-traffic-optimization",
+    "cross-app-proxy",
+    "adaptive-image-compression",
+    "value-based-web-caching",
+    "cellular-traffic-measurement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

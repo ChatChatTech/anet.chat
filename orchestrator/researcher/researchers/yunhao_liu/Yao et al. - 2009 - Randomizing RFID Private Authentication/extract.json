@@ -1,0 +1,40 @@
+{
+  "paper_id": "Yao et al. - 2009 - Randomizing RFID Private Authentication",
+  "doi": null,
+  "title": "Randomizing RFID Private Authentication",
+  "year": 2009,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Tree-based RFID认证虽将效率提升至O(log N)，但标签间共享密钥导致compromise攻击可追踪其他标签",
+  "problem_framing": "将compromise攻击、desynchronization攻击和forward secrecy三个安全关切统一为common-keys effect概念",
+  "key_insight": "通过随机游走让标签每次认证后随机移动到树中不同叶节点，消除标签间共享密钥组件",
+  "method_signature": "RWP协议：认证时随机选择锚点，计算偏移量定位标签；认证后随机分配新位置并更新密钥",
+  "evaluation_criteria": "安全：抗compromise/desynchronization/replay攻击；效率：O(1)认证复杂度",
+  "negative_result_or_admitted_limitation": "RWP向后台应用引入额外存储开销，需为每个标签记录添加表头，对大规模系统（如2^32标签）需约18.5GB",
+  "evidence_for_taste": [
+    "common-keys effect",
+    "authentication efficiency from O(log N) to O(1)",
+    "key components shared among tags lead to security flaws",
+    "randomly walking in the key tree",
+    "eliminate the common-keys effect",
+    "updating fails to change the structure of the key tree"
+  ],
+  "thinking_moves": [
+    "从多个独立攻击现象提炼统一概念框架（common-keys effect）",
+    "将树结构导航问题重新形式化为坐标空间定位",
+    "通过引入随机性消除结构化弱点",
+    "先界定最坏情况再设计防御",
+    "在安全与效率之间寻求O(1)复杂度突破"
+  ],
+  "topic_tags": [
+    "RFID-private-authentication",
+    "common-keys-effect",
+    "random-walk-protocol",
+    "tree-based-key-structure",
+    "forward-secrecy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注发表会议名称，仅根据行文风格推断为会议论文。Yunhao Liu为第六作者（合作作者），非一作或通讯作者。"
+}

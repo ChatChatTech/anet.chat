@@ -1,0 +1,39 @@
+{
+  "paper_id": "Integrating Tree Path in Transformer for Code Representation",
+  "doi": null,
+  "title": "Integrating Tree Path in Transformer for Code Representation",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "代码结构信息（AST路径）难以被序列模型捕获，现有方法缺乏上下文建模或全局结构建模能力",
+  "problem_framing": "如何将AST中的相对路径和绝对路径编码融入Transformer的注意力机制",
+  "key_insight": "相对/绝对路径编码可类比NLP中的相对/绝对位置编码，直接修改注意力分数实现结构归纳偏置",
+  "method_signature": "TPTrans：通过修改注意力QK/V矩阵，将AST相对/绝对路径编码融入自注意力",
+  "evaluation_criteria": "代码摘要任务（方法名预测），精确率/召回率/F1评估",
+  "negative_result_or_admitted_limitation": "JavaScript数据集表现较差；两种路径编码存在特征重叠，绝对路径增益微弱",
+  "evidence_for_taste": [
+    "Code2seq lacks the modelling of context",
+    "GNNs tends to be local and struggle to leverage long-range interactions",
+    "the different node combinations of paths contain plenty of structure information",
+    "the overall performance of TPTrans and TPTrans-α does not differ so much",
+    "the improvement brought by absolute path becomes smaller",
+    "these two kinds of paths are not orthogonal and much feature overlap indeed exists"
+  ],
+  "thinking_moves": [
+    "类比NLP中位置编码方法，将路径编码迁移到Transformer",
+    "通过消融实验逐步移除路径编码子模块，验证各部分贡献",
+    "对比相对路径与绝对路径的实验差异，分析特征重叠关系",
+    "将复杂问题分解为可独立验证的组件（路径编码、归一化、模型深度）"
+  ],
+  "topic_tags": [
+    "code-representation-learning",
+    "AST-path-encoding",
+    "Transformer-attention-modification",
+    "code-summarization",
+    "structural-inductive-bias"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

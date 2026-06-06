@@ -1,0 +1,42 @@
+{
+  "paper_id": "Jiang et al. - 2021 - OmniTrack Orientation-Aware RFID Tracking With Centimeter-Level Accuracy",
+  "doi": null,
+  "title": "OmniTrack: Orientation-aware RFID Tracking with Centimeter-level Accuracy",
+  "year": 2021,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有RFID追踪方法使用方向盲模型,当标签朝向变化时精度严重退化,工业生产线场景无法准确追踪",
+  "problem_framing": "将相位变化建模为距离和朝向的联合函数,突破传统方法将朝向视为常量的假设",
+  "key_insight": "通过极化理论发现标签旋转角与相位变化存在线性关系,可显式量化方向对相位的影响",
+  "method_signature": "基于极化理论的朝向感知相位模型,结合双天线差分消除旋转角,迭代追踪位置与朝向",
+  "evaluation_criteria": "厘米级定位精度、朝向角精度、与Tagoram/BackPos在变向场景下对比",
+  "negative_result_or_admitted_limitation": "Tagoram因预先知道运动轨迹而效果最好;当极化方向垂直于天线平面时采样率降低导致误差增大;多人经过会偶尔阻挡视距信号使性能下降",
+  "evidence_for_taste": [
+    "For the first time in the community, we discover and quantify the impact of tag orientation on phase change",
+    "Neglecting the impact of the varying orientation will cause the loss of tracking accuracy",
+    "Most of the existing works overlook this problem",
+    "Tagoram has the best performance, owning to the prior knowledge of the movement trajectory",
+    "using multiple channels is time-consuming because the reader has to access the channels in a round-robin manner"
+  ],
+  "thinking_moves": [
+    "从物理极化理论出发解释工程现象,反推现有模型假设失效",
+    "将二维问题中的线性关系约束应用于消除相位模糊",
+    "利用旋转角在双天线间的等同性,通过相位差分消去未知量",
+    "将追踪问题迭代化,每步利用前次位置和朝向信息约束求解",
+    "被动触发标定:利用RSS正弦变化特征校正累积误差"
+  ],
+  "topic_tags": [
+    "RFID-tracking",
+    "orientation-aware",
+    "phase-based-localization",
+    "polarization-model",
+    "industrial-CPS"
+  ],
+  "cites_own_work": [
+    "3D-omnitrack: 3D tracking with COTS RFID systems (Jiang et al., IPSN 2019)",
+    "Anchor-free backscatter positioning (Liu et al., INFOCOM 2014)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文有部分截断,3D扩展和粒子滤波部分不完整。DOI未提供,但从作者信息可推断为Tsinghua-MSU团队工作。年份从文件名提取。 | md truncated to head40k+tail20k"
+}

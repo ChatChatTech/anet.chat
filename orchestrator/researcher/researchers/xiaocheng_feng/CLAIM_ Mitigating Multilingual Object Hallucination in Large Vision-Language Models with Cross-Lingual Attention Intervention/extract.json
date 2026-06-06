@@ -1,0 +1,38 @@
+{
+  "paper_id": "CLAIM_ Mitigating Multilingual Object Hallucination in Large Vision-Language Models with Cross-Lingual Attention Intervention",
+  "doi": "10.48550/arxiv.2506.11073",
+  "title": "CLAIM: Mitigating Multilingual Object Hallucination in Large Vision-Language Models with Cross-Lingual Attention Intervention",
+  "year": 2025,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有方法依赖大规模微调，成本高昂且低资源语言难以获得标注数据",
+  "problem_framing": "将多语言目标幻觉问题重新定义为跨语言注意力模式对齐问题",
+  "key_insight": "多语言查询在中间层的视觉注意力下降约32%，可通过注意力偏移向量在推理时对齐",
+  "method_signature": "识别语言特定跨模态注意力头，估计英-目标语言偏移向量，推理时注入偏移",
+  "evaluation_criteria": "POPE和MME基准的多语言准确率，覆盖对象级和属性级幻觉",
+  "negative_result_or_admitted_limitation": "干预主要激活感知相关注意力头，可能非预期影响推理路径",
+  "evidence_for_taste": [
+    "we do not use...to preserve the original representation space",
+    "hardly incurs additional latency during the inference stage",
+    "most improvements are achieved with as few as N = 50",
+    "we do not exclude the attention...leading to the identification of attention heads specialized for the input text's language"
+  ],
+  "thinking_moves": [
+    "把多语言幻觉问题从训练阶段移到推理阶段",
+    "通过探测函数从注意力模式中识别语言敏感神经元",
+    "用均值向量估计注意力空间的语言漂移",
+    "区分感知能力与推理能力，避免干预推理路径",
+    "利用模型在英语上的强视觉感知能力作为锚点"
+  ],
+  "topic_tags": [
+    "multilingual-LVLM-hallucination",
+    "cross-lingual-attention-intervention",
+    "inference-time-alignment",
+    "vision-language-grounding",
+    "probe-based-neuron-identification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

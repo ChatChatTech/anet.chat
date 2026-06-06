@@ -1,0 +1,39 @@
+{
+  "paper_id": "Liu et al. - 2004 - Location-Aware Topology Matching in P2P Systems",
+  "doi": null,
+  "title": "Location-Aware Topology Matching in P2P Systems",
+  "year": 2004,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "P2P系统物理拓扑和逻辑拓扑不匹配导致大量冗余流量,Gnutella等系统的盲目洪泛搜索效率低下",
+  "problem_framing": "拓扑失配问题形式化为:同一消息可能多次穿越同一物理链路,搜索效率受限于拓扑不对齐",
+  "key_insight": "通过TTL2探测器探测两跳内节点延迟,切断低效连接同时添加物理距离更近的邻居以保持搜索范围",
+  "method_signature": "LTM拓扑匹配:TTL2探测器洪水+低效连接切断+源节点探测三操作协同优化覆盖网",
+  "evaluation_criteria": "流量成本vs搜索范围、平均邻居距离、查询响应时间三项指标综合评估",
+  "negative_result_or_admitted_limitation": "使用更长TTL会增加探测器流量且收益递减,最优选择为TTL=2",
+  "evidence_for_taste": [
+    "95% peers within 7 hops generate 330 TB/month",
+    "traffic overhead is trivial compared with the query cost savings",
+    "one tenth of original traffic cost",
+    "average response time is reduced by around 80%",
+    "retain the search scope"
+  ],
+  "thinking_moves": [
+    "从冗余流量的三个来源(拓扑不匹配、路径合并、重复转发)逐一拆解问题",
+    "将拓扑优化问题转化为本地决策问题——每节点只需知道两跳内信息",
+    "通过will-cut列表延迟切断连接保证查询响应可返回",
+    "用cut列表避免重复建立已切断的低效连接",
+    "实验探索LTM频率与节点寿命/查询频率的参数关系"
+  ],
+  "topic_tags": [
+    "P2P-overlay-topology-matching",
+    "TTL2-detector-probing",
+    "Gnutella-flooding-optimization",
+    "search-scope-preservation",
+    "decentralized-topology-adaptation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注venue/发表会议信息,但结构显示为学术会议论文体例。摘要和图1-3因格式问题部分信息缺失。"
+}

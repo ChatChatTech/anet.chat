@@ -1,0 +1,37 @@
+{
+  "paper_id": "Qian et al. - 2016 - Decimeter level passive tracking with wifi",
+  "doi": null,
+  "title": "Decimeter Level Passive Tracking with WiFi",
+  "year": 2016,
+  "venue": "HotWireless'16",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "WiFi passive sensing需用户携带设备或不精确;学习类方法只识别预定义活动,需训练",
+  "problem_framing": "从CSI功率谱中恢复PLCR符号,从多链接PLCR联合求解人体速度与位置",
+  "key_insight": "不同位置和速度的人体产生不同路径长度变化率,几何约束可建模CSI与移动的关系",
+  "method_signature": "CSI-PLCR几何模型+多链接约束+连续运动约束求解速度方向歧义",
+  "evaluation_criteria": "位置误差中位数24cm(有初始位置)/36cm(无初始位置),速度误差均值11%",
+  "negative_result_or_admitted_limitation": "搜索法初始化存在过拟合和潜在位置误差,需提出非学习定位技术",
+  "evidence_for_taste": [
+    "PLCR to some extent exposes the moving velocity",
+    "However, since each link is associated with an unknown sign",
+    "accumulation of tracking errors still may increase over long traces",
+    "the results, however, are not satisfiable",
+    "Non-learning localization techniques should be proposed"
+  ],
+  "thinking_moves": [
+    "把PLCR符号缺失问题转化为连续帧方向一致性约束优化",
+    "用几何反射模型把感知问题逆写成通信路径约束方程组",
+    "承认当前方案依赖穷举搜索初始化并指出这是未来改进方向"
+  ],
+  "topic_tags": [
+    "WiFi-CSI被动追踪",
+    "PLCR速度估计",
+    "路径长度变化率",
+    "室内定位无训练",
+    "多链接联合定位"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

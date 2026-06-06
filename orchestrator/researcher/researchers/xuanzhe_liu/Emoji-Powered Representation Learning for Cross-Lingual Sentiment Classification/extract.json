@@ -1,0 +1,40 @@
+{
+  "paper_id": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification",
+  "doi": "10.48550/arxiv.1806.02557",
+  "title": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification",
+  "year": 2019,
+  "venue": "WWW '19",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "74.6%互联网用户使用非英语，但标注数据英语远超其他语言，导致情感分析服务质量不平等",
+  "problem_framing": "跨语言情感分类通过机器翻译填充语言间隙，但翻译丢失语言特有的情感表达",
+  "key_insight": "利用emoji作为情感信号的跨语言通用表达，既作为监督信号又作为语言桥梁",
+  "method_signature": "ELSA：emoji预测学习语言特定表征，融合源目标语言表征做情感分类",
+  "evaluation_criteria": "Amazon评论基准数据集准确率（9个任务：3语言×3领域）+ Twitter推文分类",
+  "negative_result_or_admitted_limitation": "机器翻译方法无法保留语言特有情感知识，现有方法在日语任务上准确率都低于0.8",
+  "evidence_for_taste": [
+    "机器翻译工具通常训练于捕捉跨语言共享模式而非语言特有模式",
+    "emoji预测作为工具学习每种语言的情感感知表征",
+    "语言特有模式帮助解决语言差异问题",
+    "none of the existing approaches can achieve an accuracy over 0.85",
+    "none of the previous methods have been able to achieve an accuracy above 0.8（日语）",
+    "ELSA significantly improves the state-of-the-art results"
+  ],
+  "thinking_moves": [
+    "机器翻译失败的原因是训练目标与任务目标不一致（捕捉共享模式而非特定模式）",
+    "找到一个同时具备跨语言通用性和语言特定性的信号——emoji",
+    "emoji预测作为弱监督替代情感标签",
+    "把问题重新frame为：不仅是迁移通用情感知识，还要捕获目标语言私有情感知识",
+    "日语属于Japonic语系而非Indo-European，这是日语任务最难的本质原因"
+  ],
+  "topic_tags": [
+    "emoji-情感分析",
+    "跨语言迁移学习",
+    "弱监督表示学习",
+    "语言差异问题",
+    "注意力机制-LSTM"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的实验设计、基准对比和消融实验，证据充分 | md truncated to head40k+tail20k"
+}

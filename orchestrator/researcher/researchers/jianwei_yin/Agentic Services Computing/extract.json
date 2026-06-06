@@ -1,0 +1,44 @@
+{
+  "paper_id": "Agentic Services Computing",
+  "doi": "10.48550/arxiv.2509.24380",
+  "title": "Agentic Services Computing",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统服务计算缺乏自主认知能力，LLM智能体缺乏工程治理规范，多智能体系统缺乏与生产环境集成",
+  "problem_framing": "将服务计算、多智能体系统、LLM智能体三范式统一为具备完整生命周期的智能服务工程学科",
+  "key_insight": "智能服务不再是被调用的固定函数，而是具备感知、推理、行动、协作能力的主动参与者",
+  "method_signature": "SCALE特征框架(五项)+四阶段生命周期(Design/Deployment/Operation/Evolution)与四能力维度交织矩阵",
+  "evaluation_criteria": "通过表格比较现有survey视角差距，映射代表性工作至框架各单元",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "no existing survey integrates the three foundational pillars",
+    "from service invocation to agent orchestration",
+    "from functional correctness to behavioral trustworthiness",
+    "lacks native integration with contemporary service infrastructure",
+    "disconnected from operational service infrastructures"
+  ],
+  "thinking_moves": [
+    "从历史演进视角串联古典MAS到现代LLM智能体的能力跃迁",
+    "先列举现有工作各自局限，再定位自身统一框架的填补作用",
+    "将服务设计焦点从'是否正确'重框为'是否可信'",
+    "将能力维度与生命周期阶段交织成矩阵地图，确保覆盖无遗漏",
+    "强调非加法叠加而是原则性融合，突出理论深度"
+  ],
+  "topic_tags": [
+    "agentic-services-computing",
+    "LLM-agent-lifecycle",
+    "multi-agent-collaboration",
+    "trustworthy-AI-services",
+    "service-ecosystem-orchestration"
+  ],
+  "cites_own_work": [
+    "[199]",
+    "[200]",
+    "[201]",
+    "[202]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为survey/framework类，主要通过概念整合和分类学贡献。已提取全部核心SCALE特征、四阶段生命周期、四能力维度及对比表格中的判断标准。未见实验验证或负面结果自述。 | md truncated to head40k+tail20k"
+}

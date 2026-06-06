@@ -1,0 +1,38 @@
+{
+  "paper_id": "Ji et al. - 2013 - Voice over the dins Improving wireless channel utilization with collision tolerance",
+  "doi": null,
+  "title": "Voice over the Dins: Improving Wireless Channel Utilization with Collision Tolerance",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Collision avoidance incurs overhead that degrades channel utilization, especially in dense networks with intensive traffic.",
+  "problem_framing": "Reformulate collision handling from avoidance to tolerance, exploiting physical-layer capture effect in commercial radios.",
+  "key_insight": "802.15.4's DSSS modulation enables packet capture, allowing concurrent transmissions if aligned within 160μs and limited in number.",
+  "method_signature": "Coco: ACK-synchronized sender alignment + feedback-controlled transmission probability p for bounded concurrency.",
+  "evaluation_criteria": "Channel utilization vs. CSMA backoff in testbed experiments with 21 TelosB nodes under various topologies and packet sizes.",
+  "negative_result_or_admitted_limitation": "Performance advantage diminishes in sparse networks or low traffic; Coco requires receiver-initiated coordination.",
+  "evidence_for_taste": [
+    "an inherent conflict between collision avoidance",
+    "optimistically allowing collisions",
+    "light-weight and enhances channel utilization",
+    "Coco is like a receiver-initiated protocol",
+    "less than 5% difference for 80% cases"
+  ],
+  "thinking_moves": [
+    "从物理层实现(DSSS捕获效应)反向提炼MAC设计机会, 不依赖PHY改造即可容忍碰撞",
+    "把碰撞容忍问题分解为时机(160μs offset)和并发数(p概率)两个可独立解决的技术挑战",
+    "先理论建模Util(p)找到最优p, 再用滑动窗口统计Pc进行反馈控制——无需知道N",
+    "对标CSMA的backoff开销,用ACK触发传输消除空闲slots以换取吞吐量提升"
+  ],
+  "topic_tags": [
+    "wireless-MAC-protocol",
+    "collision-tolerance",
+    "capture-effect",
+    "802.15.4",
+    "feedback-control"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

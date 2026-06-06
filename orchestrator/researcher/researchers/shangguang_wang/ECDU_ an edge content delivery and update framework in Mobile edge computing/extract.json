@@ -1,0 +1,40 @@
+{
+  "paper_id": "ECDU_ an edge content delivery and update framework in Mobile edge computing",
+  "doi": "10.1186/s13638-019-1590-2",
+  "title": "ECDU: an edge content delivery and update framework in Mobile edge computing",
+  "year": 2019,
+  "venue": "EURASIP Journal on Wireless Communications and Networking",
+  "venue_tier": "regional",
+  "role": "corresponding",
+  "motivation": "现有CDN将用户内容全部上传云端，导致核心网络带宽压力大且浪费资源",
+  "problem_framing": "将内容上传重新分层设计为端-边-云三层架构，利用边缘节点分担云端压力",
+  "key_insight": "内容服务器存原始内容，缓存池仅存热门内容，配合Pareto分布实现按需上传",
+  "method_signature": "三层架构（端/边/云）+ ECD优先级投放 + ECU动态迁移",
+  "evaluation_criteria": "对比CDN框架的成本节省比例（~73%）与响应延迟",
+  "negative_result_or_admitted_limitation": "ECDU并非CDN的替代品，两者需结合；安全隐私问题尚需预处理方案",
+  "evidence_for_taste": [
+    "make up for the shortcomings",
+    "according to the Pareto principle",
+    "alleviating the pressure of the core network",
+    "collaborative decision",
+    "top-K cache pools",
+    "priority of contents"
+  ],
+  "thinking_moves": [
+    "将CDN架构痛点归因为分层职责不清，提出端-边-云三层重新划分职责",
+    "引用Pareto原理将长尾内容分布作为架构假设，无需上传全部内容",
+    "将内容投放决策分解为where（位置）和which（内容）的优先级问题",
+    "设计ECU动态迁移规则体现协同决策思想，缓存池自主交互而非云端控制"
+  ],
+  "topic_tags": [
+    "mobile-edge-caching",
+    "CDN-optimization",
+    "edge-content-delivery",
+    "cache-pool-ranking",
+    "content-migration"
+  ],
+  "cites_own_work": [
+    "Wang et al. 2019 (cloud-guided feature extraction)"
+  ],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Yang et al. - 2015 - Shelving Interference and Joint Identification in Large-Scale RFID Systems",
+  "doi": null,
+  "title": "Shelving Interference and Joint Identification in Large-Scale RFID Systems",
+  "year": 2015,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "现有读写器防碰撞方法需严格顺序调度，浪费大量调度时间，即使少量争议标签也引入显著延迟",
+  "problem_framing": "将RFID识别问题分解为两阶段：先识别无争议标签（并行），再协作识别争议标签",
+  "key_insight": "大多数标签是无争议的，且争议标签的信号可被多个相邻读写器接收，支持协作识别",
+  "method_signature": "Season协议栈：三阶段协议（Season-I并发识别无争议标签，Season-II/III协作识别争议标签）",
+  "evaluation_criteria": "识别吞吐量、读取率、调度轮数、平均延迟",
+  "negative_result_or_admitted_limitation": "现有方法未利用争议标签信号可被多读写器接收这一特征，导致效率低下",
+  "evidence_for_taste": [
+    "the lack of readers' collaboration",
+    "introduce a significant delay",
+    "can be received by the readers",
+    "only one of them sends query commands",
+    "Existing approaches do not leverage this feature",
+    "Above 6× improvement"
+  ],
+  "thinking_moves": [
+    "将防碰撞问题从单一调度视角转为并行+协作两阶段视角",
+    "观察到少数争议标签导致主要延迟这一反常现象",
+    "发现跨区域标签碰撞这一新类型的碰撞形态",
+    "将主动读写器选择问题映射为图的最大加权独立集问题",
+    "利用被动监听机制解决协作识别中的信息缺失问题"
+  ],
+  "topic_tags": [
+    "RFID-anti-collision",
+    "reader-collaboration",
+    "multi-reader-scheduling",
+    "contentious-tag-identification",
+    "cross-range-tag-collision"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文文本完整，包含完整方法、分析和评估内容。venue信息未在文本中明确给出，但根据论文格式和作者机构判断可能为IEEE Transactions或顶会论文。 | md truncated to head40k+tail20k"
+}

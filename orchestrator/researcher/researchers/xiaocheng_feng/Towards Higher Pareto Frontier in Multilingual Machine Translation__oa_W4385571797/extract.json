@@ -1,0 +1,38 @@
+{
+  "paper_id": "Towards Higher Pareto Frontier in Multilingual Machine Translation__oa_W4385571797",
+  "doi": "10.18653/v1/2023.acl-long.211",
+  "title": "Towards Higher Pareto Frontier in Multilingual Machine Translation",
+  "year": 2023,
+  "venue": "ACL Long Papers",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有方法只能trade-off在Pareto frontier上平衡多语言性能，无法同时提升所有语言",
+  "problem_framing": "多语言NMT的数据长尾分布导致优化某些语言必然损害其他语言，形成Pareto优化困境",
+  "key_insight": "用不同采样分布训练两个模型形成不同Pareto解，通过mutual distillation让各自学习对方的优势，从而把边界向外推",
+  "method_signature": "Pareto-MD: 双模型协作训练 + 不同温度采样分布 + 语言对特定蒸馏权重",
+  "evaluation_criteria": "BLEU score提升量和Pareto frontier可视化位移",
+  "negative_result_or_admitted_limitation": "训练两个模型使计算成本翻倍；O2M场景下模型1在HRL上会退化",
+  "evidence_for_taste": [
+    "pushing the Pareto frontier outwards rather than making trade-offs",
+    "address shortcomings of individual Pareto optimal solutions",
+    "the worse model is also possible to improve the better model",
+    "The optimal value of distillation weight varies across different datasets",
+    "the performance of HRLs (i.e., fr and de) drops about 0.7 BLEU"
+  ],
+  "thinking_moves": [
+    "把Pareto优化问题从单模型内部trade-off转为多模型协作外推边界",
+    "假设'更差的模型也有独特特征可补足更好的模型'，然后实验验证BI-PMD > UNI-PMD",
+    "发现手动调alpha的三个缺陷（语言适应性/动态性/通用性），设计AUTO-PMD自动搜索",
+    "先理论证明搜索空间降维的合理性，再做实验验证"
+  ],
+  "topic_tags": [
+    "multilingual-NMT",
+    "Pareto-optimization",
+    "mutual-distillation",
+    "temperature-sampling",
+    "low-resource-transfer"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

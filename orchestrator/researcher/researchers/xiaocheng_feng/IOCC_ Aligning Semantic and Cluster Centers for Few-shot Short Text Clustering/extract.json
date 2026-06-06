@@ -1,0 +1,38 @@
+{
+  "paper_id": "IOCC_ Aligning Semantic and Cluster Centers for Few-shot Short Text Clustering",
+  "doi": "10.48550/arxiv.2508.06126",
+  "title": "IOCC: Aligning Semantic and Cluster Centers for Few-shot Short Text Clustering",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "短文本因表达有限，传统聚类方法无法找到真正捕捉类别语义中心，导致文本表示优化方向错误",
+  "problem_framing": "将短文本聚类的核心问题重新定义为聚类中心与语义中心之间的对齐问题",
+  "key_insight": "通过伪标签构建伪中心，让样本向伪中心聚拢，伪中心在迭代中逐步逼近真实语义中心",
+  "method_signature": "IEOT引入样本间语义交互生成可靠伪标签，CACL用伪中心引导对比学习对齐聚类中心",
+  "evaluation_criteria": "ACC和NMI在8个基准数据集上评估",
+  "negative_result_or_admitted_limitation": "性能依赖于标签数据的质量和代表性，伪标签过程在噪声或模糊数据中仍可能引入错误",
+  "evidence_for_taste": [
+    "cluster centers often fail to align with the semantic centers",
+    "pseudolabels generated using traditional OT are limited to global structure",
+    "previous methods typically distribute samples uniformly",
+    "pseudo-centers to approximate the semantic center",
+    "pulling samples toward their corresponding pseudo-center"
+  ],
+  "thinking_moves": [
+    "把聚类质量差归因于簇中心与语义中心不对齐这一根本问题",
+    "先通过IEOT改进伪标签质量，再设计CACL用伪中心引导表示优化",
+    "伪中心=真实语义中心的代理，通过迭代协作逐步逼近真实语义中心",
+    "用样本间语义相似度矩阵S正则化OT transport matrix"
+  ],
+  "topic_tags": [
+    "few-shot-clustering",
+    "optimal-transport-pseudolabels",
+    "contrastive-learning",
+    "short-text-clustering",
+    "semantic-center-alignment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

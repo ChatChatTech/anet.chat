@@ -1,0 +1,37 @@
+{
+  "paper_id": "He et al. - 2009 - On the reliability of large-scale distributed systems - A topological view",
+  "doi": null,
+  "title": "On the reliability of large-scale distributed systems – A topological view",
+  "year": 2009,
+  "venue": "Computer Networks (Elsevier)",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "保护所有节点代价过高，实际只需识别并保护少量关键节点即可维持系统可靠性",
+  "problem_framing": "把关键节点检测形式化为图中cut vertex发现问题，但要求分布式执行且无需全局拓扑知识",
+  "key_insight": "一个节点是割点当且仅当它是多个block的连接点，通过本地收集 flooding 消息即可归类邻居到不同block",
+  "method_signature": "自适应检测利用已有flooding零开销 + 主动检测用轻量探针补充精度 + 通过添加连接中和割点",
+  "evaluation_criteria": "检测准确率、流量开销、查询成功率、断连后组件数变化",
+  "negative_result_or_admitted_limitation": "无全局信息导致极少数节点可能被误判为割点，但这些节点罕见且即使处理也无害",
+  "evidence_for_taste": [
+    "保护所有节点不划算",
+    "100%精确算法不必要",
+    "误判节点不会造成伤害",
+    "不需要全局拓扑信息"
+  ],
+  "thinking_moves": [
+    "用图论割点严格定义何为关键节点",
+    "接受概率性近似优于追求全局精确",
+    "零开销复用的工程思路",
+    "区分false negative和false positive的不同影响"
+  ],
+  "topic_tags": [
+    "cut-vertex-detection",
+    "P2P-overlay-reliability",
+    "distributed-graph-algorithms",
+    "wireless-sensor-networks",
+    "topological-fault-tolerance"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Object-oriented backdoor attack against image captioning",
+  "doi": "10.48550/arxiv.2401.02600",
+  "title": "Object-oriented backdoor attack against image captioning",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "Backdoor attacks on image classification are well-studied, but vision-language models remain largely unexplored for this threat",
+  "problem_framing": "Define backdoor attack for image captioning with dual goals: stealthiness (comparable BLEU on clean images) and effectiveness (high ASR on poisoned images)",
+  "key_insight": "Captions revolve around objects, so poisoning object regions with sample-specific triggers yields more natural visual effects than uniform patches",
+  "method_signature": "Object-oriented poisoning using YOLO detection + Gaussian noise injection (α=20) on detected object regions",
+  "evaluation_criteria": "BLEU (stealthiness), ASR (effectiveness), FTR (false trigger rate)",
+  "negative_result_or_admitted_limitation": "Object detector limitation causes some objects not to be detected; future work plans semantic segmentation for more precise region targeting",
+  "evidence_for_taste": [
+    "captions are usually unfolded around objects",
+    "sample-specific triggers",
+    "more satisfactory visual effect",
+    "limiting the FTR to no more than 5%",
+    "slight degradation (less than 1%)"
+  ],
+  "thinking_moves": [
+    "将caption生成问题重新frame为backdoor攻击问题",
+    "从视觉领域(图像分类)的backdoor攻击迁移到跨模态任务",
+    "利用caption围绕objects的特点设计sample-specific triggers",
+    "通过视觉对比(Fig 2)而非数值指标证明方法优越性"
+  ],
+  "topic_tags": [
+    "backdoor-attack",
+    "image-captioning",
+    "vision-language",
+    "data-poisoning",
+    "object-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,372 @@
+{
+  "slug": "lei_ren",
+  "n_papers": 11,
+  "n_indexed": 11,
+  "anchors": [
+    "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization",
+    "Cloud manufacturing platform architecture",
+    "A psychological model of human-computer cooperation for the era of artificial intelligence",
+    "Data privacy protection in microscopic image analysis for material data mining",
+    "Diff-MTS: Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series",
+    "Digital genealogy: empowering industrial embodied intelligence world model",
+    "SATQuest: A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs",
+    "Cautious strategy update promotes cooperation in spatial prisoner's dilemma game"
+  ],
+  "by_id": {
+    "A psychological model of human-computer cooperation for the era of artificial intelligence": {
+      "title": "面向智能时代的人机合作心理模型",
+      "year": 2018,
+      "venue": "中国科学: 信息科学",
+      "doi": "10.1360/n112017-00225",
+      "key_insight": "人机交互可类比为人际交互,计算机应具备与人相似的感知-认知-动作模块及心理理论能力",
+      "method_signature": "提出人机合作心理模型HCCM,包含感知/认知/动作三模块及双向交互通道",
+      "tags": [
+        "人机交互心理模型",
+        "感知-认知-动作三模块",
+        "多模态并行交互",
+        "分布式认知",
+        "具身认知理论"
+      ],
+      "quality": "full"
+    },
+    "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization": {
+      "title": "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization",
+      "year": 2007,
+      "venue": "Journal of Software",
+      "doi": null,
+      "key_insight": "笔交互具备连续性与隐含性特点，结合上下文感知智能推测用户意图，可实现自然高效的交互",
+      "method_signature": "基于笔式交互、隐式状态切换、知识库推理、扩展LIM0动态几何约束求解的白板系统",
+      "tags": [
+        "pen-based interaction",
+        "dynamic geometry",
+        "sketch recognition",
+        "context-aware HCI",
+        "computer-aided teaching"
+      ],
+      "quality": "full"
+    },
+    "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game": {
+      "title": "Cautious strategy update promotes cooperation in spatial prisoner's dilemma game",
+      "year": null,
+      "venue": "Physica A",
+      "doi": "10.1016/j.physa.2013.04.031",
+      "key_insight": "Caution creates a threshold that protects cooperators when defector advantage is below σ, allowing clusters to survive and thrive.",
+      "method_signature": "Fermi update with cautiousness index σ on L=100 square lattice; pair approximation for analytical support.",
+      "tags": [
+        "evolutionary game theory",
+        "prisoner's dilemma",
+        "spatial reciprocity",
+        "strategy updating",
+        "phase transitions"
+      ],
+      "quality": "full"
+    },
+    "Cloud manufacturing platform architecture": {
+      "title": "Cloud Manufacturing Platform Architecture",
+      "year": null,
+      "venue": null,
+      "doi": null,
+      "key_insight": "通过物联网、虚拟化、语义Web和高性能计算的融合解决现有网络制造的局限性",
+      "method_signature": "五层平台架构：资源感知层、虚拟资源层、中间件层、应用支撑层、用户界面层",
+      "tags": [
+        "cloud manufacturing platform",
+        "virtualization of hard-resources",
+        "manufacturing resource perception",
+        "knowledge-based semantic integration",
+        "layered architecture design"
+      ],
+      "quality": "partial"
+    },
+    "Data privacy protection in microscopic image analysis for material data mining": {
+      "title": "Data privacy protection in microscopic image analysis for material data mining",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2111.07892",
+      "key_insight": "材料微观图像可分解为结构信息(ground truth标签, 隐私敏感)和风格信息(受光照影响, 不敏感), 仅共享风格信息可缓解Non-IID而不泄露隐私",
+      "method_signature": "FedTransfer: 联邦图像风格转换(pix2pixHD生成合成数据) + 联邦训练(FedAvg)",
+      "tags": [
+        "federated-learning-non-iid",
+        "material-image-segmentation",
+        "privacy-preserving-data-sharing",
+        "style-transfer-gan",
+        "materials-informatics"
+      ],
+      "quality": "full"
+    },
+    "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era": {
+      "title": "Diff-MTS: Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2407.11501",
+      "key_insight": "用扩散模型替代GAN,并通过自适应MMD损失和时序分解重建模块分别解决条件一致性和时序依赖问题",
+      "method_signature": "条件自适应Ada-MMD扩散模型+TDR-UNet时序分解重建U网络",
+      "tags": [
+        "industrial-multivariate-time-series-generation",
+        "diffusion-model",
+        "conditional-AIGC",
+        "Ada-MMD",
+        "temporal-decomposition"
+      ],
+      "quality": "full"
+    },
+    "Digital genealogy_ empowering industrial embodied intelligence world model": {
+      "title": "数字族谱: 驱动工业具身智能世界模型",
+      "year": 2025,
+      "venue": "中国科学: 信息科学",
+      "doi": "10.1360/ssi-2025-0093",
+      "key_insight": "引入生物族谱DNA概念，用DG-DNA约束生成零件的表现型，实现从零件到产品的多代演化族谱，保证生成对象既有多样性又符合工业约束",
+      "method_signature": "基于DG-DNA的两阶段工业零件生成算法DG-VAE，结合VQ-VAE量化编码与Transformer生成器",
+      "tags": [
+        "digital-genealogy",
+        "DG-DNA",
+        "industrial-embodied-ai",
+        "world-model",
+        "DG-VAE",
+        "AIGC-part-generation",
+        "digital-twin-evolution",
+        "manufacturing-data-synthesis"
+      ],
+      "quality": "full"
+    },
+    "Key Issues In Cloud Simulation Platform Based On Cloud Computing": {
+      "title": "Key Issues In Cloud Simulation Platform Based On Cloud Computing",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "通过虚拟化封装和面向服务体系结构屏蔽仿真资源的分布异构性,实现按需服务",
+      "method_signature": "提出分层CSP架构(资源层/中间件层/服务层/门户层)及6项关键技术",
+      "tags": [
+        "cloud-simulation",
+        "virtualized-simulation-platform",
+        "service-oriented-M&S",
+        "on-demand-simulation",
+        "networked-simulation-resources"
+      ],
+      "quality": "partial"
+    },
+    "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs": {
+      "title": "SATQuest: A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.2509.00930",
+      "key_insight": "三维正交结构化SAT问题+PySAT客观验证,可缓解记忆化并生成细粒度推理洞察",
+      "method_signature": "CNF生成多样SAT逻辑题+三维正交控制+PySAT自动验证+RLVR微调",
+      "tags": [
+        "LLM-logical-reasoning-evaluation",
+        "CNF-SAT-problem-generation",
+        "multi-dimensional-benchmark-design",
+        "RLVR-reinforcement-fine-tuning",
+        "format-generalization-analysis"
+      ],
+      "quality": "full"
+    },
+    "Study on the description method of manufacturing capability based on description logics in cloud manufacturing": {
+      "title": "Study on the description method of manufacturing capability based on description logics in cloud manufacturing",
+      "year": 2011,
+      "venue": "Computer Integrated Manufacturing Systems",
+      "doi": null,
+      "key_insight": "将动态描述逻辑(DDL)应用于制造能力描述，同时建模静态属性(资源、案例)与动态行为(动作、状态转换)",
+      "method_signature": "基于DDL的MC描述模型 MC=(State/RelationSet,ObjectiveSet,QoSSet)，含静态属性模型与动态行为模型",
+      "tags": [
+        "cloud-manufacturing-capability",
+        "description-logics",
+        "dynamic-description-logics",
+        "manufacturing-capability-sharing",
+        "semantic-service-description"
+      ],
+      "quality": "partial"
+    },
+    "Study on the servilization of simulation capability": {
+      "title": "Study on the servilization of simulation capability",
+      "year": null,
+      "venue": null,
+      "doi": null,
+      "key_insight": "仿真能力由资源维度(R)、过程维度(P)、任务维度(T)三维构成，服务生命周期包含发布、发现、评估、演化四阶段",
+      "method_signature": "描述模型 DMSC=(T,R,P,K,E)+fun(T,P,R,K,E)，融合任务、资源、参与者、知识、企业信息",
+      "tags": [
+        "cloud-manufacturing",
+        "simulation-capability-servilization",
+        "manufacturing-capability-modeling",
+        "service-lifecycle-management",
+        "ontology-description-language"
+      ],
+      "quality": "partial"
+    }
+  },
+  "by_tag": {
+    "人机交互心理模型": [
+      "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    ],
+    "感知-认知-动作三模块": [
+      "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    ],
+    "多模态并行交互": [
+      "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    ],
+    "分布式认知": [
+      "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    ],
+    "具身认知理论": [
+      "A psychological model of human-computer cooperation for the era of artificial intelligence"
+    ],
+    "pen-based interaction": [
+      "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    ],
+    "dynamic geometry": [
+      "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    ],
+    "sketch recognition": [
+      "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    ],
+    "context-aware HCI": [
+      "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    ],
+    "computer-aided teaching": [
+      "An Intelligent Pen-Based Whiteboard System for Dynamic Geometry Visualization"
+    ],
+    "evolutionary game theory": [
+      "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    ],
+    "prisoner's dilemma": [
+      "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    ],
+    "spatial reciprocity": [
+      "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    ],
+    "strategy updating": [
+      "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    ],
+    "phase transitions": [
+      "Cautious strategy update promotes cooperation in spatial prisonerΓÇÖs dilemma game"
+    ],
+    "cloud manufacturing platform": [
+      "Cloud manufacturing platform architecture"
+    ],
+    "virtualization of hard-resources": [
+      "Cloud manufacturing platform architecture"
+    ],
+    "manufacturing resource perception": [
+      "Cloud manufacturing platform architecture"
+    ],
+    "knowledge-based semantic integration": [
+      "Cloud manufacturing platform architecture"
+    ],
+    "layered architecture design": [
+      "Cloud manufacturing platform architecture"
+    ],
+    "federated-learning-non-iid": [
+      "Data privacy protection in microscopic image analysis for material data mining"
+    ],
+    "material-image-segmentation": [
+      "Data privacy protection in microscopic image analysis for material data mining"
+    ],
+    "privacy-preserving-data-sharing": [
+      "Data privacy protection in microscopic image analysis for material data mining"
+    ],
+    "style-transfer-gan": [
+      "Data privacy protection in microscopic image analysis for material data mining"
+    ],
+    "materials-informatics": [
+      "Data privacy protection in microscopic image analysis for material data mining"
+    ],
+    "industrial-multivariate-time-series-generation": [
+      "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    ],
+    "diffusion-model": [
+      "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    ],
+    "conditional-AIGC": [
+      "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    ],
+    "Ada-MMD": [
+      "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    ],
+    "temporal-decomposition": [
+      "Diff-MTS_ Temporal-Augmented Conditional Diffusion-based AIGC for Industrial Time Series Towards the Large Model Era"
+    ],
+    "digital-genealogy": [
+      "Digital genealogy_ empowering industrial embodied intelligence world model"
+    ],
+    "DG-DNA": [
+      "Digital genealogy_ empowering industrial embodied intelligence world model"
+    ],
+    "industrial-embodied-ai": [
+      "Digital genealogy_ empowering industrial embodied intelligence world model"
+    ],
+    "world-model": [
+      "Digital genealogy_ empowering industrial embodied intelligence world model"
+    ],
+    "DG-VAE": [
+      "Digital genealogy_ empowering industrial embodied intelligence world model"
+    ],
+    "AIGC-part-generation": [
+      "Digital genealogy_ empowering industrial embodied intelligence world model"
+    ],
+    "digital-twin-evolution": [
+      "Digital genealogy_ empowering industrial embodied intelligence world model"
+    ],
+    "manufacturing-data-synthesis": [
+      "Digital genealogy_ empowering industrial embodied intelligence world model"
+    ],
+    "cloud-simulation": [
+      "Key Issues In Cloud Simulation Platform Based On Cloud Computing"
+    ],
+    "virtualized-simulation-platform": [
+      "Key Issues In Cloud Simulation Platform Based On Cloud Computing"
+    ],
+    "service-oriented-M&S": [
+      "Key Issues In Cloud Simulation Platform Based On Cloud Computing"
+    ],
+    "on-demand-simulation": [
+      "Key Issues In Cloud Simulation Platform Based On Cloud Computing"
+    ],
+    "networked-simulation-resources": [
+      "Key Issues In Cloud Simulation Platform Based On Cloud Computing"
+    ],
+    "LLM-logical-reasoning-evaluation": [
+      "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    ],
+    "CNF-SAT-problem-generation": [
+      "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    ],
+    "multi-dimensional-benchmark-design": [
+      "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    ],
+    "RLVR-reinforcement-fine-tuning": [
+      "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    ],
+    "format-generalization-analysis": [
+      "SATQuest_ A Verifier for Logical Reasoning Evaluation and Reinforcement Fine-Tuning of LLMs"
+    ],
+    "cloud-manufacturing-capability": [
+      "Study on the description method of manufacturing capability based on description logics in cloud manufacturing"
+    ],
+    "description-logics": [
+      "Study on the description method of manufacturing capability based on description logics in cloud manufacturing"
+    ],
+    "dynamic-description-logics": [
+      "Study on the description method of manufacturing capability based on description logics in cloud manufacturing"
+    ],
+    "manufacturing-capability-sharing": [
+      "Study on the description method of manufacturing capability based on description logics in cloud manufacturing"
+    ],
+    "semantic-service-description": [
+      "Study on the description method of manufacturing capability based on description logics in cloud manufacturing"
+    ],
+    "cloud-manufacturing": [
+      "Study on the servilization of simulation capability"
+    ],
+    "simulation-capability-servilization": [
+      "Study on the servilization of simulation capability"
+    ],
+    "manufacturing-capability-modeling": [
+      "Study on the servilization of simulation capability"
+    ],
+    "service-lifecycle-management": [
+      "Study on the servilization of simulation capability"
+    ],
+    "ontology-description-language": [
+      "Study on the servilization of simulation capability"
+    ]
+  }
+}

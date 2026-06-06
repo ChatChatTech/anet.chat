@@ -1,0 +1,35 @@
+{
+  "paper_id": "IDENTIFYING BUSINESS COMPONENTS FROM BUSINESS MODEL_ A METHOD BASED ON FEATURE MATHCING",
+  "doi": null,
+  "title": "IDENTIFYING BUSINESS COMPONENTS FROM BUSINESS MODEL: A METHOD BASED ON FEATURE MATCHING",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CBSD需要从业务模型中提取可复用组件，但现有方法过度依赖人工设定权重，难以实用",
+  "problem_framing": "将业务组件识别形式化为基于特征匹配和层次聚类的等价特征关系问题",
+  "key_insight": "引入等价特征关系，通过扩展Sorenson系数计算多元素相似度进行聚类",
+  "method_signature": "基于等价特征关系划分特征集+层次聚类识别业务组件",
+  "evaluation_criteria": "与complete linkage算法对比precision和recall",
+  "negative_result_or_admitted_limitation": "结构分析方法过度依赖人工设定的权重，难以实际应用",
+  "evidence_for_taste": [
+    "results of partition excessively depend on weights",
+    "difficult to apply into practice",
+    "precision and recall for the clustering algorithm is higher",
+    "extends Sorenson coefficient to calculate similarity among a set of elements"
+  ],
+  "thinking_moves": [
+    "先指出现有结构分析方法的缺陷（权重依赖），再提出特征匹配作为替代",
+    "将多个相似性指标（名称、属性、操作、关系）形式化为等价特征关系",
+    "从两元素相似度公式推广到多元素相似度，通过匹配类型计数实现"
+  ],
+  "topic_tags": [
+    "business-component-identification",
+    "feature-matching-clustering",
+    "domain-business-model",
+    "equivalent-feature-relation",
+    "hierarchical-clustering"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial"
+}

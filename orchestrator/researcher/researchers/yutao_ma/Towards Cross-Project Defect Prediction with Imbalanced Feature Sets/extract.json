@@ -1,0 +1,37 @@
+{
+  "paper_id": "Towards Cross-Project Defect Prediction with Imbalanced Feature Sets",
+  "doi": "10.48550/arxiv.1411.4228",
+  "title": "Towards Cross-Project Defect Prediction with Imbalanced Feature Sets",
+  "year": 2014,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Public defect datasets have different metric sets, making cross-project prediction infeasible due to the identical-feature assumption in regular CPDP, causing redundant data collection.",
+  "problem_framing": "Define CPDP-IFS where source and target projects have different metric sets, requiring a mapping to a common latent space.",
+  "key_insight": "Instances with different feature vectors may have similar statistical distributions of normalized metric values, making distribution characteristics a potential bridge.",
+  "method_signature": "Distribution characteristic-based instance mapping: preprocess → project onto latent space of indicators → apply regular CPDP.",
+  "evaluation_criteria": "f-measure with Wilcoxon signed-rank test and Cliff's Delta for statistical significance and effect size.",
+  "negative_result_or_admitted_limitation": "Only used logistic regression; all projects are Java-based; feature selection on 16 indicators not explored.",
+  "evidence_for_taste": [
+    "distribution characteristics seems to be proper components of the latent space",
+    "the great correlation coefficients indicate a significantly linear correlation",
+    "at least the introduction of CPDP-IFS does not have a negative effect",
+    "CPDP-IFS can be a sound complement to the regular CPDP"
+  ],
+  "thinking_moves": [
+    "把特征集合不同的问题转化为分布特征空间的映射问题",
+    "用统计分布特性(均值/方差/中位数)替代原始特征向量作为跨项目桥接",
+    "先验证方法优于简单交集法,再证与常规CPDP可比,最后构建混合模型",
+    "通过DPR指标关联分析找到CPDP-IFS何时有效的工作边界"
+  ],
+  "topic_tags": [
+    "cross-project-defect-prediction",
+    "imbalanced-feature-sets",
+    "distribution-characteristics-mapping",
+    "transfer-learning",
+    "defect-ratio-balancing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

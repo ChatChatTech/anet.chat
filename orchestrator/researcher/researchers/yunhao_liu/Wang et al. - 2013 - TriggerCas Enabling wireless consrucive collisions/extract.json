@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2013 - TriggerCas Enabling wireless consrucive collisions",
+  "doi": null,
+  "title": "TriggerCast: Enabling Wireless Constructive Collisions",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有工作只实现非破坏性干扰,包接收率甚至不如单节点传输,需主动利用构建性干扰提升接收功率和链路质量",
+  "problem_framing": "将同时传输问题重新定义为确保并发传输构建性叠加而非破坏性碰撞,需满足芯片级同步和相位对齐约束",
+  "key_insight": "发现数据发送延迟对所有节点相同,通过时钟漂移系数校准可补偿传播和处理延迟,实现250ns同步精度",
+  "method_signature": "芯片级同步(CLS)加时钟漂移校准,链路选择与对齐(LSA),利用大数定律估算预期延迟",
+  "evaluation_criteria": "95th百分位同步误差≤250ns,PRR从5%提升至70%(7并发), RSSI提升6dB(5并发)",
+  "negative_result_or_admitted_limitation": "直接使用测量延迟补偿无法达到0.5μs精度,需通过时钟漂移校准才能稳定;完美同步也不保证CI实现",
+  "evidence_for_taste": [
+    "NDI might degrade the performance",
+    "It is difficult to synchronize",
+    "the result is not sufficiently accurate",
+    "even if simultaneous transmissions are perfectly synchronized",
+    "Whether SNR of the combined signal increases depends on SNRs"
+  ],
+  "thinking_moves": [
+    "发现同类工作只追求非破坏性,主动升级目标为构建性",
+    "从工程实现失败反推理论充分条件不足",
+    "利用大数定律将随机抖动转化为可估计量",
+    "识别出延迟本质不变后简化问题",
+    "先证最坏情况上界再构建经验补偿方案"
+  ],
+  "topic_tags": [
+    "constructive-interference",
+    "wireless-sensor-networks",
+    "chip-level-synchronization",
+    "concurrent-transmission",
+    "IEEE-802.15.4"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文正文完整包含问题动机、方法实现和实验评估,但缺少完整结论章节,且未明确标注会议/期刊名称,可能为会议论文"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "2019_TMC_Cloak_of_Invisibility_Privacy-Friendly_Photo_Capturing_and_Sharing_System",
+  "doi": null,
+  "title": "Cloak of Invisibility: Privacy-Friendly Photo Capturing and Sharing System",
+  "year": 2019,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "smart devices capture photos anywhere without consent; 80% respondents want privacy techniques",
+  "problem_framing": "match users' privacy intentions with photo subjects without visible tags, preserving both accuracy and privacy",
+  "key_insight": "distance between vectors is dimension-order-independent; can transform vectors distance-preservingly without encryption",
+  "method_signature": "graph-based portrait profile + encryption-free privacy-preserving vector distance protocol",
+  "evaluation_criteria": "matching accuracy, computation/communication overhead, verification correctness",
+  "negative_result_or_admitted_limitation": "system may be vulnerable to DOS attack; accuracy depends on people detection performance",
+  "evidence_for_taste": [
+    "require users to wear visible specialized tag",
+    "which is inaesthetic and inconvenient",
+    "cannot be adopted for distance computation",
+    "broader-brush and blunt which can significantly hurt",
+    "encryption-free privacy-preserving vector distance protocol"
+  ],
+  "thinking_moves": [
+    "把perception问题重新frame成communication问题",
+    "从已知缺陷出发(明文传输/标签方案)反向定义约束",
+    "利用数学性质(维度无关性)绕过加密计算开销",
+    "baseline先跑通再叠加privacy layer渐进增强"
+  ],
+  "topic_tags": [
+    "privacy-preserving-photo-sharing",
+    "portrait-matching",
+    "vector-distance-protocol",
+    "graph-representation",
+    "outsourced-computation"
+  ],
+  "cites_own_work": [
+    "Pic: Enable large-scale privacy preserving content-based image search on cloud",
+    "POP: Privacy-preserving outsourced photo sharing and searching for mobile devices",
+    "Privacy-friendly photo capturing and sharing system (Ubicomp 2016)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

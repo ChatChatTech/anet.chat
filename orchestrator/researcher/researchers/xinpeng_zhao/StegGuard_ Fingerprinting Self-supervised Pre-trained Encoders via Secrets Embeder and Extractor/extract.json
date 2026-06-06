@@ -1,0 +1,37 @@
+{
+  "paper_id": "StegGuard_ Fingerprinting Self-supervised Pre-trained Encoders via Secrets Embeder and Extractor",
+  "doi": "10.48550/arxiv.2310.03380",
+  "title": "StegGuard: Fingerprinting Self-supervised Pre-trained Encoders via Secrets Embeder and Extractor",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "EaaS模式下预训练编码器面临被窃取的商业威胁",
+  "problem_framing": "把IP保护问题定义为\"找独特指纹\"来区分受害者vs独立编码器",
+  "key_insight": "嵌入和提取秘密的能力依赖每个编码器的唯一变换函数，盗版因依赖受害者所以变换函数相似",
+  "method_signature": "联合学习嵌入器和提取器+FcaEmb频率域注意力块",
+  "evaluation_criteria": "ebr错误率、p值、Δμ差异、PSNR/SSIM图像质量",
+  "negative_result_or_admitted_limitation": "秘密太短性能不保证，太长嵌入提取不可行",
+  "evidence_for_taste": [
+    "transform function of each individual encoder",
+    "the learned secrets embeder and extractor can reasonably become fingerprint",
+    "pirate encoder has a similar transformation to the victim",
+    "p-value of DI has a large increase, while StegGuard still remains stable"
+  ],
+  "thinking_moves": [
+    "把IP保护问题重新框为通信问题-利用编码器唯一变换特性",
+    "把\"验证编码器归属\"转译为\"能否从嵌入向量正确提取秘密\"",
+    "通过GradCAM可视化解释为什么相似编码器有相似特征提取能力",
+    "端到端联合优化嵌入器和提取器而非修改编码器本身"
+  ],
+  "topic_tags": [
+    "SSL编码器IP保护",
+    "主动秘密嵌入指纹",
+    "模型提取攻击防御",
+    "频域通道注意力",
+    "EaaS知识产权"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

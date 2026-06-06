@@ -1,0 +1,46 @@
+{
+  "paper_id": "Ma et al. - 2015 - Link Scanner Faulty Link Detection for Wireless Sensor Networks",
+  "doi": null,
+  "title": "Link Scanner: Faulty Link Detection for Wireless Sensor Networks",
+  "year": 2015,
+  "venue": "IEEE Transactions on Wireless Communications",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "需要检测大型传感网中的故障链路以诊断网络分区和路由错误，但顺序检查所有链路开销过高",
+  "problem_framing": "被动检测问题——利用已有泛洪过程而非主动探测来推断链路状态",
+  "key_insight": "故障链路导致接收的跳数与拓扑期望不匹配，可据此用概率推理推断故障链路",
+  "method_signature": "基于跳数失配的被动链路扫描结合DLP概率推理",
+  "evaluation_criteria": "漏检率(假阴性率)和误报率(假阳性率)",
+  "negative_result_or_admitted_limitation": "网络规模扩大导致DLP解空间组合爆炸，密度增加使推断了困难增大",
+  "evidence_for_taste": [
+    "faulty links can result in mismatch",
+    "rule-free probes",
+    "hop count can distinguish",
+    "best models minimize the sum",
+    "probabilistic and heuristics based",
+    "learning-based inference scheme",
+    "links which either have a good PRR more than 90%, or have a bad PRR less than 10%"
+  ],
+  "thinking_moves": [
+    "将网络通信行为(泛洪)重新框架为感知手段",
+    "从一跳一跳的跳数失配反推具体故障链路",
+    "用DLP/DLV declarative logic programming处理推理不确定性",
+    "先列工程经验规则，再以弱约束优化方式在逻辑编程中求解",
+    "加入迭代反馈机制逐轮修正先验参数"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-fault-detection",
+    "passive-link-monitoring",
+    "hop-count-inference",
+    "disjunctive-logic-programming",
+    "probabilistic-diagnosis"
+  ],
+  "cites_own_work": [
+    "GreenOrbs measurement study",
+    "Passive diagnosis for WSN",
+    "Sherlock is around",
+    "BOND hidden bottleneck"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

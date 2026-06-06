@@ -1,0 +1,37 @@
+{
+  "paper_id": "LoRASuite_ Efficient LoRA Adaptation Across Large Language Model Upgrades",
+  "doi": "10.48550/arxiv.2505.13515",
+  "title": "LoRASuite: Efficient LoRA Adaptation Across Large Language Model Upgrades",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM版本频繁更新导致已训练LoRA权重失效，从头重训练成本高、耗时长、不环保",
+  "problem_framing": "将LLM升级归纳为六个显式限制（词表、隐藏维度、中间维度、层深、头数、注意力类型），提出模块化适配方案",
+  "key_insight": "利用新旧模型已知参数计算迁移矩阵，用CKA做层对齐、用匈牙利算法做头对齐，再小规模微调保证数值稳定",
+  "method_signature": "模块化迁移：CKA层映射 + 匈牙利头映射 + 轻量微调",
+  "evaluation_criteria": "数学/常识推理准确率、内存占用、计算时间",
+  "negative_result_or_admitted_limitation": "无轻量微调时性能几乎等于原版模型，矩阵乘法导致数值不稳定；LoRASuite对学习率高度敏感",
+  "evidence_for_taste": [
+    "LoRASuite w/o LFT exhibits performance nearly identical to the vanilla model",
+    "This sensitivity likely arises because LoRASuite leverages previously trained LoRA weights",
+    "numerical stability may not be a significant concern for certain models",
+    "requires an additional small-scale fine-tuning step to achieve optimal performance"
+  ],
+  "thinking_moves": [
+    "将LLM升级问题拆解为六个独立子问题，分别设计针对性迁移算法",
+    "借鉴可解释性研究中的CKA方法做层相似度度量",
+    "用运筹学匈牙利算法做注意力头匹配",
+    "承认依赖额外微调步骤为局限，暗示未来需更鲁棒算法"
+  ],
+  "topic_tags": [
+    "LoRA-adaptation",
+    "LLM-upgrade-transfer",
+    "parameter-efficient-finetuning",
+    "centered-kernel-alignment",
+    "attention-head-mapping"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

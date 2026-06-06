@@ -1,0 +1,572 @@
+{
+  "slug": "xiaofei_xu",
+  "n_extracts": 26,
+  "n_full": 20,
+  "n_partial": 5,
+  "n_thin": 0,
+  "year_range": [
+    2003,
+    2023
+  ],
+  "top_tags": [
+    [
+      "categorical-data-clustering",
+      3
+    ],
+    [
+      "cluster-ensemble",
+      2
+    ],
+    [
+      "service-ecosystem-evolution",
+      2
+    ],
+    [
+      "model-transformation",
+      1
+    ],
+    [
+      "rough-set-theory",
+      1
+    ],
+    [
+      "MDA",
+      1
+    ],
+    [
+      "metamodel-matching",
+      1
+    ],
+    [
+      "semi-automatic-rule-construction",
+      1
+    ],
+    [
+      "服务生态系统",
+      1
+    ],
+    [
+      "多层网络模型",
+      1
+    ],
+    [
+      "事件抽取",
+      1
+    ],
+    [
+      "主动学习",
+      1
+    ],
+    [
+      "知识图谱融合",
+      1
+    ],
+    [
+      "组件复用",
+      1
+    ],
+    [
+      "特征匹配",
+      1
+    ],
+    [
+      "层次聚类",
+      1
+    ],
+    [
+      "领域业务模型",
+      1
+    ],
+    [
+      "Sorenson系数",
+      1
+    ],
+    [
+      "FP-tree",
+      1
+    ],
+    [
+      "correlation-mining",
+      1
+    ],
+    [
+      "candidate-elimination",
+      1
+    ],
+    [
+      "pattern-growth",
+      1
+    ],
+    [
+      "pearson-correlation",
+      1
+    ],
+    [
+      "link-clustering",
+      1
+    ],
+    [
+      "cross-domain-algorithm-transfer",
+      1
+    ],
+    [
+      "probabilistic-generative-model",
+      1
+    ],
+    [
+      "equivalence-class-link-mapping",
+      1
+    ],
+    [
+      "business-object-association",
+      1
+    ],
+    [
+      "log-based-traceability",
+      1
+    ],
+    [
+      "code-generation",
+      1
+    ]
+  ],
+  "topic_clusters": [
+    {
+      "tag": "categorical-data-clustering",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "A Link Clustering Based Approach for Clustering Categorical Data",
+          "year": 2004,
+          "venue": "unknown",
+          "key_insight": "CDC问题与LC问题等价，两个领域的算法可以互换使用",
+          "method_signature": "将分类数据属性等价类映射为链接，应用LC的概率生成模型聚类",
+          "score": 16
+        },
+        {
+          "paper_id": "Clustering Mixed Numeric and Categorical Data_ A Cluster Ensemble Approach",
+          "year": 2005,
+          "venue": "arXiv",
+          "key_insight": "聚类输出本身是类别标签,可作为类别属性处理;利用Squeezer算法支持加权属性相似度计算来解决不同子数据集的权重平衡",
+          "method_signature": "CEBMDC: 先分割数据集为纯类别和纯数值子集,分别聚类后合并为类别数据集再聚类集成",
+          "score": 16
+        },
+        {
+          "paper_id": "K-ANMI_ A Mutual Information Based Clustering Algorithm for Categorical Data",
+          "year": 2005,
+          "venue": null,
+          "key_insight": "Treating each attribute's value partition as a clustering result allows reformulating categorical clustering as a cluster ensemble consensus problem.",
+          "method_signature": "k-means style iterative algorithm directly optimizing ANMI objective using histogram-based data structures for scalability.",
+          "score": 16
+        }
+      ]
+    }
+  ],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2003,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "categorical-data-stream-clustering",
+          1
+        ],
+        [
+          "lossy-counting",
+          1
+        ],
+        [
+          "bounded-memory-algorithms",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2004,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "FP-tree",
+          1
+        ],
+        [
+          "correlation-mining",
+          1
+        ],
+        [
+          "candidate-elimination",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2005,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "cluster-ensemble",
+          2
+        ],
+        [
+          "categorical-data-clustering",
+          2
+        ],
+        [
+          "subspace-outlier-ensemble",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2011,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "model-transformation",
+          1
+        ],
+        [
+          "rough-set-theory",
+          1
+        ],
+        [
+          "MDA",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2012,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "enterprise-interoperability",
+          1
+        ],
+        [
+          "cross-organizational-collaboration",
+          1
+        ],
+        [
+          "networked-enterprises",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2013,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "service-composition",
+          1
+        ],
+        [
+          "mass-customization",
+          1
+        ],
+        [
+          "service-network",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2014,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "wireless-sensor-network-security",
+          1
+        ],
+        [
+          "directed-diffusion-routing",
+          1
+        ],
+        [
+          "one-way-hash-chain-authentication",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "big-service-ecosystem",
+          1
+        ],
+        [
+          "service-pattern-reuse",
+          1
+        ],
+        [
+          "requirement-pattern-matching",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "服务生态系统",
+          1
+        ],
+        [
+          "多层网络模型",
+          1
+        ],
+        [
+          "事件抽取",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "service-bundle-recommendation",
+          1
+        ],
+        [
+          "cold-start",
+          1
+        ],
+        [
+          "representation-alignment",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "fashion-compatible-generation",
+          1
+        ],
+        [
+          "semantic-alignment-module",
+          1
+        ],
+        [
+          "collocation-classification",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "missing-event-aware-TGNN",
+          1
+        ],
+        [
+          "temporal-point-process",
+          1
+        ],
+        [
+          "event-time-estimation",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "方法为半自动构建而非全自动,实验验证了方法但未在实际工业场景中验证;\"we plan to analysis the transformation rules and compose some transformation rules to improve the efficiency\"表明当前规则效率有待优化。",
+    "事件抽取准确率仅0.718，模型融合存在实体歧义错误，演化关系规则覆盖率46.5%",
+    "现有方法结果过度依赖人工设定的权重,难以实践",
+    "对于物品数较少的数据集(如mushroom), Tcp优势不明显, 在高阈值时不如Taper快",
+    "LCBCDC在癌症数据集上仅覆盖392/683条记录，其余被当作异常处理",
+    "只能处理单据和资源对象,报表对象因数据来源复杂暂不支持;仅处理数值关联,其他关联类型未考虑",
+    "现有工程方法效率偏低(‘it is still sometimes low efficient’)，需引入新范式",
+    "大多数方法自动化程度低，需要设计师手工识别组件；现有方法只关注部分性能指标而忽略其他",
+    "Arrhythmia数据集上表现不如[3]，如何选择有意义的子空间仍未解决",
+    "算法的聚类精度最终由分割后子数据集的聚类质量决定,组件算法选择至关重要;且当类别属性多于数值属性时,最终结果几乎等同于类别数据聚类结果",
+    "合并事件所有模型表现均差；深度学习因数据量小而表现不佳；本工作重点不在寻找最优模型",
+    "现有方法仍无法准确高效地构造服务,满足个性化需求仍繁琐耗时。",
+    "NLP方法的主要缺点是无法利用服务间的社交信息;图方法无法解决冷启动;简单引入预训练模型未显著提升性能可能因负迁移",
+    "现有研究更关注感知内容的静态指标而非变化本身",
+    "结构分析方法过度依赖人工设定的权重，难以实际应用",
+    "Algorithm terminates at local optimum; worst-case complexity O(I*n*k²*r*p²) requires practical assumptions on small p.",
+    "k-histograms算法产生局部最优解，依赖于初始直方图选择和数据集顺序",
+    "特征通道超过64时性能略降;λ参数增大削弱判别器和CCM影响;目前仅支持4类单品;计算复杂度O(N)",
+    "公钥方案较慢，仅在初始化引导时使用ECC，且仅保护认证性而非机密性",
+    "现有方法生成的解决方案通常是临时的，需求满足后即释放，进一步增加成本。",
+    "New parameters (R, C, H) require tuning; approximation may exclude some qualified neighbors; combinations of algorithms not thoroughly tested.",
+    "BD-QSRFP执行时间在50/100服务器时达11s/52s,过高不适于在线;100服务器已超出算法承受范围",
+    "对于复杂工作流schema，搜索过程耗时，且转换数据依赖规则为控制规则会改变模型结构",
+    "当观测事件过少时（如遮蔽>50%）性能急剧下降，MTGN可能失效；编码时间间隔在某些数据集上略微降低链接预测性能"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "no apparent pixel-to-pixel alignment",
+      "paper_id": "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    },
+    {
+      "quote": "non-local in space",
+      "paper_id": "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    },
+    {
+      "quote": "overcome the issue of spatial misalignment",
+      "paper_id": "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    },
+    {
+      "quote": "learn the correspondence relationships",
+      "paper_id": "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    },
+    {
+      "quote": "weakens the influence of the discriminator",
+      "paper_id": "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    },
+    {
+      "quote": "Bi-LSTM based on human vision",
+      "paper_id": "Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification_ An Outfit Generation Framework"
+    },
+    {
+      "quote": "the neighborhood search of the discrete ABC is quite similar to a random search",
+      "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    },
+    {
+      "quote": "existing population-based algorithms ... are often poor at exploitation",
+      "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    },
+    {
+      "quote": "the former makes it difficult to leverage the unique characteristics of SSP",
+      "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    },
+    {
+      "quote": "poorly-configured parameters could lead to undesirable QoS",
+      "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    },
+    {
+      "quote": "the complexity of finding all the qualified neighbors is comparable with that of the SSP",
+      "paper_id": "Novel Artificial Bee Colony Algorithms for QoS-Aware Service Selection"
+    },
+    {
+      "quote": "significant challenge",
+      "paper_id": "Mass Customization Oriented and Cost-Effective Service Network"
+    },
+    {
+      "quote": "reaching a tradeoff",
+      "paper_id": "Mass Customization Oriented and Cost-Effective Service Network"
+    },
+    {
+      "quote": "cost-effective",
+      "paper_id": "Mass Customization Oriented and Cost-Effective Service Network"
+    },
+    {
+      "quote": "just-enough policy",
+      "paper_id": "Mass Customization Oriented and Cost-Effective Service Network"
+    },
+    {
+      "quote": "competency assessment",
+      "paper_id": "Mass Customization Oriented and Cost-Effective Service Network"
+    },
+    {
+      "quote": "optional or mandatory",
+      "paper_id": "Mass Customization Oriented and Cost-Effective Service Network"
+    },
+    {
+      "quote": "lower degrees of customer satisfaction",
+      "paper_id": "Mass Customization Oriented and Cost-Effective Service Network"
+    },
+    {
+      "quote": "cost is bound to significantly increase",
+      "paper_id": "Mass Customization Oriented and Cost-Effective Service Network"
+    },
+    {
+      "quote": "how to reuse the existing service resources effectively",
+      "paper_id": "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service"
+    },
+    {
+      "quote": "it is still sometimes low efficient",
+      "paper_id": "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service"
+    },
+    {
+      "quote": "matching between requirement patterns and service patterns",
+      "paper_id": "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service"
+    },
+    {
+      "quote": "service context as mediation",
+      "paper_id": "A New Paradigm of Software Service Engineering in the Era of Big Data and Big Service"
+    },
+    {
+      "quote": "Transformation rules are typically created manually",
+      "paper_id": "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    },
+    {
+      "quote": "efficient design of transformation rules has become a major challenge",
+      "paper_id": "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    },
+    {
+      "quote": "selection from rules set is also a challengeable task",
+      "paper_id": "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    },
+    {
+      "quote": "complex and uncertain relationships are difficult to derive",
+      "paper_id": "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    },
+    {
+      "quote": "we try to discover both explicit and implicit matching relationships",
+      "paper_id": "A Construction Approach of Model Transformation Rules Based on Rough Set Theory"
+    },
+    {
+      "quote": "only covers a single perspective",
+      "paper_id": "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    },
+    {
+      "quote": "damages the credibility",
+      "paper_id": "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    },
+    {
+      "quote": "error propagation",
+      "paper_id": "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    },
+    {
+      "quote": "coverage will increase as the number of rules we summarize",
+      "paper_id": "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    },
+    {
+      "quote": "lacks a widely recognized definition",
+      "paper_id": "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    },
+    {
+      "quote": "traditional community detection algorithms to be directly applied",
+      "paper_id": "A Data-driven Approach for Constructing Multilayer Network-based Service Ecosystem Models"
+    },
+    {
+      "quote": "算法可以互换使用",
+      "paper_id": "A Link Clustering Based Approach for Clustering Categorical Data"
+    },
+    {
+      "quote": "CDC problem and LC problem are equivalent",
+      "paper_id": "A Link Clustering Based Approach for Clustering Categorical Data"
+    },
+    {
+      "quote": "一个对象也可以被分配到多个簇",
+      "paper_id": "A Link Clustering Based Approach for Clustering Categorical Data"
+    },
+    {
+      "quote": "our method could provide at least the same level of accuracy",
+      "paper_id": "A Link Clustering Based Approach for Clustering Categorical Data"
+    },
+    {
+      "quote": "Our experimental results show the new categorical data clustering methods to achieve better clustering accuracy",
+      "paper_id": "A Link Clustering Based Approach for Clustering Categorical Data"
+    },
+    {
+      "quote": "none of the existing definitions are widely accepted",
+      "paper_id": "A Unified Subspace Outlier Ensemble Framework for Outlier Detection in High Dimensional Spaces"
+    }
+  ]
+}

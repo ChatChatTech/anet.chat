@@ -1,0 +1,38 @@
+{
+  "paper_id": "Unifying the Convergences in Multilingual Neural Machine Translation__oa_W4385573302",
+  "doi": "10.18653/v1/2022.emnlp-main.458",
+  "title": "Unifying the Convergences in Multilingual Neural Machine Translation",
+  "year": 2022,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "多语言NMT中不同语言对在不同时刻达到收敛，导致模型在低资源语言上过拟合，高资源语言上欠拟合",
+  "problem_framing": "将收敛不一致形式化为整体最佳检查点与语言特定最佳检查点之间的损失差（性能差距）",
+  "key_insight": "使用语言特定的最佳检查点作为教师模型进行自蒸馏，并通过蒸馏开关动态控制是否进行蒸馏",
+  "method_signature": "LSSD：维护每种语言的最佳检查点，通过蒸馏开关和三层样本级权重控制知识传递",
+  "evaluation_criteria": "BLEU scores on TED-8-Diverse/Related and WMT; 性能差距减少57%",
+  "negative_result_or_admitted_limitation": "训练开销增加（5.7h→7.6h）；LSSD-Adaptive在O2M上因方差过大表现不稳定",
+  "evidence_for_taste": [
+    "HRLs typically encounter underfitting",
+    "extremely severe overfitting generally arises in LRLs",
+    "O2M converges later than M2O",
+    "the variance is 0.097 in O2M and is 0.039 in M2O",
+    "negative impact of performing distillation on data samples where the teacher model errs"
+  ],
+  "thinking_moves": [
+    "把收敛不一致问题量化为语言特定最佳检查点与整体最佳检查点的损失差",
+    "将自蒸馏思想从图像领域迁移到多语言NMT，使用同一模型的不同检查点作为师生",
+    "通过蒸馏开关机制实现动态的课程式学习，而非固定蒸馏",
+    "针对样本级负迁移设计选择性蒸馏（SELECTIVE）和自适应权重（ADAPTIVE）"
+  ],
+  "topic_tags": [
+    "multilingual-NMT",
+    "self-distillation",
+    "convergence-inconsistency",
+    "knowledge-distillation",
+    "performance-deficit"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

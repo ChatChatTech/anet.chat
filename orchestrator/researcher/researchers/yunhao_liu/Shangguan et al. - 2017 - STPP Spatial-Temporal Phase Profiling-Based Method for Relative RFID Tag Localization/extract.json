@@ -1,0 +1,40 @@
+{
+  "paper_id": "Shangguan et al. - 2017 - STPP Spatial-Temporal Phase Profiling-Based Method for Relative RFID Tag Localization",
+  "doi": null,
+  "title": "STPP: Spatial-Temporal Phase Profiling-Based Method for Relative RFID Tag Localization",
+  "year": 2017,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现实应用需要相对位置（排序）而非绝对坐标，如图书馆找错放的书、机场行李排序",
+  "problem_framing": "将相对定位问题形式化为基于相位剖面时间序列的V型区域检测与排序问题",
+  "key_insight": "移动读写器时，相位随距离先减后增形成V型对称区，V底对应被测标签正上方点",
+  "method_signature": "移动读写器采集相位序列，用DTW匹配V区，二次拟合确定标签顺序",
+  "evaluation_criteria": "排序准确率（书籍84%，行李95%），测距误差",
+  "negative_result_or_admitted_limitation": "间距较小时（如5cm）性能不佳，标签过密导致相位剖面稀疏，难以定位V底",
+  "evidence_for_taste": [
+    "are not suitable for relative object localization",
+    "error margin could allow a book to be incorrectly ordered",
+    "phase profiles outside the V-zone are fragmentary",
+    "STPP is more likely to get a wrong timestamp"
+  ],
+  "thinking_moves": [
+    "先系统否定现有方法（RSSI相位协议），再找新的可观测物理量",
+    "利用物理对称性（距离先减后增）作为检测锚点",
+    "将感知问题转化为序列模式匹配问题（DTW）",
+    "为解决速度变化导致的剖面伸缩，引入时域扭曲对齐",
+    "通过分段降采样降低DTW计算复杂度（O(MN/w²)）"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "relative-positioning",
+    "phase-profiling",
+    "dynamic-time-warping",
+    "tag-ordering"
+  ],
+  "cites_own_work": [
+    "OTrack"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

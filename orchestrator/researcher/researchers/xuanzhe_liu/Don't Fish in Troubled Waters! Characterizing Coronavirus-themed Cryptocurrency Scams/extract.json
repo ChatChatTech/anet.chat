@@ -1,0 +1,38 @@
+{
+  "paper_id": "Don't Fish in Troubled Waters! Characterizing Coronavirus-themed Cryptocurrency Scams",
+  "doi": "10.48550/arxiv.2007.13639",
+  "title": "Don't Fish in Troubled Waters! Characterizing Coronavirus-themed Cryptocurrency Scams",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "COVID-19 pandemic引发加密货币诈骗激增, FBI警告此类骗局增加, 受害者已损失超7700万美元",
+  "problem_framing": "首次系统性测量研究COVID-19主题加密货币诈骗的6种类型、流行程度和社会工程技巧",
+  "key_insight": "利用疫情特定信任(WHO/CDC)和公众健康焦虑,通过混合方法发现195个已知和未知诈骗案例",
+  "method_signature": "混合方法: 从报告数据库收集已知诈骗+基于关键词/域名/恶意软件检测未知诈骗, 手动验证",
+  "evaluation_criteria": "收集195个诈骗案例、201个区块链地址、估算33万美元损失、6329名受害者",
+  "negative_result_or_admitted_limitation": "taxonomy可能不完整; 手动识别方法不可扩展; 仅为下界估计",
+  "evidence_for_taste": [
+    "the taxonomy is summarized based on public known scams",
+    "we only consider the transactions related to these scam addresses since the beginning of the pandemic",
+    "our estimation is definitely a lower bound",
+    "one scam address can be used to fulfill more than one type of scam activities",
+    "this work relies on some manually efforts to identify the unrevealed scams"
+  ],
+  "thinking_moves": [
+    "先构建6类诈骗taxonomy, 再用混合方法系统收集已知和未知诈骗",
+    "跨平台数据源整合(BitcoinAbuse, CryptoScamDB, BitcoinTalk, Twitter, Telegram)",
+    "从公开安全报告和用户举报中提炼诈骗模式和社会工程技巧",
+    "通过区块链交易追溯量化诈骗财务影响(下界估计)"
+  ],
+  "topic_tags": [
+    "COVID-19诈骗特征化",
+    "加密货币欺诈检测",
+    "区块链安全测量",
+    "社会工程攻击分析",
+    "网络犯罪生态系统"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "An Exceptional Dataset For Rare Pancreatic Tumor Segmentation",
+  "doi": "10.48550/arxiv.2501.17555",
+  "title": "An Exceptional Dataset For Rare Pancreatic Tumor Segmentation",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "pNETs占胰腺癌不到5%，现有数据集混合多种肿瘤类型，导致pNET分割模型精度低、灵敏度差",
+  "problem_framing": "将pNET诊断问题重新定义为数据稀缺问题：需专门收集469例pNET患者构建专用CECT数据集",
+  "key_insight": "slice-wise weight loss赋予大肿瘤面积切片更高权重，确保模型学习到更多可区分的肿瘤特征",
+  "method_signature": "pNET专用CECT数据集(469例3D样本) + UNet++ baseline + 按肿瘤面积排名的slice-wise weight loss",
+  "evaluation_criteria": "Dice Similarity Coefficient (DSC)分别在pancreas切片和ROI切片上评估，区分假阳性与召回率",
+  "negative_result_or_admitted_limitation": "UNet在ROI上DSC反而从0.392降至0.347，slice-wise weight loss对不同架构效果不一致",
+  "evidence_for_taste": [
+    "there has not been a dataset specifically for pNETs",
+    "small pNETs may not alter the morphology",
+    "slices with larger tumor ground-truths might be more obvious",
+    "baselines using typical segmentation architectures can be improved",
+    "the rarity of pNETs makes segmenting them a challenging problem"
+  ],
+  "thinking_moves": [
+    "从临床诊断痛点反推数据需求：先定义肿瘤类型专属数据集的必要性",
+    "承认基线模型局限，明确提出leave room for improvement列举后续改进方向",
+    "使用slice-wise weighting解决类别不平衡，而非简单过采样或降采样"
+  ],
+  "topic_tags": [
+    "pNET-segmentation",
+    "rare-tumor-CECT-dataset",
+    "slice-wise-weight-loss",
+    "medical-image-balancing",
+    "pancreatic-neuroendocrine-tumor"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

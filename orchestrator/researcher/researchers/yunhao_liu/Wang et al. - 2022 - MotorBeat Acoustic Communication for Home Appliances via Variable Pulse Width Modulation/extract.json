@@ -1,0 +1,38 @@
+{
+  "paper_id": "Wang et al. - 2022 - MotorBeat Acoustic Communication for Home Appliances via Variable Pulse Width Modulation",
+  "doi": null,
+  "title": "MotorBeat: Acoustic Communication for Home Appliances via Variable Pulse Width Modulation",
+  "year": 2022,
+  "venue": "Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "小型家电占据家电市场主流(销量是大电器的8.3倍),但联网率仅1.2%,大量设备与互联网隔绝",
+  "problem_framing": "如何在不添加麦克风的前提下,让小型家电利用其直流电机作为声学发射器与智能音箱通信",
+  "key_insight": "直流电机在电压切换时产生电磁感应声(EI信号),通过随机化PWM开关周期(V-PWM)可将集中能量分散为类白噪声,既舒适又实现符号正交",
+  "method_signature": "V-PWM调制:固定占空比+随机开关周期,每设备分配唯一伪随机序列作为正交符号",
+  "evaluation_criteria": "通信距离(≤10m)、心跳检测准确率、比特误码率(BER)、用户舒适度主观评估",
+  "negative_result_or_admitted_limitation": "高速移动(>2m/s)引入多普勒效应导致检测失败;穿越墙壁时信号严重衰减;仅支持单向通信,无法确认ACK",
+  "evidence_for_taste": [
+    "用户耳朵对离散频率敏感",
+    "Bleep听起来像Do-Re-Mi-Fa",
+    "SNR可低于-15dB",
+    "仅需知道开关周期",
+    "脉冲对相关性符号全正或全负"
+  ],
+  "thinking_moves": [
+    "从声学物理机制分离信号与噪声:EI信号由电压控制可调制,MI信号由旋转决定构成干扰",
+    "将舒适度约束转化为信号频谱整形问题:从离散谐波→宽带噪声",
+    "利用随机调制理论解决用户QoE与通信编码的正交需求",
+    "将设备识别问题转化为符号相关检测问题(类比CDMA)"
+  ],
+  "topic_tags": [
+    "acoustic-side-channel",
+    "motor-based-communication",
+    "DC-motor-modulation",
+    "smart-home-iot",
+    "pseudo-random-PWM"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

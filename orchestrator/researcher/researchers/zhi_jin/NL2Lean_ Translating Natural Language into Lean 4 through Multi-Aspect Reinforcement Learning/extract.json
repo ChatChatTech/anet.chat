@@ -1,0 +1,38 @@
+{
+  "paper_id": "NL2Lean_ Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning",
+  "doi": "10.18653/v1/2025.emnlp-main.1586",
+  "title": "NL2Lean: Translating Natural Language into Lean 4 through Multi-Aspect Reinforcement Learning",
+  "year": 2025,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Writing accurate formal Lean 4 requires deep familiarity with syntax and logical rules, placing significant burden on domain experts.",
+  "problem_framing": "LLMs rely on instruction tuning and lack fine-grained structural and semantic alignment, producing syntactically and logically incorrect formal proofs.",
+  "key_insight": "Four reward signals (semantic, term-level, global-level, compile-check) combined with multi-aspect curriculum learning from easy to hard progressively improves translation quality.",
+  "method_signature": "Multi-aspect RL framework with dense rewards + curriculum learning on PPO-optimized LLaMA-8B base translator.",
+  "evaluation_criteria": "Compile rate + semantic faithfulness judged by backtranslation comparison and human annotators.",
+  "negative_result_or_admitted_limitation": "Compile-checking reward achieves high compilation (19.3%) but limited semantic accuracy (15.6%), confirming syntactic validity alone is insufficient.",
+  "evidence_for_taste": [
+    "lacks fine-grained semantic feedback",
+    "syntactic validity alone is not sufficient",
+    "high compilation rates only",
+    "easy-to-hard progression",
+    "complementary reward signals",
+    "time-consuming, expensive, and difficult to scale"
+  ],
+  "thinking_moves": [
+    "把形式化问题分解为多个正交评估维度而非单一指标",
+    "通过消融实验承认某一 reward 维度的局限性",
+    "承认人工评估的瓶颈并计划自动化",
+    "从工程异常(编译通过但语义错)反推现有方法的根本缺陷"
+  ],
+  "topic_tags": [
+    "NL-to-Lean-autoformalization",
+    "multi-aspect-reward-RL",
+    "curriculum-learning-math",
+    "formal-proof-generation",
+    "preference-learning-reward-model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

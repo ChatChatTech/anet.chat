@@ -1,0 +1,38 @@
+{
+  "paper_id": "Topic-to-Essay Generation with Neural Networks",
+  "doi": "10.24963/ijcai.2018/567",
+  "title": "Topic-to-Essay Generation with Neural Networks",
+  "year": 2018,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有方法难以在长文本生成中保证所有主题词都被覆盖且保持相关",
+  "problem_framing": "多主题词输入下的段落级文本生成，需解决主题完整性和主题相关性",
+  "key_insight": "用覆盖向量追踪各主题词的使用程度，在解码时动态调整注意力偏向未表达的主题",
+  "method_signature": "MTA-LSTM: 多主题感知的长短期记忆网络，带覆盖机制引导解码",
+  "evaluation_criteria": "人工评分(主题完整性/相关性/流畅性/连贯性)和BLEU-2自动指标",
+  "negative_result_or_admitted_limitation": "人类评估一致性kappa仅0.56；BLEU整体得分偏低，生成任务极具挑战；生成结果存在重复和自相矛盾问题",
+  "evidence_for_taste": [
+    "attention mechanism tends to ignore past",
+    "over-translation and under-translation",
+    "cannot guarantee semantic of all topics",
+    "overall results are not very high",
+    "duplication and self-contradiction"
+  ],
+  "thinking_moves": [
+    "从诗歌生成的受限结构类比到散文生成的自由结构，识别任务难度差异",
+    "从平均embedding的模糊表示，追溯到注意力机制可建立明确词级关系",
+    "将翻译中的覆盖机制迁移到主题覆盖，检测attention的过度关注问题",
+    "先设基线TAV-LSTM逐步扩展到TAT-LSTM再加入覆盖向量，形成递进式设计"
+  ],
+  "topic_tags": [
+    "多主题文本生成",
+    "主题覆盖机制",
+    "LSTM解码器",
+    "注意力模型",
+    "中文作文生成"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

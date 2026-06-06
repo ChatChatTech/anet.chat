@@ -1,0 +1,37 @@
+{
+  "paper_id": "MPR-GUI_ Benchmarking and Enhancing Multilingual Perception and Reasoning in GUI Agents",
+  "doi": "10.48550/arxiv.2512.00756",
+  "title": "MPR-GUI: Benchmarking and Enhancing Multilingual Perception and Reasoning in GUI Agents",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有GUI benchmark缺乏细粒度诊断能力,无法识别哪些P&R子能力导致失败,妨碍针对性改进",
+  "problem_framing": "将GUI agent能力解构为感知与推理两个维度,并要求跨语言严格对齐以隔离语言影响",
+  "key_insight": "中间层作为英语中心推理枢纽,跨语言分布差异反映P&R能力差距,可在此层注入干预向量对齐非英语表征",
+  "method_signature": "GUI-XLI:训练-free表征工程,在中间层注入跨语言差异向量对齐非英语表征",
+  "evaluation_criteria": "FPR-ACC(细粒度P&R加权准确率),跨6种语言8个维度评估",
+  "negative_result_or_admitted_limitation": "空间推理和端到端推理任务提升有限,因其对语言上下文依赖较弱且固有复杂性超出语言对齐范畴",
+  "evidence_for_taste": [
+    "当前benchmark缺乏系统细粒度评估P&R能力",
+    "使用任务成功率等粗粒度指标掩盖了所需的P&R技能",
+    "动态特性引入复杂性阻碍了语言因素的受控对齐比较",
+    "无GUI-XLI时,表征形成明显的语言特定聚类",
+    "性能差距在推理密集型任务中最为显著"
+  ],
+  "thinking_moves": [
+    "将GUI agent能力解构为感知与推理子能力进行诊断",
+    "对比粗粒度指标与细粒度诊断的价值差异",
+    "将跨语言差异向量作为显式优化方向",
+    "设计数据独立的实验(使用完全不相交的数据)",
+    "将性能差距归因于语言因素而非任务/视觉差异"
+  ],
+  "topic_tags": [
+    "GUI agent benchmark",
+    "multilingual perception-reasoning",
+    "cross-lingual representation alignment",
+    "training-free intervention",
+    "LVLM evaluation"
+  ],
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

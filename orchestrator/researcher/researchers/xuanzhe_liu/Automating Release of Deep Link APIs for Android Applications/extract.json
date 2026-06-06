@@ -1,0 +1,43 @@
+{
+  "paper_id": "Automating Release of Deep Link APIs for Android Applications",
+  "doi": "10.48550/arxiv.1711.11564",
+  "title": "Automating Release of Deep Link APIs for Android Applications",
+  "year": 2017,
+  "venue": "arxiv / IEEE Transactions",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "73% of top Android apps lack deep links; developers need 45–411 LoC manual changes per deep link, hindering web-like mobile experience",
+  "problem_framing": "Automate deep-link release by combining static analysis (navigation graphs) and dynamic analysis (fragment identification) with minimal developer effort",
+  "key_insight": "Cooperative static-dynamic analysis plus deep-link proxy enables reaching arbitrary app locations without modifying business logic",
+  "method_signature": "Navigation graph + shortest-path analysis + UI-tree fragment ID + deep-link proxy replay engine",
+  "evaluation_criteria": "Coverage increase percentage across 20 apps; runtime overhead marginality",
+  "negative_result_or_admitted_limitation": "Objects of app-specific classes in intents cannot be populated; static analysis cannot analyze dynamic fragments; low coverage of dynamic analysis",
+  "evidence_for_taste": [
+    "requires non-trivial developer efforts",
+    "only about 35% of apps have deep links",
+    "73% of the top 20,000 apps do not have deep links",
+    "static analysis cannot reach the dynamic contents",
+    "low code coverage",
+    "non-trivial manual efforts",
+    "no interference of the normal functionalities"
+  ],
+  "thinking_moves": [
+    "从20,000 app大规模实测归纳覆盖率低的客观现象",
+    "用GitHub commit history量化开发者手动改写成本(45-411 LoC)",
+    "把深链接问题拆解为activity路径和fragment状态两步",
+    "静态分析确定最短activity跳转序列, 动态分析补足fragment级状态",
+    "proxy架构规避对原业务逻辑的侵入"
+  ],
+  "topic_tags": [
+    "android-deep-links",
+    "static-dynamic-analysis-cooperation",
+    "intent-filter-automation",
+    "app-navigation-graph",
+    "mobile-hyperlink-equivalence"
+  ],
+  "cites_own_work": [
+    "xuanzhe_liu"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

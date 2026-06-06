@@ -1,0 +1,38 @@
+{
+  "paper_id": "RLOMM_ An Efficient and Robust Online Map Matching Framework with Reinforcement Learning",
+  "doi": "10.48550/arxiv.2502.06825",
+  "title": "RLOMM: An Efficient and Robust Online Map Matching Framework with Reinforcement Learning",
+  "year": 2025,
+  "venue": "SIGMOD",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有在线地图匹配方法计算冗余且贪婪策略导致后续匹配错误",
+  "problem_framing": "将在线地图匹配建模为马尔可夫决策过程(OMDP)的顺序决策问题",
+  "key_insight": "用强化学习从未来导向视角做匹配决策,避免贪心引起的级联错误",
+  "method_signature": "基于OMDP的深度Q学习框架,结合轨迹转移图和道路连接图的异构图表示",
+  "evaluation_criteria": "准确率、效率和鲁棒性在三个真实数据集上的综合表现",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "贪心方法难以处理在线场景",
+    "从全局视角考虑每次匹配",
+    "fundamentally simplifies the complexity",
+    "reducing unnecessary calculations",
+    "mitigate the impact of their heterogeneity"
+  ],
+  "thinking_moves": [
+    "把流式在线匹配问题重新框定为离线的马尔可夫决策过程",
+    "用强化学习的延迟奖励机制纠正贪心匹配的错误传播",
+    "用对比学习在隐空间中拉近轨迹和道路的表示距离",
+    "针对轨迹(无结构)和道路(图结构)的异构性分别设计专属图卷积"
+  ],
+  "topic_tags": [
+    "online-map-matching",
+    "reinforcement-learning-MDP",
+    "trajectory-road-heterogeneity",
+    "graph-representation-learning",
+    "contrastive-learning-alignment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

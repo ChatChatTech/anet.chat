@@ -1,0 +1,39 @@
+{
+  "paper_id": "Li and Liu - 2010 - Iso-Map Energy-Efficient Contour Mapping in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Iso-Map: Energy-Efficient Contour Mapping in Wireless Sensor Networks",
+  "year": 2010,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传感器网络轮廓映射的全节点上报能耗过高,现实中Huanghua港每年疏浚监测费用高达1800万美元",
+  "problem_framing": "将网络流量从O(n)降至O(√n)的同时保持等值线图高保真度,且单节点计算开销保持常数",
+  "key_insight": "仅选择位于等值线上的'isoline节点'上报,等值线长度仅占区域周界,天然呈O(√n)规模",
+  "method_signature": "Isoline节点选取+局部线性回归+梯度方向报告+Voronoi图Sink端等值线重构",
+  "evaluation_criteria": "网络流量开销、节点计算强度、保真度(Hausdorff距离)、能耗效率",
+  "negative_result_or_admitted_limitation": "超过40%节点失效时方案不可用;节点密度低时保真度下降明显",
+  "evidence_for_taste": [
+    "aggregation based protocols cannot further improve the scalability",
+    "the suppression algorithm ensures that the range spanned by suppressed nodes is bounded within the 2-hop neighborhood",
+    "More than 40 percent node failures make both of them unusable",
+    "such irregularity linearly increases (to the square root of the node density)",
+    "most of the nonbizarre curves have Hausdorff dimensions of 1"
+  ],
+  "thinking_moves": [
+    "将感知问题重新框定为通信问题:通过选择而非全量上报来削减流量",
+    "利用几何测度证明流量上界:等值线长度类比于Hausdorff维度为1的曲线",
+    "引入梯度方向作为额外信息解决离散报告的歧义性",
+    "对标最坏情况建立理论下界,而非仅做经验比较",
+    "工程约束驱动参数选择:容忍度越大流量越省但等值线测量误差越大"
+  ],
+  "topic_tags": [
+    "wireless-sensor-networks",
+    "contour-mapping",
+    "energy-efficient-protocols",
+    "isoline-selection",
+    "spatial-query-processing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

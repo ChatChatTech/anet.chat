@@ -1,0 +1,36 @@
+{
+  "paper_id": "Deniable Steganography",
+  "doi": "10.48550/arxiv.2205.12587",
+  "title": "Deniable Steganography",
+  "year": 2022,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "steganography faces coercive attack when steganalysis detects hidden messages; parties can be forced to disclose secrets",
+  "problem_framing": "port deniable encryption concepts to steganography: embed fake message + real message, provide decoy decoder D_f for coercion",
+  "key_insight": "use balanced message loss to ensure Dr and Df achieve equal extraction accuracy, making fake extraction plausible",
+  "method_signature": "DNN-based encoder embeds real+fake messages; two decoders Dr/Df with balanced loss; adversarial training",
+  "evaluation_criteria": "image quality (PSNR/SSIM/LPIPS), bit error rate, scalability to multiple decoders, sensitivity across architectures",
+  "negative_result_or_admitted_limitation": "fake messages are random bits lacking semantic plausibility; scheme sensitive to steganalysis attacks not tested",
+  "evidence_for_taste": [
+    "the deniable scheme for steganography has not been reported",
+    "balance the extraction accuracy between the real and fake messages",
+    "our scheme is not sensitive to the network architectures",
+    "good scalability to the number of decoders"
+  ],
+  "thinking_moves": [
+    "类比迁移：将deniable encryption概念跨领域移植到steganography",
+    "框架复用：在HiDDeN架构上添加decoder实现deniability，仅修改loss function",
+    "可扩展性验证：通过增加decoder数量测试方案的通用性"
+  ],
+  "topic_tags": [
+    "deniable-steganography",
+    "coercive-attack-defense",
+    "DNN-steganography",
+    "balanced-loss-training",
+    "receiver-deniable-scheme"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "paper lacks full experimental details on fake message generation; security proof incomplete; steganalysis resistance not evaluated against state-of-art detectors like ATS"
+}

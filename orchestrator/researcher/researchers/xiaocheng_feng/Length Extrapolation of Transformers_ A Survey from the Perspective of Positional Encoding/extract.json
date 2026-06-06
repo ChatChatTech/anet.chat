@@ -1,0 +1,40 @@
+{
+  "paper_id": "Length Extrapolation of Transformers_ A Survey from the Perspective of Positional Encoding",
+  "doi": "10.18653/v1/2024.findings-emnlp.582",
+  "title": "Length Extrapolation of Transformers: A Survey from the Perspective of Positional Encoding",
+  "year": 2024,
+  "venue": "Findings of EMNLP",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Transformer模型训练于固定长度序列,无法泛化到更长推理序列,阻碍了长文档场景应用",
+  "problem_framing": "将长度外推问题统一到位置编码视角下系统梳理,通过taxonomy组织方法",
+  "key_insight": "PE是决定Transformer长度外推能力的首要因素,不同PE方案在外推与表达能力上有权衡",
+  "method_signature": "从APE到RPE的PE分类体系,结合位置插值与随机位置编码的外推方法综述",
+  "evaluation_criteria": "困惑度(语言建模)作为主要指标,但承认其不足以反映下游任务表现",
+  "negative_result_or_admitted_limitation": "困惑度不足以反映下游任务性能,语言建模存在recency bias,现有benchmark不足以评估外推",
+  "evidence_for_taste": [
+    "perplexity alone does not adequately reflect",
+    "lack a general and solid theoretical foundation",
+    "it remains unclear when or if Transformers length extrapolate",
+    "perplexity is insufficient",
+    "language modeling is not an ideal task",
+    "the model cannot consistently rely on tokens at specific locations"
+  ],
+  "thinking_moves": [
+    "通过taxonomy将散乱的外推方法系统化归类",
+    "指出decay-with-distance并非外推本质而是迎合recency bias",
+    "批判困惑度作为唯一指标的局限性,指出需要新的benchmark",
+    "从理论(NTK)和工程(动态缩放)两个层面分析位置插值方法",
+    "区分RPE的不同实现(bias-based vs embedding-based)的表达力-外推权衡"
+  ],
+  "topic_tags": [
+    "transformer-length-extrapolation",
+    "positional-encoding",
+    "rotary-position-embedding",
+    "llm-long-context",
+    "position-interpolation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Yang and Liu - 2008 - Quality of Trilateration Confidence Based Iterative Localization",
+  "doi": null,
+  "title": "Quality of Trilateration: Confidence based Iterative Localization",
+  "year": 2008,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": " Trilateration suffers poor accuracy due to noisy ranging, dynamic environments, and wireless fluctuations, making it hard to employ in practical applications.",
+  "problem_framing": "Noisy distance measurement degrades trilateration in four aspects: uncertainty, non-consistency, ambiguity (flip), and error propagation.",
+  "key_insight": "Different geometric forms of trilaterations provide different localization accuracy; QoT quantifies this relationship.",
+  "method_signature": "QoT defines trilateration quality as probability mass within a disk around the estimated position, integrating geometric relationship and ranging noise.",
+  "evaluation_criteria": "Localization accuracy and error propagation speed; validated via prototype experiments and large-scale simulations (600 nodes).",
+  "negative_result_or_admitted_limitation": "Location refinement may degrade 20% of nodes, but deterioration is small compared to improvement.",
+  "evidence_for_taste": [
+    "different levels of localization accuracy",
+    "beyond a binary output function",
+    "reduces the likelihood of using low confidence references",
+    "fail to determine which combination of references provides accurate localization"
+  ],
+  "thinking_moves": [
+    "把几何不确定性重新 frame 成可量化的概率质量问题",
+    "将confidence从二元判断扩展为连续值传播机制",
+    "用optimal substructure证明将问题转化为bellman-ford最短路问题",
+    "先通过prototype验证QoT有效性，再做大规模仿真验证scalability"
+  ],
+  "topic_tags": [
+    "QoT-quantized-geometric-quality",
+    "confidence-propagation",
+    "trilateration-localization",
+    "iterative-localization-refinement",
+    "wireless-sensor-network"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

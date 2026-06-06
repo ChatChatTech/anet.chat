@@ -1,0 +1,38 @@
+{
+  "paper_id": "Huang et al. - 2011 - Optimal sampling algorithms for frequency estimation in distributed data",
+  "doi": null,
+  "title": "Optimal Sampling Algorithms for Frequency Estimation in Distributed Data",
+  "year": 2011,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "分布式系统中估算全局频率开销大,现有均匀采样在节点数n较小时不够高效",
+  "problem_framing": "在εN绝对误差约束下,最小化节点与协调器间的通信量,形式化为采样函数设计问题",
+  "key_insight": "线性采样函数g₁(x)=x√n/εN达到O(√n/ε)通信复杂度,二次采样函数g₂达到instance-optimal",
+  "method_signature": "g₁与g₂采样函数+Bloom过滤器编码压缩传输位数",
+  "evaluation_criteria": "方差Var[Yi]≤O((εN)²),最坏情况与实例最优性",
+  "negative_result_or_admitted_limitation": "g₁仅worst-case最优而非instance-optimal;instance-optimality仅在定义的sampling framework内成立",
+  "evidence_for_taste": [
+    "g₂ generally 2 to 3 times cheaper than g₁",
+    "we would claim that our algorithms are both theoretically interesting and practically useful",
+    "instance-optimality will not be possible to achieve if we do not have any restrictions",
+    "it remains an interesting problem to see if there is an instance-optimal sampling function for (p, ε)-errors"
+  ],
+  "thinking_moves": [
+    "从Zhao等人的general framework出发,改进采样函数形式",
+    "先证worst-case下界,再设计匹配的最优采样函数",
+    "利用线性特性使Bloom filter编码成为可能",
+    "通过实例最优性证明超越最坏情况的表达能力",
+    "把(item,count)对压缩为O(1)bit传输"
+  ],
+  "topic_tags": [
+    "distributed frequency estimation",
+    "sampling algorithm design",
+    "Bloom filter encoding",
+    "instance-optimality",
+    "communication complexity lower bound"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

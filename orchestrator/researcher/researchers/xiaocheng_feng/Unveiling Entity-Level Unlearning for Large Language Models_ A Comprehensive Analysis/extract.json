@@ -1,0 +1,38 @@
+{
+  "paper_id": "Unveiling Entity-Level Unlearning for Large Language Models_ A Comprehensive Analysis",
+  "doi": "10.48550/arxiv.2406.15796",
+  "title": "Unveiling Entity-Level Unlearning for Large Language Models: A Comprehensive Analysis",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有研究聚焦instance-level遗忘，忽略了版权保护等场景下删除整个实体的需求",
+  "problem_framing": "将实体级遗忘形式化为两阶段框架：遗忘集构建+遗忘执行",
+  "key_insight": "遗忘集的知识覆盖率和大小是关键因素，但简单扩大规模会损害模型效用",
+  "method_signature": "知识探测构建遗忘集 + 评估五种主流遗忘算法",
+  "evaluation_criteria": "ROUGE/概率/准确率 + KS检验Forget Quality + Model Utility调和均值",
+  "negative_result_or_admitted_limitation": "现有算法挣扎于实体级遗忘，NPO-GD在构造遗忘集上表现最差(0.0875 vs 0.5253)",
+  "evidence_for_taste": [
+    "current unlearning algorithms struggle",
+    "simply expanding the size of the constructed forget set",
+    "entities introduced through fine-tuning are more vulnerable",
+    "may not achieve true unlearning",
+    "destroy the general ability of the model"
+  ],
+  "thinking_moves": [
+    "从版权保护等现实需求反推提出新任务定义",
+    "通过可控的伪实体注入实验精确评估遗忘效果",
+    "将遗忘集覆盖率量化为BERTScore匹配度",
+    "对比预训练vs微调知识的脆弱性差异"
+  ],
+  "topic_tags": [
+    "LLM-unlearning",
+    "entity-deletion",
+    "knowledge-coverage-metric",
+    "forget-set-construction",
+    "fine-tuning-vulnerability"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

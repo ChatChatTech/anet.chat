@@ -1,0 +1,39 @@
+{
+  "paper_id": "Yuan et al. - 2026 - Reasoning with Autoregressive-Diffusion Collaborative Thoughts",
+  "doi": null,
+  "title": "Reasoning with Autoregressive-Diffusion Collaborative Thoughts",
+  "year": 2026,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM纯符号推理缺乏视觉接地能力，导致几何幻觉（语言流畅但物理不可信）",
+  "problem_framing": "将推理建模为T步序贯决策，每步维护(P_t, R_t, F_t)状态以迭代优化视觉假设",
+  "key_insight": "扩散模型作为软物理模拟器，通过像素空间碰撞检测来反向验证符号规划的物理可行性",
+  "method_signature": "Planner+Simulator+Critor三模块闭环迭代：Simulate→Critic→Refine",
+  "evaluation_criteria": "验证分数v_t∈[0,1]、token消耗削减量、空间推理准确率",
+  "negative_result_or_admitted_limitation": "迭代循环引入扩散生成的高计算开销，且推理上界受限于diffusion物理理解和critic验证正确性",
+  "evidence_for_taste": [
+    "LLMs often struggle to verify geometric structures",
+    "errors introduced during visual generation cannot be effectively detected",
+    "visual outputs are treated as immutable ground truth",
+    "sim-to-real gap",
+    "reasoning upper bound is constrained by the diffusion model's physical understanding"
+  ],
+  "thinking_moves": [
+    "把LLM的空间幻觉问题归因于缺乏像素级物理约束",
+    "把diffusion重新定义为隐式世界模型而非生成器",
+    "通过对比AR-Only与Diffusion-Only的各自失效模式来定位真正问题",
+    "借鉴Dual Coding Theory从认知科学找方法论依据",
+    "承认软模拟器在精度上的trade-off换取语义通用性"
+  ],
+  "topic_tags": [
+    "AR-Diffusion联合推理",
+    "视觉思维链",
+    "物理接地生成",
+    "软模拟器",
+    "空间推理幻觉修正"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文主要通过示意图和概念描述展示框架，缺乏具体算法细节和量化实验数据，但方法论层面的认知信号清晰"
+}

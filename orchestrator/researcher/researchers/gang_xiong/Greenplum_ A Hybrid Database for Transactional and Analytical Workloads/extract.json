@@ -1,0 +1,39 @@
+{
+  "paper_id": "Greenplum_ A Hybrid Database for Transactional and Analytical Workloads",
+  "doi": "10.48550/arxiv.2103.11080",
+  "title": "Greenplum: A Hybrid Database for Transactional and Analytical Workloads",
+  "year": 2021,
+  "venue": "arxiv / VLDB",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Enterprise users want a single system for both OLTP and OLAP workloads, reducing complexity of maintaining separate systems",
+  "problem_framing": "Adding OLTP capability to an OLAP data warehouse while maintaining ACID properties with minimal performance overhead",
+  "key_insight": "Design decisions favoring OLAP workloads (two-phase commit, restrictive locking) become prohibitively expensive for OLTP — small overhead accumulates significantly for short queries",
+  "method_signature": "Global Deadlock Detector + One-Phase Commit + Resource Groups for OLTP/OLAP isolation",
+  "evaluation_criteria": "TPC-B TPS, CH-benCHmark mixed workload throughput (QPH/QPM), scalability with client connections",
+  "negative_result_or_admitted_limitation": "OLAP performance slows 2x in GPDB 6 due to OLTP resource preemption; throughput declines beyond 600 clients due to LWLock bottleneck",
+  "evidence_for_taste": [
+    "25% query running time on locking",
+    "locking time becomes unacceptable",
+    "100 times the TPS of GPDB 5",
+    "seemingly insignificant overhead becomes quite significant",
+    "first step and more work is needed"
+  ],
+  "thinking_moves": [
+    "从性能瓶颈反推底层设计问题: two-phase commit和restrictive locking对短查询影响大",
+    "识别看似微小的开销在短事务场景下的累积效应",
+    "通过benchmark数据量变化揭示PostgreSQL vs Greenplum的本质差异",
+    "承认当前优化只是第一步，性能仍无法比肩专用OLTP数据库"
+  ],
+  "topic_tags": [
+    "HTAP",
+    "distributed-database",
+    "OLTP-optimization",
+    "global-deadlock-detection",
+    "Greenplum",
+    "one-phase-commit"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

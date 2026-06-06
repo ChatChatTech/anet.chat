@@ -1,0 +1,40 @@
+{
+  "paper_id": "Determination and Computation of Behavioral Compatibility for Web Services",
+  "doi": null,
+  "title": "Web服务行为兼容性的判定与计算",
+  "year": 2007,
+  "venue": "软件学报",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有Petri网、有限状态机等方法在服务行为复杂时出现空间爆炸,且仅能做定性判定",
+  "problem_framing": "将服务行为及交互建模为π演算进程,通过操作语义和扩展规则实现兼容性的自动判定与定量计算",
+  "key_insight": "用π演算文本式表达替代图形化状态机,可避免状态空间爆炸,同时支持兼容度定量计算",
+  "method_signature": "ServiceView2Process算法+π演算操作语义+Expansion Law扩展规则",
+  "evaluation_criteria": "动态组合场景中能否正确选取最佳服务,以及能否明确有效/非有效交互路径",
+  "negative_result_or_admitted_limitation": "指出先前方法(PN/FSM/automata)一旦服务行为错综复杂就会出现空间爆炸",
+  "evidence_for_taste": [
+    "如何保证各成员服务之间的兼容性至关重要",
+    "这些方法均只实现兼容性的定性判定",
+    "均只实现兼容性的定性判定",
+    "行为兼容性是服务组合中各成员服务之间兼容性的一个重要方面",
+    "无法实现服务行为兼容性完全的自动判定",
+    "两个服务之间的兼容度为m/n",
+    "从而指明服务交互过程中何种情况下无法正常完成交互"
+  ],
+  "thinking_moves": [
+    "将兼容性问题从图形化状态机表示转化为数学符号表达式表示",
+    "从定性判定扩展到定量计算,兼容度 = 有效路径数/总路径数",
+    "把兼容性判定转化为并发进程的推演问题",
+    "用π演算的进程变换理论支持自动定量计算"
+  ],
+  "topic_tags": [
+    "π-calculus",
+    "service-behavior-compatibility",
+    "web-service-composition",
+    "formal-methods-verification",
+    "dynamic-service-replacement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

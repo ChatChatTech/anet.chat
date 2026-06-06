@@ -1,0 +1,38 @@
+{
+  "paper_id": "CoreGuard_ Safeguarding Foundational Capabilities of LLMs Against Model Stealing in Edge Deployment",
+  "doi": "10.48550/arxiv.2410.13903",
+  "title": "CoreGuard: Safeguarding Foundational Capabilities of LLMs Against Model Stealing in Edge Deployment",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Edge-deployed LLMs面临模型窃取攻击,即使保护阻止完全提取,攻击者仍可通过微调窃取基础能力。现有防御计算和通信开销过大,不切实际。",
+  "problem_framing": "如何在边缘部署中以可接受的计算和通信开销保护LLM,同时确保足够安全性——需兼顾效率与充分性(Table1五项属性)。",
+  "key_insight": "通过行置换权重矩阵锁定模型,配合传播协议使单次初始授权即可授权所有后续层,从而实现TEE授权与GPU计算的高效结合。",
+  "method_signature": "行置换权重+列置换传播授权:仅需一次TEE授权即可保护所有层,将TEE-GPU传输降至5轮。",
+  "evaluation_criteria": "安全性(未授权推理准确率0%、模型窃取攻击准确率接近黑盒上限)与效率(FLOPs和TEE-GPU数据传输量)。",
+  "negative_result_or_admitted_limitation": "直接放整个模型到TEE导致约50倍效率下降;PPTE保护权重过少易重建;ShadowNet单token产生需1.3GB传输、几百秒延迟,不可行。",
+  "evidence_for_taste": [
+    "PPTE only provides insufficient protection",
+    "448 TEE-CPU transfers for a LLaMA3-8B model",
+    "approximately 1.3GB... would require several hundred seconds",
+    "placing it in the middle leaves at least half of the parameters unaligned",
+    "the problem reduces to Learning With Errors (LWE) problem, NP-hard"
+  ],
+  "thinking_moves": [
+    "从现有方案失败案例反推设计空间边界:TPTE/PPTE/PSP各有缺陷(Table1)",
+    "量化前人方法的不可行性:ShadowNet产生单token需1.3GB传输和几百秒延迟",
+    "在问题空间找最优点:授权位置放中间使攻击者需恢复至少一半参数",
+    "将安全性规约到已知困难问题(LWE)而非仅依赖工程防御"
+  ],
+  "topic_tags": [
+    "LLM-model-stealing-defense",
+    "edge-deployment-security",
+    "permutation-based-model-locking",
+    "TEE-GPU-offloading",
+    "trusted-execution-environment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文主体完整(含Abstract/Intro/Method/Eval/Conclusion),但某些附录细节(如specific attack formulations, additional experiments in Appendix E)被截断。Key insight和security analysis完整。 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Adaptive Backdoor Attack against Deep Neural Networks",
+  "doi": "10.32604/cmes.2023.025923",
+  "title": "Adaptive Backdoor Attack against Deep Neural Networks",
+  "year": 2023,
+  "venue": "Computers, Materials & Continua",
+  "venue_tier": "regional",
+  "role": "corresponding",
+  "motivation": "现有后门攻击使用统一触发器容易被检测和移除，需要为每张图像生成独特、难以察觉的触发器",
+  "problem_framing": "将触发器嵌入问题形式化为:在纹理丰富区域生成自适应触发器,同时限制模型参数距离以逃逸检测",
+  "key_insight": "修改平坦区域像素比修改纹理丰富区域像素更容易被人感知,应将触发器限制在纹理区域",
+  "method_signature": "纹理检测(HILL/Sobel) + U-Net生成器 + MPM离散化 + 参数裁剪约束模型距离",
+  "evaluation_criteria": "后门攻击成功率(BASR)、原始准确率(OA)、Neural Cleanse异常指数逃逸",
+  "negative_result_or_admitted_limitation": "参数裁剪约束下BASR略有下降,视觉质量也稍逊于无参数裁剪情况",
+  "evidence_for_taste": [
+    "modifying pixels in plain areas is easier to be perceived",
+    "Parameter clip eliminates these shortcuts",
+    "triggers are so obvious that they can be perceived by humans",
+    "the round error cannot be neglected",
+    "only when the 509th neuron is pruned"
+  ],
+  "thinking_moves": [
+    "将人类视觉感知原理映射到触发器嵌入策略选择",
+    "从Neural Cleanse检测机制(检测决策边界捷径)反推防御对策",
+    "用整数约束问题类比隐写术中的MPM技术",
+    "权衡攻击成功率与模型参数距离的双重约束"
+  ],
+  "topic_tags": [
+    "backdoor-attack",
+    "adaptive-trigger",
+    "texture-detection",
+    "model-parameter-clipping",
+    "neural-cleanse-evasion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

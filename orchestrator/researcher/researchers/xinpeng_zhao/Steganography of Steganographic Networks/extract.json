@@ -1,0 +1,41 @@
+{
+  "paper_id": "Steganography of Steganographic Networks",
+  "doi": "10.48550/arxiv.2302.14521",
+  "title": "Steganography of Steganographic Networks",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "DNN-based steganographic schemes cannot be deployed because the secret decoder is too large to transmit safely in public channels",
+  "problem_framing": "Disguise secret DNN model into stego DNN model for ordinary ML task, satisfying recoverability/fidelity/capacity/undetectability constraints",
+  "key_insight": "Filters important for secret task but trivial for stego task can be selected via gradient importance, preserving secret functionality while reactivating remaining filters for stego task",
+  "method_signature": "Progressive filter selection + partial optimization to disguise secret DNN into stego DNN performing ordinary task",
+  "evaluation_criteria": "Recoverability (BER/PSNR), fidelity (ACC/mIOU), capacity (expansion rate), undetectability (detection accuracy ≈50%)",
+  "negative_result_or_admitted_limitation": "Previous DNN steganographic schemes recover models with 50% BER and 10% ACC — completely broken for DNN model hiding",
+  "evidence_for_taste": [
+    "not convenient to deploy",
+    "the recovered DNN models do not work at all",
+    "fidelity is favorable",
+    "undetectability is closer to 50%",
+    "capacity hardly increases",
+    "difficult for the attackers to identify"
+  ],
+  "thinking_moves": [
+    "把steganography问题从数据层提升到网络层 — 从隐藏信息变成隐藏整个模型",
+    "先识别问题本质: secret decoder的大小和传输安全是关键瓶颈",
+    "用梯度重要性作为filter selection的度量 — 反向思考哪些参数该保留",
+    "引入partial optimization的思想 — 只更新非关键filter,避免破坏secret task",
+    "渐进式disguising代替一次性disguise — 逐步平衡secret和stego任务性能",
+    "通过对比实验承认已有方法的失败: DNN steganographic schemes are not suitable for hiding DNN models"
+  ],
+  "topic_tags": [
+    "model-steganography",
+    "filter-selection",
+    "partial-optimization",
+    "covert-communication",
+    "DNN-model-disguising"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

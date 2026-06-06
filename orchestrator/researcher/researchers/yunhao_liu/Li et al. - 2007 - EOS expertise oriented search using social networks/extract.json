@@ -1,0 +1,36 @@
+{
+  "paper_id": "Li et al. - 2007 - EOS expertise oriented search using social networks",
+  "doi": null,
+  "title": "EOS: Expertise Oriented Search Using Social Networks",
+  "year": 2007,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Researchers need to find domain experts efficiently, but existing methods lack social relationship context",
+  "problem_framing": "Expert search as relevancy ranking problem enhanced by propagating scores through co-authorship network",
+  "key_insight": "Topic relevance propagates via co-authorship edges: an expert's neighbors inherit some relevancy",
+  "method_signature": "Two-stage propagation-based expert finding + heap-Dijkstra association search on social graph",
+  "evaluation_criteria": "Conference committee membership as ground truth; comparison to baseline IR methods",
+  "negative_result_or_admitted_limitation": "Heuristic rules for name disambiguation (weakness admitted); no evaluation of disambiguation accuracy",
+  "evidence_for_tast": [
+    "improve the performance of expert finding",
+    "The main difficulty is the time efficiency",
+    "significantly outperforms the baseline",
+    "heuristic rules to deal with name disambiguation"
+  ],
+  "thinking_moves": [
+    "把专家搜索问题从纯文档匹配扩展到网络传播，利用co-authorship关系传递相关性信号",
+    "先计算本地相关性作为种子值，再通过网络迭代传播，比单纯local IR更强",
+    "关联搜索的核心约束是时间效率，倒逼采用heap-Dijkstra等高效算法而非穷举"
+  ],
+  "topic_tags": [
+    "expert-search",
+    "social-network-analysis",
+    "co-authorship",
+    "relevancy-propagation",
+    "information-retrieval"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Venue not explicitly stated in paper; role based on author ordering (4th of 6)"
+}

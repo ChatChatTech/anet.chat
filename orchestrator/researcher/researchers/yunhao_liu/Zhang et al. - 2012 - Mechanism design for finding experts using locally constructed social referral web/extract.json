@@ -1,0 +1,36 @@
+{
+  "paper_id": "Zhang et al. - 2012 - Mechanism design for finding experts using locally constructed social referral web",
+  "doi": null,
+  "title": "Mechanism Design for Finding Experts Using Locally Constructed Social Referral Web",
+  "year": 2012,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Existing social referral work assumes voluntary participation, but most paths terminate because users lack sufficient motivation to relay messages. Users are selfish and rational.",
+  "problem_framing": "Truthful mechanism design for expert finding via locally constructed referral chains, where each user has privately known participation cost.",
+  "key_insight": "A bonus payment equal to the gap between best and second-best scores makes truth-telling a dominant strategy while optimizing path similarity.",
+  "method_signature": "Score function η_k = d^k + (1 - s_{k,t}), bonus b^k = η_x - η_k, selects minimum η neighbor locally.",
+  "evaluation_criteria": "Success rate (90-95% vs 20% baseline), median path length (6), total budget cost (20% of untruthful).",
+  "negative_result_or_admitted_limitation": "Theorem 1 proof omitted; future work needed for finding groups of experts; ProdScore achieves lower per-hop cost but longer paths.",
+  "evidence_for_taste": [
+    "only parameter governing success is probability of termination",
+    "proof is omitted due to space limit",
+    "bonus will not incur significant extra pay",
+    "most paths were terminated because participants are not sufficiently motivated",
+    "untruthful mechanism could be potentially unbounded"
+  ],
+  "thinking_moves": [
+    "把自愿参与假设替换为自私理性参与者假设",
+    "用激励相容约束替换最优路径约束",
+    "将社会网络拓扑问题转化为机制设计问题"
+  ],
+  "topic_tags": [
+    "mechanism-design",
+    "truthful-search",
+    "social-referral",
+    "local-information-search",
+    "small-world-routing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial"
+}

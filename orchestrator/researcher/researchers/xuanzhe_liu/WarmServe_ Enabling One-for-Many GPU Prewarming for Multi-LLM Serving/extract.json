@@ -1,0 +1,39 @@
+{
+  "paper_id": "WarmServe_ Enabling One-for-Many GPU Prewarming for Multi-LLM Serving",
+  "doi": "10.48550/arxiv.2512.09472",
+  "title": "WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving",
+  "year": 2026,
+  "venue": "ICML",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有autoscaling和GPU sharing方案缺乏对未来负载的预见性,导致TTFT性能退化",
+  "problem_framing": "模型placement与proactive prewarming的联合优化问题,需解决跨模型干扰和瞬态prewarming窗口",
+  "key_insight": "利用LLM负载的长期周期可预测性,通过one-for-many GPU prewarming在单GPU上预加载多模型权重",
+  "method_signature": "模型placement算法+KV cache预留策略+CUDA VMM内存切换机制",
+  "evaluation_criteria": "tail TTFT(P95/P99)与请求吞吐量,对比SLLM-GPU和MuxServe基线",
+  "negative_result_or_admitted_limitation": "预测窗口过小(如3min)导致不稳定,过大(如40min)无法捕获瞬态负载动态",
+  "evidence_for_taste": [
+    "lack of awareness of future workload characteristics",
+    "strong periodicity and long-term predictability",
+    "leverages unused KV cache space",
+    "CSP is sufficiently effective",
+    "60.13×–87.63× TTFT reduction"
+  ],
+  "thinking_moves": [
+    "将系统性能瓶颈归因于缺乏对未来负载的预见性",
+    "从生产trace中发现LLM负载的长期周期规律",
+    "把prewarming技术从serverless迁移到LLM场景并解决独特挑战",
+    "提出one-for-many策略以减少独占备份副本的资源消耗",
+    "利用正在释放的GPU的空闲KV cache空间进行proactive prewarming"
+  ],
+  "topic_tags": [
+    "LLM-serving",
+    "GPU-prewarming",
+    "autoscaling",
+    "multi-model-colocation",
+    "workload-predictability"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,36 @@
+{
+  "paper_id": "2022_BIGCOM_ESBlock",
+  "doi": null,
+  "title": "Expansion-Squeeze-Block: Linear Over-parameterization with Shortcut Connections to Train Compact Convolutional Networks",
+  "year": 2022,
+  "venue": "BIGCOM",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "compact网络难以从零训练，但轻量模型已证明其有效性",
+  "problem_framing": "利用过参数化扩展卷积层宽度并添加shortcut连接提升性能",
+  "key_insight": "线性结构允许训练时扩展、推理时代数收缩回原始格式",
+  "method_signature": "ES-Block: 1×1扩张-3×3卷积-1×1收缩 + shortcut连接",
+  "evaluation_criteria": "CIFAR-100/Tiny-ImageNet top-1准确率 + #MACs/#Params/epoch时间",
+  "negative_result_or_admitted_limitation": "CL-Expansion在某些情况下优于ES-Block，最优初始化方法仍是开放问题",
+  "evidence_for_taste": [
+    "compact neural networks are sufficient",
+    "the linearity makes it possible",
+    "not guaranteed to be better",
+    "not the best choice in some cases"
+  ],
+  "thinking_moves": [
+    "从轻量模型成功反推compact网络可训练性",
+    "通过添加shortcut connection降低扩展训练的难度",
+    "利用线性代数性质实现训练推理解耦",
+    "承认不同扩展策略各有优劣非万能解"
+  ],
+  "topic_tags": [
+    "over-parameterization",
+    "network-reparameterization",
+    "compact-network-training",
+    "shortcut-connection",
+    "model-contraction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

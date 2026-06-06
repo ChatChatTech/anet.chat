@@ -1,0 +1,43 @@
+{
+  "paper_id": "Na et al. - 2025 - QuinID Enabling FDMA-Based Fully Parallel RFID with Frequency-Selective Antenna",
+  "doi": null,
+  "title": "QuinID: Enabling FDMA-Based Fully Parallel RFID with Frequency-Selective Antenna",
+  "year": 2025,
+  "venue": "ACM MOBICOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "物流和生产线上需要同时读取大量RFID标签，现有方案只能时分的串行读取",
+  "problem_framing": "如何在标签功耗~1µW约束下实现频分多址的全并行RFID通信",
+  "key_insight": "利用SAW滤波器的极高Q因子(1000)实现天线级频率选择，绕过标签数字电路的功耗限制",
+  "method_signature": "SAW滤波天线+去耦阻抗匹配网络实现标签频选+多带数字上下变频 Reader",
+  "evaluation_criteria": "读取速率提升倍数、读取距离、标签成本",
+  "negative_result_or_admitted_limitation": "现有并行解码算法实测仅提升20%，SAW滤波器非理想矩形导致roll-off限制子带数",
+  "evidence_for_taste": [
+    "merely 20% increase in the read rate",
+    "cannot meet QuinTag's selectivity requirements",
+    "a representative algorithm from [34]",
+    "it results in less energy and narrower data bandwidth"
+  ],
+  "thinking_moves": [
+    "把FDMA从数字基带搬到天线物理层，利用无源器件(SAW)替代电路功耗",
+    "从标签端约束反推天线滤波方案，而非改造Reader",
+    "发现标签宽频特性导致的噪声混叠会限制下行解调性能",
+    "用Volterra级数刻画PA记忆效应，设计数字预失真补偿非线性"
+  ],
+  "topic_tags": [
+    "RFID-parallel-reading",
+    "SAW-filtering-antenna",
+    "FDMA-backscatter",
+    "frequency-selective-tag",
+    "passive-RF-computing"
+  ],
+  "cites_own_work": [
+    "[17] Guo et al. 2024",
+    "[21] Saiyan",
+    "[22] Aloba",
+    "[23] Efficient Ambient LoRa",
+    "[49] Leggiero"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

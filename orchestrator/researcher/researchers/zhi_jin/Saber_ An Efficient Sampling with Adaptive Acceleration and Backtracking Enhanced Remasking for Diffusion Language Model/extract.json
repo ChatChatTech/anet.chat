@@ -1,0 +1,42 @@
+{
+  "paper_id": "Saber_ An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model",
+  "doi": "10.48550/arxiv.2510.18165",
+  "title": "Saber: An Efficient Sampling with Adaptive Acceleration and Backtracking Enhanced Remasking for Diffusion Language Model",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "DLM在代码生成中面临速度-质量权衡困境，减少采样步数会导致质量灾难性崩溃",
+  "problem_framing": "生成难度非均匀分布 + 早期决策不可逆导致错误级联传播",
+  "key_insight": "基于历史未掩码token平均置信度动态调整阈值，并回溯置信度下降的token重新掩码",
+  "method_signature": "自适应加速(AADU动态阈值)+回溯增强重掩码(BERM)协同机制",
+  "evaluation_criteria": "Pass@1准确率 + 推理步数/时间",
+  "negative_result_or_admitted_limitation": "仅在合理范围内探索超参数，更优超参数可能带来额外提升；O(N) CPU操作开销略高于直接采样",
+  "evidence_for_taste": [
+    "sharp drop in Pass@1 accuracy even exceeding 60%",
+    "static acceleration strategies per step are suboptimal",
+    "early high-confidence predictions to turn into irreversible errors",
+    "non-uniform difficulty",
+    "mitigate the speed-quality trade-off",
+    "adaptive acceleration and backtracking-enhanced remasking",
+    "the two components are synergistic",
+    "keeping the sequence entirely error-free throughout decoding is paramount"
+  ],
+  "thinking_moves": [
+    "从生成过程中的置信度动态变化现象提炼出\"难度非均匀\"和\"上下文演化\"两个根本性洞察",
+    "将ARM的\"where and what\"决策问题重新建模为可修正的动态过程",
+    "通过理论分析(误差累积/修剪边界)验证直觉的可行性",
+    "消融实验揭示两组件的协同必要性(缺一则速度或质量大幅下降)",
+    "从速度-质量权衡的帕累托前沿角度定位方法创新价值"
+  ],
+  "topic_tags": [
+    "diffusion-language-model-sampling",
+    "adaptive-acceleration",
+    "backtracking-error-correction",
+    "code-generation",
+    "non-autoregressive-decoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

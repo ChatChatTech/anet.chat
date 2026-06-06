@@ -1,0 +1,42 @@
+{
+  "paper_id": "Duan et al. - 2017 - Fusing RFID and computer vision for fine-grained object tracking",
+  "doi": null,
+  "title": "Fusing RFID and Computer Vision for Fine-Grained Object Tracking",
+  "year": 2017,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RFID EAS系统产生误报导致零售业损失,CV难以在多目标中定位特定物品",
+  "problem_framing": "如何将CV的精确定位能力与RFID的快速识别能力融合以实现细粒度目标跟踪",
+  "key_insight": "CV子系统获取所有运动blob精确轨迹,RIFD相位数据与轨迹匹配找标签宿主",
+  "method_signature": "基于概率模型将RFID相位与CV轨迹融合打分配对分数",
+  "evaluation_criteria": "blob匹配准确率98%,定位精度10.33mm",
+  "negative_result_or_admitted_limitation": "标签快速移动时数据包丢失严重,系统无法处理",
+  "evidence_for_taste": [
+    "false alarm problem is troublesome",
+    "making it hard to identify the thief",
+    "more robust and discriminative",
+    "guarantees the overall tracking accuracy"
+  ],
+  "thinking_moves": [
+    "CV擅长连续提供多目标精确定位但无法区分,RFID能快速识别标签但难以定位 → 取长补短",
+    "将测量相位视为高斯随机变量而非定值,构建概率模型",
+    "用迭代采样+平均降低偶然误差提升鲁棒性",
+    "借鉴SAR雷达思想用虚拟天线阵列解决硬件成本问题"
+  ],
+  "topic_tags": [
+    "RFID-CV融合跟踪",
+    "相位定位",
+    "概率模型匹配",
+    "运动blob检测",
+    "细粒度目标跟踪"
+  ],
+  "cites_own_work": [
+    "Tagoram",
+    "OTrack",
+    "Tagspin",
+    "BackPos"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整提供了系统设计、算法细节和实验评估,但未明确说明发表venue;作者slug对应yunhao Liu为合作作者,论文明确引用其之前工作如Tagoram等"
+}

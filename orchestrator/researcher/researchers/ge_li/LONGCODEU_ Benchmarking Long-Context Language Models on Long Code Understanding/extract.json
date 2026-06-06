@@ -1,0 +1,42 @@
+{
+  "paper_id": "LONGCODEU_ Benchmarking Long-Context Language Models on Long Code Understanding",
+  "doi": "10.48550/arxiv.2503.04359",
+  "title": "LONGCODEU: Benchmarking Long-Context Language Models on Long Code Understanding",
+  "year": 2025,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Progress in long-context LMs is hampered by absence of rigorous evaluation framework for long code understanding",
+  "problem_framing": "Long code understanding requires four aspects: unit perception, intra-unit understanding, inter-unit relation, and documentation understanding",
+  "key_insight": "LCLMs' performance drops dramatically when length exceeds 32K, far short of claimed 128K-1M context windows",
+  "method_signature": "Benchmark with 8 tasks across 4 understanding aspects, 3,983 examples, 0-128K token lengths",
+  "evaluation_criteria": "Recall/precision metrics with EM, LCS, CodeBLEU, BLEU adapted to task granularity",
+  "negative_result_or_admitted_limitation": "LCLMs fail to model code context effectively in their claimed context windows; inter-code unit relation understanding is most challenging",
+  "evidence_for_taste": [
+    "inter-code unit relation understanding is the most challenging",
+    "performance drops dramatically when the long code length is greater than 32K",
+    "LCLMs fail to model code context effectively",
+    "falls far short of their claimed 128K~1M context windows",
+    "near to 10 or even close to 0 on some tasks"
+  ],
+  "thinking_moves": [
+    "Identified 5 fundamental limitations in existing benchmarks to justify new evaluation",
+    "Created hierarchical taxonomy of 4 understanding aspects from real-world software tasks",
+    "Distinguished code understanding from memorization by testing w/o context",
+    "Designed task-specific metrics aligned to output granularity",
+    "Used Kendall-Tau τ ≥ 0.75 to validate metric reliability against human evaluation"
+  ],
+  "topic_tags": [
+    "long-context-LM-evaluation",
+    "code-understanding-benchmark",
+    "context-window-limitation",
+    "software-engineering-LLM",
+    "retrieval-evaluation-metrics"
+  ],
+  "cites_own_work": [
+    "EvoCodeBench",
+    "DevEval"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

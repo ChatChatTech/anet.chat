@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhang et al. - 2013 - Message in a Sealed Bottle Privacy Preserving Friending in Social Networks",
+  "doi": null,
+  "title": "Message in a Sealed Bottle: Privacy Preserving Friending in Social Networks",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "移动网络连接不可用或费用高；现有隐私保护方案依赖公钥密码系统，计算开销大且需可信第三方；用户不愿向陌生人披露个人资料",
+  "problem_framing": "在无预设或可信第三方的去中心化移动社交网络中，实现可验证的隐私保护档案匹配和安全通信信道建立",
+  "key_insight": "请求档案与匹配档案的交集天然是两个用户共享的秘密；以请求档案作为密钥加密消息，只有匹配用户能解密",
+  "method_signature": "基于对称加密的隐私保护档案匹配，利用余数向量快速排除非匹配用户，hint矩阵支持模糊搜索",
+  "evaluation_criteria": "计算时间（手机约1.3ms生成请求，非候选用户0.63ms处理），通信开销（平均190B），与PSI/PCSI方案比较",
+  "negative_result_or_admitted_limitation": "在恶意模型下，若对手从其他社交网络构建属性字典且属性空间不大，协议可能暴露请求档案；对称加密本身非抗抵赖",
+  "evidence_for_taste": [
+    "more than 90% users have unique profiles",
+    "the intersection of the request profile and the matching profile is a nature common secret",
+    "These limitations hinder the adoption of the SMC-related private matching methods in MSN",
+    "To the best of our knowledge, these are the first privacy-preserving verifiable profile matching protocols based on symmetric cryptosystem",
+    "only about 1/5610 fraction of users will reply"
+  ],
+  "thinking_moves": [
+    "利用匹配双方的共享秘密（档案交集）作为加密密钥，而非引入额外密码原语",
+    "通过余数向量模p运算实现快速排除非候选用户，降低未匹配者的计算开销",
+    "将位置属性动态化（拼接当前动态密钥哈希静态属性），增加字典攻击难度",
+    "从简单精确匹配扩展到灵活模糊匹配，通过hint矩阵支持阈值可控的搜索",
+    "在恶意模型下通过响应时间和回复集大小识别字典攻击者，而非完全阻止"
+  ],
+  "topic_tags": [
+    "privacy-preserving-profile-matching",
+    "decentralized-mobile-social-networks",
+    "symmetric-cryptosystem",
+    "verifiable-friending-protocol",
+    "location-privacy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文结构完整（intro+method+eval+conclusion），但venue信息未明确给出；摘要和引言提及与现有PSI/PCSI方案的对比，但Table V的比较数据被截断；协议描述较为详细，包含数学推导和伪代码风格描述 | md truncated to head40k+tail20k"
+}

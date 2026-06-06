@@ -1,0 +1,38 @@
+{
+  "paper_id": "2022_TBD_FedFAIM_A_Model_Performance-based_Fair_Incentive_Mechanism_for_Federated_Learning",
+  "doi": null,
+  "title": "FedFAIM: A Model Performance-based Fair Incentive Mechanism for Federated Learning",
+  "year": 2022,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "大银行有高质量数据却因担心市场份额被侵蚀而不愿与小银行合作，导致FL自由骑乘问题。",
+  "problem_framing": "将公平性分解为聚合公平(按数据质量加权更新)和奖励公平(按贡献分配不同性能的模型)。",
+  "key_insight": "最终模型本身应作为激励手段，而非仅货币补偿——贡献大的参与者应获得性能更好的模型。",
+  "method_signature": "基于边际损失的梯度筛选 + 余弦相似度的线性Shapley值贡献评估 + 基于声誉和梯度分布的奖励分配。",
+  "evaluation_criteria": "聚合精度、与真实Shapley值的Pearson相关系数、Jain公平性指数、收敛率。",
+  "negative_result_or_admitted_limitation": "现有方法仅考虑全局梯度分布而忽略局部梯度分布，难以准确反映参与者贡献。",
+  "evidence_for_taste": [
+    "larger banks with more quality data may be reluctant to collaborate",
+    "the larger the absolute value of u(t)G,j, the higher its influence",
+    "reward allocation mechanism incorporates reputation",
+    "free-rider problem",
+    "marginal loss metric"
+  ],
+  "thinking_moves": [
+    "将高价值模型场景下的激励失效问题归因为货币激励与模型本身价值的脱节",
+    "用边际损失(marginal loss)替代静态阈值以适应训练过程动态变化",
+    "观察到Shapley值差分与集合S无关，实现线性时间复杂度近似",
+    "引入Gompertz函数建模信任衰减，避免单次失败导致声誉骤降"
+  ],
+  "topic_tags": [
+    "federated-learning-incentive",
+    "fairness-aware-aggregation",
+    "shapley-value-contribution",
+    "model-performance-reward",
+    "reputation-mechanism"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文含方法细节、算法伪代码、理论证明及充分实验。提取基于全文。 | md truncated to head40k+tail20k"
+}

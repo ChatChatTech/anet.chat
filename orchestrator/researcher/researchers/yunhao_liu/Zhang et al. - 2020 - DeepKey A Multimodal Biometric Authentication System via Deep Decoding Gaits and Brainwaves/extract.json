@@ -1,0 +1,37 @@
+{
+  "paper_id": "Zhang et al. - 2020 - DeepKey A Multimodal Biometric Authentication System via Deep Decoding Gaits and Brainwaves",
+  "doi": null,
+  "title": "DeepKey: A Multimodal Biometric Authentication System via Deep Decoding Gaits and Brainwaves",
+  "year": 2020,
+  "venue": "ACM Trans. Intell. Syst. Technol.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传统生物特征认证系统(指纹、人脸)面临被伪造的风险,假指纹膜、抗监控面罩等工具日益廉价易得",
+  "problem_framing": "如何利用EEG和步态信号的互补优势构建双因素认证系统,克服单一模态的FAR过高、环境敏感等问题",
+  "key_insight": "Delta频段EEG信号的跨主体余弦相似度最低(0.0722),包含最具区分性的特征;EEG和步态的双重验证可实现FAR为0且FRR仅1%",
+  "method_signature": "基于注意力RNN的EEG(Delta带)和步态双识别模型 + 单类SVM无效ID过滤器",
+  "evaluation_criteria": "FAR(假接受率)、FRR(假拒率)、EER(等错误率)、识别准确率、系统延迟",
+  "negative_result_or_admitted_limitation": "实验仅包含7名受试者,规模有限;可穿戴传感器设备笨重,阻碍大规模部署",
+  "evidence_for_taste": [
+    "Delta band with the lowest similarity contains the most distinguishable features",
+    "FAR higher than 3% is not precise enough for highly sensitive places",
+    "the two-factor design may cause inconvenience"
+  ],
+  "thinking_moves": [
+    "基于特征可分性定量分析选择最优EEG频段(Delta)",
+    "将认证问题分解为'滤除冒名者'和'身份识别'两个子任务",
+    "通过跨模态一致性验证(EEG ID = Gait ID)实现冗余保护"
+  ],
+  "topic_tags": [
+    "EEG-biometric-authentication",
+    "gait-recognition",
+    "multimodal-fusion",
+    "attention-based-RNN",
+    "one-class-SVM"
+  ],
+  "cites_own_work": [
+    "MindID (EEG-based identification system, previous work)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

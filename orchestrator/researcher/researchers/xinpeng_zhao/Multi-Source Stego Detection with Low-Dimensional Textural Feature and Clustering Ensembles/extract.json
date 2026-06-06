@@ -1,0 +1,38 @@
+{
+  "paper_id": "Multi-Source Stego Detection with Low-Dimensional Textural Feature and Clustering Ensembles",
+  "doi": "10.3390/sym10050128",
+  "title": "Multi-Source Stego Detection with Low-Dimensional Textural Feature and Clustering Ensembles",
+  "year": 2018,
+  "venue": "Symmetry",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "真实社媒网络图像来源多样,无法获取同一来源的大量训练样本进行传统隐写分析",
+  "problem_framing": "多源隐写检测问题:在图像来源不确定的多个用户中识别隐写图像,有别于隐写者检测",
+  "key_insight": "基于LTP的低维纹理特征对纹理区域隐写变化更敏感,结合聚类集成可无需大量训练样本",
+  "method_signature": "LTP纹理特征+层次聚类集成+多数投票策略",
+  "evaluation_criteria": "平均错误概率PE和整体识别准确率AR",
+  "negative_result_or_admitted_limitation": "当有效载荷较低(<0.5bpp)时检测准确率低于50%,因正确检测数量减少",
+  "evidence_for_taste": [
+    "such massive training images from the same source are not easy to find",
+    "the benefit of clustering ensemble may disappear",
+    "the statistical features become unstable",
+    "slightly inferior detection performance",
+    "a good solution for social networks steganalysis"
+  ],
+  "thinking_moves": [
+    "将两阶段流程(隐写者检测+隐写检测)无法工作归因于训练样本不足和模型失配",
+    "通过随机裁剪图像建立多样性子图像集以利用稳定性提升信噪比",
+    "从特征相关性出发设计降维方法,借鉴霍夫曼编码思想合并高相关特征",
+    "聚类集成仅在基础学习器足够多样时有效"
+  ],
+  "topic_tags": [
+    "multi-source-stego-detection",
+    "LTP-textural-feature",
+    "clustering-ensemble",
+    "steganographer-detection",
+    "unsupervised-steganalysis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

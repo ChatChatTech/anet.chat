@@ -1,0 +1,39 @@
+{
+  "paper_id": "Dong et al. - 2011 - Link quality aware code dissemination in wireless sensor networks",
+  "doi": null,
+  "title": "Link Quality Aware Code Dissemination in Wireless Sensor Networks",
+  "year": 2011,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WSN部署后难以物理收集节点进行重新编程,需无线代码分发,但现有协议效率低",
+  "problem_framing": "将代码分发性能问题形式化为:(1)小包导致PHY效率比低(仅12.5%);(2)MNP发送方选择算法不准确,需多轮消息交换",
+  "key_insight": "利用1跳邻居链路质量信息评估发送方影响值,配合基于影响的退避定时器,可实现无需显式协调的快速发送方选择",
+  "method_signature": "ECD:动态可配包大小+链路质量感知发送方选择+基于影响的退避定时器",
+  "evaluation_criteria": "完成时间(Completion time)和数据流量(Transmitted packets),与Deluge/MNP对比",
+  "negative_result_or_admitted_limitation": "大包在92字节负载时性能反而下降:大包更易受无线损失影响,需配合发送方选择才能获益",
+  "evidence_for_taste": [
+    "large packets are more susceptible to wireless losses",
+    "using largest packets does not lead to best performance",
+    "large packets may not be always beneficial for all platforms"
+  ],
+  "thinking_moves": [
+    "从实际部署痛点出发定义问题:节点难以回收重新编程",
+    "构建效率比解析模型量化小包问题",
+    "先设计大包提升效率,再发现大包脆弱性反推需发送方选择",
+    "将发送方选择问题分解为影响估算+传输协调两个子问题"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-reprogramming",
+    "code-dissemination-protocol",
+    "sender-selection-algorithm",
+    "link-quality-estimation",
+    "dynamic-packet-sizing"
+  ],
+  "cites_own_work": [
+    "Dong et al. - 2010 - Elon",
+    "Dong et al. - 2011 - DPLC"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

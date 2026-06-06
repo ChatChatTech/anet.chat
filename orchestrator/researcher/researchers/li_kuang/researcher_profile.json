@@ -1,0 +1,521 @@
+{
+  "slug": "li_kuang",
+  "n_extracts": 24,
+  "n_full": 17,
+  "n_partial": 6,
+  "n_thin": 1,
+  "year_range": [
+    2010,
+    2026
+  ],
+  "top_tags": [
+    [
+      "generative-retrieval",
+      2
+    ],
+    [
+      "residual-quantization",
+      2
+    ],
+    [
+      "e-commerce-recommendation",
+      2
+    ],
+    [
+      "edge-computing",
+      2
+    ],
+    [
+      "complex-network-fractality",
+      1
+    ],
+    [
+      "hub-attraction-disassortativity",
+      1
+    ],
+    [
+      "dynamical-growth-model",
+      1
+    ],
+    [
+      "scale-free-network",
+      1
+    ],
+    [
+      "box-covering-renormalization",
+      1
+    ],
+    [
+      "microblog-ranking",
+      1
+    ],
+    [
+      "personalized-recommendation",
+      1
+    ],
+    [
+      "social-intimacy",
+      1
+    ],
+    [
+      "user-behavior-modeling",
+      1
+    ],
+    [
+      "information-overload",
+      1
+    ],
+    [
+      "complex-networks-optimization",
+      1
+    ],
+    [
+      "bi-objective-Pareto-network-generation",
+      1
+    ],
+    [
+      "average-path-length-spectral-parameter",
+      1
+    ],
+    [
+      "scale-free-unification-theory",
+      1
+    ],
+    [
+      "network-taxonomy-derivation",
+      1
+    ],
+    [
+      "semantic-ID",
+      1
+    ],
+    [
+      "codebook-utilization",
+      1
+    ],
+    [
+      "hourglass-phenomenon",
+      1
+    ],
+    [
+      "long-tail-distribution",
+      1
+    ],
+    [
+      "code-search",
+      1
+    ],
+    [
+      "relevance-matching",
+      1
+    ],
+    [
+      "semantic-matching",
+      1
+    ],
+    [
+      "neural-IR",
+      1
+    ],
+    [
+      "co-attention-mechanism",
+      1
+    ],
+    [
+      "long-context-LLM",
+      1
+    ],
+    [
+      "multi-turn-QA",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2010,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "complex-network-fractality",
+          1
+        ],
+        [
+          "hub-attraction-disassortativity",
+          1
+        ],
+        [
+          "dynamical-growth-model",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2011,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "mobile-service-recommendation",
+          1
+        ],
+        [
+          "DL-precondition-reasoning",
+          1
+        ],
+        [
+          "context-ontology",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2013,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "Collatz-conjecture",
+          1
+        ],
+        [
+          "graph-theory",
+          1
+        ],
+        [
+          "3x+1-problem",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2014,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "complex-networks-optimization",
+          1
+        ],
+        [
+          "bi-objective-Pareto-network-generation",
+          1
+        ],
+        [
+          "average-path-length-spectral-parameter",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "microblog-ranking",
+          1
+        ],
+        [
+          "personalized-recommendation",
+          1
+        ],
+        [
+          "social-intimacy",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2019,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "location-based-service-privacy",
+          1
+        ],
+        [
+          "road-network-k-anonymity",
+          1
+        ],
+        [
+          "location-semantics-sensitivity",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 25,
+      "top_tags": [
+        [
+          "method-naming",
+          1
+        ],
+        [
+          "code-summarization",
+          1
+        ],
+        [
+          "graph-neural-network",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 21,
+      "top_tags": [
+        [
+          "code-search",
+          1
+        ],
+        [
+          "relevance-matching",
+          1
+        ],
+        [
+          "semantic-matching",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "generative-retrieval",
+          2
+        ],
+        [
+          "residual-quantization",
+          2
+        ],
+        [
+          "e-commerce-recommendation",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "long-context-LLM",
+          1
+        ],
+        [
+          "multi-turn-QA",
+          1
+        ],
+        [
+          "cognitive-semantic-tree",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2026,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "cross-language-code-retrieval",
+          1
+        ],
+        [
+          "hybrid-code-search",
+          1
+        ],
+        [
+          "supervised-contrastive-learning",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "DGM网络仅是旋转树结构,缺乏真实网络的环路",
+    "三种用户类型的系数是预定义固定的，未来计划从用户历史行为中学习系数",
+    "使用贪心策略仅得局部最优而非全局最优,全局最优需模拟退火但计算时间过长",
+    "方法简单高效但非最优,只能缓解而非彻底解决Hourglass现象",
+    "While simple and efficient, the method is not optimal and can only alleviate, but not completely resolve, the hourglass phenomenon.",
+    "仅用API序列特征导致MRR降至0.193，贡献最小；Conv2核宽度效果不如Conv1核宽度",
+    "移除IE模块导致ACC下降23.4%，SE模块缺失导致精度降10.6%；依赖外部LLM带来系统风险",
+    "承认边缘AI研究目前处于早期阶段，通信技术需求未被充分讨论",
+    "无共享token时性能较差,需模型完全理解程序语义;参考策略相对仍有很大性能差距",
+    "APACHE II评分系统作为特征选择指导仍远未达到实际诊断过程；未来需引入医学知识图谱",
+    "软阈值小波重构导致结果很差（MAPE 16.32%）；SE注意力机制反而降低性能（引入额外参数导致过拟合）；集成规模超过6后性能不再提升",
+    "Speed-up attempt inserting [mask] between all word pairs improves speed 10x but decreases F1 from 78.1 to 72.3",
+    "ICLM在32k上下文时因文档冗余反而不如Standard；受资源限制仅验证7B和13B",
+    "现有工作未提供前提条件建模方案，仅简单建模为ABox断言",
+    "10^-5 M PATP浓度过高使捕获分子远离热点、过量捕获分子信号干扰检测，10^-6 M最优；检测需20分钟吸附时间",
+    "当移除PLCE模块时，对STL10-LT的影响比CIFAR10-LT更显著，因为STL10-LT标注数据更少，伪标签质量更关键",
+    "KU-LR方法仅在小训练集场景优于基线,大规模数据表现未知",
+    "null",
+    "Admit 'there exist simpler proofs' but choose complex method 'to illustrate the structure of the Collatz graphs'",
+    "简单集成强大模型不足以克服混合代码检索的根本挑战,单纯加权融合效果有限且不稳定",
+    "位置语义信息稀疏时难以达到k匿名要求，未来需研究稀疏语义区域的隐私保护",
+    "LLM cannot accurately determine control signals for asynchronous transmission; complex/large code exceeds LLM processing capacity"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "Introspection Expert evaluates node relevance",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "hierarchical synthesis",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "逻辑关联",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "introspects the ExtraRetr",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "iterative optimization",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "The IE module conducts introspection",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "addressing keyword bias",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "prevent over-retrieval",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "collaboration between AE and IE",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "dynamic continuation probability",
+      "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts"
+    },
+    {
+      "quote": "concatenating overly similar documents leading to document redundancy",
+      "paper_id": "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training"
+    },
+    {
+      "quote": "do not reliably generate dependencies",
+      "paper_id": "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training"
+    },
+    {
+      "quote": "lower ppl indicates higher quality",
+      "paper_id": "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training"
+    },
+    {
+      "quote": "methods selecting next doc based on similarity lead to only nearby associations",
+      "paper_id": "Re3Syn_ A Dependency-Based Data Synthesis Framework for Long-Context Post-training"
+    },
+    {
+      "quote": "MAP improves by only 0.13%",
+      "paper_id": "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    },
+    {
+      "quote": "optimal weight α varies by more than 3.9%",
+      "paper_id": "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    },
+    {
+      "quote": "models only learn language-specific representations",
+      "paper_id": "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    },
+    {
+      "quote": "reliance on surface lexical prevents deeper functional semantics",
+      "paper_id": "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    },
+    {
+      "quote": "ensembling powerful models is insufficient",
+      "paper_id": "UniCoR_ Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval"
+    },
+    {
+      "quote": "existing methods do not consider capturing two matching signals simultaneously",
+      "paper_id": "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    },
+    {
+      "quote": "the characteristic of the IR-based model is that the relevance",
+      "paper_id": "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    },
+    {
+      "quote": "combination of the two categories of models can enrich the matching information",
+      "paper_id": "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    },
+    {
+      "quote": "Both relevance matching and semantic matching are effective",
+      "paper_id": "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    },
+    {
+      "quote": "the method name is the most effective feature",
+      "paper_id": "CSRS_ Code Search with Relevance Matching and Semantic Matching"
+    },
+    {
+      "quote": "overestimation of mortality",
+      "paper_id": "Multimodal temporal-clinical note network for mortality prediction"
+    },
+    {
+      "quote": "partially duplicated with the information contained in time series",
+      "paper_id": "Multimodal temporal-clinical note network for mortality prediction"
+    },
+    {
+      "quote": "history of illness and other related information should be treated differently",
+      "paper_id": "Multimodal temporal-clinical note network for mortality prediction"
+    },
+    {
+      "quote": "this is not enough for the actual treatment process",
+      "paper_id": "Multimodal temporal-clinical note network for mortality prediction"
+    },
+    {
+      "quote": "the importance that the model assigns to each text",
+      "paper_id": "Multimodal temporal-clinical note network for mortality prediction"
+    },
+    {
+      "quote": "provide interpretability improvement",
+      "paper_id": "Multimodal temporal-clinical note network for mortality prediction"
+    },
+    {
+      "quote": "it is crucial to learn the text representation",
+      "paper_id": "Multimodal temporal-clinical note network for mortality prediction"
+    },
+    {
+      "quote": "the most contributing notes for the patients",
+      "paper_id": "Multimodal temporal-clinical note network for mortality prediction"
+    },
+    {
+      "quote": "MWCNN-soft-1-level MAPE=16.32",
+      "paper_id": "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    },
+    {
+      "quote": "increasing SE does not increase performance",
+      "paper_id": "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    },
+    {
+      "quote": "performance does not increase with increasing integration scale",
+      "paper_id": "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    },
+    {
+      "quote": "soft thresholding will lead to a bad result",
+      "paper_id": "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    },
+    {
+      "quote": "the level of wavelet decomposition has a certain influence on the method of high-frequency zeroing but has a minimal influence on the method of hard threshold",
+      "paper_id": "Multiple Wavelet Convolutional Neural Network for Short-Term Load Forecasting"
+    },
+    {
+      "quote": "counter-examples of former beliefs",
+      "paper_id": "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors"
+    },
+    {
+      "quote": "fundamental challenge to the former researches",
+      "paper_id": "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors"
+    },
+    {
+      "quote": "presumed the most connected nodes in each box as the hubs",
+      "paper_id": "A Fractal and Scale-free Model of Complex Networks with Hub Attraction Behaviors"
+    }
+  ]
+}

@@ -1,0 +1,2537 @@
+{
+  "slug": "xiaocheng_feng",
+  "n_papers": 82,
+  "n_indexed": 82,
+  "anchors": [
+    "A Language-Independent Neural Network for Event Detection",
+    "Effective Deep Memory Networks for Distant Supervised Relation Extraction",
+    "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856",
+    "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning",
+    "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828",
+    "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110",
+    "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986",
+    "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+  ],
+  "by_id": {
+    "A Distributional Lens for Multi-Aspect Controllable Text Generation__oa_W4385572988": {
+      "title": "A Distributional Lens for Multi-Aspect Controllable Text Generation",
+      "year": 2022,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2022.emnlp-main.67",
+      "key_insight": "直接搜索多个属性分布的交集区域而非插值中心",
+      "method_signature": "属性空间估计+迭代交集搜索+前缀调优解码器",
+      "tags": [
+        "multi-aspect-controllable-text-generation",
+        "attribute-distribution-intersection",
+        "prefix-tuning",
+        "autoencoder-latent-space",
+        "iterative-neighbor-search"
+      ],
+      "quality": "full"
+    },
+    "A Language-Independent Neural Network for Event Detection": {
+      "title": "A Language-Independent Neural Network for Event Detection",
+      "year": 2016,
+      "venue": "ACL",
+      "doi": "10.18653/v1/p16-2011",
+      "key_insight": "Bi-LSTM捕获双向序列信息，CNN捕获局部chunk结构，两者互补形成语言无关表示",
+      "method_signature": "Bi-LSTM+CNN混合神经网络，Skip-Gram词嵌入，softmax分类",
+      "tags": [
+        "事件检测",
+        "Bi-LSTM",
+        "CNN",
+        "语言无关性",
+        "词嵌入",
+        "触发词抽取"
+      ],
+      "quality": "full"
+    },
+    "A Survey on Dialogue Summarization_ Recent Advances and New Frontiers__oa_W4285602465": {
+      "title": "A Survey on Dialogue Summarization: Recent Advances and New Frontiers",
+      "year": 2022,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2022/764",
+      "key_insight": "对话摘要不同于文档摘要，需处理多方发言、指代消解、主题漂移等",
+      "method_signature": "综述梳理现有工作，提供数据集表格与评估排行榜",
+      "tags": [
+        "dialogue-summarization",
+        "multi-party-conversation",
+        "domain-specific-summarization",
+        "faithfulness-hallucination",
+        "pre-trained-language-models"
+      ],
+      "quality": "full"
+    },
+    "A Survey on Hallucination in Large Language Models_ Principles, Taxonomy, Challenges, and Open Questions": {
+      "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+      "year": 2024,
+      "venue": "ACM Transactions on Information Systems",
+      "doi": "10.48550/arxiv.2311.05232",
+      "key_insight": "缓解策略必须直接关联幻觉根源，提供针对性框架",
+      "method_signature": "系统性综述幻觉分类、成因、检测与缓解方法",
+      "tags": [
+        "LLM幻觉分类",
+        "事实性幻觉",
+        "忠实性幻觉",
+        "知识边界",
+        "检索增强生成RAG"
+      ],
+      "quality": "full"
+    },
+    "Adapter-based Selective Knowledge Distillation for Federated Multi-domain Meeting Summarization": {
+      "title": "Adapter-based Selective Knowledge Distillation for Federated Multi-domain Meeting Summarization",
+      "year": 2023,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2308.03275",
+      "key_insight": "用全局适配器传递服务器知识,用本地适配器保留本地领域,同时用熵值过滤不确定的全局知识",
+      "method_signature": "ADAFEDSELECTKD:全局-本地适配器+选择性知识蒸馏",
+      "tags": [
+        "federated-meeting-summarization",
+        "adapter-fine-tuning",
+        "selective-knowledge-distillation",
+        "non-IID-data-learning",
+        "entropy-based-filtering"
+      ],
+      "quality": "full"
+    },
+    "Adaptive Backtracking for Privacy Protection in Large Language Models": {
+      "title": "Adaptive Backtracking for Privacy Protection in Large Language Models",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2508.06087",
+      "key_insight": "LLM在泄露隐私前很早就形成了泄露意图，应回溯到意图形成点进行重写而非事后脱敏",
+      "method_signature": "ABack使用隐藏状态模型进行逆向推理，定位隐私泄露意图的最早点并回溯重写",
+      "tags": [
+        "RAG-privacy",
+        "enterprise-privacy-protection",
+        "backtracking-decoding",
+        "hidden-state-inference",
+        "LLM-privacy-leakage"
+      ],
+      "quality": "full"
+    },
+    "Adaptive Multi-pass Decoder for Neural Machine Translation": {
+      "title": "Adaptive Multi-pass Decoder for Neural Machine Translation",
+      "year": 2018,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/d18-1048",
+      "key_insight": "使用强化学习policy网络，根据源句复杂度和相邻轮翻译差异自动选择解码深度",
+      "method_signature": "带策略网络的自适应多轮解码器，REINFORCE算法优化BLEU奖励",
+      "tags": [
+        "neural-machine-translation",
+        "multi-pass-decoding",
+        "reinforcement-learning",
+        "adaptive-decoding",
+        "polishing-mechanism"
+      ],
+      "quality": "full"
+    },
+    "Advancing Large Language Model Attribution through Self-Improving__oa_W4404783000": {
+      "title": "Advancing Large Language Model Attribution through Self-Improving",
+      "year": 2024,
+      "venue": "EMNLP 2024",
+      "doi": "10.18653/v1/2024.emnlp-main.223",
+      "key_insight": "低质量样本通过偏好优化可提供比模仿正确答案更细粒度的学习信号",
+      "method_signature": "START框架：合成数据热身 + 迭代式拒绝采样微调 + 细粒度偏好优化",
+      "tags": [
+        "LLM归因",
+        "自改进",
+        "引用生成",
+        "偏好优化",
+        "合成数据"
+      ],
+      "quality": null
+    },
+    "Aligning Translation-Specific Understanding to General Understanding in Large Language Models__oa_W4404782829": {
+      "title": "Aligning Translation-Specific Understanding to General Understanding in Large Language Models",
+      "year": 2024,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2024.emnlp-main.289",
+      "key_insight": "Difficult words are the bottleneck; explicitly extracting interpretations via LLM's general understanding and feeding back to guide translation aligns both understandings",
+      "method_signature": "DUAT: detect difficult words via draft+QE, generate cross-lingual interpretations, filter via interpretation quality control",
+      "tags": [
+        "LLM-based machine translation",
+        "translation-specific understanding misalignment",
+        "difficult word detection",
+        "cross-lingual interpretation",
+        "translation quality estimation",
+        "generalization failure"
+      ],
+      "quality": "full"
+    },
+    "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning": {
+      "title": "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning",
+      "year": 2025,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2025.acl-long.1199",
+      "key_insight": "Introduce [REJ] token to absorb uncertainty; model can choose to abstain instead of blindly fitting ground truth.",
+      "method_signature": "Abstention tuning + abstention-aware beam search decoding using [REJ] probability as uncertainty penalty.",
+      "tags": [
+        "LLM-hallucination-mitigation",
+        "knowledge-misalignment-SFT",
+        "abstention-learning",
+        "uncertainty-calibration",
+        "selective-rejection-token"
+      ],
+      "quality": "full"
+    },
+    "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation__oa_W4402667082": {
+      "title": "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation",
+      "year": 2024,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2024.acl-long.59",
+      "key_insight": "X∩Y是检索段落中对输出有用的精确信息，现有log似然目标无法准确定位这个交集，而信息瓶颈可实现oracle压缩X̃_IB=X∩Y。",
+      "method_signature": "信息瓶颈损失L_IB=I(X̃;X|Q)-βI(X̃;Y|Q)，用于RAG噪声过滤的SFT和DPO训练。",
+      "tags": [
+        "information-bottleneck",
+        "RAG-noise-filtering",
+        "retrieval-augmented-generation",
+        "mutual-information-objective",
+        "compression-rate-optimization"
+      ],
+      "quality": "full"
+    },
+    "Bitext Name Tagging for Cross-lingual Entity Annotation Projection": {
+      "title": "Bitext Name Tagging for Cross-lingual Entity Annotation Projection",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "Combine rule-based high-confidence annotation projection with neural bitext name tagger: strict searching first for precision, then neural recall for lost annotations",
+      "method_signature": "Two-step weakly-supervised framework: high-confidence rule-based projection → LSTM-CRF bitext name tagger with cross-lingual hidden layer connections",
+      "tags": [
+        "cross-lingual annotation projection",
+        "bitext NER",
+        "low-resource language processing",
+        "LSTM-CRF sequence labeling",
+        "weakly-supervised learning"
+      ],
+      "quality": "partial"
+    },
+    "CAI_ Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models": {
+      "title": "CAI: Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2506.23590",
+      "key_insight": "LVLM在回答caption查询时对视觉信息的注意力显著强于非caption查询,可识别并精细化caption-sensitive attention heads来增强视觉感知",
+      "method_signature": "训练-free方法,通过SVM二分类器识别caption-sensitive heads,在推理时应用预计算的注意力输出位移向量进行干预",
+      "tags": [
+        "LVLM-hallucination-mitigation",
+        "attention-head-analysis",
+        "training-free-intervention",
+        "caption-query-utilization",
+        "visual-perception-enhancement"
+      ],
+      "quality": "full"
+    },
+    "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828": {
+      "title": "CC-TUNING: A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning",
+      "year": 2025,
+      "venue": "ACL 2025",
+      "doi": "10.18653/v1/2025.acl-long.933",
+      "key_insight": "非英语输入可从英语激活的融合中获益，且中间层捕获的泛化知识最具价值",
+      "method_signature": "CC-TUNING：训练时融合英/非英前馈激活加Decision Maker选择，推理时用Transform Matrix替代平行语料",
+      "tags": [
+        "latent-cross-lingual-connection",
+        "multilingual-SFT",
+        "feed-forward-activation-transfer",
+        "adaptive-layer-selection",
+        "cross-lingual-LLM-tuning"
+      ],
+      "quality": "full"
+    },
+    "CCFQA_ A Benchmark for Cross-Lingual and Cross-Modal Speech and Text Factuality Evaluation": {
+      "title": "CCFQA: A Benchmark for Cross-Lingual and Cross-Modal Speech and Text Factuality Evaluation",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2508.07295",
+      "key_insight": "以英文为枢纽语言,通过少量样本学习可将英文QA能力迁移到其他语言的多模态任务",
+      "method_signature": "构建8语言平行语音-文本QA基准,设计英文枢纽的少样本跨语言迁移策略",
+      "tags": [
+        "multilingual-factuality-benchmark",
+        "cross-modal-speech-text",
+        "hallucination-evaluation",
+        "spoken-question-answering",
+        "cross-lingual-transfer"
+      ],
+      "quality": "full"
+    },
+    "CLAIM_ Mitigating Multilingual Object Hallucination in Large Vision-Language Models with Cross-Lingual Attention Intervention": {
+      "title": "CLAIM: Mitigating Multilingual Object Hallucination in Large Vision-Language Models with Cross-Lingual Attention Intervention",
+      "year": 2025,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2506.11073",
+      "key_insight": "多语言查询在中间层的视觉注意力下降约32%，可通过注意力偏移向量在推理时对齐",
+      "method_signature": "识别语言特定跨模态注意力头，估计英-目标语言偏移向量，推理时注入偏移",
+      "tags": [
+        "multilingual-LVLM-hallucination",
+        "cross-lingual-attention-intervention",
+        "inference-time-alignment",
+        "vision-language-grounding",
+        "probe-based-neuron-identification"
+      ],
+      "quality": "full"
+    },
+    "CoMT_ A Novel Benchmark for Chain of Multi-modal Thought on Large Vision-Language Models": {
+      "title": "CoMT: A Novel Benchmark for Chain of Multi-modal Thought on Large Vision-Language Models",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2412.12932",
+      "key_insight": "人类推理时自然融合图像进行具体推理,用文本进行抽象逻辑,模型也应如此生成中间图像",
+      "method_signature": "CoMT基准包含视觉创建/删除/更新/选择四类操作,要求模型在推理链中生成相关图像",
+      "tags": [
+        "multi-modal chain-of-thought",
+        "LVLM benchmark",
+        "visual reasoning evaluation",
+        "multi-modal generation",
+        "reasoning with image generation"
+      ],
+      "quality": "full"
+    },
+    "CodeBERT_ A Pre-Trained Model for Programming and Natural Languages__oa_W3098605233": {
+      "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages",
+      "year": 2020,
+      "venue": "EMNLP Findings",
+      "doi": "10.18653/v1/2020.findings-emnlp.139",
+      "key_insight": "Hybrid objective combining MLM on bimodal data with replaced token detection on unimodal data enables leveraging abundant unpaired code",
+      "method_signature": "RoBERTa-base Transformer + MLM + RTD objectives trained on 6 PL languages",
+      "tags": [
+        "code-representation-pretraining",
+        "nl-pl-crossmodal-learning",
+        "replaced-token-detection",
+        "code-search",
+        "code-documentation-generation"
+      ],
+      "quality": "full"
+    },
+    "Context-Aware Hierarchical Taxonomy Generation for Scientific Papers via LLM-Guided Multi-Aspect Clustering__oa_W4416036362": {
+      "title": "Context-Aware Hierarchical Taxonomy Generation for Scientific Papers via LLM-Guided Multi-Aspect Clustering",
+      "year": 2025,
+      "venue": "EMNLP 2025",
+      "doi": "10.18653/v1/2025.emnlp-main.788",
+      "key_insight": "每个论文的表征应基于其与周围论文的关系动态调整，多aspect引导的编码可捕捉不同语义维度并通过动态搜索找最优分区",
+      "method_signature": "LLM动态生成多语义aspect → aspect引导摘要 → aspect独立聚类 → 组合搜索找最优aspect-cluster配对 → 自顶向下迭代建树",
+      "tags": [
+        "hierarchical-taxonomy-generation",
+        "LLM-document-clustering",
+        "multi-aspect-encoding",
+        "scientific-literature-organization",
+        "context-aware-clustering"
+      ],
+      "quality": "full"
+    },
+    "Controllable Text Generation via Probability Density Estimation in the Latent Space__oa_W4385572481": {
+      "title": "Controllable Text Generation via Probability Density Estimation in the Latent Space",
+      "year": 2023,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2023.acl-long.704",
+      "key_insight": "用Normalizing Flow的 invertible 性质把复杂潜空间映射到简单高斯先验空间,在先验空间做控制后再通过逆变换反馈",
+      "method_signature": "Normalizing Flow + 先验空间插值控制 + 反馈潜空间",
+      "tags": [
+        "controllable-text-generation",
+        "normalizing-flow",
+        "latent-space-control",
+        "probability-density-estimation",
+        "interpolation-control"
+      ],
+      "quality": "full"
+    },
+    "Cross-Lingual Text-Rich Visual Comprehension_ An Information Theory Perspective": {
+      "title": "Cross-Lingual Text-Rich Visual Comprehension: An Information Theory Perspective",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2412.17787",
+      "key_insight": "跨语言问题未能充分激活相关视觉信息,性能下降与互信息下降强相关;可通过KL散度蒸馏从单语言向跨语言迁移知识",
+      "method_signature": "MVCL-MI:最大化视觉-语言跨语言互信息,通过KL散度最小化将单语言logits蒸馏到跨语言设置",
+      "tags": [
+        "跨语言多模态理解",
+        "LVLM基准测试",
+        "信息论视角",
+        "视觉-语言对齐",
+        "互信息蒸馏"
+      ],
+      "quality": "full"
+    },
+    "Dialogue Discourse-Aware Graph Convolutional Networks for Abstractive Meeting Summarization": {
+      "title": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization",
+      "year": 2021,
+      "venue": "ACL/IJCNLP or similar",
+      "doi": null,
+      "key_insight": "对话篇章关系（QA/Contrast/Continuation）能显式刻画 utterances 间信息流，QA 关系的 question 包含后续讨论的核心 topics 可作为伪摘要",
+      "method_signature": "DDAMS 图编码器 + DDADA QA关系伪摘要数据增强 + gate机制区分不同 discourse relation 的信息流",
+      "tags": [
+        "meeting-summarization",
+        "dialogue-discourse-parsing",
+        "graph-convolutional-network",
+        "data-augmentation",
+        "multi-party-conversation"
+      ],
+      "quality": "partial"
+    },
+    "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856": {
+      "title": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization",
+      "year": 2021,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2021/524",
+      "key_insight": "QA discourse relation 识别的 question 往往包含核心话题/概念，可作为后续讨论的伪摘要，实现 data augmentation",
+      "method_signature": "DDAMS(meeting graph + RGCN + pointer decoder) + DDADA(QA-based pseudo corpus pretraining)",
+      "tags": [
+        "meeting summarization",
+        "dialogue discourse parsing",
+        "relational graph convolutional network",
+        "data augmentation for summarization",
+        "pseudo-labels from discourse"
+      ],
+      "quality": "full"
+    },
+    "Discrete Modeling via Boundary Conditional Diffusion Processes": {
+      "title": "Discrete Modeling via Boundary Conditional Diffusion Processes",
+      "year": 2024,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2410.22380",
+      "key_insight": "利用ODE精确计算前向轨迹与离散边界交点t0, 再重缩放轨迹使噪声点条件于边界分布",
+      "method_signature": "两阶段前向过程: 边界估计+轨迹重缩放构建边界条件扩散模型",
+      "tags": [
+        "离散扩散模型",
+        "边界条件生成",
+        "语言建模diffusion",
+        "概率轮廓对齐",
+        "离散图像生成"
+      ],
+      "quality": "full"
+    },
+    "Effective Deep Memory Networks for Distant Supervised Relation Extraction": {
+      "title": "Effective Deep Memory Networks for Distant Supervised Relation Extraction",
+      "year": 2017,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2017/559",
+      "key_insight": "Use two-level attention memory networks: word-level to weight context words by entity-pair relevance, relation-level to model inter-relation dependencies and reduce noise",
+      "method_signature": "Two-layer memory networks: word-level (6-hop) attention for sentence representation, relation-level (2-layer) attention for bag-of-instances multi-label classification",
+      "tags": [
+        "distant-supervision-relation-extraction",
+        "attention-memory-networks",
+        "multi-instance-multi-label",
+        "entity-pair-representation",
+        "knowledge-base-population"
+      ],
+      "quality": "full"
+    },
+    "Effective LSTMs for Target-Dependent Sentiment Classification__oa_W2529550020": {
+      "title": "Effective LSTMs for Target-Dependent Sentiment Classification",
+      "year": 2015,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1512.01100",
+      "key_insight": "标准LSTM无法区分不同目标的不同情感,必须将目标信息融入句子表示",
+      "method_signature": "TD-LSTM双方向建模前后上下文;TC-LSTM在输入层拼接目标向量",
+      "tags": [
+        "target-dependent-sentiment",
+        "LSTM-variant",
+        "target-context-connection",
+        "Twitter-sentiment-classification",
+        "neural-network-architectural-design"
+      ],
+      "quality": "full"
+    },
+    "Emage_ Non-Autoregressive Text-to-Image Generation": {
+      "title": "Emage: Non-Autoregressive Text-to-Image Generation",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2312.14988",
+      "key_insight": "允许模型在迭代中同时预测新token并修订早期错误，比纯并行解码更有效",
+      "method_signature": "迭代式非自回归mask-predict解码，支持对已生成token的修订",
+      "tags": [
+        "非自回归图像生成",
+        "迭代mask预测",
+        "文本到图像并行解码",
+        "VQVAE图像分词器"
+      ],
+      "quality": "full"
+    },
+    "Enabling Unsupervised Neural Machine Translation with Word-level Visual Representations": {
+      "title": "Enabling Unsupervised Neural Machine Translation with Word-level Visual Representations",
+      "year": 2023,
+      "venue": "EMNLP Findings",
+      "doi": "10.18653/v1/2023.findings-emnlp.839",
+      "key_insight": "图像跨语言一致性使word-level图片成为比bilingual dictionary更廉价的lexical mapping信号",
+      "method_signature": "修改embedding层+mask transformer注入图片, 用visible matrix隔离图像对无关词的影响",
+      "tags": [
+        "unsupervised-NMT",
+        "word-level-visual-representation",
+        "lexical-confusion-remedy",
+        "multimodal-translation",
+        "image-text-embedding"
+      ],
+      "quality": "full"
+    },
+    "English-Chinese Knowledge Base Translation with Neural Network": {
+      "title": "English-Chinese Knowledge Base Translation with Neural Network",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "通过门控神经网络自适应融合实体表示和关系表示，动态计算权重α∈[0,1]线性加权两部分，而非使用固定模型",
+      "method_signature": "门控神经网络学习三元组连续表示，神经张量网络建模关系，结合-ranking型hinge损失函数",
+      "tags": [
+        "knowledge-base-translation",
+        "cross-lingual-KB-enrichment",
+        "neural-tensor-network",
+        "adaptive-gating-mechanism",
+        "triple-representation-learning"
+      ],
+      "quality": "full"
+    },
+    "Enhancing Content Planning for Table-to-Text Generation with Data Understanding and Verification": {
+      "title": "Enhancing Content Planning for Table-to-Text Generation with Data Understanding and Verification",
+      "year": 2020,
+      "venue": "EMNLP Findings",
+      "doi": "10.18653/v1/2020.findings-emnlp.262",
+      "key_insight": "数值的重要性高度依赖其上下文语境值，需通过预训练学习数值间的相对关系",
+      "method_signature": "DUV：上下文数值表示(Transformer预训练)+内容规划验证(策略梯度强化监督)",
+      "tags": [
+        "table-to-text-generation",
+        "content-planning",
+        "numerical-value-representation",
+        "policy-gradient-verification",
+        "neural-content-planning"
+      ],
+      "quality": "full"
+    },
+    "Enhancing Neural Data-To-Text Generation Models with External Background Knowledge": {
+      "title": "Enhancing Neural Data-To-Text Generation Models with External Background Knowledge",
+      "year": 2019,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/d19-1299",
+      "key_insight": "Encoding external knowledge as temporary memory and combining with context via dual-attention allows inferring facts not explicitly in data table",
+      "method_signature": "KBAtt: seq2seq with dual-attention over table and knowledge base, plus copy mechanism",
+      "tags": [
+        "knowledge-base-enhanced NLG",
+        "data-to-text generation",
+        "Wikipedia infobox-to-text",
+        "dual-attention mechanism",
+        "few-shot inference learning"
+      ],
+      "quality": "full"
+    },
+    "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration": {
+      "title": "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2404.12715",
+      "key_insight": "相对表示在不同模型间保持不变,可通过映射概率分布到相对空间实现异构LLM的分布融合",
+      "method_signature": "DEEPEN将分布映射到相对空间聚合,再通过搜索式逆变换回主模型概率空间",
+      "tags": [
+        "LLM-ensemble",
+        "probability-distribution-fusion",
+        "relative-representation",
+        "vocabulary-discrepancy",
+        "heterogeneous-models"
+      ],
+      "quality": "full"
+    },
+    "Ensuring Consistency for In-Image Translation": {
+      "title": "Ensuring Consistency for In-Image Translation",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2412.18139",
+      "key_insight": "现有MMLLM倾向于逐字翻译而忽略图像语境,扩散模型难以生成风格一致的文本图像,需分别解决",
+      "method_signature": "两阶段框架:MMLLM+CoT做翻译,扩散模型+风格潜模块做图像回填",
+      "tags": [
+        "in-image-translation",
+        "multimodal-machine-translation",
+        "diffusion-model-style-consistency",
+        "text-image-generation",
+        "chain-of-thought-learning"
+      ],
+      "quality": "full"
+    },
+    "Exploring Cross-lingual Latent Transplantation_ Mutual Opportunities and Open Challenges": {
+      "title": "Exploring Cross-lingual Latent Transplantation: Mutual Opportunities and Open Challenges",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2412.12686",
+      "key_insight": "语言特异性神经元高度隔离——英语提示遗漏非英语激活，非英语提示削弱英语能力，可通过激活移植实现互补",
+      "method_signature": "X Transplant: 提取源语言某层激活替换目标语言对应层激活，无需额外训练",
+      "tags": [
+        "cross-lingual-latent-transplantation",
+        "LLM-multilingual-probing",
+        "activation-intervention",
+        "cultural-adaptability",
+        "inference-time-intervention"
+      ],
+      "quality": "full"
+    },
+    "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110": {
+      "title": "Extending Context Window of Large Language Models from a Distributional Perspective",
+      "year": 2024,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2024.emnlp-main.414",
+      "key_insight": "预训练旋转角分布与扩展分布之间的一致性随维度不同而变化,不同维度应采用不同的插值或外推策略",
+      "method_signature": "基于KL散度在每个维度独立选择插值或外推,以最小化旋转角分布扰动",
+      "tags": [
+        "RoPE上下文扩展",
+        "旋转角分布",
+        "位置嵌入理论",
+        "长度外推",
+        "LLM长文本建模"
+      ],
+      "quality": "full"
+    },
+    "FroM_ Frobenius Norm-Based Data-Free Adaptive Model Merging__oa_W4416035165": {
+      "title": "FroM: Frobenius Norm-Based Data-Free Adaptive Model Merging",
+      "year": 2025,
+      "venue": "EMNLP Findings",
+      "doi": "10.18653/v1/2025.findings-emnlp.251",
+      "key_insight": "直接用Frobenius范数量化任务向量差异作为权重系数k，避免依赖训练数据",
+      "method_signature": "用||θᵢ||ᵈᵏ加权的参数合并，FFT有闭式解，LoRA用交替优化",
+      "tags": [
+        "model-merging",
+        "parameter-efficient-fine-tuning",
+        "task-interference",
+        "frozen-norm-weighting",
+        "lora-integration"
+      ],
+      "quality": "full"
+    },
+    "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580": {
+      "title": "From Hypothesis to Publication: A Comprehensive Survey of AI-Driven Research Support Systems",
+      "year": 2025,
+      "venue": "EMNLP Findings",
+      "doi": "10.18653/v1/2025.findings-emnlp.631",
+      "key_insight": "通过研究流程框架系统整合各子领域,既覆盖全流程又兼顾专门化研究的深度",
+      "method_signature": "系统性综述+层级化分类学,按研究pipeline组织相关工作",
+      "tags": [
+        "AI-research-workflow-integration",
+        "systematic-survey-taxonomy",
+        "LLM-research-automation",
+        "hypothesis-generation-iteration",
+        "peer-review-simulation"
+      ],
+      "quality": "full"
+    },
+    "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986": {
+      "title": "GLOBESUMM: A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization",
+      "year": 2024,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2024.emnlp-main.603",
+      "key_insight": "冲突解决是跨语言多文档摘要的关键能力，协议引导的提示设计可显式指导LLM处理冲突",
+      "method_signature": "CRS迭代式摘要 + KIS压缩 + CLP跨语言对齐 + PGP协议引导",
+      "tags": [
+        "multilingual-summarization",
+        "cross-lingual-NLP",
+        "conflict-resolution",
+        "protocol-guided-prompting",
+        "event-centric-Retrieval"
+      ],
+      "quality": "full"
+    },
+    "Hierarchical Catalogue Generation for Literature Review_ A Benchmark__oa_W4389519022": {
+      "title": "Hierarchical Catalogue Generation for Literature Review: A Benchmark",
+      "year": 2023,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2023.findings-emnlp.453",
+      "key_insight": "层次指引(hierarchical guidance)对文本生成有效,目录代表作者对现有研究的理解和组织",
+      "method_signature": "提出HiCatGLR任务和HiCaD数据集(7.6k目录,389k参考文献),设计CEDS和CQE评估指标",
+      "tags": [
+        "hierarchical-catalogue-generation",
+        "literature-review-summarization",
+        "multi-document-summarization",
+        "scientific-document-structure",
+        "text-structure-generation"
+      ],
+      "quality": "full"
+    },
+    "IOCC_ Aligning Semantic and Cluster Centers for Few-shot Short Text Clustering": {
+      "title": "IOCC: Aligning Semantic and Cluster Centers for Few-shot Short Text Clustering",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2508.06126",
+      "key_insight": "通过伪标签构建伪中心，让样本向伪中心聚拢，伪中心在迭代中逐步逼近真实语义中心",
+      "method_signature": "IEOT引入样本间语义交互生成可靠伪标签，CACL用伪中心引导对比学习对齐聚类中心",
+      "tags": [
+        "few-shot-clustering",
+        "optimal-transport-pseudolabels",
+        "contrastive-learning",
+        "short-text-clustering",
+        "semantic-center-alignment"
+      ],
+      "quality": "full"
+    },
+    "Improved Visual Story Generation with Adaptive Context Modeling__oa_W4385570729": {
+      "title": "Improved Visual Story Generation with Adaptive Context Modeling",
+      "year": 2023,
+      "venue": "Findings of ACL",
+      "doi": "10.18653/v1/2023.findings-acl.305",
+      "key_insight": "依赖关系主要由句子间的语义关系衡量，应自适应选择相关历史文本-图像对",
+      "method_signature": "自适应编码器(Cross-Attention过滤历史)+自适应指导(采样阶段CLIP引导)",
+      "tags": [
+        "visual-story-generation",
+        "adaptive-context-modeling",
+        "diffusion-model",
+        "semantic-consistency",
+        "cross-attention"
+      ],
+      "quality": "full"
+    },
+    "Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization__oa_W4412945085": {
+      "title": "Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization",
+      "year": 2025,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2025.acl-long.826",
+      "key_insight": "遮蔽检索头会产生与真实幻觉相似的错误模式,可用于构造逼真的负样本",
+      "method_signature": "遮蔽检索头生成负样本+POS/NEG控制码微调+对比解码",
+      "tags": [
+        "retrieval-augmented-LLM",
+        "faithfulness-hallucination",
+        "long-form-QA",
+        "retrieval-heads",
+        "contrastive-decoding"
+      ],
+      "quality": "full"
+    },
+    "Improving Controllable Text Generation with Position-Aware Weighted Decoding": {
+      "title": "Improving Controllable Text Generation with Position-Aware Weighted Decoding",
+      "year": 2022,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2022.findings-acl.272",
+      "key_insight": "通过检测LM输出分布与目标属性的差异,在不同解码位置自适应抑制或放大控制器偏置信号",
+      "method_signature": "CAT-PAW框架在加权解码方法上添加位置感知调节器,动态调整控制信号强度",
+      "tags": [
+        "controllable-text-generation",
+        "weighted-decoding",
+        "position-aware-control",
+        "trade-off-evaluation",
+        "language-model-refinement"
+      ],
+      "quality": "full"
+    },
+    "Improving Low Resource Named Entity Recognition using Cross-lingual Knowledge Transfer": {
+      "title": "Improving Low Resource Named Entity Recognition using Cross-lingual Knowledge Transfer",
+      "year": 2018,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2018/566",
+      "key_insight": "不同语言包含互补的实体线索可通过双语词典转移；实体类型分布在语言间保持不变",
+      "method_signature": "LSTM-CRF + 双语词典编码 + 词典扩展 + 实体类型分布特征",
+      "tags": [
+        "cross-lingual NER",
+        "low-resource NER",
+        "bilingual lexicon",
+        "entity type distribution",
+        "LSTM-CRF"
+      ],
+      "quality": "full"
+    },
+    "Incorporating Commonsense Knowledge into Abstractive Dialogue Summarization via Heterogeneous Graph Networks": {
+      "title": "Incorporating Commonsense Knowledge into Abstractive Dialogue Summarization via Heterogeneous Graph Networks",
+      "year": 2020,
+      "venue": null,
+      "doi": "10.48550/arxiv.2010.10044",
+      "key_insight": "异构图网络能有效融合信息并在节点和连边中包含丰富语义,从而更准确编码对话表示",
+      "method_signature": "D-HGN:基于异构图Transformer编码话语-知识-说话人异构节点",
+      "tags": [
+        "commonsense-knowledge-dialogue",
+        "heterogeneous-graph-network",
+        "abstractive-dialogue-summarization",
+        "conceptnet-knowledge-integration",
+        "zero-shot-domain-adaptation"
+      ],
+      "quality": "full"
+    },
+    "Investigating and Mitigating the Multimodal Hallucination Snowballing in Large Vision-Language Models__oa_W4402671574": {
+      "title": "Investigating and Mitigating the Multimodal Hallucination Snowballing in Large Vision-Language Models",
+      "year": 2024,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2024.acl-long.648",
+      "key_insight": "LVLMs over-rely on text context and ignore visual information when plausible text clues exist, causing hallucination snowballing; a residual visual prediction can correct this.",
+      "method_signature": "Residual Visual Decoding (RVD) blends visual-only output distribution with full-context distribution using adaptive α based on JSD divergence.",
+      "tags": [
+        "multimodal-hallucination-snowballing",
+        "vision-language-model-decoding",
+        "residual-visual-prediction",
+        "adaptive-distribution-blending",
+        "hallucination-evaluation-framework"
+      ],
+      "quality": "full"
+    },
+    "Knowledge Based Machine Reading Comprehension": {
+      "title": "Knowledge Based Machine Reading Comprehension",
+      "year": 2018,
+      "venue": null,
+      "doi": "10.48550/arxiv.1809.04267",
+      "key_insight": "知识以三元组表示与外部KB格式一致,便于整合外部知识并提供可解释的推理路径",
+      "method_signature": "PCNet 路径匹配 + KVMemNet 记忆网络 + QGNet 问题生成,三者加权融合",
+      "tags": [
+        "knowledge-based MRC",
+        "open KB integration",
+        "triplet reasoning",
+        "multi-hop QA",
+        "neural-symbolic integration"
+      ],
+      "quality": "full"
+    },
+    "Knowledge-Aware Conversational Semantic Parsing Over Web Tables": {
+      "title": "Knowledge-Aware Conversational Semantic Parsing Over Web Tables",
+      "year": 2018,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1809.04271",
+      "key_insight": "通过整合三类知识(语法知识用于复制先前逻辑形式,专家知识用于模块化设计,外部资源知识用于增强表示)来提升解析性能",
+      "method_signature": "CAMP:知识感知的模块化语义解析器,通过copy actions处理上下文依赖",
+      "tags": [
+        "conversational-semantic-parsing",
+        "table-question-answering",
+        "knowledge-aware-neural-models",
+        "logical-form-generation",
+        "multi-turn-dialogue"
+      ],
+      "quality": "full"
+    },
+    "LangGPS_ Language Separability Guided Data Pre-Selection for Joint Multilingual Instruction Tuning": {
+      "title": "LangGPS: Language Separability Guided Data Pre-Selection for Joint Multilingual Instruction Tuning",
+      "year": 2025,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2511.10229",
+      "key_insight": "高可分离性样本帮助形成清晰语言边界,低可分离性样本充当跨语言对齐的桥梁",
+      "method_signature": "两阶段预筛选框架:先按可分离性过滤,再经传统方法细选",
+      "tags": [
+        "multilingual-instruction-tuning",
+        "language-separability",
+        "data-pre-selection",
+        "silhouette-score",
+        "cross-lingual-alignment"
+      ],
+      "quality": "full"
+    },
+    "Language Model as an Annotator_ Exploring DialoGPT for Dialogue Summarization__oa_W3176770275": {
+      "title": "Language Model as an Annotator: Exploring DialoGPT for Dialogue Summarization",
+      "year": 2021,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2021.acl-long.117",
+      "key_insight": "利用DialoGPT在海量对话数据中编码的背景知识,通过预测损失识别高信息量词,通过上下文表示相似度检测冗余",
+      "method_signature": "DialoGPT预测损失→关键词, EOS表示余弦相似度→冗余检测, 最高损失 utterance→话题分割",
+      "tags": [
+        "dialogue-summarization",
+        "pretrained-language-model-as-annotator",
+        "unsupervised-feature-annotation",
+        "keyword-extraction",
+        "topic-segmentation"
+      ],
+      "quality": "full"
+    },
+    "Language-Specific Layer Matters_ Efficient Multilingual Enhancement for Large Vision-Language Models": {
+      "title": "Language-Specific Layer Matters: Efficient Multilingual Enhancement for Large Vision-Language Models",
+      "year": 2025,
+      "venue": "EMNLP Findings",
+      "doi": "10.18653/v1/2025.findings-emnlp.666",
+      "key_insight": "Language-specific neuron activations concentrate in shallow decoder layers; fine-tuning only these layers achieves efficient multilingual alignment.",
+      "method_signature": "PLAST: monitor neuron activation MSD to identify language-specific layers, then fine-tune only top-5 decoder layers with question-translation pairs.",
+      "tags": [
+        "multilingual-LVLM",
+        "language-specific-neuron",
+        "shallow-layer-fine-tuning",
+        "parameter-efficient-training",
+        "vision-language-alignment"
+      ],
+      "quality": "full"
+    },
+    "Learning Fine-Grained Grounded Citations for Attributed Large Language Models__oa_W4402670531": {
+      "title": "Learning Fine-Grained Grounded Citations for Attributed Large Language Models",
+      "year": 2024,
+      "venue": "ACL Findings",
+      "doi": "10.18653/v1/2024.findings-acl.838",
+      "key_insight": "First extract supporting quotes from source documents (grounding), then condition the generation process on those quotes — this provides supervision signals AND serves as fine-grained attribution",
+      "method_signature": "Two-stage training: Grounding Guided Generation (extract quotes → guide generation) + Consistency-Aware Alignment via DPO to align grounding with attribution",
+      "tags": [
+        "attributed-LLM",
+        "fine-grained-citation",
+        "retrieval-augmented-generation",
+        "grounded-generation",
+        "citation-quality"
+      ],
+      "quality": "full"
+    },
+    "Learning to Rewrite for Non-Autoregressive Neural Machine Translation": {
+      "title": "Learning to Rewrite for Non-Autoregressive Neural Machine Translation",
+      "year": 2021,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2021.emnlp-main.265",
+      "key_insight": "通过 locator 模块显式学习区分错误词,取代基于置信度的启发式mask规则",
+      "method_signature": "REWRITE-NAT (Locator+Revisor+迭代训练)",
+      "tags": [
+        "non-autoregressive-NMT",
+        "iterative-refinement",
+        "error-detection",
+        "dynamic-halting",
+        "mask-predict"
+      ],
+      "quality": "full"
+    },
+    "Learning to Select Bi-Aspect Information for Document-Scale Text Content Manipulation": {
+      "title": "Learning to Select Bi-Aspect Information for Document-Scale Text Content Manipulation",
+      "year": 2020,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2002.10210",
+      "key_insight": "通过交互注意力机制建模记录与参考文本的语义关联，实现从双aspect输入中选择合适内容并同时保留风格",
+      "method_signature": "分层记录编码器+交互注意力+复制机制+回译训练",
+      "tags": [
+        "document-level-style-transfer",
+        "bi-aspect-attention",
+        "data-to-text-generation",
+        "unsupervised-text-manipulation",
+        "content-selection"
+      ],
+      "quality": "full"
+    },
+    "Length Controlled Generation for Black-box LLMs__oa_W4412945110": {
+      "title": "Length Controlled Generation for Black-box LLMs",
+      "year": 2025,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2025.acl-long.825",
+      "key_insight": "用Metropolis-Hastings框架结合重要性采样加速，无需修改模型参数即可实现黑盒LLM的长度控制",
+      "method_signature": "MH迭代采样 + 重要性采样加速的黑盒长度控制框架",
+      "tags": [
+        "black-box LLM length control",
+        "Metropolis-Hastings sampling",
+        "importance sampling acceleration",
+        "MCMC text generation",
+        "instruction following"
+      ],
+      "quality": "full"
+    },
+    "Length Extrapolation of Transformers_ A Survey from the Perspective of Positional Encoding": {
+      "title": "Length Extrapolation of Transformers: A Survey from the Perspective of Positional Encoding",
+      "year": 2024,
+      "venue": "Findings of EMNLP",
+      "doi": "10.18653/v1/2024.findings-emnlp.582",
+      "key_insight": "PE是决定Transformer长度外推能力的首要因素,不同PE方案在外推与表达能力上有权衡",
+      "method_signature": "从APE到RPE的PE分类体系,结合位置插值与随机位置编码的外推方法综述",
+      "tags": [
+        "transformer-length-extrapolation",
+        "positional-encoding",
+        "rotary-position-embedding",
+        "llm-long-context",
+        "position-interpolation"
+      ],
+      "quality": "full"
+    },
+    "MPR-GUI_ Benchmarking and Enhancing Multilingual Perception and Reasoning in GUI Agents": {
+      "title": "MPR-GUI: Benchmarking and Enhancing Multilingual Perception and Reasoning in GUI Agents",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2512.00756",
+      "key_insight": "中间层作为英语中心推理枢纽,跨语言分布差异反映P&R能力差距,可在此层注入干预向量对齐非英语表征",
+      "method_signature": "GUI-XLI:训练-free表征工程,在中间层注入跨语言差异向量对齐非英语表征",
+      "tags": [
+        "GUI agent benchmark",
+        "multilingual perception-reasoning",
+        "cross-lingual representation alignment",
+        "training-free intervention",
+        "LVLM evaluation"
+      ],
+      "quality": null
+    },
+    "MSAMSum_ Towards Benchmarking Multi-lingual Dialogue Summarization": {
+      "title": "MSAMSum: Towards Benchmarking Multi-lingual Dialogue Summarization",
+      "year": 2022,
+      "venue": "ACL Workshop on Dialogue Understanding (dialdoc)",
+      "doi": "10.18653/v1/2022.dialdoc-1.1",
+      "key_insight": "MIX-TO-MANY设置将多语言混合输入视为对齐表示空间的机遇而非障碍",
+      "method_signature": "基于mBART-50在五种多语言设置下进行监督和零样本评估",
+      "tags": [
+        "multi-lingual-dialogue-summarization",
+        "translation-based-dataset-construction",
+        "zero-shot-cross-lingual",
+        "mBART-finetuning",
+        "round-trip-quality-control"
+      ],
+      "quality": "full"
+    },
+    "Neural Semantic Parsing in Low-Resource Settings with Back-Translation and Meta-Learning": {
+      "title": "Neural Semantic Parsing in Low-Resource Settings with Back-Translation and Meta-Learning",
+      "year": 2019,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1909.05438",
+      "key_insight": "回译生成paired数据+质量控制器过滤噪声+元学习分离覆盖/未覆盖规则样本的优化目标",
+      "method_signature": "规则初始化语义解析器+问题生成器→回译迭代→短语表质量控制→MAML元学习",
+      "tags": [
+        "low-resource-semantic-parsing",
+        "back-translation",
+        "model-agnostic-meta-learning",
+        "neural-semantic-parser",
+        "rule-based-initialization"
+      ],
+      "quality": "full"
+    },
+    "One for All_ Update Parameterized Knowledge Across Multiple Models": {
+      "title": "One for All: Update Parameterized Knowledge Across Multiple Models with Once Edit",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2506.00817",
+      "key_insight": "用轻量级插件模型作为编辑模块，通过[WEIGHT] token动态分配权重，结合搜索空间零初始化和目标增强实现知识跨模型迁移",
+      "method_signature": "ONCEEDIT采用编辑+集成两阶段框架，用Tiny-Llama插件模型修改知识后与多个LLM异构集成",
+      "tags": [
+        "knowledge-editing",
+        "multi-model-ensemble",
+        "LLM-knowledge-update",
+        "heterogeneous-model-fusion",
+        "dynamic-weight-mechanism"
+      ],
+      "quality": "full"
+    },
+    "One for All_ Update Parameterized Knowledge Across Multiple Models with Once Edit": {
+      "title": "One for All: Update Parameterized Knowledge Across Multiple Models with Once Edit",
+      "year": 2025,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2025.acl-long.780",
+      "key_insight": "用轻量级插件模型作为编辑模块，通过[WEIGHT]令牌动态分配权重解决固定权重不适配问题",
+      "method_signature": "插件模型+[WEIGHT]动态权重+零初始化+目标增强的异构模型集成",
+      "tags": [
+        "knowledge-editing",
+        "model-ensemble",
+        "multi-model-editing",
+        "LLM-updating",
+        "heterogeneous-fusion"
+      ],
+      "quality": "full"
+    },
+    "Pretraining without Wordpieces_ Learning Over a Vocabulary of Millions of Words": {
+      "title": "Pretraining without Wordpieces: Learning Over a Vocabulary of Millions of Words",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2202.12142",
+      "key_insight": "word-level vocabulary avoids subword fragmentation issues; main advantage is better understanding of low-frequency and rare words",
+      "method_signature": "WordBERT with multi-million word vocabulary, sampling-based softmax training, Transformer architecture",
+      "tags": [
+        "word-level-tokenization",
+        "BERT-pretraining",
+        "vocabulary-size",
+        "low-frequency-word-representation",
+        "subword-vs-word"
+      ],
+      "quality": "full"
+    },
+    "Probing and Boosting Large Language Models Capabilities via Attention Heads": {
+      "title": "Probing and Boosting Large Language Models Capabilities via Attention Heads",
+      "year": 2025,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2025.emnlp-main.1450",
+      "key_insight": "能力是局部化的且可组合的：不同能力对应不同注意力头，复杂任务可分解为5种基础能力的组合。",
+      "method_signature": "探针分类器定位能力专属注意力头，余弦相似度筛选微调数据。",
+      "tags": [
+        "attention-head-probing",
+        "capability-localization",
+        "targeted-instruction-tuning",
+        "LLM-interpretability",
+        "data-selection-via-representations"
+      ],
+      "quality": "full"
+    },
+    "Relay Decoding_ Concatenating Large Language Models for Machine Translation": {
+      "title": "Relay Decoding: Concatenating Large Language Models for Machine Translation",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2405.02933",
+      "key_insight": "用简单线性映射层连接两个专家LLM，在有限平行语料上训练即可实现翻译",
+      "method_signature": "源语言LLM + 线性映射层 + 目标语言LLM的Relay Decoding架构",
+      "tags": [
+        "LLM-concatenation",
+        "machine-translation",
+        "cross-lingual-mapping",
+        "resource-efficient-MT",
+        "relay-decoding"
+      ],
+      "quality": "full"
+    },
+    "Retrieval-Generation Synergy Augmented Large Language Models": {
+      "title": "Retrieval-Generation Synergy Augmented Large Language Models",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2310.05149",
+      "key_insight": "GAR与RAG形成闭环，每次迭代的生成结果扩展查询提升检索，检索结果又生成新文档，两者互相增强",
+      "method_signature": "ITRG迭代框架：GAR扩展查询+RAG基于检索文档生成新段落，重复T次迭代",
+      "tags": [
+        "retrieval-augmented generation",
+        "query expansion",
+        "iterative reasoning",
+        "knowledge-intensive QA",
+        "multi-hop reasoning"
+      ],
+      "quality": "full"
+    },
+    "SCIR-MTΓÇÖs Submission for WMT24 General Machine Translation Task": {
+      "title": "SCIR-MT's Submission for WMT24 General Machine Translation Task",
+      "year": 2024,
+      "venue": "WMT24",
+      "doi": "10.18653/v1/2024.wmt-1.21",
+      "key_insight": "仅保留4.8%高质量数据的三阶段训练结合COMET-MBR解码可超越商业系统",
+      "method_signature": "LLaMA-2-13B三层连续预训练加指令微调加COMET-MBR",
+      "tags": [
+        "LLM-translation",
+        "COMET-MBR-decoding",
+        "data-filtering-pipeline",
+        "English-Czech",
+        " continual-pretraining"
+      ],
+      "quality": "full"
+    },
+    "SLAM_ Towards Efficient Multilingual Reasoning via Selective Language Alignment": {
+      "title": "SLAM: Towards Efficient Multilingual Reasoning via Selective Language Alignment",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2501.03681",
+      "key_insight": "语言特定表示仅在底层层学习，高层转化为通用表示",
+      "method_signature": "MSD层选择+仅微调FFN子层",
+      "tags": [
+        "multilingual-reasoning",
+        "layer-selection-finetuning",
+        "parameter-efficient-training",
+        "LLM-multilingualism",
+        "FFN-knowledge-injection"
+      ],
+      "quality": "full"
+    },
+    "STOA-VLP_ Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training": {
+      "title": "STOA-VLP: Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2302.09736",
+      "key_insight": "物体跨帧轨迹与多动作特征需跨时空维度联合建模,通过OTA和ASP辅助任务实现粗到细的视频-文本对齐",
+      "method_signature": "四编码器架构+双辅助任务的预训练框架:物体轨迹编码器、时空动作编码器、OTA和ASP对齐任务",
+      "tags": [
+        "video-language-pretraining",
+        "object-trajectory-tracking",
+        "multi-action-recognition",
+        "fine-grained-crossmodal-alignment",
+        "spatial-temporal-modeling"
+      ],
+      "quality": "full"
+    },
+    "Semantic Parsing with Syntax- and Table-Aware SQL Generation__oa_W2963207291": {
+      "title": "Semantic Parsing with Syntax- and Table-Aware SQL Generation",
+      "year": 2018,
+      "venue": "ACL",
+      "doi": "10.18653/v1/p18-1034",
+      "key_insight": "通过column/value/SQL三通道切换机制学习何时复制列名、单元格或关键词，并利用列-单元格关系约束WHERE子句",
+      "method_signature": "三通道指针网络加切换门，用列-单元格关系增强列向量并约束值通道候选",
+      "tags": [
+        "text-to-SQL",
+        "pointer-network",
+        "table-semantic-parsing",
+        "column-cell-relation",
+        "syntax-aware-generation"
+      ],
+      "quality": "full"
+    },
+    "Semantic-aware Contrastive Learning for Electroencephalography-to-Text Generation with Curriculum Learning": {
+      "title": "Semantic-aware Contrastive Learning for Electroencephalography-to-Text Generation with Curriculum Learning",
+      "year": 2023,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2301.09237",
+      "key_insight": "Use contrastive learning to pull same-sentence EEG across subjects together while pushing different-sentence EEG apart, with curriculum ordering from easy to hard pairs.",
+      "method_signature": "C-SCL: contrastive pre-encoder training + seq2seq fine-tuning, with cosine-similarity-based curriculum levels for positive/negative pair difficulty.",
+      "tags": [
+        "EEG-to-Text generation",
+        "brain-computer interface",
+        "contrastive learning for EEG",
+        "curriculum learning",
+        "subject-invariant representations"
+      ],
+      "quality": "full"
+    },
+    "SkillNet-X_ A Multilingual Multitask Model with Sparsely Activated Skills": {
+      "title": "SkillNet-X: A Multilingual Multitask Model with Sparsely Activated Skills",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2306.16176",
+      "key_insight": "skill modules作为knowledge transit hubs，可跨任务跨语言吸收和传递知识",
+      "method_signature": "修改Transformer的FFN和MHA层为sparse skill modules，支持task skill和language skill",
+      "tags": [
+        "multilingual-MTL",
+        "sparse-activation",
+        "skill-modules",
+        "cross-lingual-transfer",
+        "mixture-of-experts-alternative"
+      ],
+      "quality": "full"
+    },
+    "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)__oa_W2971160629": {
+      "title": "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)",
+      "year": 2019,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/d19-1310",
+      "key_insight": "当描述某项统计时，相关记录（如同行中的FG/FGA）和历史表现（如近三场双双）会被同时提及，因此编码时必须同时建模同行、同列、时序三个维度的上下文",
+      "method_signature": "三层层级编码器（记录编码层→记录融合门→行级编码层）+ 双注意力解码器，先选重要行再关注记录",
+      "tags": [
+        "table-to-text generation",
+        "hierarchical encoder",
+        "neural NLG",
+        "multi-dimensional table encoding",
+        "time-series data-to-text",
+        "content selection"
+      ],
+      "quality": "full"
+    },
+    "TableGPT_ Few-shot Table-to-Text Generation with Table Structure Reconstruction and Content Matching": {
+      "title": "TableGPT: Few-shot Table-to-Text Generation with Table Structure Reconstruction and Content Matching",
+      "year": 2020,
+      "venue": "COLING",
+      "doi": "10.18653/v1/2020.coling-main.179",
+      "key_insight": "通过模板序列化消歧模态鸿沟，用辅助任务嵌入结构信息，OT距离度量文本保真度",
+      "method_signature": "基于GPT-2的多任务框架，含表格序列化、结构重建、内容匹配三个训练目标",
+      "tags": [
+        "few-shot-table-to-text",
+        "GPT-2-finetuning",
+        "optimal-transport-content-matching",
+        "multi-task-table-structure",
+        "factual-fidelity-generation"
+      ],
+      "quality": "full"
+    },
+    "Target-Dependent Sentiment Classification with Long Short Term Memory": {
+      "title": "Effective LSTMs for Target-Dependent Sentiment Classification",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "在LSTM每个位置的输入中加入目标向量表示,使网络能显式建模目标与各语境词的连接",
+      "method_signature": "TD-LSTM双方向LSTM捕获目标左右上下文,TC-LSTM在输入层拼接目标向量",
+      "tags": [
+        "target-dependent-sentiment",
+        "LSTM-neural-composition",
+        "target-context-connection",
+        "attention-mechanism-limitation",
+        "twitter-sentiment-analysis"
+      ],
+      "quality": "full"
+    },
+    "The Factual Inconsistency Problem in Abstractive Text Summarization_ A Survey": {
+      "title": "The Factual Inconsistency Problem in Abstractive Text Summarization: A Survey",
+      "year": 2021,
+      "venue": null,
+      "doi": "10.48550/arxiv.2104.14839",
+      "key_insight": "神经模型的抽象能力是把双刃剑,且现有评估只看N-gram重叠忽略了事实层级一致性",
+      "method_signature": "综述评估指标与优化方法,按无监督/弱监督及事实编码/文本蕴含/后编辑分类",
+      "tags": [
+        "factual-consistency",
+        "abstractive-summarization",
+        "hallucination-detection",
+        "evaluation-metrics",
+        "knowledge-graph"
+      ],
+      "quality": "full"
+    },
+    "The Role of Summarization in Generative Agents_ A Preliminary Perspective": {
+      "title": "The Role of Summarization in Generative Agents: A Preliminary Perspective",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2305.01253",
+      "key_insight": "summarization is the most fundamental and indispensable capacity of generative agents manifested across diverse scenarios",
+      "method_signature": "从摘要视角重帧智能体架构,枚举6类摘要技术对应各模块",
+      "tags": [
+        "generative-agent-architecture",
+        "summarization-as-unifying-framework",
+        "LLM-agent-design",
+        "multi-module-formalization"
+      ],
+      "quality": "partial"
+    },
+    "Topic-to-Essay Generation with Neural Networks": {
+      "title": "Topic-to-Essay Generation with Neural Networks",
+      "year": 2018,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2018/567",
+      "key_insight": "用覆盖向量追踪各主题词的使用程度，在解码时动态调整注意力偏向未表达的主题",
+      "method_signature": "MTA-LSTM: 多主题感知的长短期记忆网络，带覆盖机制引导解码",
+      "tags": [
+        "多主题文本生成",
+        "主题覆盖机制",
+        "LSTM解码器",
+        "注意力模型",
+        "中文作文生成"
+      ],
+      "quality": "full"
+    },
+    "Towards Higher Pareto Frontier in Multilingual Machine Translation__oa_W4385571797": {
+      "title": "Towards Higher Pareto Frontier in Multilingual Machine Translation",
+      "year": 2023,
+      "venue": "ACL Long Papers",
+      "doi": "10.18653/v1/2023.acl-long.211",
+      "key_insight": "用不同采样分布训练两个模型形成不同Pareto解，通过mutual distillation让各自学习对方的优势，从而把边界向外推",
+      "method_signature": "Pareto-MD: 双模型协作训练 + 不同温度采样分布 + 语言对特定蒸馏权重",
+      "tags": [
+        "multilingual-NMT",
+        "Pareto-optimization",
+        "mutual-distillation",
+        "temperature-sampling",
+        "low-resource-transfer"
+      ],
+      "quality": "full"
+    },
+    "Trends in Integration of Knowledge and Large Language Models_ A Survey and Taxonomy of Methods, Benchmarks, and Applications": {
+      "title": "Trends in Integration of Knowledge and Large Language Models: A Survey and Taxonomy of Methods, Benchmarks, and Applications",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2311.05876",
+      "key_insight": "知识编辑(改参数)与检索增强(保持参数不变)是两条互补路径",
+      "method_signature": "知识编辑与检索增强的综合分类学survey",
+      "tags": [
+        "LLM知识编辑",
+        "检索增强生成RAG",
+        "知识更新方法分类",
+        "幻觉缓解",
+        "模型参数修改"
+      ],
+      "quality": "full"
+    },
+    "Unifying the Convergences in Multilingual Neural Machine Translation__oa_W4385573302": {
+      "title": "Unifying the Convergences in Multilingual Neural Machine Translation",
+      "year": 2022,
+      "venue": "EMNLP",
+      "doi": "10.18653/v1/2022.emnlp-main.458",
+      "key_insight": "使用语言特定的最佳检查点作为教师模型进行自蒸馏，并通过蒸馏开关动态控制是否进行蒸馏",
+      "method_signature": "LSSD：维护每种语言的最佳检查点，通过蒸馏开关和三层样本级权重控制知识传递",
+      "tags": [
+        "multilingual-NMT",
+        "self-distillation",
+        "convergence-inconsistency",
+        "knowledge-distillation",
+        "performance-deficit"
+      ],
+      "quality": "full"
+    },
+    "Unlocking Multilingual Reasoning Capability of LLMs and LVLMs through Representation Engineering": {
+      "title": "Unlocking Multilingual Reasoning Capabilities of LLMs and LVLMs via Representation Engineering",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2511.23231",
+      "key_insight": "多语言推理过程中，中间层将隐藏状态转换为英语表示进行推理，后期层再恢复目标语言特征；因此可分两步注入干预向量。",
+      "method_signature": "MRRE：分两层注入预计算的跨语言推理增强向量和目标语言输出锚定向量。",
+      "tags": [
+        "multilingual-reasoning",
+        "representation-engineering",
+        "LLM-LVLM-unification",
+        "inference-time-intervention",
+        "hidden-state-manipulation"
+      ],
+      "quality": "full"
+    },
+    "Unveiling Entity-Level Unlearning for Large Language Models_ A Comprehensive Analysis": {
+      "title": "Unveiling Entity-Level Unlearning for Large Language Models: A Comprehensive Analysis",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2406.15796",
+      "key_insight": "遗忘集的知识覆盖率和大小是关键因素，但简单扩大规模会损害模型效用",
+      "method_signature": "知识探测构建遗忘集 + 评估五种主流遗忘算法",
+      "tags": [
+        "LLM-unlearning",
+        "entity-deletion",
+        "knowledge-coverage-metric",
+        "forget-set-construction",
+        "fine-tuning-vulnerability"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "dialogue-summarization": [
+      "A Survey on Dialogue Summarization_ Recent Advances and New Frontiers__oa_W4285602465",
+      "Language Model as an Annotator_ Exploring DialoGPT for Dialogue Summarization__oa_W3176770275"
+    ],
+    "multi-party-conversation": [
+      "A Survey on Dialogue Summarization_ Recent Advances and New Frontiers__oa_W4285602465",
+      "Dialogue Discourse-Aware Graph Convolutional Networks for Abstractive Meeting Summarization"
+    ],
+    "faithfulness-hallucination": [
+      "A Survey on Dialogue Summarization_ Recent Advances and New Frontiers__oa_W4285602465",
+      "Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization__oa_W4412945085"
+    ],
+    "检索增强生成RAG": [
+      "A Survey on Hallucination in Large Language Models_ Principles, Taxonomy, Challenges, and Open Questions",
+      "Trends in Integration of Knowledge and Large Language Models_ A Survey and Taxonomy of Methods, Benchmarks, and Applications"
+    ],
+    "retrieval-augmented-generation": [
+      "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation__oa_W4402667082",
+      "Learning Fine-Grained Grounded Citations for Attributed Large Language Models__oa_W4402670531"
+    ],
+    "cross-lingual-transfer": [
+      "CCFQA_ A Benchmark for Cross-Lingual and Cross-Modal Speech and Text Factuality Evaluation",
+      "SkillNet-X_ A Multilingual Multitask Model with Sparsely Activated Skills"
+    ],
+    "controllable-text-generation": [
+      "Controllable Text Generation via Probability Density Estimation in the Latent Space__oa_W4385572481",
+      "Improving Controllable Text Generation with Position-Aware Weighted Decoding"
+    ],
+    "target-dependent-sentiment": [
+      "Effective LSTMs for Target-Dependent Sentiment Classification__oa_W2529550020",
+      "Target-Dependent Sentiment Classification with Long Short Term Memory"
+    ],
+    "target-context-connection": [
+      "Effective LSTMs for Target-Dependent Sentiment Classification__oa_W2529550020",
+      "Target-Dependent Sentiment Classification with Long Short Term Memory"
+    ],
+    "inference-time-intervention": [
+      "Exploring Cross-lingual Latent Transplantation_ Mutual Opportunities and Open Challenges",
+      "Unlocking Multilingual Reasoning Capability of LLMs and LVLMs through Representation Engineering"
+    ],
+    "parameter-efficient-training": [
+      "Language-Specific Layer Matters_ Efficient Multilingual Enhancement for Large Vision-Language Models",
+      "SLAM_ Towards Efficient Multilingual Reasoning via Selective Language Alignment"
+    ],
+    "knowledge-editing": [
+      "One for All_ Update Parameterized Knowledge Across Multiple Models",
+      "One for All_ Update Parameterized Knowledge Across Multiple Models with Once Edit"
+    ],
+    "multilingual-reasoning": [
+      "SLAM_ Towards Efficient Multilingual Reasoning via Selective Language Alignment",
+      "Unlocking Multilingual Reasoning Capability of LLMs and LVLMs through Representation Engineering"
+    ],
+    "multilingual-NMT": [
+      "Towards Higher Pareto Frontier in Multilingual Machine Translation__oa_W4385571797",
+      "Unifying the Convergences in Multilingual Neural Machine Translation__oa_W4385573302"
+    ],
+    "multi-aspect-controllable-text-generation": [
+      "A Distributional Lens for Multi-Aspect Controllable Text Generation__oa_W4385572988"
+    ],
+    "attribute-distribution-intersection": [
+      "A Distributional Lens for Multi-Aspect Controllable Text Generation__oa_W4385572988"
+    ],
+    "prefix-tuning": [
+      "A Distributional Lens for Multi-Aspect Controllable Text Generation__oa_W4385572988"
+    ],
+    "autoencoder-latent-space": [
+      "A Distributional Lens for Multi-Aspect Controllable Text Generation__oa_W4385572988"
+    ],
+    "iterative-neighbor-search": [
+      "A Distributional Lens for Multi-Aspect Controllable Text Generation__oa_W4385572988"
+    ],
+    "事件检测": [
+      "A Language-Independent Neural Network for Event Detection"
+    ],
+    "Bi-LSTM": [
+      "A Language-Independent Neural Network for Event Detection"
+    ],
+    "CNN": [
+      "A Language-Independent Neural Network for Event Detection"
+    ],
+    "语言无关性": [
+      "A Language-Independent Neural Network for Event Detection"
+    ],
+    "词嵌入": [
+      "A Language-Independent Neural Network for Event Detection"
+    ],
+    "触发词抽取": [
+      "A Language-Independent Neural Network for Event Detection"
+    ],
+    "domain-specific-summarization": [
+      "A Survey on Dialogue Summarization_ Recent Advances and New Frontiers__oa_W4285602465"
+    ],
+    "pre-trained-language-models": [
+      "A Survey on Dialogue Summarization_ Recent Advances and New Frontiers__oa_W4285602465"
+    ],
+    "LLM幻觉分类": [
+      "A Survey on Hallucination in Large Language Models_ Principles, Taxonomy, Challenges, and Open Questions"
+    ],
+    "事实性幻觉": [
+      "A Survey on Hallucination in Large Language Models_ Principles, Taxonomy, Challenges, and Open Questions"
+    ],
+    "忠实性幻觉": [
+      "A Survey on Hallucination in Large Language Models_ Principles, Taxonomy, Challenges, and Open Questions"
+    ],
+    "知识边界": [
+      "A Survey on Hallucination in Large Language Models_ Principles, Taxonomy, Challenges, and Open Questions"
+    ],
+    "federated-meeting-summarization": [
+      "Adapter-based Selective Knowledge Distillation for Federated Multi-domain Meeting Summarization"
+    ],
+    "adapter-fine-tuning": [
+      "Adapter-based Selective Knowledge Distillation for Federated Multi-domain Meeting Summarization"
+    ],
+    "selective-knowledge-distillation": [
+      "Adapter-based Selective Knowledge Distillation for Federated Multi-domain Meeting Summarization"
+    ],
+    "non-IID-data-learning": [
+      "Adapter-based Selective Knowledge Distillation for Federated Multi-domain Meeting Summarization"
+    ],
+    "entropy-based-filtering": [
+      "Adapter-based Selective Knowledge Distillation for Federated Multi-domain Meeting Summarization"
+    ],
+    "RAG-privacy": [
+      "Adaptive Backtracking for Privacy Protection in Large Language Models"
+    ],
+    "enterprise-privacy-protection": [
+      "Adaptive Backtracking for Privacy Protection in Large Language Models"
+    ],
+    "backtracking-decoding": [
+      "Adaptive Backtracking for Privacy Protection in Large Language Models"
+    ],
+    "hidden-state-inference": [
+      "Adaptive Backtracking for Privacy Protection in Large Language Models"
+    ],
+    "LLM-privacy-leakage": [
+      "Adaptive Backtracking for Privacy Protection in Large Language Models"
+    ],
+    "neural-machine-translation": [
+      "Adaptive Multi-pass Decoder for Neural Machine Translation"
+    ],
+    "multi-pass-decoding": [
+      "Adaptive Multi-pass Decoder for Neural Machine Translation"
+    ],
+    "reinforcement-learning": [
+      "Adaptive Multi-pass Decoder for Neural Machine Translation"
+    ],
+    "adaptive-decoding": [
+      "Adaptive Multi-pass Decoder for Neural Machine Translation"
+    ],
+    "polishing-mechanism": [
+      "Adaptive Multi-pass Decoder for Neural Machine Translation"
+    ],
+    "LLM归因": [
+      "Advancing Large Language Model Attribution through Self-Improving__oa_W4404783000"
+    ],
+    "自改进": [
+      "Advancing Large Language Model Attribution through Self-Improving__oa_W4404783000"
+    ],
+    "引用生成": [
+      "Advancing Large Language Model Attribution through Self-Improving__oa_W4404783000"
+    ],
+    "偏好优化": [
+      "Advancing Large Language Model Attribution through Self-Improving__oa_W4404783000"
+    ],
+    "合成数据": [
+      "Advancing Large Language Model Attribution through Self-Improving__oa_W4404783000"
+    ],
+    "LLM-based machine translation": [
+      "Aligning Translation-Specific Understanding to General Understanding in Large Language Models__oa_W4404782829"
+    ],
+    "translation-specific understanding misalignment": [
+      "Aligning Translation-Specific Understanding to General Understanding in Large Language Models__oa_W4404782829"
+    ],
+    "difficult word detection": [
+      "Aligning Translation-Specific Understanding to General Understanding in Large Language Models__oa_W4404782829"
+    ],
+    "cross-lingual interpretation": [
+      "Aligning Translation-Specific Understanding to General Understanding in Large Language Models__oa_W4404782829"
+    ],
+    "translation quality estimation": [
+      "Aligning Translation-Specific Understanding to General Understanding in Large Language Models__oa_W4404782829"
+    ],
+    "generalization failure": [
+      "Aligning Translation-Specific Understanding to General Understanding in Large Language Models__oa_W4404782829"
+    ],
+    "LLM-hallucination-mitigation": [
+      "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    ],
+    "knowledge-misalignment-SFT": [
+      "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    ],
+    "abstention-learning": [
+      "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    ],
+    "uncertainty-calibration": [
+      "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    ],
+    "selective-rejection-token": [
+      "Alleviating Hallucinations from Knowledge Misalignment in Large Language Models via Selective Abstention Learning"
+    ],
+    "information-bottleneck": [
+      "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation__oa_W4402667082"
+    ],
+    "RAG-noise-filtering": [
+      "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation__oa_W4402667082"
+    ],
+    "mutual-information-objective": [
+      "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation__oa_W4402667082"
+    ],
+    "compression-rate-optimization": [
+      "An Information Bottleneck Perspective for Effective Noise Filtering on Retrieval-Augmented Generation__oa_W4402667082"
+    ],
+    "cross-lingual annotation projection": [
+      "Bitext Name Tagging for Cross-lingual Entity Annotation Projection"
+    ],
+    "bitext NER": [
+      "Bitext Name Tagging for Cross-lingual Entity Annotation Projection"
+    ],
+    "low-resource language processing": [
+      "Bitext Name Tagging for Cross-lingual Entity Annotation Projection"
+    ],
+    "LSTM-CRF sequence labeling": [
+      "Bitext Name Tagging for Cross-lingual Entity Annotation Projection"
+    ],
+    "weakly-supervised learning": [
+      "Bitext Name Tagging for Cross-lingual Entity Annotation Projection"
+    ],
+    "LVLM-hallucination-mitigation": [
+      "CAI_ Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models"
+    ],
+    "attention-head-analysis": [
+      "CAI_ Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models"
+    ],
+    "training-free-intervention": [
+      "CAI_ Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models"
+    ],
+    "caption-query-utilization": [
+      "CAI_ Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models"
+    ],
+    "visual-perception-enhancement": [
+      "CAI_ Caption-Sensitive Attention Intervention for Mitigating Object Hallucination in Large Vision-Language Models"
+    ],
+    "latent-cross-lingual-connection": [
+      "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    ],
+    "multilingual-SFT": [
+      "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    ],
+    "feed-forward-activation-transfer": [
+      "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    ],
+    "adaptive-layer-selection": [
+      "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    ],
+    "cross-lingual-LLM-tuning": [
+      "CC-Tuning_ A Cross-Lingual Connection Mechanism for Improving Joint Multilingual Supervised Fine-Tuning__oa_W4412944828"
+    ],
+    "multilingual-factuality-benchmark": [
+      "CCFQA_ A Benchmark for Cross-Lingual and Cross-Modal Speech and Text Factuality Evaluation"
+    ],
+    "cross-modal-speech-text": [
+      "CCFQA_ A Benchmark for Cross-Lingual and Cross-Modal Speech and Text Factuality Evaluation"
+    ],
+    "hallucination-evaluation": [
+      "CCFQA_ A Benchmark for Cross-Lingual and Cross-Modal Speech and Text Factuality Evaluation"
+    ],
+    "spoken-question-answering": [
+      "CCFQA_ A Benchmark for Cross-Lingual and Cross-Modal Speech and Text Factuality Evaluation"
+    ],
+    "multilingual-LVLM-hallucination": [
+      "CLAIM_ Mitigating Multilingual Object Hallucination in Large Vision-Language Models with Cross-Lingual Attention Intervention"
+    ],
+    "cross-lingual-attention-intervention": [
+      "CLAIM_ Mitigating Multilingual Object Hallucination in Large Vision-Language Models with Cross-Lingual Attention Intervention"
+    ],
+    "inference-time-alignment": [
+      "CLAIM_ Mitigating Multilingual Object Hallucination in Large Vision-Language Models with Cross-Lingual Attention Intervention"
+    ],
+    "vision-language-grounding": [
+      "CLAIM_ Mitigating Multilingual Object Hallucination in Large Vision-Language Models with Cross-Lingual Attention Intervention"
+    ],
+    "probe-based-neuron-identification": [
+      "CLAIM_ Mitigating Multilingual Object Hallucination in Large Vision-Language Models with Cross-Lingual Attention Intervention"
+    ],
+    "multi-modal chain-of-thought": [
+      "CoMT_ A Novel Benchmark for Chain of Multi-modal Thought on Large Vision-Language Models"
+    ],
+    "LVLM benchmark": [
+      "CoMT_ A Novel Benchmark for Chain of Multi-modal Thought on Large Vision-Language Models"
+    ],
+    "visual reasoning evaluation": [
+      "CoMT_ A Novel Benchmark for Chain of Multi-modal Thought on Large Vision-Language Models"
+    ],
+    "multi-modal generation": [
+      "CoMT_ A Novel Benchmark for Chain of Multi-modal Thought on Large Vision-Language Models"
+    ],
+    "reasoning with image generation": [
+      "CoMT_ A Novel Benchmark for Chain of Multi-modal Thought on Large Vision-Language Models"
+    ],
+    "code-representation-pretraining": [
+      "CodeBERT_ A Pre-Trained Model for Programming and Natural Languages__oa_W3098605233"
+    ],
+    "nl-pl-crossmodal-learning": [
+      "CodeBERT_ A Pre-Trained Model for Programming and Natural Languages__oa_W3098605233"
+    ],
+    "replaced-token-detection": [
+      "CodeBERT_ A Pre-Trained Model for Programming and Natural Languages__oa_W3098605233"
+    ],
+    "code-search": [
+      "CodeBERT_ A Pre-Trained Model for Programming and Natural Languages__oa_W3098605233"
+    ],
+    "code-documentation-generation": [
+      "CodeBERT_ A Pre-Trained Model for Programming and Natural Languages__oa_W3098605233"
+    ],
+    "hierarchical-taxonomy-generation": [
+      "Context-Aware Hierarchical Taxonomy Generation for Scientific Papers via LLM-Guided Multi-Aspect Clustering__oa_W4416036362"
+    ],
+    "LLM-document-clustering": [
+      "Context-Aware Hierarchical Taxonomy Generation for Scientific Papers via LLM-Guided Multi-Aspect Clustering__oa_W4416036362"
+    ],
+    "multi-aspect-encoding": [
+      "Context-Aware Hierarchical Taxonomy Generation for Scientific Papers via LLM-Guided Multi-Aspect Clustering__oa_W4416036362"
+    ],
+    "scientific-literature-organization": [
+      "Context-Aware Hierarchical Taxonomy Generation for Scientific Papers via LLM-Guided Multi-Aspect Clustering__oa_W4416036362"
+    ],
+    "context-aware-clustering": [
+      "Context-Aware Hierarchical Taxonomy Generation for Scientific Papers via LLM-Guided Multi-Aspect Clustering__oa_W4416036362"
+    ],
+    "normalizing-flow": [
+      "Controllable Text Generation via Probability Density Estimation in the Latent Space__oa_W4385572481"
+    ],
+    "latent-space-control": [
+      "Controllable Text Generation via Probability Density Estimation in the Latent Space__oa_W4385572481"
+    ],
+    "probability-density-estimation": [
+      "Controllable Text Generation via Probability Density Estimation in the Latent Space__oa_W4385572481"
+    ],
+    "interpolation-control": [
+      "Controllable Text Generation via Probability Density Estimation in the Latent Space__oa_W4385572481"
+    ],
+    "跨语言多模态理解": [
+      "Cross-Lingual Text-Rich Visual Comprehension_ An Information Theory Perspective"
+    ],
+    "LVLM基准测试": [
+      "Cross-Lingual Text-Rich Visual Comprehension_ An Information Theory Perspective"
+    ],
+    "信息论视角": [
+      "Cross-Lingual Text-Rich Visual Comprehension_ An Information Theory Perspective"
+    ],
+    "视觉-语言对齐": [
+      "Cross-Lingual Text-Rich Visual Comprehension_ An Information Theory Perspective"
+    ],
+    "互信息蒸馏": [
+      "Cross-Lingual Text-Rich Visual Comprehension_ An Information Theory Perspective"
+    ],
+    "meeting-summarization": [
+      "Dialogue Discourse-Aware Graph Convolutional Networks for Abstractive Meeting Summarization"
+    ],
+    "dialogue-discourse-parsing": [
+      "Dialogue Discourse-Aware Graph Convolutional Networks for Abstractive Meeting Summarization"
+    ],
+    "graph-convolutional-network": [
+      "Dialogue Discourse-Aware Graph Convolutional Networks for Abstractive Meeting Summarization"
+    ],
+    "data-augmentation": [
+      "Dialogue Discourse-Aware Graph Convolutional Networks for Abstractive Meeting Summarization"
+    ],
+    "meeting summarization": [
+      "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    ],
+    "dialogue discourse parsing": [
+      "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    ],
+    "relational graph convolutional network": [
+      "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    ],
+    "data augmentation for summarization": [
+      "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    ],
+    "pseudo-labels from discourse": [
+      "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856"
+    ],
+    "离散扩散模型": [
+      "Discrete Modeling via Boundary Conditional Diffusion Processes"
+    ],
+    "边界条件生成": [
+      "Discrete Modeling via Boundary Conditional Diffusion Processes"
+    ],
+    "语言建模diffusion": [
+      "Discrete Modeling via Boundary Conditional Diffusion Processes"
+    ],
+    "概率轮廓对齐": [
+      "Discrete Modeling via Boundary Conditional Diffusion Processes"
+    ],
+    "离散图像生成": [
+      "Discrete Modeling via Boundary Conditional Diffusion Processes"
+    ],
+    "distant-supervision-relation-extraction": [
+      "Effective Deep Memory Networks for Distant Supervised Relation Extraction"
+    ],
+    "attention-memory-networks": [
+      "Effective Deep Memory Networks for Distant Supervised Relation Extraction"
+    ],
+    "multi-instance-multi-label": [
+      "Effective Deep Memory Networks for Distant Supervised Relation Extraction"
+    ],
+    "entity-pair-representation": [
+      "Effective Deep Memory Networks for Distant Supervised Relation Extraction"
+    ],
+    "knowledge-base-population": [
+      "Effective Deep Memory Networks for Distant Supervised Relation Extraction"
+    ],
+    "LSTM-variant": [
+      "Effective LSTMs for Target-Dependent Sentiment Classification__oa_W2529550020"
+    ],
+    "Twitter-sentiment-classification": [
+      "Effective LSTMs for Target-Dependent Sentiment Classification__oa_W2529550020"
+    ],
+    "neural-network-architectural-design": [
+      "Effective LSTMs for Target-Dependent Sentiment Classification__oa_W2529550020"
+    ],
+    "非自回归图像生成": [
+      "Emage_ Non-Autoregressive Text-to-Image Generation"
+    ],
+    "迭代mask预测": [
+      "Emage_ Non-Autoregressive Text-to-Image Generation"
+    ],
+    "文本到图像并行解码": [
+      "Emage_ Non-Autoregressive Text-to-Image Generation"
+    ],
+    "VQVAE图像分词器": [
+      "Emage_ Non-Autoregressive Text-to-Image Generation"
+    ],
+    "unsupervised-NMT": [
+      "Enabling Unsupervised Neural Machine Translation with Word-level Visual Representations"
+    ],
+    "word-level-visual-representation": [
+      "Enabling Unsupervised Neural Machine Translation with Word-level Visual Representations"
+    ],
+    "lexical-confusion-remedy": [
+      "Enabling Unsupervised Neural Machine Translation with Word-level Visual Representations"
+    ],
+    "multimodal-translation": [
+      "Enabling Unsupervised Neural Machine Translation with Word-level Visual Representations"
+    ],
+    "image-text-embedding": [
+      "Enabling Unsupervised Neural Machine Translation with Word-level Visual Representations"
+    ],
+    "knowledge-base-translation": [
+      "English-Chinese Knowledge Base Translation with Neural Network"
+    ],
+    "cross-lingual-KB-enrichment": [
+      "English-Chinese Knowledge Base Translation with Neural Network"
+    ],
+    "neural-tensor-network": [
+      "English-Chinese Knowledge Base Translation with Neural Network"
+    ],
+    "adaptive-gating-mechanism": [
+      "English-Chinese Knowledge Base Translation with Neural Network"
+    ],
+    "triple-representation-learning": [
+      "English-Chinese Knowledge Base Translation with Neural Network"
+    ],
+    "table-to-text-generation": [
+      "Enhancing Content Planning for Table-to-Text Generation with Data Understanding and Verification"
+    ],
+    "content-planning": [
+      "Enhancing Content Planning for Table-to-Text Generation with Data Understanding and Verification"
+    ],
+    "numerical-value-representation": [
+      "Enhancing Content Planning for Table-to-Text Generation with Data Understanding and Verification"
+    ],
+    "policy-gradient-verification": [
+      "Enhancing Content Planning for Table-to-Text Generation with Data Understanding and Verification"
+    ],
+    "neural-content-planning": [
+      "Enhancing Content Planning for Table-to-Text Generation with Data Understanding and Verification"
+    ],
+    "knowledge-base-enhanced NLG": [
+      "Enhancing Neural Data-To-Text Generation Models with External Background Knowledge"
+    ],
+    "data-to-text generation": [
+      "Enhancing Neural Data-To-Text Generation Models with External Background Knowledge"
+    ],
+    "Wikipedia infobox-to-text": [
+      "Enhancing Neural Data-To-Text Generation Models with External Background Knowledge"
+    ],
+    "dual-attention mechanism": [
+      "Enhancing Neural Data-To-Text Generation Models with External Background Knowledge"
+    ],
+    "few-shot inference learning": [
+      "Enhancing Neural Data-To-Text Generation Models with External Background Knowledge"
+    ],
+    "LLM-ensemble": [
+      "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration"
+    ],
+    "probability-distribution-fusion": [
+      "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration"
+    ],
+    "relative-representation": [
+      "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration"
+    ],
+    "vocabulary-discrepancy": [
+      "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration"
+    ],
+    "heterogeneous-models": [
+      "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration"
+    ],
+    "in-image-translation": [
+      "Ensuring Consistency for In-Image Translation"
+    ],
+    "multimodal-machine-translation": [
+      "Ensuring Consistency for In-Image Translation"
+    ],
+    "diffusion-model-style-consistency": [
+      "Ensuring Consistency for In-Image Translation"
+    ],
+    "text-image-generation": [
+      "Ensuring Consistency for In-Image Translation"
+    ],
+    "chain-of-thought-learning": [
+      "Ensuring Consistency for In-Image Translation"
+    ],
+    "cross-lingual-latent-transplantation": [
+      "Exploring Cross-lingual Latent Transplantation_ Mutual Opportunities and Open Challenges"
+    ],
+    "LLM-multilingual-probing": [
+      "Exploring Cross-lingual Latent Transplantation_ Mutual Opportunities and Open Challenges"
+    ],
+    "activation-intervention": [
+      "Exploring Cross-lingual Latent Transplantation_ Mutual Opportunities and Open Challenges"
+    ],
+    "cultural-adaptability": [
+      "Exploring Cross-lingual Latent Transplantation_ Mutual Opportunities and Open Challenges"
+    ],
+    "RoPE上下文扩展": [
+      "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    ],
+    "旋转角分布": [
+      "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    ],
+    "位置嵌入理论": [
+      "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    ],
+    "长度外推": [
+      "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    ],
+    "LLM长文本建模": [
+      "Extending Context Window of Large Language Models from a Distributional Perspective__oa_W4404783110"
+    ],
+    "model-merging": [
+      "FroM_ Frobenius Norm-Based Data-Free Adaptive Model Merging__oa_W4416035165"
+    ],
+    "parameter-efficient-fine-tuning": [
+      "FroM_ Frobenius Norm-Based Data-Free Adaptive Model Merging__oa_W4416035165"
+    ],
+    "task-interference": [
+      "FroM_ Frobenius Norm-Based Data-Free Adaptive Model Merging__oa_W4416035165"
+    ],
+    "frozen-norm-weighting": [
+      "FroM_ Frobenius Norm-Based Data-Free Adaptive Model Merging__oa_W4416035165"
+    ],
+    "lora-integration": [
+      "FroM_ Frobenius Norm-Based Data-Free Adaptive Model Merging__oa_W4416035165"
+    ],
+    "AI-research-workflow-integration": [
+      "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    ],
+    "systematic-survey-taxonomy": [
+      "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    ],
+    "LLM-research-automation": [
+      "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    ],
+    "hypothesis-generation-iteration": [
+      "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    ],
+    "peer-review-simulation": [
+      "From Hypothesis to Publication_ A Comprehensive Survey of AI-Driven Research Support Systems__oa_W4416034580"
+    ],
+    "multilingual-summarization": [
+      "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986"
+    ],
+    "cross-lingual-NLP": [
+      "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986"
+    ],
+    "conflict-resolution": [
+      "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986"
+    ],
+    "protocol-guided-prompting": [
+      "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986"
+    ],
+    "event-centric-Retrieval": [
+      "GlobeSumm_ A Challenging Benchmark Towards Unifying Multi-lingual, Cross-lingual and Multi-document News Summarization__oa_W4404792986"
+    ],
+    "hierarchical-catalogue-generation": [
+      "Hierarchical Catalogue Generation for Literature Review_ A Benchmark__oa_W4389519022"
+    ],
+    "literature-review-summarization": [
+      "Hierarchical Catalogue Generation for Literature Review_ A Benchmark__oa_W4389519022"
+    ],
+    "multi-document-summarization": [
+      "Hierarchical Catalogue Generation for Literature Review_ A Benchmark__oa_W4389519022"
+    ],
+    "scientific-document-structure": [
+      "Hierarchical Catalogue Generation for Literature Review_ A Benchmark__oa_W4389519022"
+    ],
+    "text-structure-generation": [
+      "Hierarchical Catalogue Generation for Literature Review_ A Benchmark__oa_W4389519022"
+    ],
+    "few-shot-clustering": [
+      "IOCC_ Aligning Semantic and Cluster Centers for Few-shot Short Text Clustering"
+    ],
+    "optimal-transport-pseudolabels": [
+      "IOCC_ Aligning Semantic and Cluster Centers for Few-shot Short Text Clustering"
+    ],
+    "contrastive-learning": [
+      "IOCC_ Aligning Semantic and Cluster Centers for Few-shot Short Text Clustering"
+    ],
+    "short-text-clustering": [
+      "IOCC_ Aligning Semantic and Cluster Centers for Few-shot Short Text Clustering"
+    ],
+    "semantic-center-alignment": [
+      "IOCC_ Aligning Semantic and Cluster Centers for Few-shot Short Text Clustering"
+    ],
+    "visual-story-generation": [
+      "Improved Visual Story Generation with Adaptive Context Modeling__oa_W4385570729"
+    ],
+    "adaptive-context-modeling": [
+      "Improved Visual Story Generation with Adaptive Context Modeling__oa_W4385570729"
+    ],
+    "diffusion-model": [
+      "Improved Visual Story Generation with Adaptive Context Modeling__oa_W4385570729"
+    ],
+    "semantic-consistency": [
+      "Improved Visual Story Generation with Adaptive Context Modeling__oa_W4385570729"
+    ],
+    "cross-attention": [
+      "Improved Visual Story Generation with Adaptive Context Modeling__oa_W4385570729"
+    ],
+    "retrieval-augmented-LLM": [
+      "Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization__oa_W4412945085"
+    ],
+    "long-form-QA": [
+      "Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization__oa_W4412945085"
+    ],
+    "retrieval-heads": [
+      "Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization__oa_W4412945085"
+    ],
+    "contrastive-decoding": [
+      "Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization__oa_W4412945085"
+    ],
+    "weighted-decoding": [
+      "Improving Controllable Text Generation with Position-Aware Weighted Decoding"
+    ],
+    "position-aware-control": [
+      "Improving Controllable Text Generation with Position-Aware Weighted Decoding"
+    ],
+    "trade-off-evaluation": [
+      "Improving Controllable Text Generation with Position-Aware Weighted Decoding"
+    ],
+    "language-model-refinement": [
+      "Improving Controllable Text Generation with Position-Aware Weighted Decoding"
+    ],
+    "cross-lingual NER": [
+      "Improving Low Resource Named Entity Recognition using Cross-lingual Knowledge Transfer"
+    ],
+    "low-resource NER": [
+      "Improving Low Resource Named Entity Recognition using Cross-lingual Knowledge Transfer"
+    ],
+    "bilingual lexicon": [
+      "Improving Low Resource Named Entity Recognition using Cross-lingual Knowledge Transfer"
+    ],
+    "entity type distribution": [
+      "Improving Low Resource Named Entity Recognition using Cross-lingual Knowledge Transfer"
+    ],
+    "LSTM-CRF": [
+      "Improving Low Resource Named Entity Recognition using Cross-lingual Knowledge Transfer"
+    ],
+    "commonsense-knowledge-dialogue": [
+      "Incorporating Commonsense Knowledge into Abstractive Dialogue Summarization via Heterogeneous Graph Networks"
+    ],
+    "heterogeneous-graph-network": [
+      "Incorporating Commonsense Knowledge into Abstractive Dialogue Summarization via Heterogeneous Graph Networks"
+    ],
+    "abstractive-dialogue-summarization": [
+      "Incorporating Commonsense Knowledge into Abstractive Dialogue Summarization via Heterogeneous Graph Networks"
+    ],
+    "conceptnet-knowledge-integration": [
+      "Incorporating Commonsense Knowledge into Abstractive Dialogue Summarization via Heterogeneous Graph Networks"
+    ],
+    "zero-shot-domain-adaptation": [
+      "Incorporating Commonsense Knowledge into Abstractive Dialogue Summarization via Heterogeneous Graph Networks"
+    ],
+    "multimodal-hallucination-snowballing": [
+      "Investigating and Mitigating the Multimodal Hallucination Snowballing in Large Vision-Language Models__oa_W4402671574"
+    ],
+    "vision-language-model-decoding": [
+      "Investigating and Mitigating the Multimodal Hallucination Snowballing in Large Vision-Language Models__oa_W4402671574"
+    ],
+    "residual-visual-prediction": [
+      "Investigating and Mitigating the Multimodal Hallucination Snowballing in Large Vision-Language Models__oa_W4402671574"
+    ],
+    "adaptive-distribution-blending": [
+      "Investigating and Mitigating the Multimodal Hallucination Snowballing in Large Vision-Language Models__oa_W4402671574"
+    ],
+    "hallucination-evaluation-framework": [
+      "Investigating and Mitigating the Multimodal Hallucination Snowballing in Large Vision-Language Models__oa_W4402671574"
+    ],
+    "knowledge-based MRC": [
+      "Knowledge Based Machine Reading Comprehension"
+    ],
+    "open KB integration": [
+      "Knowledge Based Machine Reading Comprehension"
+    ],
+    "triplet reasoning": [
+      "Knowledge Based Machine Reading Comprehension"
+    ],
+    "multi-hop QA": [
+      "Knowledge Based Machine Reading Comprehension"
+    ],
+    "neural-symbolic integration": [
+      "Knowledge Based Machine Reading Comprehension"
+    ],
+    "conversational-semantic-parsing": [
+      "Knowledge-Aware Conversational Semantic Parsing Over Web Tables"
+    ],
+    "table-question-answering": [
+      "Knowledge-Aware Conversational Semantic Parsing Over Web Tables"
+    ],
+    "knowledge-aware-neural-models": [
+      "Knowledge-Aware Conversational Semantic Parsing Over Web Tables"
+    ],
+    "logical-form-generation": [
+      "Knowledge-Aware Conversational Semantic Parsing Over Web Tables"
+    ],
+    "multi-turn-dialogue": [
+      "Knowledge-Aware Conversational Semantic Parsing Over Web Tables"
+    ],
+    "multilingual-instruction-tuning": [
+      "LangGPS_ Language Separability Guided Data Pre-Selection for Joint Multilingual Instruction Tuning"
+    ],
+    "language-separability": [
+      "LangGPS_ Language Separability Guided Data Pre-Selection for Joint Multilingual Instruction Tuning"
+    ],
+    "data-pre-selection": [
+      "LangGPS_ Language Separability Guided Data Pre-Selection for Joint Multilingual Instruction Tuning"
+    ],
+    "silhouette-score": [
+      "LangGPS_ Language Separability Guided Data Pre-Selection for Joint Multilingual Instruction Tuning"
+    ],
+    "cross-lingual-alignment": [
+      "LangGPS_ Language Separability Guided Data Pre-Selection for Joint Multilingual Instruction Tuning"
+    ],
+    "pretrained-language-model-as-annotator": [
+      "Language Model as an Annotator_ Exploring DialoGPT for Dialogue Summarization__oa_W3176770275"
+    ],
+    "unsupervised-feature-annotation": [
+      "Language Model as an Annotator_ Exploring DialoGPT for Dialogue Summarization__oa_W3176770275"
+    ],
+    "keyword-extraction": [
+      "Language Model as an Annotator_ Exploring DialoGPT for Dialogue Summarization__oa_W3176770275"
+    ],
+    "topic-segmentation": [
+      "Language Model as an Annotator_ Exploring DialoGPT for Dialogue Summarization__oa_W3176770275"
+    ],
+    "multilingual-LVLM": [
+      "Language-Specific Layer Matters_ Efficient Multilingual Enhancement for Large Vision-Language Models"
+    ],
+    "language-specific-neuron": [
+      "Language-Specific Layer Matters_ Efficient Multilingual Enhancement for Large Vision-Language Models"
+    ],
+    "shallow-layer-fine-tuning": [
+      "Language-Specific Layer Matters_ Efficient Multilingual Enhancement for Large Vision-Language Models"
+    ],
+    "vision-language-alignment": [
+      "Language-Specific Layer Matters_ Efficient Multilingual Enhancement for Large Vision-Language Models"
+    ],
+    "attributed-LLM": [
+      "Learning Fine-Grained Grounded Citations for Attributed Large Language Models__oa_W4402670531"
+    ],
+    "fine-grained-citation": [
+      "Learning Fine-Grained Grounded Citations for Attributed Large Language Models__oa_W4402670531"
+    ],
+    "grounded-generation": [
+      "Learning Fine-Grained Grounded Citations for Attributed Large Language Models__oa_W4402670531"
+    ],
+    "citation-quality": [
+      "Learning Fine-Grained Grounded Citations for Attributed Large Language Models__oa_W4402670531"
+    ],
+    "non-autoregressive-NMT": [
+      "Learning to Rewrite for Non-Autoregressive Neural Machine Translation"
+    ],
+    "iterative-refinement": [
+      "Learning to Rewrite for Non-Autoregressive Neural Machine Translation"
+    ],
+    "error-detection": [
+      "Learning to Rewrite for Non-Autoregressive Neural Machine Translation"
+    ],
+    "dynamic-halting": [
+      "Learning to Rewrite for Non-Autoregressive Neural Machine Translation"
+    ],
+    "mask-predict": [
+      "Learning to Rewrite for Non-Autoregressive Neural Machine Translation"
+    ],
+    "document-level-style-transfer": [
+      "Learning to Select Bi-Aspect Information for Document-Scale Text Content Manipulation"
+    ],
+    "bi-aspect-attention": [
+      "Learning to Select Bi-Aspect Information for Document-Scale Text Content Manipulation"
+    ],
+    "data-to-text-generation": [
+      "Learning to Select Bi-Aspect Information for Document-Scale Text Content Manipulation"
+    ],
+    "unsupervised-text-manipulation": [
+      "Learning to Select Bi-Aspect Information for Document-Scale Text Content Manipulation"
+    ],
+    "content-selection": [
+      "Learning to Select Bi-Aspect Information for Document-Scale Text Content Manipulation"
+    ],
+    "black-box LLM length control": [
+      "Length Controlled Generation for Black-box LLMs__oa_W4412945110"
+    ],
+    "Metropolis-Hastings sampling": [
+      "Length Controlled Generation for Black-box LLMs__oa_W4412945110"
+    ],
+    "importance sampling acceleration": [
+      "Length Controlled Generation for Black-box LLMs__oa_W4412945110"
+    ],
+    "MCMC text generation": [
+      "Length Controlled Generation for Black-box LLMs__oa_W4412945110"
+    ],
+    "instruction following": [
+      "Length Controlled Generation for Black-box LLMs__oa_W4412945110"
+    ],
+    "transformer-length-extrapolation": [
+      "Length Extrapolation of Transformers_ A Survey from the Perspective of Positional Encoding"
+    ],
+    "positional-encoding": [
+      "Length Extrapolation of Transformers_ A Survey from the Perspective of Positional Encoding"
+    ],
+    "rotary-position-embedding": [
+      "Length Extrapolation of Transformers_ A Survey from the Perspective of Positional Encoding"
+    ],
+    "llm-long-context": [
+      "Length Extrapolation of Transformers_ A Survey from the Perspective of Positional Encoding"
+    ],
+    "position-interpolation": [
+      "Length Extrapolation of Transformers_ A Survey from the Perspective of Positional Encoding"
+    ],
+    "GUI agent benchmark": [
+      "MPR-GUI_ Benchmarking and Enhancing Multilingual Perception and Reasoning in GUI Agents"
+    ],
+    "multilingual perception-reasoning": [
+      "MPR-GUI_ Benchmarking and Enhancing Multilingual Perception and Reasoning in GUI Agents"
+    ],
+    "cross-lingual representation alignment": [
+      "MPR-GUI_ Benchmarking and Enhancing Multilingual Perception and Reasoning in GUI Agents"
+    ],
+    "training-free intervention": [
+      "MPR-GUI_ Benchmarking and Enhancing Multilingual Perception and Reasoning in GUI Agents"
+    ],
+    "LVLM evaluation": [
+      "MPR-GUI_ Benchmarking and Enhancing Multilingual Perception and Reasoning in GUI Agents"
+    ],
+    "multi-lingual-dialogue-summarization": [
+      "MSAMSum_ Towards Benchmarking Multi-lingual Dialogue Summarization"
+    ],
+    "translation-based-dataset-construction": [
+      "MSAMSum_ Towards Benchmarking Multi-lingual Dialogue Summarization"
+    ],
+    "zero-shot-cross-lingual": [
+      "MSAMSum_ Towards Benchmarking Multi-lingual Dialogue Summarization"
+    ],
+    "mBART-finetuning": [
+      "MSAMSum_ Towards Benchmarking Multi-lingual Dialogue Summarization"
+    ],
+    "round-trip-quality-control": [
+      "MSAMSum_ Towards Benchmarking Multi-lingual Dialogue Summarization"
+    ],
+    "low-resource-semantic-parsing": [
+      "Neural Semantic Parsing in Low-Resource Settings with Back-Translation and Meta-Learning"
+    ],
+    "back-translation": [
+      "Neural Semantic Parsing in Low-Resource Settings with Back-Translation and Meta-Learning"
+    ],
+    "model-agnostic-meta-learning": [
+      "Neural Semantic Parsing in Low-Resource Settings with Back-Translation and Meta-Learning"
+    ],
+    "neural-semantic-parser": [
+      "Neural Semantic Parsing in Low-Resource Settings with Back-Translation and Meta-Learning"
+    ],
+    "rule-based-initialization": [
+      "Neural Semantic Parsing in Low-Resource Settings with Back-Translation and Meta-Learning"
+    ],
+    "multi-model-ensemble": [
+      "One for All_ Update Parameterized Knowledge Across Multiple Models"
+    ],
+    "LLM-knowledge-update": [
+      "One for All_ Update Parameterized Knowledge Across Multiple Models"
+    ],
+    "heterogeneous-model-fusion": [
+      "One for All_ Update Parameterized Knowledge Across Multiple Models"
+    ],
+    "dynamic-weight-mechanism": [
+      "One for All_ Update Parameterized Knowledge Across Multiple Models"
+    ],
+    "model-ensemble": [
+      "One for All_ Update Parameterized Knowledge Across Multiple Models with Once Edit"
+    ],
+    "multi-model-editing": [
+      "One for All_ Update Parameterized Knowledge Across Multiple Models with Once Edit"
+    ],
+    "LLM-updating": [
+      "One for All_ Update Parameterized Knowledge Across Multiple Models with Once Edit"
+    ],
+    "heterogeneous-fusion": [
+      "One for All_ Update Parameterized Knowledge Across Multiple Models with Once Edit"
+    ],
+    "word-level-tokenization": [
+      "Pretraining without Wordpieces_ Learning Over a Vocabulary of Millions of Words"
+    ],
+    "BERT-pretraining": [
+      "Pretraining without Wordpieces_ Learning Over a Vocabulary of Millions of Words"
+    ],
+    "vocabulary-size": [
+      "Pretraining without Wordpieces_ Learning Over a Vocabulary of Millions of Words"
+    ],
+    "low-frequency-word-representation": [
+      "Pretraining without Wordpieces_ Learning Over a Vocabulary of Millions of Words"
+    ],
+    "subword-vs-word": [
+      "Pretraining without Wordpieces_ Learning Over a Vocabulary of Millions of Words"
+    ],
+    "attention-head-probing": [
+      "Probing and Boosting Large Language Models Capabilities via Attention Heads"
+    ],
+    "capability-localization": [
+      "Probing and Boosting Large Language Models Capabilities via Attention Heads"
+    ],
+    "targeted-instruction-tuning": [
+      "Probing and Boosting Large Language Models Capabilities via Attention Heads"
+    ],
+    "LLM-interpretability": [
+      "Probing and Boosting Large Language Models Capabilities via Attention Heads"
+    ],
+    "data-selection-via-representations": [
+      "Probing and Boosting Large Language Models Capabilities via Attention Heads"
+    ],
+    "LLM-concatenation": [
+      "Relay Decoding_ Concatenating Large Language Models for Machine Translation"
+    ],
+    "machine-translation": [
+      "Relay Decoding_ Concatenating Large Language Models for Machine Translation"
+    ],
+    "cross-lingual-mapping": [
+      "Relay Decoding_ Concatenating Large Language Models for Machine Translation"
+    ],
+    "resource-efficient-MT": [
+      "Relay Decoding_ Concatenating Large Language Models for Machine Translation"
+    ],
+    "relay-decoding": [
+      "Relay Decoding_ Concatenating Large Language Models for Machine Translation"
+    ],
+    "retrieval-augmented generation": [
+      "Retrieval-Generation Synergy Augmented Large Language Models"
+    ],
+    "query expansion": [
+      "Retrieval-Generation Synergy Augmented Large Language Models"
+    ],
+    "iterative reasoning": [
+      "Retrieval-Generation Synergy Augmented Large Language Models"
+    ],
+    "knowledge-intensive QA": [
+      "Retrieval-Generation Synergy Augmented Large Language Models"
+    ],
+    "multi-hop reasoning": [
+      "Retrieval-Generation Synergy Augmented Large Language Models"
+    ],
+    "LLM-translation": [
+      "SCIR-MTΓÇÖs Submission for WMT24 General Machine Translation Task"
+    ],
+    "COMET-MBR-decoding": [
+      "SCIR-MTΓÇÖs Submission for WMT24 General Machine Translation Task"
+    ],
+    "data-filtering-pipeline": [
+      "SCIR-MTΓÇÖs Submission for WMT24 General Machine Translation Task"
+    ],
+    "English-Czech": [
+      "SCIR-MTΓÇÖs Submission for WMT24 General Machine Translation Task"
+    ],
+    "continual-pretraining": [
+      "SCIR-MTΓÇÖs Submission for WMT24 General Machine Translation Task"
+    ],
+    "layer-selection-finetuning": [
+      "SLAM_ Towards Efficient Multilingual Reasoning via Selective Language Alignment"
+    ],
+    "LLM-multilingualism": [
+      "SLAM_ Towards Efficient Multilingual Reasoning via Selective Language Alignment"
+    ],
+    "FFN-knowledge-injection": [
+      "SLAM_ Towards Efficient Multilingual Reasoning via Selective Language Alignment"
+    ],
+    "video-language-pretraining": [
+      "STOA-VLP_ Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training"
+    ],
+    "object-trajectory-tracking": [
+      "STOA-VLP_ Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training"
+    ],
+    "multi-action-recognition": [
+      "STOA-VLP_ Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training"
+    ],
+    "fine-grained-crossmodal-alignment": [
+      "STOA-VLP_ Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training"
+    ],
+    "spatial-temporal-modeling": [
+      "STOA-VLP_ Spatial-Temporal Modeling of Object and Action for Video-Language Pre-training"
+    ],
+    "text-to-SQL": [
+      "Semantic Parsing with Syntax- and Table-Aware SQL Generation__oa_W2963207291"
+    ],
+    "pointer-network": [
+      "Semantic Parsing with Syntax- and Table-Aware SQL Generation__oa_W2963207291"
+    ],
+    "table-semantic-parsing": [
+      "Semantic Parsing with Syntax- and Table-Aware SQL Generation__oa_W2963207291"
+    ],
+    "column-cell-relation": [
+      "Semantic Parsing with Syntax- and Table-Aware SQL Generation__oa_W2963207291"
+    ],
+    "syntax-aware-generation": [
+      "Semantic Parsing with Syntax- and Table-Aware SQL Generation__oa_W2963207291"
+    ],
+    "EEG-to-Text generation": [
+      "Semantic-aware Contrastive Learning for Electroencephalography-to-Text Generation with Curriculum Learning"
+    ],
+    "brain-computer interface": [
+      "Semantic-aware Contrastive Learning for Electroencephalography-to-Text Generation with Curriculum Learning"
+    ],
+    "contrastive learning for EEG": [
+      "Semantic-aware Contrastive Learning for Electroencephalography-to-Text Generation with Curriculum Learning"
+    ],
+    "curriculum learning": [
+      "Semantic-aware Contrastive Learning for Electroencephalography-to-Text Generation with Curriculum Learning"
+    ],
+    "subject-invariant representations": [
+      "Semantic-aware Contrastive Learning for Electroencephalography-to-Text Generation with Curriculum Learning"
+    ],
+    "multilingual-MTL": [
+      "SkillNet-X_ A Multilingual Multitask Model with Sparsely Activated Skills"
+    ],
+    "sparse-activation": [
+      "SkillNet-X_ A Multilingual Multitask Model with Sparsely Activated Skills"
+    ],
+    "skill-modules": [
+      "SkillNet-X_ A Multilingual Multitask Model with Sparsely Activated Skills"
+    ],
+    "mixture-of-experts-alternative": [
+      "SkillNet-X_ A Multilingual Multitask Model with Sparsely Activated Skills"
+    ],
+    "table-to-text generation": [
+      "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)__oa_W2971160629"
+    ],
+    "hierarchical encoder": [
+      "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)__oa_W2971160629"
+    ],
+    "neural NLG": [
+      "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)__oa_W2971160629"
+    ],
+    "multi-dimensional table encoding": [
+      "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)__oa_W2971160629"
+    ],
+    "time-series data-to-text": [
+      "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)__oa_W2971160629"
+    ],
+    "content selection": [
+      "Table-to-Text Generation with Effective Hierarchical Encoder on Three Dimensions (Row, Column and Time)__oa_W2971160629"
+    ],
+    "few-shot-table-to-text": [
+      "TableGPT_ Few-shot Table-to-Text Generation with Table Structure Reconstruction and Content Matching"
+    ],
+    "GPT-2-finetuning": [
+      "TableGPT_ Few-shot Table-to-Text Generation with Table Structure Reconstruction and Content Matching"
+    ],
+    "optimal-transport-content-matching": [
+      "TableGPT_ Few-shot Table-to-Text Generation with Table Structure Reconstruction and Content Matching"
+    ],
+    "multi-task-table-structure": [
+      "TableGPT_ Few-shot Table-to-Text Generation with Table Structure Reconstruction and Content Matching"
+    ],
+    "factual-fidelity-generation": [
+      "TableGPT_ Few-shot Table-to-Text Generation with Table Structure Reconstruction and Content Matching"
+    ],
+    "LSTM-neural-composition": [
+      "Target-Dependent Sentiment Classification with Long Short Term Memory"
+    ],
+    "attention-mechanism-limitation": [
+      "Target-Dependent Sentiment Classification with Long Short Term Memory"
+    ],
+    "twitter-sentiment-analysis": [
+      "Target-Dependent Sentiment Classification with Long Short Term Memory"
+    ],
+    "factual-consistency": [
+      "The Factual Inconsistency Problem in Abstractive Text Summarization_ A Survey"
+    ],
+    "abstractive-summarization": [
+      "The Factual Inconsistency Problem in Abstractive Text Summarization_ A Survey"
+    ],
+    "hallucination-detection": [
+      "The Factual Inconsistency Problem in Abstractive Text Summarization_ A Survey"
+    ],
+    "evaluation-metrics": [
+      "The Factual Inconsistency Problem in Abstractive Text Summarization_ A Survey"
+    ],
+    "knowledge-graph": [
+      "The Factual Inconsistency Problem in Abstractive Text Summarization_ A Survey"
+    ],
+    "generative-agent-architecture": [
+      "The Role of Summarization in Generative Agents_ A Preliminary Perspective"
+    ],
+    "summarization-as-unifying-framework": [
+      "The Role of Summarization in Generative Agents_ A Preliminary Perspective"
+    ],
+    "LLM-agent-design": [
+      "The Role of Summarization in Generative Agents_ A Preliminary Perspective"
+    ],
+    "multi-module-formalization": [
+      "The Role of Summarization in Generative Agents_ A Preliminary Perspective"
+    ],
+    "多主题文本生成": [
+      "Topic-to-Essay Generation with Neural Networks"
+    ],
+    "主题覆盖机制": [
+      "Topic-to-Essay Generation with Neural Networks"
+    ],
+    "LSTM解码器": [
+      "Topic-to-Essay Generation with Neural Networks"
+    ],
+    "注意力模型": [
+      "Topic-to-Essay Generation with Neural Networks"
+    ],
+    "中文作文生成": [
+      "Topic-to-Essay Generation with Neural Networks"
+    ],
+    "Pareto-optimization": [
+      "Towards Higher Pareto Frontier in Multilingual Machine Translation__oa_W4385571797"
+    ],
+    "mutual-distillation": [
+      "Towards Higher Pareto Frontier in Multilingual Machine Translation__oa_W4385571797"
+    ],
+    "temperature-sampling": [
+      "Towards Higher Pareto Frontier in Multilingual Machine Translation__oa_W4385571797"
+    ],
+    "low-resource-transfer": [
+      "Towards Higher Pareto Frontier in Multilingual Machine Translation__oa_W4385571797"
+    ],
+    "LLM知识编辑": [
+      "Trends in Integration of Knowledge and Large Language Models_ A Survey and Taxonomy of Methods, Benchmarks, and Applications"
+    ],
+    "知识更新方法分类": [
+      "Trends in Integration of Knowledge and Large Language Models_ A Survey and Taxonomy of Methods, Benchmarks, and Applications"
+    ],
+    "幻觉缓解": [
+      "Trends in Integration of Knowledge and Large Language Models_ A Survey and Taxonomy of Methods, Benchmarks, and Applications"
+    ],
+    "模型参数修改": [
+      "Trends in Integration of Knowledge and Large Language Models_ A Survey and Taxonomy of Methods, Benchmarks, and Applications"
+    ],
+    "self-distillation": [
+      "Unifying the Convergences in Multilingual Neural Machine Translation__oa_W4385573302"
+    ],
+    "convergence-inconsistency": [
+      "Unifying the Convergences in Multilingual Neural Machine Translation__oa_W4385573302"
+    ],
+    "knowledge-distillation": [
+      "Unifying the Convergences in Multilingual Neural Machine Translation__oa_W4385573302"
+    ],
+    "performance-deficit": [
+      "Unifying the Convergences in Multilingual Neural Machine Translation__oa_W4385573302"
+    ],
+    "representation-engineering": [
+      "Unlocking Multilingual Reasoning Capability of LLMs and LVLMs through Representation Engineering"
+    ],
+    "LLM-LVLM-unification": [
+      "Unlocking Multilingual Reasoning Capability of LLMs and LVLMs through Representation Engineering"
+    ],
+    "hidden-state-manipulation": [
+      "Unlocking Multilingual Reasoning Capability of LLMs and LVLMs through Representation Engineering"
+    ],
+    "LLM-unlearning": [
+      "Unveiling Entity-Level Unlearning for Large Language Models_ A Comprehensive Analysis"
+    ],
+    "entity-deletion": [
+      "Unveiling Entity-Level Unlearning for Large Language Models_ A Comprehensive Analysis"
+    ],
+    "knowledge-coverage-metric": [
+      "Unveiling Entity-Level Unlearning for Large Language Models_ A Comprehensive Analysis"
+    ],
+    "forget-set-construction": [
+      "Unveiling Entity-Level Unlearning for Large Language Models_ A Comprehensive Analysis"
+    ],
+    "fine-tuning-vulnerability": [
+      "Unveiling Entity-Level Unlearning for Large Language Models_ A Comprehensive Analysis"
+    ]
+  }
+}

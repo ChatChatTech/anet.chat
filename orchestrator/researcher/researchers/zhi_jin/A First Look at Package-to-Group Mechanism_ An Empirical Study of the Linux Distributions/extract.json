@@ -1,0 +1,37 @@
+{
+  "paper_id": "A First Look at Package-to-Group Mechanism_ An Empirical Study of the Linux Distributions",
+  "doi": "10.48550/arxiv.2410.10131",
+  "title": "A First Look at Package-to-Group Mechanism: An Empirical Study of the Linux Distributions",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "OSS项目中包数量激增，手动管理大量相关包给维护者带来沉重负担",
+  "problem_framing": "通过实证研究从应用趋势、演化模式、组质量和组倾向四个维度首次系统分析P2G机制",
+  "key_insight": "不再使用P2G的包更倾向于保留在发行版中而非直接删除",
+  "method_signature": "多版本多发行版混合方法：定量分析+人工标注+问卷调查+LDA主题建模",
+  "evaluation_criteria": "GVALUE指标(紧凑性/相关性/区分性/分布性)与人工评分Spearman相关验证",
+  "negative_result_or_admitted_limitation": "Spearman相关性弱(p=0.6,rho=0.4)表明发行版流行度因素复杂",
+  "evidence_for_taste": [
+    "no prior research on the P2G mechanism",
+    "increases the workload and pressure",
+    "16% of the groups exhibit poor quality",
+    "more likely to remain in Linux distributions",
+    "average rate of yes answers is 70%"
+  ],
+  "thinking_moves": [
+    "从无到有定义新研究对象P2G机制",
+    "多时间截面纵向追踪机制演化",
+    "将组质量量化为多维GVALUE指标",
+    "混合定量分析与定性问卷交叉验证"
+  ],
+  "topic_tags": [
+    "package-management",
+    "linux-distributions",
+    "empirical-software-engineering",
+    "group-quality-metrics",
+    "open-source-evolution"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

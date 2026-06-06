@@ -1,0 +1,37 @@
+{
+  "paper_id": "Liu et al. - 2020 - Blockchain for Data Science",
+  "doi": null,
+  "title": "Blockchain for Data Science",
+  "year": 2020,
+  "venue": "ICBCT'20",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "数据安全和隐私威胁贯穿数据科学生产、采集、处理、共享全链路,风险复杂交织",
+  "problem_framing": "探索区块链与数据科学的融合关系,分析潜在优势和挑战",
+  "key_insight": "区块链与数据科学是两种互补技术,去中心化透明安全可审计可补足数据科学隐私保护需求",
+  "method_signature": "综述方法:先概述数据科学挑战,再介绍区块链特征,最后分析融合机遇与挑战",
+  "evaluation_criteria": "识别五项潜在收益(安全隐私、可信透明、数据分析、数据共享、数据主权)和四项挑战(扩展性、分析准确性、共识升级、竞争加剧)",
+  "negative_result_or_admitted_limitation": "区块链扩展性阻止实时交易;匿名性使研究者极难从区块链数据集获取有价值信息;共识达成后如何随环境升级是重要问题",
+  "evidence_for_taste": [
+    "prevent real-time trading",
+    "extremely difficult for researchers to obtain valuable information",
+    "how to upgrade the consensus with the changes",
+    "still in the infant stage",
+    "early days"
+  ],
+  "thinking_moves": [
+    "系统性综述两领域,先分后合",
+    "将区块链特征映射到数据科学痛点",
+    "双向分析收益与挑战,不过度乐观",
+    "医疗健康作为核心应用场景举例"
+  ],
+  "topic_tags": [
+    "blockchain-data-science-integration",
+    "data-privacy-protection",
+    "healthcare-blockchain",
+    "distributed-ledger-survey",
+    "smart-contract-applications"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

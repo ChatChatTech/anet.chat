@@ -1,0 +1,42 @@
+{
+  "paper_id": "Recall_ Empowering Multimodal Embedding for Edge Devices",
+  "doi": "10.48550/arxiv.2409.15342",
+  "title": "Recall: Empowering Multimodal Embedding for Edge Devices",
+  "year": 2024,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "移动设备上的多模态嵌入模型资源消耗过高,无法实时嵌入用户每日产生的大量数据,且存在隐私泄露风险",
+  "problem_framing": "将.on-device多模态嵌入问题形式化为:如何在有限计算资源下高效生成嵌入,同时保持检索精度",
+  "key_insight": "利用early-exiting生成粗粒度嵌入用于候选过滤,将完整嵌入开销转移到查询阶段(查询稀疏且携带精确检索信息)",
+  "method_signature": "三层协同设计:数据感知预退出预测器+渐进式LoRA修复+投机式细粒度检索",
+  "evaluation_criteria": "吞吐量提升14.9倍,能耗降低13.1倍,相对精度损失小于5%",
+  "negative_result_or_admitted_limitation": "即使没有P-LoRA修复,Recall仍可获得可用的检索性能,但样本过早退出不可避免且会破坏统一嵌入空间",
+  "evidence_for_taste": [
+    "MEMs are contextually expressive",
+    "MEMs are resource-intensive",
+    "Early exit is mobile hardware-friendly",
+    "Recall shall integrate easily",
+    "retrieve semantically relevant content"
+  ],
+  "thinking_moves": [
+    "从人类记忆机制类比:长期记忆保留关键信息,细节仅在需要时回忆",
+    "将full-sized嵌入成本卸载到查询阶段,因为查询稀疏且携带精确检索信息",
+    "识别early-exiting与batching不兼容的根本矛盾:样本退出点不一致导致批次内工作负载不一致",
+    "通过progressive LoRA设计解决缓存复用问题,避免为每个退出分支重复前向传播",
+    "借鉴投机解码思想:用多粒度查询嵌入实现平衡过滤"
+  ],
+  "topic_tags": [
+    "on-device-MEM",
+    "early-exiting-multimodal",
+    "edge-embedding-inference",
+    "privacy-preserving-embedding",
+    "memory-palace-retrieval"
+  ],
+  "cites_own_work": [
+    "mllm",
+    "Towards ubiquitous learning"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

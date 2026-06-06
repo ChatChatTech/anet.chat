@@ -1,0 +1,38 @@
+{
+  "paper_id": "SecCoder_ Towards Generalizable and Robust Secure Code Generation__oa_W4404782576",
+  "doi": "10.18653/v1/2024.emnlp-main.806",
+  "title": "SecCoder: Towards Generalizable and Robust Secure Code Generation",
+  "year": 2024,
+  "venue": "EMNLP 2024",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有安全代码生成方法泛化性差、鲁棒性弱，无法应对未见漏洞和对抗攻击",
+  "problem_framing": "安全对齐中的两个关键失效模式：错配泛化(600+类CWE)和脆弱性防御",
+  "key_insight": "用in-context learning加密集检索的safe demonstration实现免重训练的安全加固",
+  "method_signature": "四阶段框架(Expansion→Selection→Integration→Generation)，用INSTRUCTOR稠密检索器选相关安全代码作demonstration",
+  "evaluation_criteria": "安全率(CodeQL检测)和功能正确性(Pass@k on HumanEval)在未见测试集上评估",
+  "negative_result_or_admitted_limitation": "C++改进仅6.14%对比Python的14.99%，上下文长度限制可用demonstration数量",
+  "evidence_for_taste": [
+    "mismatched generalization is one of the critical failure modes",
+    "basic input preprocessing defenses are not robust against the attack",
+    "doesn’t need to be retrained when meeting new vulnerabilities",
+    "preserve the correctness without any extra operation",
+    "The improvement of the security rate on InCoder is not as significant"
+  ],
+  "thinking_moves": [
+    "从安全失效案例反推根本原因：泛化缺失和防御脆弱性",
+    "把安全代码生成重新定义为demonstration retrieval + ICL问题而非微调",
+    "发现training-free方法可同时提升泛化性和鲁棒性",
+    "通过消融实验验证ICL和retriever各自的贡献",
+    "承认C++场景效果折半的局限性"
+  ],
+  "topic_tags": [
+    "secure-code-generation",
+    "in-context-learning",
+    "code-LM-safety",
+    "dense-retrieval",
+    "generalization-robustness"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

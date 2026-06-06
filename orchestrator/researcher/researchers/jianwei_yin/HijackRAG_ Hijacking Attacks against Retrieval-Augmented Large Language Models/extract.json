@@ -1,0 +1,38 @@
+{
+  "paper_id": "HijackRAG_ Hijacking Attacks against Retrieval-Augmented Large Language Models",
+  "doi": "10.48550/arxiv.2410.22832",
+  "title": "HIJACKRAG: Hijacking Attacks against Retrieval-Augmented Large Language Models",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RAG系统被广泛采用但安全性研究不足,现有工作聚焦准确性而忽视潜在攻击风险",
+  "problem_framing": "将攻击建模为优化问题:最大化RAG生成攻击者预设答案的查询数量",
+  "key_insight": "将恶意文本分解为R(检索)⊕H(劫持注意力)⊕I(指令)三组件,可同时满足检索相关性和生成操控",
+  "method_signature": "R⊕H⊕I分解框架:黑盒用查询作R,白盒用HotFlip梯度优化R",
+  "evaluation_criteria": "攻击成功率(ASR)和检索F1分数,跨数据集/模型/检索器验证",
+  "negative_result_or_admitted_limitation": "现有防御机制(释义/扩展top-k)不足以抵御HIJACKRAG,白盒攻击ASR反而低于黑盒",
+  "evidence_for_taste": [
+    "little attention has been given to the security",
+    "underscoring the urgent need for",
+    "H⊕I variant consistently fails",
+    "paraphrasing is insufficient to defend",
+    "HIJACKRAG still maintains strong attack performance"
+  ],
+  "thinking_moves": [
+    "把LLM安全威胁迁移到RAG检索环节重新分析",
+    "分解攻击需求为检索有效性+生成操控两个正交条件",
+    "基于攻击者对检索器的知识差异划分黑白盒场景",
+    "用消融实验验证各组件的必要性(H无R则检索失败,R无H则生成无效)",
+    "评估 defenses against HIJACKRAG揭示当前防御不足"
+  ],
+  "topic_tags": [
+    "RAG-security",
+    "prompt-injection",
+    "retrieval-attacks",
+    "adversarial-llm",
+    "knowledge-poisoning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

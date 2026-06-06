@@ -1,0 +1,39 @@
+{
+  "paper_id": "2022_INFOCOM_ANTIGONE_Accurate_Navigation_Path_Caching_in_Dynamic_Road_Networks_leveraging_Route_APIs",
+  "doi": null,
+  "title": "ANTIGONE: Accurate Navigation Path Caching in Dynamic Road Networks leveraging Route APIs",
+  "year": 2022,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "Querying route APIs costs >$1M/year; >50% paths not updated >6 months, causing inaccurate ETA and poor QoS for food delivery platforms.",
+  "problem_framing": "Minimize weighted average inconsistency error γ_t subject to fixed query budget per time-window; NP-Hard set cover problem.",
+  "key_insight": "Querying multi-hop OD paths costs same as single edge, so selecting long paths maximizes edge coverage per dollar; regular traffic patterns enable prediction-based prioritization.",
+  "method_signature": "Hybrid graph compression + UCB-based path selection + predictor correction + courier trace seeding",
+  "evaluation_criteria": "Inconsistency error (γ_t) and query cost savings vs Delay&Visit baseline",
+  "negative_result_or_admitted_limitation": "Predictor-based ANTIGONE error increases initially, requires 3 days to build effective predictors; courier traces are noisy (97% precision rider state classification).",
+  "evidence_for_taste": [
+    "we cannot obtain accurate maps",
+    "map provider adds noise",
+    "cost is invariable to the length",
+    "this differs from classical caching",
+    "simplified update saves lots of overhead"
+  ],
+  "thinking_moves": [
+    "把多跳路径查询等价于单边查询以扩大覆盖",
+    "利用出行时间的日周期规律性建立预测器",
+    "将路径更新问题形式化为集合覆盖并用贪心近似",
+    "引入多臂老虎机框架平衡探索与利用",
+    "用快递员轨迹替代API查询获取实时路径"
+  ],
+  "topic_tags": [
+    "navigation-path-caching",
+    "road-network-compression",
+    "multi-armed-bandit",
+    "on-demand-food-delivery",
+    "travel-time-prediction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

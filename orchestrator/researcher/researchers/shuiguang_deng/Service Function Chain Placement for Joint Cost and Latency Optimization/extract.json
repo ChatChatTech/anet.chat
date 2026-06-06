@@ -1,0 +1,36 @@
+{
+  "paper_id": "Service Function Chain Placement for Joint Cost and Latency Optimization",
+  "doi": "10.1007/s11036-020-01661-w",
+  "title": "Service Function Chain Placement for Joint Cost and Latency Optimization",
+  "year": 2020,
+  "venue": "Mobile Networks and Applications",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "NFV服务提供商希望最小化部署成本,但过度集中资源会导致延迟增加和SLA违规",
+  "problem_framing": "将VNF放置和链路嵌入建模为多目标优化问题,目标为最小化成本和延迟",
+  "key_insight": "通过加权函数αC+(1-α)L实现成本与延迟的帕累托权衡,α=0.3达最佳平衡",
+  "method_signature": "MIP多目标规划+蜂群/遗传启发式算法",
+  "evaluation_criteria": "成本(latency)和部署代价的帕累托最优性",
+  "negative_result_or_admitted_limitation": "精确解法对大规模网络不实用,启发式算法以最优性换可扩展性",
+  "evidence_for_taste": [
+    "conflicting objectives",
+    "trade-off between optimality",
+    "α = 0.3 provides the best placement",
+    "as accurate as optimal solution obtained by Gurobi (5%)"
+  ],
+  "thinking_moves": [
+    "将成本与延迟建模为冲突目标,用帕累托前沿描述权衡",
+    "先用精确MIP建模问题,再设计启发式算法处理NP难特性",
+    "通过权重因子α将多目标问题转化为单目标,支持动态偏好调节"
+  ],
+  "topic_tags": [
+    "NFV-SFC放置",
+    "多目标优化",
+    "云边协同部署",
+    "成本延迟权衡",
+    "启发式算法"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Shuiguang Deng为第二单位合作者,贡献在优化模型设计和评估验证 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Incremental and Decremental Optimal Margin Distribution Learning",
+  "doi": "10.24963/ijcai.2023/392",
+  "title": "Incremental and Decremental Optimal Margin Distribution Learning",
+  "year": 2023,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "重新训练模型代价高昂，数据流场景下需高效增量更新模型；现有IDL方法局限于线性损失函数",
+  "problem_framing": "将最优间隔分布机(ODM)扩展为支持增量/减量学习，同时处理二次型损失函数中无界拉格朗日乘子的难题",
+  "key_insight": "预先估计变化数据的拉格朗日乘子最优值，避免在无穷范围内优化，从而实现高效的增量更新",
+  "method_signature": "ID-ODM通过预计算最优乘子方向并监控断点来实现二次型损失的高效IDL",
+  "evaluation_criteria": "运行时间加速比(相比从头重训练)和测试集准确率保持",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "Lagrange multipliers are unbounded and much more difficult to track",
+    "avoid updating the Lagrange multipliers in an infinite range",
+    "breakpoint is detected",
+    "monotonically increases or decreases",
+    "Immediate cycling will not occur",
+    "strictly diagonally dominant matrix",
+    "9.1× speedup on average"
+  ],
+  "thinking_moves": [
+    "识别现有IDL方法的空白：聚焦于线性损失函数，忽略二次型损失的独特挑战",
+    "将理论差距与具体技术问题结合：以ODM为例解决二次型损失的无界乘子追踪难题",
+    "通过预计算最优方向将无限域优化问题转化为有限步迭代",
+    "利用Sherman-Morrison-Woodbury公式将O(n³)复杂度降至O(n²)",
+    "从SVM增量学习的断点监控机制类比迁移到二次型损失场景"
+  ],
+  "topic_tags": [
+    "incremental-learning",
+    "optimal-margin-distribution",
+    "quadratic-loss",
+    "Lagrange-multiplier-tracking",
+    "kernel-methods"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

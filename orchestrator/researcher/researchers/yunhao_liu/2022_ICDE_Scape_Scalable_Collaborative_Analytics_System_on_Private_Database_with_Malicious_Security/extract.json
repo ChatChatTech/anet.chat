@@ -1,0 +1,38 @@
+{
+  "paper_id": "2022_ICDE_Scape_Scalable_Collaborative_Analytics_System_on_Private_Database_with_Malicious_Security",
+  "doi": null,
+  "title": "Scape: Scalable Collaborative Analytics System on Private Database with Malicious Security",
+  "year": 2022,
+  "venue": "ICDE",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "隐私法规和数据竞争阻碍多源数据库联合分析，现有MPC方案在大规模数据上性能不堪用",
+  "problem_framing": "构建支持通用SQL操作且容忍最多一个恶意方的高效协作分析系统，核心瓶颈是join操作的O(n²)复杂度",
+  "key_insight": "通过oblivious permutation替代oblivious sorting，结合parallel prefix network将traversal轮复杂度从O(n)降至O(log n)，join代价降至O(n log² n + m)",
+  "method_signature": "基于(3,2)-replicated sharing构建六步general join协议，配合permutation优化和并行化traversal",
+  "evaluation_criteria": "端到端查询延迟和通信量，对比SMCQL/Senate/Secrecy，在TPC-H benchmark上验证可扩展性",
+  "negative_result_or_admitted_limitation": "需公开join结果大小上界m，否则需存O(n²)规模的秘密份额；m泄露是高效方案的不可避免代价",
+  "evidence_for_taste": [
+    "significantly outperforming the state-of-the-art",
+    "making Scape practical even for large datasets",
+    "the poor asymptotic complexity was the major obstacle",
+    "we do not always need sorting when we are using it",
+    "this undesired leak can be avoided by sending"
+  ],
+  "thinking_moves": [
+    "把general join的O(n²)代价归因于需要oblivious sorting的电路规模，进而追问排序是否真正必要",
+    "将traversal过程建模为迭代函数，通过引入额外indicator array使其满足结合律，从而可并行化",
+    "识别permutation-like key vector场景，用半咸安全oblivious permutation绕过完整排序",
+    "先从Krastnikov等的电路出发，再针对secret sharing的通信/轮复杂度做定制优化"
+  ],
+  "topic_tags": [
+    "secure multi-party computation",
+    "privacy-preserving SQL",
+    "oblivious join protocol",
+    "secret sharing database",
+    "malicious security optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

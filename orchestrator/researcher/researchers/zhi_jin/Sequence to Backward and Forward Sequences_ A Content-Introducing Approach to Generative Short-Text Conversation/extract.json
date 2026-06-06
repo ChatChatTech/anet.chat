@@ -1,0 +1,41 @@
+{
+  "paper_id": "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation",
+  "doi": "10.48550/arxiv.1607.00970",
+  "title": "Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation",
+  "year": 2016,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "神经对话系统倾向于生成安全的、普遍相关的回复（如\"我也\"），缺乏实质内容",
+  "problem_framing": "将回复生成重新框定为两步：先用PMI预测关键词(名词)，再生成包含该词的回复",
+  "key_insight": "通过PMI惩罚常见词、先预测具体名词作为锚点，再用seq2BF从该词向两侧生成，可强制引入实质内容",
+  "method_signature": "seq2BF: 从关键词向两侧同时生成前半(逆序)和后半(正序)序列",
+  "evaluation_criteria": "人工标注(逐点评分和成对比较)、回复长度、字符级熵",
+  "negative_result_or_admitted_limitation": "实验表明，仅将序列机械地切成两部分而不加关键词约束，模型表现反而变差(seq2BF-分数低于seq2seq)",
+  "evidence_for_taste": [
+    "universal reply: the RNN prefers",
+    "PMI penalizes a common word",
+    "artificially splitting a sequence",
+    "this treatment generally works well",
+    "We did not define what a good",
+    "the annotation may be biased"
+  ],
+  "thinking_moves": [
+    "从解码端最大概率输出反推出模型倾向于高频安全词的数学根源",
+    "将seq2seq的顺序解码约束放宽，转而允许从任意给定词向两侧生成",
+    "用熵的细粒度分解区分关键词和其余词的贡献，验证第二猜想",
+    "主动放弃BLEU指标，用人工实验说明人类回复的多样性"
+  ],
+  "topic_tags": [
+    "neural-dialogue-generation",
+    "seq2seq-universal-reply-problem",
+    "content-introducing-keyword",
+    "backward-forward-language-model",
+    "PMI-keyword-prediction"
+  ],
+  "cites_own_work": [
+    "Backward and forward language modeling for constrained natural language generation. arXiv preprint arXiv:1512.06612"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

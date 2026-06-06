@@ -1,0 +1,40 @@
+{
+  "paper_id": "Liu et al. - 2004 - A Distributed Approach to Solving Overlay Mismatching Problem",
+  "doi": null,
+  "title": "A Distributed Approach to Solving Overlay Mismatching Problem",
+  "year": 2004,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "P2P系统随机加入离开导致逻辑拓扑与物理网络不匹配,大量流量跨AS边界造成资源浪费",
+  "problem_framing": "overlay拓扑与物理拓扑失配导致查询消息重复穿越同一物理链路",
+  "key_insight": "本地测量延迟构建最小生成树,再逐步替换远距离邻居而不缩小搜索范围",
+  "method_signature": "三阶段ACE:探测邻居成本表→建最小生成树→替换远处邻居",
+  "evaluation_criteria": "流量成本降低、搜索范围不变、响应时间缩短、增益/开销比>1",
+  "negative_result_or_admitted_limitation": "R=1时优化率始终<1,ACE不能改善性能;低连接密度需更大h值才能获益",
+  "evidence_for_t_taste": [
+    "only 2 to 5 percent of Gnutella connections link peers within a single autonomous system",
+    "ACE is worth to use only if the gain/penalty ratio is larger than 1",
+    "for R=1, the optimization rate is always less than 1",
+    "we only use random policy to replace a non-flooding neighbor",
+    "naïve policy simply disconnects the most expensive neighbor"
+  ],
+  "thinking_moves": [
+    "把全局优化问题分解为本地独立执行的子问题",
+    "设定增益/开销比阈值作为算法实际可用的判断标准",
+    "承认实现细节(如随机替换策略)的局限性并计划改进"
+  ],
+  "topic_tags": [
+    "P2P-overlay-topology",
+    "distributed-algorithm",
+    "topology-mismatching",
+    "flooding-optimization",
+    "adaptive-neighbor-selection"
+  ],
+  "cites_own_work": [
+    "AOTO: Adaptive Overlay Topology Optimization (GLOBECOM 2003)",
+    "Location-Aware Topology Matching (INFOCOM 2004)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文没有明确标注venue,但从内容判断为会议论文。全文结构完整,包含动机、问题建模、算法设计、仿真实验和结论。"
+}

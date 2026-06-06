@@ -1,0 +1,38 @@
+{
+  "paper_id": "HydraServe_ Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds",
+  "doi": "10.48550/arxiv.2502.15524",
+  "title": "HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds",
+  "year": 2025,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "公共云serverless LLM服务中冷启动延迟高达40秒，主要由网络带宽受限导致模型获取成为瓶颈",
+  "problem_framing": "将LLM冷启动问题形式化为资源受限下的模型获取延迟与运行时初始化并行优化问题",
+  "key_insight": "利用流水线并行将模型分层分布到多服务器获取，同时重叠容器创建与模型预取阶段",
+  "method_signature": "三层层级优化：集群级资源分配与网络争用感知放置、worker级阶段重叠、推理级流水线合并",
+  "evaluation_criteria": "冷启动TTFT降低倍数(1.7×-4.7×)、SLO达成率提升(1.43×-1.74×)、端到端生成时间",
+  "negative_result_or_admitted_limitation": "单纯增加流水线并行度会导致GPU共享，影响推理性能；增加GPU内存会提高资源成本",
+  "evidence_for_taste": [
+    "model fetching dominates this latency",
+    "marginal improvement in TTFT diminishes",
+    "may impact inference performance due to GPU sharing",
+    "at the expense of higher resource consumption",
+    "imposes no requirement on the hotness of models"
+  ],
+  "thinking_moves": [
+    "将model fetching瓶颈问题重新框架为communication问题：利用流水线并行的层间通信来减少单worker的模型获取量",
+    "先通过实验量化各并行度下的TTFT与TPOT权衡，再设计资源分配算法",
+    "观察到模型获取与运行时初始化存在弱依赖关系，从而提出细粒度阶段重叠优化",
+    "承认GPU共享会损害推理性能，设计流水线合并机制将多worker合并回独立endpoint"
+  ],
+  "topic_tags": [
+    "serverless-LLM-serving",
+    "cold-start-latency-optimization",
+    "pipeline-parallelism",
+    "network-bandwidth-constraint",
+    "model-fetching"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

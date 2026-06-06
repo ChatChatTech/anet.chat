@@ -1,0 +1,39 @@
+{
+  "paper_id": "Xiong et al. - 2011 - Multiple task scheduling for low-duty-cycled wireless sensor networks",
+  "doi": null,
+  "title": "Multiple task scheduling for low-duty-cycled wireless sensor networks",
+  "year": 2011,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "低占空比传感器网络牺牲可用接收时间换取节能，但多任务高数据率下造成传输拥塞和数据丢失",
+  "problem_framing": "将负载均衡问题形式化为在时空维度上平衡各节点工作量的调度优化，最小化最大工作负载W(S)",
+  "key_insight": "任意最优调度中根节点在某个时刻的工作负载必然等于全局最大负载W(S)，此性质使树结构可多项式求解",
+  "method_signature": "树结构SAT算法(多项式最优)结合一般图SAG启发式算法及分布式TSP协议",
+  "evaluation_criteria": "网络吞吐量Yield、任务平均时延、缓冲区溢出次数、传输丢失率",
+  "negative_result_or_admitted_limitation": "SAT提升网络吞吐但以增加时延为代价，且对时间约束敏感性强于BST策略",
+  "evidence_for_taste": [
+    "minimize W(S), the max workload",
+    "prove it is NP-Complete in general network graphs",
+    "SAT improves network yield at the expense of time delay",
+    "the algorithms mainly apply to static routing",
+    "we plan to extend our work to consider more adaptive strategies"
+  ],
+  "thinking_moves": [
+    "从最坏情况复杂度入手证NP完全性，再为特殊结构(树)寻找多项式解",
+    "利用根节点性质将全局优化问题转化为局部约束问题",
+    "先用贪心算法确定最小阈值k，再用二分搜索定位最优W(S)",
+    "证明与构造双射等价建立(G3C)→(LBS)的复杂性归约",
+    "从理论算法扩展到分布式协议实现，考虑节点计算和存储资源限制"
+  ],
+  "topic_tags": [
+    "low-duty-cycle WSN",
+    "task scheduling",
+    "load balancing",
+    "NP-completeness proof",
+    "distributed protocol"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供具体会议/期刊名称，venue信息缺失；理论分析部分完整但工程实现讨论较少"
+}

@@ -1,0 +1,2341 @@
+{
+  "slug": "xinpeng_zhao",
+  "n_papers": 76,
+  "n_indexed": 76,
+  "anchors": [
+    "A Common Method of Share Authentication in Image Secret Sharing",
+    "Secure Cover Selection for Steganography",
+    "Image Steganography and Style Transformation Based on Generative Adversarial Network",
+    "Image Generation Network for Covert Transmission in Online Social Network",
+    "Secure neural network watermarking protocol against forging attack",
+    "Hiding Data Hiding",
+    "Invertible Image Dataset Protection",
+    "Neural network fragile watermarking with no model performance degradation",
+    "Learning to Immunize Images for Tamper Localization and Self-Recovery",
+    "Image Protection for Robust Cropping Localization and Recovery",
+    "Hiding Images in Deep Probabilistic Models",
+    "Generative Model Watermarking Suppressing High-Frequency Artifacts",
+    "Imperceptible Backdoor Attack: From Input Space to Feature Representation",
+    "Physical Invisible Backdoor Based on Camera Imaging",
+    "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models",
+    "SimuFreeMark: A Noise-Simulation-Free Robust Watermarking Against Image Editing"
+  ],
+  "by_id": {
+    "A Common Method of Share Authentication in Image Secret Sharing": {
+      "title": "A Common Method of Share Authentication in Image Secret Sharing",
+      "year": 2020,
+      "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+      "doi": "10.1109/tcsvt.2020.3025527",
+      "key_insight": "通过筛选操作(screening operation)使多项式份额的低4位XOR等于VSS加密的认证位,融合多项式ISS和无像素扩展VSS的优势",
+      "method_signature": "多项式ISS与(2,2)随机网格VSS融合,使用素域P=257,筛选系数满足XOR4LBs约束",
+      "tags": [
+        "image-secret-sharing",
+        "share-authentication",
+        "polynomial-based-ISS",
+        "visual-secret-sharing",
+        "screening-operation"
+      ],
+      "quality": "full"
+    },
+    "A Reversible Data hiding Scheme in Encrypted Domain for Secret Image Sharing based on Chinese Remainder Theorem": {
+      "title": "A Reversible Data hiding Scheme in Encrypted Domain for Secret Image Sharing based on Chinese Remainder Theorem",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2010.08502",
+      "key_insight": "利用CRT秘密共享的加法同态性质，在加密域直接进行差分扩展嵌入，无需重构图像",
+      "method_signature": "HDE-ED同态差分扩展 + DE-IS分存差分扩展",
+      "tags": [
+        "CRT-secret-sharing",
+        "separable-RDH-ED",
+        "homomorphic-difference-expansion",
+        "secret-image-sharing",
+        "multi-party-security"
+      ],
+      "quality": "full"
+    },
+    "Adaptive Backdoor Attack against Deep Neural Networks": {
+      "title": "Adaptive Backdoor Attack against Deep Neural Networks",
+      "year": 2023,
+      "venue": "Computers, Materials & Continua",
+      "doi": "10.32604/cmes.2023.025923",
+      "key_insight": "修改平坦区域像素比修改纹理丰富区域像素更容易被人感知,应将触发器限制在纹理区域",
+      "method_signature": "纹理检测(HILL/Sobel) + U-Net生成器 + MPM离散化 + 参数裁剪约束模型距离",
+      "tags": [
+        "backdoor-attack",
+        "adaptive-trigger",
+        "texture-detection",
+        "model-parameter-clipping",
+        "neural-cleanse-evasion"
+      ],
+      "quality": "full"
+    },
+    "Additional articles of special issue on Real-time image watermarking and forensics in cloud computing": {
+      "title": "Additional articles of special issue on Real-time image watermarking and forensics in cloud computing",
+      "year": 2019,
+      "venue": "Journal of Real-Time Image Processing",
+      "doi": "10.1007/s11554-019-00897-4",
+      "key_insight": "DH-VSS methods emerging as effective technique for data transmission protection with reversibility and high capacity",
+      "method_signature": "Editorial synthesis of five papers: FPGA accelerator, MLR prediction, OPVO, CDM-based RDH, and adaptive DH-VSS",
+      "tags": [
+        "FPGA硬件加速",
+        "可逆数据隐藏",
+        "视觉秘密共享",
+        "医学图像水印",
+        "LSB嵌入"
+      ],
+      "quality": "partial"
+    },
+    "An Effective Framework for Intellectual Property Protection of NLG Models": {
+      "title": "An Effective Framework for Intellectual Property Protection of NLG Models",
+      "year": 2023,
+      "venue": "Symmetry",
+      "doi": "10.3390/sym15061287",
+      "key_insight": "将密钥嵌入解码器RNN的隐藏状态而非模型权重,可使伪造密钥立即生成不可用的模型,从而主动阻止侵权而非被动识别",
+      "method_signature": "两种隐藏状态嵌入方案(⊕/⊗)配合AWD-LSTM语言模型损失保持语法质量",
+      "tags": [
+        "NLG模型水印",
+        "RNN隐藏状态嵌入",
+        "模型知识产权保护",
+        "对抗性密钥攻击",
+        "序列生成质量保证"
+      ],
+      "quality": "full"
+    },
+    "An Exceptional Dataset For Rare Pancreatic Tumor Segmentation": {
+      "title": "An Exceptional Dataset For Rare Pancreatic Tumor Segmentation",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2501.17555",
+      "key_insight": "slice-wise weight loss赋予大肿瘤面积切片更高权重，确保模型学习到更多可区分的肿瘤特征",
+      "method_signature": "pNET专用CECT数据集(469例3D样本) + UNet++ baseline + 按肿瘤面积排名的slice-wise weight loss",
+      "tags": [
+        "pNET-segmentation",
+        "rare-tumor-CECT-dataset",
+        "slice-wise-weight-loss",
+        "medical-image-balancing",
+        "pancreatic-neuroendocrine-tumor"
+      ],
+      "quality": "full"
+    },
+    "AuthenLoRA_ Entangling Stylization with Imperceptible Watermarks for Copyright-Secure LoRA Adapters": {
+      "title": "AuthenLoRA: Entangling Stylization with Imperceptible Watermarks for Copyright-Secure LoRA Adapters",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2511.21216",
+      "key_insight": "零消息正则化机制通过将清洁图像分配全零消息作为ground truth来明确水印/非水印决策边界",
+      "method_signature": "两阶段训练:预训练水印编码器+LoRA双目标联合微调,引入对角缩放矩阵S实现动态水印注入",
+      "tags": [
+        "LoRA-watermarking",
+        "diffusion-model-copyright",
+        "false-positive-reduction",
+        "stylization-watermark-coupling",
+        "zero-message-regularization"
+      ],
+      "quality": "full"
+    },
+    "CLASP_ Training-Free LLM-Assisted Source Code Watermarking via Semantic-Preserving Transformations": {
+      "title": "CLASP: Training-Free LLM-Assisted Source Code Watermarking via Semantic-Preserving Transformations",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2510.11251",
+      "key_insight": "将水印嵌入固定语义保持变换空间，利用LLM进行上下文适配选择，结合检索比对提取，避免 decoder 训练",
+      "method_signature": "两阶段框架：语义一致嵌入(LLM选择变换)+差分比对提取(检索对齐+推理恢复)",
+      "tags": [
+        "source-code-watermarking",
+        "LLM-assisted-transformation",
+        "semantic-preserving-code-edit",
+        "retrieval-based-watermark-extraction",
+        "code-provenance-verification"
+      ],
+      "quality": "full"
+    },
+    "Computing in Covert Domain Using Data Hiding": {
+      "title": "Computing in Covert Domain Using Data Hiding",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2002.06794",
+      "key_insight": "信息隐藏产生的隐写域可容纳数据,且加法和乘法运算可直接在隐写数据上实现",
+      "method_signature": "利用矩阵嵌入将二进制数据隐藏到LSB平面,服务器在隐写域执行矩阵运算",
+      "tags": [
+        "covert-domain-computing",
+        "steganography",
+        "privacy-preserving-cloud",
+        "matrix-embedding",
+        "LSB-hiding"
+      ],
+      "quality": "full"
+    },
+    "Constructive Steganography by Tangles": {
+      "title": "Constructive Steganography by Tangles",
+      "year": 2018,
+      "venue": "KSII Transactions on Internet and Information Systems",
+      "doi": "10.3837/tiis.2018.08.020",
+      "key_insight": "用细胞库将图形特征映射为二进制数据,通过在轮廓上绘制图形携带秘密",
+      "method_signature": "基于轮廓分组和图形操作符,通过细胞库在 tangle 图中构造嵌入",
+      "tags": [
+        "constructive steganography",
+        "tangle pattern generation",
+        "texture synthesis steganography",
+        "JPEG robustness",
+        "coverless information hiding"
+      ],
+      "quality": "full"
+    },
+    "Data hiding in Fingerprint Minutiae Template for Privacy Protection": {
+      "title": "Data hiding in Fingerprint Minutiae Template for Privacy Protection",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.1710.00516",
+      "key_insight": "数据隐藏能够保留生物特征模板的主要特征，而取消式生物特征和生物密码系统产生的保护模板是噪声状的可被轻易区分",
+      "method_signature": "三种策略：直接位替换、优化位替换(最小化修改影响)、保序机制(防止x坐标异常)",
+      "tags": [
+        "fingerprint-minutiae-data-hiding",
+        "biometric-privacy-protection",
+        "feature-level-steganography",
+        "template-security",
+        "order-preserving-embedding"
+      ],
+      "quality": "partial"
+    },
+    "Decision-based iterative fragile watermarking for model integrity verification": {
+      "title": "Decision-based iterative fragile watermarking for model integrity verification",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2305.09684",
+      "key_insight": "训练中存在易被遗忘的硬样本位于决策边界附近，通过最小化预测概率方差可主动构造此类脆弱样本",
+      "method_signature": "迭代最小化预测概率方差，sign梯度扰动更新样本",
+      "tags": [
+        "model-integrity-verification",
+        "fragile-watermarking",
+        "decision-based-blackbox",
+        "backdoor-detection",
+        "neural-network-fingerprinting"
+      ],
+      "quality": "partial"
+    },
+    "Defeating data hiding in social networks using generative adversarial network": {
+      "title": "Defeating data hiding in social networks using generative adversarial network",
+      "year": 2020,
+      "venue": "EURASIP Journal on Image and Video Processing",
+      "doi": "10.1186/s13640-020-00518-2",
+      "key_insight": "不同水印算法的数据分布差异大，分开训练模型并随机采样可以防止攻击者发现处理规律，同时保证干净图像不受影响",
+      "method_signature": "GAN with deep residual generator + discriminator with high-pass filter preprocessing, separate models per watermarking algorithm",
+      "tags": [
+        "steganography-detection",
+        "GAN-image-restoration",
+        "adversarial-watermark-removal",
+        "social-network-security",
+        "residual-learning"
+      ],
+      "quality": "full"
+    },
+    "Deniable Steganography": {
+      "title": "Deniable Steganography",
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2205.12587",
+      "key_insight": "use balanced message loss to ensure Dr and Df achieve equal extraction accuracy, making fake extraction plausible",
+      "method_signature": "DNN-based encoder embeds real+fake messages; two decoders Dr/Df with balanced loss; adversarial training",
+      "tags": [
+        "deniable-steganography",
+        "coercive-attack-defense",
+        "DNN-steganography",
+        "balanced-loss-training",
+        "receiver-deniable-scheme"
+      ],
+      "quality": "partial"
+    },
+    "End-to-End Model for Speech Enhancement by Consistent Spectrogram Masking": {
+      "title": "End-to-End Model for Speech Enhancement by Consistent Spectrogram Masking",
+      "year": 2019,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1901.00295",
+      "key_insight": "约束估计频谱在一致频谱子集内，可收缩解空间加速收敛",
+      "method_signature": "DenseNet+Quasi-Layer实现STFT一致性损失函数优化",
+      "tags": [
+        "consistent-spectrogram",
+        "phase-processing",
+        "speech-enhancement",
+        "end-to-end-STFT",
+        "masking-methods"
+      ],
+      "quality": "full"
+    },
+    "Exploiting Frequency Characteristics for Boosting the Invisibility of Adversarial Attacks": {
+      "title": "Exploiting Frequency Characteristics for Boosting the Invisibility of Adversarial Attacks",
+      "year": 2024,
+      "venue": "Applied Sciences",
+      "doi": "10.3390/app14083315",
+      "key_insight": "深度网络对特定频率敏感,高频扰动对人眼不可见却能有效攻击",
+      "method_signature": "频率域梯度计算+频率损失+K-means聚类筛选候选频率成分",
+      "tags": [
+        "adversarial-attack-invisibility",
+        "frequency-domain-analysis",
+        "Fourier-perturbation",
+        "human-visual-system",
+        "transferable-black-box-attack"
+      ],
+      "quality": "full"
+    },
+    "Exploiting Language Model for Efficient Linguistic Steganalysis": {
+      "title": "Exploiting Language Model for Efficient Linguistic Steganalysis",
+      "year": 2021,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2107.12168",
+      "key_insight": "语言模型对词的条件概率分布建模能力可经预训练迁移到隐写分析分类器",
+      "method_signature": "LM-RNN(基于RNN的语言模型预训练)和AE-RNN(基于序列自编码器的预训练)",
+      "tags": [
+        "linguistic steganalysis",
+        "language model pre-training",
+        "RNN-based classifier",
+        "text generation detection",
+        "transfer learning for security"
+      ],
+      "quality": "full"
+    },
+    "Exploiting Language Model for Efficient Linguistic Steganalysis_ An Empirical Study": {
+      "title": "Exploiting Language Model for Efficient Linguistic Steganalysis_ An Empirical Study",
+      "year": null,
+      "venue": "null",
+      "doi": null,
+      "key_insight": "预训练语言模型能捕获载体与隐写文本的条件概率分布差异,此能力可通过参数迁移到分类器",
+      "method_signature": "RNN语言模型预训练或序列自编码器预训练后参数迁移用于隐写分析微调",
+      "tags": [
+        "linguistic-steganalysis",
+        "language-model-transfer",
+        "pre-training-fine-tuning",
+        "perplexity-analysis",
+        "RNN-steganalysis"
+      ],
+      "quality": "full"
+    },
+    "FGAS_ Fixed Decoder Network-Based Audio Steganography with Adversarial Perturbation Generation": {
+      "title": "FGAS: Fixed Decoder Network-Based Audio Steganography with Adversarial Perturbation Generation",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2505.22266",
+      "key_insight": "发送方和接收方只需共享固定解码器的结构和密钥,无需传输大型模型即可实现安全隐蔽通信",
+      "method_signature": "A2PG策略通过迭代优化生成大小受限的对抗扰动,同时满足消息可解码性和对抗隐蔽性约束",
+      "tags": [
+        "audio-steganography-fixed-decoder",
+        "adversarial-perturbation-generation",
+        "anti-steganalysis",
+        "adversarial-curriculum-learning",
+        "lightweight-cryptographic-embedding"
+      ],
+      "quality": "full"
+    },
+    "From Covert Hiding to Visual Editing_ Robust Generative Video Steganography": {
+      "title": "From Covert Hiding to Visual Editing: Robust Generative Video Steganography",
+      "year": 2024,
+      "venue": "ArXiv",
+      "doi": "10.48550/arxiv.2401.00652",
+      "key_insight": "语义特征比高频分量更抗失真，嵌入语义层而非修改像素LSB能天然获得鲁棒性",
+      "method_signature": "RoGVS通过Secret-ID block和AdaIN将秘密信息注入身份特征，在脸替换过程中实现隐写",
+      "tags": [
+        "video-steganography",
+        "generative-video-modeling",
+        "face-swapping",
+        "semantic-feature-embedding",
+        "robust-steganography"
+      ],
+      "quality": "full"
+    },
+    "From Image to Imuge_ Immunized Image Generation": {
+      "title": "From Image to Imuge: Immunized Image Generation",
+      "year": 2021,
+      "venue": "ACM MM '21",
+      "doi": "10.48550/arxiv.2110.14196",
+      "key_insight": "Encoder spreads coarse content representation into ambient areas via residual image R, enabling decoder to reconstruct originals from tampered regions",
+      "method_signature": "U-Net encoder+verifier+decoder trained with GAN, parameter-less noise layer simulating JPEG/scaling/clone attacks, progressive recovery from low-to-high resolution",
+      "tags": [
+        "image-tamper-self-recovery",
+        "fragile-watermarking",
+        "GAN-forensics",
+        "adversarial-image-training",
+        "content-authentication"
+      ],
+      "quality": "full"
+    },
+    "Game-theoretic Analysis to Parameterized Reversible Watermarking": {
+      "title": "Game-theoretic Analysis to Content-adaptive Reversible Watermarking",
+      "year": 2020,
+      "venue": "Journal of Information Hiding and Multimedia Signal Processing",
+      "doi": "10.1080/02564602.2020.1739574",
+      "key_insight": "非合作博弈下每个玩家的最优响应只依赖自身失真约束，合作博弈的均衡取决于双方共享的边信息",
+      "method_signature": "双编码器博弈模型，率失真优化，求解纳什均衡策略",
+      "tags": [
+        "reversible-watermarking",
+        "game-theory",
+        "rate-distortion-optimization",
+        "content-adaptive-embedding",
+        "multi-player-steganography"
+      ],
+      "quality": "full"
+    },
+    "GenPTW_ Latent Image Watermarking for Provenance Tracing and Tamper Localization": {
+      "title": "GenPTW: Latent Image Watermarking for Provenance Tracing and Tamper Localization",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2504.19567",
+      "key_insight": "通过 cross-attention fusion 让水印随潜表征演化并对齐语义，通过 spatial fusion 在最终解码层注入像素级空间先验",
+      "method_signature": "CAF+SF 双模块潜空间嵌入 + tamper-aware extractor 联合水印解码与篡改定位",
+      "tags": [
+        "latent-space-watermarking",
+        "provenance-tracing",
+        "tamper-localization",
+        "generative-model-forensics",
+        "cross-attention-fusion",
+        "AIGC-editing-robustness"
+      ],
+      "quality": "full"
+    },
+    "Generating Watermarked Adversarial Texts": {
+      "title": "Generating Watermarked Adversarial Texts",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2110.12948",
+      "key_insight": "Construct substitution sets where each word can simultaneously serve adversarial perturbation and watermark embedding",
+      "method_signature": "Word-level adversarial generation with partition-based substitution sets for joint watermarking",
+      "tags": [
+        "adversarial-text-generation",
+        "text-watermarking",
+        "word-level-attacks",
+        "semantic-preservation",
+        "ownership-verification"
+      ],
+      "quality": "full"
+    },
+    "Generative Model Watermarking Suppressing High-Frequency Artifacts": {
+      "title": "Generative Model Watermarking Suppressing High-Frequency Artifacts",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.12391",
+      "key_insight": "通过在嵌入网络的上/下采样层引入低通滤波抗混叠,可同时抑制结构缺陷和扰动引入的高频伪影",
+      "method_signature": "抗混叠水印嵌入网络(低通滤波上/下采样层)+联合损失优化+对抗训练",
+      "tags": [
+        "generative-model-watermarking",
+        "high-frequency-artifacts",
+        "anti-aliasing",
+        "frequency-domain-imperceptibility",
+        "DNN-IP-protection"
+      ],
+      "quality": "full"
+    },
+    "Generative Steganographic Flow": {
+      "title": "Generative Steganographic Flow",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.05838",
+      "key_insight": "利用Glow流模型的逆变换性质，在浮点latent的二进制编码中嵌入秘密数据",
+      "method_signature": "基于Glow的流模型+latent优化+IEEE754二进制隐写",
+      "tags": [
+        "generative-steganography",
+        "normalizing-flows",
+        "bijective-mapping",
+        "latent-optimization",
+        "steganalysis-security"
+      ],
+      "quality": "full"
+    },
+    "Hiding Data Hiding__oa_W4306315237": {
+      "title": "Hiding Data Hiding",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2102.06826",
+      "key_insight": "不同任务使用显著不同的图像作为输入(如y是彩色图、m是二值图、r是全黑图)，网络能自动区分并执行对应任务",
+      "method_signature": "单一DNN用联合损失函数同时训练风格迁移、数据嵌入、数据提取三个任务",
+      "tags": [
+        "steganography",
+        "deep-steganography",
+        "covert-communication",
+        "neural-network-watermarking",
+        "style-transfer",
+        "adversarial-training"
+      ],
+      "quality": "full"
+    },
+    "Hiding Images in Deep Probabilistic Models": {
+      "title": "Hiding Images in Deep Probabilistic Models",
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2210.02257",
+      "key_insight": "用DNN建模覆盖图像的概率密度，通过共享嵌入密钥生成特定噪声映射到秘密图像，实现分布层面的隐藏",
+      "method_signature": "SinGAN学习单张覆盖图像的内部patch分布，在训练时将重建损失从覆盖图像改为秘密图像",
+      "tags": [
+        "SinGAN-steganography",
+        "deep-probabilistic-hiding",
+        "multi-user-image-hiding",
+        "model-security-probing",
+        "generative-model-watermarking"
+      ],
+      "quality": "full"
+    },
+    "Hiding Images into Images with Real-world Robustness": {
+      "title": "Hiding Images into Images with Real-world Robustness",
+      "year": 2021,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2110.05689",
+      "key_insight": "攻击发生在数据嵌入之后而非之前,ADH-GAN的鲁棒性在实际场景无法实现;先提取残差再解码的分步恢复策略有效",
+      "method_signature": "嵌入网络+攻击层+解耦网络+揭示网络,多分支U-Net架构",
+      "tags": [
+        "image-hiding",
+        "deep-steganography",
+        "robust-watermarking",
+        "adversarial-training",
+        "jpeg-robustness"
+      ],
+      "quality": "full"
+    },
+    "High Performance Im2win and Direct Convolutions using Three Tensor Layouts on SIMD Architectures": {
+      "title": "High Performance Im2win and Direct Convolutions using Three Tensor Layouts on SIMD Architectures",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2408.00278",
+      "key_insight": "im2win结合NHWC布局可达理论峰值的95%，相比NCHW提升11%-355%；CHWN8通过设8N_in为最内层解决向量寄存器约束问题",
+      "method_signature": "三种新布局(NHWC/CHWN/CHWN8)配合hoist、对齐、阻塞、向量化、FMA、循环合并等通用优化",
+      "tags": [
+        "SIMD-convolution-optimization",
+        "tensor-data-layout",
+        "im2win-convolution",
+        "memory-efficiency",
+        "roofline-model"
+      ],
+      "quality": "full"
+    },
+    "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models": {
+      "title": "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models",
+      "year": 2024,
+      "venue": "Applied Sciences",
+      "doi": "10.3390/app14041494",
+      "key_insight": "绕过CNN嵌入网络，直接在低频域嵌入可调频率扰动，可同时规避CNN结构伪影与扰动引入的高频痕迹",
+      "method_signature": "频率扰动生成网络F替代CNN嵌入器，低频域(128×128)叠加扰动，联合训练提取网络E",
+      "tags": [
+        "generative-model-watermarking",
+        "frequency-domain-imperceptibility",
+        "high-frequency-artifacts",
+        "neural-network-ownership-protection",
+        "low-frequency-perturbation"
+      ],
+      "quality": "full"
+    },
+    "Image Generation Network for Covert Transmission in Online Social Network": {
+      "title": "Image Generation Network for Covert Transmission in Online Social Network",
+      "year": 2022,
+      "venue": "ACM MM '22",
+      "doi": "10.48550/arxiv.2207.10292",
+      "key_insight": "用秘密消息控制AdaIN的scale和bias，实现语义层面的信息编码",
+      "method_signature": "CIS-Net四模块：生成+对抗+噪声模拟+提取",
+      "tags": [
+        "coverless-steganography",
+        "GAN-image-synthesis",
+        "AdaIN-semantic-control",
+        "JPEG-robustness",
+        "social-network-covert-channel"
+      ],
+      "quality": "full"
+    },
+    "Image Protection for Robust Cropping Localization and Recovery": {
+      "title": "Image Protection for Robust Cropping Localization and Recovery",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2206.02405",
+      "key_insight": "使用可逆神经网络使图像保护过程可逆，同时利用特征对齐网络统一不同攻击下的变换域",
+      "method_signature": "CLR-Net: 可逆U-Net生成器+轻量U-Net定位器+特征对齐网络+FG-JPEG模拟器",
+      "tags": [
+        "image-cropping-localization",
+        "image-recovery",
+        "invertible-neural-network",
+        "image-protection",
+        "jpeg-compression-simulation"
+      ],
+      "quality": "partial"
+    },
+    "Image Steganography and Style Transformation Based on Generative Adversarial Network": {
+      "title": "Image Steganography and Style Transformation Based on Generative Adversarial Network",
+      "year": 2024,
+      "venue": "Mathematics",
+      "doi": "10.3390/math12040615",
+      "key_insight": "在图像生成时编码信息而非修改现成图像,消除了cover-stego对,彻底切断隐分析可利用的对比基准",
+      "method_signature": "GAN框架下encoder-decoder风格迁移网络,同步嵌入消息并训练SRNet判别器对抗训练",
+      "tags": [
+        "image-steganography",
+        "style-transfer",
+        "GAN-adversarial-training",
+        "coverless-steganography",
+        "AIGC-steganography"
+      ],
+      "quality": "full"
+    },
+    "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767": {
+      "title": "Imperceptible Backdoor Attack: From Input Space to Feature Representation",
+      "year": 2022,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2022/242",
+      "key_insight": "将触发器建模为多项分布采样(±1,0)而非直接生成浮点触发器，既解决像素整数约束问题，又最小化修改幅度",
+      "method_signature": "U-Net生成器+SampleNet采样多项分布+特征纠缠正则化",
+      "tags": [
+        "backdoor-attack-stealthiness",
+        "multinomial-distribution-sampling",
+        "feature-representation-entanglement",
+        "frequency-domain-detection-defense",
+        "trigger-generator-U-Net"
+      ],
+      "quality": "full"
+    },
+    "Invertible Image Dataset Protection": {
+      "title": "INVERTIBLE IMAGE DATASET PROTECTION",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2112.14420",
+      "key_insight": "Train the INN generator with a defense simulation layer so perturbations survive JPEG/blur/resize",
+      "method_signature": "RAEG uses U-shaped invertible INN with DSAC blocks and ensemble classifiers, trained with defense simulation",
+      "tags": [
+        "invertible-neural-network",
+        "adversarial-dataset-protection",
+        "reversible-adversarial-examples",
+        "defense-robustness",
+        "steganography-watermarking"
+      ],
+      "quality": "full"
+    },
+    "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization": {
+      "title": "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization",
+      "year": 2019,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1909.02742",
+      "key_insight": "神经网络对人类不可感知的微小特征敏感,可利用这一感知差异在LSB层级隐藏触发器",
+      "method_signature": "基于LSB隐写嵌入触发器 + Lp范数正则化生成微小扰动触发器",
+      "tags": [
+        "backdoor-attack-invisibility",
+        "LSB-steganography-trigger",
+        "Lp-norm-regularization-attack",
+        "neural-network-perceptual-gap",
+        "trojan-detection-evasion"
+      ],
+      "quality": "full"
+    },
+    "Learning to Immunize Images for Tamper Localization and Self-Recovery": {
+      "title": "Learning to Immunize Images for Tamper Localization and Self-Recovery",
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2210.15902",
+      "key_insight": "观察图像免疫与自恢复间的可逆性关系,采用归一化流生成器在单网络中联合学习 immunization 和 recovery",
+      "method_signature": "IINet(可逆U-net)+KD-JPEG(JPEG模拟器)+伪造检测器+双判别器",
+      "tags": [
+        "image-immunization",
+        "invertible-neural-network",
+        "tamper-localization",
+        "jpeg-robustness",
+        "self-recovery"
+      ],
+      "quality": "full"
+    },
+    "Lightweight Salient Object Detection in Optical Remote-Sensing Images via Semantic Matching and Edge Alignment": {
+      "title": "Lightweight Salient Object Detection in Optical Remote-Sensing Images via Semantic Matching and Edge Alignment",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2301.02778",
+      "key_insight": "将高层特征和低层特征区分对待——高层用语义匹配激活位置，低层用边缘对齐增强细节",
+      "method_signature": "SeaNet: MobileNet-V2编码器 + DSMM(语义匹配) + ESAM(边缘对齐) + 轻量解码器",
+      "tags": [
+        "lightweight-ORSI-SOD",
+        "dynamic-depthwise-convolution",
+        "edge-self-alignment",
+        "semantic-matching",
+        "channel-wise-correlation"
+      ],
+      "quality": "partial"
+    },
+    "Lost in the Digital Wild": {
+      "title": "Lost in the Digital Wild: Hiding Information in Digital Activities",
+      "year": 2018,
+      "venue": "MPS '18 - International Workshop on Multimedia Privacy and Security",
+      "doi": "10.1145/3267357.3267365",
+      "key_insight": "将信息隐藏在'活动发生'这一事实本身,而非活动内容,整个数字世界成为动态载体",
+      "method_signature": "活动映射编码框架:位序列→数字活动序列→解码还原",
+      "tags": [
+        "activity-based-steganography",
+        "coverless-information-hiding",
+        "social-network-covert-channel",
+        "Twitter-behavioral-encoding",
+        "network-steganography"
+      ],
+      "quality": "full"
+    },
+    "Markov process-based retrieval for encrypted JPEG images": {
+      "title": "Markov process-based retrieval for encrypted JPEG images",
+      "year": 2016,
+      "venue": "Eurasip Journal on Information Security",
+      "doi": "10.1186/s13635-015-0028-6",
+      "key_insight": "Intra-block, inter-block, and inter-component dependencies among DCT coefficients remain statistically invariant under stream cipher + permutation encryption, enabling Markov-based feature extraction from encrypted images.",
+      "method_signature": "Markov transition probability matrices over DCT VLI code lengths + multi-class SVM dimensionality reduction",
+      "tags": [
+        "encrypted-domain-retrieval",
+        "JPEG-DCT-markov-features",
+        "privacy-preserving-multimedia",
+        "stream-cipher-partial-encryption",
+        "multi-class-SVM-reduction"
+      ],
+      "quality": "full"
+    },
+    "Model Copyright Protection in Buyer-seller Environment": {
+      "title": "Model Copyright Protection in Buyer-seller Environment",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2312.05262",
+      "key_insight": "不加密模型参数,而是让模型对输入敏感——只有添加正确key扰动的合法输入才能正确分类",
+      "method_signature": "输入敏感神经网络ISNN:合法输入=干净样本+key扰动,损失函数拉大合法/非法输入的输出距离",
+      "tags": [
+        "neural-network-copyright-protection",
+        "input-sensitive-model",
+        "buyer-seller-model-security",
+        "adversarial-perturbation-key",
+        "model-watermarking"
+      ],
+      "quality": "full"
+    },
+    "Multi-Source Stego Detection with Low-Dimensional Textural Feature and Clustering Ensembles": {
+      "title": "Multi-Source Stego Detection with Low-Dimensional Textural Feature and Clustering Ensembles",
+      "year": 2018,
+      "venue": "Symmetry",
+      "doi": "10.3390/sym10050128",
+      "key_insight": "基于LTP的低维纹理特征对纹理区域隐写变化更敏感,结合聚类集成可无需大量训练样本",
+      "method_signature": "LTP纹理特征+层次聚类集成+多数投票策略",
+      "tags": [
+        "multi-source-stego-detection",
+        "LTP-textural-feature",
+        "clustering-ensemble",
+        "steganographer-detection",
+        "unsupervised-steganalysis"
+      ],
+      "quality": "full"
+    },
+    "Multimodal Fake News Detection via CLIP-Guided Learning": {
+      "title": "Multimodal Fake News Detection via CLIP-Guided Learning",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.2205.14304",
+      "key_insight": "CLIP跨模态相似度可显式度量图文一致性，据此自适应调节融合特征权重",
+      "method_signature": "FND-CLIP: CLIP编码图文+余弦相似度重加权+模态级注意力聚合",
+      "tags": [
+        "CLIP-multimodal-fusion",
+        "fake-news-detection",
+        "cross-modal-similarity-gating",
+        "modality-wise-attention",
+        "pretrained-vision-language-model"
+      ],
+      "quality": "full"
+    },
+    "Neural network fragile watermarking with no model performance degradation": {
+      "title": "Neural network fragile watermarking with no model performance degradation",
+      "year": 2022,
+      "venue": "ICIP",
+      "doi": "10.48550/arxiv.2208.07585",
+      "key_insight": "Using variance regularization on prediction probabilities across categories makes generated triggers sensitive to model parameter changes.",
+      "method_signature": "Train generative model with L_cla + a·Var(P) loss to create fragile triggers without modifying target classifier.",
+      "tags": [
+        "neural-network-watermarking",
+        "fragile-trigger",
+        "backdoor-detection",
+        "model-integrity-verification",
+        "generative-model"
+      ],
+      "quality": "full"
+    },
+    "Non-Interactive and Secure Data Aggregation Scheme for Internet of Things": {
+      "title": "Non-Interactive and Secure Data Aggregation Scheme for Internet of Things",
+      "year": 2021,
+      "venue": "Electronics",
+      "doi": "10.3390/electronics10202464",
+      "key_insight": "通过加法秘密分享将数据分成两部分，用户分别发给两服务器，利用两服务器非共谋假设消除用户间交互需求",
+      "method_signature": "非交互式秘密分享聚合+双非共谋服务器+随机数掩码+可验证计算",
+      "tags": [
+        "IoT-data-aggregation",
+        "secret-sharing",
+        "non-interactive-protocol",
+        "privacy-preserving",
+        "verifiable-computation"
+      ],
+      "quality": "full"
+    },
+    "Object-oriented backdoor attack against image captioning": {
+      "title": "Object-oriented backdoor attack against image captioning",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2401.02600",
+      "key_insight": "Captions revolve around objects, so poisoning object regions with sample-specific triggers yields more natural visual effects than uniform patches",
+      "method_signature": "Object-oriented poisoning using YOLO detection + Gaussian noise injection (α=20) on detected object regions",
+      "tags": [
+        "backdoor-attack",
+        "image-captioning",
+        "vision-language",
+        "data-poisoning",
+        "object-detection"
+      ],
+      "quality": "full"
+    },
+    "Orientation Convolutional Networks for Image Recognition": {
+      "title": "Orientation Convolutional Networks for Image Recognition",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2102.01523",
+      "key_insight": "低秩结构传播可显著提升稀疏表示,矩阵分解框架可同时捕获全局和局部结构",
+      "method_signature": "LGF矩阵分解(核范数+低秩+稀疏约束)调制CNN卷积核",
+      "tags": [
+        "Gabor滤波器",
+        "矩阵分解",
+        "旋转变换鲁棒性",
+        "深度CNN调制",
+        "稀疏低秩表示"
+      ],
+      "quality": "full"
+    },
+    "PROMPT-IML_ Image Manipulation Localization with Pre-trained Foundation Models Through Prompt Tuning": {
+      "title": "PROMPT-IML: Image Manipulation Localization with Pre-trained Foundation Models Through Prompt Tuning",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2401.00653",
+      "key_insight": "预训练视觉基础模型蕴含丰富语义知识，通过提示调优可将语义信息与高频信息对齐融合，提升模型鲁棒性",
+      "method_signature": "双分支Swin-Transformer提取语义和频率特征，FAF模块用通道/空间/可变型注意力对齐融合，Mask2Former解码输出",
+      "tags": [
+        "图像篡改定位",
+        "视觉提示调优",
+        "多模态特征融合",
+        "基础模型适应",
+        "篡改检测鲁棒性"
+      ],
+      "quality": "full"
+    },
+    "Perceptual Hash of Neural Networks": {
+      "title": "Perceptual Hash of Neural Networks",
+      "year": 2022,
+      "venue": "Symmetry",
+      "doi": "10.3390/sym14040810",
+      "key_insight": "把神经网络模型视为计算图,用ONNX统一转换框架兼容性,合并操作层为节点以提取语义信息",
+      "method_signature": "两阶段图神经网络HNN-Net:图生成器转DNN为图,GNN生成Q-bit紧凑二值哈希码",
+      "tags": [
+        "DNN模型版权保护",
+        "神经网络感知哈希",
+        "图神经网络模型检索",
+        "模型结构相似度",
+        "哈希编码量化"
+      ],
+      "quality": "full"
+    },
+    "Physical Invisible Backdoor Based on Camera Imaging": {
+      "title": "Physical Invisible Backdoor Based on Camera Imaging",
+      "year": 2023,
+      "venue": "ACM MM",
+      "doi": "10.48550/arxiv.2309.07428",
+      "key_insight": "利用不同相机硬件缺陷和算法差异产生的独特指纹作为触发器,无需改动任何像素",
+      "method_signature": "三阶段训练:相机识别模型→脆弱教师模型→蒸馏学生模型",
+      "tags": [
+        "camera-fingerprint-backdoor",
+        "physical-backdoor-attack",
+        "model-distillation-defense",
+        "CFA-interpolation",
+        "invisible-trigger"
+      ],
+      "quality": "full"
+    },
+    "Privacy-Protected Deletable Blockchain": {
+      "title": "Privacy-Protected Deletable Blockchain",
+      "year": 2019,
+      "venue": "IEEE Access",
+      "doi": "10.1109/access.2019.2962816",
+      "key_insight": "根据不同删除原因采用不同隐私保护策略：traceable ring signature揭示身份或Pedersen commitment揭示交易内容",
+      "method_signature": "基于proof-of-space共识机制，使用traceable ring signature和linkable multi-signature实现隐私保护可删除区块链",
+      "tags": [
+        "privacy-protected-blockchain",
+        "deletable-blockchain",
+        "proof-of-space",
+        "linkable-multi-signature",
+        "traceable-ring-signature"
+      ],
+      "quality": "full"
+    },
+    "RGB-T Semantic Segmentation With Location, Activation, and Sharpening": {
+      "title": "RGB-T Semantic Segmentation With Location, Activation, and Sharpening",
+      "year": 2022,
+      "venue": "IEEE Trans. Circuits Syst. Video Technol.",
+      "doi": "10.1109/tcsvt.2022.3208833",
+      "key_insight": "特征层级具有独特属性,需设计专门模块而非统一模块;乘法提取共存信息,加法提取综合信息,二者互补。",
+      "method_signature": "LASNet三步走:CLM定位,CAM激活,ESM锐化。",
+      "tags": [
+        "cross-modal-fusion",
+        "RGB-T-semantic-segmentation",
+        "feature-level-discriminative-treatment",
+        "thermal-infrared",
+        "attention-mechanism"
+      ],
+      "quality": "full"
+    },
+    "Reversible Data Hiding With Image Enhancement Using Histogram Shifting": {
+      "title": "Reversible Data Hiding With Image Enhancement Using Histogram Shifting",
+      "year": 2019,
+      "venue": "IEEE Access",
+      "doi": "10.1109/access.2019.2909560",
+      "key_insight": "通过最大化直方图熵来构造转移矩阵,让直方图 vacancies 迭代分配给峰值,实现熵增最大的嵌入",
+      "method_signature": "RDH-CE双阶段框架:基线嵌入(vacancy reservation + transfer matrix) + 扩展嵌入(预测误差直方图)",
+      "tags": [
+        "reversible data hiding",
+        "contrast enhancement",
+        "histogram shifting",
+        "structural similarity",
+        "entropy maximization"
+      ],
+      "quality": "full"
+    },
+    "Robust Face Recognition in Low Resolution and Blurred Image Using Joint Information in Space and Frequency": {
+      "title": "Robust Face Recognition in Low Resolution and Blurred Image Using Joint Information in Space and Frequency",
+      "year": 2012,
+      "venue": "International Conference on Intelligent Computing and Intelligent Systems",
+      "doi": "10.1007/978-3-642-35606-3_73",
+      "key_insight": "不同频率间的相关性在低分辨率和模糊退化下有利于提升识别性能",
+      "method_signature": "ELFD在相同空间位置编码两相关频率的联合局部描述符，含自适应窗口选择和幅度相位融合",
+      "tags": [
+        "face-recognition-blur-invariant",
+        "local-frequency-descriptor",
+        "low-resolution-face-recognition",
+        "adaptive-STFT-window",
+        "magnitude-phase-fusion"
+      ],
+      "quality": "full"
+    },
+    "Robust and Imperceptible Black-box DNN Watermarking Based on Fourier Perturbation Analysis and Frequency Sensitivity Clustering": {
+      "title": "Robust and Imperceptible Black-box DNN Watermarking Based on Fourier Perturbation Analysis and Frequency Sensitivity Clustering",
+      "year": 2022,
+      "venue": null,
+      "doi": "10.48550/arxiv.2208.03944",
+      "key_insight": "基于频率原理，DNN从低频到高频拟合目标函数，中低频扰动最适合构造触发样本，且聚类使扰动具有模型依赖性",
+      "method_signature": "傅里叶扰动分析 + 频率敏感度K-means聚类确定触发频率",
+      "tags": [
+        "DNN水印",
+        "傅里叶扰动分析",
+        "频率敏感度聚类",
+        "黑盒验证",
+        "触发样本生成"
+      ],
+      "quality": "full"
+    },
+    "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer": {
+      "title": "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer",
+      "year": 2023,
+      "venue": "IEEE Transactions on Image Processing",
+      "doi": "10.1109/tip.2023.3314285",
+      "key_insight": "用Transformer替换CNN backbone建立全局关系,再对全局特征进行局部增强(全局到局部范式)",
+      "method_signature": "GeleNet使用PVT transformer backbone配合D-SWSAM、KTM、SWSAM三个模块进行显著目标检测",
+      "tags": [
+        "ORSI-SOD",
+        "Transformer backbone",
+        "Direction-aware convolution",
+        "Global-to-local paradigm",
+        "Attention mechanism"
+      ],
+      "quality": "full"
+    },
+    "Secure Cover Selection for Steganography": {
+      "title": "Secure Cover Selection for Steganography",
+      "year": 2019,
+      "venue": "IEEE Access",
+      "doi": "10.1109/access.2019.2914226",
+      "key_insight": "用MMD距离约束选择过程，保持stego集与clear集的距离不超过任意两clear集的距离阈值",
+      "method_signature": "MMD约束下的最小失真图像搜索策略",
+      "tags": [
+        "steganography-cover-selection",
+        "pooled-steganalysis",
+        "MMD-distance",
+        "individual-level-security",
+        "statistical-detectability"
+      ],
+      "quality": "full"
+    },
+    "Secure Steganographic Cover Generation via a Noise-Optimization Stacked StyleGAN2": {
+      "title": "Secure Steganographic Cover Generation via a Noise-Optimization Stacked StyleGAN2",
+      "year": 2023,
+      "venue": "Symmetry",
+      "doi": "10.3390/sym15050979",
+      "key_insight": "噪声注入可类比为一种隐写操作，通过优化噪声图可增强生成图像安全性；安全性和保真度呈反比关系",
+      "method_signature": "两阶段堆叠StyleGAN2架构，SNON网络利用secure loss和LPIPS fidelity loss进行噪声优化",
+      "tags": [
+        "steganographic-cover-synthesis",
+        "stylegan2-noise-optimization",
+        "security-fidelity-tradeoff",
+        "noise-loss-steganalysis",
+        "progressive-growing-generation"
+      ],
+      "quality": "full"
+    },
+    "Secure neural network watermarking protocol against forging attack": {
+      "title": "Secure neural network watermarking protocol against forging attack",
+      "year": 2020,
+      "venue": "EURASIP Journal on Image and Video Processing",
+      "doi": "10.1186/s13640-020-00527-1",
+      "key_insight": "用单向哈希函数生成触发样本链,攻击者无法逆向构造合法触发集",
+      "method_signature": "用双向单向哈希链生成触发集并嵌入所有权验证协议",
+      "tags": [
+        "neural-network-watermarking",
+        "forging-attack-defense",
+        "one-way-hash-chain",
+        "black-box-attack",
+        "intellectual-property-protection"
+      ],
+      "quality": "full"
+    },
+    "Semantic-Preserving Linguistic Steganography by Pivot Translation and Semantic-Aware Bins Coding": {
+      "title": "Semantic-Preserving Linguistic Steganography by Pivot Translation and Semantic-Aware Bins Coding",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2203.03795",
+      "key_insight": "Use pivot translation (En→Ge→En) to alter expression while anchoring semantics in German pivot text",
+      "method_signature": "En2Ge2En Seq2Seq model with Semantic-aware Bins coding for token-to-bits mapping",
+      "tags": [
+        "linguistic-steganography",
+        "pivot-translation",
+        "semantic-consistency",
+        "information-encoding",
+        "subword-tokenization"
+      ],
+      "quality": "full"
+    },
+    "SimuFreeMark_ A Noise-Simulation-Free Robust Watermarking Against Image Editing": {
+      "title": "SimuFreeMark: A Noise-Simulation-Free Robust Watermarking Against Image Editing",
+      "year": 2025,
+      "venue": null,
+      "doi": "10.48550/arxiv.2511.11295",
+      "key_insight": "图像低频分量对传统信号处理和AIGC语义编辑均具有内在稳定性,利用预训练VAE将其映射到深度特征空间可兼顾稳定性和语义鲁棒性",
+      "method_signature": "基于FFT低频分解+SD-VAE潜空间嵌入+双阶段训练的水印框架",
+      "tags": [
+        "deep-learning-watermarking",
+        "noise-simulation-free",
+        "low-frequency-stability",
+        "AIGC-editing-robustness",
+        "VAE-latent-embedding"
+      ],
+      "quality": "full"
+    },
+    "Special issue on real-time image watermarking and forensics in cloud computing": {
+      "title": "Special issue on real-time image watermarking and forensics in cloud computing",
+      "year": 2019,
+      "venue": "Journal of Real-Time Image Processing",
+      "doi": "10.1007/s11554-019-00881-y",
+      "key_insight": "通过分类综述21篇论文,揭示实时性、计算效率是连接学术研究与实际云端应用的核心瓶颈",
+      "method_signature": "特殊issue综述:5类技术+21篇论文分类概述",
+      "tags": [
+        "real-time-watermarking",
+        "cloud-forensics",
+        "computational-complexity",
+        "reversible-data-hiding",
+        "steganography-steganalysis"
+      ],
+      "quality": "partial"
+    },
+    "Steal My Artworks for Fine-tuning_ A Watermarking Framework for Detecting Art Theft Mimicry in Text-to-Image Models": {
+      "title": "Steal My Artworks for Fine-tuning? A Watermarking Framework for Detecting Art Theft Mimicry in Text-to-Image Models",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2311.13619",
+      "key_insight": "水印在微调后会以可预测的高位准确率(60-80%)出现在生成的图像分布中,而非水印图像仅约40-60%",
+      "method_signature": "在作品嵌入水印→微调扩散模型→提取生成图像水印→分析分布差异溯源",
+      "tags": [
+        "diffusion-model-mimicry-detection",
+        "artist-copyright-protection",
+        "watermark-distribution-forensics",
+        "text-to-image-fine-tuning",
+        "style-imitation-attribution"
+      ],
+      "quality": "full"
+    },
+    "StegGuard_ Fingerprinting Self-supervised Pre-trained Encoders via Secrets Embeder and Extractor": {
+      "title": "StegGuard: Fingerprinting Self-supervised Pre-trained Encoders via Secrets Embeder and Extractor",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2310.03380",
+      "key_insight": "嵌入和提取秘密的能力依赖每个编码器的唯一变换函数，盗版因依赖受害者所以变换函数相似",
+      "method_signature": "联合学习嵌入器和提取器+FcaEmb频率域注意力块",
+      "tags": [
+        "SSL编码器IP保护",
+        "主动秘密嵌入指纹",
+        "模型提取攻击防御",
+        "频域通道注意力",
+        "EaaS知识产权"
+      ],
+      "quality": "full"
+    },
+    "Steganalysis of Neural Networks Based on Symmetric Histogram Distribution": {
+      "title": "Steganalysis of Neural Networks Based on Symmetric Histogram Distribution",
+      "year": 2023,
+      "venue": "Symmetry",
+      "doi": "10.3390/sym15051079",
+      "key_insight": "利用动态交互式模型的特性，通过简单查询提取特征向量进行盲检测，无需访问内部结构",
+      "method_signature": "基于直方图分布的对称隐写分析方法，使用SVM和集成分类器",
+      "tags": [
+        "neural-network-steganalysis",
+        "black-box-detection",
+        "symmetric-histogram-method",
+        "data-hiding-detection",
+        "deep-learning-security"
+      ],
+      "quality": "full"
+    },
+    "Steganographic visual story with mutual-perceived joint attention": {
+      "title": "Steganographic visual story with mutual-perceived joint attention",
+      "year": 2021,
+      "venue": "EURASIP Journal on Image and Video Processing",
+      "doi": "10.1186/s13640-020-00543-1",
+      "key_insight": "通过互感知联合注意力(MPJA)建模图像与文本的相互感知关系，动态调整每词嵌入位数以保语义",
+      "method_signature": "ResNet+Bi-LSTM编码图像序列 + MPJA跨模态注意力 + 自适应变长隐写",
+      "tags": [
+        "text-steganography",
+        "visual-story-generation",
+        "mutual-attention-mechanism",
+        "adaptive-embedding",
+        "cross-modal-hiding"
+      ],
+      "quality": "full"
+    },
+    "Steganography in animated emoji using self-reference": {
+      "title": "Steganography in animated emoji using self-reference",
+      "year": 2021,
+      "venue": "Multimedia Systems",
+      "doi": "10.1007/s00530-020-00723-z",
+      "key_insight": "If we construct a reference image close to the original image before GIF compression, we can modify pixels toward original values, reducing extra error from embedding.",
+      "method_signature": "Self-reference algorithm using DnCNN to construct reference images; modify pixels based on RGB vector angles between compression and embedding distortion.",
+      "tags": [
+        "GIF-steganography",
+        "self-reference-distortion",
+        "DnCNN-denoising",
+        "syndrome-trellis-coding",
+        "animated-emoji-covert-communication"
+      ],
+      "quality": "full"
+    },
+    "Steganography of Steganographic Networks": {
+      "title": "Steganography of Steganographic Networks",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2302.14521",
+      "key_insight": "Filters important for secret task but trivial for stego task can be selected via gradient importance, preserving secret functionality while reactivating remaining filters for stego task",
+      "method_signature": "Progressive filter selection + partial optimization to disguise secret DNN into stego DNN performing ordinary task",
+      "tags": [
+        "model-steganography",
+        "filter-selection",
+        "partial-optimization",
+        "covert-communication",
+        "DNN-model-disguising"
+      ],
+      "quality": "full"
+    },
+    "Structural Watermarking to Deep Neural Networks via Network Channel Pruning": {
+      "title": "Structural Watermarking to Deep Neural Networks via Network Channel Pruning",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2107.08688",
+      "key_insight": "利用剪枝机制将水印嵌入冗余架构,剪枝率本身成为水印信号,保持原任务性能",
+      "method_signature": "通道剪枝+QIM量化的结构水印嵌入,按层局部剪枝而非全局剪枝",
+      "tags": [
+        "DNN知识产权保护",
+        "网络结构水印",
+        "通道剪枝",
+        "模型压缩水印",
+        "后门水印"
+      ],
+      "quality": "full"
+    },
+    "Towards Deep Network Steganography_ From Networks to Networks": {
+      "title": "Towards Deep Network Steganography: From Networks to Networks",
+      "year": 2022,
+      "venue": "ACM Conference (acronym 'XX')",
+      "doi": "10.48550/arxiv.2307.03444",
+      "key_insight": "在秘密DNN中插入干扰滤波器并伪装成执行另一任务的普通DNN，仅训练干扰参数实现无损恢复",
+      "method_signature": "梯度滤波插入+侧信息隐藏+部分优化策略的端到端DNN隐写框架",
+      "tags": [
+        "DNN-steganography",
+        "model-concealment",
+        "gradient-based-filter-insertion",
+        "partial-optimization",
+        "parameter-statistical-undetectability"
+      ],
+      "quality": "full"
+    },
+    "Transferable Watermarking to Self-supervised Pre-trained Graph Encoders by Trigger Embeddings": {
+      "title": "Transferable Watermarking to Self-supervised Pre-trained Graph Encoders by Trigger Embeddings",
+      "year": 2024,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2406.13177",
+      "key_insight": "迫使编码器将触发实例映射到嵌入空间中唯一的紧凑簇，下游模型继承后门",
+      "method_signature": "损失函数 = 原始任务损失 + 内部聚类损失 + 外部分离损失",
+      "tags": [
+        "graph-neural-network-watermarking",
+        "self-supervised-learning-copyright",
+        "backdoor-watermark",
+        "graph-foundation-model-protection",
+        "black-box-verification"
+      ],
+      "quality": "full"
+    },
+    "Trigger Where It Hurts_ Unveiling Hidden Backdoors through Sensitivity with Sensitron": {
+      "title": "Trigger Where It Hurts: Unveiling Hidden Backdoors through Sensitivity with Sensitron",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2509.19101",
+      "key_insight": "可利用SHAP等可解释性工具反推模型决策薄弱环节,建立敏感度分数与攻击效果的数学关联(SRC=0.83)",
+      "method_signature": "Sensitron三阶段: DMSA预测敏感位置→ H-SHAP层级归因精化→ Plug-and-Rank生成排名的上下文触发器",
+      "tags": [
+        "NLP-backdoor-attack",
+        "sensitivity-analysis",
+        "explainability-weaponization",
+        "hierarchical-attribution",
+        "plug-and-rank-trigger"
+      ],
+      "quality": "full"
+    },
+    "Trojaning semi-supervised learning model via poisoning wild images on the web": {
+      "title": "Trojaning semi-supervised learning model via poisoning wild images on the web",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2301.00435",
+      "key_insight": "Label-inconsistent poisoning fails on SSL because SSL algorithms strive to correct unlabeled examples to correct classes; poisoning only target class examples allows gradient matching to trick SSL",
+      "method_signature": "Gradient matching backdoor generator using surrogate network; poisoned unlabeled images match gradients of target class images",
+      "tags": [
+        "backdoor poisoning",
+        "semi-supervised learning",
+        "zero-knowledge attack",
+        "gradient matching",
+        "unlabeled data poisoning"
+      ],
+      "quality": "full"
+    },
+    "Universal Image Vaccine Against Steganography": {
+      "title": "Universal Image Vaccine Against Steganography",
+      "year": 2025,
+      "venue": "Symmetry",
+      "doi": "10.3390/sym17010066",
+      "key_insight": "CLAHE算法可同时提升图像质量并使直方图更规律，破坏隐写嵌入的局部特征从而增强检测器敏感度",
+      "method_signature": "上传前对图像施加CLAHE处理作为通用疫苗，无需修改现有隐写分析方法",
+      "tags": [
+        "image-vaccine-steganalysis",
+        "CLAHE-image-enhancement",
+        "universal-countermeasure",
+        "steganography-defense",
+        "content-adaptive-steganography"
+      ],
+      "quality": "full"
+    },
+    "Watermarking Graph Neural Networks by Random Graphs": {
+      "title": "Watermarking Graph Neural Networks by Random Graphs",
+      "year": 2021,
+      "venue": "ISDFS",
+      "doi": "10.1109/isdfs52919.2021.9486352",
+      "key_insight": "用随机生成的ER图作为触发器,非标记模型会产生随机预测,自然产生低误报率",
+      "method_signature": "生成带随机特征的ER图作为触发器,嵌入水印到节点标签预测中",
+      "tags": [
+        "GNN水印",
+        "知识产权保护",
+        "黑盒验证",
+        "ER随机图",
+        "触发集嵌入"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "generative-model-watermarking": [
+      "Generative Model Watermarking Suppressing High-Frequency Artifacts",
+      "Hiding Images in Deep Probabilistic Models",
+      "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models"
+    ],
+    "neural-network-watermarking": [
+      "Hiding Data Hiding__oa_W4306315237",
+      "Neural network fragile watermarking with no model performance degradation",
+      "Secure neural network watermarking protocol against forging attack"
+    ],
+    "invertible-neural-network": [
+      "Image Protection for Robust Cropping Localization and Recovery",
+      "Invertible Image Dataset Protection",
+      "Learning to Immunize Images for Tamper Localization and Self-Recovery"
+    ],
+    "backdoor-attack": [
+      "Adaptive Backdoor Attack against Deep Neural Networks",
+      "Object-oriented backdoor attack against image captioning"
+    ],
+    "steganography": [
+      "Computing in Covert Domain Using Data Hiding",
+      "Hiding Data Hiding__oa_W4306315237"
+    ],
+    "model-integrity-verification": [
+      "Decision-based iterative fragile watermarking for model integrity verification",
+      "Neural network fragile watermarking with no model performance degradation"
+    ],
+    "fragile-watermarking": [
+      "Decision-based iterative fragile watermarking for model integrity verification",
+      "From Image to Imuge_ Immunized Image Generation"
+    ],
+    "backdoor-detection": [
+      "Decision-based iterative fragile watermarking for model integrity verification",
+      "Neural network fragile watermarking with no model performance degradation"
+    ],
+    "DNN-steganography": [
+      "Deniable Steganography",
+      "Towards Deep Network Steganography_ From Networks to Networks"
+    ],
+    "tamper-localization": [
+      "GenPTW_ Latent Image Watermarking for Provenance Tracing and Tamper Localization",
+      "Learning to Immunize Images for Tamper Localization and Self-Recovery"
+    ],
+    "AIGC-editing-robustness": [
+      "GenPTW_ Latent Image Watermarking for Provenance Tracing and Tamper Localization",
+      "SimuFreeMark_ A Noise-Simulation-Free Robust Watermarking Against Image Editing"
+    ],
+    "high-frequency-artifacts": [
+      "Generative Model Watermarking Suppressing High-Frequency Artifacts",
+      "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models"
+    ],
+    "frequency-domain-imperceptibility": [
+      "Generative Model Watermarking Suppressing High-Frequency Artifacts",
+      "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models"
+    ],
+    "deep-steganography": [
+      "Hiding Data Hiding__oa_W4306315237",
+      "Hiding Images into Images with Real-world Robustness"
+    ],
+    "covert-communication": [
+      "Hiding Data Hiding__oa_W4306315237",
+      "Steganography of Steganographic Networks"
+    ],
+    "style-transfer": [
+      "Hiding Data Hiding__oa_W4306315237",
+      "Image Steganography and Style Transformation Based on Generative Adversarial Network"
+    ],
+    "adversarial-training": [
+      "Hiding Data Hiding__oa_W4306315237",
+      "Hiding Images into Images with Real-world Robustness"
+    ],
+    "jpeg-robustness": [
+      "Hiding Images into Images with Real-world Robustness",
+      "Learning to Immunize Images for Tamper Localization and Self-Recovery"
+    ],
+    "coverless-steganography": [
+      "Image Generation Network for Covert Transmission in Online Social Network",
+      "Image Steganography and Style Transformation Based on Generative Adversarial Network"
+    ],
+    "social-network-covert-channel": [
+      "Image Generation Network for Covert Transmission in Online Social Network",
+      "Lost in the Digital Wild"
+    ],
+    "黑盒验证": [
+      "Robust and Imperceptible Black-box DNN Watermarking Based on Fourier Perturbation Analysis and Frequency Sensitivity Clustering",
+      "Watermarking Graph Neural Networks by Random Graphs"
+    ],
+    "partial-optimization": [
+      "Steganography of Steganographic Networks",
+      "Towards Deep Network Steganography_ From Networks to Networks"
+    ],
+    "image-secret-sharing": [
+      "A Common Method of Share Authentication in Image Secret Sharing"
+    ],
+    "share-authentication": [
+      "A Common Method of Share Authentication in Image Secret Sharing"
+    ],
+    "polynomial-based-ISS": [
+      "A Common Method of Share Authentication in Image Secret Sharing"
+    ],
+    "visual-secret-sharing": [
+      "A Common Method of Share Authentication in Image Secret Sharing"
+    ],
+    "screening-operation": [
+      "A Common Method of Share Authentication in Image Secret Sharing"
+    ],
+    "CRT-secret-sharing": [
+      "A Reversible Data hiding Scheme in Encrypted Domain for Secret Image Sharing based on Chinese Remainder Theorem"
+    ],
+    "separable-RDH-ED": [
+      "A Reversible Data hiding Scheme in Encrypted Domain for Secret Image Sharing based on Chinese Remainder Theorem"
+    ],
+    "homomorphic-difference-expansion": [
+      "A Reversible Data hiding Scheme in Encrypted Domain for Secret Image Sharing based on Chinese Remainder Theorem"
+    ],
+    "secret-image-sharing": [
+      "A Reversible Data hiding Scheme in Encrypted Domain for Secret Image Sharing based on Chinese Remainder Theorem"
+    ],
+    "multi-party-security": [
+      "A Reversible Data hiding Scheme in Encrypted Domain for Secret Image Sharing based on Chinese Remainder Theorem"
+    ],
+    "adaptive-trigger": [
+      "Adaptive Backdoor Attack against Deep Neural Networks"
+    ],
+    "texture-detection": [
+      "Adaptive Backdoor Attack against Deep Neural Networks"
+    ],
+    "model-parameter-clipping": [
+      "Adaptive Backdoor Attack against Deep Neural Networks"
+    ],
+    "neural-cleanse-evasion": [
+      "Adaptive Backdoor Attack against Deep Neural Networks"
+    ],
+    "FPGA硬件加速": [
+      "Additional articles of special issue on Real-time image watermarking and forensics in cloud computing"
+    ],
+    "可逆数据隐藏": [
+      "Additional articles of special issue on Real-time image watermarking and forensics in cloud computing"
+    ],
+    "视觉秘密共享": [
+      "Additional articles of special issue on Real-time image watermarking and forensics in cloud computing"
+    ],
+    "医学图像水印": [
+      "Additional articles of special issue on Real-time image watermarking and forensics in cloud computing"
+    ],
+    "LSB嵌入": [
+      "Additional articles of special issue on Real-time image watermarking and forensics in cloud computing"
+    ],
+    "NLG模型水印": [
+      "An Effective Framework for Intellectual Property Protection of NLG Models"
+    ],
+    "RNN隐藏状态嵌入": [
+      "An Effective Framework for Intellectual Property Protection of NLG Models"
+    ],
+    "模型知识产权保护": [
+      "An Effective Framework for Intellectual Property Protection of NLG Models"
+    ],
+    "对抗性密钥攻击": [
+      "An Effective Framework for Intellectual Property Protection of NLG Models"
+    ],
+    "序列生成质量保证": [
+      "An Effective Framework for Intellectual Property Protection of NLG Models"
+    ],
+    "pNET-segmentation": [
+      "An Exceptional Dataset For Rare Pancreatic Tumor Segmentation"
+    ],
+    "rare-tumor-CECT-dataset": [
+      "An Exceptional Dataset For Rare Pancreatic Tumor Segmentation"
+    ],
+    "slice-wise-weight-loss": [
+      "An Exceptional Dataset For Rare Pancreatic Tumor Segmentation"
+    ],
+    "medical-image-balancing": [
+      "An Exceptional Dataset For Rare Pancreatic Tumor Segmentation"
+    ],
+    "pancreatic-neuroendocrine-tumor": [
+      "An Exceptional Dataset For Rare Pancreatic Tumor Segmentation"
+    ],
+    "LoRA-watermarking": [
+      "AuthenLoRA_ Entangling Stylization with Imperceptible Watermarks for Copyright-Secure LoRA Adapters"
+    ],
+    "diffusion-model-copyright": [
+      "AuthenLoRA_ Entangling Stylization with Imperceptible Watermarks for Copyright-Secure LoRA Adapters"
+    ],
+    "false-positive-reduction": [
+      "AuthenLoRA_ Entangling Stylization with Imperceptible Watermarks for Copyright-Secure LoRA Adapters"
+    ],
+    "stylization-watermark-coupling": [
+      "AuthenLoRA_ Entangling Stylization with Imperceptible Watermarks for Copyright-Secure LoRA Adapters"
+    ],
+    "zero-message-regularization": [
+      "AuthenLoRA_ Entangling Stylization with Imperceptible Watermarks for Copyright-Secure LoRA Adapters"
+    ],
+    "source-code-watermarking": [
+      "CLASP_ Training-Free LLM-Assisted Source Code Watermarking via Semantic-Preserving Transformations"
+    ],
+    "LLM-assisted-transformation": [
+      "CLASP_ Training-Free LLM-Assisted Source Code Watermarking via Semantic-Preserving Transformations"
+    ],
+    "semantic-preserving-code-edit": [
+      "CLASP_ Training-Free LLM-Assisted Source Code Watermarking via Semantic-Preserving Transformations"
+    ],
+    "retrieval-based-watermark-extraction": [
+      "CLASP_ Training-Free LLM-Assisted Source Code Watermarking via Semantic-Preserving Transformations"
+    ],
+    "code-provenance-verification": [
+      "CLASP_ Training-Free LLM-Assisted Source Code Watermarking via Semantic-Preserving Transformations"
+    ],
+    "covert-domain-computing": [
+      "Computing in Covert Domain Using Data Hiding"
+    ],
+    "privacy-preserving-cloud": [
+      "Computing in Covert Domain Using Data Hiding"
+    ],
+    "matrix-embedding": [
+      "Computing in Covert Domain Using Data Hiding"
+    ],
+    "LSB-hiding": [
+      "Computing in Covert Domain Using Data Hiding"
+    ],
+    "constructive steganography": [
+      "Constructive Steganography by Tangles"
+    ],
+    "tangle pattern generation": [
+      "Constructive Steganography by Tangles"
+    ],
+    "texture synthesis steganography": [
+      "Constructive Steganography by Tangles"
+    ],
+    "JPEG robustness": [
+      "Constructive Steganography by Tangles"
+    ],
+    "coverless information hiding": [
+      "Constructive Steganography by Tangles"
+    ],
+    "fingerprint-minutiae-data-hiding": [
+      "Data hiding in Fingerprint Minutiae Template for Privacy Protection"
+    ],
+    "biometric-privacy-protection": [
+      "Data hiding in Fingerprint Minutiae Template for Privacy Protection"
+    ],
+    "feature-level-steganography": [
+      "Data hiding in Fingerprint Minutiae Template for Privacy Protection"
+    ],
+    "template-security": [
+      "Data hiding in Fingerprint Minutiae Template for Privacy Protection"
+    ],
+    "order-preserving-embedding": [
+      "Data hiding in Fingerprint Minutiae Template for Privacy Protection"
+    ],
+    "decision-based-blackbox": [
+      "Decision-based iterative fragile watermarking for model integrity verification"
+    ],
+    "neural-network-fingerprinting": [
+      "Decision-based iterative fragile watermarking for model integrity verification"
+    ],
+    "steganography-detection": [
+      "Defeating data hiding in social networks using generative adversarial network"
+    ],
+    "GAN-image-restoration": [
+      "Defeating data hiding in social networks using generative adversarial network"
+    ],
+    "adversarial-watermark-removal": [
+      "Defeating data hiding in social networks using generative adversarial network"
+    ],
+    "social-network-security": [
+      "Defeating data hiding in social networks using generative adversarial network"
+    ],
+    "residual-learning": [
+      "Defeating data hiding in social networks using generative adversarial network"
+    ],
+    "deniable-steganography": [
+      "Deniable Steganography"
+    ],
+    "coercive-attack-defense": [
+      "Deniable Steganography"
+    ],
+    "balanced-loss-training": [
+      "Deniable Steganography"
+    ],
+    "receiver-deniable-scheme": [
+      "Deniable Steganography"
+    ],
+    "consistent-spectrogram": [
+      "End-to-End Model for Speech Enhancement by Consistent Spectrogram Masking"
+    ],
+    "phase-processing": [
+      "End-to-End Model for Speech Enhancement by Consistent Spectrogram Masking"
+    ],
+    "speech-enhancement": [
+      "End-to-End Model for Speech Enhancement by Consistent Spectrogram Masking"
+    ],
+    "end-to-end-STFT": [
+      "End-to-End Model for Speech Enhancement by Consistent Spectrogram Masking"
+    ],
+    "masking-methods": [
+      "End-to-End Model for Speech Enhancement by Consistent Spectrogram Masking"
+    ],
+    "adversarial-attack-invisibility": [
+      "Exploiting Frequency Characteristics for Boosting the Invisibility of Adversarial Attacks"
+    ],
+    "frequency-domain-analysis": [
+      "Exploiting Frequency Characteristics for Boosting the Invisibility of Adversarial Attacks"
+    ],
+    "Fourier-perturbation": [
+      "Exploiting Frequency Characteristics for Boosting the Invisibility of Adversarial Attacks"
+    ],
+    "human-visual-system": [
+      "Exploiting Frequency Characteristics for Boosting the Invisibility of Adversarial Attacks"
+    ],
+    "transferable-black-box-attack": [
+      "Exploiting Frequency Characteristics for Boosting the Invisibility of Adversarial Attacks"
+    ],
+    "linguistic steganalysis": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis"
+    ],
+    "language model pre-training": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis"
+    ],
+    "RNN-based classifier": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis"
+    ],
+    "text generation detection": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis"
+    ],
+    "transfer learning for security": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis"
+    ],
+    "linguistic-steganalysis": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis_ An Empirical Study"
+    ],
+    "language-model-transfer": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis_ An Empirical Study"
+    ],
+    "pre-training-fine-tuning": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis_ An Empirical Study"
+    ],
+    "perplexity-analysis": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis_ An Empirical Study"
+    ],
+    "RNN-steganalysis": [
+      "Exploiting Language Model for Efficient Linguistic Steganalysis_ An Empirical Study"
+    ],
+    "audio-steganography-fixed-decoder": [
+      "FGAS_ Fixed Decoder Network-Based Audio Steganography with Adversarial Perturbation Generation"
+    ],
+    "adversarial-perturbation-generation": [
+      "FGAS_ Fixed Decoder Network-Based Audio Steganography with Adversarial Perturbation Generation"
+    ],
+    "anti-steganalysis": [
+      "FGAS_ Fixed Decoder Network-Based Audio Steganography with Adversarial Perturbation Generation"
+    ],
+    "adversarial-curriculum-learning": [
+      "FGAS_ Fixed Decoder Network-Based Audio Steganography with Adversarial Perturbation Generation"
+    ],
+    "lightweight-cryptographic-embedding": [
+      "FGAS_ Fixed Decoder Network-Based Audio Steganography with Adversarial Perturbation Generation"
+    ],
+    "video-steganography": [
+      "From Covert Hiding to Visual Editing_ Robust Generative Video Steganography"
+    ],
+    "generative-video-modeling": [
+      "From Covert Hiding to Visual Editing_ Robust Generative Video Steganography"
+    ],
+    "face-swapping": [
+      "From Covert Hiding to Visual Editing_ Robust Generative Video Steganography"
+    ],
+    "semantic-feature-embedding": [
+      "From Covert Hiding to Visual Editing_ Robust Generative Video Steganography"
+    ],
+    "robust-steganography": [
+      "From Covert Hiding to Visual Editing_ Robust Generative Video Steganography"
+    ],
+    "image-tamper-self-recovery": [
+      "From Image to Imuge_ Immunized Image Generation"
+    ],
+    "GAN-forensics": [
+      "From Image to Imuge_ Immunized Image Generation"
+    ],
+    "adversarial-image-training": [
+      "From Image to Imuge_ Immunized Image Generation"
+    ],
+    "content-authentication": [
+      "From Image to Imuge_ Immunized Image Generation"
+    ],
+    "reversible-watermarking": [
+      "Game-theoretic Analysis to Parameterized Reversible Watermarking"
+    ],
+    "game-theory": [
+      "Game-theoretic Analysis to Parameterized Reversible Watermarking"
+    ],
+    "rate-distortion-optimization": [
+      "Game-theoretic Analysis to Parameterized Reversible Watermarking"
+    ],
+    "content-adaptive-embedding": [
+      "Game-theoretic Analysis to Parameterized Reversible Watermarking"
+    ],
+    "multi-player-steganography": [
+      "Game-theoretic Analysis to Parameterized Reversible Watermarking"
+    ],
+    "latent-space-watermarking": [
+      "GenPTW_ Latent Image Watermarking for Provenance Tracing and Tamper Localization"
+    ],
+    "provenance-tracing": [
+      "GenPTW_ Latent Image Watermarking for Provenance Tracing and Tamper Localization"
+    ],
+    "generative-model-forensics": [
+      "GenPTW_ Latent Image Watermarking for Provenance Tracing and Tamper Localization"
+    ],
+    "cross-attention-fusion": [
+      "GenPTW_ Latent Image Watermarking for Provenance Tracing and Tamper Localization"
+    ],
+    "adversarial-text-generation": [
+      "Generating Watermarked Adversarial Texts"
+    ],
+    "text-watermarking": [
+      "Generating Watermarked Adversarial Texts"
+    ],
+    "word-level-attacks": [
+      "Generating Watermarked Adversarial Texts"
+    ],
+    "semantic-preservation": [
+      "Generating Watermarked Adversarial Texts"
+    ],
+    "ownership-verification": [
+      "Generating Watermarked Adversarial Texts"
+    ],
+    "anti-aliasing": [
+      "Generative Model Watermarking Suppressing High-Frequency Artifacts"
+    ],
+    "DNN-IP-protection": [
+      "Generative Model Watermarking Suppressing High-Frequency Artifacts"
+    ],
+    "generative-steganography": [
+      "Generative Steganographic Flow"
+    ],
+    "normalizing-flows": [
+      "Generative Steganographic Flow"
+    ],
+    "bijective-mapping": [
+      "Generative Steganographic Flow"
+    ],
+    "latent-optimization": [
+      "Generative Steganographic Flow"
+    ],
+    "steganalysis-security": [
+      "Generative Steganographic Flow"
+    ],
+    "SinGAN-steganography": [
+      "Hiding Images in Deep Probabilistic Models"
+    ],
+    "deep-probabilistic-hiding": [
+      "Hiding Images in Deep Probabilistic Models"
+    ],
+    "multi-user-image-hiding": [
+      "Hiding Images in Deep Probabilistic Models"
+    ],
+    "model-security-probing": [
+      "Hiding Images in Deep Probabilistic Models"
+    ],
+    "image-hiding": [
+      "Hiding Images into Images with Real-world Robustness"
+    ],
+    "robust-watermarking": [
+      "Hiding Images into Images with Real-world Robustness"
+    ],
+    "SIMD-convolution-optimization": [
+      "High Performance Im2win and Direct Convolutions using Three Tensor Layouts on SIMD Architectures"
+    ],
+    "tensor-data-layout": [
+      "High Performance Im2win and Direct Convolutions using Three Tensor Layouts on SIMD Architectures"
+    ],
+    "im2win-convolution": [
+      "High Performance Im2win and Direct Convolutions using Three Tensor Layouts on SIMD Architectures"
+    ],
+    "memory-efficiency": [
+      "High Performance Im2win and Direct Convolutions using Three Tensor Layouts on SIMD Architectures"
+    ],
+    "roofline-model": [
+      "High Performance Im2win and Direct Convolutions using Three Tensor Layouts on SIMD Architectures"
+    ],
+    "neural-network-ownership-protection": [
+      "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models"
+    ],
+    "low-frequency-perturbation": [
+      "High-Frequency Artifacts-Resistant Image Watermarking Applicable to Image Processing Models"
+    ],
+    "GAN-image-synthesis": [
+      "Image Generation Network for Covert Transmission in Online Social Network"
+    ],
+    "AdaIN-semantic-control": [
+      "Image Generation Network for Covert Transmission in Online Social Network"
+    ],
+    "JPEG-robustness": [
+      "Image Generation Network for Covert Transmission in Online Social Network"
+    ],
+    "image-cropping-localization": [
+      "Image Protection for Robust Cropping Localization and Recovery"
+    ],
+    "image-recovery": [
+      "Image Protection for Robust Cropping Localization and Recovery"
+    ],
+    "image-protection": [
+      "Image Protection for Robust Cropping Localization and Recovery"
+    ],
+    "jpeg-compression-simulation": [
+      "Image Protection for Robust Cropping Localization and Recovery"
+    ],
+    "image-steganography": [
+      "Image Steganography and Style Transformation Based on Generative Adversarial Network"
+    ],
+    "GAN-adversarial-training": [
+      "Image Steganography and Style Transformation Based on Generative Adversarial Network"
+    ],
+    "AIGC-steganography": [
+      "Image Steganography and Style Transformation Based on Generative Adversarial Network"
+    ],
+    "backdoor-attack-stealthiness": [
+      "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    ],
+    "multinomial-distribution-sampling": [
+      "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    ],
+    "feature-representation-entanglement": [
+      "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    ],
+    "frequency-domain-detection-defense": [
+      "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    ],
+    "trigger-generator-U-Net": [
+      "Imperceptible Backdoor Attack_ From Input Space to Feature Representation__oa_W4285605767"
+    ],
+    "adversarial-dataset-protection": [
+      "Invertible Image Dataset Protection"
+    ],
+    "reversible-adversarial-examples": [
+      "Invertible Image Dataset Protection"
+    ],
+    "defense-robustness": [
+      "Invertible Image Dataset Protection"
+    ],
+    "steganography-watermarking": [
+      "Invertible Image Dataset Protection"
+    ],
+    "backdoor-attack-invisibility": [
+      "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization"
+    ],
+    "LSB-steganography-trigger": [
+      "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization"
+    ],
+    "Lp-norm-regularization-attack": [
+      "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization"
+    ],
+    "neural-network-perceptual-gap": [
+      "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization"
+    ],
+    "trojan-detection-evasion": [
+      "Invisible Backdoor Attacks on Deep Neural Networks via Steganography and Regularization"
+    ],
+    "image-immunization": [
+      "Learning to Immunize Images for Tamper Localization and Self-Recovery"
+    ],
+    "self-recovery": [
+      "Learning to Immunize Images for Tamper Localization and Self-Recovery"
+    ],
+    "lightweight-ORSI-SOD": [
+      "Lightweight Salient Object Detection in Optical Remote-Sensing Images via Semantic Matching and Edge Alignment"
+    ],
+    "dynamic-depthwise-convolution": [
+      "Lightweight Salient Object Detection in Optical Remote-Sensing Images via Semantic Matching and Edge Alignment"
+    ],
+    "edge-self-alignment": [
+      "Lightweight Salient Object Detection in Optical Remote-Sensing Images via Semantic Matching and Edge Alignment"
+    ],
+    "semantic-matching": [
+      "Lightweight Salient Object Detection in Optical Remote-Sensing Images via Semantic Matching and Edge Alignment"
+    ],
+    "channel-wise-correlation": [
+      "Lightweight Salient Object Detection in Optical Remote-Sensing Images via Semantic Matching and Edge Alignment"
+    ],
+    "activity-based-steganography": [
+      "Lost in the Digital Wild"
+    ],
+    "coverless-information-hiding": [
+      "Lost in the Digital Wild"
+    ],
+    "Twitter-behavioral-encoding": [
+      "Lost in the Digital Wild"
+    ],
+    "network-steganography": [
+      "Lost in the Digital Wild"
+    ],
+    "encrypted-domain-retrieval": [
+      "Markov process-based retrieval for encrypted JPEG images"
+    ],
+    "JPEG-DCT-markov-features": [
+      "Markov process-based retrieval for encrypted JPEG images"
+    ],
+    "privacy-preserving-multimedia": [
+      "Markov process-based retrieval for encrypted JPEG images"
+    ],
+    "stream-cipher-partial-encryption": [
+      "Markov process-based retrieval for encrypted JPEG images"
+    ],
+    "multi-class-SVM-reduction": [
+      "Markov process-based retrieval for encrypted JPEG images"
+    ],
+    "neural-network-copyright-protection": [
+      "Model Copyright Protection in Buyer-seller Environment"
+    ],
+    "input-sensitive-model": [
+      "Model Copyright Protection in Buyer-seller Environment"
+    ],
+    "buyer-seller-model-security": [
+      "Model Copyright Protection in Buyer-seller Environment"
+    ],
+    "adversarial-perturbation-key": [
+      "Model Copyright Protection in Buyer-seller Environment"
+    ],
+    "model-watermarking": [
+      "Model Copyright Protection in Buyer-seller Environment"
+    ],
+    "multi-source-stego-detection": [
+      "Multi-Source Stego Detection with Low-Dimensional Textural Feature and Clustering Ensembles"
+    ],
+    "LTP-textural-feature": [
+      "Multi-Source Stego Detection with Low-Dimensional Textural Feature and Clustering Ensembles"
+    ],
+    "clustering-ensemble": [
+      "Multi-Source Stego Detection with Low-Dimensional Textural Feature and Clustering Ensembles"
+    ],
+    "steganographer-detection": [
+      "Multi-Source Stego Detection with Low-Dimensional Textural Feature and Clustering Ensembles"
+    ],
+    "unsupervised-steganalysis": [
+      "Multi-Source Stego Detection with Low-Dimensional Textural Feature and Clustering Ensembles"
+    ],
+    "CLIP-multimodal-fusion": [
+      "Multimodal Fake News Detection via CLIP-Guided Learning"
+    ],
+    "fake-news-detection": [
+      "Multimodal Fake News Detection via CLIP-Guided Learning"
+    ],
+    "cross-modal-similarity-gating": [
+      "Multimodal Fake News Detection via CLIP-Guided Learning"
+    ],
+    "modality-wise-attention": [
+      "Multimodal Fake News Detection via CLIP-Guided Learning"
+    ],
+    "pretrained-vision-language-model": [
+      "Multimodal Fake News Detection via CLIP-Guided Learning"
+    ],
+    "fragile-trigger": [
+      "Neural network fragile watermarking with no model performance degradation"
+    ],
+    "generative-model": [
+      "Neural network fragile watermarking with no model performance degradation"
+    ],
+    "IoT-data-aggregation": [
+      "Non-Interactive and Secure Data Aggregation Scheme for Internet of Things"
+    ],
+    "secret-sharing": [
+      "Non-Interactive and Secure Data Aggregation Scheme for Internet of Things"
+    ],
+    "non-interactive-protocol": [
+      "Non-Interactive and Secure Data Aggregation Scheme for Internet of Things"
+    ],
+    "privacy-preserving": [
+      "Non-Interactive and Secure Data Aggregation Scheme for Internet of Things"
+    ],
+    "verifiable-computation": [
+      "Non-Interactive and Secure Data Aggregation Scheme for Internet of Things"
+    ],
+    "image-captioning": [
+      "Object-oriented backdoor attack against image captioning"
+    ],
+    "vision-language": [
+      "Object-oriented backdoor attack against image captioning"
+    ],
+    "data-poisoning": [
+      "Object-oriented backdoor attack against image captioning"
+    ],
+    "object-detection": [
+      "Object-oriented backdoor attack against image captioning"
+    ],
+    "Gabor滤波器": [
+      "Orientation Convolutional Networks for Image Recognition"
+    ],
+    "矩阵分解": [
+      "Orientation Convolutional Networks for Image Recognition"
+    ],
+    "旋转变换鲁棒性": [
+      "Orientation Convolutional Networks for Image Recognition"
+    ],
+    "深度CNN调制": [
+      "Orientation Convolutional Networks for Image Recognition"
+    ],
+    "稀疏低秩表示": [
+      "Orientation Convolutional Networks for Image Recognition"
+    ],
+    "图像篡改定位": [
+      "PROMPT-IML_ Image Manipulation Localization with Pre-trained Foundation Models Through Prompt Tuning"
+    ],
+    "视觉提示调优": [
+      "PROMPT-IML_ Image Manipulation Localization with Pre-trained Foundation Models Through Prompt Tuning"
+    ],
+    "多模态特征融合": [
+      "PROMPT-IML_ Image Manipulation Localization with Pre-trained Foundation Models Through Prompt Tuning"
+    ],
+    "基础模型适应": [
+      "PROMPT-IML_ Image Manipulation Localization with Pre-trained Foundation Models Through Prompt Tuning"
+    ],
+    "篡改检测鲁棒性": [
+      "PROMPT-IML_ Image Manipulation Localization with Pre-trained Foundation Models Through Prompt Tuning"
+    ],
+    "DNN模型版权保护": [
+      "Perceptual Hash of Neural Networks"
+    ],
+    "神经网络感知哈希": [
+      "Perceptual Hash of Neural Networks"
+    ],
+    "图神经网络模型检索": [
+      "Perceptual Hash of Neural Networks"
+    ],
+    "模型结构相似度": [
+      "Perceptual Hash of Neural Networks"
+    ],
+    "哈希编码量化": [
+      "Perceptual Hash of Neural Networks"
+    ],
+    "camera-fingerprint-backdoor": [
+      "Physical Invisible Backdoor Based on Camera Imaging"
+    ],
+    "physical-backdoor-attack": [
+      "Physical Invisible Backdoor Based on Camera Imaging"
+    ],
+    "model-distillation-defense": [
+      "Physical Invisible Backdoor Based on Camera Imaging"
+    ],
+    "CFA-interpolation": [
+      "Physical Invisible Backdoor Based on Camera Imaging"
+    ],
+    "invisible-trigger": [
+      "Physical Invisible Backdoor Based on Camera Imaging"
+    ],
+    "privacy-protected-blockchain": [
+      "Privacy-Protected Deletable Blockchain"
+    ],
+    "deletable-blockchain": [
+      "Privacy-Protected Deletable Blockchain"
+    ],
+    "proof-of-space": [
+      "Privacy-Protected Deletable Blockchain"
+    ],
+    "linkable-multi-signature": [
+      "Privacy-Protected Deletable Blockchain"
+    ],
+    "traceable-ring-signature": [
+      "Privacy-Protected Deletable Blockchain"
+    ],
+    "cross-modal-fusion": [
+      "RGB-T Semantic Segmentation With Location, Activation, and Sharpening"
+    ],
+    "RGB-T-semantic-segmentation": [
+      "RGB-T Semantic Segmentation With Location, Activation, and Sharpening"
+    ],
+    "feature-level-discriminative-treatment": [
+      "RGB-T Semantic Segmentation With Location, Activation, and Sharpening"
+    ],
+    "thermal-infrared": [
+      "RGB-T Semantic Segmentation With Location, Activation, and Sharpening"
+    ],
+    "attention-mechanism": [
+      "RGB-T Semantic Segmentation With Location, Activation, and Sharpening"
+    ],
+    "reversible data hiding": [
+      "Reversible Data Hiding With Image Enhancement Using Histogram Shifting"
+    ],
+    "contrast enhancement": [
+      "Reversible Data Hiding With Image Enhancement Using Histogram Shifting"
+    ],
+    "histogram shifting": [
+      "Reversible Data Hiding With Image Enhancement Using Histogram Shifting"
+    ],
+    "structural similarity": [
+      "Reversible Data Hiding With Image Enhancement Using Histogram Shifting"
+    ],
+    "entropy maximization": [
+      "Reversible Data Hiding With Image Enhancement Using Histogram Shifting"
+    ],
+    "face-recognition-blur-invariant": [
+      "Robust Face Recognition in Low Resolution and Blurred Image Using Joint Information in Space and Frequency"
+    ],
+    "local-frequency-descriptor": [
+      "Robust Face Recognition in Low Resolution and Blurred Image Using Joint Information in Space and Frequency"
+    ],
+    "low-resolution-face-recognition": [
+      "Robust Face Recognition in Low Resolution and Blurred Image Using Joint Information in Space and Frequency"
+    ],
+    "adaptive-STFT-window": [
+      "Robust Face Recognition in Low Resolution and Blurred Image Using Joint Information in Space and Frequency"
+    ],
+    "magnitude-phase-fusion": [
+      "Robust Face Recognition in Low Resolution and Blurred Image Using Joint Information in Space and Frequency"
+    ],
+    "DNN水印": [
+      "Robust and Imperceptible Black-box DNN Watermarking Based on Fourier Perturbation Analysis and Frequency Sensitivity Clustering"
+    ],
+    "傅里叶扰动分析": [
+      "Robust and Imperceptible Black-box DNN Watermarking Based on Fourier Perturbation Analysis and Frequency Sensitivity Clustering"
+    ],
+    "频率敏感度聚类": [
+      "Robust and Imperceptible Black-box DNN Watermarking Based on Fourier Perturbation Analysis and Frequency Sensitivity Clustering"
+    ],
+    "触发样本生成": [
+      "Robust and Imperceptible Black-box DNN Watermarking Based on Fourier Perturbation Analysis and Frequency Sensitivity Clustering"
+    ],
+    "ORSI-SOD": [
+      "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    ],
+    "Transformer backbone": [
+      "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    ],
+    "Direction-aware convolution": [
+      "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    ],
+    "Global-to-local paradigm": [
+      "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    ],
+    "Attention mechanism": [
+      "Salient Object Detection in Optical Remote Sensing Images Driven by Transformer"
+    ],
+    "steganography-cover-selection": [
+      "Secure Cover Selection for Steganography"
+    ],
+    "pooled-steganalysis": [
+      "Secure Cover Selection for Steganography"
+    ],
+    "MMD-distance": [
+      "Secure Cover Selection for Steganography"
+    ],
+    "individual-level-security": [
+      "Secure Cover Selection for Steganography"
+    ],
+    "statistical-detectability": [
+      "Secure Cover Selection for Steganography"
+    ],
+    "steganographic-cover-synthesis": [
+      "Secure Steganographic Cover Generation via a Noise-Optimization Stacked StyleGAN2"
+    ],
+    "stylegan2-noise-optimization": [
+      "Secure Steganographic Cover Generation via a Noise-Optimization Stacked StyleGAN2"
+    ],
+    "security-fidelity-tradeoff": [
+      "Secure Steganographic Cover Generation via a Noise-Optimization Stacked StyleGAN2"
+    ],
+    "noise-loss-steganalysis": [
+      "Secure Steganographic Cover Generation via a Noise-Optimization Stacked StyleGAN2"
+    ],
+    "progressive-growing-generation": [
+      "Secure Steganographic Cover Generation via a Noise-Optimization Stacked StyleGAN2"
+    ],
+    "forging-attack-defense": [
+      "Secure neural network watermarking protocol against forging attack"
+    ],
+    "one-way-hash-chain": [
+      "Secure neural network watermarking protocol against forging attack"
+    ],
+    "black-box-attack": [
+      "Secure neural network watermarking protocol against forging attack"
+    ],
+    "intellectual-property-protection": [
+      "Secure neural network watermarking protocol against forging attack"
+    ],
+    "linguistic-steganography": [
+      "Semantic-Preserving Linguistic Steganography by Pivot Translation and Semantic-Aware Bins Coding"
+    ],
+    "pivot-translation": [
+      "Semantic-Preserving Linguistic Steganography by Pivot Translation and Semantic-Aware Bins Coding"
+    ],
+    "semantic-consistency": [
+      "Semantic-Preserving Linguistic Steganography by Pivot Translation and Semantic-Aware Bins Coding"
+    ],
+    "information-encoding": [
+      "Semantic-Preserving Linguistic Steganography by Pivot Translation and Semantic-Aware Bins Coding"
+    ],
+    "subword-tokenization": [
+      "Semantic-Preserving Linguistic Steganography by Pivot Translation and Semantic-Aware Bins Coding"
+    ],
+    "deep-learning-watermarking": [
+      "SimuFreeMark_ A Noise-Simulation-Free Robust Watermarking Against Image Editing"
+    ],
+    "noise-simulation-free": [
+      "SimuFreeMark_ A Noise-Simulation-Free Robust Watermarking Against Image Editing"
+    ],
+    "low-frequency-stability": [
+      "SimuFreeMark_ A Noise-Simulation-Free Robust Watermarking Against Image Editing"
+    ],
+    "VAE-latent-embedding": [
+      "SimuFreeMark_ A Noise-Simulation-Free Robust Watermarking Against Image Editing"
+    ],
+    "real-time-watermarking": [
+      "Special issue on real-time image watermarking and forensics in cloud computing"
+    ],
+    "cloud-forensics": [
+      "Special issue on real-time image watermarking and forensics in cloud computing"
+    ],
+    "computational-complexity": [
+      "Special issue on real-time image watermarking and forensics in cloud computing"
+    ],
+    "reversible-data-hiding": [
+      "Special issue on real-time image watermarking and forensics in cloud computing"
+    ],
+    "steganography-steganalysis": [
+      "Special issue on real-time image watermarking and forensics in cloud computing"
+    ],
+    "diffusion-model-mimicry-detection": [
+      "Steal My Artworks for Fine-tuning_ A Watermarking Framework for Detecting Art Theft Mimicry in Text-to-Image Models"
+    ],
+    "artist-copyright-protection": [
+      "Steal My Artworks for Fine-tuning_ A Watermarking Framework for Detecting Art Theft Mimicry in Text-to-Image Models"
+    ],
+    "watermark-distribution-forensics": [
+      "Steal My Artworks for Fine-tuning_ A Watermarking Framework for Detecting Art Theft Mimicry in Text-to-Image Models"
+    ],
+    "text-to-image-fine-tuning": [
+      "Steal My Artworks for Fine-tuning_ A Watermarking Framework for Detecting Art Theft Mimicry in Text-to-Image Models"
+    ],
+    "style-imitation-attribution": [
+      "Steal My Artworks for Fine-tuning_ A Watermarking Framework for Detecting Art Theft Mimicry in Text-to-Image Models"
+    ],
+    "SSL编码器IP保护": [
+      "StegGuard_ Fingerprinting Self-supervised Pre-trained Encoders via Secrets Embeder and Extractor"
+    ],
+    "主动秘密嵌入指纹": [
+      "StegGuard_ Fingerprinting Self-supervised Pre-trained Encoders via Secrets Embeder and Extractor"
+    ],
+    "模型提取攻击防御": [
+      "StegGuard_ Fingerprinting Self-supervised Pre-trained Encoders via Secrets Embeder and Extractor"
+    ],
+    "频域通道注意力": [
+      "StegGuard_ Fingerprinting Self-supervised Pre-trained Encoders via Secrets Embeder and Extractor"
+    ],
+    "EaaS知识产权": [
+      "StegGuard_ Fingerprinting Self-supervised Pre-trained Encoders via Secrets Embeder and Extractor"
+    ],
+    "neural-network-steganalysis": [
+      "Steganalysis of Neural Networks Based on Symmetric Histogram Distribution"
+    ],
+    "black-box-detection": [
+      "Steganalysis of Neural Networks Based on Symmetric Histogram Distribution"
+    ],
+    "symmetric-histogram-method": [
+      "Steganalysis of Neural Networks Based on Symmetric Histogram Distribution"
+    ],
+    "data-hiding-detection": [
+      "Steganalysis of Neural Networks Based on Symmetric Histogram Distribution"
+    ],
+    "deep-learning-security": [
+      "Steganalysis of Neural Networks Based on Symmetric Histogram Distribution"
+    ],
+    "text-steganography": [
+      "Steganographic visual story with mutual-perceived joint attention"
+    ],
+    "visual-story-generation": [
+      "Steganographic visual story with mutual-perceived joint attention"
+    ],
+    "mutual-attention-mechanism": [
+      "Steganographic visual story with mutual-perceived joint attention"
+    ],
+    "adaptive-embedding": [
+      "Steganographic visual story with mutual-perceived joint attention"
+    ],
+    "cross-modal-hiding": [
+      "Steganographic visual story with mutual-perceived joint attention"
+    ],
+    "GIF-steganography": [
+      "Steganography in animated emoji using self-reference"
+    ],
+    "self-reference-distortion": [
+      "Steganography in animated emoji using self-reference"
+    ],
+    "DnCNN-denoising": [
+      "Steganography in animated emoji using self-reference"
+    ],
+    "syndrome-trellis-coding": [
+      "Steganography in animated emoji using self-reference"
+    ],
+    "animated-emoji-covert-communication": [
+      "Steganography in animated emoji using self-reference"
+    ],
+    "model-steganography": [
+      "Steganography of Steganographic Networks"
+    ],
+    "filter-selection": [
+      "Steganography of Steganographic Networks"
+    ],
+    "DNN-model-disguising": [
+      "Steganography of Steganographic Networks"
+    ],
+    "DNN知识产权保护": [
+      "Structural Watermarking to Deep Neural Networks via Network Channel Pruning"
+    ],
+    "网络结构水印": [
+      "Structural Watermarking to Deep Neural Networks via Network Channel Pruning"
+    ],
+    "通道剪枝": [
+      "Structural Watermarking to Deep Neural Networks via Network Channel Pruning"
+    ],
+    "模型压缩水印": [
+      "Structural Watermarking to Deep Neural Networks via Network Channel Pruning"
+    ],
+    "后门水印": [
+      "Structural Watermarking to Deep Neural Networks via Network Channel Pruning"
+    ],
+    "model-concealment": [
+      "Towards Deep Network Steganography_ From Networks to Networks"
+    ],
+    "gradient-based-filter-insertion": [
+      "Towards Deep Network Steganography_ From Networks to Networks"
+    ],
+    "parameter-statistical-undetectability": [
+      "Towards Deep Network Steganography_ From Networks to Networks"
+    ],
+    "graph-neural-network-watermarking": [
+      "Transferable Watermarking to Self-supervised Pre-trained Graph Encoders by Trigger Embeddings"
+    ],
+    "self-supervised-learning-copyright": [
+      "Transferable Watermarking to Self-supervised Pre-trained Graph Encoders by Trigger Embeddings"
+    ],
+    "backdoor-watermark": [
+      "Transferable Watermarking to Self-supervised Pre-trained Graph Encoders by Trigger Embeddings"
+    ],
+    "graph-foundation-model-protection": [
+      "Transferable Watermarking to Self-supervised Pre-trained Graph Encoders by Trigger Embeddings"
+    ],
+    "black-box-verification": [
+      "Transferable Watermarking to Self-supervised Pre-trained Graph Encoders by Trigger Embeddings"
+    ],
+    "NLP-backdoor-attack": [
+      "Trigger Where It Hurts_ Unveiling Hidden Backdoors through Sensitivity with Sensitron"
+    ],
+    "sensitivity-analysis": [
+      "Trigger Where It Hurts_ Unveiling Hidden Backdoors through Sensitivity with Sensitron"
+    ],
+    "explainability-weaponization": [
+      "Trigger Where It Hurts_ Unveiling Hidden Backdoors through Sensitivity with Sensitron"
+    ],
+    "hierarchical-attribution": [
+      "Trigger Where It Hurts_ Unveiling Hidden Backdoors through Sensitivity with Sensitron"
+    ],
+    "plug-and-rank-trigger": [
+      "Trigger Where It Hurts_ Unveiling Hidden Backdoors through Sensitivity with Sensitron"
+    ],
+    "backdoor poisoning": [
+      "Trojaning semi-supervised learning model via poisoning wild images on the web"
+    ],
+    "semi-supervised learning": [
+      "Trojaning semi-supervised learning model via poisoning wild images on the web"
+    ],
+    "zero-knowledge attack": [
+      "Trojaning semi-supervised learning model via poisoning wild images on the web"
+    ],
+    "gradient matching": [
+      "Trojaning semi-supervised learning model via poisoning wild images on the web"
+    ],
+    "unlabeled data poisoning": [
+      "Trojaning semi-supervised learning model via poisoning wild images on the web"
+    ],
+    "image-vaccine-steganalysis": [
+      "Universal Image Vaccine Against Steganography"
+    ],
+    "CLAHE-image-enhancement": [
+      "Universal Image Vaccine Against Steganography"
+    ],
+    "universal-countermeasure": [
+      "Universal Image Vaccine Against Steganography"
+    ],
+    "steganography-defense": [
+      "Universal Image Vaccine Against Steganography"
+    ],
+    "content-adaptive-steganography": [
+      "Universal Image Vaccine Against Steganography"
+    ],
+    "GNN水印": [
+      "Watermarking Graph Neural Networks by Random Graphs"
+    ],
+    "知识产权保护": [
+      "Watermarking Graph Neural Networks by Random Graphs"
+    ],
+    "ER随机图": [
+      "Watermarking Graph Neural Networks by Random Graphs"
+    ],
+    "触发集嵌入": [
+      "Watermarking Graph Neural Networks by Random Graphs"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging",
+  "doi": "10.48550/arxiv.2503.00325",
+  "title": "CADRef: Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "DNN部署在现实场景中常对OOD样本产生过度自信的错误预测，在自动驾驶和医疗诊断等安全关键领域造成严重风险",
+  "problem_framing": "将OOD检测形式化为二分类问题：使用得分函数为样本分配置信度分数，ID样本得高分，OOD样本得低分",
+  "key_insight": "样本特征与类感知平均特征的相对误差可作为判别准则，且通过符号对齐关系解耦正负误差后分别缩放可放大ID与OOD的区分度",
+  "method_signature": "CARef计算类感知相对特征误差，CADRef在正负特征上分别用样本级和训练集级对数得分归一化后融合",
+  "evaluation_criteria": "AUROC越高越好，FPR95越低越好，在ImageNet-1k、CIFAR-10/100等多个数据集和多种模型架构上评估",
+  "negative_result_or_admitted_limitation": "ASH-S等特征塑形方法在ViT、Swin等架构上完全崩溃（AUROC低于50%），表明这类方法缺乏跨架构鲁棒性；正误差作为独立得分会严重降低检测性能（AUROC和FPR95分别下降约13%和15%）",
+  "evidence_for_taste": [
+    "neglecting the rich information embedded within the features",
+    "positive error as the score substantially reduces OOD detection performance",
+    "feature shaping-based methods exhibit architecture-specific behavior",
+    "ViM does not fully utilize feature information",
+    "AUROC below 50% on ViT-B/16, Swin-B, and ConvNeXt-B",
+    "positive error plays a harmful role in CARef's coupling form",
+    "reducing feature dimensionality potentially compromises the precision"
+  ],
+  "thinking_moves": [
+    "从特征内部信息利用不足的观察出发，认为现有方法只重塑特征而忽视特征本身的丰富信息",
+    "对正负特征误差进行独立消融实验，发现两者对检测的贡献相反，正误差具有有害作用",
+    "利用对数得分与正误差的互补关系，用比值替代原始正误差以解决高置信度区域的重叠问题",
+    "将特征解耦与对数方法结合，而非简单拼接，保留了特征信息的判别能力同时引入对数信号的置信度先验",
+    "批评ViM将特征投影到其他空间而非直接在特征空间内利用ID/OOD样本的可分性"
+  ],
+  "topic_tags": [
+    "out-of-distribution-detection",
+    "neural-network-safety",
+    "feature-decoupling",
+    "class-aware-feature",
+    "post-hoc-ood-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

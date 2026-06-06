@@ -1,0 +1,39 @@
+{
+  "paper_id": "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation__oa_W2236688737",
+  "doi": "10.48550/arxiv.1601.03651",
+  "title": "Improved Relation Classification by Deep Recurrent Neural Networks with Data Augmentation",
+  "year": 2016,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "浅层神经网络可能无法充分探索不同抽象层级的表示空间",
+  "problem_framing": "利用最短依存路径进行实体对关系分类",
+  "key_insight": "关系具有方向性,调换两子路径顺序可生成逆关系样本实现数据增强",
+  "method_signature": "堆叠多层RNN隐藏层于最短依存路径上",
+  "evaluation_criteria": "SemEval-2010 Task 8的F1分数",
+  "negative_result_or_admitted_limitation": "深度过大时性能下降;CNN深度架构反而损害性能;Other类引入噪声",
+  "evidence_for_taste": [
+    "shallow architectures...may fail to explore",
+    "deep RNN is a large model",
+    "The Other class contains mainly noise",
+    "performance decreases when the depth is too large",
+    "CNN deep architecture hurts the performance"
+  ],
+  "thinking_moves": [
+    "观察到现有方法的深度局限,主张通过堆叠RNN层捕获多级抽象",
+    "利用关系方向性特征设计无损数据增强策略",
+    "通过可视化追踪信息流验证层级学习效果",
+    "区分噪声类与其他类进行差异化数据增强"
+  ],
+  "topic_tags": [
+    "deep-RNN",
+    "relation-classification",
+    "shortest-dependency-path",
+    "data-augmentation",
+    "semantic-relations"
+  ],
+  "cites_own_work": [
+    "Xu et al., 2015b"
+  ],
+  "extraction_quality": "full"
+}

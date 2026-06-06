@@ -1,0 +1,39 @@
+{
+  "paper_id": "Adaptive Backtracking for Privacy Protection in Large Language Models",
+  "doi": "10.48550/arxiv.2508.06087",
+  "title": "Adaptive Backtracking for Privacy Protection in Large Language Models",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有隐私保护方法忽视企业数据泄露风险；数据脱敏虽能防泄露但严重损害模型效用",
+  "problem_framing": "将隐私保护定义为约束优化问题：最大化RAG生成效用的同时避免泄露隐私实体",
+  "key_insight": "LLM在泄露隐私前很早就形成了泄露意图，应回溯到意图形成点进行重写而非事后脱敏",
+  "method_signature": "ABack使用隐藏状态模型进行逆向推理，定位隐私泄露意图的最早点并回溯重写",
+  "evaluation_criteria": "综合隐私效用分数：结合ALR/ASR/CLR与ROUGE-L/METEOR/GPT判分",
+  "negative_result_or_admitted_limitation": "ABack难以检测语义混淆的隐性隐私泄露，因实体对齐存在局限",
+  "evidence_for_taste": [
+    "data sanitization inevitably reduces the informativeness",
+    "LLMs form the intention to leak privacy at a very early stage",
+    "none of the methods can simultaneously ensure effective privacy protection",
+    "prompt injection is the only viable attack",
+    "backtracking to the origin of the leakage intention"
+  ],
+  "thinking_moves": [
+    "将用户导向隐私问题重新定义为企业导向隐私威胁",
+    "识别现有方法二元困境：防泄露则损效用，保效用则泄露",
+    "从解码过程介入而非输入输出层面防护",
+    "借鉴贝叶斯推断框架建模隐私泄露的隐式意图",
+    "为验证方法有效性主动训练更强的攻击模型"
+  ],
+  "topic_tags": [
+    "RAG-privacy",
+    "enterprise-privacy-protection",
+    "backtracking-decoding",
+    "hidden-state-inference",
+    "LLM-privacy-leakage"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

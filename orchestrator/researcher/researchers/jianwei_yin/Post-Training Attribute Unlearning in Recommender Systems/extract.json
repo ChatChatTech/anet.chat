@@ -1,0 +1,42 @@
+{
+  "paper_id": "Post-Training Attribute Unlearning in Recommender Systems",
+  "doi": "10.48550/arxiv.2403.06737",
+  "title": "Post-Training Attribute Unlearning in Recommender Systems",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "隐私法规要求删除用户敏感属性信息,现有方法只能处理训练数据而非隐含属性,后训练场景下无法重新训练模型",
+  "problem_framing": "将属性遗忘形式化为用户嵌入空间上的优化问题,通过分布混淆实现属性不可区分,同时保持推荐性能",
+  "key_insight": "用锚分布替代两两分布比对可降复杂度O(T²)至O(T);函数空间正则化比参数空间L2范数更能保留推荐功能",
+  "method_signature": "两分量损失函数:分布到分布区分损失+函数空间排序正则损失",
+  "evaluation_criteria": "属性推理攻击准确率(越小越好)与NDCG/HR指标(越大越好)之权衡",
+  "negative_result_or_admitted_limitation": "直接应用二进制属性方法到多类场景会导致计算复杂度O(T²)爆炸和推荐性能下降",
+  "evidence_for_taste": [
+    "not applicable for AU",
+    "parameter-space might be a poor indicator",
+    "negative correlation between our proposed regularization loss",
+    "we observed that the performance of recommendation decreases",
+    "significantly computational complexity"
+  ],
+  "thinking_moves": [
+    "从属性推断攻击的存在性反向定义遗忘目标为隐含属性",
+    "用锚分布的水波中心估计替代全两两比较降复杂度",
+    "借鉴持续学习的函数空间正则化思路替代参数空间L2",
+    "区分二进制与多类属性场景的方法论差异"
+  ],
+  "topic_tags": [
+    "recommender-system-unlearning",
+    "attribute-inference-defense",
+    "distribution-distance-MMD",
+    "function-space-regularization",
+    "post-training-model-editing"
+  ],
+  "cites_own_work": [
+    "[45] D2D-PR",
+    "[45] previous work",
+    "[45] Making Users Indistinguishable"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文末尾被截断,部分实验细节和结论不完整。第一作者为Chaochao Chen,Jianwei Yin为最后署名作者(可能是通讯或资深作者)。 | md truncated to head40k+tail20k"
+}

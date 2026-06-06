@@ -1,0 +1,45 @@
+{
+  "paper_id": "Characterizing EOSIO Blockchain",
+  "doi": "10.48550/arxiv.2002.05369",
+  "title": "Characterizing EOSIO Blockchain",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "EOSIO有百万账户和数十亿交易,但生态系统的安全与欺诈问题尚不清楚,导致数百万美元损失",
+  "problem_framing": "将区块链安全欺诈问题转化为可量化的行为异常检测问题:通过图建模和特征相似度识别bots和攻击账户",
+  "key_insight": "EOSIO超30%账户是bot-like,超300攻击账户造成超150万EOS损失,且这些问题可通过图结构异常和行为模式相似度自动检测",
+  "method_signature": "构建EMFG/EACG/ECIG三类图模型,从社区和账户两层利用行为相似度检测bot;用盈利阈值和手动验证识别攻击",
+  "evaluation_criteria": "以已知bot账户和已确认攻击为ground truth,验证检测的precision/recall,并人工确认可疑账户",
+  "negative_result_or_admitted_limitation": "必须依赖heuristics和manual validation,无法保证所有标记账户真正是bot,仅提供下界",
+  "evidence_for_taste": [
+    "relied on heuristics and manual validation",
+    "it is impossible for us to make sure all accounts flagged are truly bots",
+    "we only offer a lower-bound",
+    "heuristics to flag accounts that are suspicious",
+    "This, of course, might not be scalable",
+    "Pareto effect",
+    "superficial prosperity",
+    "30.75% of the accounts (381,008) as bot-like"
+  ],
+  "thinking_moves": [
+    "将链上交易建模为带时间戳的图(EMFG),利用图度量(clustering coefficient, assortativity)揭示资金流向特征",
+    "通过EACG树结构中out-degree异常识别潜在的bot控制器账户群",
+    "将bot检测问题分解为社区级(创建关系)和账户级(行为相似度)两个维度",
+    "用盈利模式和交易频率的时间窗口来区分normal accounts和attack accounts",
+    "承认方法依赖heuristics,强调手动验证的必要性,而非声称算法完全自动",
+    "对比Ethereum量化指标凸显EOSIO的特殊性(gambling DApps主导,clustering系数高三倍)"
+  ],
+  "topic_tags": [
+    "blockchain-security",
+    "bot-detection",
+    "graph-analysis",
+    "EOSIO-DApp",
+    "attack-forensics"
+  ],
+  "cites_own_work": [
+    "Understanding Ethereum via Graph Analysis (INFOCOM 2018)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

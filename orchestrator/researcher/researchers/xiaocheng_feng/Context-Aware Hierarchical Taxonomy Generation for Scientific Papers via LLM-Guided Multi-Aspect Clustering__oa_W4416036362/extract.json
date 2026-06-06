@@ -1,0 +1,39 @@
+{
+  "paper_id": "Context-Aware Hierarchical Taxonomy Generation for Scientific Papers via LLM-Guided Multi-Aspect Clustering__oa_W4416036362",
+  "doi": "10.18653/v1/2025.emnlp-main.788",
+  "title": "Context-Aware Hierarchical Taxonomy Generation for Scientific Papers via LLM-Guided Multi-Aspect Clustering",
+  "year": 2025,
+  "venue": "EMNLP 2025",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "学术文献爆发式增长导致研究者难以系统组织领域知识，现有方法缺乏连贯性与粒度",
+  "problem_framing": "将论文分层次组织为语义连贯的分类树，核心挑战是LLM单独生成无法对齐语料、聚类方法忽略语义维度",
+  "key_insight": "每个论文的表征应基于其与周围论文的关系动态调整，多aspect引导的编码可捕捉不同语义维度并通过动态搜索找最优分区",
+  "method_signature": "LLM动态生成多语义aspect → aspect引导摘要 → aspect独立聚类 → 组合搜索找最优aspect-cluster配对 → 自顶向下迭代建树",
+  "evaluation_criteria": "聚类质量(NMI/ARI/Purity)、结构对齐(CEDS/HSR)、人类五维评估(覆盖度/相关度/结构/有效性/充分性)",
+  "negative_result_or_admitted_limitation": "k_v增大会损害结构质量(CEDS下降、节点数膨胀)，adaptive策略计算开销高但收益有限；固定aspect下剪枝策略破坏高质量聚类",
+  "evidence_for_taste": [
+    "lack coherence and granularity",
+    "struggle to capture highly specialized knowledge",
+    "taxonomies produced solely by LLMs are not guaranteed to align with the content of a given corpus",
+    "without this context awareness, papers focusing on distinct aspects might be incorrectly categorized",
+    "simple greedy filtering may break high-quality groupings",
+    "silhouette-based selection may offer limited practical benefit"
+  ],
+  "thinking_moves": [
+    "先定位LLM单独生成的失败模式：专业化知识捕捉不足、与语料不对齐、产生幻觉类别",
+    "将任务重新框架为context-aware问题：论文表征应动态依赖其与周围论文的关系",
+    "识别语义异质性：不同aspect的编码空间结构不同，不应简单拼接聚合",
+    "用组合优化形式化分区选择：k_v个分区需从aspect×cluster的笛卡尔积中搜索唯一配对"
+  ],
+  "topic_tags": [
+    "hierarchical-taxonomy-generation",
+    "LLM-document-clustering",
+    "multi-aspect-encoding",
+    "scientific-literature-organization",
+    "context-aware-clustering"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,43 @@
+{
+  "paper_id": "Wang et al. - 2012 - A Survey of Green Mobile Networks Opportunities and Challenges",
+  "doi": null,
+  "title": "A Survey of Green Mobile Networks: Opportunities and Challenges",
+  "year": 2012,
+  "venue": "Mobile Networks and Applications",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "ICT能耗激增,移动网络占ICT总能耗57%却主要关注容量和QoS而忽视能效",
+  "problem_framing": "如何在满意QoS水平以上实现完美能效,找到性能-能耗曲线上可接受的平衡点",
+  "key_insight": "\"over-compromised performance with QoS sacrifice is unacceptable in commercial networks\"——绿色技术需在above satisfiable QoS level区域追求能效",
+  "method_signature": "五大组件(数据中心/宏基站/毫微微基站/终端/服务)×三类技术(处理/通信/系统)的分类体系",
+  "evaluation_criteria": "能量效率指标(PUE/ECR/TEER等)与QoS/用户体验(QoE)的联合评估",
+  "negative_result_or_admitted_limitation": "proxy-based schemes highly rely on remote servers, which will bring more deployment cost in practical, and moreover, how to inherently reduce energy consumption for P2P protocols for mobile environment is still unexplored and challenging",
+  "evidence_for_taste": [
+    "over-provisioning condition",
+    "perfect energy efficiency",
+    "above the satisfiable QoS level",
+    "unsatisfying level regarding the QoS requirement",
+    "energy-saving gain achieved usually at the cost of degradation of QoS",
+    "uncompromised QoS",
+    "performance compromise"
+  ],
+  "thinking_moves": [
+    "从ICT能源危机的宏观背景落到移动网络能耗分布的定量分析",
+    "用能量-性能曲线可视化问题空间,划分不可接受/可接受/理想区域",
+    "对移动网络系统进行五大组件拆解并分别枚举绿能技术",
+    "将零散绿能技术归类为处理/通信/系统三个维度",
+    "从metrics层面建立评价基准统一衡量不同技术的能效",
+    "识别over-provisioning为跨组件的核心问题",
+    "承认某些方案存在practical limitation并指出未探索方向"
+  ],
+  "topic_tags": [
+    "green-mobile-networks",
+    "energy-efficiency-metrics",
+    "base-station-power-saving",
+    "femtocell-interference",
+    "end-host-transmission-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "这是survey论文,非原创方法论文,主要贡献在于分类框架和现状综述。提取的taste信号主要反映作者作为survey者的认知方式——如何组织问题空间、划定研究边界、承认未解问题。 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zheng et al. - 2017 - Detecting radio frequency interference for CSI measurements on COTS WiFi devices",
+  "doi": null,
+  "title": "Detecting Radio Frequency Interference for CSI Measurements on COTS WiFi Devices",
+  "year": 2017,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RFI严重劣化CSI感知性能，但在WiFi感知文献中未获充分关注",
+  "problem_framing": "如何从每个CSI测量中检测交叉技术干扰，以识别被污染的CSI",
+  "key_insight": "RFI信号的循环平稳特性不会从CSI中完全消失",
+  "method_signature": "SCF梯度矩阵+SVD和CAF纹理分析+GLCM能量",
+  "evaluation_criteria": "TP率、TN率和检测准确率",
+  "negative_result_or_admitted_limitation": "蓝牙跳频和微波扫描导致TP率降低；远距离干扰或收发近距离时性能显著下降",
+  "evidence_for_taste": [
+    "RFI is surprisingly overlooked",
+    "does not deal with interfered CSI directly",
+    "detect RFI for each CSI measurement",
+    "not feasible to simply select a threshold",
+    "the texture becomes more complicated",
+    "the existence of cross-technology interference is sufficient for most CSI-based sensing applications"
+  ],
+  "thinking_moves": [
+    "从物理层信号属性(循环平稳性)反推其在CSI中的可检测性",
+    "将时域/频域分析分别应用于CSI的不同视角(CAF vs SCF)",
+    "从信号处理引入图像分析工具(GLCM纹理)来处理CSI序列",
+    "承认在特定干扰类型下算法失效的事实(蓝牙/微波)"
+  ],
+  "topic_tags": [
+    "WiFi CSI sensing",
+    "cross-technology interference detection",
+    "cyclostationary analysis",
+    "commodity WiFi devices",
+    "PHY-layer signal processing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注venue信息，仅从内容推断为会议论文；role标注基于作者署名顺序推测"
+}

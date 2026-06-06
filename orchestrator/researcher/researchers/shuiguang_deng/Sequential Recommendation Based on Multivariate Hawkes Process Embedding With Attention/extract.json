@@ -1,0 +1,39 @@
+{
+  "paper_id": "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention",
+  "doi": "10.1109/tcyb.2021.3077361",
+  "title": "Sequential Recommendation Based on Multivariate Hawkes Process Embedding With Attention",
+  "year": 2021,
+  "venue": "IEEE Transactions on Cybernetics",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "信息过载问题严峻，传统方法忽视时间信息，复杂交互关系难以捕捉",
+  "problem_framing": "用多元Hawkes过程建模时序行为序列，用注意力机制自适应融合长短时偏好",
+  "key_insight": "Hawkes过程可在连续时间空间建模事件依赖，注意力可自适应权衡用户的长短期偏好权重",
+  "method_signature": "MHPE-a: 嵌入层+多元Hawkes过程+注意力偏好融合",
+  "evaluation_criteria": "Recall@K和MRR@K在lastfm和gowalla数据集上与baseline对比",
+  "negative_result_or_admitted_limitation": "gowalla数据集更稀疏，注意力带来的性能提升不如lastfm显著",
+  "evidence_for_taste": [
+    "prediction at t1 and t3 mainly depends on short-term preference",
+    "prediction at t2 or t4 is mostly up to long-term preference",
+    "MHPE-a can incorporate both long/short-term user preferences",
+    "influence the performance improvement achieved by attention component"
+  ],
+  "thinking_moves": [
+    "将时序推荐问题重新frame为连续时间空间中的点过程建模",
+    "通过松弛正性约束允许α和μ为负值以建模抑制效应",
+    "用注意力机制替代静态加权来动态融合长短时偏好",
+    "通过负采样解决softmax计算复杂度与物品集合规模的矛盾"
+  ],
+  "topic_tags": [
+    "sequential-recommendation",
+    "multivariate-Hawkes-process",
+    "attention-mechanism",
+    "temporal-point-process",
+    "user-preference-modeling"
+  ],
+  "cites_own_work": [
+    "53"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

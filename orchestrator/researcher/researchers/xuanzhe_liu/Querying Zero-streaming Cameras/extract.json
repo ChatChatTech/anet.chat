@@ -1,0 +1,39 @@
+{
+  "paper_id": "Querying Zero-streaming Cameras",
+  "doi": null,
+  "title": "Video Analytics with Zero-streaming Cameras",
+  "year": 2021,
+  "venue": "USENIX ATC",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "低代价摄像头捕获海量\"冷\"视频(<0.005%被查询),流式传输浪费带宽,云端难以承担处理",
+  "problem_framing": "如何在本地存储+按需查询模式下,兼顾捕获时资源效率和查询时探索速度",
+  "key_insight": "稀疏高准确帧远优于稠密低准确帧;多轮递增算子可在执行中逐步细化结果",
+  "method_signature": "DIVA: landmarks稀疏建知识 + multipass算子升级策略",
+  "evaluation_criteria": "100×实时视频处理速度;半结果返回快一个量级;相对基线加速≥4×",
+  "negative_result_or_admitted_limitation": "短视频范围(<分钟)直接上传即可;DIVA不适用于非稳态摄像头;依赖摄像头存储可靠性",
+  "evidence_for_taste": [
+    "only <0.005% video data",
+    "Streaming cold videos wastes bandwidth",
+    "accurate knowledge on a sparse sample",
+    "High accuracy is crucial",
+    "We are the first",
+    "low-cost cameras can hardly build quality indexes"
+  ],
+  "thinking_moves": [
+    "从冷数据统计反推架构:提出zero-streaming替代streaming",
+    "把算子成本/准确度作为自适应维度,随查询进行动态调整",
+    "稀疏采样理论支撑landmark设计:regular sampling ensures unbiased estimation",
+    "承认现有系统的局限:低代价摄像头无法实时建高质量索引"
+  ],
+  "topic_tags": [
+    "edge-camera-video-analytics",
+    "zero-streaming-architecture",
+    "adaptive-neural-operators",
+    "multi-pass-query-refinement",
+    "landmark-based-knowledge-distillation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "评估部分被截断,部分baseline参数缺失(如PreIndexAll的详细设定);论文结构完整,核心方法有完整描述和实验支撑 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "SkillNet-X_ A Multilingual Multitask Model with Sparsely Activated Skills",
+  "doi": "10.48550/arxiv.2306.16176",
+  "title": "SkillNet-X: A Multilingual Multitask Model with Sparsely Activated Skills",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "现有MTL只能利用cross-task或cross-language知识，无法同时利用两者",
+  "problem_framing": "将多语言多任务学习重新定义为skill modules的稀疏激活组合问题",
+  "key_insight": "skill modules作为knowledge transit hubs，可跨任务跨语言吸收和传递知识",
+  "method_signature": "修改Transformer的FFN和MHA层为sparse skill modules，支持task skill和language skill",
+  "evaluation_criteria": "11个NLU数据集(4语言)的平均性能及新任务泛化能力",
+  "negative_result_or_admitted_limitation": "skill set是基于prior knowledge手动定义，可能有更优配置",
+  "evidence_for_taste": [
+    "both cross-task and cross-language",
+    "knowledge transit hubs",
+    "sparsely activates parts of",
+    "maybe there's a better setup",
+    "skill modules have learned the corresponding skills"
+  ],
+  "thinking_moves": [
+    "将MTL的痛点从'参数共享冲突'重新frame成'skill modules的组合问题'",
+    "通过perturbation实验验证skill是否被真正学到而非被混淆",
+    "用mean pooling解决不同任务激活skill数量不同的表示融合问题"
+  ],
+  "topic_tags": [
+    "multilingual-MTL",
+    "sparse-activation",
+    "skill-modules",
+    "cross-lingual-transfer",
+    "mixture-of-experts-alternative"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

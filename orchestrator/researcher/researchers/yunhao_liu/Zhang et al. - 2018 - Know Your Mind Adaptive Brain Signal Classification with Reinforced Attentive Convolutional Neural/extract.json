@@ -1,0 +1,44 @@
+{
+  "paper_id": "Zhang et al. - 2018 - Know Your Mind Adaptive Brain Signal Classification with Reinforced Attentive Convolutional Neural",
+  "doi": null,
+  "title": "Know Your Mind: Adaptive Cognitive Activity Recognition with Reinforced Attentive Convolutional Neural",
+  "year": 2018,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "EEG feature engineering耗时且依赖专家知识，现有方法域特异性过强不适跨场景迁移，且EEG信号低信噪比高混沌性",
+  "problem_framing": "将EEG分类定义为单样本级分类问题而非分段级，需处理信号的快速时变与空间依赖关系挖掘",
+  "key_insight": "用强化学习自动搜索最佳注意力窗口位置，结合复制混洗操作枚举潜在空间组合，无需穷举所有排列",
+  "method_signature": "强化选择注意力机制 + 卷积映射，从原始EEG直接端到端分类",
+  "evaluation_criteria": "分类准确率/精确率/召回率/F1，低延迟，缺失通道下的鲁棒性",
+  "negative_result_or_admitted_limitation": "单样本分类仅反映瞬时意图而非长期稳定意图；强化学习策略跨传感器组合泛化能力有限",
+  "evidence_for_taste": [
+    "EEG signals have the highest STD",
+    "single EEG sample only contains spatial information",
+    "exhausting method is too computationally expensive",
+    "reward growth rate is increasing",
+    "sample-based classification is more attractive"
+  ],
+  "thinking_moves": [
+    "通过统计对比EEG与其他传感器的STD和相关系数，定量证明EEG的高混沌性",
+    "用复制混洗替代穷举所有维度排列，将组合爆炸问题转化为概率探索",
+    "把准确率提升难度非线性的直觉，设计为指数奖励函数中的规范化项",
+    "选择样本级而非分段级分类，直接针对实时意图识别的应用需求",
+    "将注意力窗口设计为可左右平移、扩展收缩的RL动作，隐式搜索最优特征子集"
+  ],
+  "topic_tags": [
+    "EEG-classification",
+    "brain-computer-interface",
+    "reinforcement-learning-attention",
+    "sample-level-CNN",
+    "cognitive-activity-recognition"
+  ],
+  "cites_own_work": [
+    "Zhang et al. 2018",
+    "Zhang et al. 2019",
+    "Yao et al. 2017",
+    "Zhang et al. 2018 MindID"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文提供了完整的方法和实验，但未明确标注venue、DOI和具体发表会议/期刊信息。根据作者机构和论文风格推断为CCF会议/期刊水平，但无法从文本中直接确认。 | md truncated to head40k+tail20k"
+}

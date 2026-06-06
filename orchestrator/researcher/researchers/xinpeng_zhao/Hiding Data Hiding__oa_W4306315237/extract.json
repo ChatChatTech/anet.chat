@@ -1,0 +1,38 @@
+{
+  "paper_id": "Hiding Data Hiding__oa_W4306315237",
+  "doi": "10.48550/arxiv.2102.06826",
+  "title": "Hiding Data Hiding",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "对手不仅分析内容还监控行为，数据隐藏工具本身需要隐藏以确保安全",
+  "problem_framing": "把数据隐藏工具伪装成执行普通任务(风格迁移)的DNN，使其能同时完成风格迁移、数据嵌入、数据提取三个任务",
+  "key_insight": "不同任务使用显著不同的图像作为输入(如y是彩色图、m是二值图、r是全黑图)，网络能自动区分并执行对应任务",
+  "method_signature": "单一DNN用联合损失函数同时训练风格迁移、数据嵌入、数据提取三个任务",
+  "evaluation_criteria": "PSNR/SSIM评估图像质量，BER评估数据提取准确率，对抗训练评估鲁棒性，XuNet评估安全性",
+  "negative_result_or_admitted_limitation": "当前生成式数据隐藏方法无法抵御先进隐写分析检测，常量修改代价函数是根本问题",
+  "evidence_for_taste": [
+    "generative DH methods often assume that the costs of modifying individual pixels are equal",
+    "the loss function designed for generative DH implies that the unit loss of modifying a single pixel is constant",
+    "cannot resist against advanced steganalysis systems",
+    "the proposed method already achieves satisfactory performance",
+    "the network architecture reported in this paper may be not optimal"
+  ],
+  "thinking_moves": [
+    "把数据隐藏工具本身作为要隐藏的对象，而非仅隐藏嵌入的数据",
+    "利用DNN冗余参数和不同输入图像的差异性实现一网多用",
+    "通过与专门训练的单任务网络对比验证多任务网络的性能损失可忽略",
+    "坦然承认生成式隐写在对抗隐写分析上的根本性不足，并指出常量代价函数是原因"
+  ],
+  "topic_tags": [
+    "steganography",
+    "deep-steganography",
+    "covert-communication",
+    "neural-network-watermarking",
+    "style-transfer",
+    "adversarial-training"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

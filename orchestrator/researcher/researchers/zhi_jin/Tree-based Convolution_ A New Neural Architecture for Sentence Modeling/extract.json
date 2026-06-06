@@ -1,0 +1,38 @@
+{
+  "paper_id": "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling",
+  "doi": null,
+  "title": "Discriminative Neural Sentence Modeling by Tree-Based Convolution",
+  "year": 2015,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "CNNs lack structural modeling; RNNs have long propagation paths causing gradient issues. Can we combine CNN efficiency with RNN structure?",
+  "problem_framing": "Reformulate sentence modeling as tree-sliding convolution with max pooling to achieve short paths from any node to output",
+  "key_insight": "Tree-based convolution applies fixed-depth subtree detectors sliding over parsing trees, combining structural capture with CNN-like short paths",
+  "method_signature": "c-TBCNN/d-TBCNN: convolution windows over constituency/dependency trees with max pooling",
+  "evaluation_criteria": "Accuracy on sentiment analysis (5-class/2-class) and 6-way question classification vs state-of-the-art baselines",
+  "negative_result_or_admitted_limitation": "c-TBCNN is slightly worse than d-TBCNN; 3-slot pooling for constituency trees is admitted as 'hard mechanism' temporarily; pooling effect not strong",
+  "evidence_for_taste": [
+    "TBCNNs are not very sensitive to pooling methods",
+    "we regard 3-slot pooling for c-TBCNN is a hard mechanism temporarily",
+    "the effect is not strong",
+    "Further improvement can be addressed in future work",
+    "This strategy enables us to take a glance at the stability"
+  ],
+  "thinking_moves": [
+    "Diagnose CNN and RNN each with a specific failure mode: flatness vs long paths",
+    "Borrow max pooling from CNN but apply it on tree structure",
+    "Accept that constituency tree pooling design is imperfect",
+    "Visualize which subtree features survive pooling to validate semantic relevance"
+  ],
+  "topic_tags": [
+    "tree-convolution",
+    "sentence-structural-features",
+    "max-pooling-over-trees",
+    "dependency-parse-neural",
+    "sentiment-classification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

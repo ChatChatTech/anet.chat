@@ -1,0 +1,39 @@
+{
+  "paper_id": "GUI Testing Arena_ A Unified Benchmark for Advancing Autonomous GUI Testing Agent",
+  "doi": "10.48550/arxiv.2412.18426",
+  "title": "GUI Testing Arena: A Unified Benchmark for Advancing Autonomous GUI Testing Agent",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有GUI测试代理研究缺乏标准化评估框架,导致结果难以复现和横向比较。",
+  "problem_framing": "将自动化GUI测试形式化为POMDP问题,分解为测试意图生成、测试任务执行、GUI缺陷检测三个子任务。",
+  "key_insight": "通过Transition Tuple数据结构解耦GUI缺陷表示,使大规模缺陷数据集构建成为可能,并实现可复现的标准化评估。",
+  "method_signature": "GTArena统一基准+Transition Tuple缺陷模型+POMDP决策框架",
+  "evaluation_criteria": "Coverage率、Type Match、Exact Match、Success Rate、Accuracy、Recall-D/N",
+  "negative_result_or_admitted_limitation": "即使最先进模型在所有子任务上表现均不佳,当前能力与实际应用存在显著差距。",
+  "evidence_for_taste": [
+    "a rigorous definition and structured framework have been largely absent",
+    "lacks standardized evaluation metrics",
+    "lack of standardization and transparency hinders further progress",
+    "even the most advanced models struggle to perform well",
+    "significant gap between the current capabilities"
+  ],
+  "thinking_moves": [
+    "从碎片化任务到端到端完整测试流程的范式转变",
+    "用POMDP框架形式化部分可观测的GUI环境决策问题",
+    "用Transition Tuple解耦缺陷表示与任务执行",
+    "提出关联微调后性能与通用基准的新评估方法",
+    "区分Display Defects与Interaction Defects两类缺陷"
+  ],
+  "topic_tags": [
+    "autonomous-GUI-testing-agent",
+    "multimodal-LLM-benchmark",
+    "GUI-defect-detection",
+    "visual-based-agent-evaluation",
+    "POMDP-GUI-automation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

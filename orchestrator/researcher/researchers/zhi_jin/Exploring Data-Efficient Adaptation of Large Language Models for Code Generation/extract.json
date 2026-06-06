@@ -1,0 +1,42 @@
+{
+  "paper_id": "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation",
+  "doi": "10.48550/arxiv.2403.00046",
+  "title": "Exploring Data-Efficient Adaptation of Large Language Models for Code Generation",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "在代码生成特定场景中，有限训练数据导致微调效果差，甚至模型性能下降",
+  "problem_framing": "如何用少量数据有效适配LLM到特定代码生成场景",
+  "key_insight": "利用LLM自身错误输出作为学习机会，比直接学习数据集样本更高效，因修订代码在模型表征空间中与错误输出更接近",
+  "method_signature": "DEED：先收集错误代码，用Self-Revise自动修订，再用修订代码优化模型，迭代执行",
+  "evaluation_criteria": "Pass@k指标衡量生成代码的功能正确性，通过测试用例执行评估",
+  "negative_result_or_admitted_limitation": "Self-refine和Self-debug在小模型(如CodeGen-2B)上表现不佳，且推理时需迭代导致时间和token消耗增加",
+  "evidence_for_taste": [
+    "error-driven learning observed in humans",
+    "更接近并相似于错误输出代码",
+    "在模型表征空间中",
+    "may lead to a degradation in model performance",
+    "Self-Refine and Self-debug underperform",
+    "trade off the performance"
+  ],
+  "thinking_moves": [
+    "将人类认知中的错误驱动学习机制类比迁移到LLM适应过程",
+    "通过模型表征空间的欧氏距离实验验证学习效率差异的假设",
+    "承认基线方法的缺点：强迫LLM重新学习全部样本是低效的",
+    "迭代优化策略结合经验回放实现训练稳定性和数据利用效率的平衡"
+  ],
+  "topic_tags": [
+    "LLM代码生成",
+    "数据高效微调",
+    "错误驱动学习",
+    "自修订",
+    "少样本适应"
+  ],
+  "cites_own_work": [
+    "Self-collaboration Code Generation via ChatGPT",
+    "Self-Edit: Fault-Aware Code Editor"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Xie et al. - 2020 - LiTag localization and posture estimation with passive visible light tags",
+  "doi": null,
+  "title": "LiTag: Localization and Posture Estimation with Passive Visible Light Tags",
+  "year": 2020,
+  "venue": "SenSys",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有定位系统需要校准或专用设备，成本高部署难；现有摄像头已广泛部署但无法直接用于定位",
+  "problem_framing": "如何在未标定相机下实现被动光学标签的定位和姿态估计，且无需电池或芯片",
+  "key_insight": "利用双折射干涉产生的颜色随视角变化特性提供空间信息，结合相机成像几何关系，无需标定参数即可求解",
+  "method_signature": "双折射干涉色向量映射方向+射影几何约束求解相机位姿",
+  "evaluation_criteria": "2D定位误差中位数1.6cm，3D误差12cm，姿态误差1度",
+  "negative_result_or_admitted_limitation": "光线直线传播，无法直接处理非视距场景；低分辨率图像难以检测标签",
+  "evidence_for_taste": [
+    "significantly reduces the calibration overhead",
+    "LiTag can work with a single camera without calibration",
+    "chip-less and battery-less",
+    "The working range of LiTag is related to camera resolution and tag size"
+  ],
+  "thinking_moves": [
+    "把标定开销作为核心痛点，提出无需标定即可工作",
+    "利用物理现象(双折射干涉)替代参数标定提供尺度信息",
+    "颜色向量仅含位置信息，不含姿态信息，故分两步走"
+  ],
+  "topic_tags": [
+    "可见光定位",
+    "无源标签",
+    "双折射干涉",
+    "未标定相机",
+    "姿态估计"
+  ],
+  "cites_own_work": [
+    "Rainbowlight",
+    "LiTell",
+    "iLAMP"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文后半部分(实验细节)被截断，但核心方法论和动机部分完整；通讯作者为Jiliang Wang，非Yunhao Liu本人 | md truncated to head40k+tail20k"
+}

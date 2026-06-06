@@ -1,0 +1,40 @@
+{
+  "paper_id": "Probing and Boosting Large Language Models Capabilities via Attention Heads",
+  "doi": "10.18653/v1/2025.emnlp-main.1450",
+  "title": "Probing and Boosting Large Language Models Capabilities via Attention Heads",
+  "year": 2025,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有方法依赖外部信号(性能变化、梯度相似性)理解LLM能力，缺乏对内部组件的结构性链接。",
+  "problem_framing": "将LLM能力对应到注意力头层面，建立能力-头映射，并用于指导数据选择。",
+  "key_insight": "能力是局部化的且可组合的：不同能力对应不同注意力头，复杂任务可分解为5种基础能力的组合。",
+  "method_signature": "探针分类器定位能力专属注意力头，余弦相似度筛选微调数据。",
+  "evaluation_criteria": "能力判别准确率>70%为映射有效；超越LESS 1-1.5点、RDS 5-6点为有效。",
+  "negative_result_or_admitted_limitation": "32个头时性能显著下降，因能力头重叠增加导致判别性降低；手动任务分解存在主观性；仅验证至8B模型。",
+  "evidence_for_taste": [
+    "70% discrimination accuracy",
+    "1 to 1.5 points over LESS",
+    "5 to 6 points over RDS",
+    ">50% heads unique to single capability",
+    "excessive overlap reduces discriminability",
+    "less is more for alignment"
+  ],
+  "thinking_moves": [
+    "从行为相关推结构对应：先可视化能力在模型族内分布的一致性和跨族差异",
+    "能力正交性即洞察：若头之间重叠少则分类有效",
+    "把抽象的能力定义转化为可测量的探针输出",
+    "验证映射有效性需通过下游任务：数据选择效果",
+    "能力可组合性使方法可扩展至未见过任务",
+    "从梯度黑箱转向注意力头白箱：无需反向传播即可选择数据"
+  ],
+  "topic_tags": [
+    "attention-head-probing",
+    "capability-localization",
+    "targeted-instruction-tuning",
+    "LLM-interpretability",
+    "data-selection-via-representations"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

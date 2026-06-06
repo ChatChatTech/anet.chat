@@ -1,0 +1,60 @@
+{
+  "paper_id": "Edge Intelligence_ The Confluence of Edge Computing and Artificial Intelligence",
+  "doi": "10.1109/jiot.2020.2984887",
+  "title": "Edge Intelligence: The Confluence of Edge Computing and Artificial Intelligence",
+  "year": 2020,
+  "venue": "IEEE Internet of Things Journal",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "物联网设备产生的数据量激增，若全部上传云端处理将造成严重网络拥塞，需在边缘执行AI模型",
+  "problem_framing": "将Edge Intelligence划分为AI for edge(用AI赋能边缘计算)和AI on edge(在边缘运行AI模型)两个方向",
+  "key_insight": "QoE多目标联合优化需涵盖性能、成本、隐私、效率、可靠性，而非单一指标",
+  "method_signature": "自底向上拓扑-内容-服务分层 + 自顶向下模型适配-框架设计-处理器加速",
+  "evaluation_criteria": "QoE综合指标:性能、成本、隐私、效率、可靠性；训练损失与推理精度",
+  "negative_result_or_admitted_limitation": "Edge Intelligence目前处于早期阶段，许多概念仍不清楚，问题尚未解决",
+  "evidence_for_toggle": [
+    "vanilla version of Federated Learning has strong demand for communication efficiency",
+    "Edge Intelligence, currently in its early stage, and is attracting more researchers",
+    "many concepts are still unclear and questions remain unsolved",
+    "this survey is not fully covered by this survey",
+    "Processor Acceleration is mainly investigated by AI researchers, this paper will not delve into it"
+  ],
+  "thinking_moves": [
+    "从顶层QoE多维指标统一两个方向的研究目标",
+    "自底向上分解AI for edge问题层次，自顶向下分解AI on edge技术栈",
+    "将现有survey未能覆盖的空白作为写作动机",
+    "先建立概念分类框架，再填充具体研究方向",
+    "区分AI服务于边缘计算 vs AI模型本身部署在边缘这两条技术路径"
+  ],
+  "topic_tags": [
+    "edge intelligence taxonomy",
+    "device-edge-cloud synergy",
+    "federated learning",
+    "QoE optimization",
+    "distributed AI inference"
+  ],
+  "cites_own_work": [
+    {
+      "title": "QoE aware and cell capacity enhanced computation offloading for multi-server mobile edge computing systems with energy harvesting devices",
+      "year": 2018,
+      "role": "co-author"
+    },
+    {
+      "title": "A mobility-aware cross-edge computation offloading framework for partitionable applications",
+      "year": 2019,
+      "role": "first"
+    },
+    {
+      "title": "A density-based offloading strategy for IoT devices in edge computing systems",
+      "year": 2018,
+      "role": "co-author"
+    },
+    {
+      "title": "Data-intensive application deployment at edge: A deep reinforcement learning approach",
+      "year": 2019,
+      "role": "co-author"
+    }
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

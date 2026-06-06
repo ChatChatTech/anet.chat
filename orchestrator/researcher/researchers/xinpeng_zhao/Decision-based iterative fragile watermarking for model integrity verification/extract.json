@@ -1,0 +1,40 @@
+{
+  "paper_id": "Decision-based iterative fragile watermarking for model integrity verification",
+  "doi": "10.48550/arxiv.2305.09684",
+  "title": "Decision-based iterative fragile watermarking for model integrity verification",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "云平台托管模型面临篡改风险，用户无法访问内部参数，只能黑盒查询验证完整性",
+  "problem_framing": "将正常样本转化为对模型参数变化敏感的脆弱样本，使微小篡改导致预测结果改变",
+  "key_insight": "训练中存在易被遗忘的硬样本位于决策边界附近，通过最小化预测概率方差可主动构造此类脆弱样本",
+  "method_signature": "迭代最小化预测概率方差，sign梯度扰动更新样本",
+  "evaluation_criteria": "ChangeRate衡量预测变化率，PSNR/SSIM衡量视觉质量，1e-4量级参数变化检测",
+  "negative_result_or_admitted_limitation": "MNIST样本PSNR仅29dB，CIFAR100需更多扰动迭代收敛，TinyImageNet高PSNR易振荡",
+  "evidence_for_taste": [
+    "fragile samples are located near the classification boundary",
+    "minimize the variance of the predicted probability",
+    "even with changes in the overall parameters of magnitude 1e-4",
+    "PSNR of 55 dB in TinyImageNet",
+    "fragile samples that the human eye is unable to identify exactly what they are"
+  ],
+  "thinking_moves": [
+    "利用训练动态中反复被遗忘的硬样本现象，反推决策边界附近样本的脆弱性本质",
+    "将完整性验证问题重构为样本敏感化优化问题",
+    "黑盒约束下仅依赖输出概率分布设计迭代更新，规避梯度信息暴露风险",
+    "通过小幅度多次迭代平衡视觉质量与敏感性"
+  ],
+  "topic_tags": [
+    "model-integrity-verification",
+    "fragile-watermarking",
+    "decision-based-blackbox",
+    "backdoor-detection",
+    "neural-network-fingerprinting"
+  ],
+  "cites_own_work": [
+    "ICIP-2022 (Yin et al., 2022)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为arXiv预印本，无明确会议/期刊发表信息；作者单位完整；部分方法细节需参考算法流程图理解"
+}

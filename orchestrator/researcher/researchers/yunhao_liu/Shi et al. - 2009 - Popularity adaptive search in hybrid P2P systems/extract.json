@@ -1,0 +1,39 @@
+{
+  "paper_id": "Shi et al. - 2009 - Popularity adaptive search in hybrid P2P systems",
+  "doi": null,
+  "title": "Popularity adaptive search in hybrid P2P systems",
+  "year": 2009,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "P2P peers frequently join/leave, causing stale popularity statistics that lead to wrong flooding/DHT decisions",
+  "problem_framing": "How to correctly estimate item popularity in dynamic P2P where replicas constantly change due to peer churn",
+  "key_insight": "Designate smart nodes to sense network dynamics and tune gossip-obtained popularity values using dynamic rate β",
+  "method_signature": "Smart nodes monitor peer changes, compute βg, adjust popularity by γ = 1 + βg(Δt - Δt0)",
+  "evaluation_criteria": "Estimation error, traffic overhead per link, response time",
+  "negative_result_or_admitted_limitation": "PASH suffers from cheating if ratio of malicious nodes exceeds 10%, needs trust management",
+  "evidence_for_taste": [
+    "statistics of replicas will remain unchanged or increase",
+    "flooding threshold is set at Tf",
+    "PASH outperforms GAB",
+    "reduces traffic overhead by 20%–35%",
+    "reduction of response time by 50%"
+  ],
+  "thinking_moves": [
+    "Identify monotonicity bug in prior gossip design (always increases never decreases)",
+    "Formalize dynamic rate β as derivative of replica count",
+    "Separate concerns: smart nodes for sensing vs. all nodes for gossip",
+    "Derive utility decline formulas to prove problem severity",
+    "Adaptive sensing period inversely proportional to deviation δβ"
+  ],
+  "topic_tags": [
+    "hybrid-P2P-search",
+    "popularity-estimation",
+    "peer-churn",
+    "smart-node-sensing",
+    "DHT-flooding-hybrid"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Published by Elsevier in 2008 (available online). Specific journal name not visible in provided text. Yunhao Liu is co-author (b affiliation - HKUST)."
+}

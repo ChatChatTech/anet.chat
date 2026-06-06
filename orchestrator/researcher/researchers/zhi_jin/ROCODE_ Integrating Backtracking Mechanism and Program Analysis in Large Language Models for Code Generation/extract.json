@@ -1,0 +1,44 @@
+{
+  "paper_id": "ROCODE_ Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation",
+  "doi": "10.48550/arxiv.2411.07112",
+  "title": "ROCODE: Integrating Backtracking Mechanism and Program Analysis in Large Language Models for Code Generation",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLM自回归生成导致错误累积，现有后修方法难以解决累积错误且浪费资源",
+  "problem_framing": "生成过程中何时回滚、何处回滚、如何避免重错三个关键问题",
+  "key_insight": "编译器的程序分析可增量检测错误，LLM不确定性熵可定位回滚点，指数衰减惩罚可约束再生",
+  "method_signature": "增量错误检测+熵驱动回滚策略+约束再生+Trie树建模",
+  "evaluation_criteria": "PassRate编译通过率、AvgPassRate平均测试通过率、CCP编译器正确性",
+  "negative_result_or_admitted_limitation": "λ值越大约束越松，惩罚衰减慢，需更多迭代才能修正错误",
+  "evidence_for_taste": [
+    "一旦错误产生，后续生成几乎可被视为冗余",
+    "理想情况下应回滚并及时解决错误，而非在错误基础上继续",
+    "简单回滚到上一个无错误状态通常不能解决问题",
+    "将错误路径概率直接清零会误伤良性token"
+  ],
+  "thinking_moves": [
+    "将LLM生成过程类比人类编码实践的审查调整能力缺失",
+    "从编译器视角发现其不仅可执行代码还可做程序分析",
+    "利用LLM概率模型的不确定性(熵)作为自我评估信号",
+    "把线性生成轨迹重新建模为树结构以容纳回滚路径",
+    "约束再生采用指数衰减而非硬遮挡以避免误伤良性token"
+  ],
+  "topic_tags": [
+    "LLM代码生成",
+    "回溯机制",
+    "程序分析",
+    "错误累积",
+    "增量检测"
+  ],
+  "cites_own_work": [
+    "SEED: customize large language models",
+    "CODEP: grammatical seq2seq model",
+    "Self-planning code generation",
+    "Self-collaboration code generation",
+    "CodeScore: Evaluating code generation"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为arXiv预印本，缺少完整的方法细节和某些实验数据(TABLE I部分截断)，但核心方法论和评估框架完整 | md truncated to head40k+tail20k"
+}

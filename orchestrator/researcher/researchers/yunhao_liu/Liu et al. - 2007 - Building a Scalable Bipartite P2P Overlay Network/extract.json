@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2007 - Building a Scalable Bipartite P2P Overlay Network",
+  "doi": null,
+  "title": "Building a Scalable Bipartite P2P Overlay Network",
+  "year": 2007,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "75%查询响应路径存在拓扑失配,造成大量冗余流量",
+  "problem_framing": "拓扑优化需保持搜索范围完整,避免收缩搜索域",
+  "key_insight": "双色 bipartite 结构让红peer计算两跳MST,白peer探测并替换邻居,分工降低开销",
+  "method_signature": "SBO四阶段: bootstrapping着色/白peer探测/红peer计算FC/白peer替换邻居",
+  "evaluation_criteria": "流量成本下降85%,查询响应时间下降60%",
+  "negative_result_or_admitted_limitation": "减少RK冗余可能导致查询延迟增加,需权衡",
+  "evidence_for_taste": [
+    "cannot draw the conclusion that the overlays are better because only takes message and traffic cost into consideration",
+    "It is more effective to solve RN problems than RK problems",
+    "the price is to sacrifice the query response time",
+    "Reducing RK duplication might lead to an increase in the query latency"
+  ],
+  "thinking_moves": [
+    "区分RK和RN两类问题,识别RN更需解决",
+    "从具体拓扑例子推导出cycle导致重复的通用性质",
+    "证明SBO操作不增加图的连通分量数量",
+    "先分析最坏情况开销O(n),再通过模拟找最优参数",
+    "bipartite属性保证两跳拓扑完整性,无需额外交换信息"
+  ],
+  "topic_tags": [
+    "P2P overlay topology mismatch",
+    "bipartite overlay optimization",
+    "MST-based neighbor replacement",
+    "unstructured P2P flooding",
+    "distributed topology repair"
+  ],
+  "cites_own_work": [
+    "ACE (2004/2005)",
+    "LTM (2004)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

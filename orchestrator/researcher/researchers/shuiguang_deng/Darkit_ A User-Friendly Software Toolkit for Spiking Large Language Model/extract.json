@@ -1,0 +1,36 @@
+{
+  "paper_id": "Darkit_ A User-Friendly Software Toolkit for Spiking Large Language Model",
+  "doi": "10.48550/arxiv.2412.15634",
+  "title": "Darkit: A User-Friendly Software Toolkit for Spiking Large Language Model",
+  "year": null,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "研究者使用现有开源框架时面临环境配置、数据预处理、参数调优等繁琐步骤，学习成本过高",
+  "problem_framing": "将问题定义为一站式工具链缺失导致的入门门槛高，而非算法性能不足",
+  "key_insight": "通过统一GUI和自动化工具降低spiking LLM的研究门槛比改进算法更紧迫",
+  "method_signature": "提供10项功能的集成化工具包，含GUI可视化与代码编辑器",
+  "evaluation_criteria": "功能完整性、用户易用性、可扩展性",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "resulting in significant time consumption",
+    "requires an in-depth understanding",
+    "facilitating the creation and implementation",
+    "greatly simplify the learning, deployment"
+  ],
+  "thinking_moves": [
+    "从用户痛点反推工具设计需求，而非从理论缺口出发",
+    "把算法问题重新框定为工程易用性问题",
+    "通过列举具体障碍来论证工具的必要性而非论证算法的优越性"
+  ],
+  "topic_tags": [
+    "spiking-neural-network",
+    "software-toolkit",
+    "LLM-inference",
+    "brain-inspired-computing",
+    "user-interface-design"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为工具介绍类文献，缺乏具体实验数据和性能对比。year从DOI推算为2024但未明确。缺少对工具实际效果的负面评价或局限性分析。"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Wang et al. - 2012 - It is Not Just a Matter of Time Oscillation-Free Emergency Navigation with Sensor Networks",
+  "doi": null,
+  "title": "It Is Not Just A Matter of Time: Oscillation-Free Emergency Navigation with Sensor Networks",
+  "year": 2012,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "用户在紧急导航中会因动态危险而反复往返(振荡),振荡不仅延长时间,更会因危险蔓延而封死逃生路径",
+  "problem_framing": "把导航可达性量化为路径的可达概率,振荡是核心问题而非时间消耗",
+  "key_insight": "振荡不只是时间问题——频繁振荡会导致用户在危险中停留更久,且动态危险会封锁逃生路线",
+  "method_signature": "OPEN:基于ENO(期望振荡次数)度量的防振荡路径规划",
+  "evaluation_criteria": "路径可达率、最小危险距离、暴露值、延迟、通信开销",
+  "negative_result_or_admitted_limitation": "OPEN在最小安全距离上比MA低约5%,但MA过于保守反而错过逃生机会",
+  "evidence_for_taste": [
+    "those approaches, however, mostly consider the emergency as a static phenomenon",
+    "oscillation is not just a matter of time",
+    "frequent oscillations will decrease the user’s chances of survival",
+    "MA approach achieves the optimal result with the ratio of 1",
+    "navigation decisions made by MA are often over-conservative"
+  ],
+  "thinking_moves": [
+    "从时间度量转向生存概率度量",
+    "把振荡从时间问题重新定义为安全问题",
+    "用三角几何约束保证速度计算的合理性",
+    "牺牲局部最优(安全距离)换取全局可达率"
+  ],
+  "topic_tags": [
+    "sensor-network-navigation",
+    "oscillation-free",
+    "dynamic-danger",
+    "path-reachability",
+    "emergency-escape"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少明确的venue信息,无法确认发表场所的具体层级"
+}

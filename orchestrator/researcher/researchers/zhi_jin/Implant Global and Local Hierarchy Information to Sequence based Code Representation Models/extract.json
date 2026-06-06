@@ -1,0 +1,43 @@
+{
+  "paper_id": "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models",
+  "doi": "10.48550/arxiv.2303.07826",
+  "title": "Implant Global and Local Hierarchy Information to Sequence based Code Representation Models",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "序列模型和非序列模型各有问题，结合结构信息时只挖掘了部分层级信息，忽视完整层级结构的影响",
+  "problem_framing": "将代码层级结构对token的影响形式化为层级嵌入，分全局(语句级)和局部(token级)两个层次",
+  "key_insight": "代码层级结构不仅包含token间关系，还包含语句的操作语义(global)和token在语句中的局部上下文(local)",
+  "method_signature": "HiT: CST根到叶路径编码为层级嵌入，与token嵌入拼接后送入Transformer序列编码器",
+  "evaluation_criteria": "分类准确率、MAP@R、生成任务P/R/F1，以及变量作用域检测任务",
+  "negative_result_or_admitted_limitation": "C++数据集中序列模型表现差，因代码序列高度相似(平均TF-IDF余弦相似度0.754-0.787)导致难以区分",
+  "evidence_for_taste": [
+    "overlook the full impact of hierarchical structure",
+    "they only mine part of token-level hierarchical structure",
+    "global and local hierarchical information are essential",
+    "local hierarchy outperforms the global hierarchy",
+    "sequence models to accurately classify them"
+  ],
+  "thinking_moves": [
+    "先分析现有方法(GREAT/CodeTransformer等)的局限——只关注token间关系而忽视全局层级",
+    "把层级结构的影响分解为语句级(操作语义)和token级(局部上下文)两个正交维度",
+    "设计变量作用域检测任务作为探针，直接验证模型是否习得全局层级信息",
+    "通过消融实验(global-only vs local-only vs complete)揭示两类层级信息的独立贡献"
+  ],
+  "topic_tags": [
+    "code-representation-learning",
+    "hierarchical-embedding",
+    "transformer-code",
+    "syntax-tree-hierarchy",
+    "clone-detection"
+  ],
+  "cites_own_work": [
+    "ASTNN",
+    "GGNN",
+    "GREAT",
+    "CodeTransformer"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文末尾结果部分被截断，Table IV-VI等详细数据不完整，但从已有内容可提取核心贡献和动机链 | md truncated to head40k+tail20k"
+}

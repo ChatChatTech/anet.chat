@@ -1,0 +1,39 @@
+{
+  "paper_id": "Huang et al. - 2014 - Shake and walk Acoustic direction finding and fine-grained indoor localization using smartphones",
+  "doi": null,
+  "title": "Shake and Walk: Acoustic Direction Finding and Fine-grained Indoor Localization Using Smartphones",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "智能手机方向发现难以在远距离精确实现,且现有方法需要特殊硬件或受限于GPS无法室内使用。",
+  "problem_framing": "通过手机晃动产生的多普勒效应精确测量位移(亚毫米级)和相对速度,结合惯性传感器实现声源方向计算。",
+  "key_insight": "用相位锁环(PLL)替代FFT追踪相位变化,可突破时频分辨率限制,实现亚毫米位移测量精度。",
+  "method_signature": "Swadloon结合声学PLL与惯性传感器的多普勒方向发现,经线性回归融合两路速度。",
+  "evaluation_criteria": "方向误差(度)、定位误差(米)、追踪误差(米),需覆盖不同距离、角度、环境。",
+  "negative_result_or_admitted_limitation": "FFT在速度快速变化时无法精确测量频率,L>40m信号过弱不稳定;多源时误差显著恶化;对声源指向性敏感。",
+  "evidence_for_taste": [
+    "the resolution ΔF, which is more than 5.38Hz, is not precise enough",
+    "We leave it as a future work to understand why the phenomena happen",
+    "the error shift is close to constant in these cases",
+    "the signal is too weak. So we do not show the result",
+    "when both sources have high volume",
+    "the other possible complementary method is"
+  ],
+  "thinking_moves": [
+    "识别FFT的时频分辨率困境,转向相位域求解",
+    "从纯惯性传感器的积分漂移,回退到融合声学辅助",
+    "先设计理想公式,再逐个放宽假设(常速→任意速度,同高→不同高)",
+    "多径效应通过经验观察分类讨论,发现反射信号相对强度与距离的关系",
+    "承认不理解某些现象(旋转方向导致均值漂移),如实记录为未来工作"
+  ],
+  "topic_tags": [
+    "acoustic-Doppler-direction-finding",
+    "phase-locked-loop",
+    "smartphone-indoor-localization",
+    "inertial-sensor-fusion",
+    "multipath-robustness"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

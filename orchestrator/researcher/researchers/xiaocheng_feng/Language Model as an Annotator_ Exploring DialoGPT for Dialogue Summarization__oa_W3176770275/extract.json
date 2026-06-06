@@ -1,0 +1,39 @@
+{
+  "paper_id": "Language Model as an Annotator_ Exploring DialoGPT for Dialogue Summarization__oa_W3176770275",
+  "doi": "10.18653/v1/2021.acl-long.117",
+  "title": "Language Model as an Annotator: Exploring DialoGPT for Dialogue Summarization",
+  "year": 2021,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有对话摘要系统依赖开放域工具获取语义特征，这些工具对话域不友好或需人工标注",
+  "problem_framing": "将预训练对话模型重框架为无监督标注器,自动标注关键词/冗余/话题分割三类特征",
+  "key_insight": "利用DialoGPT在海量对话数据中编码的背景知识,通过预测损失识别高信息量词,通过上下文表示相似度检测冗余",
+  "method_signature": "DialoGPT预测损失→关键词, EOS表示余弦相似度→冗余检测, 最高损失 utterance→话题分割",
+  "evaluation_criteria": "ROUGE-1/2/L, BERTScore, 人工评估(信息量/简洁性/覆盖度)",
+  "negative_result_or_admitted_limitation": "即使检测出冗余,模型仍生成含冗余信息的摘要,原因是小数据集导致训练不充分",
+  "evidence_for_taste": [
+    "open-domain toolkits that are dialog-agnostic",
+    "labor-consuming",
+    "a model is obtained extensive knowledge via pre-training",
+    "a good summary is intuitively related to three aspects",
+    "we attribute this to the fact that the small dataset leads to insufficient training"
+  ],
+  "thinking_moves": [
+    "把预训练模型从生成器重框架为标注器",
+    "用预测损失代理信息量:难预测=重要",
+    "用表示相似度代理冗余度:加入后表示不变=冗余",
+    "用不可预测性代理话题切换:难推断=新话题开始",
+    "验证三个注解任务各有非重叠贡献"
+  ],
+  "topic_tags": [
+    "dialogue-summarization",
+    "pretrained-language-model-as-annotator",
+    "unsupervised-feature-annotation",
+    "keyword-extraction",
+    "topic-segmentation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

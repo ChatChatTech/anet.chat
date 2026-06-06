@@ -1,0 +1,43 @@
+{
+  "paper_id": "Liu et al. - 2010 - Long-term large-scale sensing in the forest recent advances and future directions of GreenOrbs",
+  "doi": null,
+  "title": "Long-term large-scale sensing in the forest: recent advances and future directions of GreenOrbs",
+  "year": 2010,
+  "venue": "Frontiers in Computer Science",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "现有WSN部署无法同时满足长期和大规模需求,森林监测需要长时连续的精细化数据采集",
+  "problem_framing": "探索WSN是否真正可扩展,厘清在野外环境长期大规模部署的根本性挑战",
+  "key_insight": "链路丢包率随时间波动且独立于流量负载,但有限的网络可见性使得无法确定根因",
+  "method_signature": "三级测试体系(室内试验台/原型系统/天目山部署),TelosB节点,TinyOS系统",
+  "evaluation_criteria": "有效数据包数量、网络存活时长、丢包率分布、能耗平衡",
+  "negative_result_or_admitted_limitation": "we can neither validate nor refute this point, because the limited network visibility disables a deterministic answer",
+  "evidence_for_taste": [
+    "Do WSNs really scale?",
+    "we can neither validate nor refute",
+    "diagnosis based on incomplete knowledge",
+    "packet drops due to faulty node behavior account for nearly 39%"
+  ],
+  "thinking_moves": [
+    "通过对比ExScal、SensorScope等既有部署,显式定义自身研究gap",
+    "从网络流量分布的不均匀性和不稳定性反推系统拓扑脆弱性",
+    "将网络可见性不足定义为无法做确定诊断的根本障碍",
+    "承认当前设计无法支撑确定性分析,需转向工具研发"
+  ],
+  "topic_tags": [
+    "WSN长期部署",
+    "森林生态监测",
+    "网络诊断工具",
+    "多层级测试平台",
+    "无线重编程"
+  ],
+  "cites_own_work": [
+    "Mo et al. 2009 canopy closure",
+    "Li et al. 2008 fire risk",
+    "Liu et al. 2010 passive diagnosis",
+    "Dong et al. 2010 Elon reprogramming",
+    "Yang et al. 2009 localizability"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "本文为GreenOrbs项目综述与方向指引,包含大量对已有工作的反思性陈述,是研究品味提取的优质语料"
+}

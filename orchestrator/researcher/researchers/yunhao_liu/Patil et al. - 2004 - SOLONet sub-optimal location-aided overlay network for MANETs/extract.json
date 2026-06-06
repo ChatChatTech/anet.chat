@@ -1,0 +1,38 @@
+{
+  "paper_id": "Patil et al. - 2004 - SOLONet sub-optimal location-aided overlay network for MANETs",
+  "doi": null,
+  "title": "SOLONet: Sub-Optimal Location-Aided Overlay Network for MANETs",
+  "year": 2004,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Overlay multicast in MANETs requires location info for low-latency trees, but precise location updates cause broadcast storms and overhead.",
+  "problem_framing": "How to build a location-aided overlay tree without frequent precise location updates, trading optimality for reduced overhead.",
+  "key_insight": "Event-based updates (node crossing cell boundary) replace continuous location broadcasts; cell centers approximate node locations.",
+  "method_signature": "Cell-partitioned topology with local leaders; event-based location updates on cell boundary crossing.",
+  "evaluation_criteria": "Completion time comparison between optimal tree, sub-optimal SOLONet tree, and random overlay tree across varying cell sizes and member counts.",
+  "negative_result_or_admitted_limitation": "Entire topology as one cell creates star topology, causing significant performance degradation and high collision at source.",
+  "evidence_for_taste": [
+    "does not compromise the performance gains",
+    "closely matches with that of an optimal tree",
+    "tradeoff between the advantages",
+    "Smaller cell size is not recommended if the node mobility is high",
+    "the improvement in performance is offset by an increase in the service broadcast overhead"
+  ],
+  "thinking_moves": [
+    "把精确度-开销的连续变量问题，转成离散格子边界触发的事件驱动模型",
+    "承认次优解性能足够好，用近似换取可扩展性",
+    "从空间分割角度自然导出leader局部化设计",
+    "通过仿真验证'性能差距不大'来论证方案可行性"
+  ],
+  "topic_tags": [
+    "location-aided-overlay-multicast",
+    "event-driven-location-updates",
+    "cell-partitioned-MANET",
+    "leader-selection-algorithm",
+    "overlay-tree-latency-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

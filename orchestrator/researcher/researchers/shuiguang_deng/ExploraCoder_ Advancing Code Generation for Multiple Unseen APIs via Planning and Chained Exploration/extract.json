@@ -1,0 +1,40 @@
+{
+  "paper_id": "ExploraCoder_ Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration",
+  "doi": "10.18653/v1/2025.acl-long.887",
+  "title": "ExploraCoder: Advancing Code Generation for Multiple Unseen APIs via Planning and Chained Exploration",
+  "year": 2025,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "LLM在训练数据中未见API时性能受限,难以处理新引入或私有维护库的编程问题",
+  "problem_framing": "多API调用的库导向代码生成,需解决API文档歧义与LLM多API交互推理局限",
+  "key_insight": "人类探索式编程启发:将复杂问题分解为子任务,通过迭代实验积累API使用经验",
+  "method_signature": "训练无关框架,通过子任务规划和API链式探索实现未见API调用",
+  "evaluation_criteria": "Pass@k和Success@k衡量生成的代码能否通过测试用例执行",
+  "negative_result_or_admitted_limitation": "小模型能力弱可能导致ExploraCoder效果不佳,且依赖完整NL文档",
+  "evidence_for_taste": [
+    "LLMs struggle to directly invoke multiple unseen APIs in a single run",
+    "hallucinate unfamiliar APIs usage",
+    "bug-driven",
+    "self-repair fails to correct",
+    "naive RAG approach",
+    "retriever's ability to recall relevant APIs becomes a bottleneck"
+  ],
+  "thinking_moves": [
+    "复杂多步任务分解为可独立探索的子任务来降低难度",
+    "用可执行反馈信号验证中间步骤正确性而非端到端生成",
+    "将人类探索式编程行为形式化为LLM可执行的迭代实验流程",
+    "承认前期工作(retrieval)的局限,指出retriever召回能力是瓶颈",
+    "对比实验揭示端到端调试与中间步骤调试的差异"
+  ],
+  "topic_tags": [
+    "LLM-code-generation",
+    "unseen-API-invocation",
+    "chain-of-exploration",
+    "exploratory-programming",
+    "API-hallucination-mitigation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

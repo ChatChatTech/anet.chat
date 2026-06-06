@@ -1,0 +1,41 @@
+{
+  "paper_id": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data",
+  "doi": "10.48550/arxiv.2006.06983",
+  "title": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data",
+  "year": 2021,
+  "venue": "WWW '21",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有FL研究过度理想化假设(设备始终可用、同构硬件),实际部署中异质性显著影响训练,但从未被系统量化",
+  "problem_framing": "将异质性问题解耦为硬件异质性与状态异质性,构建可复现异质性的FL仿真平台并测量性能影响",
+  "key_insight": "状态异质性比硬件异质性更导致精度下降;设备失效和参与者偏差是性能降级的主因",
+  "method_signature": "首个基于136k智能手机实测数据的异质性影响实证研究,构建状态感知FL仿真平台",
+  "evaluation_criteria": "收敛精度、训练时间/轮次、压缩率、跨设备精度方差(公平性)",
+  "negative_result_or_admitted_limitation": "q-FedAvg在异质性-aware设置下解决公平性问题效果减弱;压缩算法几乎无法加速收敛",
+  "evidence_for_taste": [
+    "assumptions could be too ideal",
+    "non-trivial performance degradation",
+    "optimizations are not always effective as reported",
+    "can hardly speed up",
+    "less effective in ensuring fairness"
+  ],
+  "thinking_moves": [
+    "先定位研究空白:现有FL论文未系统量化异质性影响",
+    "将异质性解耦为硬件/状态两部分分别测量",
+    "搭建仿真平台时贴近实际协议,保留状态检查机制",
+    "对比先进算法与基准FedAvg在异质性下效果差异",
+    "从失败案例反推算法假设失效原因"
+  ],
+  "topic_tags": [
+    "federated-learning-heterogeneity",
+    "mobile-device-simulation",
+    "cross-device-fl",
+    "measurement-study",
+    "fairness-in-fl"
+  ],
+  "cites_own_work": [
+    "xuanzhe_liu"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "null | md truncated to head40k+tail20k"
+}

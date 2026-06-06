@@ -1,0 +1,45 @@
+{
+  "paper_id": "Agentic Services Computing",
+  "doi": "10.48550/arxiv.2509.24380",
+  "title": "Agentic Services Computing",
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "三大领域（服务计算、MAS、LLM agents）各自独立存在根本局限，需深度整合而非简单叠加。",
+  "problem_framing": "将服务重新定义为具备意图、行为和演化轨迹的自主智能体，而非静态接口。",
+  "key_insight": "ASC用四阶段生命周期（Design/Deployment/Operation/Evolution）组织研究，四大支柱（感知、决策、协作、信任）横向贯穿。",
+  "method_signature": "SCALE五特征框架+四阶段生命周期+研究框架矩阵",
+  "evaluation_criteria": "任务成功率、安全合规性、用户满意度",
+  "negative_result_or_admitted_limitation": "经典MAS在开放动态环境中适应性受限，现有survey缺乏统一整合框架。",
+  "evidence_for_taste": [
+    "constrained by hand-crafted knowledge",
+    "lack systematic support for full-lifecycle",
+    "largely disconnected from systematic engineering",
+    "insufficient reliability and poor system-level",
+    "not an incremental extension",
+    "treating trust and safety in isolation"
+  ],
+  "thinking_moves": [
+    "将三个孤立领域（服务计算、MAS、LLM agents）的互补短板提炼为整合动机",
+    "用表格系统化批判现有survey的缺失维度，定位自身差异化贡献",
+    "从功能性正确性转向行为可信度，重新定义服务质量评判标准",
+    "从被动的API调用转变为主动的意图驱动执行",
+    "将静态编排替换为动态去中心化协作"
+  ],
+  "topic_tags": [
+    "LLM-based agents",
+    "multi-agent systems",
+    "service lifecycle governance",
+    "autonomous decision-making",
+    "trustworthiness alignment"
+  ],
+  "cites_own_work": [
+    "199",
+    "200",
+    "201",
+    "202"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

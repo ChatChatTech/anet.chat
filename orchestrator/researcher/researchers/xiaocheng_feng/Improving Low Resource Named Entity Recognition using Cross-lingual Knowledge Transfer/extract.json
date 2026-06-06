@@ -1,0 +1,37 @@
+{
+  "paper_id": "Improving Low Resource Named Entity Recognition using Cross-lingual Knowledge Transfer",
+  "doi": "10.24963/ijcai.2018/566",
+  "title": "Improving Low Resource Named Entity Recognition using Cross-lingual Knowledge Transfer",
+  "year": 2018,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "神经网络NER模型在低资源语言上因缺乏标注数据导致性能下降",
+  "problem_framing": "通过跨语言知识迁移丰富低资源语言词语的语义表示",
+  "key_insight": "不同语言包含互补的实体线索可通过双语词典转移；实体类型分布在语言间保持不变",
+  "method_signature": "LSTM-CRF + 双语词典编码 + 词典扩展 + 实体类型分布特征",
+  "evaluation_criteria": "F-score on CoNLL Dutch/Spanish and OntoNotes Chinese",
+  "negative_result_or_admitted_limitation": "CLNER性能较低因其使用基于语言资源的间接特征和跨语言实体映射；这些方法存在错误传播问题",
+  "evidence_for_taste": [
+    "sequence feature is more important for modeling lexicon structure",
+    "cross-language representation has better ability to model non-covered entities",
+    "entity type distribution can be regarded as a language-independent knowledge",
+    "bilingual lexicons are one of the most basic language resources"
+  ],
+  "thinking_moves": [
+    "用双语词典在语义层面嫁接高低资源语言",
+    "线性投影解决词典覆盖不到的词(OOV问题)",
+    "实体类型分布作为语言无关特征跨语言迁移",
+    "强调序列特征优于注意力机制用于词典结构建模"
+  ],
+  "topic_tags": [
+    "cross-lingual NER",
+    "low-resource NER",
+    "bilingual lexicon",
+    "entity type distribution",
+    "LSTM-CRF"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

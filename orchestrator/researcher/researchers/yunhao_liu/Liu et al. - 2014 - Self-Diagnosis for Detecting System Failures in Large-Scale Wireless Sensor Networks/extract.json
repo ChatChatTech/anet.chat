@@ -1,0 +1,42 @@
+{
+  "paper_id": "Liu et al. - 2014 - Self-Diagnosis for Detecting System Failures in Large-Scale Wireless Sensor Networks",
+  "doi": null,
+  "title": "Self-Diagnosis for Detecting System Failures in Large-Scale Wireless Sensor Networks",
+  "year": 2014,
+  "venue": "IEEE Transactions on Wireless Communications",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Sink-based diagnosis causes huge communication overhead and obtains incomplete information due to unreliable wireless links",
+  "problem_framing": "How to enable single sensors with narrow local scope to cooperatively diagnose failures without centralized control",
+  "key_insight": "Encode diagnosis process as FSM state transitions; nodes transit state based on local evidence and propagate only the small current state",
+  "method_signature": "FSM-based fault detectors that travel among nodes, transiting states via local evidence until Accept state is reached",
+  "evaluation_criteria": "Detection ratio, false alarm ratio, and traffic overhead (diagnosis traffic / total traffic)",
+  "negative_result_or_admitted_limitation": "Sink must tolerate inconsistent results from different nodes; diagnosis messages themselves can be lost due to congestion",
+  "evidence_for_taste": [
+    "sink often obtains incomplete and suspicious information",
+    "problematic sensors themselves are usually incapable",
+    "a sensor only has very narrow scope on the system state",
+    "our approach can pinpoint the root causes from the local evidences only",
+    "fault detectors are not intended for single node",
+    "different nodes have different views of the network"
+  ],
+  "thinking_moves": [
+    "把 sink 拉模型反转为节点推模型",
+    "把诊断问题形式化为状态机状态转移",
+    "用 CUSUM 加 bootstrap 做变化点检测来触发诊断",
+    "开放框架: 新故障类型可通过传播新检测器解决",
+    "邻居协作弥补死亡节点无法自报的问题"
+  ],
+  "topic_tags": [
+    "WSN self-diagnosis",
+    "FSM fault detector",
+    "change-point detection",
+    "distributed state machine",
+    "TinyD2"
+  ],
+  "cites_own_work": [
+    "GreenOrbs"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

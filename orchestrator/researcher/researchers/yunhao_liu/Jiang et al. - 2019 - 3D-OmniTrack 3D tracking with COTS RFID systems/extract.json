@@ -1,0 +1,40 @@
+{
+  "paper_id": "Jiang et al. - 2019 - 3D-OmniTrack 3D tracking with COTS RFID systems",
+  "doi": null,
+  "title": "3D-OmniTrack: 3D Tracking with COTS RFID Systems",
+  "year": 2019,
+  "venue": "IPSN",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有RFID追踪系统只能处理2D空间或分别追踪位置和朝向,无法应对3D空间中标签同时平移和旋转的复杂场景",
+  "problem_framing": "将3D位置+朝向联合追踪形式化为:利用极化敏感相位模型约束多假设轨迹搜索空间,解决同一相位对应多种组合的歧义",
+  "key_insight": "通过分析RFID信号传播的极化效应,将标签朝向变化映射为可计算的相位偏移,实现单标签同时追踪位置和朝向",
+  "method_signature": "极化敏感相位模型 + MHT多假设追踪框架",
+  "evaluation_criteria": "厘米级定位误差 + 平均朝向误差5°",
+  "negative_result_or_admitted_limitation": "多径效应使定位误差增加2.3倍,朝向误差增加3.7倍;穷举初始化需计算10^12种组合",
+  "evidence_for_taste": [
+    "orientation change can lead to the maximum phase change of 2π",
+    "the same phase measurement can correspond to many different combinations",
+    "computational complexity will be high",
+    "the random noise introduced by the hardware may lead to multiple candidates"
+  ],
+  "thinking_moves": [
+    "从信号传播物理机制出发:将圆极化天线抽象为两个正交线极化天线,推导相位与朝向的解析关系",
+    "将感知问题转化为通信问题:用极化匹配理论解释相位偏移的物理来源",
+    "面对组合爆炸:先用相位模型约束候选集,再用RSSI辅助剪枝,最后用MHT维护多条假设轨迹",
+    "承认现实约束:针对不同应用场景提供三种初始化策略,而不是追求单一万能方法",
+    "通过实验验证物理模型:旋转标签一圈观察相位变化2π,确认理论推导与实测吻合"
+  ],
+  "topic_tags": [
+    "RFID-localization",
+    "3D-orientation-tracking",
+    "polarization-sensitive-phase-model",
+    "multiple-hypotheses-tracking",
+    "COTS-RFID-systems"
+  ],
+  "cites_own_work": [
+    "OmniTrack [8]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的理论推导、算法设计、初始化方法和实验评估。关键认知信号:作者认识到相位模型必须包含极化效应而非仅考虑距离,且承认多径效应和多假设搜索的计算复杂度是主要限制 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,496 @@
+{
+  "slug": "yutao_ma",
+  "n_extracts": 15,
+  "n_full": 15,
+  "n_partial": 0,
+  "n_thin": 0,
+  "year_range": [
+    2008,
+    2025
+  ],
+  "top_tags": [
+    [
+      "power-law-distribution",
+      2
+    ],
+    [
+      "cross-project-defect-prediction",
+      2
+    ],
+    [
+      "transfer-learning",
+      2
+    ],
+    [
+      "QoS-aware recommendation",
+      1
+    ],
+    [
+      "ranking-oriented CF",
+      1
+    ],
+    [
+      "Kendall rank correlation",
+      1
+    ],
+    [
+      "hybrid collaborative filtering",
+      1
+    ],
+    [
+      "Web service selection",
+      1
+    ],
+    [
+      "bug-triaging",
+      1
+    ],
+    [
+      "developer-collaboration-networks",
+      1
+    ],
+    [
+      "dynamic-graph-representation",
+      1
+    ],
+    [
+      "spatial-temporal-GNN",
+      1
+    ],
+    [
+      "joint-random-walk-sampling",
+      1
+    ],
+    [
+      "bibliometric-assessment",
+      1
+    ],
+    [
+      "software-engineering-trends",
+      1
+    ],
+    [
+      "author-contribution-scoring",
+      1
+    ],
+    [
+      "research-evaluation-rule",
+      1
+    ],
+    [
+      "software-defect-prediction",
+      1
+    ],
+    [
+      "metric-set-simplification",
+      1
+    ],
+    [
+      "cross-project-prediction",
+      1
+    ],
+    [
+      "feature-selection",
+      1
+    ],
+    [
+      "within-project-vs-cross-project",
+      1
+    ],
+    [
+      "bug-priority-prediction",
+      1
+    ],
+    [
+      "class-imbalance-handling",
+      1
+    ],
+    [
+      "software-bug-lifecycle",
+      1
+    ],
+    [
+      "evolutionary-feature-engineering",
+      1
+    ],
+    [
+      "cross-project-validation",
+      1
+    ],
+    [
+      "self-supervised-learning",
+      1
+    ],
+    [
+      "cervical-OCT-classification",
+      1
+    ],
+    [
+      "contrastive-texture-learning",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2008,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "complex-networks",
+          1
+        ],
+        [
+          "software-evolution",
+          1
+        ],
+        [
+          "network-motifs",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2013,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "OSS-commit-interval",
+          1
+        ],
+        [
+          "power-law-distribution",
+          1
+        ],
+        [
+          "SVN-revision-control",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2014,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "cross-project-defect-prediction",
+          2
+        ],
+        [
+          "transfer-learning",
+          2
+        ],
+        [
+          "bibliometric-assessment",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2015,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "QoS-aware recommendation",
+          1
+        ],
+        [
+          "ranking-oriented CF",
+          1
+        ],
+        [
+          "Kendall rank correlation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "cross-project defect prediction",
+          1
+        ],
+        [
+          "training data selection",
+          1
+        ],
+        [
+          "logistic regression classifier",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2017,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "knowledge-worker-behavior",
+          1
+        ],
+        [
+          "open-source-software",
+          1
+        ],
+        [
+          "workload-overload-detection",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2018,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "Drosophila-heart-OCM-segmentation",
+          1
+        ],
+        [
+          "U-Net-semantic-segmentation",
+          1
+        ],
+        [
+          "soft-IOU-loss",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2021,
+      "paper_count": 6,
+      "top_tags": [
+        [
+          "sequential-recommendation",
+          1
+        ],
+        [
+          "graph-convolutional-network",
+          1
+        ],
+        [
+          "bipartite-graph",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "bug-triaging",
+          1
+        ],
+        [
+          "developer-collaboration-networks",
+          1
+        ],
+        [
+          "dynamic-graph-representation",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "bug-priority-prediction",
+          1
+        ],
+        [
+          "class-imbalance-handling",
+          1
+        ],
+        [
+          "software-bug-lifecycle",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "实验仅用响应时间子集且数据集较小(339用户5825服务)，威胁外部效度；多参数调试可能陷入局部最优",
+    "JRWalk仅适用于同质网络，无法直接应用于异质网络；模型在开源项目以外软件系统上的表现未知",
+    "九成顶尖学者的领导力得分低于参考线,表明软件工程领域对通讯作者标注不够重视",
+    "阈值选择基于先前研究和经验而非严格准则，CPDP性能不佳被广泛质疑",
+    "模型性能在不同项目间差异显著，且未预测变更发生的时间点",
+    "误分类38个MI图像为HSIL,因LBP纹理特征相似;CR方法因patch交换噪声表现差;LSIL因样本量小被排除",
+    "Git等分布式系统结论是否适用尚不确定",
+    "现有MCP推荐方法主要依赖语义匹配而忽视结构约束,导致概念上匹配但执行时失败",
+    "结构稳定性可能必要但非充分条件,仍无法解释约束增长的起源",
+    "现有GCN方法无法显式编码用户-物品二部图中的高阶连接,无法统一建模用户和物品的时序动态",
+    "Cannot precisely describe developers' true states due to lack of real behavioral data; intrinsic relationships between spatial and temporal behavior remain unknown",
+    "成虫图像因皮肤高吸收导致低灵敏度，心壁边界不连续造成预测泄漏；128像素宽度限制了信息量；人工标注存在不可避免的误差",
+    "阈值ρ可能随评估公式变化而不稳定,且数据仅来自PROMISE子集,泛化性存疑",
+    "不同Z-score归一化方法、特征选择、步长0.1的α优化、单一LR分类器等参数设置不同会导致结果变化",
+    "Only used logistic regression; all projects are Java-based; feature selection on 16 indicators not explored."
+  ],
+  "taste_quotes": [
+    {
+      "quote": "简单分类器往往表现更好",
+      "paper_id": "An empirical study on software defect prediction with a simplified metric set"
+    },
+    {
+      "quote": "不能既要蛋糕又要吃",
+      "paper_id": "An empirical study on software defect prediction with a simplified metric set"
+    },
+    {
+      "quote": "CPDP方法被广泛质疑",
+      "paper_id": "An empirical study on software defect prediction with a simplified metric set"
+    },
+    {
+      "quote": "基于先前研究和自身经验",
+      "paper_id": "An empirical study on software defect prediction with a simplified metric set"
+    },
+    {
+      "quote": "简单预测器更通用",
+      "paper_id": "An empirical study on software defect prediction with a simplified metric set"
+    },
+    {
+      "quote": "牺牲一点精度换取通用性",
+      "paper_id": "An empirical study on software defect prediction with a simplified metric set"
+    },
+    {
+      "quote": "none of the previous studies consider periodic interactions",
+      "paper_id": "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    },
+    {
+      "quote": "jointly considers both node importance and edge importance",
+      "paper_id": "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    },
+    {
+      "quote": "Such a hybrid strategy can improve",
+      "paper_id": "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    },
+    {
+      "quote": "Without additional optimization",
+      "paper_id": "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    },
+    {
+      "quote": "remains unknown for other large-scale",
+      "paper_id": "A spatialΓÇôtemporal graph neural network framework for automated software bug triaging"
+    },
+    {
+      "quote": "outperformed two out of four medical experts",
+      "paper_id": "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning"
+    },
+    {
+      "quote": "introduce the texture features of cervical OCT images to contrastive learning",
+      "paper_id": "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning"
+    },
+    {
+      "quote": "due to similar LBP texture features",
+      "paper_id": "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning"
+    },
+    {
+      "quote": "better interpretability based on texture features",
+      "paper_id": "Cervical optical coherence tomography image classification based on contrastive selfΓÇÉsupervised texture learning"
+    },
+    {
+      "quote": "LLM-based agents often struggle to select appropriate tools",
+      "paper_id": "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    },
+    {
+      "quote": "treating MCP server recommendations as a purely semantic matching problem while overlooking structural constraints",
+      "paper_id": "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    },
+    {
+      "quote": "semantically relevant may still be unusable due to mismatches",
+      "paper_id": "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    },
+    {
+      "quote": "Without transparent rationales, developers cannot easily assess the suitability",
+      "paper_id": "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    },
+    {
+      "quote": "still a challenging problem",
+      "paper_id": "From Language to Action_ Enhancing LLM Task Efficiency with Task-Aware MCP Server Recommendation"
+    },
+    {
+      "quote": "fail to capture short- and long-term sequential information",
+      "paper_id": "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    },
+    {
+      "quote": "neglecting the temporal dynamics of item properties",
+      "paper_id": "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    },
+    {
+      "quote": "consider only direct user-item interactions",
+      "paper_id": "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    },
+    {
+      "quote": "cannot effectively capture the high-order collaborative information",
+      "paper_id": "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    },
+    {
+      "quote": "make a better trade-off between recommendation performance and model training efficiency",
+      "paper_id": "Position-enhanced and Time-aware Graph Convolutional Network for Sequential Recommendations"
+    },
+    {
+      "quote": "most leading scholars do not attach much weight to the status of corresponding author",
+      "paper_id": "An Analysis of Research in Software Engineering_ Assessment and Trends"
+    },
+    {
+      "quote": "only the first institution named on a paper receives the basic score for its leadership",
+      "paper_id": "An Analysis of Research in Software Engineering_ Assessment and Trends"
+    },
+    {
+      "quote": "数据 errors have hardly any impact on the Top 15 ranking results",
+      "paper_id": "An Analysis of Research in Software Engineering_ Assessment and Trends"
+    },
+    {
+      "quote": "it is very hard to reach a widely recognized consensus on such an assessment",
+      "paper_id": "An Analysis of Research in Software Engineering_ Assessment and Trends"
+    },
+    {
+      "quote": "the prior studies... have been questioned by some critics",
+      "paper_id": "An Analysis of Research in Software Engineering_ Assessment and Trends"
+    },
+    {
+      "quote": "手动评估优先级变更耗时",
+      "paper_id": "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    },
+    {
+      "quote": "主观判断导致不一致",
+      "paper_id": "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    },
+    {
+      "quote": "预测优先级变更而非初始优先级",
+      "paper_id": "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    },
+    {
+      "quote": "8%的bug经历了优先级变更",
+      "paper_id": "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    },
+    {
+      "quote": "直接应用现有方法效果不佳",
+      "paper_id": "Bug Priority Change Prediction_ An Exploratory Study on Apache Software"
+    },
+    {
+      "quote": "power-law distributions of lifecycle- and release-level",
+      "paper_id": "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    },
+    {
+      "quote": "few of previous papers conducted empirical research",
+      "paper_id": "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    },
+    {
+      "quote": "active committers' individual commit behavior are very similar",
+      "paper_id": "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    },
+    {
+      "quote": "heavy-tailed distributions of inter-event times",
+      "paper_id": "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    },
+    {
+      "quote": "decision based queuing process",
+      "paper_id": "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion"
+    }
+  ]
+}

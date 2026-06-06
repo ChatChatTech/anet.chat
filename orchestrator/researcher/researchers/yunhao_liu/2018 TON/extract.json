@@ -1,0 +1,37 @@
+{
+  "paper_id": "2018 TON",
+  "doi": null,
+  "title": "Finding the Stars in the Fireworks: Deep Understanding of Motion Sensor Fingerprint",
+  "year": 2018,
+  "venue": "TON",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "移动传感器数据可唯一标识设备/用户，造成严重隐私威胁，现有方法在动态场景下鲁棒性不足",
+  "problem_framing": "从容量理论、鲁棒特征提取、隐私保护三个维度系统理解传感器指纹问题",
+  "key_insight": "多传感器/多轴数据形成高维特征空间，大幅提升指纹容量；LSTM自动学习本质特征而非依赖手工特征",
+  "method_signature": "Multi-LSTM神经网络提取传感器指纹特征 + 生成对抗式匿名化模型",
+  "evaluation_criteria": "F-score/准确率(指纹识别)、L2距离/步数误差(匿名化效果与数据效用)",
+  "negative_result_or_admitted_limitation": "人手行为特征确实增加了设备指纹识别难度；如何分离人与设备指纹仍是挑战",
+  "evidence_for_taste": [
+    "handcrafted features cannot capture the essential characteristics",
+    "F-score reduces to 78% when the phone moves in a moderate speed",
+    "calibration requires specialized equipment, while obfuscation reduces the utility",
+    "How to separate the human fingerprints and device fingerprints remains a challenging question"
+  ],
+  "thinking_moves": [
+    "先建立理论容量模型(Balls-into-Bins)回答指纹空间是否足够大，再设计神经网络提取特征",
+    "发现手工特征的致命弱点在动态场景下急剧退化，转向端到端学习",
+    "将攻击与防御统一建模：生成器欺骗已训练好的指纹识别器，同时最小化数据修改",
+    "从单传感器到多传感器融合，验证维度对容量的乘积效应"
+  ],
+  "topic_tags": [
+    "motion-sensor-fingerprinting",
+    "multi-LSTM-fingerprinting",
+    "sensor-privacy-anonymization",
+    "device-authentication-deep-learning",
+    "balls-into-bins-capacity-model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

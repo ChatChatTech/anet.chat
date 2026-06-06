@@ -1,0 +1,40 @@
+{
+  "paper_id": "2022_TKDD_Adaptive_Model_Scheduling_for_Resource_efficient_Data_Labeling",
+  "doi": null,
+  "title": "Adaptive Model Scheduling for Resource-efficient Data Labeling",
+  "year": 2022,
+  "venue": "ACM Trans. Knowl. Discov. Data",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Multiple resource-hungry models needed for comprehensive labeling, but executing all models on all data is infeasible due to limited computing resources and stringent delay constraints.",
+  "problem_framing": "Submodular function maximization with knapsack constraints where model output values are unknown until execution, making classic optimization approaches infeasible.",
+  "key_insight": "Executed models' outputs provide semantic hints about unexecuted models' outputs; a DRL agent can learn these implicit relationships to predict model value before execution.",
+  "method_signature": "DRL-based model value prediction combined with cost-profit greedy scheduling under deadline or deadline-memory constraints.",
+  "evaluation_criteria": "Execution time savings (53% with full recall) and value recall rate improvement (132%-310% vs random scheduling under 0.5s deadline).",
+  "negative_result_or_admitted_limitation": "Knowledge transfer degrades when content distributions diverge (e.g., training on dog images, testing on human actions); requires 10%-20% of dataset for adequate training samples.",
+  "evidence_for_taste": [
+    "handcrafted rules are cumbersome and inefficient when there are tens of models",
+    "classic submodular optimization approaches infeasible to solve our problem",
+    "cost-Q greedy algorithm performs better than provable guarantee 1-1/e",
+    "knowledge learned from the other dataset with different content distribution can also optimize scheduling effectively",
+    "a large portion of computing resources could be wasted without careful model selection"
+  ],
+  "thinking_moves": [
+    "Prove evaluation function is submodular to characterize problem structure, then pivot to DRL because classic approaches cannot handle unknown values",
+    "Model outputs become observations that inform predictions about unexecuted models - frame as sequential decision problem",
+    "Separate prediction component (DRL) from scheduling algorithms to enable flexible deployment under different resource constraints",
+    "Admit handcrafted rules fail at scale, requiring data-driven approach to discover model relationships automatically"
+  ],
+  "topic_tags": [
+    "adaptive-model-scheduling",
+    "deep-reinforcement-learning",
+    "data-labeling",
+    "submodular-optimization",
+    "model-relationship-mining"
+  ],
+  "cites_own_work": [
+    "2020_ICDE_comprehensive_efficient_data_labeling"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

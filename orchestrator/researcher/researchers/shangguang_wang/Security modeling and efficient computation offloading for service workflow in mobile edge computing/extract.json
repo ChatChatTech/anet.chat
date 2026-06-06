@@ -1,0 +1,40 @@
+{
+  "paper_id": "Security modeling and efficient computation offloading for service workflow in mobile edge computing",
+  "doi": "10.1016/j.future.2019.03.011",
+  "title": "Security modeling and efficient computation offloading for service workflow in mobile edge computing",
+  "year": 2019,
+  "venue": "Future Generation Computer Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Mobile devices are resource-constrained but face complex energy-consuming applications; offloading to edge servers introduces security threats (snooping, alteration).",
+  "problem_framing": "Minimize MD energy consumption under risk probability and deadline constraints, by optimally selecting security services, task locations, and execution order for workflow tasks.",
+  "key_insight": "Security overhead is node-dependent and linearly/inversely proportional to secured data size, processor cores, and frequency—enabling schedulers to incorporate heterogeneous overhead into optimization.",
+  "method_signature": "SEECO strategy: security overhead model + NP-hard problem formulation + GA-based coding for task order, location, and security service selection.",
+  "evaluation_criteria": "Execution energy vs. risk probability (0.1-1.0), deadline constraint satisfaction, impact of security services, edge server count.",
+  "negative_result_or_admitted_limitation": "When edge servers exceed a certain number, execution energy shows no significant reduction—indicating diminishing returns from over-provisioning.",
+  "evidence_for_taste": [
+    "security overhead is node dependent",
+    "critical and fundamental to measure the quantity value",
+    "not sophisticated enough yet",
+    "which are not suitable for security-aware workflow scheduling",
+    "none of the above work considers the impact of task dependency",
+    "the curves of both are flat",
+    "once it exceeds a certain value, the chromosomes will become chaotic"
+  ],
+  "thinking_moves": [
+    "Identify that existing security overhead models ignore node heterogeneity, then build empirical models to capture parameter relationships.",
+    "Formulate scheduling as a constrained multi-objective problem, prove NP-hardness, then resort to genetic algorithm as the solving paradigm.",
+    "Test parameter sensitivity systematically (cores, frequency, data size) to discover proportional/inverse-proportional trends, then express as equations.",
+    "Compare against trivial baselines (Local, Max_Level, Min_Level) to bound where SEECO provides meaningful tradeoffs under varying risk rates."
+  ],
+  "topic_tags": [
+    "MEC-computation-offloading",
+    "workflow-scheduling-security",
+    "security-overhead-modeling",
+    "energy-efficient-MD",
+    "genetic-algorithm-scheduling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

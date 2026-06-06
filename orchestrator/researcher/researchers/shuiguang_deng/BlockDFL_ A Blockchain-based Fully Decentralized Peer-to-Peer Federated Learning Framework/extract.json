@@ -1,0 +1,38 @@
+{
+  "paper_id": "BlockDFL_ A Blockchain-based Fully Decentralized Peer-to-Peer Federated Learning Framework",
+  "doi": "10.48550/arxiv.2205.10568",
+  "title": "BlockDFL: A Blockchain-based Fully Decentralized Peer-to-Peer Federated Learning Framework",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "传统联邦学习依赖中心化服务器,去中心化FL会加剧投毒攻击和数据泄露风险",
+  "problem_framing": "如何在无互信P2P环境中实现安全高效的联邦学习",
+  "key_insight": "两层评分机制(本地median-based + 全局Krum)配合PBFT投票,可唯一选出高质量全局更新",
+  "method_signature": "区块链+PBFT投票+双层评分+梯度压缩的完全去中心化FL框架",
+  "evaluation_criteria": "准确率、投毒防御率(≤40%恶意)、时间效率、可扩展性",
+  "negative_result_or_admitted_limitation": "CIFAR-10上恶意比例增加时准确率略降,空块比例随恶意参与者增加而上升",
+  "evidence_for_taste": [
+    "Krum performs not well when facing non-IID data",
+    "Threshold-based testing relies on manual thresholds",
+    "DP lowers model accuracy",
+    "Homomorphic encryption brings tremendous computation cost",
+    "Sparsification helps to focus only on important parameters"
+  ],
+  "thinking_moves": [
+    "先指出现有方法(Krum/阈值测试/DP/同态加密)的各自缺陷,再组合解决方案",
+    "分解问题:本地更新评分与全局更新评分的不同需求",
+    "用区块链哈希实现角色随机分配,平衡去中心化与效率",
+    "梯度压缩同时解决隐私保护和通信开销两个问题"
+  ],
+  "topic_tags": [
+    "blockchain-federated-learning",
+    "peer-to-peer-FL",
+    "poisoning-attack-defense",
+    "gradient-compression-privacy",
+    "PBFT-consensus"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "实验部分有图表数据但无具体数值表格,评估细节需推断 | md truncated to head40k+tail20k"
+}

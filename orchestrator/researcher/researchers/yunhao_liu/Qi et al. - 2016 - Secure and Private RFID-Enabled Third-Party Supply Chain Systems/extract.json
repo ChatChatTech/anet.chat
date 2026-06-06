@@ -1,0 +1,38 @@
+{
+  "paper_id": "Qi et al. - 2016 - Secure and Private RFID-Enabled Third-Party Supply Chain Systems",
+  "doi": null,
+  "title": "Secure and Private RFID-Enabled Third-Party Supply Chain Systems",
+  "year": 2016,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "RFID供应链中物流商可窥探商业秘密, Sender可否认生产消息,批处理开销过高导致系统瓶颈",
+  "problem_framing": "将三方供应链系统的安全性需求形式化为批隐私、批/项不可伪造性、批效率三个独立维度",
+  "key_insight": "用批量签名代替逐项签名,将签名结果编码进计算轻量级密码ID由RFID标签承载",
+  "method_signature": "先签名后承诺的PVS密码学ID方案+分布式批量传输/仲裁协议",
+  "evaluation_criteria": "在C1G2 commodity RFID标签上进行理论分析和实验验证安全性和效率",
+  "negative_result_or_admitted_limitation": "逐项签名方案开销过大不可行:Sender需生成n个签名,Relaynode和Receiver需验证n个签名",
+  "evidence_for_taste": [
+    "computation-lightweight crypto-IDs",
+    "prohibitive signature processing overhead",
+    "through careful design",
+    "easily becomes a bottleneck",
+    "enforces all the participants behave"
+  ],
+  "thinking_moves": [
+    "从三个参与方各自利益出发定义安全需求,而不是统一安全策略",
+    "识别批处理是效率瓶颈,提出批级密码学原语替代逐项操作",
+    "设计两阶段仲裁协议分离轻量证明和重量审计强制参与者自律",
+    "将签名结果编码进标签存储而非传输完整消息以减少通信开销"
+  ],
+  "topic_tags": [
+    "RFID-supply-chain-privacy",
+    "batch-cryptographic-signature",
+    "non-repudiation-proof",
+    "private-verifiable-signature",
+    "three-party-supply-chain"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "venue未在文本中明确出现,推测为IEEE/ACM会议论文;self-citation未明显检测到 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Bug Priority Change Prediction_ An Exploratory Study on Apache Software",
+  "doi": "10.48550/arxiv.2512.09216",
+  "title": "Bug Priority Change Prediction: An Exploratory Study on Apache Software",
+  "year": 2025,
+  "venue": "ACM Trans. Softw. Eng. Methodol.",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "手动评估优先级变更耗时且依赖主观判断，导致错误变更阻碍及时修复",
+  "problem_framing": "将预测任务分为两阶段：报告阶段预测是否变更，修复阶段预测新优先级",
+  "key_insight": "通过项目演化、报告者历史、评论动态、历史变更项四维度构建演化特征",
+  "method_signature": "条件混合采样+软投票集成+代价敏感学习的两阶段混合架构",
+  "evaluation_criteria": "F1-score(Phase I)、F1-weighted/macro(Phase II)、交叉项目验证",
+  "negative_result_or_admitted_limitation": "模型性能在不同项目间差异显著，且未预测变更发生的时间点",
+  "evidence_for_taste": [
+    "手动评估优先级变更耗时",
+    "主观判断导致不一致",
+    "预测优先级变更而非初始优先级",
+    "8%的bug经历了优先级变更",
+    "直接应用现有方法效果不佳"
+  ],
+  "thinking_moves": [
+    "从静态优先级预测转向动态变更预测，reframe研究问题",
+    "通过消融实验验证演化特征和类别不平衡策略的独立贡献",
+    "将bug生命周期严格划分为两个时间窗口构建特征",
+    "采用交叉项目验证评估模型泛化能力而非仅留出法"
+  ],
+  "topic_tags": [
+    "bug-priority-prediction",
+    "class-imbalance-handling",
+    "software-bug-lifecycle",
+    "evolutionary-feature-engineering",
+    "cross-project-validation"
+  ],
+  "cites_own_work": [
+    "Li et al. 2024 - Bug priority change empirical study (same research group)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Yutao Ma是第六位作者，非通讯作者。完整文本提供了详细的方法、实验和讨论部分，提取质量完整。 | md truncated to head40k+tail20k"
+}

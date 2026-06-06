@@ -1,0 +1,41 @@
+{
+  "paper_id": "EdgeMoE_ Empowering Sparse Large Language Models on Mobile Devices",
+  "doi": "10.48550/arxiv.2308.14352",
+  "title": "EdgeMoE: Empowering Sparse Large Language Models on Mobile Devices",
+  "year": 2023,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM部署在移动端面临巨大参数规模和运行时成本压力，MoE模型虽能稀疏激活扩展参数但专家权重导致内存墙问题",
+  "problem_framing": "将内存分层为专家缓存，通过I/O-计算流水线和对等量化解决稀疏激活模型的移动端高效推理问题",
+  "key_insight": "专家权重bulk但cold(86.5%内存但只26.4%计算)，非专家hot但小，这天然匹配存储层次结构；且专家激活路径呈power law分布表明层间相关可预测",
+  "method_signature": "专家级混合精度量化+基于激活相关性的专家预加载+结合频率和层位置的缓存淘汰策略",
+  "evaluation_criteria": "内存节省倍数、推理加速比、精度损失百分比(≤2%)",
+  "negative_result_or_admitted_limitation": "频率缓存策略因专家激活被训练为平衡而收益有限；不适用于prefill阶段或多请求并行场景",
+  "evidence_for_taste": [
+    "experts are bulky but cold",
+    "non-expert weights contribute most computation",
+    "activation frequency across experts is purposely trained to be balanced",
+    "activation path follows power law distribution",
+    "sophisticated quantization algorithms achieving higher compression ratio, yet incurring significant pre-processing time",
+    "such an approach unfeasible due to expert activation dependency",
+    "EdgeMoE does not choose bitwidths at run-time, as it is difficult to predict"
+  ],
+  "thinking_moves": [
+    "从边缘设备资源约束出发反向设计存储层次映射",
+    "把内存管理问题重新frame为缓存问题利用working set思想",
+    "通过消融实验区分各优化技术的独立贡献",
+    "发现看似平衡的全局统计下隐藏着有序的路径分布",
+    "从定性观察到定量验证的迭代分析"
+  ],
+  "topic_tags": [
+    "MoE-LLM-edge-inference",
+    "expert-memory-hierarchy",
+    "mixed-precision-quantization",
+    "expert-preloading-pipeline",
+    "on-device-sparse-models"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "完整提取了论文的方法论要点、认知过程和工程判断。Shangguang Wang作为Senior Author/Corresponding Author，其在services computing和mobile edge computing领域的背景可能影响了问题域的选择——将LLM部署问题导向存储层次优化这一系统视角。 | md truncated to head40k+tail20k"
+}

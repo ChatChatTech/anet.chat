@@ -1,0 +1,44 @@
+{
+  "paper_id": "Xiao et al. - 2005 - Improving Unstructured Peer-to-Peer Systems by Adaptive Connection Establishment",
+  "doi": null,
+  "title": "Improving Unstructured Peer-to-Peer Systems by Adaptive Connection Establishment",
+  "year": 2005,
+  "venue": "IEEE Transactions on Computers",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "P2P系统物理拓扑失配严重,仅2-5%连接在同一AS内,但40%+节点在Top10 AS,导致大量冗余跨域流量",
+  "problem_framing": "overlay逻辑拓扑与物理网络拓扑不匹配, floods查询时同一物理链路被重复遍历,需在保持搜索范围的同时优化拓扑",
+  "key_insight": "本地计算MST实现选择性flooding保留搜索范围,再通过探测非flooding邻居的邻居找到更近节点替换远距离邻居",
+  "method_signature": "ACE三阶段:邻居开销表构建交换→MST选择性洪泛→overlay拓扑优化(邻居替换)",
+  "evaluation_criteria": "流量成本(消息数×物理链路数)和查询响应时间,需同时优化两者且不缩减搜索范围",
+  "negative_result_or_admitted_limitation": "仅用随机策略选择替换候选节点效果欠佳,需研究更优候选选择策略",
+  "evidence_for_taste": [
+    "traffic cost is one of the parameters network administrators are seriously concerned with",
+    "QoS focuses on user-perceived qualities",
+    "it is meaningless to merely optimize one metric without considering the other",
+    "ACE is worth to use only if the gain/penalty ratio is larger than 1",
+    "The major advantage of this policy is its simplicity"
+  ],
+  "thinking_moves": [
+    "从现实测量数据量化拓扑失配严重程度,建立问题紧迫性",
+    "将流量成本和响应时间明确为对立优化目标,形式化权衡关系",
+    "用最小生成树替代洪泛避免环路,保留搜索范围同时减少重复传输",
+    "分阶段渐进优化:先局部MST再全局邻居替换,控制算法复杂度",
+    "证明ACE操作不增加连通分量数量,用反证法定理保证overlay不会碎片化",
+    "引入优化深度参数h,通过可调参数探索性能-开销帕累托边界"
+  ],
+  "topic_tags": [
+    "P2P-overlay-topology-mismatch",
+    "adaptive-connection-establishment",
+    "minimum-spanning-tree-flooding",
+    "unstructured-P2P-traffic-optimization",
+    "overlay-physical-topology-alignment"
+  ],
+  "cites_own_work": [
+    "AOTO: Adaptive Overlay Topology Optimization in Unstructured P2P Systems (2003)",
+    "A Distributed Approach to Solving Overlay Mismatch Problem (2004)",
+    "Location-Aware Topology Matching in Unstructured P2P Systems (2004)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的方法论描述和性能评估,但部分表格图片内容因格式问题无法完全解析。已从文本中提取了足够的一手证据支持所有字段。 | md truncated to head40k+tail20k"
+}

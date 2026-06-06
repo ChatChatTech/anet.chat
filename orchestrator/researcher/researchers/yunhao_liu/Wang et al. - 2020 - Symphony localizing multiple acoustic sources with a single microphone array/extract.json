@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2020 - Symphony localizing multiple acoustic sources with a single microphone array",
+  "doi": null,
+  "title": "Symphony: Localizing Multiple Acoustic Sources with a Single Microphone Array",
+  "year": 2020,
+  "venue": "SenSys '20",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "智能设备需同时定位多个声源，现有方案要么只能定位单一源，要么需要分布式阵列",
+  "problem_framing": "单阵列多源定位问题：信号混合严重、路径多样不可预测、DoA与源关联模糊",
+  "key_insight": "利用麦克风阵列几何冗余区分不同路径信号，用同类路径固有相干性识别同源DoA",
+  "method_signature": "几何过滤纯峰值+相干性筛选+LOS/ECHO可相交几何判据",
+  "evaluation_criteria": "定位误差(中位数0.694m)、DoA精度、处理时间、对比VoLoc基准",
+  "negative_result_or_admitted_limitation": "VoLoc假设存在静音间隙不适用于多源场景，且单阵列Far-field效应无法分离平行射线",
+  "evidence_for_taste": [
+    "pure peaks can nearly form a straight line",
+    "the resolution of pair also increases",
+    "This explains why it is reasonable",
+    "The ECHO path is a delayed version of the LOS",
+    "the DoAs of LOS and ECHO should meet a criterion",
+    "we cannot determine the pure-peak combinations confidently"
+  ],
+  "thinking_moves": [
+    "将墙壁视为镜子创造虚拟阵列，绕过单阵列Far-field限制",
+    "将峰值识别问题formulate为曲线拟合，用fitting metric容忍离散化误差",
+    "利用混合峰值(LOS-ECHO)作为桥梁关联同源路径，突破峰值重叠问题",
+    "将DoA识别问题分解为两步：同源判定(相干性)+路径判定(几何相交)",
+    "借鉴加权最小二乘法对不同间距pair分配不同惩罚因子处理异方差"
+  ],
+  "topic_tags": [
+    "single-array localization",
+    "multi-source DoA estimation",
+    "acoustic signal coherence",
+    "geometry-based filtering",
+    "smart speaker perception"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

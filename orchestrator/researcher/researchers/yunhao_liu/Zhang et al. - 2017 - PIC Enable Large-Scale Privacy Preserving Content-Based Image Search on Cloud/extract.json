@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zhang et al. - 2017 - PIC Enable Large-Scale Privacy Preserving Content-Based Image Search on Cloud",
+  "doi": null,
+  "title": "PIC: Enable Large-scale Privacy Preserving Content-based Image Search on Cloud",
+  "year": 2017,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "云平台存储搜索图像需求迫切,但用户隐私担忧阻碍参与未信任服务",
+  "problem_framing": "在保护图像和查询隐私的前提下实现大规模内容-based图像搜索",
+  "key_insight": "利用多层同态加密将密钥管理与计算分离,实现非交互式隐私保护搜索",
+  "method_signature": "基于多层同态加密+MapReduce的隐私保护图像搜索系统",
+  "evaluation_criteria": "搜索准确率95.2%/93.4%,计算通信开销,MapReduce并行效率",
+  "negative_result_or_admitted_limitation": "基本方案在高分辨率大图像集时性能下降,传统SMC和简单同态加密因交互开销无法扩展",
+  "evidence_for_taste": [
+    "image privacy at a low cost",
+    "privacy-preserving without sacrificing the search accuracy",
+    "traditional SMC...cannot be the solution",
+    "cannot deal with massive images",
+    "our system is capable to be used"
+  ],
+  "thinking_moves": [
+    "将隐私约束转化为架构设计机会(密钥三方分离)",
+    "用工程系统(HashMapReduce)克服密码学效率瓶颈",
+    "承认现有方法局限后再建立自己的方案",
+    "从安全证明和原型实验双重角度验证可信性",
+    "用视觉词袋压缩高维向量降低通信开销"
+  ],
+  "topic_tags": [
+    "homomorphic-encryption",
+    "privacy-preserving-search",
+    "cloud-outsourcing",
+    "image-retrieval",
+    "parallel-computing"
+  ],
+  "cites_own_work": [
+    "Zhang et al. PoP ICDCS 2015",
+    "Zhang et al. INFOCOM 2013"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

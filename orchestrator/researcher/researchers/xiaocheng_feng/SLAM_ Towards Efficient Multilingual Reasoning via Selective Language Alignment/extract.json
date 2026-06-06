@@ -1,0 +1,37 @@
+{
+  "paper_id": "SLAM_ Towards Efficient Multilingual Reasoning via Selective Language Alignment",
+  "doi": "10.48550/arxiv.2501.03681",
+  "title": "SLAM: Towards Efficient Multilingual Reasoning via Selective Language Alignment",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "全参数两阶段训练计算资源消耗大且导致灾难性遗忘",
+  "problem_framing": "如何精准识别并微调仅负责多语言理解的底层FFN层",
+  "key_insight": "语言特定表示仅在底层层学习，高层转化为通用表示",
+  "method_signature": "MSD层选择+仅微调FFN子层",
+  "evaluation_criteria": "准确率、预测一致性比率PCR、训练效率",
+  "negative_result_or_admitted_limitation": "语言间数据不平衡导致不同语言对齐程度不等，性能权衡不可避免",
+  "evidence_for_taste": [
+    "representation learning of languages is merely conducted in lower-level layers",
+    "languages is significantly influenced by a small subset of language-specific neurons",
+    "feed-forward layers store most of the multilingual knowledge",
+    "directly fine-tuning the language-specific layers will inevitably impair the model's inherent reasoning abilities"
+  ],
+  "thinking_moves": [
+    "从神经元激活模式反推语言处理层次结构",
+    "将两阶段训练合并为单阶段以解决灾难性遗忘",
+    "通过MSD量化层的多语言参与度来精准选层",
+    "假设FFN存储多语言知识则只微调FFN即可"
+  ],
+  "topic_tags": [
+    "multilingual-reasoning",
+    "layer-selection-finetuning",
+    "parameter-efficient-training",
+    "LLM-multilingualism",
+    "FFN-knowledge-injection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

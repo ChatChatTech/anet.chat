@@ -1,0 +1,38 @@
+{
+  "paper_id": "DP-MemArc_ Differential Privacy Transfer Learning for Memory Efficient Language Models",
+  "doi": "10.48550/arxiv.2406.11087",
+  "title": "DP-MemArc: Differential Privacy Transfer Learning for Memory Efficient Language Models",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "大模型微调需要大量训练内存，且差分隐私方法进一步增加开销，使资源受限场景下的训练困难",
+  "problem_framing": "将内存高效微调问题形式化为：如何在差分隐私约束下最小化模型权重和激活函数状态的内存消耗",
+  "key_insight": "通过旁路网络压缩激活函数维度或用可逆网络从输出重建中间状态，可将内存优化与隐私保护解耦",
+  "method_signature": "DP-MemArc_side + DP-MemArc_rev 双架构，BK-MixOpt差分隐私优化",
+  "evaluation_criteria": "训练内存(GB)、准确率/BLEU/ROUGE-L/perplexity，不同ε隐私约束下对比",
+  "negative_result_or_admitted_limitation": "当r足够小时旁路调优性能显著下降；可逆网络需要更多训练步数才能达到稳定",
+  "evidence_for_taste": [
+    "requires less training memory than DP-LoRA",
+    "maintaining similar training memory usage",
+    "only achieves marginal reductions in memory overhead",
+    "insufficient optimization efficiency in memory resources",
+    "LoRA is superior to other candidate architectures"
+  ],
+  "thinking_moves": [
+    "从内存占用源分离出权重和激活函数状态两部分，分别针对性优化",
+    "将side-tuning的可加性形式与差分隐私梯度裁剪结合",
+    "借鉴可逆网络的隐藏态重建能力来避免存储激活值",
+    "通过复杂度分析表格对比不同架构的时间空间权衡",
+    "先与边际改进方法对比定位问题，再提出根本性架构改变"
+  ],
+  "topic_tags": [
+    "differential-privacy-finetuning",
+    "memory-efficient-LLM",
+    "side-network-tuning",
+    "reversible-networks",
+    "parameter-efficient-transfer"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

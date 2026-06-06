@@ -1,0 +1,37 @@
+{
+  "paper_id": "An efficient task offloading scheme in vehicular edge computing",
+  "doi": "10.1186/s13677-020-00175-w",
+  "title": "An efficient task offloading scheme in vehicular edge computing",
+  "year": 2020,
+  "venue": "EURASIP Journal on Wireless Communications and Networking",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Vehicular计算资源未被充分利用，且高移动性场景下任务卸载成本高、延迟敏感应用难以满足",
+  "problem_framing": "将任务卸载建模为最小化系统总成本的优化问题，受最大容忍延迟和车辆停留时间约束",
+  "key_insight": "优先将任务分配给附近资源丰富车辆因其通信和计算成本最低，从而最大化利用车载计算资源",
+  "method_signature": "三段式部分卸载(本地V2V VEC)+基于停留时间的比例估算+贪婪选择合格车辆",
+  "evaluation_criteria": "总卸载成本随车辆密度/RRV数量/任务大小/容忍延迟/车速的变化",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "fully exploit the vehicular available resources",
+    "prefer assigning most of the task part on the VEC server",
+    "not fully use the vehicular resources",
+    "cost-efficient system"
+  ],
+  "thinking_moves": [
+    "识别现有工作的关键缺陷：偏好云服务器而忽视车载资源",
+    "将问题重新定义为成本最小化而非延迟最小化",
+    "利用高移动性特点动态调整卸载比例而非静态分配",
+    "通过贪婪选择简化分布式环境下的决策复杂度"
+  ],
+  "topic_tags": [
+    "vehicular edge computing",
+    "partial task offloading",
+    "V2V V2I communication",
+    "mobility-aware offloading",
+    "cost minimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整包含系统模型、问题形式化、算法设计、仿真验证等完整内容，抽取质量为full | md truncated to head40k+tail20k"
+}

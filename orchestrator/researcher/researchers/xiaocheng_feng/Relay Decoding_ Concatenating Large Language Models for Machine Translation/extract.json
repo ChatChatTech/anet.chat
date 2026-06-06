@@ -1,0 +1,38 @@
+{
+  "paper_id": "Relay Decoding_ Concatenating Large Language Models for Machine Translation",
+  "doi": "10.48550/arxiv.2405.02933",
+  "title": "Relay Decoding: Concatenating Large Language Models for Machine Translation",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLMs常不支持源语言和目标语言同时具备能力，continuous learning代价高昂",
+  "problem_framing": "将跨语言翻译问题重新定义为两个单语言专家模型的拼接问题",
+  "key_insight": "用简单线性映射层连接两个专家LLM，在有限平行语料上训练即可实现翻译",
+  "method_signature": "源语言LLM + 线性映射层 + 目标语言LLM的Relay Decoding架构",
+  "evaluation_criteria": "BLEU和chrF指标在Multi30k和WikiMatrix数据集上的性能对比",
+  "negative_result_or_admitted_limitation": "获取平行数据的成本很高；cross-attention系列方法因参数过多在小型数据集上表现不佳",
+  "evidence_for_taste": [
+    "Aquila2和LLaMA individually都不擅长中法翻译",
+    "Linear mapping method achieved the best results",
+    "cross-attention series method yield lower results",
+    "Acquiring parallel data can be costly",
+    "finetuning the parameters of the second large model yield better results"
+  ],
+  "thinking_moves": [
+    "把昂贵的continuous learning问题转化为模型拼接的工程问题",
+    "通过ablation study验证哪些组件真正起作用(如Linear优于Cross-attention)",
+    "将跨语言翻译需求拆解为单语言能力组合问题",
+    "承认数据获取成本是方法局限，以此指引未来方向(探索单语数据)"
+  ],
+  "topic_tags": [
+    "LLM-concatenation",
+    "machine-translation",
+    "cross-lingual-mapping",
+    "resource-efficient-MT",
+    "relay-decoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

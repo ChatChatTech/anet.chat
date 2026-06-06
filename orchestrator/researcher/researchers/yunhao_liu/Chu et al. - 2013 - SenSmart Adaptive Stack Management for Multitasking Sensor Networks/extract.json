@@ -1,0 +1,40 @@
+{
+  "paper_id": "Chu et al. - 2013 - SenSmart Adaptive Stack Management for Multitasking Sensor Networks",
+  "doi": null,
+  "title": "SenSmart: Adaptive Stack Management for Multitasking Sensor Networks",
+  "year": 2013,
+  "venue": "IEEE Transactions on Computers",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传感器节点仅有4KB内存，现有OS需程序员估算栈用量导致内存浪费和任务数受限",
+  "problem_framing": "在小内存无虚拟内存硬件的系统上实现自适应栈管理以支持抢占式多任务",
+  "key_insight": "将二进制翻译与轻量级内核结合，通过逻辑地址翻译实现栈自动重定位",
+  "method_signature": "基站式二进制改写+逻辑地址翻译+栈动态重定位",
+  "evaluation_criteria": "可容纳并发任务数、栈迁移开销、上下文切换成本、包丢失率",
+  "negative_result_or_admitted_limitation": "压缩比不可预测可能导致循环缓冲区溢出；极端内存过载时需终止任务",
+  "evidence_for_taste": [
+    "weak stack adaptivity directly affects OS's ability",
+    "virtual memory is still very unlikely to be available",
+    "static stack analysis has intrinsic limitation",
+    "the benefit by far outweighs the overhead",
+    "such a cost is worthwhile to improve system resilience"
+  ],
+  "thinking_moves": [
+    "将传统OS依赖的虚拟内存硬件约束转为软件模拟问题",
+    "通过区分基站式翻译和运行时翻译分担计算负载",
+    "承认软件方案的不可预测性并提供可关闭的压缩选项",
+    "用真实应用负载（二叉树搜索）验证极端内存压力下的行为"
+  ],
+  "topic_tags": [
+    "binary-translation",
+    "stack-adaptivity",
+    "sensor-network-OS",
+    "interrupt-free-preemption",
+    "logical-addressing"
+  ],
+  "cites_own_work": [
+    "t-kernel"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

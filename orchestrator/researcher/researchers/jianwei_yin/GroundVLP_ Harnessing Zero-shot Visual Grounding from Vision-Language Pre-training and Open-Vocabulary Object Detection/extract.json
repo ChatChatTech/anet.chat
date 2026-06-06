@@ -1,0 +1,40 @@
+{
+  "paper_id": "GroundVLP_ Harnessing Zero-shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection",
+  "doi": "10.48550/arxiv.2312.15043",
+  "title": "GroundVLP: Harnessing Zero-shot Visual Grounding from Vision-Language Pre-training and Open-Vocabulary Object Detection",
+  "year": 2023,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "视觉 grounding 标注成本高、规模小，限制了模型的泛化能力",
+  "problem_framing": "零样本 visual grounding：通过融合 VLP 的 GradCAM 热图和 OVD 的候选框实现无需额外训练的视觉定位",
+  "key_insight": "通过加权分级公式融合 VLP 生成的语义热图与 OVD 检测的类别特定候选框，平衡置信度与空间相关性",
+  "method_signature": "VLP(GradCAM热图) + OVD(候选框) + 加权分级融合",
+  "evaluation_criteria": "RefCOCO/+/g 准确率；Flickr30k Entities R@1/R@5",
+  "negative_result_or_admitted_limitation": "使用预测类别时性能下降，因数据集存在目标不明确、语法不规范、无目标词等问题",
+  "evidence_for_taste": [
+    "数据集固有噪声和偏差",
+    "提取的目标单元不准确",
+    "发现 OVD 的视觉定位能力较弱",
+    "探测 RefCOCO/+/g 数据集的内在噪声",
+    "发现 VLP 模型倾向于关注大物体"
+  ],
+  "thinking_moves": [
+    "将有限标注数据问题转化为可利用的大规模预训练模型组合问题",
+    "探测性能下降根因，发现数据集本身的三类噪声",
+    "通过消融实验逐步验证热图聚合、候选框类型等各组件有效性",
+    "提出视觉可识别词的注意力聚合来优化文本到图像的模态映射"
+  ],
+  "topic_tags": [
+    "zero-shot-visual-grounding",
+    "vision-language-pretraining",
+    "open-vocabulary-detection",
+    "GradCAM-heatmaps",
+    "weighted-fusion"
+  ],
+  "cites_own_work": [
+    "VL-CheckList"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

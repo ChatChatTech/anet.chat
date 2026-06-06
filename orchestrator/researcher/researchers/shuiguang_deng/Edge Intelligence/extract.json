@@ -1,0 +1,38 @@
+{
+  "paper_id": "Edge Intelligence",
+  "doi": "10.1007/978-3-031-22155-2",
+  "title": "Edge Intelligence: From Theory to Practice",
+  "year": 2023,
+  "venue": "Springer",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "现实痛点：边缘计算资源受限且分布式，传统云中心方法难以直接迁移，需要理论与实践结合的教材",
+  "problem_framing": "如何将AI/ML方法用于优化边缘计算中的服务生命周期、任务卸载和数据管道",
+  "key_insight": "边缘计算形成分布式计算连续统系统，需在笛卡尔空间和马尔可夫空间分别建模，AI/ML可在此连续统上优化服务",
+  "method_signature": "7章结构+7套教程实验(TaLs)，从基础到实践逐步推进",
+  "evaluation_criteria": "学生通过教程实验掌握实际技能，每个实验配套视频和代码",
+  "negative_result_or_admitted_limitation": "limitations of MapReduce；Current Issues and Challenges 章节承认现有方法的不足",
+  "evidence_for_taste": [
+    "从基础到实践逐步推进",
+    "each comes with its own dedicated set of teaching materials",
+    "step-by-step improve their technical capabilities",
+    "limitations of MapReduce",
+    "Current Issues and Challenges"
+  ],
+  "thinking_moves": [
+    "将边缘计算定义为连续统而非孤立节点",
+    "先建立理论基础再逐步深入实践",
+    "通过具体用例(SLOs、DAG)阐释抽象概念",
+    "区分笛卡尔空间和马尔可夫空间两种建模视角"
+  ],
+  "topic_tags": [
+    "edge-computing-continuum",
+    "edge-AI-ML-optimization",
+    "service-lifecycle-management",
+    "computation-offloading",
+    "kubernetes-orchestration"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "提取基于前言和目录结构，实际研究内容在章节正文中，章节内容未完全提供因此无法评估具体方法细节"
+}

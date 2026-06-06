@@ -1,0 +1,38 @@
+{
+  "paper_id": "Learning to Rewrite for Non-Autoregressive Neural Machine Translation",
+  "doi": "10.18653/v1/2021.emnlp-main.265",
+  "title": "Learning to Rewrite for Non-Autoregressive Neural Machine Translation",
+  "year": 2021,
+  "venue": "EMNLP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有迭代NAT模型依赖低效启发式规则定位错误,会误改正确词而保留错误词",
+  "problem_framing": "将翻译修正问题显式建模为 locate-revise 两阶段学习",
+  "key_insight": "通过 locator 模块显式学习区分错误词,取代基于置信度的启发式mask规则",
+  "method_signature": "REWRITE-NAT (Locator+Revisor+迭代训练)",
+  "evaluation_criteria": "BLEU score、迭代次数、加速比、词重复率",
+  "negative_result_or_admitted_limitation": "De→En 上落后JM-NAT (31.52 vs 32.24),因教师模型更强",
+  "evidence_for_taste": [
+    "exposes the serious weakness",
+    "mask-predict may mistake to rewrite correct words",
+    "discrepancy that can hurt performance",
+    "performance gain is relatively subtle",
+    "slight decrease of speedup"
+  ],
+  "thinking_moves": [
+    "从迭代NAT的核心弱点(错误识别不准确)切入而非修补性能",
+    "把perception问题重构为communication问题:显式学习定位错误",
+    "通过迭代训练保持训练-推理数据分布一致性",
+    "承认共享权重导致性能微降但换来更少迭代"
+  ],
+  "topic_tags": [
+    "non-autoregressive-NMT",
+    "iterative-refinement",
+    "error-detection",
+    "dynamic-halting",
+    "mask-predict"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Xiaocheng Feng is co-author, not first/corresponding. Email is xcfeng@ir.hit.edu.cn."
+}

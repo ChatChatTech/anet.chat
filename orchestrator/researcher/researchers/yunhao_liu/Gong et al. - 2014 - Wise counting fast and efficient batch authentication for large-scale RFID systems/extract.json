@@ -1,0 +1,41 @@
+{
+  "paper_id": "Gong et al. - 2014 - Wise counting fast and efficient batch authentication for large-scale RFID systems",
+  "doi": null,
+  "title": "Wise Counting: Fast and Efficient Batch Authentication for Large-Scale RFID Systems",
+  "year": 2014,
+  "venue": "MobiHoc",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "RFID大规模化后逐标签认证效率极低(每天仅能认证103批次),需要批量概率认证",
+  "problem_framing": "将假冒标签估计问题形式化为:给定多个标签集,估计复合表达式中的假冒数量|C|,满足相对误差ε和失败概率δ",
+  "key_insight": "先前方法浪费了大量非单例观测的认证摘要信息,通过层级认证结构利用所有最小阶统计量可实现统计高效估计",
+  "method_signature": "层级认证结构(HAS)=均匀随机哈希+最小阶统计,利用slotwise min操作处理多标签集复合表达式",
+  "evaluation_criteria": "相对标准误差(RSE)、标准差(SD)、归一化标准差(NSD)、通信开销",
+  "negative_result_or_admitted_limitation": "INC方法因未利用关联信息和多比特开销导致表现始终差于WIC,RSE差距达7倍以上",
+  "evidence_for_taste": [
+    "fail to explore correlation information",
+    "not statistically efficient",
+    "wasting a large amount of other authentication synopses",
+    "wisely utilize all minimum order statistics",
+    "RSE remains almost unchanged as the number of verified tags grows"
+  ],
+  "thinking_moves": [
+    "从统计角度审视先验方法,发现它们将认证摘要视为独立实体而非利用关联信息",
+    "通过层级结构将一维估计扩展到多标签集复合场景",
+    "利用最小阶统计量的概率特性(如min(X1',X2')~Exp(λ1+λ2))简化复合集估计",
+    "将通信问题转化为信息论问题,分析RSE与帧大小的关系"
+  ],
+  "topic_tags": [
+    "RFID批量认证",
+    "假冒估计",
+    "层级数据结构",
+    "概率计数",
+    "多标签集验证"
+  ],
+  "cites_own_work": [
+    "Gong et al. 2013 (INC)",
+    "Gong et al. 2014 (Arbitrarily Accurate)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

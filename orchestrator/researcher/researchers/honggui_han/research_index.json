@@ -1,0 +1,107 @@
+{
+  "slug": "honggui_han",
+  "n_papers": 3,
+  "n_indexed": 3,
+  "anchors": [
+    "Research on an online self-organizing radial basis function neural network",
+    "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things",
+    "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+  ],
+  "by_id": {
+    "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things": {
+      "title": "FSL: federated sequential learning-based cyberattack detection for Industrial Internet of Things",
+      "year": 2023,
+      "venue": "Journal of Manufacturing Systems",
+      "doi": "10.1007/s44244-023-00006-2",
+      "key_insight": "TCN提取局部时序特征+FedProx正则化聚合,可解决节点异构和时间序列建模的双重挑战",
+      "method_signature": "TCN本地模型+FedProx联邦聚合的时序攻击检测框架",
+      "tags": [
+        "federated learning IIoT",
+        "temporal convolutional network",
+        "node heterogeneity handling",
+        "cyberattack detection",
+        "FedProx aggregation"
+      ],
+      "quality": "full"
+    },
+    "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning": {
+      "title": "基于深度强化学习的多智能体分布式事件触发优化控制",
+      "year": 2024,
+      "venue": "中国科学: 技术科学",
+      "doi": "10.1360/sst-2023-0346",
+      "key_insight": "触发条件减少冗余观测信息, 联合策略计算期望接收的观测信息, 避免丢掉重要信息",
+      "method_signature": "MADDPG结合事件触发控制, 通信与控制联合策略, 指数函数碰撞惩罚项",
+      "tags": [
+        "multi-agent-reinforcement-learning",
+        "distributed-event-triggered-control",
+        "MADDPG",
+        "obstacle-avoidance",
+        "cooperative-motion-control"
+      ],
+      "quality": "full"
+    },
+    "Research on an online self-organizing radial basis function neural network": {
+      "title": "Research on an online self-organizing radial basis function neural network",
+      "year": 2010,
+      "venue": "Neural Computing and Applications",
+      "doi": "10.1007/s00521-009-0323-6",
+      "key_insight": "通过感受野半径判断是否添加或删除RBF节点，同时用梯度下降法调整位置和宽度，实现结构与参数联合优化",
+      "method_signature": "在线自组织RBF(SORBF)，基于感受野半径的生长-修剪算法",
+      "tags": [
+        "RBF神经网络",
+        "自组织结构设计",
+        "动态系统辨识",
+        "感受野半径",
+        "污水处理软测量"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "federated learning IIoT": [
+      "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    ],
+    "temporal convolutional network": [
+      "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    ],
+    "node heterogeneity handling": [
+      "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    ],
+    "cyberattack detection": [
+      "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    ],
+    "FedProx aggregation": [
+      "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things"
+    ],
+    "multi-agent-reinforcement-learning": [
+      "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    ],
+    "distributed-event-triggered-control": [
+      "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    ],
+    "MADDPG": [
+      "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    ],
+    "obstacle-avoidance": [
+      "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    ],
+    "cooperative-motion-control": [
+      "Multi-agent distributed event-triggered optimization control based on deep reinforcement learning"
+    ],
+    "RBF神经网络": [
+      "Research on an online self-organizing radial basis function neural network"
+    ],
+    "自组织结构设计": [
+      "Research on an online self-organizing radial basis function neural network"
+    ],
+    "动态系统辨识": [
+      "Research on an online self-organizing radial basis function neural network"
+    ],
+    "感受野半径": [
+      "Research on an online self-organizing radial basis function neural network"
+    ],
+    "污水处理软测量": [
+      "Research on an online self-organizing radial basis function neural network"
+    ]
+  }
+}

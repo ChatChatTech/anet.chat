@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhang et al. - 2025 - SynSeg Feature Synergy for Multi-Category Contrastive Learning in Open-Vocabulary Semantic Segmenta",
+  "doi": null,
+  "title": "SynSeg: Feature Synergy for Multi-Category Contrastive Learning in End-to-End Open-Vocabulary Semantic Segmentation",
+  "year": 2025,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有弱监督开放词汇分割方法缺乏精确监督信号，无法建模类别间相关性，且难以重建适合对比学习的特征",
+  "problem_framing": "将开放词汇语义分割的弱监督学习定义为多类别对比学习问题，通过intra/inter-category对齐与分离增强监督信号",
+  "key_insight": "语义激活图可重构特征：将类别激活图与条件视觉向量矩阵相乘，生成强调语义相关区域的synergy特征",
+  "method_signature": "MCCL多类别对比学习+FSS特征协同结构，在单次前向中生成foreground/background synergy特征用于对比学习",
+  "evaluation_criteria": "零样本语义分割mIoU指标，在VOC/Context/Object/Stuff/City五个数据集与SOTA方法对比",
+  "negative_result_or_admitted_limitation": "inter-category separation loss (L_sep)是最重要的组件，移除后性能下降最大",
+  "evidence_for_taste": [
+    "lack of explicit modeling of inter-category correlations",
+    "lacks the ability to reconstruct representations",
+    "avoids the foreground bias introduced by the visual encoder",
+    "inter-category separation loss L_sep is the most prominent",
+    "without a coordinated interplay of both intra- and inter-category alignment"
+  ],
+  "thinking_moves": [
+    "将类别激活图重新解释为注意力加权向量，通过矩阵乘法重建适合对比学习的synergy特征",
+    "从单类别对比学习扩展到多类别，引入inter-category alignment和separation构成协同对抗优化",
+    "通过移除L_sep验证各损失函数的必要性，确认inter-category分离是提升性能的关键杠杆",
+    "将语义分割中per-pixel互斥约束重新框架为multi-hot激活，允许像素同时属于多类别"
+  ],
+  "topic_tags": [
+    "open-vocabulary-semantic-segmentation",
+    "multi-category-contrastive-learning",
+    "weakly-supervised-segmentation",
+    "feature-reconstruction",
+    "visual-text-alignment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文未明确标注发表 venues（CVPR 2025 等均为参考文献）。Yunhao Liu 为合作作者身份参与，多个机构联合发表。论文提供了完整的方法论、实验设计和 ablation study，证据充分。"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Wang et al. - 2013 - Asymptotic throughput for large-scale wireless networks with general node density",
+  "doi": null,
+  "title": "Asymptotic throughput for large-scale wireless networks with general node density",
+  "year": 2013,
+  "venue": "Wireless Networks (Springer)",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有工作仅考虑λ=n的密集网络或λ=1的稀疏扩展网络，未覆盖中间密度情况",
+  "problem_framing": "在广义物理模型下，给定节点密度λ∈[1,n]、会话数n_s和每会话目的节点数n_d，求可达多播吞吐量阶数",
+  "key_insight": "用动脉道路系统取代渗透理论高速公路系统，可在某些n_d区间取得更优吞吐量",
+  "method_signature": "普通动脉道路M_o与平行动脉道路M_p双scheme协同，根据λ/ns/nd选择最优",
+  "evaluation_criteria": "渐近吞吐量阶数Ω(·)，与渗透路由scheme在特定参数下比较胜负",
+  "negative_result_or_admitted_limitation": "当n_d = O(n/(logn)^{α+7})时，REN下吞吐量不如文献[6]；某些区间尚未找到更优scheme",
+  "evidence_for_taste": [
+    "the bottleneck is probably displaced",
+    "improves the final multicast throughput",
+    "better than those derived by percolation-based schemes",
+    "will be an interesting future work"
+  ],
+  "thinking_moves": [
+    "统一dense/extended scaling的密度参数λ",
+    "从渗透理论高速公路转向自定义动脉道路骨干",
+    "用9-TDMA和parallel scheduling分别处理两类道路系统",
+    "通过bottleneck principle分解各phase负载"
+  ],
+  "topic_tags": [
+    "wireless-adhoc-capacity",
+    "asymptotic-throughput",
+    "multicast-routing",
+    "node-density-scaling",
+    "percolation-theory"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,36 @@
+{
+  "paper_id": "Generative Steganographic Flow",
+  "doi": "10.48550/arxiv.2305.05838",
+  "title": "Generative Steganographic Flow",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有生成式隐写方法性能差，图像质量低、隐藏容量小",
+  "problem_framing": "将隐写建模为输入秘密数据与生成图像之间的可逆双射变换",
+  "key_insight": "利用Glow流模型的逆变换性质，在浮点latent的二进制编码中嵌入秘密数据",
+  "method_signature": "基于Glow的流模型+latent优化+IEEE754二进制隐写",
+  "evaluation_criteria": "bpp(隐藏容量)、Acc(提取准确率)、NIQE(图像质量)、PE(安全性越接近0.5越好)",
+  "negative_result_or_admitted_limitation": "Sign位修改会翻转像素值严重影响图像内容，PNG格式舍入操作不可逆导致准确率下降",
+  "evidence_for_taste": [
+    "poor performances",
+    "far better performances than SOTA",
+    "cannot distinguish our generated stego images",
+    "almost without information loss",
+    "arouse suspicion of the third-party"
+  ],
+  "thinking_moves": [
+    "把感知/隐写问题重新框定为信息论中的可逆变换问题",
+    "利用流模型天然可逆性质实现编解码一体化",
+    "先通过latent优化提升基础图像质量，再在二进制位平面嵌入信息"
+  ],
+  "topic_tags": [
+    "generative-steganography",
+    "normalizing-flows",
+    "bijective-mapping",
+    "latent-optimization",
+    "steganalysis-security"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

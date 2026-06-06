@@ -1,0 +1,42 @@
+{
+  "paper_id": "An empirical study on software defect prediction with a simplified metric set",
+  "doi": "10.1016/j.infsof.2014.11.006",
+  "title": "An empirical study on software defect prediction with a simplified metric set",
+  "year": 2014,
+  "venue": "Information and Software Technology",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "新项目缺乏足够历史数据，复杂预测模型成本高，需要在准确率和代价之间做权衡",
+  "problem_framing": "定义四个研究问题：(1) WPDP与CPDP的选择依据；(2) 简化指标集预测器是否可行；(3) 哪种分类器适合简化指标集；(4) 是否存在最小指标子集",
+  "key_insight": "Top-5指标子集(CBO、LOC、RFC、LCOM、CE)可作为通用特征子集，简化预测器在准确率和代价间达成可接受的折中",
+  "method_signature": "基于覆盖率的Top-k特征选择 + 相关性过滤找最小指标子集，6个分类器 × 3个场景",
+  "evaluation_criteria": "Recall≥0.7且Precision≥0.5为可接受性能，用Wilcoxon符号秩检验和单因素ANOVA验证显著性",
+  "negative_result_or_admitted_limitation": "阈值选择基于先前研究和经验而非严格准则，CPDP性能不佳被广泛质疑",
+  "evidence_for_taste": [
+    "简单分类器往往表现更好",
+    "不能既要蛋糕又要吃",
+    "CPDP方法被广泛质疑",
+    "基于先前研究和自身经验",
+    "简单预测器更通用",
+    "牺牲一点精度换取通用性"
+  ],
+  "thinking_moves": [
+    "从成本-准确率-通用性三维度重构预测器选择问题",
+    "用覆盖率指标量化Top-k特征子集的代表性",
+    "通过相关性分析逐步消减冗余指标直至最小子集",
+    "用统计显著性检验(ANOVA)验证简化方法的稳定性"
+  ],
+  "topic_tags": [
+    "software-defect-prediction",
+    "metric-set-simplification",
+    "cross-project-prediction",
+    "feature-selection",
+    "within-project-vs-cross-project"
+  ],
+  "cites_own_work": [
+    "He, Shu, Yang等2012年的跨项目预测可行性研究",
+    "Menzies等的静态代码特征研究"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

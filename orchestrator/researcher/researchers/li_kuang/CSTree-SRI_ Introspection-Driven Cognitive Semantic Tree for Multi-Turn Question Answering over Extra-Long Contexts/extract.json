@@ -1,0 +1,44 @@
+{
+  "paper_id": "CSTree-SRI_ Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts",
+  "doi": "10.18653/v1/2025.acl-long.1286",
+  "title": "CSTree-SRI: Introspection-Driven Cognitive Semantic Tree for Multi-Turn Question Answering over Extra-Long Contexts",
+  "year": 2025,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "LLM在超长上下文多轮QA中性能显著下降，难以捕获逻辑关联且产生噪声累积",
+  "problem_framing": "现有方法缺乏有效机制保持多轮交互的连贯性；上下文窗口扩展方法无法保留跨文档关系",
+  "key_insight": "通过内省专家动态验证逻辑连贯性，配合认知语义树分层合成，实现超长上下文的结构化导航",
+  "method_signature": "四专家模块(RE/SE/IE/AE)协同构建认知语义树，内省驱动动态检索与迭代优化",
+  "evaluation_criteria": "MTQA-ELC基准(256k上下文)，含ACC/ETScore/Human-Adjusted综合评分",
+  "negative_result_or_admitted_limitation": "移除IE模块导致ACC下降23.4%，SE模块缺失导致精度降10.6%；依赖外部LLM带来系统风险",
+  "evidence_for_taste": [
+    "Introspection Expert evaluates node relevance",
+    "hierarchical synthesis",
+    "逻辑关联",
+    "introspects the ExtraRetr",
+    "iterative optimization",
+    "The IE module conducts introspection",
+    "addressing keyword bias",
+    "prevent over-retrieval",
+    "collaboration between AE and IE",
+    "dynamic continuation probability"
+  ],
+  "thinking_moves": [
+    "把超长上下文QA建模为结构化导航问题而非逐token处理",
+    "模仿人类阅读笔记的层次结构做认知建模",
+    "用内省机制替代固定的检索策略实现动态决策",
+    "通过分层遍历平衡检索深度与计算效率",
+    "迭代式AE-IE协作实现答案质量的渐进优化"
+  ],
+  "topic_tags": [
+    "long-context-LLM",
+    "multi-turn-QA",
+    "cognitive-semantic-tree",
+    "retrieval-augmented-generation",
+    "introspection-mechanism"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

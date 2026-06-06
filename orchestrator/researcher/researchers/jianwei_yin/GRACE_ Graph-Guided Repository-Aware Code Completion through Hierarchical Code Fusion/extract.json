@@ -1,0 +1,39 @@
+{
+  "paper_id": "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion",
+  "doi": "10.48550/arxiv.2509.05980",
+  "title": "GRACE: Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion",
+  "year": 2026,
+  "venue": "ICSE",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "LLM在仓库级代码补全中因上下文窗口有限且代码依赖复杂而性能下降",
+  "problem_framing": "将代码仓库建模为层级图数据库,通过图结构表达语义和结构依赖关系",
+  "key_insight": "图结构优于文本序列,混合检索(结构+语义)配合图融合可防止结构信息丢失",
+  "method_signature": "多层级图构建→混合图检索器→图重排→图融合增强→LLM补全",
+  "evaluation_criteria": "EM、ES、Recall、F1四项指标",
+  "negative_result_or_admitted_limitation": "交叉注意力在大规模检索上下文时成为主要瓶颈",
+  "evidence_for_taste": [
+    "while a few studies attempt to incorporate simple graph structures",
+    "their utilization of code structural information remains rudimentary",
+    "entirely ignores potential structural relationships",
+    "The absence of this information severely constrains the LLM's ability",
+    "naive concatenation strategies"
+  ],
+  "thinking_moves": [
+    "从文本建模转向层级图数据库建模",
+    "识别RAG两大核心缺陷:文本相似忽略结构,拼接丢失依赖",
+    "拆解为图构建/图检索/图增强三阶段挑战",
+    "设计语义+结构双路径编码实现互补检索",
+    "节点特征层和图结构层双维度融合保留依赖信息"
+  ],
+  "topic_tags": [
+    "仓库级代码补全",
+    "图增强RAG",
+    "层级代码融合",
+    "结构化检索",
+    "代码图表示"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

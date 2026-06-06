@@ -1,0 +1,40 @@
+{
+  "paper_id": "Chen et al. - 2016 - Privacy-Aware High-Quality Map Generation with Participatory Sensing",
+  "doi": null,
+  "title": "Privacy-aware High-quality Map Generation with Participatory Sensing",
+  "year": 2016,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Crowdsourcing地图生成威胁用户隐私，轨迹可推断行为模式",
+  "problem_framing": "将隐私保护下的地图生成建模为优化问题(P)，约束为用户隐私泄露函数",
+  "key_insight": "γ≥1时Crust无法唯一恢复曲线，从而保护用户轨迹；γ控制隐私-效用权衡",
+  "method_signature": "PMG框架：用户上传重排稀疏点，服务器用Crust重建曲线",
+  "evaluation_criteria": "生成地图与真值地图的距离误差<10m",
+  "negative_result_or_admitted_limitation": "家庭-办公室等周期性路线无法保证隐私，无论T多大",
+  "evidence_for_taste": [
+    "curve reconstruction problem is unsolvable",
+    "privacy could not be guaranteed no matter how large T",
+    "if γ >= 1, F is un-reconstructible",
+    "such a problem is NP-hard",
+    "We bypass the deviation metric"
+  ],
+  "thinking_moves": [
+    "把隐私保护问题重新frame成计算几何的曲线重建问题",
+    "利用γ-sample条件的理论性质建立隐私-效用数学关系",
+    "通过证明目标函数的次模性为贪心算法提供近似比保证",
+    "先引用Crust的重建保证，再承认GPS误差和道路宽度的实际挑战"
+  ],
+  "topic_tags": [
+    "participatory-sensing",
+    "privacy-protection",
+    "curve-reconstruction",
+    "GPS-trace",
+    "submodular-optimization"
+  ],
+  "cites_own_work": [
+    "[46] IEEE INFOCOM 2014"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

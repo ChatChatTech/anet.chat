@@ -1,0 +1,39 @@
+{
+  "paper_id": "2023_MobiHoc_DP_DOCO",
+  "doi": null,
+  "title": "Differentially Private Distributed Online Convex Optimization Towards Low Regret and Communication Cost",
+  "year": 2023,
+  "venue": "MobiHoc",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有PDOCO算法在稀缺DP预算或高模型维度时 regret 急剧增加，通信成本随网络边数和学>时间线性增长",
+  "problem_framing": "在DP约束下找到使 regret 最小化的最优批量大小 τ，优化 regret 和通信成本之间的平衡",
+  "key_insight": "批量更新策略在减少DP噪声(大批量)和保持模型更新速度(小批量)之间存在基本权衡，最优 τ=Θ(d/ε) 可同时改善两者",
+  "method_signature": "PDOM (Private DOCO with Optimal Mini-batch)，含PDOM-O和PDOM-S两种设置，使用拉普拉斯机制添加DP噪声",
+  "evaluation_criteria": "Regret bound (后悔值界限) 和 communication cost (消息复杂度)，与SOTA PDOCO算法和非隐私算法对比",
+  "negative_result_or_admitted_limitation": "stochastic setting 中 DP 影响可忽略需满足 T=Ω(d^4/(nε^4))，即需要足够长的学习时间才能发挥算法优势",
+  "evidence_for_taste": [
+    "finds the optimal batch size that balances",
+    "reduces the regret and communication cost by an O(d/ε) factor",
+    "optimal batch size also varies a lot for different feedback settings",
+    "heuristic batch sizes and do not fully understand their impact",
+    "performance essentially the same as the non-private algorithm"
+  ],
+  "thinking_moves": [
+    "先系统推导所有批量大小下的 regret 边界，再通过优化得到最优批量",
+    "将优化问题从单一目标扩展为 regret 和通信成本的双目标联合优化",
+    "区分 oblivious 和 stochastic 两种反馈设置，分别设计针对性算法",
+    "从非隐私算法中借用成熟的梯度下降更新规则",
+    "将 batch size 选择问题形式化为 regret 最小化问题的闭式解"
+  ],
+  "topic_tags": [
+    "differential-privacy",
+    "distributed-online-learning",
+    "mini-batch-optimization",
+    "communication-complexity",
+    "convex-optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

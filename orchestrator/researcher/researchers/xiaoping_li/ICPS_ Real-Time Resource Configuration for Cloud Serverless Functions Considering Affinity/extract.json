@@ -1,0 +1,40 @@
+{
+  "paper_id": "ICPS_ Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity",
+  "doi": "10.48550/arxiv.2504.06512",
+  "title": "ICPS: Real-Time Resource Configuration for Cloud Serverless Functions Considering Affinity",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Serverless workflows suffer from cold starts and network delays accumulating across branching structures, degrading execution efficiency",
+  "problem_framing": "Minimize workflow response time with minimal resource consumption, formalized as minimizing φ_resp × φ_resource product",
+  "key_insight": "Predict function concurrency via LSTM, pre-warm instances to avoid cold starts, and co-locate dependent functions on same worker node via affinity",
+  "method_signature": "ICPS: LSTM-based concurrency prediction + affinity-based instance deployment + request routing",
+  "evaluation_criteria": "Average response efficiency φ_resp and resource utilization φ_resource, evaluated via RPD against optimal",
+  "negative_result_or_admitted_limitation": "As workflow depth increases, branch misjudgments by ICPS have greater impact on response time",
+  "evidence_for_taste": [
+    "overlook the invocation dependencies",
+    "rarely consider co-location",
+    "misjudgments in branches by ICPS",
+    "interference between them can degrade",
+    "RPD value is lowest",
+    "27 strategy combinations",
+    "accumulation of cold start delays"
+  ],
+  "thinking_moves": [
+    "通过穷举组合搜索识别最优策略: 3×3×3=27种组合通过实验比对选择最优",
+    "从系统整体视角而非单个函数解决冷启动问题",
+    "用响应效率与资源利用率的乘积作为联合优化目标,体现权衡思维",
+    "借鉴AWS Lambda的Keep-Alive和Fission的Pool策略作为baseline对比"
+  ],
+  "topic_tags": [
+    "serverless-cold-start",
+    "LSTM-concurrency-prediction",
+    "affinity-deployment",
+    "workflow-response-time",
+    "container-pre-warming"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

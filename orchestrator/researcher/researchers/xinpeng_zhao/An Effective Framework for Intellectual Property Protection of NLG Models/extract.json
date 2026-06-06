@@ -1,0 +1,39 @@
+{
+  "paper_id": "An Effective Framework for Intellectual Property Protection of NLG Models",
+  "doi": "10.3390/sym15061287",
+  "title": "An Effective Framework for Intellectual Property Protection of NLG Models",
+  "year": 2023,
+  "venue": "Symmetry",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "已部署的NLG模型可能被窃取或非法使用,而现有水印方法仅能事后验证所有权,无法及时阻止侵权行为",
+  "problem_framing": "将NLG模型的IP保护建模为对称信号处理问题,在RNN隐藏状态中嵌入密钥并通过密钥/签名双重验证",
+  "key_insight": "将密钥嵌入解码器RNN的隐藏状态而非模型权重,可使伪造密钥立即生成不可用的模型,从而主动阻止侵权而非被动识别",
+  "method_signature": "两种隐藏状态嵌入方案(⊕/⊗)配合AWD-LSTM语言模型损失保持语法质量",
+  "evaluation_criteria": "BLEU/ROUGE/SPICE衡量生成质量,GErr衡量语法错误,自然度评分,攻击后性能衰减与签名检测率",
+  "negative_result_or_admitted_limitation": "跨数据集微调后签名检测率下降约25%;当攻击者完全掌握模型知识时可进行密钥重训练微调攻击",
+  "evidence_for_taste": [
+    "SPICE of the Passport model dropped 16.86%",
+    "BLEU-1 of our proposed model drops by almost 50%",
+    "signature detection rates drop by nearly 25%",
+    "this scenario is difficult to happen in practice",
+    "embedding signature in the model weights is generally vulnerable"
+  ],
+  "thinking_moves": [
+    "批评现有方法'are not applicable'于文本数据,因为DNN输出的是序列而非标签",
+    "指出backdoor方法'easy to detect and cause malicious behavior'从而否定该路线",
+    "识别出'only identify and verify ownership'是现有方法的核心缺陷,因此提出'prevent illegal use'的新目标",
+    "通过对比实验暴露Passport方法'quite different from baseline'的质量问题,反衬自身方法的优势",
+    "承认fine-tuning攻击下检测率下降的缺陷,但通过'still have the embedded key'保持论证完整性"
+  ],
+  "topic_tags": [
+    "NLG模型水印",
+    "RNN隐藏状态嵌入",
+    "模型知识产权保护",
+    "对抗性密钥攻击",
+    "序列生成质量保证"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

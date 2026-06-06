@@ -1,0 +1,235 @@
+{
+  "slug": "xuanhua_shi",
+  "n_papers": 7,
+  "n_indexed": 7,
+  "anchors": [
+    "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution",
+    "Incremental and Decremental Optimal Margin Distribution Learning",
+    "Scalable Optimal Margin Distribution Machine",
+    "Scalable Optimal Margin Distribution Machine",
+    "E2CNN: entity-type-enriched cascaded neural network for Chinese financial relation extraction",
+    "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation",
+    "GECC: A GPU-Based High-Throughput Framework for Elliptic Curve Cryptography"
+  ],
+  "by_id": {
+    "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction": {
+      "title": "E2CNN: entity-type-enriched cascaded neural network for Chinese financial relation extraction",
+      "year": 2024,
+      "venue": "Frontiers of Computer Science",
+      "doi": "10.1007/s11704-024-3983-6",
+      "key_insight": "Entity types provide consistency (same-type entities share relation patterns) and exclusion (certain entity-relation combinations are impossible), acting as implicit constraints for relation extraction.",
+      "method_signature": "E2CNN: BERT encoding with [e:type] markers + span-type identification + cascaded subject-then-object extraction per relation.",
+      "tags": [
+        "Chinese-financial-relation-extraction",
+        "overlap-triple-handling",
+        "entity-type-constraints",
+        "span-based-NER",
+        "knowledge-graph-construction"
+      ],
+      "quality": "full"
+    },
+    "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation": {
+      "title": "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2412.12158",
+      "key_insight": "超星消息传递将超边无损展开为层级树状结构,结合双曲空间更好捕捉层次结构",
+      "method_signature": "H2GNN在洛伦兹空间执行双阶段超星消息传递,使用质心操作作为聚合函数",
+      "tags": [
+        "knowledge hypergraph",
+        "hyperbolic embedding",
+        "multi-relational learning",
+        "hyper-star message passing",
+        "position-aware representation"
+      ],
+      "quality": "partial"
+    },
+    "Incremental and Decremental Optimal Margin Distribution Learning": {
+      "title": "Incremental and Decremental Optimal Margin Distribution Learning",
+      "year": 2023,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2023/392",
+      "key_insight": "预先估计变化数据的拉格朗日乘子最优值，避免在无穷范围内优化，从而实现高效的增量更新",
+      "method_signature": "ID-ODM通过预计算最优乘子方向并监控断点来实现二次型损失的高效IDL",
+      "tags": [
+        "incremental-learning",
+        "optimal-margin-distribution",
+        "quadratic-loss",
+        "Lagrange-multiplier-tracking",
+        "kernel-methods"
+      ],
+      "quality": "full"
+    },
+    "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution": {
+      "title": "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution",
+      "year": 2022,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2022/393",
+      "key_insight": "熵正则化最优传输可精确识别无标签中的正负实例,间隔分布优化可克服标签噪声",
+      "method_signature": "PUOTMD: OT估计类先验 + 间隔分布分类器联合优化",
+      "tags": [
+        "positive-unlabeled learning",
+        "optimal transport",
+        "margin distribution optimization",
+        "class prior estimation",
+        "semi-supervised classification"
+      ],
+      "quality": "full"
+    },
+    "Scalable Optimal Margin Distribution Machine__oa_W4375959491": {
+      "title": "Scalable Optimal Margin Distribution Machine",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.04837",
+      "key_insight": "借鉴分层抽样思想在RKHS中构造层次,使每条数据在所有划分中比例一致,从而局部解快速收敛到全局解",
+      "method_signature": "分布感知划分+双坐标下降+分布式SVRG加速",
+      "tags": [
+        "kernel_methods_scalability",
+        "margin_distribution_learning",
+        "distribution_aware_partition",
+        "dual_coordinate_descent",
+        "stratified_sampling_RKHS"
+      ],
+      "quality": "full"
+    },
+    "Scalable Optimal Margin Distribution Machine__oa_W4385768171": {
+      "title": "Scalable Optimal Margin Distribution Machine",
+      "year": 2023,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2023/485",
+      "key_insight": "通过在RKHS中进行分层采样划分数据，保持一阶和二阶统计量，使局部解快速收敛至全局解",
+      "method_signature": "SODM：分布感知分区策略 + 局部ODM串接初始化 + DSVRG加速线性核",
+      "tags": [
+        "margin-distribution-learning",
+        "kernel-method-scalability",
+        "distributed-QP-solver",
+        "stratified-sampling-in-RKHS",
+        "dual-coordinate-descent"
+      ],
+      "quality": "full"
+    },
+    "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography": {
+      "title": "GECC: A GPU-Based High-Throughput Framework for Elliptic Curve Cryptography",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2501.03245",
+      "key_insight": "Borrow GAS mechanism from parallel graph processing to reduce modinv from 32n to sp; use predicate registers to eliminate IMAD bottleneck; apply find-then-recompute for kernel fusion",
+      "method_signature": "Batch EC operations via Montgomery's trick with GAS mechanism, multi-level cache management, and IMAD-minimized modular multiplication",
+      "tags": [
+        "GPU-ECC-optimization",
+        "Montgomery-trick-batching",
+        "modular-multiplication-IMAD",
+        "elliptic-curve-cryptography",
+        "memory-hierarchy-optimization"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "Chinese-financial-relation-extraction": [
+      "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction"
+    ],
+    "overlap-triple-handling": [
+      "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction"
+    ],
+    "entity-type-constraints": [
+      "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction"
+    ],
+    "span-based-NER": [
+      "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction"
+    ],
+    "knowledge-graph-construction": [
+      "E2CNN_ entity-type-enriched cascaded neural network for Chinese financial relation extraction"
+    ],
+    "knowledge hypergraph": [
+      "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    ],
+    "hyperbolic embedding": [
+      "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    ],
+    "multi-relational learning": [
+      "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    ],
+    "hyper-star message passing": [
+      "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    ],
+    "position-aware representation": [
+      "Hyperbolic Hypergraph Neural Networks for Multi-Relational Knowledge Hypergraph Representation"
+    ],
+    "incremental-learning": [
+      "Incremental and Decremental Optimal Margin Distribution Learning"
+    ],
+    "optimal-margin-distribution": [
+      "Incremental and Decremental Optimal Margin Distribution Learning"
+    ],
+    "quadratic-loss": [
+      "Incremental and Decremental Optimal Margin Distribution Learning"
+    ],
+    "Lagrange-multiplier-tracking": [
+      "Incremental and Decremental Optimal Margin Distribution Learning"
+    ],
+    "kernel-methods": [
+      "Incremental and Decremental Optimal Margin Distribution Learning"
+    ],
+    "positive-unlabeled learning": [
+      "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    ],
+    "optimal transport": [
+      "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    ],
+    "margin distribution optimization": [
+      "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    ],
+    "class prior estimation": [
+      "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    ],
+    "semi-supervised classification": [
+      "Posistive-Unlabeled Learning via Optimal Transport and Margin Distribution"
+    ],
+    "kernel_methods_scalability": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    ],
+    "margin_distribution_learning": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    ],
+    "distribution_aware_partition": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    ],
+    "dual_coordinate_descent": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    ],
+    "stratified_sampling_RKHS": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4375959491"
+    ],
+    "margin-distribution-learning": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    ],
+    "kernel-method-scalability": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    ],
+    "distributed-QP-solver": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    ],
+    "stratified-sampling-in-RKHS": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    ],
+    "dual-coordinate-descent": [
+      "Scalable Optimal Margin Distribution Machine__oa_W4385768171"
+    ],
+    "GPU-ECC-optimization": [
+      "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    ],
+    "Montgomery-trick-batching": [
+      "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    ],
+    "modular-multiplication-IMAD": [
+      "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    ],
+    "elliptic-curve-cryptography": [
+      "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    ],
+    "memory-hierarchy-optimization": [
+      "gECC_ A GPU-based high-throughput framework for Elliptic Curve Cryptography"
+    ]
+  }
+}

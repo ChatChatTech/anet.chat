@@ -1,0 +1,39 @@
+{
+  "paper_id": "End-to-End Model for Speech Enhancement by Consistent Spectrogram Masking",
+  "doi": "10.48550/arxiv.1901.00295",
+  "title": "End-to-End Model for Speech Enhancement by Consistent Spectrogram Masking",
+  "year": 2019,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "掩蔽后的频谱可能不对应任何时域信号，导致伪影且收敛困难",
+  "problem_framing": "将增强问题定义为在不一致频谱空间中优化，解空间过大",
+  "key_insight": "约束估计频谱在一致频谱子集内，可收缩解空间加速收敛",
+  "method_signature": "DenseNet+Quasi-Layer实现STFT一致性损失函数优化",
+  "evaluation_criteria": "PESQ和SNR多信噪比多噪声类型对比DNN基线",
+  "negative_result_or_admitted_limitation": "极端信噪比时相位信息缺失导致伪影可忽略，CSM优势减弱",
+  "evidence_for_taste": [
+    "masking on spectrogram would violent its consistency constraints",
+    "inconsistent problem enlarges the solution space",
+    "introduces artifacts into resynthesized signals",
+    "accelerate the model training",
+    "the convergency speed of QL-FCN-CSM overtaking the others"
+  ],
+  "thinking_moves": [
+    "从数学约束违反(一致性)反推工程伪影根源",
+    "将不一致频谱问题重新形式化为优化空间问题",
+    "利用ISTFT-STFT对偶性构建等效损失函数",
+    "设计可微分的Quasi-Layer使傅里叶核可学习",
+    "通过损失函数域约束收缩解空间加速训练"
+  ],
+  "topic_tags": [
+    "consistent-spectrogram",
+    "phase-processing",
+    "speech-enhancement",
+    "end-to-end-STFT",
+    "masking-methods"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Large Language Model-Aware In-Context Learning for Code Generation",
+  "doi": "10.48550/arxiv.2310.09748",
+  "title": "Large Language Model-Aware In-Context Learning for Code Generation",
+  "year": 2023,
+  "venue": "arXiv/ACM Conference",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "ICL性能对示例选择高度敏感,现有基于文本相似度的方法未考虑LLM自身的prior knowledge和preferences",
+  "problem_framing": "将example selection问题定义为学习LLM偏好的retrieval任务,通过LLM自身反馈生成labeled data训练neural retriever",
+  "key_insight": "用ground-truth programs的生成概率来衡量候选示例对LLM的有用程度,概率高者为positive,低者为negative",
+  "method_signature": "两阶段:BM25初筛→LLM概率估计→contrastive learning训练GraphCodeBERT retriever",
+  "evaluation_criteria": "Pass@k(execution-based), human evaluation(correctness/quality/maintainability)",
+  "negative_result_or_admitted_limitation": "larger size of S_i results in better performance but is more computationally expensive, leaving other sizes to future work",
+  "evidence_for_taste": [
+    "performance usually varying from almost random to near state-of-the-art",
+    "selecting applicable examples for ICL becomes more urgent",
+    "they do not consider the prior knowledge in LLMs and ignore their preferences",
+    "Examples in ICL are supposed to provide information that LLMs require"
+  ],
+  "thinking_moves": [
+    "从ICL不稳定性反推出示例选择的重要性",
+    "将启发式文本匹配方法的失效归因于忽略LLM自身偏好",
+    "把估计candidate example问题reframe为用LLM自身概率反馈label数据",
+    "通过contrastive learning使retriever与LLM偏好对齐而非与文本相似度对齐"
+  ],
+  "topic_tags": [
+    "in-context-learning",
+    "example-selection",
+    "code-generation",
+    "LLM-preference",
+    "contrastive-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

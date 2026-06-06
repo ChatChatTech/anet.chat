@@ -1,0 +1,38 @@
+{
+  "paper_id": "Neural Semantic Parsing in Low-Resource Settings with Back-Translation and Meta-Learning",
+  "doi": "10.48550/arxiv.1909.05438",
+  "title": "Neural Semantic Parsing in Low-Resource Settings with Back-Translation and Meta-Learning",
+  "year": 2019,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "神经语义解析依赖大量标注数据，成本高昂，实际场景中仅有简单规则可用",
+  "problem_framing": "从有限规则出发，通过自动生成数据提升模型准确率和泛化能力，将问题建模为伪多任务",
+  "key_insight": "回译生成paired数据+质量控制器过滤噪声+元学习分离覆盖/未覆盖规则样本的优化目标",
+  "method_signature": "规则初始化语义解析器+问题生成器→回译迭代→短语表质量控制→MAML元学习",
+  "evaluation_criteria": "WikiSQL执行准确率、SequentialQA问答准确率、SimpleQuestions准确率",
+  "negative_result_or_admitted_limitation": "问题生成在复杂逻辑形式上效果不佳，多轮对话场景下生成质量差导致性能下降",
+  "evidence_for_taste": [
+    "back-translation, quality control and MAML incrementally improves",
+    "question generation does not work well on this task",
+    "meta-learning guarantees model's accuracy and stability",
+    "we can use the rule to detect which task an example belongs to",
+    "Self-training is somewhat tautological"
+  ],
+  "thinking_moves": [
+    "把语义解析问题重新frame成带噪的伪数据生成+过滤问题",
+    "将覆盖/未覆盖规则的样本视为不同的伪任务来应用元学习",
+    "通过回译利用decoder对目标分布敏感的特性进行双向增强",
+    "借鉴NMT后验正则化的短语表方法来过滤回译噪声"
+  ],
+  "topic_tags": [
+    "low-resource-semantic-parsing",
+    "back-translation",
+    "model-agnostic-meta-learning",
+    "neural-semantic-parser",
+    "rule-based-initialization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

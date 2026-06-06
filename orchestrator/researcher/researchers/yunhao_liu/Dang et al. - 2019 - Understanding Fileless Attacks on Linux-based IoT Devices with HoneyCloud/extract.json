@@ -1,0 +1,39 @@
+{
+  "paper_id": "Dang et al. - 2019 - Understanding Fileless Attacks on Linux-based IoT Devices with HoneyCloud",
+  "doi": null,
+  "title": "Understanding Fileless Attacks on Linux-based IoT Devices with HoneyCloud",
+  "year": 2019,
+  "venue": "MobiSys '19",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "IoT设备面临fileless攻击激增,但现有防御手段对其无效且缺乏系统研究",
+  "problem_framing": "用蜜罐大规模捕获真实攻击,系统分类fileless攻击并提出防御策略",
+  "key_insight": "Read-only文件系统防恶意软件反而阻碍shell日志,形成安全悖论",
+  "method_signature": "多源关联shell命令/文件系统/流量/第三方报告分类fileless攻击",
+  "evaluation_criteria": "攻击捕获量、类型覆盖率、成本效率、与硬件蜜罐对比",
+  "negative_result_or_admitted_limitation": "软件蜜罐比硬件蜜罐少37%可疑连接;read-only文件系统阻碍检测",
+  "evidence_for_taste": [
+    "increases the difficulty",
+    "fundamental trade-off",
+    "unexpectedly increases",
+    "not vice versa",
+    "we suspect this is because"
+  ],
+  "thinking_moves": [
+    "从蜜罐部署成本约束推导出云端软件方案可行性",
+    "用硬件蜜罐经验指导软件蜜罐高保真度设计",
+    "从攻击命令分布发现可用命令构成攻击面",
+    "发现安全机制的副作用悖论",
+    "将防御策略封装为可操作工作流"
+  ],
+  "topic_tags": [
+    "IoT-security",
+    "fileless-attack-taxonomy",
+    "honeypot-deployment",
+    "cloud-honeypot",
+    "attack-surface-reduction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "摘要完整但正文在fileless攻击分类处截断,部分具体统计数据缺失 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,44 @@
+{
+  "paper_id": "DeepWear_ Adaptive Local Offloading for On-Wearable Deep Learning",
+  "doi": "10.48550/arxiv.1712.03073",
+  "title": "DeepWear: Adaptive Local Offloading for On-Wearable Deep Learning",
+  "year": 2017,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Wearables have constrained hardware but need DL; cloud offloading costs privacy and connectivity",
+  "problem_framing": "Binary offloading decision insufficient; must partition DL model across wearable-handheld",
+  "key_insight": "Internal layers produce smaller intermediate data, reducing Bluetooth transfer delay",
+  "method_signature": "Context-aware partial model partition with runtime decision making",
+  "evaluation_criteria": "End-to-end latency and energy consumption on both wearable and handheld",
+  "negative_result_or_admitted_limitation": "Memory usage not considered; only 3 devices and 8 models tested",
+  "evidence_for_taste": [
+    "offloading the whole model",
+    "internal layer inside the model may yield a smaller intermediate output",
+    "layers of a given type within the DL model can have significantly different characteristics",
+    "DeepX targets at only linear DNN models",
+    "offloading decisions are often manually defined at the design time"
+  ],
+  "thinking_moves": [
+    "把binary offloading decision扩展为partial offloading问题",
+    "通过实验揭示layer-level granularity的性能差异",
+    "从end-to-end latency反推partition point选择",
+    "承认现有function-level offloading方法的根本局限",
+    "通过heuristic减少exponential search space"
+  ],
+  "topic_tags": [
+    "wearable-DL-offloading",
+    "edge-computing",
+    "model-partition",
+    "bluetooth-latency-tradeoff",
+    "adaptive-scheduling"
+  ],
+  "cites_own_work": [
+    "Deeptype: On-device deep learning for input personalization service",
+    "Deepcache: Principled cache for mobile deep vision",
+    "Shuffledog: Characterizing and adapting user-perceived latency",
+    "Characterizing smartwatch usage in the wild"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

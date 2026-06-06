@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2017 - Spatio-temporal analysis and prediction of cellular traffic in metropolis",
+  "doi": null,
+  "title": "Spatio-temporal Analysis and Prediction of Cellular Traffic in Metropolis",
+  "year": 2017,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "senior",
+  "motivation": "现有时序方法忽视由用户流动引发的空间依赖，无法准确预测城域范围、细粒度基站流量",
+  "problem_framing": "将蜂窝流量分解为in-cell和inter-cell两部分，用有向图建模时空依赖，GNN学习预测",
+  "key_insight": "用户跨基站移动产生的inter-cell流量可达90%，且依赖可跨远距基站，须用图结构显式建模",
+  "method_signature": "GNN图神经网络对in-cell/inter-cell分解流量建模时空依赖，propagation+output两步预测",
+  "evaluation_criteria": "MAE和MARE双指标，与NAIVE/ARIMA/LSTM/GNN-A对比，GNN-D全面胜出",
+  "negative_result_or_admitted_limitation": "事件推理因缺乏ground-truth无法充分验证，属于未来工作",
+  "evidence_for_taste": [
+    "inter-cell traffic can be up to 90%",
+    "largely overlooked in previous works",
+    "fail to capture the intensive spatial dependency",
+    "fail to verify our inference",
+    "state-of-the-art time-series approaches perform poorly"
+  ],
+  "thinking_moves": [
+    "从数据特征反推模型假设：流量峰值相差10万倍，时序模型捕捉不足",
+    "识别被忽视的依赖类型：远距基站间因快速交通产生的空间相关性",
+    "用分解策略简化问题：in-cell vs inter-cell分别建模再合并",
+    "从网络管理痛点出发定义任务：5G时代需精准预测来调配资源",
+    "承认事件推理验证困难，诚实说明未来工作方向"
+  ],
+  "topic_tags": [
+    "cellular-traffic-prediction",
+    "graph-neural-network",
+    "in-cell-inter-cell-decomposition",
+    "spatio-temporal-modeling",
+    "urban-mobility"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue信息在论文中未明确标注，仅通过引用推断为IEEE/ACM顶级会议；DOI缺失；事件推理部分承认验证不足但未详细展开技术限制"
+}

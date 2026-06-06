@@ -1,0 +1,37 @@
+{
+  "paper_id": "SIGCOMM2024",
+  "doi": null,
+  "title": "SCX: Stateless KV-Cache Encoding for Cloud-Scale Confidential Transformer Serving",
+  "year": 2024,
+  "venue": "SIGCOMM",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "Transformer models在医疗诊断等敏感应用中面临隐私泄露风险，现有方法在隐私保护与效率间存在权衡",
+  "problem_framing": "云端既无法恢复用户输入，也无法独立完成下一个token预测，同时保持零精度损失",
+  "key_insight": "用用户控制的密钥编码Transformer推理中的中间KV-cache，实现状态无关的隐私保护",
+  "method_signature": "用户密钥控制下的KV-cache编码/解码，零精度损失",
+  "evaluation_criteria": "延迟(36ms for LLaMA-7B)、比现有方法数量级提升、KV-cache通信效率提升85%",
+  "negative_result_or_admitted_limitation": "现有密码学方法和内存隔离方法通常面临高延迟或硬件依赖问题",
+  "evidence_for_take": [
+    "privacy concerns in sensitive applications",
+    "zero loss of inference quality",
+    "outperforming state-of-the-art by orders of magnitude",
+    "addresses communication complexity and attack vulnerabilities"
+  ],
+  "thinking_moves": [
+    "将隐私保护问题重新定义为编码问题，规避传统密码学开销",
+    "状态无关设计避免服务端存储用户密钥的信任假设",
+    "从通信复杂度视角审视KV-cache隐私问题",
+    "证明方法可与现有KV-cache优化技术互补而非竞争"
+  ],
+  "topic_tags": [
+    "confidential-inference",
+    "KV-cache",
+    "transformer-privacy",
+    "stateless-encoding",
+    "cloud-inference"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "摘要信息为主，未见完整方法/实验/结论部分的详细文本；作者角色和具体技术细节(如具体编码方案、威胁模型)未提供"
+}

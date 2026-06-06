@@ -1,0 +1,37 @@
+{
+  "paper_id": "2025_WSDM",
+  "doi": null,
+  "title": "Fast-DataShapley: Neural Modeling for Training Data Valuation",
+  "year": 2026,
+  "venue": "WSDM '26",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "Shapley值计算复杂度指数增长,每新增测试样本需重新训练模型,成本不可接受",
+  "problem_framing": "将训练数据估值定义为合作博弈,关注预测特定样本而非整体测试集的数据贡献",
+  "key_insight": "利用Shapley值的加权最小二乘刻画,将SV计算转化为优化问题训练可复用解释器",
+  "method_signature": "Fast-DataShapley: CWLS优化+Shapley核采样+高效约束归一化+解释器模型",
+  "evaluation_criteria": "value loss H_η(数据移除后模型预测置信度),数据清洗与可视化验证",
+  "negative_result_or_admitted_limitation": "仅覆盖监督任务,AIGC等生成任务需重新训练大模型,设计合理效用函数困难",
+  "evidence_for_taste": [
+    "Shapley value methods...exponentially",
+    "retraining the target model numerous times",
+    "introducing the prior information by grouping",
+    "convergence easier for the explainer model",
+    "further exploratory efforts are required"
+  ],
+  "thinking_moves": [
+    "迁移FastSHAP的特征级SV解释器思路到训练数据级估值,利用其最小二乘框架规避组合爆炸",
+    "从两个正交维度降低训练开销:近似效用函数(AFDS)与降低组合空间(GFDS/GFDS+)",
+    "引入Owen值和Shapley对称性理论作为分组依据,从数据层面而非特征层面扩展groupShapley"
+  ],
+  "topic_tags": [
+    "data-valuation",
+    "shapley-value",
+    "training-data-influence",
+    "explainable-AI",
+    "data-copyright"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

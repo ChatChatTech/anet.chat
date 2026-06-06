@@ -1,0 +1,41 @@
+{
+  "paper_id": "aiXcoder-7B-v2_ Training LLMs to Fully Utilize the Long Context in Repository-level Code Completion",
+  "doi": "10.48550/arxiv.2503.15301",
+  "title": "Aligning LLMs to Fully Utilize the Cross-file Context in Repository-level Code Completion",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "LLMs在repo级代码补全中难以充分利用跨文件上下文,根源在于预训练与任务需求的错位",
+  "problem_framing": "预训练的next-token预测使模型倾向于关注近邻上下文,而repo级补全需要频繁访问长距离跨文件上下文",
+  "key_insight": "通过构造context-aware代码补全数据集,显式训练LLM学会在长跨文件上下文中定位相关信息",
+  "method_signature": "COLA双阶段训练: SFT学习生成context-aware代码 + DPO强化学习抑制错误上下文利用",
+  "evaluation_criteria": "Exact Match(EM)和BLEU评测repo级代码补全性能",
+  "negative_result_or_admitted_limitation": "aiXcoder-7B-cont略弱于原始aiXcoder-7B,表明进一步预训练可能导致轻微过拟合; COLA仅覆盖两种显式关联的context-aware代码,隐式关系未涉及",
+  "evidence_for_taste": [
+    "LLMs struggle to fully utilize",
+    "misalignment between pre-training",
+    "relying on nearby context",
+    "frequently attending to long-range",
+    "purely data-driven solution",
+    "teach LLMs to focus",
+    "push LLMs to actively utilize"
+  ],
+  "thinking_moves": [
+    "将模型局限归因于预训练范式与任务需求的结构性错位",
+    "提出alignment这一新视角,不同于以往的retrieval-centric范式",
+    "通过数据构造显式强制模型在长上下文中定位关键信息",
+    "用DPO强化学习显式惩罚模型对错误上下文的利用",
+    " ablation验证双阶段训练和两种代码类型的必要性"
+  ],
+  "topic_tags": [
+    "LLM-code-completion",
+    "cross-file-context-utilization",
+    "context-alignment",
+    "long-context-LLM",
+    "reinforcement-learning-4-code"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

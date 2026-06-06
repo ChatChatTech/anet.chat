@@ -1,0 +1,39 @@
+{
+  "paper_id": "Ji et al. - 2014 - Walking down the STAIRS Efficient collision resolution for wireless sensor networks",
+  "doi": null,
+  "title": "Walking down the STAIRS: Efficient collision resolution for wireless sensor networks",
+  "year": 2014,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Collisions in duty-cycled WSNs waste energy and cause severe latency; existing backoff solutions degrade under bursty traffic.",
+  "problem_framing": "Collision resolution as identifying N contenders efficiently in one round via RSSI stairs pattern, instead of sequential backoff.",
+  "key_insight": "Constructive interference creates RSSI stair-step pattern; counting falling edges reveals number of simultaneous senders.",
+  "method_signature": "Superimposed identical packets generate measurable RSSI stairs; assign channel slots by CP packet length.",
+  "evaluation_criteria": "Latency reduction and throughput improvement vs Strawman and CSMA backoff; detection accuracy of falling edges.",
+  "negative_result_or_admitted_limitation": "In sparse low-rate networks STAIRS advantages diminish; CSMA backoff shows efficiency in simplicity.",
+  "evidence_for_taste": [
+    "at most one sender can be identified and win the channel access in each round",
+    "the performance may suffer serious degradation in duty cycled WSNs",
+    "this intentionally generated stair pattern of RSSI provides a helpful tool",
+    "external interference from 802.11 Wifi networks may generate some falling edges",
+    "the general detection accuracy is around 90% for all the 5 cases"
+  ],
+  "thinking_moves": [
+    "从叠加信号异常反推物理层可利用特征",
+    "把perception问题(reidentifying contenders)重新frame成communication问题(channel assignment)",
+    "把碰撞场景建模为ball-and-bin分配问题",
+    "理论推导RSSI公式后做实证验证",
+    "识别工程挑战(同步精度+RSSI噪声)并分别攻克"
+  ],
+  "topic_tags": [
+    "WSN collision resolution",
+    "constructive interference networking",
+    "RSSI stairs detection",
+    "receiver-initiated MAC",
+    "multi-hop WSN scheduling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue tier uncertain; DOI null. The paper lacks explicit venue naming in text, though references suggest IPSN. Yunhao Liu listed as co-author with affiliation Tsinghua."
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Li et al. - 2008 - Signature-File-Based Approach for Query Answering Over Wireless Sensor Networks",
+  "doi": null,
+  "title": "Signature-File-Based Approach for Query Answering Over Wireless Sensor Networks",
+  "year": 2008,
+  "venue": "IEEE Transactions on Vehicular Technology",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "传感器节点电池供电、难以更换，需节省能耗；同时无线链路丢包率高达30%，需抗损",
+  "problem_framing": "在节能与抗丢包约束下，同时支持聚合查询和范围查询两类应用",
+  "key_insight": "签名文件的叠加编码天然去重(OR操作)+可压缩+误报率可精确控制，实现节能与鲁棒性兼得",
+  "method_signature": "签名文件+多径路由+自适应RLE压缩+动态桶分配",
+  "evaluation_criteria": "查询精度(召回率)和通信开销(包数)",
+  "negative_result_or_admitted_limitation": "Sketch方法仅支持聚合查询，且在节点稀疏时偏差过大精度极低；等宽桶在非均匀分布下导致bucket竞争误差",
+  "evidence_for_taste": [
+    "only works on aggregative queries, which is thus infeasible for range queries",
+    "the accuracy of the sketch approach is based on the large number of nodes",
+    "possible excessive bias on the sketch insert may lead to very low accuracy",
+    "The LIST approach's performance is the worst",
+    "may introduce large errors when data distribution does not follow the uniform distribution"
+  ],
+  "thinking_moves": [
+    "把multipath的去重难题归约到签名文件的位运算OR操作",
+    "发现签名文件稀疏性(0多1少)，用改进RLE压缩降低传输开销",
+    "用false drop公式反推签名长度m和权重w，实现误差率可精确控制",
+    "识别Sketch仅支持聚合的局限，将边界查询能力作为自己的核心优势"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network",
+    "signature-file",
+    "in-network-aggregation",
+    "range-query",
+    "multipath-routing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

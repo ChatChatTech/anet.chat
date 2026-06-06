@@ -1,0 +1,42 @@
+{
+  "paper_id": "_Is your explanation stable___ A Robustness Evaluation Framework for Feature Attribution",
+  "doi": "10.48550/arxiv.2209.01782",
+  "title": "Is your explanation stable? A Robustness Evaluation Framework for Feature Attribution",
+  "year": 2022,
+  "venue": "CCS '22",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现实环境中随机噪声导致相似图像的特征归属图剧烈扰动，且现有算法易受对抗攻击，难以在安全关键场景中信任",
+  "problem_framing": "将解释可靠性问题重新定义为：可靠解释应包含归属分数图、置信区间和分数显著性三个部分",
+  "key_insight": "通过采样邻域输入并对中位数进行假设检验，将未知分布转换为伯努利分布，获得小样本下的精确置信界",
+  "method_signature": "MeTFA: 对特征归属分布的中位数进行假设检验,生成显著性图和光滑化图",
+  "evaluation_criteria": "稳定性用mstd,忠实性用insertion/deletion/overall,鲁棒忠实性用噪声扰动下的新指标",
+  "negative_result_or_admitted_limitation": "SmoothGrad等方法需要极大样本量才能保证置信界正确,计算开销沉重,且小样本时均值对异常值敏感",
+  "evidence_for_taste": [
+    "LIME gives different attribution maps for the same image",
+    "gradient-based methods produce drastically different attribution maps",
+    "human-imperceptible noise, the attacker can manipulate an attribution map arbitrarily",
+    "a method to reduce and quantify the uncertainty",
+    "make the explanations reliable",
+    "built on a stability assumption"
+  ],
+  "thinking_moves": [
+    "把解释稳定性问题重新frame成统计假设检验问题",
+    "利用中位数性质将未知分布转换为伯努利分布,避免中心极限定理",
+    "提出鲁棒忠实性指标,从单一输入评估扩展到邻域评估",
+    "区分两种场景:重要性显著性检验vs置信区间估计"
+  ],
+  "topic_tags": [
+    "XAI-robustness-evaluation",
+    "feature-attribution-stability",
+    "hypothesis-testing-explainability",
+    "adversarial-explanation-defense",
+    "median-based-inference"
+  ],
+  "cites_own_work": [
+    "GridSaliency",
+    "LEMNA"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "ACSAC_23_DeepContract__Controllable_Authorization_of_Deep_Learning_Models___Final_version_ (3)",
+  "doi": null,
+  "title": "DeepContract: Controllable Authorization of Deep Learning Models",
+  "year": 2023,
+  "venue": "ACSAC",
+  "venue_tier": "strong",
+  "role": "unknown",
+  "motivation": "模型是宝贵IP,现有方案要么要求用户上传数据(隐私风险),要么部署在用户侧(失去控制权)",
+  "problem_framing": "可控模型授权:在不泄露原始权重的前提下部署加密模型,并能随时撤销使用权",
+  "key_insight": "利用TEE的完整性验证生成合约特定的飞地代码,实现层间解密与推理管道化,解决内存受限问题",
+  "method_signature": "基于Baker映射的通用模型加密+合约驱动的TEE受控推理框架",
+  "evaluation_criteria": "安全性(抗暴力/微调攻击)、推理延迟、内存占用、能耗",
+  "negative_result_or_admitted_limitation": "直接加密方法与需求不兼容,ChaoW因方形加密区域限制可被微调攻击恢复,SGX侧信道攻击超出范围",
+  "evidence_for_taste": [
+    "incompatible with our encryption requirements",
+    "unacceptable computational overhead",
+    "cannot simultaneously meet our requirements",
+    "cannot prevent leakage of the original model",
+    "does not consider the confidentiality of the model itself",
+    "an unusable model with poor performance",
+    "out of scope for this paper",
+    "8%-23% slower inference speed"
+  ],
+  "thinking_moves": [
+    "识别SOTA方法的形状约束缺陷并设计更通用的加密方案",
+    "通过安全级别参数化密钥搜索,量化抗攻击能力",
+    "将内存约束问题转化为管道化解密与推理的工程优化",
+    "用穷举搜索复杂度下界证明安全性"
+  ],
+  "topic_tags": [
+    "DL模型IP保护",
+    "TEE安全推理",
+    "模型授权控制",
+    "神经网络加密",
+    "可验证飞地代码"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

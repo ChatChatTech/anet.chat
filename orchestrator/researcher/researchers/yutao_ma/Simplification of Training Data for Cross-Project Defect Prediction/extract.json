@@ -1,0 +1,42 @@
+{
+  "paper_id": "Simplification of Training Data for Cross-Project Defect Prediction",
+  "doi": "10.48550/arxiv.1405.0773",
+  "title": "Simplification of Training Data for Cross-Project Defect Prediction",
+  "year": 2014,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "公开仓库训练数据量大但质量参差不齐,盲目使用导致过多误报,需筛选合适训练数据",
+  "problem_framing": "将训练数据简化和过滤器选择建模为多粒度(发布级+实例级)优化问题",
+  "key_insight": "先用k-NN选相似发布,再选相似实例,并用DPR值指导训练集驱动/测试集驱动过滤器的选择",
+  "method_signature": "riTDS多粒度简化(发布级rTDS+实例级iTDS)+双滤波器自适应选择",
+  "evaluation_criteria": "f-measure,g-measure,AUC,推荐准确率,预测精度增量",
+  "negative_result_or_admitted_limitation": "阈值ρ可能随评估公式变化而不稳定,且数据仅来自PROMISE子集,泛化性存疑",
+  "evidence_for_taste": [
+    "data quality, rather than the total quantity of data",
+    "a larger amount of training data may not lead to a higher performance",
+    "Naive Bayes is more suitable for building predictors",
+    "we may obtain different thresholds if other formulas are used",
+    "it is possible that we accidentally selected data sets that have better"
+  ],
+  "thinking_moves": [
+    "提出多粒度简化而非单一粒度,先选发布再选实例",
+    "用DPR指标量化指导过滤器选择策略",
+    "比较五种分类器在简化数据上的表现差异",
+    "承认阈值依赖评估公式,指出泛化局限",
+    "用推荐准确率而非单一性能指标验证决策规则"
+  ],
+  "topic_tags": [
+    "cross-project-defect-prediction",
+    "training-data-simplification",
+    "multi-granularity-filtering",
+    "defect-proneness-ratio",
+    "transfer-learning"
+  ],
+  "cites_own_work": [
+    "He et al., 2012",
+    "He et al., 2014"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

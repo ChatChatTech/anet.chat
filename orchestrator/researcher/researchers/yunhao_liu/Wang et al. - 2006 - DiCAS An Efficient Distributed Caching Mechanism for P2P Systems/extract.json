@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2006 - DiCAS An Efficient Distributed Caching Mechanism for P2P Systems",
+  "doi": null,
+  "title": "DiCAS: An Efficient Distributed Caching Mechanism for P2P Systems",
+  "year": 2006,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Gnutella flooding产生330TB/月流量，95%节点7跳内可达却仍低效；DHT维护成本高，难以适应高动态网络。",
+  "problem_framing": "如何在索引成本与搜索成本间取得平衡——既要避免洪泛的高流量，又要避免DHT的紧耦合维护开销。",
+  "key_insight": "用hash函数被动地将文件索引松散映射到一组peer，而非精确映射到单一peer，从而降低索引维护成本。",
+  "method_signature": "Peer Group ID = hash(query) Mod M，按组ID划分搜索层，只向匹配的peer转发查询。",
+  "evaluation_criteria": "网络搜索流量、查询成功率、响应时间、缓存命中率。",
+  "negative_result_or_admitted_limitation": "DiCASalone降低流量83%，但查询成功率下降80%，需结合push/select操作补救。",
+  "evidence_for_taste": [
+    "overlapped cache hits...exceeded 32 percent",
+    "duplicated and redundant cache results",
+    "traffic reduction by about 83 percent",
+    "success rate of DiCAS is decreased by 80 percent",
+    "success rate will be proportionally decreased",
+    "increasing layer gradually converges",
+    "low cost...contrasts to the high maintenance cost of DHT"
+  ],
+  "thinking_moves": [
+    "发现统一缓存的冗余问题（32%重复），启发设计目标",
+    "将搜索问题重新frame为分层的group matching问题",
+    "承认方案有成功率代价，先量化再补救",
+    "对M值做边际效益分析，发现收敛点"
+  ],
+  "topic_tags": [
+    "P2P-search-efficiency",
+    "distributed-caching",
+    "adaptive-query-forwarding",
+    "Gnutella-optimization",
+    "hash-based-grouping"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Yunhao Liu为共同作者（非一作），论文含完整实验验证和局限性分析。 | md truncated to head40k+tail20k"
+}

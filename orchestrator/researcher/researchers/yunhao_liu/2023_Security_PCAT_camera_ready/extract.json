@@ -1,0 +1,39 @@
+{
+  "paper_id": "2023_Security_PCAT_camera_ready",
+  "doi": null,
+  "title": "PCAT: Functionality and Data Stealing from Split Learning by Pseudo-Client Attack",
+  "year": 2023,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Split learning保护客户端数据隐私，但服务器仍能窃取功能和隐私数据，既往方法要求已知客户端结构且在复杂模型下失效",
+  "problem_framing": "在半诚实服务器不知道客户端模型结构的条件下，如何实现功能窃取、输入重建和标签推断三种攻击目标",
+  "key_insight": "训练好的服务器模型本身就包含足够知识来构造伪客户端模型，即使不使用smashed data也能窃取功能；中间服务器模型序列能进一步提升效果",
+  "method_signature": "PCAT利用服务器模型和极少量数据同步训练伪客户端模型，无需任何客户端知识即可替代真实客户端",
+  "evaluation_criteria": "功能窃取准确率差距、输入重建视觉质量、标签推断准确率",
+  "negative_result_or_admitted_limitation": "数据重建依赖客户端模型可逆假设，当模型不可逆时重建失效（'data reconstruction attack relies on the assumption that the client model is invertible'）",
+  "evidence_for_taste": [
+    "requires the knowledge of the client model structure",
+    "performance deteriorates dramatically",
+    "the search space could be too large to converge",
+    "functionality very close to the real client",
+    "steal the functionality while it is being trained",
+    "use a sequence of evolving targets"
+  ],
+  "thinking_moves": [
+    "从攻击角度重新审视模型拆分设计：服务器虽无客户端结构但通过服务器模型本身的知识可构造功能等价的替代品",
+    "把知识蒸馏思想引入攻击场景：利用中间模型的序列演化信号而非仅用最终模型作为监督目标",
+    "将模型反转的大搜索空间问题转化为训练一个替代模型，绕开同时优化参数和输入的困难",
+    "从完全已知客户端结构转变为不需要任何知识，降低攻击前提假设使其更实用"
+  ],
+  "topic_tags": [
+    "split-learning-security",
+    "model-functionality-stealing",
+    "privacy-leakage",
+    "pseudo-client-attack",
+    "knowledge-distillation-attack"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为camera ready版本，无DOI，论文未明确说明发表venue，从内容判断为安全领域会议或期刊 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Guo et al. - 2013 - Expandable and Cost-Effective Network Structures for Data Centers Using Dual-Port Servers",
+  "doi": null,
+  "title": "Expandable and Cost-Effective Network Structures for Data Centers Using Dual-Port Servers",
+  "year": 2013,
+  "venue": "IEEE Transactions on Computers",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有server-centric网络结构(DCell/BCube)扩展时需改动已有服务器配置,不适合大规模部署;且使用超过两个端口的服务器",
+  "problem_framing": "在只使用双端口 commodity 服务器的约束下,如何设计可扩展且低成本的数据中心网络结构,同时保证低直径和高二分宽度",
+  "key_insight": "通过层次复合图递归构造,扩展时只需向恒定数量服务器添加一条链路,无需改动已有服务器配置",
+  "method_signature": "HCN递归层次不规则复合网络 + BCN双维度层次复合网络,均仅用两端口服务器",
+  "evaluation_criteria": "网络直径/平均路径长度/二分宽度/路径多样性/容错能力/扩展成本",
+  "negative_result_or_admitted_limitation": "HCN规模略小于FiConn;BCN路由路径略长于最短路径;吞吐率低于Fat-Tree/DCell/BCube",
+  "evidence_for_taste": [
+    "not truly expandable",
+    "no changes with respect to the node's configuration",
+    "only append one wiring link to a constant number of servers",
+    "cannot achieve the same aggregate capacity",
+    "significantly outperforms FiConn in terms of the bisection width",
+    "routing path length is a little bit larger than the shortest path length"
+  ],
+  "thinking_moves": [
+    "从现有方案不具真正可扩展性的工程痛点出发,抽象出'扩展时不改配置'的形式化约束",
+    "将数据中心组网问题转化为图论度/直径优化问题",
+    "先设计HCN验证可行性与规则性,再为追求最大规模而提出BCN",
+    "承认吞吐率劣势后提出应用层局部性优化策略作为补偿"
+  ],
+  "topic_tags": [
+    "data-center-networking",
+    "server-centric-topology",
+    "dual-port-server-interconnection",
+    "degree-diameter-optimization",
+    "hierarchical-compound-graph"
+  ],
+  "cites_own_work": [
+    "Guo et al. - 2008 - DCell",
+    "Li et al. - 2009 - FiConn"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文通过IEEE TC发表,无DOI但有完整作者信息和方法论描述;extraction_quality设为full因完整覆盖全文结构 | md truncated to head40k+tail20k"
+}

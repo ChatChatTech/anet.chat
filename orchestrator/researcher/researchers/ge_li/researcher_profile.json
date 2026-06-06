@@ -1,0 +1,531 @@
+{
+  "slug": "ge_li",
+  "n_extracts": 44,
+  "n_full": 42,
+  "n_partial": 2,
+  "n_thin": 0,
+  "year_range": [
+    2015,
+    2025
+  ],
+  "top_tags": [
+    [
+      "code-summarization",
+      3
+    ],
+    [
+      "constrained-text-generation",
+      3
+    ],
+    [
+      "LLM-code-generation",
+      2
+    ],
+    [
+      "model-compression",
+      2
+    ],
+    [
+      "LLM代码生成评估",
+      2
+    ],
+    [
+      "仓库级代码生成",
+      2
+    ],
+    [
+      "上下文窗口限制",
+      2
+    ],
+    [
+      "sentiment-analysis",
+      2
+    ],
+    [
+      "question-classification",
+      2
+    ],
+    [
+      "constituency-parsing",
+      2
+    ],
+    [
+      "dependency-parsing",
+      2
+    ],
+    [
+      "LLM-fine-tuning",
+      2
+    ],
+    [
+      "LLM-data-contamination",
+      2
+    ],
+    [
+      "trustworthy-evaluation",
+      2
+    ],
+    [
+      "neural-network-transfer-learning",
+      2
+    ],
+    [
+      "tree-based convolution",
+      2
+    ],
+    [
+      "natural language inference",
+      2
+    ],
+    [
+      "sentence pair modeling",
+      2
+    ],
+    [
+      "heuristic matching",
+      2
+    ],
+    [
+      "automatic-prompt-editing",
+      2
+    ],
+    [
+      "neural-dialogue-generation",
+      2
+    ],
+    [
+      "content-introducing",
+      2
+    ],
+    [
+      "neural-NLP-regularization",
+      1
+    ],
+    [
+      "embedding-overfitting",
+      1
+    ],
+    [
+      "hyperparameter-tuning",
+      1
+    ],
+    [
+      "dropout-vs-L2",
+      1
+    ],
+    [
+      "incremental-training",
+      1
+    ],
+    [
+      "embedding-regularization-comparison",
+      1
+    ],
+    [
+      "NLP-overfitting",
+      1
+    ],
+    [
+      "incremental-hyperparameter-tuning",
+      1
+    ]
+  ],
+  "topic_clusters": [
+    {
+      "tag": "code-summarization",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Are We Building on the Rock_ On the Importance of Data Preprocessing for Code Summarization",
+          "year": 2022,
+          "venue": "ESEC/FSE",
+          "key_insight": "噪声数据广泛存在于31%-66%的样本中,移除噪声后BLEU-4提升21%-27%",
+          "method_signature": "基于启发式if-else规则的CAT清洗工具,检测并修正/移除12类代码-注释对噪声",
+          "score": 17
+        },
+        {
+          "paper_id": "SAGA_ Summarization-Guided Assert Statement Generation",
+          "year": 2023,
+          "venue": "arXiv",
+          "key_insight": "开发者撰写的摘要包含意图相关参数（如delta值），可补充源代码中缺失的关键断言信息",
+          "method_signature": "基于CodeT5预训练模型，用特殊token隔离测试前缀、焦点方法和摘要三种输入模态",
+          "score": 16
+        },
+        {
+          "paper_id": "Integrating Tree Path in Transformer for Code Representation",
+          "year": null,
+          "venue": "null",
+          "key_insight": "Relative paths reveal token relationships (patterns like for-loops); absolute paths reveal per-token program behavior; both can bias self-attention",
+          "method_signature": "TPTrans: modify Transformer attention with path-encoded relative position representations and layer-normalized GRU encoders",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "tag": "constrained-text-generation",
+      "paper_count": 3,
+      "exemplars": [
+        {
+          "paper_id": "Backward and Forward Language Modeling for Constrained Sentence Generation",
+          "year": 2015,
+          "venue": "unknown",
+          "key_insight": "从给定词同时向两端生成,无需首词约束即可保证该词出现在任意位置",
+          "method_signature": "双向/异步B/F RNN语言模型,基于GRU的条件概率乘积分解",
+          "score": 16
+        },
+        {
+          "paper_id": "Sequence to Backward and Forward Sequences_ A Content-Introducing∩ü£n Approach to Generative Short-Text Conversation",
+          "year": 2016,
+          "venue": "arXiv preprint",
+          "key_insight": "用PMI预测关键词作为生成起点,seq2BF模型从关键词同时向后向前生成,确保关键词出现在任意位置且语义丰富",
+          "method_signature": "seq2BF模型:序列到向后和向前序列",
+          "score": 16
+        },
+        {
+          "paper_id": "Backbone Language Modeling for Constrained Natural Language Generation",
+          "year": null,
+          "venue": "null",
+          "key_insight": "若某词必须出现,以该词为根节点构建贝叶斯网络",
+          "method_signature": "B/F双通道RNN同步或异步从约束词生成前后文",
+          "score": 11
+        }
+      ]
+    }
+  ],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2015,
+      "paper_count": 50,
+      "top_tags": [
+        [
+          "sentiment-analysis",
+          2
+        ],
+        [
+          "question-classification",
+          2
+        ],
+        [
+          "constituency-parsing",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2016,
+      "paper_count": 30,
+      "top_tags": [
+        [
+          "neural-network-transfer-learning",
+          2
+        ],
+        [
+          "neural-dialogue-generation",
+          2
+        ],
+        [
+          "content-introducing",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2017,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "seq2seq-dialog-collapse",
+          1
+        ],
+        [
+          "unaligned-conditional-distribution",
+          1
+        ],
+        [
+          "translation-vs-dialog-comparison",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2022,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "code-summarization",
+          1
+        ],
+        [
+          "data-quality",
+          1
+        ],
+        [
+          "benchmark-dataset-noise",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "LLM-code-generation",
+          1
+        ],
+        [
+          "requirements-refinement",
+          1
+        ],
+        [
+          "human-LLM-collaboration",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 55,
+      "top_tags": [
+        [
+          "LLM代码生成评估",
+          2
+        ],
+        [
+          "仓库级代码生成",
+          2
+        ],
+        [
+          "上下文窗口限制",
+          2
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 30,
+      "top_tags": [
+        [
+          "LLM代码生成智能体",
+          1
+        ],
+        [
+          "单智能体规划推理",
+          1
+        ],
+        [
+          "多智能体协作架构",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "Re-embedding words is not effective; dropout performs slightly worse than L2 penalty in experiments",
+    "词重嵌入方法在实验中无效;Dropout单独使用时不如L2惩罚;本工作目标不是超越或复现最优结果,而是公平比较",
+    "智能体生成的代码常含逻辑缺陷、性能陷阱或安全漏洞,难以被单元测试覆盖",
+    "随机选split word增加不确定性,导致perplexity高于顺序LM",
+    "所有B/F变体困惑度均高于顺序模型,sep-B/F过于贪婪且生成内容过短",
+    "LCLM在代码长度超过32K时性能急剧下降，远未达到宣称的128K-1M上下文窗口能力",
+    "Auto-Refine（无人类介入的自动修正）反而损害了LLM的代码生成性能，说明人类干预是必要且不可忽视的",
+    "LSTM单元dropout会伤害模型记忆能力,即使小dropout率0.1也不行",
+    "Dropout LSTM内部单元会损害模型性能，即使dropout rate很小(如0.1)",
+    "PDA需为每种编程语言单独构建，且仅保证语法正确不保证编译正确",
+    "execution semantics alignment 带来额外计算开销;未进行超参调优因RL训练成本高",
+    "压缩存在信息损失，仅当稀有词参数估计精度提升占优时性能才改善；词表超过20k时LSTM-z,wb略逊于LSTM-z",
+    "LSTM-z,wb在词表大于20k时略逊于LSTM-z;压缩有信息损失,当第二因素占优时压缩模型才更优",
+    "gpt-4在DevEval上Pass@1仅53.04%，远低于HumanEval的80%",
+    "GPT-4在DevEval上Pass@1仅53.04%远低于HumanEval的80%，LLM难以理解长且异构的上下文",
+    "3-slot pooling for c-TBCNN是'hard mechanism'暂时方案；复杂pooling效果提升不大，模型对pooling方法不敏感",
+    "c-TBCNN略逊于d-TBCNN；复杂pooling效果有限；c-TBCNN的3-slot pooling是暂时硬编码",
+    "matching softmax在情感分析任务上反而降低性能0.6%",
+    "即使最强模型GPT-4在此基准上Pass@1仅20.73%,远低于HumanEval上的88.4%",
+    "EvoCodeBench为单语言(Python)基准,规模小于部分现有基准(Text Processing域仅1样本)",
+    "Self-refine and Self-debug underperform on small LLMs; full fine-tuning is computationally expensive",
+    "FNN和FSNN无法拟合语言建模任务;FTNN在复杂周期建模上表现差,参数更多",
+    "引入额外内存开销(GAM/FAM)，随batch增大占比减小但仍不可忽略",
+    "采用LoRA而非全参数微调模拟污染；假设基模型未受污染但实际可能存在轻微污染；验证仅限代码生成和逻辑推理领域",
+    "使用LoRA模拟污染而非全参数微调，假设基础LLM无污染且构建开销大(>2100 GPU小时)",
+    "跨语义迁移无效(无提升),MULT+INIT无额外收益",
+    "MULT和INIT组合并不产生额外增益；隐藏层在语义不同任务中不可迁移；输出层完全专属于数据集",
+    "TPTrans-α (with absolute path) shows almost no gain over TPTrans alone; path overlap exists between absolute and relative paths",
+    "LCLMs fail to model code context effectively in their claimed context windows; inter-code unit relation understanding is most challenging",
+    "单独使用element-wise product效果显著差于拼接或差操作",
+    "单独使用element-wise product效果显著劣于concatenation或difference",
+    "PACE处理中高难度问题有效,但面对极复杂问题时建议人机协作,以及闭源模型API限制导致无法访问概率",
+    "对高度复杂问题效果有限，需人机协作释放更大潜力；某些任务如operators几乎无法改善",
+    "T5在修改后的数据集上表现不佳，因断言语句更长且包含未知token；模型依赖预训练参数而非自适应调整",
+    "无内容引入的seq2BF得分反而更低，说明人为拆分序列并非自然语言建模的妙方；BLEU不适合评估对话因其忽略回复多样性",
+    "seq2BF无关键词时得分最低,证明简单切分序列并非建模自然语言的有效方式;放弃BLEU因人类回复多样度过高导致零覆盖",
+    "RNN无法有效训练，仅学习标签分布而非结构特征",
+    "假设实数据有限，未考虑后处理或数据过滤，结论仅适用于此假设",
+    "c-TBCNN略逊于d-TBCNN; pooling方法对结果影响不大,模型对pooling不敏感",
+    "直接应用原始CoT-Decoding于代码生成导致性能下降，因代码序列长且整体置信度难以评估",
+    "100% shuffle shows anomalous high R^2; no good explanation currently.",
+    "COLA-132K仅覆盖两种显式关联的上下文感知代码，隐式关系难以定义和收集",
+    "因预训练算力成本高,未做全面超参搜索,配置可能非最优"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "re-embedding words is not effective in our experiments",
+      "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    },
+    {
+      "quote": "goal of this paper is not to outperform",
+      "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    },
+    {
+      "quote": "the goal of this paper is not to reproduce",
+      "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    },
+    {
+      "quote": "regularizations mainly serve as a local effect",
+      "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    },
+    {
+      "quote": "dropout performs slightly worse than l2 penalty",
+      "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    },
+    {
+      "quote": "unexpectedly helps optimization",
+      "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    },
+    {
+      "quote": "embedding is sparse in use",
+      "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    },
+    {
+      "quote": "behaviors may be different from those in other scenarios like image recognition",
+      "paper_id": "A Comparative Study on Regularization Strategies for Embedding-based Neural Networks__oa_W2963840901"
+    },
+    {
+      "quote": "❸ faces issues with data contamination",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "❺ entangle code understanding with other task-specific challenges",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "reducing the risk of data contamination",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "inter-code unit relation understanding is the most challenging",
+      "paper_id": "Benchmarking Long-Context Language Models on Long Code Understanding"
+    },
+    {
+      "quote": "which stabilizes the training process",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "which is potentially applicable to other LMs",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "strictly speaking, increases at an extremely small rate",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "we find the memory consumption grows imperceptibly",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "which is unexpected",
+      "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2510403588"
+    },
+    {
+      "quote": "poorly aligned with real-world",
+      "paper_id": "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    },
+    {
+      "quote": "inconsistent with developers' actual experiences",
+      "paper_id": "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    },
+    {
+      "quote": "struggle with understanding long and heterogeneous contexts",
+      "paper_id": "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    },
+    {
+      "quote": "even though a valid function connect is present",
+      "paper_id": "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    },
+    {
+      "quote": "non-existent function - create_connection",
+      "paper_id": "DevEval_ A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories__oa_W4402670434"
+    },
+    {
+      "quote": "results are not consistent",
+      "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    },
+    {
+      "quote": "only 0.04–0.21% error reduction",
+      "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    },
+    {
+      "quote": "the incapability of transferring",
+      "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    },
+    {
+      "quote": "MULT and INIT are generally comparable",
+      "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    },
+    {
+      "quote": "do not obtain further gain",
+      "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    },
+    {
+      "quote": "more prone to semantics than image",
+      "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    },
+    {
+      "quote": "semantic relatedness—which emerges",
+      "paper_id": "How Transferable are Neural Networks in NLP Applications___oa_W2964352358"
+    },
+    {
+      "quote": "The effect and human effort of the second stage far surpass",
+      "paper_id": "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    },
+    {
+      "quote": "Prompt p in this context is conceptualized as a policy",
+      "paper_id": "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    },
+    {
+      "quote": "the critic possesses a slightly higher significance",
+      "paper_id": "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    },
+    {
+      "quote": "humans can often produce a satisfactory first attempt without much effort",
+      "paper_id": "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    },
+    {
+      "quote": "The real challenge is refining and optimizing these drafts",
+      "paper_id": "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    },
+    {
+      "quote": "This stabilization indicates a saturation point",
+      "paper_id": "PACE_ Improving Prompt with Actor-Critic Editing for Large Language Model__oa_W4402669970"
+    },
+    {
+      "quote": "propagation paths in RNNs are deep",
+      "paper_id": "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    },
+    {
+      "quote": "gradients tend to vanish (or blow up)",
+      "paper_id": "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    },
+    {
+      "quote": "may lead to information loss",
+      "paper_id": "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    },
+    {
+      "quote": "TBCNNs are not that sensitive to pooling methods",
+      "paper_id": "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    },
+    {
+      "quote": "c-TBCNN is slightly worse",
+      "paper_id": "Tree-based Convolution_ A New Neural Architecture for Sentence Modeling"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "paper_id": "Liu et al. - 2013 - DOF Duplicate Detectable Opportunistic Forwarding in duty-cycled wireless sensor networks",
+  "doi": null,
+  "title": "DOF: Duplicate Detectable Opportunistic Forwarding in Duty-Cycled Wireless Sensor Networks",
+  "year": 2013,
+  "venue": "IEEE Infocom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "机会路由在低占空比传感网中产生大量重复包,导致信道退化、网络吞吐下降和能量浪费。",
+  "problem_framing": "将重复抑制问题形式化为:在保持机会路由空间多样性的同时,如何用轻量级机制避免多前向器同时接收同一数据分组。",
+  "key_insight": "利用分时隙ACK让发送者探测所有潜在前向器,并向确定性下一跳发送数据,在消除重复的同时保留机会路由的好处。",
+  "method_signature": "基于分时隙确认的重复可检测机会转发协议,probe-data两阶段传输分离。",
+  "evaluation_criteria": "重复率、网络产量(PRR)、能耗(无线占空比)、延迟(前导码数)。",
+  "negative_result_or_admitted_limitation": "软件ACK在流量高时脆弱,发送者等待ACK时新包可能到达,ACK丢失和时隙预测误差在高负载下发生,IPI=1s时PRR低于80%。",
+  "evidence_for_taste": [
+    "duplicates significantly degrade the system performance and should be avoided",
+    "the coordination restricts concurrent transmissions",
+    "the overhearing based approaches are not well adapted to the bursty traffic",
+    "the coordination process introduces extra overhead",
+    "while it limits the number of available ACK slots",
+    "the probe transmission for each data packet is little, it should be avoided when the traffic load is high",
+    "the duplicate ratio of our slot assignment algorithm is just a little higher than the ideal method"
+  ],
+  "thinking_moves": [
+    "将重复抑制与机会路由的优势对立起来,用分时隙ACK作为轻量级折中",
+    "承认理想重复消除与实践可行性的差距,接受轻微重复以换取灵活性",
+    "从实现异常反推协议在高流量下的脆弱性,承认软件ACK的局限性"
+  ],
+  "topic_tags": [
+    "opportunistic routing",
+    "duty-cycled WSN",
+    "duplicate suppression",
+    "low power listening",
+    "MAC protocol design"
+  ],
+  "cites_own_work": [
+    "ORW",
+    "L^2",
+    "CTP",
+    "GreenOrbs"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

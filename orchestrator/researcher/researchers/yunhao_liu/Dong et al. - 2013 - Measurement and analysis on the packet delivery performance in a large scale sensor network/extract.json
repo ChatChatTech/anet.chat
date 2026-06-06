@@ -1,0 +1,43 @@
+{
+  "paper_id": "Dong et al. - 2013 - Measurement and analysis on the packet delivery performance in a large scale sensor network",
+  "doi": null,
+  "title": "Measurement and Analysis on the Packet Delivery Performance in A Large Scale Sensor Network",
+  "year": 2013,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有大规模WSN对各层协议联合影响下的丢包根因缺乏系统性理解,影响系统优化和应用开发",
+  "problem_framing": "将网络丢包分解为可归因的具体类别,建立时空调度关联以揭示根因",
+  "key_insight": "利用因果图对触发事件与丢包事件做时空关联分析,揭示不同丢包类型的空间分布特征各异",
+  "method_signature": "MAP方法学:稳健算法识别丢包与系统事件,因果图追踪交互,时空相关性分析",
+  "evaluation_criteria": "PDR(分组投递率)及各根因占比,含loop/correlation/false positive率",
+  "negative_result_or_admitted_limitation": "数据源仅含数据分组,无法捕获完整系统事件;33.43%丢包无法关联根因",
+  "evidence_for_taste": [
+    "we usually do not know how and to what extent",
+    "The multiple impacts of a single trigger",
+    "we do not examine the correlations among different events",
+    "current ready-to-use TinyOS low power protocol stack is not good enough",
+    "93% of the loop events do not cause overflow drops",
+    "the current packet-level CRC mechanism cannot guarantee",
+    "we cannot associate with root causes"
+  ],
+  "thinking_moves": [
+    "从总体性能指标反推具体根因类别(先分类再归因)",
+    "用因果图替代统计相关,追踪trigger→loss的传导路径",
+    "观察可视化模式(vertical/horizontal banding)触发诊断假设",
+    "承认数据不完整,不硬凑因果,留33%为unknown",
+    "把协议性能差距作为baseline评判自身方法的有效性"
+  ],
+  "topic_tags": [
+    "WSN-packet-delivery",
+    "large-scale-empirical-measurement",
+    "causal-graph-correlation",
+    "GreenOrbs-deployment",
+    "routing-loop-analysis"
+  ],
+  "cites_own_work": [
+    "Liu et al., 2011 - GreenOrbs measurement study (INFOCOM)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文正文中未明确标注会议/期刊名称,年份从论文结构推断为2013,DOI缺失,但核心方法论和作者角色信息完整提取"
+}

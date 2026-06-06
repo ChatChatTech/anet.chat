@@ -1,0 +1,38 @@
+{
+  "paper_id": "Li and Liu - 2007 - Underground structure monitoring with wireless sensor networks",
+  "doi": null,
+  "title": "Underground Structure Monitoring with Wireless Sensor Networks",
+  "year": 2007,
+  "venue": "IPSN'07",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Coal mine collapses cause 50%+ of 480 fatalities in US; rapid detection of collapse holes is critical for rescue",
+  "problem_framing": "Detect hole regions via neighbor loss in mesh network; maintain system validity when topology suddenly changes",
+  "key_insight": "No accelerometers needed—exploit the sensor node hole itself as the indicator of collapse location",
+  "method_signature": "Hexagonal mesh deployment + beacon mechanism + convex hull of edge nodes to bound hole region",
+  "evaluation_criteria": "Detection error (m), reconfiguration error (2D/3D), processing latency, packet loss rate",
+  "negative_result_or_admitted_limitation": "RSS-based neighbor detection fails in coal mine due to dynamic signals; single-node holes undetectable",
+  "evidence_for_taste": [
+    "accelerometer costs $50+",
+    "a naïve method...failed in our prototype",
+    "a small hole affecting only one sensor node cannot be detected",
+    "such a centralized approach often suffers long latency",
+    "directly employing those approaches...will lead to poor detection accuracy"
+  ],
+  "thinking_moves": [
+    "把传感检测问题重新定义为网络拓扑变化问题",
+    "用网络连通性替代传感器硬件检测",
+    "先证明凸包定理成立, 再以此作为检测误差上界",
+    "通过hexagonal规则部署消除邻居集合的不确定性"
+  ],
+  "topic_tags": [
+    "WSN-hole-detection",
+    "underground-monitoring",
+    "self-adaptive-sensor-network",
+    "node-reconfiguration",
+    "coal-mine-safety"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Full paper available with complete method and evaluation sections. Authors clearly distinguish their work from existing WSN hole detection by NOT relying on accelerometers and NOT assuming stable network topology."
+}

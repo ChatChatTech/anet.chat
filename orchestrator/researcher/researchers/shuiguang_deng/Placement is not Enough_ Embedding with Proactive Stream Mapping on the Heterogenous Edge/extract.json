@@ -1,0 +1,41 @@
+{
+  "paper_id": "Placement is not Enough_ Embedding with Proactive Stream Mapping on the Heterogenous Edge",
+  "doi": "10.48550/arxiv.2012.04158",
+  "title": "Placement is not Enough: Embedding with Proactive Stream Mapping on the Heterogenous Edge",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "IoT stream processing on edge requires low latency; existing approaches only optimize function placement passively.",
+  "problem_framing": "Joint optimization of function placement and stream mapping with data splitting on heterogeneous edge to minimize DAG makespan.",
+  "key_insight": "Proactive stream mapping and data splitting can significantly reduce makespan even when function placement appears suboptimal.",
+  "method_signature": "Dynamic programming-based embedding (DPE) solving function embedding substructure optimally.",
+  "evaluation_criteria": "Makespan reduction vs FixDoc and HEFT on Alibaba cluster trace with 2119 DAGs.",
+  "negative_result_or_admitted_limitation": "Complexity O(N!) is of great order; offline algorithm sacrifices runtime for global optimality.",
+  "evidence_for_taste": [
+    "placement of functions is fixed",
+    "global optimality",
+    "optimal substructure",
+    "NP-hard",
+    "offline algorithm"
+  ],
+  "thinking_moves": [
+    "Identify that routing path is passive (SDN-generated) vs should be optimized",
+    "Decompose joint placement+mapping problem via optimal substructure in DP",
+    "Transform infinity norm minimization to LP via slack variables",
+    "Prove optimal condition via AM-GM inequality to avoid simplex method",
+    "Acknowledge NP-hard path enumeration while accepting offline runtime cost"
+  ],
+  "topic_tags": [
+    "edge-computing-embedding",
+    "stream-mapping",
+    "DAG-scheduling",
+    "heterogeneous-edge",
+    "data-splitting"
+  ],
+  "cites_own_work": [
+    "FixDoc (Liu et al. 2019) is compared as baseline"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Shuiguang Deng appears as co-author with equal contribution marker but not explicitly marked as corresponding. Year not explicitly stated in paper; inferred from arxiv ID 2012.xxxxx as 2020."
+}

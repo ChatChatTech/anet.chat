@@ -1,0 +1,38 @@
+{
+  "paper_id": "Cluster-Wide Task Slowdown Detection in Cloud System",
+  "doi": "10.48550/arxiv.2408.04236",
+  "title": "Cluster-Wide Task Slowdown Detection in Cloud System",
+  "year": 2024,
+  "venue": "KDD '24",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "单任务检测在百万并发任务下不可行,且单任务慢速不一定表示集群故障",
+  "problem_framing": "利用任务持续时间分布检测集群级慢速,分布具有复合周期性和局部异常波动",
+  "key_insight": "标准注意力机制偏向高振幅子周期,需逐层剥离高振幅再重建低振幅子周期",
+  "method_signature": "SORN:降序剥离子周期振幅+神经最优传输+挑剔损失函数",
+  "evaluation_criteria": "F1分数、精确率、召回率,多工业数据集对比SOTA方法",
+  "negative_result_or_admitted_limitation": "当时间序列噪声增大且周期严格性降低时性能会下降",
+  "evidence_for_taste": [
+    "we theoretically prove and empirically find the flaw",
+    "The subperiod with low amplitude can not be well reconstructed",
+    "it performs best on the Ali1 and Ali2 datasets",
+    "the effectiveness of our method is positively correlated to the strictness of periodicity"
+  ],
+  "thinking_moves": [
+    "从理论证明标准注意力在复合周期时间序列上的缺陷,再提出经验改进方案",
+    "将异常检测问题重新定义为通信问题:信号提取与噪声分离",
+    "利用最优传输区分集群慢速与其他非周期性正常波动"
+  ],
+  "topic_tags": [
+    "time-series-anomaly-detection",
+    "cloud-operations",
+    "transformer-attention-mechanism",
+    "optimal-transport",
+    "compound-periodicity"
+  ],
+  "cites_own_work": [
+    "LARA: A Light and Antioverfitting Retraining Approach (WWW 2024)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

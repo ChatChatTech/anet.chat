@@ -1,0 +1,37 @@
+{
+  "paper_id": "LSHFed_ Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping",
+  "doi": "10.48550/arxiv.2511.01296",
+  "title": "LSHFed: Robust and Communication-Efficient Federated Learning with Locally-Sensitive Hashing Gradient Mapping",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "分布式联邦学习在信任缺失环境中易受投毒攻击和推理攻击,且现有防御通信开销大",
+  "problem_framing": "将恶意梯度检测、隐私保护、通信压缩三个挑战统一建模",
+  "key_insight": "利用LSH将高维梯度不可逆投影为紧凑比特串,通过汉明距离高效识别恶意更新",
+  "method_signature": "LSHGM多超平面投影生成梯度比特串,ScoreQ-Hash角色选举,掩码隐私保护",
+  "evaluation_criteria": "模型精度(抗攻击)、通信开销(压缩比)、计算效率",
+  "negative_result_or_admitted_limitation": "当恶意节点超过40%时,Krum等基线方法性能崩溃,本文在50%时仍稳定",
+  "evidence_for_taste": [
+    "LSH enables sublinear nearest-neighbor search",
+    "1000× reduction in gradient verification",
+    "approximate linear correlation > 0.98",
+    "maintaining near–no–attack accuracy until the system's theoretical failure point",
+    "Krum also demonstrates relatively strong accuracy at lower adversary fractions, it tends to collapse once the proportion of malicious participants exceeds 40%"
+  ],
+  "thinking_moves": [
+    "将梯度检测问题reframe为communication问题,通过LSH实现信息压缩下的安全验证",
+    "先建立LSH距离与欧氏距离的线性相关性证明,再作为检测有效性的理论依据",
+    "对恶意行为施加惩罚机制,让反复异常的节点在选举中逐渐出局",
+    "将隐私保护和投毒检测统一在不可逆映射框架下,避免分别防御的复杂性"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "locally-sensitive-hashing",
+    "adversarial-robustness",
+    "gradient-privacy",
+    "communication-efficiency"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

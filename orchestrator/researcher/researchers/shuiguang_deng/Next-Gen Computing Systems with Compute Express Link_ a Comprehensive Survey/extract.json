@@ -1,0 +1,44 @@
+{
+  "paper_id": "Next-Gen Computing Systems with Compute Express Link_ a Comprehensive Survey",
+  "doi": "10.48550/arxiv.2412.20249",
+  "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey",
+  "year": 2024,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "互连带宽仅增长30倍而算力增长60000倍,严重限制系统整体性能",
+  "problem_framing": "将CXL研究按单机和分布式分类,覆盖内存扩展、近存处理、统一内存、内存池化和共享",
+  "key_insight": "CXL通过硬件缓存一致性统一加速器和处理器内存访问,避免数据搬移开销",
+  "method_signature": "综述CXL从单机到分布式系统的最新研究,按互联类型、研究内容和负载分类",
+  "evaluation_criteria": "实测延迟带宽、真实应用性能(LLM/Redis/KVS)、仿真平台准确性对比",
+  "negative_result_or_admitted_limitation": "动态页迁移技术TPP会增加尾延迟;软件层-tiering在虚拟化环境开销高;FPGA型CXL设备性能显著低于ASIC型",
+  "evidence_for_taste": [
+    "显著落后",
+    "计算单元需要浪费大量性能",
+    "网络高延迟大大阻碍资源分解",
+    "内存墙挑战",
+    "性能下降10-82%",
+    "预取阶段因延迟和带宽限制导致性能下降",
+    "解码阶段很适合CXL",
+    "必须经过较长的访问路径",
+    "PCIe接口带宽成为主要性能瓶颈"
+  ],
+  "thinking_moves": [
+    "先列现状痛点(算力与带宽增长失衡),再提出CXL作为解法",
+    "按系统规模分层组织(单机→分布式),每层再按研究主题细分",
+    "区分协议层(Type1/2/3设备)解决不同场景问题",
+    "区分仿真与真实硬件性能差异,指出仿真的保守性",
+    "从摩尔定律失效切入引出内存分解范式",
+    "承认前人survey的局限性(时间过早、内容只关注协议本身)"
+  ],
+  "topic_tags": [
+    "CXL内存扩展",
+    "近存处理",
+    "异构计算统一内存",
+    "内存池化分解",
+    "分布式共享内存"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Hiding Images into Images with Real-world Robustness",
+  "doi": "10.48550/arxiv.2110.05689",
+  "title": "Hiding Images into Images with Real-world Robustness",
+  "year": 2021,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "现有图像嵌入网络对JPEG压缩和噪声攻击脆弱，无法用于实际版权保护",
+  "problem_framing": "在保持图像质量和高容量的同时实现真实世界攻击下的鲁棒信息嵌入",
+  "key_insight": "攻击发生在数据嵌入之后而非之前,ADH-GAN的鲁棒性在实际场景无法实现;先提取残差再解码的分步恢复策略有效",
+  "method_signature": "嵌入网络+攻击层+解耦网络+揭示网络,多分支U-Net架构",
+  "evaluation_criteria": "PSNR/SSIM量化嵌入质量与抗攻击恢复效果,对比ADH-GAN",
+  "negative_result_or_admitted_limitation": "网络会过拟合固定JPEG模拟器导致盲JPEG去伪影性能差;四张图像时性能显著下降",
+  "evidence_for_taste": [
+    "pinpoint the weaknesses",
+    "cannot be achieved in real-world",
+    "over-fit a fixed JPEG simulator",
+    "we sacrifice robustness against JPEG",
+    "color inconsistency in the marked image"
+  ],
+  "thinking_moves": [
+    "发现ADH-GAN训练流程与实际攻击顺序相反导致失效",
+    "将恢复任务分解为先残差提取再解码的两阶段",
+    "借鉴Mixup数据增强思想用多JPEG实现混合训练",
+    "通过消融实验验证每个组件的必要性"
+  ],
+  "topic_tags": [
+    "image-hiding",
+    "deep-steganography",
+    "robust-watermarking",
+    "adversarial-training",
+    "jpeg-robustness"
+  ],
+  "cites_own_work": [
+    "From image to imuge: Immunized image generation"
+  ],
+  "extraction_quality": "full"
+}

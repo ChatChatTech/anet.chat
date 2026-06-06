@@ -1,0 +1,38 @@
+{
+  "paper_id": "A Model-Based Fuzzy Control Approach to Achieving Adaptation with Contextual Uncertainties",
+  "doi": "10.48550/arxiv.1704.00417",
+  "title": "A Model-Based Fuzzy Control Approach to Achieving Adaptation with Contextal Uncertainties",
+  "year": 2017,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "SAS需要处理开放环境的变化,但现有方法缺乏对上下文不确定性与需求不确定性交织情境的动态适应量化研究",
+  "problem_framing": "将NFR满意度度量和任务配置的动态调整问题,形式化为前馈-反馈模糊控制系统的调节问题",
+  "key_insight": "利用前馈模糊控制器处理上下文变化对NFR期望满意度的影响,反馈回路则通过偏差纠正任务配置,实现两层自适应",
+  "method_signature": "基于目标模型和上下文层次模型构建模糊控制器,使用语言变量和隶属度函数表示不确定性,通过三类启发式规则(UPD/ENA/COR)进行推理",
+  "evaluation_criteria": "移动推送通知应用仿真实验,检验NFR满意度偏差是否在阈值范围内,统计可接受偏差比例",
+  "negative_result_or_admitted_limitation": "规则设计依赖专家知识,人类专家可能无法观察所有系统行为;当规则数量增加时会产生冲突需检测消除",
+  "evidence_for_taste": [
+    "the inherent fuzziness and vagueness of human perception",
+    "we cannot precisely define the mathematical relations",
+    "Fuzzy inference is a quantitative approach",
+    "the results correspond to our cognition and perception",
+    "a human expert cannot observe all system behaviors"
+  ],
+  "thinking_moves": [
+    "将需求工程中的模糊不确定性问题映射为控制理论中的扰动输入问题",
+    "把NFR适应和任务配置适应解耦为前馈控制和反馈控制两个独立回路",
+    "用语言变量桥接人类认知中的模糊性与精确的数学推理",
+    "通过正负相关性将任务参数变化与软目标满意度变化进行形式化关联"
+  ],
+  "topic_tags": [
+    "fuzzy-control-SAS",
+    "NFR-dynamic-adaptation",
+    "feedforward-feedback-control",
+    "context-uncertainty-modeling",
+    "requirements-engineering-control-theory"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,36 @@
+{
+  "paper_id": "A simple model clarifies the complicated relationships of complex networks",
+  "doi": "10.1038/srep06197",
+  "title": "A simple model clarifies the complicated relationships of complex networks",
+  "year": 2014,
+  "venue": "Scientific Reports",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "数百种网络模型解释不同特质,导致学界认为不同特质源于不同成因,但组合爆炸使模型过于复杂",
+  "problem_framing": "将多种网络类型统一为双目标优化问题:最小化节点度和最大化边度,同时约束平均路径长度",
+  "key_insight": "平均路径长度c如同分光光谱,可区分完整网络、Delta分布、紧凑、社区、逾渗、分形等类型",
+  "method_signature": "基于三度量(节点度、边度、平均路径)的双目标优化,贪婪策略求解Pareto前沿",
+  "evaluation_criteria": "生成网络是否符合幂律分布(γ≈期望值),实际平均路径是否接近约束c值",
+  "negative_result_or_admitted_limitation": "使用贪心策略仅得局部最优而非全局最优,全局最优需模拟退火但计算时间过长",
+  "evidence_for_taste": [
+    "combinatorics would make such a schema quite complicated",
+    "different types of complex networks originate from different origins",
+    "Because different models used very different mechanisms, it is widely believed",
+    "the resultant networks are local optimal solutions, not global optimal solutions"
+  ],
+  "thinking_moves": [
+    "将不同网络类型归因于同一优化模型的不同Pareto解",
+    "用约束c作为光谱线连续区分网络类型",
+    "通过Pareto前沿概念连接多目标优化与网络分类",
+    "承认算法仅得局部最优以换取实用性"
+  ],
+  "topic_tags": [
+    "complex-networks-optimization",
+    "bi-objective-Pareto-network-generation",
+    "average-path-length-spectral-parameter",
+    "scale-free-unification-theory",
+    "network-taxonomy-derivation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

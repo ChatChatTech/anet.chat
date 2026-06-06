@@ -1,0 +1,38 @@
+{
+  "paper_id": "Semantic-Preserving Linguistic Steganography by Pivot Translation and Semantic-Aware Bins Coding",
+  "doi": "10.48550/arxiv.2203.03795",
+  "title": "Semantic-Preserving Linguistic Steganography by Pivot Translation and Semantic-Aware Bins Coding",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "MLS methods have low payload; GLS methods have semantic inconsistency. Want high payload without sacrificing semantics.",
+  "problem_framing": "Text steganography tradeoff between embedding capacity and semantic preservation across MLS vs GLS paradigms",
+  "key_insight": "Use pivot translation (En→Ge→En) to alter expression while anchoring semantics in German pivot text",
+  "method_signature": "En2Ge2En Seq2Seq model with Semantic-aware Bins coding for token-to-bits mapping",
+  "evaluation_criteria": "BLEU/BERTScore for semantics, PPL for fluency, steganalysis accuracy for security",
+  "negative_result_or_admitted_limitation": "Word-level causes many unknown tokens and security drops sharply (Fig.4)",
+  "evidence_for_taste": [
+    "BPE and subword have become one of the core technologies",
+    "is also related to linguistic steganography",
+    "we leave the optimization for our future work",
+    "a sharp decline for the embedding payload",
+    "more likely to arouse the suspicion of the detector"
+  ],
+  "thinking_moves": [
+    "Bridge MLS and GLS by reframing paraphrase generation as a steganographic encoding opportunity",
+    "Anchor semantic invariance in an intermediate language (German) to decouple expression from meaning",
+    "Trade vocabulary coverage for subword granularity to eliminate unknown tokens that betray embedding",
+    "Accept that common-token strategies hurt payload; instead design semantic-aware bin assignment to preserve quality without sacrifice"
+  ],
+  "topic_tags": [
+    "linguistic-steganography",
+    "pivot-translation",
+    "semantic-consistency",
+    "information-encoding",
+    "subword-tokenization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

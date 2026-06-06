@@ -1,0 +1,48 @@
+{
+  "paper_id": "A Log-based and Traceability-Oriented Business Object Association Model for Code Generation",
+  "doi": null,
+  "title": "A Log-based and Traceability-Oriented Business Object Association Model for Code Generation",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "企业软件需要敏捷重构,传统过程导向建模不完备,且业务对象间关联频繁变化",
+  "problem_framing": "业务对象内部稳定但对象间关联易变,现有OO/E-R方法将关联编码为对象属性导致僵硬",
+  "key_insight": "将关联从对象内部剥离为独立日志,使简单操作处理单对象状态变更,复杂操作通过操作关联日志实现对象关联追踪",
+  "method_signature": "业务对象模型+状态日志+关联日志+简单/复杂操作分离+代码生成工具",
+  "evaluation_criteria": "二次开发周期缩短比例(从1月降至12天,效率提升60%)",
+  "negative_result_or_admitted_limitation": "只能处理单据和资源对象,报表对象因数据来源复杂暂不支持;仅处理数值关联,其他关联类型未考虑",
+  "evidence_for_taste": [
+    "cannot support n to n associations",
+    "increase the complexity of programming",
+    "increase the chaos of object structure",
+    "only if business object and the corresponding operation models are flexible enough",
+    "separate those unstable elements from those stable ones",
+    "elements that usually change are mainly the associations",
+    "elements that frequently change",
+    "the former mainly done during design phase and the latter mainly dealt with during implementation phase"
+  ],
+  "thinking_moves": [
+    "从对象结构混乱问题反推关联应独立于对象",
+    "把可变关联从稳定对象中分离以实现关注点分离",
+    "将关联建模为独立运行日志以支持追踪和动态变化",
+    "将业务操作分为简单(单对象)和复杂(跨对象关联)两类",
+    "从代码生成目标逆向设计模型结构以保证可转换性"
+  ],
+  "topic_tags": [
+    "business-object-association",
+    "log-based-traceability",
+    "code-generation",
+    "ESA-agile-reconfiguration",
+    "separation-of-concerns"
+  ],
+  "cites_own_work": [
+    [
+      "WANG Z J, XU X F, ZHAN D C. Reconfiguration oriented business models for enterprise information system. Computer Applications, 2005",
+      "WANG Z J, XU X F, ZHAN D C. RO-BPM: A reconfiguration-oriented business process model. Computer Integrated Manufacturing Systems, 2004",
+      "WANG Z J, XU X F, ZHAN D C. Component Granularity Optimization Design Based on Business Model Stability Evaluation. Chinese Journal of Computers. 2006"
+    ]
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注年份和发表venue,表格中日期显示2006年但属于模拟数据而非发表时间"
+}

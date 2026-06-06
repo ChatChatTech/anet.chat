@@ -1,0 +1,43 @@
+{
+  "paper_id": "Blockchain-based collaborative edge computing_ efficiency, incentive and trust",
+  "doi": "10.1186/s13677-023-00452-4",
+  "title": "Blockchain-based collaborative edge computing: efficiency, incentive and trust",
+  "year": 2023,
+  "venue": "Cluster Computing",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "边缘服务器属于不同提供商，缺乏协作激励；协作过程需要可追溯和可信的记录；传统中心化存储不适配分布式场景。",
+  "problem_framing": "用户需求多变、边缘设施异构、用户与服务器数量不匹配场景下的计算卸载与资源分配问题。",
+  "key_insight": "VCG拍卖使出价规则满足Nash均衡和弱优势策略，区块链确保协作过程可追溯且不可篡改。",
+  "method_signature": "E-VCG: 基于VCG拍卖的两阶段边缘需求响应方法，结合区块链优化激励与信任机制。",
+  "evaluation_criteria": "负载均衡、服务时间方差、任务传输距离、能源消耗、用户QoE。",
+  "negative_result_or_admitted_limitation": "仅考虑静态场景，未考虑用户移动性的动态影响。",
+  "evidence_for_taste": [
+    "load balancing of edge systems is beneficial",
+    "improve the edge resource utilization",
+    "satisfy the Nash equilibrium",
+    "more effective for algorithms with uneven demand response",
+    "slightly outperforms the UCB method",
+    "forking attack by blockchain"
+  ],
+  "thinking_moves": [
+    "把VCG拍卖应用于边缘计算的不平衡供需场景",
+    "用区块链解决多边缘节点间的激励与信任问题",
+    "从负载均衡角度切入优化边缘资源利用",
+    "识别区块链在边缘协作中的forking attack风险",
+    "分三类场景对比协作与否的性能差异"
+  ],
+  "topic_tags": [
+    "VCG拍卖计算卸载",
+    "区块链边缘协作",
+    "边缘负载均衡",
+    "边缘需求响应",
+    "区块链安全攻击"
+  ],
+  "cites_own_work": [
+    "12",
+    "24"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Link Clustering Based Approach for Clustering Categorical Data",
+  "doi": "10.48550/arxiv.cs/0412019",
+  "title": "A Link Clustering Based Approach for Clustering Categorical Data",
+  "year": 2004,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "CDC和LC被割裂为独立研究领域，两者之间存在可交叉借鉴的底层共性",
+  "problem_framing": "将CDC问题形式化为等价的LC问题，通过属性划分构造等价类作为链接",
+  "key_insight": "CDC问题与LC问题等价，两个领域的算法可以互换使用",
+  "method_signature": "将分类数据属性等价类映射为链接，应用LC的概率生成模型聚类",
+  "evaluation_criteria": "聚类准确率r=∑ai/n，其中ai为簇与真实类别的最大重叠数",
+  "negative_result_or_admitted_limitation": "LCBCDC在癌症数据集上仅覆盖392/683条记录，其余被当作异常处理",
+  "evidence_for_taste": [
+    "算法可以互换使用",
+    "CDC problem and LC problem are equivalent",
+    "一个对象也可以被分配到多个簇",
+    "our method could provide at least the same level of accuracy",
+    "Our experimental results show the new categorical data clustering methods to achieve better clustering accuracy"
+  ],
+  "thinking_moves": [
+    "识别两个独立领域(Categorical Data Clustering与Link Clustering)共享的底层结构",
+    "通过形式化等价变换建立领域间的映射关系",
+    "借用已有成熟算法的概率生成模型框架解决问题",
+    "用实验验证理论声明的实践可行性"
+  ],
+  "topic_tags": [
+    "categorical-data-clustering",
+    "link-clustering",
+    "cross-domain-algorithm-transfer",
+    "probabilistic-generative-model",
+    "equivalence-class-link-mapping"
+  ],
+  "cites_own_work": [
+    "Squeezer: an efficient algorithm for clustering categorical data (2002)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文来源于arXiv，年代较早，venue信息缺失。Xiaofei Xu是合著者（非第一作者），论文与作者之前发表的Squeezer算法有承接关系。"
+}

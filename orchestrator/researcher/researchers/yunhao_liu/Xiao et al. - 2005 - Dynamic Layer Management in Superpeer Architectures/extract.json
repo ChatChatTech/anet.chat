@@ -1,0 +1,38 @@
+{
+  "paper_id": "Xiao et al. - 2005 - Dynamic Layer Management in Superpeer Architectures",
+  "doi": null,
+  "title": "Dynamic Layer Management in Superpeer Architectures",
+  "year": 2005,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Superpeer P2P systems lack layer management; transient/low-capacity peers act as superpeers and size ratio is uncontrolled",
+  "problem_framing": "Three open problems: optimal leaf-to-super ratio, ratio maintenance, and peer selection for superlayer",
+  "key_insight": "Optimal ratio = sqrt((B-C)/A)-1 by minimizing weighted workload combining superpeer load and network-wide load",
+  "method_signature": "Workload model (connection+query+relay) + distributed DLM with scaled capacity/age comparisons",
+  "evaluation_criteria": "Layer size ratio stability, superpeer avg capacity/age, weighted workload minimization vs theoretical optimum",
+  "negative_result_or_admitted_limitation": "Cannot minimize superpeer workload and network workload simultaneously; trade-off is fundamental",
+  "evidence_for_taste": [
+    "impossible to minimize these two workloads",
+    "there is a trade-off between these two workloads",
+    "Unfortunately, these two goals are not always compatible",
+    "the ratio of PAO to NLCO is trivial",
+    "the additional overhead is negligible"
+  ],
+  "thinking_moves": [
+    "把全局优化问题分解为可独立计算的最优参数",
+    "引入对数比例mu=log(l_nn/k_l)作为失衡标志",
+    "用比例控制调节规模参数X_capa和X_age",
+    "先建模证明最坏/最优情况界再仿真验证"
+  ],
+  "topic_tags": [
+    "superpeer-P2P",
+    "layer-management-algorithm",
+    "workload-model",
+    "distributed-protocol-design",
+    "peer-elections"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

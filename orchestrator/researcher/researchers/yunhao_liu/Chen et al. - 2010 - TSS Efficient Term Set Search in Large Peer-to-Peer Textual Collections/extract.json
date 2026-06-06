@@ -1,0 +1,37 @@
+{
+  "paper_id": "Chen et al. - 2010 - TSS Efficient Term Set Search in Large Peer-to-Peer Textual Collections",
+  "doi": null,
+  "title": "TSS: Efficient Term Set Search in Large Peer-to-Peer Textual Collections",
+  "year": 2010,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "P2P多关键词搜索因依赖多次单关键词查询而承受不可接受的流量开销，而预计算词集索引虽能降低开销但索引规模指数爆炸。",
+  "problem_framing": "将大规模P2P文本检索的可扩展性问题形式化为：如何在保持搜索精度的同时，将词集索引规模从指数级压缩到线性规模。",
+  "key_insight": "观察到用户查询普遍简短(85%≤3词)且兴趣有限，故只需索引最高相关性的词集，牺牲少量召回率换取指数级索引压缩。",
+  "method_signature": "基于TFxIDF排名的词集剪枝算法，仅发布top λn·log(n)个相关词集到分布式哈希表。",
+  "evaluation_criteria": "通信开销降低倍数、召回率、精确率、F-Score、p@k排名准确率。",
+  "negative_result_or_admitted_limitation": "TSS确实降低召回率，且不打算与更精细化的集中式检索算法竞争(first step, TSS does not target at competing with more elaborated centralized retrieval algorithms)。",
+  "evidence_for_taste": [
+    "slightly lower Recall but higher Precision",
+    "A higher Precision is commonly more desirable",
+    "Precomputing the index makes a trade-off",
+    "TSS has slightly lower Recall but higher Precision"
+  ],
+  "thinking_moves": [
+    "从用户查询日志统计中发现查询长度分布规律，将其转化为索引剪枝策略",
+    "将指数级索引问题转化为选择最相关子集的多目标优化问题",
+    "用TFxIDF作为相关性度量，将主观搜索质量映射为可计算的排序分数",
+    "承认精确率-召回率权衡，明确标注方法定位为first step而非端到端解决方案"
+  ],
+  "topic_tags": [
+    "P2P-search",
+    "DHT-indexing",
+    "term-set-pruning",
+    "TFxIDF-ranking",
+    "distributed-information-retrieval"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

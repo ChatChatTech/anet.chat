@@ -1,0 +1,35 @@
+{
+  "paper_id": "2022_BIGCOM_Federated_Learning_with_Personalized_Differential_Privacy_Combining_Client_Selection",
+  "doi": null,
+  "title": "Federated Learning with Personalized Differential Privacy Combining Client Selection",
+  "year": 2022,
+  "venue": "BIGCOM",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "现有FL+DP研究假设所有客户隐私需求相同，现实中人们的隐私需求各不相同",
+  "problem_framing": "FL中客户拥有个性化隐私预算，DP机制与客户端选择未结合导致模型性能下降",
+  "key_insight": "偏好高本地损失小添加噪声的客户；噪声对训练后期影响大于前期",
+  "method_signature": "PDP机制结合采样降低噪声 + 考虑本地损失和隐私需求的客户端选择评分",
+  "evaluation_criteria": "MNIST数据集上的训练损失和模型精度",
+  "negative_result_or_admitted_limitation": "隐私预算分配策略过于简单（均分到训练迭代），影响机制性能",
+  "evidence_for_taste": [
+    "part of clients with extreme high privacy needs will hurt the performance of the model",
+    "The privacy budget allocation for clients in our mechanism is very simple",
+    "which is likely to affect the performance of the mechanism"
+  ],
+  "thinking_moves": [
+    "理论推导收敛界后提取工程设计原则",
+    "将隐私需求问题从数据库领域迁移到FL领域重新定义",
+    "通过定理发现噪声影响随训练进行指数增长这一动态特性"
+  ],
+  "topic_tags": [
+    "federated-learning",
+    "personalized-differential-privacy",
+    "client-selection",
+    "convergence-analysis",
+    "privacy-utility-tradeoff"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

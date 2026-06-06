@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zheng et al. - 2017 - Interference Resilient Duty Cycling for Sensor Networks Under Co-Existing Environments",
+  "doi": null,
+  "title": "Interference Resilient Duty Cycling for Sensor Networks under Co-existing Environments",
+  "year": 2017,
+  "venue": "SenSys (prior presentation)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "无线传感网低功耗模式下,LPL/LPP机制在干扰下产生错误唤醒和空闲监听,导致能耗浪费",
+  "problem_framing": "现有机制依赖信号强度检测(太松)或探测包解码(太严),均易受干扰影响",
+  "key_insight": "通过RSSI时域序列特征(On-air时间、MPI、PAPR、UNF)识别ZigBee信号而非依赖能量阈值",
+  "method_signature": "基于规则的时域RSSI特征提取与ZigBee识别",
+  "evaluation_criteria": " duty cycle reduction, false wake-up ratio, PDR",
+  "negative_result_or_admitted_limitation": "Algorithm 1仅识别87.6% ZigBee段,且在强干扰下存在误识风险",
+  "evidence_for_taste": [
+    "检查信号强度是宽松条件",
+    "解码探测包是严格条件",
+    "只唤醒ZigBee传输时",
+    "遵循保守设计原则",
+    "保守设计原则"
+  ],
+  "thinking_moves": [
+    "通过实验揭示现有机制的根本缺陷:能量检测太松、解码探测太严",
+    "将识别问题重新定义为'只识别ZigBee传输'而非'区分干扰'",
+    "提出保守设计原则:宁可误识干扰也不漏识ZigBee",
+    "从物理层标准(802.15.4)推导特征(PAPR、On-air时间)而非从数据推导",
+    "承认初始规则的局限性后改进为鲁棒算法"
+  ],
+  "topic_tags": [
+    "low-duty-cycle-MAC",
+    "ZigBee-interference-mitigation",
+    "RSSI-pattern-analysis",
+    "wireless-sensor-network",
+    "interference-resilient-protocol"
+  ],
+  "cites_own_work": [
+    "prior SenSys 2014 version"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

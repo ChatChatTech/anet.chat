@@ -1,0 +1,41 @@
+{
+  "paper_id": "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds",
+  "doi": "10.48550/arxiv.2204.04371",
+  "title": "Learning to Schedule Multi-Server Jobs with Fluctuated Processing Speeds",
+  "year": 2022,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "生产环境中多服务器作业的处理速度因DVFS等技术动态波动，现有算法需要预先知道速度才能做出调度决策",
+  "problem_framing": "将波动速度下的多服务器作业调度建模为在线学习问题，通过遗憾最小化框架最大化累积效用",
+  "key_insight": "虽然实际处理速度随时间波动，但其来自硬件规格决定的潜在分布，算法可通过探索-利用学习该分布",
+  "method_signature": "ESDP结合在线学习与动态规划，通过求解一系列松弛的整数规划问题实现多项式时间求解",
+  "evaluation_criteria": "累积总体效用(AOU)、遗憾上界O(ln T)、与基准策略的仿真对比提升达73%/36%/28%",
+  "negative_result_or_admitted_limitation": "ESDP对线性可分效用有较低遗憾，但性能保证不适用于非线性情形",
+  "evidence_for_taste": [
+    "maximize the cumulative overall utility",
+    "best-so-far regret O(ln T)",
+    "solved in polynomial time",
+    "We make no assumptions on the convexity",
+    "logarithmically with the time slot length",
+    "perform extensive simulations"
+  ],
+  "thinking_moves": [
+    "将随机优化问题转化为遗憾最小化问题进行理论分析",
+    "通过收敛到零的序列构造松弛问题将随机规划转为确定性优化",
+    "利用动态规划递归求解松弛后的整数规划实现多项式复杂度"
+  ],
+  "topic_tags": [
+    "multi-server job scheduling",
+    "fluctuated processing speeds",
+    "service locality",
+    "online learning",
+    "dynamic programming"
+  ],
+  "cites_own_work": [
+    "H. Zhao, S. Deng, Z. Liu, Z. Xiang, J. Yin, S. Dustdar, and A. Zomaya, \"Dpos...\" (reference [26])",
+    "H. Zhao, S. Deng, Z. Xiang, and J. Yin, \"Online social welfare...\" (reference [27])"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

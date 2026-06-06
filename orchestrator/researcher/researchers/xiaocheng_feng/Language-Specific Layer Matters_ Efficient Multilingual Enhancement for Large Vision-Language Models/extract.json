@@ -1,0 +1,39 @@
+{
+  "paper_id": "Language-Specific Layer Matters_ Efficient Multilingual Enhancement for Large Vision-Language Models",
+  "doi": "10.18653/v1/2025.findings-emnlp.666",
+  "title": "Language-Specific Layer Matters: Efficient Multilingual Enhancement for Large Vision-Language Models",
+  "year": 2025,
+  "venue": "EMNLP Findings",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "LVLMs exhibit severe multilingual imbalance due to English-centric training corpora, limiting real-world global deployment.",
+  "problem_framing": "Identify which model layers handle language-specific representations to enable targeted, efficient multilingual enhancement.",
+  "key_insight": "Language-specific neuron activations concentrate in shallow decoder layers; fine-tuning only these layers achieves efficient multilingual alignment.",
+  "method_signature": "PLAST: monitor neuron activation MSD to identify language-specific layers, then fine-tune only top-5 decoder layers with question-translation pairs.",
+  "evaluation_criteria": "Average accuracy across 6 languages on MMBench/MMMB; parameter efficiency (tuned params ratio); training cost reduction vs full fine-tuning.",
+  "negative_result_or_admitted_limitation": "Performance trade-offs exist across languages due to pre-training data imbalances; larger-scale model experiments not conducted due to compute limits.",
+  "evidence_for_taste": [
+    "shallow layers more engaged in learning language-specific representations",
+    "multilingual understanding is predominantly localized in the shallow layers",
+    "Precisely selecting layers that are actively involved in multilingual comprehension is essential",
+    "Indiscriminately fine-tuning all language-specific layers might compromise inherent general capabilities"
+  ],
+  "thinking_moves": [
+    "从LLM的多语言机制研究迁移到LVLM，验证三层工作模式（语言理解→任务解决→语言转换）是否适用",
+    "用logit lens可视化和神经元激活统计（MSD）代替主观的layer selection假设",
+    "区分语言特定层vs任务解决层：前者用MSD衡量语言间激活差异，后者保持通用能力不被破坏",
+    "从full-parameter fine-tuning退回到layer-selective tuning，牺牲部分自由度换取效率提升"
+  ],
+  "topic_tags": [
+    "multilingual-LVLM",
+    "language-specific-neuron",
+    "shallow-layer-fine-tuning",
+    "parameter-efficient-training",
+    "vision-language-alignment"
+  ],
+  "cites_own_work": [
+    "Fan et al., 2025 (语言特异性神经元研究)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

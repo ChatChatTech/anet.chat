@@ -1,0 +1,37 @@
+{
+  "paper_id": "SEAG_ Structure-Aware Event Causality Generation",
+  "doi": "10.18653/v1/2023.findings-acl.283",
+  "title": "SEAG: Structure-Aware Event Causality Generation",
+  "year": 2023,
+  "venue": "ACL Findings",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "pipelined方法分离事件检测和因果识别导致错误传播，缺乏跨任务依赖，破坏事件因果图的完整性",
+  "problem_framing": "将事件因果提取建模为结构化生成问题，而非两阶段抽取，通过图线性化将ECG转为序列进行端到端text2text生成",
+  "key_insight": "关系词(如动词)使线性化序列更流畅接近自然语言；因果图结构判别训练让模型区分正负ECG结构而非仅学习表层特征",
+  "method_signature": "图线性化模板 + T5/BART生成 + 因果结构判别多任务训练",
+  "evaluation_criteria": "事件因果三元组精确匹配(Directed需方向一致)的P/R/F1",
+  "negative_result_or_admitted_limitation": "在EventStoryLine上F1仅35%左右，远低于SCITE的92%；对隐式因果抽取不如显式因果效果好",
+  "evidence_for_taste": [
+    "this is not suitable for Event Causality Extraction",
+    "we find this constraint is enough",
+    "model suffers in extracting implicit event causality",
+    "severely deteriorates linguistic structure",
+    "the model is prone to extract unfaithful ECGs"
+  ],
+  "thinking_moves": [
+    "将pipeline两阶段问题重新frame为端到端结构化生成",
+    "图结构信息需要保持完整，转为序列时不破坏因果语义",
+    "对比学习中负样本并非所有节点边都错，需区分优化",
+    "用生成式预训练模型的优势来克服小样本学习困难"
+  ],
+  "topic_tags": [
+    "event-causality-extraction",
+    "graph-linearization",
+    "structural-discrimination",
+    "text2text-generation",
+    "joint-extraction"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

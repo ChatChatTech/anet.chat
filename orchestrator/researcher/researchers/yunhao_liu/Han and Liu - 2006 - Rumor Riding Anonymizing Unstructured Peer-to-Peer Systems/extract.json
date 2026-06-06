@@ -1,0 +1,42 @@
+{
+  "paper_id": "Han and Liu - 2006 - Rumor Riding Anonymizing Unstructured Peer-to-Peer Systems",
+  "doi": null,
+  "title": "Rumor Riding: Anonymizing Unstructured Peer-to-Peer Systems",
+  "year": 2006,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有基于路径的匿名方案存在高开销问题：路径预构建、周期性维护更新、动态P2P中节点离线导致路径失效",
+  "problem_framing": "如何在无预构建路径下实现轻量级双向匿名，同时降低加密开销并提高可靠性",
+  "key_insight": "将密钥和密文作为分离的\"谣言\"随机游走，在相遇的\"播种者\"节点处组装，利用对称加密替代非对称加密",
+  "method_signature": "基于随机游走的非路径匿名协议，谣言碰撞机制实现端到端匿名",
+  "evaluation_criteria": "碰撞率、碰撞距离、播种者数量、流量开销、加密延迟、响应时间",
+  "negative_result_or_admitted_limitation": "理论分析仅考虑理想情况，实际中独立采样假设不成立，实际播种者数量少于估计；协议在全局对手控制网络时失效",
+  "evidence_for_taste": [
+    "eliminates the heavy load of path construction",
+    "without involving the asymmetric cryptographic algorithm",
+    "significantly cuts down the cryptographic overhead",
+    "it is not practical to employ P5 in a P2P system",
+    "This feature also results in a low latency",
+    "It must be admitted that the above result merely considers the ideal case"
+  ],
+  "thinking_moves": [
+    "从现有路径方案的三大缺陷（构建、维护、可靠性）系统归纳问题",
+    "用随机游走替代预构建路径，彻底改变问题形式",
+    "引入对称加密替代RSA，从根本上降低开销",
+    "理论建模碰撞率（公式推导），再通过仿真验证实际拓扑",
+    "从攻击者视角分层分析（本地协同、时序、前驱、流量分析、追溯），证明协议防御能力",
+    "承认理论与实践的gap，承认协议局限",
+    "实现验证实际吞吐量和延迟，而非仅理论分析"
+  ],
+  "topic_tags": [
+    "P2P匿名通信",
+    "随机游走协议",
+    "轻量级加密",
+    "非路径匿名",
+    "Rumors碰撞机制"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注发表venue，但从格式和参考文献判断为会议论文。未明确标注Yunhao Liu的具体贡献比例。理论分析在Section IV有详细推导，但实现验证部分(Section VI)较简略。"
+}

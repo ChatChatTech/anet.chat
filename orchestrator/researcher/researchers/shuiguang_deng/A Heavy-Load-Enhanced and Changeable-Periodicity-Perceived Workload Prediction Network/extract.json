@@ -1,0 +1,37 @@
+{
+  "paper_id": "A Heavy-Load-Enhanced and Changeable-Periodicity-Perceived Workload Prediction Network",
+  "doi": "10.48550/arxiv.2308.01917",
+  "title": "A Heavy-Load-Enhanced and Changeable-Periodicity-Perceived Workload Prediction Network",
+  "year": 2023,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "云服务器工作负载高度可变且偶发高峰，现有方法假设固定周期或不平衡数据处理导致预测精度有限",
+  "problem_framing": "将工作负载预测问题定义为周期自适应检测与稀有重负载优先优化的双挑战联合建模",
+  "key_insight": "通过周期感知机制自动检测变周期,通过阿喀琉斯之踵损失函数迭代优化预测序列中误差最大的片段",
+  "method_signature": "PePNet编码器-解码器架构融合长期趋势/短期依赖/周期信息,AHLF动态调整梯度权重",
+  "evaluation_criteria": "MSE/MAE/MAPE综合评估整体与重负载预测精度,对比SOTA方法提升11.8%整体和21.0%重负载MSE",
+  "negative_result_or_admitted_limitation": "现有SOTA方法在重负载上误差几乎是整体误差的两倍,且忽略SLA违规风险",
+  "evidence_for_taste": [
+    "errors in heavy-workload prediction are more likely to cause SLA violations",
+    "the error is nearly twice as large as the former's error",
+    "mitigating the overemphasis on sporadic patterns",
+    "Periodicity-Perceived Mechanism contributes more to the prediction accuracy than the AHLF"
+  ],
+  "thinking_moves": [
+    "从SLA违规风险重新定义重负载预测的重要性权重",
+    "将损失函数设计从均匀加权改为聚焦最差片段的迭代优化",
+    "利用自相关系数的周期峰值模式自动检测变周期长度",
+    "先证周期性挖掘误差上界,再提供GMM自动调参策略"
+  ],
+  "topic_tags": [
+    "cloud-workload-prediction",
+    "periodicity-detection",
+    "heavy-load-burst",
+    "encoder-decoder",
+    "imbalanced-regression"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

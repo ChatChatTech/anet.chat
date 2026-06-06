@@ -1,0 +1,38 @@
+{
+  "paper_id": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+  "doi": "10.48550/arxiv.1508.03720",
+  "title": "Classifying Relations via Long Short Term Memory Networks along Shortest Dependency Path",
+  "year": 2015,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Relation classification现有方法依赖人工特征或核函数设计,深度学习虽有潜力但仍需人工知识介入网络结构",
+  "problem_framing": "将关系分类建模为沿两实体间最短依存路径的序列特征学习问题,需捕获关系方向性",
+  "key_insight": "最短依存路径浓缩最相关信息且消除噪声;分两子路径处理可捕获关系方向性r(a,b)≠r(b,a)",
+  "method_signature": "SDP-LSTM:多通道LSTM沿SDP两子路径分别传播,经max pooling拼接后softmax分类",
+  "evaluation_criteria": "SemEval-2010 Task 8宏平均F1-score(含19类关系)",
+  "negative_result_or_admitted_limitation": "LSTM单元dropout会伤害模型记忆能力,即使小dropout率0.1也不行",
+  "evidence_for_taste": [
+    "Shortest dependency paths are informative",
+    "Direction matters",
+    "Linguistic information helps",
+    "dropout of LSTM units hurts the model",
+    "these information sources are complementary",
+    "we think it necessary to let the neural model process information in a direction-sensitive manner"
+  ],
+  "thinking_moves": [
+    "将依存树的有向路径用于捕获关系方向性,而非仅用句子的词序列",
+    "沿依存路径的多通道信息(词性/语法关系/上位词)可互补",
+    "通过控制实验验证LSTM单元和方向性处理的有效性"
+  ],
+  "topic_tags": [
+    "Relation classification",
+    "Shortest dependency path",
+    "LSTM recurrent network",
+    "Multichannel neural architecture",
+    "SemEval-2010 Task 8"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

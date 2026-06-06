@@ -1,0 +1,40 @@
+{
+  "paper_id": "Robustifying Learning-Augmented Caching Efficiently without Compromising 1-Consistency",
+  "doi": "10.48550/arxiv.2507.16242",
+  "title": "Robustifying Learning-Augmented Caching Efficiently without Compromising 1-Consistency",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Learning-augmented caching achieves ideal 1-consistency but lacks robustness; existing robustification sacrifices consistency or incurs excessive overhead",
+  "problem_framing": "Online caching minimization under limited cache size; enhance robustness of 1-consistent algorithms while preserving optimal performance under perfect predictions",
+  "key_insight": "Guard pages only upon detected prediction errors using lightweight phase-based mechanism, avoiding costly recomputation while preserving 1-consistency",
+  "method_signature": "GUARD framework with phase-based error detection and guard mechanism, O(1) per-request overhead",
+  "evaluation_criteria": "Consistency (competitive ratio under perfect predictions), robustness (bound under arbitrary errors), smoothness (degradation with prediction errors)",
+  "negative_result_or_admitted_limitation": "F&R and F&R (FITF) incur O(n² log k) overhead due to recomputing optimal solution; marking-based methods restrict attaining 1-consistency",
+  "evidence_for_taste": [
+    "lacks robustness: it can perform arbitrarily worse when predictions are inaccurate",
+    "this introduces a multiplicative factor of 2 in the robustness guarantees",
+    "its overhead is prohibitive for real-time use",
+    "may prevent necessary evictions that would otherwise be justified by accurate predictions",
+    "overly aggressive random evictions may lead to a long eviction chain",
+    "this comparison is often insensitive"
+  ],
+  "thinking_moves": [
+    "观察到immediate protection损害一致性，从全局相位视角重新设计保护时机",
+    "从昂贵的显式错误检测（重算OPT）转向利用最优驱逐内在模式的隐式检测",
+    "把预测驱动驱逐限制在guarded/un-guarded集合上，实现一致性保持",
+    "通过eviction chain分析建立随机驱逐的概率上界，连接smoothness与inversions",
+    "承认过度保护的问题，转而只在证据显示错误时才介入"
+  ],
+  "topic_tags": [
+    "learning-augmented-algorithms",
+    "cache-robustness",
+    "online-algorithms",
+    "prediction-error-detection",
+    "phase-based-mechanism"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wu et al. - 2013 - Footprints elicit the truth Improving global positioning accuracy via local mobility",
+  "doi": null,
+  "title": "Footprints elicit the truth: Improving global positioning accuracy via local mobility",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "GPS定位误差(1-20米)影响服务质量,传统增强系统依赖固定基础设施难以普及",
+  "problem_framing": "将GPS全局位置与惯性传感局部轨迹对齐,通过坐标变换拟合提升精度",
+  "key_insight": "惯性传感提供精确局部结构,GPS提供全局坐标框架,两者结构互补可还原真值",
+  "method_signature": "手机惯性传感构建局部轨迹,Horn方法优化平移旋转缩放变换全局坐标",
+  "evaluation_criteria": "30%误差降低,步数计数误差≤5步,平均误差<4米",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "elicit the ground truth",
+    "think GLObally and act loCALly",
+    "more likely to elicit the ground truth",
+    "free of using any reference information",
+    "without war-driving"
+  ],
+  "thinking_moves": [
+    "将感知问题重构为通信问题:GPS结构歪斜但坐标框架正确,惯性传感结构精确但相对,互补可得真值",
+    "利用传感器互补而非改进单一传感器:不追求更准的GPS或惯性传感,而是融合两者各自优势",
+    "借用成熟几何方法解决定位问题:直接应用Horn的绝对定向闭式解到坐标变换"
+  ],
+  "topic_tags": [
+    "GPS-INS-fusion",
+    "pedestrian-dead-reckoning",
+    "mobile-phone-localization",
+    "coordinate-transformation",
+    "outdoor-positioning-refinement"
+  ],
+  "cites_own_work": [
+    "LiFS [6]",
+    "Unloc [9]",
+    "Zee [7]",
+    "CompAcc [8]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

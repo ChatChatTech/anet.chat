@@ -1,0 +1,38 @@
+{
+  "paper_id": "Exploring Parameter-Efficient Fine-Tuning of Large Language Model on Automated Program Repair",
+  "doi": "10.48550/arxiv.2406.05639",
+  "title": "Exploring Parameter-Efficient Fine-Tuning of Large Language Model on Automated Program Repair",
+  "year": 2024,
+  "venue": "ASE 2024",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "FMFT demands significant computing resources which may be not practical for all users; limited research on PEFT for APR",
+  "problem_framing": "Investigate PEFT effectiveness/efficiency on APR with execution-based evaluation; construct APR-specific instruction dataset",
+  "key_insight": "IA3 outperforms other PEFT methods by improving LLM creativity rather than just pattern similarity matching",
+  "method_signature": "PEFT (LoRA/prefix-tuning/p-tuning v2/IA3) fine-tuning LLMs on APR-Instruction with test-based patch validation",
+  "evaluation_criteria": "pass@k metrics on Defects4J/QuixBugs/HumanEval-Java; peak GPU memory and trainable parameter counts",
+  "negative_result_or_admitted_limitation": "FMFT performed inferior to both no fine-tuning and PEFT methods due to overfitting with limited dataset",
+  "evidence_for_taste": [
+    "FMFT performed inferior to both no fine-tuning",
+    "does not ensure that executing the two code segments will produce similar",
+    "high-quality patches ranked within the top 10",
+    "Improving the rank blindly does not necessarily yield further improvements",
+    "larger parameter size in FMFT may increase the risk of overfitting"
+  ],
+  "thinking_moves": [
+    "把APR的评估标准从语法相似度转向功能正确性验证",
+    "发现FMFT在有限数据上过拟合的问题,转而强调PEFT的效率优势",
+    "通过creativity分析解释IA3优于其他PEFT方法的原因",
+    "发现参数规模与训练数据大小与PEFT效果不成正比"
+  ],
+  "topic_tags": [
+    "PEFT-APR-integration",
+    "execution-based-patch-validation",
+    "LLM-creativity-in-program-repair",
+    "parameter-efficient-fine-tuning",
+    "instruction-tuning-for-code-repair"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

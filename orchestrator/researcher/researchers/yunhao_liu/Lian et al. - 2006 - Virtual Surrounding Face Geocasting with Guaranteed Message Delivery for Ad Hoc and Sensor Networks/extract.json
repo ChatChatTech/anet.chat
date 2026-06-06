@@ -1,0 +1,40 @@
+{
+  "paper_id": "Lian et al. - 2006 - Virtual Surrounding Face Geocasting with Guaranteed Message Delivery for Ad Hoc and Sensor Networks",
+  "doi": null,
+  "title": "Virtual Surrounding Face Geocasting with Guaranteed Message Delivery for Ad Hoc and Sensor Networks",
+  "year": 2006,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有geocasting协议要么不保证消息传递,要么保证传递但传输成本过高,传感器节点电池能量有限,低能耗是核心需求",
+  "problem_framing": "将geocasting形式化为两个优化目标:保证消息传递+最小化传输开销,通过Gabriel图平面化和面遍历实现",
+  "key_insight": "将所有与geocasting区域相交的face合并成唯一虚拟包围面,只需遍历一次该面边界而非分别遍历多个face",
+  "method_signature": "VSFG协议:VSF转发+VSF遍历+受限洪泛三阶段,利用左右手法则实现面遍历",
+  "evaluation_criteria": "传输消息数上界(2n+k vs 3n+k)、仿真对比RFIFT reduction达到40%",
+  "negative_result_or_admitted_limitation": "假设geocasting期间节点不移动,仅适用于静态网络;EZMG因检查空入口区域导致传输成本过高",
+  "evidence_for_taste": [
+    "does not guarantee message delivery",
+    "incurs a high transmission costs",
+    "reduces the upper bound",
+    "guarantees message delivery",
+    "asymptotically optimal",
+    "close to the optimal number"
+  ],
+  "thinking_moves": [
+    "将多个face合并为一个虚拟face来简化遍历路径",
+    "通过数学证明建立消息传递保证的上界",
+    "先给出理论最优上界再通过仿真验证实际性能",
+    "对比分析同类算法成本结构的差异来源",
+    "利用面图属性(死路、退回)分析平均-case传输次数"
+  ],
+  "topic_tags": [
+    "geocasting",
+    "face-routing",
+    "planar-graph",
+    "sensor-networks",
+    "message-delivery-guarantee"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注venue,role信息从署名顺序推断Liu为co-author,非first或corresponding author"
+}

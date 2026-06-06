@@ -1,0 +1,43 @@
+{
+  "paper_id": "Zheng et al. - 2018 - Combating Cross-Technology Interference for Robust Wireless Sensing with COTS WiFi",
+  "doi": null,
+  "title": "Combating Cross-Technology Interference for Robust Wireless Sensing with COTS WiFi",
+  "year": 2018,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "WiFi sensing suffers severe CTI from Bluetooth/ZigBee/microwave, degrading CSI and sensing performance, yet this is surprisingly overlooked",
+  "problem_framing": "Detect per-CSI interference, identify distorted subcarriers, and repair them via frequency-domain interpolation",
+  "key_insight": "Non-WiFi devices occupy only narrow instant bandwidth, affecting specific subcarriers → can identify and interpolate",
+  "method_signature": "Cyclostationarity-based RFI detection + linear interpolation of distorted subcarriers",
+  "evaluation_criteria": ">30% performance gain on human detection; detection time 1.5s/500 samples; >90% TP rate for different CTI types",
+  "negative_result_or_admitted_limitation": "Temporal filters fail on persistent CTI, attenuate motion-induced dynamics, and require sequential data",
+  "evidence_for_taste": [
+    "surprisingly unnoticed and largely unexplored",
+    "pose severe impacts on CSI measurements",
+    "temporal filtering may not apply",
+    "do not provide targeted solutions",
+    "merely neglect the RFI issue",
+    "yields a remarkable performance gain"
+  ],
+  "thinking_moves": [
+    "从field遗漏的critical issue出发: 证明问题存在且严重",
+    "把per-CSI干扰处理从filtering/regression重新frame成subcarrier-level repair",
+    "借鉴pilot-aided OFDM信道估计思想做interpolation",
+    "cyclostationarity理论从通信检测迁移到CSI感知",
+    "先detection再mitigation两阶段pipeline",
+    "强调与现有分类器orthogonal、可叠加"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-sensing",
+    "cross-technology-interference",
+    "cyclostationarity-detection",
+    "frequency-domain-mitigation",
+    "COTS-WiFi"
+  ],
+  "cites_own_work": [
+    "PADS (human detection)",
+    "Prior ICC 2017 RFI detection work"
+  ],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Liu et al. - 2003 - AOTO adaptive overlay topology optimization in unstructured P2P systems",
+  "doi": null,
+  "title": "AOTO: Adaptive Overlay Topology Optimization in Unstructured P2P Systems",
+  "year": 2003,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "P2P系统拓扑与底层物理网络不匹配，导致大量不必要的跨自治域流量，限制搜索性能",
+  "problem_framing": "将拓扑不匹配问题形式化为overlay邻居到物理路径代价过高，需优化逻辑拓扑",
+  "key_insight": "通过构建源节点到直接邻居的overlay组播树+替换远距离邻居为近距离邻居两层操作解决问题",
+  "method_signature": "AOTO算法:选择性洪泛(SF建组播树)+主动拓扑(AT替换远邻)",
+  "evaluation_criteria": "流量减少率Δk、平均距离D、查询响应时间",
+  "negative_result_or_admitted_limitation": "虽有优化但未能达到最优IP层组播代价，且最优需要持续迭代开销过大",
+  "evidence_for_taste": [
+    "only 2 to 5 percent of Gnutella connections",
+    "more than 40 percent of all Gnutella peers are located",
+    "causing large amount of unnecessary traffic",
+    "none of them is practically used due to high maintenance",
+    "this is unnecessary and creates too much overhead",
+    "the overhead to exhaust all n possible replacements may also be too high"
+  ],
+  "thinking_moves": [
+    "从实测Gnutella统计发现拓扑失配程度远严重于直觉",
+    "用具体数值例子(左图1次vs右图5次通信)直观揭示问题本质",
+    "将全局拓扑优化分解为局部最小生成树问题",
+    "区分flooding邻居与非flooding邻居以分离优化阶段",
+    "承认算法无法达到全局最优，转而追求局部迭代改进"
+  ],
+  "topic_tags": [
+    "P2P-overlay-topology",
+    "topology-mismatching",
+    "adaptive-multicast-tree",
+    "Gnutella-flooding-optimization",
+    "unstructured-P2P"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue信息未在文中明确给出，无法确认是哪个会议/期刊"
+}

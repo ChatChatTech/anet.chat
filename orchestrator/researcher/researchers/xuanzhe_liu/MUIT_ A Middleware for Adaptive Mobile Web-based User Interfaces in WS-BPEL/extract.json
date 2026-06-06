@@ -1,0 +1,41 @@
+{
+  "paper_id": "MUIT_ A Middleware for Adaptive Mobile Web-based User Interfaces in WS-BPEL",
+  "doi": "10.48550/arxiv.1602.09125",
+  "title": "MUIT: A Middleware for Adaptive Mobile Web-based User Interfaces in WS-BPEL",
+  "year": 2016,
+  "venue": "arxiv",
+  "venue_tier": "workshop",
+  "role": "first",
+  "motivation": "BYOD要求下员工用移动设备处理工作流任务，需要快速开发集成移动UI到现有业务流程",
+  "problem_framing": "WS-BPEL原为自动化服务编排设计,缺乏详细UI描述能力,需解决无缝集成、跨平台适配、通信性能三个技术挑战",
+  "key_insight": "用DSL声明式编程实现MVC中Controller自动化,避免HTML/CSS/JS代码任意混合,自动生成中间UI",
+  "method_signature": "中间件DSL声明式开发MVC适配Web UI,WS-BPEL无侵入集成,离线缓存同步机制",
+  "evaluation_criteria": "性能开销(响应时间/流量/能耗)与可用性评分(20+用户,Likert五分制,四场景对比)",
+  "negative_result_or_admitted_limitation": "Web应用访问设备服务(蓝牙/摄像头/本地存储)受限,HTML5 API实现不完整;Web应用常被认为逊于原生应用",
+  "evidence_for_taste": [
+    "学习BPEL4People WS-HumanTask不成功经验",
+    "这些解决方案主要集中人工任务规范,缺乏详细描述UI可能性",
+    "实现往往与应用程序逻辑混合",
+    "Web apps通常被认为逊于原生应用"
+  ],
+  "thinking_moves": [
+    "吸取前人不成功经验教训,重新设计无侵入方案",
+    "将UI开发复杂问题归因于代码混合,通过DSL约束强制结构化",
+    "用中间件封装屏蔽底层异构性,让开发者专注业务逻辑",
+    "权衡Web跨平台优势与原生性能差距,承认HTML5 API实现不完整"
+  ],
+  "topic_tags": [
+    "WS-BPEL移动扩展",
+    "DSL声明式UI编程",
+    "MVC控制器自动化",
+    "离线任务缓存同步",
+    "BYOD企业工作流"
+  ],
+  "cites_own_work": [
+    "iMashup平台",
+    "数据驱动服务组合",
+    "移动Web缓存性能测量"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文被截断,评估部分数据不完整;DSL语法细节和实现细节来自前半部分描述 | md truncated to head40k+tail20k"
+}

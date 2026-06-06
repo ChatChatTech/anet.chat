@@ -1,0 +1,39 @@
+{
+  "paper_id": "Why Do Neural Dialog Systems Generate Short and Meaningless Replies_ A Comparison between Dialog and Translation",
+  "doi": "10.48550/arxiv.1712.02250",
+  "title": "Why Do Neural Dialog Systems Generate Short and Meaningless Replies? A Comparison between Dialog and Translation",
+  "year": 2017,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Neural dialog systems generate universal short replies like 'I don't know', which is a severe practical failure.",
+  "problem_framing": "Compare dialog vs translation Seq2Seq behavior; hypothesis: unaligned data (multiple plausible replies) causes collapse.",
+  "key_insight": "Shuffling translation pairs creates unaligned distribution, reproducing short replies—confirming the conjecture.",
+  "method_signature": "Shuffle source-target pairs in translation to mimic dialog's multiple-plausible-replies property.",
+  "evaluation_criteria": "BLEU, length, negative log-probability, entropy, R^2 correlation of hidden states with time step.",
+  "negative_result_or_admitted_limitation": "100% shuffle shows anomalous high R^2; no good explanation currently.",
+  "evidence_for_taste": [
+    "admittedly impossible to construct exactly the same scenario",
+    "there lacks an empirical explanation",
+    "causally expressed in our previous work",
+    "not supported by experiments",
+    "more controlled"
+  ],
+  "thinking_moves": [
+    "把dialog问题转译成translation可控实验",
+    "通过人为制造unaligned数据验证假设",
+    "承认实验无法完全复现dialog的真实场景"
+  ],
+  "topic_tags": [
+    "seq2seq-dialog-collapse",
+    "unaligned-conditional-distribution",
+    "translation-vs-dialog-comparison",
+    "universal-reply-mitigation",
+    "data-shuffling-hypothesis"
+  ],
+  "cites_own_work": [
+    "Mou et al. (2016)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "First author is Bolin Wei; Ge Li is co-author withSoftware Institute affiliation."
+}

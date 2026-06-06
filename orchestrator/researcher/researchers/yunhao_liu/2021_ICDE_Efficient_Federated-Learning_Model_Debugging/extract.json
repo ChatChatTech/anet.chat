@@ -1,0 +1,38 @@
+{
+  "paper_id": "2021_ICDE_Efficient_Federated-Learning_Model_Debugging",
+  "doi": null,
+  "title": "Efficient Federated-Learning Model Debugging",
+  "year": 2021,
+  "venue": "ICDE",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "FL无法访问客户端本地训练数据，导致错误训练样本引起的全局模型测试误差难以追溯根因",
+  "problem_framing": "将FL模型调试问题形式化为:如何在隐私约束下量化训练样本对全局模型的负面影响",
+  "key_insight": "利用影响函数的加性性质,先定位异常客户端再定位异常样本,避免逐样本计算开销",
+  "method_signature": "分层影响分析:训练日志法定位客户端+HVP/RK近似法定位样本+影响驱动重训练选参与者",
+  "evaluation_criteria": "客户端识别准确率/召回率,样本识别精确率/召回率,计算/通信开销,模型精度提升",
+  "negative_result_or_admitted_limitation": "在严重非独立同分布场景下,数据不平衡主导模型精度,误标样本影响不明显导致识别精度下降",
+  "evidence_for_taste": [
+    "the invisibility of clients' local training data",
+    "erroneous samples have obviously larger absolute influence values",
+    "the influence function for FL is linear in the weights wk",
+    "precision drops to around 60% and 70%",
+    "the costs are orders of magnitude lower"
+  ],
+  "thinking_moves": [
+    "从FL核心矛盾(数据不可见)出发,识别出因果链条:错误数据→局部梯度异常→聚合梯度偏离→测试误差",
+    "将集中式影响函数扩展到FL时,发现加性性质允许层次分解,从而设计两阶段定位策略",
+    "将效率问题拆分为计算资源和通信资源两个维度,分别设计算法1和算法2适配不同偏好",
+    "通过训练日志中梯度偏差的离群点检测替代昂贵的逐样本影响计算,实现零客户端开销"
+  ],
+  "topic_tags": [
+    "federated-learning-debugging",
+    "influence-function",
+    "training-data-quality",
+    "client-selection",
+    "privacy-preserving-ml"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "研究者slug(yunhao_liu)与论文作者列表不符,可能存在任务配置问题;论文提供了较为完整的动机、问题定义、方法设计和实验评估,证据充足 | md truncated to head40k+tail20k"
+}

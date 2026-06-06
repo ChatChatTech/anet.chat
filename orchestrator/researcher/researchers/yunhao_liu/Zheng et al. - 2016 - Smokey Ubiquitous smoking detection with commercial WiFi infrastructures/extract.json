@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zheng et al. - 2016 - Smokey Ubiquitous smoking detection with commercial WiFi infrastructures",
+  "doi": null,
+  "title": "Smokey: Ubiquitous Smoking Detection with Commercial WiFi Infrastructures",
+  "year": 2016,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "室内禁烟政策缺乏无处不在的被动监测手段，现有传感器和视觉方案在非视距环境下失效",
+  "problem_framing": "利用WiFi CSI信号变化检测吸烟行为，无需目标配合，适用于LOS/NLOS多种环境",
+  "key_insight": "吸烟是具有固定动作顺序和呼吸节奏的复合活动，其节律性使区分日常动作成为可能",
+  "method_signature": "基于前景检测的运动提取+呼吸节律分析+自相关周期检测",
+  "evaluation_criteria": "TPR/FPR在静态/动态环境中的表现，NLOS和穿墙场景鲁棒性",
+  "negative_result_or_admitted_limitation": "穿墙场景准确率急剧下降，TPR在FPR=0.01时仅0.304",
+  "evidence_for_taste": [
+    "avoiding the target-dependent training set",
+    "we exploit the periodical pattern",
+    "foreground detection based motion acquisition",
+    "smoking is a rhythmic activity",
+    "single subcarrier fails to gather enough information"
+  ],
+  "thinking_moves": [
+    "将精确手势识别问题重新框架为节律周期检测问题",
+    "借用图像处理的前景检测解决CSI子载波动态敏感性问题",
+    "利用呼气时长大于吸气时长的生理特征作为吸烟判据",
+    "通过动作顺序而非单动作识别来规避个体差异"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-smoking-detection",
+    "device-free-human-detection",
+    "periodicity-analysis",
+    "foreground-detection-motion-acquisition",
+    "NLOS-sensing"
+  ],
+  "cites_own_work": [
+    "Zhou et al. 2013 (omnidirectional passive human detection)",
+    "Shangguan et al. 2015 (Shopminer)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

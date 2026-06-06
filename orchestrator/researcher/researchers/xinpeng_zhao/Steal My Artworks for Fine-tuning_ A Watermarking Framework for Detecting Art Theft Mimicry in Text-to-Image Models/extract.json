@@ -1,0 +1,36 @@
+{
+  "paper_id": "Steal My Artworks for Fine-tuning_ A Watermarking Framework for Detecting Art Theft Mimicry in Text-to-Image Models",
+  "doi": "10.48550/arxiv.2311.13619",
+  "title": "Steal My Artworks for Fine-tuning? A Watermarking Framework for Detecting Art Theft Mimicry in Text-to-Image Models",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Artists上传作品后无法防止被用于AI风格模仿,自身权益受侵害却无从追查",
+  "problem_framing": "把艺术作品版权保护问题重新形式化为:通过水印在生成图像中的分布检测来溯源未授权微调行为",
+  "key_insight": "水印在微调后会以可预测的高位准确率(60-80%)出现在生成的图像分布中,而非水印图像仅约40-60%",
+  "method_signature": "在作品嵌入水印→微调扩散模型→提取生成图像水印→分析分布差异溯源",
+  "evaluation_criteria": "通过生成的1000张图像中水印位准确率分布(平均位/最佳位)判断是否使用了受害者作品",
+  "negative_result_or_admitted_limitation": "当攻击者只分享少量风格生成图像而不公开模型时,框架识别能力有限",
+  "evidence_for_taste": [
+    "watermarks remain extractable following sophisticated imitative fine-tuning",
+    "the watermark bit accuracy of a single image lacks persuasive power",
+    "analyzing watermark accuracy extremes, averages, and distributions",
+    "The framework's ability to identify them is limited"
+  ],
+  "thinking_moves": [
+    "把版权侵权检测问题reframe为水印分布信号检测问题",
+    "从单张图像判定转为分布统计推断",
+    "考虑攻击者已知水印技术时的多场景鲁棒性测试",
+    "承认框架在攻击者主动隐藏模型时的局限性"
+  ],
+  "topic_tags": [
+    "diffusion-model-mimicry-detection",
+    "artist-copyright-protection",
+    "watermark-distribution-forensics",
+    "text-to-image-fine-tuning",
+    "style-imitation-attribution"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

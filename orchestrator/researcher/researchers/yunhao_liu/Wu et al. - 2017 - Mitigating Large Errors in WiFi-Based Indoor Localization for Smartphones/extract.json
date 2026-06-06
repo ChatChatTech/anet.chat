@@ -1,0 +1,41 @@
+{
+  "paper_id": "Wu et al. - 2017 - Mitigating Large Errors in WiFi-Based Indoor Localization for Smartphones",
+  "doi": null,
+  "title": "Mitigating Large Errors in WiFi-based Indoor Localization for Smartphones",
+  "year": 2017,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WiFi指纹定位在大误差方面存在瓶颈，尤其在移动环境中现有方法性能迅速下降",
+  "problem_framing": "从物理约束和硬件限制出发，识别RSS指纹在空间和时间上的混合问题",
+  "key_insight": "移动用户采集的指纹是当前位与历史位的RSS混合体，需用幻影指纹匹配",
+  "method_signature": "幻影指纹+鲁棒回归+区分因子，统一指纹相似度度量",
+  "evaluation_criteria": "均值误差<3m，95分位误差<7m，对比现有方法提升21%以上",
+  "negative_result_or_admitted_limitation": "选择部分APs丢弃其他APs并非最佳方案，AP选择是数据依赖的",
+  "evidence_for_taste": [
+    "large errors of prior works could range from 12 to around 40 meters",
+    "faraway APs may contain larger uncertainties",
+    "more than 11% of RSS measurements are outdated",
+    "over 80% of fingerprints contain outdated RSSs"
+  ],
+  "thinking_moves": [
+    "从实测数据发现硬件协议导致的不完整扫描现象",
+    "将 Transitional fingerprint 定义为新问题类型",
+    "通过引入惯性传感器dead reckoning估计历史位置",
+    "用鲁棒回归(LMS)容忍小比例outlier的影响"
+  ],
+  "topic_tags": [
+    "WiFi-fingerprint-localization",
+    "transitional-fingerprint",
+    "robust-regression-LMS",
+    "smartphone-indoor-localization",
+    "discrimination-factor"
+  ],
+  "cites_own_work": [
+    "LiFS",
+    "Walkie-Markie",
+    "MOLOC"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

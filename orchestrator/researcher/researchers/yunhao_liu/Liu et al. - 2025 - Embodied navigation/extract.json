@@ -1,0 +1,37 @@
+{
+  "paper_id": "Liu et al. - 2025 - Embodied navigation",
+  "doi": null,
+  "title": "Embodied navigation",
+  "year": 2025,
+  "venue": "Science China Information Sciences",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "传统绝对坐标系导航无法应对无GPS/地图的水下/地下/未知环境导航需求",
+  "problem_framing": "将导航重新定义为智能体与物理世界交互获取局部地图、定位并优化路线的范式",
+  "key_insight": "传感数据本身（而非地图）引导移动，感知空间构成与R³等距的Banach空间",
+  "method_signature": "系统性综述：感知→导航→效率优化→新兴任务四维度分类框架",
+  "evaluation_criteria": "综述类论文无原创实验，评估基于现有benchmark综合比较",
+  "negative_result_or_admitted_limitation": "sophisticated navigation tasks remain a formidable challenge for AI agents",
+  "evidence_for_taste": [
+    "Is this the only necessary way to navigate?",
+    "sensing data alone, without being mapped to the physical world, may be sufficient",
+    "The key to finding such subspace is to define a distance-preserving map function f",
+    "robustness improvement from these hand-crafted strategies is relatively limited"
+  ],
+  "thinking_moves": [
+    "从传统绝对坐标框架跳脱，质疑地图的必要性",
+    "用数学公理化（Theorem 1）重新定义传感数据空间",
+    "将导航问题重新框架为 sensation space 等距嵌入问题",
+    "系统分类而非提出新方法，体现工程整合思维"
+  ],
+  "topic_tags": [
+    "embodied-ai-navigation",
+    "sensor-fusion-odometry",
+    "sensation-space-formalization",
+    "visual-lidar-radio-perception",
+    "SLAM-review"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

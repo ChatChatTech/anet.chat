@@ -1,0 +1,39 @@
+{
+  "paper_id": "Duan et al. - 2016 - Accurate Spatial Calibration of RFID Antennas via Spinning Tags",
+  "doi": null,
+  "title": "Accurate Spatial Calibration of RFID Antennas via Spinning Tags",
+  "year": 2016,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "手动校准RFID读写器位置耗时费力且不准确,是实现精确定位的必要前提",
+  "problem_framing": "将读写器定位问题建模为利用旋转标签生成圆阵合成孔径,通过相位角度谱定位目标",
+  "key_insight": "发现标签相位与朝向存在规律性关联,通过傅里叶拟合量化后校准,可将定位精度提升3.7倍",
+  "method_signature": "旋转标签模拟圆阵,增强功率谱R(φ)加权概率权重抑制噪声干扰",
+  "evaluation_criteria": "3D空间定位误差均值7.3cm、标准差1.8cm,与LandMarc等基线对比",
+  "negative_result_or_admitted_limitation": "当两个旋转中心距离小于30cm时定位精度下降,因采样点过近带来相位测量不确定性",
+  "evidence_for_taste": [
+    "our proposed method is more effective and accurate than the traditional AoA approach",
+    "the peak in Fig. 6(b) is far sharper than that in Fig. 6(a)",
+    "many false candidates fade away, protruding the real one",
+    "the holistic changing pattern is almost the same",
+    "it can aid in supply chain management"
+  ],
+  "thinking_moves": [
+    "将读写器定位问题反向思考为标签旋转生成虚拟阵列",
+    "从实测相位偏差反推存在额外物理因素(标签朝向)影响",
+    "用概率分布加权将经验噪声模型嵌入优化目标函数",
+    "先量化相位-朝向关系再构建校准流程",
+    "通过对比实验验证校准步骤对精度的实际贡献"
+  ],
+  "topic_tags": [
+    "RFID-reader-localization",
+    "phase-calibration",
+    "synthetic-aperture",
+    "circular-antenna-array",
+    "tag-orientation-effect"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未提供具体DOI和完整venue信息,仅从标题推断年份2016。实验细节充分,但theory/formalization部分引用较多外部文献。tag orientation影响的发现是核心贡献,但该发现本身缺乏充分的理论推导。"
+}

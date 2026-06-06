@@ -1,0 +1,38 @@
+{
+  "paper_id": "An Explainable Toolbox for Evaluating Pre-trained Vision-Language Models",
+  "doi": "10.18653/v1/2022.emnlp-demos.4",
+  "title": "An Explainable Toolbox for Evaluating Pre-trained Vision-Language Models",
+  "year": 2022,
+  "venue": "EMNLP Demos",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "现有VLP评估只看下游任务平均准确率，无法洞察模型优缺点，难测corner case",
+  "problem_framing": "用ITM任务探测模型鲁棒性，通过语言/视觉扰动生成hard negatives进行细粒度分析",
+  "key_insight": "minor input changes会暴露模型能力边界，hard negative采样策略是诊断的核心",
+  "method_signature": "VL-CheckList: 语言变体(Object/Attribute/Relation)+视觉变体(object-level augmentation)",
+  "evaluation_criteria": "accuracy = 正样本分数>负样本分数的比例 (Equation 1)",
+  "negative_result_or_admitted_limitation": "CLIP对属性和关系变体理解能力极低，尤其Relation-spatial；小目标和角落目标识别受限",
+  "evidence_for_taste": [
+    "only average downstream task accuracy provides little information",
+    "test models' robustness against extreme corner cases",
+    "revealed weaknesses in several state-of-the-art NLP models",
+    "explore more fine-grained region-to-text multimodal alignment is a promising direction",
+    "the location and size of the object can significantly affect the judgment"
+  ],
+  "thinking_moves": [
+    "从黑盒准确率反推具体能力缺陷",
+    "把评估问题转化为诊断探测问题",
+    "借鉴CheckList思想做能力探针",
+    "用扰动实验揭示模型注意力分布偏好"
+  ],
+  "topic_tags": [
+    "VLP模型诊断",
+    "Image-Text-Matching评估",
+    "hard negative采样",
+    "vision-language模型可解释性",
+    "细粒度能力探针"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的动机、问题定义、方法论和实验结果，提取质量为full"
+}

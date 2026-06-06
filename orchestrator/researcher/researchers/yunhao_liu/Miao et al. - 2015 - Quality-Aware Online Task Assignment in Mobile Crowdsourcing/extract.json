@@ -1,0 +1,37 @@
+{
+  "paper_id": "Miao et al. - 2015 - Quality-Aware Online Task Assignment in Mobile Crowdsourcing",
+  "doi": null,
+  "title": "Quality-Aware Online Task Assignment in Mobile Crowdsourcing",
+  "year": 2015,
+  "venue": "IEEE INFOCOM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "众包工人不可靠且位置约束使传统二分图匹配失效",
+  "problem_framing": "质量感知的在线任务分配，最大化加权精度服从旅行约束",
+  "key_insight": "用辅助函数F替代原始质量函数A，填补偶数点的值使函数变成次模函数",
+  "method_signature": "基于ΔF贪婪度量的在线分支定界算法",
+  "evaluation_criteria": "平均任务质量A(H)/n与离线最优的竞争比",
+  "negative_result_or_admitted_limitation": "仅考虑二元选择任务和匿名工人，实值或多选任务需更复杂测量",
+  "evidence_for_taste": [
+    "Hitchhiking better fits human's intent",
+    "the quality function only increases at odd points",
+    "This property impedes the design and analysis",
+    "approximates the offline optimal solution",
+    "QAOTA outperforms the three heuristic algorithms"
+  ],
+  "thinking_moves": [
+    "把非次模函数改造成次模以获得理论保证",
+    "用奇偶交替的差分ΔF代替原始ΔA作为贪婪度量",
+    "用HSWA子问题的近似比推导整体竞争比"
+  ],
+  "topic_tags": [
+    "mobile-crowdsourcing",
+    "location-based-task-assignment",
+    "quality-control",
+    "online-algorithm",
+    "competitive-ratio"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "null"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization__oa_W3188385856",
+  "doi": "10.24963/ijcai.2021/524",
+  "title": "Dialogue Discourse-Aware Graph Model and Data Augmentation for Meeting Summarization",
+  "year": 2021,
+  "venue": "IJCAI",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有方法将会议视为线性序列，忽视话语间的丰富交互关系；且训练数据严重不足，模型性能受限",
+  "problem_framing": "将会议 utterances 与 discourse relations 构建为 Levi graph，通过图编码器建模话语交互，用 QA relation 构建伪摘要语料",
+  "key_insight": "QA discourse relation 识别的 question 往往包含核心话题/概念，可作为后续讨论的伪摘要，实现 data augmentation",
+  "method_signature": "DDAMS(meeting graph + RGCN + pointer decoder) + DDADA(QA-based pseudo corpus pretraining)",
+  "evaluation_criteria": "ROUGE-1/2/L F1 scores; human evaluation on relevance and informativeness",
+  "negative_result_or_admitted_limitation": "DDAMS+DDADA (w/o fine-tune) only achieves basic effect - fine-tuning is essential for good performance",
+  "evidence_for_taste": [
+    "hindering the exploration of inherently rich interactive relations",
+    "a question often sparks a discussion in a meeting",
+    "the scale of corpus is significant to the performance",
+    "uniformly accepting information from different discourse relations is not suitable",
+    "Ground truth obtains the highest scores"
+  ],
+  "thinking_moves": [
+    "将会议建模从线性序列改为图结构，显式编码话语间的 discourse relations",
+    "观察 QA relation 的语义功能：question 往往蕴含讨论的核心概念",
+    "利用此观察构建伪语料解决数据不足，将问题生成作为预训练目标",
+    "区分 in/out edges 解决不同类型顶点特征空间差异问题",
+    "验证各 discourse relation 类型的贡献差异，Conditional/Result 等更关键"
+  ],
+  "topic_tags": [
+    "meeting summarization",
+    "dialogue discourse parsing",
+    "relational graph convolutional network",
+    "data augmentation for summarization",
+    "pseudo-labels from discourse"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

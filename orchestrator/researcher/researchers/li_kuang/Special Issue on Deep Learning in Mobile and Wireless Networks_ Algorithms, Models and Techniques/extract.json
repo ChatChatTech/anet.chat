@@ -1,0 +1,36 @@
+{
+  "paper_id": "Special Issue on Deep Learning in Mobile and Wireless Networks_ Algorithms, Models and Techniques",
+  "doi": "10.1007/s11036-021-01871-w",
+  "title": "Special Issue on Deep Learning in Mobile and Wireless Networks: Algorithms, Models and Techniques",
+  "year": 2021,
+  "venue": "Mobile Networks & Applications",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "深度学习在桌面设备成功,自然趋势向移动网络和无线网络延伸",
+  "problem_framing": "移动设备资源受限,传统深度学习训练耗时难以部署",
+  "key_insight": "数据收集与预测阶段可本地执行,训练阶段需轻量化模型",
+  "method_signature": "特邀综述七篇精选论文,涵盖轻量检测、边缘路由、隐私协议等",
+  "evaluation_criteria": "null",
+  "negative_result_or_admitted_limitation": "null",
+  "evidence_for_taste": [
+    "represents the current state of the art",
+    "selected contributions",
+    "valuable contributions",
+    "great interest to the community"
+  ],
+  "thinking_moves": [
+    "编委视角综述特邀论文,从工程约束倒推轻量化必要性",
+    "按任务类型归类(检测、路由、调度、隐私)展现领域全景",
+    "强调挑战:模型训练耗时、设备容量有限、资源约束"
+  ],
+  "topic_tags": [
+    "deep-learning-mobile-deployment",
+    "edge-computing",
+    "object-detection",
+    "privacy-protocol",
+    "misinformation-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "本文为期刊特刊导言,非原创研究论文。Guest Editor角色,主要职责为组织特邀稿件而非提出个人方法论。无法提取具体方法的evaluation criteria或negative results,只能识别其编委综述视角的领域认知模式。"
+}

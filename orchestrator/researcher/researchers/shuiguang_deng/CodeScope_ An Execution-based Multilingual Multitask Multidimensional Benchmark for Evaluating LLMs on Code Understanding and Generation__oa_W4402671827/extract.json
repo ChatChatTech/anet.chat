@@ -1,0 +1,40 @@
+{
+  "paper_id": "CodeScope_ An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation__oa_W4402671827",
+  "doi": "10.18653/v1/2024.acl-long.301",
+  "title": "CodeScope: An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation",
+  "year": 2024,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有代码评测基准语言覆盖窄、任务单一、依赖表面匹配度而非真实执行效果，与实际软件开发需求脱节",
+  "problem_framing": "将LLM代码评测问题形式化为多语言多任务多维度的执行基准测试，引入长度/难度/效率三维评估框架",
+  "key_insight": "执行结果正确性才是代码生成的最终目标，BLEU等匹配度指标与执行正确性相关性弱",
+  "method_signature": "构建43语言8任务的CodeScope基准，配合MultiCodeEngine实现跨14种语言的自动化代码执行评测",
+  "evaluation_criteria": "Pass@K/DSR@K/Opt@K等执行验证指标，辅以覆盖率/匹配度作为理解任务补充",
+  "negative_result_or_admitted_limitation": "GPT-4在自动化测试任务表现不佳，无法生成与实际执行输出一致的测试用例；HumanEval准确率94.4%太高基准过易",
+  "evidence_for_taste": [
+    "execution-based metrics...are more reliable",
+    "These metrics may not reflect the practical applicability",
+    "code lexical similarity and execution correctness are weakly correlated",
+    "it is too easy",
+    "we found several flaws in the XCodeEval dataset",
+    "still face considerable challenges"
+  ],
+  "thinking_moves": [
+    "指出表面相似度指标掩盖了代码实际可用性本质",
+    "用现实软件开发的多语言多任务复杂性来批判单语言单任务评测局限性",
+    "从基准数据质量缺陷(俄语数据、输出不一致)反推评测基础设施的必要性",
+    "用Easy/Hard难度分层揭示LLM能力的真实边界",
+    "从模型稳定性(标准差)角度评估代码长度处理能力"
+  ],
+  "topic_tags": [
+    "LLM代码评测基准",
+    "多语言代码生成",
+    "执行验证评估",
+    "代码优化评估",
+    "代码理解评测"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

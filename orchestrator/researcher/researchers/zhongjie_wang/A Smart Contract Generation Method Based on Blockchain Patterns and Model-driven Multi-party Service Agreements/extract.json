@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Smart Contract Generation Method Based on Blockchain Patterns and Model-driven Multi-party Service Agreements",
+  "doi": "10.21203/rs.3.rs-4264996/v1",
+  "title": "A Smart Contract Generation Method Based on Blockchain Patterns and Model-driven Multi-party Service Agreements",
+  "year": 2024,
+  "venue": "Research Square",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Multi-party service agreements face trust issues under centralized execution; blockchain offers decentralization but contract development is complex.",
+  "problem_framing": "Three challenges: (1) extracting blockchain-relevant content from agreement text, (2) modeling agreements for blockchain without cross-domain barriers, (3) automatically generating deployable smart contract code.",
+  "key_insight": "Combine LLM-assisted clause extraction, MDA-based modeling (CIM→PIM→PSM), and a multi-level smart contract reuse library indexed by blockchain patterns to enable automated code generation.",
+  "method_signature": "MDA-based smart contract generation via LLM extraction + blockchain pattern reuse library",
+  "evaluation_criteria": "Case study validation: generated Solidity code passes Slither security checks, deploys on Remix, and authorization functions execute correctly.",
+  "negative_result_or_admitted_limitation": "Still some non-automated steps in converting blockchain analysis results into CIM; smart contracts become immutable after deployment—future work will explore update methods.",
+  "evidence_for_taste": [
+    "demonstrates the feasibility and effectiveness",
+    "reducing the development cycle",
+    "reducing cross-domain collaboration barriers",
+    "passed security checks",
+    "successfully deployed and used"
+  ],
+  "thinking_moves": [
+    "从复杂文本中分离出适合区块链执行的内容(LLM+句法依存分析)",
+    "用MDA三层模型(CIM/PIM/PSM)保持模型转换中区块链语义不丢失",
+    "用区块链pattern作为代码复用的索引粒度,组织多层级reuse库",
+    "用case study+安全检查工具验证可行性,而不是性能benchmark"
+  ],
+  "topic_tags": [
+    "smart-contract-code-generation",
+    "model-driven-architecture-MDA",
+    "blockchain-pattern-reuse-library",
+    "LLM-assisted-contract-analysis",
+    "multi-party-service-agreement"
+  ],
+  "cites_own_work": [
+    "Shen et al. 2023 [19]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

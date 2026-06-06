@@ -1,0 +1,38 @@
+{
+  "paper_id": "Seed Feature Maps-based CNN Models for LEO Satellite Remote Sensing Services",
+  "doi": "10.48550/arxiv.2308.06515",
+  "title": "Seed Feature Maps-based CNN Models for LEO Satellite Remote Sensing Services",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LEO卫星计算资源受限、传输带宽有限，需高效CNN模型部署与参数更新方案。",
+  "problem_framing": "将CNN层中通过滑动窗口生成特征图的过程替换为非线性变换，以同时降低FLOPs和参数量传输。",
+  "key_insight": "仅学习一个种子特征图，通过非线性变换函数（随机超参数）生成其余特征图，超参数由随机种子保存和复现。",
+  "method_signature": "SineFM：每层仅需一个种子滤波器，其余特征图由正弦函数等非线性变换生成。",
+  "evaluation_criteria": "mIoU、FLOPs、参数量、FPS、mean F1、OA综合评估精度与效率权衡。",
+  "negative_result_or_admitted_limitation": "理论分析中近似成立需假设c_relu非全零向量，且仅针对CNN模型未涉及Transformer。",
+  "evidence_for_taste": [
+    "nonlinear transformation acts to regularize",
+    "avoiding a large number of sliding window",
+    "randomly initialized and remain fixed",
+    "greatly reduces the FLOPs",
+    "best trade-off in terms of minimizing"
+  ],
+  "thinking_moves": [
+    "将特征图生成从算力密集型滑动卷积重构为参数化非线性变换",
+    "利用随机种子的可复现性压缩待传输参数量",
+    "通过非线性变换的规则性实现隐式正则化提升性能",
+    "在效率与精度的帕累托前沿寻找最优超参数配置"
+  ],
+  "topic_tags": [
+    "LEO-satellite-CNN-deployment",
+    "seed-feature-map",
+    "nonlinear-transformation-FLOPs-reduction",
+    "random-seed-parameter-compression",
+    "remote-sensing-semantic-segmentation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

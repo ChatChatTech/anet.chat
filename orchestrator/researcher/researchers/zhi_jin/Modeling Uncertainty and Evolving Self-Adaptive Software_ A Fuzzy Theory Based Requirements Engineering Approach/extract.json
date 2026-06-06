@@ -1,0 +1,36 @@
+{
+  "paper_id": "Modeling Uncertainty and Evolving Self-Adaptive Software_ A Fuzzy Theory Based Requirements Engineering Approach",
+  "doi": "10.48550/arxiv.1704.00873",
+  "title": "Modeling Uncertainty and Evolving Self-Adaptive Software: A Fuzzy Theory Based Requirements Engineering Approach",
+  "year": 2017,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现实环境中软硬件变化剧烈,需求和上下文的不确定性难以用数学公式精确描述",
+  "problem_framing": "将不确定性建模为模糊属性,通过四类推理模式实现自适应与演化学习",
+  "key_insight": "模糊属性+推理规则可同时支撑自适应决策和增量知识学习两种演化能力",
+  "method_signature": "基于模糊理论的推理机控制论方法",
+  "evaluation_criteria": "满意度精度与执行时间的权衡比较",
+  "negative_result_or_admitted_limitation": "前向推理速度快但不优化,后向推理精度高但计算量大,参数识别和系统识别在噪声环境下不稳定",
+  "evidence_for_taste": [
+    "analyzers' assumption towards a system may deviate from stakeholders' expectations",
+    "the approach is insensitive to less noises",
+    "identify analytic formulae of SAS is not the best choice"
+  ],
+  "thinking_moves": [
+    "将需求不确定性重新定义为模糊隶属度问题",
+    "用控制论视角统一四种推理模式(前向/后向/参数识别/系统识别)",
+    "将软件作为灰盒vs黑盒系统对比学习效果",
+    "用遗传算法和神经网络实现增量参数/系统辨识"
+  ],
+  "topic_tags": [
+    "自适应性软件",
+    "模糊需求工程",
+    "上下文不确定性",
+    "控制理论适配",
+    "增量学习演化"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

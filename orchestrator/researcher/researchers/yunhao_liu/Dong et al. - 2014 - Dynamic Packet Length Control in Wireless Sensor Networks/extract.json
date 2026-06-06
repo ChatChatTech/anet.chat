@@ -1,0 +1,42 @@
+{
+  "paper_id": "Dong et al. - 2014 - Dynamic Packet Length Control in Wireless Sensor Networks",
+  "doi": null,
+  "title": "Dynamic Packet Length Control in Wireless Sensor Networks",
+  "year": 2014,
+  "venue": "IEEE Transactions on Wireless Communications",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "固定参数优化方案无法适应无线信道的动态变化，需要人工干预调参",
+  "problem_framing": "用传输开销与有效字节的比值(TO)作为度量，在动态信道下优化分组长度",
+  "key_insight": "通过滑动窗口监测PRR并迭代调整分组长度，可逼近最优解而无需预先知道BER或拓扑",
+  "method_signature": "基于TO度量的滑动窗口式分组长度自适应控制",
+  "evaluation_criteria": "传输开销TO、数据交付率、无线占空比duty cycle",
+  "negative_result_or_admitted_limitation": "Prior fixed optimization solutions heavily depend on the accurate selection of multiple factors such as the distance between nodes, path loss exponent, shadow fading component, and etc. If those factors are accurately measured, fixed optimization framework can outperform dynamic approaches.",
+  "evidence_for_taste": [
+    "optimal packet length under b1 is l1",
+    "we can see that the AggAck mechanism mitigates the ACK overhead",
+    "the additional overhead of DPLC keeps within 10%",
+    "the performance of AIDA is relatively low because our experiment has a low data rate",
+    "Packet lengths that minimize the TO value are different for different experiment settings",
+    "CTP-max slightly reduces the reliability while CTP-DPLC remains the high reliability"
+  ],
+  "thinking_moves": [
+    "从实验观察出发：图1展示不同功率/距离下最优分组长度不同",
+    "将多跳路径开销递归分解为各跳单跳开销之和",
+    "通过 piggyback 将上游开销信息传递到当前跳用于联合优化",
+    "在实现层面分析 buffer 大小、接口类型等工程权衡",
+    "先做 TOSSIM 仿真验证算法，再做 20 节点实际测试床验证实用性"
+  ],
+  "topic_tags": [
+    "WSN-packet-length-adaptation",
+    "link-quality-estimation",
+    "aggregation-fragmentation-service",
+    "CTP-integration",
+    "energy-duty-cycle-optimization"
+  ],
+  "cites_own_work": [
+    "Dong et al., \"DPLC: dynamic packet length control in wireless sensor networks,\" IEEE INFOCOM 2010"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

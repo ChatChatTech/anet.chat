@@ -1,0 +1,43 @@
+{
+  "paper_id": "Wang et al. - 2024 - TransformLoc Transforming MAVs into Mobile Localization Infrastructures in Heterogeneous Swarms-1",
+  "doi": null,
+  "title": "TransformLoc: Transforming MAVs into Mobile Localization Infrastructures in Heterogeneous Swarms",
+  "year": 2024,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "BMAVs具备有限算力导致定位误差快速累积,而现有方案依赖预部署基础设施或高成本传感器,在应急场景下不可用。",
+  "problem_framing": "将AMA V重新部署为移动定位基础设施以服务BMAV,需解决BMAV未知多样化定位误差估计和AMA V资源分配的耦合决策难题。",
+  "key_insight": "让少量高端AMA V充当移动定位基础设施,把感知与计算能力卸载给大量低端BMAV,实现协作式自适应定位。",
+  "method_signature": "误差感知联合位置估计模型+邻近驱动自适应分组调度策略",
+  "evaluation_criteria": "定位误差(ATE)和导航成功率,基于真实无人机测试台和物理特征仿真",
+  "negative_result_or_admitted_limitation": "当AMA V自身定位误差超过10cm时系统性能下降,需配备LiDAR或深度相机实现VINS等高精度自定位。",
+  "evidence_for_taste": [
+    "transforming AMAVs into mobile localization infrastructures",
+    "turning this insight into a practical system is non-trivial",
+    "uncertainty-aided inference method",
+    "decouple the resource allocation issue",
+    "non-myopic manner",
+    "NP-hard nature"
+  ],
+  "thinking_moves": [
+    "把'昂贵高端MAV'重新框架为'可移动定位基础设施',实现算力卸载而非升级低端MAV",
+    "将高维多对多资源分配问题通过Voronoi图分区拆解为多个一对多子问题",
+    "利用协方差矩阵的迹(tr)作为定位不确定性的代理指标,替代无法直接获取的真实位置误差",
+    "采用前瞻δ步的搜索树进行非短视调度,平衡观测距离与角度的最优性",
+    "Kalman滤波框架整合BMAV自身预测与AMA V外部观测,执行间歇性联合位置估计"
+  ],
+  "topic_tags": [
+    "MAV-swarm-localization",
+    "heterogeneous-robot-systems",
+    "resource-allocation",
+    "Kalman-filter",
+    "visual-fiducial-tracking"
+  ],
+  "cites_own_work": [
+    "H-SwarmLoc (SL) [30] is a SOTA method",
+    "SwarmMap [31]"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "venue字段为空,paper未明确标注会议/期刊信息。role信息不完整,作者列表中标注了corresponding author但未指明第一作者的具体分工。"
+}

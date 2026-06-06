@@ -1,0 +1,41 @@
+{
+  "paper_id": "Jian et al. - 2010 - Beyond Triangle Inequality Sifting Noisy and Outlier Distance Measurements for Localization",
+  "doi": null,
+  "title": "Beyond Triangle Inequality: Sifting Noisy and Outlier Distance Measurements for Localization",
+  "year": 2010,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "小部分异常测量值会严重破坏定位精度，三角不等式方法检测能力不足",
+  "problem_framing": "将异常检测定义为图的可嵌入性问题，利用图刚性与冗余刚性理论识别异常边",
+  "key_insight": "冗余刚性图在可嵌入时必不含异常边；generic cycle是最小的冗余刚性子图",
+  "method_signature": "基于bilateration generic cycles的两阶段异常检测算法",
+  "evaluation_criteria": "定位误差降低程度与异常边拒绝率",
+  "negative_result_or_admitted_limitation": "基本算法在正常边存在测量误差时失效，需引入误差阈值δ",
+  "evidence_for_taste": [
+    "triangle inequality fails to detect outliers",
+    "cannot identify them",
+    "with probability of 0",
+    "has measure non-zero",
+    "G is unembeddable",
+    "this algorithm can handle a more practical error model"
+  ],
+  "thinking_moves": [
+    "从三角不等式的工程局限出发，反推其数学性质不足",
+    "将异常检测问题重新frame为图论可嵌入性判定",
+    "引入冗余刚性作为比刚性更强的理论条件",
+    "从组件级分析下降到单边级分析，寻找最小冗余刚性结构",
+    "用generic cycle连通性与Laman条件建立等价关系",
+    "承认简化假设的局限性，为工程实用性引入容差参数"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-localization",
+    "outlier-detection",
+    "graph-rigidity-theory",
+    "distance-ranging-error",
+    "bilateration"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "paper mentions MicaZ motes experiment but venue/conference info not explicitly stated in text"
+}

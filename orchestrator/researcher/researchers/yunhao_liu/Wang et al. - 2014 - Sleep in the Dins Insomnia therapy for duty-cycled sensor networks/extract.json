@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2014 - Sleep in the Dins Insomnia therapy for duty-cycled sensor networks",
+  "doi": null,
+  "title": "Sleep in the Dins: Insomnia Therapy for Duty-cycled Sensor Networks",
+  "year": 2014,
+  "venue": "IEEE",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "1200节点实际网络CitySee中现有协议的能耗远超预期,理论与实践严重脱节",
+  "problem_framing": "现有协议忽视流量模式与协议动态扩展唤醒时间,无法实现最优能耗",
+  "key_insight": "睡眠间隔与唤醒时间需根据流量速率λ联合优化,固定参数设置必然导致能耗增加",
+  "method_signature": "LAD协议:在线估计流量λ,查表获取最优(ts,tw,td),自适应调整占空比",
+  "evaluation_criteria": "占空比、每包能耗、丢包率、流量适应性、无线电操作详查",
+  "negative_result_or_admitted_limitation": "仅优化睡眠间隔而不考虑动态扩展时间td无法达到最优,且计算最优参数开销大不适用于资源受限节点",
+  "evidence_for_taste": [
+    "state-of-the-art protocols with empirical parameters are not adequate",
+    "fixed settings in TinyOS LPL MAC are not appropriate",
+    "such a mechanism is still lacking",
+    "may lead to very poor performance",
+    "cannot achieve optimal performance"
+  ],
+  "thinking_moves": [
+    "从大规模实际部署异常反推理论缺陷",
+    "建模分析唤醒时间与流量速率的耦合关系",
+    "预计算查表法规避嵌入式节点的计算开销",
+    "区分前导传输与非前导传输两类情况进行能量分析"
+  ],
+  "topic_tags": [
+    "duty-cycling-protocol",
+    "wireless-sensor-network",
+    "energy-efficiency-optimization",
+    "LPL-MAC",
+    "adaptive-protocol-design"
+  ],
+  "cites_own_work": [
+    "CitySee network data for trace-driven simulation"
+  ],
+  "extraction_quality": "full"
+}

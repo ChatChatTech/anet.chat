@@ -1,0 +1,41 @@
+{
+  "paper_id": "Impaired regional structure-function coupling as novel neurophenotype_ mechanistic insights and diagnostic exploration in treatment-resistant depression",
+  "doi": "10.1038/s44184-026-00206-5",
+  "title": "Impaired regional structure-function coupling as novel neurophenotype: mechanistic insights and diagnostic exploration in treatment-resistant depression",
+  "year": 2026,
+  "venue": "Nature Mental Health",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "TRD诊断依赖症状和试药,缺乏早期识别标志物,延误治疗增加自杀风险和疾病负担",
+  "problem_framing": "将结构-功能耦合(SFC)定义为GMV与ALFF的概率分布相似度,对比TRD/nTRD/HC三组差异",
+  "key_insight": "右侧额中回等区域的SFC解耦是TRD特异性神经表型,可作为影像标志物用于鉴别诊断",
+  "method_signature": "KL散度计算区域GMV-ALFF耦合,XGBoost/SVM二分类,双 atlas验证+半样本重复",
+  "evaluation_criteria": "ROC-AUC/准确率/特异度/敏感度,FDR多重比较校正",
+  "negative_result_or_admitted_limitation": "TRD病程延长可能掩盖SFC变化,早期识别仍有挑战;相关性分析在全患者组整体不显著,需亚组分析",
+  "evidence_for_taste": [
+    "Neither ALFF nor GMV differences alone reproduced the spatial pattern",
+    "coupling alterations are not driven by a unimodal change",
+    "longer illness duration in TRD may obscure detection of SFC changes",
+    "greater structural–functional dissociation has been associated with hindered network efficiency",
+    "among the first to provide neurobiological diagnostic markers for TRD",
+    "weak correlations between SFC and clinical symptoms were observed"
+  ],
+  "thinking_moves": [
+    "单模态研究忽视结构-功能交互,转向多模态耦合分析",
+    "先验证SFC变化非单模态驱动,而是协调性改变",
+    "对比unimodal方法与SFC方法,强调SFC的互补价值",
+    "相关性弱则细分亚组挖掘group-specific模式",
+    "解释为何TRD失去相关性:系统衰竭失去代偿链接",
+    "用机器学习将神经特征转化为临床可用的鉴别工具"
+  ],
+  "topic_tags": [
+    "structure-function-coupling",
+    "treatment-resistant-depression",
+    "multimodal-MRI",
+    "KL-divergence",
+    "machine-learning-classification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

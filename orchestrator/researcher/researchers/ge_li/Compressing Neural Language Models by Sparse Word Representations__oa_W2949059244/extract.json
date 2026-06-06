@@ -1,0 +1,37 @@
+{
+  "paper_id": "Compressing Neural Language Models by Sparse Word Representations__oa_W2949059244",
+  "doi": "10.48550/arxiv.1610.03950",
+  "title": "Compressing Neural Language Models by Sparse Word Representations",
+  "year": 2016,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "神经语言模型参数量大、内存占用高,难以部署到移动端;低频词梯度更新不足,无法习得有效表示",
+  "problem_framing": "将词嵌入与输出层权重压缩至与词表大小无关,使参数量不随词表增长",
+  "key_insight": "词典中陌生词由常用词定义→稀有词嵌入可由常用词的稀疏线性组合重构",
+  "method_signature": "基于稀疏编码的词表示压缩,每词仅需4-8个非零值,结合ZRegression稳定NCE训练",
+  "evaluation_criteria": "困惑度(perplexity),内存消耗",
+  "negative_result_or_admitted_limitation": "LSTM-z,wb在词表大于20k时略逊于LSTM-z;压缩有信息损失,当第二因素占优时压缩模型才更优",
+  "evidence_for_taste": [
+    "too memory-consuming",
+    "unlikely to learn meaningful representations for infrequent words",
+    "improves the perplexity measure",
+    "which is almost imperceptible",
+    "When the vocabulary size is greater than, say, 20k"
+  ],
+  "thinking_moves": [
+    "通过词典编纂类比构建嵌入空间稀疏表示",
+    "观察到NCE训练中归一化因子Zh远离1导致不稳定,提出ZRegression层预测Zh",
+    "论证词嵌入与输出层权重共享内部结构(共现统计),故稀疏码可共用",
+    "压缩有两个效果:损失信息但提升稀有词参数估计准确性,两者权衡决定性能"
+  ],
+  "topic_tags": [
+    "neural-language-models",
+    "model-compression",
+    "sparse-representations",
+    "word-embeddings",
+    "LSTM"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

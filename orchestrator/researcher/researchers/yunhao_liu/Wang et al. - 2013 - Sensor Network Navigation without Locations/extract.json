@@ -1,0 +1,38 @@
+{
+  "paper_id": "Wang et al. - 2013 - Sensor Network Navigation without Locations",
+  "doi": null,
+  "title": "Sensor Network Navigation without Locations",
+  "year": 2013,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "strong",
+  "role": "senior",
+  "motivation": "现有导航系统依赖位置信息,但地下矿井等环境无法提供位置,需重新设计无位置需求的导航协议",
+  "problem_framing": "将人类安全导航问题建模为无位置条件下的路径规划,需同时满足安全性、效率和可扩展性",
+  "key_insight": "利用危险区域外部的安全区域中轴线构建分布式路网,将拓扑信息嵌入传感器网络实现无位置导航",
+  "method_signature": "基于安全区域中轴线构建分布式路网,采用虚拟势场引导用户,事件驱动局部更新应对动态危险区",
+  "evaluation_criteria": "路径到危险区最小距离、路径长度、网络通信开销、动态环境下用户逃脱时间",
+  "negative_result_or_admitted_limitation": "5%的导航失败源于动态危险区阻塞所有可行路径,无法成功导航至出口",
+  "evidence_for_taste": [
+    "the navigation of human beings is the safety-critical selection of a single route",
+    "prevents us from simply borrowing existing packet routing protocols",
+    "achieves comparable performance with significantly reduced communication overhead"
+  ],
+  "thinking_moves": [
+    "把位置依赖问题转化为纯拓扑/通信问题",
+    "从计算几何的medial axis理论获得路由拓扑",
+    "先用理论证明安全属性,再工程实现",
+    "区分全局安全与局部安全两个层次"
+  ],
+  "topic_tags": [
+    "location-free-navigation",
+    "sensor-network-medial-axis",
+    "emergency-navigation",
+    "road-map-routing",
+    "distributed-topological-routing"
+  ],
+  "cites_own_work": [
+    "Li et al. 2009 INFOCOM preliminary version"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

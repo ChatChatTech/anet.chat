@@ -1,0 +1,40 @@
+{
+  "paper_id": "ChatUniTest_ A Framework for LLM-Based Test Generation",
+  "doi": "10.48550/arxiv.2305.04764",
+  "title": "ChatUniTest: A Framework for LLM-Based Test Generation",
+  "year": null,
+  "venue": "FSE Companion '24",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "手动编写和维护高质量单元测试费时费力,LLM工具存在上下文限制和验证不足导致生成错误的问题",
+  "problem_framing": "将LLM生成单元测试问题框架为带验证修复的多阶段流程:预处理-生成-后处理",
+  "key_insight": "自适应焦点上下文机制在token限制内最大化有价值信息,同时生成-验证-修复闭环修正错误",
+  "method_signature": "基于AST解析和依赖分析构建上下文,经生成-三层验证-规则/LLM修复的完整流程",
+  "evaluation_criteria": "Line Coverage对比EvoSuite/TestSpark,辅以19人用户问卷调查有用性",
+  "negative_result_or_admitted_limitation": "TestSpark因prompt超token限制无法处理Csv项目,EvoSuite因JDK版本不兼容无法处理Ecommerce项目",
+  "evidence_for_taste": [
+    "LLM often produce incorrect tests",
+    "lost-in-the-middle effect",
+    "outperforms TestSpark and Evo-Suite",
+    "89% use ChatUniTest to assist",
+    "Token limit of the model",
+    "TestSpark fails to generate tests"
+  ],
+  "thinking_moves": [
+    "将测试生成任务分解为预处理-生成-后处理三阶段流水线",
+    "识别LLM在测试生成中的两类局限并分别设计机制应对",
+    "验证失败触发修复的自动闭环而非人工干预",
+    "用rule-based处理确定性错误,LLM-based作为兜底处理意外错误",
+    "从已有工具缺陷反推需要改进的具体工程问题"
+  ],
+  "topic_tags": [
+    "LLM自动化测试生成",
+    "自适应上下文选择",
+    "测试用例修复机制",
+    "Java单元测试",
+    "生成验证修复闭环"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

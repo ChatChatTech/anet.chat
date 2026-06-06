@@ -1,0 +1,41 @@
+{
+  "paper_id": "Genomic insights into the evolution of Echinochloa species as weed and orphan crop",
+  "doi": "10.1038/s41467-022-28359-9",
+  "title": "Genomic insights into the evolution of Echinochloa species as weed and orphan crop",
+  "year": 2022,
+  "venue": "Nature Communications",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Barnyard grasses cause 50-70% rice yield loss yet include domesticated millets; genomic basis of this dual role is unknown",
+  "problem_framing": "Complex allohexaploid/allotetraploid genomes impede understanding speciation and adaptation; species delimitation is difficult",
+  "key_insight": "Contrasted NB-ARC disease-gene contraction in Echinochloa vs expansion in wheat reveals fitness-cost-driven adaptation strategy",
+  "method_signature": "DipHiC diploid-assisted polyploid genome scaffolding + population-scale resequencing of 737 accessions",
+  "evaluation_criteria": "Assembly quality validated by BUSCO, LAI scores, read mapping rates, and subgenome-specific k-mer partitioning",
+  "negative_result_or_admitted_limitation": "Details of E. colona hexaploidization could not be uncovered because of the lack of parental genomes",
+  "evidence_for_taste": [
+    "excellent resources or systems for understanding plant tolerance to stress",
+    "marked contraction in the sizes of gene families related to biotic stress response",
+    "substantial impact of ILS on phylogenetic inference",
+    "genetic exchange events (introgression) rather than ILS drove topological incongruence"
+  ],
+  "thinking_moves": [
+    "用小麦多倍体演化框架类比Echinochloa polyploidization",
+    "将基因家族拷贝数变化与适应度成本关联解释 weeds 高适应性",
+    "用KS分布峰值+物种树一致性+QuIBL三角度交叉验证phylogeny",
+    "通过ABBA-BABA统计量化种间渐渗对遗传多样性的贡献"
+  ],
+  "topic_tags": [
+    "polyploid-genome-assembly",
+    "weed-crop-duality",
+    "herbicide-resistance-genomics",
+    "incomplete-lineage-sorting",
+    "barnyard-millet-domestication"
+  ],
+  "cites_own_work": [
+    "Ye et al. 2019",
+    "Ye et al. 2020",
+    "Guo et al. 2017"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

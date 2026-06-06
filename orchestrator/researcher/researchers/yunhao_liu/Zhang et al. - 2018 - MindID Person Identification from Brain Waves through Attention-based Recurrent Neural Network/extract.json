@@ -1,0 +1,39 @@
+{
+  "paper_id": "Zhang et al. - 2018 - MindID Person Identification from Brain Waves through Attention-based Recurrent Neural Network",
+  "doi": null,
+  "title": "MindID: Person Identification from Brain Waves through Attention-based Recurrent Neural Network",
+  "year": 2018,
+  "venue": "ACM Journal of Computer Science and Cultural Heritage",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有生物特征识别易被伪造（指纹膜、仿生面具、变声器），EEG信号不可见不可触无法克隆，具有天然攻击抵抗性",
+  "problem_framing": "将EEG身份识别问题形式化为：如何从低质量、跨环境数据中学到稳健可泛化的用户特征表示",
+  "key_insight": "Delta频段（0.5-4Hz）同时满足'稳定'和'可区分'——它源于基础生命维持系统，不随意识状态波动而变化，且存在于所有脑状态中",
+  "method_signature": "Delta频段带通滤波 + 注意力加权Encoder-Decoder LSTM特征提取 + XGBoost boosting分类",
+  "evaluation_criteria": "多数据集准确率（EID-M/EID-S/EEG-S）、跨试次稳健性、跨设备适应性",
+  "negative_result_or_admitted_limitation": "基线和SOTA方法在高音质数据集上表现可接受，但在低音质数据集（EID-M）上Full频段准确率骤降至<0.82，无法应对环境漂移",
+  "evidence_for_tast(e)": [
+    "most discriminative and efficient pattern",
+    "Delta pattern contains the most steady",
+    "lowest correlation coefficients",
+    "only contributes a slight fluctuation",
+    "the Delta pattern is the most reliable",
+    "cannot handle high-frequency band signals"
+  ],
+  "thinking_moves": [
+    "从意识状态与脑电模式的关联性反推：低意识状态产生的信号更基础、更个体化、因而更稳定",
+    "用Pearson相关系数量化'可区分性'——跨被试相关性越低越容易区分",
+    "组合异质分类器：统计方法擅低频，深度学习擅高频，两者互补",
+    "跨数据集验证来证明方法不依赖特定采集环境"
+  ],
+  "topic_tags": [
+    "EEG-biometrics",
+    "attention-mechanism",
+    "Delta-pattern-analysis",
+    "cross-session-recognition",
+    " Encoder-Decoder-RNN"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

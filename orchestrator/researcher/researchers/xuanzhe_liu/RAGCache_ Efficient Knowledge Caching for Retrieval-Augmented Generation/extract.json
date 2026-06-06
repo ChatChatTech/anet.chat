@@ -1,0 +1,38 @@
+{
+  "paper_id": "RAGCache_ Efficient Knowledge Caching for Retrieval-Augmented Generation",
+  "doi": "10.48550/arxiv.2404.12457",
+  "title": "RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RAG系统因检索文档注入导致序列过长,计算和内存成本高,GPU在检索期间空闲",
+  "problem_framing": "将RAG性能优化形式化为外部知识中间状态的多级缓存问题,利用检索模式偏斜特性",
+  "key_insight": "同一文档在不同前缀下产生的KV tensor不同,因此需用前缀树组织缓存以保持顺序敏感",
+  "method_signature": "知识树+前缀感知PGDSF替换策略+动态投机流水线,跨GPU/主机内存层级缓存KV tensor",
+  "evaluation_criteria": "首token时间TTFT和吞吐量,对比vLLM+Faiss基线及SGLang",
+  "negative_result_or_admitted_limitation": "当top-k较大时文档排列组合爆炸导致重用率低,需在命中率与缓存效率间权衡",
+  "evidence_for_taste": [
+    "RAG introduces long sequence generation",
+    "the recurrence of identical documents",
+    "a small fraction of documents accounts for",
+    "caching knowledge’s intermediate states",
+    "prefix-aware Greedy-Dual-Size-Frequency"
+  ],
+  "thinking_moves": [
+    "从RAG序列长度实验数据发现prefill是主要瓶颈",
+    "利用检索请求分布的偏斜特性(幂律分布)论证缓存可行性",
+    "用Attention位置敏感性重新约束缓存结构设计",
+    "将系统优化问题分解为缓存结构+替换策略+调度重排三个正交子问题"
+  ],
+  "topic_tags": [
+    "RAG系统优化",
+    "KV缓存复用",
+    "多级内存层次缓存",
+    "LLM投机执行",
+    "前缀树索引"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

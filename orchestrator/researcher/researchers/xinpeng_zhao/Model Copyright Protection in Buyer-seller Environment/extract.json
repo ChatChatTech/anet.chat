@@ -1,0 +1,39 @@
+{
+  "paper_id": "Model Copyright Protection in Buyer-seller Environment",
+  "doi": "10.48550/arxiv.2312.05262",
+  "title": "Model Copyright Protection in Buyer-seller Environment",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "训练DNN成本高昂,买家购买模型,但买卖环境不可信导致模型被窃取,商业价值受损",
+  "problem_framing": "如何在无信任环境中保护DNN模型不被盗用,同时保证买家可用且计算开销低",
+  "key_insight": "不加密模型参数,而是让模型对输入敏感——只有添加正确key扰动的合法输入才能正确分类",
+  "method_signature": "输入敏感神经网络ISNN:合法输入=干净样本+key扰动,损失函数拉大合法/非法输入的输出距离",
+  "evaluation_criteria": "准确率P_buyer > 基线T=P_opt-10%,对抗者准确率P_adv < T,计算复杂度O_buyer=O(1)",
+  "negative_result_or_admitted_limitation": "标签不一致方法对重训练攻击和伪造版权攻击并不总是有效(Remark 1)",
+  "evidence_for_taste": [
+    "the adversary cannot obtain satisfactory accuracy",
+    "Remark 1 The ISNN trained with label-inconsistent",
+    "is not always effective against retraining attacks",
+    "the perturbation intensity impacts the results weakly",
+    "the accuracy P_adv^t_att < 80% < T",
+    "encryption is not perfect for model copyright protection"
+  ],
+  "thinking_moves": [
+    "从加密模型参数转向输入层鉴别",
+    "把对抗者访问权限作为威胁模型设计边界",
+    "用准确率阈值量化可用性vs安全性的tradeoff",
+    "考虑攻击者拥有全部数据集和扰动强度信息的强化威胁模型"
+  ],
+  "topic_tags": [
+    "neural-network-copyright-protection",
+    "input-sensitive-model",
+    "buyer-seller-model-security",
+    "adversarial-perturbation-key",
+    "model-watermarking"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

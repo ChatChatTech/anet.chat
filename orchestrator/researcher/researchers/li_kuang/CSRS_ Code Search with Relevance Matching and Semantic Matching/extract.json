@@ -1,0 +1,38 @@
+{
+  "paper_id": "CSRS_ Code Search with Relevance Matching and Semantic Matching",
+  "doi": "10.48550/arxiv.2203.07736",
+  "title": "CSRS: Code Search with Relevance Matching and Semantic Matching",
+  "year": 2022,
+  "venue": "ICPC '22",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "现有代码搜索方法不能同时捕获词汇相关性和语义相关性两种信号，导致匹配信息不完整",
+  "problem_framing": "代码搜索任务需要同时捕获查询与代码片段之间的关键词匹配信号和语义关联",
+  "key_insight": "IR方法捕获词汇匹配信号、DL方法捕获语义关联，两者结合可丰富匹配信息并提升搜索能力",
+  "method_signature": "CNN编码模块生成n-gram嵌入+神经IR相关性匹配模块+共注意力语义匹配模块的组合模型",
+  "evaluation_criteria": "MRR、Recall@k、NDCG三个指标在18.22M训练样本和10k测试集上评估",
+  "negative_result_or_admitted_limitation": "仅用API序列特征导致MRR降至0.193，贡献最小；Conv2核宽度效果不如Conv1核宽度",
+  "evidence_for_taste": [
+    "existing methods do not consider capturing two matching signals simultaneously",
+    "the characteristic of the IR-based model is that the relevance",
+    "combination of the two categories of models can enrich the matching information",
+    "Both relevance matching and semantic matching are effective",
+    "the method name is the most effective feature"
+  ],
+  "thinking_moves": [
+    "识别现有方法的正交性缺陷：IR方法和DL方法各有所长但未结合",
+    "通过消融实验验证每个模块的独立贡献",
+    "通过分别测试单个代码特征评估特征重要性",
+    "通过窗口大小消融验证多粒度n-gram嵌入的必要性"
+  ],
+  "topic_tags": [
+    "code-search",
+    "relevance-matching",
+    "semantic-matching",
+    "neural-IR",
+    "co-attention-mechanism"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

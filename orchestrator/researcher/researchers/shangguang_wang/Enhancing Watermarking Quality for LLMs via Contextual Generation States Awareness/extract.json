@@ -1,0 +1,39 @@
+{
+  "paper_id": "Enhancing Watermarking Quality for LLMs via Contextual Generation States Awareness",
+  "doi": "10.48550/arxiv.2506.07403",
+  "title": "Enhancing Watermarking Quality for LLMs via Contextual Generation States Awareness",
+  "year": 2025,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "现有水印方法干扰LLM生成过程导致内容质量下降,模型所有者和发布者不愿部署水印",
+  "problem_framing": "将水印容量定义为 token 的语义重要性,通过分析上下文生成状态评估每个位置的嵌入影响",
+  "key_insight": "孤立token置信度无法可靠识别关键信息,需结合当前token及其上下文生成状态联合评估",
+  "method_signature": "CAW框架通过上下文生成状态感知的容量评估器动态调整水印强度,配合树注意力多分支预生成机制",
+  "evaluation_criteria": "任务准确率(而非困惑度)作为文本质量指标,联合检测率AUROC/F1评估水印效果",
+  "negative_result_or_admitted_limitation": "困惑度无法反映生成内容的准确性,对关键数值的错误不敏感,不能全面衡量文本质量",
+  "evidence_for_taste": [
+    "perplexity cannot indicate the accuracy of generated content",
+    "such assessments are inadequate for capturing fine-grained flaws",
+    "may misidentify irreplaceable generated content due to localized informational bias",
+    "entropy-based methods may misidentify key tokens because they evaluate each token in isolation",
+    "vocabulary-partitioning strategies are inherently tied to reweighting-based mechanisms"
+  ],
+  "thinking_moves": [
+    "先指出困惑度指标的局限性,再提出任务准确率作为更合理的评估标准",
+    "从token级局部置信度扩展到上下文生成状态的联合建模",
+    "通过Pareto前沿分析展示检测率与质量的最优权衡",
+    "借鉴树注意力解码解决前瞻token依赖导致的延迟问题",
+    "用神经evaluator替代人工设计的统计特征实现端到端学习"
+  ],
+  "topic_tags": [
+    "LLM-watermarking",
+    "contextual-generation-states",
+    "text-quality-preservation",
+    "plug-and-play-framework",
+    "tree-attention-decoding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

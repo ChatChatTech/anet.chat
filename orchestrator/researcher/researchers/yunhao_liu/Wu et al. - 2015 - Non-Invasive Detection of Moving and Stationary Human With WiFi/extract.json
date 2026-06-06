@@ -1,0 +1,41 @@
+{
+  "paper_id": "Wu et al. - 2015 - Non-Invasive Detection of Moving and Stationary Human With WiFi",
+  "doi": null,
+  "title": "Non-invasive Detection of Moving and Stationary Human With WiFi",
+  "year": 2015,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "现有静态人员检测需场景标定(采集无人的信道profile),实际部署繁琐且易失效",
+  "problem_framing": "用统一的WiFi CSI框架同时检测移动和静止人员,无需先验标定",
+  "key_insight": "人即使静止也持续呼吸,胸腔起伏产生周期性信号调制,可作为存在性指示",
+  "method_signature": "CSI幅相特征→相关矩阵特征值→motion indicator二分决策→移动/呼吸双模块",
+  "evaluation_criteria": "移动/静止/无人三类检测率(真阳/真阴),对比基线提升约30%",
+  "negative_result_or_admitted_limitation": "多人呼吸叠加难以分离;LOS路径限制实际覆盖范围",
+  "evidence_for_taste": [
+    "require scenario-specific calibration",
+    "previous schemes may still fail",
+    "too few packets make no sense",
+    "neither amplitude nor phase alone is sufficient",
+    "breathing signal may be destroyed by whole-body motion"
+  ],
+  "thinking_moves": [
+    "把'感知静止人存在'这个难题重新frame成'检测呼吸信号周期性'",
+    "利用呼吸频率范围(0.167-0.667Hz)远窄于一般环境噪声来设计带通滤波器",
+    "用相关矩阵特征值替代绝对幅值,实现跨场景统一的阈值",
+    "先粗糙motion indicator二选一,再精细双模块复核,平衡计算开销与准确率"
+  ],
+  "topic_tags": [
+    "WiFi-CSI-breathing-detection",
+    "device-free-human-presence",
+    "stationary-target-detection",
+    "phase-information-exploitation",
+    "calibration-free-sensing"
+  ],
+  "cites_own_work": [
+    "FIMD (Xiao et al.)",
+    "ArrayTrack (Xiong et al.)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

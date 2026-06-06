@@ -1,0 +1,39 @@
+{
+  "paper_id": "A Secure Process-Service Model",
+  "doi": "10.1007/978-3-540-24685-5_106",
+  "title": "A Secure Process-Service Model",
+  "year": 2005,
+  "venue": "International Conference on Computational Science and Its Applications",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "服务提供方因安全和商业机密不愿公开流程细节,但消费方需要时间信息进行时间管理,两者矛盾",
+  "problem_framing": "流程服务呈现为黑箱,消费者难以获知足够结构与时间信息以参与时间管理",
+  "key_insight": "将流程服务分为私有体(PSB)和公开声明(PSD),通过界面时间等价原则在保护细节的同时向消费者提供必要时间约束",
+  "method_signature": "PSB(结构+时间约束全量) + PSD(抽象后等价可发布) + 自动生成算法O(n³)",
+  "evaluation_criteria": "PSD与PSB满足界面时间等价:输入输出活动的时间点相同,行为可相互模拟",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "not only satisfy the security and secrecy requirements from providers, but also provide enough information for consumers",
+    "PSD is deeply abstracted from its relative PSB and hides much detail information",
+    "present like a black box with only interfaces to consumers",
+    "business enterprises are not willing to do that due to the consideration on security and secrecy factors"
+  ],
+  "thinking_moves": [
+    "将一个矛盾问题(提供方要隐藏/消费方要透明)转化为二分结构问题(私有体vs公开声明)",
+    "用时间等价性作为抽象保真度的形式化保证",
+    "针对已有标准(BPEL4WS/WSFL/XLANG)的共同缺陷进行批判性定位",
+    "从服务组合实际场景中发现流程封装的痛点并形式化"
+  ],
+  "topic_tags": [
+    "process-service-abstraction",
+    "time-constraint-management",
+    "web-service-security",
+    "interface-equivalence",
+    "workflow-encapsulation"
+  ],
+  "cites_own_work": [
+    "Research of Time Model in Service-Based Workflow (2004)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文提供了问题动机和模型框架,但缺少具体评估数据和完整算法描述;时间管理领域定义较多;参考文献显示2004年相关工作,论文约2005年发表"
+}

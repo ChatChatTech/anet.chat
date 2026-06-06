@@ -1,0 +1,41 @@
+{
+  "paper_id": "Dong et al. - 2013 - R3 Optimizing relocatable code for efficient reprogramming in networked embedded systems",
+  "doi": null,
+  "title": "R3: Optimizing Relocatable Code for Efficient Reprogramming in Networked Embedded Systems",
+  "year": 2013,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "无线传感器网络软件更新传输量大，能量消耗高，现有增量方法delta文件仍过大",
+  "problem_framing": "将代码相似性最大化与元数据开销最小化作为两个独立优化维度",
+  "key_insight": "用符号索引替代全零填充以保持相似性，用位图替代偏移字段以削减元数据",
+  "method_signature": "R3diff(最优delta生成)+R3sim(相似性保持的二进制格式优化)",
+  "evaluation_criteria": "delta文件大小、执行时间、内存占用，对比Stream/R2/Zephyr/Hermes/Rsync",
+  "negative_result_or_admitted_limitation": "RMTD算法对复杂程序执行时间60s、内存240MB，不适用于iMote2",
+  "evidence_for_taste": [
+    "R2 has a relatively large overhead",
+    "RMTD algorithm unsuitable",
+    "significantly improves the runtime performance",
+    "does not cause memory segmentation",
+    "the metadata occupies a large portion",
+    "reduces the metadata overhead"
+  ],
+  "thinking_moves": [
+    "先定位R2的元数据开销来源，再针对性用符号索引+位图替换定位条目",
+    "将COPY命令代价β=5字节的编码开销纳入最优性证明的前提条件",
+    "通过n≈0.0864C和m≈0.0233C的实测比例量化R3相比R2的元数据削减量"
+  ],
+  "topic_tags": [
+    "wireless-reprogramming",
+    "delta-differencing",
+    "relocatable-code",
+    "sensor-network",
+    "binary-optimization"
+  ],
+  "cites_own_work": [
+    "R2 (INFOCOM 2011)",
+    "Elon (SIGMETRICS 2010)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文摘要和引言方法论较完整，但缺少完整的方法细节和实验数据图；venue信息从作者所属推断可能为普通会议但未在文中明确标注"
+}

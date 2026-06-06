@@ -1,0 +1,42 @@
+{
+  "paper_id": "SeaLLM_ Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference",
+  "doi": "10.48550/arxiv.2504.15720",
+  "title": "SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference",
+  "year": 2025,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "LLM服务请求流量动态变化，专用GPU部署导致资源浪费和服务效率低下",
+  "problem_framing": "在满足SLO约束下，最小化归一化延迟的放置计划和请求调度联合优化问题",
+  "key_insight": "利用LLM服务的输入输出长度分布等特征指导放置和调度决策",
+  "method_signature": "基于服务特征感知的双预算调度算法与两阶段放置算法的资源管理框架",
+  "evaluation_criteria": "归一化延迟、尾延迟、SLO达成率、TTFT、TPOT",
+  "negative_result_or_admitted_limitation": "实际请求可能偏离服务特征分布，破坏调度算法最优性",
+  "evidence_for_taste": [
+    "FCFS调度算法臭名昭著",
+    "head-of-line blocking problem",
+    "the optimality of the scheduling algorithm",
+    "doubles the budget to continue serving",
+    "fixed replacement interval, which is hard to decide",
+    "preassigned quota increases the latency for bursty services",
+    "doubles the budget once the budget is used up"
+  ],
+  "thinking_moves": [
+    "先分离放置和调度为两阶段问题降低复杂度",
+    "用模拟器基于历史数据评估候选放置计划",
+    "将归一化延迟定义为优化目标而非简单平均延迟",
+    "从排队论c-μ规则推导最优优先级公式",
+    "用预算加倍机制缓解假设不成立时的性能退化",
+    "通过实际与估计性能差异自适应调整替换间隔"
+  ],
+  "topic_tags": [
+    "LLM服务调度",
+    "GPU资源分配",
+    "KV缓存管理",
+    "多租户LLM服务",
+    "延迟优化调度"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

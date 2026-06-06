@@ -1,0 +1,41 @@
+{
+  "paper_id": "ECC-SNN_ Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks",
+  "doi": "10.48550/arxiv.2505.20835",
+  "title": "ECC-SNN: Cost-Effective Edge-Cloud Collaboration for Spiking Neural Networks",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "边缘设备资源受限，纯ANN云端框架通信开销高能耗大，SNN能效优但精度不足",
+  "problem_framing": "将边缘云协作定义为Setup-Execution-Update三阶段联合优化问题，用归一化熵过滤歧义样本",
+  "key_insight": "用云端大ANN作为oracle通过知识蒸馏指导边缘小SNN，并让边缘通过增量学习自主减少对云的依赖",
+  "method_signature": "ANN-SNN联合训练( logits +特征对齐损失 ) + 熵阈值过滤协作推理 + 自蒸馏增量学习",
+  "evaluation_criteria": "准确率提升(4.15%)、能耗降低(79.4%)、延迟降低(39.1%)",
+  "negative_result_or_admitted_limitation": "复杂数据集(ImageNet)上云边精度差距过大，无法实现精度超越；通信开销在大输入时不可忽略",
+  "evidence_for_taste": [
+    "SNNs often underperform compared to ANNs",
+    "requires additional memory and computational resources",
+    "the dominant factor",
+    "the communication overhead becomes non-negligible",
+    "the accuracy gap between the cloud and edge models is too large"
+  ],
+  "thinking_moves": [
+    "将SNN部署难题归因为梯度误差累积，先用知识蒸馏预处理而非事后补救",
+    "把云端ANN定位为oracle而非待优化对象，简化端到端优化目标",
+    "通信开销和计算开销解耦分析，分别针对ImageNet和CIFAR场景讨论",
+    "从成本-精度帕累托最优视角设计滤波器阈值δ",
+    "用自蒸馏框架替代回放缓冲，规避BPTT时间步内存开销"
+  ],
+  "topic_tags": [
+    "edge-cloud-collaboration",
+    "spiking-neural-networks",
+    "incremental-learning",
+    "knowledge-distillation",
+    "energy-efficient-inference"
+  ],
+  "cites_own_work": [
+    "EC-SNN",
+    "Tr-Spiking-YOLO"
+  ],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "Liu et al. - 2026 - EIoT Embodied Intelligence of Things",
+  "doi": null,
+  "title": "EIoT: Embodied Intelligence of Things",
+  "year": 2026,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "AI缺乏物理具身无法与真实世界直接交互,无法达成AGI",
+  "problem_framing": "提出EIoT新范式:从IoT连接→AIoT赋智→EIoT组合具身智能",
+  "key_insight": "设备从被动数据收集者转变为主动 enact 智能体",
+  "method_signature": "Enacted/Engaged/Evolutionary三维框架+智能体化",
+  "evaluation_criteria": "概念框架与开发者路线图,无实证评估",
+  "negative_result_or_admitted_limitation": "EIoT remains an emerging and largely underexplored field, with numerous open challenges related to architecture, coordination, scalability, and evaluation",
+  "evidence_for_taste": [
+    "real intelligence through embodied",
+    "enacted agents—replace notion of merely instrumented",
+    "intermittent, opportunistic connections",
+    "establishes compositional intelligence"
+  ],
+  "thinking_moves": [
+    "把IoT物理世界重新 frame 成智能体(agentization)",
+    "从AI辅助科学的三维度反推具身必要性",
+    "把智能组合问题类比为生物组织层级结构",
+    "从通信领域轻量化技术推导边缘智能约束"
+  ],
+  "topic_tags": [
+    "embodied-AI",
+    "IoT-agentization",
+    "edge-intelligence",
+    "swarm-intelligence",
+    "physical-digital-convergence"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "这是一篇位置/概念论文,提出EIoT新范式框架,主要贡献是概念定义和发展路线图而非实证工作。论文列举了大量相关工作(Mistify,MCUNet,Babel等)作为支撑但未提供原创实验数据,缺乏具体性能指标和对比评估。三维框架(Enacted/Engaged/Evolutionary)属于概念性贡献而非算法/系统贡献。 | md truncated to head40k+tail20k"
+}

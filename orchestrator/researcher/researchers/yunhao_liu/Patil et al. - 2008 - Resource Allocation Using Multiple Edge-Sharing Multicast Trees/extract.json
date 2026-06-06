@@ -1,0 +1,45 @@
+{
+  "paper_id": "Patil et al. - 2008 - Resource Allocation Using Multiple Edge-Sharing Multicast Trees",
+  "doi": null,
+  "title": "Resource Allocation Using Multiple Edge-Sharing Multicast Trees",
+  "year": 2008,
+  "venue": "IEEE Transactions on Vehicular Technology",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "MANET中单播树仅少数内部节点贡献资源，导致节点能耗不均、瓶颈节点出现， multicast tree寿命受限",
+  "problem_framing": "构建多棵可共享低权重边的生成树，在资源公平分配与时延约束间取得平衡",
+  "key_insight": "低权重边可跨树复用而不显著增加时延；边缘重叠度受阈值控制，性能曲线在阈值增大时趋于平坦",
+  "method_signature": "MEST算法迭代运行修改版GHS算法，通过边缘数组标记B/R/U/X/S状态控制边复用",
+  "evaluation_criteria": "multicast latency延迟、leaf nodes数量（资源利用率）、overlap index重叠度",
+  "negative_result_or_admitted_limitation": "SplitStream依赖非成员节点协助且时延较高；k-MST算法后期树被迫使用高权重边导致整体时延由最重树决定",
+  "evidence_for_taste": [
+    "higher fan-out results in low depth",
+    "the performance curves tend to flatten",
+    "the final tree would be the one with the highest delay",
+    "A very high value would lead to several overlapping edges",
+    "we suggest setting an upper bound",
+    "optimal threshold value is 75 m",
+    "the gain in performance seen is not proportional to the number of trees"
+  ],
+  "thinking_moves": [
+    "把公平分配问题转化为生成树重叠边选择问题",
+    "通过图例对比揭示edge-disjoint并非最优——高权重边集中在某树导致最坏时延",
+    "从仿真观察到的平坦化曲线反推阈值应存在最优区间",
+    "把系统整体延迟约束锚定于权重最大的那棵树",
+    "识别bridge edge作为必须共享的特殊边"
+  ],
+  "topic_tags": [
+    "MANET-overlay-multicast",
+    "spanning-tree-resource-allocation",
+    "edge-sharing-multicast-trees",
+    "distributed-MST-algorithm",
+    "threshold-parameter-tuning"
+  ],
+  "cites_own_work": [
+    "Xiao Patil Liu Ni Esfahanian 2004",
+    "Patil Liu Xiao Esfahanian Ni 2004",
+    "Patil Esfahanian Liu Xiao 2005"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "文中未明确标注年份、DOI和venue tier；部分技术细节（如GHS具体修改、bridge检测的override机制）因篇幅限制仅作概述；仿真参数和结果图表可从文内提取但未逐项引用"
+}

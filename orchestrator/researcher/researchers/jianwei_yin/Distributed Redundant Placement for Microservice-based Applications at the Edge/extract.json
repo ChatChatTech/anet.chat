@@ -1,0 +1,39 @@
+{
+  "paper_id": "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+  "doi": "10.48550/arxiv.1911.03600",
+  "title": "Distributed Redundant Placement for Microservice-based Applications at the Edge",
+  "year": 2019,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Kubernetes默认调度器在MEC场景下无法保证高可用性，边缘站点异构性导致容器故障恢复时间不可接受",
+  "problem_framing": "将复合微服务的冗余部署建模为随机离散优化问题，通过SAA方法处理用户请求不确定性",
+  "key_insight": "同一候选服务可部署在多个边缘站点实现冗余，通过多路访问加速响应同时保证高可用性",
+  "method_signature": "SAA-RP框架结合GASS遗传算法求解，每个候选服务的部署实例数和位置作为决策变量",
+  "evaluation_criteria": "总体响应时间、平均完成时间、算法收敛性和可扩展性",
+  "negative_result_or_admitted_limitation": "仅考虑线性结构应用，DAG扩展留待未来工作；超参数对最优性影响较小",
+  "evidence_for_taste": [
+    "high availability cannot be ensured",
+    "the outage time could be dozens of seconds",
+    "redundancy is not always a win",
+    "creating too many instances can lead to instability"
+  ],
+  "thinking_moves": [
+    "将容器故障恢复问题重新框架为服务部署位置选择问题",
+    "利用边缘站点异构性作为冗余部署的约束条件而非障碍",
+    "将不确定性通过SAA采样平均近似为确定性子问题",
+    "承认冗余策略存在临界点，过度冗余反而导致不稳定"
+  ],
+  "topic_tags": [
+    "edge-computing-service-placement",
+    "microservice-redundancy",
+    "stochastic-optimization",
+    "genetic-algorithm",
+    "kubernetes-edge"
+  ],
+  "cites_own_work": [
+    "Deploying data-intensive applications with multiple services components on edge (2019)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

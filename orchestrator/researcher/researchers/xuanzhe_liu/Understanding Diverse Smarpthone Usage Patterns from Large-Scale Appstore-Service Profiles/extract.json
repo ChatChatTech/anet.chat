@@ -1,0 +1,40 @@
+{
+  "paper_id": "Understanding Diverse Smarpthone Usage Patterns from Large-Scale Appstore-Service Profiles",
+  "doi": null,
+  "title": "Understanding Diverse Smarpthone Usage Patterns from Large-Scale Appstore-Service Profiles",
+  "year": 2017,
+  "venue": "IEEE Transactions on Software Engineering",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "App developers无法直接接触用户、理解需求，现有小规模研究偏差大且缺乏代表性",
+  "problem_framing": "用大规模真实数据(1700万用户)刻画App使用行为的多维分布规律",
+  "key_insight": "多维指标(下载/用户/流量/时长)揭示Pareto式分布，且用户评分与实际使用常不一致",
+  "method_signature": "大规模行为数据的描述性统计+相关性与回归分析",
+  "evaluation_criteria": "验证Pareto原则和幂律分布、发现指标间不一致性",
+  "negative_result_or_admitted_limitation": "3%应用占95%下载量是极端长尾，普通方法难揭示；用户评分与下载量不总一致",
+  "evidence_for_taste": [
+    "ratings are usually sparse",
+    "the ratings are usually provided as an overall score",
+    "surprisingly find that user ratings",
+    "device models are heavily fragmented",
+    "numerous apps keep long-live TCP connections"
+  ],
+  "thinking_moves": [
+    "用极端数据规模揭示小样本研究看不到的规律",
+    "将App流行度从单一下载量扩展为多维指标体系",
+    "通过数据发现评分机制与实际使用的系统性偏差",
+    "从用户行为反推平台设计问题而非正向提出方案"
+  ],
+  "topic_tags": [
+    "app-store用户行为",
+    "移动流量分析",
+    "Android设备碎片化",
+    "用户评分可靠性",
+    "幂律分布验证"
+  ],
+  "cites_own_work": [
+    "IMC 2015 conference paper"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "完整提取了论文的动机、问题定义、核心发现和思维方式。论文贡献明确列举5个方面，方法论采用描述性统计+相关性分析，评价标准为验证已知分布规律和发现新模式。 | md truncated to head40k+tail20k"
+}

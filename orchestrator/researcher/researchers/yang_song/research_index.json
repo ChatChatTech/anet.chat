@@ -1,0 +1,133 @@
+{
+  "slug": "yang_song",
+  "n_papers": 4,
+  "n_indexed": 4,
+  "anchors": [
+    "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval",
+    "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval",
+    "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval",
+    "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine"
+  ],
+  "by_id": {
+    "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval": {
+      "title": "ECNU at 2015 CDS Track: Two Re-ranking Methods in Medical Information Retrieval",
+      "year": 2015,
+      "venue": "TREC 2015 Clinical Decision Support Track",
+      "doi": null,
+      "key_insight": "查询项在文档中的位置信息具有衰减效应，通过自定义核函数融合高斯、三角、余弦和圆形核可以建模这种空间依赖性",
+      "method_signature": "结合BM25/PL2/BB2的集成排序结果，使用随机森林(逐点)和SVM(成对)进行重排序；同时利用四核组合核函数的位置模型进行重排序",
+      "tags": [
+        "clinical-decision-support",
+        "learning-to-rank",
+        "medical-IR",
+        "position-based-retrieval",
+        "query-expansion"
+      ],
+      "quality": "full"
+    },
+    "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval": {
+      "title": "ECNU at 2015 eHealth Task 2: User-centred Health Information Retrieval",
+      "year": 2015,
+      "venue": "CLEF eHealth Evaluation Lab",
+      "doi": null,
+      "key_insight": "利用Google搜索将用户描述自动翻译为MeSH医学术语，实现查询扩展",
+      "method_signature": "Web查询扩展+随机森林学习排序+多IR模型组合",
+      "tags": [
+        "medical-IR",
+        "query-expansion",
+        "learning-to-rank",
+        "circumlocutory-queries",
+        "Web-based-expansion"
+      ],
+      "quality": "full"
+    },
+    "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval": {
+      "title": "ECNU at 2016 eHealth Task 3: Patient-centred Information Retrieval",
+      "year": 2016,
+      "venue": "CLEF eHealth Evaluation Lab",
+      "doi": null,
+      "key_insight": "利用Google爬取网页摘要结合MeSH医学术语库进行查询扩展，并通过多模型组合消除单一模型偏差",
+      "method_signature": "Web查询扩展+多IR模型组合(BM25/PL2/BB2/TFIDF/LM)",
+      "tags": [
+        "medical-IR-query-expansion",
+        "web-based-query-expansion",
+        "model-combination",
+        "clef-ehealth",
+        "mesh-terminology"
+      ],
+      "quality": "full"
+    },
+    "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine": {
+      "title": "ECNU at 2017 eHealth Task 2: Technologically Assisted Reviews in Empirical Medicine",
+      "year": 2017,
+      "venue": "CLEF 2017 eHealth Evaluation Lab",
+      "doi": null,
+      "key_insight": "L2R模型与Word2vec模型互补,两者组合(α=0.8,β=0.2)优于单独使用",
+      "method_signature": "L2R模型(特征:BM25/PL2/BB2得分+排名)+Word2vec语义相似度加权融合",
+      "tags": [
+        "医疗信息检索",
+        "学习排序",
+        "系统性评审",
+        "文档排序",
+        "词向量语义匹配"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "learning-to-rank": [
+      "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval",
+      "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval"
+    ],
+    "medical-IR": [
+      "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval",
+      "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval"
+    ],
+    "query-expansion": [
+      "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval",
+      "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval"
+    ],
+    "clinical-decision-support": [
+      "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval"
+    ],
+    "position-based-retrieval": [
+      "ECNU at 2015 CDS Track_ Two Re-ranking Methods in Medical Information Retrieval"
+    ],
+    "circumlocutory-queries": [
+      "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval"
+    ],
+    "Web-based-expansion": [
+      "ECNU at 2015 eHealth Task 2_ User-centred Health Information Retrieval"
+    ],
+    "medical-IR-query-expansion": [
+      "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval"
+    ],
+    "web-based-query-expansion": [
+      "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval"
+    ],
+    "model-combination": [
+      "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval"
+    ],
+    "clef-ehealth": [
+      "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval"
+    ],
+    "mesh-terminology": [
+      "ECNU at 2016 eHealth Task 3_ Patient-centred Information Retrieval"
+    ],
+    "医疗信息检索": [
+      "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine"
+    ],
+    "学习排序": [
+      "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine"
+    ],
+    "系统性评审": [
+      "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine"
+    ],
+    "文档排序": [
+      "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine"
+    ],
+    "词向量语义匹配": [
+      "ECNU at 2017 eHealth Task 2_ Technologically Assisted Reviews in Empirical Medicine"
+    ]
+  }
+}

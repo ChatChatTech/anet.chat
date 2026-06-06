@@ -1,0 +1,1920 @@
+{
+  "slug": "xuanzhe_liu",
+  "n_papers": 62,
+  "n_indexed": 62,
+  "anchors": [
+    "A First Look at Deep Learning Apps on Smartphones",
+    "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification",
+    "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software",
+    "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data",
+    "Supporting Video Queries on Zero-Streaming Cameras",
+    "Rise of Distributed Deep Learning Training in the Big Model Era: From a Software Engineering Perspective",
+    "Understanding Diverse Smartphone Usage Patterns from Large-Scale Appstore-Service Profiles"
+  ],
+  "by_id": {
+    "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software": {
+      "title": "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software",
+      "year": 2020,
+      "venue": "ESEC/FSE 2020",
+      "doi": "10.48550/arxiv.2005.00760",
+      "key_insight": "部署比开发更难：70.7%无答案、响应时间3倍于非部署问题",
+      "method_signature": "3,023 SO帖子 + 769手动标注构建72类挑战taxonomy",
+      "tags": [
+        "DL-software-deployment",
+        "Stack-Overflow-empirical-study",
+        "mobile-deployment",
+        "browser-deployment",
+        "taxonomy-construction"
+      ],
+      "quality": "full"
+    },
+    "A First Look at Blockchain-based Decentralized Applications": {
+      "title": "A First Look at Blockchain-based Decentralized Applications",
+      "year": 2019,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1909.00939",
+      "key_insight": "DApp流行度遵循帕累托分布，金融类DApp主导市场，仅15.7%完全开源，75%仅用单一智能合约",
+      "method_signature": "大规模经验分析：995 DApp、5158智能合约、29846075条交易",
+      "tags": [
+        "Ethereum-DApp-empirical-study",
+        "smart-contract-pattern-analysis",
+        "blockchain-cost-modeling",
+        "DApp-ecosystem-characterization",
+        "gas-optimization"
+      ],
+      "quality": "full"
+    },
+    "A First Look at Deep Learning Apps on Smartphones": {
+      "title": "A First Look at Deep Learning Apps on Smartphones",
+      "year": 2018,
+      "venue": "WWW'19",
+      "doi": "10.48550/arxiv.1812.05448",
+      "key_insight": "实际部署的DL模型极小(中位数2.47MB/10M FLOPs)，比预期轻两个数量级",
+      "method_signature": "基于APK静态分析的DL Sniffer和Model Extractor工具链",
+      "tags": [
+        "mobile-deep-learning",
+        "android-app-analysis",
+        "model-deployment",
+        "empirical-study",
+        "on-device-inference"
+      ],
+      "quality": "full"
+    },
+    "A Survey of Resource-efficient LLM and Multimodal Foundation Models": {
+      "title": "A Survey of Resource-Efficient LLM and Multimodal Foundation Models",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2401.08092",
+      "key_insight": "效率优化需贯穿训练到部署全流程, 结合模型压缩与系统调度协同设计",
+      "method_signature": "综述顶会论文中模型架构、训练/服务算法、系统设计等资源优化策略",
+      "tags": [
+        "LLM压缩",
+        "模型服务系统",
+        "边缘AI",
+        "多模态模型效率",
+        "能耗优化",
+        "分布式训练"
+      ],
+      "quality": "full"
+    },
+    "A community-centric approach to automated service composition": {
+      "title": "A community-centric approach to automated service composition",
+      "year": null,
+      "venue": "Sci China Inf Sci",
+      "doi": "10.1007/s11434-010-9996-6",
+      "key_insight": "利用社区集体智慧共享和复用已有解决方案",
+      "method_signature": "服务池+任务模板的社区框架",
+      "tags": [
+        "service-composition",
+        "community-intelligence",
+        "web-services",
+        "user-centric",
+        "service-access"
+      ],
+      "quality": "partial"
+    },
+    "Accurate CPU Power Modeling for Multicore Smartphones": {
+      "title": "Accurate CPU Power Modeling for Multicore Smartphones",
+      "year": null,
+      "venue": "MobiSys",
+      "doi": null,
+      "key_insight": "加权平均idle state驻留时长WED_Ci能准确预测多核CPU功耗",
+      "method_signature": "基于WED的idle-state regression model",
+      "tags": [
+        "smartphone-power-modeling",
+        "CPU-idle-states",
+        "multicore-power-estimation",
+        "ARM-power-model",
+        "Android-kernel-instrumentation"
+      ],
+      "quality": "full"
+    },
+    "An Empirical Study on Deployment Faults of Deep Learning Based Mobile Applications": {
+      "title": "An Empirical Study on Deployment Faults of Deep Learning Based Mobile Applications",
+      "year": 2021,
+      "venue": null,
+      "doi": "10.48550/arxiv.2101.04930",
+      "key_insight": "48.4%的部署故障发生在模型转换阶段,其中不支持的操作是最常见症状(占转换阶段31.3%)",
+      "method_signature": "经验性研究,手动标注故障样本,归纳式构建层级症状分类树(23类)",
+      "tags": [
+        "mobile DL deployment",
+        "model conversion fault",
+        "TF Lite",
+        "Core ML",
+        "empirical software engineering"
+      ],
+      "quality": "full"
+    },
+    "Anatomizing Deep Learning Inference in Web Browsers": {
+      "title": "Anatomizing Deep Learning Inference in Web Browsers",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.2402.05981",
+      "key_insight": "降低推理延迟不等于提升QoE,WebGL推理虽快但因资源冲突导致平滑度下降62.7%,需在延迟与体验间权衡",
+      "method_signature": "模型级+核级性能剖析,对比Wasm/WebGL后端与原生环境,从SIMD利用率、运行时开销、资源竞争多角度归因延迟差距",
+      "tags": [
+        "in-browser DL inference",
+        "WebAssembly performance",
+        "WebGL GPU abstraction",
+        "QoE measurement",
+        "browser-native performance gap"
+      ],
+      "quality": "full"
+    },
+    "Automating Release of Deep Link APIs for Android Applications": {
+      "title": "Automating Release of Deep Link APIs for Android Applications",
+      "year": 2017,
+      "venue": "arxiv / IEEE Transactions",
+      "doi": "10.48550/arxiv.1711.11564",
+      "key_insight": "Cooperative static-dynamic analysis plus deep-link proxy enables reaching arbitrary app locations without modifying business logic",
+      "method_signature": "Navigation graph + shortest-path analysis + UI-tree fragment ID + deep-link proxy replay engine",
+      "tags": [
+        "android-deep-links",
+        "static-dynamic-analysis-cooperation",
+        "intent-filter-automation",
+        "app-navigation-graph",
+        "mobile-hyperlink-equivalence"
+      ],
+      "quality": "full"
+    },
+    "Benchmarking of DL Libraries and Models on Mobile Devices": {
+      "title": "A Comprehensive Benchmark of Deep Learning Libraries on Mobile Devices",
+      "year": 2022,
+      "venue": "WWW '22",
+      "doi": "10.48550/arxiv.2202.06512",
+      "key_insight": "DL软件的影响可能压倒算法设计和硬件容量的优化效果",
+      "method_signature": "MDLBench自动benchmark：6库×15模型×10设备，含算子级instrumentation",
+      "tags": [
+        "mobile-DL-inference",
+        "DL-library-benchmark",
+        "performance-fragmentation",
+        "operator-level-optimization",
+        "on-device-deep-learning"
+      ],
+      "quality": "full"
+    },
+    "Bias Behind the Wheel_ Fairness Testing of Autonomous Driving Systems": {
+      "title": "Bias Behind the Wheel: Fairness Testing of Autonomous Driving Systems",
+      "year": 2024,
+      "venue": "ACM Trans. Softw. Eng. Methodol.",
+      "doi": "10.48550/arxiv.2308.02935",
+      "key_insight": "特定驾驶条件下,行人检测器可同时实现更优公平性和更高性能,挑战传统公平性-性能权衡理论",
+      "method_signature": "八种DL检测器在四数据集上的多维度公平性测试与场景分层分析",
+      "tags": [
+        "autonomous-driving-fairness",
+        "pedestrian-detection-bias",
+        "group-fairness-testing",
+        "demographic-disparity",
+        "software-testing"
+      ],
+      "quality": "full"
+    },
+    "Characterizing EOSIO Blockchain": {
+      "title": "Characterizing EOSIO Blockchain",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2002.05369",
+      "key_insight": "EOSIO超30%账户是bot-like,超300攻击账户造成超150万EOS损失,且这些问题可通过图结构异常和行为模式相似度自动检测",
+      "method_signature": "构建EMFG/EACG/ECIG三类图模型,从社区和账户两层利用行为相似度检测bot;用盈利阈值和手动验证识别攻击",
+      "tags": [
+        "blockchain-security",
+        "bot-detection",
+        "graph-analysis",
+        "EOSIO-DApp",
+        "attack-forensics"
+      ],
+      "quality": "full"
+    },
+    "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data": {
+      "title": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data",
+      "year": 2021,
+      "venue": "WWW '21",
+      "doi": "10.48550/arxiv.2006.06983",
+      "key_insight": "状态异质性比硬件异质性更导致精度下降;设备失效和参与者偏差是性能降级的主因",
+      "method_signature": "首个基于136k智能手机实测数据的异质性影响实证研究,构建状态感知FL仿真平台",
+      "tags": [
+        "federated-learning-heterogeneity",
+        "mobile-device-simulation",
+        "cross-device-fl",
+        "measurement-study",
+        "fairness-in-fl"
+      ],
+      "quality": "full"
+    },
+    "Characterizing and Detecting WebAssembly Runtime Bugs": {
+      "title": "Characterizing and Detecting WebAssembly Runtime Bugs",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2301.12102",
+      "key_insight": "WASM运行时bug可按架构组件层次化分类,基于模式可有效检测",
+      "method_signature": "经验性研究311个真实bug的分类与修复策略,构建模式检测框架",
+      "tags": [
+        "WebAssembly-runtime-bugs",
+        "empirical-software-engineering",
+        "bug-taxonomy",
+        "pattern-based-detection",
+        "WASM-compilation"
+      ],
+      "quality": "full"
+    },
+    "DeepWear_ Adaptive Local Offloading for On-Wearable Deep Learning": {
+      "title": "DeepWear: Adaptive Local Offloading for On-Wearable Deep Learning",
+      "year": 2017,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.1712.03073",
+      "key_insight": "Internal layers produce smaller intermediate data, reducing Bluetooth transfer delay",
+      "method_signature": "Context-aware partial model partition with runtime decision making",
+      "tags": [
+        "wearable-DL-offloading",
+        "edge-computing",
+        "model-partition",
+        "bluetooth-latency-tradeoff",
+        "adaptive-scheduling"
+      ],
+      "quality": "full"
+    },
+    "DistServe_ Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving": {
+      "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2401.09670",
+      "key_insight": "将prefill和decoding分离到不同GPU可消除阶段间干扰,实现各自独立的资源分配和并行策略优化",
+      "method_signature": "解聚合prefill/decoding阶段,根据延迟要求独立优化各阶段并行度和资源分配算法",
+      "tags": [
+        "LLM serving disaggregation",
+        "prefill-decoding interference",
+        "goodput optimization",
+        "model parallelism tuning",
+        "latency SLO optimization"
+      ],
+      "quality": "partial"
+    },
+    "Don't Fish in Troubled Waters! Characterizing Coronavirus-themed Cryptocurrency Scams": {
+      "title": "Don't Fish in Troubled Waters! Characterizing Coronavirus-themed Cryptocurrency Scams",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2007.13639",
+      "key_insight": "利用疫情特定信任(WHO/CDC)和公众健康焦虑,通过混合方法发现195个已知和未知诈骗案例",
+      "method_signature": "混合方法: 从报告数据库收集已知诈骗+基于关键词/域名/恶意软件检测未知诈骗, 手动验证",
+      "tags": [
+        "COVID-19诈骗特征化",
+        "加密货币欺诈检测",
+        "区块链安全测量",
+        "社会工程攻击分析",
+        "网络犯罪生态系统"
+      ],
+      "quality": "full"
+    },
+    "DroidLink_ Automated Generation of Deep Links for Android Apps": {
+      "title": "DroidLink: Automated Generation of Deep Links for Android Apps",
+      "year": 2018,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.1605.06928",
+      "key_insight": "Model activity transitions as paths; compute shortest shortcuts to enable efficient deep link execution without modifying app structure",
+      "method_signature": "Navigation Graph via dynamic analysis → Shortcut computation → Proxy Activity architecture for APK repackaging",
+      "tags": [
+        "Android-deep-link-automation",
+        "mobile-app-interoperability",
+        "navigation-graph-analysis",
+        "intent-based-activity-transition",
+        "automated-app-indexing"
+      ],
+      "quality": "full"
+    },
+    "Elastic On-Device LLM Service": {
+      "title": "Elastic On-Device LLM Service",
+      "year": 2025,
+      "venue": "ACM MOBICOM '25",
+      "doi": "10.48550/arxiv.2409.09071",
+      "key_insight": "Transformer的注意力头和MLP神经元满足置换一致性，可离线重排序使子模型连续，切换仅需移动指针",
+      "method_signature": "基于置换一致单元的一次性重排序+双头微小语言模型编排提示-模型弹性化",
+      "tags": [
+        "on-device-LLM",
+        "SLO-elasticity",
+        "permutation-consistency",
+        "model-pruning",
+        "prompt-compression",
+        "mobile-AI-agent"
+      ],
+      "quality": "full"
+    },
+    "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification": {
+      "title": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification",
+      "year": 2019,
+      "venue": "WWW '19",
+      "doi": "10.48550/arxiv.1806.02557",
+      "key_insight": "利用emoji作为情感信号的跨语言通用表达，既作为监督信号又作为语言桥梁",
+      "method_signature": "ELSA：emoji预测学习语言特定表征，融合源目标语言表征做情感分类",
+      "tags": [
+        "emoji-情感分析",
+        "跨语言迁移学习",
+        "弱监督表示学习",
+        "语言差异问题",
+        "注意力机制-LSTM"
+      ],
+      "quality": "full"
+    },
+    "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification (Extended Abstract)": {
+      "title": "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification (Extended Abstract)",
+      "year": 2020,
+      "venue": "IJCAI",
+      "doi": "10.24963/ijcai.2020/649",
+      "key_insight": "表情符号既是情感标签的代理又是语言间桥梁,可同时捕获跨语言通用情感和语言特有情感模式",
+      "method_signature": "ELSA:用表情符号预测作为监督学习语言特有情感表示,结合翻译后的双语表示做情感分类",
+      "tags": [
+        "cross-lingual sentiment classification",
+        "emoji-powered representation learning",
+        "language discrepancy problem",
+        "distant supervision via emojis",
+        "bilingual representation alignment"
+      ],
+      "quality": "full"
+    },
+    "Energy-Efficient GPU Clusters Scheduling for Deep Learning": {
+      "title": "Energy-Efficient GPU Clusters Scheduling for Deep Learning",
+      "year": 2023,
+      "venue": null,
+      "doi": "10.48550/arxiv.2304.06381",
+      "key_insight": "定义能量效率为每单位能耗带来的吞吐量,通过性能模型动态调配GPU和频率",
+      "method_signature": "基于性能模型的贪心GPU分配+频率调整算法,结合网络打包与伙伴分配",
+      "tags": [
+        "GPU集群调度",
+        "深度学习训练能耗优化",
+        "DVFS动态调频",
+        "资源弹性分配",
+        "性能建模预测"
+      ],
+      "quality": "full"
+    },
+    "Enjoy your observability_ an industrial survey of microservice tracing and analysis": {
+      "title": "Enjoy your observability: an industrial survey of microservice tracing and analysis",
+      "year": 2021,
+      "venue": "Empirical Software Engineering",
+      "doi": "10.1007/s10664-021-10063-9",
+      "key_insight": "微服务追踪分析是软件工程的新大数据问题,智能分析仍处于起步阶段",
+      "method_signature": "25位受访者来自10家公司5个领域,定性访谈+开放编码分析",
+      "tags": [
+        "microservice-observability",
+        "distributed-tracing-pipeline",
+        "industrial-survey",
+        "trace-analysis",
+        "intelligent-analysis-immaturity"
+      ],
+      "quality": "full"
+    },
+    "Exploring the Generalizability of Spatio-Temporal Traffic Prediction_ Meta-Modeling and an Analytic Framework": {
+      "title": "Exploring the Generalizability of Spatio-Temporal Traffic Prediction: Meta-Modeling and an Analytic Framework",
+      "year": 2021,
+      "venue": "IEEE TKDE",
+      "doi": "10.1109/tkde.2021.3130762",
+      "key_insight": "统一建模多种时空知识因素(closeness/periodicity/proximity/functionality),可设计跨场景泛化模型",
+      "method_signature": "STAnalytic定性分析框架 + STMeta元模型(分层集成多时空知识)",
+      "tags": [
+        "spatio-temporal prediction",
+        "traffic prediction generalizability",
+        "meta-learning",
+        "graph neural networks",
+        "urban mobility"
+      ],
+      "quality": "full"
+    },
+    "FLASH_ Heterogeneity-Aware Federated Learning at Scale": {
+      "title": "FLASH: Heterogeneity-Aware Federated Learning at Scale",
+      "year": 2022,
+      "venue": "IEEE Transactions on Mobile Computing",
+      "doi": "10.1109/tmc.2022.3214234",
+      "key_insight": "状态异构比硬件异构对准确率的负面影响更大（9.5% vs 0.4%），且异构性使现有进阶算法的优化效果大幅折损（q-FedAvg方差降低效果下降17.5%）。",
+      "method_signature": "构建异构感知的FL模拟平台FLASH，基于真实设备状态轨迹与硬件容量数据，对比异构/非异构设置下的算法性能差异。",
+      "tags": [
+        "federated-learning-heterogeneity",
+        "mobile-edge-training",
+        "real-device-evaluation",
+        "client-selection-optimization",
+        "fl-configuration-tuning"
+      ],
+      "quality": "full"
+    },
+    "FaaSLight_ General Application-Level Cold-Start Latency Optimization for Function-as-a-Service in Serverless Computing": {
+      "title": "FaaSLight: General Application-Level Cold-Start Latency Optimization for Function-as-a-Service in Serverless Computing",
+      "year": 2022,
+      "venue": "ACM",
+      "doi": "10.48550/arxiv.2207.08175",
+      "key_insight": "应用代码加载延迟是冷启动主要开销，仅加载必要代码可显著优化",
+      "method_signature": "通过函数级调用图识别可选代码并按需加载",
+      "tags": [
+        "serverless-cold-start",
+        "FaaS-optimization",
+        "code-bloating",
+        "function-level-callgraph",
+        "on-demand-loading"
+      ],
+      "quality": "full"
+    },
+    "Fairness Testing of Large Language Models in Role-Playing": {
+      "title": "Fairness Testing of Large Language Models in Role-Playing",
+      "year": null,
+      "venue": null,
+      "doi": "10.48550/arxiv.2411.00585",
+      "key_insight": "角色扮演会激活LLM中不同的偏见知识，移除角色扮演后偏见响应平均下降23.8%",
+      "method_signature": "LLM生成550个角色及33000个问题，结合规则和LLM判断器识别偏见响应",
+      "tags": [
+        "fairness-testing",
+        "LLM-bias-detection",
+        "role-playing",
+        "test-oracle-generation",
+        "social-bias"
+      ],
+      "quality": "partial"
+    },
+    "Federated Neural Architecture Search": {
+      "title": "Federated Neural Architecture Search",
+      "year": 2020,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2002.06352",
+      "key_insight": "充分利用NAS过程中模型候选人的不充分再训练特征，通过并行、动态、异构方式降低客户端开销",
+      "method_signature": "DecNAS框架结合并行训练、早期丢弃候选、动态轮数三项优化",
+      "tags": [
+        "federated-NAS",
+        "decentralized-architecture-search",
+        "on-device-NN-optimization",
+        "client-resource-constraint",
+        "architecture-pruning"
+      ],
+      "quality": "full"
+    },
+    "From Cloud to Edge_ A First Look at Public Edge Platforms": {
+      "title": "From Cloud to Edge: A First Look at Public Edge Platforms",
+      "year": 2021,
+      "venue": "ACM Internet Measurement Conference (IMC '21)",
+      "doi": "10.48550/arxiv.2109.03395",
+      "key_insight": "当前边缘平台距离愿景仍有差距——服务器距用户仍有5-12跳而非1-2跳,延迟收益有限,但工作负载可预测性更强",
+      "method_signature": "大规模众包测量+受控实验+VM traces统计,用户侧与提供商侧双视角对比",
+      "tags": [
+        "edge-platform-measurement",
+        "network-latency-characterization",
+        "workload-trace-analysis",
+        "crowdsourced-measurement",
+        "edge-cloud-comparison"
+      ],
+      "quality": "full"
+    },
+    "Heterogeneity-Aware Federated Learning": {
+      "title": "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data",
+      "year": 2021,
+      "venue": "WWW '21",
+      "doi": null,
+      "key_insight": "状态异构性(常被忽视)比硬件异构性更导致精度下降,现有先进FL算法在异构感知设置下效果大打折扣",
+      "method_signature": "构建异构感知FL模拟平台,使用136k智能手机真实状态追踪数据驱动仿真,对比多种FL算法性能",
+      "tags": [
+        "FL-heterogeneity-empirical-study",
+        "smartphone-on-device-training",
+        "FL-algorithm-fairness",
+        "FL-convergence-analysis",
+        "cross-device-FL"
+      ],
+      "quality": "full"
+    },
+    "Hierarchical Federated Learning through LAN-WAN Orchestration": {
+      "title": "Hierarchical Federated Learning through LAN-WAN Orchestration",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2010.11612",
+      "key_insight": "LAN bandwidth is 10x more abundant and unmetered; frequent local aggregation reduces WAN reliance while accelerating convergence",
+      "method_signature": "LanFL: LAN-aware hierarchical FL with dynamic topology selection and device number balancing for heterogeneous LANs",
+      "tags": [
+        "hierarchical-federated-learning",
+        "LAN-WAN-orchestration",
+        "P2P-aggregation-topology",
+        "cross-device-FL",
+        "edge-assisted-distributed-learning"
+      ],
+      "quality": "full"
+    },
+    "HydraServe_ Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds": {
+      "title": "HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds",
+      "year": 2025,
+      "venue": "unknown",
+      "doi": "10.48550/arxiv.2502.15524",
+      "key_insight": "利用流水线并行将模型分层分布到多服务器获取，同时重叠容器创建与模型预取阶段",
+      "method_signature": "三层层级优化：集群级资源分配与网络争用感知放置、worker级阶段重叠、推理级流水线合并",
+      "tags": [
+        "serverless-LLM-serving",
+        "cold-start-latency-optimization",
+        "pipeline-parallelism",
+        "network-bandwidth-constraint",
+        "model-fetching"
+      ],
+      "quality": "full"
+    },
+    "Internetware_ An Emerging Software Paradigm for Internet Computing": {
+      "title": "Internetware: An Emerging Software Paradigm for Internet Computing",
+      "year": 2011,
+      "venue": "Journal of Computer Science and Technology",
+      "doi": "10.1007/s11390-011-1159-y",
+      "key_insight": "Internetware的核心是支持“涌现式协作”——目标在协作执行前不明确或不确定，需按需动态组装自治软件实体",
+      "method_signature": "架构中心的技术解决方案框架，覆盖软件模型、中间件和工程方法三个层面",
+      "tags": [
+        "Internetware软件范式",
+        "涌现式软件协作",
+        "运行时软件架构",
+        "自主组件模型",
+        "互联网中间件"
+      ],
+      "quality": "full"
+    },
+    "LLM as a System Service on Mobile Devices": {
+      "title": "LLM as a System Service on Mobile Devices",
+      "year": 2024,
+      "venue": null,
+      "doi": "10.48550/arxiv.2403.11805",
+      "key_insight": "KV缓存可分块、可不等压、可重算,提出细粒度块级KV缓存压缩与换入换出策略",
+      "method_signature": "LLMS三层技术:容差感知压缩+换入重算流水线+LCTRU块生命周期管理",
+      "tags": [
+        "mobile-LLM-deployment",
+        "KV-cache-management",
+        "system-level-LLM-service",
+        "context-switching-latency",
+        "chunk-wise-swapping"
+      ],
+      "quality": "full"
+    },
+    "LLMCad_ Fast and Scalable On-device Large Language Model Inference": {
+      "title": "LLMCad: Fast and Scalable On-device Large Language Model Inference",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2309.04255",
+      "key_insight": "小模型虽无法端到端正确生成，但对多数简单token（冠词、代词、标点）能正确生成；sub-optimal token可能是大模型的正确答案",
+      "method_signature": "Token树生成+置信度分支调度+非自回归验证+自适应回退阈值+推测生成管线",
+      "tags": [
+        "on-device-LLM-inference",
+        "model-collaboration",
+        "speculative-decoding",
+        "memory-wall",
+        "token-tree-verification"
+      ],
+      "quality": "full"
+    },
+    "Listening to Chaotic Whispers_ A Deep Learning Framework for News-oriented Stock Trend Prediction": {
+      "title": "Listening to Chaotic Whispers: A Deep Learning Framework for News-oriented Stock Trend Prediction",
+      "year": 2018,
+      "venue": "WSDM 2018",
+      "doi": "10.48550/arxiv.1712.02136",
+      "key_insight": "模仿人类学习过程处理混沌新闻的三个原则:序列上下文依赖、多样影响力、有效高效学习",
+      "method_signature": "Hybrid Attention Networks (HAN) + 自步学习(SPL),双层注意力+双向GRU",
+      "tags": [
+        "stock-trend-prediction",
+        "news-mining",
+        "hybrid-attention-networks",
+        "self-paced-learning",
+        "deep-learning-financial"
+      ],
+      "quality": null
+    },
+    "Listening to Chaotic Whispers_ A Deep Learning Framework for∩ü£n News-oriented Stock Trend Prediction": {
+      "title": "Listening to Chaotic Whispers: A Deep Learning Framework for News-oriented Stock Trend Prediction",
+      "year": 2018,
+      "venue": "WSDM 2018",
+      "doi": "10.48550/arxiv.1712.02136",
+      "key_insight": "人类处理混沌新闻遵循三原则:序列上下文依赖、多样影响力、有效高效学习,据此设计双层注意力网络",
+      "method_signature": "Hybrid Attention Networks (HAN) + 自节奏学习机制,含新闻级注意力和时序级注意力",
+      "tags": [
+        "stock-trend-prediction",
+        "news-mining",
+        "hybrid-attention-networks",
+        "self-paced-learning",
+        "deep-learning-RNN"
+      ],
+      "quality": "full"
+    },
+    "LoongServe_ Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism": {
+      "title": "LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism",
+      "year": 2024,
+      "venue": "SOSP",
+      "doi": "10.48550/arxiv.2404.09526",
+      "key_insight": "预填充阶段序列并行本身就在循环通信KV张量，只需选择性保留即可实现零开销缩容",
+      "method_signature": "ESP+主动迁移+多主解码+四步调度算法",
+      "tags": [
+        "LLM serving",
+        "elastic sequence parallelism",
+        "KV-cache management",
+        "dynamic resource scheduling",
+        "prefill-decoding disaggregation"
+      ],
+      "quality": "full"
+    },
+    "LoongTrain_ Efficient Training of Long-Sequence LLMs with Head-Context Parallelism": {
+      "title": "LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2406.18485",
+      "key_insight": "将head-parallel与context-parallel组成二维网格d_hp×d_cp,在突破扩展性限制的同时通过限制d_cp减少P2P步骤",
+      "method_signature": "2D-Attention(d_hp×d_cp grid) + Double-Ring-Attention(inner/outer rings) + 设备放置策略",
+      "tags": [
+        "distributed-training",
+        "sequence-parallelism",
+        "attention-mechanism",
+        "LLM-training",
+        "communication-overlap"
+      ],
+      "quality": "full"
+    },
+    "MUIT_ A Middleware for Adaptive Mobile Web-based User Interfaces in WS-BPEL": {
+      "title": "MUIT: A Middleware for Adaptive Mobile Web-based User Interfaces in WS-BPEL",
+      "year": 2016,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.1602.09125",
+      "key_insight": "用DSL声明式编程实现MVC中Controller自动化,避免HTML/CSS/JS代码任意混合,自动生成中间UI",
+      "method_signature": "中间件DSL声明式开发MVC适配Web UI,WS-BPEL无侵入集成,离线缓存同步机制",
+      "tags": [
+        "WS-BPEL移动扩展",
+        "DSL声明式UI编程",
+        "MVC控制器自动化",
+        "离线任务缓存同步",
+        "BYOD企业工作流"
+      ],
+      "quality": "partial"
+    },
+    "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading": {
+      "title": "Mandheling: Mixed-Precision On-Device DNN Training with DSP Offloading",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2206.07509",
+      "key_insight": "DSP擅长INT8整数运算但朴素使用反而更慢,需从训练动态中发现scale factor的稳定模式来优化rescaling",
+      "method_signature": "CPU-DSP协同调度+自适应rescaling+batch拆分+子图复用,释放DSP算力",
+      "tags": [
+        "on-device-training",
+        "DSP-offloading",
+        "mixed-precision-training",
+        "mobile-DNN",
+        "cache-optimization"
+      ],
+      "quality": "full"
+    },
+    "MegaScale-Infer_ Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism": {
+      "title": "MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2504.02263",
+      "key_insight": "解聚注意力和FFN模块，独立扩展并使用异构GPU，使每个专家处理的批次增大恢复计算密集性",
+      "method_signature": "乒乓球管道并行+自定义M2N通信库，消除GPU-CPU拷贝和同步开销",
+      "tags": [
+        "MoE-serving",
+        "disaggregated-inference",
+        "expert-parallelism",
+        "pipeline-parallelism",
+        "M2N-communication"
+      ],
+      "quality": "full"
+    },
+    "MegaScale-MoE_ Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production": {
+      "title": "MegaScale-MoE: Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production",
+      "year": 2025,
+      "venue": "EuroSys",
+      "doi": "10.1145/3767295.3769325",
+      "key_insight": "将MoE层限制在单节点内利用NVLink高带宽,避免跨节点通信成为瓶颈",
+      "method_signature": "定制通信高效并行+运算符级通信计算重叠+通信压缩",
+      "tags": [
+        "MoE-distributed-training",
+        "communication-computation-overlap",
+        "NVLink-parallelism",
+        "tile-level-kernel-fusion",
+        "FP8-training-compression"
+      ],
+      "quality": "full"
+    },
+    "Mitigating Redundant Data Transfers for Mobile Web Applications via App-Specific Cache Space": {
+      "title": "Mitigating Redundant Data Transfers for Mobile Web Applications via App-Specific Cache Space",
+      "year": 2016,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.1605.06678",
+      "key_insight": "Native apps control resources explicitly via packages; Web apps should adopt similar app-specific resource management instead of relying on shared browser cache",
+      "method_signature": "ReWAP packages stable resources with engine-generated manifest, uses HTML5 AppCache wrapper for app-specific local storage",
+      "tags": [
+        "mobile-web-caching",
+        "resource-packaging",
+        "redundant-transfer-reduction",
+        "app-specific-cache",
+        "browser-performance-optimization"
+      ],
+      "quality": "full"
+    },
+    "Moving Deep Learning into Web Browser_ How Far Can We Go_": {
+      "title": "Moving Deep Learning into Web Browser: How Far Can We Go?",
+      "year": 2019,
+      "venue": null,
+      "doi": "10.48550/arxiv.1901.09388",
+      "key_insight": "模型加载时间主导推理耗时；CPU后端在小模型上优于GPU；集成显卡可使浏览器超越CPU原生框架",
+      "method_signature": "构建Chrome扩展测量框架性能与资源利用率，决策树分析性能差距贡献因子",
+      "tags": [
+        "browser-based deep learning",
+        "TensorFlow.js",
+        "WebGL acceleration",
+        "JavaScript DL frameworks",
+        "empirical performance measurement"
+      ],
+      "quality": "full"
+    },
+    "MuxFlow_ Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters": {
+      "title": "MuxFlow: Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters",
+      "year": 2023,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2303.13803",
+      "key_insight": "MPS可空间共享但无法保证性能和安全性；两层保护机制+混合错误处理可解决此问题",
+      "method_signature": "xCUDA两层性能保护+混合错误处理+动态SM分配+匹配调度",
+      "tags": [
+        "GPU-sharing",
+        "production-DL-clusters",
+        "MPS-space-sharing",
+        "performance-protection",
+        "matching-scheduling"
+      ],
+      "quality": "full"
+    },
+    "Neural Architecture Search over Decentralized Data": {
+      "title": "Federated Neural Architecture Search",
+      "year": null,
+      "venue": "unknown",
+      "doi": null,
+      "key_insight": "NAS过程中候选模型无需充分收敛，可利用并行训练、动态轮数和早期丢弃三招大幅降低客户端开销",
+      "method_signature": "DecNAS:联邦NAS框架，通过客户端分组并行训练候选、动态调整轮数、早期淘汰劣质候选",
+      "tags": [
+        "federated-learning",
+        "neural-architecture-search",
+        "mobile-DNN",
+        "decentralized-training",
+        "privacy-preserving-ML"
+      ],
+      "quality": "partial"
+    },
+    "Promptware Engineering_ Software Engineering for Prompt-Enabled Systems": {
+      "title": "Promptware Engineering: Software Engineering for Prompt-Enabled Systems",
+      "year": 2026,
+      "venue": "ACM Transactions on Software Engineering and Methodology",
+      "doi": "10.48550/arxiv.2503.02400",
+      "key_insight": "自然语言编程+LLM运行时=需重新诠释SE活动(需求/设计/测试等)",
+      "method_signature": "提出promptware engineering路线图，含27个研究机会点",
+      "tags": [
+        "prompt-engineering-methodology",
+        "LLM-as-runtime-environment",
+        "software-engineering-lifecycle",
+        "prompt-testing-automation",
+        "natural-language-programming"
+      ],
+      "quality": "full"
+    },
+    "Querying Zero-streaming Cameras": {
+      "title": "Video Analytics with Zero-streaming Cameras",
+      "year": 2021,
+      "venue": "USENIX ATC",
+      "doi": null,
+      "key_insight": "稀疏高准确帧远优于稠密低准确帧;多轮递增算子可在执行中逐步细化结果",
+      "method_signature": "DIVA: landmarks稀疏建知识 + multipass算子升级策略",
+      "tags": [
+        "edge-camera-video-analytics",
+        "zero-streaming-architecture",
+        "adaptive-neural-operators",
+        "multi-pass-query-refinement",
+        "landmark-based-knowledge-distillation"
+      ],
+      "quality": "partial"
+    },
+    "RAGCache_ Efficient Knowledge Caching for Retrieval-Augmented Generation": {
+      "title": "RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2404.12457",
+      "key_insight": "同一文档在不同前缀下产生的KV tensor不同,因此需用前缀树组织缓存以保持顺序敏感",
+      "method_signature": "知识树+前缀感知PGDSF替换策略+动态投机流水线,跨GPU/主机内存层级缓存KV tensor",
+      "tags": [
+        "RAG系统优化",
+        "KV缓存复用",
+        "多级内存层次缓存",
+        "LLM投机执行",
+        "前缀树索引"
+      ],
+      "quality": "full"
+    },
+    "Research on WebAssembly Runtimes_ A Survey": {
+      "title": "Research on WebAssembly Runtimes: A Survey",
+      "year": 2024,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2404.12621",
+      "key_insight": "首次提出将Wasm运行时研究按内部与外部双维度系统化分类",
+      "method_signature": "系统文献综述，收集98篇论文，Kitchenham流程，前向/后向滚雪球",
+      "tags": [
+        "WebAssembly runtime survey",
+        "Wasm runtime classification",
+        "Wasm application scenarios",
+        "literature review methodology",
+        "Wasm security and performance"
+      ],
+      "quality": "full"
+    },
+    "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective": {
+      "title": "Rise of Distributed Deep Learning Training in the Big Model Era: From a Software Engineering Perspective",
+      "year": 2023,
+      "venue": "J. ACM",
+      "doi": "10.48550/arxiv.2112.06222",
+      "key_insight": "分布式特定故障与非分布式故障共享相同症状表象，但根因不同，这增加了调试难度；大多数故障症状有频繁的修复模式。",
+      "method_signature": "基于关键字挖掘SO和GitHub问题，手动标注与仲裁，统计故障分布与修复模式。",
+      "tags": [
+        "distributed-training-debugging",
+        "DL-software-fault-taxonomy",
+        "empirical-software-engineering",
+        "multi-GPU-training-issues",
+        "developer-QA-analysis"
+      ],
+      "quality": "full"
+    },
+    "Rise of the Planet of Serverless Computing_ A Systematic Review": {
+      "title": "Rise of the Planet of Serverless Computing: A Systematic Review",
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2206.12275",
+      "key_insight": "通过taxonomy将17个研究方向分类,并从解决方案分类、实验设置、发表 venues 四个维度系统分析164篇论文",
+      "method_signature": "基于Kitchenham指南的系统性文献综述,收集164篇论文,构造17个研究类别taxonomy",
+      "tags": [
+        "serverless-computing",
+        "systematic-review",
+        "taxonomy-construction",
+        "function-as-a-service",
+        "cloud-computing-literature"
+      ],
+      "quality": "full"
+    },
+    "SCOPE_ Performance Testing for Serverless Computing": {
+      "title": "SCOPE: Performance Testing for Serverless Computing",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arxiv.2306.01620",
+      "key_insight": "短时执行的serverless函数需细粒度高精度停止准则,通过置信区间和历史轮次对比判断稳定性",
+      "method_signature": "双阶段停止准则:准确度检查(百分位置信区间)+一致性检查(前后轮次都通过)",
+      "tags": [
+        "serverless-performance-testing",
+        "stopping-criterion",
+        "confidence-interval",
+        "non-parametric-methods",
+        "cloud-function-evaluation"
+      ],
+      "quality": "full"
+    },
+    "SeaLLM_ Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference": {
+      "title": "SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference",
+      "year": 2025,
+      "venue": "arxiv",
+      "doi": "10.48550/arxiv.2504.15720",
+      "key_insight": "利用LLM服务的输入输出长度分布等特征指导放置和调度决策",
+      "method_signature": "基于服务特征感知的双预算调度算法与两阶段放置算法的资源管理框架",
+      "tags": [
+        "LLM服务调度",
+        "GPU资源分配",
+        "KV缓存管理",
+        "多租户LLM服务",
+        "延迟优化调度"
+      ],
+      "quality": "full"
+    },
+    "Software Engineering for Serverless Computing": {
+      "title": "Software Engineering for Serverless Computing",
+      "year": 2022,
+      "venue": null,
+      "doi": "10.48550/arxiv.2207.13263",
+      "key_insight": "实现问题占开发者挑战35.4%, 需自动化代码审查; 配置错误需检测工具而非手动修复",
+      "method_signature": "Vision paper: 列举12个SE研究方向, 无实验验证",
+      "tags": [
+        "serverless SE challenges",
+        "configuration management",
+        "cold start optimization",
+        "application migration",
+        "multi-cloud portability"
+      ],
+      "quality": "partial"
+    },
+    "Supporting Video Queries on Zero-Streaming Cameras": {
+      "title": "Video Analytics with Zero-streaming Cameras",
+      "year": 2021,
+      "venue": "USENIX ATC (inferred from ATC 2021 references)",
+      "doi": null,
+      "key_insight": "准确知识在稀疏帧上比不准确知识在所有帧上更有价值；多轮递增算子逐步精化结果",
+      "method_signature": "DIVA：捕获期构建稀疏地标帧，查询期多轮算子升级处理",
+      "tags": [
+        "zero-streaming-camera",
+        "video-query-system",
+        "cold-video-analytics",
+        "edge-cloud-coordination",
+        "multi-pass-inference"
+      ],
+      "quality": "full"
+    },
+    "Tuning adaptive computations for the performance improvement of applications in JEE server": {
+      "title": "Tuning adaptive computations for the performance improvement of applications in JEE server",
+      "year": 2012,
+      "venue": "The Brazilian Computer Society (Middleware '10 Best Workshop Papers)",
+      "doi": "10.1007/s13174-012-0060-4",
+      "key_insight": "自适应计算可按 autonomic level 细粒度降级(S3→S0)而非粗暴启停,实现灵活的资源权衡",
+      "method_signature": "基于MAPE控制环的AC层级调优模型,设计CLAT等算法动态升降AC层级控制资源消耗",
+      "tags": [
+        "autonomic-computing",
+        "JEE-server-tuning",
+        "adaptive-computation-resource-allocation",
+        "autonomic-level-degradation"
+      ],
+      "quality": "full"
+    },
+    "Understanding Diverse Smarpthone Usage Patterns from Large-Scale Appstore-Service Profiles": {
+      "title": "Understanding Diverse Smarpthone Usage Patterns from Large-Scale Appstore-Service Profiles",
+      "year": 2017,
+      "venue": "IEEE Transactions on Software Engineering",
+      "doi": null,
+      "key_insight": "多维指标(下载/用户/流量/时长)揭示Pareto式分布，且用户评分与实际使用常不一致",
+      "method_signature": "大规模行为数据的描述性统计+相关性与回归分析",
+      "tags": [
+        "app-store用户行为",
+        "移动流量分析",
+        "Android设备碎片化",
+        "用户评分可靠性",
+        "幂律分布验证"
+      ],
+      "quality": "full"
+    },
+    "VM Matters_ A Comparison of WASM VMs and EVMs in the Performance of Blockchain Smart Contracts": {
+      "title": "VM Matters: A Comparison of WASM VMs and EVMs in the Performance of Blockchain Smart Contracts",
+      "year": 2020,
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2012.01032",
+      "key_insight": "eWASM引擎反而慢于EVM: gas计量和EEI上下文切换的额外开销淹没了WASM的性能优势",
+      "method_signature": "跨引擎测量研究: EVM引擎间、WASM引擎间、跨字节码引擎对比,含256/64位双版本基准",
+      "tags": [
+        "EVM性能测量",
+        "eWASM开销分析",
+        "区块链智能合约基准",
+        "WASM引擎对比",
+        "以太坊客户端"
+      ],
+      "quality": "full"
+    },
+    "WarmServe_ Enabling One-for-Many GPU Prewarming for Multi-LLM Serving": {
+      "title": "WarmServe: Enabling One-for-Many GPU Prewarming for Multi-LLM Serving",
+      "year": 2026,
+      "venue": "ICML",
+      "doi": "10.48550/arxiv.2512.09472",
+      "key_insight": "利用LLM负载的长期周期可预测性,通过one-for-many GPU prewarming在单GPU上预加载多模型权重",
+      "method_signature": "模型placement算法+KV cache预留策略+CUDA VMM内存切换机制",
+      "tags": [
+        "LLM-serving",
+        "GPU-prewarming",
+        "autoscaling",
+        "multi-model-colocation",
+        "workload-predictability"
+      ],
+      "quality": "full"
+    },
+    "When Mobile Apps Going Deep_ An Empirical Study of Mobile Deep Learning": {
+      "title": "A First Look at Deep Learning Apps on Smartphones",
+      "year": 2019,
+      "venue": "WWW",
+      "doi": null,
+      "key_insight": "移动端深度学习模型出乎意料地轻量(中位数仅2.47MB/10M FLOPs),远小于服务器模型和MobileNet",
+      "method_signature": "构建DL Sniffer静态分析工具,通过检测DL框架而非代码模式来识别DL应用并提取模型",
+      "tags": [
+        "mobile-deep-learning-empirical",
+        "android-app-analysis",
+        "dl-framework-adoption",
+        "on-device-inference",
+        "model-protection"
+      ],
+      "quality": "full"
+    }
+  },
+  "by_tag": {
+    "taxonomy-construction": [
+      "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software",
+      "Rise of the Planet of Serverless Computing_ A Systematic Review"
+    ],
+    "android-app-analysis": [
+      "A First Look at Deep Learning Apps on Smartphones",
+      "When Mobile Apps Going Deep_ An Empirical Study of Mobile Deep Learning"
+    ],
+    "on-device-inference": [
+      "A First Look at Deep Learning Apps on Smartphones",
+      "When Mobile Apps Going Deep_ An Empirical Study of Mobile Deep Learning"
+    ],
+    "federated-learning-heterogeneity": [
+      "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data",
+      "FLASH_ Heterogeneity-Aware Federated Learning at Scale"
+    ],
+    "empirical-software-engineering": [
+      "Characterizing and Detecting WebAssembly Runtime Bugs",
+      "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    ],
+    "cross-device-FL": [
+      "Heterogeneity-Aware Federated Learning",
+      "Hierarchical Federated Learning through LAN-WAN Orchestration"
+    ],
+    "pipeline-parallelism": [
+      "HydraServe_ Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds",
+      "MegaScale-Infer_ Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism"
+    ],
+    "stock-trend-prediction": [
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for News-oriented Stock Trend Prediction",
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for∩ü£n News-oriented Stock Trend Prediction"
+    ],
+    "news-mining": [
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for News-oriented Stock Trend Prediction",
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for∩ü£n News-oriented Stock Trend Prediction"
+    ],
+    "hybrid-attention-networks": [
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for News-oriented Stock Trend Prediction",
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for∩ü£n News-oriented Stock Trend Prediction"
+    ],
+    "self-paced-learning": [
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for News-oriented Stock Trend Prediction",
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for∩ü£n News-oriented Stock Trend Prediction"
+    ],
+    "mobile-DNN": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading",
+      "Neural Architecture Search over Decentralized Data"
+    ],
+    "DL-software-deployment": [
+      "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software"
+    ],
+    "Stack-Overflow-empirical-study": [
+      "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software"
+    ],
+    "mobile-deployment": [
+      "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software"
+    ],
+    "browser-deployment": [
+      "A Comprehensive Study on Challenges in Deploying Deep Learning Based Software"
+    ],
+    "Ethereum-DApp-empirical-study": [
+      "A First Look at Blockchain-based Decentralized Applications"
+    ],
+    "smart-contract-pattern-analysis": [
+      "A First Look at Blockchain-based Decentralized Applications"
+    ],
+    "blockchain-cost-modeling": [
+      "A First Look at Blockchain-based Decentralized Applications"
+    ],
+    "DApp-ecosystem-characterization": [
+      "A First Look at Blockchain-based Decentralized Applications"
+    ],
+    "gas-optimization": [
+      "A First Look at Blockchain-based Decentralized Applications"
+    ],
+    "mobile-deep-learning": [
+      "A First Look at Deep Learning Apps on Smartphones"
+    ],
+    "model-deployment": [
+      "A First Look at Deep Learning Apps on Smartphones"
+    ],
+    "empirical-study": [
+      "A First Look at Deep Learning Apps on Smartphones"
+    ],
+    "LLM压缩": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "模型服务系统": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "边缘AI": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "多模态模型效率": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "能耗优化": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "分布式训练": [
+      "A Survey of Resource-efficient LLM and Multimodal Foundation Models"
+    ],
+    "service-composition": [
+      "A community-centric approach to automated service composition"
+    ],
+    "community-intelligence": [
+      "A community-centric approach to automated service composition"
+    ],
+    "web-services": [
+      "A community-centric approach to automated service composition"
+    ],
+    "user-centric": [
+      "A community-centric approach to automated service composition"
+    ],
+    "service-access": [
+      "A community-centric approach to automated service composition"
+    ],
+    "smartphone-power-modeling": [
+      "Accurate CPU Power Modeling for Multicore Smartphones"
+    ],
+    "CPU-idle-states": [
+      "Accurate CPU Power Modeling for Multicore Smartphones"
+    ],
+    "multicore-power-estimation": [
+      "Accurate CPU Power Modeling for Multicore Smartphones"
+    ],
+    "ARM-power-model": [
+      "Accurate CPU Power Modeling for Multicore Smartphones"
+    ],
+    "Android-kernel-instrumentation": [
+      "Accurate CPU Power Modeling for Multicore Smartphones"
+    ],
+    "mobile DL deployment": [
+      "An Empirical Study on Deployment Faults of Deep Learning Based Mobile Applications"
+    ],
+    "model conversion fault": [
+      "An Empirical Study on Deployment Faults of Deep Learning Based Mobile Applications"
+    ],
+    "TF Lite": [
+      "An Empirical Study on Deployment Faults of Deep Learning Based Mobile Applications"
+    ],
+    "Core ML": [
+      "An Empirical Study on Deployment Faults of Deep Learning Based Mobile Applications"
+    ],
+    "empirical software engineering": [
+      "An Empirical Study on Deployment Faults of Deep Learning Based Mobile Applications"
+    ],
+    "in-browser DL inference": [
+      "Anatomizing Deep Learning Inference in Web Browsers"
+    ],
+    "WebAssembly performance": [
+      "Anatomizing Deep Learning Inference in Web Browsers"
+    ],
+    "WebGL GPU abstraction": [
+      "Anatomizing Deep Learning Inference in Web Browsers"
+    ],
+    "QoE measurement": [
+      "Anatomizing Deep Learning Inference in Web Browsers"
+    ],
+    "browser-native performance gap": [
+      "Anatomizing Deep Learning Inference in Web Browsers"
+    ],
+    "android-deep-links": [
+      "Automating Release of Deep Link APIs for Android Applications"
+    ],
+    "static-dynamic-analysis-cooperation": [
+      "Automating Release of Deep Link APIs for Android Applications"
+    ],
+    "intent-filter-automation": [
+      "Automating Release of Deep Link APIs for Android Applications"
+    ],
+    "app-navigation-graph": [
+      "Automating Release of Deep Link APIs for Android Applications"
+    ],
+    "mobile-hyperlink-equivalence": [
+      "Automating Release of Deep Link APIs for Android Applications"
+    ],
+    "mobile-DL-inference": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices"
+    ],
+    "DL-library-benchmark": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices"
+    ],
+    "performance-fragmentation": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices"
+    ],
+    "operator-level-optimization": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices"
+    ],
+    "on-device-deep-learning": [
+      "Benchmarking of DL Libraries and Models on Mobile Devices"
+    ],
+    "autonomous-driving-fairness": [
+      "Bias Behind the Wheel_ Fairness Testing of Autonomous Driving Systems"
+    ],
+    "pedestrian-detection-bias": [
+      "Bias Behind the Wheel_ Fairness Testing of Autonomous Driving Systems"
+    ],
+    "group-fairness-testing": [
+      "Bias Behind the Wheel_ Fairness Testing of Autonomous Driving Systems"
+    ],
+    "demographic-disparity": [
+      "Bias Behind the Wheel_ Fairness Testing of Autonomous Driving Systems"
+    ],
+    "software-testing": [
+      "Bias Behind the Wheel_ Fairness Testing of Autonomous Driving Systems"
+    ],
+    "blockchain-security": [
+      "Characterizing EOSIO Blockchain"
+    ],
+    "bot-detection": [
+      "Characterizing EOSIO Blockchain"
+    ],
+    "graph-analysis": [
+      "Characterizing EOSIO Blockchain"
+    ],
+    "EOSIO-DApp": [
+      "Characterizing EOSIO Blockchain"
+    ],
+    "attack-forensics": [
+      "Characterizing EOSIO Blockchain"
+    ],
+    "mobile-device-simulation": [
+      "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data"
+    ],
+    "cross-device-fl": [
+      "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data"
+    ],
+    "measurement-study": [
+      "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data"
+    ],
+    "fairness-in-fl": [
+      "Characterizing Impacts of Heterogeneity in Federated Learning upon Large-Scale Smartphone Data"
+    ],
+    "WebAssembly-runtime-bugs": [
+      "Characterizing and Detecting WebAssembly Runtime Bugs"
+    ],
+    "bug-taxonomy": [
+      "Characterizing and Detecting WebAssembly Runtime Bugs"
+    ],
+    "pattern-based-detection": [
+      "Characterizing and Detecting WebAssembly Runtime Bugs"
+    ],
+    "WASM-compilation": [
+      "Characterizing and Detecting WebAssembly Runtime Bugs"
+    ],
+    "wearable-DL-offloading": [
+      "DeepWear_ Adaptive Local Offloading for On-Wearable Deep Learning"
+    ],
+    "edge-computing": [
+      "DeepWear_ Adaptive Local Offloading for On-Wearable Deep Learning"
+    ],
+    "model-partition": [
+      "DeepWear_ Adaptive Local Offloading for On-Wearable Deep Learning"
+    ],
+    "bluetooth-latency-tradeoff": [
+      "DeepWear_ Adaptive Local Offloading for On-Wearable Deep Learning"
+    ],
+    "adaptive-scheduling": [
+      "DeepWear_ Adaptive Local Offloading for On-Wearable Deep Learning"
+    ],
+    "LLM serving disaggregation": [
+      "DistServe_ Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+    ],
+    "prefill-decoding interference": [
+      "DistServe_ Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+    ],
+    "goodput optimization": [
+      "DistServe_ Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+    ],
+    "model parallelism tuning": [
+      "DistServe_ Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+    ],
+    "latency SLO optimization": [
+      "DistServe_ Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving"
+    ],
+    "COVID-19诈骗特征化": [
+      "Don't Fish in Troubled Waters! Characterizing Coronavirus-themed Cryptocurrency Scams"
+    ],
+    "加密货币欺诈检测": [
+      "Don't Fish in Troubled Waters! Characterizing Coronavirus-themed Cryptocurrency Scams"
+    ],
+    "区块链安全测量": [
+      "Don't Fish in Troubled Waters! Characterizing Coronavirus-themed Cryptocurrency Scams"
+    ],
+    "社会工程攻击分析": [
+      "Don't Fish in Troubled Waters! Characterizing Coronavirus-themed Cryptocurrency Scams"
+    ],
+    "网络犯罪生态系统": [
+      "Don't Fish in Troubled Waters! Characterizing Coronavirus-themed Cryptocurrency Scams"
+    ],
+    "Android-deep-link-automation": [
+      "DroidLink_ Automated Generation of Deep Links for Android Apps"
+    ],
+    "mobile-app-interoperability": [
+      "DroidLink_ Automated Generation of Deep Links for Android Apps"
+    ],
+    "navigation-graph-analysis": [
+      "DroidLink_ Automated Generation of Deep Links for Android Apps"
+    ],
+    "intent-based-activity-transition": [
+      "DroidLink_ Automated Generation of Deep Links for Android Apps"
+    ],
+    "automated-app-indexing": [
+      "DroidLink_ Automated Generation of Deep Links for Android Apps"
+    ],
+    "on-device-LLM": [
+      "Elastic On-Device LLM Service"
+    ],
+    "SLO-elasticity": [
+      "Elastic On-Device LLM Service"
+    ],
+    "permutation-consistency": [
+      "Elastic On-Device LLM Service"
+    ],
+    "model-pruning": [
+      "Elastic On-Device LLM Service"
+    ],
+    "prompt-compression": [
+      "Elastic On-Device LLM Service"
+    ],
+    "mobile-AI-agent": [
+      "Elastic On-Device LLM Service"
+    ],
+    "emoji-情感分析": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    ],
+    "跨语言迁移学习": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    ],
+    "弱监督表示学习": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    ],
+    "语言差异问题": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    ],
+    "注意力机制-LSTM": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification"
+    ],
+    "cross-lingual sentiment classification": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification (Extended Abstract)"
+    ],
+    "emoji-powered representation learning": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification (Extended Abstract)"
+    ],
+    "language discrepancy problem": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification (Extended Abstract)"
+    ],
+    "distant supervision via emojis": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification (Extended Abstract)"
+    ],
+    "bilingual representation alignment": [
+      "Emoji-Powered Representation Learning for Cross-Lingual Sentiment Classification (Extended Abstract)"
+    ],
+    "GPU集群调度": [
+      "Energy-Efficient GPU Clusters Scheduling for Deep Learning"
+    ],
+    "深度学习训练能耗优化": [
+      "Energy-Efficient GPU Clusters Scheduling for Deep Learning"
+    ],
+    "DVFS动态调频": [
+      "Energy-Efficient GPU Clusters Scheduling for Deep Learning"
+    ],
+    "资源弹性分配": [
+      "Energy-Efficient GPU Clusters Scheduling for Deep Learning"
+    ],
+    "性能建模预测": [
+      "Energy-Efficient GPU Clusters Scheduling for Deep Learning"
+    ],
+    "microservice-observability": [
+      "Enjoy your observability_ an industrial survey of microservice tracing and analysis"
+    ],
+    "distributed-tracing-pipeline": [
+      "Enjoy your observability_ an industrial survey of microservice tracing and analysis"
+    ],
+    "industrial-survey": [
+      "Enjoy your observability_ an industrial survey of microservice tracing and analysis"
+    ],
+    "trace-analysis": [
+      "Enjoy your observability_ an industrial survey of microservice tracing and analysis"
+    ],
+    "intelligent-analysis-immaturity": [
+      "Enjoy your observability_ an industrial survey of microservice tracing and analysis"
+    ],
+    "spatio-temporal prediction": [
+      "Exploring the Generalizability of Spatio-Temporal Traffic Prediction_ Meta-Modeling and an Analytic Framework"
+    ],
+    "traffic prediction generalizability": [
+      "Exploring the Generalizability of Spatio-Temporal Traffic Prediction_ Meta-Modeling and an Analytic Framework"
+    ],
+    "meta-learning": [
+      "Exploring the Generalizability of Spatio-Temporal Traffic Prediction_ Meta-Modeling and an Analytic Framework"
+    ],
+    "graph neural networks": [
+      "Exploring the Generalizability of Spatio-Temporal Traffic Prediction_ Meta-Modeling and an Analytic Framework"
+    ],
+    "urban mobility": [
+      "Exploring the Generalizability of Spatio-Temporal Traffic Prediction_ Meta-Modeling and an Analytic Framework"
+    ],
+    "mobile-edge-training": [
+      "FLASH_ Heterogeneity-Aware Federated Learning at Scale"
+    ],
+    "real-device-evaluation": [
+      "FLASH_ Heterogeneity-Aware Federated Learning at Scale"
+    ],
+    "client-selection-optimization": [
+      "FLASH_ Heterogeneity-Aware Federated Learning at Scale"
+    ],
+    "fl-configuration-tuning": [
+      "FLASH_ Heterogeneity-Aware Federated Learning at Scale"
+    ],
+    "serverless-cold-start": [
+      "FaaSLight_ General Application-Level Cold-Start Latency Optimization for Function-as-a-Service in Serverless Computing"
+    ],
+    "FaaS-optimization": [
+      "FaaSLight_ General Application-Level Cold-Start Latency Optimization for Function-as-a-Service in Serverless Computing"
+    ],
+    "code-bloating": [
+      "FaaSLight_ General Application-Level Cold-Start Latency Optimization for Function-as-a-Service in Serverless Computing"
+    ],
+    "function-level-callgraph": [
+      "FaaSLight_ General Application-Level Cold-Start Latency Optimization for Function-as-a-Service in Serverless Computing"
+    ],
+    "on-demand-loading": [
+      "FaaSLight_ General Application-Level Cold-Start Latency Optimization for Function-as-a-Service in Serverless Computing"
+    ],
+    "fairness-testing": [
+      "Fairness Testing of Large Language Models in Role-Playing"
+    ],
+    "LLM-bias-detection": [
+      "Fairness Testing of Large Language Models in Role-Playing"
+    ],
+    "role-playing": [
+      "Fairness Testing of Large Language Models in Role-Playing"
+    ],
+    "test-oracle-generation": [
+      "Fairness Testing of Large Language Models in Role-Playing"
+    ],
+    "social-bias": [
+      "Fairness Testing of Large Language Models in Role-Playing"
+    ],
+    "federated-NAS": [
+      "Federated Neural Architecture Search"
+    ],
+    "decentralized-architecture-search": [
+      "Federated Neural Architecture Search"
+    ],
+    "on-device-NN-optimization": [
+      "Federated Neural Architecture Search"
+    ],
+    "client-resource-constraint": [
+      "Federated Neural Architecture Search"
+    ],
+    "architecture-pruning": [
+      "Federated Neural Architecture Search"
+    ],
+    "edge-platform-measurement": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "network-latency-characterization": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "workload-trace-analysis": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "crowdsourced-measurement": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "edge-cloud-comparison": [
+      "From Cloud to Edge_ A First Look at Public Edge Platforms"
+    ],
+    "FL-heterogeneity-empirical-study": [
+      "Heterogeneity-Aware Federated Learning"
+    ],
+    "smartphone-on-device-training": [
+      "Heterogeneity-Aware Federated Learning"
+    ],
+    "FL-algorithm-fairness": [
+      "Heterogeneity-Aware Federated Learning"
+    ],
+    "FL-convergence-analysis": [
+      "Heterogeneity-Aware Federated Learning"
+    ],
+    "hierarchical-federated-learning": [
+      "Hierarchical Federated Learning through LAN-WAN Orchestration"
+    ],
+    "LAN-WAN-orchestration": [
+      "Hierarchical Federated Learning through LAN-WAN Orchestration"
+    ],
+    "P2P-aggregation-topology": [
+      "Hierarchical Federated Learning through LAN-WAN Orchestration"
+    ],
+    "edge-assisted-distributed-learning": [
+      "Hierarchical Federated Learning through LAN-WAN Orchestration"
+    ],
+    "serverless-LLM-serving": [
+      "HydraServe_ Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds"
+    ],
+    "cold-start-latency-optimization": [
+      "HydraServe_ Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds"
+    ],
+    "network-bandwidth-constraint": [
+      "HydraServe_ Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds"
+    ],
+    "model-fetching": [
+      "HydraServe_ Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds"
+    ],
+    "Internetware软件范式": [
+      "Internetware_ An Emerging Software Paradigm for Internet Computing"
+    ],
+    "涌现式软件协作": [
+      "Internetware_ An Emerging Software Paradigm for Internet Computing"
+    ],
+    "运行时软件架构": [
+      "Internetware_ An Emerging Software Paradigm for Internet Computing"
+    ],
+    "自主组件模型": [
+      "Internetware_ An Emerging Software Paradigm for Internet Computing"
+    ],
+    "互联网中间件": [
+      "Internetware_ An Emerging Software Paradigm for Internet Computing"
+    ],
+    "mobile-LLM-deployment": [
+      "LLM as a System Service on Mobile Devices"
+    ],
+    "KV-cache-management": [
+      "LLM as a System Service on Mobile Devices"
+    ],
+    "system-level-LLM-service": [
+      "LLM as a System Service on Mobile Devices"
+    ],
+    "context-switching-latency": [
+      "LLM as a System Service on Mobile Devices"
+    ],
+    "chunk-wise-swapping": [
+      "LLM as a System Service on Mobile Devices"
+    ],
+    "on-device-LLM-inference": [
+      "LLMCad_ Fast and Scalable On-device Large Language Model Inference"
+    ],
+    "model-collaboration": [
+      "LLMCad_ Fast and Scalable On-device Large Language Model Inference"
+    ],
+    "speculative-decoding": [
+      "LLMCad_ Fast and Scalable On-device Large Language Model Inference"
+    ],
+    "memory-wall": [
+      "LLMCad_ Fast and Scalable On-device Large Language Model Inference"
+    ],
+    "token-tree-verification": [
+      "LLMCad_ Fast and Scalable On-device Large Language Model Inference"
+    ],
+    "deep-learning-financial": [
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for News-oriented Stock Trend Prediction"
+    ],
+    "deep-learning-RNN": [
+      "Listening to Chaotic Whispers_ A Deep Learning Framework for∩ü£n News-oriented Stock Trend Prediction"
+    ],
+    "LLM serving": [
+      "LoongServe_ Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism"
+    ],
+    "elastic sequence parallelism": [
+      "LoongServe_ Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism"
+    ],
+    "KV-cache management": [
+      "LoongServe_ Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism"
+    ],
+    "dynamic resource scheduling": [
+      "LoongServe_ Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism"
+    ],
+    "prefill-decoding disaggregation": [
+      "LoongServe_ Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism"
+    ],
+    "distributed-training": [
+      "LoongTrain_ Efficient Training of Long-Sequence LLMs with Head-Context Parallelism"
+    ],
+    "sequence-parallelism": [
+      "LoongTrain_ Efficient Training of Long-Sequence LLMs with Head-Context Parallelism"
+    ],
+    "attention-mechanism": [
+      "LoongTrain_ Efficient Training of Long-Sequence LLMs with Head-Context Parallelism"
+    ],
+    "LLM-training": [
+      "LoongTrain_ Efficient Training of Long-Sequence LLMs with Head-Context Parallelism"
+    ],
+    "communication-overlap": [
+      "LoongTrain_ Efficient Training of Long-Sequence LLMs with Head-Context Parallelism"
+    ],
+    "WS-BPEL移动扩展": [
+      "MUIT_ A Middleware for Adaptive Mobile Web-based User Interfaces in WS-BPEL"
+    ],
+    "DSL声明式UI编程": [
+      "MUIT_ A Middleware for Adaptive Mobile Web-based User Interfaces in WS-BPEL"
+    ],
+    "MVC控制器自动化": [
+      "MUIT_ A Middleware for Adaptive Mobile Web-based User Interfaces in WS-BPEL"
+    ],
+    "离线任务缓存同步": [
+      "MUIT_ A Middleware for Adaptive Mobile Web-based User Interfaces in WS-BPEL"
+    ],
+    "BYOD企业工作流": [
+      "MUIT_ A Middleware for Adaptive Mobile Web-based User Interfaces in WS-BPEL"
+    ],
+    "on-device-training": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading"
+    ],
+    "DSP-offloading": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading"
+    ],
+    "mixed-precision-training": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading"
+    ],
+    "cache-optimization": [
+      "Mandheling_ Mixed-Precision On-Device DNN Training with DSP Offloading"
+    ],
+    "MoE-serving": [
+      "MegaScale-Infer_ Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism"
+    ],
+    "disaggregated-inference": [
+      "MegaScale-Infer_ Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism"
+    ],
+    "expert-parallelism": [
+      "MegaScale-Infer_ Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism"
+    ],
+    "M2N-communication": [
+      "MegaScale-Infer_ Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism"
+    ],
+    "MoE-distributed-training": [
+      "MegaScale-MoE_ Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production"
+    ],
+    "communication-computation-overlap": [
+      "MegaScale-MoE_ Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production"
+    ],
+    "NVLink-parallelism": [
+      "MegaScale-MoE_ Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production"
+    ],
+    "tile-level-kernel-fusion": [
+      "MegaScale-MoE_ Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production"
+    ],
+    "FP8-training-compression": [
+      "MegaScale-MoE_ Large-Scale Communication-Efficient Training of Mixture-of-Experts Models in Production"
+    ],
+    "mobile-web-caching": [
+      "Mitigating Redundant Data Transfers for Mobile Web Applications via App-Specific Cache Space"
+    ],
+    "resource-packaging": [
+      "Mitigating Redundant Data Transfers for Mobile Web Applications via App-Specific Cache Space"
+    ],
+    "redundant-transfer-reduction": [
+      "Mitigating Redundant Data Transfers for Mobile Web Applications via App-Specific Cache Space"
+    ],
+    "app-specific-cache": [
+      "Mitigating Redundant Data Transfers for Mobile Web Applications via App-Specific Cache Space"
+    ],
+    "browser-performance-optimization": [
+      "Mitigating Redundant Data Transfers for Mobile Web Applications via App-Specific Cache Space"
+    ],
+    "browser-based deep learning": [
+      "Moving Deep Learning into Web Browser_ How Far Can We Go_"
+    ],
+    "TensorFlow.js": [
+      "Moving Deep Learning into Web Browser_ How Far Can We Go_"
+    ],
+    "WebGL acceleration": [
+      "Moving Deep Learning into Web Browser_ How Far Can We Go_"
+    ],
+    "JavaScript DL frameworks": [
+      "Moving Deep Learning into Web Browser_ How Far Can We Go_"
+    ],
+    "empirical performance measurement": [
+      "Moving Deep Learning into Web Browser_ How Far Can We Go_"
+    ],
+    "GPU-sharing": [
+      "MuxFlow_ Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters"
+    ],
+    "production-DL-clusters": [
+      "MuxFlow_ Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters"
+    ],
+    "MPS-space-sharing": [
+      "MuxFlow_ Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters"
+    ],
+    "performance-protection": [
+      "MuxFlow_ Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters"
+    ],
+    "matching-scheduling": [
+      "MuxFlow_ Efficient and Safe GPU Sharing in Large-Scale Production Deep Learning Clusters"
+    ],
+    "federated-learning": [
+      "Neural Architecture Search over Decentralized Data"
+    ],
+    "neural-architecture-search": [
+      "Neural Architecture Search over Decentralized Data"
+    ],
+    "decentralized-training": [
+      "Neural Architecture Search over Decentralized Data"
+    ],
+    "privacy-preserving-ML": [
+      "Neural Architecture Search over Decentralized Data"
+    ],
+    "prompt-engineering-methodology": [
+      "Promptware Engineering_ Software Engineering for Prompt-Enabled Systems"
+    ],
+    "LLM-as-runtime-environment": [
+      "Promptware Engineering_ Software Engineering for Prompt-Enabled Systems"
+    ],
+    "software-engineering-lifecycle": [
+      "Promptware Engineering_ Software Engineering for Prompt-Enabled Systems"
+    ],
+    "prompt-testing-automation": [
+      "Promptware Engineering_ Software Engineering for Prompt-Enabled Systems"
+    ],
+    "natural-language-programming": [
+      "Promptware Engineering_ Software Engineering for Prompt-Enabled Systems"
+    ],
+    "edge-camera-video-analytics": [
+      "Querying Zero-streaming Cameras"
+    ],
+    "zero-streaming-architecture": [
+      "Querying Zero-streaming Cameras"
+    ],
+    "adaptive-neural-operators": [
+      "Querying Zero-streaming Cameras"
+    ],
+    "multi-pass-query-refinement": [
+      "Querying Zero-streaming Cameras"
+    ],
+    "landmark-based-knowledge-distillation": [
+      "Querying Zero-streaming Cameras"
+    ],
+    "RAG系统优化": [
+      "RAGCache_ Efficient Knowledge Caching for Retrieval-Augmented Generation"
+    ],
+    "KV缓存复用": [
+      "RAGCache_ Efficient Knowledge Caching for Retrieval-Augmented Generation"
+    ],
+    "多级内存层次缓存": [
+      "RAGCache_ Efficient Knowledge Caching for Retrieval-Augmented Generation"
+    ],
+    "LLM投机执行": [
+      "RAGCache_ Efficient Knowledge Caching for Retrieval-Augmented Generation"
+    ],
+    "前缀树索引": [
+      "RAGCache_ Efficient Knowledge Caching for Retrieval-Augmented Generation"
+    ],
+    "WebAssembly runtime survey": [
+      "Research on WebAssembly Runtimes_ A Survey"
+    ],
+    "Wasm runtime classification": [
+      "Research on WebAssembly Runtimes_ A Survey"
+    ],
+    "Wasm application scenarios": [
+      "Research on WebAssembly Runtimes_ A Survey"
+    ],
+    "literature review methodology": [
+      "Research on WebAssembly Runtimes_ A Survey"
+    ],
+    "Wasm security and performance": [
+      "Research on WebAssembly Runtimes_ A Survey"
+    ],
+    "distributed-training-debugging": [
+      "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    ],
+    "DL-software-fault-taxonomy": [
+      "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    ],
+    "multi-GPU-training-issues": [
+      "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    ],
+    "developer-QA-analysis": [
+      "Rise of Distributed Deep Learning Training in the Big Model Era_ From a Software Engineering Perspective"
+    ],
+    "serverless-computing": [
+      "Rise of the Planet of Serverless Computing_ A Systematic Review"
+    ],
+    "systematic-review": [
+      "Rise of the Planet of Serverless Computing_ A Systematic Review"
+    ],
+    "function-as-a-service": [
+      "Rise of the Planet of Serverless Computing_ A Systematic Review"
+    ],
+    "cloud-computing-literature": [
+      "Rise of the Planet of Serverless Computing_ A Systematic Review"
+    ],
+    "serverless-performance-testing": [
+      "SCOPE_ Performance Testing for Serverless Computing"
+    ],
+    "stopping-criterion": [
+      "SCOPE_ Performance Testing for Serverless Computing"
+    ],
+    "confidence-interval": [
+      "SCOPE_ Performance Testing for Serverless Computing"
+    ],
+    "non-parametric-methods": [
+      "SCOPE_ Performance Testing for Serverless Computing"
+    ],
+    "cloud-function-evaluation": [
+      "SCOPE_ Performance Testing for Serverless Computing"
+    ],
+    "LLM服务调度": [
+      "SeaLLM_ Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference"
+    ],
+    "GPU资源分配": [
+      "SeaLLM_ Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference"
+    ],
+    "KV缓存管理": [
+      "SeaLLM_ Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference"
+    ],
+    "多租户LLM服务": [
+      "SeaLLM_ Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference"
+    ],
+    "延迟优化调度": [
+      "SeaLLM_ Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference"
+    ],
+    "serverless SE challenges": [
+      "Software Engineering for Serverless Computing"
+    ],
+    "configuration management": [
+      "Software Engineering for Serverless Computing"
+    ],
+    "cold start optimization": [
+      "Software Engineering for Serverless Computing"
+    ],
+    "application migration": [
+      "Software Engineering for Serverless Computing"
+    ],
+    "multi-cloud portability": [
+      "Software Engineering for Serverless Computing"
+    ],
+    "zero-streaming-camera": [
+      "Supporting Video Queries on Zero-Streaming Cameras"
+    ],
+    "video-query-system": [
+      "Supporting Video Queries on Zero-Streaming Cameras"
+    ],
+    "cold-video-analytics": [
+      "Supporting Video Queries on Zero-Streaming Cameras"
+    ],
+    "edge-cloud-coordination": [
+      "Supporting Video Queries on Zero-Streaming Cameras"
+    ],
+    "multi-pass-inference": [
+      "Supporting Video Queries on Zero-Streaming Cameras"
+    ],
+    "autonomic-computing": [
+      "Tuning adaptive computations for the performance improvement of applications in JEE server"
+    ],
+    "JEE-server-tuning": [
+      "Tuning adaptive computations for the performance improvement of applications in JEE server"
+    ],
+    "adaptive-computation-resource-allocation": [
+      "Tuning adaptive computations for the performance improvement of applications in JEE server"
+    ],
+    "autonomic-level-degradation": [
+      "Tuning adaptive computations for the performance improvement of applications in JEE server"
+    ],
+    "app-store用户行为": [
+      "Understanding Diverse Smarpthone Usage Patterns from Large-Scale Appstore-Service Profiles"
+    ],
+    "移动流量分析": [
+      "Understanding Diverse Smarpthone Usage Patterns from Large-Scale Appstore-Service Profiles"
+    ],
+    "Android设备碎片化": [
+      "Understanding Diverse Smarpthone Usage Patterns from Large-Scale Appstore-Service Profiles"
+    ],
+    "用户评分可靠性": [
+      "Understanding Diverse Smarpthone Usage Patterns from Large-Scale Appstore-Service Profiles"
+    ],
+    "幂律分布验证": [
+      "Understanding Diverse Smarpthone Usage Patterns from Large-Scale Appstore-Service Profiles"
+    ],
+    "EVM性能测量": [
+      "VM Matters_ A Comparison of WASM VMs and EVMs in the Performance of Blockchain Smart Contracts"
+    ],
+    "eWASM开销分析": [
+      "VM Matters_ A Comparison of WASM VMs and EVMs in the Performance of Blockchain Smart Contracts"
+    ],
+    "区块链智能合约基准": [
+      "VM Matters_ A Comparison of WASM VMs and EVMs in the Performance of Blockchain Smart Contracts"
+    ],
+    "WASM引擎对比": [
+      "VM Matters_ A Comparison of WASM VMs and EVMs in the Performance of Blockchain Smart Contracts"
+    ],
+    "以太坊客户端": [
+      "VM Matters_ A Comparison of WASM VMs and EVMs in the Performance of Blockchain Smart Contracts"
+    ],
+    "LLM-serving": [
+      "WarmServe_ Enabling One-for-Many GPU Prewarming for Multi-LLM Serving"
+    ],
+    "GPU-prewarming": [
+      "WarmServe_ Enabling One-for-Many GPU Prewarming for Multi-LLM Serving"
+    ],
+    "autoscaling": [
+      "WarmServe_ Enabling One-for-Many GPU Prewarming for Multi-LLM Serving"
+    ],
+    "multi-model-colocation": [
+      "WarmServe_ Enabling One-for-Many GPU Prewarming for Multi-LLM Serving"
+    ],
+    "workload-predictability": [
+      "WarmServe_ Enabling One-for-Many GPU Prewarming for Multi-LLM Serving"
+    ],
+    "mobile-deep-learning-empirical": [
+      "When Mobile Apps Going Deep_ An Empirical Study of Mobile Deep Learning"
+    ],
+    "dl-framework-adoption": [
+      "When Mobile Apps Going Deep_ An Empirical Study of Mobile Deep Learning"
+    ],
+    "model-protection": [
+      "When Mobile Apps Going Deep_ An Empirical Study of Mobile Deep Learning"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Watermarking Graph Neural Networks by Random Graphs",
+  "doi": "10.1109/isdfs52919.2021.9486352",
+  "title": "Watermarking Graph Neural Networks by Random Graphs",
+  "year": 2021,
+  "venue": "ISDFS",
+  "venue_tier": "regional",
+  "role": "co-author",
+  "motivation": "GNN模型训练成本高,面临知识产权被侵犯的风险,需要保护其所有权",
+  "problem_framing": "将GNN模型水印问题形式化为黑盒验证问题,通过模型输出即可提取水印",
+  "key_insight": "用随机生成的ER图作为触发器,非标记模型会产生随机预测,自然产生低误报率",
+  "method_signature": "生成带随机特征的ER图作为触发器,嵌入水印到节点标签预测中",
+  "evaluation_criteria": "网络保真度、水印可靠性、水印唯一性、对模型剪枝和微调的鲁棒性",
+  "negative_result_or_admitted_limitation": "水印容量与鲁棒性之间存在权衡,较大水印对模型剪枝更脆弱",
+  "evidence_for_taste": [
+    "which would limit the commercial value",
+    "results in a low false alarm rate",
+    "adds \"unreasonable\" random pattern",
+    "a larger watermark size is less robust",
+    "surprising, as Pr increases, the performance will decline"
+  ],
+  "thinking_moves": [
+    "用随机图的不确定性自然区分标记与非标记模型",
+    "分析边密度与特征随机性对学习难度的联合影响",
+    "通过熵的不对称性解释特征翻转前后的性能差异",
+    "在容量与鲁棒性之间做工程权衡而非追求单目标最优"
+  ],
+  "topic_tags": [
+    "GNN水印",
+    "知识产权保护",
+    "黑盒验证",
+    "ER随机图",
+    "触发集嵌入"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文完整呈现了方法设计、实验验证和局限性分析,可提取全部认知信号"
+}

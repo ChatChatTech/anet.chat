@@ -1,0 +1,37 @@
+{
+  "paper_id": "2023_usenixsecurity_pcat",
+  "doi": null,
+  "title": "PCAT: Functionality and Data Stealing from Split Learning by Pseudo-Client Attack",
+  "year": 2023,
+  "venue": "USENIX Security Symposium",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "Server has incentive to steal client functionality to avoid revenue sharing in SL; existing attacks fail on unknown/deep client models",
+  "problem_framing": "How to steal client functionality inputs and labels when client model structure is unknown and complex without being detected",
+  "key_insight": "A well-trained server model alone can construct a pseudo-client model using very limited data; intermediate server models during training provide extra guidance knowledge",
+  "method_signature": "Pseudo-Client Attack using server model knowledge transfer without requiring client model structure",
+  "evaluation_criteria": "Accuracy gap between pseudo-client and victim model; label inference accuracy; input reconstruction quality (SSIM)",
+  "negative_result_or_admitted_limitation": "UnSplit test accuracy drops to 22.1% on CIFAR-10 with VGG16; norm-based label inference only works for imbalanced binary classification",
+  "evidence_for_taste": [
+    "performance deteriorates dramatically",
+    "search space could be too large to converge",
+    "accuracy gap achieves 10%",
+    "even in non-i.i.d. conditions"
+  ],
+  "thinking_moves": [
+    "Abandon model inversion search paradigm entirely",
+    "Recast problem as knowledge transfer from server model",
+    "Exploit intermediate training checkpoints as learning targets",
+    "Use label alignment to train pseudo-client without client awareness"
+  ],
+  "topic_tags": [
+    "split-learning-privacy",
+    "model-stealing-attack",
+    "server-side-knowledge-extraction",
+    "functionality-replication",
+    "gradient-inversion"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "Pattern learning for scheduling microservice workflow to cloud containers",
+  "doi": "10.21203/rs.3.rs-3726089/v1",
+  "title": "Pattern learning for scheduling microservice workflow to cloud containers",
+  "year": 2024,
+  "venue": "International Journal of Machine Learning and Cybernetics",
+  "venue_tier": "regional",
+  "role": "corresponding",
+  "motiation": "大量计算在调度过程中重复,因为微服务工作流存在很多相似子结构",
+  "problem_framing": "将微服务工作流调度问题形式化为带软截止日期约束的DAG调度到异构容器",
+  "key_insight": "通过GNN挖掘工作流中的模式子结构,复用排序结果可避免重复计算",
+  "method_signature": "PMWSC框架: GNN模式识别 → 工作流排序 → 任务排序(PB-TS) → 资源选择(PB-RS)",
+  "evaluation_criteria": "平均延迟(average tardiness)和调度方案生成时间(runtime)",
+  "negative_result_or_admitted_limitation": "当资源不足时,PMWSC的延迟高于HEFT-D和PEFT-D; 算法并非总是最优",
+  "evidence_for_taste": [
+    "a lot of computations are repeated in a scheduling process",
+    "little attention has been paid on mining similar substructures",
+    "the order of tasks from the same pattern is order-preserved",
+    "no task sorting is needed from the same pattern",
+    "our framework is more suitable for the environment with sufficient resources"
+  ],
+  "thinking_moves": [
+    "从重复计算切入: 识别工作流相似子结构可减少调度计算量",
+    "将模式信息预嵌入调度两阶段(任务排序+资源选择)以简化搜索空间",
+    "先分策略做参数标定(Turkey HSD), 再比较整体框架效果",
+    "承认算法依赖资源充足性条件,非万能解"
+  ],
+  "topic_tags": [
+    "microservice workflow scheduling",
+    "container cloud",
+    "GNN pattern recognition",
+    "deadline-constrained optimization",
+    "scheduling algorithm efficiency"
+  ],
+  "cites_own_work": [
+    "Li, W., Li, X., Ruiz, R.: Scheduling microservice-based workflows to containers in on-demand cloud resources. In: CSCWD 2021"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "评估部分有图表被截断,部分数值结果不完整,但方法论和实验设计完整可见 | md truncated to head40k+tail20k"
+}

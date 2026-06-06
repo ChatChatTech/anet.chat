@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhou et al. - 2025 - QUIDS Quality-informed Incentive-driven Multi-agent Dispatching System for Mobile Crowdsensing",
+  "doi": null,
+  "title": "QUIDS: Quality-informed Incentive-driven Multi-agent Dispatching System for Mobile Crowdsensing",
+  "year": 2025,
+  "venue": "IEEE Transactions on Mobile Computing (in review)",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "非专用车辆感知覆盖不均、传感器可靠性不确定、覆盖与可靠性存在此消彼长的矛盾",
+  "problem_framing": "将覆盖与可靠性的耦合问题建模为ASQ指标的最大化优化问题，约束为预算限制",
+  "key_insight": "多个低可靠性传感器的读数通过聚合可以补偿个体偏差，协同推理可同时提升数据可靠性和调度效率",
+  "method_signature": "ASQ指标 + 协同推理 + 差异化激励的车辆调度算法",
+  "evaluation_criteria": "ASQ提升38%、地图重构误差降低39-74%、覆盖率与可靠性联合优化效果",
+  "negative_result_or_admitted_limitation": "truth discovery假设同模态数据，对跨模态数据融合场景不适用；依赖准确的轨迹预测",
+  "evidence_for_taste": [
+    "often-overlooked issue of sensing reliability",
+    "neglecting sensing reliability may lead to unreliable data",
+    "does not distinguish between dynamic errors and constant biases"
+  ],
+  "thinking_moves": [
+    "用数据聚合思路解决低质量传感器偏差问题",
+    "将感知可靠性与覆盖率解耦为统一的ASQ指标",
+    "引入bias term扩展truth discovery框架处理系统性误差",
+    "激励设计结合机会成本和风险补偿扩大可行域"
+  ],
+  "topic_tags": [
+    "vehicular-mobile-crowdsensing",
+    "quality-of-information",
+    "sensing-reliability-inference",
+    "truth-discovery",
+    "multi-agent-dispatching"
+  ],
+  "cites_own_work": [
+    "Quest: Quality-informed multi-agent dispatching system (INFOCOM 2024) - extended version"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

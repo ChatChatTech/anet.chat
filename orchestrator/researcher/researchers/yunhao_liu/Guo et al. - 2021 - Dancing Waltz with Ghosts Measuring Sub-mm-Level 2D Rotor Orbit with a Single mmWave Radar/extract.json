@@ -1,0 +1,44 @@
+{
+  "paper_id": "Guo et al. - 2021 - Dancing Waltz with Ghosts Measuring Sub-mm-Level 2D Rotor Orbit with a Single mmWave Radar",
+  "doi": null,
+  "title": "Dancing Waltz with Ghosts: Measuring Sub-mm-Level 2D Rotor Orbit with a Single mmWave Radar",
+  "year": 2021,
+  "venue": "IPSN",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传统跟踪转子轨道需部署多个传感器或双雷达，存在高侵入性、高复杂度和信道资源竞争问题",
+  "problem_framing": "如何在单毫米波雷达约束下，通过非视距多径信号恢复亚毫米级二维转子轨道",
+  "key_insight": "利用毫米波的空间可分离性分离多径幽灵反射，将多个一维观测投影合成二维轨道",
+  "method_signature": "基于GMR信号的四模块处理流水线(提取→位移→选择→恢复)",
+  "evaluation_criteria": "轨道距离误差和形状特征(离心率、相位)的准确性",
+  "negative_result_or_admitted_limitation": "从非视距GMR信号精确提取位移仍有改进空间",
+  "evidence_for_taste": [
+    "Ghost Images in RAM",
+    "Dancing the waltz together",
+    "sub-mm-level orbit is much smaller than target size",
+    "low SNR due to multiple reflections",
+    "spatial resolution of commercial mmWave radars can hardly support",
+    "still room for improvement in accurate displacement extraction",
+    "high locality of their input data"
+  ],
+  "thinking_moves": [
+    "将目标从粒子假设扩展为刚体，分析不同表面点的反射特性差异",
+    "在欠定系统中引入物理约束(法向方向、正弦波形频谱特征)来稳定求解",
+    "把信号质量问题归约为几何约束搜索问题",
+    "利用多径信号固有同步特性(传播时间差远小于调频周期)简化多视角观测",
+    "将时域信号建模映射到IQ域几何特征进行去噪"
+  ],
+  "topic_tags": [
+    "mmWave-multipath-exploitation",
+    "rotor-orbit-tracking",
+    "ghost-multipath-reflection",
+    "rigid-body-motion-sensing",
+    "industrial-rotation-monitoring"
+  ],
+  "cites_own_work": [
+    "[15] mmVib: Micrometer-Level Vibration Measurement with mmWave Radar (2020)",
+    "[12] RED: RFID-based Eccentricity Detection (2021)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "部分字符被'?'替代(如sub-mm中的mm、单位等)，导致标题和部分数值不完全准确；方法章节有截断 | md truncated to head40k+tail20k"
+}

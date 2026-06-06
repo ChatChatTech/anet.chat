@@ -1,0 +1,39 @@
+{
+  "paper_id": "Moving Deep Learning into Web Browser_ How Far Can We Go_",
+  "doi": "10.48550/arxiv.1901.09388",
+  "title": "Moving Deep Learning into Web Browser: How Far Can We Go?",
+  "year": 2019,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "JavaScript-based DL框架兴起，但无人系统评估浏览器端DL的可行性与性能瓶颈",
+  "problem_framing": "从功能覆盖、性能实测、与原生平台差距三个维度实证评估7个主流框架",
+  "key_insight": "模型加载时间主导推理耗时；CPU后端在小模型上优于GPU；集成显卡可使浏览器超越CPU原生框架",
+  "method_signature": "构建Chrome扩展测量框架性能与资源利用率，决策树分析性能差距贡献因子",
+  "evaluation_criteria": "训练/推理耗时、模型文件大小、CPU/GPU利用率、框架功能完整性",
+  "negative_result_or_admitted_limitation": "ConvNetJS调用栈深度仅3而TensorFlow.js为48，暴露框架开销问题；nGPU训练时间反而长于iGPU因WebGL调用开销大",
+  "evidence_for_taste": [
+    "DL in browsers is still at dawn",
+    "Model loading dominates the computation",
+    "the depth of the call stack of ConvNetJS is only 3 while TensorFlow.js is 48",
+    "training time on nGPU is even longer than iGPU",
+    "TensorFlow.js sometimes cannot maximize the utilization"
+  ],
+  "thinking_moves": [
+    "将推理拆解为模型加载、预热、推理三阶段细粒度测量",
+    "用决策树量化后端类型、任务类型、模型复杂度对性能差距的贡献权重",
+    "对比独立显卡与集成显卡在浏览器端的表现差异",
+    "通过调用栈深度对比揭示框架实现效率差异",
+    "统计CPU利用率揭露JavaScript单线程瓶颈"
+  ],
+  "topic_tags": [
+    "browser-based deep learning",
+    "TensorFlow.js",
+    "WebGL acceleration",
+    "JavaScript DL frameworks",
+    "empirical performance measurement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

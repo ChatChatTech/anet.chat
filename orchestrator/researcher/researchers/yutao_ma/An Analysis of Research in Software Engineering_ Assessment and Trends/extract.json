@@ -1,0 +1,38 @@
+{
+  "paper_id": "An Analysis of Research in Software Engineering_ Assessment and Trends",
+  "doi": "10.48550/arxiv.1407.4903",
+  "title": "An Analysis of Research in Software Engineering: Assessment and Trends",
+  "year": 2014,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有软件工程评估存在样本小、关键词主观、评分规则忽略领导角色等问题",
+  "problem_framing": "通过构建综合评估规则(C rule)实现更合理的学者、机构和国家排名",
+  "key_insight": "区分第一/通讯作者与其他作者角色,并根据CCF分级对不同出版物赋分",
+  "method_signature": "自动化从EI Compendex采集数据,按C rule计算评分并拟合幂律分布",
+  "evaluation_criteria": "基于基本分(first/correspond author拿全分,其他作者拿一半)和CCF等级加权",
+  "negative_result_or_admitted_limitation": "九成顶尖学者的领导力得分低于参考线,表明软件工程领域对通讯作者标注不够重视",
+  "evidence_for_taste": [
+    "most leading scholars do not attach much weight to the status of corresponding author",
+    "only the first institution named on a paper receives the basic score for its leadership",
+    "数据 errors have hardly any impact on the Top 15 ranking results",
+    "it is very hard to reach a widely recognized consensus on such an assessment",
+    "the prior studies... have been questioned by some critics"
+  ],
+  "thinking_moves": [
+    "先指出前人方法的三个缺陷,再针对性提出改进",
+    "用幂律分布证明长尾数据对排名影响极小,增强结果的鲁棒性",
+    "通过组合'综合分'与'领导力分'对比揭示隐藏的学术行为模式",
+    "引用Matthews效应解释为何少数顶尖学者得分远超其他人"
+  ],
+  "topic_tags": [
+    "bibliometric-assessment",
+    "power-law-distribution",
+    "software-engineering-trends",
+    "author-contribution-scoring",
+    "research-evaluation-rule"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Yutao Ma为通讯作者(co-author with asterisk),负责提出C rule评估方法。论文提供了完整的方法论和实验结果。 | md truncated to head40k+tail20k"
+}

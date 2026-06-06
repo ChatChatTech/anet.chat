@@ -1,0 +1,41 @@
+{
+  "paper_id": "Backward and Forward Language Modeling for Constrained Sentence Generation",
+  "doi": "10.48550/arxiv.1512.06612",
+  "title": "Backward and Forward Language Modeling for Constrained Sentence Generation",
+  "year": 2015,
+  "venue": "unknown",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "现有语言模型无法保证生成句子中包含指定词汇,这限制了问答等实际应用",
+  "problem_framing": "将约束词作为根节点,通过贝叶斯网络分解联合概率生成前后文",
+  "key_insight": "从给定词同时向两端生成,无需首词约束即可保证该词出现在任意位置",
+  "method_signature": "双向/异步B/F RNN语言模型,基于GRU的条件概率乘积分解",
+  "evaluation_criteria": "科学论文标题的困惑度,以及生成文本的定性质量比较",
+  "negative_result_or_admitted_limitation": "所有B/F变体困惑度均高于顺序模型,sep-B/F过于贪婪且生成内容过短",
+  "evidence_for_taste": [
+    "existing approaches could not solve this problem",
+    "All B/F variants yield a larger perplexity",
+    "the sep-B/F model is too greedy",
+    "generating short and general texts is a known issue",
+    "Randomly choosing a split word increases uncertainly"
+  ],
+  "thinking_moves": [
+    "将句子联合概率的分解方式从单向链改为双向分支结构",
+    "比较同步生成与异步生成两种变体的信息整合效果",
+    "承认随机分词带来的困惑度代价是可接受的工程权衡",
+    "用oracle设置验证约束词已知时模型的实际能力上限"
+  ],
+  "topic_tags": [
+    "constrained-text-generation",
+    "bidirectional-RNN-LM",
+    "arXiv-title-generation",
+    "Bayesian-network-decomposition",
+    "GRU-language-model"
+  ],
+  "cites_own_work": [
+    "Lili Mou, Ge Li, L. Zhang et al. - tree-based convolution for programming language",
+    "Lili Mou, H. Peng, Ge Li et al. - discriminative neural sentence modeling"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

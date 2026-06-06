@@ -1,0 +1,38 @@
+{
+  "paper_id": "Dynamics of Open-Source Software Developer's Commit Behavior_ An Empirical Investigation of Subversion",
+  "doi": "10.48550/arxiv.1309.0897",
+  "title": "Dynamics of Open-Source Software Developer's Commit Behavior: An Empirical Investigation of Subversion",
+  "year": 2013,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "先前研究关注提交大小分布,但未深入研究提交间隔的动态规律",
+  "problem_framing": "用四个指标(PLCCI/PLICI/FLCCI/FLICI)形式化开发者的提交行为",
+  "key_insight": "开发者提交间隔遵循幂律分布,反映OSS协作开发的普遍规律",
+  "method_signature": "基于CDF估计幂律指数,对55个发布周期进行多函数拟合对比",
+  "evaluation_criteria": "R²拟合优度>0.96为最佳,皮尔逊相关系数显著性检验",
+  "negative_result_or_admitted_limitation": "Git等分布式系统结论是否适用尚不确定",
+  "evidence_for_taste": [
+    "power-law distributions of lifecycle- and release-level",
+    "few of previous papers conducted empirical research",
+    "active committers' individual commit behavior are very similar",
+    "heavy-tailed distributions of inter-event times",
+    "decision based queuing process"
+  ],
+  "thinking_moves": [
+    "将Barabási的人类行为动力学框架移植到软件工程领域",
+    "从项目级/文件级、集体/个体四个维度构建指标体系",
+    "用CDF降噪来估计幂律标度指数",
+    "对多个发布阶段重复验证以检验规律是否重演"
+  ],
+  "topic_tags": [
+    "OSS-commit-interval",
+    "power-law-distribution",
+    "SVN-revision-control",
+    "developer-behavior-dynamics",
+    "incremental-development"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

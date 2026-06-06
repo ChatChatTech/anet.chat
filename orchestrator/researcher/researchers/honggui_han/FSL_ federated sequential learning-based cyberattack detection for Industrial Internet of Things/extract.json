@@ -1,0 +1,41 @@
+{
+  "paper_id": "FSL_ federated sequential learning-based cyberattack detection for Industrial Internet of Things",
+  "doi": "10.1007/s44244-023-00006-2",
+  "title": "FSL: federated sequential learning-based cyberattack detection for Industrial Internet of Things",
+  "year": 2023,
+  "venue": "Journal of Manufacturing Systems",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "IIoT faces data isolation and node heterogeneity challenges for cyberattack detection while preserving data security",
+  "problem_framing": "分布式节点时间序列数据的异构性导致全局模型精度下降,需要协同建模但不暴露原始数据",
+  "key_insight": "TCN提取局部时序特征+FedProx正则化聚合,可解决节点异构和时间序列建模的双重挑战",
+  "method_signature": "TCN本地模型+FedProx联邦聚合的时序攻击检测框架",
+  "evaluation_criteria": "Accuracy, Precision, Recall, F1 score对比CNN/LSTM",
+  "negative_result_or_admitted_limitation": "VSA和UA攻击因对时序信号影响小而检测效果差;实验中只有4个客户端,节点异构性不够明显",
+  "evidence_for_taste": [
+    "non-i.i.d. characteristics may lead to a severe impairment",
+    "CNN performs much better on MNIST",
+    "FSL loss function converged faster and gave the best results",
+    "the models tend to confuse VSA and UA with normal signals",
+    "making the heterogeneity of nodes not obvious enough"
+  ],
+  "thinking_moves": [
+    "时序数据的本质是因果依赖,用TCN的膨胀卷积捕获长距离时序关联",
+    "FedProx通过近端项约束本地更新偏移,缓解非i.i.d.数据导致的client-drift",
+    "先证明时序模型对工业数据有效,再迁移到联邦框架验证可行性",
+    "实验设计用MNIST排除时序假设,用BDD验证时序建模,用Edge-IIoTset验证真实IIoT攻击检测"
+  ],
+  "topic_tags": [
+    "federated learning IIoT",
+    "temporal convolutional network",
+    "node heterogeneity handling",
+    "cyberattack detection",
+    "FedProx aggregation"
+  ],
+  "cites_own_work": [
+    "Li F, Li Q, Zhang J, et al. (2021) detection and diagnosis of data integrity attacks in solar farms",
+    "Zhao L, Li J, Li Q, Li F (2022) federated learning framework for detecting false data injection attacks"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

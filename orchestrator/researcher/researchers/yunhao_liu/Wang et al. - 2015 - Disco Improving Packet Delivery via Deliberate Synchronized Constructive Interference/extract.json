@@ -1,0 +1,38 @@
+{
+  "paper_id": "Wang et al. - 2015 - Disco Improving Packet Delivery via Deliberate Synchronized Constructive Interference",
+  "doi": null,
+  "title": "Disco: Improving Packet Delivery via Deliberate Synchronized Constructive Interference",
+  "year": 2015,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "传统CI(Constructive Interference)不能保证功率增益和PRR提升,WSN节点能量受限需更高效并发传输",
+  "problem_framing": "设计足够条件使多个并发传输在接收端产生正向叠加增益,而非仅容忍碰撞",
+  "key_insight": "精确补偿传播时延和无线电处理时延+链路选择对齐,可将CI从容忍碰撞提升为构造性叠加",
+  "method_signature": "Triggercast: CLS(芯片级同步)+LSA(链路选择对齐)双模块分布式中间件",
+  "evaluation_criteria": "PRR提升幅度(5→70%)、RSSI增益、同步误差(95th≤250ns)、ETX降低",
+  "negative_result_or_admitted_limitation": "Glossy因未补偿传播时延且未选链路,性能甚至差于单路径路由",
+  "evidence_for_taste": [
+    "no obvious power gain if RSSI differences exceed 3 dB",
+    "PRR drops quickly as differences of propagation delay increase",
+    "exactly synchronized signals with different link qualities might also superpose destructively",
+    "capture effect dominates the packet reception",
+    "more senders may not lead to PRR improvement"
+  ],
+  "thinking_moves": [
+    "从实验发现传统CI无法保证功率增益→挑战已有工作假设",
+    "对现象建立理论充分条件(SC-I/II)再实现系统",
+    "把同步问题分解为传播时延补偿+无线电处理时延补偿两部分"
+  ],
+  "topic_tags": [
+    "constructive-interference",
+    "wireless-sensor-networks",
+    "concurrent-transmission-synchronization",
+    "chip-level-timing",
+    "PRR-improvement"
+  ],
+  "cites_own_work": [
+    "Exploiting constructive interference for scalable flooding (Wang et al., 2012 IEEE INFOCOM)"
+  ],
+  "extraction_quality": "full"
+}

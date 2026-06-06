@@ -1,0 +1,41 @@
+{
+  "paper_id": "Wang et al. - 2015 - On the Delay Performance in a Large-Scale Wireless Sensor Network Measurement, Analysis, and Implic",
+  "doi": null,
+  "title": "On the Delay Performance in a Large-Scale Wireless Sensor Network: Measurement, Analysis, and Implications",
+  "year": 2015,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "现有WSN延迟测量依赖网络同步带来开销，不适合运营网络；缺乏大规模实际网络测量",
+  "problem_framing": "如何在无同步开销下精确测量端到端延迟，并识别影响延迟的关键因素",
+  "key_insight": "延迟误差由时钟漂移界定且有界，证明无需全网同步即可可靠测量；发现WSN中重传和队列长度比路由事件更关键",
+  "method_signature": "MLT无同步延迟测量 + Rulefit自动因子提取 + 经验延迟建模",
+  "evaluation_criteria": "延迟计算误差界、因子与延迟的Pearson相关性、预测大延迟的准确率/均衡准确率",
+  "negative_result_or_admitted_limitation": "环境因素（温度湿度）对延迟直接影响有限；WSN中路由事件影响远小于互联网",
+  "evidence_for_taste": [
+    "important factors are not necessarily the same with those in the Internet",
+    "the calculated delay has a bounded error",
+    "the impact of parent change is relatively small in WSNs",
+    "the impact of backoff is not as significant as other factors",
+    "a practical end-to-end delay performance measurement in an operational large-scale WSN is still missing"
+  ],
+  "thinking_moves": [
+    "将测量误差问题转化为时钟漂移约束问题，证明界存在即可无需精确同步",
+    "用Rulefit自动挖掘数据而非预设假设，自动排序因子重要性",
+    "从相关性强度的角度区分因子，区分'相关'与'可预测'两个层面",
+    "将理论延迟模型(无其他因素)作为基线，经验数据揭示偏离原因",
+    "对比WSN与Internet的影响因素差异，批判性审视既有研究假设"
+  ],
+  "topic_tags": [
+    "WSN-delay-measurement",
+    "low-power-listening",
+    "clock-drift-bounded-error",
+    "Rulefit-factor-analysis",
+    "empirical-delay-model"
+  ],
+  "cites_own_work": [
+    "IEEE RTSS 2012 preliminary version"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文文本，包含方法、理论证明、评估和局限 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Zhou et al. - 2013 - Towards omnidirectional passive human detection",
+  "doi": null,
+  "title": "Towards Omnidirectional Passive Human Detection",
+  "year": 2013,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有被动人体检测系统的覆盖范围受限于链路中心架构，即使使用全向天线也表现出方向性覆盖，无法满足全向检测应用需求",
+  "problem_framing": "将全向被动人体检测定义为一个利用链路中心架构实现圆盘状检测覆盖的问题，包含均等判决和方位判别两个层次",
+  "key_insight": "利用PHY层的信道频率响应(CFR)幅值的统计结构，在抵抗背景干扰的同时对近处人体保持敏感性，从而虚拟调节覆盖形状",
+  "method_signature": "采用CFR幅值直方图作为PHY层特征，使用Earth Mover距离进行指纹匹配分类",
+  "evaluation_criteria": "误报率、漏报率、各方向检测率、方位判别准确率、直接性度量",
+  "negative_result_or_admitted_limitation": "沿TX-RX链路反向的用户签名区分度仍较低，导致该方向的分类准确率较低，覆盖形状尚未达到理想的全向",
+  "evidence_for_taste": [
+    "CFR is more preferable due to its sensitivity",
+    "the amplitudes of CFRs discriminate the irrelevant background unstableness",
+    "the coverage shape of the proposed scheme is still not perfectly omnidirectional",
+    "the signatures against the TX-RX link still hold less distinction",
+    "a user with such location tends to introduce similar extent of variations"
+  ],
+  "thinking_moves": [
+    "将多径效应从需要抑制的干扰重新定义为可利用的签名资源",
+    "从天线领域的方向性度量中借用数学形式来量化检测覆盖的各向同性程度",
+    "将被动检测问题与室内定位的指纹方法进行类比，但指出两者对签名稳定性的要求本质不同",
+    "通过对比CIR和CFR在时域/频域的敏感性差异，选择CFR作为主要特征"
+  ],
+  "topic_tags": [
+    "WiFi sensing",
+    "device-free detection",
+    "PHY layer features",
+    "CFR fingerprinting",
+    "omnidirectional coverage"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注会议名称，仅通过格式推断为会议论文。文中多次引用了作者团队的其他工作(如Fila、Locating in fingerprint space等)，但未明确列出对比引用情况。"
+}

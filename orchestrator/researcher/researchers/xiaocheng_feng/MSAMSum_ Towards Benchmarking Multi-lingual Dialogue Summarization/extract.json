@@ -1,0 +1,41 @@
+{
+  "paper_id": "MSAMSum_ Towards Benchmarking Multi-lingual Dialogue Summarization",
+  "doi": "10.18653/v1/2022.dialdoc-1.1",
+  "title": "MSAMSum: Towards Benchmarking Multi-lingual Dialogue Summarization",
+  "year": 2022,
+  "venue": "ACL Workshop on Dialogue Understanding (dialdoc)",
+  "venue_tier": "workshop",
+  "role": "first",
+  "motivation": "多语言会议场景日益普遍，跨国参会者需要用偏好语言获取摘要",
+  "problem_framing": "多语言对话摘要任务需要数据和设置两个维度支撑",
+  "key_insight": "MIX-TO-MANY设置将多语言混合输入视为对齐表示空间的机遇而非障碍",
+  "method_signature": "基于mBART-50在五种多语言设置下进行监督和零样本评估",
+  "evaluation_criteria": "多语言ROUGE-1/2/L分数",
+  "negative_result_or_admitted_limitation": "多语言模型参数干扰导致性能低于单语言专家模型",
+  "evidence_for_taste": [
+    "requires models with multilingual capabilities",
+    "may cause the parameters interference problem",
+    "multi-lingual model only deals with one language at a time in the pre-training progress",
+    "help the representation space of the low-resource language align with other languages",
+    "low-resource languages tend to perform poorly"
+  ],
+  "thinking_moves": [
+    "将数据稀缺问题转化为翻译工程问题",
+    "提出混合语言设置探索预训练模型处理多语言混合输入的潜力",
+    "将多语言对话摘要问题分解为五个递进式设置",
+    "用代码切换机制解释低资源语言的对齐效果"
+  ],
+  "topic_tags": [
+    "multi-lingual-dialogue-summarization",
+    "translation-based-dataset-construction",
+    "zero-shot-cross-lingual",
+    "mBART-finetuning",
+    "round-trip-quality-control"
+  ],
+  "cites_own_work": [
+    "Feng et al., 2021a",
+    "Feng et al., 2021b",
+    "Feng et al., 2021c"
+  ],
+  "extraction_quality": "full"
+}

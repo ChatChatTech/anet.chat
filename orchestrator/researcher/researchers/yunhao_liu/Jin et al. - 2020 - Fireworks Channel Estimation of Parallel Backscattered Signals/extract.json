@@ -1,0 +1,42 @@
+{
+  "paper_id": "Jin et al. - 2020 - Fireworks Channel Estimation of Parallel Backscattered Signals",
+  "doi": null,
+  "title": "Fireworks: Channel Estimation of Parallel Backscattered Signals",
+  "year": 2020,
+  "venue": "MobiCom",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有方法只能处理并行解码或非碰撞信号，无法在碰撞时估计通道参数，导致多目标感知应用受限",
+  "problem_framing": "将并行反向散射信号的通道估计问题建模为IQ域信号轨迹与通道参数的变换关系",
+  "key_insight": "碰撞信号的IQ域移动轨迹由各标签通道参数决定，虽状态变化但几何特性保持不变",
+  "method_signature": "通过全局优化将IQ域轨迹反解为通道参数，利用所有路径信息约束估计误差",
+  "evaluation_criteria": "相位误差(rad)、幅度误差、跟踪精度提升倍数(2~4×)",
+  "negative_result_or_admitted_limitation": "FlipTracer在低信噪比时误差反而减小，说明高功率时干扰加剧；各标签因相位差异不同而表现各异",
+  "evidence_for_taste": [
+    "can we estimate the channel",
+    "fast-moving signal in the IQ domain",
+    "signal samples aren't concentrated",
+    "signal trajectory is a simple connection",
+    "geometric properties of the trajectory"
+  ],
+  "thinking_moves": [
+    "将难以定位的瞬时状态问题转化为可观测的几何轨迹问题",
+    "利用OFDM调制产生直线路径的线性特性",
+    "从单标签密度峰值估计扩展到并行多标签轨迹全局优化",
+    "观察到异步翻转使轨迹自然分段",
+    "通过IIA模型正变换通道参数，再全局优化反解"
+  ],
+  "topic_tags": [
+    "RFID-channel-estimation",
+    "backscatter-parallel-decoding",
+    "IQ-domain-trajectory-analysis",
+    "multi-target-sensing",
+    "inter-tag-interference"
+  ],
+  "cites_own_work": [
+    "FlipTracer",
+    "Tagoram"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为完整版本，包含方法细节和实验评估。作者Yunhao Liu为合作作者(Michigan State University)。 | md truncated to head40k+tail20k"
+}

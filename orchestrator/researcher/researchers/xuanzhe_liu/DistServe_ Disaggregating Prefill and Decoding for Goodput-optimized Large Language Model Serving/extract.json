@@ -1,0 +1,39 @@
+{
+  "paper_id": "DistServe_ Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+  "doi": "10.48550/arxiv.2401.09670",
+  "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "LLM serving中prefill和decoding两阶段延迟需求不同,现有系统混部导致强干扰且资源耦合",
+  "problem_framing": "在TTFT和TPOT SLO约束下最大化per-GPU goodput(满足SLO的最大请求率)",
+  "key_insight": "将prefill和decoding分离到不同GPU可消除阶段间干扰,实现各自独立的资源分配和并行策略优化",
+  "method_signature": "解聚合prefill/decoding阶段,根据延迟要求独立优化各阶段并行度和资源分配算法",
+  "evaluation_criteria": "90% SLO达成率下可服务的最大请求率,以及可支持的最严格延迟SLO倍数",
+  "negative_result_or_admitted_limitation": "chunked-prefill等技术'cannot eliminate the interference'且增加O(N^2)内存访问开销",
+  "evidence_for_taste": [
+    "cannot eliminate the interference",
+    "avoids over-provisioning",
+    "renders priority scheduling ineffective",
+    "significantly improves per-GPU goodput",
+    "maximizing per-GPU goodput"
+  ],
+  "thinking_moves": [
+    "识别两阶段特性差异(compute-bound vs memory-bound)导致的问题",
+    "用M/D/1排队论建模prefill阶段的延迟行为",
+    "将资源耦合问题转化为独立优化问题",
+    "通过通信开销分析论证解聚合的可行性",
+    "枚举并行配置并用仿真器评估SLO达成率寻找最优placement"
+  ],
+  "topic_tags": [
+    "LLM serving disaggregation",
+    "prefill-decoding interference",
+    "goodput optimization",
+    "model parallelism tuning",
+    "latency SLO optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "正文方法部分基本完整,评估结果展示较多但被截断,缺乏对自身方法局限的详细讨论 | md truncated to head40k+tail20k"
+}

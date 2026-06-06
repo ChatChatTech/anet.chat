@@ -1,0 +1,37 @@
+{
+  "paper_id": "2026_ICDE_TopFGL_camera_ready",
+  "doi": null,
+  "title": "TopFGL: A Topology-Aware and Distribution-Agnostic Federated Learning Framework Tackling Topological Heterogeneity on Graph Data",
+  "year": 2026,
+  "venue": "ICDE",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "Graph data silos due to GDPR privacy regulations block collaborative learning; existing FGL fails under topological heterogeneity",
+  "problem_framing": "Topological heterogeneity across clients causes divergent GNN training directions, degrading model aggregation; prior works leak intermediate info or lack adaptability",
+  "key_insight": "Train lightweight topology learners to capture explicit topological patterns; leverage learned topology for similarity-based server aggregation and client-side augmentation without sharing raw data",
+  "method_signature": "Topology learner + CKA-based compatible aggregation + dual-model guided topology augmentation",
+  "evaluation_criteria": "Accuracy (5.6% gain) and training time reduction (50%) across 11 datasets, 3 distributions, up to 100 clients",
+  "negative_result_or_admitted_limitation": "Performance may diminish when graph structure is noisy or detrimental to representation learning",
+  "evidence_for_taste": [
+    "directly extracting topological guidance from the topology-unaware models cannot guarantee accuracy",
+    "sharing embeddings can lead to label leakage",
+    "these approaches struggle to maintain effectiveness under varying topological distributions",
+    "the strong emphasis on topology also frames the applicability of our framework"
+  ],
+  "thinking_moves": [
+    "把拓扑异质性问题拆分为全局聚合不兼容和本地邻居不足两个子问题",
+    "先用轻量级探测网络学习显式拓扑表征，再反推客户端间的拓扑相似度",
+    "通过对比主任务GNN和拓扑学习器的预测差异来定位拓扑不足节点",
+    "借鉴图对比学习的思路：用一致性边过滤(KNN+LCC)增强稀疏图连通性"
+  ],
+  "topic_tags": [
+    "federated-graph-learning",
+    "topological-heterogeneity",
+    "topology-aware-aggregation",
+    "graph-augmentation",
+    "privacy-preserving-ml"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

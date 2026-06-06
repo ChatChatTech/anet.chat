@@ -1,0 +1,42 @@
+{
+  "paper_id": "Sun et al. - 2014 - Energy-Efficient Neighbor Discovery in Mobile Ad Hoc and Wireless Sensor Networks A Survey",
+  "doi": null,
+  "title": "Energy-Efficient Neighbor Discovery in Mobile Ad Hoc and Wireless Sensor Networks: A Survey",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "电池技术进展缓慢,能耗成为移动自组网和传感器网络应用的瓶颈,idle listening占主导",
+  "problem_framing": "duty cycle与discovery latency的相互制约,定义为块设计问题,求最小活跃槽集合",
+  "key_insight": "尽管原理各异,确定性协议可纳入统一框架分析;随机与确定方法各有适用场景",
+  "method_signature": "按四原则分类:随机(Birthday)、超半占用、旋转抵抗交集、互素周期,给出通用框架",
+  "evaluation_criteria": "duty cycle、discovery latency(含worst-case)、power-latency product,仿真对比CDF",
+  "negative_result_or_admitted_limitation": "Quorum仅支持对称运行;asymmetric情形下最优调度规约为NP-complete顶点覆盖问题;无全优方案",
+  "evidence_for_taste": [
+    "crux lies in the power scarcity",
+    "trade-off between duty cycle and discovery latency",
+    "they are in conflict with one another",
+    "deterministic protocols can be incorporated into a generic framework",
+    "we argue that this may still be too restrictive",
+    "they are fundamentally limited to symmetric networks",
+    "there is no all-round approach"
+  ],
+  "thinking_moves": [
+    "将多种协议抽象为统一框架下的分类学分析",
+    "用概率论(Birthday Paradox)支撑随机方法的平均性能",
+    "用Chinese Remainder Theorem严格证明互素周期方法的worst-case bound",
+    "从几何直觉(旋转不变交集)推导出块设计约束",
+    "通过仿真揭示随机方法在average case优但在tail behavior差",
+    "承认不同方法在symmetric vs asymmetric场景下各有优劣,无全优解"
+  ],
+  "topic_tags": [
+    "neighbor-discovery-protocol",
+    "duty-cycle-latency-tradeoff",
+    "asynchronous-wireless",
+    "quorum-design",
+    "coprime-scheduling"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

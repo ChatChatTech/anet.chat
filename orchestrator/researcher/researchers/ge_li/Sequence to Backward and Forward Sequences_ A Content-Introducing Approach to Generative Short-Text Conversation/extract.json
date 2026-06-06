@@ -1,0 +1,42 @@
+{
+  "paper_id": "Sequence to Backward and Forward Sequences_ A Content-Introducing Approach to Generative Short-Text Conversation",
+  "doi": "10.48550/arxiv.1607.00970",
+  "title": "Sequence to Backward and Forward Sequences: A Content-Introducing Approach to Generative Short-Text Conversation",
+  "year": 2016,
+  "venue": "arXiv",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "神经对话系统倾向于生成安全的、万能的回复（如\"I don't know\"），缺乏实际内容",
+  "problem_framing": "将内容引入问题形式化为：先预测关键词，再生成包含该词的回复，关键词可出现在任意位置",
+  "key_insight": "用PMI而非最大概率预测关键词 penalizes 高频通用词；seq2BF从关键词双向生成突破顺序约束",
+  "method_signature": "PMI关键词预测 + seq2BF双向序列生成（含关键词的条件解码）",
+  "evaluation_criteria": "人类评估（逐点评分、成对比较）、字符级熵、回复长度",
+  "negative_result_or_admitted_limitation": "无内容引入的seq2BF得分反而更低，说明人为拆分序列并非自然语言建模的妙方；BLEU不适合评估对话因其忽略回复多样性",
+  "evidence_for_taste": [
+    "神经网络的performance is not satisfactory",
+    "tends to generate safe, universally relevant replies",
+    "penalizes a common word by dividing its prior probability",
+    "the two assumptions may not be true, we use them in a pragmatic way",
+    "artificially splitting a sequence into two parts itself is not a fancy way",
+    "we abandoned BLEU scores as evaluation criteria",
+    "no bi-gram overlaps between his replies and the references"
+  ],
+  "thinking_moves": [
+    "提出两个假设：seq2seq无法捕获丰富语义 vs 即使能捕获，从通用词出发也难以转向具体概念",
+    "通过细分关键词与剩余词的熵来验证第二个假设",
+    "把\"在任意位置插入内容\"这个问题重新frame成\"从关键词双向生成\"",
+    "采用简化策略：关键词预测只输出单一词汇，不捕获复杂句法语义"
+  ],
+  "topic_tags": [
+    "neural-dialogue-generation",
+    "keyword-prediction",
+    "seq2seq-variants",
+    "content-introducing",
+    "universal-reply-problem"
+  ],
+  "cites_own_work": [
+    "Mou et al., 2015 (backward and forward language modeling)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "Ge Li为署名作者（非第一、非通讯），承担模型设计贡献。论文对负向结果处理坦诚：seq2BF-不如baseline说明拆分本身无效，需配合关键词才有意义。"
+}

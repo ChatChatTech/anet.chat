@@ -1,0 +1,40 @@
+{
+  "paper_id": "Improving Controllable Text Generation with Position-Aware Weighted Decoding",
+  "doi": "10.18653/v1/2022.findings-acl.272",
+  "title": "Improving Controllable Text Generation with Position-Aware Weighted Decoding",
+  "year": 2022,
+  "venue": "ACL Findings",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "Weighted decoding方法在提高控制强度的同时导致文本质量下降,存在控制强度与流畅度的权衡困境",
+  "problem_framing": "将控制强度/流畅度权衡问题重新形式化为控制器在所有位置施加偏置而忽略LM原始输出分布的矛盾",
+  "key_insight": "通过检测LM输出分布与目标属性的差异,在不同解码位置自适应抑制或放大控制器偏置信号",
+  "method_signature": "CAT-PAW框架在加权解码方法上添加位置感知调节器,动态调整控制信号强度",
+  "evaluation_criteria": "slope(权衡曲线斜率)作为核心指标,同时评估控制强度/困惑度/区分度",
+  "negative_result_or_admitted_limitation": "可训练调节器因伪数据噪声反而不如启发式调节器;多义词关键词(如military)使启发式调节器产生混淆",
+  "evidence_for_taste": [
+    "trade-off is due to the controller assigning bias signals to all decoding positions while ignoring the original results of LMs",
+    "an ideal controllable generator should generate high-quality text under different control strengths",
+    "degeneration often happens when a serious mismatch occurs between output distributions of the LM and the target attribute",
+    "the heuristic one (H) performs better than the trainable one (T). We hypothesize that it is due to the noises in the pseudo data",
+    "Heuristic regulator in our CAT-PAW is sometimes confused about the LM's preference when facing these keywords"
+  ],
+  "thinking_moves": [
+    "从权衡曲线的几何特征(斜率)而非单点性能重新定义任务成功标准",
+    "将控制失败归因于时序位置错配而非方法本身缺陷",
+    "借鉴对比思维:当LM已倾向目标属性时应放大控制,否则应抑制",
+    "采用最简启发式方法作为训练数据不足时的保守基线"
+  ],
+  "topic_tags": [
+    "controllable-text-generation",
+    "weighted-decoding",
+    "position-aware-control",
+    "trade-off-evaluation",
+    "language-model-refinement"
+  ],
+  "cites_own_work": [
+    "Xiaocheng Feng is the corresponding author of this work"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

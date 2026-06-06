@@ -1,0 +1,42 @@
+{
+  "paper_id": "Xu et al. - 2022 - SwarmMap Scaling Up Real-time Collaborative Visual SLAM at the Edge",
+  "doi": null,
+  "title": "SwarmMap: Scaling Up Real-time Collaborative Visual SLAM at the Edge",
+  "year": 2022,
+  "venue": "USENIX NSDI",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "协作视觉SLAM的代理数量增长导致带宽爆炸、调度延迟和存储溢出,现有边缘卸载方案无法扩展",
+  "problem_framing": "将协作视觉SLAM的可扩展性问题形式化为数据爆炸下的通信/调度/存储三维资源开销挑战",
+  "key_insight": "不重新设计SLAM算法,而是通过操作日志追踪而非数据同步、优先级调度而非FCFS、质量感知压缩而非均匀裁剪来提供系统级抽象",
+  "method_signature": "Mapit操作日志追踪+STS优先级多级队列+MBP质量均衡地图骨架压缩",
+  "evaluation_criteria": "支持代理数量(2× SOTA)、轨迹误差(38cm/20代理)、带宽消耗、内存占用",
+  "negative_result_or_admitted_limitation": "现有压缩方法忽略地图质量差异,导致降质;计算导向的划分方案无法应对数据爆炸;现有方案在超过10个代理时超出链路容量",
+  "evidence_for_taste": [
+    "fail to address the data explosion",
+    "ignore such difference when compressing",
+    "cannot scale with the sheer size",
+    "limited data volume reduction",
+    "exacerbate the localization error",
+    "setting a strong barrier for practical deployment"
+  ],
+  "thinking_moves": [
+    "将perception算法问题重框为系统通信与调度问题",
+    "从数据爆炸这一系统现象反推当前方案架构缺陷",
+    "观察代理贡献地图的质量不均匀性,提出质量均衡思想而非均匀裁剪",
+    "承认现有工作的根本局限,而非修补边角案例",
+    "从运营成本视角定义'可扩展性'——同资源下服务更多代理"
+  ],
+  "topic_tags": [
+    "collaborative-visual-slam",
+    "edge-offloading-slam",
+    "multi-agent-scheduling",
+    "map-backbone-compression",
+    "bandwidth-optimization"
+  ],
+  "cites_own_work": [
+    "Edge assisted mobile semantic visual slam (INFOCOM 2020)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

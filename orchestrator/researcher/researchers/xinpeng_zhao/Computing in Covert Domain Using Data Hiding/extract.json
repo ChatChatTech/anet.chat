@@ -1,0 +1,41 @@
+{
+  "paper_id": "Computing in Covert Domain Using Data Hiding",
+  "doi": "10.48550/arxiv.2002.06794",
+  "title": "Computing in Covert Domain Using Data Hiding",
+  "year": 2020,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Homomorphic encryption计算复杂度大,普通用户和移动设备不方便使用",
+  "problem_framing": "在隐写域中执行计算,让服务器既看不到原始数据也得不到计算结果",
+  "key_insight": "信息隐藏产生的隐写域可容纳数据,且加法和乘法运算可直接在隐写数据上实现",
+  "method_signature": "利用矩阵嵌入将二进制数据隐藏到LSB平面,服务器在隐写域执行矩阵运算",
+  "evaluation_criteria": "可行性(差分率为0)、不可感知性(P_E接近0.5)、安全性(无密钥时错误率50%)、复杂度(远低于RSA)",
+  "negative_result_or_admitted_limitation": "内积运算要求嵌入矩阵H正交,限制了矩阵选择的灵活性",
+  "evidence_for_taste": [
+    "encryption would inevitably impact the utility",
+    "not convenient for common users or mobile devices",
+    "completely undetectable",
+    "much smaller than the homomorphic encryption"
+  ],
+  "thinking_moves": [
+    "把信息安全问题frame成通信问题",
+    "利用矩阵嵌入的线性结构保持运算可逆性",
+    "从隐写安全性角度论证数据不可发现性"
+  ],
+  "topic_tags": [
+    "covert-domain-computing",
+    "steganography",
+    "privacy-preserving-cloud",
+    "matrix-embedding",
+    "LSB-hiding"
+  ],
+  "cites_own_work": [
+    "SRMQ1",
+    "SRM",
+    "PSRM",
+    "SPAM",
+    "Reversible Data Hiding in Encrypted Images"
+  ],
+  "extraction_quality": "full"
+}

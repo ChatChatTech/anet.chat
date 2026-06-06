@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2014 - QoF Towards Comprehensive Path Quality Measurement in Wireless Sensor Networks",
+  "doi": null,
+  "title": "QoF: Towards Comprehensive Path Quality Measurement in Wireless Sensor Networks",
+  "year": 2014,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "GreenOrbs系统实测发现节点内部丢包导致数据产量严重下降，现有ETX指标无法刻画节点内部灰色地带",
+  "problem_framing": "将路径质量测量从链路层扩展到包含节点内部转发质量的端到端综合指标",
+  "key_insight": "节点内部转发可建模为虚拟链路，与物理链路组合形成完整的路径质量估计",
+  "method_signature": "QoF=PDR/ETC，结合节点PDR与链路ETC进行分布式路径质量计算",
+  "evaluation_criteria": "数据产量、网络传输开销、成功传输的单位成本",
+  "negative_result_or_admitted_limitation": "当节点所有出链路质量均差时QoF无法帮助规避问题；重传次数过高会降低节点PDR产生权衡",
+  "evidence_for_taste": [
+    "gray zone inside a node",
+    "faulty nodes",
+    "excessively high packet losses",
+    "link quality ETX may not give optimal delivery path",
+    "overestimate the transmission count"
+  ],
+  "thinking_moves": [
+    "从实际系统异常反推现有理论的盲区",
+    "将节点内部处理重新框定为虚拟链路的链路估计问题",
+    "通过穷举节点失效原因验证问题的普遍性",
+    "区分传输成本与数据交付率两个正交维度"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-routing",
+    "path-quality-metric",
+    "node-forwarding-quality",
+    "ETX-limitation",
+    "multi-hop-reliability"
+  ],
+  "cites_own_work": [
+    "INFOCOM 2011 preliminary version"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

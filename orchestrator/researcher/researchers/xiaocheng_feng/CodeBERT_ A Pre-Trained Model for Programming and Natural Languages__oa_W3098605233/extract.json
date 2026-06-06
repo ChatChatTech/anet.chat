@@ -1,0 +1,38 @@
+{
+  "paper_id": "CodeBERT_ A Pre-Trained Model for Programming and Natural Languages__oa_W3098605233",
+  "doi": "10.18653/v1/2020.findings-emnlp.139",
+  "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages",
+  "year": 2020,
+  "venue": "EMNLP Findings",
+  "venue_tier": "strong",
+  "role": "corresponding",
+  "motivation": "Pre-trained models revolutionized NLP but lacked bimodal NL-PL representations for code understanding and generation tasks",
+  "problem_framing": "Treat NL and PL as separate modalities, learn cross-modal representations using both bimodal (paired) and unimodal (unpaired) code data",
+  "key_insight": "Hybrid objective combining MLM on bimodal data with replaced token detection on unimodal data enables leveraging abundant unpaired code",
+  "method_signature": "RoBERTa-base Transformer + MLM + RTD objectives trained on 6 PL languages",
+  "evaluation_criteria": "MRR for code search; BLEU for code generation; zero-shot accuracy for NL-PL probing",
+  "negative_result_or_admitted_limitation": "Incorporating AST into pre-training does not bring improvements; code2seq with AST paths still outperforms",
+  "evidence_for_taste": [
+    "the fuels for model training include not only bimodal data",
+    "we implement two efficient n-gram language models",
+    "the CodeBERT itself could be further improved",
+    "applying that model does not bring improvements",
+    "code completion is challenging"
+  ],
+  "thinking_moves": [
+    "把编程语言当作一种新模态,对齐视觉-语言的预训练范式",
+    "通过RTD目标把大量无配对代码纳入训练,突破配对数据稀缺的瓶颈",
+    "先验证理解任务有效,再试探生成任务的天花板",
+    "零样本探针设计直接检测预训练模型习得的知识类型"
+  ],
+  "topic_tags": [
+    "code-representation-pretraining",
+    "nl-pl-crossmodal-learning",
+    "replaced-token-detection",
+    "code-search",
+    "code-documentation-generation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

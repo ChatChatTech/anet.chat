@@ -1,0 +1,41 @@
+{
+  "paper_id": "SAFA-SNN_ Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network",
+  "doi": "10.48550/arxiv.2510.03648",
+  "title": "SAFA-SNN: Sparsity-Aware On-Device Few-Shot Class-Incremental Learning with Fast-Adaptive Structure of Spiking Neural Network",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "边缘设备数据隐私和动态环境需要持续学习，但ANN方法资源消耗大、依赖服务器。",
+  "problem_framing": "on-device FSCIL面临灾难性遗忘、过拟合以及内存/算力严重受限的多重挑战。",
+  "key_insight": "通过阈值调控将神经元分为稳定和自适应两类，使大多数突触权重自然保持，仅少数更新，从而保留基类知识。",
+  "method_signature": "阈值动态调节+零阶优化+原型正交子空间投影的联合框架",
+  "evaluation_criteria": "增量会话准确率、谐波精度、能量消耗、稀疏度-精度权衡",
+  "negative_result_or_admitted_limitation": "零阶优化引入随机采样的计算开销，未来需探索潜在空间中的高效实现",
+  "evidence_for_taste": [
+    "surrogate derivative is nearly zero",
+    "causing gradient vanishing or mismatch",
+    "ZOO inevitably introduces some computational overhead",
+    "using only five samples is adequate",
+    "training is very robust to even extreme values"
+  ],
+  "thinking_moves": [
+    "将神经元放电行为与可塑性-稳定性权衡联系起来",
+    "用零阶优化绕过SNN中非可微激活函数的梯度难题",
+    "将原型偏差问题重新框定为子空间投影问题",
+    "从生物神经元阈值调节机制出发设计正则化"
+  ],
+  "topic_tags": [
+    "spiking-neural-network",
+    "few-shot-incremental-learning",
+    "on-device-inference",
+    "neuromorphic-hardware",
+    "prototype-subspace-projection"
+  ],
+  "cites_own_work": [
+    "Deng et al., 2025",
+    "Deng et al., 2022"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文被截断，附录部分不完整；作者slug为shuiguang_deng，在作者列表中为co-author。 | md truncated to head40k+tail20k"
+}

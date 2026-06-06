@@ -1,0 +1,38 @@
+{
+  "paper_id": "Xu et al. - 2018 - Embracing Spatial Awareness for Reliable WiFi-Based Indoor Location Systems",
+  "doi": null,
+  "title": "Embracing Spatial Awareness for Reliable WiFi-Based Indoor Location Systems",
+  "year": 2018,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "RSS指纹存在空间歧义和时间不稳定，阻碍室内定位大规模部署",
+  "problem_framing": "空间歧义（不同位置RSS相似导致误匹配）和时间不稳定（指纹随时间漂移）",
+  "key_insight": "相邻位置间的RSS差值比单点RSS值更稳定，可利用RSS空间梯度矩阵作为指纹",
+  "method_signature": "ViViPlus系统：RSG矩阵指纹替代RSS向量，联合解决空间歧义与时间漂移",
+  "evaluation_criteria": "平均精度、95分位误差，与Horus/TW-KNN/GIFT/ViVi/Magicol对比",
+  "negative_result_or_admitted_limitation": "r过大(4-5)反而降低精度，远邻RSS关系不再稳定；SIFT方法不如特征向量法",
+  "evidence_for_taste": [
+    "spatial relationships among the RSSs of one AP at multiple neighbouring locations tend to be more robust",
+    "The three best matched RSG matrices almost always appear at the three closest locations",
+    "When r further increases to 5, however, the location errors increase to 2.96m"
+  ],
+  "thinking_moves": [
+    "从信号处理的物理特性出发：多径效应影响单点RSS但差异关系保持",
+    "把定位问题从匹配单点指纹重新frame为匹配空间梯度关系",
+    "通过离散化增强鲁棒性，将连续RSS差值转为三值(0/1/2)关系标记",
+    "查询矩阵构建时复用候选位置的邻居数据，避免要求额外移动信息"
+  ],
+  "topic_tags": [
+    "WiFi-fingerprint-localization",
+    "RSS-spatial-gradient",
+    "indoor-positioning",
+    "temporal-stability",
+    "matrix-eigenvector-matching"
+  ],
+  "cites_own_work": [
+    "ViVi"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少明确的venue信息（ACM/IEEE会议），DOI为null；因是全文提取，内容较为完整"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "2023_Security_PCAT",
+  "doi": null,
+  "title": "PCAT: Functionality and Data Stealing from Split Learning by Pseudo-Client Attack",
+  "year": 2023,
+  "venue": "USENIX Security Symposium",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "Server在split learning中有强烈动机窃取客户端功能以避免收益分成",
+  "problem_framing": "如何在对客户端模型结构无知且模型更深更复杂时有效窃取功能、输入和标签",
+  "key_insight": "训练好的服务器模型本身就包含足够信息可构建伪客户端模型窃取功能",
+  "method_signature": "利用中间服务器模型序列训练伪客户端模型，无需 smashed data 和客户端结构",
+  "evaluation_criteria": "伪模型与真实模型准确率差距、输入重构MSE、标签推断准确率",
+  "negative_result_or_admitted_limitation": "数据重构依赖于客户端模型可逆假设，模型不可逆时无法重构",
+  "evidence_for_taste": [
+    "server model本身可以提供足够信息",
+    "中间服务器模型能指导伪客户端模型",
+    "现有攻击在深层模型上性能急剧下降",
+    "不需要任何关于客户端模型的知识",
+    "仅需很少样本(0.1%-5%)"
+  ],
+  "thinking_moves": [
+    "把服务器模型从被动接收方重新定位为可利用的知识源",
+    "用训练过程中的模型序列而非最终模型作为学习目标",
+    "绕过传统model inversion的大搜索空间问题",
+    "训练一个功能相似的替代模型而非试图恢复原模型",
+    "利用服务器自身数据通过对齐标签参与训练过程"
+  ],
+  "topic_tags": [
+    "split-learning-security",
+    "model-stealing-attack",
+    "privacy-inference",
+    "semi-honest-server",
+    "adversarial-pretraining"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,422 @@
+{
+  "slug": "hailiang_zhao",
+  "n_extracts": 13,
+  "n_full": 13,
+  "n_partial": 0,
+  "n_thin": 0,
+  "year_range": [
+    2019,
+    2026
+  ],
+  "top_tags": [
+    [
+      "LLM-based agents",
+      1
+    ],
+    [
+      "multi-agent systems",
+      1
+    ],
+    [
+      "service lifecycle governance",
+      1
+    ],
+    [
+      "autonomous decision-making",
+      1
+    ],
+    [
+      "trustworthiness alignment",
+      1
+    ],
+    [
+      "out-of-distribution-detection",
+      1
+    ],
+    [
+      "neural-network-safety",
+      1
+    ],
+    [
+      "feature-decoupling",
+      1
+    ],
+    [
+      "class-aware-feature",
+      1
+    ],
+    [
+      "post-hoc-ood-detection",
+      1
+    ],
+    [
+      "network-slicing",
+      1
+    ],
+    [
+      "decentralized-algorithm",
+      1
+    ],
+    [
+      "posted-price-mechanism",
+      1
+    ],
+    [
+      "privacy-preserving",
+      1
+    ],
+    [
+      "primal-dual-approach",
+      1
+    ],
+    [
+      "data-locality-scheduling",
+      1
+    ],
+    [
+      "task-assignment",
+      1
+    ],
+    [
+      "distributed-job-execution",
+      1
+    ],
+    [
+      "water-filling-approximation",
+      1
+    ],
+    [
+      "bipartite-matching",
+      1
+    ],
+    [
+      "edge-service-placement",
+      1
+    ],
+    [
+      "microservice-redundancy",
+      1
+    ],
+    [
+      "multi-access-edge-computing",
+      1
+    ],
+    [
+      "stochastic-optimization",
+      1
+    ],
+    [
+      "kubernetes-deployment",
+      1
+    ],
+    [
+      "edge intelligence taxonomy",
+      1
+    ],
+    [
+      "device-edge-cloud synergy",
+      1
+    ],
+    [
+      "federated learning",
+      1
+    ],
+    [
+      "QoE optimization",
+      1
+    ],
+    [
+      "distributed AI inference",
+      1
+    ]
+  ],
+  "topic_clusters": [],
+  "recurring_thinking_moves": [],
+  "evolution_arc": [
+    {
+      "year": 2019,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "edge-service-placement",
+          1
+        ],
+        [
+          "microservice-redundancy",
+          1
+        ],
+        [
+          "multi-access-edge-computing",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2020,
+      "paper_count": 15,
+      "top_tags": [
+        [
+          "network-slicing",
+          1
+        ],
+        [
+          "decentralized-algorithm",
+          1
+        ],
+        [
+          "posted-price-mechanism",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2023,
+      "paper_count": 10,
+      "top_tags": [
+        [
+          "multi-server-job-scheduling",
+          1
+        ],
+        [
+          "online-gradient-ascent",
+          1
+        ],
+        [
+          "regret-analysis",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2024,
+      "paper_count": 5,
+      "top_tags": [
+        [
+          "data-locality-scheduling",
+          1
+        ],
+        [
+          "task-assignment",
+          1
+        ],
+        [
+          "distributed-job-execution",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2025,
+      "paper_count": 20,
+      "top_tags": [
+        [
+          "LLM-based agents",
+          1
+        ],
+        [
+          "multi-agent systems",
+          1
+        ],
+        [
+          "service lifecycle governance",
+          1
+        ]
+      ]
+    },
+    {
+      "year": 2026,
+      "paper_count": 6,
+      "top_tags": [
+        [
+          "spiking neural network",
+          1
+        ],
+        [
+          "mmWave sensing",
+          1
+        ],
+        [
+          "frequency matching",
+          1
+        ]
+      ]
+    }
+  ],
+  "consistent_rejections": [
+    "经典MAS在开放动态环境中适应性受限，现有survey缺乏统一整合框架。",
+    "ASH-S等特征塑形方法在ViT、Swin等架构上完全崩溃（AUROC低于50%），表明这类方法缺乏跨架构鲁棒性；正误差作为独立得分会严重降低检测性能（AUROC和FPR95分别下降约13%和15%）",
+    "拍卖机制对在线网络切片问题不理想；DQN即使在状态和动作空间被离散化后也可能需要数天甚至数周才能获得不太好的动作",
+    "RD启发式算法的理论性能分析留作未来工作,未给出完备保证",
+    "Redundancy is not always a win; creating too many instances can lead to unacceptably high response times and even instability",
+    "Edge Intelligence目前处于早期阶段，许多概念仍不清楚，问题尚未解决",
+    "β† marks onset of over-low-pass behavior, not optimal β; more complex LIF variants hurt cross-dataset consistency",
+    "Image-based methods heavily influenced by lighting variability and fail to capture dynamic changes in cutting process critical for early failure prediction.",
+    "最坏情况复杂度O(N!)，虽承认NP难但以离线算法和N小为由辩护。",
+    "仅考虑跨节点通信开销，节点内通信建模留待未来工作",
+    "移除BC(平衡分类器)模块对两个数据集影响显著,表明尾类偏置输出的平衡至关重要",
+    "当服务资源有限时,优先级变得重要,且未处理任务依赖关系的尾延迟优化",
+    "集中式随难度扩展性差;层级式存在跨层失调;异层级通信开销大;全息式失去全局鲁棒性"
+  ],
+  "taste_quotes": [
+    {
+      "quote": "it remains unclear when and why SNNs are advantageous",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "hard thresholding indiscriminately suppressing both noise and informative components",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "costly dataset-specific sweeps and offers limited mechanistic insight",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "accuracy degradations are empirically more frequent",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "more flexible neuron dynamics may increase representational capacity",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "their accuracy varies substantially across datasets",
+      "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing"
+    },
+    {
+      "quote": "constrained by hand-crafted knowledge",
+      "paper_id": "Agentic Services Computing"
+    },
+    {
+      "quote": "lack systematic support for full-lifecycle",
+      "paper_id": "Agentic Services Computing"
+    },
+    {
+      "quote": "largely disconnected from systematic engineering",
+      "paper_id": "Agentic Services Computing"
+    },
+    {
+      "quote": "insufficient reliability and poor system-level",
+      "paper_id": "Agentic Services Computing"
+    },
+    {
+      "quote": "not an incremental extension",
+      "paper_id": "Agentic Services Computing"
+    },
+    {
+      "quote": "treating trust and safety in isolation",
+      "paper_id": "Agentic Services Computing"
+    },
+    {
+      "quote": "neglecting the rich information embedded within the features",
+      "paper_id": "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    },
+    {
+      "quote": "positive error as the score substantially reduces OOD detection performance",
+      "paper_id": "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    },
+    {
+      "quote": "feature shaping-based methods exhibit architecture-specific behavior",
+      "paper_id": "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    },
+    {
+      "quote": "ViM does not fully utilize feature information",
+      "paper_id": "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    },
+    {
+      "quote": "AUROC below 50% on ViT-B/16, Swin-B, and ConvNeXt-B",
+      "paper_id": "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    },
+    {
+      "quote": "positive error plays a harmful role in CARef's coupling form",
+      "paper_id": "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    },
+    {
+      "quote": "reducing feature dimensionality potentially compromises the precision",
+      "paper_id": "CADRef_ Robust Out-of-Distribution Detection via Class-Aware Decoupled Relative Feature Leveraging"
+    },
+    {
+      "quote": "拍卖机制可能不是在线网络切片的理想选择",
+      "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    },
+    {
+      "quote": "MVNO应该不知道租户的到达顺序",
+      "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    },
+    {
+      "quote": "租户的私人信息不应该被其他租户获取",
+      "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    },
+    {
+      "quote": "时间消耗的重复竞标",
+      "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    },
+    {
+      "quote": "当成本函数为线性时达到最优竞争比",
+      "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    },
+    {
+      "quote": "接近离线最优性能",
+      "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    },
+    {
+      "quote": "拍卖需要时间并需要多轮通信",
+      "paper_id": "DPoS_ Decentralized, Privacy-Preserving, and Low-Complexity Online Slicing for Multi-Tenant Networks"
+    },
+    {
+      "quote": "显著降低计算开销",
+      "paper_id": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    },
+    {
+      "quote": "提供近似因子等于任务组数的严格证明",
+      "paper_id": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    },
+    {
+      "quote": "使用商业求解器如CPLEX",
+      "paper_id": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    },
+    {
+      "quote": "可提高调度效率",
+      "paper_id": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    },
+    {
+      "quote": "RD性能优于WF",
+      "paper_id": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    },
+    {
+      "quote": "left as future work",
+      "paper_id": "Data-Locality-Aware Task Assignment and Scheduling for Distributed Job Executions"
+    },
+    {
+      "quote": "high availability cannot be ensured",
+      "paper_id": "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    },
+    {
+      "quote": "the default assignment does not fully take heterogeneity",
+      "paper_id": "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    },
+    {
+      "quote": "redundancy is not always a win",
+      "paper_id": "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    },
+    {
+      "quote": "the outage time could be dozens of minutes",
+      "paper_id": "Distributed Redundant Placement for Microservice-based Applications at the Edge"
+    },
+    {
+      "quote": "contamination as cross-modal redundancy",
+      "paper_id": "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    },
+    {
+      "quote": "explicitly preserving modality-specific information",
+      "paper_id": "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    },
+    {
+      "quote": "recursive refinement pathway functions as an anchor mechanism",
+      "paper_id": "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    },
+    {
+      "quote": "contamination-free and information-sufficient basis for fusion",
+      "paper_id": "OmniFuser_ Adaptive Multimodal Fusion for Service-Oriented Predictive Maintenance"
+    }
+  ]
+}

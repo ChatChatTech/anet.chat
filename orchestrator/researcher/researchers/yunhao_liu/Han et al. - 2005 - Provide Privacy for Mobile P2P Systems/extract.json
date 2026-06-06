@@ -1,0 +1,37 @@
+{
+  "paper_id": "Han et al. - 2005 - Provide Privacy for Mobile P2P Systems",
+  "doi": null,
+  "title": "Provide Privacy for Mobile P2P Systems",
+  "year": 2005,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "移动P2P网络中查询以明文洪泛，节点被邻居监视，无法保护隐私和匿名性",
+  "problem_framing": "将匿名性分为发起者、响应者及互匿名三类，现有协议无法提供真实匿名保证",
+  "key_insight": "利用秘密分享(SSS)分发查询份额，利用IDA+洋葱路由冗余传输文件，可实现互匿名且开销低",
+  "method_signature": "SMA协议: SSS匿名发查询 + SIDA安全传文件 + 洋葱路由匿名回复路径",
+  "evaluation_criteria": "流量开销、响应时间、安全开销(加密运算次数)",
+  "negative_result_or_admitted_limitation": "SMA额外延迟约40%正常响应时间，未来需通过自适应机制降低分享洪泛的流量开销",
+  "evidence_for_taste": [
+    "by setting a proper average probability as 0.3, we balance the traffic overhead and system reliability",
+    "Considering the tradeoff with the mutual anonymity achievement, this additional delay is acceptable",
+    "the more the shares are split, the higher the traffic cost is",
+    "SMA achieves mutual anonymity with a lower cryptographic processing overhead"
+  ],
+  "thinking_moves": [
+    "利用移动P2P网络中非相邻节点天然具有部分匿名性的观察",
+    "组合已有原语(SSS/IDA/洋葱路由)解决新问题，而非发明新密码学",
+    "理论证明完美保密性，再通过模拟验证实际开销可接受",
+    "显式承认性能损耗并论证其合理性，而非回避tradeoff"
+  ],
+  "topic_tags": [
+    "mobile-P2P-anonymity",
+    "secret-sharing-query",
+    "information-dispersal",
+    "onion-routing",
+    "mutual-privacy-protocol"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文提供了完整的方法论和分析，动机、问题定义、关键洞察和承认的局限性均有直接文本证据；venue信息未在正文中明确给出"
+}

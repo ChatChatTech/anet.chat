@@ -1,0 +1,45 @@
+{
+  "paper_id": "2022_SenSys_HideSeeker",
+  "doi": null,
+  "title": "HideSeeker: Uncover the Hidden Gems in Obfuscated Images",
+  "year": 2022,
+  "venue": "SenSys",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "隐私图像混淆技术看似有效,但神经网络可从上下文推断被遮挡对象,存在隐私重泄露风险",
+  "problem_framing": "给定混淆图像,推断被遮挡区域的隐私对象类别,将遮挡区域视觉特征失效问题转化为上下文关系推理",
+  "key_insight": "被遮挡对象的视觉特征已失效,但场景和周围可识别物体仍携带语义关联,通过建模空间语义关系图可推断隐藏对象",
+  "method_signature": "提取视觉上下文→构建遮挡-物体-场景关系图→图神经网络+注意力机制推断对象类别",
+  "evaluation_criteria": "多混淆技术下隐藏对象推断准确率,相比CompNets提升35.42%,尤其inpainting从24.67%提升至78.16%",
+  "negative_result_or_admitted_limitation": "当无可识别物体或遮挡面积超过80%时,方法失效;性能受限于底层检测模型",
+  "evidence_for_taste": [
+    "we can hardly rely on regional visual features",
+    "we introduce weights to balance the visual and spatial representations",
+    "the accuracy of CompNets declines sharply",
+    "our scheme may fail when there is no recognizable object",
+    "the proportion of obfuscation area exceeds 80%"
+  ],
+  "thinking_moves": [
+    "遮挡区域视觉失效时转向邻居上下文建模",
+    "引入门控机制控制遮挡节点对其他节点的负面影响",
+    "注意力机制衡量邻居节点对遮挡区域的贡献度",
+    "从完全遮挡的细粒度分类退回到粗粒度类别推断"
+  ],
+  "topic_tags": [
+    "privacy-leakage-assessment",
+    "image-obfuscation-attack",
+    "graph-neural-network",
+    "contextual-inference",
+    "ambient-sensing"
+  ],
+  "cites_own_work": [
+    [
+      49,
+      50,
+      51,
+      52
+    ]
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "yunhao_liu未出现在作者列表中,其在相关工作中被引用为合作者,因此role标记为unknown | md truncated to head40k+tail20k"
+}

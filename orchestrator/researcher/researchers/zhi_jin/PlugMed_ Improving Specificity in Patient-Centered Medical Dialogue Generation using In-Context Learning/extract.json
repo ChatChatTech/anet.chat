@@ -1,0 +1,39 @@
+{
+  "paper_id": "PlugMed_ Improving Specificity in Patient-Centered Medical Dialogue Generation using In-Context Learning",
+  "doi": "10.48550/arxiv.2305.11508",
+  "title": "PlugMed: Improving Specificity in Patient-Centered Medical Dialogue Generation using In-Context Learning",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LLMs给出过度自信的医疗建议,患者难以辨别有效性和安全性,缺乏诊断逻辑导致不精准响应",
+  "problem_framing": "用ICL引导LLM遵循医生诊断策略,需解决提示生成与输出筛选两个环节",
+  "key_insight": "LLM擅长生成丰富医疗术语但过度自信不问诊,SLM谨慎但术语贫乏,二者互补可用SLM筛选LLM输出",
+  "method_signature": "PG模块(全局+局部视图检索)+RR模块(微调SLM用困惑度排序)",
+  "evaluation_criteria": "意图准确率(INT)+Top-n医学术语匹配(T3M)+人类五项检查(角色一致性/共情/正确性/必要性/丰富度)",
+  "negative_result_or_admitted_limitation": "PlugMed诊断效率不足,难以快速识别疾病,可能增加平均对话轮数损害患者体验",
+  "evidence_for_taste": [
+    "LLMs often exhibit overconfidence",
+    "Instruct-tuning may compromise the diagnostic capability",
+    "models have not fully grasped the diagnostic capabilities",
+    "Global View is susceptible to distractions",
+    "ChatGPT often advises patients to seek professional assistance"
+  ],
+  "thinking_moves": [
+    "诊断对话中LLM行为缺陷→归因于过度自信不问诊",
+    "观察到LLM与SLM行为互补→构建RR模块利用SLM筛选LLM",
+    "现有评估指标不适用于任务导向对话→提出意图准确率+Top-n术语匹配",
+    "全局检索易受无关信息干扰→引入局部视图以近期对话为查询补充",
+    "从case study对比不同模型策略缺陷→验证方法有效性"
+  ],
+  "topic_tags": [
+    "medical-dialogue-generation",
+    "in-context-learning",
+    "large-language-model",
+    "response-ranking",
+    "patient-specific-response"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

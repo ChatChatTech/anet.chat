@@ -1,0 +1,38 @@
+{
+  "paper_id": "SeMi_ When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples",
+  "doi": "10.48550/arxiv.2501.06004",
+  "title": "SeMi: When Imbalanced Semi-Supervised Learning Meets Mining Hard Examples",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有CISSL方法主要关注重平衡数据集，但忽视了利用hard examples提升性能的潜力，导致未充分利用无标签数据",
+  "problem_framing": "将CISSL中的hard examples定义为：每个类中难以学习的样本以及少数类中的样本，传统高置信度阈值(0.95)会抑制这些样本的学习",
+  "key_insight": "适度降低置信度阈值(0.70)并结合熵加权重分配注意力，同时通过语义伪标签与分类器伪标签动态混合来增强伪标签确定性",
+  "method_signature": "OHEML(熵加权) + 平衡置信度衰减记忆库 + PLCE(动态混合伪标签) + 解耦平衡分类器",
+  "evaluation_criteria": "Top-1 accuracy on test set (mean±std over 3 runs), CIFAR10/100-LT, STL10-LT, ImageNet-127 benchmarks",
+  "negative_result_or_admitted_limitation": "当移除PLCE模块时，对STL10-LT的影响比CIFAR10-LT更显著，因为STL10-LT标注数据更少，伪标签质量更关键",
+  "evidence_for_taste": [
+    "making it difficult to fully harness the power of unlabeled data",
+    "These hard examples are often from tail classes, making them critical",
+    "neglecting the importance of utilizing embedding confidence information",
+    "severely degrades the quality of pseudo-labels",
+    "the higher the confidence of an embedding, the higher the certainty"
+  ],
+  "thinking_moves": [
+    "从利用率指标( masked probability<80%)反推样本未被充分利用的问题",
+    "先观察到降低阈值会增不确定性，再提出熵加权+混合伪标签的补偿方案",
+    "将记忆库从单一类别平衡扩展到同时考虑置信度与类别平衡",
+    "从训练阶段动态调整语义伪标签与分类器伪标签的混合比例",
+    "通过可视化(混淆矩阵、t-SNE)验证tail类性能的实质性改善"
+  ],
+  "topic_tags": [
+    "class-imbalanced semi-supervised learning",
+    "hard example mining",
+    "pseudo-label certainty enhancement",
+    "confidence decay memory bank",
+    "entropy-based reweighting"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

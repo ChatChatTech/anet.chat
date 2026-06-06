@@ -1,0 +1,41 @@
+{
+  "paper_id": "Frequency Matching in Spiking Neural Networks for mmWave Sensing",
+  "doi": null,
+  "title": "Frequency Matching in Spiking Neural Networks for mmWave Sensing",
+  "year": 2026,
+  "venue": "Proceedings of the 43rd International Conference on Machine Learning",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "ANNs need heavy preprocessing/deep architecture for mmWave edge sensing, conflicting with efficiency constraints",
+  "problem_framing": "Mechanism-data alignment: connect LIF temporal filtering with mmWave spectral structure",
+  "key_insight": "Match LIF effective bandwidth to discriminative spectral content to suppress noise while preserving signal",
+  "method_signature": "Frequency-Matching Score (FMS) for β selection via maximum-deviation rule on FMS curve",
+  "evaluation_criteria": "Test accuracy, energy consumption, latency across edge devices on 4 mmWave datasets",
+  "negative_result_or_admitted_limitation": "β† marks onset of over-low-pass behavior, not optimal β; more complex LIF variants hurt cross-dataset consistency",
+  "evidence_for_taste": [
+    "it remains unclear when and why SNNs are advantageous",
+    "hard thresholding indiscriminately suppressing both noise and informative components",
+    "costly dataset-specific sweeps and offers limited mechanistic insight",
+    "accuracy degradations are empirically more frequent",
+    "more flexible neuron dynamics may increase representational capacity",
+    "their accuracy varies substantially across datasets"
+  ],
+  "thinking_moves": [
+    "把SNN优势问题从经验现象重新frame成可解释的mechanism-data alignment",
+    "避开调参式β优化，改用几何构造定义reference boundary",
+    "用频域分析把感知问题转化为频率选择问题",
+    "用IIR低通滤波等价性把神经动力学映射到频谱响应",
+    "对比硬阈值低通与软低通保留高频信息的差异"
+  ],
+  "topic_tags": [
+    "spiking neural network",
+    "mmWave sensing",
+    "frequency matching",
+    "LIF dynamics",
+    "edge inference",
+    "low-pass filtering"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

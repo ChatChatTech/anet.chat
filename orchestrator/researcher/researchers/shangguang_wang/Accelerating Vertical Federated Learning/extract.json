@@ -1,0 +1,38 @@
+{
+  "paper_id": "Accelerating Vertical Federated Learning",
+  "doi": "10.1109/tbdata.2022.3192898",
+  "title": "Accelerating Vertical Federated Learning",
+  "year": 2022,
+  "venue": "IEEE Transactions on Big Data",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "VFL在同态加密下通信和计算开销巨大,导致实际部署几乎不可用,网络异构性进一步放大延迟",
+  "problem_framing": "将VFL性能瓶颈解耦为通信开销(网络异构)和计算开销(HE乘法),分别设计针对性优化",
+  "key_insight": "备份worker与PCA特征压缩是正交技术,可协同组合——前者缓解通信straggler,后者减少加密乘法次数",
+  "method_signature": "基于SSP的备份worker scheme + 本地PCA压缩特征维度,减少加密乘法的计算量",
+  "evaluation_criteria": "通信开销降低65.26%、计算开销降低40.66%、AUC与原始VFL相当",
+  "negative_result_or_admitted_limitation": "PCA压缩在Epsilon数据集上损失约3%精度,不同数据集表现差异大,存在效率-精度的权衡",
+  "evidence_for_taste": [
+    "the possible accuracy loss cannot conceal the enormous increase",
+    "dataset affinity may come from the limitations of PCA",
+    "reduces communication overhead by 65.26%",
+    "reduces computation overhead by 40.66%",
+    "performs on par with vanilla VFL",
+    "our system makes VFL more practical"
+  ],
+  "thinking_moves": [
+    "通过实验runtime breakdown将VFL瓶颈量化为通信和计算两部分",
+    "借用分布式学习的备份worker思想,但针对VFL加密中间结果的特点改造",
+    "承认加密优化以精度换速度,不做完美主义",
+    "强调两方法正交可组合,提供系统级解决方案"
+  ],
+  "topic_tags": [
+    "vertical-federated-learning",
+    "homomorphic-encryption-overhead",
+    "backup-worker-straggler",
+    "PCA-feature-compression",
+    "communication-computation-tradeoff"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

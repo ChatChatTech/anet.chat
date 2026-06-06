@@ -1,0 +1,41 @@
+{
+  "paper_id": "Digital twin driven autonomous management and control architecture and key technologies for low-altitude intelligent networks",
+  "doi": "10.1360/ssi-2025-0071",
+  "title": "数字孪生驱动的低空智联网自智管控架构及关键技术",
+  "year": 2025,
+  "venue": "中国科学: 信息科学",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "低空智联网立体化覆盖、高可靠通信、超精准服务特征使传统被动式管控无法满足业务随需服务要求",
+  "problem_framing": "缺乏系统化架构支撑低空智联网的高动态、异构资源与跨域协同管控需求",
+  "key_insight": "通过虚实映射的数字孪生体实现毫秒级状态感知与自智管控闭环,推动网络从人工经验驱动向数据智能驱动跃迁",
+  "method_signature": "三层自智管控架构(低空网络层/数字孪生层/自智管控层)配合GNN预测与AS-DDS状态同步",
+  "evaluation_criteria": "网络状态预测精度与多步稳定性、资源同步开销节约率、应急覆盖部署有效性",
+  "negative_result_or_admitted_limitation": "现有深度学习预测模型高度依赖全网流量实时获取,难以适应时空资源受限的高度动态低空网络,模型泛化能力有限",
+  "evidence_for_taste": [
+    "预测结果最接近真实值",
+    "带宽降低26.9%~34.1%",
+    "异常值数量比其他模型少很多",
+    "在表达能力和推理速度之间取得平衡"
+  ],
+  "thinking_moves": [
+    "将物理实体高保真映射问题重新建模为图神经网络节点/边关系表达问题",
+    "用动态图注意网络DGAT替代传统RNN路径更新以保持推理速度",
+    "将不规则覆盖问题转化为圆形填充问题再设计贪婪算法",
+    "承认现有方法无法满足大范围长期精准预测,转而追求小尺度预测与粒度-精度平衡"
+  ],
+  "topic_tags": [
+    "low-altitude-intelligent-networks",
+    "digital-twin",
+    "autonomous-network",
+    "GNN-prediction",
+    "airborne-base-station-deployment"
+  ],
+  "cites_own_work": [
+    "Energy-efficient coverage and capacity enhancement with intelligent UAV-BSs deployment in 6G edge networks (IEEE TITS 2023)",
+    "Digital twin driven service self-healing with graph neural networks in 6G edge networks (IEEE JSAC 2023)",
+    "Adaptive and low-cost resource synchronization based on data distribution service in high dynamic networks (Comput Networks 2024)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "CodePAD_ Sequence-based Code Generation with Pushdown Automaton",
+  "doi": "10.48550/arxiv.2211.00818",
+  "title": "CodePAD: Sequence-based Code Generation with Pushdown Automaton",
+  "year": 2022,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有序列模型生成的代码无法保证语法正确性,严重阻碍生成代码的可用性。",
+  "problem_framing": "将代码生成中的语法错误归类为TSM和ENS两种,通过PDA约束序列生成过程。",
+  "key_insight": "编程语言是PDA可识别语言的子集,被PDA接受的代码必为语法正确代码。",
+  "method_signature": "CodePAD框架将PDA演绎融入深度学习,包含PDA模块、状态表示、状态预测任务和联合预测。",
+  "evaluation_criteria": "GCP(语法正确率)、BLEU、CodeBLEU、EM(精确匹配)四项指标综合评估。",
+  "negative_result_or_admitted_limitation": "方法无法防止编译错误,且PDA对每种编程语言需单独构建,增加CPU和内存开销。",
+  "evidence_for_taste": [
+    "most sequence-based approaches generate codes with no guarantee of grammatical correctness",
+    "satisfying grammar constraints during code generation require the above two properties",
+    "It is inspired by the operating principle of programming language parsers in practice",
+    "CSD cannot handle GPLs like Python",
+    "However, PICARD used a parser for filtering... its candidate hypotheses might have terminal symbol mismatch errors"
+  ],
+  "thinking_moves": [
+    "将编程语言解析器的运作原理反向迁移到序列生成过程",
+    "先识别TSM和ENS两类具体语法错误,再针对性设计约束机制",
+    "把树方法的语法保证优势嫁接到序列方法的效率优势上",
+    "通过消融实验逐层剥离验证各组件贡献度",
+    "承认PDA构建的工程成本和编译错误不可控"
+  ],
+  "topic_tags": [
+    "code-generation-grammar-constraint",
+    "pushdown-automaton-PDA",
+    "sequence-based-deep-learning",
+    "Python-parsing",
+    "zero-shot-code-synthesis"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

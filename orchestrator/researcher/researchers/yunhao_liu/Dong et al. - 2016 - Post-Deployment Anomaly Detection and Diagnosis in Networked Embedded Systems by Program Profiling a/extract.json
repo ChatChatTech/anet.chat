@@ -1,0 +1,44 @@
+{
+  "paper_id": "Dong et al. - 2016 - Post-Deployment Anomaly Detection and Diagnosis in Networked Embedded Systems by Program Profiling a",
+  "doi": null,
+  "title": "Post-Deployment Anomaly Detection and Diagnosis in Networked Embedded Systems by Program Profiling and Symptom Mining",
+  "year": 2016,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "传感器网络部署后异常诊断困难：节点级工具缺乏全局视野，网络级工具缺乏代码级信息，两者简单组合开销过大",
+  "problem_framing": "将后部署异常检测与诊断形式化为函数级程序剖析+PCA症状挖掘的联合问题，支持黑盒自动检测",
+  "key_insight": "利用二进制插桩对短函数进行轻量级计数剖析，比PC程序更能反映执行细节；PCA比one-class SVM更适于捕捉相关性格式异常",
+  "method_signature": "二进制插桩函数计数 + PCA异常检测 + t检验+调用图诊断报告",
+  "evaluation_criteria": "诊断准确性（与one-class SVM对比）、运行时开销、开发者诊断时间",
+  "negative_result_or_admitted_limitation": "无法检测并发交错导致的问题；非可复现异常若在开启D2前发生则无法检测；函数计数法丢失返回值等详细执行信息",
+  "evidence_for_taste": [
+    "cannot localize the problem inside the node",
+    "D2 is able to point programmers closer to the most likely causes",
+    "function counts for sensor network applications carry more execution information than those for PCs",
+    "PCA identifies B and C as anomalies while SVM identifies B, C, D, E as anomalies",
+    "data points D and E may represent normal conditions",
+    "We consider PCA as a more suitable choice in our case",
+    "cannot detect concurrency problems due to improper interleavings of functions"
+  ],
+  "thinking_moves": [
+    "从现实部署案例(LOFAR-agro/GreenOrbs)的具体困境提炼出节点级与网络级工具Gap的工程问题",
+    "将黑盒程序视为信号源，用PCA在函数计数相关空间中发现偏离正常子空间的异常点",
+    "通过SPE(投影到异常子空间的长度)量化异常程度，而非简单阈值判断",
+    "用t检验在异常向量中逐步定位单个异常函数和异常函数对比率",
+    "用调用/Post图关系约束诊断报告，过滤不相关的可疑函数",
+    "将TinyOS的split-phase I/O等待时间作为扩展特征，解决函数执行时间不反映I/O等待的问题"
+  ],
+  "topic_tags": [
+    "sensor-network-diagnosis",
+    "binary-instrumentation",
+    "function-count-profiling",
+    "PCA-anomaly-detection",
+    "post-deployment-debugging"
+  ],
+  "cites_own_work": [
+    "GreenOrbs"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

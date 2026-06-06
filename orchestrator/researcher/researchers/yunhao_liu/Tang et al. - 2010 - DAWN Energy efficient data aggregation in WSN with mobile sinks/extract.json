@@ -1,0 +1,37 @@
+{
+  "paper_id": "Tang et al. - 2010 - DAWN Energy efficient data aggregation in WSN with mobile sinks",
+  "doi": null,
+  "title": "DAWN: Energy Efficient Data Aggregation in WSN with Mobile Sinks",
+  "year": 2010,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Sensor batteries in large forests are hard to replace; mobile sinks can help but existing theoretical models ignore constrained paths and moving speeds.",
+  "problem_framing": "Joint flow routing and mobile sink location optimization under constrained road networks and energy budgets, maximizing network lifetime.",
+  "key_insight": "Decouple problem into static-to-static-sink aggregation (LP) and mobile sink tour planning (Chinese Postman variants), with virtual nodes bridging subregions.",
+  "method_signature": "MLDA integer program + tree extraction + interference-free scheduling + MM k-CPP approximation for mobile sink patrol.",
+  "evaluation_criteria": "Network lifetime (timeslots until first node dies) and delivery delay, validated on GreenOrbs 120-node forest testbed.",
+  "negative_result_or_admitted_limitation": "Prior work ignores moving speed of sinks, but real speeds have significant impact on energy dissipation and cannot be simply ignored.",
+  "evidence_for_taste": [
+    "theoretical model of this problem remains difficult",
+    "most of existing solutions either remain heuristic at best",
+    "approximation ratio... regarding to the life time",
+    "constant approximation",
+    "NP-hard by a reduction from the k-partition problem"
+  ],
+  "thinking_moves": [
+    "把时变sink位置和流路由耦合问题分解为两个可独立求解的子问题",
+    "用整数规划松弛求解最优流网络,再用贪心提取聚合树",
+    "把NP-hard的移动规划问题映射到Chinese Postman问题并给出常数近似",
+    "先证最坏情况上界, 再用实验验证实际性能"
+  ],
+  "topic_tags": [
+    "mobile-sink routing",
+    "network lifetime optimization",
+    "data aggregation scheduling",
+    "Chinese postman problem",
+    "energy-constrained WSN"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial"
+}

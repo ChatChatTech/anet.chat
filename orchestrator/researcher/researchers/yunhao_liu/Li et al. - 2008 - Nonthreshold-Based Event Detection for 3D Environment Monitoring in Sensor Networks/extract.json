@@ -1,0 +1,38 @@
+{
+  "paper_id": "Li et al. - 2008 - Nonthreshold-Based Event Detection for 3D Environment Monitoring in Sensor Networks",
+  "doi": null,
+  "title": "Nonthreshold-Based Event Detection for 3D Environment Monitoring in Sensor Networks",
+  "year": 2008,
+  "venue": "IEEE Transactions on Knowledge and Data Engineering",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "矿井监控中复杂事件(如瓦斯泄漏、水渗)无法用阈值检测,需要时空模式匹配而非单点阈值比较",
+  "problem_framing": "将事件检测形式化为在3D梯度数据图上进行数据模式匹配,而非逐节点阈值判定",
+  "key_insight": "用正交多面体(OP)建模立方体簇,配合线性回归模型实现网内聚合,兼顾压缩率与精度",
+  "method_signature": "3D梯度数据图+空间OP模型+多路径路由+增量更新机制",
+  "evaluation_criteria": "事件检测召回率/精确率、网络流量开销、对链路丢包的鲁棒性",
+  "negative_result_or_admitted_limitation": "随机部署下召回率大幅下降至70%;简单均值聚合最高仅78%召回;SAT方法在丢包网络中几乎失效",
+  "evidence_for_taste": [
+    "threshold-based approaches work well for detecting simple events",
+    "average value-based aggregation does not integrate the volume factor",
+    "the SAT approach introduces the least traffic overhead but provides the worst",
+    "exploits the stabilization of monitored environment where events rarely happen",
+    "SAT approach leads to unacceptable detection recall rate"
+  ],
+  "thinking_moves": [
+    "将事件检测从逐点阈值比较重新框架为全局数据模式匹配",
+    "从2D等高线图扩展到3D空间正交多面体表示",
+    "利用几何运算(O(n))实现网内高效聚合",
+    "通过历史数据稳定性减少不必要通信开销"
+  ],
+  "topic_tags": [
+    "3D sensor networks",
+    "event detection",
+    "in-network aggregation",
+    "orthogonal polyhedra",
+    "coal mine monitoring"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

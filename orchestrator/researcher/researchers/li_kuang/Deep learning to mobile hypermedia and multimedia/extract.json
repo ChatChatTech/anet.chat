@@ -1,0 +1,35 @@
+{
+  "paper_id": "Deep learning to mobile hypermedia and multimedia",
+  "doi": "10.1007/s11276-022-02902-4",
+  "title": "Deep learning to mobile hypermedia and multimedia",
+  "year": 2022,
+  "venue": "Wireless Networks",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "移动端超媒体与多媒体数据量巨大",
+  "problem_framing": "深度学习需解决移动端智能化问题",
+  "key_insight": "深度学习在人工智能多领域取得突破",
+  "method_signature": "无原创方法，为特刊编辑摘要",
+  "evaluation_criteria": "无原创实验评估",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "arm-based smartphones, laptops, wearables, and other smart devices are everywhere",
+    "deep learning method has made significant breakthroughs",
+    "tens of billions or even hundreds of billions of data",
+    "represents the current state of the art"
+  ],
+  "thinking_moves": [
+    "以特刊编辑视角总结六大研究方向",
+    "从IoT、医疗、隐私保护等多场景概括深度学习应用"
+  ],
+  "topic_tags": [
+    "mobile-multimedia",
+    "deep-learning",
+    "edge-computing",
+    "federated-learning",
+    "IoT"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "thin",
+  "extraction_notes": "本文为特刊编辑前言，非原创研究论文。内容是对六篇入选论文的摘要介绍，未体现李况个人科研品味或方法论。role为co-author而非独立贡献author。"
+}

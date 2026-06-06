@@ -1,0 +1,40 @@
+{
+  "paper_id": "Completion by Comprehension_ Guiding Code Generation with Multi-Granularity Understanding",
+  "doi": "10.48550/arxiv.2512.04538",
+  "title": "Completion by Comprehension: Guiding Code Generation with Multi-Granularity Understanding",
+  "year": 2025,
+  "venue": "arxiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有RAG方法将代码视为纯文本,依赖浅层语义匹配,忽视结构语义和代码特定依赖关系,无法捕获控制流和潜在意图",
+  "problem_framing": "将仓库级代码补全问题重新定义为\"先理解再补全\":不是仅依赖片段级检索,而是深度理解多粒度上下文",
+  "key_insight": "采用\"理解优先,补全在后\"范式,通过静态分析提取函数/文件/项目级结构化上下文,经图筛选后转换为LLM可理解的自然语言提示",
+  "method_signature": "静态分析提取多粒度上下文+图排序筛选+结构感知代码重排器+统一提示生成",
+  "evaluation_criteria": "EM(精确匹配)、ES(编辑相似度)、ID.EM(标识符精确匹配)、F1-score四个指标,在CrossCodeEval和RepoEval基准上对比RawRAG/RepoCoder/RLCoder",
+  "negative_result_or_admitted_limitation": "基于规则的静态分析可能遗漏复杂结构中的重要执行路径;提取的多粒度上下文可能包含冗余或噪声内容,分散模型注意力",
+  "evidence_for_taste": [
+    "treat code purely as text sequences",
+    "ignore the inherent structural and semantic characteristics",
+    "Comprehension first, then Completion",
+    "control flow and syntactic structure",
+    "rule-based heuristics",
+    "these handcrafted rules inevitably overlook certain edge cases"
+  ],
+  "thinking_moves": [
+    "把代码补全的检索问题重新框架为理解问题",
+    "从人类开发者先理解后编码的行为模式获得启示",
+    "通过静态分析显式建模代码的结构语义而非仅做文本匹配",
+    "用图排序(Personalized PageRank)量化多粒度上下文元素的重要性",
+    "承认手工规则存在边界情况遗漏的局限,指出未来需更鲁棒的策略"
+  ],
+  "topic_tags": [
+    "仓库级代码补全",
+    "多粒度代码理解",
+    "静态分析增强生成",
+    "结构感知检索",
+    "RAG增强LLM"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

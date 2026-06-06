@@ -1,0 +1,39 @@
+{
+  "paper_id": "Modeling Programs Hierarchically with Stack-Augmented LSTM",
+  "doi": "10.48550/arxiv.2002.04516",
+  "title": "Modeling Programs Hierarchically with Stack-Augmented LSTM",
+  "year": 2020,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "编程语言具有显式层次结构，传统统计语言模型难以捕获，导致长距离依赖问题",
+  "problem_framing": "将程序表示为AST序列，通过PUSH/POP操作在堆栈上记录代码块层级信息",
+  "key_insight": "堆栈的PUSH/POP操作天然适合追踪代码块的开始与结束，可存储恢复上下文信息",
+  "method_signature": "Stack-Augmented LSTM: AST序列化后对⟨/⟩标记执行确定性PUSH/POP操作",
+  "evaluation_criteria": "代码补全(Accuracy/MRR)、程序分类(Accuracy)、代码摘要(BLEU-4/METEOR)",
+  "negative_result_or_admitted_limitation": "封闭词表限制；程序长度300时TBCNN优于此模型；需监督语法解析器",
+  "evidence_for_taste": [
+    "the characteristic of the stack is well suitable",
+    "our model can capture longer dependency",
+    "produce a precise representation for programs",
+    "how to incorporate hierarchical information",
+    "thinking like a human",
+    "store and restore contextual information"
+  ],
+  "thinking_moves": [
+    "人类理解程序时先理解底层代码块再理解高层代码块，将此认知策略computational modeling",
+    "现有模型将程序flatten为序列丢失层次信息，提出用AST保留结构并用⟨⟩标记代码块边界",
+    "堆栈的FILO特性与嵌套代码块结构同构，PUSH/POP操作可确定性对应AST层级",
+    "通过比较不同程序长度下LSTM与SA-LSTM精度变化验证长距离依赖捕获能力"
+  ],
+  "topic_tags": [
+    "programming-language-modeling",
+    "stack-augmented-LSTM",
+    "AST-hierarchical-representation",
+    "code-completion",
+    "long-term-dependency"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

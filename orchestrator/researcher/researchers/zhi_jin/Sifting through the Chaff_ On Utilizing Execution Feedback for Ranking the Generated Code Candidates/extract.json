@@ -1,0 +1,41 @@
+{
+  "paper_id": "Sifting through the Chaff_ On Utilizing Execution Feedback for Ranking the Generated Code Candidates",
+  "doi": "10.48550/arxiv.2408.13976",
+  "title": "Sifting through the Chaff: On Utilizing Execution Feedback for Ranking the Generated Code Candidates",
+  "year": 2024,
+  "venue": "ASE '24",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Execution-based ranking受限于单元测试稀缺和安全风险；非执行方法CodeRanker仅用分类标签，无法理解错误根因",
+  "problem_framing": "Code ranking——从LLM生成的多个候选代码中选择正确代码；核心难题是仅靠分类标签不足以训练出能理解错误原因的ranker",
+  "key_insight": "多任务学习整合代码分类与执行反馈生成，使ranker既具备基本分类能力，又能深度理解错误根因，从而在推理时不依赖执行反馈",
+  "method_signature": "RankEF通过硬/软参数共享和中间微调三策略，用分类损失+生成损失联合训练CodeT5+，推理时不执行代码",
+  "evaluation_criteria": "Pass@1/2/5 on APPS, MBPP, HumanEval benchmarks",
+  "negative_result_or_admitted_limitation": "CodeRanker将错误类型细化到更细粒度后性能反而下降，表明仅增加类别数不能有效提升模型能力",
+  "evidence_for_taste": [
+    "merely increasing the number of categories does not effectively enhance the model’s capability",
+    "execution feedback provides valuable insights into why the code fails",
+    "execution-based methods...encounter notable limitations, such as scarcity of quality unit tests and security risks",
+    "does not allow CodeRanker to grasp the underlying reasons",
+    "highly sensitive to label distribution, leading to weak generalization ability"
+  ],
+  "thinking_moves": [
+    "从CodeRanker局限出发：仅用正误标签无法捕获索引越界、未定义变量等微妙错误",
+    "区分三类执行结果(正确/执行错误/意图错误)，模板化反馈以消除噪声",
+    "通过多任务学习将执行反馈信息蒸馏到ranker参数中，实现推理时不依赖执行",
+    "消融实验验证hard parameter sharing优于soft sharing和中间微调",
+    "λ=0.9的实验选择表明生成任务权重应远高于分类任务"
+  ],
+  "topic_tags": [
+    "code-ranking",
+    "execution-feedback",
+    "multi-task-learning",
+    "LLM-code-generation",
+    "code-classification"
+  ],
+  "cites_own_work": [
+    "Self-edit"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

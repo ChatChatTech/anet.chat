@@ -1,0 +1,45 @@
+{
+  "paper_id": "MCPWorld_ A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents",
+  "doi": "10.48550/arxiv.2506.07672",
+  "title": "MCPWorld: A Unified Benchmarking Testbed for API, GUI, and Hybrid Computer Use Agents",
+  "year": 2025,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有CUA基准测试主要针对GUI agent，评估方法易受UI变化影响，且忽略API暴露的功能交互（如MCP）",
+  "problem_framing": "如何设计GUI无关的评估器来验证API-powered CUAs的任务完成，并实现API、GUI与混合模态的统一基准测试",
+  "key_insight": "使用可修改源码的\"白盒应用\"，通过动态代码插桩直接监控应用内部行为，实现与agent实现或UI状态解耦的鲁棒精确评估",
+  "method_signature": "白盒应用+内部行为Hook的统一CUA测试台",
+  "evaluation_criteria": "任务成功率(SR)和关键步骤完成率(KSCR)",
+  "negative_result_or_admitted_limitation": "MCP-only配置因\"MCP覆盖不足\"（48.42%失败原因）和\"API不兼容\"持续表现最差；MCP工具过长prompt导致5-10步任务成功率反而下降",
+  "evidence_for_taste": [
+    "greatly broadens the design space of CUA",
+    "decoupled from specific agent implementations",
+    "operating independently of the CUA's workflow",
+    "most reliable verification",
+    "precisely addresses these issues",
+    "especially fragile to interface modifications",
+    "ill-suited for API CUAs",
+    "After-the-move checking",
+    "the most reliable verification",
+    "directly responding to in-app hook triggering"
+  ],
+  "thinking_moves": [
+    "从\"外部状态匹配\"（UI截图、输出文件）转向\"内部信号同步\"——通过插桩直接捕获应用层语义事件",
+    "将评估器的角色从\"事后比对\"重新定义为\"实时Hook触发器\"",
+    "识别现有方法的根本缺陷：UI匹配受界面修改影响，文件输出延迟且可能根本不持久化",
+    "以\"应用内部是否有意义的信号\"而非\"agent执行轨迹\"作为ground truth",
+    "承认MCP-only的失败不是agent能力问题，而是MCP生态本身的覆盖不足"
+  ],
+  "topic_tags": [
+    "CUA-benchmarking",
+    "MCP-protocol",
+    "white-box-evaluation",
+    "API-agent",
+    "dynamic-binary-instrumentation",
+    "computer-use-agent"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

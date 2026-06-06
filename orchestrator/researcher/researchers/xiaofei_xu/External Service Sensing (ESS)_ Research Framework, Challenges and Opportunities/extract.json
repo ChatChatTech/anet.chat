@@ -1,0 +1,36 @@
+{
+  "paper_id": "External Service Sensing (ESS)_ Research Framework, Challenges and Opportunities",
+  "doi": "10.48550/arxiv.2106.09208",
+  "title": "External Service Sensing (ESS): Research Framework, Challenges and Opportunities",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统服务计算研究将服务视为静态实体,导致许多模型/算法在现实中失效",
+  "problem_framing": "将服务变化感知定义为一个四维框架问题(对象、内容、渠道、技术)",
+  "key_insight": "ESS是其他服务计算问题的上游任务,需先感知变化才能提升实用性",
+  "method_signature": "四维框架:感知对象、内容、渠道、技术组合定义具体ESS问题",
+  "evaluation_criteria": "准确性、完整性、及时性、成本四个指标衡量感知质量",
+  "negative_result_or_admitted_limitation": "现有研究更关注感知内容的静态指标而非变化本身",
+  "evidence_for_taste": [
+    "resulting in the situation that many proposed models/algorithms do not work in the real world",
+    "the framework is compatible with existing research",
+    "This demonstrates the soundness of ESS",
+    "most immediate work is by Zheng et al"
+  ],
+  "thinking_moves": [
+    "观察到研究实践脱节:服务实际动态变化但学术研究视为静态",
+    "将零散的感知工作系统化重构为标准问题",
+    "定义上游任务框架为下游应用奠基"
+  ],
+  "topic_tags": [
+    "services-computing",
+    "service-change-sensing",
+    "research-framework",
+    "service-dynamics",
+    "upstream-tasks"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "2025_SIGCOMM2025_SCX",
+  "doi": null,
+  "title": "SCX: Stateless KV-Cache Encoding for Cloud-Scale Confidential Transformer Serving",
+  "year": 2025,
+  "venue": "SIGCOMM",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有机密计算方法(密码学/TEE/访问控制)在隐私与效率间存在根本矛盾,大模型推理延迟难以接受",
+  "problem_framing": "将云端KV-cache设计为无法独立完成下一个token预测的状态,通过用户控制密钥锁定中间状态",
+  "key_insight": "利用Transformer前后向传播的顺序性,仅保留首尾层密钥即可锁定推理,中间层密钥可共享降低通信复杂度",
+  "method_signature": "三阶段编码+令牌置换+冗余嵌入+拉普拉斯噪声,实现O(T+L)通信复杂度",
+  "evaluation_criteria": "lossless inference quality, attack resistance (brute-force/LLM-assisted/fitting), latency <50ms for 7B",
+  "negative_result_or_admitted_limitation": "Multi-GPU部署时需与NVIDIA CC配合使用,存在额外all_gather通信开销",
+  "evidence_for_taste": [
+    "existing solutions are insufficient to resist certain known attack methods",
+    "This design reduces the communication complexity from O(T·L) to O(T+L)",
+    "these methods often suffer from significant computational and communication overheads",
+    "can incur non-negligible latency in distributed inference scenarios"
+  ],
+  "thinking_moves": [
+    "将隐私问题重新frame为通信复杂度问题,利用模型结构的顺序性破局",
+    "把攻击防御映射到差分隐私理论,给出形式化的概率上界证明",
+    "区分prefill和generation两阶段分别设计密钥策略,利用自回归特性",
+    "从已有技术(cryptography/TEE/access control)的根本局限出发寻找新 tradeoff空间"
+  ],
+  "topic_tags": [
+    "confidential-LLM-serving",
+    "KV-cache-encoding",
+    "privacy-preserving-inference",
+    "device-cloud-collaboration",
+    "differential-privacy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,39 @@
+{
+  "paper_id": "Han and Liu - 2008 - Mutual Anonymity for Mobile P2P Systems",
+  "doi": null,
+  "title": "Mutual Anonymity for Mobile P2P Systems",
+  "year": 2008,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有路径式匿名方案在高动态移动P2P网络中可靠性差、处理开销大,难以实用化",
+  "problem_framing": "如何实现MOPNET中无预设路径的双方匿名通信,同时保证可靠交付",
+  "key_insight": "用Shamir秘密分享将查询分成n份分散广播,任意t份即可恢复,无需暴露双方身份",
+  "method_signature": "PUZZLE协议:(t,n)SSS+SIDA实现非路径式查询和文件传输,概率广播控制范围",
+  "evaluation_criteria": "代理冗余度、流量开销、响应时间、交易成功率、安全处理开销",
+  "negative_result_or_admitted_limitation": "恶意节点超过60%时成功率急剧下降;P5等广播方案在大规模P2P中扩展性差",
+  "evidence_for_taste": [
+    "extremely difficult in practice",
+    "The maintenance and update overheads are cumbersome",
+    "is not suitable for decentralized MOPNETs",
+    "leverage the redundancy ability to mitigate",
+    "probability of agent peers being on the shortest path is higher"
+  ],
+  "thinking_moves": [
+    "将路径式匿名设计的问题归因为移动性和预设路径的矛盾",
+    "用信息分散+秘密分享替代洋葱路由,改变通信模式",
+    "引入概率参数p和阈值t/n平衡匿名覆盖与流量开销",
+    "通过冗余代理节点而非固定路径来提升可靠性",
+    "先分析数学安全性(完美安全、计算安全),再验证实际性能"
+  ],
+  "topic_tags": [
+    "mobile P2P anonymity",
+    "secret sharing scheme",
+    "information dispersal algorithm",
+    "ad hoc network routing",
+    "mutual anonymity protocol"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

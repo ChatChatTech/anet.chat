@@ -1,0 +1,39 @@
+{
+  "paper_id": "BPI_ A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain",
+  "doi": "10.48550/arxiv.2509.00480",
+  "title": "BPI: A Novel Efficient and Reliable Search Structure for Hybrid Storage Blockchain",
+  "year": 2025,
+  "venue": "ACM SIGMOD 2026",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Hybrid storage blockchain faces query completeness verification problem where malicious SPs can omit valid results while passing ADS verification; high B+ tree maintenance overhead in high-frequency transaction blockchain",
+  "problem_framing": "定义如何利用区块链只读特性避免全量扫描；如何在保证验证安全性的同时压缩VO通信开销；如何实现常数级插入复杂度的索引结构",
+  "key_insight": "Blockchain immutability allows users to skip previously queried data and focus on new data only, enabling Articulated Search via stop-location tokens to narrow search scope",
+  "method_signature": "BMF+ forest structure with feature mask encoding and bitwise operations; CRC-based variable-length VO compression for fine-grained validation",
+  "evaluation_criteria": "Search performance对比B+树和EthMB+; maintenance overhead; storage space reduction; verification communication overhead",
+  "negative_result_or_admitted_limitation": "BPI is restricted to keyword searches and may not fully cover conditional and range queries due to lack of support for arbitrary interval queries",
+  "evidence_for_taste": [
+    "malicious SP can undermine completeness",
+    "B+ tree queries introduce unnecessary overhead",
+    "skip previously queried data",
+    "constant overhead in data insertion",
+    "achieves balance between security and communication overhead"
+  ],
+  "thinking_moves": [
+    "利用区块链只读特性重新定义搜索问题：跳过旧数据只查新数据",
+    "将树结构遍历替换为位运算和mask编码加速查询",
+    "从对数级插入复杂度转向常数级插入复杂度设计",
+    "区分粗粒度与细粒度验证，选择细粒度可降低重复验证成本",
+    "借鉴数据去重思想跳过零mask避免存储"
+  ],
+  "topic_tags": [
+    "hybrid-storage-blockchain",
+    "keyword-search-index",
+    "query-verification",
+    "append-only-data-structures",
+    "bitwise-search"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "Full paper text available with complete methodology and evaluation sections. SIGMOD 2026 acceptance provides venue confirmation. Author Jianwei Yin is listed as co-author (non-corresponding) in the author block. | md truncated to head40k+tail20k"
+}

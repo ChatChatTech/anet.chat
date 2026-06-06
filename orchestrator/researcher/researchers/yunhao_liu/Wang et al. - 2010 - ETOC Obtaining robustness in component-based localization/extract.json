@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2010 - ETOC Obtaining robustness in component-based localization",
+  "doi": null,
+  "title": "ETOC: Obtaining Robustness in Component-based Localization",
+  "year": 2010,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Component-based localization outperforms node-based in sparse networks but is highly sensitive to ranging errors causing structural deformation",
+  "problem_framing": "Define error tolerance as upper bound of ranging errors under which a component can be localized uniquely without deformation",
+  "key_insight": "A single node suffers only translation, but components suffer three transformations (translation, rotation, reflection), requiring new robust patterns beyond existing flip-ambiguity methods",
+  "method_signature": "ETOC uses robust coordinate system conversion patterns to achieve guaranteed localization robustness",
+  "evaluation_criteria": "Performance (localized node ratio), accuracy (SPEE), cost (trilaterations per node)",
+  "negative_result_or_admitted_limitation": "Case 4 requires five edges while optimal pattern requires four; parallel line special case has zero error tolerance and is non-robust",
+  "evidence_for_taste": [
+    "the state-of-the-art designs",
+    "the SPEE of RQ is always higher",
+    "ETOC performs better in error control",
+    "requires the average degree to be over 25",
+    "the cost of ETOC is near optimal"
+  ],
+  "thinking_moves": [
+    "Identify that components have higher DOF than single nodes (3 transformations vs 1)",
+    "Define error tolerance analytically to bound structural deformation",
+    "Exploit geometry of robust patterns to eliminate ambiguities systematically",
+    "Distinguish node-based vs component-based error tolerance requirements"
+  ],
+  "topic_tags": [
+    "wireless-sensor-network-localization",
+    "error-tolerance",
+    "component-based-localization",
+    "robust-localization",
+    "structural-deformation"
+  ],
+  "cites_own_work": [
+    "Wang et al. 2008 BCALL"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Venue not explicitly stated in provided text; DOI not provided; role based on author order Yunhao Liu appears as co-author (3rd of 5), not first/corresponding"
+}

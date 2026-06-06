@@ -1,0 +1,46 @@
+{
+  "paper_id": "A Survey of Resource-efficient LLM and Multimodal Foundation Models",
+  "doi": "10.48550/arxiv.2401.08092",
+  "title": "A Survey of Resource-efficient LLM and Multimodal Foundation Models",
+  "year": 2024,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "大模型资源消耗巨大,阻碍AI民主化和环境可持续性发展",
+  "problem_framing": "从算法和系统层面分析大模型计算/内存/能耗效率优化",
+  "key_insight": "效率优化需算法与系统协同,从云到端全面覆盖",
+  "method_signature": "文献综述,按模型压缩/训练/服务/系统组织",
+  "evaluation_criteria": "覆盖顶会论文,涵盖算法与系统性方法",
+  "negative_result_or_admitted_limitation": "目前仅支持相对小规模模型,尚未见真实部署",
+  "evidence_for_taste": [
+    "poses a significant challenge",
+    "huge resource demand",
+    "resource-hungry",
+    "quadratic complexity",
+    "exponentially",
+    "democratization",
+    "endangers sustainability",
+    "hinder its democratization"
+  ],
+  "thinking_moves": [
+    "把模型扩展代价与国家能耗并列对比",
+    "从单一算法视角转向算法+系统协同视角",
+    "按计算复杂度分析瓶颈来源",
+    "覆盖从云到端的完整服务栈",
+    "识别阻碍AI民主化的核心障碍"
+  ],
+  "topic_tags": [
+    "foundation-model-efficiency",
+    "LLM-compression",
+    "edge-deployment",
+    "multimodal-model",
+    "resource-optimization"
+  ],
+  "cites_own_work": [
+    "FwdLLM",
+    "EdgeMoE",
+    "LLMCAD"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,42 @@
+{
+  "paper_id": "Zhang et al. - 2015 - PIC Enable Large-Scale Privacy Preserving Content-Based Image Search on Cloud",
+  "doi": null,
+  "title": "PIC: Enable Large-scale Privacy Preserving Content-based Image Search on Cloud",
+  "year": 2015,
+  "venue": "IEEE ICNP",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "图像包含敏感信息，用户隐私顾虑阻碍其参与不可信的云服务",
+  "problem_framing": "在云端大规模加密图像上进行高效内容搜索，同时保护图像和查询隐私",
+  "key_insight": "利用多层同态加密和密钥转换实现非交互式搜索，将计算外包云端且云端不接触明文",
+  "method_signature": "多层HE+密钥转换+MapReduce分布式并行搜索加密特征向量",
+  "evaluation_criteria": "搜索准确率(95.2%/93.4%)与响应时间(17小时/4秒)",
+  "negative_result_or_admitted_limitation": "基本方案在通用图像上性能下降，针对人脸识别等简单场景更有效",
+  "evidence_for_taste": [
+    "arouse great concerns on the image content privacy",
+    "for most cases the simple access policy is sufficient",
+    "sufficient for our application",
+    "negligible accuracy loss",
+    "only to generate the keys"
+  ],
+  "thinking_moves": [
+    "发现特征向量可重建图像揭示隐私威胁",
+    "区别于传统SMC：云端不能学习索引结构和图像内容",
+    "将计算密集任务外包云端同时保持隐私",
+    "用足够轻量但不多余的HE实现实际可用",
+    "借鉴CV领域索引技术并适配隐私约束"
+  ],
+  "topic_tags": [
+    "privacy-preserving-image-search",
+    "homomorphic-encryption-cloud",
+    "content-based-retrieval",
+    "MapReduce-parallel-search",
+    "access-control-ABE"
+  ],
+  "cites_own_work": [
+    "PoP: Privacy-preserving outsourced photo sharing (ICDCS 2015)",
+    "Verifiable private multiparty computation (INFOCOM 2013)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

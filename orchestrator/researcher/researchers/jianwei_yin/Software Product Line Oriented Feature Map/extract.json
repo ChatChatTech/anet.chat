@@ -1,0 +1,38 @@
+{
+  "paper_id": "Software Product Line Oriented Feature Map",
+  "doi": "10.1007/978-3-540-72586-2_156",
+  "title": "Software Product Line Oriented Feature Map",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统软件开发模式成本高、效率低、维护性差，难以满足大规模定制环境需求",
+  "problem_framing": "现有特征模型缺乏对特征依赖、约束表达和资源导航的完整支持",
+  "key_insight": "通过引入资源实体层(超结构)并叠加到特征依赖基础设施上，实现快速定位和组装",
+  "method_signature": "特征映射定义为七元组FM=(F,A,C,R,λA,λC,λR)，以OWL本体作为元模型表示基础",
+  "evaluation_criteria": "通过移动电话软件产品线案例展示特征映射的建模和元模型映射",
+  "negative_result_or_admitted_limitation": "现有特征模型无法完整支持不同领域的多样化特征依赖表达",
+  "evidence_for_taste": [
+    "deficiency of current feature modeling",
+    "perfects feature dependency",
+    "supports quick navigation",
+    "each feature owns its resource entities"
+  ],
+  "thinking_moves": [
+    "识别现有方法的四个具体缺陷",
+    "用集合论形式化定义新概念",
+    "将本体论作为元模型表示基础",
+    "区分基础设施层和超结构层",
+    "通过案例展示元模型映射"
+  ],
+  "topic_tags": [
+    "software-product-line",
+    "feature-modeling",
+    "ontology-representation",
+    "variability-management",
+    "resource-navigation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未标注年份和具体会议/期刊名称；案例研究缺乏定量验证，主要用于概念展示"
+}

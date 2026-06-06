@@ -1,0 +1,39 @@
+{
+  "paper_id": "From Covert Hiding to Visual Editing_ Robust Generative Video Steganography",
+  "doi": "10.48550/arxiv.2401.00652",
+  "title": "From Covert Hiding to Visual Editing: Robust Generative Video Steganography",
+  "year": 2024,
+  "venue": "ArXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统视频隐写方法基于修改隐蔽空间嵌入信息，但难以抵御OSN传输中的常见失真",
+  "problem_framing": "将隐写重新定义为视觉编辑问题，通过修改视频的语义特征来嵌入秘密信息而非修改隐蔽空间",
+  "key_insight": "语义特征比高频分量更抗失真，嵌入语义层而非修改像素LSB能天然获得鲁棒性",
+  "method_signature": "RoGVS通过Secret-ID block和AdaIN将秘密信息注入身份特征，在脸替换过程中实现隐写",
+  "evaluation_criteria": "BPF衡量容量，提取准确率衡量鲁棒性，AUC衡量安全性",
+  "negative_result_or_admitted_limitation": "HiDDeN即使加了失真模块也无法泛化到视频级失真；PWRN在运动模糊和对比度调整下仍受限",
+  "evidence_for_taste": [
+    "alterations in high-frequency components can be obliterated",
+    "strong coupling between identity and attribute features",
+    "adding more Secret-ID blocks improves performance",
+    "The addition of attacking layer improves accuracy by 6%",
+    "cannot generalize well to video-level distortions",
+    "integrating the Attacking Layer after the initial 800k steps for stability"
+  ],
+  "thinking_moves": [
+    "把隐写问题重新框定为视觉编辑问题，利用预训练脸替换网络作为隐写载体",
+    "从像素级修改转向语义级注入，假设高层特征更抗信道失真",
+    "通过消融实验验证嵌入位置的影响，说明浅层特征与深层特征的差异性贡献",
+    "引入对抗训练和梯度惩罚来同时优化视觉质量和提取准确性",
+    "工程调参经验：先训800k步再加入attacking layer以保证训练稳定"
+  ],
+  "topic_tags": [
+    "video-steganography",
+    "generative-video-modeling",
+    "face-swapping",
+    "semantic-feature-embedding",
+    "robust-steganography"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

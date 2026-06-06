@@ -1,0 +1,41 @@
+{
+  "paper_id": "Gu et al. - 2014 - Intelligent sleep stage mining service with smartphones",
+  "doi": null,
+  "title": "Intelligent Sleep Stage Mining Service with Smartphones",
+  "year": 2014,
+  "venue": "UbiComp '14",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "现有睡眠监测方法代价高或精度低,普通人难以便捷获取高质量睡眠分析",
+  "problem_framing": "如何利用手机内置传感器感知睡眠相关事件并推断睡眠阶段",
+  "key_insight": "不同睡眠阶段伴随特定身体运动和声音事件,CRF可建模时序依赖关系",
+  "method_signature": "加速度+麦克风+光感多模态特征输入CRF,每5分钟检测一次睡眠阶段",
+  "evaluation_criteria": "与Zeo(EEG)对比准确率,与Jawbone/SleepAsAndroid对比唤醒服务质量",
+  "negative_result_or_admitted_limitation": "检测准确率64.55%无法媲美专业医学设备,仅提供普适性睡眠服务",
+  "evidence_for_taste": [
+    "sleep quality is actually determined by",
+    "large body movements like body rollovers usually occur when people are in light sleep",
+    "tiny body movements such as arm trembling and leg jerking usually occur in deep sleep",
+    "somniloquy occurs frequently during REM because of continual dreams",
+    "The CPU share of Sleep Hunter stays stable from 5% to 9%",
+    "Sleep Hunter cannot take place of those professional medical devices",
+    "if the deep sleep stage occurs in the first hour after the user falls asleep and lasts more than 10 minutes, the possibility of its recurrence is high"
+  ],
+  "thinking_moves": [
+    "把睡眠感知问题从医学领域移到日常手机场景,强调便利性而非医学精度",
+    "先通过实验验证身体运动和声音事件与睡眠阶段的关联性,再构建统计模型",
+    "承认当前精度的局限性,明确系统定位为日常普适服务而非医疗替代品",
+    "从时间维度观察睡眠阶段分布与年龄的相关性,用小样本观察推断生理机制",
+    "对现有商业产品仅用单一指标(运动量)做睡眠阶段判断的做法进行隐含批评"
+  ],
+  "topic_tags": [
+    "sleep-stage-detection",
+    "smartphone-sensing",
+    "actigraphy",
+    "conditional-random-field",
+    "acoustic-event-classification"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

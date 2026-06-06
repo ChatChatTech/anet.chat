@@ -1,0 +1,44 @@
+{
+  "paper_id": "Software Engineering for Serverless Computing",
+  "doi": "10.48550/arxiv.2207.13263",
+  "title": "Software Engineering for Serverless Computing",
+  "year": 2022,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "Serverless市场需求激增(21B美元2025), 但SE尚未系统解决其独特工程挑战",
+  "problem_framing": "将serverless开发问题分解为12个方向, 分研究者/云厂商两侧讨论SE切入点",
+  "key_insight": "实现问题占开发者挑战35.4%, 需自动化代码审查; 配置错误需检测工具而非手动修复",
+  "method_signature": "Vision paper: 列举12个SE研究方向, 无实验验证",
+  "evaluation_criteria": "无具体评估指标, 为call-for-action",
+  "negative_result_or_admitted_limitation": null,
+  "evidence_for_taste": [
+    "implementation problem is related to incorrect code usage",
+    "developers frequently ask configuration-based questions",
+    "the error is found until application developers attempt deployment",
+    "code coverage metrics do not reflect the main complexity",
+    "the reproducibility of evaluation results becomes a prominent focus",
+    "each serverless platform defines serverless functions in their ways",
+    "suffers from the performance issue"
+  ],
+  "thinking_moves": [
+    "从开发者痛点统计反推研究优先级",
+    "将复杂问题按角色(研究者/云厂商)分类治理",
+    "从已有测量研究提取可改进的维度",
+    "承认现有方法的工程成本不现实"
+  ],
+  "topic_tags": [
+    "serverless SE challenges",
+    "configuration management",
+    "cold start optimization",
+    "application migration",
+    "multi-cloud portability"
+  ],
+  "cites_own_work": [
+    "Wen et al. 2021 empirical study",
+    "Wen et al. 2022 literature review",
+    "Wen et al. 2021 serverlessbench"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "Vision paper未提出具体方法, 无实验数据验证。主要输出为问题分类框架, 证据为定性讨论和已有研究引用。"
+}

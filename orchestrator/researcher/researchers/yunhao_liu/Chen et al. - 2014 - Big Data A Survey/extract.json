@@ -1,0 +1,38 @@
+{
+  "paper_id": "Chen et al. - 2014 - Big Data A Survey",
+  "doi": null,
+  "title": "Big Data: A Survey",
+  "year": 2014,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "大数据爆发式增长，但缺乏系统性梳理，难以形成统一认知框架",
+  "problem_framing": "将大数据价值链划分为生成、获取、存储、分析四个阶段，识别技术瓶颈",
+  "key_insight": "4Vs模型(Volume, Variety, Velocity, Value)揭示大数据本质：海量多样快速的数据中提取价值",
+  "method_signature": "综述法：按价值链阶段组织素材，关联技术(云计算/IoT/Hadoop)与应用场景",
+  "evaluation_criteria": "覆盖面广度、技术挑战识别完整性、未来方向清晰度",
+  "negative_result_or_admitted_limitation": "综述性质，缺乏具体方法的实验验证或性能量化比较",
+  "evidence_for_taste": [
+    "must defeat business opponents",
+    "how to transform a bunch of data into big data",
+    "you could only own a bunch of data other than big data if you do not utilize",
+    "the most critical problem in big data, which is how to discover values",
+    "requires experts in different fields cooperate"
+  ],
+  "thinking_moves": [
+    "按价值链阶段建立分类体系，将分散技术整合为系统认知框架",
+    "用具体案例(Google/FB/Amazon)量化抽象概念，避免空泛论述",
+    "强调技术间的协同关系而非孤立罗列",
+    "从商业决策视角定义技术需求，而非纯学术角度"
+  ],
+  "topic_tags": [
+    "big-data-survey",
+    "value-chain-analysis",
+    "4Vs-model",
+    "cloud-iot-convergence",
+    "hadoop-parallel-processing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Liu Yunhao位于第三位，属于综述论文的联合作者角色，非第一作者也非通讯作者。论文本身是教科书式综述，覆盖全面但缺乏原创方法论贡献，属于知识整理型而非问题解决型研究。 | md truncated to head40k+tail20k"
+}

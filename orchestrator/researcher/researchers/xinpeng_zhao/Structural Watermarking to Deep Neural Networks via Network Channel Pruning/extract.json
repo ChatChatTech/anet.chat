@@ -1,0 +1,36 @@
+{
+  "paper_id": "Structural Watermarking to Deep Neural Networks via Network Channel Pruning",
+  "doi": "10.48550/arxiv.2107.08688",
+  "title": "Structural Watermarking to Deep Neural Networks via Network Channel Pruning",
+  "year": 2021,
+  "venue": "arXiv",
+  "venue_tier": "preprint",
+  "role": "co-author",
+  "motivation": "现有DNN水印通过修改参数嵌入,但参数攻击可移除水印,需要把水印嵌入结构而非参数",
+  "problem_framing": "把水印嵌入网络结构,用通道剪枝率作为信息载体,用QIM量化剪枝率",
+  "key_insight": "利用剪枝机制将水印嵌入冗余架构,剪枝率本身成为水印信号,保持原任务性能",
+  "method_signature": "通道剪枝+QIM量化的结构水印嵌入,按层局部剪枝而非全局剪枝",
+  "evaluation_criteria": "水印载荷、网络保真度、水印可靠性、对参数级攻击的鲁棒性",
+  "negative_result_or_admitted_limitation": "知识蒸馏等改变模型结构的攻击可移除水印,但需要大量数据和计算资源",
+  "evidence_for_taste": [
+    "bypass such attacks by introducing",
+    "cannot resist against various attack",
+    "pruning the internal channels",
+    "network structure rather than",
+    "the performance of the DNN model"
+  ],
+  "thinking_moves": [
+    "从攻击方式反推防御策略:既然参数级攻击针对参数,那就把水印嵌入结构",
+    "把感知/所有权保护问题重新frame为通信问题:QIM调制剪枝率",
+    "复用已有技术(剪枝)而非发明新机制,降低工程阻力"
+  ],
+  "topic_tags": [
+    "DNN知识产权保护",
+    "网络结构水印",
+    "通道剪枝",
+    "模型压缩水印",
+    "后门水印"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

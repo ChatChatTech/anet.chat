@@ -1,0 +1,38 @@
+{
+  "paper_id": "Multi-user web service selection based on multi-QoS prediction",
+  "doi": "10.1007/s10796-013-9455-4",
+  "title": "Multi-user web service selection based on multi-QoS prediction",
+  "year": 2013,
+  "venue": "Information Systems Frontiers",
+  "venue_tier": "strong",
+  "role": "first",
+  "motivation": "现有方案针对单用户场景，未考虑服务过载；历史记录存在大量缺失QoS值导致选择困难",
+  "problem_framing": "将多用户Web服务选择建模为带处理容量约束的全局效用最大化优化问题",
+  "key_insight": "先用非负矩阵分解从多QoS属性联合提取用户特征，再用多输出SVR同步预测缺失值",
+  "method_signature": "NMF特征提取+MSVR多QoS预测+KM算法快速匹配",
+  "evaluation_criteria": "MAE/RMSE评估预测精度，计算时间评估选择效率",
+  "negative_result_or_admitted_limitation": "参数r对预测精度有影响，需在2-8范围内调优",
+  "evidence_for_taste": [
+    "cannot be directly used on multi-user condition",
+    "avoid overload of selected services",
+    "simultaneously calculate the multi-QoS",
+    "time complexity can be O(n × m) in the best situation",
+    "takes the relationship between QoS attributes into consideration"
+  ],
+  "thinking_moves": [
+    "把全局选择问题归约到最大权匹配问题，证明等价性后用KM算法求解",
+    "先用矩阵分解解决稀疏QoS数据的特征提取，再训练回归模型同步预测多属性",
+    "区分三种挑战：效果(Effect)、效率(Efficiency)、同时性(Simultaneity)逐一应对",
+    "先计算局部最优解，仅在过载发生时才触发全局优化的KM算法"
+  ],
+  "topic_tags": [
+    "QoS-prediction",
+    "multi-user-service-selection",
+    "matrix-factorization",
+    "support-vector-regression",
+    "maximum-weight-matching"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "paper提供完整框架、方法和实验，仅缺具体页面号"
+}

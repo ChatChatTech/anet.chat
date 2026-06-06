@@ -1,0 +1,41 @@
+{
+  "paper_id": "Liu et al. - 2010 - Exploring the hidden connectivity in urban vehicular networks",
+  "doi": null,
+  "title": "Exploring the Hidden Connectivity in Urban Vehicular Networks",
+  "year": 2010,
+  "venue": "unknown",
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "VANET高效信息交换困难，传统移动网络方法产生巨大流量负担，效率低。",
+  "problem_framing": "将信息查询与检索问题，从动态移动网络映射到静态道路基础设施结构上求解。",
+  "key_insight": "车辆虽高移动，但运动模式被城市道路地图限制，可利用道路段间的连通性构建信息查询图。",
+  "method_signature": "将道路段抽象为节点构造交叉图，建立最小权重连通支配集引导查询。",
+  "evaluation_criteria": "查询成功率、传输代价、投递延迟、带宽消耗。",
+  "negative_result_or_admitted_limitation": "CDS基础转发策略会错过地图上某些最短路径，导致稍高延迟。",
+  "evidence_for_taste": [
+    "用户对信息搜索效率敏感",
+    "车辆密度随区域变化大",
+    "全局分布随时间稳定",
+    "理想节点密度阈值d",
+    "顺序投递延迟约四倍",
+    "车辆频繁切换策略？不会",
+    "地图不一致影响查询效率"
+  ],
+  "thinking_moves": [
+    "将动态感知问题重框为静态拓扑优化问题",
+    "用真实大规模轨迹数据验证假设，而非仿真",
+    "观察经验现象后归纳可利用的不变量",
+    "在NP难问题中接受近似，用trace校准权重函数",
+    "先保证正确性，再优化效率tradeoff"
+  ],
+  "topic_tags": [
+    "VANET-information-exchange",
+    "trace-driven-study",
+    "road-map-abstract",
+    "connected-dominating-set",
+    "urban-vehicular-network"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

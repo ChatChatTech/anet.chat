@@ -1,0 +1,40 @@
+{
+  "paper_id": "Coupling Distributed and Symbolic Execution for Natural Language Queries",
+  "doi": "10.48550/arxiv.1612.02741",
+  "title": "Coupling Distributed and Symbolic Execution for Natural Language Queries",
+  "year": 2017,
+  "venue": "ICML",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Distributed executors are weak in execution efficiency and interpretability; symbolic executors are efficient but hard to train, especially at early stages (cold start problem).",
+  "problem_framing": "Natural language table querying requires multiple execution steps. Need to couple distributed (differentiable but slow) and symbolic (efficient but discrete) execution paradigms.",
+  "key_insight": "Distributed executor's field attention 'generally aligns with column selection' — use this imperfect symbolic interpretation as supervision signal to pretrain symbolic executor, alleviating REINFORCE cold start.",
+  "method_signature": "Two-way coupling: distributed→symbolic pretraining, then symbolic→distributed feedback using intermediate execution results.",
+  "evaluation_criteria": "Denotation accuracy, execution accuracy, learning efficiency (epochs to converge), execution efficiency (seconds per query), interpretability.",
+  "negative_result_or_admitted_limitation": "REINFORCE alone takes 2000 epochs to get started and gets stuck in poor local optima; symbolic executor alone cannot recover complicated execution cases.",
+  "evidence_for_taste": [
+    "sensitive to the initial policy",
+    "very difficult to get started at early stages",
+    "exponential numbers of combinatorial states",
+    "largely alleviates the cold start problem",
+    "blazingly fast",
+    "high interpretability",
+    "near-perfect field attention"
+  ],
+  "thinking_moves": [
+    "观察到分布式执行器虽不完美但仍有符号可解释性, 用它做预训练信号",
+    "用REINFORCE改进预训练后的策略, 而不是从零开始RL",
+    "将符号执行器的中间结果反馈给分布式模型, 实现双向耦合",
+    "承认强监督(执行序列标签)不可得的现实约束, 只用denotation弱监督"
+  ],
+  "topic_tags": [
+    "neural-semantic-parsing",
+    "table-querying",
+    "distributed-symbolic-coupling",
+    "REINFORCE-pretraining",
+    "neural-symbolic-systems"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

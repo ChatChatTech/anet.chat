@@ -1,0 +1,38 @@
+{
+  "paper_id": "A Latent Feelings-aware RNN Model for User Churn Prediction with Behavioral Data",
+  "doi": "10.48550/arxiv.1911.02224",
+  "title": "A Latent Feelings-aware RNN Model for User Churn Prediction with Behavioral Data",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "在线游戏运营商只能获取用户行为日志,无法直接获取用户情感,难以预测流失和采取针对性挽留措施",
+  "problem_framing": "把用户流失分类问题转化为基于行为数据预测logout时间间隔的回归问题,并同时估计用户的隐性情感",
+  "key_insight": "用户满意度决定logout时长(aspiration),游戏内行为间隔由欲望决定;通过时间预测任务可反向提取情感潜变量",
+  "method_signature": "LaFee双LSTM结构同时学习satisfaction和aspiration潜变量,共享参数独立输出",
+  "evaluation_criteria": "多时间阈值(1/3/7天)下的流失预测准确率,以及情感变量的可解释性验证",
+  "negative_result_or_admitted_limitation": "BMM-UCP单独使用效果差于LSTM,因引入游戏内数据导致过拟合",
+  "evidence_for_taste": [
+    "most researches regard machine learning methods as black boxes",
+    "the meaning of the neurons of hidden layers are not important",
+    "the accuracies decreases as the increase of τ",
+    "when τ is one day, the so-called churn has a strong randomness"
+  ],
+  "thinking_moves": [
+    "把流失分类问题重新frame为logout时间间隔回归问题",
+    "将抽象情感概念具体化为satisfaction和aspiration两个可测结构",
+    "通过时间预测任务实现情感潜变量的可学习化",
+    "从黑盒端到端模型的批评出发,追求模型可解释性",
+    "利用行为序列的时序依赖性建立情感变量的记忆机制"
+  ],
+  "topic_tags": [
+    "user-churn-prediction",
+    "latent-feeling-estimation",
+    "RNN-LSTM-variant",
+    "behavior-sequence-modeling",
+    "online-game-analytics"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为完整论文,包含方法、实验和讨论各部分。year从arXiv编号1911推断为2019年但未明确标注,venue信息缺失。"
+}

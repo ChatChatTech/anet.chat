@@ -1,0 +1,39 @@
+{
+  "paper_id": "2022_ICDE_COCA_Cost-Effective_Collaborative_Annotation_System_by_Combining_Experts_and_Amateurs",
+  "doi": null,
+  "title": "COCA: Cost-Effective Collaborative Annotation System by Combining Experts and Amateurs",
+  "year": 2022,
+  "venue": "ICDE",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Expert annotation is expensive but necessary for precision; amateurs are cheap but cannot give precise labels for fine-grained tasks; existing methods need prior labeled data.",
+  "problem_framing": "Formulate annotation as an optimization over cost ratio k between expert and amateur prices, minimizing total cost while achieving target precision.",
+  "key_insight": "Experts only need to label 'pivot' samples (one per category) plus uncertain cases; amateurs do pairwise comparisons on ML-suggested similar pairs; ML model coordinates iteratively.",
+  "method_signature": "Iterative three-agent system (expert/amateur/ML) with metric learning-guided annotation assignment and uncertainty-based sampling.",
+  "evaluation_criteria": "Cost saving ratio vs k (price ratio) at same precision as SOTA automatic labeling models on fine-grained datasets.",
+  "negative_result_or_admitted_limitation": "COCA requires k above threshold to outperform SOTA; real amateurs with mistakes need higher k thresholds than simulated amateurs.",
+  "evidence_for_taste": [
+    "it would be inefficient to randomly pick data pairs",
+    "we don’t expect amateurs to do that",
+    "Amateurs don’t have to discover categories",
+    "metric learning can perform steadily",
+    "metric learned on Stanford Dogs can better capture"
+  ],
+  "thinking_moves": [
+    "Exploit asymmetric costs between expert and amateur labor",
+    "Re-frame complex annotation as three-agent collaboration problem",
+    "Prove Lemma 1 to justify reference category selection theoretically",
+    "Iterate from zero prior knowledge by progressive label accumulation",
+    "Balance inter-category sample sizes and intra-category variance for ML training"
+  ],
+  "topic_tags": [
+    "crowdsourcing-annotation",
+    "fine-grained-classification",
+    "metric-learning",
+    "expert-amateur-collaboration",
+    "active-learning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

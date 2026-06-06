@@ -1,0 +1,38 @@
+{
+  "paper_id": "Dong et al. - 2012 - Distributed Coverage in Wireless Ad Hoc and Sensor Networks by Topological Graph Approaches",
+  "doi": null,
+  "title": "Distributed Coverage in Wireless Ad Hoc and Sensor Networks by Topological Graph Approaches",
+  "year": 2012,
+  "venue": "IEEE Transactions on Computers",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有覆盖方法依赖精确位置信息或集中计算,在资源受限的大规模网络中不实用",
+  "problem_framing": "将覆盖问题定义为基于k-hop环和传感比值γ= Rc/Rs的confine coverage,可配置覆盖粒度",
+  "key_insight": "边界环只需能从小子环组装而成,而非要所有环可收缩,大幅放宽了同调群准则",
+  "method_signature": "基于环划分的覆盖准则 + void preserving transformation分布式调度算法",
+  "evaluation_criteria": "覆盖孔直径上界、节点集规模、实际孔径与理论边界偏差",
+  "negative_result_or_admitted_limitation": "本文准则为充分非必要条件,存在能实现覆盖但无法判定的网络",
+  "evidence_for_taste": [
+    "greatly limit the applicability",
+    "cannot be expended to achieve",
+    "is overqualified for coverage requirements",
+    "This will reduce the network performance",
+    "is sufficient, but not necessary condition"
+  ],
+  "thinking_moves": [
+    "识别Ghrist方法的两大局限:集中计算和三角形限制",
+    "将代数拓扑问题重新框为图论环划分问题",
+    "从几何直觉(填充小环)导出数学覆盖判定准则",
+    "提出void preserving transformation实现分布式节点调度"
+  ],
+  "topic_tags": [
+    "connectivity-based coverage",
+    "confine coverage",
+    "cycle partition",
+    "distributed coverage scheduling",
+    "topological graph methods"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "论文结构完整,包含动机/问题形式化/方法/理论证明/仿真评估全流程 | md truncated to head40k+tail20k"
+}

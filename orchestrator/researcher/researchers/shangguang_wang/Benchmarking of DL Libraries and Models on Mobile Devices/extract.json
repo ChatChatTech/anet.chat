@@ -1,0 +1,44 @@
+{
+  "paper_id": "Benchmarking of DL Libraries and Models on Mobile Devices",
+  "doi": "10.48550/arxiv.2202.06512",
+  "title": "A Comprehensive Benchmark of Deep Learning Libraries on Mobile Devices",
+  "year": 2022,
+  "venue": "WWW '22",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "DL库对移动端推理至关重要,但现有研究缺乏对现代DL库的量化性能评估",
+  "problem_framing": "用MDLBench基准测试6个DL库、15个模型、10台设备以揭示DL库生态的全貌",
+  "key_insight": "DL库性能在不同模型和硬件间严重碎片化,软件影响可压倒算法或硬件优化",
+  "method_signature": "构建自动化基准测试工具,跨DL库/模型/设备进行系统化性能测量",
+  "evaluation_criteria": "以推理时间、每算子延迟、冷启动开销等指标评估DL库性能差异",
+  "negative_result_or_admitted_limitation": "INT8量化带来的加速(0.8×–3.0×)远低于理论预期(4×)",
+  "evidence_for_taste": [
+    "no prior work ever dives deep",
+    "up to 62,806× gap",
+    "severe fragmentation",
+    "no one-size-fit-all",
+    "can overwhelm the optimizations",
+    "much less than the theoretical expectation",
+    "significantly slower than warm inference",
+    "performance bugs are introduced",
+    "takes 1–16 weeks to be fixed",
+    "becomes relatively stable since 2020"
+  ],
+  "thinking_moves": [
+    "用大规模实证测量揭示\"已知但未量化\"的现象",
+    "从碎片化现象反推底层实现差异",
+    "通过纵向版本测试发现性能回归问题",
+    "\"神谕\"仿真揭示跨库算子级集成的潜在收益",
+    "将软件选择问题重新定义为动态加载需求"
+  ],
+  "topic_tags": [
+    "mobile-DL-benchmark",
+    "DL-library-comparison",
+    "on-device-inference",
+    "performance-fragmentation",
+    "quantization-overhead"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "作者Wang为第8位合作作者,贡献主要在移动DL系统测量方向 | md truncated to head40k+tail20k"
+}

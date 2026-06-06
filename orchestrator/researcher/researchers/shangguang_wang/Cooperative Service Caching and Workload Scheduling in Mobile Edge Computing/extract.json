@@ -1,0 +1,43 @@
+{
+  "paper_id": "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing",
+  "doi": "10.48550/arxiv.2002.01358",
+  "title": "Cooperative Service Caching and Workload Scheduling in Mobile Edge Computing",
+  "year": 2020,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "边缘节点资源异构且存储-计算能力不一致,不合作导致资源严重浪费",
+  "problem_framing": "MINLP问题,联合优化服务缓存和工作负载调度,最小化响应时间和外包流量",
+  "key_insight": "边缘节点协作可协调利用异构存储与计算资源,Gibbs采样实现近最优缓存决策",
+  "method_signature": "两层ICE算法:外层Gibbs采样更新缓存,内层水填充调度工作负载",
+  "evaluation_criteria": "服务响应时间和外包流量",
+  "negative_result_or_admitted_limitation": "即使简化情形仍具NP复杂度,贪婪算法仅考虑流行度忽视存储需求导致性能较差",
+  "evidence_for_taste": [
+    "hard to determine the exact value of the budget",
+    "cannot highlight the benefit of reduced delay",
+    "This work cannot be directly applied to applications which are both data-intensive and computation-intensive"
+  ],
+  "thinking_moves": [
+    "通过简化情形反证原问题NP复杂度",
+    "利用M/M/1队列模型证明工作负载调度子问题凸性",
+    "将Gibbs采样条件概率与目标函数值关联实现迭代收敛",
+    "借用通信领域水填充思想构造多项式复杂度调度算法",
+    "识别服务缓存与工作负载调度的耦合关系并分层求解"
+  ],
+  "topic_tags": [
+    "mobile-edge-caching",
+    "workload-scheduling",
+    "Gibbs-sampling",
+    "water-filling-algorithm",
+    "edge-cooperation",
+    "MINLP",
+    "convex-optimization"
+  ],
+  "cites_own_work": [
+    "[7] Xu et al. 2018",
+    "[8] Chen et al. 2018",
+    "[19] Wang et al. 2016"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文主体完整但venue信息未明确标注,部分算法细节以figure引用代替;作者列表中Shangguang Wang为co-author/Senior Member角色"
+}

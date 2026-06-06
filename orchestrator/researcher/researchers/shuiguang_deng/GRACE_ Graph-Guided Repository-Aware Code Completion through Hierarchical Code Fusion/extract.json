@@ -1,0 +1,40 @@
+{
+  "paper_id": "GRACE_ Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion",
+  "doi": "10.48550/arxiv.2509.05980",
+  "title": "GRACE: Graph-Guided Repository-Aware Code Completion through Hierarchical Code Fusion",
+  "year": 2026,
+  "venue": "ICSE",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有RAG方法仅依赖文本相似度检索,忽视代码结构关系(如调用链、继承层次),导致结构信息丢失",
+  "problem_framing": "将代码仓库重新建模为层级化语义图数据库,结合图神经网络结构检索与传统文本检索",
+  "key_insight": "通过图融合机制首次有效利用检索代码与待补全代码之间的结构关联,保留函数调用和继承等依赖关系",
+  "method_signature": "三层代码图构建→混合图检索器→结构化图融合增强→图到文本序列化",
+  "evaluation_criteria": "EM(精确匹配)、ES(编辑相似度)、Recall、F1分数对比6种基线方法",
+  "negative_result_or_admitted_limitation": "消融实验显示去除图融合后F1下降6.2%、EM下降5.4%,确认融合机制不可替代",
+  "evidence_for_taste": [
+    "neglecting structural relationships",
+    "lose critical structural information",
+    "fundamentally advancing",
+    "for the first time",
+    "indispensable pillars",
+    "decisive drop",
+    "decisive drop—up to –6.2% F1"
+  ],
+  "thinking_moves": [
+    "将代码补全问题从文本匹配重新框架为图结构检索问题",
+    "通过消融实验验证每个组件的必要性,承认结构融合是最关键组件",
+    "先用层次化抽象分解复杂仓库,再逐层建立语义关联",
+    "承认现有方法根本性局限,提出范式转换而非增量改进"
+  ],
+  "topic_tags": [
+    "LLM代码补全",
+    "代码图检索",
+    "图神经网络RAG",
+    "仓库级代码推理",
+    "结构化上下文融合"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

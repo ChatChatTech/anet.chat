@@ -1,0 +1,37 @@
+{
+  "paper_id": "2021_DCOSS_MampM_Recognizing_Multiple_Co-evolving_Activities_From_Multi-source_Videos",
+  "doi": null,
+  "title": "M&M: Recognizing Multiple Co-evolving Activities From Multi-source Videos",
+  "year": 2021,
+  "venue": "DCOSS",
+  "venue_tier": "workshop",
+  "role": "first",
+  "motivation": "监控场景中多摄像头视野重叠但各自获取不完整信息,现有方法无法识别多源视频中的多协同演化活动",
+  "problem_framing": "多源视频中多个异步演化活动的交叉识别,需解决单视图无法区分姿态和信息不完整问题",
+  "key_insight": "不直接在2D视频上识别,而提取骨骼后利用多源机会重建完整3D视图不变模型进行融合学习",
+  "method_signature": "多源2D骨骼重建3D场景,图嵌入子活动,自底向上图粗化识别,小样本HMM时序建模",
+  "evaluation_criteria": "10类协同演化活动平均识别准确率91.2%,3D重建误差<5cm",
+  "negative_result_or_admitted_limitation": "饮水和打电话识别较差,因相关物体小难检测且姿态细微难区分",
+  "evidence_for_taste": [
+    "M&M is the first step to recognize multiple co-evolving activities from multi-source videos",
+    "a small set of training samples is sufficient to learn a good mapping function",
+    "our method has good scalability to changing activity scenarios",
+    "Using more cameras leads to better reconstruction accuracy"
+  ],
+  "thinking_moves": [
+    "把perception问题转frame为信息融合问题,多源视频的互补性是机会而非障碍",
+    "拒绝端到端训练,采用基于归约的小样本学习方法",
+    "将图解析问题自底向上处理,自然检测多活动区域",
+    "从3D重建到图嵌入再到层级粗化,模块化解耦复杂问题"
+  ],
+  "topic_tags": [
+    "multi-source-video-activity-recognition",
+    "3D-skeleton-reconstruction",
+    "cross-camera-pose-matching",
+    "co-evolving-activity-recognition",
+    "graph-based-activity-embedding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

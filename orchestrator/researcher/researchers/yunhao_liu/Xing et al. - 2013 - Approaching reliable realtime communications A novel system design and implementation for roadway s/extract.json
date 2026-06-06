@@ -1,0 +1,42 @@
+{
+  "paper_id": "Xing et al. - 2013 - Approaching reliable realtime communications A novel system design and implementation for roadway s",
+  "doi": null,
+  "title": "Approaching Reliable Realtime Communications? A Novel System Design and Implementation for Roadway Safety Oriented Vehicular Communications",
+  "year": 2013,
+  "venue": "IEEE VNC (inferred from context)",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有DSRC/WiFi/3G/4G系统无法同时满足道路安全通信的硬实时(<100ms)和高可靠(>99% PDR)要求",
+  "problem_framing": "将安全通信需求形式化为在 burst traffic 场景下同时保证 latency 和 reliability 的联合优化问题",
+  "key_insight": "通过干扰无关的信道分配机制将冲突转化为可预测的调度问题,结合时域/频域/空域复用实现干扰自由通信",
+  "method_signature": "基于统计实时载波感知的干扰无关信道分配+冲突避免传输时隙选择的多通道MAC设计",
+  "evaluation_criteria": "4-to-4和5-to-1实验下多场景(高速/城市/农村/隧道/桥梁)的99% PDR within 100ms",
+  "negative_result_or_admitted_limitation": "信道分配依赖邻居节点ID获取,默认控制信道需周期性广播ID,部署有一定前提条件",
+  "evidence_for_taste": [
+    "requires any cooperation/coordination",
+    "dozens of GBs",
+    "first system for roadway safety communications",
+    "two orders of magnitude",
+    "burst traffic scenario"
+  ],
+  "thinking_moves": [
+    "把安全通信问题从感知/传输解耦视角重新定义为中心协调问题",
+    "先承认现有DSRC系统的根本性局限,再提出从底层重新设计的方案",
+    "用最坏情况实验(5-to-1)验证系统在极限负载下的可靠性保证",
+    "将干扰建模为空间复用问题,利用叠加码实现无协调干扰自由通信",
+    "在硬件实现中验证理论设计的可行性,而非仅做仿真"
+  ],
+  "topic_tags": [
+    "vehicular-communication",
+    "realtime-reliability",
+    "interference-free-channel-allocation",
+    "MAC-protocol-design",
+    "roadway-safety"
+  ],
+  "cites_own_work": [
+    "Kai Xing, X. Cheng et al. 2007 (MobiCom superimposed codes)",
+    "Xing and Gu 2012 (Tech Report)"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注会议名称,从格式推断为IEEE Vehicular Networking Conference。方法细节引用技术报告而非全文呈现,部分算法设计未在正文完整展示。"
+}

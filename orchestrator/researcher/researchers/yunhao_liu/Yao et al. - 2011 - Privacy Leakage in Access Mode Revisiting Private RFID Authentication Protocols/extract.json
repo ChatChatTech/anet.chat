@@ -1,0 +1,39 @@
+{
+  "paper_id": "Yao et al. - 2011 - Privacy Leakage in Access Mode Revisiting Private RFID Authentication Protocols",
+  "doi": null,
+  "title": "Privacy Leakage in Access Mode: Revisiting Private RFID Authentication Protocols",
+  "year": 2011,
+  "venue": "IEEE PerCom",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "现有RFID隐私保护协议仅随机化计算过程，但访问模式缺乏随机性，可被攻击者利用时序差异追踪标签。",
+  "problem_framing": "通过测量阅读器定位标签的响应时间，攻击者可在不破解密码的情况下区分和追踪RFID标签。",
+  "key_insight": "后端数据库的顺序访问导致处理时间与标签记录位置相关，即使密码机制安全，访问模式仍泄露隐私。",
+  "method_signature": "Access Mode based Attack (AMA): 测量认证响应时间差异以识别标签位置特征的攻击方法。",
+  "evaluation_criteria": "标签间处理时间差异的区分能力及追踪成功率。",
+  "negative_result_or_admitted_limitation": "现有三类主流PPA协议(线性、树型、同步)均被证明在此攻击下不再私有。",
+  "evidence_for_taste": [
+    "are not private",
+    "is easy to conduct",
+    "the processing time...consumes more time",
+    "resolution power of AMA is at least 30",
+    "the randomness-lacking access mode is the major source of RFID privacy leakage"
+  ],
+  "thinking_moves": [
+    "发现已被证明安全的协议存在系统性漏洞：访问模式未被纳入隐私模型",
+    "从关注密码学机制转向后端数据访问模式，将计算隐私问题重新定义为存储访问问题",
+    "用实验验证理论分析：即使差异仅30条记录也能成功区分两标签",
+    "攻击泛化：证明此方法适用于所有PPA协议类别而非仅限于特定方案"
+  ],
+  "topic_tags": [
+    "RFID-privacy-leakage",
+    "access-mode-attack",
+    "timing-analysis",
+    "RFID-authentication",
+    "side-channel-attack"
+  ],
+  "cites_own_work": [
+    "[23] Yao et al. PerCom 2009"
+  ],
+  "extraction_quality": "full"
+}

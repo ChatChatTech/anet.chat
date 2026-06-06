@@ -1,0 +1,42 @@
+{
+  "paper_id": "Wang et al. - 2015 - On Oscillation-Free Emergency Navigation via Wireless Sensor Networks",
+  "doi": null,
+  "title": "On Oscillation-Free Emergency Navigation via Wireless Sensor Networks",
+  "year": 2015,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "senior",
+  "motivation": "紧急导航中用户被迫来回移动（振荡）导致在危险区停留时间延长，错失逃生机会，生存概率下降",
+  "problem_framing": "将导航路径的可达性定义为路径在某时刻可安全到达终点的概率，现有方法忽视危险的时空动态特性导致振荡",
+  "key_insight": "用虚拟三角形几何关系预测危险节点运动趋势，将时空动态量化为ENO（期望振荡次数）作为路径规划指标",
+  "method_signature": "OPEN: 基于ENO度量的分布式振荡自由紧急导航协议，利用跳数与危险节点速度计算路径可达性",
+  "evaluation_criteria": "导航成功率、路径可达性、全局/局部振荡程度、最小安全距离",
+  "negative_result_or_admitted_limitation": "OPEN在最小安全距离指标上比MA低5%，因为MA过度保守地选择路径而错失潜在逃生机会；CPNST在环境动态变化时表现差",
+  "evidence_for_taste": [
+    "MA approach achieves the optimal result",
+    "over-conservative, which tend to miss some potential survival opportunities",
+    "it is not just a matter of time",
+    "passive reactions to the dynamics of emergency",
+    "oscillation is not just a matter of time"
+  ],
+  "thinking_moves": [
+    "将危险的时空动态映射为危险节点的运动速度",
+    "用几何三角关系（余弦定理）从跳数变化推算危险节点运动趋势",
+    "将可达性问题分解为各路段ENO的累加和",
+    "路径更新只在序列不匹配时才触发，降低计算开销",
+    "承认被动反应无法保证安全，需要主动预测"
+  ],
+  "topic_tags": [
+    "WSN-emergency-navigation",
+    "oscillation-free-navigation",
+    "danger-dynamics-prediction",
+    "ENO-metric",
+    "reachable-path"
+  ],
+  "cites_own_work": [
+    "GreenOrbs",
+    "CitySee"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

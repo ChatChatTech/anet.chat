@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhang et al. - 2018 - ChromaCode A Fully Imperceptible Screen-Camera Communication System",
+  "doi": null,
+  "title": "ChromaCode: A Fully Imperceptible Screen-Camera Communication System",
+  "year": 2018,
+  "venue": "MobiCom '18",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "65%用户跳过视频广告因侵入性，需边看边传数据的隐蔽侧信道",
+  "problem_framing": "同时实现三个冲突目标：完全隐蔽、高速率、低误码率",
+  "key_insight": "利用CIELAB感知均匀色彩空间+CIEDE2000公式可精确控制感知色差，从而在保证不可见性的同时最大化吞吐量",
+  "method_signature": "基于CIELAB空间的 outcome-driven 自适应亮度嵌入+RS+卷积级联纠错码",
+  "evaluation_criteria": "用户研究验证不可见 flicker，测量 raw throughput、goodput 和 BER，与 InFrame++、TextureCode 对比",
+  "negative_result_or_admitted_limitation": "BER仍约0.05较高，且编解码速度未达实时能力，acknowledged as 未来工作",
+  "evidence_for_taste": [
+    "uniform color space allows better tolerance",
+    "outcome-based philosophy",
+    "neither encoding nor decoding speeds have supported realtime capability now",
+    "achieve all three goals simultaneously",
+    "neither the embedded images monopolize any screen space",
+    "the achieved BER is somewhat still high"
+  ],
+  "thinking_moves": [
+    "把 HVS 感知问题从 RGB/YUV 空间重新定位到感知均匀的 CIELAB 色彩空间",
+    "从 lightness-change-driven 反转为 outcome-driven 设计（先定期望色差再算亮度变化）",
+    "引入通信领域的 RS+卷积级联码方案应对屏幕-相机信道噪声",
+    "承认高BER是通道本质限制，不归咎于实现",
+    "通过对比 InFrame++（高吞吐可见）和 TextureCode（不可见低吞吐）显式定义三类工作的设计空间"
+  ],
+  "topic_tags": [
+    "screen-camera-communication",
+    "perceptual-uniform-color-space",
+    "hidden-data-embedding",
+    "error-correction-coding",
+    "visible-light-communication"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "完整论文已提取，包含abstract、intro、方法论、实验和讨论部分 | md truncated to head40k+tail20k"
+}

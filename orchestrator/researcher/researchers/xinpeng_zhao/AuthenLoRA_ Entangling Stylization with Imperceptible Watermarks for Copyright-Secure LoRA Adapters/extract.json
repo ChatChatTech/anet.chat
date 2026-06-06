@@ -1,0 +1,38 @@
+{
+  "paper_id": "AuthenLoRA_ Entangling Stylization with Imperceptible Watermarks for Copyright-Secure LoRA Adapters",
+  "doi": "10.48550/arxiv.2511.21216",
+  "title": "AuthenLoRA: Entangling Stylization with Imperceptible Watermarks for Copyright-Secure LoRA Adapters",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "LoRA模型可被轻易重新分发且现有水印技术无法将水印传播到生成的图像中",
+  "problem_framing": "将风格迁移与水印嵌入解耦为双目标联合优化问题",
+  "key_insight": "零消息正则化机制通过将清洁图像分配全零消息作为ground truth来明确水印/非水印决策边界",
+  "method_signature": "两阶段训练:预训练水印编码器+LoRA双目标联合微调,引入对角缩放矩阵S实现动态水印注入",
+  "evaluation_criteria": "BitAcc、TPR@FPR=10^-6(低假阳性)、FID、CLIP及抗攻击鲁棒性",
+  "negative_result_or_admitted_limitation": "随裁剪比例p增大,FID急剧上升表明stylization功能被破坏",
+  "evidence_for_taste": [
+    "fail to propagate watermarks to generated images",
+    "suffer from high false positives",
+    "high-saturation watermark residuals introduced by the watermark encoder",
+    "bit accuracies exceeding 90% even after merging",
+    "optimal when the AuthenLoRA is paired with the base model"
+  ],
+  "thinking_moves": [
+    "将水印检测问题从单纯优化提取准确率重新frame为降低假阳性率的二元分类问题",
+    "通过引入零消息正则化惩罚解码器在清洁输入上的过度自信响应",
+    "观察到现有损失函数无法抑制高饱和残留,发明PRTS损失选择性惩罚色度异常",
+    "通过动态调整双目标权重在训练早期优先水印保真度、后期强化风格质量"
+  ],
+  "topic_tags": [
+    "LoRA-watermarking",
+    "diffusion-model-copyright",
+    "false-positive-reduction",
+    "stylization-watermark-coupling",
+    "zero-message-regularization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Exploring and Unleashing the Power of Large Language Models in Automated Code Translation",
+  "doi": "10.48550/arxiv.2404.14646",
+  "title": "Exploring and Unleashing the Power of Large Language Models in Automated Code Translation",
+  "year": 2024,
+  "venue": "ACM FSE",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "现有学习式转译器性能不足且训练资源昂贵,LLM有潜力但未充分探索",
+  "problem_framing": "将LLM在代码翻译任务上与最先进转译器做实证对比,并对失败案例做系统分类",
+  "key_insight": "测试用例能同时解决LLM对源程序理解不足、I/O类型缺失、跨语言差异忽略三类问题",
+  "method_signature": "UniTrans三阶段框架:测试用例生成→翻译增强→迭代修复",
+  "evaluation_criteria": "计算准确率(CA)和精确匹配率(EM Acc)",
+  "negative_result_or_admitted_limitation": "TransCoder训练需32张V100 GPU跑12天,且各语言对翻译准确率均不到50%",
+  "evidence_for_taste": [
+    "To reveal the actual ability",
+    "in-depth analysis",
+    "shows that automated code translation with LLMs is promising",
+    "Nevertheless, LLMs still suffer some accuracy issues",
+    "rigorously cleaned the widely-used code translation dataset"
+  ],
+  "thinking_moves": [
+    "用实证分析代替理论假设,通过大量失败案例归纳问题根源",
+    "将失败案例分类,量化各类失败占比以确定改进优先级",
+    "从失败分析反推解决方案:测试用例同时解决理解、类型、差异三类问题",
+    "迭代式修复采用执行错误反馈而非规则修复,保持通用性"
+  ],
+  "topic_tags": [
+    "LLM代码翻译",
+    "自动化代码转译",
+    "测试用例增强",
+    "程序修复",
+    "多语言代码迁移"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

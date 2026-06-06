@@ -1,0 +1,38 @@
+{
+  "paper_id": "2022_BIGCOM_Crowdsourcin System for Multi-object Annotation in Surveillance Videos",
+  "doi": null,
+  "title": "Crowdsourcing System for Multi-object Annotation in Surveillance Videos",
+  "year": 2022,
+  "venue": "BIGCOM",
+  "venue_tier": "unknown",
+  "role": "unknown",
+  "motivation": "视频标注是劳动密集型任务，现有公开数据集无法满足特定场景需求，需要定制化标注服务",
+  "problem_framing": "将标注质量问题形式化为标注者能力估计和任务分配问题，利用视频中时间和目标的关联性实现互评机制",
+  "key_insight": "同一视频的任务并非独立， bounding box 错误会传播到 trajectory，可利用此关联将标注和审核分配给不同工人实现互评",
+  "method_signature": "基于模型推理结果发现 near-golden 任务，结合时序和目标关联度用 KM 算法进行相关性任务分配",
+  "evaluation_criteria": "near-golden 任务的错误率、标注结果的错误率、任务分配的关联度",
+  "negative_result_or_admitted_limitation": "预先定义的 golden tasks 非常昂贵且效果不佳；worker abilities 初始化过低会导致算法只关注部分能力而忽略其他能力",
+  "evidence_for_taste": [
+    "golden tasks defined in advance is very costly and not effective",
+    "the worker, while expecting to make money, doesn't have a high quality of task answers",
+    "annotation and review are the same job, but for different objects",
+    "tasks are not independent of each other, but overlap with each other",
+    "the bounding box task is related to the trajectory task"
+  ],
+  "thinking_moves": [
+    "把审核工作重新 frame 成互评机制，让标注者之间互相审核模型结果和人工结果",
+    "利用任务间的重叠关系（bounding box 错误蕴含 trajectory 错误）推断任务关联性",
+    "用模型推理结果免费生成 near-golden tasks 替代昂贵的预定义 golden tasks",
+    "将 KM 算法从匹配问题扩展到带关联度权重的任务分配问题"
+  ],
+  "topic_tags": [
+    "multi-object tracking annotation",
+    "crowdsourcing task assignment",
+    "surveillance video annotation",
+    "annotator ability estimation",
+    "correlated task assignment"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文偏工程系统描述，方法部分有较多公式推导但核心创新点（关联任务分配）论证较简略，实验部分为模拟实验缺乏真实众包验证"
+}

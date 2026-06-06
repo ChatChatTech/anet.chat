@@ -1,0 +1,38 @@
+{
+  "paper_id": "2024_INFOCOM_GraphProxy_Communication-Efficient_Federated_Graph_Learning_with_Adaptive_Proxy",
+  "doi": null,
+  "title": "GraphProxy: Communication-Efficient Federated Graph Learning with Adaptive Proxy",
+  "year": 2024,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "FGL中跨客户端边需要共享邻居信息,导致通信成本高达训练时间6-8倍,amazon-cs数据集通信增加97倍",
+  "problem_framing": "在保持模型性能的前提下,减少跨客户端邻居信息共享的通信开销",
+  "key_insight": "可以用本地节点的代理替代外部邻居进行邻域聚合,代理需满足嵌入相似性和类别相关性两个条件",
+  "method_signature": "GraphProxy:代理搜索+动态更新,基于嵌入相似度和类别相关性选择本地代理",
+  "evaluation_criteria": "通信成本 vs 测试准确率;与FedCog/FedAvg对比;6个真实数据集",
+  "negative_result_or_admitted_limitation": "随机代理在小图cora提升8.69%但大图pubmed降低2.99%,证明随机选择不可行",
+  "evidence_for_taste": [
+    "shows opposite effects on the two datasets",
+    "tends to conform to local distributions",
+    "lacks performance guarantees",
+    "still incurs high communication cost",
+    "there still lacks an efficient FGL solution"
+  ],
+  "thinking_moves": [
+    "从性能vs通信的trade-off出发,尝试用本地代理替代跨客户端通信",
+    "先做小规模数据验证(Fig.1随机代理实验),发现图规模影响代理效果",
+    "理论分析证明代理相似度足够高时可等效替代(Lemma1,2)",
+    "动态更新机制解决训练过程中嵌入变化导致代理失效的问题"
+  ],
+  "topic_tags": [
+    "federated-graph-learning",
+    "communication-efficiency",
+    "neighborhood-aggregation",
+    "proxy-substitution",
+    "cross-client-edges"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,40 @@
+{
+  "paper_id": "SCX_SIGCOMM2025",
+  "doi": null,
+  "title": "SCX: Stateless KV-Cache Encoding for Cloud-Scale Confidential Transformer Serving",
+  "year": 2025,
+  "venue": "SIGCOMM 2025",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有的云端机密推理方法（密码学/隔离/访问控制）在隐私和效率之间存在不可调和的矛盾，无法在商品级硬件上实现高效部署",
+  "problem_framing": "将用户数据保护形式化为「云端KV-cache必须 stateless」——即使概率足够低，云端若无用户密钥也无法独立生成下一个token",
+  "key_insight": "利用Transformer逐层顺序计算的特性，只对首尾层加锁，中间层密钥上传云端，使通信复杂度从O(T·L)降至O(T+L)",
+  "method_signature": "用户端编码+云端推理的两方协议，通过置换/冗余嵌入/拉普拉斯噪声三重变换实现差分隐私保证",
+  "evaluation_criteria": "延迟(<50ms for 7B)、隐私下界(差分隐私参数ε)、推理质量(数学等价证明)、攻击抵抗力(蛮力/LLM恢复/拟合反演)",
+  "negative_result_or_admitted_limitation": "需依赖云端TEE进行密钥交互以最小化通信开销；RAG场景需在TEE内执行检索组件，非自包含方案",
+  "evidence_for_taste": [
+    "requires interaction with the user for every KV-cache access",
+    "simplified encoding schemes are often vulnerable to such attacks",
+    "These constraints make cryptography-based methods challenging to deploy at scale",
+    "The reliance on CPU-based enclaves results in high latency",
+    "may not be readily available or compatible with all cloud environments",
+    "SCX can be easily deployed in existing cloud environments with minimal modifications"
+  ],
+  "thinking_moves": [
+    "将「隐私保护」问题重新框架为「KV-cache无状态化」——借鉴Apple PCC的思想但针对LLM特点重新设计",
+    "通过理论分析（差分隐私下界）而非实验验证来确立隐私保证的坚实基础",
+    "先证明数学等价性（保证零质量损失），再讨论效率优化——优先回答「能否work」",
+    "对每个已知攻击方法逐一增强防御：蛮力→置换，LLM恢复→冗余嵌入，拟合反演→一次性噪声",
+    "通过与Nvidia CC的边界条件分析（多GPU场景）来定位自身方案的优势区间，而非笼统宣称优越性"
+  ],
+  "topic_tags": [
+    "confidential-LLM-serving",
+    "KV-cache-encoding",
+    "differential-privacy-inference",
+    "device-cloud-collaborative-inference",
+    "transformer-privacy"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

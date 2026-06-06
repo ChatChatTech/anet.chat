@@ -1,0 +1,36 @@
+{
+  "paper_id": "Characterizing and Detecting WebAssembly Runtime Bugs",
+  "doi": "10.48550/arxiv.2301.12102",
+  "title": "Characterizing and Detecting WebAssembly Runtime Bugs",
+  "year": 2023,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "WASM应用广泛,但运行时bug频繁报告却缺乏系统研究",
+  "problem_framing": "从GitHub收集311个真实bug,建立分类体系,设计检测框架",
+  "key_insight": "WASM运行时bug可按架构组件层次化分类,基于模式可有效检测",
+  "method_signature": "经验性研究311个真实bug的分类与修复策略,构建模式检测框架",
+  "evaluation_criteria": "检测出53个新bug,14个确认,6个修复",
+  "negative_result_or_admitted_limitation": "无法复现部分bug报告,检测器难以覆盖所有模式",
+  "evidence_for_taste": [
+    "indicate the root causes and the diversity",
+    "showing almost perfect agreement",
+    "successfully identified 53 previously-unknown bugs",
+    "The developers have confirmed it is a bug"
+  ],
+  "thinking_moves": [
+    "从真实bug报告反推架构层缺陷",
+    "将bug现象映射到组件架构形成层次分类",
+    "从分类衍生修复策略形成模式检测"
+  ],
+  "topic_tags": [
+    "WebAssembly-runtime-bugs",
+    "empirical-software-engineering",
+    "bug-taxonomy",
+    "pattern-based-detection",
+    "WASM-compilation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

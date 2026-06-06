@@ -1,0 +1,42 @@
+{
+  "paper_id": "A Framework for the Elicitation and Analysis of Information Technology Service Requirements and Their Alignment with Enterprise Business Goals",
+  "doi": "10.1109/compsacw.2010.54",
+  "title": "A Framework for the Elicitation and Analysis of Information Technology Service Requirements and Their Alignment with Enterprise Business Goals",
+  "year": 2010,
+  "venue": "COMPSACW",
+  "venue_tier": "workshop",
+  "role": "co-author",
+  "motivation": "ITIL和COBIT框架缺乏系统化的需求获取与分析方法，导致IT服务与业务目标脱节",
+  "problem_framing": "将需求工程方法迁移到IT服务管理领域，实现服务需求与业务目标对齐",
+  "key_insight": "IT服务管理面临的挑战与软件需求工程40年来解决的挑战几乎相同，RE方法可直接应用",
+  "method_signature": "融合i*框架与问题フレーム方法，结合本体领域模型和协作研讨会",
+  "evaluation_criteria": "工具原型验证和真实案例评估作为基准",
+  "negative_result_or_admitted_limitation": "框架目前仅完成初步研究，尚未提供实际案例验证其有效性",
+  "evidence_for_taste": [
+    "ITIL does not define how this value is to be elicited",
+    "It is not surprising that these challenges are almost identical",
+    "fundamentally different from existing work on goal orientation",
+    "These domain models and problem frames will become the guidelines"
+  ],
+  "thinking_moves": [
+    "识别现有框架(ITIL/COBIT)的方法论空白",
+    "跨学科知识迁移：将RE领域的成熟方法移植到服务管理",
+    "多方法融合：整合i*目标建模与问题フレーム分析",
+    "从业务价值共创角度重新定义需求来源"
+  ],
+  "topic_tags": [
+    "IT服务需求工程",
+    "业务-IT对齐",
+    "i*-目标导向分析",
+    "问题フレーム方法",
+    "服务供应链本体建模"
+  ],
+  "cites_own_work": [
+    "OUTSET/MUSTER方法",
+    "i*框架与问题フレーム结合",
+    "不一致性管理研究",
+    "Web服务能力模型"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为研究提案/框架设计阶段，缺乏完整的方法验证和实验数据。基于2010年COMPSACW研讨会论文，信息深度有限。"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "2022_BIGCOM_Personalized_Differentially_Private_Online_Minimum_Bipartite_Matching_in_Spatial_Crowdsourcing_bigcom",
+  "doi": null,
+  "title": "Personalized Differentially Private Online Minimum Bipartite Matching in Spatial Crowdsourcing",
+  "year": 2022,
+  "venue": "BIGCOM",
+  "venue_tier": "regional",
+  "role": "unknown",
+  "motivation": "Untrusted servers in spatial crowdsourcing leak location privacy; users need personalized privacy levels",
+  "problem_framing": "Online bipartite matching with ε-geo-indistinguishability where workers/tasks choose own (h,ε) preferences",
+  "key_insight": "Quadtree structure enables intuitive coarse-grained level selection, combined with truncated geometric mechanism to satisfy ε-geo-indistinguishability at each level",
+  "method_signature": "GMT mechanism on quadtree + EMD distance + accelerated distance calculation for matching",
+  "evaluation_criteria": "Total travel distance of matching under differential privacy constraint",
+  "negative_result_or_admitted_limitation": "HST-based approach requires prior user distribution knowledge which may differ from true distribution",
+  "evidence_for_taste": [
+    "user-friendly",
+    "intuitively select",
+    "different levels of location privacy",
+    "most effective",
+    "saves up to 35.9% total distance"
+  ],
+  "thinking_moves": [
+    "把隐私偏好的直觉选择映射到四叉树层级结构上",
+    "将连续二维位置问题转换为一维节点编号便于几何机制处理",
+    "识别距离计算的时间瓶颈后提出加速方法"
+  ],
+  "topic_tags": [
+    "geo-indistinguishability",
+    "quadtree-spatial-indexing",
+    "personalized-differential-privacy",
+    "online-bipartite-matching",
+    "location-privacy-spatial-crowdsourcing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

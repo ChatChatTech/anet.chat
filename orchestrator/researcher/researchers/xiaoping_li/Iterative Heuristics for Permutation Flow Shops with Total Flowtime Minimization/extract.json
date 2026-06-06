@@ -1,0 +1,38 @@
+{
+  "paper_id": "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization",
+  "doi": "10.1007/978-0-387-36594-7_37",
+  "title": "Iterative Heuristics for Permutation Flow Shops with Total Flowtime Minimization",
+  "year": null,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "NP完全的车间调度问题现实中广泛存在，现有启发式方法通过单次搜索改进有限",
+  "problem_framing": "总流通时间最小化的置换流水车间调度问题, NP完全, 需设计高效启发式",
+  "key_insight": "迭代搜索能大幅提升基于RZ插入的启发式性能, 但对NEH插入类启发式提升有限",
+  "method_signature": "在迭代RZ框架上集成LR初始解生成和FPE/FPE-R邻域搜索",
+  "evaluation_criteria": "ARPD(平均相对偏差百分比)和CPU时间, 对比现有最佳复合启发式",
+  "negative_result_or_admitted_limitation": "好的初始解不能保证IRZ有好结果, FLR1反而恶化性能",
+  "evidence_for_taste": [
+    "IRZ improves RZ about 5.27 times",
+    "FL nearly 1 times but WY very little",
+    "good initial solution cannot ensure good result for IRZ",
+    "the best two are LR(n) and LR(n/m)",
+    "ITERATIVE METHOD IS DESIRABLE FOR RZ-INSERTION"
+  ],
+  "thinking_moves": [
+    "把单次搜索的构造启发式通过迭代机制升级为更强的邻域搜索",
+    "发现不同插入策略(RZ vs NEH)对迭代提升的响应差异巨大",
+    "通过整合而非替换来组合已有优势: LR做初始解+IRZ做迭代+FPE做邻域改进",
+    "承认初始解质量与最终效果非线性相关, 修正了直觉假设"
+  ],
+  "topic_tags": [
+    "permutation-flowshop-scheduling",
+    "total-flowtime-minimization",
+    "iterative-heuristics",
+    "composite-constructive-heuristics",
+    "pairwise-exchange-improvement"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注发表年份和会议/期刊全称, 仅通过DOI推断为Springer LNCS系列但无法确认具体卷名"
+}

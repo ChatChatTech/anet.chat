@@ -1,0 +1,49 @@
+{
+  "paper_id": "Segmentation of Drosophila Heart in Optical Coherence Microscopy Images Using Convolutional Neural Networks",
+  "doi": "10.48550/arxiv.1803.01947",
+  "title": "Segmentation of Drosophila Heart in Optical Coherence Microscopy Images Using Convolutional Neural Networks",
+  "year": 2018,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "传统方法难以准确高效地分割果蝇心脏OCM图像，自动高通量分析需求迫切",
+  "problem_framing": "将果蝇心脏分割建模为像素级语义分割任务，需克服形态变异、对比度变化、噪声干扰",
+  "key_insight": "U-Net编码器-解码器架构配合跳跃连接能保留空间信息；软IOU损失函数实现端到端可微训练",
+  "method_signature": "基于U-Net的encoder-decoder CNN，使用软IOU损失，10折交叉验证，数据增强",
+  "evaluation_criteria": "IOU(Intersection over Union)为主指标，辅以心脏功能参数(EDD/ESD/FS/HR)对比验证",
+  "negative_result_or_admitted_limitation": "成虫图像因皮肤高吸收导致低灵敏度，心壁边界不连续造成预测泄漏；128像素宽度限制了信息量；人工标注存在不可避免的误差",
+  "evidence_for_taste": [
+    "high extent of reliability",
+    "greatly resembles",
+    "high IOU at all stages",
+    "shows good accuracy",
+    "accurate measurements",
+    "reliable tool",
+    "smoother prediction line",
+    "advantage of deep learning",
+    "efficient in prediction",
+    "key reason is the decoder"
+  ],
+  "thinking_moves": [
+    "将生物医学图像分割问题迁移U-Net架构解决",
+    "用10折交叉验证最大化利用有限数据集",
+    "通过数据增强(平移旋转)防止过拟合和位置偏置",
+    "采用软IOU损失函数实现可微分割输出",
+    "对比FCN基线证明encoder-decoder保留更多特征",
+    "用功能参数(EDD/ESD/FS)间接验证分割质量"
+  ],
+  "topic_tags": [
+    "Drosophila-heart-OCM-segmentation",
+    "U-Net-semantic-segmentation",
+    "soft-IOU-loss",
+    "biomedical-image-CNN",
+    "10-fold-cross-validation"
+  ],
+  "cites_own_work": [
+    "Li et al. 2013",
+    "Alex et al. 2015",
+    "Alex et al. 2017",
+    "Men et al. 2016"
+  ],
+  "extraction_quality": "full"
+}

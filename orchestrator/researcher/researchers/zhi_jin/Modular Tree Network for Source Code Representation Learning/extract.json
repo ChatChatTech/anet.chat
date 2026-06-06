@@ -1,0 +1,41 @@
+{
+  "paper_id": "Modular Tree Network for Source Code Representation Learning",
+  "doi": "10.48550/arxiv.2104.00196",
+  "title": "Modular Tree Network for Source Code Representation Learning",
+  "year": 2018,
+  "venue": "J. ACM",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "现有AST神经网络模型用同一单元建模不同语义单元，无法捕捉AST子结构的语义差异，导致欠拟合。",
+  "problem_framing": "将AST中不同类型的语义单元（如For、While、If）用不同神经网络模块建模，动态组合成树结构网络。",
+  "key_insight": "不同语义单元类型需要不同的组合函数来捕获其结构特性，仅用单一神经网络单元建模所有语义单元是不够的。",
+  "method_signature": "MTN为每类AST语义单元设计专属神经模块，包含MTN-a（全局参数共享）和MTN-b（按类型参数共享）两种策略。",
+  "evaluation_criteria": "程序分类准确率（293类POJ数据集）和代码克隆检测F1分数（OJClone数据集），对比CNN/LSTM/Tree-LSTM/TBCNN/GGNN。",
+  "negative_result_or_admitted_limitation": "GGNN在程序分类任务上表现不佳，准确率甚至低于序列模型；Tree-LSTM对负克隆对预测偏高，阈值选择困难。",
+  "evidence_for_taste": [
+    "same neural network unit to model different kinds",
+    "apparently not enough, which can cause underfitting",
+    "different programming languages may contain different semantic units",
+    "similar semantic units in different programming languages may have different form",
+    "modeling differences among semantic units",
+    "MTNs are more advantageous for fewer training data"
+  ],
+  "thinking_moves": [
+    "识别现有树模型的核心缺陷：同一单元无法处理语义差异",
+    "从编程语言语法规则出发界定语义单元类型集合",
+    "为每类语义单元设计反映其结构特性的神经模块（如For的四子节点控制-循环体结构）",
+    "用element-wise max处理If-else的不定叉数问题",
+    "通过收敛速度而非仅最终精度验证模型优越性",
+    "发现Tree-LSTM对负克隆对预测偏高的问题并归因于参数共享过度"
+  ],
+  "topic_tags": [
+    "AST-based neural network",
+    "source code representation learning",
+    "program classification",
+    "code clone detection",
+    "modular tree-structured neural network"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

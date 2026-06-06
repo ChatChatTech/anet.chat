@@ -1,0 +1,39 @@
+{
+  "paper_id": "CoReQA_ Uncovering Potentials of Language Models in Code Repository Question Answering",
+  "doi": "10.48550/arxiv.2501.03447",
+  "title": "CoReQA: Uncovering Potentials of Language Models in Code Repository Question Answering",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "corresponding",
+  "motivation": "现有代码基准侧重生成和补全，忽视代码问答；现有QA基准局限于方法级或文件级，无法反映真实世界的代码复杂性",
+  "problem_framing": "代码仓库级问答需要模型检索相关内容并生成答案，传统BLEU等指标不适用于评估自然语言与代码混合的问答",
+  "key_insight": "从GitHub issue及其含positive comments的真实讨论中构建QA对，确保需求真实且与开发者相关；用LLM-as-a-judge框架从准确性、完整性、相关性、清晰度和 pairwise 比较五个维度评估",
+  "method_signature": "GitHub issue-driven QA生成 + LLM-as-a-judge五维评估",
+  "evaluation_criteria": "准确性(1-10)、完整性(1-10)、相关性(1-10)、清晰度(1-10)、Pairwise比较(PCE)",
+  "negative_result_or_admitted_limitation": "BM25检索带来的提升非常有限；即使用完整仓库上下文，长上下文模型性能提升也很小且指标仍不理想",
+  "evidence_for_taste": [
+    "existing benchmarks primarily focus on code generation",
+    "fail to capture the real-world complexity",
+    "The improvement brought by BM25 is also limited",
+    "performance improves only slightly",
+    "the metrics remain suboptimal",
+    "BM25 may not effectively retrieve the most relevant information"
+  ],
+  "thinking_moves": [
+    "指出现有benchmark的评估盲点：只关注生成任务而忽视问答",
+    "用真实GitHub issue构造benchmark以确保数据的实用性和真实性",
+    "发现检索策略(BM25)与模型内在能力之间存在性能瓶颈",
+    "通过长上下文与BM25对比间接验证检索质量不足"
+  ],
+  "topic_tags": [
+    "code-repository-QA",
+    "LLM-evaluation-benchmark",
+    "GitHub-issue-QA-generation",
+    "LLM-as-a-judge",
+    "RAG-context-retrieval"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "Chen et al. - 2019 - The Cask Effect of Multi-source Content Delivery Measurement and Mitigation",
+  "doi": null,
+  "title": "The Cask Effect of Multi-source Content Delivery: Measurement and Mitigation",
+  "year": 2019,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "多源下载加速在23%情况下反而降低速度,违背直觉",
+  "problem_framing": "将木桶效应形式化为宏观类型异质性+微观参与时间多样性",
+  "key_insight": "加速效果不取决于最快源,而受制于贡献最短的源和参与时间差异",
+  "method_signature": "基于ε-greedy的特征贪婪选择+DPT驱动 shuffle",
+  "evaluation_criteria": "下载速度增长率(AR)和加速成功率(ASR)",
+  "negative_result_or_admitted_limitation": "37%的下载几乎无加速(增长0 KBps),多源策略有时反而降低成功率至50%以下",
+  "evidence_for_taste": [
+    "23% of downloads have worse performance after being upgraded",
+    "a decline in terms of delivery speed often occurs",
+    "sometimes even falling below 50%",
+    "approximately 37% of downloads are trivially accelerated",
+    "multi-source content delivery sometimes generates a worse download speed"
+  ],
+  "thinking_moves": [
+    "从宏观类型异质性+微观时序多样性双层解构木桶短板",
+    "用工程异常反推理论:多源加速竟有23%恶化",
+    "将多臂老虎机问题简化到特征层面而非个体层面",
+    "把DPT定义为准静态指标用于实时决策阈值"
+  ],
+  "topic_tags": [
+    "multi-source-download",
+    "cask-effect",
+    "DPT-participation-time",
+    "content-delivery-acceleration",
+    "contextual-bandit"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

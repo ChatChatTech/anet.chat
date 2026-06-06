@@ -1,0 +1,44 @@
+{
+  "paper_id": "Dong et al. - 2009 - Fine-grained boundary recognition in wireless ad hoc and sensor networks by topological methods",
+  "doi": null,
+  "title": "Fine-grained boundary recognition in wireless ad hoc and sensor networks by topological methods",
+  "year": 2009,
+  "venue": "MobiHoc",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有方法无法检测小洞,而网络实际中存在大量由节点失效形成的小空洞",
+  "problem_framing": "在无位置信息条件下,如何精确定位任意大小的网络边界洞",
+  "key_insight": "边界环不能用三角形填充,通过FGP变换保持基本群同时收缩图结构",
+  "method_signature": "FGP图变换提取骨架,最小2-基分离主边界环,间隙边最短路精化",
+  "evaluation_criteria": "能否检测任意大小的洞,特别是小洞,与WGM等先进方法对比",
+  "negative_result_or_admitted_limitation": "现有方法在小洞密集时难以区分,WGM的割支会合并连通",
+  "evidence_for_tast e": [
+    "fail to accurately locate boundaries",
+    "especially when small holes exist",
+    "The success of Kröller's design greatly depends",
+    "may not always be the case",
+    "Those methods implicitly assume holes are relatively far",
+    "Hence, the approach fails to really locate each hole",
+    "cut branches will be combined and connected together",
+    "This is the first location-free design that focuses on exactly finding boundary cycles"
+  ],
+  "thinking_moves": [
+    "先指出先前粗粒度方法无法处理小洞的问题",
+    "从代数拓扑角度形式化边界定义",
+    "利用三角形填充性质区分洞边界与可收缩结构",
+    "设计FGP变换在保持拓扑不变性下简化图",
+    "通过间隙边约束找到最紧凑的边界环",
+    "承认竞争方法在密集小洞场景下的失效"
+  ],
+  "topic_tags": [
+    "boundary-recognition",
+    "wireless-sensor-networks",
+    "topological-methods",
+    "graph-theory",
+    "connectivity-only-localization",
+    "hole-detection"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "无DOI信息,根据版权声明确认年份和会议 | md truncated to head40k+tail20k"
+}

@@ -1,0 +1,43 @@
+{
+  "paper_id": "2024_TPDS_Privacy-Preserving_Data_Selection_for_Horizontal_and_Vertical_Federated_Learning",
+  "doi": null,
+  "title": "Privacy-Preserving Data Selection for Horizontal and Vertical Federated Learning",
+  "year": 2024,
+  "venue": "IEEE Transactions on Parallel and Distributed Systems",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "FL系统中低质量训练样本导致模型准确率低、不稳定,但访问本地数据会违反隐私",
+  "problem_framing": "在预算约束下,选择高质量样本/特征的同时保护各方隐私",
+  "key_insight": "分层选择:先用DPP选高质量客户,再用梯度上界范数动态选重要且无错的样本",
+  "method_signature": "DPP+PSI分层客户样本选择+错误感知重要性采样",
+  "evaluation_criteria": "模型准确率、收敛速度、计算/通信开销",
+  "negative_result_or_admitted_limitation": "现有方法给错误样本更高优先级,导致在有噪声数据时性能严重下降",
+  "evidence_for_taste": [
+    "erroneous samples have significantly greater importance values than correct ones",
+    "Using upper bound norms is to reduce computation cost",
+    "those methods cannot be directly applied to FL systems",
+    "neither considers other data quality factors",
+    "large communication overhead since the massive parameters are transferred",
+    "unreasonable assumption, e.g., the existence of a trusted third party"
+  ],
+  "thinking_moves": [
+    "通过数据驱动分析归纳选择原则而非直接套用现有方法",
+    "把样本重要性估计问题分解为客户级和样本级的层次化选择",
+    "注意到错误样本具有异常大的梯度值这一反常现象并设计异常检测阈值",
+    "用梯度上界范数替代传统梯度范数以降低计算开销(只需一次前向传播)"
+  ],
+  "topic_tags": [
+    "federated-learning-client-selection",
+    "privacy-preserving-sample-selection",
+    "determinantal-point-process",
+    "gradient-norm-importance-sampling",
+    "PSI-based-feature-selection"
+  ],
+  "cites_own_work": [
+    "conference version [14]",
+    "FedSDG-FS [36]",
+    "efficient feature importance [37]"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

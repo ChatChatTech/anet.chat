@@ -1,0 +1,39 @@
+{
+  "paper_id": "A Survey on Deep Neural Network Partition over Cloud, Edge and End Devices",
+  "doi": "10.48550/arxiv.2304.10020",
+  "title": "A Survey on Deep Neural Network Partition over Cloud, Edge and End Devices",
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "DNNs越来越深/复杂但端设备资源受限,云高延迟,边有限资源,需要分而治之",
+  "problem_framing": "将DNN分区问题形式化为五维分类框架,统一描述现有方法",
+  "key_insight": "五维分类框架可完美定义任何现有DNN分区方法,提供统一描述语言",
+  "method_signature": "系统综述:文献收集→五维分类→统一数学模型→评价指标→挑战分析",
+  "evaluation_criteria": "延迟/能耗/精度/吞吐量/隐私/内存等多目标权衡",
+  "negative_result_or_admitted_limitation": "时间空间复杂度常被忽略;假设整个模型预先安装不现实;动态运行环境成本需研究",
+  "evidence_for_taste": [
+    "most DNN partition approaches are efficient in simulation environments",
+    "the time and space complexity of the partition algorithms are often ignored",
+    "Assuming simultaneous installation of the entire DNN model...is inappropriate",
+    "essential to study offloading cost of DNN inference in the dynamic runtime environment",
+    "Only papers published before December 2021 were considered"
+  ],
+  "thinking_moves": [
+    "将异质分布方法归类为五维张量,建立统一描述空间",
+    "从工程实践反推理论假设失效(仿效→实际部署鸿沟)",
+    "承认综述局限:筛选标准导致可能遗漏重要工作",
+    "自底向上归纳法:60篇论文→抽象框架→形式化描述",
+    "识别方法论盲点:复杂度分析被普遍忽视"
+  ],
+  "topic_tags": [
+    "DNN-partition-taxonomy",
+    "cloud-edge-end-collaboration",
+    "edge-inference-offloading",
+    "distributed-deep-learning",
+    "latency-energy-tradeoff"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "survey论文的方法论贡献是分类体系而非算法创新,品味信号来自其承认的领域局限和形式化抽象过程 | md truncated to head40k+tail20k"
+}

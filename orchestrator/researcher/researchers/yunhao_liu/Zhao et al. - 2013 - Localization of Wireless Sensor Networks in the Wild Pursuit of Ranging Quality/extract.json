@@ -1,0 +1,40 @@
+{
+  "paper_id": "Zhao et al. - 2013 - Localization of Wireless Sensor Networks in the Wild Pursuit of Ranging Quality",
+  "doi": null,
+  "title": "Localization of Wireless Sensor Networks in the Wild: Pursuit of Ranging Quality",
+  "year": 2013,
+  "venue": "IEEE/ACM Transactions on Networking",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "GreenOrbs森林部署中现有定位方法误差大,因RSSI不稳定、非均匀分布、测距误差普遍存在",
+  "problem_framing": "测距质量包含锚节点位置精度和测距精度两方面,需在迭代中持续提升",
+  "key_insight": "好节点识别与坏链接权重抑制的迭代交替——滤出好节点作为锚,再标定坏节点",
+  "method_signature": "CDL:虚拟跳数初始化→邻域匹配滤除坏节点→加权鲁棒估计校准",
+  "evaluation_criteria": "GreenOrbs实测定位误差(米),对比DV-hop/MDS-MAP/SISR",
+  "negative_result_or_admitted_limitation": "直接用对数阴影模型校准所有节点输出更差;无过滤时好节点精度反而下降",
+  "evidence_for_taste": [
+    "ranging quality determines the overall localization accuracy",
+    "Model-based filtration is infeasible",
+    "the output to be even worse than before",
+    "the negative impact of bad nodes may be serious and cannot be neglected"
+  ],
+  "thinking_moves": [
+    "从野外实测异常反推理论假设失效",
+    "将定位问题重构为测距质量提升问题",
+    "通过迭代滤-校交替建立置信传播链",
+    "以序列匹配容忍RSSI不规则性而非建模"
+  ],
+  "topic_tags": [
+    "WSN localization",
+    "RSSI ranging quality",
+    "GreenOrbs forest deployment",
+    "range-free hybrid",
+    "iterative calibration"
+  ],
+  "cites_own_work": [
+    "GreenOrbs canopy closure 2009",
+    "SISR approach Kung 2009"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

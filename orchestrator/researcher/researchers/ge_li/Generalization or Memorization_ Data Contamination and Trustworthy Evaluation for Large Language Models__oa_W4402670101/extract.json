@@ -1,0 +1,41 @@
+{
+  "paper_id": "Generalization or Memorization_ Data Contamination and Trustworthy Evaluation for Large Language Models__oa_W4402670101",
+  "doi": "10.18653/v1/2024.findings-acl.716",
+  "title": "Generalization or Memorization: Data Contamination and Trustworthy Evaluation for Large Language Models",
+  "year": 2024,
+  "venue": "Findings of ACL",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "LLMs训练数据巨大且来源广泛，可能隐式包含测试数据，导致评估性能被高估，需要检测数据污染并保证评估可信度",
+  "problem_framing": "将数据污染检测定义为通过LLM输出分布的峰度(peakedness)来识别，黑盒条件下仅需采样文本即可检测",
+  "key_insight": "训练数据会使LLM输出分布变得更集中（峰度增加），通过编辑距离分布的峰度可以检测隐式和显式污染",
+  "method_signature": "CDD用编辑距离分布峰度检测污染，TED通过排除峰度和去重修正评估分布",
+  "evaluation_criteria": "Accuracy/F1/AUC检测效果，Pass@1评估性能，TED削减污染导致的性能提升至66.9%",
+  "negative_result_or_admitted_limitation": "使用LoRA模拟污染而非全参数微调，假设基础LLM无污染且构建开销大(>2100 GPU小时)",
+  "evidence_for_taste": [
+    "we are the first to consider from the standpoint of LLMs' output distribution",
+    "the impact of data contamination on the LLM's output distribution is substantial",
+    "the performance keeps improving on leaked data but stagnates and even degrades on similar data",
+    "the density of zero edit distance escalates sharply to more than 20 times larger than the original"
+  ],
+  "thinking_moves": [
+    "从输出统计特性反推训练记忆：分布峰度是污染的指纹",
+    "将黑盒检测问题转化为分布建模问题，仅需采样文本",
+    "先建立动机性示例(CodeLlama在HumanEval上的反常现象)，再形式化方法",
+    "检测与修正一体化：PEAK函数既用于检测也用于修正分布"
+  ],
+  "topic_tags": [
+    "LLM-data-contamination",
+    "output-distribution-peakedness",
+    "edit-distance-distribution",
+    "trustworthy-evaluation",
+    "black-box-detection"
+  ],
+  "cites_own_work": [
+    "Dong et al. 2023a (CodeScore)",
+    "Dong et al. 2023b (Self-collaboration code generation)",
+    "Jiang et al. 2023 (Self-planning code generation)",
+    "Li et al. 2024 (DevEval)"
+  ],
+  "extraction_quality": "full"
+}

@@ -1,0 +1,37 @@
+{
+  "paper_id": "2018_INFOCOM_Finding_the_Stars_in_the_Fireworks_Deep_Understanding_of_Motion_Sensor_Fingerprint",
+  "doi": null,
+  "title": "Finding the Stars in the Fireworks: Deep Understanding of Motion Sensor Fingerprint",
+  "year": 2018,
+  "venue": "INFOCOM",
+  "venue_tier": "top",
+  "role": "unknown",
+  "motivation": "硬件指纹可唯一标识移动设备进而识别用户,但现有方法依赖手工特征且在动态场景下性能大幅下降",
+  "problem_framing": "从理论容量、鲁棒特征提取、隐私保护三个维度系统性理解传感器指纹能力",
+  "key_insight": "多LSTM网络自动学习被用户运动噪声掩盖的硬件本质特征,而非依赖手工设计特征",
+  "method_signature": "多LSTM指纹提取+生成对抗匿名化模型",
+  "evaluation_criteria": "F-score、准确率、匿名化后步数误差、L2距离、推理延迟",
+  "negative_result_or_admitted_limitation": "同一用户使用多设备时准确率降至89%,难以分离人与设备指纹",
+  "evidence_for_taste": [
+    "handcrafted features cannot capture the essential characteristics",
+    "human factor indeed increases the difficulty",
+    "the accuracy reduces to 89%",
+    "It takes us about 5 seconds to extract those 70 features"
+  ],
+  "thinking_moves": [
+    "用Balls-into-Bins概率模型形式化指纹容量问题",
+    "通过静态vs动态场景对比揭示手工特征的脆弱性",
+    "用对抗训练同时优化匿名化效果与数据保真度",
+    "从设备级→品牌级→用户级分层验证指纹区分能力"
+  ],
+  "topic_tags": [
+    "motion-sensor-fingerprint",
+    "device-authentication",
+    "multi-LSTM",
+    "privacy-anonymization",
+    "generative-adversarial"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

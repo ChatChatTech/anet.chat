@@ -1,0 +1,40 @@
+{
+  "paper_id": "Wang et al. - 2025 - Ultra-High-Frequency Harmony mmWave Radar and Event Camera Orchestrate Accurate Drone Landing",
+  "doi": null,
+  "title": "Ultra-High-Frequency Harmony: mmWave Radar and Event Camera Orchestrate Accurate Drone Landing",
+  "year": 2025,
+  "venue": "SenSys '25",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "无人机配送市场蓬勃发展，但降落阶段10厘米误差即可导致目标损坏或充电口错失，传统帧相机采样频率不足150Hz需求",
+  "problem_framing": "在嘈杂环境下从事件相机和毫米波雷达的异构测量中精确提取无人机相关数据并实现高频融合定位",
+  "key_insight": "事件相机微秒级采样延迟与毫米波雷达高频采样天然契合，两者结合可实现时间一致性+空间互补性",
+  "method_signature": "CCT跨模态协同跟踪+GAJO因子图自适应联合优化",
+  "evaluation_criteria": "定位精度0.083m、延迟5.15ms，超越SOTA方法48%和62%以上",
+  "negative_result_or_admitted_limitation": "现有算法噪声过滤率精确率和召回率均低于65%，EKF/PF方法存在累积漂移误差",
+  "evidence_for_tightness": [
+    "现有算法的处理延迟使其不适合低延迟定位任务",
+    "这些限制源于传统帧相机的固有物理限制",
+    "无法轻松通过软件解决方案解决"
+  ],
+  "thinking_moves": [
+    "从硬件物理限制出发寻找sensor-level突破，而非算法层面修补",
+    "将无人机螺旋桨周期性微运动作为区分性特征进行信号提取",
+    "将2D成像与深度感知的空间互补性建模为因子图优化约束",
+    "通过benchmark直接否定现有方法（recall和precision<65%）来定义问题边界"
+  ],
+  "topic_tags": [
+    "mmWave-event-camera-fusion",
+    "drone-landing-localization",
+    "factor-graph-optimization",
+    "event-camera-tracking",
+    "periodic-micro-motion-detection"
+  ],
+  "cites_own_work": [
+    "EventTracker (Luo et al. 2024)",
+    "TransformLoc (Wang et al. 2024)",
+    "Drone obstacle avoidance (Xu et al. 2023)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

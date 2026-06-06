@@ -1,0 +1,38 @@
+{
+  "paper_id": "PrivSplit__A_Lossless_Method_for_Prompt_Privacy_in_Distributed_PEFT__CR_ (1)",
+  "doi": null,
+  "title": "PrivSplit: A Lossless Method for Prompt Privacy in Distributed Parameter-Efficient Fine-Tuning",
+  "year": 2026,
+  "venue": "WWW '26",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "分布式PEFT中云端可通过嵌入向量反转攻击重构用户原始提示,现有隐私保护方法存在性能损失或计算开销过大",
+  "problem_framing": "如何在保证模型性能完全无损的前提下实现输入提示的隐私保护",
+  "key_insight": "将输入嵌入拆分为公开和私密两部分,通过在首层LoRA注入精心设计的补偿项来完美恢复私密部分的影响",
+  "method_signature": "Split and Compensate策略:嵌入拆分+补偿项注入实现数学上完全无损",
+  "evaluation_criteria": "模型准确率(utility)和攻击成功率(ASR)对比基线方法",
+  "negative_result_or_admitted_limitation": "无现有方法能同时提供强隐私保护、零性能损失和低计算开销;输出隐私扩展引入显著通信增量",
+  "evidence_for_taste": [
+    "the influence of this withheld private part is not simply discarded but is perfectly reintroduced",
+    "breaking the conventional privacy-performance trade-off",
+    "mathematically identical to that of a non-private execution",
+    "vanishingly small amount of information",
+    "zero additional communication overhead"
+  ],
+  "thinking_moves": [
+    "从云端反转攻击的观察出发,识别出嵌入反转的可行性源于云端持有词嵌入矩阵",
+    "将隐私保护问题重构为信息注入问题——补偿项是信息载体",
+    "利用LoRA架构约束设计局部可计算但云端无法推算的补偿机制",
+    "通过信息论严格证明隐私保证的极限而非仅做实验验证"
+  ],
+  "topic_tags": [
+    "LLM-prompt-privacy",
+    "distributed-PEFT",
+    "lossless-privacy",
+    "inversion-attack-defense",
+    "LoRA-compensation"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

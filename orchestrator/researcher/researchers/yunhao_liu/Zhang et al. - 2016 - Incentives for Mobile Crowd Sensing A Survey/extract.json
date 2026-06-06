@@ -1,0 +1,41 @@
+{
+  "paper_id": "Zhang et al. - 2016 - Incentives for Mobile Crowd Sensing A Survey",
+  "doi": null,
+  "title": "Incentives for Mobile Crowd Sensing: A Survey",
+  "year": 2016,
+  "venue": "IEEE Communications Surveys & Tutorials",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "用户缺乏参与感知的足够动机，感知任务消耗计算、通信、能源资源并泄露位置隐私",
+  "problem_framing": "将激励分为娱乐、服务、金钱三类，每类强调用户不同需求",
+  "key_insight": "娱乐和服务激励依赖具体任务，货币激励更具通用性可适用于多种感知任务",
+  "method_signature": "综述分类方法，整理各激励类型的代表性工作和结构特征",
+  "evaluation_criteria": "用户参与率、空间时间覆盖、成本效率、平台效用",
+  "negative_result_or_admitted_limitation": "货币激励中HIDDEN方案效果最差，MACRO参与率最低；娱乐/服务激励通用性受限；现有机制忽视隐私保护",
+  "evidence_for_taste": [
+    "ordinary individuals will not participate in sensing tasks",
+    "monetary incentives are mostly designed for a general framework",
+    "The tight coupling between mechanisms limits the generalization",
+    "HIDDEN incentive payment scheme is the least effective",
+    "largely ignore the privacy protection of participants"
+  ],
+  "thinking_moves": [
+    "将激励按用户需求类型三分",
+    "对比各激励类型的适用性与通用性",
+    "从游戏理论角度设计诚实激励",
+    "识别支付预期差异对参与的影响"
+  ],
+  "topic_tags": [
+    "mobile-crowd-sensing",
+    "incentive-mechanisms",
+    "reverse-auction",
+    "game-theoretic-incentives",
+    "participatory-sensing"
+  ],
+  "cites_own_work": [
+    "Zhang et al. 2014 trajectory estimation",
+    "Yang et al. 2015 indoor localization"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

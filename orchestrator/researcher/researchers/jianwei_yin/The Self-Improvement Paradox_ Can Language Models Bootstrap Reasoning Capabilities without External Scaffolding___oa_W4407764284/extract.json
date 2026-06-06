@@ -1,0 +1,37 @@
+{
+  "paper_id": "The Self-Improvement Paradox_ Can Language Models Bootstrap Reasoning Capabilities without External Scaffolding___oa_W4407764284",
+  "doi": "10.48550/arxiv.2502.13441",
+  "title": "The Self-Improvement Paradox: Can Language Models Bootstrap Reasoning Capabilities without External Scaffolding?",
+  "year": 2025,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "真实数据枯竭+人工标注成本高,LLM自我改进依赖外部信号导致无法实现真正自举",
+  "problem_framing": "将自改进问题形式化为:能否仅靠模型自身生成的合成数据微调模型本身而不借助任何外部监督",
+  "key_insight": "对齐模型自身可通过\"诱饵提示→拒绝采样去重→多数投票共识\"三步生成高质量域内QA对,实现真正的零监督自改进",
+  "method_signature": "CRESCENT:诱饵提示引导问题生成+拒绝采样自去重+多数投票共识增强",
+  "evaluation_criteria": "零样本/少样本数学推理准确率+一般能力保持+知识蒸馏效果",
+  "negative_result_or_admitted_limitation": "实验仅限数学推理域,对齐模型限制:未探索基模型适用性,Magpie类方法会降低数学能力",
+  "evidence_for_taste": [
+    "existing approaches rely heavily on external seed datasets",
+    "zero external data, nor assistance from third-party models",
+    "Such data may improve instruction-following but will degrade fundamental capabilities",
+    "performance substantially inferior (-18.2%) to CRESCENT",
+    "may constrain the quality of the distilled data"
+  ],
+  "thinking_moves": [
+    "把'模型崩溃'担忧重构为可控的自生成数据过程",
+    "先通过诱饵提示锁定域空间,再通过拒绝采样探索多样性,最后用多数投票选取置信答案",
+    "从分解式认知出发:相关性-多样性-准确性三个维度各自对应技术步骤",
+    "把自改进问题从'依赖外部信号'重新定义为'三步自洽循环'"
+  ],
+  "topic_tags": [
+    "LLM自改进",
+    "拒绝采样去重",
+    "多数投票共识",
+    "合成数据自举",
+    "数学推理能力提升"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full"
+}

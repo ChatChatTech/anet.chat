@@ -1,0 +1,40 @@
+{
+  "paper_id": "A Design Method of Reusable Components Based on Feature Matching",
+  "doi": null,
+  "title": "A Design Method of Reusable Components Based on Feature Matching",
+  "year": null,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有特征匹配方法(如F³)过度依赖人工设定权重,难以应用于实践",
+  "problem_framing": "从领域业务模型中抽取可复用业务组件,需避免手动设权重的问题",
+  "key_insight": "用图结构层次聚类+扩展Sorenson系数自动计算实体相似度,无需人工权重",
+  "method_signature": "基于图的层次聚类+扩展Sorenson系数+领域词库语义相似度",
+  "evaluation_criteria": "通过质量度量指标评价业务组件质量",
+  "negative_result_or_admitted_limitation": "现有方法结果过度依赖人工设定的权重,难以实践",
+  "evidence_for_taste": [
+    "results of partition excessively depend on weights",
+    "difficult to apply into practice",
+    "avoid setting weight by manual",
+    "quality metrics to evaluate"
+  ],
+  "thinking_moves": [
+    "先批判现有方法人工设权重的缺陷,再提出自动计算相似度的方法",
+    "将业务活动分解为五方面(输入/输出对象、触发/升起事件、业务操作)",
+    "用图结构存储实体间相似度关系,支持层次聚类",
+    "将组件特征分为必需/可选/替代三类,便于灵活复用"
+  ],
+  "topic_tags": [
+    "组件复用",
+    "特征匹配",
+    "层次聚类",
+    "领域业务模型",
+    "Sorenson系数"
+  ],
+  "cites_own_work": [
+    "ZHAN Dechen, XU Xiaofei, LI Chengyan. Research on framework of ERP system with double control from time and cost",
+    "WANG Zhong-jie, XU Xiao-fei, ZHAN De-chen RO-BPM: A reconfiguration-oriented business process model"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文缺少明确年份和发表 venue 信息,只能从引用文献推测约为2000年代初期。方法部分完整,但评估验证细节略显单薄。"
+}

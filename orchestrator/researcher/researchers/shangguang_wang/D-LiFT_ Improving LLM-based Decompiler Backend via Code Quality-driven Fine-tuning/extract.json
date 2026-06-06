@@ -1,0 +1,40 @@
+{
+  "paper_id": "D-LiFT_ Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning",
+  "doi": "10.48550/arxiv.2506.10125",
+  "title": "D-LIFT: Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning",
+  "year": 2025,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "first",
+  "motivation": "LLM改进了反编译代码可读性但引入语义错误，准确率被牺牲",
+  "problem_framing": "如何在提升可读性的同时保证反编译输出的句法与语义正确性",
+  "key_insight": "准确率优先验证，通过D-SCORE引导强化学习微调，仅对通过准确率检查的候选代码奖励可读性",
+  "method_signature": "D-SCORE多维评分 + GRPO强化学习微调 + 推理期三路选择",
+  "evaluation_criteria": "D-SCORE综合评分衡量句法/语义/可读性三维度质量提升比例",
+  "negative_result_or_admitted_limitation": "LLM在细节上频繁犯错，原始准确代码经LLM处理后平均44.2%变得不准确，原来不准确的代码改进率仅8.02%",
+  "evidence_for_taste": [
+    "preserving accuracy while improving readability",
+    "introducing new errors and relying on unreliable accuracy validation",
+    "LLMs frequently make errors on small details",
+    "trades accuracy for readability",
+    "new inaccuracies are found in 93.2% of the functions"
+  ],
+  "thinking_moves": [
+    "将准确率问题从隐式假设变成显式约束",
+    "用评分机制把多个LLM候选解转化为可比较信号",
+    "发现单一ground truth不足以训练，改用GRPO相对归一化",
+    "语义检查需依赖二进制而非源码，避免source-dependent假设"
+  ],
+  "topic_tags": [
+    "decompiler-quality-assessment",
+    "LLM-fine-tuning-reinforcement-learning",
+    "semantic-verification-symbolic-execution",
+    "code-readability-metrics",
+    "binary-analysis"
+  ],
+  "cites_own_work": [
+    "D-Helix"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

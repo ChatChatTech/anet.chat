@@ -1,0 +1,37 @@
+{
+  "paper_id": "Reasoning on Context Satisfiability for Service Recommendation in Mobile Network",
+  "doi": null,
+  "title": "Reasoning on Context Satisfiability for Service Recommendation in Mobile Network",
+  "year": 2011,
+  "venue": "Journal of Digital Information Management",
+  "venue_tier": "regional",
+  "role": "first",
+  "motivation": "移动设备资源受限，需要更精准的服务推荐列表",
+  "problem_framing": "将服务消费者上下文与执行前提条件匹配问题",
+  "key_insight": "基于轻量级DL形式化前提条件，实现上下文可满足性推理",
+  "method_signature": "上下文本体+DL前提条件形式化+可满足性推理",
+  "evaluation_criteria": "案例研究验证方法可行性",
+  "negative_result_or_admitted_limitation": "现有工作未提供前提条件建模方案，仅简单建模为ABox断言",
+  "evidence_for_taste": [
+    "current work does not provide solutions",
+    "simplified DL alleviates the complex",
+    "neglected the fulfillment of precondition",
+    "should not be returned"
+  ],
+  "thinking_moves": [
+    "将服务推荐问题重新定义为前提条件可满足性检查",
+    "通过DL形式化将定性上下文匹配转化为可判定推理",
+    "区分服务实例可执行性与Web服务可实现性两种推理模式",
+    "指出前人仅关注接口/行为/QoS而忽视前提条件的缺失"
+  ],
+  "topic_tags": [
+    "mobile-service-recommendation",
+    "DL-precondition-reasoning",
+    "context-ontology",
+    "service-discovery-context-matching",
+    "ubiquitous-computing"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文为会议/期刊文章摘要形式，包含完整引言、方法框架和案例，但无量化实验数据。方法创新点明确但评估证据较弱。"
+}

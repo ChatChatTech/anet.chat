@@ -1,0 +1,40 @@
+{
+  "paper_id": "ERA-CoT_ Improving Chain-of-Thought through Entity Relationship Analysis__oa_W4402671544",
+  "doi": "10.18653/v1/2024.acl-long.476",
+  "title": "ERA-CoT: Improving Chain-of-Thought through Entity Relationship Analysis",
+  "year": 2024,
+  "venue": "ACL",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "LLMs struggle with complex multi-entity scenarios due to implicit relationships requiring multi-step reasoning.",
+  "problem_framing": "Decompose CoT reasoning into entity extraction, explicit/implicit relationship analysis, and relationship discrimination.",
+  "key_insight": "Filtering unreliable implicit relationships via scoring threshold eliminates erroneous relations that otherwise degrade reasoning.",
+  "method_signature": "Five-step ERA-CoT pipeline: entity extraction, explicit RE, implicit inference, discrimination scoring, Q&A.",
+  "evaluation_criteria": "Accuracy (EM) on 6 datasets across commonsense, logical, and mathematical reasoning.",
+  "negative_result_or_admitted_limitation": "Performance improvement is not significant for tasks with fewer entity relationships like symbolic reasoning.",
+  "evidence_for_taste": [
+    "implicit relationship inference is prone to errors",
+    "A reasonable number of implicit relationships contributes to a better understanding",
+    "excessively large number may lead to hallucinations",
+    "If the relationships are correctly inferred, the model is likely to answer questions correctly",
+    "Small LLMs still possess the ability to identify implicit relationships"
+  ],
+  "thinking_moves": [
+    "Identify that CoT fails on implicit entity relations, then decompose the problem into extractable sub-tasks",
+    "Use Self-Consistency to filter noisy NER and relation extraction outputs",
+    "Decompose relationship inference into explicit (directly stated) and implicit (multi-hop) components",
+    "Apply ablation to discover which step contributes most to failure (implicit inference errors dominate)",
+    "Tune k (number of implicit relations) to balance capability gain vs hallucination risk",
+    "Set threshold v_th to eliminate low-confidence inferred relations rather than forcing all into reasoning"
+  ],
+  "topic_tags": [
+    "LLM-reasoning",
+    "chain-of-thought",
+    "entity-relationship-analysis",
+    "zero-shot-prompting",
+    "multi-hop-reasoning"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

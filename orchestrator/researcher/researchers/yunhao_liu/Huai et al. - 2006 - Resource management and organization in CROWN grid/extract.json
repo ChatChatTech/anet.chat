@@ -1,0 +1,42 @@
+{
+  "paper_id": "Huai et al. - 2006 - Resource management and organization in CROWN grid",
+  "doi": null,
+  "title": "Resource Management and Organization in CROWN Grid",
+  "year": 2006,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "集中式资源管理存在单点失效问题,大规模网格需要高效的分布式机制",
+  "problem_framing": "如何最大化资源利用率并解决动态环境中的搭便车问题",
+  "key_insight": "通过服务俱乐部(S-Club)在GIS网格上构建覆盖网络,同类服务聚类以减少搜索延迟和流量",
+  "method_signature": "S-Club服务俱乐部Overlay + 信任激励双层P2P架构",
+  "evaluation_criteria": "平均响应时间、总流量开销、优化比率、分配比率",
+  "negative_result_or_admitted_limitation": "俱乐部构建需权衡潜在收益与维护成本,需动态调整以适应服务热度变化",
+  "evidence_for_taste": [
+    "single point of failure",
+    "we have to be careful on the trade-off",
+    "potential benefit and the cost incurred",
+    "some types of services become less popular",
+    "protect light users against starvation"
+  ],
+  "thinking_moves": [
+    "把GIS网格重新组织为服务俱乐部覆盖网络",
+    "借鉴市场定价原理构建信任激励模型",
+    "软硬激励结合解决搭便车问题",
+    "用分配比率保护轻量用户防止饥饿"
+  ],
+  "topic_tags": [
+    "grid-resource-management",
+    "service-discovery-overlay",
+    "trust-incentive-mechanism",
+    "P2P-architecture",
+    "CROWN-grid"
+  ],
+  "cites_own_work": [
+    "Hu et al. 2005",
+    "Huai et al. 2005",
+    "Xiao et al. 2005"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "论文为邀请论文,未明确标注会议名称,但引用了IEEE Services Computing等相关会议成果"
+}

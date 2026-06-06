@@ -1,0 +1,41 @@
+{
+  "paper_id": "2022_TMC_Thumbup",
+  "doi": null,
+  "title": "ThumbUp: Secure Smartwatch Controller for Smart Homes using Simple Hand Gestures",
+  "year": 2022,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "venue_tier": "top",
+  "role": "first",
+  "motivation": "现有智能家居控制系统无法兼顾安全性与便捷性，用户需要一种能通过简单手势实现身份识别与指令控制的轻量级方案",
+  "problem_framing": "将问题分解为用户识别（二分类：合法/攻击者）和指令识别（多分类：9种手势），并定义需解决的三大挑战：训练数据稀缺、信号弱、实时性要求",
+  "key_insight": "简单手指动作的IMU信号中存在用户独特生物特征，通过Auto-Encoder过滤掉用户身份信息反而能提升手势分类的通用性",
+  "method_signature": "BiLSTM-Attention网络提取时频特征，AE滤波重构STFT图谱，RF建模时序上下文关联",
+  "evaluation_criteria": "用户分类准确率、认证EER、指令识别准确率、用户友好度排名",
+  "negative_result_or_admitted_limitation": "用户躯体运动会极大干扰系统（creates a huge disruption），仅用10个样本冷启动限制了识别精度上限",
+  "evidence_for_taste": [
+    "gestures must be sufficiently convenient",
+    "not convenient enough for daily fast control",
+    "with both user-friendliness and usability",
+    "without additional sensors",
+    "quite resistant to changes in humidity"
+  ],
+  "thinking_moves": [
+    "从生物力学角度论证手指动作的不可模仿性：肌肉受潜意识控制",
+    "将用户身份视为分类噪音，通过对抗训练将其过滤反而提升泛化能力",
+    "用AE在隐私保护与特征可用性之间取得工程折中",
+    "将时序上下文建模从HMM简化为随机森林以满足实时性约束",
+    "承认冷启动样本量限制对精度的本质影响"
+  ],
+  "topic_tags": [
+    "smartwatch-authentication",
+    "IMU-gesture-biometrics",
+    "autoencoder-filter",
+    "BiLSTM-attention",
+    "smart-home-control"
+  ],
+  "cites_own_work": [
+    "Thumbup (2020 PerCom)"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

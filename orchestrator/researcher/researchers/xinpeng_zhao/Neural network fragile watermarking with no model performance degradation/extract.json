@@ -1,0 +1,37 @@
+{
+  "paper_id": "Neural network fragile watermarking with no model performance degradation",
+  "doi": "10.48550/arxiv.2208.07585",
+  "title": "Neural network fragile watermarking with no model performance degradation",
+  "year": 2022,
+  "venue": "ICIP",
+  "venue_tier": "strong",
+  "role": "co-author",
+  "motivation": "Pre-trained DNN models may be injected with backdoors through malicious finetuning, risking security in applications like autonomous driving.",
+  "problem_framing": "Fragile watermarking to detect model modification: watermarks should be sensitive to fine-tuning so any modification is immediately detectable.",
+  "key_insight": "Using variance regularization on prediction probabilities across categories makes generated triggers sensitive to model parameter changes.",
+  "method_signature": "Train generative model with L_cla + a·Var(P) loss to create fragile triggers without modifying target classifier.",
+  "evaluation_criteria": "AccTri measures difference between predicted labels and secret key; AccTri<1.0 indicates model modification.",
+  "negative_result_or_admitted_limitation": "When weight a=1, AccTri does not decline in first epoch—detection may have omissions.",
+  "evidence_for_taste": [
+    "fragile is opposite to robustness",
+    "no degradation in performances",
+    "sensitive to model modification",
+    "AccTri declines sharply",
+    "sensitivity of trigger set"
+  ],
+  "thinking_moves": [
+    "把检测模型完整性问题reframe成通信验证问题",
+    "通过Ablation study验证Var正则项是生成脆弱触发的关键",
+    "对比白盒和黑盒方法的局限性，突出无需模型细节的黑盒方案"
+  ],
+  "topic_tags": [
+    "neural-network-watermarking",
+    "fragile-trigger",
+    "backdoor-detection",
+    "model-integrity-verification",
+    "generative-model"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": ""
+}

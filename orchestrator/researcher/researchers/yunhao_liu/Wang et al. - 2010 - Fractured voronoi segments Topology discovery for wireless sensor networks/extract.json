@@ -1,0 +1,39 @@
+{
+  "paper_id": "Wang et al. - 2010 - Fractured voronoi segments Topology discovery for wireless sensor networks",
+  "doi": null,
+  "title": "Fractured Voronoi Segments: Topology Discovery for Wireless Sensor Networks",
+  "year": 2010,
+  "venue": "null",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有方法依赖位置信息、UDG模型或规则信号,在实际部署中不可用或失效",
+  "problem_framing": "仅用连接信息检测传感器网络边界和孔洞,不依赖几何知识和简化通信模型",
+  "key_insight": "若在网络连通图上构建Voronoi图,边界会阻断Voronoi线段形成断裂点",
+  "method_signature": "虚拟Voronoi图(VVD)方法:选站点→建Voronoi图→检测断裂点→连边界",
+  "evaluation_criteria": "稀疏网络检测精度、网络不规则性容忍度、通信开销效率",
+  "negative_result_or_admitted_limitation": "Wang等人方法在信号不规则网络中心区域误报大空洞",
+  "evidence_for_taste": [
+    "misreports many cut pairs",
+    "most existing approaches fail",
+    "prevents to use the geometric information",
+    "none previous studies consider this problem",
+    "hop count information to approximate the distance"
+  ],
+  "thinking_moves": [
+    "把感知问题重新几何化:边界检测→Voronoi图断裂",
+    "从工程异常反推理论假设失效:不规则信号→最短路径树失效",
+    "先构建粗糙骨架再逐步细化:cut nodes→coarse boundary→tight boundary",
+    "释放过度假设获得鲁棒性:不依赖UDG模型",
+    "局部操作限制全局开销:voronoi cell内洪水"
+  ],
+  "topic_tags": [
+    "WSN-boundary-detection",
+    "Voronoi-diagram",
+    "connectivity-only-localization",
+    "anisotropic-network",
+    "topology-discovery"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文未明确标注会议名称,venue无法确认。方法细节完整,但缺少对应作者角色说明,role基于署名顺序推断。"
+}

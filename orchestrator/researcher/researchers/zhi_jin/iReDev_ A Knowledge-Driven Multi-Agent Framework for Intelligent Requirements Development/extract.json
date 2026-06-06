@@ -1,0 +1,41 @@
+{
+  "paper_id": "iReDev_ A Knowledge-Driven Multi-Agent Framework for Intelligent Requirements Development",
+  "doi": "10.48550/arxiv.2507.13081",
+  "title": "iReDev: A Knowledge-Driven Multi-Agent Framework for Intelligent Requirements Development",
+  "year": 2025,
+  "venue": "ACM Trans. Softw. Eng. Methodol.",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "Requirements development is time-consuming and labor-intensive, yet existing LLM multi-agent systems provide limited support for this critical phase.",
+  "problem_framing": "Current multi-agent frameworks ignore expert knowledge injection, lack dynamic collaboration mechanisms, and overlook human-agent collaboration in requirements engineering.",
+  "key_insight": "Injecting structured expert knowledge (methodologies, standards, heuristics) into agents via chain-of-thought enables them to simulate real requirements engineers and produce higher-quality artifacts.",
+  "method_signature": "Six knowledge-driven agents with event-driven artifact pool and human-in-the-loop.",
+  "evaluation_criteria": "BLEU, BertScore, G-Eval completeness/correctness/cohesion on user requirements lists, use case models, and SRS documents.",
+  "negative_result_or_admitted_limitation": "Current framework depends on manually extracting knowledge; knowledge is treated as static asset, not automatically evolved.",
+  "evidence_for_taste": [
+    "LLMs tend not to achieve satisfactory performance",
+    "lack a reasoning process, resulting in unsatisfactory performance",
+    "existing works only assign agents as roles, without considering",
+    "The monitoring scope for each agent can be customized",
+    "The knowledge can be parsed and extracted manually or using NLP"
+  ],
+  "thinking_moves": [
+    "将需求开发重新定义为多智能体协作系统，而非单一LLM任务",
+    "从权威文献和专家经验中提取结构化知识，而非仅依赖LLM内部知识",
+    "采用黑板机制的事件驱动通信，支持需求迭代和反馈循环",
+    "将人类知识作为智能体设计核心，而非事后追加",
+    "通过多种指标组合评估，而非单一自动化指标"
+  ],
+  "topic_tags": [
+    "LLM-multi-agent-requirements-engineering",
+    "knowledge-driven-agent",
+    "human-in-the-loop",
+    "event-driven-communication",
+    "chain-of-thought-prompting"
+  ],
+  "cites_own_work": [
+    "MARE"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

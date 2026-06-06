@@ -1,0 +1,37 @@
+{
+  "paper_id": "Constructive Steganography by Tangles",
+  "doi": "10.3837/tiis.2018.08.020",
+  "title": "Constructive Steganography by Tangles",
+  "year": 2018,
+  "venue": "KSII Transactions on Internet and Information Systems",
+  "venue_tier": "regional",
+  "role": "corresponding",
+  "motivation": "传统修改式隐写不安全,需用不修改载体的构造式隐写来对抗检测",
+  "problem_framing": "把隐写问题重新定义为按密文构造图像,而非修改已有图像",
+  "key_insight": "用细胞库将图形特征映射为二进制数据,通过在轮廓上绘制图形携带秘密",
+  "method_signature": "基于轮廓分组和图形操作符,通过细胞库在 tangle 图中构造嵌入",
+  "evaluation_criteria": "嵌入容量、视觉效果、抗隐写分析能力、JPEG抗压缩性",
+  "negative_result_or_admitted_limitation": "Rich-Model 无法区分干净与隐写 tangle 图像,两者检测错误率均约2%",
+  "evidence_for_taste": [
+    "使用 Rich-Model 做分析",
+    "传统隐写方法不如以前安全",
+    "传统隐写分析不适用于此类隐写",
+    "生成式图像与自然图像差异大",
+    "需要较大质量因子保证提取正确"
+  ],
+  "thinking_moves": [
+    "把隐写问题从修改载体 frame 成从零构造载体",
+    "利用 tangle 图像与自然图像的结构差异来逃避检测",
+    "通过容量-鲁棒性权衡来确定 JPEG 压缩质量阈值"
+  ],
+  "topic_tags": [
+    "constructive steganography",
+    "tangle pattern generation",
+    "texture synthesis steganography",
+    "JPEG robustness",
+    "coverless information hiding"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

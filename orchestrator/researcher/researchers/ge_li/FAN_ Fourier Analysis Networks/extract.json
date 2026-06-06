@@ -1,0 +1,40 @@
+{
+  "paper_id": "FAN_ Fourier Analysis Networks",
+  "doi": "10.48550/arxiv.2410.02675",
+  "title": "FAN: Fourier Analysis Networks",
+  "year": 2024,
+  "venue": "arXiv",
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有通用神经网络难以建模周期性,在训练域外泛化能力弱",
+  "problem_framing": "周期性建模能力应随网络深度扩展,且隐藏层特征可用于后续层的周期建模",
+  "key_insight": "通过FAN层同时引入傅里叶分量与非线性激活,使Fourier系数表示能力随深度正相关",
+  "method_signature": "FAN层=[cos(W_px)||sin(W_px)||σ(B̄_p+W̄_px)],替换MLP层",
+  "evaluation_criteria": "周期性函数拟合(OOD泛化),符号公式,时序预测,语言建模任务上的Loss/Acc/MSE对比",
+  "negative_result_or_admitted_limitation": "FNN和FSNN无法拟合语言建模任务;FTNN在复杂周期建模上表现差,参数更多",
+  "evidence_for_taste": [
+    "existing neural networks face difficulties in fitting periodic functions",
+    "capacity to fit the Fourier coefficients is independent of the depth",
+    "FNN and FSNN cannot fit language modeling tasks",
+    "FTNN performs poorly on complex periodic modeling tasks",
+    "KAN performance declines as the number of parameters increases",
+    "training loss may have diverged considerably from the distribution of the test data"
+  ],
+  "thinking_moves": [
+    "发现现有Fourier网络深度增加时傅里叶系数拟合能力不增,定位为核心瓶颈",
+    "从傅里叶级数公式出发,逐步矩阵化推导网络结构",
+    "提出两条设计原则后构建FAN层,满足深度可扩展性与各层可用性",
+    "通过对比实验证明FAN兼具周期建模与通用建模能力,优于专用Fourier网络",
+    "层-wise谱分析揭示三阶段'解构-探索-重构'机制"
+  ],
+  "topic_tags": [
+    "Fourier分析网络",
+    "周期性建模",
+    "神经网络归纳偏置",
+    "OOD泛化",
+    "深度网络可扩展性"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

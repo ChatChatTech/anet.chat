@@ -1,0 +1,40 @@
+{
+  "paper_id": "2024_recsys24-153",
+  "doi": null,
+  "title": "Utilizing Non-click Samples via Semi-supervised Learning for Conversion Rate Prediction",
+  "year": 2024,
+  "venue": "RecSys '24",
+  "venue_tier": "top",
+  "role": "corresponding",
+  "motivation": "CTCVR辅助任务将非点击样本的CVR标签隐式设为负，加剧了假负样本问题，影响模型性能",
+  "problem_framing": "将非点击样本视为无标签而非负样本，用半监督学习预测其转化概率作为伪标签",
+  "key_insight": "非点击≠不感兴趣，曝光偏差/位置偏差导致用户可能未注意到商品，这些样本若被点击仍可能转化",
+  "method_signature": "NISE半监督CVR预测，丢弃CTCVR任务，仅用CTR辅助任务和动态加权策略",
+  "evaluation_criteria": "AUC、LogLoss、KS分数；公共数据集Ali-CCP、KuaiRand-Pure及腾讯生产数据集",
+  "negative_result_or_admitted_limitation": "ESCM²-DR在生产数据集和部分实验中出现训练不稳定，LogLoss显著偏高",
+  "evidence_for_taste": [
+    "non-click samples are implicitly treated as negative",
+    "exacerbating the FNS problem",
+    "Non-click ≠ Disinterest",
+    "absence of clicks does not necessarily imply disinterest",
+    "non-click behaviors often result from a desire to avoid distractions",
+    "even a 0.1% increase in the AUC score is significant"
+  ],
+  "thinking_moves": [
+    "从CTCVR任务的分解公式推导其隐式假设，发现该假设会加剧FNS问题",
+    "通过反事实分析论证非点击样本未必代表用户不感兴趣",
+    "将CVR任务中非点击样本的未知标签重新定义为无标签而非负标签",
+    "利用模型自身的预测概率作为伪标签实现半监督学习",
+    "观察到CTR与CVR损失量级差异导致训练不平衡，故设计动态加权机制"
+  ],
+  "topic_tags": [
+    "CVR-prediction",
+    "false-negative-samples",
+    "semi-supervised-learning",
+    "multi-task-learning",
+    "sample-selection-bias"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

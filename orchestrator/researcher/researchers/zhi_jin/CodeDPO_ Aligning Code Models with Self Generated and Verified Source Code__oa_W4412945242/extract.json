@@ -1,0 +1,39 @@
+{
+  "paper_id": "CodeDPO_ Aligning Code Models with Self Generated and Verified Source Code__oa_W4412945242",
+  "doi": "10.18653/v1/2025.acl-long.771",
+  "title": "CodeDPO: Aligning Code Models with Self Generated and Verified Source Code",
+  "year": 2025,
+  "venue": "ACL 2025 Long Papers",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "SFT训练无法让模型区分正确与错误代码,且不优化执行效率,需将偏好学习引入代码生成",
+  "problem_framing": "代码偏好需基于正确性和效率这两个客观指标,而非自然语言的主观偏好",
+  "key_insight": "通过PageRank式迭代更新让代码与测试互相验证置信度,消除对外部测试或强大模型的依赖",
+  "method_signature": "自生成-自验证循环+PageRank迭代评分构建偏好数据集,再以DPO训练优化",
+  "evaluation_criteria": "HumanEval等基准通过率、执行时间加速比、优化代码占比",
+  "negative_result_or_admitted_limitation": "未引入特定Python库先验知识导致Torch/TensorFlow设置下性能略有下降",
+  "evidence_for_taste": [
+    "SFT falls short in teaching models to consistently prefer correct solutions",
+    "tests executable by more code snippets are more reliable",
+    "code that passes more tests is more likely to be correct",
+    "mutual reinforcement mechanism to update the credibility",
+    "performance saturation"
+  ],
+  "thinking_moves": [
+    "将SFT的\"提升正确解概率\"与\"同时提升错误解概率\"矛盾显式化",
+    "借鉴PageRank双向迭代思想解决代码-测试相互验证的信任分配",
+    "不依赖GPT-4生成测试,而是让代码与测试互相验证构建伪ground-truth",
+    "区分正确性优化与效率优化两个正交维度分别构造偏好对",
+    "通过消融对比证明自验证机制优于简单统计通过测试数量"
+  ],
+  "topic_tags": [
+    "code generation preference optimization",
+    "self-verification ranking algorithm",
+    "DPO training for code models",
+    "PageRank-inspired code scoring",
+    "code execution efficiency optimization"
+  ],
+  "cites_own_work": [],
+  "extraction_quality": "full",
+  "extraction_notes": "md truncated to head40k+tail20k"
+}

@@ -1,0 +1,43 @@
+{
+  "paper_id": "From Image to Imuge_ Immunized Image Generation",
+  "doi": "10.48550/arxiv.2110.14196",
+  "title": "From Image to Imuge: Immunized Image Generation",
+  "year": 2021,
+  "venue": "ACM MM '21",
+  "venue_tier": "top",
+  "role": "co-author",
+  "motivation": "Existing fragile watermarking fails under real-world benign attacks like JPEG compression—images become unrecoverable after social media compression",
+  "problem_framing": "Image self-recovery as joint encoder-localization-decoder pipeline: immunized image must survive compression yet enable tamper localization and content recovery",
+  "key_insight": "Encoder spreads coarse content representation into ambient areas via residual image R, enabling decoder to reconstruct originals from tampered regions",
+  "method_signature": "U-Net encoder+verifier+decoder trained with GAN, parameter-less noise layer simulating JPEG/scaling/clone attacks, progressive recovery from low-to-high resolution",
+  "evaluation_criteria": "L-PSNR in tampered regions; BCE for localization; SSIM for visual quality; user study comparing fidelity vs inpainting",
+  "negative_result_or_admitted_limitation": "Without verifier and discriminators, Imuge fails completely (L-PSNR drops from 27.43 to 13.16); larger tampers degrade recovery quality; plain areas need extra residual patterns",
+  "evidence_for_taste": [
+    "the schemes are therefore fragile",
+    "Imuge fails to conduct content recovery",
+    "we do not compare Imuge with the previous fragile image self-recovery schemes",
+    "we find that the ℓ2 distance is better",
+    "the failure of precise tamper mask prediction always happens",
+    "the schemes are only tolerant to a typical kind of attack"
+  ],
+  "thinking_moves": [
+    "把传统watermarking的不可逆失真问题重新frame成对抗攻击下的图像恢复问题",
+    "从网络训练耦合问题出发,提出task decoupling解决梯度相互干扰",
+    "观察到decoder特征比encoder特征包含更丰富的缺失区域信息,设计local feature sharing复用浅层特征",
+    "把真实世界攻击分类为malicious tamper和benign attack两类,提出参数无关噪声层统一模拟"
+  ],
+  "topic_tags": [
+    "image-tamper-self-recovery",
+    "fragile-watermarking",
+    "GAN-forensics",
+    "adversarial-image-training",
+    "content-authentication"
+  ],
+  "cites_own_work": [
+    "Xinpeng Zhang 2008",
+    "Xinpeng Zhang 2010",
+    "Xinpeng Zhang 2011"
+  ],
+  "extraction_quality": "full",
+  "extraction_notes": null
+}

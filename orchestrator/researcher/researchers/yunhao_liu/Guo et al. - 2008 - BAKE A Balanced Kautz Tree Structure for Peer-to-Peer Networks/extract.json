@@ -1,0 +1,40 @@
+{
+  "paper_id": "Guo et al. - 2008 - BAKE A Balanced Kautz Tree Structure for Peer-to-Peer Networks",
+  "doi": null,
+  "title": "BAKE: A Balanced Kautz Tree Structure for Peer-to-Peer Networks",
+  "year": 2008,
+  "venue": null,
+  "venue_tier": "unknown",
+  "role": "co-author",
+  "motivation": "现有P2P架构要求节点数为特定值,但实际中节点数量任意且动态变化,导致设计失效",
+  "problem_framing": "设计任意节点数下保持常数出度和最优直径的P2P拓扑结构",
+  "key_insight": "利用平衡Kautz树结构处理任意节点数,继承Kautz图的优良拓扑性质",
+  "method_signature": "平衡Kautz树→叶节点映射→最长后缀匹配资源放置→冗余路由",
+  "evaluation_criteria": "出度恒定、路由直径最优、失败场景下路由成功率、延迟和消息开销",
+  "negative_result_or_admitted_limitation": "现有路由方案在动态环境下健壮性差",
+  "evidence_for_taste": [
+    "fail to address the issue",
+    "suffer from poor robustness",
+    "practically easy to implement",
+    "does not cause additional network overhead",
+    "almost achieves Moore Bound"
+  ],
+  "thinking_moves": [
+    "发现理论拓扑要求与实际动态环境的gap",
+    "从图论中寻找接近Moore界的最优结构",
+    "将静态Kautz图性质迁移到动态树结构",
+    "为路由失败设计冗余备份机制"
+  ],
+  "topic_tags": [
+    "P2P-overlay-topology",
+    "Kautz-graph",
+    "constant-degree-dht",
+    "balanced-tree-structure",
+    "routing-robustness"
+  ],
+  "cites_own_work": [
+    "[14] MOORE prior work"
+  ],
+  "extraction_quality": "partial",
+  "extraction_notes": "论文标注了会议应为IEEE INFOCOM附近,但未明确指定具体venue"
+}
